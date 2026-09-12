@@ -67,3 +67,12 @@ Context sources: ~/.claude survey (this session), global CLAUDE.md, vault CLAUDE
   - GitHub: private `vnjkoxpl-42905/ai-os`, initial commit 9b1a3aa, 6,691 files; ignores projects/ raw/ tmp/ .firecrawl/ .env.
   - Scheduled task "Claude Code Backup": every 10 min + at logon.
 Status: build in progress (first full run + restore proof pending)
+
+### Build log (2026-09-12)
+- First full mirror took ~3 h (10.7 GB, 86k files) because `projects/hyperframes-student-kit/.venv` (torch/onnx) was included. Now excluded (`.venv`, `venv`), same as `node_modules`.
+- `Register-ScheduledTask` denied (not elevated); switched to `schtasks.exe`, which works per-user. Two tasks: "Claude Code Backup" (every 10 min) and "Claude Code Backup (logon)".
+- Added a mutex so overlapping runs skip.
+- `Compress-Archive` failed on the snapshot; replaced with Windows `tar.exe` writing to %TEMP% then moving to Drive. Snapshot-2026-09-12.zip = 231 MB.
+- Two empty `raw/` folders with trailing-space names cannot exist on Drive; excluded (raw/ is immutable, not renamed).
+- Clean run 03:02: all mirrors rc<8, machine-info.json written, git pushed.
+- Restore proof: running into scratchpad `restore-test` with -SkipInstall.
