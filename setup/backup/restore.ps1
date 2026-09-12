@@ -40,7 +40,7 @@ $newPrefix = Enc $Target
 if ($oldPrefix -ne $newPrefix) {
     Get-ChildItem (Join-Path $Target '.claude\projects') -Directory | Where-Object { $_.Name.StartsWith($oldPrefix) } | ForEach-Object {
         $new = $newPrefix + $_.Name.Substring($oldPrefix.Length)
-        [IO.Directory]::Move("\?\" + $_.FullName, "\?\" + (Join-Path $_.Parent.FullName $new)); Write-Host "  renamed transcripts: $($_.Name) -> $new"
+        Rename-Item -LiteralPath $_.FullName -NewName $new -Force; Write-Host "  renamed transcripts: $($_.Name) -> $new"
     }
     # Paths inside settings/config that pointed at the old home (plain and JSON-escaped forms). Literal string replace, no regex.
     $oldJson = $info.home.Replace('\','\'); $newJson = $Target.Replace('\','\')

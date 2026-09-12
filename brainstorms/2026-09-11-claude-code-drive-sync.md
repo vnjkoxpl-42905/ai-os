@@ -1,6 +1,6 @@
 # Claude Code -> Google Drive live sync: Brainstorm / Discovery Notes
 Date: 2026-09-11 · Goal: decide how every Claude Code chat, skill, config, and the ai-os vault gets mirrored to Google Drive continuously so the MacBook Pro opens identical.
-Status: in progress
+Status: complete (2026-09-12). Resume point: test restore.sh on the Mac; delete test folders %TEMP%t and scratchpad restore-test once Joshua confirms.
 Context sources: ~/.claude survey (this session), global CLAUDE.md, vault CLAUDE.md
 
 ## Facts gathered before the interview (verified on disk, 2026-09-11)
@@ -76,3 +76,5 @@ Status: build in progress (first full run + restore proof pending)
 - Two empty `raw/` folders with trailing-space names cannot exist on Drive; excluded (raw/ is immutable, not renamed).
 - Clean run 03:02: all mirrors rc<8, machine-info.json written, git pushed.
 - Restore proof: running into scratchpad `restore-test` with -SkipInstall.
+- Restore proof PASSED 2026-09-12 into %TEMP%\rt: all folders restored, 7 transcript dirs renamed, claude.json paths rewritten. (`-replace '[\:/]'` silently fails to match backslashes in PS 5.1; use string .Replace.)
+- restore.sh (Mac) untested: no Mac available.
