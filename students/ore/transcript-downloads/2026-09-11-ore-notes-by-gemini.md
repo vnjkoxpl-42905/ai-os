@@ -1,0 +1,2872 @@
+﻿✍️ Quick notes
+Please rate the new Quick notes tab by taking a short survey.
+Ore
+
+
+Sep 11, 2026
+Joshua Fisseha oreoluwavjames@gmail.com
+
+
+LSAT preparation strategies and platform feature updates with technical bug reviews.
+
+
+LSAT Study Routine and Personal Health Management
+* Oreoluwa identified that studying at night after a 9-to-5 job leads to cognitive fatigue and reduced focus.
+* Oreoluwa plans to discuss medication adjustments and LSAT accommodations with a psychiatrist on the 18th to address severe side effects.
+* Joshua recommended prioritizing morning study sessions on fewer days per week to ensure consistency and prevent burnout.
+* Oreoluwa noted the need to improve nutritional habits to counteract medication-induced appetite suppression and focus issues.
+
+
+Platform Development and Functionality
+* Joshua committed to updating the platform with Reading Comprehension and Smart Drill functionality by the upcoming Sunday.
+* The Smart Drill feature will use adaptive algorithms to select practice questions based on individual user performance analytics.
+
+
+LSAT Argument Structure and Methodology
+* Joshua emphasized identifying the main conclusion as the mandatory first step for every argument read.
+* Valid arguments must contain an author's opinion, which relies on explicit support from at least one other statement.
+* Joshua introduced the FAPS mnemonic (For, After all, Plus/Besides, Since) for identifying non-negotiable premise indicator words.
+* They discussed using pivot words such as "but," "yet," and "however" to detect logical shifts and counter-arguments.
+* Joshua explained that when authors rebut attributed viewpoints, the conclusion often appears in the middle of the argument.
+* Joshua clarified that subconclusions function as both an author's opinion and evidence supporting the final main conclusion.
+
+
+Argument Component Identification
+* The argument core consists exclusively of the main conclusion, intermediate conclusions, and supporting premises.
+* Intermediate conclusions serve as dual-purpose components, supporting the main conclusion while simultaneously being supported by preceding premises.
+* Background information and extraneous context are excluded from the argument core.
+
+
+Strategic Handling of Opposing Viewpoints
+* The author introduces external groups, theories, or viewpoints exclusively to initiate a rebuttal, rather than to validate the opposing position.
+* Authors utilize pivot words such as "but" or "however" to acknowledge a limited concession before countering the opposing viewpoint.
+
+
+Analytical Verification Techniques
+* Classify statements into 4 categories—conclusion, support, opposing viewpoint, or neutral background—to isolate the argument core.
+* Test logical relationships between statements by repeatedly asking "Why should I believe that?" to confirm the supporting structure.
+* Prioritize rearticulating the argument's logical flow over reliance on indicator words, which can be inconsistent.
+
+
+LSAT Preparation and Technical Issues
+* Oreoluwa shifted to a sustainable, slower study phase to mitigate burnout.
+* The LSAT is a scaled, competitive exam distinct from the Bar Exam's pass-fail structure.
+* Joshua emphasized mastering argument structure before tackling advanced sufficient or necessary assumption questions.
+* Oreoluwa reported that the platform's coach explanation popup fails to load upon submitting answers.
+
+
+Cultural Identity and Professional Aspirations
+* Discussed the spirit of excellence and cultural emphasis on professional success in Nigerian-American communities.
+* Explored differences in cultural identity and ancestral connection between Nigerian-Americans and broader Black American groups.
+
+
+Canadian Law School Assessment
+* Joshua identified the University of Toronto as a globally ranked, competitive 'Harvard of the North'.
+* Canadian law degrees are generally more affordable than US institutions while maintaining high US market prestige.
+* McGill University in Montreal requires French language proficiency for potential applicants.
+
+
+Platform Technical and User Experience
+* Oreoluwa James reported login errors on Chrome while accessing Law Hub, noting that Safari functions correctly.
+* Joshua Fisseha is replacing the current chatbot interface with a direct database integration to streamline the question-drilling process.
+* Joshua Fisseha committed to investigating potential platform-side causes for the reported connection issues.
+
+
+System Development and UI Optimization
+* Joshua Fisseha identified rendering errors where explanation blocks fail to align properly beneath the stimulus.
+* Joshua Fisseha flagged a bug where tasks assigned to other users inappropriately appear on the admin dashboard.
+
+
+Feature Roadmap and Data Management
+* Joshua Fisseha proposed redesigning Smart Drilling to dynamically assign questions based on user performance analytics.
+* Joshua Fisseha mandated that replacement words be stored in both the replacement list and user-specific vocabulary databases.
+
+
+Next steps
+* [Joshua Fisseha] Send Video Resources: Provide the instructional video and sample regarding LSAT structural analysis.
+* [Oreoluwa James] Discuss Medical Plan: Consult with the psychiatrist about medication changes and test accommodations on the 18th.
+* [Joshua Fisseha] Update Learning Platform: Enable Reading Comprehension and Smart Drill functionality by Sunday.
+* [Oreoluwa James] Adjust Study Routine: Shift study sessions to morning hours and include more rest days.
+* [Oreoluwa James] Document Analogy: Document the LeBron and Kyrie basketball analogy to aid in recalling the concept of subconclusions and their relation to main conclusions.
+* [Oreoluwa James] Type Notes: Transcribe all handwritten meeting notes to ensure full comprehension of the discussed logic concepts.
+* [Joshua Fisseha] Assign Training Materials: Provide the boot camp and relevant skill drills to the student for continued practice.
+* [Oreoluwa James] Research UFT Law: Research the application requirements and the admissions process for the University of Toronto law school.
+* [Oreoluwa James] Research McGill Law: Investigate the application process and requirements for McGill University law school.
+* [Oreoluwa James] Complete Bootcamp: Complete the provided bootcamp materials and prioritize these tasks over reading comprehension exercises.
+* [Oreoluwa James] Troubleshoot Browser: Verify Law Hub functionality on the Safari browser to resolve ongoing connection errors.
+* [Oreoluwa James] Report Technical Issues: Notify Joshua Fisseha via message if connection issues persist after testing on Safari.
+* [Joshua Fisseha] Investigate Safari Issues: Investigate Safari display issues to identify the root cause of errors occurring on that browser.
+* [Oreoluwa James] Test Safari: Test the application on Safari and report back if the technical issues persist.
+* [Oreoluwa James] Fix Admin Assignments: Debug the admin module to prevent tasks assigned to other users from appearing on the primary dashboard.
+* [Oreoluwa James] Fix Page Spacing: Audit the page layout to correct misalignment issues between the stimulus and answer explanation blocks.
+* [Oreoluwa James] Design Smart Drilling: Draft a development plan for the smart drilling feature that selects questions based on individual user performance analytics.
+* [Oreoluwa James] Update Vocabulary: Ensure that all replacement words are saved within both the replacement list and the specific user vocabulary database.
+
+
+
+
+
+
+Want to see more? View the full notes
+Tip: You can always access your full notes from the left sidebar.
+
+
+
+
+
+
+You should review Gemini's notes to make sure they're accurate. Get tips and learn how Gemini takes notes
+📝 Full notes
+Sep 11, 2026
+Ore
+Invited Joshua Fisseha oreoluwavjames@gmail.com
+Attachments Ore
+Meeting records Transcript 
+
+
+
+
+Summary
+LSAT preparation strategies and platform feature updates with technical bug reviews.
+
+LSAT Argument Core Mastery
+Structural analysis methods clarified how to identify main conclusions and premises. Practice drills improved logical reasoning skills.
+
+Immigrant Work Ethic Culture
+Cultural backgrounds and high parental expectations shaped academic drives. Canadian law schools were evaluated as viable alternatives.
+
+Platform UI Bug Fixes
+Technical errors on Law Hub and platform features were reviewed. Smart drilling and database explanations will be updated by Sunday.
+
+
+
+
+Next steps
+* [Joshua Fisseha] Send Video Resources: Provide the instructional video and sample regarding LSAT structural analysis.
+* [Oreoluwa James] Discuss Medical Plan: Consult with the psychiatrist about medication changes and test accommodations on the 18th.
+* [Joshua Fisseha] Update Learning Platform: Enable Reading Comprehension and Smart Drill functionality by Sunday.
+* [Oreoluwa James] Adjust Study Routine: Shift study sessions to morning hours and include more rest days.
+* [Oreoluwa James] Document Analogy: Document the LeBron and Kyrie basketball analogy to aid in recalling the concept of subconclusions and their relation to main conclusions.
+* [Oreoluwa James] Type Notes: Transcribe all handwritten meeting notes to ensure full comprehension of the discussed logic concepts.
+* [Joshua Fisseha] Assign Training Materials: Provide the boot camp and relevant skill drills to the student for continued practice.
+* [Oreoluwa James] Research UFT Law: Research the application requirements and the admissions process for the University of Toronto law school.
+* [Oreoluwa James] Research McGill Law: Investigate the application process and requirements for McGill University law school.
+* [Oreoluwa James] Complete Bootcamp: Complete the provided bootcamp materials and prioritize these tasks over reading comprehension exercises.
+* [Oreoluwa James] Troubleshoot Browser: Verify Law Hub functionality on the Safari browser to resolve ongoing connection errors.
+* [Oreoluwa James] Report Technical Issues: Notify Joshua Fisseha via message if connection issues persist after testing on Safari.
+* [Joshua Fisseha] Investigate Safari Issues: Investigate Safari display issues to identify the root cause of errors occurring on that browser.
+* [Oreoluwa James] Test Safari: Test the application on Safari and report back if the technical issues persist.
+* [Oreoluwa James] Fix Admin Assignments: Debug the admin module to prevent tasks assigned to other users from appearing on the primary dashboard.
+* [Oreoluwa James] Fix Page Spacing: Audit the page layout to correct misalignment issues between the stimulus and answer explanation blocks.
+* [Oreoluwa James] Design Smart Drilling: Draft a development plan for the smart drilling feature that selects questions based on individual user performance analytics.
+* [Oreoluwa James] Update Vocabulary: Ensure that all replacement words are saved within both the replacement list and the specific user vocabulary database.
+
+
+
+
+Details
+* LSAT Study Progress and Challenges: Oreoluwa James reported on their LSAT preparation, noting they are behind on translation drills, practicing logical reasoning, and working on reading comprehension (00:03:07). Oreoluwa James expressed frustration regarding a perceived lack of progress over several months despite consistent effort (00:04:08).
+* Platform Feature Updates: Joshua Fisseha announced that reading comprehension and logical reasoning modules, along with explanation updates, will be fully functional on their platform by Sunday (00:04:08).
+* Work Schedule and Study Timing: Oreoluwa James described their full-time work schedule in Philadelphia, noting a long commute that requires leaving home around 7:45 to 8:00 AM for 9:00 AM office meetings, with occasional free time after 11:30 AM to study (00:07:38). Oreoluwa James stated that studying at night leaves their brain exhausted and less effective compared to morning study sessions (00:06:44) (00:08:33).
+* Medication Management and Side Effects: Oreoluwa James shared that they have a psychology appointment on the 18th to discuss test accommodations and potential medication adjustments. Oreoluwa James explained they avoid taking their 20 mg extended-release Adderall due to severe afternoon and evening crashes causing agitation, grumpiness, and overstimulation during study hours, as well as appetite suppression and poor nutrition (00:08:33) (00:17:48).
+* Medication Strategy and Perspectives: Oreoluwa James discussed considering alternative medications like Vyvanse or instant-release Adderall for specific blocks of time, such as practice tests, and noted their doctor is conservative regarding medication (00:17:48). Oreoluwa James reframed medication as a supportive supplement rather than something to stigmatize, noting their ADHD diagnosis was prompted by LSAT study difficulties (00:19:38).
+* Law School Application Timeline: Oreoluwa James discussed targeting either the November or January LSAT, emphasizing a firm commitment to applying later with their best possible score rather than rushing with a subpar score (00:12:11).
+* Study Frequency and Schedule Recommendations: Joshua Fisseha recommended that Oreoluwa James study fewer days per week (4 to 5 days) rather than forcing two hours every single day, suggesting scheduled days off, such as Tuesdays and Thursdays, to create healthy psychological urgency and prevent burnout (00:24:46).
+* Smart Drill Feature Implementation: Joshua Fisseha explained the upcoming "smart drill" feature on their platform, launching by Sunday, which uses an algorithm based on user analytics to automatically serve targeted questions matching the user's skill level (00:23:11).
+* Introduction to Structural Analysis and Main Conclusions: Joshua Fisseha introduced structural analysis for LSAT arguments, emphasizing that identifying the main conclusion, referred to as the "North Star," is the critical first step before analyzing content (00:30:18). Joshua Fisseha explained that a valid conclusion must be an author's opinion rather than a verifiable fact and must receive explicit support from at least one other statement (00:35:28).
+  
+
+* Methodologies for Identifying Conclusions and Cross-Examining Arguments: Joshua Fisseha advised students to actively cross-examine every claim in a stimulus by asking why they should believe it (00:36:37). Joshua Fisseha noted that conclusions are rarely the final sentence and have a high probability of appearing in the first sentence or functioning as a rebuttal in the middle of the argument (00:52:40).
+  
+
+* Indicator Words for Premises, Opinions, and Pivots: Joshua Fisseha outlined key indicator words, highlighting the mnemonic "FAPS" (For, After all, Because, Since) for rigid premise indicators that always pair with a conclusion (00:40:28). Joshua Fisseha also reviewed opinion indicators (ought, should) and pivot words (but, yet, however) that signal a shift in argumentative direction (00:44:28).
+  
+
+* Handling Opposing Viewpoints and Implicit Conclusions: Joshua Fisseha explained that when an argument attributes a claim to an outside group, such as proponents or economists, the author will invariably negate or reject that position (00:51:13). Joshua Fisseha stressed the importance of explicitly rearticulating implicit conclusions rather than relying on vague summaries like stating that a group is wrong (00:56:48).
+  
+
+* Subconclusions in Argument Structures: Joshua Fisseha defined subconclusions, also known as intermediate conclusions, as dual-functioning statements that both receive support from premises and provide support for the final main conclusion (00:58:46).
+* Understanding Intermediate Conclusions: Joshua Fisseha introduced the concept of an intermediate conclusion, describing it as a dual-functioning statement that both supports a main conclusion and is supported by a premise. To explain this, Joshua Fisseha used a travel analogy comparing a starting point to a premise, a layover to an intermediate conclusion, and a final destination to a main conclusion (00:59:56). Oreoluwa James noted that the term implies a middle ground, and Joshua Fisseha confirmed that an intermediate conclusion holds all the criteria of a regular conclusion except for being the final stop in the argument (01:01:43).
+  
+
+* Sports Analogy for Argument Components: Joshua Fisseha and Oreoluwa James utilized a basketball analogy to further clarify the hierarchical relationship between main and intermediate conclusions. Joshua Fisseha equated LeBron James to a main conclusion and Kyrie Irving to an intermediate conclusion, illustrating that Kyrie Irving acts as a superstar supporting LeBron James while also relying on supporting cast members (01:02:39) (01:04:20). Oreoluwa James expressed complete understanding of the analogy, highlighting its effectiveness for retaining the concept (01:05:16).
+* Definition of the Argument Core: Joshua Fisseha defined the argument core as consisting exclusively of the main conclusion, any intermediate conclusions, and premises, while labeling everything else as peripheral context or fluff (01:07:19). Oreoluwa James brought up past confusion regarding nested claims and hybrid arguments introduced by another instructor, noting the difficulty in understanding those complex terms (01:08:09).
+* Identification of Opposing Viewpoints: Joshua Fisseha explained that when authors introduce other people, groups, or ideologies in a stimulus, they do so solely to disagree with them, functioning as a counter-position rather than validating external views (01:09:08). While the term nested claims was mentioned, Oreoluwa James preferred the term opposing viewpoint because it intuitively conveyed that the author was in disagreement (01:11:05).
+* Handling Concessions and Pivots: Joshua Fisseha described how authors sometimes use a diplomatic approach by granting the opposing side a point or two before introducing a pivot word such as "but" or "however" to refute them (01:13:38). Joshua Fisseha emphasized that these concessions should not be mistaken for agreement, as the ultimate goal of the author remains combative against the opposing viewpoint (01:14:45).
+* Broad Categories of Argument Statements: Joshua Fisseha outlined how every statement in an LSAT argument falls into one of four broad categories: support (including intermediate conclusions and premises), opposing viewpoints (rebuttals or concessions), and neutral background information (01:17:05). To determine these categories, Joshua Fisseha stated that one must identify the main conclusion and test each statement's relationship to it (01:18:24).
+* Testing Argument Hierarchies: Oreoluwa James and Joshua Fisseha practiced mapping a sample argument about Michael Jordan versus LeBron James to distinguish between premises, intermediate conclusions, and main conclusions (01:23:14). Joshua Fisseha instructed Oreoluwa James to look for main conclusions either in the first sentence or introduced via a rebuttal, establishing the framework for analyzing question stems (01:25:10).
+  
+
+* Analysis of a Practice Question Stimulus: Oreoluwa James read the first sentence of a practice prompt involving Santiana recommending the study of history to avoid past mistakes, correctly identifying it as an opposing viewpoint that the author would rebut (01:27:07). Joshua Fisseha encouraged this proactive reading strategy to ensure they remain in the driver's seat rather than reading blindly (01:27:58).
+* Evaluation of Indicator Words and Competing Conclusions: Oreoluwa James and Joshua Fisseha analyzed indicator words such as "should" (indicating an opinion) and "since" (indicating a premise) within the practice prompt (01:31:17) (01:34:52). When multiple potential conclusions surfaced, Joshua Fisseha guided Oreoluwa James to test which statement logically supported the other (01:36:57).
+  
+
+* Testing Logical Flow with the Question Method: Joshua Fisseha introduced a bulletproof method for finding the main conclusion by asking "Why should I believe that?" for each statement to establish a coherent logical chain (01:38:41) (01:43:50). Oreoluwa James successfully applied this technique to rearticulate the statements, confirming that the main conclusion was the author's recommendation against following Santiana's advice, supported by the premise that history consists of unique, unrepeatable accidents (01:42:43). Joshua Fisseha stressed the importance of rearticulation over blindly relying on indicator words (01:44:54).
+* Evaluation of Answer Choices: Joshua Fisseha and Oreoluwa James evaluated the answer choices for the practice question, noting that many options are half-right or rely on unsupported assumptions (01:46:35). Through careful elimination, Oreoluwa James identified the correct option stating that one should not try to avoid repeating past mistakes by studying history, aligning with the author's exact conclusion (01:48:13).
+* Foundational Mastery and Next Steps: Joshua Fisseha emphasized that identifying main conclusions is a crucial foundational skill required before tackling other LSAT question types. To reinforce this, Joshua Fisseha announced plans to assign Oreoluwa James a comprehensive boot camp containing skill drills and notes to build replicable study habits through consistent exposure (01:49:02) (01:51:29).
+* LSAT Preparation Burnout and Lifestyle Adjustments: Oreoluwa James discussed experiencing burnout during their initial LSAT preparation in October due to studying multiple hours daily, leading to a shift in their study habits and daily routine. To avoid past burnout, they limited driving time, engaged in social activities like running or workout classes, and slowed down their pace while recognizing the difficulty of law school admissions (01:58:57).
+* Comparison of LSAT, Bar Exam, and Law School Rigor: Oreoluwa James compared the LSAT unfavorably to the bar exam, noting that the LSAT relies on a scaled numerical score rather than a simple pass-or-fail standard like the bar (02:00:43). They expressed confidence in adapting well to law school once financial stability is achieved, contrasting master's programs that are paper-heavy with the exam-heavy nature of law school (02:01:37).
+* Accent Perceptions and Cultural References: Oreoluwa James and Joshua Fisseha engaged in a lighthearted exchange regarding regional accents, with Oreoluwa James comparing Joshua Fisseha's Canadian accent to musical artist Nav (02:02:32). Joshua Fisseha playfully objected, suggesting comparisons to Drake or Justin Bieber instead (02:03:13).
+* Racial Demographics and Code-Switching Experiences: Oreoluwa James noted that they grew up attending predominantly white schools, which required them to learn code-switching after experiencing racism in high school (02:04:30). They described adapting their communication style when interacting with white people, people of color, and Nigerian peers (02:05:18).
+* Immigrant Communities and Terminology in North America: Joshua Fisseha and Oreoluwa James discussed West African and Ethiopian immigrant populations in Canada and the United States, differentiating between wealthy international students and local immigrants. They defined terms such as FOB (fresh off the boat) and IGGB (I just got back) to describe individuals with local accents versus those returning from studying in the United Kingdom (02:06:08).
+* Global Presence and Professional Dominance of Nigerians: Joshua Fisseha highlighted the prominent presence and professional success of Nigerians globally, particularly in fields like medicine, law, and engineering in the United States (02:08:46). Oreoluwa James and Joshua Fisseha noted that Nigerian Americans and European-born Nigerians achieve high educational attainment, often benefiting from strong community networks (02:09:30).
+* Educational Attainment and Affirmative Action Impacts: Joshua Fisseha observed that affirmative action programs in American medical and law schools often resulted in significant representation of Nigerian immigrants rather than solely descendants of enslaved Black Americans (02:09:30). Oreoluwa James concurred, emphasizing that Nigerian children raised in Western countries frequently attain higher education due to greater systemic opportunities (02:10:22).
+* Socioeconomic Realities and Nigerian Parental Expectations: Oreoluwa James described the pervasive elitist mindset and pride within Nigerian culture, noting high parental expectations for professional degrees and financial success (02:12:13). They emphasized that their motivation to pursue a Juris Doctor and potentially a Ph.D. stems from both personal ambition and cultural pressure to achieve professional excellence (02:13:14).
+* Parenting Philosophies and Standards of Excellence: Oreoluwa James shared their philosophy on parenting, emphasizing a strict standard of excellence where children must strive to be the best at whichever career path they choose (02:15:11). They noted that Nigerian culture instills a strong spirit of excellence, pushing individuals toward professional doctorates and elite careers (02:16:31).
+* Evaluating Canadian Law Schools as an Alternative: Joshua Fisseha recommended that Oreoluwa James consider applying to Canadian law schools, citing comparable admission criteria like GPA and LSAT evaluations, lower international tuition costs, and strong professional portability to the United States (02:17:26). Oreoluwa James acknowledged having considered the University of Toronto since the previous year (02:19:18).
+* University of Toronto Admissions and Reputation: Joshua Fisseha described the University of Toronto as Canada's equivalent to a top-tier American institution, noting its global top-20 ranking and competitive admissions standards (02:19:18). Oreoluwa James noted that the acceptance rate for the University of Toronto is approximately 8.9% (02:20:45).
+* Student Associations and Religious Demographics in Nigeria: Oreoluwa James and Joshua Fisseha discussed university student associations, noting that Nigerian student groups constituted a large majority within African student unions in Canada (02:20:45). They also touched upon religious demographics in Nigeria, identifying Christianity and Islam as the two primary religions (02:22:32).
+* Corruption in Nigeria and Personal Fraud Incident: Oreoluwa James discussed systemic corruption in Nigeria, sharing a personal anecdote about a house manager who stole funds provided by Oreoluwa James's mother for a driver's license application (02:23:22). They contrasted the glamorous global perception of Nigerians with the harsh realities of corruption within the country (02:24:26).
+* Cultural Tensions Between Black Americans and Nigerian Immigrants: Joshua Fisseha and Oreoluwa James discussed cultural friction and tensions between Black Americans and Nigerian immigrants, attributing the conflict to Nigerian elitism and identity disparities. Oreoluwa James argued that some friction stems from Black Americans lacking a direct connection to ancestral trees, unlike immigrants who maintain ties to specific nations (02:25:21).
+* Identity Crises and Ancestral Connections: Oreoluwa James and Joshua Fisseha analyzed identity challenges within diaspora communities, discussing how ancestral disconnects can lead to cultural debates and comparisons (02:28:54). Joshua Fisseha mentioned that some students identified with Hebrew Israelite histories and expressed beliefs regarding historical events involving West Africans (02:35:37).
+* Cultural Disparities and Safety Conversations: Oreoluwa James highlighted cultural differences between Black Americans and Nigerian immigrants, noting that Nigerian parents emphasize strict educational standards and safety precautions regarding law enforcement interactions (02:30:42). Oreoluwa James discussed self-identifying primarily by race while recognizing their specific nationality as Nigerian American (02:33:10).
+* Historical Narratives and Generational Trauma: Oreoluwa James discussed the fabrication and omission of historical facts in educational curricula, referencing political efforts in states like Florida to restrict teaching about slavery (02:35:37). They also noted that generational trauma significantly impacts Black American men, often requiring therapeutic intervention (02:37:28).
+* Multicultural Dynamics in Canada versus the United States: Joshua Fisseha and Oreoluwa James contrasted the multicultural landscape of Canada with the United States, noting that Black populations in Canada are predominantly of Caribbean or African immigrant descent rather than multi-generational Black Canadians (02:38:14). Joshua Fisseha observed that Canadian communities exhibit less animosity and more blending of immigrant subcultures and slangs (02:39:54).
+* Immigrant Identity and Past Relationship Cultural Differences: Oreoluwa James reflected on a past relationship with a Haitian ex-partner, explaining that cultural and educational differences contributed to their breakup in August (02:44:30). They noted that differing views on higher education and cultural norms created barriers in the relationship (02:45:21).
+* Cultural Preservation and High Parental Expectations: Oreoluwa James discussed their intention to preserve Nigerian traditions for future children, including teaching the Yoruba language and maintaining family connections (02:46:21). They reiterated that high parental expectations and cultural pride drive their relentless work ethic and ambition (02:48:16).
+* Immigrant Work Ethic and Drive for Success: Joshua Fisseha and Oreoluwa James emphasized the strong work ethic characteristic of African immigrants, who often relocate with limited resources and push past significant barriers to achieve financial stability (02:49:07). Oreoluwa James noted that immigrant parents often immigrated to America as young adults without family support, establishing a foundation of resilience (02:50:58).
+* LSAT Logical Reasoning Strategy Review: Oreoluwa James expressed appreciation for Joshua Fisseha's breakdown of logical reasoning strategies, noting that the session clarified how to analyze question stimuli and avoid making unsupported assumptions (02:52:31). Joshua Fisseha advised Oreoluwa James to focus on foundational building blocks before tackling complex sufficient and necessary assumption questions, and confirmed assigning practice work (02:53:25).
+* LSAT Platform Technical Error with Explanation Popups: Oreoluwa James demonstrated a technical issue on the LSAT study platform where answering questions incorrectly triggered an error message stating "Joshua is having trouble connecting" instead of displaying the explanation popup (02:55:17). Joshua Fisseha acknowledged the technical glitch for further review (02:56:04).
+* Law Hub Login Issues and Browser Troubleshooting: Oreoluwa James experiences login errors on Chrome for Law Hub, reporting that they cannot connect properly, which prevents them from accessing explanations. Oreoluwa James notes that they can use Safari as an alternative browser and mentions using Elsat hacks for question breakdowns due to previous access problems. Oreoluwa James states they will test access on Safari and message Joshua Fisseha if issues persist, while Joshua Fisseha commits to investigating if anything on their side causes the browser error (02:56:57) (02:58:49).
+  
+
+* Platform Setup and Explanation Database Updates: Joshua Fisseha explains that the platform setup will change significantly over the weekend, transitioning away from a chatbot model to a database-backed, seven-stage process where written explanations are displayed directly next to questions. Joshua Fisseha notes that they wrote out extensive explanations that are now fully populated in the database, which will alter how users drill questions (02:57:59). Oreoluwa James acknowledges the update and expresses satisfaction with the progress (02:58:49).
+* UI and Page Spacing Adjustments: Joshua Fisseha addresses formatting problems, noting that screenshots and page layouts suffer from spacing issues around the stimulus. Joshua Fisseha explains that explanations must be positioned properly underneath the stimulus without breaking page formatting (02:58:49). Joshua Fisseha directs everyone to examine the page spacing and help identify and fix the underlying issue (03:01:37).
+* Admin Assignment Data Visibility Bug: Joshua Fisseha identifies a recurring system bug where assigning work to someone else as an admin incorrectly displays on Joshua Fisseha's side. Joshua Fisseha states that they need to fix this so that administrative assignments do not clutter personal views while retaining underlying data access. Joshua Fisseha tasks the team with resolving this visibility issue (03:01:37).
+* Smart Drilling Feature Redesign: Joshua Fisseha discusses updating the smart drilling feature, stating that standalone single-question options should be removed in favor of building sets that automatically select questions based on user analytics and appropriate difficulty levels (03:01:37). Joshua Fisseha wants this feature to be even more powerful and intelligent than the Elsat demon smart drill as users increase their usage. Joshua Fisseha requests that the team help design a comprehensive plan for this functionality (03:05:05).
+* Vocabulary and Autocorrect Replacements: Joshua Fisseha addresses autocorrect vocabulary settings, explaining that replacement words used to fix errors must be properly saved in the database rather than the original erroneous words. Joshua Fisseha emphasizes ensuring that these words are stored in both general replacements and specifically within their own vocabulary, keeping potential speech variations and mix-ups in mind. Joshua Fisseha checks if this was already implemented by the team (03:05:05).
+
+
+
+
+You should review Gemini's notes to make sure they're accurate. Get tips and learn how Gemini takes notes
+How is the quality of these specific notes? Take a short survey to let us know your feedback, including how helpful the notes were for your needs.
+📖 Transcript
+Sep 11, 2026
+Ore - Transcript
+00:01:30
+
+
+Oreoluwa James: Hello. Wait, hold on. Hello.
+Joshua Fisseha: All right, let's go. Let me just grab my right. Let's go. All right, Oy,
+Oreoluwa James: How are you?
+Joshua Fisseha: how you doing?
+Oreoluwa James: I'm doing pretty okay. How are you,
+Joshua Fisseha: You know, I'm a little tired. I won't lie. Kind of gasp, but you know, living the dream.
+Oreoluwa James: man? That's all we can do. Just like that's all we can do.
+Joshua Fisseha: You know,
+Oreoluwa James: I hear you.
+Joshua Fisseha: I don't know why you're bothering me with my mom. My my mother. That's something she would say.
+Oreoluwa James: Oh,
+Joshua Fisseha: It's very African.
+Oreoluwa James: that's all we can do. Because that's all we can do.
+Joshua Fisseha: Yeah. The gospel.
+Oreoluwa James: Like I' it's actually gotten to the point that I've been I tell people I'm like you can't ask me to do more than what I can do. Like I can't, you know, I'm like I can't
+
+
+
+
+00:03:07
+
+
+Joshua Fisseha: This is like that's hilarious. Yeah, I'm sure. That's literally it. Like, but like give me an update. How's life? How's uh Elsa? Like, how are you feeling? Give me an update on everything.
+Oreoluwa James: um I feel I feel like I'm okay. Um I started doing the translation drills and you're right, they're definitely hard. like definitely behind on them. Um I'm not sure if I'm doing them exactly the way that the program wants me to do them. So maybe you'll probably be able to better tell me if I am. Um and then on outside of that, I've been just doing like regular um logical reasoning drilling. And um I think what I need to do is start getting into the habit of taking more time to review my wrong answers like why I got certain things wrong and start trying to identify like patterns that could be there. And then um I also started to like pick back up on reading comprehension again because I noticed is your system only for logical reasoning?
+
+
+
+
+00:04:08
+
+
+Joshua Fisseha: uh temporarily by the by the end of this weekend because I had a couple things I wanted to update with the um explanations for passages. I've been working on that but but it's going to be by the Sunday it's going to be RC and LR is going to be completely functional.
+Oreoluwa James: Oh, nice. Okay, cool. Yeah. Um, so I've been doing like some um reading comprehension stuff as well, too. Trying to just keep my mind sharp with that. Uh, I feel like there are some days where I answer questions, I don't get them right, and I don't know if it's like I'm not getting them right because I'm just not understanding what the stimulus is saying, if I'm not understanding um what the part of what I'm supposed to be looking for, if I'm tired, like there's just so many different things that are kind of like going into it. Um, I just really want to get into like a pattern slash routine of at least feeling like there's more progress than where I was like a few months ago because I kind of feel like there's not a lot of progress.
+
+
+
+
+00:05:09
+
+
+Oreoluwa James: But I'm also trying to be patient with myself too. Like patience is like grace.
+Joshua Fisseha: patience. Say it's it's going to take a it's going to you're going to need to Yeah. Like it's frustrating, but it's uh half the game is a waiting game. Like just doing the same doing the right thing consistently and the other half is wait.
+Oreoluwa James: Yeah.
+Joshua Fisseha: Um it's like working out.
+Oreoluwa James: I mean, where Yeah. literally that's what I'm saying by I like I'm a marathoner, so I'm trying so hard to compare this to like running marathons.
+Joshua Fisseha: You want me thoughts? Oh, wow. Good for you.
+Oreoluwa James: Um Yeah.
+Joshua Fisseha: That's easy. That's wild.
+Oreoluwa James: I'm just trying really hard to like compare that to running in the sense of, you know, running is something that you build up to. It's not something you just jump out and like you start doing it. Like there's going to be practice and there's going to be regression. There's going to be setbacks.
+
+
+
+
+00:05:56
+
+
+Oreoluwa James: There's going to be some days, but it's like take it day by day, you get better every single day. Um, but I also do know that like even with running though, like there's always different approaches one can take to like see more improvement than others, you know, whether that's like changing your diet or like changing your like breathing or whatever. So that's kind of how I I take the LSAT too where it is a day by day thing.
+Joshua Fisseha: or being or being Ethiopian. Just kidding.
+Oreoluwa James: Huh.
+Joshua Fisseha: Or being Ethiopian.
+Oreoluwa James: Literally like or just be like super duper smart or something. But um um Oh,
+Joshua Fisseha: Oh, yeah. I meant for the marathon part,
+Oreoluwa James: I'm screaming.
+Joshua Fisseha: not the Also for the Elsat.
+Oreoluwa James: No. Yeah. Or be Kenyon like it probably does like be be
+Joshua Fisseha: I don't know if that really counts. Uh maybe.
+Oreoluwa James: Ethiopian or be like Kenyon or be just like ridiculously fast for no reason.
+Joshua Fisseha: Yeah.
+Oreoluwa James: Um but no,
+
+
+
+
+00:06:44
+
+
+Joshua Fisseha: Yeah.
+Oreoluwa James: yeah,
+Joshua Fisseha: Or long distance.
+Oreoluwa James: I know it's like a Yeah,
+Joshua Fisseha: Long distance.
+Oreoluwa James: I know it's like a dayby-day process.
+Joshua Fisseha: Yep.
+Oreoluwa James: It's just um I'm trying to like have a lot of grace with myself because I still do work a 9 to5. So, it's also just like I'm working most of the day and then um the only times I really find myself being able to study is like at the end of the day when my brain's already kind of like mush and like fried. So, I'm just trying to be consistent with um certain things. Obviously, the days where I don't have to be at work like early in the morning, I try to take advantage of that. Like yesterday was a slightly better day where I was able to do um some LR drills in the morning and I I felt like um I felt a little bit more encouraged to like read everything and make sense of the question stimulus while I was going through. Sometimes I feel like when I study at night it's just like I need to just read this to try to guess what this question is, you know?
+
+
+
+
+00:07:38
+
+
+Oreoluwa James: So, um I don't love that obviously,
+Joshua Fisseha: Right.
+Oreoluwa James: but we're we're we're getting through it.
+Joshua Fisseha: Yeah. Um, what time do you what time do you work? Uh, like what time do you start work?
+Oreoluwa James: Um, it it depends. Like I work in Philly, but my commute is really far. So, for example, today I had people in the office that were meeting us at 9:00, but in order for me to get there for 9:00, I have to leave my house by like 7:45, 8 a.m. So, like I when I have to be in the office early,
+Joshua Fisseha: Oat.
+Oreoluwa James: I have to like leave my house relatively early. Um, the cool part is though that sometimes my day could be as simple as someone's there from 9:30 to 11:30 and then I'm kind of free. So like after that 11:30, 12 mark, I can sit in my office and just do drills or just like read or do reading comprehension or whatever it is for a few hours before going home. So I I take advantage of those days when I'm able to.
+
+
+
+
+00:08:33
+
+
+Oreoluwa James: But um most days I'm like in the office like actually doing the work that I need to do. So whenever I go to the office, it's cuz I actually have to go, not because I'm like just going for fun or to see people cuz that commute is just too far. But my my schedule typically is um like around like 9 I I do like 9 to5 depending on what the day is. Some days I finish earlier, some days I finish a little bit later. Uh-huh. um depending on the workload. So, I've I've found myself even over like the past year of studying for this test, like I usually end up studying towards the um end of the day and like a transparency moment. I really I actually have a um psych appointment on the 18th. So, I'm going to actually talk to him about the other accommodations that you and I talked about, but also talk to him about potential like medication changes because um I have been avoiding taking my aderall for like several weeks now because I don't like the aderall crash.
+
+
+
+
+00:09:32
+
+
+Oreoluwa James: Like at the end of the day, I get really agitated and grumpy and it's extra annoying because that's like
+Joshua Fisseha: Yep. Jesus.
+Oreoluwa James: the time that I actually have to study. But I also don't want to put myself in like a um a place where I'm taking my aderall later in
+Joshua Fisseha: Oh yeah. Yeah.
+Oreoluwa James: the day and then I have difficulty falling asleep, you know? So, I have to find some sort of balance.
+Joshua Fisseha: Yeah.
+Oreoluwa James: And even with that, I know he's he's mentioned in the past or at least from what I've researched, a lot of people say um aderall works really well with like high protein foods. So, you have to consistently be eating like high protein foods because it like feeds off of the fat or whatever it's supposed to do. or you can take like a additional supplement that's supposed to lessen the crash or lessen the symptoms that one feels. But sometimes at the end of the day I'm just so like I'm very likely literally miserable
+
+
+
+
+00:10:19
+
+
+Joshua Fisseha: You're miserable.
+Oreoluwa James: like very agitated, extremely like overwhelmed, over stimulated where I just like can't focus. And it's very easy to tell when that like happens cuz some of my friends will be like,"You need to go to bed." and it'll be like 8:00 p.m., you know, it'll be like 8 8:30 and they're like,"You need to like go to bed. Like, you're done for the day. We can tell." So, um, even that's been kind of a problem where I've been avoiding the medication that's supposed to help me lock in because of the symptoms that one will experience later. So, um, sometimes I I don't know if it's not necessarily she doesn't understand the question stimulus or if it's more
+Joshua Fisseha: Okay.
+Oreoluwa James: like my brain can't like calm down enough for me to really like read everything between the lines I'm supposed to because I was taught like when you're doing LR, you're supposed to read and as you read like break everything down like how the translation drill is and like put things in your own words like define things in your own words or like figure out easier words for you to just comprehend everything a little bit better.
+
+
+
+
+00:11:20
+
+
+Oreoluwa James: So by the time you actually understand that, you're like,"Okay, this is what this is actually saying." So the question and the answers make more sense. But I find myself to be in a hard place doing that. So I'm going to ask them about other options to see how that can be of
+Joshua Fisseha: All right.
+Oreoluwa James: um of help to me because sometimes when I study for this test, I feel like I'm an idiot. And I'm like, I'm not an idiot though. Like I have a master's degree. Like I've been in school for forever, you know? So, um, and I know the test is designed to like weed out a certain demographic of people from being able to go to school and just like, you know, but I I keep telling myself it is a standardized test at the end of the day. So there's like a method. to the madness and I just have to identify like the best approach to that method that works for me. So, some days are some days are good, some days are like not so great.
+
+
+
+
+00:12:11
+
+
+Oreoluwa James: Um, I'm again like being very patient with myself in the sense of I would love um a November LSAT date just based off of like my schedule with my personal goals and other things, but also I'm not like completely opposed to taking it in January too because I think you get your score back at the end of January and there's a lot of people that still send applications out January, like even early February. Um,
+Joshua Fisseha: Oh yeah.
+Oreoluwa James: and you know, they do relatively well. And again, I think we had this conversation the last time that I'm a firm believer in I'd rather apply later with my best ELSAT score than apply like early with a score that I couldn't like really lock all the way in, you know? So, um I was talking about it with one of my friends who's also studying for the LSAT right now. It feels like the time I want to go to law school, everybody wants to go to law school. I'm like, you guys, y'all can't keep trying to take these seats from me.
+
+
+
+
+00:13:00
+
+
+Oreoluwa James: Like, I'm getting stressed out. Like, I can't talk about it with other people cuz I'll be like, oh my god, yeah, like I might go to law school, too. Like, my mom made the joke the other day. She's like,"Honestly, I probably should have been a lawyer. Like, I could probably do all of this logical stuff that you're talking about." I'm like,"Uh, maybe." I'm like,"Maybe." No,
+Joshua Fisseha: Don't sleep on her. Go sleep on her.
+Oreoluwa James: seriously.
+Joshua Fisseha: Don't Don't
+Oreoluwa James: I'm like,"Maybe." Because, you know, like African parents like they're very logical sometimes. Sometimes,
+Joshua Fisseha: Yeah.
+Oreoluwa James: but like they are in the sense of they're like I think our parents have been born and raised to play devil's advocate at any time. Like I can tell my mom something and she'll be like,"Okay, but like what was that person doing?" Like someone I could be like,"Oh my god, the police killed somebody." My mom would be like,"And what was the person doing?" Like you know how like the a normal person would be like,
+
+
+
+
+00:13:43
+
+
+Joshua Fisseha: Yes. Yes.
+Oreoluwa James: "Oh my god,
+Joshua Fisseha: It's my mom.
+Oreoluwa James: the police suck." My mom would be like,
+Joshua Fisseha: Yeah.
+Oreoluwa James: "What did the person do to provoke the police to kill him?" You know, like she's that type of person that will ask,
+Joshua Fisseha: Yeah.
+Oreoluwa James: not that she doesn't know that there's police brutality and all of those things, but that's just how she operates. So, I'm trying to get to that level where everything I do is kind of almost like argumentative. Well, not argumentative, but everything that I do, every conversation I have where people are like, she's going to do the lawyer thing where I'm like, well, why do you think like that? Like, why why why is that your first approach as opposed to doing something else? though. Um, but yeah, I mean I'm pretty okay.
+Joshua Fisseha: Yeah, I was going to say for the I did I actually did my my my thesis in my undergrad. I did it on ADHD and funny enough like a prescription um oh like ADHD uh particularly toward minorities.
+
+
+
+
+00:14:36
+
+
+Joshua Fisseha: That was my thesis.
+Oreoluwa James: Mhm.
+Joshua Fisseha: So, like a I was going to say like obviously like the problem that you're in a tough situation because like I 100% um sure that the aderall crash is the worst like like you're not you're not the thing about aderall aderall is like it's it's an amazing thing but for your situation the part is the crash brings you lower than your average point. You're not just you don't just go you don't go from like you know like you know your your focus you're locked into being like normal. You go from like wherever you are normally to like minus so you go plus 10 but then you essentially go minus 10. So that's going to be really difficult for you. That being said, like the like the only thing I could think of for your situation, like just off my own, this is like obviously take this with a grain of salt. Like it it makes more sense probably to like do less studying, but do it in the morning. That's probably your best.
+
+
+
+
+00:15:31
+
+
+Oreoluwa James: Mhm.
+Joshua Fisseha: Like you don't have to do it every day, but like if you were to decide to do like two days weekends like Saturday, Sunday, then like you were to spend like I don't know one or two days during the week or wake up like before you go to and I don't know what your commute looks like if you're driving or your bus. Um, that would probably be better cuz the the situation
+Oreoluwa James: I think it booted you out.
+Joshua Fisseha: So he was like,"This girl putting me out on my own call." Um, no, but you're right. Like the I was going to say the last like I don't know. I I can I I I feel like that's you're that's a tough spot to be in post studying if the morning.
+Oreoluwa James: Yeah.
+Joshua Fisseha: Oh my goodness. That's the other thing too is like uh also like you probably don't know this, but you see the protein stuff. The other thing is the like the gin. that's really like the the best best solution.
+
+
+
+
+00:17:03
+
+
+Joshua Fisseha: Um, but it's so hard to do it too because like you're
+Oreoluwa James: Oh my gosh. No. It's like it feels it almost feels like impossible, but it feels like that, which is I get it and it's supposed to feel impossible cuz it is a lot of stuff that you're doing, but I'm not discouraged because other people have done it. You know what I'm saying? Like there's people that work full-time and study for the LI and have gotten into law school and there's people that are now in law school and they're still working full-time. And I'm also somebody that's very I'm very active as well. So, I run like again like I said, I'm a marathoner. I run a lot.
+Joshua Fisseha: No, true. True.
+Oreoluwa James: I'm um I'm a Pilates instructor, so I teach Pilates. I do I do a lot of different things as well,
+Joshua Fisseha: Oh, damn.
+Oreoluwa James: you know. Um I strength train in the gym. So like I definitely am there. I think my two biggest like issues though truthfully is um like
+
+
+
+
+00:17:48
+
+
+Joshua Fisseha: Close.
+Oreoluwa James: time, not time management, but timing like medication like when I should take it for me to avoid. And then also, I won't lie, as active as I am, I'm I have a very bad relationship with food in the sense of I don't eat very well. And it also doesn't help the fact that aderall is like an appetite suppressant,
+Joshua Fisseha: The worst.
+Oreoluwa James: too.
+Joshua Fisseha: Yeah.
+Oreoluwa James: So,
+Joshua Fisseha: The worst.
+Oreoluwa James: it's like I take it and I get so focused on the things I'm supposed to be doing that I forget about like eating it stuff.
+Joshua Fisseha: Yeah.
+Oreoluwa James: So, I there's been times where when I first started taking it, I would set alarms on my phone to like go off and I'd be like,"Eat a snack or like eat like granola or like fruit or something like that in between the day because if I don't, like I literally won't eat." So,
+Joshua Fisseha: Yeah.
+Oreoluwa James: I'm considering talking to my doctor about it in the sense of asking him if um potentially taking bance will be a better option or as opposed to bans, maybe doing um um aderall that's not extended release because my aderal is like 20 milligrams extended release.
+
+
+
+
+00:18:49
+
+
+Joshua Fisseha: Yes.
+Oreoluwa James: So, maybe just taking like aderall. I think it's like the other one is IR like instant or maybe it's just something else.
+Joshua Fisseha: It's an early sale.
+Oreoluwa James: But I think the other one that's not extended release is only,
+Joshua Fisseha: Yeah.
+Oreoluwa James: you know, it only works for a shorter period of time. So maybe just taking it during the period of time that I know I really need it.
+Joshua Fisseha: Yeah.
+Oreoluwa James: You know, like say I'm like, okay, I'm going to sit for a full length practice test on a Saturday. It's like, okay, that IR is going to start at whatever time and then it's going to finish in like four hours, you know, and like obviously I can use that during the time period to like kick in for the test. So I have to just ask him about it. He's very he's a funny guy because he's very slow to kind of um he's very conservative with his modalities in the sense of like he's like I don't really want to medicate you if you don't really need to be medicated.
+
+
+
+
+00:19:38
+
+
+Oreoluwa James: And to be honest, I went into my appointments with him being like I don't want to be medicated. Um but I I kind of I removed the stigma that's around medication. Um you know, I kind I try to look at it like how people take supplements. I'm like, it's not that you're taking supplements because there's something wrong with you,
+Joshua Fisseha: Whatever
+Oreoluwa James: but it's like maybe you're just a little bit more deficient in vitamin D or like you want to calm yourself down more, so you take like Ashwagandha that helps with your stress response. Like it's not a big deal. Um, so I think it's just the approach that I go. So, I definitely do think I want to make a switch over to um studying like for at least 2 hours in the morning or whatever I can and then making sure that's around the time period that whatever medication I help I take to keep me focused helps. Um, but my thing is I don't just like taking medication to take medication. In the beginning, I thought I was like,"Oh, you know, it was funny. I think it was the it was actually the ELSAT that like made me go get diagnosed for real because
+
+
+
+
+00:20:38
+
+
+Oreoluwa James: I like was thinking about how difficult it was for me to like just sit down and like study and you know in my head I was like you know what it's fine it's because this test is boring and it's just really lengthy and it's really long like it's nothing that you're doing but then I had to be honest with myself and I and I I talked about how these symptoms show up in my day-to-day life too that's not even outside of my LSAT. And then that was the reality where I said,"Okay, maybe I do need to go and speak with somebody about um the best approach to this in general because I'm eventually going to start law school." And it's like, excuse my language, but like n***** need to lock in, you know? So,
+Joshua Fisseha: Yeah.
+Oreoluwa James: it's like like that's how I look at it in that sense of I can't go into school and know that there's something that I could have addressed with somebody that's a professional and I chose not to because of whatever reason.
+Joshua Fisseha: Oops.
+
+
+
+
+00:21:27
+
+
+Oreoluwa James: So, um, so you said you suggest like less study but aiming more for the morning. Like would you say like less days a week? Because I try I feel like I try to get at least two hours in a day if I'm able to.
+Joshua Fisseha: Yeah. Don't do that.
+Oreoluwa James: Sometimes I feel like it works. Other days I don't feel like it works. Um, or even if it's not like sitting down and being at a computer, I would love to figure out other ways to make it feel like um more um not versatile but like easier access. Like say I'm on the stairm at the gym. Like I would love an opportunity if there's like a logical reasoning game. I wish someone could make a game. Like if someone knows how to make like an app that makes logical reasoning questions like a game, that would be a really really cool thing. I feel like Elsat Demon, they did a good job of that in the beginning. And then I started to realize that they're just like bullies because their explanations became really rude and it was like um sorry I didn't understand that.
+
+
+
+
+00:22:19
+
+
+Oreoluwa James: I don't know why.
+Joshua Fisseha: are are you talking about the smart drill?
+Oreoluwa James: Um I think so.
+Joshua Fisseha: That's the other question I I want to ask you before we jump in. What's the how are you drilling right now? What's your like mode of drilling? Just throw ahead. So like are you using the cell you're building sense and stuff?
+Oreoluwa James: I'm sorry.
+Joshua Fisseha: Like how are you like what's your form of drilling right now?
+Oreoluwa James: Well,
+Joshua Fisseha: Like what's the
+Oreoluwa James: when I go on the elsat U and I just go to like the drill section, I just click like set up an LR drill.
+Joshua Fisseha: So I was going to that's what I saw when I was looking at it. But what I because what I was going to say is you should and I'll I'll so there's going to be a lot of change this weekend by the way. the Sunday the Sunday you expect by a lot of things are going to not a lot but there's going to be like it's pretty much done but the idea is like I would recommend for you the other thing is using the smart drill so it's essentially it's exactly what else demon has where you choose you you don't have to think about it it's going to choose questions for you
+
+
+
+
+00:23:11
+
+
+Oreoluwa James: Mhm.
+Joshua Fisseha: and it will find the perfect questions for you based off the level you are the more questions you do the more smarter it gets and knows about you so then it'll give you better questions for what you need um so I would recommend I was say that's the other thing too like use don't go into taking sets, let it choose for you because it will detect where your problems are and all you have to press start start smart drill and it'll just choose a question
+Oreoluwa James: Okay.
+Joshua Fisseha: for you and the more you do it, the more the algorithm will understand what you need. Um, that's actually much better. And you can also do a question like when you're in the middle of work break or like you like you have the option to be not locked into like 10 questions or that's just like a commitment you don't necessarily want to force something.
+Oreoluwa James: Is there a is there like a smart drill area? Because when I click drill, it seems like it's either bringing up the um read recall and um assignments or it's like practice your weakest types.
+
+
+
+
+00:24:03
+
+
+Joshua Fisseha: Okay, I'm going to check right now. I would see if it's enabled for you.
+Oreoluwa James: Okay.
+Joshua Fisseha: Okay. Oh, no. I haven't I don't think I It's Oh, no. Because Yeah, there was Okay. No, no. So, I I I pulled it back. I forgot that I pulled it back. It's It's going to be, by the way, so this this Sunday, you're going to see the RC. You're also going to see a lot of um activities to do and all and you're going to have exactly what we just discussed. You're going to have the smart all drill and then you're just going to do as many questions on that as you can. Not like as many as you can, but like you're going to have the option to when you go on the homepage, all you have to press start smart drill and you'll be able to do on your phone and it'll give you a question based off of like what it knows about you based off all the practice tests off the analytics you have and also like the more questions you drill the more it'll know.
+
+
+
+
+00:24:46
+
+
+Joshua Fisseha: So that will be something you should really that's probably what I would say um is the most powerful. It's actually the most underrated and you picked up on that demon has that one thing that I would say is good but you're going to get the exact same thing. So um by Sunday expect it to be there.
+Oreoluwa James: Okay.
+Joshua Fisseha: The other thing too is like study less days. Um I would recommend you study less days. Don't try to force two hours a day.
+Oreoluwa James: Okay.
+Joshua Fisseha: go for like if anything even like if you go like four days a week maybe five days a week if you can if you can do Saturday Sunday for example because you're not working and then you chose like two days a week maybe three days weekdays if you want to push it but taking at least like a t take Tuesdays and Thursdays off for example and you were to say to stick to like Monday Wednesday Friday something like that of that sort um you're way better off and the thing of Why is that you don't even want to look at the LSAP those two days you're not doing it because you want to
+
+
+
+
+00:25:45
+
+
+Oreoluwa James: Okay.
+Joshua Fisseha: force yourself to miss it a little bit. It's a weird psychological trick where if you don't give yourself the chance to be away from it, you're just going to be kind of dragging along your like you know like by like your knuckles. You're going to just be kind of like just going through it the motions. But when you take a day off, you'll feel like okay I I need to like it's almost a sense of urgency. You want to play with that feeling because that's very powerful. Plus it's like it'll give you that feeling of locking in when you're actually doing it. If you just like do it like half ass, just like going through it, yeah, I'll do it the two hours, your two hours won't be effective as you think. When you give yourself constraints, you'll find yourself, it's almost like unanimously. I found that to be the case for most students. Um, don't force do not and when you're not doing the test, like you really don't do the test.
+
+
+
+
+00:26:27
+
+
+Joshua Fisseha: Like really like don't try to flirt with like looking at something and like like no like force yourself not to do it. It's part of the it's like going to the gym like you're an athlete. So like it's like if you try to overtrain it's going to diminish your ultimate like you're not you're actually doing less. Um doing less can be more anytime. So like you want to uh not allow your like uh you know people can get OCD and like like I need to get something done.
+Oreoluwa James: No, I completely get it.
+Joshua Fisseha: You need to re stuff away from
+Oreoluwa James: I feel like when I go like two or three days without being in the gym, I'm like, I got to go for the gym. Like that's how I feel.
+Joshua Fisseha: Yeah. Yeah.
+Oreoluwa James: So I get what you mean.
+Joshua Fisseha: Yeah. Yeah. And it's uh when you go to gym, you'll be like,"Whoa, I'm I'm like like energy is topnotch." You haven't done it for a couple days,
+
+
+
+
+00:27:08
+
+
+Joshua Fisseha: so your body's like rested. You really want to work with that. The LSAT's not a volume like like it's it's really a game of like consistency over like intensity big time. Um but yeah, what we're gonna what I wanted to do um though is I'm just going to jump into this with you. Um and we'll I'll have you jump a question.
+Oreoluwa James: Okay. And
+Joshua Fisseha: Let's just stick to what's here. So, we'll keep a simple um this is the what everybody hates to do. Well, we can do door two directions. Um, conditionals is the I know it's the boogeyman for a lot of people. They just don't like doing conditionals because they're headache. Um, but the other thing as well is uh I was going to ask you how do you feel about um your ability to do your ability to uh like structural analysis like like with regards to role questions with like argument parts? Do you are you do you feel in your own like in your own personal experience do you feel like you're comfortable with that?
+
+
+
+
+00:28:39
+
+
+Joshua Fisseha: Um, we can like I would probably think it's good to go touch on that.
+Oreoluwa James: Yeah,
+Joshua Fisseha: Um,
+Oreoluwa James: we can.
+Joshua Fisseha: but we do need to do conditionals soon. That's the thing. So, it's like either or. So, we can do we can do this for now and we'll do is we'll go to the Yeah, we'll stick that. There's two directions you can because there's no wrong answer. Still very early to I'm just gonna we'll go through anyways. The idea is um what or at least what we're going to Can you see my screen? No, you can't.
+Oreoluwa James: Not yet.
+Joshua Fisseha: Um second Okay. The the thing that I was going to say uh you can see the whiteboard, right?
+Oreoluwa James: Mhm.
+Joshua Fisseha: Okay. So, um, when we say like we discussed it last time, right? We discussed the idea like we introduced the idea of like how do we even approach the Elsa, what's the game plan, what's the general framework um that was broadly what we were discussing understanding what validity is understanding how to approach like the thought process with like attacking the argument in a in a broad sense.
+
+
+
+
+00:30:18
+
+
+Joshua Fisseha: Um, but to be able to do that, we do need to have like a high level proficiency with being able to categorize each claim and be able to know which function like why that statement is presented in front of us for each claim or why that claim is presented in front of us. Um, also knowing what is said, but we also need to know why that statement is there. Why did the author write that like claim or that statement? We need to be able to do that for all of the claims, all the statements on the um on the stimulus because we once we can have the structural understanding, it also does serve us to understand that to be able to understand it from like a um an understanding of content. Content will come is not as important as structure. So, broadly speaking, we need to know the every claim on the LSAT, right? We want to read, we want to recall, and we want to be able to uh color it ideally as we go. And I can send you remind me to send you write it down uh a sample.
+
+
+
+
+00:31:13
+
+
+Joshua Fisseha: I have a stu like a I got some students who made a video. So it's going to be just a little review so you can see and it's going to be instructional video. Um because you still want to stay on that. You don't want to stomp that and you want to make sure that you get and you'll see the instructions because um yeah it's just like uh somebody else actually right before you said the same thing like they're not sure if they're doing it right. So I have to send a couple people a video because it wasn't very clear with the instructions. But that being said, um we do need to know what the but once we understand what it says, we have to be able to categorize it. So the categories broadly speaking um of course is the northstar main conclusion. The main conclusion this is everything. This is the thing that we are trying to show that whether the author did his job of establishing the case. Right? Once we can identify that it becomes um everything else works and is centered around that idea.
+
+
+
+
+00:32:13
+
+
+Joshua Fisseha: So we know the main conclusion, the author's conclusion. We need to have a very clear understanding of the strength, the degree of his claim. We need to be able to say does he does he say something must be true? Something necessarily have to be true? Something could be true. Um we do want to understand all of those nuances. the conclusion. We have to have a very pinpoint sharp understanding what exactly they're claiming, right? Um there's there's obviously we'll go into that, but we need to first identify the conclusion. Number one task for every single argument read, you're on a manh hunt for the conclusion. Nothing else matters until you find that. Okay? And for the conclusion, how do we find that? What's our methodology?
+Oreoluwa James: Um, I feel like for me. me, I usually I try to find like indicators. Like I'll find words that kind of give it away in the beginning. Um, or like I'll just find a statement that seems um I don't know what word I want to use, but a statement that seems like it's like law, you know, where it could be like therefore children that start school at 8:30 are going to always show signs of being tired compared, you know, like something like that where it seems very like sturdy and it seems like, okay, like this is like the main piece, like this is the whole point.
+
+
+
+
+00:33:34
+
+
+Joshua Fisseha: Yeah, the Yeah, that's and that's broadly true. The thing though is the danger in that because of the importance of the conclusion. Um like it's like thinking of it like you can get away with that law with what you said. The danger is kind of think of it as like Russian roulette. Like if you mess up the conclusion, everything else will will not like nothing is going to work. This is your your ability to do a question kind of like um at least do it with like know well obviously you can guess an answer theoretically but the correct answer will only be possible if you know the conclusion very well right um like you may get away with it here and there but that's just because you never you won't be able to repeat that. If you cannot articulate the conclusion exactly as they want as they're expressing it you will never get to the ability to consistently get the questions right. Um, it's actually funny enough like people overestimate their ability to to be able to do this.
+
+
+
+
+00:34:25
+
+
+Joshua Fisseha: It's a very overestimated uh not that it's not people can't do it, but it's people have over sense of confidence with their ability to understand the conclusion. It's not just getting a feel for it. That's not enough. We need to know because if you're a lawyer, you can't just be like, I don't I think my I'm fighting for my client's innocence. It's like you either you're fighting for your client's innocence or you can't have like an ambiguity with the what your verdict you're fighting for. That's not even ne like if you you know you can negotiate certain things but whatever side of the case you're taking is going to be super conclusion ultimately the two steps you want to take author's opinion one of the statements are going to be the author it's going to be an opinion not fact and fact like I said it's not an actual fact in the real world it's a fact that like we have uh we take to be true um based off of like based off of the how the author expresses it.
+
+
+
+
+00:35:28
+
+
+Joshua Fisseha: Like if they treat as a fact, you treat as a fact. If it's measurable, if it's verifiable in a sense like it's empirical, then you can actually check like and see whether it's like like a fact should be of course descriptive, but it is also like it needs to be something that's like verifiable. I can't I can't know one's like intentions.
+Oreoluwa James: Okay.
+Joshua Fisseha: for example, like you're brewing the LSAT um you're taking the LSAT to be able to be a lawyer one day, right? I don't know if that's that's not a fact. I don't know that, right? Like I can assume that, right? Because based off of like your intentions probably point you toward direction that's not something I can put under a microscope and say you know or's like intentions like I'm going to put on a scale I can't really measure that right it's not it's abstract so fact is something that can be like measurable in some sense or empirical like Canada's land mass or America's like land mass or who is the president of United States it's like there's a line where you can say yes or no that has to be so it cannot be a fact has to be an opinion it's where the author goes on a win takes a leap okay so first thing has to be the author's opinion so that statement has to be the author's Opinion step two has to be receiving explicit support
+
+
+
+
+00:36:37
+
+
+Joshua Fisseha: from at least one other statement. Doesn't need doesn't need more than one other statement. At least one other statement. Like I always say, not every statement is a premise of conclusion, right? There's other state there's other things that we will figure out. we'll look at today. But not every statement is a premise or conclusion, right? So we want to get at least explicit. So we only get explicit at least from one other statement. The other thing though we can do this the simplest but practical way is whenever you see a claim you should probably ask yourself this for every claim you read. Um broadly speaking you want to ask yourself why and not like like like not passively feebly. You want to be very aggressive when you do this. Why should I believe this? You're cross-examining the stimulus. So, every statement and then one of the answers, they're going to give you an answer for that. They're going to be appealing to another statement, right?
+
+
+
+
+00:37:42
+
+
+Joshua Fisseha: So, um say we'll be at the top lawyer, right? Why should I believe this? Right? I have to have another statement to be able to express why I believe that because of course like an example here, you being top floor can't be a fact because it hasn't happened yet, right? By definition, it's like I can't unless I'm god I could I could never express to you what the future's going to be, right? But I can give you my opinion on a recommendation or not recommendation, prediction, right? I can say this is a great top player. Why should I believe this? Because me just saying you're a top lawyer is not a conclusion. It's not an argument. An argument has to have both a premise and a conclusion. Must if it's missing one of those two things, it cannot be an argument, of course. So, I need to have an answer to this. Does it have to be a good answer? No. But it has to at least be an attempt, right?
+
+
+
+
+00:38:55
+
+
+Joshua Fisseha: It can be like because she is you're from you're not from DC, are you? I always Jersey.
+Oreoluwa James: Jersey.
+Joshua Fisseha: Why do I Why do I always think you're from DC?
+Oreoluwa James: I wish I would love to go to school there. Maybe. We'll see.
+Joshua Fisseha: You grew up in Jersey.
+Oreoluwa James: I'm sorry.
+Joshua Fisseha: You grew up in Jersey.
+Oreoluwa James: Yeah.
+Joshua Fisseha: Like you you're born and raging.
+Oreoluwa James: Born and raised.
+Joshua Fisseha: Wow. Okay.
+Oreoluwa James: Been here my whole life. This is all I know.
+Joshua Fisseha: It's uh I had a I had another one. I had a like one of my one of my like favorite students. He was a Jersey guy, but he would sound like you're from Jersey.
+Oreoluwa James: Really?
+Joshua Fisseha: He was like not like obviously maybe Yeah. I don't know.
+Oreoluwa James: Yeah.
+Joshua Fisseha: I guess maybe I'm just not at all.
+Oreoluwa James: I don't think I have a I don't think I have a Jersey accent. I'm not.
+
+
+
+
+00:39:40
+
+
+Oreoluwa James: Yeah,
+Joshua Fisseha: Not at all.
+Oreoluwa James: I don't think I have a Jersey accent because I like I know some people that do have Jersey accents and you don't really recognize it until you leave and then come back and you're like, why do you talk like that?
+Joshua Fisseha: Wait, you went to college in like uh Jersey, too?
+Oreoluwa James: Mhm.
+Joshua Fisseha: Okay. Interesting. Yeah, his like I honestly though I'm saying that from a sample size of like I think one or two. So, and he had a strong like it was very very strong accent. I'll say so the the idea is she'll order the top lawyer. Why? Believe it's because she's from Jersey. Not really probably a good answer as to why you'll be a top lawyer, but it's at least me trying to give you an answer. Doesn't have to be a reasonable one.
+Oreoluwa James: Yeah.
+Joshua Fisseha: I'm attempting it. It's the attempt, right? Um, and the other thing to remember is yes, the indicator words are your best friends.
+
+
+
+
+00:40:28
+
+
+Joshua Fisseha: The more important indicator or no words to know though more than anything is your premise indicator words because it's a weird quirk of the English language where it's impossible to have a premise indicator word and not have a premise follow it. It's impossible. Conclusion indicator words, you can you can have there could be some games there. There can be a subconclusion. It can be not a conclusion at all. So conclusion indicator words are more flexible but premise indicator words are not. And the ones that you need to remember are these are the more most common ones. These four
+Oreoluwa James: Yeah, because for I feel like AZ is one too, right? Okay.
+Joshua Fisseha: try. So, and this is the way you can remember it. This is actually something a student of mine taught me. I think it was the same student actually. Funny, the Jersey student, but yeah, this is how he remembered it. And this is how like I always teach him not like this.
+
+
+
+
+00:41:31
+
+
+Joshua Fisseha: FAPS. So, the like instinct of the fabs, right? So, for after all, because that's fabs.
+Oreoluwa James: Okay.
+Joshua Fisseha: So um I'm just going I'm going to have you you just got to remember that you have to these are the four most important ones. The value in these is that every single time you see an indicator word like they said it's a primary indicator word but indirectly it's also a conclusion indicator word
+Oreoluwa James: indirectly is also a conclusion. What?
+Joshua Fisseha: indicator word indirectly because whatever you see a premise there has to be a conclusion
+Oreoluwa James: Okay.
+Joshua Fisseha: attached. So if I say because whatever follows the word because it's going to whatever phrase or statement or whatever it is follows because is going to be a premise but then it means whatever set was said before it has to be a conclusion. Right? So if I see the word since, I know that there's a conclusion attached to that since. And the premise. Okay. And the word for same thing, right?
+
+
+
+
+00:42:50
+
+
+Joshua Fisseha: Um so we know that there will always be a conclusion attached to it. It could follow it too like the way you can see since right. Um it could be like since premise night conclusion. Right? But it could also be premise, a conclusion, then premise. The order is not really important, but we just know there's going to be a conclusion uh attached to it right before the frame statement or right after the the premise. There's going to be something attached. So, we do need to know these very well because it's like a cheat code. And you can't there's no negotiating with these. Conclusion indicator words can't be negotiated with. It could be a therefore a hence
+Oreoluwa James: Okay.
+Joshua Fisseha: so very popular one
+Oreoluwa James: Mhm.
+Joshua Fisseha: obviously right um as a result um that premise um that's this is like then the conclusion indicator words you do you want to know the other indicator words you want to be aware of are indicator words of Other things like we're going to discuss here is like opinion indicator words.
+
+
+
+
+00:44:28
+
+
+Joshua Fisseha: Okay, these are words like ought, should the there there's ought, should, preferable, like you'll see terms like that, but ought and should are very important. These are like um opinion indicator words. We do. want to know them uh because they indicate that the statement is an opinion whether it's opinion of the author, right? Um if it's talking from firsthand or he's talking from the perspective of uh from the perspective of uh like the other side, they're saying they believe they should do that. But that's that's not too complicated. The idea that we want to make sure we understand both through and through is that indicates a con like if it's a an indicator word of course will tell us that's likely to be a conclusion. because in the conclusion has to be opinion there. So um now we do also want to know I'm just going to throw another one in here just because it's good to know these ones as well. We want to have this understanding but yet and however. Do you know what those indicate?
+
+
+
+
+00:45:56
+
+
+Oreoluwa James: like a I don't know like a difference in opinion or like a I don't there's like a way I'm trying to explain it but I don't I don't know if it's like a difference in opinion
+Joshua Fisseha: It's pivot, right? Um, which is good. The the idea is that we understand that when the author gives you the word but yet however it's changing directions from what it said prior. It's counteracting what was said before. Not maybe entirely, but at least at some level it is. Okay. So we know that likely in almost any free scenario when we see the word but yet however it should be the but should introduce it should be but either the conclusion then then premise right and then so I'll give you an idea See what I mean? But um I'll show you another example. The truck is going to leave nasty leave a leave a terrible I'll leave behind a terrible that will is going to ruin a American, Canadian Well done, but yeah, it's fine.
+
+
+
+
+00:48:03
+
+
+Oreoluwa James: That's funny cuz I was literally thinking the word relationship cuz he probably is.
+Joshua Fisseha: Oh, yeah. Yeah, it's it's horrendous. Like, everyone in Canada is absolutely like disgust. Like, we have streets called Trump. Um, and they're all they're like the city council are taking them all down and changing them. Like, it's really like uh people are really not happy with that.
+Oreoluwa James: Wow.
+Joshua Fisseha: Can Ontario like even even talking to you right now,
+Oreoluwa James: God.
+Joshua Fisseha: I have to be careful that they don't catch me.
+Oreoluwa James: No.
+Joshua Fisseha: Okay.
+Oreoluwa James: Before you just like randomly like get booted off again.
+Joshua Fisseha: Yeah, that's hilarious. No. So, yeah, Trump is going to ruin the American Canadian relationship. Um, but he cannot stay in office forever. Or we'll say something more. But he will not crush the Canadian spirit. Yes, he will. Since we're true north, we're the true north. Okay. So yeah, this is the one way they could do it.
+
+
+
+
+00:49:24
+
+
+Joshua Fisseha: So it's going to be uh he's going to give us they're going to give us like some uh likely attribution to another another side, another belief system, another ideology, another system, another other person or group. Whenever they mess with a group or person that's not the author speaking about himself, it's a guarantee he's going to go against it. So, he'll never bring up anybody else except for the fact that he wants to recruit them. Just this So this so this is the thing that I want you to also keep in mind. It's not necessarily so this is the conclusion. So but will introduce a conclusion then premise but it can also go prem premise then conclusion right. So but since we are the true north uh you will not cross today's spirit. So the indicator words are important to understand that there's an indication of something but we don't want to think about pivot word means it has to be the conclusion could be premise and conclusion. So he questioned uh true Earth. But since we're the true north, you will not crush the Canadian spirit.
+
+
+
+
+00:51:13
+
+
+Joshua Fisseha: Yeah. So you always know premise, then conclusion, conclusion, then premise. Okay. And whatever said before, he's shifting away from that. Okay. Now this is the other thing to also be very um to be very important here. Um we do want to notice that whenever they give us a not very important but something really like useful as well is like I was saying while I was mentioning this whenever they give us opposing viewpoints so whenever they bring up anybody else that's not the author. So they'll bring up likely like some people say, biologists will attribute an idea. They'll be an attribution to a group, right? we'll say I don't know Africans um I don't know you can think of economists right so whenever they bring up any group of people any individual anything of some sort we know they're going to negate that idea so we want to read it with understanding whatever that the person is going to be attributed whatever they give to that person they're going to deny it at some point at some Okay.
+
+
+
+
+00:52:40
+
+
+Joshua Fisseha: Um. Yes. Okay. So, we always want to pay attention to and we want to call it out right away and we see want to get in the habit of that. Okay. Um now for conclusion questions and argument part questions even method uh reasoning question um there's a couple things that we can uh remember this as like just like these are little shortcuts cheat sheet codes for like these question types conclusion
+Oreoluwa James: Mhm.
+Joshua Fisseha: and the um yeah the conclusion is going to be and almost like vast majority like 90% of them is going to be in one of two places in the argument. Where do you think it would be?
+Oreoluwa James: like where in the stimulus will the conclusion be? Usually I feel like it's either the first sentence or it's the last sentence.
+Joshua Fisseha: Yes. Um not the last almost never going to be the last sentence because they know that you're going to expect that, right? Everyone's going to think, oh, therefore, and last sentence is going to be the conclusion.
+
+
+
+
+00:53:47
+
+
+Joshua Fisseha: No. So, it's going to be yes, either first sentence very unlikely last sentence, but first sentence. Yes. Right. And the other place is it's going to be a rebuttal. You have a 90% chance of not higher of being of being this. What does that mean? They're going to tell you straight off because they know people are expecting the conclusion to come right off the bat swinging, right? They're expecting to build up and like a support the conclusion because that's how normally people talk. Like nobody's going to say the conclusion then support. That's that's not really the case. It's upside down. It's counterintuitive. The other thing though is they're going to bring up some people believe X but right we know that the first statement if they attribute to anybody else but the author is not talking in first person he's talking about a group or an ideology or thing right instantly we should expect that it's going to be a rebuttal so we expect the conclusion to be kind of like crammed in the middle and they might not even articulate the conclusion out loud what I mean by that if I said some people believe give me a random belief you can I'll let you give
+
+
+
+
+00:54:53
+
+
+Oreoluwa James: Some people believe that aliens exist.
+Joshua Fisseha: You're telling people some people don't. Okay. Some people believe aliens exist. Right now the idea is we know that if they say uh even I'll make it more specific. say some scientists or some science some some politicians.
+Oreoluwa James: You know, the one I hate the most when they do it, they'll be like,"Proponents believe." I'm like,"Oh my god,
+Joshua Fisseha: Yes. Yes. Yes.
+Oreoluwa James: I hate that word proponent because then I'm like,
+Joshua Fisseha: That's a that's
+Oreoluwa James: okay, so proponent is like an advocate." And I usually assume like an advocate is more of a positive thing. Like they're in support of that, right? Okay. Okay.
+Joshua Fisseha: well they're proponents of a belief. means that they believe in this idea. Yes.
+Oreoluwa James: Yeah.
+Joshua Fisseha: Um yeah, that's a very popular one. So some like uh proponents of uh I don't know the Republican party or whatever you want to say like some politicians believe that aliens exist.
+
+
+
+
+00:55:51
+
+
+Joshua Fisseha: We can keep it like that. We expect that that means that they're going to the answer will be something the answer but the conclusion will come in a form that's not necessarily going to say but aliens do not exist. They're going to say but they are wrong. Why they do that? And this is obviously simplistic version here. They want you to they want to confuse you by not actually spelling out the conclusion that they're fighting for in the argument. They're going to condense the idea of what they're trying to like articulate and the word they. They is doing a lot of carrying there. They is condensing the whole idea that the other side's holding on to. So they'll use words like they are wrong or um they're misinformed.
+Oreoluwa James: So the author is saying like in this the author would be saying that politicians are wrong about believing in aliens based on how this is set up so far.
+Joshua Fisseha: It's It's literally aliens don't exist.
+Oreoluwa James: Okay, that's what the author is trying to say.
+
+
+
+
+00:56:48
+
+
+Joshua Fisseha: Right. Yes. That thing. Exactly. Right. They You're not You're literally saying whatever they're saying, whatever they believe, they're wrong. Right. So you want to rearticulate. the conclusions because they might even name it. They won't say it. They'll say,"But they're wrong." And then they'll go into their arguments justification. They're wrong. And this is obviously like pretty clear, but they might go into saying like they're wrong. We've had plenty of sightings and all the sightings have been found to be uh Jim Bob who's been wearing like costumes uh to prank the neighborhood kids, let's say, something like that.
+Oreoluwa James: Mhm.
+Joshua Fisseha: Um so, and the thing is you want to rearticulate the conclusion, the rebuttal. You want to rearticulate it as what the side is fighting for. Like I was saying, the conclusion, you don't want to leave it as, oh, the conclusion is they are wrong. That's not what you want to think of it as. The conclusion is aliens don't exist.
+
+
+
+
+00:57:37
+
+
+Joshua Fisseha: Be very explicit. Do not do not let yourself get uh muffled in with the just like vagueness. You should be able to write the conclusion as a sentence like very concise and know which side you're fighting for right based off.
+Oreoluwa James: based off of the author's claims.
+Joshua Fisseha: Yes. So whatever the idea is being attributed to. So if they're saying
+Oreoluwa James: So like for this some politicians believe aliens exist but they are wrong. My conclusion would be aliens do not exist.
+Joshua Fisseha: that's the that's the office conclusion here. Yeah.
+Oreoluwa James: Okay.
+Joshua Fisseha: It's not like some alien politics don't believe aliens exist. That's not the like obviously that's not the authors. It's literally saying they're wrong. So that idea and we want to supplement what's being said of the referential phrase with the reference. The reference is the idea of like the aliens existing. Rearticulate the conclusion as a rebuttal and be very clear, right? Um, do not let the conclusions be implicit because they're often implicit conclusions and that's how they get us in many questions.
+
+
+
+
+00:58:46
+
+
+Joshua Fisseha: And you might have a general feeling like, yeah, author doesn't agree with this side. Yeah, and you might get away with it, but the thing is when the questions get challenging and you're trying to keep all the ideas in your head, you want to keep your ideas sharp because they will they're going to throw a lot of like tricky nuances in there that might be even it might be like um more nuanced and this is the the other piece of the pie I want to throw in here is the idea of like premise conclusion. We can have subconclusions which a subconclusion or intermediate conclusion is just simply put a conclusion that functions as as a dual functioning. It's supporting a conclusion. You know what I should double check. You're aware of what a subconclusion is, right? If you don't subscribe or an intermediate
+Oreoluwa James: a subconclusion like an intermediate
+Joshua Fisseha: conclusion.
+Oreoluwa James: one.
+Joshua Fisseha: Yeah, they're the same thing. They're the same thing.
+Oreoluwa James: Okay. It's like Isn't it both like Isn't it both like the author's opinion and evidence?
+
+
+
+
+00:59:56
+
+
+Joshua Fisseha: Uh yeah, kind of. But it's specifically It's a conclusion.
+Oreoluwa James: Okay.
+Joshua Fisseha: So it's not any less of a conclusion.
+Oreoluwa James: But it's like not the main conclusion though.
+Joshua Fisseha: Exactly. So think of it as like a layover in some sense. Like the premise is where you're starting off the argument, right? Um you've been to Canada before, right?
+Oreoluwa James: Mhm.
+Joshua Fisseha: Okay. So let's say premise is uh we'll say jersey is the starting point. That's the starting point of the argument. And then let's say you wanted to go to Montreal. So thinking of the uh the layover is in Toronto. Yeah. So, the thing is like for some people that got on a flight with you, they got into the fight with you, their end trip will be Toronto. They just want to go to Toronto. That's their vacation, let's just say, right? And then for other people, this is just going to be a pit stop for them to be able to get to the last point which is to Montreal.
+
+
+
+
+01:01:43
+
+
+Joshua Fisseha: Right? So it's not nothing's inherently a conclusion or a premise or a conclusion main conclusion or intermediate conclusion. It just depends on how the argument is formulated. So like the conclusion the intermediate conclusion when you say the word intermediate outside of the LSAP, how do you understand that? What does that like where do you hear that word coming from? Where do you hear that word usually used?
+Oreoluwa James: It's like usually the in the middle.
+Joshua Fisseha: Oh,
+Oreoluwa James: It'll be like beginner,
+Joshua Fisseha: exactly.
+Oreoluwa James: intermediate, and then like expert or something or advanced or something.
+Joshua Fisseha: Got it. Yeah, exactly. Same thing here. Thinking of the intermediate as the middle road. So, it's it's dual functioning. It's supporting a main conclusion directly supporting the main conclusion, but it's also being supported. So, it has all the criteria and all the features of a regular main conclusion, but it's just not the final stop. Like in in another argument, it could have been the main conclusion if they didn't add more.
+
+
+
+
+01:02:39
+
+
+Joshua Fisseha: Right.
+Oreoluwa James: So, it's supporting the conclusion,
+Joshua Fisseha: But if they add another conclusion Yeah.
+Oreoluwa James: but it's also still being supported.
+Joshua Fisseha: Yes. It has to be an author's opinion. It has to also be supported by another statement. But then it's also doing that for another statement. So like thinking of it as like the hierarchy. If you uh I don't know if you watch any sports, but if you do, like do you watch any sports?
+Oreoluwa James: Mhm.
+Joshua Fisseha: What sports do you watch?
+Oreoluwa James: I watch tennis. I watch soccer. I mean, when it's like World Cup, um, basketball, baseball.
+Joshua Fisseha: Yeah. Sweet. So, let's say basketball. What's your What's your team? I'll say the Nets.
+Oreoluwa James: No, I'm a Sixers girl.
+Joshua Fisseha: Okay. Bandwagon. LeBron's on the We'll say LeBron.
+Oreoluwa James: I literally do everything in Philadelphia. I work in Philly.
+Joshua Fisseha: Okay.
+Oreoluwa James: I'm a Philly girl like and I went to school there.
+
+
+
+
+01:03:34
+
+
+Joshua Fisseha: You do work there. I forgot you do work there. I was going to say
+Oreoluwa James: That's my city. Like that's my city. Yeah, Philly is my city because when you when you hit a certain part of um North Jersey, when they talk about the city, they're talking about New York. But when you're like down here and you're talking about the city, you're talking about Philadelphia. Like I was tell my like,"Oh, we're going to go to the city. We're talking about Philly. Like we're not talking about anywhere else." So
+Joshua Fisseha: Interesting. Okay. I I I forget how close they are. Northeast.
+Oreoluwa James: yeah.
+Joshua Fisseha: Yeah. Um let's say basketball, we'll use LeBron and or I guess who do you I guess I don't know if you'd call LeBron the superstar um on that team now. Still he's the old man. Um you know, I'm going use a more simple clear distinction here. Let's say remember when LeBron was on the Cavs with Kyrie.
+
+
+
+
+01:04:20
+
+
+Oreoluwa James: Mhm.
+Joshua Fisseha: Yeah. So, LeBron being thinking of LeBron as is LeBron a superstar when he was obviously on the on the Cavs with Kyrie.
+Oreoluwa James: I would say so. Yeah.
+Joshua Fisseha: Yeah, for sure. LeBron's like probably arguably the greatest to ever play basketball. Maybe arguably number two wherever you put him.
+Oreoluwa James: Mhm.
+Joshua Fisseha: That's uh you kind of threw some shade there at LeBron, but yeah, he's definitely a superstar. Um, so but is Kyrie a superstar?
+Oreoluwa James: I mean, I think it depends on who you're asking.
+Joshua Fisseha: I want to know. Jesus Christ. Kyrie Irving is definitely a superstar.
+Oreoluwa James: Yeah. But I feel like it depends on who you're asking,
+Joshua Fisseha: Yep. Fair.
+Oreoluwa James: you know,
+Joshua Fisseha: Um,
+Oreoluwa James: like I urban. So, I mean, I definitely agree.
+Joshua Fisseha: yeah. You know what I'll say? Yeah. Like we'll say for the sake like he's for sure I would say he's a superstar. is like a generational talent, right?
+
+
+
+
+01:05:16
+
+
+Joshua Fisseha: So the thing is LeBron was definitely the like the alpha dog, your big dog on the team, right? But the thing is, so Kyrie and the cast, right? They were supporting LeBron.
+Oreoluwa James: is the intermediate conclusion.
+Joshua Fisseha: Yeah. Kyrie's equivalent to like an intermediate conclusion.
+Oreoluwa James: Yeah, because he's still a conclusion in the sense of he's still a superstar, but he's being supported and he is ultimately supporting LeBron James, who's like the main conclusion.
+Joshua Fisseha: Exactly.
+Oreoluwa James: I completely get it. Okay, cool. Great analogy.
+Joshua Fisseha: Yeah,
+Oreoluwa James: Really good analogy. I need to write that down so I can remember it.
+Joshua Fisseha: you got that.
+Oreoluwa James: But really good analogy.
+Joshua Fisseha: Yeah. So, the idea is Yeah. the supporting cast is supporting Kyrie and like on another team Kyrie could be the superstar if he was like not what like you know like LeBron LeBron James, but he's there to support LeBron, who's the main like the the head hot show like you as you basically caught it.
+
+
+
+
+01:06:04
+
+
+Oreoluwa James: Mhm.
+Joshua Fisseha: And they're technically all supporting LeBron because if they're supporting Kyrie, who's supporting LeBron, they're indirectly support like I guess figuratively speaking. Yeah. Right. So, it does need to he is a star, but no, nobody will ever discount that from Kyrie, unless you're or where you're just like, it could be better. His jump shot's cool, but he's not objective. That's the that's that's a high standard. I won't lie. He's if he came to Canada, he'd be worshiped as a as the Messiah of Canada who came here. People would treat him like it's crazy. Um, but yeah. No. So, that's the general idea.
+Oreoluwa James: And the other word you used before was like dual functioning,
+Joshua Fisseha: So
+Oreoluwa James: right?
+Joshua Fisseha: exactly.
+Oreoluwa James: Right. That makes sense.
+Joshua Fisseha: Okay. Now the other thing that this is so whenever we say the argument core the argument is only the when we're saying argument we're only talking about the author's argument is exclusively talking about these pieces here.
+
+
+
+
+01:07:19
+
+
+Joshua Fisseha: main conclusion. Um, whenever there is because not all arguments have an immediate conclusion, when they're there, that counts. And the premise, this is the argument. Everything outside of this is not the argument. It's just it's just dirt around the argument. It's just fluff. thinking like if you're like a I don't know like an archaeologist, you find like a I don't know like dinosaur fossils or whatever it is and like you want to get the dust off the fossils to be able to identify what type of like I don't know it's a T-Rex not a dinosaur but like generally speaking like that we're trying to get to the bottom of the argument see where is the pieces of the argument that I actually care about which is this argument core right we're trying to identify this and then everything else around it is just peripheral stuff that's just like we need to get through it to be able to get to this part we need to identify this part this is where you can actually identify the gold, right?
+
+
+
+
+01:08:09
+
+
+Joshua Fisseha: Um, now the things around it, we do need to be able to identify them because like it gives us more context, but it's also like we can identify that it's not the argument core as well because we don't want to mix it up. And that's going to be stuff like an opposing viewpoint, which is what we're talking about with the idea of when they attribute another side. Like if they were using for a simple example, back to like the other example I'll use um some people say.
+Oreoluwa James: like if they were using um a pivot word like a pivot indicator.
+Joshua Fisseha: Yes.
+Oreoluwa James: Yeah. Because I won't lie, this kind of reminds me of the part about um loophole that I started getting confused because like when she started talking about like hybrid arguments and like nested claims,
+Joshua Fisseha: Oh, nested clims.
+Oreoluwa James: I was like you're I'm like you're losing me.
+Joshua Fisseha: Yeah.
+Oreoluwa James: I'm like you're losing me.
+Joshua Fisseha: Yeah.
+Oreoluwa James: I'm like you're losing me. in the part that sucks because like all of them are still like really necessary to know to be able to fully understand everything which kind of annoying just whatever.
+
+
+
+
+01:09:08
+
+
+Joshua Fisseha: Yeah.
+Oreoluwa James: Okay.
+Joshua Fisseha: And and it's it's a lot simpler than you would be surprised. It's kind of explained in a more complicated fashion than probably is all it is like another side of another viewpoint whenever another viewpoint.
+Oreoluwa James: Yeah. Like I know a nested claim is like basically someone that's not the author has also made a claim.
+Joshua Fisseha: Yes. And the author will never agree with that side. So the author never going to say uh like yeah like some people like love to eat ice cream, right? And I think they're damn like they're they're like they're damn geniuses. That'll never happen. I completely agree. He's always there to disagree. They're almost think of them as always going to be punching bags. The author is an absolute narcissist. He just only brings up people just to be able to use them as to show why they're wrong. He'll never bring up somebody just to dignify them. Never, ever, ever. So the moment you hear about anybody else being spoken of, okay, whatever they're saying, the author doesn't agree with that.
+
+
+
+
+01:10:05
+
+
+Joshua Fisseha: You should trigger that as like reflex with instinct. They bring up a biologist. If they bring up scientists, proponents of like X theories, you know, like okay,
+Oreoluwa James: Yeah.
+Joshua Fisseha: whatever he thinks about they whatever they think he's going to say otherwise. The thing though to pay attention to say some people say bron uh
+Oreoluwa James: Or can you kind of like set it up where it's like a traditional logical reasoning thing where it'll be like the first word is like critic and then it goes into the stimulus because I I typically understand it be like that word
+Joshua Fisseha: yeah
+Oreoluwa James: critic is like the critic is the author.
+Joshua Fisseha: that is not the critic. Well if yeah the critic is the author. That's not what I'm referring to though.
+Oreoluwa James: Okay.
+Joshua Fisseha: I'm more so referring to when the author brings I I'll we'll see a question here. So, I'll just show you it.
+Oreoluwa James: Okay.
+Joshua Fisseha: Um is whenever the author brings up anybody else's name or anybody else else, any group, any identity, any sort of theory or ideology in the stimulus, he's only bringing them up to disagree.
+
+
+
+
+01:11:05
+
+
+Joshua Fisseha: He's never going to bring them up just to bring them up.
+Oreoluwa James: Wait, one more time.
+Joshua Fisseha: So, he's only bringing up other people or other idea ideas people groups like if he brings up politicians. If it brings up biologists, right, or art art historians, he only brings them up to disagree.
+Oreoluwa James: So that's kind of where that nested claim comes in.
+Joshua Fisseha: Yes. And I hate that language.
+Oreoluwa James: Okay.
+Joshua Fisseha: It's like triggering me. Yes. Like technically, yeah. Nested claim if that works for you. But yeah, simply put just like I would say an opposing
+Oreoluwa James: Or what's the other word we can use to describe it?
+Joshua Fisseha: viewpoint.
+Oreoluwa James: Okay.
+Joshua Fisseha: Yeah. If nested claim works better for you though, that's there's no problem with that.
+Oreoluwa James: No, I think opposing has a stronger has a stronger word because like immediately when I think of the word opposing, I'm thinking that the author is not in agreement with what's being said.
+Joshua Fisseha: Yes.
+Oreoluwa James: So yeah,
+
+
+
+
+01:11:53
+
+
+Joshua Fisseha: Yes. has to play like I it doesn't intuitively at least
+Oreoluwa James: necess Nested claim is cool cuz nested claim is like it's basically trying to tell you like it's a hidden claim that's in there because it's not directly like the author saying it but it's still it's still there like it's still a claim that needs to be like focused on or like you your attention should be there but I
+Joshua Fisseha: Yeah. Okay.
+Oreoluwa James: think opposing viewpoint is better.
+Joshua Fisseha: Yeah. Because the purpose of it being there is not just to be hidden. The purpose there is like what does the author disagreeing with? He only brings up people disagreeing.
+Oreoluwa James: Yeah.
+Joshua Fisseha: There's no other reason why he would ever bring up anybody else but his own side. So if in the first sentence I see him bring up any group or any people, anything of any sort, he's just and he's attributing some sort of ideology or belief or or a trait, right? I know he's just going to say that to just well to just like to just basically go against them.
+
+
+
+
+01:12:43
+
+
+Joshua Fisseha: So I just want to figure out what they believe and say,"Okay, author doesn't believe that or at least he's going to nuance that to death." So the and we'll see in the question. The other thing that I'll last part that I want to throw in here just there's obviously the other type of claim the opposing view is very important the other thing though and under opposing viewpoint they can go about it in two ways okay so I don't know do you live with uh do you live with like a partner have you ever lived with like a partner before personal but personal
+Oreoluwa James: I like I like don't ever think I want to live with my partner until I absolutely positively have to. And even when then even when that happens,
+Joshua Fisseha: One second.
+Oreoluwa James: I'm like I would love to have like two two like rooms. I remember like the last guy I was eating, I mentioned that. I was like,"Yeah, I feel like when I move, like I would still like my own room." He didn't understand what I was saying.
+
+
+
+
+01:13:38
+
+
+Oreoluwa James: I like I don't think anyone will, but it's okay. No, I don't.
+Joshua Fisseha: Okay. So, I guess I'll use I'll use the example anyways. Um, okay. Imagine like you, you know, um you're going to come home from work one day, right? You live with your partner um and you see the dishes on this on the table, right? So there's two ways you can go about approaching it, right? You can either go about it in a diplomatic way and be like or a diplomatic way you can say or actually you can go the first way. You can be you can just choose violence. You can say I told you like for the last time like you don't leave the dishes on the sink, right? you can get like say like I'm tired of this whatever you can just basically do combatively co at your partner right the other approach you can think of that as the opposing viewpoint just completely just head-on say you're wrong the other way they can go about it this is the way the elsack can be sometimes a little bit shifty they'll in they'll they'll they'll basically apply like thinking of it like like if you were to go to your partner you'd be like going about it in a more diplomatic way you could be like
+
+
+
+
+01:14:45
+
+
+Joshua Fisseha: listen babe you know I get it like you know you're the man of house and like you know you make uh you know like all of you know the family uh happy and like but listen like I and usually the word but will be there so you'll say I know you work so hard you know you do so much for the family, you know, you're the man of the house. Stroke the ego a little bit. Then you introduce the pivot word. But the infamous but. However, yet we cannot leave the dishes on the sink on the counter. So you're conceding. You're essentially taking two steps back to be able to take three steps forward. We do not confuse that with saying that the author is not still going against them. So sometimes the author when they're doing opposing viewpoint, they'll grant the other side a point or two. Then they'll come in and pivot away and say you still need to be able to like like they're still disagreeing. We do not want to take their concession, you know, for belief that they're um not like they're like that they're not agreeing with the other side.
+
+
+
+
+01:15:55
+
+
+Joshua Fisseha: So we need to be able to be very clear what is the point is to be able to combat them ultimately or at least go about it in a way that correct them right. Um, so remembering with the R with the LR and the main conclusion and intermediate or main conclusion and argument part questions, right? It's going to be broadly speaking the conclusion going to be in the first sentence or it's going to be a rebuttal conclusion. So, first sentence conclusion. So, when you're reading, when you see that question stem, you see it being a main conclusion question. You should automatically be on your alert. You be like,"Okay, whatever they're going to say is going to be very, very attentive to the first sentence or it's going to be on if they don't make it the first sentence, it's going to be a rebuttal. you're going to bring up um something along the lines of like some ex people believe this thing or propos theory. One of the one or one or the other is going to happen with the highest degree of possibility.
+
+
+
+
+01:17:05
+
+
+Joshua Fisseha: Once you know that, your life becomes a lot easier. You're essentially able to prime yourself to say um you're like you're reading it with
+Oreoluwa James: But that's what like the question stems at our like main
+Joshua Fisseha: anticipation and argument
+Oreoluwa James: conclusion.
+Joshua Fisseha: part questions. And the biggest simplest possible way to be able to do this um the broader general like I gave you all the nuance and the details but the biggest thing that you want to understand is every statement on the outside can be categorized really in a broader four buckets. This is really all you need to really understand. We got into the we got into the nitty-gritty, but this is the the broader buckets. Every statement is going to be either the conclusion is going to be support When I say support that means that includes intermediate conclusion premise that's like the sub uh like that's the things that are under support. One of these two will be intermediate conclusion premise that falls under support. Three opposing. So it's going to be a rebuttal sometimes with a concession but it's still rebuttal.
+
+
+
+
+01:18:24
+
+
+Joshua Fisseha: and four neutral which will be like background information context telling you why this topic is even relevant to speak about maybe give you details about it define certain topics like what key concepts that are going to be used right um it's laying the ground but it's not actually part of the argument it's just neutral so all of the argument all the statements on the um um all the statements in the argument can be will be one of these And the way that you are able to identify what they are is you have to know the conclusion and then you have to ask yourself what is the relationship of each statement to that conclusion. So if I have a support it's only support if it's if if it's considered support in relation to the main conclusion. If it's support for the other side technically it's still support but it's opposing viewpoints like support like for their they might believe something for whatever reason. They might say I believe you know like uh like I can use a simple argument here just before we jump into this question here.
+
+
+
+
+01:19:26
+
+
+Joshua Fisseha: I'll say like LeBron uh some people think LeBron or we'll say MJ better than LeBron, right?
+Oreoluwa James: Mhm.
+Joshua Fisseha: Um and although MJ is is an icon concession, right? I'm saying he's an icon and uh an
+Oreoluwa James: Interesting.
+Joshua Fisseha: alltime great.
+Oreoluwa James: They're pivot words coming in
+Joshua Fisseha: I'm giving him his flowers.
+Oreoluwa James: there.
+Joshua Fisseha: However, uh yeah, he is not I'll say he is not. I'll say um I'll use I'll say some old some old heads think MJ is better than LeBron. And although MJ is an icon, an alltime great, however, he is still not However, the old hers are are wrong. Right? So, what's this conclusion here?
+Oreoluwa James: MJ is not better than LeBron.
+Joshua Fisseha: Right? So, what does that mean? Leon is Yeah,
+Oreoluwa James: Better than MJ. Okay.
+Joshua Fisseha: which you what you said is exactly um like fair game, right? Um so yes, exactly. And I gave a concession, right? I brought a pivot. I I bought a posting viewpoint.
+
+
+
+
+01:21:12
+
+
+Joshua Fisseha: I brought um concession, right? And I have to throw in his wrong after finish argument since uh because LeBron um has brought uh or LeBron has brought Yeah. multiple championships.
+Oreoluwa James: I just say okay. Yeah. Yeah.
+Joshua Fisseha: That's home TV.
+Oreoluwa James: You know this is actually perfectly fine because this is dead ass how long some the of the question simules be like literally they be mad long for no reason.
+Joshua Fisseha: Oh yeah.
+Oreoluwa James: At first I was like,
+Joshua Fisseha: Right.
+Oreoluwa James: "Why don't you just say because he has won a lot of championships?" But I'm like,"No, they actually have to be overly lengthy for no reason.
+Joshua Fisseha: Exactly. Exactly. So this is uh introducing all the different points. Premise. Now we have a conclusion, pivot, opposing viewpoint, right? So that's where we bring everything together. So we're going to wrap it up with we're going to do some we're going to let you look at I'm going to let you like first um I want you to see a question and understand when someone assign it to you um you're going to have an understanding of what it would look like.
+
+
+
+
+01:23:14
+
+
+Joshua Fisseha: You're going to hear something.
+Oreoluwa James: Now that I'm reading this back again, I'm trying to like break it down one more time. So, however, heads are wrong. That's the conclusion. But like when you break it down, it's LeBron is better than MJ. We know that because that's what the author is trying to say because he has brought championships to his home team. So when we say that that is the support to the conclusion.
+Joshua Fisseha: You got it.
+Oreoluwa James: But technically that's not considered like an intermediate conclusion. That's just premise.
+Joshua Fisseha: No.
+Oreoluwa James: That's just evidence of the conclusion.
+Joshua Fisseha: Yep.
+Oreoluwa James: And then
+Joshua Fisseha: But I I I guess I could I could maybe could have showed you that. Um we could have done was wrong because he has uh we'll say he has he has more aura, right? And I'll say um since I'll say uh when he went walks into an arena, he he gets more cheers. up. Now we have intermediate conclusion.
+
+
+
+
+01:25:10
+
+
+Joshua Fisseha: I won't write because twice because that looks ugly. Since he has more aura. Okay. So they're wrong. Why are they wrong? Because he has more aura.
+Oreoluwa James: and that's the intermediate.
+Joshua Fisseha: So the reason Yep.
+Oreoluwa James: conclusion. Okay.
+Joshua Fisseha: And then why do we think he has more aura when he walk? Because when he walks into the room arena, he gets more chairs.
+Oreoluwa James: More tears.
+Joshua Fisseha: Exactly.
+Oreoluwa James: Okay. I have to like I hand write all my notes when you speak, but I'm going to like in order to make sure I really understand, I'm going to then type it up later.
+Joshua Fisseha: I'm going to try to do this question here. Okay. So, we're going to do that exact thing that we practice. Remember, where do we expect to see the main conclusion uh to be pointed? Like where do we expect to see the two spots where we can expect it,
+Oreoluwa James: Um, either the first sentence or it's a rebuttal.
+
+
+
+
+01:26:18
+
+
+Joshua Fisseha: right? So, if we see somebody else being brought up in the first sentence instead of the author speaking in his own perspective, we know that's going to be a rebuttal.
+Oreoluwa James: Wait, one more time.
+Joshua Fisseha: So if we see in the first sentence, the author is not speaking about his own opinion, he's talking about somebody else's belief or any if he brings up anybody else. He just mention mention anybody else is brought into the argument, we know instantly he's going to just say they're wrong.
+Oreoluwa James: Yeah. So that's the opposing viewpoint.
+Joshua Fisseha: That's rebuttal. Yes. Exactly.
+Oreoluwa James: So the first sentence is the opposing viewpoint already.
+Joshua Fisseha: It's going to either be so it's going to be one of two. Either he's going to speak from his own point of view. He's gonna say,"I believe X, Y, or Z." So that's going to be his conclusion. If he doesn't do that, the other option is he's going to bring up somebody else just to dunk on them.
+Oreoluwa James: Okay.
+
+
+
+
+01:27:07
+
+
+Joshua Fisseha: So there's one of two directions he can go.
+Oreoluwa James: Yeah. Okay. Yeah. So, I don't know even know how to say that name. Santiana, whatever the hell they make up. So, like they make up dumbass names. Santiana recommends a way to I'm so sorry if you know Santiana.
+Joshua Fisseha: Damn.
+Oreoluwa James: I apologize,
+Joshua Fisseha: You hear this,
+Oreoluwa James: but I'm screaming.
+Joshua Fisseha: Aiana? I don't know.
+Oreoluwa James: Imagine you're you're like so
+Joshua Fisseha: It's crazy. All the smoke. I don't know what she did. She just She just She's just trying to live her life,
+Oreoluwa James: Yeah, I'm just ready.
+Joshua Fisseha: you know.
+Oreoluwa James: I'm ready to just fight Santiana. Anyway, Santiana recommends that we study history to avoid the mistakes of the past. So, that first sentence, Santiana says to avoid mistakes of the past, study history. And that is going to be the opposing viewpoint or rebuttal.
+Joshua Fisseha: Well, they're the same. Well, rebuttal is what the author does to the opposing viewpoint,
+
+
+
+
+01:27:58
+
+
+Oreoluwa James: Okay. Yeah. So that's the opposing viewpoint.
+Joshua Fisseha: which he is going to rebut too. Yeah.
+Oreoluwa James: Mhm.
+Joshua Fisseha: As you said, right? So, instantly we reason why it's useful is that we're not reading blindly. We're having like the ability to be in the driver's seat.
+Oreoluwa James: Mhm.
+Joshua Fisseha: So the instant the moment I hear Santiana, I hear about people from Chicago, people from like uh I don't know the tribe, people from not Ghanaian, you're Nigerian, people who are Yuba, people who are EOSA, whatever, you know, it's like we know whatever he's going to say something else.
+Oreoluwa James: Okay.
+Joshua Fisseha: What what where you from? Yuba.
+Oreoluwa James: I'm Yurba.
+Joshua Fisseha: Knew it. I knew it.
+Oreoluwa James: I I heard how I'm like, okay. I love when people like are knowledgeable. I don't know. Like I don't know tribes in Ethiopia. Do you guys have tribes? Is it like smaller towns? Like how do you what do you guys say?
+
+
+
+
+01:28:50
+
+
+Joshua Fisseha: Oh yeah. Yeah, we have crafts. Um,
+Oreoluwa James: Okay.
+Joshua Fisseha: yeah, we have like Yeah, we have like like a lot of We have a lot of I wonder if we have we probably have more I would say probably than Niger I think Nigeria is that you guys have a
+Oreoluwa James: Oh, for sure.
+Joshua Fisseha: lot you guys have a lot too. So I don't know. You're the only country I would say possibly not.
+Oreoluwa James: We do have a lot of times.
+Joshua Fisseha: You guys have a lot of tribes.
+Oreoluwa James: Yeah,
+Joshua Fisseha: I know that you guys have like a hell hell out of a lot of tribes and a lot of languages too,
+Oreoluwa James: we do.
+Joshua Fisseha: I believe, if I remember correctly.
+Oreoluwa James: Yeah. Everybody speaks like their own s***.
+Joshua Fisseha: Yeah. Yeah. Let's jump this question. So, we see that Santiana recommended that we study history to avoid the mistakes of the past. Okay. So, now let's properly think about we know that the author is going to rebut it, right?
+
+
+
+
+01:29:36
+
+
+Joshua Fisseha: What is that? What's the other side of the argument going to be?
+Oreoluwa James: Um the other side of it could be the um like the pivot word.
+Joshua Fisseha: I mean,
+Oreoluwa James: So like
+Joshua Fisseha: like, sorry, let's rearticulate. If I if he's going to agree with him. What does that mean? He's going to believe.
+Oreoluwa James: He's going to believe that we don't need to study history to avoid mistakes or that
+Joshua Fisseha: Yeah. Exactly.
+Oreoluwa James: studying history does not avoid mistakes of the past.
+Joshua Fisseha: Yeah. Exactly.
+Oreoluwa James: Okay.
+Joshua Fisseha: You could even stop right there if you're really about that life. You could just stop right there and you could actually go into the answers. Theoretically, you wouldn't I would be I would lose my hair if you did that. Um,
+Oreoluwa James: Maybe like in another like month when I'm really set in and I like working on a time limit
+Joshua Fisseha: but don't
+Oreoluwa James: maybe.
+Joshua Fisseha: don't ever do that.
+Oreoluwa James: But I I don't know if I would do that because I feel that's the easiest way to get set up.
+
+
+
+
+01:30:35
+
+
+Joshua Fisseha: Don't ever that's that's too
+Oreoluwa James: Like that's a setup. Just sounds like a setup. Sounds like you're setting me up,
+Joshua Fisseha: Yeah. No, no, be I'd be furious, too. No, you would. No, you would. You wouldn't. You wouldn't know. There's no way. You would do it with understanding it's going to happen, but you still want to confirm your Yeah.
+Oreoluwa James: right?
+Joshua Fisseha: That's too gen too gent to degenerate.
+Oreoluwa James: Yeah.
+Joshua Fisseha: You could probably get away with what I'm saying, but no,
+Oreoluwa James: Do you say that's too Gen Z?
+Joshua Fisseha: too degenerate.
+Oreoluwa James: For a second, I thought you said that was too Gen Z. I'm like, are you not Gen Z? Like, you're not that much older than me. You can't be that much older than me.
+Joshua Fisseha: I'm I'm old. You're like what? You said mid to late 20s.
+Oreoluwa James: Yeah, I'm 26.
+Joshua Fisseha: Oh, yeah. You're young. You're young.
+
+
+
+
+01:31:17
+
+
+Oreoluwa James: Okay. Anyway, I don't like asking people their ages. It's okay,
+Joshua Fisseha: It's very disrespectful.
+Oreoluwa James: especially with women. Okay. Um, but we should not follow his advice.
+Joshua Fisseha: What does that sound like?
+Oreoluwa James: Uh, is it like I'm looking at my notes. Is that support? No, that's not support.
+Joshua Fisseha: What is what? Let's point out. Do we see any indicated words here?
+Oreoluwa James: Yeah, the word but
+Joshua Fisseha: All right. Okay. So, let me see. But it can be two one of two things. It's going to be conclusion then premise or premise then conclusion.
+Oreoluwa James: that conclusion.
+Joshua Fisseha: And side notes, the word should, what does that indicate?
+Oreoluwa James: Um, that's like an uh opinion.
+Joshua Fisseha: Yes. And then if it's an opinion, what do we think it's probably going to be?
+Oreoluwa James: If it if there's the word if the it's opinion.
+Joshua Fisseha: If you told me it's an opinion, what does that probably tell me that it is then?
+
+
+
+
+01:32:32
+
+
+Joshua Fisseha: What's the argument part? Like what part of the argument does that sound like it is then?
+Oreoluwa James: It sounds
+Joshua Fisseha: Like the author's opinion is fall under what part of the argument usually?
+Oreoluwa James: like I don't know.
+Joshua Fisseha: Take a shot.
+Oreoluwa James: I don't know. I don't want to be wrong. So, I don't know.
+Joshua Fisseha: Is the author's opinion typically a premise?
+Oreoluwa James: is the author's opinion typically a premise.
+Joshua Fisseha: Mhm.
+Oreoluwa James: Yes.
+Joshua Fisseha: What? How do we figure out what the conclusion is? What's the steps? Do you remember the steps?
+Oreoluwa James: I'm like still going through my notes.
+Joshua Fisseha: I I threw a lot at you,
+Oreoluwa James: H so long.
+Joshua Fisseha: by the way,
+Oreoluwa James: I know.
+Joshua Fisseha: so I know that's quite a bit.
+Oreoluwa James: I'm like I'm like trying to like be as organized.
+Joshua Fisseha: And I'm going to give you a note, by the way. You're going to get all the same notes, so you don't have to like stress too much.
+
+
+
+
+01:33:48
+
+
+Oreoluwa James: Okay. Is it like the I mean I have like the step one is the author's opinion.
+Joshua Fisseha: So what what does that word indicate?
+Oreoluwa James: The word should is like an opinion indicator.
+Joshua Fisseha: So that means the sentence is an opinion. So step one's met.
+Oreoluwa James: You said what?
+Joshua Fisseha: So step one's met, right? According to what you just said,
+Oreoluwa James: Mhm.
+Joshua Fisseha: right? So should is telling us the statements and opinion, which is a good sign, right? For what is it? What is it a good sign to to what does it sound like it's going to be then? You said that it's an opinion. So step one step one for what part of the argument? Remind me.
+Oreoluwa James: the main conclusion.
+Joshua Fisseha: Correct. So this is a good contender for a conclusion because it's a pivot word with the word should after. So that means it's probably but conclusion, right?
+Oreoluwa James: Mhm.
+Joshua Fisseha: Okay. So we know that this is the conclusion.
+
+
+
+
+01:34:52
+
+
+Joshua Fisseha: Now what other indicator words do we notice in this argument here?
+Oreoluwa James: just looking at the whole thing.
+Joshua Fisseha: Yeah, I'll let you scan through it.
+Oreoluwa James: I mean, I see the word since,
+Joshua Fisseha: Oh.
+Oreoluwa James: but since is a premise indicator.
+Joshua Fisseha: So what does that sound like?
+Oreoluwa James: So, that just sounds like that's evidence. or a premise to support a conclusion.
+Joshua Fisseha: Right. So, this is going to be a premise, right? So, what's the premise? Read it all out.
+Oreoluwa James: History consists of unique and unre repeatable accidents. None of the crisises is that is that what it says?
+Joshua Fisseha: Yeah.
+Oreoluwa James: Crises. Sorry.
+Joshua Fisseha: The crisis.
+Oreoluwa James: I'm so sorry.
+Joshua Fisseha: Yeah.
+Oreoluwa James: None of the crises we now face are the same as those our ancestors faced.
+Joshua Fisseha: Let's pause. So, let's recap what we've read so far. First line told this one ask what is sleek?
+Oreoluwa James: As for leaves, We need to study history to avoid mistakes or like past mistakes.
+
+
+
+
+01:36:03
+
+
+Joshua Fisseha: Yeah. And then what does he say after that?
+Oreoluwa James: We don't need to do that. Like we Oh, that was very vague. We don't need to study history to avoid past mistakes.
+Joshua Fisseha: Right. Yeah. Exactly. Exactly. He's saying good. We should not do that. We should not study history to avoid the past mistakes. And then what does next line say?
+Oreoluwa James: Um so history is like different like accidents that we're not going to face again.
+Joshua Fisseha: Mhm. So that sounds like remember we want to ask ourselves what the part that we maybe identified as conclusion. We want to say why should I believe that? So why should I believe that we shouldn't follow his advice? Let's test it. That's how you test it, right? And then let's see if the author gives us an answer. because of history does not repeat itself. So if history doesn't repeat itself, why would we study it is ultimately what he's saying, right?
+
+
+
+
+01:36:57
+
+
+Joshua Fisseha: Like if we know that if the value of history is to to be able to avoid the mistakes of the past, it only becomes useful if the past is repeated, right? Or just we're studying a bunch of random events that don't have anything to do with each other. That's ultimately what he's arguing, right?
+Oreoluwa James: right?
+Joshua Fisseha: And then look at the last sentence. This is a good one.
+Oreoluwa James: Last sentence, thus, which is another conclusion indicator. Studying history never enables one to avoid mistakes of the past.
+Joshua Fisseha: So we have a conclusion competing with the other conclusion. Okay. So, how do we figure out which one's the main conclusion?
+Oreoluwa James: um I mean the step two would have been that there needs to be at least one statement that provides I don't know support
+Joshua Fisseha: Mhm. So which one of these when you get down to two conclusions you should ask yourself which one makes the other one more
+Oreoluwa James: Mhm.
+Joshua Fisseha: believable. So all you have to do is ask yourself why should I believe that and place one of the two conclusions as the first statement and then say why should I believe that and then the other statement which is the other conclusion and then one of them will make sense more it'll have a more of like a flow to it.
+
+
+
+
+01:38:41
+
+
+Oreoluwa James: Okay.
+Joshua Fisseha: So like in this case we could try it out. So read out the conclusion to the first statement and say why should I believe that and the last statement but then don't just read it out say the statement as it's supposed to be stated like like a spell it out saying
+Oreoluwa James: Okay. Okay. So, you want me this you want me to first state the first conclusion we So first conclusion we found is that we should not follow ES's advice of stuttering stuttering studying history to avoid mistakes of the past.
+Joshua Fisseha: Right. And then say,"Why should I believe that?"
+Oreoluwa James: Why should I believe that? Because the history consists of past accidents that we won't do
+Joshua Fisseha: Sorry.
+Oreoluwa James: again.
+Joshua Fisseha: Sorry. You're going to do that for the other conclusion. So you're going to you're going to because one of those conclusions are the main conclusion.
+Oreoluwa James: Okay. Oh,
+Joshua Fisseha: So one of them is going to support the other one and all you have to do is try one of them is going to be the support for the
+
+
+
+
+01:39:33
+
+
+Oreoluwa James: so you have to do that for both
+Joshua Fisseha: other idea. So all you have to do is take that first statement and test it out. Say we should not follow the advice to uh study history. We should not study history and follow advice to be able to avoid the mistakes of the past. Why should I believe that? Then insert the last sentence and see does that sound right? And you can do that vice versa because one of them will support the other one. One of them is LeBron, one of them's Kyrie.
+Oreoluwa James: Okay. Um, we should not study history to avoid mistakes of the past. Why should I do that? Studying history never enables one to avoid Oh, wow.
+Joshua Fisseha: You got it. See how that sweetly smooth slides in
+Oreoluwa James: So,
+Joshua Fisseha: Just
+Oreoluwa James: you're telling me that we should not follow his advice as the main conclusion? Oh my god, these people are so tricky because you would think that the last sentence would be the main conclusion because it's so wordy if you like just rushing through the stimulus.
+
+
+
+
+01:40:43
+
+
+Oreoluwa James: So wait, what was the So we asked ourselves single conclusion,
+Joshua Fisseha: clip.
+Oreoluwa James: but this is only when we're like battling between two conclusions when we know there's an intermediate and there's or this is all the
+Joshua Fisseha: Nope.
+Oreoluwa James: time.
+Joshua Fisseha: This is for every single time you see a conclusion in a if you want to because if you want you're basically trying to see support test
+Oreoluwa James: Wow.
+Joshua Fisseha: which one is supporting which that's ultimately what you're trying to
+Oreoluwa James: So you're supposed to do that with everything.
+Joshua Fisseha: do.
+Oreoluwa James: So that also helps with like premises too.
+Joshua Fisseha: Exactly. Exactly.
+Oreoluwa James: So then I mean test. Okay.
+Joshua Fisseha: Yeah, you got it. Exactly.
+Oreoluwa James: Okay. I feel like I'm getting confused, but it's also that time of the night, but I get it. Okay. Okay.
+Joshua Fisseha: What's confusing? Looks we're wrapping up here.
+Oreoluwa James: No,
+Joshua Fisseha: But what's confusing?
+Oreoluwa James: cuz now I'm trying Now I'm trying to remember where the pink part stands.
+
+
+
+
+01:41:31
+
+
+Oreoluwa James: I know since is a since is like a premise indicator. So since is just evidence for for what conclusion specifically? Cuz it seems like that last sentence that last sentence is the intermediate
+Joshua Fisseha: Let me check.
+Oreoluwa James: conclusion which is technically still evidence you know it's just not the main conclusion of the argument. So now history um that sentence where it's like history is like a bunch of accidents of the past and like we're not going to face those again. Like where does that evidence support specifically?
+Joshua Fisseha: So ask yourself, so the intermediate conclusion has to be receiving support, right?
+Oreoluwa James: So we're saying that is more supporting that last intermediate conclusion.
+Joshua Fisseha: I know. Why should I believe that? Who do I know? I just know.
+Oreoluwa James: Okay. So the conclusion is studying Studying history never allows someone to avoid their mistakes or their past.
+Joshua Fisseha: Remember
+Oreoluwa James: Why should I believe that? History consists of unique and unre repeatable accidents, none of which we face now.
+
+
+
+
+01:42:43
+
+
+Joshua Fisseha: I want you to this is and I know been we've been way at this for a minute now. So like the the thing I'll say is we want to re the second sentence is wordy very wordy. We want to rephrase that.
+Oreoluwa James: Okay.
+Joshua Fisseha: So what are they saying in the second sentence ultimately like what's the nature what's the sentence trying to express like what's it trying to express in your own words
+Oreoluwa James: So basically it's saying that history is accidents that we won't face now.
+Joshua Fisseha: yes say that instead of saying what they said there so start from the main conclusion and do why should
+Oreoluwa James: Okay.
+Joshua Fisseha: I believe that why should I ask this question twice so first damn
+Oreoluwa James: Okay. Studying history never allows one to
+Joshua Fisseha: Sorry. All right.
+Oreoluwa James: avoid.
+Joshua Fisseha: Ask yourself I I don't mean to be uh annoying. Do the start off with the main conclusion and then do that one then two then three.
+Oreoluwa James: Okay. Um, we should not study history to avoid mistakes of the past.
+
+
+
+
+01:43:50
+
+
+Joshua Fisseha: I say why should I believe that?
+Oreoluwa James: Why should I Why should I believe that studying
+Joshua Fisseha: with
+Oreoluwa James: history never allows someone to avoid mistakes of the past?
+Joshua Fisseha: again.
+Oreoluwa James: And then am I supposed to say why should I believe that?
+Joshua Fisseha: Yep. Yep. Exactly.
+Oreoluwa James: Why should I believe that history is accidents that we won't face again?
+Joshua Fisseha: That makes sense. So, you're telling me if we remind we recap all of it, you're saying we shouldn't study the history to avoid the mistakes of the past. Why should I believe that? Because history doesn't ever like uh allow you to ever like avoid the mistakes of the past. Why should I believe that? Because p the past is just a bunch of random events that never occur again. So the trick is just ask yourself why should I believe that for every statement and it's going to have one natural flowing train. It's like the ultimate because you can use the indicator words but those are indicators.
+
+
+
+
+01:44:54
+
+
+Joshua Fisseha: Do not be a slave to them. You have a bulletproof guaranteed way to find out. you will never get this if you do what we did there. You'll never get that wrong. But if you try to use indicator words, you'll be hit or miss. Sometimes they'll be good, but then sometimes it gets confusing. So the skill that you want to have is be able to rearticulate what's being said like the RC drill. You need to be able to do that. If you do that like you did today, if you couldn't do what you did today, we would have been in hell. We would have just been destroyed. If you could not rearticulate the second statement,
+Oreoluwa James: Okay.
+Joshua Fisseha: it would have been very confusing. But the fact that you could do that, it made it very easy for you to see how could we can get to that point. But that opens the door to be able to even attempt it. Which is why also good that you're like you're able to rearticulate it.
+
+
+
+
+01:45:33
+
+
+Joshua Fisseha: You said it very well. Just random events. It's not going to happen again. That's why that's why they give us justification for the belief that we shouldn't study or study history never actually allows you to make avoid mistakes. And that's good justification to not do what he wants us to do which is a recommendation. Right? So let's say it the other way around. So now we know that a conclusion is that second part we need to know a conclusion to point out that we should uh not study history to avoid the mistakes of the past. Right? Let's go through the answer choices. So we'll see what do you think about answer choice K.
+Oreoluwa James: People should not study history since doing so leads them to misunderstand the crises they face they now face.
+Joshua Fisseha: So what is he saying? He's saying that we shouldn't do what that what
+Oreoluwa James: shouldn't study history.
+Joshua Fisseha: he said.
+Oreoluwa James: I mean, that's what the first part of it says of of the of question of answer
+
+
+
+
+01:46:35
+
+
+Joshua Fisseha: So yes,
+Oreoluwa James: A.
+Joshua Fisseha: this is the tricky part. He not saying we're going to study history. He never said that. Let's be very specific. What did he say exactly? We should study history, too.
+Oreoluwa James: Avoid mistakes mistakes of the past. Okay.
+Joshua Fisseha: That is not a collective never study history. He's saying your advice is stupid. Why is it stupid?
+Oreoluwa James: Oh, is the answer I'm so sorry to cut ahead.
+Joshua Fisseha: He's saying you're studying history is valuable.
+Oreoluwa James: Is the answer D?
+Joshua Fisseha: Did he say everything about valuable? Where did we ever get?
+Oreoluwa James: Not valuable. Maybe it's cuz I saw not for the reason that S suggests.
+Joshua Fisseha: That's not enough. We can't have anything wrong with the answer choice.
+Oreoluwa James: Okay.
+Joshua Fisseha: Okay. So let's go let's go through it like one by one. So we have a no it is half truth. A lot of the answer choices will be half right.
+
+
+
+
+01:47:26
+
+
+Joshua Fisseha: That's the trick there. You can't accept a half wrong answer ever. Okay. So we know that a is like since doing so he's saying people should not study history. He never said don't study history. He's just saying don't do it for that reason. Every historical period is different from every every other historical period. Is that his conclusion?
+Oreoluwa James: No.
+Joshua Fisseha: No. Although the crisis generation the one generation faces may appear to be the same as those that other generations faces. Does he say anything about that?
+Oreoluwa James: No, it doesn't mention generation.
+Joshua Fisseha: Nope. Studying history is valuable. When did what does studying history is valid.
+Oreoluwa James: He doesn't. That's just like a weak assumption. I think I would just like assume that's the thing, but it's not cuz it's not like explicitly stated.
+Joshua Fisseha: Yeah. No assumptions allowed.
+Oreoluwa James: Yeah.
+Joshua Fisseha: He never said about what the value of tree. He's just saying literally saying I don't agree with you.
+
+
+
+
+01:48:13
+
+
+Joshua Fisseha: I don't agree with that guy. That's his conclusion. His advice is bad. Okay. So, let's look at the last one. One should not try to avoid repeating mistakes of previous generations by studying history.
+Oreoluwa James: That's exactly what he's saying.
+Joshua Fisseha: Mhm. You're just saying the other guy saying we should study history to avoid mistakes of the past. He's saying no, we should not try to avoid repeating mistakes of the past by studying history. That doesn't do that.
+Oreoluwa James: Okay.
+Joshua Fisseha: Make sense?
+Oreoluwa James: Yep.
+Joshua Fisseha: So, we never choose an answer that's half right. But this is going to take practice. Um, you're going to need to like this is not like we went through a crazy amount because I wanted to because I wanted to get this foundations. You're going to need it. It's not going to be a one time like you saw this now you're going to be good. Um,
+Oreoluwa James: Mhm.
+Joshua Fisseha: it's going to be a like you're going to need to um practice non-stop.
+
+
+
+
+01:49:02
+
+
+Joshua Fisseha: Like when I say non-stop, like you're going to get reps in. Um, and you'll use the note and I'm going to assign you drills of like question drills and also like drills for um like just like skill drills.
+Oreoluwa James: Okay.
+Joshua Fisseha: So, you're probably I'm going to do is I'm going to assign you to skill drills. Okay. Um, no, what I'm going to do is sign you a boot camp. I have to say I'm tired.
+Oreoluwa James: So you said this is something to do for almost every question, but I feel like that question that specific question stem was like more of a main conclusion one, right?
+Joshua Fisseha: There's only my conclusion. Yeah.
+Oreoluwa James: So what we did today is really only for main conclusion and argument part.
+Joshua Fisseha: No.
+Oreoluwa James: Okay.
+Joshua Fisseha: No. So because we need to find the conclusion for every question.
+Oreoluwa James: Every time
+Joshua Fisseha: Every question we know. Yeah. we need to do the conclusion because then other questions they might ask you to do something different with the making conclusion.
+
+
+
+
+01:49:55
+
+
+Joshua Fisseha: The question that they ask you here is just identify it. The next question is they might ask us attack the main conclusion but we can't attack the making conclusion unless we know what the main conclusion
+Oreoluwa James: if you know what it is.
+Joshua Fisseha: is.
+Oreoluwa James: Yeah.
+Joshua Fisseha: So this is the most important skill prior. If you don't do this right nothing else is going to work. Everything else is a waste of your time. Can I just do this? Like we said here, we need to know it. Like you shouldn't be doing questions at all until you can do this properly because then you're just wasting material and you're wasting your energy and then you're not getting better. Um, this is so so crucial. And I'm going to send you a a boot camp. Um, and you're going to work on that boot camp. It's going to eventually point you towards questions. You're going to do questions. Um, and you need to master the skill. If you don't master the skill, it's going to it's going to bite you in the ass in the future.
+
+
+
+
+01:50:42
+
+
+Joshua Fisseha: A lot of people want to run to I want to be able to do like a like a parallel necessary assumption with the you know like conditional. No, man. Those things are just icing on the cake compared to like knowing how to do the smoke. Um any questions?
+Oreoluwa James: Not right now. I think I just need to like go through all the notes because I have a general understanding when you were like walking me through. But sometimes the problem is when I'm walking myself through if my notes aren't like organized into like the best way to actually like step one, step two, step three. because honestly that's kind of what we did that there are certain steps to take.
+Joshua Fisseha: Yep.
+Oreoluwa James: Um yeah, so I have to like definitely organize my notes. So I'll probably do that today.
+Joshua Fisseha: You're going to go through all of it. You're going to go through you're gonna get you're going to have all of it. So, I'm I'm sending you a boot camp.
+
+
+
+
+01:51:29
+
+
+Joshua Fisseha: It's going to go through everything we discussed. You're going to go through all it's gonna have a notes.
+Oreoluwa James: Okay.
+Joshua Fisseha: It's gonna have um like drills, skill drills. like this is just so you you're going to be to be exposed to this multiple times. Don't the mistake people think is like they think oh you learn and then you just like yeah next no you the the work starts when you leave like figuratively speaking like you're not just going to hear the information say okay now I understand that's not like that you need to be exposed to it you need to be
+Oreoluwa James: No. Yeah, it's like something that definitely has to be like studied each time. I think that's I think that's what um people miss out on. Well, not miss out on, but I think that's what I mean by when I say this is a standardized test as in like that's the standard like to know how to do that. So,
+Joshua Fisseha: Yep.
+Oreoluwa James: okay.
+Joshua Fisseha: Yeah. And that's what a lot of tutors problem the problem with a lot of tutor they'll say something to you.
+
+
+
+
+01:52:16
+
+
+Joshua Fisseha: Yeah. you do this question, they'll correct the question with you, but then it's like how do I like repeat like I don't you're not going to retain any of that stuff that like you might we went through the material theory and stuff which is if you get that that's good but then it's like if you just do recreing questions that you did on a section um that individual question you might think it's because I missed something here but it's like no no no you need to be able to like break that habit and build a new habit and that only happens by like doing it going to sleep taking time away from it coming back and then you do
+Oreoluwa James: Yeah, that's what I'm saying by like how it needs to be like in a way that is like replicable each time.
+Joshua Fisseha: Y and that only comes with exposure to the skill then drilling it to the point where you can't not do it just like you did for I don't know like multiple times tables right when you're growing up or whatever it's like you need to be able to be just like ram it get like it to a point where you can't not see it but if it's just me loading a bunch of material you're not going to be able to retain any of it and you might remember it for a day then you're going to go back to your old habits so
+
+
+
+
+01:53:13
+
+
+Joshua Fisseha: I'm going to sign.
+Oreoluwa James: Yeah.
+Joshua Fisseha: I'm going to sign it right now.
+Oreoluwa James: Okay.
+Joshua Fisseha: I'm going to just hide you right now so I don't forget or make you wait. Not that you're going to do it tonight, but No,
+Oreoluwa James: Oh yeah, I have come on for tonight.
+Joshua Fisseha: don't even look at the second. Yeah. There's nothing. Yeah, you're going to get the um breakdown. It's going to be good. And like take your time with it. Um you can also take your own notes as you're going through it too. Um that being said, like uh you can also like it's always going to be there for you to look at and I believe you can even probably download it or PDF like the PDFs. Um, just make sure you get it. Anybody got any class tonight?
+Oreoluwa James: I have to like figure out what I want to do with my hair. And in the morning, I have a one of my friends works for Lululemon and she's like their community specialist.
+
+
+
+
+01:54:58
+
+
+Oreoluwa James: So, one of the things she has to do is like goes around to a bunch of different community things like yoga classes and like a lot of like workout classes and meeting people. Um, and like of course she like brings me along for everything. So, at 8:00 a.m. in the morning, I'm doing like a I have no idea. I won't even lie to you. I have no idea what this workout is about to be. I'm like f****** terrified. but she has a friend that goes to like a CrossFit gym and she's actually opening her own Pilates studio. So, they invited us to come. So, I have an 8 a.m. workout in the morning. So, honestly, like when I leave here, I was going to try to see if I can organize my notes a little bit, but to be honest, I don't even want to look at them again. I'm just going to probably wait until like tomorrow. Um, and I need to do laundry. Like, that's my plan.
+
+
+
+
+01:55:47
+
+
+Oreoluwa James: That's what I mean by I'm like I've become so not like sheltered, but my Friday nights are not like crazy anymore.
+Joshua Fisseha: Yeah.
+Oreoluwa James: And I don't know if it's because of just decisions I've made where I don't really care to be doing a bunch of stuff anymore or if it's because I'm like I'm sitting for the LSAT and I'm really just using that as an excuse to like not have to go out and like do stuff with people anymore cuz my definition of fun has changed. I think I'm partied out, which sounds really sad to say, but I was like really crazy in my early 20s. I felt like like 20, 21, 22, like I was out so much. So, I'm like completely partied out. Like,
+Joshua Fisseha: I agree.
+Oreoluwa James: like completely partied out.
+Joshua Fisseha: I hear you.
+Oreoluwa James: I'm done. Like,
+Joshua Fisseha: I agree. Yeah, definitely. Early 20s is always an adventure.
+Oreoluwa James: my god.
+Joshua Fisseha: I find that uh you live on like uh residents and stuff uh
+
+
+
+
+01:56:33
+
+
+Oreoluwa James: Like, yeah.
+Joshua Fisseha: near
+Oreoluwa James: Like when I was in college, I was like living on campus. So I was like trashed like every weekend. Trashed every every weekend.
+Joshua Fisseha: Easy.
+Oreoluwa James: And then I like started to realize like how bad alcohol is for our bodies. Like you know I kept waking up feeling like super sluggish, slow, like hung over, vomiting, like all the things like every weekend. Like there's something wrong. Mongo say there's something wrong. I'm like,"This is not normal." Like, this shouldn't be normal to for like me to be doing this every single weekend. Like $2 Tuesdays, like tequila Tuesdays, that's not a normal thing. I mean, in college, it is, but like as an adult now.
+Joshua Fisseha: The greatest times.
+Oreoluwa James: Yeah. And I think for me, it's just like, and again, my friends, some of my friends are like understanding of it. Some of my friends are not as understanding. And I truthfully tell people I'm like if you have never experienced like a generational lock in in the sense of like you need like the way I need to be locked in right now Josh is because like I'm changing my life.
+
+
+
+
+01:57:31
+
+
+Oreoluwa James: You know what I'm saying? By like me going to law school ultimately will like change my life.
+Joshua Fisseha: That's hilarious.
+Oreoluwa James: If you don't have that experience like you're not going to understand what I'm going through when I say things like ain't s*** funny until I get into law school. Like I'm not laughing. You know what I'm saying? It's like I'm not laughing until I got into law school. Like I'm not like I don't like nothing is funny to me until I I see an acceptance letter. Then I feel like I'm gonna be able to breathe, you know, like I can breathe and be like like okay.
+Joshua Fisseha: Are you friends with the Nigerians? Are you Are you a lot of your friends Nigerians?
+Oreoluwa James: A lot of them are. Yeah.
+Joshua Fisseha: Really? Okay.
+Oreoluwa James: Yeah.
+Joshua Fisseha: Interesting.
+Oreoluwa James: A good portion of my friends are Nigerian, which is funny because you would think like because we're all very, you know, like Africans are like very education oriented.
+
+
+
+
+01:58:10
+
+
+Oreoluwa James: You would think they would understand, but um some of them do, especially because some of them are like doctorate holders. Like I have friends that are like literally doctors, like they just started residency and s***,
+Joshua Fisseha: I was going to say
+Oreoluwa James: you know? But um like some of them are understanding, some of them aren't. I think I'm just going through that phase of like your 20s and entering adulthood where people that have this like main character syndrome or that refuse to give other people grace are like now realizing I also again like I said I used to be like a major party girl in the sense of I was like out
+Joshua Fisseha: Mhm.
+Oreoluwa James: every weekend like friends with all the DJs. So like I was always the one like coordinating all of the birthday stuff like all of the events, different things. Like people would hit me up for like the afters and everything.
+Joshua Fisseha: Yep.
+Oreoluwa James: And now that I'm like not doing that as much, I'm not like seeing them as much. Like I'm not out as much.
+
+
+
+
+01:58:57
+
+
+Oreoluwa James: I'm not going up there as much. And a lot of it is just because I I just don't have the time to drive an hour up, be with you guys for 4 hours, and then drive an hour back. That's like seven hours of my day, you know? And again, I'm in this like guilt phase where I'm I'm trying to not feel guilty about like continuing to live my life because I think I told you the first time around. I approached the ELSAT in like a super unhealthy way where I was studying for like multiple hours a day every single day, super duper burnt out. Like just like it got to the point where when I took the first exam in October, I was like just like I'm ready to get this s*** over with like ASAP. Like it wasn't even like a good let's get this s*** over with where I felt prepared to like energize like you know when you're excited like for me I was like it is what it is like I literally don't even care at this point like I don't so I approached it really like bad but this time around I'm also just kind of like if I have to be alone for a few months let me be alone for a few months it'll definitely help
+
+
+
+
+01:59:54
+
+
+Joshua Fisseha: What is this?
+Oreoluwa James: save me money you know like it'll help save me money like a lot of different. thing. So, um, my Friday nights have become if I'm not studying for Elsa, I'm like maybe doing laundry or maybe going to see a friend that's not too far and like doing appetizers or like maybe going for a run or like doing a solid work class or something. You know what I'm saying? Like I've definitely shifted like before it used to be like I'm out. I'm out on Wednesday nights, I'm out on Thursday nights. Um, I've had to slow down. Like I think this test and this process in general has showed me that I really need to slow down. So I am in that slow phase because no one tells you that the hardest part about law school is
+Joshua Fisseha: Yes.
+Oreoluwa James: getting in until you're in the process of it. I'm like what the f*** is this?
+Joshua Fisseha: Oops.
+Oreoluwa James: Like everybody on TikTok that's like now 1L's they're like by the way it does get better.
+
+
+
+
+02:00:43
+
+
+Oreoluwa James: They're like, like 1 L is hard as s***, but like it does get better because truthfully, they're all like there's nothing harder than like trying to get into law school because of how competitive it is,
+Joshua Fisseha: I think
+Oreoluwa James: the requirements, all of the things. And also, I saw some someone else had that same point that you said about like how like the LSAT is not a determining factor of how well you will do on the bar. And other people were like,"Yeah, no, no offense. Like the LSAT is harder than the bar because the LSAT is like scaled, like number scaled.
+Joshua Fisseha: Yeah.
+Oreoluwa James: Like the higher your score is, the better it is. The bar is literally just about passing.
+Joshua Fisseha: Yeah.
+Oreoluwa James: But at least it's like literal information that you just have to memorize and like familiarize yourself with.
+Joshua Fisseha: Yeah.
+Oreoluwa James: It's not equations. It's not stuff. It's just a memory pattern. So if you can just remember enough information to just hope that you pass and you just pass, you know, I would love it if the ELSA was just pass fail, you know, instead of it being like that scale.
+
+
+
+
+02:01:37
+
+
+Oreoluwa James: So um even knowing people saying like people saying that the bar is even easier than that. I feel like um with the proper mindset and everything else going in, I'll definitely do I think I'll do pretty well in law school. Honestly, I feel like I'll enjoy it. I think my biggest thing just has to be getting myself financially together because I don't want the stress of finances on me while I'm in school because I feel like that can really take away from the joy that is going to school. You know, I worked through my master's program and it wasn't bad, you know, because my master's program was not very exam heavy.
+Joshua Fisseha: It's fold.
+Oreoluwa James: Yeah, it was like it was not very exam focused or exam heavy. It was like very paperheavy. Um, there were exams obviously, but it's not law school where you're in torts and there's two exams, you know? It's like there's a midterm and there's a final. If you bomb your midterm, like the likelihood of you passing that final is like you got a crunch, you know?
+
+
+
+
+02:02:32
+
+
+Oreoluwa James: So, um, I still feel like I I feel like I'll enjoy it, though. Um,
+Joshua Fisseha: for sure.
+Oreoluwa James: yeah.
+Joshua Fisseha: But I feel like it's like a lot of people like the hard part is getting
+Oreoluwa James: Do you have friends that are attorneys?
+Joshua Fisseha: in. Pardon me.
+Oreoluwa James: Do you have friends that are attorneys?
+Joshua Fisseha: Yeah. Yeah. So many.
+Oreoluwa James: What are their thoughts about you doing so well on your LSA side and you're like you didn't go through the path yet?
+Joshua Fisseha: Oh, I get I get bombarded probably. Oh, I get like probably this question like once a week at least like the last years,
+Oreoluwa James: really cuz my mom my mom said that too when I was telling I was like,
+Joshua Fisseha: few years.
+Oreoluwa James: "Oh my god, mom, by the way, my tutor is Ethiopian." And she was like,"An Ethiopian living in Canada? It sounded like a it sounded like a paradox." Like she's like,
+Joshua Fisseha: There's a lot there's a lot of us in Canada.
+
+
+
+
+02:03:13
+
+
+Oreoluwa James: "An Ethiopian?" No,
+Joshua Fisseha: Uh, actually,
+Oreoluwa James: to be honest, your accent's very Canadian. Like, now that I'm listening to you,
+Joshua Fisseha: yeah. Yeah.
+Oreoluwa James: you sound like Nav.
+Joshua Fisseha: Yeah. Nav, that's crazy.
+Oreoluwa James: Yeah, I'm not saying that on purpose,
+Joshua Fisseha: Wow.
+Oreoluwa James: but you're actually like your accent's very Canadian. Like, now that I'm thinking about it,
+Joshua Fisseha: That's hilarious.
+Oreoluwa James: you're like you're very very you're very Canadian.
+Joshua Fisseha: Nav is was is very disrespectful. How you going to say Nav?
+Oreoluwa James: I'm so sorry.
+Joshua Fisseha: We have so many.
+Oreoluwa James: I'm sorry.
+Joshua Fisseha: Could have said you could have said Drake.
+Oreoluwa James: But I like I like though.
+Joshua Fisseha: You could have said I would even been okay with Justin Bieber. I could have even taken them.
+Oreoluwa James: I like Nav.
+Joshua Fisseha: Not even I would have been, you know, I would have probably been slight of it. Now it was like a brown boy from Bmpton.
+Oreoluwa James: But you don't But you don't sound like Justin Bieber.
+
+
+
+
+02:03:49
+
+
+Joshua Fisseha: I'm not saying I do. I'm saying it would have been better for it to hear someone say uh Drake.
+Oreoluwa James: No, I think you sound like Mav. And I like Nav, my brother and I, we like Nav. My younger brother and I,
+Joshua Fisseha: It's hilarious.
+Oreoluwa James: we like N.
+Joshua Fisseha: Brown boy from Bmpton.
+Oreoluwa James: We think Ner.
+Joshua Fisseha: He's a he's a brown boy from Bmpton. No, he's I haven't heard from Navin like he's very he's been out of the I feel like he's been out for maybe I don't pay attention to I mean,
+Oreoluwa James: Yeah,
+Joshua Fisseha: I'm just bold now.
+Oreoluwa James: he's like not in the scene as much.
+Joshua Fisseha: But yeah, he was one point he was like at one point he was pretty like he's popping for a bit. He's popping for a bit,
+Oreoluwa James: Mhm.
+Joshua Fisseha: but he's uh I was going to say you don't even you yourself. I was going to say you don't sound like a I was like you sound this going to be extremely offensive.
+
+
+
+
+02:04:30
+
+
+Joshua Fisseha: Um, there's no other way to say it, but you sound like I thought you were gonna say that you hang out with mostly like uh,
+Oreoluwa James: white people.
+Joshua Fisseha: yeah, like white people, like valley girls kind of kind of vibe,
+Oreoluwa James: Yeah. I mean, if it makes you feel better, I I love Los Angeles. Like, I spend like when I'm not in Jersey,
+Joshua Fisseha: of course.
+Oreoluwa James: I'm literally in LA. Um or if I'm not like out of the country on an island because I like being warm, which is like as soon as this test is over. I'm really hoping I can lock it in for November. Um, I know the registration deadline's the first, but if I don't lock it in for November, trust me, I'm definitely still going on a trip somewhere in like December. I don't care. Even if I have to sit for um January, but if I'm not in Jersey, I'm in LA. Um, I went to predominantly white schools like my entire life though. So, I have been around Yeah,
+
+
+
+
+02:05:18
+
+
+Joshua Fisseha: I had a feeling the ladies
+Oreoluwa James: I have been around white people for a very long time. Um, I think it was in high school.
+Joshua Fisseha: instructor. I was like,
+Oreoluwa James: Yes,
+Joshua Fisseha: "Yes.
+Oreoluwa James: exactly. And I think it was in high school that I was radicalized fully because that was the first time someone ever called me the n-word. And then I learned the importance of needing to like code switch of how to code switch like how to talk to white people to like get
+Joshua Fisseha: Hey,
+Oreoluwa James: by versus how to engage and like communicate with like people of color, black people. And then I also code switch like when I'm around Nigerians as well. So like it's it's a lot of different like genres.
+Joshua Fisseha: I feel like a lot of a lot of Nigerians uh like I've heard this I feel Cuz I I when I went to English. Well, my undergrad, alhamdulillah, actually like a lot of like Nigerians, like Ghanaians, like the But the thing is they were from G international.
+
+
+
+
+02:06:08
+
+
+Joshua Fisseha: So, they weren't like you in a sense like they're they're like not like you. I say like they were born in Ghana or raised in Nigeria.
+Oreoluwa James: No, they're like fresh off the boat.
+Joshua Fisseha: Yeah. But the thing was that being said like they're from like obviously from money. So like they didn't have the like I guess maybe my Ethiopia is a bit different because we don't have like you guys have like big ballers, right?
+Oreoluwa James: Yeah.
+Joshua Fisseha: Um where it's like they're like more like you would like because in our when we say fresh off the boat it typically means like they're free like racial but like when you say when Nigerians are fresh off the boat it doesn't it's not what you usually think of when you say like it means that they probably went to school in the UK for their undergrad
+Oreoluwa James: Oh, yeah. Yeah.
+Joshua Fisseha: or high
+Oreoluwa James: Yeah. I mean we we call them um J I I J GB. We call them IGGB. It's like I just got back because you know like Dei December, right?
+
+
+
+
+02:06:59
+
+
+Oreoluwa James: Like how that's like a thing in Nigeria during um December.
+Joshua Fisseha: Yes. In Ghana too, right? Ghana,
+Oreoluwa James: Yeah. It's like Yeah,
+Joshua Fisseha: I'm pretty sure is huge.
+Oreoluwa James: it's it's um it's Ghana and um Nigeria and they do that December. We call them IGGB because it'll be like the politicians and all the really rich people in
+Joshua Fisseha: Yeah.
+Oreoluwa James: Nigeria will send their kids to go and live in the UK.
+Joshua Fisseha: Yeah.
+Oreoluwa James: So like Tamotidola like grew up obviously in the UK. The Aoras which are like these this family that is really popular on social media. I think they're popular because the two sisters are in like social media influencers. One of them ran track at USC like in in um they're just like social media
+Joshua Fisseha: Who are the Who are the people? What's hum?
+Oreoluwa James: influencers but they're Nigerian but like when you hear them like their accents are like English English. Yeah. So, um, when I say FOB, I mean like somebody comes here and they're really bush, like very local,
+
+
+
+
+02:07:58
+
+
+Joshua Fisseha: Yeah.
+Oreoluwa James: like very local in the sense of like you can kind of hear in their accent like it it gives like NA accent, you know, or IGGB where they're they talk like they're from the UK and they talk very slow and they'll be like,
+Joshua Fisseha: Yeah.
+Oreoluwa James: "No, I just Yeah, I just got back and now I'm here and I'm going to be here for a few weeks. like Yeah.
+Joshua Fisseha: Yes. Yes. Yes.
+Oreoluwa James: Yeah.
+Joshua Fisseha: That was just It's shocking.
+Oreoluwa James: Very um
+Joshua Fisseha: It's shocking because I remember um because I didn't like grow up like obviously some Africans but like some Nigerians and like West Africans. The college university was insane. Like it was just it was takeover like Nigerian takeover. It was honestly like,
+Oreoluwa James: yo everywhere. Like the school I went to in Jersey,
+Joshua Fisseha: oh my goodness.
+Oreoluwa James: they called it um they always call it Nigeria University because it's a state school and you know how like Africans are always telling people to stay in state because of money.
+
+
+
+
+02:08:46
+
+
+Oreoluwa James: So like I feel like every state school that you go to, you'll find a lot of Nigerian people. Like no joke, just because of that belief as well. But Nigerians are Nigerians are actually everywhere when you think about it.
+Joshua Fisseha: It's insane everywhere. Like it's Insane.
+Oreoluwa James: You could go like You could go to the most You could go to Russia and meet Japanese people. I said Japanese and meet Nigerian people.
+Joshua Fisseha: Yeah,
+Oreoluwa James: You can go to Japan and meet Nigeria. Like you can meet them everywhere. It's kind of it's actually excessive when you think about it. Like why are you guys everywhere?
+Joshua Fisseha: you guys are cooking though. Like I honestly I like uh of any ethnic group like you guys are low-key somewhat uh like you guys have your own problems in some. very classist but when it comes to like you guys are dominating like any medical law like it's preposterous like you guys are just like I don't know what is happening but it's like one of those
+
+
+
+
+02:09:30
+
+
+Oreoluwa James: Yeah.
+Joshua Fisseha: uh one of the biggest like people that know but like it's still I feel like not people are not aware of how insanely like because in America I know like there even like the funny thing is my my friend went to he went to medical school in America and he's like the affirmative action back when he he went he was Because obviously form of action is typically supposed to be for the like the black Americans who went through like but
+Oreoluwa James: Yeah. Yeah. Affirmative action is supposed to be like DEI.
+Joshua Fisseha: it's yeah when they had it right and then it's supposed to be for the African
+Oreoluwa James: So
+Joshua Fisseha: like the idea was for the slave like descendants like the ones were African-Americans but it just ends up being where like literally like every single black person in my power like literally not without exception Nigerian Nigerian Nigerian Nigerian is like and the law schools medical schools like engineering it's like you guys are just like a takeover over like a dominance.
+Oreoluwa James: everywhere. Yeah.
+
+
+
+
+02:10:22
+
+
+Joshua Fisseha: I think in like one generation I think you guys are going to be like like a force to and even like the I think it was like the median I think you guys you guys the most educated in America or something. I remember I saw a statistic where you guys are like the of all minority groups I think you guys have the most like degrees or the most highest percentage of graduate degrees
+Oreoluwa James: Yeah, I think I think Nigerian Americans definitely do because whenever people say that like, oh, like Nigerian kids are on top. Nigerian kids are so this, they're that, that, I agree.
+Joshua Fisseha: that are cooking.
+Oreoluwa James: I agree, but like I can't lie to you. It's definitely the Nigerian kids that were like born and raised in the
+Joshua Fisseha: Yeah.
+Oreoluwa James: Americas.
+Joshua Fisseha: Yes. Yes.
+Oreoluwa James: Like the Nigerian kids born and raised in the Americas or the Nigerian kids born and raised in like Europe like the like yeah like the ones that
+Joshua Fisseha: Oh, you mean like the Okay, I see you mean not the ones who like like living there.
+
+
+
+
+02:11:10
+
+
+Joshua Fisseha: Yeah, because they have the opportunity.
+Oreoluwa James: are living the ones that are living there like don't get me wrong extremely smart for there but there's so many limitations on their learning and education that it gets in the way.
+Joshua Fisseha: What opportunity
+Oreoluwa James: You know, like you can have someone that's a really well renowned like doctor in Nigeria, but their their expertise and their education goes only as far as like what is available to them. You know, like we don't know that if this guy could be like a really really great surgeon because they might not ever have the proper tools and instruments and things for him to even be able to do surgery. Half the time those n***** don't even have a like. You know what I'm saying? So it's like there it seems like not as much but
+Joshua Fisseha: And they're scamming. So they're scamming,
+Oreoluwa James: like Yeah.
+Joshua Fisseha: right? So that tells you how smart they are. like they're able to figure out a way to finesse
+Oreoluwa James: But like here So here though like like me and like my siblings for example like my siblings are black sheep because my brothers are just I don't know they're just on their own whatever wave but like I have friends that entire family is doctors just different levels like like I
+
+
+
+
+02:12:13
+
+
+Joshua Fisseha: That's what I'm saying.
+Oreoluwa James: have like I have friends entire families are doctors. I have one friends that they're they're twins and they're both dentists and they both open their own practice. Like that's what I like that's the type of I mean like where um I have two friends husband and wife both Nigerian both lawyers like that's how they operate and I think it's because we have this mindset that says niga no carry last and we're a very prideful
+Joshua Fisseha: Oh my gosh.
+Oreoluwa James: country like we're overly prideful not overly prideful but like we are a very prideful country and
+Joshua Fisseha: Overly prideful. Sorry.
+Oreoluwa James: because yeah to the point that it's actually nauseating like it's sickening um
+Joshua Fisseha: Overly prideful. Yo, you guys. You guys. I remember when I first came like because they're from I I didn't know them like that when I first came like and I remember they said oh Ethiopia and they they made a comment I forgot they made a comment as like a ultimately like oh like this like poverty comment like along the lines of like a like a like a like they made a comment in regards to like essentially being poor and like uh it's because they have it's very class the thing is they're also social not
+
+
+
+
+02:13:14
+
+
+Oreoluwa James: Yeah. Yeah. Like they're very elitist,
+Joshua Fisseha: social They're an e collective elitist to the very least.
+Oreoluwa James: like very class. Yeah. Very elitist. Very classist. Which is makes me laugh because like Nigeria themselves, you guys are in some s***. Like I say that s*** all the time. I'm like Nigeria themselves is in some s***. Like that country is effed up for them to even be acting the way that they do. But it's it's true.
+Joshua Fisseha: You guys are cooking though.
+Oreoluwa James: Like yo,
+Joshua Fisseha: I can't take that from you guys because you guys are cooking.
+Oreoluwa James: yeah, that's why you think I gota got to trust the process,
+Joshua Fisseha: It's
+Oreoluwa James: bro. Like that I got to keep going. Like even even off the strength of like even if I didn't want to go to law school like literally because I'm Nigerian somehow one if there was a will there's a way I would have gotten a PhD in something like I would I just have to like you know what I'm saying like part of the part of me wanting to get the JD like a lot of it is genuinely because of the way I want to help people because I'm aware of the fact that that degree holds weight but there's also things that one can learn in law school that is just irreplaceable like once you have it, it's yours.
+
+
+
+
+02:14:16
+
+
+Oreoluwa James: No one can take that from you.
+Joshua Fisseha: Yeah,
+Oreoluwa James: And it really opens a lot of seats and places for you at the table. But then there's also that other really small part of me that's like I'm also Nigerian. So it's like of course I need to have a doctorate. It's like like that trend that was happening.
+Joshua Fisseha: things can be true.
+Oreoluwa James: It's like I'm Nigerian. Of course I was a valid Victorian of my class. Or it's like I'm Nigerian. It's like of course I have five degrees and I'm getting two more. You know, like those type of things.
+Joshua Fisseha: Yeah.
+Oreoluwa James: Um, so even if I was like I don't want to go to law school, like even if I had just stuck with my masters for like maybe two more years after I had already graduated and did like four years post like masters, somehow someway I would have been enrolled in a PhD just simply off the strength of like more education knowledge. of power, all of those things because they're very focused like the my parents generation very very very focused on everybody being professionals and they associate professionalism with education
+
+
+
+
+02:15:11
+
+
+Joshua Fisseha: Yeah,
+Oreoluwa James: especially in this country of course anybody.
+Joshua Fisseha: of course.
+Oreoluwa James: So, um, even for me, obviously, like the things I've learned with my parents, it's great. I think the way AI is going, there's going to be so many different changes by the time we have kids. I I don't even know if college is going to be a thing or if everyone's doing trade schools or whatever it is.
+Joshua Fisseha: Right.
+Oreoluwa James: I just don't My mindset is when I have kids, the goal is always going to be I want to be I want to have kids because I just want to have kids. Not for any other reason, not for my own selfish reasons or whatever, but just because I want to be a mom and take care of a small person and raise them up into an amazing person or amazing human, but like for me it's always been I don't care what it is you want to do. Just make sure you're the best at it, you know?
+Joshua Fisseha: There she is.
+Oreoluwa James: Like I I say that all the time.
+
+
+
+
+02:15:58
+
+
+Oreoluwa James: I'm like,
+Joshua Fisseha: There's There's the There's the Yuba blood.
+Oreoluwa James: yeah,
+Joshua Fisseha: Whatever you do,
+Oreoluwa James: like just make sure you're the best.
+Joshua Fisseha: be the best. I respect it though.
+Oreoluwa James: Just make sure you're the best at it.
+Joshua Fisseha: I respect it.
+Oreoluwa James: So like Joshua, if you were to tell me you're like,"Yeah, I'm like a professional skateboarder." Or it's like,"I want to be a" or it's like,"Oh yeah, I'm a skateboarder." I'd be like,"You need to skateboarder." No,
+Joshua Fisseha: You're the best in the world.
+Oreoluwa James: literally. Or somebody's like,"Oh,
+Joshua Fisseha: Yes.
+Oreoluwa James: I really like to run." I'm like,"You need to go to the Olympics." You know, like that's how I operate.
+Joshua Fisseha: Right.
+Oreoluwa James: It's like,
+Joshua Fisseha: Right.
+Oreoluwa James: "Oh." Um, that's why like even when I was originally supposed to go to medical school and all that stuff, I think it was during COVID where I started toying around with the idea of like physician assistant like PA.
+
+
+
+
+02:16:31
+
+
+Oreoluwa James: My parents were like physician assistant. They're like,
+Joshua Fisseha: Yeah.
+Oreoluwa James: you're assisting the physician, but you don't want to be the physician. Like that's like the way they operate.
+Joshua Fisseha: Yeah.
+Oreoluwa James: And to be honest, it's real.
+Joshua Fisseha: Yeah.
+Oreoluwa James: Like it's a real thing where I just the I think the spirit of excellence rests heavily on Africans overall in general, but like heavily on Nigerians like for sure. But like Nigerian Americans, like deaf, like Nigerian Americans, like anybody born in the Americas, anybody born in Europe, because I feel like they don't talk about the um Nigerians that are in Europe either. Like very smart. Like my cousin's actually my cousin's actually Yeah,
+Joshua Fisseha: She very smart even in Nigeria.
+Oreoluwa James: my cousin's actually in law school in Europe.
+Joshua Fisseha: Even because you said it like Yeah.
+Oreoluwa James: I don't talk to her much about it because I have no idea about the like European law system at all,
+Joshua Fisseha: Yeah.
+Oreoluwa James: but I know she's there. I think she's at I think she's at UCL or like College of London or one of those two or something.
+
+
+
+
+02:17:26
+
+
+Oreoluwa James: Um, but she was Yeah,
+Joshua Fisseha: No objection, please.
+Oreoluwa James: she was born and raised in London though. So, it's like she's just going through the system there, not like being here at first and doing that. Um, it's funny because I was thinking of going I was thinking of applying to schools in Canada, but I also don't know what that process even I don't even know what that process
+Joshua Fisseha: you should you should consider it because like you have it's the same it's the same like the Canadian
+Oreoluwa James: entails.
+Joshua Fisseha: American system is the same thing else has the same the GPA their GPA is being measured the same way there's no difference um I feel like a you guys are a lot of Americans recently. Um, and then Canadian law degree is very respected because like in America the law degrees are either like the top like god tier like you're talking about like Ivy League.
+Oreoluwa James: Mhm.
+Joshua Fisseha: The problem with you guys is you have everything between that and like a crack house. You guys have there's no standardized approach.
+
+
+
+
+02:18:16
+
+
+Joshua Fisseha: It's just like everything else is so there's no Canadian schools are like for American schools you have like 12 out of 10 but then you also have schools that are like minus like literally like could pay to get in, right? Corrupt as hell. Canadian schools are all across the board. They're more like you're going to get between that like six and a half, like seven to eight range. There's nothing below a seven, but you're not going to get a Harvard. You might get a close like a uft. Um, and the pricing for the American schools are way overpriced compared to the schools.
+Oreoluwa James: Oh yeah.
+Joshua Fisseha: The Canadian schools, one benefit is that even like considering the fact that uh you're international, you'd be paying like like significantly less in Canada. Like significantly less. you be paying probably like a quarter like you can graduate in Canada with like a law degree and that would work like you can easily get a job in America because they're all like top they're all very well respected as Canadian schools and Americans understand that there's no easy law schools to get in they're all hard but the thing is like uh obviously like if you want to be an American you want to work in America it's like just seamless to be I know that you it's easy
+
+
+
+
+02:19:18
+
+
+Oreoluwa James: Yeah, like it makes sense to, but I like I won't even lie, like University of Toronto has been on my brain since like last year. Like I've been thinking about it.
+Joshua Fisseha: Is he hella competitive?
+Oreoluwa James: My only thing is I just really
+Joshua Fisseha: But you should consider it. Like you should consider it. Yeah. Like it's a T basically UFT is essentially two T14.
+Oreoluwa James: I believe it.
+Joshua Fisseha: Yeah. Yeah. It's like it's world scale is probably ranked, you know, world scale is ranked. I know it's top 20 in the world. I don't know if it's top 14 in the world, but it's like it's top 20 in the world for sure. like it's better than probably like the lower end of the T14s, but it's not like the Harvard, but it's it's like the the the requirements are very competitive. Um, that being said,
+Oreoluwa James: I'm sure.
+Joshua Fisseha: they call it the Harvard of Canada. So, the Harvard of the North, they call it.
+
+
+
+
+02:20:01
+
+
+Joshua Fisseha: So, there's like Miguel is another school.
+Oreoluwa James: Yeah.
+Joshua Fisseha: You speak French.
+Oreoluwa James: Miguel Miguel University. Uh
+Joshua Fisseha: Yeah, you should look you should check it out though. honest, it's not a you save the benefit is the money that you save and the respect of the degree because you get the same degree that applies transferably whatever. Of course, there's got to be some like if you go to UFT, you can like everybody uft can go to like they get American jobs.
+Oreoluwa James: But what's the like Miguel is in um Miguel's in Montreal,
+Joshua Fisseha: French.
+Oreoluwa James: right?
+Joshua Fisseha: Yeah.
+Oreoluwa James: Yeah.
+Joshua Fisseha: Yeah.
+Oreoluwa James: I was about to say what's that language barrier like though?
+Joshua Fisseha: You can't Yeah, you have to speak French. You have to speak French.
+Oreoluwa James: Yeah.
+Joshua Fisseha: They don't allow anybody Yeah,
+Oreoluwa James: See, I don't I don't do all that.
+Joshua Fisseha: that's not it. But uft is the U of is like if you get in there you're you're set for honestly like it.
+
+
+
+
+02:20:45
+
+
+Oreoluwa James: I just looked it up. I said University of Toronto's like acceptance rate is like almost 8.9%.
+Joshua Fisseha: Yeah.
+Oreoluwa James: It's like very low.
+Joshua Fisseha: It's like the like I said like the Harvards and those those ones are a bit better than the uft but for Canadians teams. It's like that's our our Harvard or like that's where the the best in and even like internationally you guys of course Nigerians have a to hold on uft like you guys have like all the universities though like you guys I remember in our I was the president of the Ethiopian Association at Carlton when I was there university and like you guys uh we always worked together Nigerians and we had a lot of events together we throw like parties and stuff but you guys had like a immense population like it was it was
+Oreoluwa James: Yum.
+Joshua Fisseha: the biggest club on campus.
+Oreoluwa James: We're It's like we're literally everywhere.
+Joshua Fisseha: Yeah.
+Oreoluwa James: Like we had ours so our like African student um association is called TW. Like I would say at least 70% of people that were there were Nigerians like no
+
+
+
+
+02:21:42
+
+
+Joshua Fisseha: Oh yeah. Yeah. Even our school.
+Oreoluwa James: joke.
+Joshua Fisseha: Our school the biggest association is
+Oreoluwa James: The other 30% would be like people that are Ghanaian or like Liberian or you'll have one random person be like I'm sending a le or some like you know like random.
+Joshua Fisseha: Yeah.
+Oreoluwa James: But I feel like I go anywhere and I see like Nigerian people like even like I'm not going to hold you even just like I think yesterday like between this week I saw one girl post a video and she was talking about the she was like basically talking about how like tennis is comparable to like finding jobs in law or like tennis can be like associated with like law jobs or something. I thought it was really cool. I watch the whole thing by her name. I wouldn't have known she was Nigerian, especially because her last name is like Abdul, but she got married. I click her bio, of course, I see the Nigerian flag and of course I see lawyer. I'm like, or no, no,
+
+
+
+
+02:22:32
+
+
+Joshua Fisseha: You guys have a lot of Muslims,
+Oreoluwa James: no, one L.
+Joshua Fisseha: right? You got a lot of Muslims,
+Oreoluwa James: H,
+Joshua Fisseha: right? Like your country has a lot of Muslims.
+Oreoluwa James: yes, yes, yeah, yeah. Nigerian.
+Joshua Fisseha: It's weird to me.
+Oreoluwa James: Yeah.
+Joshua Fisseha: Are you Muslim? I'm I'm assuming no.
+Oreoluwa James: Sorry, my dog's barking. But um no, yeah, Nigerians are um like the two main religions are Islam and Christianity.
+Joshua Fisseha: Are you are you a Muslim? Are you Muslim yourself? Are you Christian?
+Oreoluwa James: I'm Christian. Yep.
+Joshua Fisseha: No. Let's
+Oreoluwa James: My um my mom's mom was Muslim, but then she um ended up marrying my grandpa and then converted.
+Joshua Fisseha: Oh, damn. I know. Yes. And you guys have a very I don't really I don't know. I've heard a lot of like in different things, but I know you guys are having like a the thing it's hard to gauge whether it's propaganda, but I know a lot of like the Muslims are giving you guys problems.
+
+
+
+
+02:23:22
+
+
+Joshua Fisseha: I've heard in Nigeria.
+Oreoluwa James: Mhm.
+Joshua Fisseha: I I don't know how much of that's legitimate because I've seen like people say it's propaganda. Some people saying it's true.
+Oreoluwa James: Everybody's getting everybody is giving everybody a hard time in Nigeria right now. Like Nigerians are giving other Nigerians a hard time. Like even my mom and like our family businesses we have out there, it's like she has to keep flying out, spending time there because you can't trust anybody to do anything. Literally like there's no there's no solidarity anywhere in Nigeria. Like Nigerians are scamming other Nigerians. Like you're just scamming other people. Why did this is so random. Why did um my mom we have a home there. So, like when we don't go to Nigeria, we rent the home out to like other people that are visiting or traveling or whatever it is. Why did my mom go hire a new like house manager, like a new guy to do the house management? My mom gave him money for him to go and get his um driver's license because she was like,"You should be able to drive because if you need to go pick up guests from the airport and bring them back or like chauffeur them around, like you should be able to do that." Why did this guy take my mom's
+
+
+
+
+02:24:26
+
+
+Oreoluwa James: money and then like proceed to tell her that the person that was supposed to help him get his driver's license died and he like left with her money.
+Joshua Fisseha: That's great.
+Oreoluwa James: That's but that's what I mean by like that's the s*** that they do all the time. That's why I'm like Nigeria's like super duper duper corrupt. Like Nigeria there like being in Nigeria is one thing. We're very like glamorized everywhere else though. Like we're glamorized on all other places. But then when you get to Nigeria, it's like almost an eye roll because you're like you guys are just effing the program up. Like you're f****** the brand up. Like you're f****** the brand up because like you said, everybody knows Nigerians to be very much like very posh, very on top of like everywhere.
+Joshua Fisseha: Very bor.
+Oreoluwa James: Like we are we are elitist, you know? We are. That's the best way for me to even explain it. And then it's like you get there and you're like,"What's going on?" Like,
+
+
+
+
+02:25:21
+
+
+Oreoluwa James: "Why are you guys doing this? Why are you operating like this? Like, what's happening?" So, yeah.
+Joshua Fisseha: Like I heard that I heard that you guys have like a like somebody was like I have I have a lot of a lot of like African-American students and they all have beef with you guys. Like they always mention like we don't like the Nigerians like they'll say Africans but then they always say Nigerians.
+Oreoluwa James: They don't they don't like they don't like um they don't like Nigerians
+Joshua Fisseha: What's going on with that? I'm confused by it. Like
+Oreoluwa James: because of a like what we said about Nigerians just being very like elitist and like thinking they're better than everybody else. Like since we are very prideful, we come in for that. But I personally think a lot of it is like self-inflicted on black Americans parts or like African-American parts mainly because I think they're just upset that they're not Nigerian. Like I think they're just upset that they have to go more out of their way to find their ancestral tree, you know,
+
+
+
+
+02:26:13
+
+
+Joshua Fisseha: Yeah.
+Oreoluwa James: like to claim something like everybody wants to claim something like every like you know remember so long ago like that they were calling African they were calling African people African booty scratchers like that was a thing like they were calling people
+Joshua Fisseha: Yeah.
+Oreoluwa James: African boot scratchers where it's like oh like you're African like I used to like be so embarrassed to tell people my name growing up and stuff because I knew people were going to look at me like what the f*** does all of that s*** mean? Um, but I I really do think a lot of it is just like a pride type of thing where they just look like we just don't like you because you think you're better than everybody else. But in reality, it's like that is how we move because there is a small percentage of our population that is very much better than everybody. You know what I'm saying? I'm like there's like I promise you you could probably go to every Like no joke, like no joke. You could probably go to every hospital in like the entire country of the United States and find at least like five doctors that are Nigerians in every state.
+
+
+
+
+02:27:11
+
+
+Joshua Fisseha: Oh yeah,
+Oreoluwa James: Every state. I'm telling you, every state.
+Joshua Fisseha: all my all my African students are
+Oreoluwa James: Like you can go to like Wyoming and you'll find them. You can go to Nebraska and you will find them. That's what I mean by like Nigerians are very much taking over the map. And they think that's why they have beef because um we're a very prideful group of people and we're not afraid of being prideful. I say it all the time. I'm like Niger Carrie last. I'm like I go so hard because a I need to get to a bag and I genuinely just want to live a good and comfortable life. And b also like it's literally embedded in my DNA to go this hard. It is like it's embedded in my blood. Like how I was raised. My mom's like you must be the best all times. My mom is convinced and honestly I I agree with her but my mom's convinced. She's like you need to become a millionaire before you're 30. And to be honest like it's doable.
+
+
+
+
+02:27:58
+
+
+Oreoluwa James: Like there's ways to make money for real. Like you just got to be smart and very intentional with how you move. And that's I think what puts a lot of people um that aren't like Nigerian at a disadvantage because like you just have to be smart and like know how to move. So I think people are just upset because Nigerians like are very much like we're better than everybody.
+Joshua Fisseha: Yeah, you guys. I don't know what it is. You guys, they have smoke for you, but every time like they like it's weird.
+Oreoluwa James: They'll be all right. Like they'll be they'll be like super duper all right.
+Joshua Fisseha: It's very weird.
+Oreoluwa James: Like they will be they'll be so fine. Like they'll be all right.
+Joshua Fisseha: Yeah.
+Oreoluwa James: They'll be
+Joshua Fisseha: I don't know what you guys are doing out there. where you guys are like it's it's very uh I had one of my students he actually like got into a good school. He was uh very adamant in saying like they also have I do think I do agree with you like I would never say this to them because it's very offensive but um there is an identity um issue there.
+
+
+
+
+02:28:54
+
+
+Oreoluwa James: For sure.
+Joshua Fisseha: I think there's an idea of like you guys sold them out but the West Africans they believe they sold them out in they have like a weird not weird
+Oreoluwa James: Yeah. They like that's No, but that it's true. That's why so many people like so many um even like we have the term so we have the term akata which means like black American. Some people think it's offensive. I don't when I use it I don't mean to be offensive. Like I hope people don't think I'm being offensive. I'm literally just saying like black American, you know? Like I have friends that are black American where it's like they would have to like go and do an ancestry DNA test or something in order for them to like come up with their percentages of like where they come from, you know, because their parents were born in America and their parents' parents were born in America and their parents' parents' parents were born in America, you know? It's like me and you, my parents were born in Nigeria.
+
+
+
+
+02:29:43
+
+
+Oreoluwa James: Your parents, I'm assuming, were born in Ethiopia. So, like we already know what's up.
+Joshua Fisseha: Right.
+Oreoluwa James: Um,
+Joshua Fisseha: Let's go.
+Oreoluwa James: and like you said, like there's definitely that lack like when you don't have like an identity or when you don't have an understanding of an identity, an understanding of like where you come from, like what you represent. It's definitely diminishing. Like, it's hard. Um, so I I think it's funny where sometimes people will say stupid s*** like,"Oh, we got to be better than the Nigerians. Like, we got to beat the Nigerians." I'm like,"I don't know why you're saying that. Just you can join us." Like, it doesn't always have to be like a competition. But like in my head, I'm like,"It is a competition." I'm like,
+Joshua Fisseha: Yeah, I think they I think they have this feel. I don't know if it's like I think there's just a very long because there's also comparison because you're both black like you're obviously both from like West Africans and like all Africans to be honest but like West Africans there's Nigeria the most prominent known ones from that group so they think like people compare them right they'll be like oh like the Nigerians can do it like why can't uh why can't people use you guys as a
+
+
+
+
+02:30:42
+
+
+Oreoluwa James: Yeah. No, literally just so crazy to me that people even do like what do you guys even do? Like what do you even do?
+Joshua Fisseha: and your and I feel like the generation of your parents they feel that way too. been like these people are lazy like they don't work like the way that you know.
+Oreoluwa James: Oh my god. My mom will be like,
+Joshua Fisseha: Yeah.
+Oreoluwa James: "Where were we? We were out one time and my mom I think we were in like Newark or something and we were at a stop a stoplight and these girls pulled up in like a Nissan or like whatever car blasting music and they got out of their car and were like twerking on the road and my mom was like this is why
+Joshua Fisseha: Yeah.
+Oreoluwa James: a people like my mom was like this is why a people will never like move forward. She's like this is why people will never do like you know like that's the minds that she has.
+Joshua Fisseha: Yes. Yes.
+
+
+
+
+02:31:21
+
+
+Joshua Fisseha: Yes.
+Oreoluwa James: She's like,"This is why I cut out. People will never like compare to where we are and stuff like that." Or my parents will say stuff like,"You're not a black American person." Like, you know, they're like,
+Joshua Fisseha: Yes.
+Oreoluwa James: "You're a Nigerian kid." So, like, you got to also understand that, too, because it's unfortunate for me to say this,
+Joshua Fisseha: Yes.
+Oreoluwa James: but I feel like you'll understand what I'm trying to say.
+Joshua Fisseha: Completely different culture.
+Oreoluwa James: Black American people can be like really ghetto. Like, some of them can be really like some of them can be really,
+Joshua Fisseha: It's a completely different culture.
+Oreoluwa James: really, really ghetto. And I think I literally do think it's because there's no connection to a culture. Like you get what I'm saying? I feel like us as Africans, it's like the expectation is always for us to do well. like anybody that comes from a culture the expectation is always to do well because Africans, Africans, Indians and Asians like what's the like there's like one thing we all have in common when it comes to like career paths and that's like you're an engineer, you're a lawyer, you're a doctor,
+
+
+
+
+02:32:20
+
+
+Joshua Fisseha: Yeah.
+Oreoluwa James: you need to be super duper smart, you need to do this. A lot of that stemmed from the fact that we know we're a minority and because we're a minority, we have to work twice as hard as like anybody else, especially like white people, white men specifically, to be able to even get that seat at the table. And that's how like we were brought up. But also at the same time, you know, I still have conversations with my friends that are black American and I tell them, I'm like, I hope you guys know that we still have to have the hard conversations with our parents, too, you know, and I'm still going to have to have the hard conversations with my kids, too.
+Joshua Fisseha: Okay.
+Oreoluwa James: even if I marry um a Nigerian man and I have very like Nigerian oriented type of kids were The hard conversations were like what you do when you get stopped by a police officer in the United States like put your hands like all of this stuff like putting taking your hoodie down like making sure you're not in these type of places after certain times and being around certain people and all that stuff.
+
+
+
+
+02:33:10
+
+
+Oreoluwa James: Like we still have to have those same conversations. So I think it depends on the person that you ask, you know, um I identify Yeah,
+Joshua Fisseha: It's tricky though.
+Oreoluwa James: I identify as black.
+Joshua Fisseha: The problem with the
+Oreoluwa James: I tell people I'm like I'm I'm um like you see race before you see ethnicity. You know what I'm saying? Like when someone looks at me I mean obviously my name gives it away but maybe without even looking at my name. If you were to like look at me with no understanding of my name you're going to see a black woman first before you see anything else you know.
+Joshua Fisseha: Really?
+Oreoluwa James: So like I still understand that and I still share that concept with people. But then when I have conversations and I start um speaking more with other people, like I met some random guy yesterday after my run, halfway through he stopped me and he was like,
+Joshua Fisseha: It's
+Oreoluwa James: "So like what are you like ethnicity-wise?" He's like,"What?" Like what's your He's like,
+
+
+
+
+02:33:59
+
+
+Oreoluwa James: "What's your ethnicity?" I was like,"Ethnicity as in I was like,"What do you mean?" Because when I think of ethnicity, I think of them like you're either like Hispanic or Latino or that's it. But I was like,"You mean like nationality?" And he was like,"Yeah, like what's your nationality?" I'm like, well, I'm Nigerian, you know, or I call myself Nigerian American when I really get down to the nitty-gritty of it as opposed to
+Joshua Fisseha: Yeah.
+Oreoluwa James: African-American because yes, we have been taught to separate those terms because I am not quote Africanamean because I know where in Africa I am from. I am from Nigeria,
+Joshua Fisseha: Very
+Oreoluwa James: so I am Nigerian-American, but that's not going to be on the ethnicity aspect when you're filling out a form. It's just going to be African-American. So, I think it's an identity crisis.
+Joshua Fisseha: cool.
+Oreoluwa James: Like, when you don't know where you're from, you don't know how to bring yourself back to like a center of gravity um to enjoy and like be able to connect with people and stuff.
+
+
+
+
+02:34:51
+
+
+Oreoluwa James: Like, I think that's what people that are considered like black Americans, what they really crave, like what they're actually angry about.
+Joshua Fisseha: Big time.
+Oreoluwa James: Not like I don't think they're angry about the fact that we are very prideful and like elitist and like like you know like we're very big and puffed up and all that stuff, but it's also just like I think you're also just upset that you can't claim being Nigerian
+Joshua Fisseha: Well,
+Oreoluwa James: because
+Joshua Fisseha: they think you guys sold them like like when they tell me they're like,"Yeah, like you guys like they do I think you're actually right because they have weird I don't want to say weird because I don't know enough about it, but they have this like uh like I have I have like three or four of my students that are like because I don't have any really much explored to black Americans because I'm not like from America in a sense like like I don't have like they're very they're very different than the Canadian blacks. It's very different like we're not the same in a sense.
+
+
+
+
+02:35:37
+
+
+Oreoluwa James: Yeah.
+Joshua Fisseha: They als but the thing is they al call themselves uh like Hebrew and like they always say we're Hebrew, we're Hebrew, we're Hebrew and it's like uh like we're the real Israel. Like there's a lot of that like kind of talk and I don't know enough about the history but it's like and they're like yeah like the West Africans they sold us because they knew we're Hebrew and we're not one of them. There's like an interesting history there that I don't know I don't know how much of it is just like like made up
+Oreoluwa James: I mean,
+Joshua Fisseha: or
+Oreoluwa James: history is always kind of fabricated when you think about it. History is fabricated to a certain extent because like we we change history because we don't want people to learn. Just like that question. It's like technically I I I I don't agree. I do think that you can learn from past mistakes by studying the past. But um at the same time um I I I I think that history can be really fabricated.
+
+
+
+
+02:36:30
+
+
+Oreoluwa James: And because history can be very fabricated, a lot of people are learning information in bits and pieces and they're kind of just running with it. It's literally what the Trump administration is trying to do currently now by like blocking certain history classes and certain books to be read. I think at one point they were trying to and it was either in Florida or one of those like random southern states that they don't want to teach about slavery anymore.
+Joshua Fisseha: I heard about that.
+Oreoluwa James: And why?
+Joshua Fisseha: I heard about that.
+Oreoluwa James: Because it paints like a certain minority or I said minority it paints a certain demographic of people in a negative light. And I'm like well paints them in a negative light or not. It's still history. it's still something that happened. So no matter like what is going on, you should still teach it. Um but like you know there are parts like that's like either overly fabricated or under fabricated. Like for example, I think history is very underfabricated because white people have been the ones to teach us history for so long.
+
+
+
+
+02:37:28
+
+
+Oreoluwa James: Slavery was way worse than what the books say it is. You know,
+Joshua Fisseha: Oh yeah.
+Oreoluwa James: slavery was way worse than what people have explained it and all those things like generational traumas worth.
+Joshua Fisseha: Oh yeah.
+Oreoluwa James: We see it in especially like black American men now. Like black American men, my cousin, she's a professor and she says this all the time. She's like,"All black men need to go to therapy." She's like,"All black men need to go to therapy." She's like,"But all black, like American men especially, need to go to therapy because they're like holding on to so much generational trauma that they themselves don't even realize they're holding on to." And I think I agree because I'm like it's just going to keep being like
+Joshua Fisseha: Yeah.
+Oreoluwa James: cyclical like in that sense of you hold on to this trauma. You keep thinking like all of this s*** I got to get it out the mud. I got to get it out of here. Or like poverty how that's like a it's Yeah.
+
+
+
+
+02:38:14
+
+
+Joshua Fisseha: Yeah. Know it's it's it's especially the black Americans. You guys have a uniquely new I guess like they're just a different breed. like you when you're not like when you're not uh because we don't have like like we have a few but we don't have the same like all the black people here are mostly either Caribbean or African. It's not like we have like African Canadians or like the one there's some but they're very few and they're like up north and random.
+Oreoluwa James: Yeah.
+Joshua Fisseha: They're not like a relevant population.
+Oreoluwa James: Where it's like they were just they're just like black people that happen to be born in Canada. Like I get what you mean.
+Joshua Fisseha: They're all Africans.
+Oreoluwa James: Like I get completely what you mean cuz I'm thinking about all my black friends.
+Joshua Fisseha: African Canada. The blacks are like freaking
+Oreoluwa James: All my black friends that are in Canada are literally Nigerian. Like I don't know anybody that's just like not Yeah.
+Joshua Fisseha: Yeah.
+Oreoluwa James: I think it's also cuz Canada is just like different than America.
+
+
+
+
+02:39:02
+
+
+Oreoluwa James: Truthfully,
+Joshua Fisseha: We have an identity.
+Oreoluwa James: it is.
+Joshua Fisseha: You guys have like a natural a national identity.
+Oreoluwa James: Mhm.
+Joshua Fisseha: Us is just like it truly is a melting like it's a like multicultural. Like it's not a it's multicultural in a sense that it's not uh there's not like a like you guys have I want to say like very strong not strong but you have like very you have less different types of groups. We have like like for example us we have like a lot of different types of sub groups like you guys will have like oh like black America which is like it's like African-Americans you could argue like a huge chunk you guys have whites you have like Asians and like obviously there's little mixes in between all these things. Us is like we have like you know like a lot of Arabs. We have a lot like a lot like I went I've had students especially from the south like they have no idea what like an Arab is. They're like I don't even know what that is.
+
+
+
+
+02:39:54
+
+
+Joshua Fisseha: like they have no even like us is like we have like Somali, we have Ethiopians, we have people from Kenya and like we're all our culture is
+Oreoluwa James: Yeah.
+Joshua Fisseha: mixture
+Oreoluwa James: Where like everybody that's like black by like race still can be connected back to somewhere that's like the Caribbean or African. Like I completely get what you mean.
+Joshua Fisseha: all of us.
+Oreoluwa James: Like I completely get what you mean.
+Joshua Fisseha: All of us we don't have any African Canadians don't
+Oreoluwa James: Like I 100%. And honestly I feel like it's like I feel like it's better that way.
+Joshua Fisseha: really um it's different.
+Oreoluwa James: Because then you don't have you don't have all of these like f******
+Joshua Fisseha: It's different.
+Oreoluwa James: culture wars that are super unnecessary.
+Joshua Fisseha: Yeah. But that that's not really a thing. You don't really see like even it's funny because like you'll see you'll see like I don't know it's weird to say but like you'll have um like our even our slang is like different languages of different places.
+
+
+
+
+02:40:41
+
+
+Joshua Fisseha: Like we use different like like you you'll hear like Nigerians like use like a Somali word in their like everyday language and you'll hear like it's weird.
+Oreoluwa James: Literally
+Joshua Fisseha: Yeah. Like, oh, you'll hear like like the slang is mixed or the Caribbean like like you'll hear Caribbean people like
+Oreoluwa James: Right.
+Joshua Fisseha: um you'll hear like Nigerian speaking like all of us.
+Oreoluwa James: Like you'll like you'll say hi to somebody and you'll be like wagan. You're like what?
+Joshua Fisseha: Yeah.
+Oreoluwa James: I don't know.
+Joshua Fisseha: Everybody watching Yeah.
+Oreoluwa James: Yeah.
+Joshua Fisseha: It's very much
+Oreoluwa James: And that's makes me laugh because like we do that here but like it's only people that have culture that do that. Like one of my closest friends is Jamaican. So like I picked up on Jamaican lingo because of like speaking with her. Black American people don't like do that. Black American people don't do that.
+Joshua Fisseha: You go.
+Oreoluwa James: Like black American people have their own like slang, I guess, but it's still like all I like I think the word I want to use is like it's like Ebonics where like they're able to just speak like the way that they do their tone like certain words that
+
+
+
+
+02:41:34
+
+
+Joshua Fisseha: That's clear.
+Oreoluwa James: they use and pronunciations of things and
+Joshua Fisseha: Yeah, it's a They have their own world.
+Oreoluwa James: everything.
+Joshua Fisseha: It's a very bizarre like not bizarre but it's I didn't realize how there was like a a divide between I thought that like I thought black Americans were similar like here we have it's like yeah there's different cultures we all have like our own cultures in some sense but it's not like animosity of any sort.
+Oreoluwa James: Mhm.
+Joshua Fisseha: It's not like it's a weird There's nothing like like like my friends were Nigerian.
+Oreoluwa James: I mean, it wouldn't be weird. I think it wouldn't be weird because everybody has their own culture that they identify with, you know,
+Joshua Fisseha: Yeah.
+Oreoluwa James: in the sense of like I can sit here and I can say I am Nigerian American. Why? Because my parents were not born here in America. They were born in Nigeria and migrated here. So, I'm also the child of immigrants. So, I like I also rep that heavy too because I I believe that America is built on immigrants.
+
+
+
+
+02:42:26
+
+
+Oreoluwa James: So, I'm Nigerian American because my two parents were born and raised in Nigeria. My mom's mom was born and raised in Nigeria. My mom's dad was born and raised in Nigeria.
+Joshua Fisseha: Yeah.
+Oreoluwa James: My dad's dad was born and raised in Nigeria. My mom, my dad's mom was born in Lebanon, then moved to Nigeria and was raised. So, she's like Lebanese, but like a Lebanese living in Nigeria that like knows the Europe language. Like their parents were set up somewhere else. Like they continued in Lebanon. and we continue Nigeria. So that is the culture like that's the identity or like even like you Joshua like my parents are Ethiopian my parents' parents are Ethiopian my greatgrandparents are Ethiopian like it's
+Joshua Fisseha: 100 generations back.
+Oreoluwa James: always you know it's like been connected but it's like black Americans their own
+Joshua Fisseha: Yeah.
+Oreoluwa James: is like my parents were born in America my grandparents were born in America my great-grandparents were born in America my great great grandparents were born in America my great great grandparents marched with Martin Luther King in America like, you know, like that.
+
+
+
+
+02:43:27
+
+
+Joshua Fisseha: It's crazy.
+Oreoluwa James: And then they're like,"Oh, but I just did an ancestry DNA and I'm 23% Nigerian." Yeah, because you're like mixed with like a bunch of different things. She like,"I'm 23% Nigerian, 40% Cameroonian, 40% D." It's like so funny.
+Joshua Fisseha: It's only like 10% European And you you'll go 10% European.
+Oreoluwa James: Huh?
+Joshua Fisseha: You're like,"Oh, boy." And you know why?
+Oreoluwa James: No, literally. It's like I'm 10% Cameroonian,
+Joshua Fisseha: It's because they're Yeah.
+Oreoluwa James: 10% Ghanaian,
+Joshua Fisseha: It's really sad.
+Oreoluwa James: like another percentage Ethiopian, Egyptian, like all these things. And I'm like, that's great.
+Joshua Fisseha: Ethiopian.
+Oreoluwa James: But like I think a lot of the
+Joshua Fisseha: I feel like that's it. African-American as Ethiopian. I don't I think that because there was no the slave trade like to America didn't there was never
+Oreoluwa James: Yeah, it wasn't even that.
+Joshua Fisseha: a Yeah.
+Oreoluwa James: It was really more West Africa if anything. So
+Joshua Fisseha: was I think maybe a little bit central Africa, but like there's no such thing as like a like a African-American that like maybe there's one, but like unless they like they marry someone like us like me or something like that, but like they're not it wasn't like slavery that happened uh between America and Ethiopia.
+
+
+
+
+02:44:30
+
+
+Joshua Fisseha: There's never a connection there.
+Oreoluwa James: are you married?
+Joshua Fisseha: But there's the West African Pardon me.
+Oreoluwa James: Are you married?
+Joshua Fisseha: Am I married? No. No.
+Oreoluwa James: Do you plan to marry like an Ethiopian woman?
+Joshua Fisseha: Oh, it's a good question. Um, I got that question a lot recently. Um, but I'm always like I don't know. Haven't uh I haven't the
+Oreoluwa James: Are you very like are you very like proudly Ethiopian?
+Joshua Fisseha: pal,
+Oreoluwa James: cuz like I'm very proudly Nigerian where it's funny cuz I just
+Joshua Fisseha: of First,
+Oreoluwa James: um I just broke up with my boyfriend last month in August. He was Haitian and that was like one of the small things that was like killing me because of that like difference in culture because not that like Haitians and Nigerians are like so far apart but like they are. Cuz he always used to be like Yeah.
+Joshua Fisseha: they're different though. They're different.
+Oreoluwa James: He always used to be like we're not that far apart.
+
+
+
+
+02:45:21
+
+
+Joshua Fisseha: How different.
+Oreoluwa James: We're not that different. I'm like we are we aren't but we are.
+Joshua Fisseha: Very
+Oreoluwa James: like we aren't but we are like there are certain things that we can have we can say that are similarities but it's also like again this is where that pride like ignorance that Nigerians hold come into play where it's like he when I first started dating him he was working in marketing my parents wouldn't even accept that as a career path unless I was like telling them I'm marketing for Barack Obama like you know what I'm saying like they'd be like what the f***
+Joshua Fisseha: Yeah. Yeah.
+Oreoluwa James: does that even have to do with anything Um he also was like the type of person where he was
+Joshua Fisseha: Yeah.
+Oreoluwa James: like um I have a bachelor's degree and I think that's enough for me. Even that like like when he told me that I was like grabbing my chest. I was like what the hell do you mean that's enough for you? Like you know and that's again coming from somebody that like very val like very much values education and like the power in education but it's also because I'm Nigerian you know like I also love I love Burnab boy
+
+
+
+
+02:46:21
+
+
+Joshua Fisseha: You're up.
+Oreoluwa James: like I love my afro beats like I love my music and all these things too. So,
+Joshua Fisseha: Europe.
+Oreoluwa James: like I know deep down like there's a small part of me that's like I don't mind like not marrying a Nigerian person. But I think dating him for like the year that we did date, I realized like I was like,"No, I don't really think I want to have someone that I have to go through all of this like cultural explanation and like details and understanding with and why things are the way that they are like why my parents are going to vet you like like it's their job because you know
+Joshua Fisseha: Yeah, this Yeah, it's tough.
+Oreoluwa James: like it's a lot." And I like as somebody that's very like proudfully like Nigerian, I also like want my kids to have the same experience that I had growing up. The only difference is going to be like I'm not like generation Nigerian where I was born there and like back here. So, like obviously I'm going to have to do a lot of work to keep the tradition alive for them, like cooking like Nigerian dishes and like allowing them to be around their other cousins and everybody.
+
+
+
+
+02:47:21
+
+
+Oreoluwa James: Especially if I like marry a man that's like not Nigerian, like allowing them to be around their other Nigerian cousins. Like commanding my parents like when they come over, only speak Yurbat to them. Like don't speak English to them. Only speak Yurba to them because I I can speak Yurba but like not great. Like I can speak enough Yurba here that people are like,"Okay." Okay. But when I get there, like people will definitely know I'm like American. They're like,"Oh yeah, like this American girl." Like I'm not allowed to go to the market and speak cuz my mom's like because they'll know that you're not from here and they'll they'll try to play you. But um yeah, like I think a lot of it just stems from like identity. when you have an identity. I think it's also the same thing with Christianity. When you have an identity and you like belong somewhere, like that sense of belonging is very comforting.
+Joshua Fisseha: Yeah. Yeah.
+Oreoluwa James: So imagine you don't have it and then imagine like someone that is like also very like ignorant and prideful like Nigerian people are also emphasizing the fact that you don't have it.
+
+
+
+
+02:48:16
+
+
+Oreoluwa James: It's like no no I'm Nigerian and you're not like you don't know anything. Like I'm Nigerian. I'm better than everybody and like that's literally how we operate. So whenever people tell me like Nigerian people are so this, they're so that I'm like you're not wrong. But like also like we al we work very hard. So I think we do have the right to be able to flex on everybody. Like we work very hard. Like I can definitely tell you like I am a very very hard worker. I feel like this test is not showing that. But I'm a very hard worker. Like I am a very very hard worker in the sense of I do everything with the best of my ability each time. Um every single time. Like I have a billion things on my plate all the time, constantly, consistently. And I think that's like the case for every Nigerian kid. Like mostly there's like probably a small percentage Nigerian kids that aren't like always doing the damn thing.
+
+
+
+
+02:49:07
+
+
+Oreoluwa James: Like you'll meet Nigerians, they're dentists, they're lawyers, they're doctors, their resumes are stacked, like stacked, like completely stacked because it's just like Yeah. And I'm just getting started. Like I'm just getting started. You know, people ask, they're like,"Oh my god." They're like,"You're going to law school even with like two degrees already?" They're like,"Geez, how long have you been in school? Like, that's already six years, and then another what, three years? Another four years, and then you're thinking of a PhD." Da da da. And I'm like,"And I'm just getting started." Like, I'm just getting started because who going to take the degrees from me? Nobody. You can't.
+Joshua Fisseha: No, it's true. Like once you get the JD, you're kind of in a good spot for Yeah. The thing is honestly like you guys have uh your guys are and you're you guys are very grounded in um well the big thing I think it for you guys not the you guys are grounded but the idea is you guys have this idea like uh it's easy money like the way that you guys because you guys are regular ready to work super hard and then you see like um obviously like non black like non non- Nigerians you guys come here and you're like like I can I can work and I can actually make it.
+
+
+
+
+02:50:18
+
+
+Joshua Fisseha: And I feel like you guys are like compared to back home, right? Like there wasn't we don't have that same opportunity. So when they get they smell blood, it's almost like they they're like,"Oh, this is like I can I can run laps around you guys." Like you guys are worried about like, you know, uh working for a long time or like studying too hard. It's like like I'll do this in my like the moment you guys are able to get opportunity, you guys do not let the opportunity miss.
+Oreoluwa James: Oh my gosh. Like never.
+Joshua Fisseha: But then a lot of people that are not Yeah.
+Oreoluwa James: Yeah. Like I think And I think that's it with so many that's with so many cultural people, you know,
+Joshua Fisseha: Yeah.
+Oreoluwa James: where for a while people in America were trying to say like,
+Joshua Fisseha: Yeah.
+Oreoluwa James: "Oh, immigrants are stealing our jobs." I'm like,"No, immigrants want to make it. Like you are the ones complaining that y'all can't make it here." But like Yeah.
+
+
+
+
+02:50:58
+
+
+Joshua Fisseha: You are comfortable. Oh, it's public.
+Oreoluwa James: I was like,
+Joshua Fisseha: Yeah.
+Oreoluwa James: you guys are the ones complaining that you can't make it here, but like an immigrant is going to show you like everything that they can do to be able to like get it out the mud. Like for real. Like I I agree. Like I think black people always talk about this like get it out the mud mentality when in reality it's like immigrants like actually come here and get it out the you know I always tell it to people my parents like punched well above their weight coming here because they always told us they're like I migrated to
+Joshua Fisseha: Yeah, same.
+Oreoluwa James: America when I was 18. No mom, no dad. Had to push through. Had to do what I need to do. And to be honest like it's annoying because they always try to use that as like guilt tripping you when you don't do something for them. But also at the same time, when you really sit down and think about it, like that s*** is kind of crazy.
+
+
+
+
+02:51:44
+
+
+Oreoluwa James: Like imagine you're moving across the entire world to go and like
+Joshua Fisseha: Yep. Got a kid at home. You have like a nobody that you know here.
+Oreoluwa James: Yeah.
+Joshua Fisseha: You might just know people you met. You're just like uh and you're not also like it's not like you're working just it's not just a problem of working hard. it's a matter of like your family's back home and then you you're not like it's like going to a foreign it's challenging because like if it was just a matter of work ethic is one thing but it's like you're literally in the alien land. You're like what the hell is like this uh like it's just different.
+Oreoluwa James: Yeah. But that's one thing I'll I'll say though that like Africans and then like Nigerians especially like the work ethic is there. Like the work the work ethic is there.
+Joshua Fisseha: They worked they worked the butt off.
+Oreoluwa James: Like we work we definitely work.
+Joshua Fisseha: Yeah.
+Oreoluwa James: We work we work. But thank you so much for today's session.
+
+
+
+
+02:52:31
+
+
+Oreoluwa James: I definitely feel like I have a better understanding of how to attack like the main conclusion and really just break question stimulus down. To be honest, it almost feels like the way you explained it was very easy, but it almost is like highlighting what I've been trying to avoid doing for so long when it came to this test in that sense of I feel like I knew the basics, but I didn't know the basics, you know,
+Joshua Fisseha: Yep.
+Oreoluwa James: and it was showcasing in like the way I would think through answers and how I would do stuff. Um, because before I used to be like, everybody keeps telling me that the answer is right in the question stimulus and I'm like, where the f*** is it? But it's like when you break it down like that, you'll be able to figure it out.
+Joshua Fisseha: Yep.
+Oreoluwa James: Like of course you'll be able to figure it out a little bit better because I used to be that person where I'm like gh I don't want to I don't want to be here and then I have to start assuming and presuming and thinking outside the box and inferring and all that other type of stuff.
+
+
+
+
+02:53:25
+
+
+Oreoluwa James: I think infer instances is definitely where I struggle too because like when people say something like what is the unsaid argument that's when my brain starts to think of like random stuff where I'm like well maybe the reason why it's not working is because the cat wanted to get the tattoo but the tattoo artist was saying that no like you know what I'm saying like I'll just start randomly thinking of things but I think still having this breakdown will be able to even help with that more right like do you think like having this breakdown will be able to clarify inferences where when it's like assumption questions where they're saying like what's the unstated or unsaid argument or like what's the unsaid gap or like how do you like loop the gap back together because I think that's where I struggle especially um sufficient assumption and necessary assumption will always kick my ass. I would like to kick its ass back if I could but it's definitely hard.
+Joshua Fisseha: Yeah. No, it's it's one step at a time. You don't worry about necessary sufficient as of now.
+
+
+
+
+02:54:25
+
+
+Joshua Fisseha: It's it's not an issue of um it's not gonna it's not an issue of just like sufficient unnecessary assumption specifically. It's that the building blocks up to there. That's something that needs to be improved. So then you the complete like the outcome will just seem like oh I didn't get a suspicion assumption correction right but it's not like to leave that specifically about the assumption part. It's going to be about um something that's like on the steps because all these things build on each other. So if you don't have a good foundation or if you're like your second block is shaky then when you they apply pressure because they will like make different variations of challenging. So like there'll be sufficient time for maybe the structure is hard to identify and if you don't have ability to identify the structure even if you're able to figure out how to assess an argument's gap you don't you have to know where the gap could be even like within the structure right but that being said it's like it's one step at a time and like I'm going to I have to jump off but I sent
+
+
+
+
+02:55:17
+
+
+Oreoluwa James: Mhm.
+Joshua Fisseha: you the I signed you the work I was doing this as we were like getting this I was getting a bunch of stuff that I need to get done but like
+Oreoluwa James: Okay.
+Joshua Fisseha: I sent you it you should be able to go work through it um focus on that for now you don't have to do the RC get the boot camp out of the way first. Um, and the you can check right now if it's there.
+Oreoluwa James: Yeah,
+Joshua Fisseha: There's going to be a lot of updates.
+Oreoluwa James: I see it. Intro to LR argument,
+Joshua Fisseha: Yeah.
+Oreoluwa James: anatomy, premises, conclusion. Yeah.
+Joshua Fisseha: Yeah. So, if there's any issues um like uh with like running on your plat like on the side your side, let me know. You can send me a message.
+Oreoluwa James: Okay. Oh, yeah.
+Joshua Fisseha: You can
+Oreoluwa James: I did want to say the only thing I did notice is that sometimes um if I were to get the answer wrong, the popup that usually comes up in the corner with like an explanation hasn't been popping up recently.
+
+
+
+
+02:56:04
+
+
+Oreoluwa James: It would say something like Joshua is like offline right now or like Joshua cannot connect right now or something.
+Joshua Fisseha: Oh, weird. Um,
+Oreoluwa James: Yeah.
+Joshua Fisseha: is is there any world you could like I don't know how if it's possible if you could even potentially pull it up right now, but uh
+Oreoluwa James: Um, I can try to Hold on. Let me see if I do I feel like now that I'm about to show you. It's probably It's probably going to like f me up. Well, not f me up, but it's probably like not going to do what I want it to do. But, can you see my screen? Okay. So, like I'm just going to try to just get this one wrong. So, hopefully I just pick a random one and it's wrong. So, let's just say B skip. Okay. Joshua is having trouble connecting. Please try again.
+Joshua Fisseha: Okay.
+Oreoluwa James: And that's like what would pop up with like the coach H.
+
+
+
+
+02:56:57
+
+
+Joshua Fisseha: Okay. I see. I say. Let me just one second. Messenger.
+Oreoluwa James: And to be real though,
+Joshua Fisseha: Yeah.
+Oreoluwa James: I can recheck this on Safari because I'm not going to lie, I have been having issues with Chrome. Like, for some reason, Law Hub will not let me log in on Chrome, but it'll let me log in on Safari. So, I don't know if it's like something wrong with this browser. Um, so I can like double check it on Safari and if it's still showing me that I'll send you a message like tomorrow maybe. Um, but that's what it does. It'll be like Joshua cannot like connect right now. Like please try again later. And sometimes I was actually looking for the um actual like explanation as to why something was wrong the way it is because I find myself being um stuck between two answers a lot and I'll still pick the wrong answer and I I I just like don't want to do that. Like I want to come confidently like start going through sections and stuff.
+
+
+
+
+02:57:59
+
+
+Joshua Fisseha: Right.
+Oreoluwa James: Yeah.
+Joshua Fisseha: Right. So, yeah, I'm I'm going to make sure if there's anything on my side that's causing that, I'm going I'm going to figure out what's what it is.
+Oreoluwa James: Okay. Yeah. Yeah.
+Joshua Fisseha: Um,
+Oreoluwa James: But I'll I'll message you if I try Safari and it doesn't work.
+Joshua Fisseha: but it's going to change a lot this weekend. Yeah, it's but regardless the even that whole setup is going to completely change. I was and I was an intermediate for um because I I was writing out explanations after explanations for questions. So like in the midst of that I wanted to like I would have it so it's basically directly sens but I have all of it now in the database so it's going to be all filled in and you're not going to use you're just going to have the explanations right there rather than having that little chat bot. Um, so like I mean that's going to be the you're going to get basically it's going to be the the the process of drilling the question is going to be very different because I'm not like although a lot of them already there it's going to be completely full
+
+
+
+
+02:58:49
+
+
+Oreoluwa James: Okay, no worries.
+Joshua Fisseha: and then you have essentially a seven stage where you have the explanations there and stuff.
+Oreoluwa James: Good job.
+Joshua Fisseha: Yeah. So you'll be good.
+Oreoluwa James: No worry because I've been using I'll use like Elsat hacks because I like how Elsat hacks like breaks down um questions too. So when it when it did start popping up and I couldn't get access to it anymore, I just started using that instead. But all is well. I'll let you know if it does that on Safari tomorrow. All right. Thank you so much.
+Joshua Fisseha: It's going good. All right. Talk soon.
+Oreoluwa James: Bye.
+Joshua Fisseha: currently like the first screenshot, but the second screenshot is what it should be more like the explication should be under there under the stimulus like that. and make sure that they're properly it's properly set up where all of the spacing so the stimulus and the spacing it doesn't mess up the spacing. So I want to fix that right now. It's kind of not working well.
+
+
+
+
+03:01:37
+
+
+Joshua Fisseha: It shouldn't be that Twitter exists as other tokens. Okay. So, the first thing is the first thing that I want to do is I want you to I want you to tell me uh to see whenever I assign something to somebody else as the admin. Why does it always show on my side? It should save I should have access to their data and stuff, but it shouldn't show my side when I assign somebody else's work. We need to fix that. Also, pay attention to the spacing. So, everyone drill look at the spacing of the page. I want you to help me figure out what the issue is needs to be fixed. And the other thing is I also want to the smart drilling feature where it's just one question at a time. It's not an option anymore. It's only building a set. We need to fix that where the smart drilling feature should be so smart where it can be able to uh collect all the like it should be able to be able to start drill and it just choose a question for them based off their analytics and it should be very configured to be able to find the right question for them, the right level.
+
+
+
+
+03:05:05
+
+
+Joshua Fisseha: The more they use it, the more they get smarter and knows in the nose and they know what to assign them. It should be able to be like similar to Elsat demons smart drill. But I want to be even more powerful and smarter, more brilliant. So I want you to help me design that plan. So I'm telling you all these things is these are multiple tasks that we want to do. I want to get this all on board so you understand first where um I'm coming from in a sense like what I want to accomplish um and then we can have a direction of what we should do in order but I want to give this all my to-do list. Tell me if you understand what I'm saying and let me say back what I want and you can grill me to get better understanding. Use the grill with docs skill though. Grow with ducks. also did you add all of the words that I'm using to replace? So the ones that are being replaced, those words are not the ones we're we're saving. Of course, we're doing the ones that are the replacement. So the the the word that should be that we are using that that should be autocorrecting too where it should be fixed like those words should be saved into our words when you have their vocabulary fix that make sure and I think you did that but make sure both it's both um in my in both places it's in the replacements also it's going to they needed to be and specifically my vocabulary as well. This is one of the examples and think about all the variation for real with dogs that could sound like it'd be got mixed up with I don't know.
+
+
+
+
+Transcription ended after 03:09:34
+
+
+This editable transcript was computer generated and might contain errors. People can also change the text after it was created.
