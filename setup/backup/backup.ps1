@@ -42,7 +42,8 @@ Mirror (Join-Path $Home_ '.codex') (Join-Path $Cur 'codex') @('cache')
 # 4. Superwhisper app data (modes, vocabulary, settings).
 Mirror (Join-Path $env:LOCALAPPDATA 'Superwhisper') (Join-Path $Cur 'superwhisper') @()
 # 5. The vault, including code repos, minus dependency caches that reinstall.
-Mirror $Vault (Join-Path $Cur 'ai-os') @('node_modules','.venv','venv','.vite','.turbo','.next','dist','__pycache__','.cache')
+Mirror $Vault (Join-Path $Cur 'ai-os') @('node_modules','.venv','venv','.vite','.turbo','.next','dist','__pycache__','.cache','Main Conclusion ','Videos ')
+# (Two empty raw/ folders whose names end in a space are excluded above: Google Drive cannot create them.)
 # 6. Other dotfiles that matter on a new machine.
 $dot = Join-Path $Cur 'dotfiles'; New-Item -ItemType Directory -Force -Path $dot | Out-Null
 foreach ($f in '.gitconfig','.npmrc','.bashrc','.bash_profile') {
@@ -53,8 +54,8 @@ Mirror (Join-Path $env:APPDATA 'gh')  (Join-Path $dot 'gh')  @()
 Mirror (Join-Path $Home_ '.config')   (Join-Path $dot 'config') @()
 
 # 7. Machine info so restore can rewrite paths.
-@{ machine=$env:COMPUTERNAME; user=$env:USERNAME; home=$Home_; vault=$Vault; os='windows'; backedUpAt=$Stamp;
-   claudeVersion=(try { (& claude --version 2>$null) } catch { '' }) } |
+$cv = ''; try { $cv = (& claude --version 2>$null | Out-String).Trim() } catch {}
+@{ machine=$env:COMPUTERNAME; user=$env:USERNAME; home=$Home_; vault=$Vault; os='windows'; backedUpAt=$Stamp; claudeVersion=$cv } |
   ConvertTo-Json | Out-File (Join-Path $Cur 'machine-info.json') -Encoding utf8
 "Last successful backup: $Stamp  (from $env:COMPUTERNAME)`r`nRestore instructions: see README - START HERE.md" |
   Out-File (Join-Path $Drive 'LAST-BACKUP.txt') -Encoding utf8
@@ -82,7 +83,10 @@ if (-not (Test-Path $zip)) {
     & robocopy $Vault (Join-Path $tmp 'ai-os') /MIR /XJ /R:0 /W:0 /NFL /NDL /NP /NJH /XD raw projects node_modules .venv tmp .obsidian .firecrawl | Out-Null
     & robocopy (Join-Path $Home_ '.claude') (Join-Path $tmp 'claude') /MIR /XJ /R:0 /W:0 /NFL /NDL /NP /NJH /XD plugins shell-snapshots | Out-Null
     Copy-Item (Join-Path $Home_ '.claude.json') $tmp -Force -ErrorAction SilentlyContinue
-    & tar.exe -a -cf $zip -C $tmp . 2>&1 | Out-File -Append $Log
+    $localZip = Join-Path $env:TEMP "snapshot-$today.zip"
+    Remove-Item $localZip -Force -ErrorAction SilentlyContinue
+    & "$env:SystemRoot\System32\tar.exe" -a -cf $localZip -C $tmp . 2>&1 | Out-File -Append $Log
+    if (Test-Path $localZip) { Move-Item $localZip $zip -Force } else { "snapshot FAILED: tar produced no file" | Out-File -Append $Log }
     Remove-Item $tmp -Recurse -Force -ErrorAction SilentlyContinue
     Get-ChildItem $Snaps -Filter 'snapshot-*.zip' | Sort-Object Name -Descending | Select-Object -Skip 30 | Remove-Item -Force
     "snapshot: $zip" | Out-File -Append $Log
