@@ -35,6 +35,8 @@ Raw evidence (docs crawl, community pages, searches) is in `raw/sources/superwhi
 
 9. **No sync to the iPhone yet (checked 2026-09-12).** FileSync is Mac-only; the Windows docs page (`/docs/get-started/windows`) lists it as "still in development for Windows", the iOS page says modes and vocabulary "don't sync from your Mac or PC yet", and the Windows app resets `filesyncEnabled` to false at launch. The phone is kept in step by paste: the Super mode instructions and the vocabulary live on the artifact "Superwhisper on iPhone" (https://claude.ai/code/artifact/63400afd-4f6c-4139-ba82-461de066d544); republish it whenever `modes/super.md` or `vocabulary.md` changes. Re-check the Windows page after each app update.
 
+10. **Official CLI + MCP exist, Mac-only (checked 2026-09-12).** `superwhisper` CLI (search/export/stats/vocab/snippets/mcp), announced 2026-07-16, released at github.com/superultrainc/superwhisper-cli-release; v0.1.0 ships only a macOS universal binary and the install script refuses non-Darwin. The Claude Code plugin (superultrainc/superwhisper-claude-code) is also Mac 2.13+. On this PC, `sync.py` is the equivalent of `superwhisper vocab`. Re-check the release assets after each Windows app update; when a Windows binary lands, add `superwhisper mcp` to Claude Code.
+
 ## Where the app keeps things
 
 `C:\Users\Joshu\AppData\Local\com.superwhisper.app\`

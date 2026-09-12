@@ -21,23 +21,35 @@ Checks:
       — routing maps that point at moved or deleted files send sessions hunting.
   (g) no UNDECLARED claude/codex asymmetry. The two subtrees are intentionally unequal,
       so the legitimate split is declared in skills/PARITY.md and only new drift fails.
+  (h) effective Claude/Codex skill availability has no undeclared one-runtime drift;
+  (i) active instruction scopes have both CLAUDE.md and AGENTS.md;
+  (j) Codex agent TOML files are valid, complete, and activated from the catalog.
 Exit 0 = PASS, 1 = FAIL.
 """
-import os, re, sys, filecmp
+import os, re, sys, filecmp, tomllib
+from pathlib import Path
 
-BRAIN = "/Users/joshuaf/ai-os"
-DB = f"{BRAIN}/skills"
-HOME = os.path.expanduser("~")
+BRAIN = str(Path(__file__).resolve().parents[2])
+DB = os.path.join(BRAIN, "skills")
+HOME = str(Path.home())
 SPECIAL = {"_snapshots", "_project-forks", "_inactive", "README.md", "INDEX.md"}
 
 # Active roots to audit (only those that exist are checked).
-ACTIVE_ROOTS = [
-    f"{HOME}/.claude/skills",
-    f"{HOME}/.agents/skills",
-    f"{BRAIN}/.claude/skills",
-    f"{BRAIN}/.agents/skills",
-    f"{BRAIN}/projects/email-hq/.claude/skills",
+PROJECT_ACTIVE_ROOTS = [
+    os.path.join(BRAIN, ".claude", "skills"),
+    os.path.join(BRAIN, ".agents", "skills"),
+    os.path.join(BRAIN, "projects", "email-hq", ".claude", "skills"),
 ]
+
+# Home-level roots also contain skills installed and managed by external plugins.
+# They are included when comparing effective Claude/Codex availability, but they
+# are not required to be mirrored into this project's catalog.
+RUNTIME_ACTIVE_ROOTS = {
+    "claude": [os.path.join(HOME, ".claude", "skills"),
+               os.path.join(BRAIN, ".claude", "skills")],
+    "codex": [os.path.join(HOME, ".agents", "skills"),
+              os.path.join(BRAIN, ".agents", "skills")],
+}
 
 def db_names(sub):
     base = os.path.join(DB, sub)
@@ -74,7 +86,7 @@ def main():
 
     # (a)+(b) active roots
     all_db = claude_db | codex_db
-    for root in ACTIVE_ROOTS:
+    for root in PROJECT_ACTIVE_ROOTS:
         if not os.path.isdir(root):
             continue
         for n in os.listdir(root):
@@ -84,15 +96,15 @@ def main():
             if os.path.islink(p):
                 if not os.path.exists(p):
                     fails.append(f"broken activation symlink: {root}/{n}")
-                elif f"{BRAIN}/skills/" not in os.path.realpath(p):
-                    fails.append(f"activation not into DB: {root}/{n} -> {os.path.realpath(p)}")
+                elif n not in all_db:
+                    fails.append(f"activation not represented in DB: {root}/{n} -> {os.path.realpath(p)}")
             elif os.path.isdir(p):
                 # real dir in an active root: must be mirrored in DB by name
                 if n not in all_db:
                     fails.append(f"un-mirrored skill in active root: {root}/{n} (not in DB)")
                     continue
                 # (e) drift check: copied activation's SKILL.md vs its DB source
-                sub = "codex" if "/.agents/" in root else "claude"
+                sub = "codex" if ".agents" in Path(root).parts else "claude"
                 db_dir = os.path.join(DB, sub, n)
                 act_skf = os.path.join(p, "SKILL.md")
                 db_skf = os.path.join(db_dir, "SKILL.md")
@@ -156,6 +168,58 @@ def main():
         for n in sorted((codex_db - claude_db) - declared):
             fails.append(f"undeclared parity drift: skills/codex/{n} has no claude counterpart "
                          f"(activate for both, or declare in skills/PARITY.md)")
+
+        # (h) effective runtime parity. Project activations can satisfy a skill
+        # absent from the home-level root and vice versa. External plugin skills
+        # do not have to live in this DB, but unexplained one-runtime availability
+        # is still drift worth surfacing.
+        effective = {}
+        for runtime, roots in RUNTIME_ACTIVE_ROOTS.items():
+            names = set()
+            for root in roots:
+                if os.path.isdir(root):
+                    names.update(
+                        n for n in os.listdir(root)
+                        if not n.startswith(".")
+                        and os.path.isfile(os.path.join(root, n, "SKILL.md"))
+                    )
+            effective[runtime] = names
+        for n in sorted((effective["claude"] - effective["codex"]) - declared):
+            fails.append(f"undeclared activation drift: {n} is available to Claude but not Codex")
+        for n in sorted((effective["codex"] - effective["claude"]) - declared):
+            fails.append(f"undeclared activation drift: {n} is available to Codex but not Claude")
+
+    # (i) instruction twins. Frozen, imported, and vendor reference material is
+    # not an active project scope and is intentionally excluded.
+    ignored_parts = {".git", "archive", "graph-imports", "node_modules", "raw", "reference", "_snapshots", "anthropic-capture"}
+    for current, dirs, files in os.walk(BRAIN):
+        dirs[:] = [d for d in dirs if d not in ignored_parts]
+        present = set(files)
+        if "CLAUDE.md" in present and "AGENTS.md" not in present:
+            fails.append(f"missing AGENTS.md peer: {os.path.relpath(current, BRAIN)}")
+        if "AGENTS.md" in present and "CLAUDE.md" not in present:
+            fails.append(f"missing CLAUDE.md peer: {os.path.relpath(current, BRAIN)}")
+
+    # (j) project-scoped Codex agents.
+    agent_catalog = os.path.join(BRAIN, "agents", "codex")
+    agent_active = os.path.join(BRAIN, ".codex", "agents")
+    if os.path.isdir(agent_catalog):
+        for name in sorted(n for n in os.listdir(agent_catalog) if n.endswith(".toml")):
+            source = os.path.join(agent_catalog, name)
+            try:
+                with open(source, "rb") as handle:
+                    data = tomllib.load(handle)
+            except (OSError, tomllib.TOMLDecodeError) as exc:
+                fails.append(f"invalid Codex agent TOML: agents/codex/{name}: {exc}")
+                continue
+            for field in ("name", "description", "developer_instructions"):
+                if not data.get(field):
+                    fails.append(f"Codex agent missing {field}: agents/codex/{name}")
+            activated = os.path.join(agent_active, name)
+            if not os.path.isfile(activated):
+                fails.append(f"Codex agent not activated: .codex/agents/{name}")
+            elif not filecmp.cmp(source, activated, shallow=False):
+                fails.append(f"stale Codex agent activation: .codex/agents/{name}")
 
     if fails:
         for msg in fails:

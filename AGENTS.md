@@ -1,7 +1,7 @@
 <!-- HAND-OWNED since 2026-07-17. This file is the authority for Codex — edit it directly. On any major change, mirror it into CLAUDE.md so Claude and Codex stay in sync. -->
 # Jay 2 — operating instructions for Codex (ai-os)
 
-The canonical root is `/Users/joshuaf/ai-os`. This is the router: it holds pointers, not knowledge. Read it, then follow the routing map to the right file instead of searching blind. Twin for Claude Code: `CLAUDE.md`.
+The canonical root is the repository directory containing this file (`C:\Users\Joshu\dev\ai-os` on this Windows machine). Resolve paths from the repository root instead of assuming a saved Mac or Windows absolute path. This is the router: it holds pointers, not knowledge. Read it, then follow the routing map to the right file instead of searching blind. Twin for Claude Code: `CLAUDE.md`.
 
 ## Identity and mission
 
@@ -11,7 +11,7 @@ Standing duties, run from here without re-briefing: student operations (transcri
 
 ## Routing map
 
-Paths relative to `/Users/joshuaf/ai-os`.
+Paths are relative to the repository root.
 
 | Need | Path |
 |---|---|
@@ -90,7 +90,7 @@ Active in this root. Run `pickup` only when Joshua explicitly asks for it. Do no
 | `tutorocean-profile-fill` | TutorOcean profile work |
 | `prompt-architect-refiner` | refining a prompt before it ships |
 
-When a skill run exposes a gap, improve the skill before moving on. Codex runs the same set as Claude minus the wiki/Obsidian and `graphify` skills.
+When a skill run exposes a gap, improve the skill before moving on. Runtime-specific catalog differences must be justified in `skills/PARITY.md`; undeclared differences are defects.
 
 ## Guardrails
 
