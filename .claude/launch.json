@@ -79,6 +79,20 @@
         "8099"
       ],
       "port": 8099
+    },
+    {
+      "name": "lsatu-explanation-dev",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "--prefix",
+        "projects/lsatu-wt-explanation",
+        "run",
+        "dev",
+        "--",
+        "--port",
+        "8094"
+      ],
+      "port": 8094
     }
   ]
 }
