@@ -42,7 +42,7 @@ Mirror (Join-Path $Home_ '.codex') (Join-Path $Cur 'codex') @('cache')
 # 4. Superwhisper app data (modes, vocabulary, settings).
 Mirror (Join-Path $env:LOCALAPPDATA 'Superwhisper') (Join-Path $Cur 'superwhisper') @()
 # 5. The vault, including code repos, minus dependency caches that reinstall.
-Mirror $Vault (Join-Path $Cur 'ai-os') @('node_modules','.vite','.turbo','.next','dist','__pycache__','.cache')
+Mirror $Vault (Join-Path $Cur 'ai-os') @('node_modules','.venv','venv','.vite','.turbo','.next','dist','__pycache__','.cache')
 # 6. Other dotfiles that matter on a new machine.
 $dot = Join-Path $Cur 'dotfiles'; New-Item -ItemType Directory -Force -Path $dot | Out-Null
 foreach ($f in '.gitconfig','.npmrc','.bashrc','.bash_profile') {
@@ -79,10 +79,10 @@ if (-not (Test-Path $zip)) {
     $tmp = Join-Path $env:TEMP "cc-snap-$today"
     Remove-Item $tmp -Recurse -Force -ErrorAction SilentlyContinue
     New-Item -ItemType Directory -Force -Path $tmp | Out-Null
-    & robocopy $Vault (Join-Path $tmp 'ai-os') /MIR /XJ /R:0 /W:0 /NFL /NDL /NP /NJH /XD raw projects node_modules tmp .obsidian | Out-Null
+    & robocopy $Vault (Join-Path $tmp 'ai-os') /MIR /XJ /R:0 /W:0 /NFL /NDL /NP /NJH /XD raw projects node_modules .venv tmp .obsidian .firecrawl | Out-Null
     & robocopy (Join-Path $Home_ '.claude') (Join-Path $tmp 'claude') /MIR /XJ /R:0 /W:0 /NFL /NDL /NP /NJH /XD plugins shell-snapshots | Out-Null
     Copy-Item (Join-Path $Home_ '.claude.json') $tmp -Force -ErrorAction SilentlyContinue
-    Compress-Archive -Path (Join-Path $tmp '*') -DestinationPath $zip -Force
+    & tar.exe -a -cf $zip -C $tmp . 2>&1 | Out-File -Append $Log
     Remove-Item $tmp -Recurse -Force -ErrorAction SilentlyContinue
     Get-ChildItem $Snaps -Filter 'snapshot-*.zip' | Sort-Object Name -Descending | Select-Object -Skip 30 | Remove-Item -Force
     "snapshot: $zip" | Out-File -Append $Log

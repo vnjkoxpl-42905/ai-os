@@ -12,7 +12,7 @@ What gets copied (Drive folder `current\`):
 | `claude.json` | `~\.claude.json` | MCP servers, OAuth |
 | `codex\` | `~\.codex` | Codex CLI config + auth |
 | `superwhisper\` | `%LOCALAPPDATA%\Superwhisper` | modes, vocabulary, settings |
-| `ai-os\` | `~\dev\ai-os` | the whole vault, including code repos (minus `node_modules`) |
+| `ai-os\` | `~\dev\ai-os` | the whole vault, including code repos (minus `node_modules` and `.venv`) |
 | `dotfiles\` | `.gitconfig`, `gh`, `gws`, `.config` | CLI logins and config |
 | `machine-info.json` | | which machine, when, which paths (restore uses this) |
 
