@@ -1,0 +1,31 @@
+---
+type: operating-layer
+subject: Personal-data handling
+updated: 2026-07-17
+aliases: []
+---
+
+# Personal-data handling
+
+## The model
+
+- **Secrets = `.env` + `.gitignore`, and nothing else.** API keys live in the root `.env`; `.gitignore` keeps it out of Git. There is no `private/` tier, no macOS Keychain, no encrypted vault — the old `records.sparsebundle` design is dead, not deferred (decided 2026-07-17).
+- **Passwords, bank/card data, and government IDs are out of scope for this OS entirely.** Joshua keeps them outside it. Never ask him to paste one, never store one, never write one to `.env`.
+- **Everything else is ordinary local-only working material** and may live in this repository: names, emails, schedules, application essays, score reports, profiles, session transcripts and teaching notes, correspondence, and shareable `buy.stripe.com` payment links. Classify by what the content *is*, never by a filename.
+- **Safety comes from `.claude/settings.json`** (allow/deny tool lists) and scoped API keys, not from prompt instructions. Jay 2 acts under its own credentials and never impersonates Joshua.
+
+As of 2026-07-17 this OS stores no secret material beyond API keys in the root `.env`. The earlier design's private stores (`private/records.sparsebundle`, migration manifests, `private/records/`, `private/config/`) were all verified empty and removed. Do not recreate them.
+
+## Student data
+
+One folder per student under `students/<name>/` holds their whole working record: transcripts, correspondence, homework, notes, profile, and payment-link pages. Open the folder and everything is there. There is no separate private student tier — every file was read and found to contain no secret material.
+
+The tradeoff is accepted deliberately: **outer Git history retains student data permanently.** Since this brain has no Git remote, that is fine locally. The scrub-before-remote rule below is the compensating control, and it is load-bearing.
+
+## Before any remote or push
+
+1. Stop: this repository is intentionally local-only.
+2. Scan the complete outer worktree and Git history, every retained nested repository and its history, and ignored runtime paths.
+3. Confirm `.env`, logs, locks, and `projects/lsatu/` are untracked, and that no credential exists in reachable or dangling Git objects.
+4. **Scrub student data.** Student material — names, transcripts, correspondence, payment-link pages — is tracked by design and is therefore in history permanently. It is not publishable as-is. Decide per destination whether it is redacted, filtered out of history, or whether the remote is private enough to carry it. Skipping this step publishes every student's working record.
+5. Obtain Joshua's explicit approval before adding any remote or pushing anything.

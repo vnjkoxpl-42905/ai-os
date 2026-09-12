@@ -1,0 +1,1 @@
+/Users/joshuaf/.claude/plugins/marketplaces/claude-plugins-official/plugins/agent-sdk-dev/agents/agent-sdk-verifier-ts.md

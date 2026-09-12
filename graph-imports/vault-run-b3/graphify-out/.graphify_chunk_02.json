@@ -1,0 +1,1496 @@
+{
+  "nodes": [
+    {
+      "id": "command_authoring",
+      "label": "Slash command authoring",
+      "type": "capability",
+      "summary": "Create Claude Code slash commands as markdown files with optional YAML frontmatter, dynamic arguments, file references and inline bash. Treated as a legacy format superseded by the SKILL.md directory layout, but loaded identically.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/command-development/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/command-development/README.md",
+        "/Users/joshuaf/ai-os/skills/claude/command-development/examples/simple-commands.md",
+        "/Users/joshuaf/ai-os/skills/claude/command-development/examples/plugin-commands.md"
+      ]
+    },
+    {
+      "id": "instructions_for_agent_not_user",
+      "label": "Write instructions for the agent, not the user",
+      "type": "design-principle",
+      "summary": "Command and skill bodies become the agent's instructions when invoked, so they must be directives to Claude about what to do rather than descriptions to a human about what will happen.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/command-development/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/command-development/examples/simple-commands.md"
+      ]
+    },
+    {
+      "id": "yaml_frontmatter_contract",
+      "label": "YAML frontmatter contract",
+      "type": "design-principle",
+      "summary": "Every command and skill declares itself through optional YAML frontmatter: name, description, allowed-tools, model, argument-hint, disable-model-invocation. The description is the discovery and trigger surface.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/command-development/references/frontmatter-reference.md",
+        "/Users/joshuaf/ai-os/skills/claude/command-development/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/codex/higgsfield-websites/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/ingest/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/morning-brief/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/gws-drive/SKILL.md"
+      ]
+    },
+    {
+      "id": "least_privilege_tool_scoping",
+      "label": "Least-privilege tool scoping",
+      "type": "constraint",
+      "summary": "allowed-tools should be the most restrictive set that works, using command filters such as Bash(git:*) rather than Bash(*). Safety lives in the tool layer, not in prose.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/command-development/references/frontmatter-reference.md",
+        "/Users/joshuaf/ai-os/skills/claude/command-development/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/command-development/references/testing-strategies.md"
+      ]
+    },
+    {
+      "id": "dynamic_argument_substitution",
+      "label": "Dynamic argument substitution",
+      "type": "technique",
+      "summary": "$ARGUMENTS captures all arguments as one string; $1/$2/$3 capture positional arguments. argument-hint documents the expected shape for autocomplete.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/command-development/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/command-development/references/frontmatter-reference.md",
+        "/Users/joshuaf/ai-os/skills/claude/command-development/references/advanced-workflows.md"
+      ]
+    },
+    {
+      "id": "inline_bash_context_injection",
+      "label": "Inline bash context injection",
+      "type": "technique",
+      "summary": "Backtick-bang syntax executes a shell command at invocation time and splices its output into the prompt, so the agent starts with live repo or environment state rather than asking for it.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/command-development/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/command-development/references/plugin-features-reference.md",
+        "/Users/joshuaf/ai-os/skills/claude/command-development/references/advanced-workflows.md"
+      ]
+    },
+    {
+      "id": "file_reference_inclusion",
+      "label": "@-syntax file reference inclusion",
+      "type": "technique",
+      "summary": "@path or @$1 pulls a file's contents into the prompt before processing, letting a command operate on named files without a separate Read step.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/command-development/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/command-development/references/plugin-features-reference.md"
+      ]
+    },
+    {
+      "id": "plugin_root_portable_paths",
+      "label": "CLAUDE_PLUGIN_ROOT portable paths",
+      "type": "technique",
+      "summary": "${CLAUDE_PLUGIN_ROOT} resolves to the plugin's absolute directory so bundled scripts, templates and config are referenced portably instead of by hardcoded or cwd-relative paths.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/command-development/references/plugin-features-reference.md",
+        "/Users/joshuaf/ai-os/skills/claude/command-development/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/command-development/examples/plugin-commands.md"
+      ]
+    },
+    {
+      "id": "command_namespacing",
+      "label": "Namespaced command organization",
+      "type": "technique",
+      "summary": "Subdirectories under commands/ create namespaces shown in /help, used once a set exceeds roughly 15 items or a plugin ships 5+ commands, and to avoid name collisions across plugins.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/command-development/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/command-development/references/plugin-features-reference.md",
+        "/Users/joshuaf/ai-os/skills/claude/command-development/references/marketplace-considerations.md"
+      ]
+    },
+    {
+      "id": "input_validation_before_execution",
+      "label": "Validate inputs before acting",
+      "type": "technique",
+      "summary": "Check required arguments, valid enum values, file existence and plugin resource availability early, and report what is missing with corrective guidance rather than proceeding on bad input.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/command-development/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/command-development/references/plugin-features-reference.md",
+        "/Users/joshuaf/ai-os/skills/claude/command-development/references/advanced-workflows.md"
+      ]
+    },
+    {
+      "id": "graceful_failure_and_rollback",
+      "label": "Graceful failure, rollback and checkpoints",
+      "type": "technique",
+      "summary": "Workflows detect non-zero exits, offer recovery options, roll back to a saved prior state, and log checkpoints so an interrupted run can resume rather than restart.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/command-development/references/advanced-workflows.md",
+        "/Users/joshuaf/ai-os/skills/claude/command-development/references/documentation-patterns.md",
+        "/Users/joshuaf/ai-os/skills/claude/command-development/references/marketplace-considerations.md"
+      ]
+    },
+    {
+      "id": "workflow_state_file",
+      "label": "Persistent workflow state file",
+      "type": "technique",
+      "summary": "Multi-invocation workflows carry state in a git- or repo-local markdown file (a .local.md state file, a decision map, a pulled manifest) that each step reads, updates and eventually cleans up.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/command-development/references/advanced-workflows.md",
+        "/Users/joshuaf/ai-os/skills/claude/decision-mapping/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/pull-submissions/SKILL.md"
+      ]
+    },
+    {
+      "id": "workflow_locking",
+      "label": "Workflow locking against concurrency",
+      "type": "technique",
+      "summary": "A lock file blocks a second concurrent run of a stateful workflow and is removed on completion, preventing two agents from corrupting the same shared state.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/command-development/references/advanced-workflows.md"
+      ]
+    },
+    {
+      "id": "command_composition_chaining",
+      "label": "Command composition and chaining",
+      "type": "workflow-stage",
+      "summary": "Each command does one thing; a meta-command orchestrates a sequence of them, and pipeline commands consume the output of prior steps. Loose coupling and standard interfaces are the enabling rule.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/command-development/references/advanced-workflows.md",
+        "/Users/joshuaf/ai-os/skills/claude/command-development/examples/plugin-commands.md"
+      ]
+    },
+    {
+      "id": "interactive_question_wizard",
+      "label": "AskUserQuestion decision wizard",
+      "type": "technique",
+      "summary": "For choices that need explained trade-offs or multi-select, a command calls AskUserQuestion with 2-4 described options rather than relying on positional arguments, and adapts later questions to earlier answers.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/command-development/references/interactive-commands.md"
+      ]
+    },
+    {
+      "id": "one_question_at_a_time",
+      "label": "One question at a time",
+      "type": "design-principle",
+      "summary": "Interviews resolve the decision tree one branch at a time, waiting for an answer before asking the next. Batching questions is bewildering; each question carries a recommended answer.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/grilling/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/command-development/references/interactive-commands.md"
+      ]
+    },
+    {
+      "id": "grilling_interview",
+      "label": "Adversarial plan grilling",
+      "type": "capability",
+      "summary": "Relentlessly interview the user about a plan or design until shared understanding is reached, walking every branch of the design tree and resolving dependencies between decisions.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/grilling/SKILL.md"
+      ]
+    },
+    {
+      "id": "explore_codebase_instead_of_asking",
+      "label": "Answer from the codebase before asking",
+      "type": "design-principle",
+      "summary": "If a question can be answered by reading the code or the live system, do that instead of spending the user's attention on it. Applies to grilling, triage context gathering and file discovery.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/grilling/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/triage/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/ingest/SKILL.md"
+      ]
+    },
+    {
+      "id": "domain_modeling",
+      "label": "Active domain modeling",
+      "type": "capability",
+      "summary": "Challenge terms against the glossary, sharpen fuzzy language into canonical terms, stress-test relationships with concrete scenarios, and write CONTEXT.md and ADRs the moment decisions crystallise.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/domain-modeling/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/domain-modeling/CONTEXT-FORMAT.md",
+        "/Users/joshuaf/ai-os/skills/claude/domain-modeling/ADR-FORMAT.md"
+      ]
+    },
+    {
+      "id": "ubiquitous_language_glossary",
+      "label": "CONTEXT.md ubiquitous-language glossary",
+      "type": "artifact-produced",
+      "summary": "An opinionated glossary of context-specific terms with an _Avoid_ list of rejected synonyms. Devoid of implementation detail; a CONTEXT-MAP.md at the root signals a multi-context repo.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/domain-modeling/CONTEXT-FORMAT.md",
+        "/Users/joshuaf/ai-os/skills/claude/domain-modeling/SKILL.md"
+      ]
+    },
+    {
+      "id": "adr_decision_record",
+      "label": "Architectural decision record",
+      "type": "artifact-produced",
+      "summary": "A sequentially numbered file in docs/adr/ recording in one to three sentences what the context was, what was decided, and why. Value is in recording that a decision happened, not in filling sections.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/domain-modeling/ADR-FORMAT.md",
+        "/Users/joshuaf/ai-os/skills/claude/domain-modeling/SKILL.md"
+      ]
+    },
+    {
+      "id": "adr_three_test_gate",
+      "label": "ADR three-test gate",
+      "type": "constraint",
+      "summary": "Only offer an ADR when the decision is hard to reverse, surprising without context, and the result of a real trade-off. If any of the three is missing, skip it.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/domain-modeling/ADR-FORMAT.md",
+        "/Users/joshuaf/ai-os/skills/claude/domain-modeling/SKILL.md"
+      ]
+    },
+    {
+      "id": "lazy_artifact_creation",
+      "label": "Create files lazily",
+      "type": "design-principle",
+      "summary": "Do not scaffold empty structure. Create CONTEXT.md when the first term resolves, docs/adr/ when the first ADR is needed, a student folder only when a real relationship exists.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/domain-modeling/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/domain-modeling/ADR-FORMAT.md",
+        "/Users/joshuaf/ai-os/skills/claude/ingest/SKILL.md"
+      ]
+    },
+    {
+      "id": "cross_reference_claim_against_code",
+      "label": "Cross-reference stated behavior against code",
+      "type": "technique",
+      "summary": "When the user asserts how something works, check whether the code agrees and surface the contradiction rather than accepting the claim. Triage applies the same check for redundancy against existing implementations.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/domain-modeling/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/triage/SKILL.md"
+      ]
+    },
+    {
+      "id": "decision_map_fog_of_war",
+      "label": "Decision map with fog of war",
+      "type": "capability",
+      "summary": "Turn a loose idea into a compact markdown map of numbered investigation tickets with blocked-by edges, deliberately incomplete beyond the frontier, pushed forward one resolved ticket per session.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/decision-mapping/SKILL.md"
+      ]
+    },
+    {
+      "id": "ticket_sized_to_one_session",
+      "label": "Ticket sized to one agent session",
+      "type": "constraint",
+      "summary": "Each decision-map ticket must fit a single ~100K-token session, and the whole map is loaded as context every session, so the map itself must stay compact and link out to assets rather than inlining them.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/decision-mapping/SKILL.md"
+      ]
+    },
+    {
+      "id": "skip_the_process_when_unneeded",
+      "label": "Offer to skip the heavyweight process",
+      "type": "design-principle",
+      "summary": "When grilling surfaces no fog of war, or a decision is easy to reverse, or a change is trivial, explicitly offer to skip the ceremony and implement directly.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/decision-mapping/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/domain-modeling/ADR-FORMAT.md"
+      ]
+    },
+    {
+      "id": "triage_state_machine",
+      "label": "Issue and PR triage state machine",
+      "type": "capability",
+      "summary": "Move issues and external PRs through two category roles (bug, enhancement) and five state roles (needs-triage, needs-info, ready-for-agent, ready-for-human, wontfix). A PR is treated as an issue with attached code.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/triage/SKILL.md"
+      ]
+    },
+    {
+      "id": "agent_brief_artifact",
+      "label": "Agent brief",
+      "type": "artifact-produced",
+      "summary": "A structured comment posted when an issue or PR reaches ready-for-agent: category, summary, current vs desired behavior, key interfaces, testable acceptance criteria and explicit out-of-scope. It is the contract an AFK agent works from.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/triage/AGENT-BRIEF.md",
+        "/Users/joshuaf/ai-os/skills/claude/triage/SKILL.md"
+      ]
+    },
+    {
+      "id": "durable_spec_over_paths",
+      "label": "Durability over precision in specs",
+      "type": "design-principle",
+      "summary": "Briefs describe interfaces, types and behavioral contracts, never file paths or line numbers, because the spec may sit unworked for weeks while the codebase moves under it. Behavioral, not procedural.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/triage/AGENT-BRIEF.md"
+      ]
+    },
+    {
+      "id": "acceptance_criteria_and_scope_bounds",
+      "label": "Testable acceptance criteria with scope bounds",
+      "type": "design-principle",
+      "summary": "Every delegated unit of work carries independently verifiable done-criteria plus an explicit out-of-scope list, so the agent knows when it is finished and does not gold-plate adjacent features.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/triage/AGENT-BRIEF.md"
+      ]
+    },
+    {
+      "id": "rejection_knowledge_base",
+      "label": "Out-of-scope rejection knowledge base",
+      "type": "capability",
+      "summary": "One markdown file per rejected concept in .out-of-scope/ recording the durable reasoning plus a Prior requests list, checked by concept similarity during triage so the same request is not re-litigated.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/triage/OUT-OF-SCOPE.md",
+        "/Users/joshuaf/ai-os/skills/claude/triage/SKILL.md"
+      ]
+    },
+    {
+      "id": "already_implemented_is_not_rejected",
+      "label": "Already-implemented is not a rejection",
+      "type": "failure-mode",
+      "summary": "Closing something as wontfix because it already exists must not be written to .out-of-scope/; doing so poisons the dedup checks with false rejections. Point to where the feature lives instead.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/triage/OUT-OF-SCOPE.md",
+        "/Users/joshuaf/ai-os/skills/claude/triage/SKILL.md"
+      ]
+    },
+    {
+      "id": "reproduce_before_delegating",
+      "label": "Verify the claim before grilling or delegating",
+      "type": "workflow-stage",
+      "summary": "Before any grilling or brief-writing, reproduce the reported bug from the reporter's steps or check out the PR and run its tests. A confirmed verification makes a far stronger agent brief; failure to reproduce is a needs-info signal.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/triage/SKILL.md"
+      ]
+    },
+    {
+      "id": "evidence_before_claims",
+      "label": "Evidence before completion claims",
+      "type": "constraint",
+      "summary": "No completion, passing or fixed claim without fresh verification output in the current message. Identify the proving command, run it in full, read the output and exit code, then claim with the evidence attached.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/verification-before-completion/SKILL.md"
+      ]
+    },
+    {
+      "id": "verify_persisted_state_not_local_state",
+      "label": "Verify persisted state, not the local view",
+      "type": "technique",
+      "summary": "After a write, re-read the authoritative surface to confirm it landed: reload the profile page rather than trusting the modal, reload the plugin then check dev:errors, check the VCS diff rather than the agent's success report.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/tutorocean-profile-fill/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/obsidian-cli/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/verification-before-completion/SKILL.md"
+      ]
+    },
+    {
+      "id": "rationalization_red_flags",
+      "label": "Rationalization red-flag table",
+      "type": "failure-mode",
+      "summary": "A named list of the thoughts that precede a discipline breach (\"just this once\", \"should work now\", \"this is a simple question\", \"the skill is overkill\") paired with the reality that overrides each.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/verification-before-completion/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/using-superpowers/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill_invocation_mandate",
+      "label": "Mandatory skill invocation before acting",
+      "type": "constraint",
+      "summary": "If there is even a 1% chance a skill applies, invoke it before any response or action including clarifying questions and codebase exploration, announce \"Using [skill] to [purpose]\", and follow it exactly.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/using-superpowers/SKILL.md"
+      ]
+    },
+    {
+      "id": "process_skills_before_implementation_skills",
+      "label": "Process skills outrank implementation skills",
+      "type": "design-principle",
+      "summary": "When several skills apply, process skills set the approach first and implementation skills carry it out. \"Let's build X\" routes to brainstorming first; \"fix this bug\" routes to systematic debugging first.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/using-superpowers/SKILL.md"
+      ]
+    },
+    {
+      "id": "instruction_precedence_order",
+      "label": "User instructions override skills override defaults",
+      "type": "constraint",
+      "summary": "CLAUDE.md, AGENTS.md and direct requests take precedence over skills, which override default behavior. Skill workflows are skipped only on explicit human instruction. Subagents dispatched for a specific task ignore the invocation mandate.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/using-superpowers/SKILL.md"
+      ]
+    },
+    {
+      "id": "harness_tool_mapping",
+      "label": "Cross-harness tool mapping",
+      "type": "capability",
+      "summary": "Skills speak in actions (dispatch a subagent, create a todo); per-harness reference files translate those actions into the concrete tools available on Codex, Pi and Antigravity, and say what to do when no equivalent exists.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/using-superpowers/references/codex-tools.md",
+        "/Users/joshuaf/ai-os/skills/claude/using-superpowers/references/pi-tools.md",
+        "/Users/joshuaf/ai-os/skills/claude/using-superpowers/references/antigravity-tools.md"
+      ]
+    },
+    {
+      "id": "subagent_dispatch_dependency",
+      "label": "Subagent dispatch availability",
+      "type": "tool-dependency",
+      "summary": "Parallel-agent and subagent-driven skills need real dispatch primitives: Codex requires multi_agent = true for spawn/wait/close, Antigravity uses invoke_subagent, Pi may have none. Never fabricate Task calls when the capability is absent.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/using-superpowers/references/codex-tools.md",
+        "/Users/joshuaf/ai-os/skills/claude/using-superpowers/references/pi-tools.md",
+        "/Users/joshuaf/ai-os/skills/claude/using-superpowers/references/antigravity-tools.md"
+      ]
+    },
+    {
+      "id": "checklist_task_tracking",
+      "label": "Checklist task tracking",
+      "type": "technique",
+      "summary": "Multi-step work maintains a live checklist as the source of truth for what remains: a todo per skill checklist item, an Antigravity task artifact, or a repo TODO.md on harnesses without a task tool.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/using-superpowers/references/antigravity-tools.md",
+        "/Users/joshuaf/ai-os/skills/claude/using-superpowers/references/pi-tools.md",
+        "/Users/joshuaf/ai-os/skills/claude/using-superpowers/SKILL.md"
+      ]
+    },
+    {
+      "id": "sandbox_environment_detection",
+      "label": "Read-only environment detection before branching",
+      "type": "technique",
+      "summary": "Before creating worktrees or finishing branches, probe git with read-only commands: a differing git-dir and git-common-dir means an existing linked worktree, an empty branch name means detached HEAD and no push or PR from the sandbox.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/using-superpowers/references/codex-tools.md"
+      ]
+    },
+    {
+      "id": "ingest_front_door",
+      "label": "Single ingest front door",
+      "type": "capability",
+      "summary": "One entry point for getting anything into the brain: routes web clips, Gemini transcripts, knowledge sources and bulk exports to their pipeline, so the user never has to know which pipeline a thing belongs to.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/ingest/SKILL.md"
+      ]
+    },
+    {
+      "id": "content_hash_dedupe",
+      "label": "Dedupe by content hash before ingesting",
+      "type": "technique",
+      "summary": "Hash the candidate with shasum -a 256 and compare against filed material of the same size, because a byte-identical copy under a different filename has already been ingested. Also check wiki/log.md for the source name.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/ingest/SKILL.md"
+      ]
+    },
+    {
+      "id": "immutable_source_provenance",
+      "label": "Sources are immutable",
+      "type": "constraint",
+      "summary": "raw/ is never modified, moved or deleted; duplicates are flagged for the human to decide. Bulk PII exports are inventoried rather than read wholesale, and government IDs stop the ingest entirely.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/ingest/SKILL.md"
+      ]
+    },
+    {
+      "id": "generated_mirror_never_hand_edited",
+      "label": "Generated mirrors are never hand-edited",
+      "type": "constraint",
+      "summary": "Files that mirror a live backend (*.generated.md, the roster, pulled submissions) are regenerated, never written by hand, and the backend stays the source of truth the local copy reflects.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/ingest/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/pull-submissions/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/morning-brief/SKILL.md"
+      ]
+    },
+    {
+      "id": "script_over_hand_parsing",
+      "label": "Prefer the inventory script over hand-derivation",
+      "type": "design-principle",
+      "summary": "Run the read-only inventory script to map transcripts to students rather than re-parsing filenames each session; when it gets something wrong, fix the script or the alias file instead of working around it silently.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/ingest/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/morning-brief/SKILL.md"
+      ]
+    },
+    {
+      "id": "pull_submissions",
+      "label": "Pull booking-time student submissions",
+      "type": "capability",
+      "summary": "Authenticate as admin against the LSAT U backend, list bookings carrying notes or files, and mirror the comments and signed-URL downloads into students/<name>/submissions/. On-demand only, no cron or watcher.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/pull-submissions/SKILL.md"
+      ]
+    },
+    {
+      "id": "idempotent_pull_manifest",
+      "label": "Idempotent pull via manifest",
+      "type": "technique",
+      "summary": "A per-student .pulled.json records which redemption ids have already been fetched so re-running only pulls what is new, and a --dry-run mode lists without writing.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/pull-submissions/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/command-development/references/marketplace-considerations.md"
+      ]
+    },
+    {
+      "id": "morning_brief",
+      "label": "Morning inbox brief",
+      "type": "capability",
+      "summary": "One daily pass that sweeps Gmail, classifies every waiting message into a bucket, ranks the queue, drafts each reply in the user's voice and logs it. Exists because 19% of his emails are late-reply apologies.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/morning-brief/SKILL.md"
+      ]
+    },
+    {
+      "id": "draft_never_send",
+      "label": "Draft, never send",
+      "type": "constraint",
+      "summary": "Outbound correspondence is created as a real draft with the --draft safety flag and left for the human to send. Payment and billing messages are flagged only, never drafted, because Stripe not the inbox is the authority.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/morning-brief/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/tutorocean-profile-fill/SKILL.md"
+      ]
+    },
+    {
+      "id": "rank_by_cost_of_silence",
+      "label": "Rank by cost of continued silence",
+      "type": "technique",
+      "summary": "Order the reply queue by what silence costs rather than arrival time: aging consultations, then blocked active students, then fast-decaying new inquiries, then scheduling. State each item's age in days.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/morning-brief/SKILL.md"
+      ]
+    },
+    {
+      "id": "send_ledger_logging",
+      "label": "Append-only send ledger",
+      "type": "artifact-produced",
+      "summary": "One line per outbound draft in wiki/send-ledger.md with status drafted, promoted to sent only when the human confirms. A wrong ledger line is worse than a missing one.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/morning-brief/SKILL.md"
+      ]
+    },
+    {
+      "id": "voice_gate",
+      "label": "Voice gate for human-facing copy",
+      "type": "constraint",
+      "summary": "Anything a student or prospect will read routes through the saved teaching voice and confirmed vault facts: no em-dashes, no AI-slop vocabulary, no invented credentials, dates or experience.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/morning-brief/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/tutorocean-profile-fill/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/pickup/SKILL.md"
+      ]
+    },
+    {
+      "id": "human_approval_gate",
+      "label": "Stop-before-consequential-action gate",
+      "type": "constraint",
+      "summary": "Irreversible or judgment-bearing actions halt for explicit human authorization: uploads, policy agreement and final submission; creating a student folder; state overrides; and disable-model-invocation on commands that must be typed by a human.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/tutorocean-profile-fill/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/ingest/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/triage/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/command-development/references/frontmatter-reference.md",
+        "/Users/joshuaf/ai-os/skills/claude/decision-mapping/SKILL.md"
+      ]
+    },
+    {
+      "id": "tutorocean_profile_fill",
+      "label": "TutorOcean profile fill",
+      "type": "capability",
+      "summary": "Populate the tutor application and profile from vault-confirmed facts and saved LSAT story copy, verifying each save in the profile view, and stopping before uploads, policy agreement or submission.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/tutorocean-profile-fill/SKILL.md"
+      ]
+    },
+    {
+      "id": "session_pickup_briefing",
+      "label": "Session pickup briefing",
+      "type": "capability",
+      "summary": "On explicit request only, read the task ledger, hot cache, dashboard, index and latest log entry, follow the resume pointer to any active plan file, then emit a 6-8 line briefing and stop without starting work.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/pickup/SKILL.md"
+      ]
+    },
+    {
+      "id": "lazy_retrieval_context_budget",
+      "label": "Lazy retrieval to protect the context budget",
+      "type": "design-principle",
+      "summary": "Load only what the current step needs: skim the index rather than crawling pages, read only the messages you are about to draft for, never read a PII export wholesale, and let references and examples load on demand.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/pickup/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/morning-brief/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/ingest/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/command-development/README.md"
+      ]
+    },
+    {
+      "id": "carry_open_questions_and_recheck_stale_state",
+      "label": "Carry open questions forward, re-check stale state",
+      "type": "constraint",
+      "summary": "Unresolved questions from a prior handoff are re-surfaced and re-asked rather than silently rolling forward, and any load-bearing claim about a live system is re-verified rather than restated as current.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/pickup/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/triage/SKILL.md"
+      ]
+    },
+    {
+      "id": "gws_cli_dependency",
+      "label": "gws CLI dependency",
+      "type": "tool-dependency",
+      "summary": "All Google Workspace access runs through the gws binary with a shared auth and security preamble in gws-shared, per-service surfaces (drive, gmail, calendar) and helper commands prefixed with +.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/gws-drive/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/gws-workflow/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/gws-workflow-file-announce/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/gws-workflow-standup-report/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/morning-brief/SKILL.md"
+      ]
+    },
+    {
+      "id": "inspect_schema_before_calling",
+      "label": "Inspect the schema before calling an API method",
+      "type": "technique",
+      "summary": "Browse resources with --help and run gws schema <resource>.<method> to learn required params, types and defaults before building --params and --json flags, rather than guessing the call shape.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/gws-drive/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/gws-workflow/SKILL.md"
+      ]
+    },
+    {
+      "id": "read_vs_write_command_labeling",
+      "label": "Label read-only versus write commands",
+      "type": "design-principle",
+      "summary": "Each helper command states plainly whether it mutates anything: standup-report is read-only and never modifies data, file-announce is a write command that sends a Chat message.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/gws-workflow-standup-report/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/gws-workflow-file-announce/SKILL.md"
+      ]
+    },
+    {
+      "id": "cross_service_aggregation",
+      "label": "Cross-service aggregation into one summary",
+      "type": "capability",
+      "summary": "Workflow helpers combine two or more services into a single answer: today's calendar agenda plus the open task list as a standup, or a Drive upload followed by a Chat announcement.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/gws-workflow/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/gws-workflow-standup-report/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/gws-workflow-file-announce/SKILL.md"
+      ]
+    },
+    {
+      "id": "obsidian_cli_dependency",
+      "label": "Obsidian CLI dependency",
+      "type": "tool-dependency",
+      "summary": "The obsidian binary drives a running Obsidian instance for reading, creating, searching and property editing, plus a plugin dev loop of plugin:reload, dev:errors, dev:screenshot and dev:console.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/obsidian-cli/SKILL.md"
+      ]
+    },
+    {
+      "id": "obsidian_bases_declarative_views",
+      "label": "Obsidian Bases declarative views",
+      "type": "capability",
+      "summary": "A .base YAML file defines filters, computed formulas, property display names, summaries and one or more table, cards, list or map views, producing database-like queries over vault notes.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/obsidian-bases/SKILL.md"
+      ]
+    },
+    {
+      "id": "yaml_quoting_and_type_pitfalls",
+      "label": "YAML quoting and Duration-type pitfalls",
+      "type": "failure-mode",
+      "summary": "The common Bases breakages: unquoted strings containing YAML special characters, double quotes nested inside double quotes in formulas, referencing an undefined formula, and doing arithmetic on a Duration without first accessing .days.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/obsidian-bases/SKILL.md"
+      ]
+    },
+    {
+      "id": "browser_snapshot_uid_interaction",
+      "label": "Snapshot-then-interact browser automation",
+      "type": "capability",
+      "summary": "Chrome DevTools MCP drives a page by navigating, waiting, taking an accessibility snapshot for element uids, then acting on those uids. Text snapshots are preferred over screenshots for automation.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/chrome-devtools/SKILL.md"
+      ]
+    },
+    {
+      "id": "higgsfield_website_build",
+      "label": "Higgsfield website and app builder",
+      "type": "capability",
+      "summary": "Drive the full lifecycle of a React 19 + TanStack Start SSR Cloudflare Worker through the higgsfield website CLI, routed at create time by a required --type of website (standalone) or app (Higgsfield-integrated).",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/codex/higgsfield-websites/SKILL.md"
+      ]
+    },
+    {
+      "id": "command_testing_validation",
+      "label": "Layered command testing",
+      "type": "capability",
+      "summary": "Seven escalating levels from frontmatter syntax validation through argument matrices, file references, bash execution and integration, wired into a suite script, a pre-commit hook and CI.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/command-development/references/testing-strategies.md"
+      ]
+    },
+    {
+      "id": "self_documenting_command",
+      "label": "Self-documenting command header",
+      "type": "technique",
+      "summary": "An HTML comment block in the command file carrying purpose, usage, arguments, examples, requirements, related commands, troubleshooting and changelog, so the docs travel with the artifact.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/command-development/references/documentation-patterns.md"
+      ]
+    },
+    {
+      "id": "versioning_and_deprecation",
+      "label": "Versioning, deprecation and migration notes",
+      "type": "technique",
+      "summary": "Semantic versions with a changelog, breaking changes called out with migration guidance, and deprecation warnings that name the replacement and the removal version before a feature disappears.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/command-development/references/documentation-patterns.md",
+        "/Users/joshuaf/ai-os/skills/claude/command-development/references/marketplace-considerations.md"
+      ]
+    },
+    {
+      "id": "portable_distribution_readiness",
+      "label": "Distribution readiness",
+      "type": "capability",
+      "summary": "Making a command survive unknown environments: platform detection, dependency probing with install guidance, graceful degradation when optional tools are absent, first-run onboarding and a pre-release checklist.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/command-development/references/marketplace-considerations.md"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "command_authoring",
+      "target": "yaml_frontmatter_contract",
+      "type": "depends_on",
+      "confidence": 0.95,
+      "evidence": "\"Add configuration using YAML frontmatter\" with description, allowed-tools, model, argument-hint"
+    },
+    {
+      "source": "command_authoring",
+      "target": "instructions_for_agent_not_user",
+      "type": "constrains",
+      "confidence": 0.95,
+      "evidence": "\"Commands are written for agent consumption, not human consumption\""
+    },
+    {
+      "source": "yaml_frontmatter_contract",
+      "target": "least_privilege_tool_scoping",
+      "type": "produces",
+      "confidence": 0.9,
+      "evidence": "allowed-tools: \"Be as restrictive as possible... use command filters for Bash (e.g., git:* not *)\""
+    },
+    {
+      "source": "yaml_frontmatter_contract",
+      "target": "human_approval_gate",
+      "type": "produces",
+      "confidence": 0.85,
+      "evidence": "disable-model-invocation: \"Command only invokable by user typing /command... safer for sensitive operations\""
+    },
+    {
+      "source": "command_authoring",
+      "target": "dynamic_argument_substitution",
+      "type": "depends_on",
+      "confidence": 0.9,
+      "evidence": "$ARGUMENTS and positional $1/$2 expansion documented as core command features"
+    },
+    {
+      "source": "command_authoring",
+      "target": "inline_bash_context_injection",
+      "type": "depends_on",
+      "confidence": 0.9,
+      "evidence": "\"Commands can execute bash commands inline to dynamically gather context\""
+    },
+    {
+      "source": "command_authoring",
+      "target": "file_reference_inclusion",
+      "type": "depends_on",
+      "confidence": 0.9,
+      "evidence": "\"Review @$1 ... Claude reads src/api/users.ts before processing command\""
+    },
+    {
+      "source": "interactive_question_wizard",
+      "target": "dynamic_argument_substitution",
+      "type": "alternative_to",
+      "confidence": 0.9,
+      "evidence": "\"use the AskUserQuestion tool within command execution rather than relying on command arguments\""
+    },
+    {
+      "source": "interactive_question_wizard",
+      "target": "one_question_at_a_time",
+      "type": "overlaps_with",
+      "confidence": 0.65,
+      "evidence": "Conditional flows build later questions on earlier answers; grilling states asking multiple at once is bewildering. INFERRED convergence of two sources"
+    },
+    {
+      "source": "grilling_interview",
+      "target": "one_question_at_a_time",
+      "type": "depends_on",
+      "confidence": 0.95,
+      "evidence": "\"Ask the questions one at a time, waiting for feedback on each question before continuing\""
+    },
+    {
+      "source": "grilling_interview",
+      "target": "explore_codebase_instead_of_asking",
+      "type": "constrains",
+      "confidence": 0.95,
+      "evidence": "\"If a question can be answered by exploring the codebase, explore the codebase instead\""
+    },
+    {
+      "source": "grilling_interview",
+      "target": "domain_modeling",
+      "type": "chains_into",
+      "confidence": 0.9,
+      "evidence": "Triage step 4: \"run the /grilling and /domain-modeling skills together\""
+    },
+    {
+      "source": "domain_modeling",
+      "target": "ubiquitous_language_glossary",
+      "type": "produces",
+      "confidence": 0.95,
+      "evidence": "\"When a term is resolved, update CONTEXT.md right there\""
+    },
+    {
+      "source": "domain_modeling",
+      "target": "adr_decision_record",
+      "type": "produces",
+      "confidence": 0.9,
+      "evidence": "\"Offer ADRs sparingly\" with the ADR-FORMAT template"
+    },
+    {
+      "source": "adr_three_test_gate",
+      "target": "adr_decision_record",
+      "type": "constrains",
+      "confidence": 0.95,
+      "evidence": "\"All three of these must be true: hard to reverse, surprising without context, the result of a real trade-off\""
+    },
+    {
+      "source": "domain_modeling",
+      "target": "cross_reference_claim_against_code",
+      "type": "depends_on",
+      "confidence": 0.9,
+      "evidence": "\"When the user states how something works, check whether the code agrees\""
+    },
+    {
+      "source": "lazy_artifact_creation",
+      "target": "ubiquitous_language_glossary",
+      "type": "constrains",
+      "confidence": 0.9,
+      "evidence": "\"Create files lazily — only when you have something to write\""
+    },
+    {
+      "source": "lazy_artifact_creation",
+      "target": "adr_decision_record",
+      "type": "constrains",
+      "confidence": 0.85,
+      "evidence": "\"Create the docs/adr/ directory lazily — only when the first ADR is needed\""
+    },
+    {
+      "source": "skip_the_process_when_unneeded",
+      "target": "adr_three_test_gate",
+      "type": "overlaps_with",
+      "confidence": 0.7,
+      "evidence": "\"If a decision is easy to reverse, skip it\" mirrors offering to skip the decision map"
+    },
+    {
+      "source": "decision_map_fog_of_war",
+      "target": "grilling_interview",
+      "type": "depends_on",
+      "confidence": 0.95,
+      "evidence": "Bootstrap: \"Run a /grilling and /domain-modelling session to surface the open decisions\""
+    },
+    {
+      "source": "decision_map_fog_of_war",
+      "target": "domain_modeling",
+      "type": "depends_on",
+      "confidence": 0.9,
+      "evidence": "\"Discuss: Uses the /grilling and /domain-modelling skills. The default case.\""
+    },
+    {
+      "source": "decision_map_fog_of_war",
+      "target": "workflow_state_file",
+      "type": "specializes",
+      "confidence": 0.85,
+      "evidence": "\"a stateful decision map in a markdown file\" that every session loads and updates"
+    },
+    {
+      "source": "ticket_sized_to_one_session",
+      "target": "decision_map_fog_of_war",
+      "type": "constrains",
+      "confidence": 0.95,
+      "evidence": "\"Each ticket must be sized to one 100K token agent session\""
+    },
+    {
+      "source": "decision_map_fog_of_war",
+      "target": "skip_the_process_when_unneeded",
+      "type": "produces",
+      "confidence": 0.85,
+      "evidence": "\"you should offer the user the chance to skip the decision map\" when grilling leaves no fog of war"
+    },
+    {
+      "source": "decision_map_fog_of_war",
+      "target": "lazy_retrieval_context_budget",
+      "type": "depends_on",
+      "confidence": 0.8,
+      "evidence": "\"the whole map is loaded as context into every session, so it must stay compact\""
+    },
+    {
+      "source": "triage_state_machine",
+      "target": "agent_brief_artifact",
+      "type": "produces",
+      "confidence": 0.95,
+      "evidence": "\"ready-for-agent — post an agent brief comment\""
+    },
+    {
+      "source": "triage_state_machine",
+      "target": "reproduce_before_delegating",
+      "type": "depends_on",
+      "confidence": 0.95,
+      "evidence": "Step 3 \"Verify the claim. Before any grilling, check that the claim holds up\""
+    },
+    {
+      "source": "reproduce_before_delegating",
+      "target": "agent_brief_artifact",
+      "type": "prerequisite_of",
+      "confidence": 0.85,
+      "evidence": "\"A confirmed verification makes a much stronger agent brief\""
+    },
+    {
+      "source": "triage_state_machine",
+      "target": "grilling_interview",
+      "type": "chains_into",
+      "confidence": 0.9,
+      "evidence": "\"Grill (if needed). If the request needs fleshing out, run the /grilling and /domain-modeling skills together\""
+    },
+    {
+      "source": "triage_state_machine",
+      "target": "rejection_knowledge_base",
+      "type": "consumes",
+      "confidence": 0.95,
+      "evidence": "Step 1(b) prior rejection: \"read .out-of-scope/*.md and surface any that resembles this request\""
+    },
+    {
+      "source": "triage_state_machine",
+      "target": "rejection_knowledge_base",
+      "type": "produces",
+      "confidence": 0.9,
+      "evidence": "\"Rejected (enhancement) — write to .out-of-scope/, link to it from a comment, then close\""
+    },
+    {
+      "source": "already_implemented_is_not_rejected",
+      "target": "rejection_knowledge_base",
+      "type": "constrains",
+      "confidence": 0.95,
+      "evidence": "\"recording it would poison the dedup checks with false rejections\""
+    },
+    {
+      "source": "triage_state_machine",
+      "target": "cross_reference_claim_against_code",
+      "type": "depends_on",
+      "confidence": 0.85,
+      "evidence": "Redundancy check: \"search for an existing implementation of the requested behavior by domain concept\""
+    },
+    {
+      "source": "agent_brief_artifact",
+      "target": "durable_spec_over_paths",
+      "type": "constrains",
+      "confidence": 0.95,
+      "evidence": "\"Don't reference file paths — they go stale... Don't reference line numbers\""
+    },
+    {
+      "source": "agent_brief_artifact",
+      "target": "acceptance_criteria_and_scope_bounds",
+      "type": "depends_on",
+      "confidence": 0.95,
+      "evidence": "\"Every agent brief must have concrete, testable acceptance criteria\" plus an explicit out-of-scope section"
+    },
+    {
+      "source": "triage_state_machine",
+      "target": "human_approval_gate",
+      "type": "constrains",
+      "confidence": 0.85,
+      "evidence": "\"Recommend... Wait for direction\"; \"flag transitions that look unusual and ask before proceeding\""
+    },
+    {
+      "source": "triage_state_machine",
+      "target": "carry_open_questions_and_recheck_stale_state",
+      "type": "depends_on",
+      "confidence": 0.8,
+      "evidence": "\"Parse any prior triage notes so you don't re-ask resolved questions\" and present an updated picture on resume"
+    },
+    {
+      "source": "evidence_before_claims",
+      "target": "verify_persisted_state_not_local_state",
+      "type": "specializes",
+      "confidence": 0.85,
+      "evidence": "\"Agent completed | Requires VCS diff shows changes | Not sufficient: agent reports success\""
+    },
+    {
+      "source": "evidence_before_claims",
+      "target": "rationalization_red_flags",
+      "type": "depends_on",
+      "confidence": 0.9,
+      "evidence": "\"Rationalization Prevention\" table: \"Should work now → RUN the verification\""
+    },
+    {
+      "source": "skill_invocation_mandate",
+      "target": "rationalization_red_flags",
+      "type": "depends_on",
+      "confidence": 0.9,
+      "evidence": "\"These thoughts mean STOP—you're rationalizing\" red flag table"
+    },
+    {
+      "source": "evidence_before_claims",
+      "target": "reproduce_before_delegating",
+      "type": "overlaps_with",
+      "confidence": 0.75,
+      "evidence": "Both demand an executed check before an assertion is allowed to stand. INFERRED from parallel structure"
+    },
+    {
+      "source": "verify_persisted_state_not_local_state",
+      "target": "tutorocean_profile_fill",
+      "type": "constrains",
+      "confidence": 0.95,
+      "evidence": "\"confirm the persisted values in the profile view, not just the modal state\""
+    },
+    {
+      "source": "verify_persisted_state_not_local_state",
+      "target": "obsidian_cli_dependency",
+      "type": "depends_on",
+      "confidence": 0.8,
+      "evidence": "Plugin dev cycle: reload, then \"obsidian dev:errors\", then screenshot or DOM check"
+    },
+    {
+      "source": "skill_invocation_mandate",
+      "target": "process_skills_before_implementation_skills",
+      "type": "depends_on",
+      "confidence": 0.9,
+      "evidence": "\"When multiple skills apply, process skills come first — they set the approach\""
+    },
+    {
+      "source": "instruction_precedence_order",
+      "target": "skill_invocation_mandate",
+      "type": "constrains",
+      "confidence": 0.9,
+      "evidence": "\"User instructions... take precedence over skills, which in turn override default behavior\""
+    },
+    {
+      "source": "skill_invocation_mandate",
+      "target": "checklist_task_tracking",
+      "type": "produces",
+      "confidence": 0.85,
+      "evidence": "\"follow the skill exactly. If it has a checklist, create a todo per item\""
+    },
+    {
+      "source": "harness_tool_mapping",
+      "target": "subagent_dispatch_dependency",
+      "type": "produces",
+      "confidence": 0.9,
+      "evidence": "Each reference maps \"Dispatch a subagent\" to the harness equivalent or states none exists"
+    },
+    {
+      "source": "harness_tool_mapping",
+      "target": "checklist_task_tracking",
+      "type": "produces",
+      "confidence": 0.9,
+      "evidence": "\"Task tracking (create a todo, mark complete)\" maps to a task artifact or TODO.md per harness"
+    },
+    {
+      "source": "harness_tool_mapping",
+      "target": "skill_invocation_mandate",
+      "type": "depends_on",
+      "confidence": 0.85,
+      "evidence": "\"Platform Adaptation: If your harness appears here, read its reference file\""
+    },
+    {
+      "source": "subagent_dispatch_dependency",
+      "target": "sandbox_environment_detection",
+      "type": "chains_into",
+      "confidence": 0.7,
+      "evidence": "Codex reference pairs multi_agent enablement with worktree/branch environment probes before acting"
+    },
+    {
+      "source": "ingest_front_door",
+      "target": "content_hash_dedupe",
+      "type": "depends_on",
+      "confidence": 0.95,
+      "evidence": "\"Dedupe by content hash, not by name\" before any pipeline"
+    },
+    {
+      "source": "ingest_front_door",
+      "target": "immutable_source_provenance",
+      "type": "constrains",
+      "confidence": 0.95,
+      "evidence": "\"Never modify the source. raw/ is immutable.\""
+    },
+    {
+      "source": "ingest_front_door",
+      "target": "generated_mirror_never_hand_edited",
+      "type": "constrains",
+      "confidence": 0.9,
+      "evidence": "\"Never write to *.generated.md. Those are backend mirrors and get overwritten.\""
+    },
+    {
+      "source": "ingest_front_door",
+      "target": "script_over_hand_parsing",
+      "type": "depends_on",
+      "confidence": 0.9,
+      "evidence": "\"Start with the inventory. Do not re-derive the mapping by hand.\""
+    },
+    {
+      "source": "ingest_front_door",
+      "target": "explore_codebase_instead_of_asking",
+      "type": "depends_on",
+      "confidence": 0.85,
+      "evidence": "\"Find the file without asking Joshua where it is\" — search Clippings, raw/inbox, Downloads, Desktop first"
+    },
+    {
+      "source": "ingest_front_door",
+      "target": "human_approval_gate",
+      "type": "constrains",
+      "confidence": 0.9,
+      "evidence": "\"Never create a student folder without asking\"; do not delete a duplicate without asking"
+    },
+    {
+      "source": "ingest_front_door",
+      "target": "lazy_retrieval_context_budget",
+      "type": "depends_on",
+      "confidence": 0.85,
+      "evidence": "\"Never read one wholesale — it will blow the context window and has before\""
+    },
+    {
+      "source": "ingest_front_door",
+      "target": "lazy_artifact_creation",
+      "type": "overlaps_with",
+      "confidence": 0.6,
+      "evidence": "Creating a student folder only when a real recurring relationship exists. INFERRED as the same restraint principle"
+    },
+    {
+      "source": "pull_submissions",
+      "target": "idempotent_pull_manifest",
+      "type": "depends_on",
+      "confidence": 0.95,
+      "evidence": "\"Records each pulled redemption in a per-student .pulled.json manifest so re-running only fetches what's new\""
+    },
+    {
+      "source": "pull_submissions",
+      "target": "generated_mirror_never_hand_edited",
+      "type": "constrains",
+      "confidence": 0.9,
+      "evidence": "\"The backend is the source of truth; this is a mirror. Never delete backend rows from here.\""
+    },
+    {
+      "source": "pull_submissions",
+      "target": "session_pickup_briefing",
+      "type": "chains_into",
+      "confidence": 0.85,
+      "evidence": "\"Use when Joshua says pull submissions... or as part of /pickup\""
+    },
+    {
+      "source": "pull_submissions",
+      "target": "ingest_front_door",
+      "type": "overlaps_with",
+      "confidence": 0.7,
+      "evidence": "Both land external student material into students/<name>/ but from different sources; pull is backend, ingest is files and transcripts"
+    },
+    {
+      "source": "morning_brief",
+      "target": "draft_never_send",
+      "type": "constrains",
+      "confidence": 0.95,
+      "evidence": "\"--draft is the safety flag. It is never omitted here. This skill has no send step at all.\""
+    },
+    {
+      "source": "morning_brief",
+      "target": "rank_by_cost_of_silence",
+      "type": "depends_on",
+      "confidence": 0.95,
+      "evidence": "\"Order the queue by cost of continued silence, not by arrival time\""
+    },
+    {
+      "source": "morning_brief",
+      "target": "send_ledger_logging",
+      "type": "produces",
+      "confidence": 0.95,
+      "evidence": "\"Append one line per draft to wiki/send-ledger.md, status drafted\""
+    },
+    {
+      "source": "morning_brief",
+      "target": "voice_gate",
+      "type": "constrains",
+      "confidence": 0.95,
+      "evidence": "\"Every draft routes through wiki/teaching-voice.md. Non-negotiable\""
+    },
+    {
+      "source": "morning_brief",
+      "target": "gws_cli_dependency",
+      "type": "depends_on",
+      "confidence": 0.95,
+      "evidence": "Sweep and draft steps run gws gmail +triage, +read and +send"
+    },
+    {
+      "source": "morning_brief",
+      "target": "lazy_retrieval_context_budget",
+      "type": "depends_on",
+      "confidence": 0.9,
+      "evidence": "\"Read the ones you are about to draft for. Context spent on messages that need no reply is context not spent on the drafts.\""
+    },
+    {
+      "source": "morning_brief",
+      "target": "script_over_hand_parsing",
+      "type": "depends_on",
+      "confidence": 0.8,
+      "evidence": "\"Rebuild the roster first\" via build-roster.py so active-student membership is answerable"
+    },
+    {
+      "source": "morning_brief",
+      "target": "human_approval_gate",
+      "type": "constrains",
+      "confidence": 0.9,
+      "evidence": "\"Payment is flag-only on purpose... surface them for Joshua and stop\""
+    },
+    {
+      "source": "tutorocean_profile_fill",
+      "target": "voice_gate",
+      "type": "constrains",
+      "confidence": 0.9,
+      "evidence": "\"Use only confirmed facts from the vault or the user. Do not invent education dates, credentials, uploads, or years of experience.\""
+    },
+    {
+      "source": "tutorocean_profile_fill",
+      "target": "human_approval_gate",
+      "type": "constrains",
+      "confidence": 0.95,
+      "evidence": "\"Stop before education uploads, ID uploads, policy agreement, or application submission unless the user explicitly says to continue\""
+    },
+    {
+      "source": "tutorocean_profile_fill",
+      "target": "browser_snapshot_uid_interaction",
+      "type": "depends_on",
+      "confidence": 0.6,
+      "evidence": "Profile filling and post-save re-checking are browser-driven form work. INFERRED from the skill being a web-form flow with no CLI named"
+    },
+    {
+      "source": "session_pickup_briefing",
+      "target": "lazy_retrieval_context_budget",
+      "type": "depends_on",
+      "confidence": 0.95,
+      "evidence": "\"Do not read deeper synthesis/concept pages yet... The goal is orientation per token, not loading everything\""
+    },
+    {
+      "source": "session_pickup_briefing",
+      "target": "carry_open_questions_and_recheck_stale_state",
+      "type": "constrains",
+      "confidence": 0.95,
+      "evidence": "\"Carry open questions forward\" and \"Do not restate stale state as current\""
+    },
+    {
+      "source": "session_pickup_briefing",
+      "target": "workflow_state_file",
+      "type": "consumes",
+      "confidence": 0.85,
+      "evidence": "Resume pointer reads the named active plan or handoff file for the immediate next stage"
+    },
+    {
+      "source": "session_pickup_briefing",
+      "target": "human_approval_gate",
+      "type": "constrains",
+      "confidence": 0.85,
+      "evidence": "\"Emit 6 to 8 lines, then wait for Joshua. Do not begin work.\""
+    },
+    {
+      "source": "gws_cli_dependency",
+      "target": "inspect_schema_before_calling",
+      "type": "depends_on",
+      "confidence": 0.9,
+      "evidence": "\"Before calling any API method, inspect it\" with gws schema <resource>.<method>"
+    },
+    {
+      "source": "cross_service_aggregation",
+      "target": "gws_cli_dependency",
+      "type": "depends_on",
+      "confidence": 0.95,
+      "evidence": "Workflow helper commands are all invoked as gws workflow +<helper>"
+    },
+    {
+      "source": "cross_service_aggregation",
+      "target": "read_vs_write_command_labeling",
+      "type": "constrains",
+      "confidence": 0.85,
+      "evidence": "standup-report \"Read-only — never modifies data\" vs file-announce \"This is a write command\""
+    },
+    {
+      "source": "obsidian_bases_declarative_views",
+      "target": "yaml_quoting_and_type_pitfalls",
+      "type": "produces",
+      "confidence": 0.9,
+      "evidence": "Troubleshooting section enumerates unquoted specials, mismatched quotes, undefined formulas, Duration math"
+    },
+    {
+      "source": "obsidian_bases_declarative_views",
+      "target": "obsidian_cli_dependency",
+      "type": "overlaps_with",
+      "confidence": 0.6,
+      "evidence": "Both operate on the same vault surface, one declaratively via .base files and one imperatively via the CLI. INFERRED"
+    },
+    {
+      "source": "obsidian_bases_declarative_views",
+      "target": "verify_persisted_state_not_local_state",
+      "type": "depends_on",
+      "confidence": 0.8,
+      "evidence": "\"Test in Obsidian: Open the .base file in Obsidian to confirm the view renders correctly\""
+    },
+    {
+      "source": "command_composition_chaining",
+      "target": "workflow_state_file",
+      "type": "depends_on",
+      "confidence": 0.9,
+      "evidence": "\"Deployment state saved to .claude/deployment-state.local.md... Run /deploy-test to continue\""
+    },
+    {
+      "source": "workflow_locking",
+      "target": "workflow_state_file",
+      "type": "constrains",
+      "confidence": 0.9,
+      "evidence": "\"Checking for active deployments... Cannot start concurrent deployment\""
+    },
+    {
+      "source": "command_composition_chaining",
+      "target": "graceful_failure_and_rollback",
+      "type": "depends_on",
+      "confidence": 0.85,
+      "evidence": "Checkpoint log plus \"/deployment-resume [last-successful-checkpoint]\""
+    },
+    {
+      "source": "input_validation_before_execution",
+      "target": "graceful_failure_and_rollback",
+      "type": "chains_into",
+      "confidence": 0.8,
+      "evidence": "\"Validate early in command... Provide helpful error messages, suggest corrective actions\""
+    },
+    {
+      "source": "input_validation_before_execution",
+      "target": "inline_bash_context_injection",
+      "type": "depends_on",
+      "confidence": 0.85,
+      "evidence": "Validation is implemented as bang-backtick test/grep probes spliced into the prompt"
+    },
+    {
+      "source": "plugin_root_portable_paths",
+      "target": "portable_distribution_readiness",
+      "type": "prerequisite_of",
+      "confidence": 0.85,
+      "evidence": "\"No hardcoded paths\" in the pre-release checklist; PLUGIN_ROOT \"works across all installations\""
+    },
+    {
+      "source": "command_namespacing",
+      "target": "portable_distribution_readiness",
+      "type": "depends_on",
+      "confidence": 0.8,
+      "evidence": "\"Namespace Awareness: Avoid name collisions\" with plugin-prefixed command names"
+    },
+    {
+      "source": "command_testing_validation",
+      "target": "yaml_frontmatter_contract",
+      "type": "consumes",
+      "confidence": 0.9,
+      "evidence": "Level 1 and 2 validate frontmatter markers, model values and description length"
+    },
+    {
+      "source": "command_testing_validation",
+      "target": "evidence_before_claims",
+      "type": "overlaps_with",
+      "confidence": 0.7,
+      "evidence": "Both require an executed check before release; testing-strategies runs a suite, verification demands fresh output. INFERRED"
+    },
+    {
+      "source": "command_testing_validation",
+      "target": "portable_distribution_readiness",
+      "type": "prerequisite_of",
+      "confidence": 0.85,
+      "evidence": "Pre-release checklist requires \"Tested by others\" and \"All arguments tested\" before distribution"
+    },
+    {
+      "source": "self_documenting_command",
+      "target": "versioning_and_deprecation",
+      "type": "produces",
+      "confidence": 0.85,
+      "evidence": "The documentation comment block carries CHANGELOG, MIGRATION NOTES and DEPRECATION WARNINGS"
+    },
+    {
+      "source": "versioning_and_deprecation",
+      "target": "portable_distribution_readiness",
+      "type": "depends_on",
+      "confidence": 0.8,
+      "evidence": "\"Version number set, Changelog updated\" in the distribution checklist"
+    },
+    {
+      "source": "self_documenting_command",
+      "target": "command_authoring",
+      "type": "specializes",
+      "confidence": 0.85,
+      "evidence": "\"Add comments: Explain complex logic; Provide examples: Show usage in comments\" in command best practices"
+    },
+    {
+      "source": "lazy_retrieval_context_budget",
+      "target": "command_authoring",
+      "type": "constrains",
+      "confidence": 0.8,
+      "evidence": "\"Progressive disclosure... Claude loads references and examples as needed based on task\""
+    },
+    {
+      "source": "higgsfield_website_build",
+      "target": "yaml_frontmatter_contract",
+      "type": "depends_on",
+      "confidence": 0.85,
+      "evidence": "Frontmatter carries name, description, argument-hint and allowed-tools: Bash"
+    },
+    {
+      "source": "higgsfield_website_build",
+      "target": "human_approval_gate",
+      "type": "constrains",
+      "confidence": 0.8,
+      "evidence": "\"--type ... is the USER'S choice — when the request doesn't make it obvious, ask the user before creating\""
+    },
+    {
+      "source": "higgsfield_website_build",
+      "target": "lazy_retrieval_context_budget",
+      "type": "depends_on",
+      "confidence": 0.75,
+      "evidence": "\"This file routes to the right flow; each flow carries its own workflow, references, hard rules\""
+    },
+    {
+      "source": "browser_snapshot_uid_interaction",
+      "target": "lazy_retrieval_context_budget",
+      "type": "depends_on",
+      "confidence": 0.8,
+      "evidence": "\"Use pagination and filtering to minimize data. Set includeSnapshot: false on input actions unless you need updated page state\""
+    },
+    {
+      "source": "browser_snapshot_uid_interaction",
+      "target": "inspect_schema_before_calling",
+      "type": "overlaps_with",
+      "confidence": 0.6,
+      "evidence": "Both insist on reading the current structure (page snapshot / method schema) before issuing an action. INFERRED"
+    },
+    {
+      "source": "draft_never_send",
+      "target": "human_approval_gate",
+      "type": "specializes",
+      "confidence": 0.9,
+      "evidence": "Drafting stops short of the irreversible act and leaves the send to the human"
+    },
+    {
+      "source": "send_ledger_logging",
+      "target": "evidence_before_claims",
+      "type": "overlaps_with",
+      "confidence": 0.75,
+      "evidence": "\"Status only becomes sent when Joshua actually sends it and says so... a wrong ledger line is worse than a missing one\""
+    },
+    {
+      "source": "generated_mirror_never_hand_edited",
+      "target": "immutable_source_provenance",
+      "type": "overlaps_with",
+      "confidence": 0.7,
+      "evidence": "Both forbid local edits to material owned elsewhere; one protects upstream sources, the other downstream mirrors. INFERRED"
+    },
+    {
+      "source": "idempotent_pull_manifest",
+      "target": "content_hash_dedupe",
+      "type": "alternative_to",
+      "confidence": 0.7,
+      "evidence": "Both prevent double-ingestion, one by recorded id and one by content hash. INFERRED from parallel purpose"
+    },
+    {
+      "source": "instructions_for_agent_not_user",
+      "target": "skill_invocation_mandate",
+      "type": "overlaps_with",
+      "confidence": 0.6,
+      "evidence": "Both treat the skill or command body as binding agent instruction rather than descriptive prose. INFERRED"
+    }
+  ]
+}

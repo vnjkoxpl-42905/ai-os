@@ -1,0 +1,139 @@
+{
+  "_comment": "Batch-3 bridge edges. Five orphan components (10 nodes) reasoned from node labels and summaries, not from re-reading source text — every edge is therefore INFERRED and carries a justification in `note` for review. apply_stitch.py strips `note` before it reaches the graph. Confidence reflects how directly the two summaries entail the relation.",
+  "edges": [
+    {
+      "source": "chat_only_handoff",
+      "target": "context_handoff",
+      "type": "specializes",
+      "confidence": 0.94,
+      "evidence": "INFERRED: both describe compacting session state before a context reset; chat_only_handoff is the write-nothing variant of the general context_handoff concept.",
+      "note": "Strongest bridge in the set. These almost certainly should have merged at extraction but the labels share no tokens, so neither the exact nor the fuzzy collapse caught them."
+    },
+    {
+      "source": "handoff_vs_wrapup",
+      "target": "session_continuity_capability",
+      "type": "constrains",
+      "confidence": 0.88,
+      "evidence": "INFERRED: the handoff-vs-wrapup rule is the routing condition that decides which continuity mechanism runs, so it constrains the general capability."
+    },
+    {
+      "source": "synthesis_not_filesystem_audit",
+      "target": "handoff_writer",
+      "type": "constrains",
+      "confidence": 0.86,
+      "evidence": "INFERRED: 'no git log, no broad glob sweeps, never invent state' is a direct authoring constraint on the handoff writer."
+    },
+    {
+      "source": "chat_only_handoff",
+      "target": "context_window_hygiene",
+      "type": "depends_on",
+      "confidence": 0.8,
+      "evidence": "INFERRED: the chat-only handoff exists to serve context-window hygiene near the ~250k threshold named in its summary."
+    },
+    {
+      "source": "completion_criterion",
+      "target": "evidence_before_claims",
+      "type": "overlaps_with",
+      "confidence": 0.87,
+      "evidence": "INFERRED: a checkable done-condition and a requirement for evidence before claiming done are the same discipline stated from two directions."
+    },
+    {
+      "source": "premature_completion",
+      "target": "evidence_before_claims",
+      "type": "constrains",
+      "confidence": 0.84,
+      "evidence": "INFERRED: premature completion is the named failure mode that the evidence-before-claims rule exists to prevent."
+    },
+    {
+      "source": "completion_criterion",
+      "target": "pre_output_checklist",
+      "type": "prerequisite_of",
+      "confidence": 0.79,
+      "evidence": "INFERRED: a pre-output checklist can only be written once the completion criterion it checks against is defined."
+    },
+    {
+      "source": "premature_completion",
+      "target": "distrust_the_report",
+      "type": "overlaps_with",
+      "confidence": 0.72,
+      "evidence": "INFERRED: an agent stopping early and an agent's self-report being unreliable are the same underlying trust problem; this run produced a live instance of it."
+    },
+    {
+      "source": "design_token_bundle",
+      "target": "design_system_alignment",
+      "type": "produces",
+      "confidence": 0.85,
+      "evidence": "INFERRED: the eight-file token bundle (W3C tokens, Tailwind config, CSS variables, shadcn theme) is precisely the artifact design-system alignment consumes."
+    },
+    {
+      "source": "design_extraction_capability",
+      "target": "design_token_bundle",
+      "type": "produces",
+      "confidence": 0.95,
+      "evidence": "INFERRED: the extraction capability's stated output is the multi-format bundle; this pair is already internally linked and the edge anchors the component."
+    },
+    {
+      "source": "design_extraction_capability",
+      "target": "browser_automation",
+      "type": "depends_on",
+      "confidence": 0.78,
+      "evidence": "INFERRED: running against a URL with multi-page crawl requires driving a real browser."
+    },
+    {
+      "source": "design_token_bundle",
+      "target": "oklch_color_space",
+      "type": "overlaps_with",
+      "confidence": 0.68,
+      "evidence": "INFERRED: extracted color tokens and the OKLCH commitment both govern how color is represented, but the bundle's color space is not stated in its summary."
+    },
+    {
+      "source": "youtube_full_capability",
+      "target": "cap_watch_video",
+      "type": "overlaps_with",
+      "confidence": 0.9,
+      "evidence": "INFERRED: both cover retrieving and reading video content; the YouTube skill is the concrete implementation of the watch-a-video capability."
+    },
+    {
+      "source": "api_key_env_and_credits",
+      "target": "credential_via_env_not_hardcoded",
+      "type": "specializes",
+      "confidence": 0.91,
+      "evidence": "INFERRED: TRANSCRIPT_API_KEY in the environment is a direct instance of the credentials-via-env-never-hardcoded rule."
+    },
+    {
+      "source": "api_key_env_and_credits",
+      "target": "prefer_cheapest_mechanism",
+      "type": "overlaps_with",
+      "confidence": 0.82,
+      "evidence": "INFERRED: ordering workflows to minimize credit spend is the cheapest-mechanism principle applied to a metered API."
+    },
+    {
+      "source": "youtube_full_capability",
+      "target": "external_binary_dependency",
+      "type": "depends_on",
+      "confidence": 0.7,
+      "evidence": "INFERRED: the skill routes through TranscriptAPI as an external service; whether that is a binary or a hosted API is not stated, so the dependency type is uncertain."
+    },
+    {
+      "source": "read_config_before_guessing",
+      "target": "verify_dont_ask",
+      "type": "overlaps_with",
+      "confidence": 0.93,
+      "evidence": "INFERRED: the summary explicitly says to verify with the cheapest probe rather than ask the user, which is the verify-don't-ask rule stated verbatim."
+    },
+    {
+      "source": "read_config_before_guessing",
+      "target": "local_config_file_pattern",
+      "type": "depends_on",
+      "confidence": 0.83,
+      "evidence": "INFERRED: reading .claude/settings.json and .mcp.json first presupposes the local config-file convention."
+    },
+    {
+      "source": "read_config_before_guessing",
+      "target": "no_hand_editing_generated_config",
+      "type": "overlaps_with",
+      "confidence": 0.75,
+      "evidence": "INFERRED: both treat the config file as authoritative state to be read and respected rather than guessed at or overwritten."
+    }
+  ]
+}

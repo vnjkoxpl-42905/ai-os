@@ -1,0 +1,84 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "lsatu-dev",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "--prefix",
+        "projects/lsatu",
+        "run",
+        "dev"
+      ],
+      "port": 8080,
+      "autoPort": true
+    },
+    {
+      "name": "lsatu-preview",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "--prefix",
+        "projects/lsatu",
+        "run",
+        "preview"
+      ],
+      "port": 4173
+    },
+    {
+      "name": "lsatu-a11y-dev",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "--prefix",
+        "projects/lsatu-wt-a11y",
+        "run",
+        "dev",
+        "--",
+        "--port",
+        "8091"
+      ],
+      "port": 8091
+    },
+    {
+      "name": "lsatu-perf-dev",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "--prefix",
+        "C:/Users/Joshu/dev/lsatu-perf",
+        "run",
+        "dev",
+        "--",
+        "--port",
+        "8092"
+      ],
+      "port": 8092
+    },
+    {
+      "name": "lsatu-rrc-demos-dev",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "--prefix",
+        "projects/lsatu-wt-rrc-demos",
+        "run",
+        "dev",
+        "--",
+        "--port",
+        "8093"
+      ],
+      "port": 8093
+    },
+    {
+      "name": "lsatu-timed-launch-dev",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "--prefix",
+        "projects/lsatu-fix-homework-timed-launch",
+        "run",
+        "dev",
+        "--",
+        "--port",
+        "8099"
+      ],
+      "port": 8099
+    }
+  ]
+}

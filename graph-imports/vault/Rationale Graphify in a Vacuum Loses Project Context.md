@@ -1,0 +1,22 @@
+---
+source_file: "raw/sources/clips/graphify-obsidian-claude-code-cheat-code/Graphify + Obsidian + Claude Code = CHEAT CODE.md"
+type: "document"
+community: "Graphify and Knowledge Graph Layer"
+tags:
+  - graphify/document
+  - graphify/EXTRACTED
+  - community/Graphify_and_Knowledge_Graph_Layer
+---
+
+# Rationale: Graphify in a Vacuum Loses Project Context
+
+## Connections
+- [[graphify --obsidian Flag]] - `rationale_for` [EXTRACTED]
+
+
+
+
+## Source
+- [[Graphify + Obsidian + Claude Code = CHEAT CODE]]
+
+#graphify/document #graphify/EXTRACTED #community/Graphify_and_Knowledge_Graph_Layer

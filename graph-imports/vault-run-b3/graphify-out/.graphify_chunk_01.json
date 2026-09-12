@@ -1,0 +1,2586 @@
+{
+  "nodes": [
+    {
+      "id": "impeccable_frontend_design_skill",
+      "label": "impeccable (frontend design skill)",
+      "type": "capability",
+      "summary": "A 24-command frontend design skill that designs, evaluates, refines, enhances and fixes production UI. Routing: no argument renders the command menu; a matching first word loads that command's reference; anything else is a freeform design invocation under the shared laws.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/SKILL.md"
+      ]
+    },
+    {
+      "id": "cap_shape",
+      "label": "shape: design brief before code",
+      "type": "capability",
+      "summary": "Discovery interview (2-3 questions per round, at least one real user-answer round) plus optional visual probes, synthesized into a 10-section design brief that must be explicitly confirmed. Writes no code.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/shape.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/SKILL.md"
+      ]
+    },
+    {
+      "id": "cap_craft",
+      "label": "craft: shape-then-build end to end",
+      "type": "capability",
+      "summary": "Seven-step build loop: shape, load references, land visual direction, extract assets, build to production quality, browser-iterate, present. Runs shape internally and cannot build until the build gate passes.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/craft.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/SKILL.md"
+      ]
+    },
+    {
+      "id": "cap_teach",
+      "label": "teach: establish PRODUCT.md / DESIGN.md",
+      "type": "capability",
+      "summary": "Explores the codebase, interviews for register/users/personality/anti-references/accessibility, and writes PRODUCT.md; then offers document for DESIGN.md. Never synthesizes PRODUCT.md from the original prompt alone.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/teach.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/SKILL.md"
+      ]
+    },
+    {
+      "id": "cap_document",
+      "label": "document: generate DESIGN.md from code",
+      "type": "capability",
+      "summary": "Scans CSS custom properties, Tailwind config, token files and components to auto-extract a design system, then asks for qualitative language and writes DESIGN.md (Stitch six-section format) plus a DESIGN.json sidecar. Seed mode covers pre-implementation projects.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/document.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/SKILL.md"
+      ]
+    },
+    {
+      "id": "cap_extract",
+      "label": "extract: consolidate reusable patterns",
+      "type": "capability",
+      "summary": "Finds patterns used 3+ times with the same intent, plans extraction, builds enriched reusable components/tokens, migrates existing uses, and documents them. Refuses premature abstraction.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/extract.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/SKILL.md"
+      ]
+    },
+    {
+      "id": "cap_critique",
+      "label": "critique: UX design review with scoring",
+      "type": "capability",
+      "summary": "Runs two isolated assessments (LLM design review + automated detector), synthesizes a combined report with heuristic scores, anti-pattern verdict, priority issues, persona red flags, then asks targeted questions and emits a ranked command plan.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/critique.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/SKILL.md"
+      ]
+    },
+    {
+      "id": "cap_audit",
+      "label": "audit: technical quality checks",
+      "type": "capability",
+      "summary": "Code-level diagnostic across accessibility, performance, theming, responsive design and anti-patterns, each scored 0-4 for a /20 health score. Documents issues; does not fix them.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/audit.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/SKILL.md"
+      ]
+    },
+    {
+      "id": "cap_polish",
+      "label": "polish: final pass before shipping",
+      "type": "capability",
+      "summary": "Meticulous last pass over alignment, IA/flow shape, typography, color, states, micro-interactions, copy, icons, forms, edge cases, responsiveness, performance and code hygiene. Must not run before the work is functionally complete.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/polish.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/SKILL.md"
+      ]
+    },
+    {
+      "id": "cap_bolder",
+      "label": "bolder: amplify safe or bland design",
+      "type": "capability",
+      "summary": "Increases visual impact through typographic, color, spatial, effect, motion and compositional amplification. In the product register it amplifies clarity and hierarchy rather than drama.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/bolder.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/SKILL.md"
+      ]
+    },
+    {
+      "id": "cap_quieter",
+      "label": "quieter: tone down overstimulating design",
+      "type": "capability",
+      "summary": "Reduces saturation, visual weight, decoration and motion while preserving character and hierarchy. Explicitly not a path to grayscale or genericness.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/quieter.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/SKILL.md"
+      ]
+    },
+    {
+      "id": "cap_distill",
+      "label": "distill: strip to essence",
+      "type": "capability",
+      "summary": "Removes complexity across IA, visuals, layout, interaction, content and code so one primary goal and one primary action remain. Simplicity means removing obstacles, not features.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/distill.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/SKILL.md"
+      ]
+    },
+    {
+      "id": "cap_harden",
+      "label": "harden: production resilience",
+      "type": "capability",
+      "summary": "Strengthens against extreme inputs, error scenarios, i18n, edge cases, validation, accessibility resilience and slow connections. Designs that only work with perfect data are not production ready.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/harden.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/SKILL.md"
+      ]
+    },
+    {
+      "id": "cap_onboard",
+      "label": "onboard: first-run flows and activation",
+      "type": "capability",
+      "summary": "Designs welcome flows, empty states, contextual tooltips, tours and tutorials aimed at the shortest path to the aha moment, with skip paths and dismissal memory.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/onboard.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/SKILL.md"
+      ]
+    },
+    {
+      "id": "cap_animate",
+      "label": "animate: purposeful motion",
+      "type": "capability",
+      "summary": "Adds entrance choreography, micro-interactions, state transitions, navigation motion and delight moments with a named hero moment and explicit duration/easing discipline.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/animate.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/SKILL.md"
+      ]
+    },
+    {
+      "id": "cap_colorize",
+      "label": "colorize: strategic color introduction",
+      "type": "capability",
+      "summary": "Introduces semantic color, accent application, tinted surfaces, data-viz encoding and borders into monochromatic UIs, dosed by the chosen color strategy.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/colorize.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/SKILL.md"
+      ]
+    },
+    {
+      "id": "cap_typeset",
+      "label": "typeset: typography hierarchy and fonts",
+      "type": "capability",
+      "summary": "Assesses generic or muddy type and rebuilds font selection, scale, weight roles, measure and OpenType detail. Register decides fluid clamp scales versus fixed rem scales.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/typeset.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/SKILL.md"
+      ]
+    },
+    {
+      "id": "cap_layout",
+      "label": "layout: spacing, rhythm and hierarchy",
+      "type": "capability",
+      "summary": "Fixes arbitrary spacing, weak structure, monotonous card grids and flat hierarchy by establishing a spacing system, rhythm, the right layout tool, and semantic elevation.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/layout.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/SKILL.md"
+      ]
+    },
+    {
+      "id": "cap_delight",
+      "label": "delight: personality and memorable moments",
+      "type": "capability",
+      "summary": "Adds micro-interactions, copy personality, illustrations, sound, easter eggs and celebration moments, sized to the register and never blocking the task.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/delight.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/SKILL.md"
+      ]
+    },
+    {
+      "id": "cap_overdrive",
+      "label": "overdrive: push past conventional limits",
+      "type": "capability",
+      "summary": "Uses the full browser platform (View Transitions, scroll-driven animation, WebGL/WebGPU, virtual scrolling, Workers, WASM) to make an interface feel extraordinary. Must propose 2-3 directions and get a pick before building.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/overdrive.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/SKILL.md"
+      ]
+    },
+    {
+      "id": "cap_clarify",
+      "label": "clarify: UX copy, labels and errors",
+      "type": "capability",
+      "summary": "Rewrites unclear interface text across errors, labels, CTAs, help text, empty states, success, loading, confirmations and navigation toward specific, active, human, consistent copy.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/clarify.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/SKILL.md"
+      ]
+    },
+    {
+      "id": "cap_adapt",
+      "label": "adapt: retarget across devices and contexts",
+      "type": "capability",
+      "summary": "Rethinks the experience for a new context (mobile, tablet, desktop, print, email) rather than scaling it, changing layout, interaction, content and navigation strategy per target.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/adapt.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/SKILL.md"
+      ]
+    },
+    {
+      "id": "cap_optimize",
+      "label": "optimize: diagnose and fix UI performance",
+      "type": "capability",
+      "summary": "Measures Core Web Vitals and bottlenecks, then fixes loading, rendering, animation, framework and network performance. Measure before and after; never optimize blind.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/optimize.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/SKILL.md"
+      ]
+    },
+    {
+      "id": "cap_live",
+      "label": "live: in-browser variant mode",
+      "type": "capability",
+      "summary": "Boot a helper server, inject a picker, and run a poll loop where the user selects an element and the agent generates three hot-swapped HTML+CSS variants with tunable parameters, then accepts one into true source.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/live.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/SKILL.md"
+      ]
+    },
+    {
+      "id": "ai_slop_test",
+      "label": "the AI slop test",
+      "type": "design-principle",
+      "summary": "If someone could look at the interface and say 'AI made that' without doubt, it has failed. Invoked as the pass/fail gate across critique, audit, craft, bolder and both register references.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/brand.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/product.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/critique.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/audit.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/craft.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/bolder.md"
+      ]
+    },
+    {
+      "id": "category_reflex_check",
+      "label": "category-reflex check (two altitudes)",
+      "type": "technique",
+      "summary": "First-order: if theme and palette are guessable from the category alone it is the training-data reflex. Second-order: if the aesthetic family is guessable from category-plus-anti-references it is the trap one tier deeper. Rework until neither is obvious.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/brand.md"
+      ]
+    },
+    {
+      "id": "reflex_reject_lists",
+      "label": "reflex-reject font and aesthetic-lane lists",
+      "type": "constraint",
+      "summary": "Named ban lists of training-data default typefaces (Fraunces, Playfair, Inter, Space Grotesk, DM Sans, Instrument Serif and kin) and saturated aesthetic families (editorial-typographic). Applies to greenfield choices and departure-mode variants, never to an already-committed identity.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/brand.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/typography.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/live.md"
+      ]
+    },
+    {
+      "id": "register_split",
+      "label": "register: brand vs product",
+      "type": "design-principle",
+      "summary": "Every design task is brand (design IS the product) or product (design SERVES the product). Identified before designing from the task cue, the surface in focus, or PRODUCT.md's register field; the matching reference is loaded and the shared laws apply to both.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/brand.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/product.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/teach.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/bolder.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/quieter.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/colorize.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/typeset.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/layout.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/animate.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/delight.md"
+      ]
+    },
+    {
+      "id": "color_strategy_axis",
+      "label": "color strategy commitment axis",
+      "type": "design-principle",
+      "summary": "Four steps of commitment: Restrained (tinted neutrals plus one accent under 10%), Committed (one saturated color across 30-60%), Full palette (3-4 named roles), Drenched (the surface IS the color). Product defaults to Restrained; brand has permission for the rest.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/brand.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/product.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/colorize.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/shape.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/document.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/live.md"
+      ]
+    },
+    {
+      "id": "oklch_color_space",
+      "label": "OKLCH as the color space",
+      "type": "technique",
+      "summary": "Use OKLCH (or LCH) instead of HSL because it is perceptually uniform; hold chroma and hue while varying lightness, and reduce chroma near the extremes because high chroma there looks garish.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/color-and-contrast.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/colorize.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/document.md"
+      ]
+    },
+    {
+      "id": "tinted_neutrals",
+      "label": "tinted neutrals, never pure black or white",
+      "type": "constraint",
+      "summary": "Pure gray and #000/#fff are banned. Every neutral carries 0.005-0.015 chroma hued toward this project's brand color, creating subconscious cohesion without reading as tinted.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/color-and-contrast.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/colorize.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/polish.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/quieter.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/bolder.md"
+      ]
+    },
+    {
+      "id": "gray_on_color_ban",
+      "label": "never gray text on colored backgrounds",
+      "type": "constraint",
+      "summary": "Gray on color reads washed out and dead. Use a darker shade of the background color or transparency instead.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/color-and-contrast.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/polish.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/quieter.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/colorize.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/audit.md"
+      ]
+    },
+    {
+      "id": "theme_scene_sentence",
+      "label": "theme via a physical scene sentence",
+      "type": "technique",
+      "summary": "Dark versus light is never a default. Write one sentence of physical context (who, where, ambient light, mood) concrete enough that it forces the answer; run the sentence, not the category.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/shape.md"
+      ]
+    },
+    {
+      "id": "absolute_bans",
+      "label": "the absolute bans (match and refuse)",
+      "type": "constraint",
+      "summary": "Side-stripe borders over 1px, gradient text via background-clip, decorative glassmorphism, the hero-metric template, identical card grids, and modal-as-first-thought. If about to write one, rewrite the element with different structure.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/colorize.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/layout.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/critique.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/audit.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/bolder.md"
+      ]
+    },
+    {
+      "id": "no_em_dashes_copy_rule",
+      "label": "copy earns its place, no em dashes",
+      "type": "constraint",
+      "summary": "Every word must earn its place, with no restated headings or intros that repeat the title, and no em dashes or double hyphens anywhere in interface copy.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/distill.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/ux-writing.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/clarify.md"
+      ]
+    },
+    {
+      "id": "cards_are_lazy",
+      "label": "cards are the lazy answer",
+      "type": "constraint",
+      "summary": "Cards are only correct when they are truly the best affordance; nested cards are always wrong. Spacing and alignment create grouping naturally, and not everything needs a container.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/layout.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/spatial-design.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/distill.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/polish.md"
+      ]
+    },
+    {
+      "id": "setup_gate_preflight",
+      "label": "non-optional setup gate (preflight)",
+      "type": "constraint",
+      "summary": "Context, product, command-reference, craft-shape, and image gates must all pass before any project file is edited. Codex-style agents state an IMPECCABLE_PREFLIGHT line naming each gate's state before mutating.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/craft.md"
+      ]
+    },
+    {
+      "id": "product_md",
+      "label": "PRODUCT.md (strategic context)",
+      "type": "artifact-produced",
+      "summary": "Required project-root file carrying register, users, product purpose, brand personality, anti-references, design principles and accessibility needs. Every other command reads it before working; if missing or placeholder, teach runs as a blocker.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/teach.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/document.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/live.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/critique.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/personas.md"
+      ]
+    },
+    {
+      "id": "design_md",
+      "label": "DESIGN.md (visual system spec)",
+      "type": "artifact-produced",
+      "summary": "Optional but strongly recommended visual spec in the Google Stitch format: YAML token frontmatter plus exactly six fixed-order sections (Overview, Colors, Typography, Elevation, Components, Do's and Don'ts). Tokens are normative; prose contextualizes.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/teach.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/document.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/live.md"
+      ]
+    },
+    {
+      "id": "design_json_sidecar",
+      "label": "DESIGN.json sidecar (extensions)",
+      "type": "artifact-produced",
+      "summary": "Companion file carrying what the Stitch frontmatter schema cannot hold: tonal ramps, shadow and motion tokens, breakpoints, self-contained component HTML/CSS snippets, and the narrative (north star, named rules, do's and don'ts).",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/document.md"
+      ]
+    },
+    {
+      "id": "design_brief",
+      "label": "confirmed design brief",
+      "type": "artifact-produced",
+      "summary": "The ten-section output of shape: feature summary, primary user action, design direction, scope, layout strategy, key states, interaction model, content requirements, recommended references, open questions. Only counts once the user explicitly confirms it.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/shape.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/craft.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/SKILL.md"
+      ]
+    },
+    {
+      "id": "visual_direction_probe",
+      "label": "visual direction probes and north-star mocks",
+      "type": "artifact-produced",
+      "summary": "2-4 distinct direction probes in shape and 1-3 resolved north-star comps in craft, generated only when the work is net-new, fidelity is mid-fi or above, and the harness has native image generation. Direction artifacts, never implementation assets.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/shape.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/craft.md"
+      ]
+    },
+    {
+      "id": "image_gen_capability_gate",
+      "label": "native image generation (capability gate)",
+      "type": "tool-dependency",
+      "summary": "The probe and mock steps are gated on the harness having a built-in image tool. If unavailable, state the skip in one line and proceed; never ask the user to install APIs, shell scripts or one-off tooling for it.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/shape.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/craft.md"
+      ]
+    },
+    {
+      "id": "mock_fidelity_inventory",
+      "label": "mock fidelity inventory",
+      "type": "technique",
+      "summary": "Before building, inventory the approved mock's visible ingredients (hero silhouette, signature motifs, nav/CTA treatment, section sequence, image-native content, type/density/color/motion cues) and decide how each is implemented. Missing major ingredients in the live result are P0 defects.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/craft.md"
+      ]
+    },
+    {
+      "id": "structured_interview_stop",
+      "label": "stop and interview rather than infer",
+      "type": "technique",
+      "summary": "When context cannot be inferred, stop and use the harness's structured question tool (or ask in chat), 2-3 questions per round, waiting for answers. Inferred answers are hypotheses to confirm, never finished facts.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/shape.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/teach.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/bolder.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/quieter.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/distill.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/colorize.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/animate.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/delight.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/extract.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/critique.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/overdrive.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/document.md"
+      ]
+    },
+    {
+      "id": "browser_iteration_loop",
+      "label": "browser-based critique-and-fix iteration",
+      "type": "workflow-stage",
+      "summary": "Open the result in a real browser, inspect screenshots across mobile/tablet/desktop viewports, write a short self-critique, patch, and re-inspect until no material defects remain. Never stop after the first implementation pass.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/craft.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/overdrive.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/critique.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/polish.md"
+      ]
+    },
+    {
+      "id": "dual_isolated_assessment",
+      "label": "two isolated assessments",
+      "type": "technique",
+      "summary": "Critique launches an LLM design review and an automated detection pass that may not see each other's output, each in its own browser tab, delegated to separate sub-agents. The isolation is what makes the combined score honest.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/critique.md"
+      ]
+    },
+    {
+      "id": "deterministic_detector",
+      "label": "npx impeccable detector (CLI + live overlay)",
+      "type": "tool-dependency",
+      "summary": "A bundled deterministic scanner flagging 25 AI-slop and design-quality patterns, run as `npx impeccable --json [--fast]` over markup files and as an injected overlay served by `npx impeccable live` whose findings are read from the console.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/critique.md"
+      ]
+    },
+    {
+      "id": "nielsen_heuristics_scoring",
+      "label": "Nielsen's 10 heuristics, scored 0-4",
+      "type": "technique",
+      "summary": "Each heuristic scored 0-4 for a total out of 40 with published rating bands (36-40 excellent through 0-11 critical). Most real interfaces score 20-32; a 4 must mean genuinely excellent.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/heuristics-scoring.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/critique.md"
+      ]
+    },
+    {
+      "id": "p0_p3_severity",
+      "label": "P0-P3 issue severity",
+      "type": "technique",
+      "summary": "Every finding is tagged Blocking, Major, Minor or Polish, with the tiebreaker question: would a user contact support about this? If yes it is at least P1. Recommended actions are ordered by severity.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/heuristics-scoring.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/critique.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/audit.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/craft.md"
+      ]
+    },
+    {
+      "id": "persona_walkthrough",
+      "label": "persona-based red-flag walkthrough",
+      "type": "technique",
+      "summary": "Walk the primary user action as 2-3 of five archetypes (Alex power user, Jordan first-timer, Sam accessibility-dependent, Riley stress tester, Casey distracted mobile), reporting named element-level failures rather than generic concerns. Project-specific personas derive from Design Context.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/personas.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/critique.md"
+      ]
+    },
+    {
+      "id": "command_recommendation_handoff",
+      "label": "findings-to-command action plan",
+      "type": "workflow-stage",
+      "summary": "Both evaluation commands close by mapping each priority issue to a specific impeccable sub-command in priority order, skipping commands that would address zero issues, and ending the chain with polish.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/critique.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/audit.md"
+      ]
+    },
+    {
+      "id": "design_system_alignment",
+      "label": "align to the design system, name the drift's root cause",
+      "type": "design-principle",
+      "summary": "Discovery of the design system precedes any other polish work. Each deviation is classified as a missing token, a one-off implementation, or a conceptual misalignment, because the fix differs by category and fixing the symptom compounds drift.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/polish.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/extract.md"
+      ]
+    },
+    {
+      "id": "three_times_rule",
+      "label": "extract only at three uses with the same intent",
+      "type": "constraint",
+      "summary": "Only patterns used 3+ times with the same intent are worth extracting; premature abstraction is worse than duplication, and two things that look similar but serve different purposes stay separate.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/extract.md"
+      ]
+    },
+    {
+      "id": "eight_interactive_states",
+      "label": "the eight interactive states",
+      "type": "constraint",
+      "summary": "Every interactive element needs default, hover, focus, active, disabled, loading, error and success designed. The common miss is designing hover without focus; keyboard users never see hover.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/interaction-design.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/product.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/polish.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/craft.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/animate.md"
+      ]
+    },
+    {
+      "id": "focus_visible_ring",
+      "label": "focus rings via :focus-visible",
+      "type": "technique",
+      "summary": "Never outline:none without a replacement. Show a 2-3px high-contrast offset ring on :focus-visible so keyboard users get the indicator and pointer users do not.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/interaction-design.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/polish.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/audit.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/personas.md"
+      ]
+    },
+    {
+      "id": "state_coverage",
+      "label": "realistic state coverage (empty, loading, error, edge)",
+      "type": "constraint",
+      "summary": "Default, hover, focus, active, disabled, loading, error, success, empty, overflow, long and short text, and first-run states are the definition of done. Each must feel intentional, not like an afterthought.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/craft.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/polish.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/harden.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/product.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/shape.md"
+      ]
+    },
+    {
+      "id": "empty_state_as_onboarding",
+      "label": "empty states are onboarding opportunities",
+      "type": "design-principle",
+      "summary": "An empty state must say what will appear, why it matters, how to start, carry visual interest, and offer contextual help. Blank space and 'No items' are wasted teaching moments.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/onboard.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/ux-writing.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/clarify.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/product.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/delight.md"
+      ]
+    },
+    {
+      "id": "progressive_disclosure",
+      "label": "progressive disclosure",
+      "type": "technique",
+      "summary": "Reveal complexity only when the user needs it: teach features at the point of use, hide secondary content behind clear entry points, and match how much a feature reveals to its neighbors.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/cognitive-load.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/distill.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/onboard.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/polish.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/adapt.md"
+      ]
+    },
+    {
+      "id": "working_memory_limit",
+      "label": "the four-item working memory rule",
+      "type": "constraint",
+      "summary": "Humans hold at most about four items in working memory. At any decision point count the options: 4 or fewer is manageable, 5-7 pushes the boundary, 8 or more means users skip, misclick or abandon.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/cognitive-load.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/critique.md"
+      ]
+    },
+    {
+      "id": "cognitive_load_checklist",
+      "label": "eight-item cognitive load checklist",
+      "type": "technique",
+      "summary": "Single focus, chunking, grouping, visual hierarchy, one thing at a time, minimal choices, working memory, progressive disclosure. 0-1 failures is low load, 2-3 moderate, 4 or more critical.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/cognitive-load.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/critique.md"
+      ]
+    },
+    {
+      "id": "squint_test",
+      "label": "the squint test",
+      "type": "technique",
+      "summary": "Blur the view (or blur a screenshot) and check whether the most important element, the second most important, and the groupings are still identifiable. If everything reads the same weight, hierarchy is broken.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/spatial-design.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/layout.md"
+      ]
+    },
+    {
+      "id": "multi_dimension_hierarchy",
+      "label": "hierarchy through 2-3 dimensions at once",
+      "type": "technique",
+      "summary": "Combine size, weight, color, position and space rather than relying on size alone; the best hierarchy uses two or three dimensions together, and space alone is often enough.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/spatial-design.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/layout.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/typeset.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/quieter.md"
+      ]
+    },
+    {
+      "id": "spacing_scale_system",
+      "label": "a consistent spacing scale with varied rhythm",
+      "type": "constraint",
+      "summary": "Spacing values must come from a defined 4pt-based scale named semantically by relationship, applied with gap rather than margins, and deliberately varied: tight groupings against generous separations. Same padding everywhere is monotony.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/spatial-design.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/layout.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/polish.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/craft.md"
+      ]
+    },
+    {
+      "id": "container_queries",
+      "label": "container queries for components",
+      "type": "technique",
+      "summary": "Viewport queries belong to page layout; container queries let the same component stay compact in a sidebar and expand in main content without viewport hacks.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/spatial-design.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/layout.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/adapt.md"
+      ]
+    },
+    {
+      "id": "semantic_z_index",
+      "label": "semantic z-index and elevation scales",
+      "type": "constraint",
+      "summary": "Build a named stacking scale (dropdown, sticky, modal-backdrop, modal, toast, tooltip) and a consistent shadow scale instead of arbitrary 999/9999 values. Shadows should be subtle enough that seeing them clearly means they are too strong.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/spatial-design.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/layout.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/interaction-design.md"
+      ]
+    },
+    {
+      "id": "modular_type_scale",
+      "label": "modular type scale with real contrast",
+      "type": "constraint",
+      "summary": "Fewer sizes with more contrast: about five roles on a committed ratio. Brand uses fluid clamp() at 1.25 or higher; product uses a fixed rem scale at 1.125-1.2. Flat scales read as uncommitted and muddy the hierarchy.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/typography.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/typeset.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/brand.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/product.md"
+      ]
+    },
+    {
+      "id": "measure_65_75ch",
+      "label": "cap the measure at 45-75ch",
+      "type": "constraint",
+      "summary": "Body line length is capped with ch units around 65-75 characters, with line-height scaling inversely to line length. Data and compact UI can run denser.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/typography.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/typeset.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/polish.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/product.md"
+      ]
+    },
+    {
+      "id": "light_on_dark_compensation",
+      "label": "light-on-dark text needs three-axis compensation",
+      "type": "technique",
+      "summary": "Light type on dark reads lighter: bump line-height 0.05-0.1, add 0.01-0.02em letter-spacing, and optionally step body weight up one notch. Fix all three axes, not just one.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/typography.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/brand.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/color-and-contrast.md"
+      ]
+    },
+    {
+      "id": "font_loading_strategy",
+      "label": "web font loading without layout shift",
+      "type": "technique",
+      "summary": "font-display swap or optional, metric-matched fallbacks via size-adjust and ascent/descent overrides, preload only the critical weight, and prefer a variable font at three or more weights.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/typography.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/typeset.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/optimize.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/craft.md"
+      ]
+    },
+    {
+      "id": "motion_duration_ladder",
+      "label": "the 100/300/500 duration ladder",
+      "type": "constraint",
+      "summary": "100-150ms for instant feedback, 200-300ms for state changes, 300-500ms for layout changes, 500-800ms for entrances, with exits at about 75% of the enter duration and nothing over 500ms for feedback.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/motion-design.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/animate.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/polish.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/product.md"
+      ]
+    },
+    {
+      "id": "ease_out_no_bounce",
+      "label": "exponential ease-out, never bounce or elastic",
+      "type": "constraint",
+      "summary": "Use ease-out-quart / quint / expo for natural deceleration. Bounce and elastic curves feel dated and draw attention to the animation instead of the content.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/motion-design.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/animate.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/polish.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/quieter.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/bolder.md"
+      ]
+    },
+    {
+      "id": "no_layout_property_animation",
+      "label": "do not casually animate layout properties",
+      "type": "constraint",
+      "summary": "Avoid animating width, height, top, left and margins; use transform, FLIP or grid-template-rows instead, and keep expensive blur/filter/shadow areas bounded and verified smooth in-browser.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/motion-design.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/animate.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/optimize.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/audit.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/polish.md"
+      ]
+    },
+    {
+      "id": "premium_motion_materials",
+      "label": "premium motion materials beyond transform/opacity",
+      "type": "technique",
+      "summary": "Blur, backdrop-filter, masks, clip paths, shadow bloom, SVG filters and gradient movement are legitimate motion materials when they make the interaction feel more premium and stay smooth on target viewports.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/motion-design.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/animate.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/craft.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/optimize.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/polish.md"
+      ]
+    },
+    {
+      "id": "reduced_motion",
+      "label": "respect prefers-reduced-motion",
+      "type": "constraint",
+      "summary": "A hard accessibility requirement, not a suggestion: provide a crossfade or static alternative while preserving functional animation like progress and focus indicators. Vestibular disorders affect roughly 35% of adults over 40.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/motion-design.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/animate.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/harden.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/overdrive.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/polish.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/delight.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/audit.md"
+      ]
+    },
+    {
+      "id": "perceived_performance",
+      "label": "perceived performance over measured speed",
+      "type": "design-principle",
+      "summary": "What matters is how fast it feels: under 80ms reads as instant, passive waiting feels longer than active engagement, and preemptive starts, progressive completion and optimistic UI shift the balance. Too-fast results can even reduce perceived value.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/motion-design.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/interaction-design.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/optimize.md"
+      ]
+    },
+    {
+      "id": "core_web_vitals",
+      "label": "Core Web Vitals as the performance target",
+      "type": "technique",
+      "summary": "LCP under 2.5s, INP under 200ms and CLS under 0.1, each with named fixes, measured before and after on real devices and throttled networks rather than desktop Chrome on fast wifi.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/optimize.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/audit.md"
+      ]
+    },
+    {
+      "id": "wcag_contrast",
+      "label": "WCAG contrast requirements",
+      "type": "constraint",
+      "summary": "4.5:1 for body text, 3:1 for large text and UI components, with 7:1 as the AAA target. Placeholder text still needs 4.5:1, and light gray on white is the most common failure.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/color-and-contrast.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/audit.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/polish.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/colorize.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/personas.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/typeset.md"
+      ]
+    },
+    {
+      "id": "never_color_alone",
+      "label": "never convey meaning by color alone",
+      "type": "constraint",
+      "summary": "Color must be paired with icons, labels or patterns; roughly 8% of men cannot distinguish red from green, and screen-reader users get nothing from a color cue.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/color-and-contrast.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/colorize.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/personas.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/audit.md"
+      ]
+    },
+    {
+      "id": "touch_target_44",
+      "label": "44x44 minimum touch targets",
+      "type": "constraint",
+      "summary": "Interactive elements need at least a 44x44 tap area, expanded with padding or a pseudo-element when the visual size is smaller, with adequate spacing between neighbors.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/spatial-design.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/adapt.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/polish.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/audit.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/personas.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/responsive-design.md"
+      ]
+    },
+    {
+      "id": "input_method_detection",
+      "label": "detect input method, not just screen size",
+      "type": "technique",
+      "summary": "Screen width does not imply pointer type. Use pointer: fine/coarse and hover: hover/none queries, and never make functionality depend on hover.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/responsive-design.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/adapt.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/audit.md"
+      ]
+    },
+    {
+      "id": "content_driven_breakpoints",
+      "label": "content-driven, mobile-first breakpoints",
+      "type": "technique",
+      "summary": "Start with mobile base styles and layer complexity with min-width queries; let the content decide where it breaks rather than chasing device sizes, and use clamp() for fluid values without breakpoints.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/responsive-design.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/adapt.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/layout.md"
+      ]
+    },
+    {
+      "id": "i18n_text_expansion",
+      "label": "budget for translation expansion and RTL",
+      "type": "constraint",
+      "summary": "German runs about 30% longer and Finnish 30-40%; budget 30-40% extra space, avoid fixed widths on text containers, use logical CSS properties for RTL, and use the Intl API for dates, numbers and plurals.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/harden.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/ux-writing.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/shape.md"
+      ]
+    },
+    {
+      "id": "specific_button_labels",
+      "label": "specific verb-plus-object labels",
+      "type": "constraint",
+      "summary": "Never OK, Submit or Yes/No. Say what will happen ('Save changes', 'Create account', 'Delete 5 items'), and name the destruction for destructive actions.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/ux-writing.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/clarify.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/onboard.md"
+      ]
+    },
+    {
+      "id": "error_message_formula",
+      "label": "the error message formula",
+      "type": "technique",
+      "summary": "Every error answers what happened, why, and how to fix it, in plain language, near the source, without blaming the user and without humor.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/ux-writing.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/clarify.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/harden.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/heuristics-scoring.md"
+      ]
+    },
+    {
+      "id": "terminology_consistency",
+      "label": "one term, used everywhere",
+      "type": "constraint",
+      "summary": "Pick one word per concept (Delete not Remove/Trash; Settings not Preferences/Options) and enforce it with a glossary. Variety in terminology creates confusion, and the same noun must mean the same thing across screens.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/ux-writing.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/clarify.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/polish.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/heuristics-scoring.md"
+      ]
+    },
+    {
+      "id": "undo_over_confirm",
+      "label": "undo beats confirmation",
+      "type": "design-principle",
+      "summary": "Users click through confirmations mindlessly. Remove from the UI immediately and offer an undo toast; reserve confirmation for truly irreversible, high-cost or batch actions.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/interaction-design.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/ux-writing.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/clarify.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/heuristics-scoring.md"
+      ]
+    },
+    {
+      "id": "overlay_positioning",
+      "label": "overlay positioning without clipping",
+      "type": "technique",
+      "summary": "position:absolute inside overflow:hidden is the most common generated-code dropdown bug. Escape it with the Popover API top layer, CSS anchor positioning, a portal, or position:fixed with boundary checks.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/interaction-design.md"
+      ]
+    },
+    {
+      "id": "progressive_enhancement",
+      "label": "progressive enhancement is non-negotiable",
+      "type": "constraint",
+      "summary": "Every advanced technique degrades gracefully via @supports or feature detection, and the experience without the enhancement must still be good. Bleeding-edge APIs always need a functional fallback.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/overdrive.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/harden.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/adapt.md"
+      ]
+    },
+    {
+      "id": "propose_before_building",
+      "label": "propose directions before building",
+      "type": "workflow-stage",
+      "summary": "For the highest-misfire work, think through 2-3 directions with described look and feel and trade-offs, and get the user's pick before writing code. Skipping it risks building something that has to be thrown away.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/overdrive.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/shape.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/craft.md"
+      ]
+    },
+    {
+      "id": "brand_imagery_obligation",
+      "label": "ship real imagery when the brief implies it",
+      "type": "constraint",
+      "summary": "For restaurants, hotels, magazines, travel, food, fashion and similar surfaces, zero images is a bug, not restraint. Use stock (Unsplash) searched for the brand's physical object, one decisive photo over five mediocre ones, with alt text in voice.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/brand.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/craft.md"
+      ]
+    },
+    {
+      "id": "font_selection_procedure",
+      "label": "the font selection procedure",
+      "type": "technique",
+      "summary": "Write three concrete brand-voice words, list the three reflex fonts and reject any on the ban list, browse a real catalog hunting the brand as a physical object, then cross-check: if the pick matches the original reflex, start over.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/brand.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/typeset.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/typography.md"
+      ]
+    },
+    {
+      "id": "identity_lock",
+      "label": "identity lock (extract before varying)",
+      "type": "technique",
+      "summary": "In live mode, extract the surface's actual identity from DESIGN.md, CSS custom properties, computed styles and sibling components into one factual sentence before planning. Skipping it is the primary cause of off-brand variants.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/live.md"
+      ]
+    },
+    {
+      "id": "default_vs_departure_mode",
+      "label": "default mode vs departure mode",
+      "type": "trigger-condition",
+      "summary": "Variants preserve the existing identity in about 90% of live sessions. Departure mode is triggered only by PRODUCT.md anti-references naming this surface or an explicit user request; when unsure, default, because off-brand variants are the unrecoverable error.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/live.md"
+      ]
+    },
+    {
+      "id": "variant_axis_distinctness",
+      "label": "three variants, three different axes",
+      "type": "technique",
+      "summary": "Each variant commits to a different primary axis (hierarchy, topology, typographic system, color strategy, density, structural decomposition) or, in departure mode, a different concrete aesthetic direction, verified by a family pass and a sentence pass.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/live.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/bolder.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/quieter.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/colorize.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/typeset.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/layout.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/adapt.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/animate.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/delight.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/overdrive.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/distill.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/polish.md"
+      ]
+    },
+    {
+      "id": "live_params_contract",
+      "label": "live variant parameter budget",
+      "type": "constraint",
+      "summary": "Variants expose 0-4 coarse knobs (range, steps, toggle) declared as a JSON manifest and driving CSS variables or data attributes, budgeted by the element's visual weight: 0 for a leaf, 2 for a medium composition, 2-3 for a hero. Under-shipping knobs is the common freeform failure.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/live.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/layout.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/typeset.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/colorize.md"
+      ]
+    },
+    {
+      "id": "carbonize_cleanup",
+      "label": "carbonize cleanup after accept",
+      "type": "workflow-stage",
+      "summary": "When an accepted variant is stitched in temporarily, the agent must synchronously move the CSS to the real stylesheet, bake parameter values, unwrap the variant div, and delete the markers and dead @scope rules before polling again.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/live.md"
+      ]
+    },
+    {
+      "id": "generated_file_guard",
+      "label": "never persist into generated files",
+      "type": "constraint",
+      "summary": "The wrap and accept helpers refuse to write into generated or untracked files because accepting there is silent data loss; the agent-driven fallback locates the true source (template, component, or data) and persists the accepted variant there.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/live.md"
+      ]
+    },
+    {
+      "id": "context_loader_script",
+      "label": "load-context.mjs / live.mjs context loader",
+      "type": "tool-dependency",
+      "summary": "A Node script that resolves PRODUCT.md and DESIGN.md from the project root or fallback directories, migrates legacy .impeccable.md, and returns full JSON that must be consumed whole. It is re-run after teach or document rewrite the files.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/teach.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/document.md",
+        "/Users/joshuaf/ai-os/skills/claude/impeccable/reference/live.md"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "impeccable_frontend_design_skill",
+      "target": "cap_shape",
+      "type": "specializes",
+      "confidence": 0.98,
+      "evidence": "'shape [feature] | Build | Plan UX/UI before writing code'"
+    },
+    {
+      "source": "impeccable_frontend_design_skill",
+      "target": "cap_craft",
+      "type": "specializes",
+      "confidence": 0.98,
+      "evidence": "'craft [feature] | Build | Shape, then build a feature end-to-end'"
+    },
+    {
+      "source": "impeccable_frontend_design_skill",
+      "target": "cap_teach",
+      "type": "specializes",
+      "confidence": 0.98,
+      "evidence": "'teach | Build | Set up PRODUCT.md and DESIGN.md context'"
+    },
+    {
+      "source": "impeccable_frontend_design_skill",
+      "target": "cap_document",
+      "type": "specializes",
+      "confidence": 0.98,
+      "evidence": "'document | Build | Generate DESIGN.md from existing project code'"
+    },
+    {
+      "source": "impeccable_frontend_design_skill",
+      "target": "cap_extract",
+      "type": "specializes",
+      "confidence": 0.98,
+      "evidence": "'extract [target] | Build | Pull reusable tokens and components'"
+    },
+    {
+      "source": "impeccable_frontend_design_skill",
+      "target": "cap_critique",
+      "type": "specializes",
+      "confidence": 0.98,
+      "evidence": "'critique [target] | Evaluate | UX design review with heuristic scoring'"
+    },
+    {
+      "source": "impeccable_frontend_design_skill",
+      "target": "cap_audit",
+      "type": "specializes",
+      "confidence": 0.98,
+      "evidence": "'audit [target] | Evaluate | Technical quality checks (a11y, perf, responsive)'"
+    },
+    {
+      "source": "impeccable_frontend_design_skill",
+      "target": "cap_polish",
+      "type": "specializes",
+      "confidence": 0.98,
+      "evidence": "'polish [target] | Refine | Final quality pass before shipping'"
+    },
+    {
+      "source": "impeccable_frontend_design_skill",
+      "target": "cap_bolder",
+      "type": "specializes",
+      "confidence": 0.98,
+      "evidence": "'bolder [target] | Refine | Amplify safe or bland designs'"
+    },
+    {
+      "source": "impeccable_frontend_design_skill",
+      "target": "cap_quieter",
+      "type": "specializes",
+      "confidence": 0.98,
+      "evidence": "'quieter [target] | Refine | Tone down aggressive designs'"
+    },
+    {
+      "source": "impeccable_frontend_design_skill",
+      "target": "cap_distill",
+      "type": "specializes",
+      "confidence": 0.98,
+      "evidence": "'distill [target] | Refine | Strip to essence, remove complexity'"
+    },
+    {
+      "source": "impeccable_frontend_design_skill",
+      "target": "cap_harden",
+      "type": "specializes",
+      "confidence": 0.98,
+      "evidence": "'harden [target] | Refine | Production-ready: errors, i18n, edge cases'"
+    },
+    {
+      "source": "impeccable_frontend_design_skill",
+      "target": "cap_onboard",
+      "type": "specializes",
+      "confidence": 0.98,
+      "evidence": "'onboard [target] | Refine | Design first-run flows, empty states'"
+    },
+    {
+      "source": "impeccable_frontend_design_skill",
+      "target": "cap_animate",
+      "type": "specializes",
+      "confidence": 0.98,
+      "evidence": "'animate [target] | Enhance | Add purposeful animations and motion'"
+    },
+    {
+      "source": "impeccable_frontend_design_skill",
+      "target": "cap_colorize",
+      "type": "specializes",
+      "confidence": 0.98,
+      "evidence": "'colorize [target] | Enhance | Add strategic color to monochromatic UIs'"
+    },
+    {
+      "source": "impeccable_frontend_design_skill",
+      "target": "cap_typeset",
+      "type": "specializes",
+      "confidence": 0.98,
+      "evidence": "'typeset [target] | Enhance | Improve typography hierarchy and fonts'"
+    },
+    {
+      "source": "impeccable_frontend_design_skill",
+      "target": "cap_layout",
+      "type": "specializes",
+      "confidence": 0.98,
+      "evidence": "'layout [target] | Enhance | Fix spacing, rhythm, and visual hierarchy'"
+    },
+    {
+      "source": "impeccable_frontend_design_skill",
+      "target": "cap_delight",
+      "type": "specializes",
+      "confidence": 0.98,
+      "evidence": "'delight [target] | Enhance | Add personality and memorable touches'"
+    },
+    {
+      "source": "impeccable_frontend_design_skill",
+      "target": "cap_overdrive",
+      "type": "specializes",
+      "confidence": 0.98,
+      "evidence": "'overdrive [target] | Enhance | Push past conventional limits'"
+    },
+    {
+      "source": "impeccable_frontend_design_skill",
+      "target": "cap_clarify",
+      "type": "specializes",
+      "confidence": 0.98,
+      "evidence": "'clarify [target] | Fix | Improve UX copy, labels, and error messages'"
+    },
+    {
+      "source": "impeccable_frontend_design_skill",
+      "target": "cap_adapt",
+      "type": "specializes",
+      "confidence": 0.98,
+      "evidence": "'adapt [target] | Fix | Adapt for different devices and screen sizes'"
+    },
+    {
+      "source": "impeccable_frontend_design_skill",
+      "target": "cap_optimize",
+      "type": "specializes",
+      "confidence": 0.98,
+      "evidence": "'optimize [target] | Fix | Diagnose and fix UI performance'"
+    },
+    {
+      "source": "impeccable_frontend_design_skill",
+      "target": "cap_live",
+      "type": "specializes",
+      "confidence": 0.98,
+      "evidence": "'live | Iterate | Visual variant mode: pick elements in the browser'"
+    },
+    {
+      "source": "cap_teach",
+      "target": "product_md",
+      "type": "produces",
+      "confidence": 0.98,
+      "evidence": "teach 'writes two complementary files at the project root: PRODUCT.md ... DESIGN.md'"
+    },
+    {
+      "source": "cap_teach",
+      "target": "cap_document",
+      "type": "chains_into",
+      "confidence": 0.95,
+      "evidence": "'If the user agrees, delegate to $impeccable document (it auto-detects scan vs seed)'"
+    },
+    {
+      "source": "cap_document",
+      "target": "design_md",
+      "type": "produces",
+      "confidence": 0.98,
+      "evidence": "'Generate a DESIGN.md file at the project root that captures the current visual design system'"
+    },
+    {
+      "source": "cap_document",
+      "target": "design_json_sidecar",
+      "type": "produces",
+      "confidence": 0.95,
+      "evidence": "'Step 4b: Write DESIGN.json sidecar (extensions only)'"
+    },
+    {
+      "source": "cap_shape",
+      "target": "design_brief",
+      "type": "produces",
+      "confidence": 0.98,
+      "evidence": "'Output: A design brief that can be handed off to $impeccable craft'"
+    },
+    {
+      "source": "cap_shape",
+      "target": "visual_direction_probe",
+      "type": "produces",
+      "confidence": 0.9,
+      "evidence": "'Phase 1.5: Visual Direction Probe (Capability-Gated)'"
+    },
+    {
+      "source": "cap_craft",
+      "target": "visual_direction_probe",
+      "type": "produces",
+      "confidence": 0.9,
+      "evidence": "'Generate 1 to 3 high-fidelity north-star comps based on the confirmed brief'"
+    },
+    {
+      "source": "cap_shape",
+      "target": "cap_craft",
+      "type": "chains_into",
+      "confidence": 0.97,
+      "evidence": "'the brief is complete. The user can now hand it to $impeccable' / craft Step 1 runs shape"
+    },
+    {
+      "source": "cap_craft",
+      "target": "cap_shape",
+      "type": "depends_on",
+      "confidence": 0.98,
+      "evidence": "'Run $impeccable shape ... Wait for the design brief to be fully confirmed'"
+    },
+    {
+      "source": "cap_craft",
+      "target": "design_brief",
+      "type": "consumes",
+      "confidence": 0.98,
+      "evidence": "'Confirmed design brief from shape' listed first in the Craft Contract"
+    },
+    {
+      "source": "cap_craft",
+      "target": "mock_fidelity_inventory",
+      "type": "produces",
+      "confidence": 0.92,
+      "evidence": "'Before building, inventory the approved mock's major visible ingredients'"
+    },
+    {
+      "source": "mock_fidelity_inventory",
+      "target": "browser_iteration_loop",
+      "type": "constrains",
+      "confidence": 0.9,
+      "evidence": "'Compare screenshots against the mock fidelity inventory ... Missing major ingredients are P0 defects'"
+    },
+    {
+      "source": "cap_craft",
+      "target": "browser_iteration_loop",
+      "type": "depends_on",
+      "confidence": 0.95,
+      "evidence": "'Step 6: Browser-Based Iteration. This step is critical. Do not stop after the first implementation pass.'"
+    },
+    {
+      "source": "cap_teach",
+      "target": "cap_craft",
+      "type": "prerequisite_of",
+      "confidence": 0.9,
+      "evidence": "'If PRODUCT.md is missing ... run $impeccable teach, then resume ... resume into $impeccable shape before any implementation work'"
+    },
+    {
+      "source": "visual_direction_probe",
+      "target": "image_gen_capability_gate",
+      "type": "depends_on",
+      "confidence": 0.95,
+      "evidence": "'The current harness has built-in image generation capability'"
+    },
+    {
+      "source": "cap_critique",
+      "target": "command_recommendation_handoff",
+      "type": "produces",
+      "confidence": 0.95,
+      "evidence": "'Recommended Actions ... List recommended commands in priority order'"
+    },
+    {
+      "source": "cap_audit",
+      "target": "command_recommendation_handoff",
+      "type": "produces",
+      "confidence": 0.95,
+      "evidence": "'List recommended commands in priority order (P0 first, then P1, then P2)'"
+    },
+    {
+      "source": "command_recommendation_handoff",
+      "target": "cap_polish",
+      "type": "chains_into",
+      "confidence": 0.95,
+      "evidence": "'End with $impeccable polish as the final step if any fixes were recommended'"
+    },
+    {
+      "source": "cap_critique",
+      "target": "cap_audit",
+      "type": "overlaps_with",
+      "confidence": 0.85,
+      "evidence": "both open with an Anti-Patterns Verdict and both score the surface, one on UX heuristics and one on technical dimensions"
+    },
+    {
+      "source": "cap_critique",
+      "target": "cap_audit",
+      "type": "alternative_to",
+      "confidence": 0.8,
+      "evidence": "audit is 'a code-level audit, not a design critique'"
+    },
+    {
+      "source": "cap_extract",
+      "target": "design_system_alignment",
+      "type": "produces",
+      "confidence": 0.85,
+      "evidence": "'Update design system documentation ... Add new components to the component library'"
+    },
+    {
+      "source": "cap_polish",
+      "target": "design_system_alignment",
+      "type": "depends_on",
+      "confidence": 0.95,
+      "evidence": "'Aligning the feature to the design system is not optional ... Discovery comes before any other polish work'"
+    },
+    {
+      "source": "cap_polish",
+      "target": "cap_extract",
+      "type": "chains_into",
+      "confidence": 0.8,
+      "evidence": "'Consolidate tokens: If you introduced new values, check whether they should be tokens'"
+    },
+    {
+      "source": "cap_live",
+      "target": "identity_lock",
+      "type": "depends_on",
+      "confidence": 0.95,
+      "evidence": "'This sentence is the identity lock ... Skipping this phase is the primary cause of off-brand variants'"
+    },
+    {
+      "source": "cap_live",
+      "target": "default_vs_departure_mode",
+      "type": "depends_on",
+      "confidence": 0.93,
+      "evidence": "'Phase B: Pick mode (default vs departure)'"
+    },
+    {
+      "source": "cap_live",
+      "target": "variant_axis_distinctness",
+      "type": "depends_on",
+      "confidence": 0.93,
+      "evidence": "'Three variants -> three DIFFERENT axes'"
+    },
+    {
+      "source": "cap_live",
+      "target": "live_params_contract",
+      "type": "produces",
+      "confidence": 0.9,
+      "evidence": "'Parameters (composition-sized, 0-4 per variant)'"
+    },
+    {
+      "source": "cap_live",
+      "target": "carbonize_cleanup",
+      "type": "chains_into",
+      "confidence": 0.92,
+      "evidence": "'Required after accept (carbonize) ... rewrite it into permanent form before doing anything else'"
+    },
+    {
+      "source": "cap_live",
+      "target": "generated_file_guard",
+      "type": "constrains",
+      "confidence": 0.92,
+      "evidence": "'Wrap only writes into files it judges to be source ... accepting a variant into a generated file is silent data loss'"
+    },
+    {
+      "source": "cap_live",
+      "target": "context_loader_script",
+      "type": "depends_on",
+      "confidence": 0.9,
+      "evidence": "'$impeccable live already warms context via live.mjs'"
+    },
+    {
+      "source": "cap_teach",
+      "target": "context_loader_script",
+      "type": "depends_on",
+      "confidence": 0.95,
+      "evidence": "'Run the shared loader first so you know what already exists'"
+    },
+    {
+      "source": "cap_document",
+      "target": "context_loader_script",
+      "type": "depends_on",
+      "confidence": 0.9,
+      "evidence": "'Refresh the session cache. Run node .agents/skills/impeccable/scripts/load-context.mjs one final time'"
+    },
+    {
+      "source": "cap_live",
+      "target": "cap_bolder",
+      "type": "consumes",
+      "confidence": 0.9,
+      "evidence": "'Read reference/<action>.md before planning. Each sub-command encodes a specific discipline'"
+    },
+    {
+      "source": "cap_live",
+      "target": "cap_quieter",
+      "type": "consumes",
+      "confidence": 0.9,
+      "evidence": "'Read reference/<action>.md before planning. Each sub-command encodes a specific discipline'"
+    },
+    {
+      "source": "cap_live",
+      "target": "cap_distill",
+      "type": "consumes",
+      "confidence": 0.9,
+      "evidence": "'Read reference/<action>.md before planning. Each sub-command encodes a specific discipline'"
+    },
+    {
+      "source": "cap_live",
+      "target": "cap_polish",
+      "type": "consumes",
+      "confidence": 0.9,
+      "evidence": "'Read reference/<action>.md before planning. Each sub-command encodes a specific discipline'"
+    },
+    {
+      "source": "cap_live",
+      "target": "cap_typeset",
+      "type": "consumes",
+      "confidence": 0.9,
+      "evidence": "'Read reference/<action>.md before planning. Each sub-command encodes a specific discipline'"
+    },
+    {
+      "source": "cap_live",
+      "target": "cap_colorize",
+      "type": "consumes",
+      "confidence": 0.9,
+      "evidence": "'Read reference/<action>.md before planning. Each sub-command encodes a specific discipline'"
+    },
+    {
+      "source": "cap_live",
+      "target": "cap_layout",
+      "type": "consumes",
+      "confidence": 0.9,
+      "evidence": "'Read reference/<action>.md before planning. Each sub-command encodes a specific discipline'"
+    },
+    {
+      "source": "cap_live",
+      "target": "cap_adapt",
+      "type": "consumes",
+      "confidence": 0.9,
+      "evidence": "'Read reference/<action>.md before planning. Each sub-command encodes a specific discipline'"
+    },
+    {
+      "source": "cap_live",
+      "target": "cap_animate",
+      "type": "consumes",
+      "confidence": 0.9,
+      "evidence": "'Read reference/<action>.md before planning. Each sub-command encodes a specific discipline'"
+    },
+    {
+      "source": "cap_live",
+      "target": "cap_delight",
+      "type": "consumes",
+      "confidence": 0.9,
+      "evidence": "'Read reference/<action>.md before planning. Each sub-command encodes a specific discipline'"
+    },
+    {
+      "source": "cap_live",
+      "target": "cap_overdrive",
+      "type": "consumes",
+      "confidence": 0.9,
+      "evidence": "'Read reference/<action>.md before planning. Each sub-command encodes a specific discipline'"
+    },
+    {
+      "source": "setup_gate_preflight",
+      "target": "product_md",
+      "type": "depends_on",
+      "confidence": 0.95,
+      "evidence": "'Product | PRODUCT.md exists and is not empty or placeholder'"
+    },
+    {
+      "source": "setup_gate_preflight",
+      "target": "design_brief",
+      "type": "depends_on",
+      "confidence": 0.93,
+      "evidence": "'Craft | $impeccable craft has a user-confirmed shape brief for this task'"
+    },
+    {
+      "source": "setup_gate_preflight",
+      "target": "cap_craft",
+      "type": "constrains",
+      "confidence": 0.95,
+      "evidence": "'Mutation | All active gates above pass. | Do not edit project files yet.'"
+    },
+    {
+      "source": "setup_gate_preflight",
+      "target": "register_split",
+      "type": "depends_on",
+      "confidence": 0.85,
+      "evidence": "setup step 2 is Register identification before designing"
+    },
+    {
+      "source": "product_md",
+      "target": "register_split",
+      "type": "produces",
+      "confidence": 0.9,
+      "evidence": "'register field in PRODUCT.md' carries the project default"
+    },
+    {
+      "source": "design_md",
+      "target": "design_json_sidecar",
+      "type": "depends_on",
+      "confidence": 0.85,
+      "evidence": "'The sidecar ... carries what Stitch's schema can't hold ... It extends the frontmatter, it doesn't duplicate it'"
+    },
+    {
+      "source": "product_md",
+      "target": "design_md",
+      "type": "constrains",
+      "confidence": 0.9,
+      "evidence": "'Every anti-reference in PRODUCT.md should show up here as a Don't with the same language'"
+    },
+    {
+      "source": "ai_slop_test",
+      "target": "cap_craft",
+      "type": "constrains",
+      "confidence": 0.95,
+      "evidence": "'Does it pass the AI slop test? If someone saw this and said AI made this, would they believe it immediately?'"
+    },
+    {
+      "source": "ai_slop_test",
+      "target": "cap_critique",
+      "type": "constrains",
+      "confidence": 0.95,
+      "evidence": "'AI Slop Detection (CRITICAL): Does this look like every other AI-generated interface?'"
+    },
+    {
+      "source": "ai_slop_test",
+      "target": "cap_audit",
+      "type": "constrains",
+      "confidence": 0.95,
+      "evidence": "'Anti-Patterns Verdict. Start here. Pass/fail: Does this look AI-generated?'"
+    },
+    {
+      "source": "ai_slop_test",
+      "target": "cap_bolder",
+      "type": "constrains",
+      "confidence": 0.95,
+      "evidence": "'The test: If you showed this to someone and said AI made this bolder, would they believe you immediately?'"
+    },
+    {
+      "source": "ai_slop_test",
+      "target": "absolute_bans",
+      "type": "depends_on",
+      "confidence": 0.92,
+      "evidence": "'Cross-register failures are the absolute bans above'"
+    },
+    {
+      "source": "ai_slop_test",
+      "target": "category_reflex_check",
+      "type": "depends_on",
+      "confidence": 0.9,
+      "evidence": "'Category-reflex check. Run at two altitudes'"
+    },
+    {
+      "source": "category_reflex_check",
+      "target": "reflex_reject_lists",
+      "type": "depends_on",
+      "confidence": 0.88,
+      "evidence": "'The brand register's reflex-reject aesthetic lanes list catches the currently-saturated families'"
+    },
+    {
+      "source": "reflex_reject_lists",
+      "target": "font_selection_procedure",
+      "type": "constrains",
+      "confidence": 0.92,
+      "evidence": "'List the three fonts you'd reach for by reflex. If any appear in the reflex-reject list below, reject them'"
+    },
+    {
+      "source": "reflex_reject_lists",
+      "target": "variant_axis_distinctness",
+      "type": "constrains",
+      "confidence": 0.85,
+      "evidence": "'Avoid the reflex-reject lanes in brand.md. Don't trade one monoculture for another'"
+    },
+    {
+      "source": "register_split",
+      "target": "cap_bolder",
+      "type": "constrains",
+      "confidence": 0.93,
+      "evidence": "each reference opens with a Register section splitting brand from product behavior"
+    },
+    {
+      "source": "register_split",
+      "target": "cap_quieter",
+      "type": "constrains",
+      "confidence": 0.93,
+      "evidence": "each reference opens with a Register section splitting brand from product behavior"
+    },
+    {
+      "source": "register_split",
+      "target": "cap_colorize",
+      "type": "constrains",
+      "confidence": 0.93,
+      "evidence": "each reference opens with a Register section splitting brand from product behavior"
+    },
+    {
+      "source": "register_split",
+      "target": "cap_typeset",
+      "type": "constrains",
+      "confidence": 0.93,
+      "evidence": "each reference opens with a Register section splitting brand from product behavior"
+    },
+    {
+      "source": "register_split",
+      "target": "cap_layout",
+      "type": "constrains",
+      "confidence": 0.93,
+      "evidence": "each reference opens with a Register section splitting brand from product behavior"
+    },
+    {
+      "source": "register_split",
+      "target": "cap_animate",
+      "type": "constrains",
+      "confidence": 0.93,
+      "evidence": "each reference opens with a Register section splitting brand from product behavior"
+    },
+    {
+      "source": "register_split",
+      "target": "cap_delight",
+      "type": "constrains",
+      "confidence": 0.93,
+      "evidence": "each reference opens with a Register section splitting brand from product behavior"
+    },
+    {
+      "source": "register_split",
+      "target": "cap_teach",
+      "type": "prerequisite_of",
+      "confidence": 0.9,
+      "evidence": "'Register (ask first - it shapes everything below)'"
+    },
+    {
+      "source": "register_split",
+      "target": "color_strategy_axis",
+      "type": "constrains",
+      "confidence": 0.9,
+      "evidence": "'Product defaults to Restrained ... Brand surfaces have permission for Committed, Full palette, and Drenched'"
+    },
+    {
+      "source": "register_split",
+      "target": "modular_type_scale",
+      "type": "constrains",
+      "confidence": 0.9,
+      "evidence": "brand uses fluid clamp at >=1.25; product uses fixed rem at 1.125-1.2"
+    },
+    {
+      "source": "register_split",
+      "target": "motion_duration_ladder",
+      "type": "constrains",
+      "confidence": 0.85,
+      "evidence": "'Product: 150-250 ms on most transitions ... No orchestrated page-load sequences'"
+    },
+    {
+      "source": "color_strategy_axis",
+      "target": "cap_colorize",
+      "type": "constrains",
+      "confidence": 0.95,
+      "evidence": "'Pick a color strategy first per SKILL.md (Restrained / Committed / Full palette / Drenched) and follow its dosage'"
+    },
+    {
+      "source": "color_strategy_axis",
+      "target": "design_brief",
+      "type": "constrains",
+      "confidence": 0.9,
+      "evidence": "brief section 3 is 'Color strategy (Restrained / Committed / Full palette / Drenched)'"
+    },
+    {
+      "source": "oklch_color_space",
+      "target": "tinted_neutrals",
+      "type": "prerequisite_of",
+      "confidence": 0.9,
+      "evidence": "'Even a chroma of 0.005-0.01 is enough' expressed in OKLCH terms"
+    },
+    {
+      "source": "oklch_color_space",
+      "target": "cap_colorize",
+      "type": "constrains",
+      "confidence": 0.9,
+      "evidence": "'Use OKLCH for color: It's perceptually uniform'"
+    },
+    {
+      "source": "tinted_neutrals",
+      "target": "gray_on_color_ban",
+      "type": "overlaps_with",
+      "confidence": 0.8,
+      "evidence": "both are color-hygiene rules repeated in polish, quieter and colorize"
+    },
+    {
+      "source": "wcag_contrast",
+      "target": "never_color_alone",
+      "type": "overlaps_with",
+      "confidence": 0.8,
+      "evidence": "both accessibility color constraints listed together in color-and-contrast and audit"
+    },
+    {
+      "source": "theme_scene_sentence",
+      "target": "design_brief",
+      "type": "constrains",
+      "confidence": 0.9,
+      "evidence": "brief section 3 includes 'the theme scene sentence'"
+    },
+    {
+      "source": "theme_scene_sentence",
+      "target": "category_reflex_check",
+      "type": "prerequisite_of",
+      "confidence": 0.8,
+      "evidence": "'Rework the scene sentence and color strategy until the answer isn't obvious from the domain'"
+    },
+    {
+      "source": "absolute_bans",
+      "target": "cards_are_lazy",
+      "type": "overlaps_with",
+      "confidence": 0.85,
+      "evidence": "'Identical card grids' is an absolute ban and 'Cards are the lazy answer' is the shared layout law"
+    },
+    {
+      "source": "absolute_bans",
+      "target": "cap_colorize",
+      "type": "constrains",
+      "confidence": 0.95,
+      "evidence": "'NEVER: border-left or border-right greater than 1px as a colored accent stripe. This is one of the three absolute bans'"
+    },
+    {
+      "source": "absolute_bans",
+      "target": "cap_layout",
+      "type": "constrains",
+      "confidence": 0.9,
+      "evidence": "'Don't default to the hero metric layout ... Use identical card grids everywhere'"
+    },
+    {
+      "source": "absolute_bans",
+      "target": "cap_bolder",
+      "type": "constrains",
+      "confidence": 0.92,
+      "evidence": "'WARNING - AI SLOP TRAP ... Review ALL the DON'T guidelines from the parent impeccable skill'"
+    },
+    {
+      "source": "cap_critique",
+      "target": "dual_isolated_assessment",
+      "type": "depends_on",
+      "confidence": 0.97,
+      "evidence": "'Launch two independent assessments. Neither may see the other's output'"
+    },
+    {
+      "source": "dual_isolated_assessment",
+      "target": "deterministic_detector",
+      "type": "depends_on",
+      "confidence": 0.95,
+      "evidence": "'Assessment B: Automated Detection. Run the bundled deterministic detector'"
+    },
+    {
+      "source": "cap_critique",
+      "target": "nielsen_heuristics_scoring",
+      "type": "depends_on",
+      "confidence": 0.95,
+      "evidence": "'Nielsen's Heuristics ... Score each of the 10 heuristics 0-4'"
+    },
+    {
+      "source": "cap_critique",
+      "target": "persona_walkthrough",
+      "type": "depends_on",
+      "confidence": 0.93,
+      "evidence": "'Persona Red Flags ... Auto-select 2-3 personas most relevant to this interface type'"
+    },
+    {
+      "source": "cap_critique",
+      "target": "cognitive_load_checklist",
+      "type": "depends_on",
+      "confidence": 0.92,
+      "evidence": "'Run the 8-item cognitive load checklist. Report failure count'"
+    },
+    {
+      "source": "cognitive_load_checklist",
+      "target": "working_memory_limit",
+      "type": "depends_on",
+      "confidence": 0.9,
+      "evidence": "'Minimal choices: Are decisions simplified (<=4 visible options at any decision point)?'"
+    },
+    {
+      "source": "cognitive_load_checklist",
+      "target": "progressive_disclosure",
+      "type": "depends_on",
+      "confidence": 0.9,
+      "evidence": "'Progressive disclosure: Is complexity revealed only when the user needs it?'"
+    },
+    {
+      "source": "nielsen_heuristics_scoring",
+      "target": "p0_p3_severity",
+      "type": "chains_into",
+      "confidence": 0.9,
+      "evidence": "'Issue Severity (P0-P3). Tag each individual issue found during scoring'"
+    },
+    {
+      "source": "p0_p3_severity",
+      "target": "command_recommendation_handoff",
+      "type": "constrains",
+      "confidence": 0.9,
+      "evidence": "'List recommended commands in priority order (P0 first, then P1, then P2)'"
+    },
+    {
+      "source": "persona_walkthrough",
+      "target": "product_md",
+      "type": "consumes",
+      "confidence": 0.85,
+      "evidence": "'If AGENTS.md contains a ## Design Context section from impeccable teach, also generate 1-2 project-specific personas'"
+    },
+    {
+      "source": "persona_walkthrough",
+      "target": "focus_visible_ring",
+      "type": "constrains",
+      "confidence": 0.85,
+      "evidence": "Sam's red flags include 'Missing or invisible focus indicators'"
+    },
+    {
+      "source": "persona_walkthrough",
+      "target": "touch_target_44",
+      "type": "constrains",
+      "confidence": 0.85,
+      "evidence": "Casey's red flags include 'Tiny tap targets or targets too close together'"
+    },
+    {
+      "source": "persona_walkthrough",
+      "target": "state_coverage",
+      "type": "constrains",
+      "confidence": 0.85,
+      "evidence": "Riley tests 'empty states, long strings, special characters' and broken recovery"
+    },
+    {
+      "source": "cap_audit",
+      "target": "wcag_contrast",
+      "type": "constrains",
+      "confidence": 0.9,
+      "evidence": "a11y dimension checks 'Text contrast ratios < 4.5:1'"
+    },
+    {
+      "source": "cap_audit",
+      "target": "core_web_vitals",
+      "type": "overlaps_with",
+      "confidence": 0.8,
+      "evidence": "audit's Performance dimension and optimize's Core Web Vitals cover the same measurable ground"
+    },
+    {
+      "source": "cap_audit",
+      "target": "cap_optimize",
+      "type": "chains_into",
+      "confidence": 0.9,
+      "evidence": "audit documents performance issues and maps them to '$impeccable optimize'"
+    },
+    {
+      "source": "cap_audit",
+      "target": "cap_adapt",
+      "type": "chains_into",
+      "confidence": 0.88,
+      "evidence": "audit's Responsive Design findings map to '$impeccable adapt'"
+    },
+    {
+      "source": "cap_audit",
+      "target": "cap_harden",
+      "type": "chains_into",
+      "confidence": 0.85,
+      "evidence": "audit's accessibility and edge-case findings map to '$impeccable harden'"
+    },
+    {
+      "source": "cap_critique",
+      "target": "cap_clarify",
+      "type": "chains_into",
+      "confidence": 0.85,
+      "evidence": "microcopy findings map to '$impeccable clarify'"
+    },
+    {
+      "source": "cap_critique",
+      "target": "cap_distill",
+      "type": "chains_into",
+      "confidence": 0.85,
+      "evidence": "'information overload' findings map to '$impeccable distill'"
+    },
+    {
+      "source": "cap_bolder",
+      "target": "cap_quieter",
+      "type": "alternative_to",
+      "confidence": 0.95,
+      "evidence": "opposite amplitude operations on the same surface: amplify impact versus reduce intensity"
+    },
+    {
+      "source": "cap_distill",
+      "target": "cap_quieter",
+      "type": "overlaps_with",
+      "confidence": 0.85,
+      "evidence": "both reduce - distill removes elements and complexity, quieter lowers visual intensity while keeping the elements"
+    },
+    {
+      "source": "cap_distill",
+      "target": "progressive_disclosure",
+      "type": "depends_on",
+      "confidence": 0.9,
+      "evidence": "'Progressive disclosure: Hide complexity behind clear entry points'"
+    },
+    {
+      "source": "cap_distill",
+      "target": "cards_are_lazy",
+      "type": "constrains",
+      "confidence": 0.88,
+      "evidence": "'Remove unnecessary cards: Cards aren't needed for basic layout'"
+    },
+    {
+      "source": "cap_bolder",
+      "target": "multi_dimension_hierarchy",
+      "type": "depends_on",
+      "confidence": 0.85,
+      "evidence": "'Hierarchy amplification: Make big things BIGGER, small things smaller (increase contrast)'"
+    },
+    {
+      "source": "cap_quieter",
+      "target": "multi_dimension_hierarchy",
+      "type": "depends_on",
+      "confidence": 0.85,
+      "evidence": "'Hierarchy through subtlety: Use weight, size, and space instead of color and boldness'"
+    },
+    {
+      "source": "cap_layout",
+      "target": "squint_test",
+      "type": "depends_on",
+      "confidence": 0.92,
+      "evidence": "'Apply the squint test ... can you still identify the most important element'"
+    },
+    {
+      "source": "cap_layout",
+      "target": "spacing_scale_system",
+      "type": "depends_on",
+      "confidence": 0.95,
+      "evidence": "'Establish a Spacing System ... values come from a defined set, not arbitrary numbers'"
+    },
+    {
+      "source": "cap_layout",
+      "target": "semantic_z_index",
+      "type": "depends_on",
+      "confidence": 0.88,
+      "evidence": "'Create a semantic z-index scale (dropdown -> sticky -> modal-backdrop -> modal -> toast -> tooltip)'"
+    },
+    {
+      "source": "cap_layout",
+      "target": "container_queries",
+      "type": "depends_on",
+      "confidence": 0.8,
+      "evidence": "'Consult the spatial design reference for detailed guidance on grids, rhythm, and container queries'"
+    },
+    {
+      "source": "cap_layout",
+      "target": "multi_dimension_hierarchy",
+      "type": "depends_on",
+      "confidence": 0.9,
+      "evidence": "'Use the fewest dimensions needed for clear hierarchy'"
+    },
+    {
+      "source": "cap_typeset",
+      "target": "modular_type_scale",
+      "type": "depends_on",
+      "confidence": 0.95,
+      "evidence": "'Establish a modular scale (e.g., 1.25 ratio) with clear hierarchy'"
+    },
+    {
+      "source": "cap_typeset",
+      "target": "measure_65_75ch",
+      "type": "depends_on",
+      "confidence": 0.92,
+      "evidence": "'Set max-width on text containers using ch units (max-width: 65ch)'"
+    },
+    {
+      "source": "cap_typeset",
+      "target": "font_selection_procedure",
+      "type": "depends_on",
+      "confidence": 0.9,
+      "evidence": "'Brand: run the font selection procedure in brand.md'"
+    },
+    {
+      "source": "cap_typeset",
+      "target": "font_loading_strategy",
+      "type": "depends_on",
+      "confidence": 0.88,
+      "evidence": "'Ensure web font loading doesn't cause layout shift (font-display: swap, metric-matched fallbacks)'"
+    },
+    {
+      "source": "cap_animate",
+      "target": "motion_duration_ladder",
+      "type": "depends_on",
+      "confidence": 0.95,
+      "evidence": "'Durations by purpose: 100-150ms instant feedback ... 500-800ms entrance animations'"
+    },
+    {
+      "source": "cap_animate",
+      "target": "ease_out_no_bounce",
+      "type": "depends_on",
+      "confidence": 0.95,
+      "evidence": "'AVOID - feel dated and tacky: bounce ... elastic'"
+    },
+    {
+      "source": "cap_animate",
+      "target": "reduced_motion",
+      "type": "depends_on",
+      "confidence": 0.95,
+      "evidence": "'CRITICAL: Respect prefers-reduced-motion'"
+    },
+    {
+      "source": "cap_animate",
+      "target": "no_layout_property_animation",
+      "type": "constrains",
+      "confidence": 0.92,
+      "evidence": "'Avoid casual animation of layout-driving properties (width, height, top, left, margins)'"
+    },
+    {
+      "source": "cap_animate",
+      "target": "premium_motion_materials",
+      "type": "depends_on",
+      "confidence": 0.85,
+      "evidence": "'use blur, filters, masks, shadows, and color shifts when they materially improve the effect'"
+    },
+    {
+      "source": "cap_animate",
+      "target": "cap_delight",
+      "type": "overlaps_with",
+      "confidence": 0.9,
+      "evidence": "animate's 'Delight Moments' section and delight's 'Micro-interactions & Animation' section prescribe the same confetti, hover and success flourishes"
+    },
+    {
+      "source": "cap_delight",
+      "target": "empty_state_as_onboarding",
+      "type": "overlaps_with",
+      "confidence": 0.8,
+      "evidence": "both treat empty states as personality and teaching surfaces"
+    },
+    {
+      "source": "cap_delight",
+      "target": "cap_onboard",
+      "type": "overlaps_with",
+      "confidence": 0.85,
+      "evidence": "both design empty states and first-time moments, one for joy and one for activation"
+    },
+    {
+      "source": "cap_onboard",
+      "target": "empty_state_as_onboarding",
+      "type": "depends_on",
+      "confidence": 0.95,
+      "evidence": "'Empty States: Instead of blank space, show what will appear here'"
+    },
+    {
+      "source": "cap_onboard",
+      "target": "progressive_disclosure",
+      "type": "depends_on",
+      "confidence": 0.9,
+      "evidence": "'Overwhelm with information upfront (progressive disclosure!)' listed under NEVER"
+    },
+    {
+      "source": "cap_overdrive",
+      "target": "propose_before_building",
+      "type": "depends_on",
+      "confidence": 0.97,
+      "evidence": "'This command has the highest potential to misfire. Do NOT jump straight into implementation.'"
+    },
+    {
+      "source": "cap_overdrive",
+      "target": "progressive_enhancement",
+      "type": "depends_on",
+      "confidence": 0.95,
+      "evidence": "'Progressive enhancement is non-negotiable'"
+    },
+    {
+      "source": "cap_overdrive",
+      "target": "browser_iteration_loop",
+      "type": "depends_on",
+      "confidence": 0.93,
+      "evidence": "'Technically ambitious effects almost never work on the first try ... iterate'"
+    },
+    {
+      "source": "cap_overdrive",
+      "target": "reduced_motion",
+      "type": "constrains",
+      "confidence": 0.95,
+      "evidence": "'Ignore prefers-reduced-motion - this is an accessibility requirement, not a suggestion'"
+    },
+    {
+      "source": "cap_overdrive",
+      "target": "cap_bolder",
+      "type": "alternative_to",
+      "confidence": 0.75,
+      "evidence": "INFERRED: both amplify, but bolder pushes visual distinctiveness while overdrive pushes technical capability"
+    },
+    {
+      "source": "propose_before_building",
+      "target": "cap_shape",
+      "type": "overlaps_with",
+      "confidence": 0.8,
+      "evidence": "INFERRED: both force an explicit user-approved direction before code is written"
+    },
+    {
+      "source": "cap_harden",
+      "target": "state_coverage",
+      "type": "depends_on",
+      "confidence": 0.92,
+      "evidence": "'Empty states ... Loading states ... Permission states' plus error scenario coverage"
+    },
+    {
+      "source": "cap_harden",
+      "target": "i18n_text_expansion",
+      "type": "depends_on",
+      "confidence": 0.95,
+      "evidence": "'Text expansion: Add 30-40% space budget for translations'"
+    },
+    {
+      "source": "cap_harden",
+      "target": "error_message_formula",
+      "type": "depends_on",
+      "confidence": 0.85,
+      "evidence": "'Leave error messages generic (Error occurred)' listed under NEVER"
+    },
+    {
+      "source": "cap_harden",
+      "target": "reduced_motion",
+      "type": "depends_on",
+      "confidence": 0.85,
+      "evidence": "'Motion sensitivity' block in Accessibility Resilience"
+    },
+    {
+      "source": "cap_harden",
+      "target": "progressive_enhancement",
+      "type": "depends_on",
+      "confidence": 0.88,
+      "evidence": "'Graceful degradation: Core functionality works without JavaScript'"
+    },
+    {
+      "source": "cap_clarify",
+      "target": "error_message_formula",
+      "type": "depends_on",
+      "confidence": 0.95,
+      "evidence": "'Explain what went wrong in plain language. Suggest how to fix it'"
+    },
+    {
+      "source": "cap_clarify",
+      "target": "specific_button_labels",
+      "type": "depends_on",
+      "confidence": 0.95,
+      "evidence": "'Bad: Click here | Submit | OK. Good: Create account | Save changes'"
+    },
+    {
+      "source": "cap_clarify",
+      "target": "terminology_consistency",
+      "type": "depends_on",
+      "confidence": 0.92,
+      "evidence": "'Be consistent: Use same terms throughout (don't vary for variety)'"
+    },
+    {
+      "source": "cap_clarify",
+      "target": "undo_over_confirm",
+      "type": "overlaps_with",
+      "confidence": 0.8,
+      "evidence": "'Don't overuse confirmations (only for risky actions)'"
+    },
+    {
+      "source": "cap_clarify",
+      "target": "empty_state_as_onboarding",
+      "type": "depends_on",
+      "confidence": 0.85,
+      "evidence": "'No projects yet. Create your first project to get started.'"
+    },
+    {
+      "source": "cap_clarify",
+      "target": "no_em_dashes_copy_rule",
+      "type": "constrains",
+      "confidence": 0.8,
+      "evidence": "INFERRED: the shared copy law governs all interface text clarify rewrites"
+    },
+    {
+      "source": "cap_adapt",
+      "target": "touch_target_44",
+      "type": "depends_on",
+      "confidence": 0.92,
+      "evidence": "'Touch targets 44x44px minimum (not hover-dependent)'"
+    },
+    {
+      "source": "cap_adapt",
+      "target": "input_method_detection",
+      "type": "depends_on",
+      "confidence": 0.9,
+      "evidence": "'Different input methods: Touch, mouse, keyboard' and the pointer/hover query guidance"
+    },
+    {
+      "source": "cap_adapt",
+      "target": "content_driven_breakpoints",
+      "type": "depends_on",
+      "confidence": 0.9,
+      "evidence": "'Use generic breakpoints blindly (use content-driven breakpoints)' listed under NEVER"
+    },
+    {
+      "source": "cap_adapt",
+      "target": "container_queries",
+      "type": "depends_on",
+      "confidence": 0.85,
+      "evidence": "'Container Queries: Adapt based on container, not viewport'"
+    },
+    {
+      "source": "cap_optimize",
+      "target": "core_web_vitals",
+      "type": "depends_on",
+      "confidence": 0.95,
+      "evidence": "'Core Web Vitals Optimization ... LCP < 2.5s, FID < 100ms / INP < 200ms, CLS < 0.1'"
+    },
+    {
+      "source": "cap_optimize",
+      "target": "no_layout_property_animation",
+      "type": "depends_on",
+      "confidence": 0.9,
+      "evidence": "'GPU-accelerated (fast) transform/opacity vs CPU-bound (slow) left/width'"
+    },
+    {
+      "source": "cap_optimize",
+      "target": "font_loading_strategy",
+      "type": "depends_on",
+      "confidence": 0.88,
+      "evidence": "'Optimize Fonts: Use font-display: swap or optional, subset fonts, preload critical fonts'"
+    },
+    {
+      "source": "cap_optimize",
+      "target": "perceived_performance",
+      "type": "depends_on",
+      "confidence": 0.85,
+      "evidence": "'prioritize user-perceived performance ... Does it feel faster?'"
+    },
+    {
+      "source": "cap_polish",
+      "target": "state_coverage",
+      "type": "depends_on",
+      "confidence": 0.95,
+      "evidence": "'Every interactive element needs all states ... Missing states create confusion'"
+    },
+    {
+      "source": "cap_polish",
+      "target": "eight_interactive_states",
+      "type": "depends_on",
+      "confidence": 0.95,
+      "evidence": "'Interaction States: Default, Hover, Focus, Active, Disabled, Loading, Error, Success'"
+    },
+    {
+      "source": "cap_polish",
+      "target": "spacing_scale_system",
+      "type": "depends_on",
+      "confidence": 0.92,
+      "evidence": "'Consistent spacing: All gaps use spacing scale (no random 13px gaps)'"
+    },
+    {
+      "source": "cap_polish",
+      "target": "terminology_consistency",
+      "type": "depends_on",
+      "confidence": 0.9,
+      "evidence": "'Consistent terminology: Same things called same names throughout'"
+    },
+    {
+      "source": "cap_polish",
+      "target": "wcag_contrast",
+      "type": "depends_on",
+      "confidence": 0.9,
+      "evidence": "'Contrast ratios: All text meets WCAG standards'"
+    },
+    {
+      "source": "cap_polish",
+      "target": "ease_out_no_bounce",
+      "type": "depends_on",
+      "confidence": 0.9,
+      "evidence": "'Consistent easing: Use ease-out-quart/quint/expo ... Never bounce or elastic'"
+    },
+    {
+      "source": "eight_interactive_states",
+      "target": "focus_visible_ring",
+      "type": "depends_on",
+      "confidence": 0.92,
+      "evidence": "'Focus | Keyboard/programmatic focus | Visible ring'"
+    },
+    {
+      "source": "eight_interactive_states",
+      "target": "state_coverage",
+      "type": "overlaps_with",
+      "confidence": 0.9,
+      "evidence": "state_coverage widens the same list with empty, overflow, long/short text and first-run"
+    },
+    {
+      "source": "undo_over_confirm",
+      "target": "specific_button_labels",
+      "type": "overlaps_with",
+      "confidence": 0.8,
+      "evidence": "'When you must confirm: name the action ... use specific button labels (Delete project / Keep project)'"
+    },
+    {
+      "source": "overlay_positioning",
+      "target": "semantic_z_index",
+      "type": "depends_on",
+      "confidence": 0.85,
+      "evidence": "'Arbitrary z-index values like z-index: 9999 - Use a semantic z-index scale'"
+    },
+    {
+      "source": "touch_target_44",
+      "target": "input_method_detection",
+      "type": "depends_on",
+      "confidence": 0.8,
+      "evidence": "coarse-pointer media queries are how larger targets get applied conditionally"
+    },
+    {
+      "source": "measure_65_75ch",
+      "target": "modular_type_scale",
+      "type": "depends_on",
+      "confidence": 0.8,
+      "evidence": "'Scale container width and font-size together so effective character measure stays in the 45-75ch band'"
+    },
+    {
+      "source": "light_on_dark_compensation",
+      "target": "modular_type_scale",
+      "type": "constrains",
+      "confidence": 0.8,
+      "evidence": "light-on-dark requires stepping line-height, tracking and weight off the nominal scale values"
+    },
+    {
+      "source": "brand_imagery_obligation",
+      "target": "cap_craft",
+      "type": "constrains",
+      "confidence": 0.85,
+      "evidence": "craft Step 4 'Asset Extraction' requires real imagery where the mock or subject matter calls for it"
+    },
+    {
+      "source": "font_selection_procedure",
+      "target": "modular_type_scale",
+      "type": "chains_into",
+      "confidence": 0.8,
+      "evidence": "font choice precedes scale and pairing decisions in both brand.md and typeset.md"
+    },
+    {
+      "source": "structured_interview_stop",
+      "target": "cap_shape",
+      "type": "constrains",
+      "confidence": 0.95,
+      "evidence": "'Discovery must include at least one user-answer round'"
+    },
+    {
+      "source": "structured_interview_stop",
+      "target": "cap_teach",
+      "type": "constrains",
+      "confidence": 0.95,
+      "evidence": "'Interview mode, not confirmation mode ... Complete at least one real user-answer round before drafting PRODUCT.md'"
+    },
+    {
+      "source": "structured_interview_stop",
+      "target": "design_brief",
+      "type": "prerequisite_of",
+      "confidence": 0.9,
+      "evidence": "'A shape run is incomplete until the brief is confirmed'"
+    },
+    {
+      "source": "three_times_rule",
+      "target": "cap_extract",
+      "type": "constrains",
+      "confidence": 0.95,
+      "evidence": "'only extract things used 3+ times with the same intent. Premature abstraction is worse than duplication'"
+    },
+    {
+      "source": "design_system_alignment",
+      "target": "three_times_rule",
+      "type": "overlaps_with",
+      "confidence": 0.7,
+      "evidence": "INFERRED: both police when a value or component becomes system-owned rather than local"
+    },
+    {
+      "source": "live_params_contract",
+      "target": "variant_axis_distinctness",
+      "type": "depends_on",
+      "confidence": 0.88,
+      "evidence": "'Parameters are part of the design ... If the variant explores density, expose a density knob'"
+    },
+    {
+      "source": "identity_lock",
+      "target": "default_vs_departure_mode",
+      "type": "prerequisite_of",
+      "confidence": 0.92,
+      "evidence": "Phase A identity extraction runs before Phase B mode selection"
+    },
+    {
+      "source": "default_vs_departure_mode",
+      "target": "reflex_reject_lists",
+      "type": "depends_on",
+      "confidence": 0.85,
+      "evidence": "'The reflex-reject lists are for greenfield decisions and for departure-mode variants in live.md'"
+    },
+    {
+      "source": "generated_file_guard",
+      "target": "carbonize_cleanup",
+      "type": "overlaps_with",
+      "confidence": 0.75,
+      "evidence": "INFERRED: both govern how an accepted variant becomes durable, correct source"
+    },
+    {
+      "source": "cap_live",
+      "target": "browser_iteration_loop",
+      "type": "overlaps_with",
+      "confidence": 0.8,
+      "evidence": "INFERRED: both close the loop by looking at the rendered result in a real browser rather than at code"
+    },
+    {
+      "source": "deterministic_detector",
+      "target": "absolute_bans",
+      "type": "consumes",
+      "confidence": 0.85,
+      "evidence": "the detector 'flags 25 specific patterns (AI slop tells + general design quality)'"
+    },
+    {
+      "source": "no_em_dashes_copy_rule",
+      "target": "terminology_consistency",
+      "type": "overlaps_with",
+      "confidence": 0.7,
+      "evidence": "INFERRED: both are interface-copy hygiene rules enforced across commands"
+    },
+    {
+      "source": "perceived_performance",
+      "target": "motion_duration_ladder",
+      "type": "depends_on",
+      "confidence": 0.8,
+      "evidence": "'The 80ms threshold ... This is your target for micro-interactions'"
+    },
+    {
+      "source": "progressive_disclosure",
+      "target": "working_memory_limit",
+      "type": "depends_on",
+      "confidence": 0.85,
+      "evidence": "'5-7 items: Pushing the boundary - consider grouping or progressive disclosure'"
+    },
+    {
+      "source": "cap_onboard",
+      "target": "cap_clarify",
+      "type": "overlaps_with",
+      "confidence": 0.8,
+      "evidence": "both prescribe empty-state, tooltip and help-text copy patterns"
+    },
+    {
+      "source": "cap_harden",
+      "target": "cap_adapt",
+      "type": "overlaps_with",
+      "confidence": 0.75,
+      "evidence": "both stress the interface against real-world contexts - harden against data and errors, adapt against devices"
+    },
+    {
+      "source": "context_loader_script",
+      "target": "product_md",
+      "type": "consumes",
+      "confidence": 0.95,
+      "evidence": "'The output tells you whether PRODUCT.md and/or DESIGN.md already exist'"
+    },
+    {
+      "source": "context_loader_script",
+      "target": "design_md",
+      "type": "consumes",
+      "confidence": 0.95,
+      "evidence": "loader resolves both files and reports contextDir"
+    }
+  ]
+}

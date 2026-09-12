@@ -1,0 +1,31 @@
+2026-09-11 15:43:13 send u2qlf4u19tjj5pkrkfkvg068e4: DRY RUN ok -> dryrun-u2qlf4u19tjj5pkrkfkvg068e4.txt
+2026-09-11 15:44:01 registered task PreConsult_2026-09-11_1616_Test-Preconsult fire=2026-09-11 15:46 state=Ready
+2026-09-11 15:46:15 unregistered task PreConsult_2026-09-11_1616_Test-Preconsult
+2026-09-11 15:46:15 send u2qlf4u19tjj5pkrkfkvg068e4: SENT to contact+preconsult-test@aspiringattorneys.com msg=1a0920193499db80 status=sent
+2026-09-11 15:46:39 status crashed:
+Traceback (most recent call last):
+  File "C:\Users\Joshu\dev\ai-os\.agents\skills\pre-consultation-check-in\scripts\checkin.py", line 664, in main
+    return args.fn(args)
+           ^^^^^^^^^^^^^
+  File "C:\Users\Joshu\dev\ai-os\.agents\skills\pre-consultation-check-in\scripts\checkin.py", line 598, in cmd_status
+    tasks = {t["name"]: t for t in list_tasks()}
+                                   ^^^^^^^^^^^^
+  File "C:\Users\Joshu\dev\ai-os\.agents\skills\pre-consultation-check-in\scripts\checkin.py", line 369, in list_tasks
+    out = powershell(ps).strip()
+          ^^^^^^^^^^^^^^
+  File "C:\Users\Joshu\dev\ai-os\.agents\skills\pre-consultation-check-in\scripts\checkin.py", line 315, in powershell
+    raise RuntimeError((p.stderr or p.stdout)[-1500:])
+RuntimeError: #< CLIXML
+<Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04"><Obj S="progress" RefId="0"><TN RefId="0"><T>System.Management.Automation.PSCustomObject</T><T>System.Object</T></TN><MS><I64 N="SourceId">1</I64><PR N="Record"><AV>Preparing modules for first use.</AV><AI>0</AI><Nil /><PI>-1</PI><PC>-1</PC><T>Completed</T><SR>-1</SR><SD> </SD></PR></MS></Obj><Obj S="progress" RefId="1"><TNRef RefId="0" /><MS><I64 N="SourceId">1</I64><PR N="Record"><AV>Preparing modules for first use.</AV><AI>0</AI><Nil /><PI>-1</PI><PC>-1</PC><T>Completed</T><SR>-1</SR><SD> </SD></PR></MS></Obj><Obj S="progress" RefId="2"><TNRef RefId="0" /><MS><I64 N="SourceId">2</I64><PR N="Record"><AV>Get-ScheduledTask -TaskPath '\LSATU\PreConsult\' | ForEach-Object {</AV><AI>548684216</AI><Nil /><PI>-1</PI><PC>100</PC><T>Completed</T><SR>0</SR><SD>1/1 completed</SD></PR></MS></Obj></Objs>
+
+2026-09-11 15:47:56 registered task PreConsult_2026-09-11_1647_Test-Cancelled fire=2026-09-11 16:17 state=Ready
+2026-09-11 15:48:01 registered task PreConsult_2026-09-11_1657_Test-Moved fire=2026-09-11 16:27 state=Ready
+2026-09-11 15:48:25 unregistered task PreConsult_2026-09-11_1647_Test-Cancelled
+2026-09-11 15:48:25 send rqojubcrfgc076k004ppelqfgk: event gone/cancelled; nothing sent
+2026-09-11 15:48:33 unregistered task PreConsult_2026-09-11_1657_Test-Moved
+2026-09-11 15:48:37 registered task PreConsult_2026-09-11_1828_Test-Moved fire=2026-09-11 17:58 state=Ready
+2026-09-11 15:48:37 send nef8qsaqn2g1tgha0n2221a63c: moved 2026-09-11 16:57 -> 2026-09-11 18:28; re-registered PreConsult_2026-09-11_1828_Test-Moved
+2026-09-11 15:48:49 unregistered task PreConsult_2026-09-11_1828_Test-Moved
+2026-09-11 15:49:19 registered task PreConsult_2026-09-11_1709_Test-Reconcile fire=2026-09-11 16:39 state=Ready
+2026-09-11 15:49:33 unregistered task PreConsult_2026-09-11_1709_Test-Reconcile
+2026-09-11 15:54:43 note: the 'status crashed' traceback at 15:46:39 above was an empty-task-folder bug in list_tasks(); fixed 15:47 the same day (Get-ScheduledTask -ErrorAction SilentlyContinue). Not a first-load issue.

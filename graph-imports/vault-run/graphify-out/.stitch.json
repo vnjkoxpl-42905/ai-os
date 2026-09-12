@@ -1,0 +1,666 @@
+{
+  "edges": [
+    {
+      "source": "second_brain_levels_level_4_knowledge_graph",
+      "target": "graphify_obsidian_bridge_graphify_obsidian_bridge",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": null,
+      "source_location": null,
+      "weight": 1.0,
+      "note": "The Level 4 node names graphify explicitly as the knowledge-graph tier, which is exactly what the Graphify-to-Obsidian bridge implements."
+    },
+    {
+      "source": "second_brain_levels_level_2_llm_wiki",
+      "target": "index_wiki_index",
+      "relation": "rationale_for",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": null,
+      "source_location": null,
+      "weight": 1.0,
+      "note": "Level 2 is defined as index/log/backlinks/hot-cache, which the vault's wiki index is the concrete instance of."
+    },
+    {
+      "source": "second_brain_levels_level_2_llm_wiki",
+      "target": "log_wiki_log",
+      "relation": "rationale_for",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": null,
+      "source_location": null,
+      "weight": 1.0,
+      "note": "The append-only wiki log is the 'log' component the Level 2 LLM-wiki pattern prescribes."
+    },
+    {
+      "source": "second_brain_levels_ai_os_sits_at_level_2",
+      "target": "2026_07_16_vault_rebuild_vision_document",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.75,
+      "source_file": null,
+      "source_location": null,
+      "weight": 1.0,
+      "note": "The assessment that ai-os sits at a complete Level 2 is a judgment about the vault the rebuild vision defines."
+    },
+    {
+      "source": "second_brain_levels_3ms_framework",
+      "target": "automation_backlog_automation_workflow_analysis",
+      "relation": "rationale_for",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": null,
+      "source_location": null,
+      "weight": 1.0,
+      "note": "The 3Ms/Four Cs framework is the operator lens the automation backlog analysis is ranked against."
+    },
+    {
+      "source": "second_brain_levels_do_not_climb_levels",
+      "target": "log_decisions_log",
+      "relation": "rationale_for",
+      "confidence": "INFERRED",
+      "confidence_score": 0.7,
+      "source_file": null,
+      "source_location": null,
+      "weight": 1.0,
+      "note": "A standing 'build the lowest level that removes real pain' rationale is the kind of locked decision the decisions log records."
+    },
+    {
+      "source": "obsidian_command_center_karpathy_structure",
+      "target": "2026_07_16_vault_rebuild_vision_document",
+      "relation": "rationale_for",
+      "confidence": "INFERRED",
+      "confidence_score": 0.75,
+      "source_file": null,
+      "source_location": null,
+      "weight": 1.0,
+      "note": "The raw/wiki/output Karpathy layout is the structure the vault rebuild vision adopts."
+    },
+    {
+      "source": "obsidian_command_center_claude_code_obsidian_command_center",
+      "target": "graphify_obsidian_bridge_graphify_obsidian_bridge",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.7,
+      "source_file": null,
+      "source_location": null,
+      "weight": 1.0,
+      "note": "Both describe driving the Obsidian vault from Claude Code tooling; the bridge is one surface of the command-center setup."
+    },
+    {
+      "source": "obsidian_command_center_skill_shortcut_buttons",
+      "target": "2026_07_15_project_claude_md_standardization_master_skill_agent_command_database_in_the_brain",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.7,
+      "source_file": null,
+      "source_location": null,
+      "weight": 1.0,
+      "note": "Shortcut buttons launch skills, which the master skill/agent/command database in the brain catalogs."
+    },
+    {
+      "source": "obsidian_command_center_claude_md_less_is_more",
+      "target": "2026_07_15_project_claude_md_standardization_master_skill_agent_command_database_in_the_brain",
+      "relation": "rationale_for",
+      "confidence": "INFERRED",
+      "confidence_score": 0.75,
+      "source_file": null,
+      "source_location": null,
+      "weight": 1.0,
+      "note": "'CLAUDE.md: less is more' is the guiding principle behind the CLAUDE.md standardization project."
+    },
+    {
+      "source": "obsidian_command_center_legible_structure_over_rag",
+      "target": "log_decisions_log",
+      "relation": "rationale_for",
+      "confidence": "INFERRED",
+      "confidence_score": 0.65,
+      "source_file": null,
+      "source_location": null,
+      "weight": 1.0,
+      "note": "Choosing legible file structure over a RAG build is a locked architectural decision of the OS."
+    },
+
+    {
+      "source": "accuracy_over_speed",
+      "target": "dakota_brown",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": null,
+      "source_location": null,
+      "weight": 1.0,
+      "note": "Extracted from Dakota's 2026-03-07 session notes as coaching given to Dakota."
+    },
+    {
+      "source": "slow_reading_strategy",
+      "target": "dakota_transcripts",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": null,
+      "source_location": null,
+      "weight": 1.0,
+      "note": "Appears in a Dakota transcript download, part of the Dakota transcript set."
+    },
+    {
+      "source": "translating_the_stimulus_drill",
+      "target": "dakota_brown",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": null,
+      "source_location": null,
+      "weight": 1.0,
+      "note": "Drill assigned to Dakota in the 2026-03-07 session notes."
+    },
+    {
+      "source": "talking_out_loud_method",
+      "target": "c_alexander",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": null,
+      "source_location": null,
+      "weight": 1.0,
+      "note": "Method taught to C. Alexander in his 2026-06-19 session notes."
+    },
+    {
+      "source": "restating_the_stimulus_in_plain_language",
+      "target": "c_alexander",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": null,
+      "source_location": null,
+      "weight": 1.0,
+      "note": "Technique coached in C. Alexander's 2026-06-19 session notes."
+    },
+    {
+      "source": "restating_the_stimulus_in_plain_language",
+      "target": "lr_taxonomy_reasoning_types_index",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": null,
+      "source_location": null,
+      "weight": 1.0,
+      "note": "Plain-language restatement is a general LR stimulus-comprehension technique that sits above the reasoning-type taxonomy."
+    },
+    {
+      "source": "accuracy_over_speed",
+      "target": "teaching_voice_teaching_voice",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.55,
+      "source_file": null,
+      "source_location": null,
+      "weight": 1.0,
+      "note": "Accuracy-before-speed is a recurring stance in Joshua's coaching register, but the link is inferred rather than stated."
+    },
+
+    {
+      "source": "accuracy_over_speed",
+      "target": "method_and_flaw_strategy_guide_accuracy_efficiency_paradox",
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": null,
+      "source_location": null,
+      "weight": 1.0,
+      "note": "Same teaching idea stated in two files: forget the clock, accuracy first, efficiency arrives as a byproduct."
+    },
+    {
+      "source": "rationale_prioritize_accuracy_over_speed",
+      "target": "method_and_flaw_strategy_guide_rationale_disregard_speed",
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": null,
+      "source_location": null,
+      "weight": 1.0,
+      "note": "Both rationales make the identical argument that mastery produces efficiency, so speed should be disregarded early."
+    },
+    {
+      "source": "slow_reading_strategy",
+      "target": "method_and_flaw_strategy_guide_accuracy_efficiency_paradox",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": null,
+      "source_location": null,
+      "weight": 1.0,
+      "note": "Slow reading is the concrete practice the accuracy-efficiency paradox justifies."
+    },
+    {
+      "source": "_scan_must_be_true_mss_2025_10_31_16_30_edt_notes_by_gemini_intuition_over_diagramming",
+      "target": "_scan_must_be_true_mss_2025_10_31_16_30_edt_notes_by_gemini_session_must_be_true_mss",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": null,
+      "source_location": null,
+      "weight": 1.0,
+      "note": "Same source file: the concept was taught in the 2025-10-31 Must be True / MSS session node already in the main component."
+    },
+    {
+      "source": "_scan_must_be_true_mss_2025_10_31_16_30_edt_notes_by_gemini_rationale_pilot_analogy",
+      "target": "_scan_must_be_true_mss_2025_10_31_16_30_edt_notes_by_gemini_session_must_be_true_mss",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": null,
+      "source_location": null,
+      "weight": 1.0,
+      "note": "The pilot-analogy rationale is stated in the same 2025-10-31 session notes."
+    },
+    {
+      "source": "method_and_flaw_strategy_guide_accuracy_efficiency_paradox",
+      "target": "_project_flaw_module_project",
+      "relation": "references",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": null,
+      "source_location": null,
+      "weight": 1.0,
+      "note": "The Method and Flaw Strategy Guide is curriculum material of the Flaw and Famous Flaws module project."
+    },
+    {
+      "source": "_scan_must_be_true_mss_2025_10_31_16_30_edt_notes_by_gemini_intuition_over_diagramming",
+      "target": "accuracy_over_speed",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.7,
+      "source_file": null,
+      "source_location": null,
+      "weight": 1.0,
+      "note": "Trusting intuition with a structured reset is the same mastery-first stance as accuracy over speed, seen from the execution side."
+    },
+
+    {
+      "source": "how_to_use_your_claude_code_projects_in_codex_in_5_mins_skills_and_agents_layer",
+      "target": "2026_07_15_project_claude_md_standardization_master_skill_agent_command_database_in_the_brain",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": null,
+      "source_location": null,
+      "weight": 1.0,
+      "note": "The article's skills-and-agents layer is exactly what the brain's skill/agent/command database stores and activates per tool."
+    },
+    {
+      "source": "how_to_use_your_claude_code_projects_in_codex_in_5_mins_codex_agents_are_toml_claude_agents_are_markdown",
+      "target": "2026_07_15_project_claude_md_standardization_master_skill_agent_command_database_in_the_brain",
+      "relation": "rationale_for",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": null,
+      "source_location": null,
+      "weight": 1.0,
+      "note": "The TOML-vs-markdown format split is why the database keeps separate claude/ and codex/ subtrees."
+    },
+    {
+      "source": "how_to_use_your_claude_code_projects_in_codex_in_5_mins_shared_knowledge_layer",
+      "target": "index_wiki_index",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.7,
+      "source_file": null,
+      "source_location": null,
+      "weight": 1.0,
+      "note": "The shared knowledge layer is the tool-agnostic vault content the wiki index catalogs for both runtimes."
+    },
+    {
+      "source": "how_to_use_your_claude_code_projects_in_codex_in_5_mins_three_layer_mental_model_shared_knowledge_skills_tool_config",
+      "target": "log_decisions_log",
+      "relation": "rationale_for",
+      "confidence": "INFERRED",
+      "confidence_score": 0.65,
+      "source_file": null,
+      "source_location": null,
+      "weight": 1.0,
+      "note": "The three-layer model underpins the recorded dual-runtime decisions about what is shared versus tool-specific."
+    },
+
+    {
+      "source": "graphify_obsidian_claude_code_cheat_code_four_options_for_handling_the_markdown_flood",
+      "target": "graphify_obsidian_bridge_graphify_obsidian_bridge",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": null,
+      "source_location": null,
+      "weight": 1.0,
+      "note": "The four options are options for where graphify's generated markdown lands in the vault, which the bridge implements."
+    },
+    {
+      "source": "graphify_obsidian_claude_code_cheat_code_rationale_prefer_the_easily_deletable_subfolder",
+      "target": "log_decisions_log",
+      "relation": "rationale_for",
+      "confidence": "INFERRED",
+      "confidence_score": 0.7,
+      "source_file": null,
+      "source_location": null,
+      "weight": 1.0,
+      "note": "Choosing the quarantine subfolder is a locked decision about how graphify output enters the vault."
+    },
+    {
+      "source": "graphify_obsidian_claude_code_cheat_code_quarantine_subfolder_in_main_vault",
+      "target": "index_wiki_index",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": null,
+      "source_location": null,
+      "weight": 1.0,
+      "note": "A quarantine subfolder is a placement decision inside the vault the wiki index catalogs."
+    },
+
+    {
+      "source": "product_reading_is_the_workload",
+      "target": "_project_flaw_module_project",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": null,
+      "source_location": null,
+      "weight": 1.0,
+      "note": "Stated in the Flaw and Famous Flaws PRODUCT.md as a design principle of that module."
+    },
+    {
+      "source": "product_rationale_typography_load_bearing",
+      "target": "_project_flaw_module_project",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": null,
+      "source_location": null,
+      "weight": 1.0,
+      "note": "The typography rationale is the design justification recorded in the same module's PRODUCT.md."
+    },
+    {
+      "source": "product_wcag_aaa_accessibility",
+      "target": "_project_flaw_module_project",
+      "relation": "references",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": null,
+      "source_location": null,
+      "weight": 1.0,
+      "note": "WCAG AAA contrast is a stated build requirement of the Flaw module product spec."
+    },
+
+    {
+      "source": "principle_strengthen_hwk_assignment",
+      "target": "nsf_lr_question_feature_index",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.65,
+      "source_file": null,
+      "source_location": null,
+      "weight": 1.0,
+      "note": "Strengthen homework sits in the LR Assumption and Objection family the question-feature index catalogs."
+    },
+    {
+      "source": "strengthen_application_hwk_assignment",
+      "target": "nsf_lr_question_feature_index",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.65,
+      "source_file": null,
+      "source_location": null,
+      "weight": 1.0,
+      "note": "Strengthen - Application homework is LR curriculum material indexed by question feature."
+    },
+    {
+      "source": "principle_strengthen_hwk_assignment",
+      "target": "necessary_assumption",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.5,
+      "source_file": null,
+      "source_location": null,
+      "weight": 1.0,
+      "note": "Weak but honest: Strengthen and Necessary Assumption are siblings in the Assumption and Objection family; the homework file itself is a failed ingest stub with no extractable content."
+    },
+
+    {
+      "source": "main_point_question",
+      "target": "c_alexander",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": null,
+      "source_location": null,
+      "weight": 1.0,
+      "note": "Worked in C. Alexander's 2026-04-07 reduced-rate session notes."
+    },
+    {
+      "source": "main_point_question",
+      "target": "main_conclusion_handoff_main_conclusion_bootcamp",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": null,
+      "source_location": null,
+      "weight": 1.0,
+      "note": "Main Point questions are the question type the Main Conclusion / Argument Structure bootcamp teaches."
+    },
+    {
+      "source": "referential_phrase",
+      "target": "conclusion",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.7,
+      "source_file": null,
+      "source_location": null,
+      "weight": 1.0,
+      "note": "Referential phrasing is the mechanism used to identify which sentence carries the conclusion."
+    },
+    {
+      "source": "lindsay_songwriter_question",
+      "target": "c_alexander",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": null,
+      "source_location": null,
+      "weight": 1.0,
+      "note": "The Critic Lindsay item was drilled in C. Alexander's 2026-04-07 session."
+    },
+
+    {
+      "source": "work_situational_booking_links",
+      "target": "work_aspiring_attorneys",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": null,
+      "source_location": null,
+      "weight": 1.0,
+      "note": "Stated in context/work.md as an operating rule of the Aspiring Attorneys business."
+    },
+    {
+      "source": "work_rationale_billing_is_contextual",
+      "target": "work_aspiring_attorneys",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": null,
+      "source_location": null,
+      "weight": 1.0,
+      "note": "The billing-is-contextual rationale is recorded in context/work.md governing business correspondence."
+    },
+    {
+      "source": "work_rationale_billing_is_contextual",
+      "target": "joshua_fisseha",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.7,
+      "source_file": null,
+      "source_location": null,
+      "weight": 1.0,
+      "note": "Per-person billing reconstruction is a rule for drafting in Joshua's voice on his behalf."
+    },
+
+    {
+      "source": "principle_conform_principle_in_stimulus_hwk_context_setting_qualifiers",
+      "target": "nsf_lr_question_feature_index",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": null,
+      "source_location": null,
+      "weight": 1.0,
+      "note": "Qualifier-rereading is a Principle-question answer-elimination feature of the kind the question-feature index catalogs."
+    },
+    {
+      "source": "principle_conform_principle_in_stimulus_hwk_rationale_simplify_but_recheck",
+      "target": "lr_taxonomy_reasoning_types_index",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.55,
+      "source_file": null,
+      "source_location": null,
+      "weight": 1.0,
+      "note": "Weak-but-honest: the simplify-then-recheck rationale is Principle-family reasoning technique indexed under the LR reasoning-type taxonomy."
+    },
+
+    {
+      "source": "scan_sabrina_2026_02_21_16_46_est_notes_by_gemini_descriptive_answer_two_parts",
+      "target": "role_answer_key_flaw_matching_drill",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": null,
+      "source_location": null,
+      "weight": 1.0,
+      "note": "The two-part (evidence / conclusion) structure of descriptive flaw answers is the exact skill the flaw-description matching drill trains."
+    },
+    {
+      "source": "scan_sabrina_2026_02_21_16_46_est_notes_by_gemini_overlooks_the_possibility",
+      "target": "role_answer_key_flaw_matching_drill",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.75,
+      "source_file": null,
+      "source_location": null,
+      "weight": 1.0,
+      "note": "'Overlooks the possibility' is answer-choice language the flaw-description matching drill teaches students to classify."
+    },
+    {
+      "source": "scan_sabrina_2026_02_21_16_46_est_notes_by_gemini_overlooks_the_possibility",
+      "target": "necessary_assumption",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.65,
+      "source_file": null,
+      "source_location": null,
+      "weight": 1.0,
+      "note": "Taught in the Necessary Assumption notes as the contrasting weakener-answer marker."
+    },
+
+    {
+      "source": "scan_sabrina_2026_02_21_16_46_est_notes_by_gemini_takes_for_granted",
+      "target": "necessary_assumption",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": null,
+      "source_location": null,
+      "weight": 1.0,
+      "note": "The note literally states that 'takes for granted' marks a necessary assumption answer choice."
+    },
+    {
+      "source": "scan_sabrina_2026_02_21_16_46_est_notes_by_gemini_weak_language_necessary_assumption",
+      "target": "necessary_assumption",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": null,
+      "source_location": null,
+      "weight": 1.0,
+      "note": "The note literally states that necessary assumption answers use weak language and that 'any' is too strong."
+    },
+    {
+      "source": "scan_sabrina_2026_02_21_16_46_est_notes_by_gemini_weak_language_necessary_assumption",
+      "target": "nsf_lr_question_feature_index",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.7,
+      "source_file": null,
+      "source_location": null,
+      "weight": 1.0,
+      "note": "Answer-choice language strength is a question-feature of the kind the LR question-feature index catalogs."
+    },
+
+    {
+      "source": "notes_main_conclusion_dillen_session_notes",
+      "target": "main_conclusion_handoff_main_conclusion_bootcamp",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": null,
+      "source_location": null,
+      "weight": 1.0,
+      "note": "Source lives in corpus/Curriculum/Main Conclusion/Notes and is a source document behind the Main Conclusion bootcamp."
+    },
+    {
+      "source": "_megadoc_lecture_main_conclusion_dillen_sampson_lecture",
+      "target": "main_conclusion_handoff_main_conclusion_bootcamp",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": null,
+      "source_location": null,
+      "weight": 1.0,
+      "note": "The megadoc lecture is one of the 11 Main Conclusion sources compiled for the bootcamp build."
+    },
+    {
+      "source": "notes_main_conclusion_dillen_session_notes",
+      "target": "conclusion",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": null,
+      "source_location": null,
+      "weight": 1.0,
+      "note": "The notes cover identifying premises, intermediate conclusions, and the main conclusion of an argument."
+    },
+    {
+      "source": "_megadoc_lecture_main_conclusion_dillen_sampson_lecture",
+      "target": "premise",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.75,
+      "source_file": null,
+      "source_location": null,
+      "weight": 1.0,
+      "note": "The lecture teaches argument-core decomposition into premises and conclusions."
+    },
+
+    {
+      "source": "_project_tech_stack",
+      "target": "_project_flaw_module_project",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": null,
+      "source_location": null,
+      "weight": 1.0,
+      "note": "The stack decision is recorded in the Flaw and Famous Flaws _PROJECT.md as that module's build stack."
+    },
+    {
+      "source": "_project_tech_stack",
+      "target": "log_decisions_log",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.7,
+      "source_file": null,
+      "source_location": null,
+      "weight": 1.0,
+      "note": "A locked stack choice is the class of decision the append-only decisions log records."
+    }
+  ]
+}

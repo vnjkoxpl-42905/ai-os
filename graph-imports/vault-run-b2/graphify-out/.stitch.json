@@ -1,0 +1,35 @@
+{
+  "edges": [
+    {"source": "the_problem_is_always_in_the_stimulus", "target": "the_problem_is_the_stimulus_not_the_answers", "relation": "semantically_similar_to", "confidence": "INFERRED", "confidence_score": 0.95, "source_file": null, "source_location": null, "weight": 1.0, "note": "c1: same doctrine phrased twice; norm_label missed it"},
+    {"source": "the_answers_live_on_the_left_side", "target": "prephrase_before_answer_choices", "relation": "conceptually_related_to", "confidence": "INFERRED", "confidence_score": 0.85, "source_file": null, "source_location": null, "weight": 1.0, "note": "c1: both enforce working the stimulus before the choices"},
+    {"source": "analogy_technique", "target": "comprehension_is_the_whole_game", "relation": "conceptually_related_to", "confidence": "INFERRED", "confidence_score": 0.8, "source_file": null, "source_location": null, "weight": 1.0, "note": "c1: analogy is the remedy when comprehension, not reasoning, is the blocker"},
+    {"source": "bite_sized_reading_landmine", "target": "translate_the_stimulus_one_thought_at_a_time", "relation": "semantically_similar_to", "confidence": "INFERRED", "confidence_score": 0.85, "source_file": null, "source_location": null, "weight": 1.0, "note": "c1: both chunk the stimulus into single thoughts"},
+    {"source": "commas_as_structure_markers", "target": "read_for_structure_not_detail", "relation": "conceptually_related_to", "confidence": "INFERRED", "confidence_score": 0.8, "source_file": null, "source_location": null, "weight": 1.0, "note": "c1: punctuation as a structural cue"},
+
+    {"source": "the_lsat_wants_you_to_play_dumb", "target": "be_dumber_with_conditionals", "relation": "semantically_similar_to", "confidence": "INFERRED", "confidence_score": 0.9, "source_file": null, "source_location": null, "weight": 1.0, "note": "c2: same do-not-autofill instruction, one general one conditional-specific"},
+    {"source": "dont_grant_undefined_terms", "target": "scope_violations_never_assume", "relation": "conceptually_related_to", "confidence": "INFERRED", "confidence_score": 0.8, "source_file": null, "source_location": null, "weight": 1.0, "note": "c2: both refuse unstated content"},
+    {"source": "reasonable_person_standard", "target": "answer_choice_language_intensity", "relation": "conceptually_related_to", "confidence": "INFERRED", "confidence_score": 0.65, "source_file": null, "source_location": null, "weight": 1.0, "note": "c2: reasonableness test applied to how strongly a choice is worded"},
+
+    {"source": "precision_of_scope_in_answer_choices", "target": "argument_scope", "relation": "conceptually_related_to", "confidence": "INFERRED", "confidence_score": 0.9, "source_file": null, "source_location": null, "weight": 1.0, "note": "c3: scope precision is scope applied to choices"},
+    {"source": "especially_signals_extra_credit", "target": "answer_choice_language_intensity", "relation": "conceptually_related_to", "confidence": "INFERRED", "confidence_score": 0.8, "source_file": null, "source_location": null, "weight": 1.0, "note": "c3: a specific intensity-word reading rule"},
+
+    {"source": "readiness_test_three_practice_tests", "target": "practice_tests_are_diagnostic", "relation": "conceptually_related_to", "confidence": "INFERRED", "confidence_score": 0.85, "source_file": null, "source_location": null, "weight": 1.0, "note": "c4: readiness rule built on the diagnostic view of PTs"},
+    {"source": "do_todays_work_properly", "target": "accuracy_strictly_before_speed", "relation": "conceptually_related_to", "confidence": "INFERRED", "confidence_score": 0.75, "source_file": null, "source_location": null, "weight": 1.0, "note": "c4: both subordinate throughput to doing the rep right"},
+
+    {"source": "cash_cow_analogy", "target": "analogy_technique", "relation": "implements", "confidence": "INFERRED", "confidence_score": 0.85, "source_file": null, "source_location": null, "weight": 1.0, "note": "c5: a worked instance of the analogy technique"},
+    {"source": "hot_potato_ponzi_framing", "target": "analogy_technique", "relation": "implements", "confidence": "INFERRED", "confidence_score": 0.85, "source_file": null, "source_location": null, "weight": 1.0, "note": "c5: same"},
+    {"source": "hot_potato_ponzi_framing", "target": "passage_as_lr_argument", "relation": "conceptually_related_to", "confidence": "INFERRED", "confidence_score": 0.65, "source_file": null, "source_location": null, "weight": 1.0, "note": "c5: direct anchor into the main component, independent of c1"},
+
+    {"source": "flow_vs_friction_two_modes", "target": "rationale_confidence_is_an_output_of_process", "relation": "conceptually_related_to", "confidence": "INFERRED", "confidence_score": 0.75, "source_file": null, "source_location": null, "weight": 1.0, "note": "c6: when to run the checklist vs trust the read"},
+    {"source": "rationale_permission_to_lose_a_point", "target": "accuracy_strictly_before_speed", "relation": "conceptually_related_to", "confidence": "INFERRED", "confidence_score": 0.7, "source_file": null, "source_location": null, "weight": 1.0, "note": "c6: triage rationale, protects accuracy on the rest"},
+
+    {"source": "conditionals_are_must_be_true_only", "target": "must_be_true", "relation": "conceptually_related_to", "confidence": "INFERRED", "confidence_score": 0.92, "source_file": null, "source_location": null, "weight": 1.0, "note": "c7: direct restriction on the must-be-true domain"},
+    {"source": "infer_means_must_be_true", "target": "inference_must_be_true", "relation": "semantically_similar_to", "confidence": "INFERRED", "confidence_score": 0.95, "source_file": null, "source_location": null, "weight": 1.0, "note": "c7: label variants of one rule"},
+
+    {"source": "part_vs_whole", "target": "part_to_whole", "relation": "semantically_similar_to", "confidence": "INFERRED", "confidence_score": 0.95, "source_file": null, "source_location": null, "weight": 1.0, "note": "c8: label variants of the composition/division flaw"},
+
+    {"source": "principle_question", "target": "principle_questions", "relation": "semantically_similar_to", "confidence": "INFERRED", "confidence_score": 0.97, "source_file": null, "source_location": null, "weight": 1.0, "note": "c9: singular/plural label variant"},
+
+    {"source": "vocabulary_triage", "target": "obscure_vocabulary_is_defined_in_place", "relation": "conceptually_related_to", "confidence": "INFERRED", "confidence_score": 0.85, "source_file": null, "source_location": null, "weight": 1.0, "note": "c10: both handle unknown words without a dictionary"}
+  ]
+}

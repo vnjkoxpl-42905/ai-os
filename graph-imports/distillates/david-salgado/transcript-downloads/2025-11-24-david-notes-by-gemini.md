@@ -1,0 +1,89 @@
+---
+source: students/david-salgado/transcript-downloads/2025-11-24-david-notes-by-gemini.md
+date: 2025-11-24
+person: David Salgado
+attendees: [David Salgado, Joshua Fisseha]
+kind: session
+substantive: true
+---
+
+# David Salgado, 2025-11-24
+
+A pre-test session six days before David's November LSAT results, split between admissions strategy (GPA addendum, the post-affirmative-action landscape) and blind-review work on two Logical Reasoning questions from PT 154: a Resolve/Reconcile paradox and a Strengthen question about eroded archaeological rubbish. The Strengthen question ran roughly forty minutes and turned into an extended argument about what "granting the premise" actually permits.
+
+## LSAT concepts
+
+- **Resolve/Reconcile (paradox)** — Joshua's cue is the word "explain": "remember when we see the word explain, what does that mean again?" Answer: cause. "We're looking for which one of these could be a proposed causal factor like a third factor." The thing to be explained is the **effect**; the correct answer supplies a third factor that produces it.
+- **Setup and surprise** — the structural frame for paradox stimuli: "think of it like there's a setup and there's going to be a paradox... whenever we see a setup in a paradox, think of it like the paradox is going to be at least some sort of surprise." Then: "you're looking for something to bridge those two facts together, a link."
+- **Strengthen** — support runs from premise to conclusion, and the work is at the join, not the premises. David's own formulation, endorsed: "the support always comes from the premises... but we might have to strengthen the reasoning from the premise to the conclusion."
+- **Granting the premise vs. attacking the premise** — the session's central concept. A premise stated in vague terms ("destructive effects") is granted as *true*, but its *extent* is not granted. Joshua: "in the argument we interpret the phrase destructive effects as confirming that some destruction has taken place... destructive effects doesn't mean everything is damaged or everything's destroyed. Destructive effects just means damage has occurred, but the extent is limited by the mechanism, which is erosion."
+- **Selective mechanism** — a causal mechanism named in a premise carries its own real-world limits, and the gap lives there. "The conclusion has a gap because erosion is selective." Erosion "rots wood, cloth and food," but "does erosion destroy like stone, gold, or like thick pottery?"
+- **Scope of a vague quantifier** — David reached this himself: "just because it has destructive effects, we don't know necessarily how damaged the items are... that's one gap that the author left out."
+- **Referential language in answer choices** — an answer choice referring to "the pits" or "the dwellings" is calling back to the same pits and dwellings in the stimulus, not introducing new ones. "They're referring to the ones in the argument... it's the same exact dwellings."
+- **Answer strength and specificity** — "certain types of items" is fatally weak because it "leaves room for there to be still plenty of stuff that did go to trash that we could learn from." Compare to the winner, which is specific and mechanism-relevant.
+- **Bullish main point (David's own coinage, Reading Comp)** — a main-point answer that "only encapsulates like certain paragraphs instead of the entire passage." Raised as a recurring difficulty; Joshua deferred it to the next session.
+
+## Teaching moves
+
+- **Opens the question by asking for the type before anything else** — "of course. What type of question is that?" — and then makes David defend the label rather than confirming it.
+- **Has David narrate the stimulus sentence by sentence with live labeling.** "Keep going. You got it." He lets David label each line as premise or context and then asks "so what did you gather from that?" before offering anything. When David speculates about a cause, Joshua does not correct or confirm: "I'll let you keep free flow thinking."
+- **Deliberately hears the reasoning even when the answer was right.** After David explained D correctly: "I just wanted to hear your thoughts and just to hear how you thought through it." He explicitly declines to over-teach a question David already owns: "I don't need to go too much into this because you kind of understood it, explained it pretty well."
+- **Names the difference between wrong and uncomfortable.** Joshua diagnosed David's discomfort with a question he got right: "it's not hard for you, but it's just awkward... there's a sense of shakiness with your confidence in regards to this question. You're like, I get it but it doesn't feel good. Is that right to say?" This surfaced that David had misread "preceded," which is the real fault, not the reasoning.
+- **The skeptic hat.** "When you put your skeptic hat on... erosion, we don't know if it destroys inorganic or organic things. We just don't know that."
+- **Argues by counterfactual world.** "If the pit is like full of indestructible stone tools, the archaeologist would be wrong, right?" Then the inverse to show what would have made the argument valid: "if the destruction were total, destroying both fragile and durable items, the archaeologist's conclusion that the pit is useless would be airtight."
+- **Refuses to move on while a confusion is live, and asks the student to restate the objection.** When David kept insisting the analysis was premise-fighting, Joshua did not repeat himself. He asked David to state it back: "explain to me why you think they contradict. Why would that contradict the evidence?" Only after hearing it did he name the actual error: "I think the confusion might be coming from assuming that destructive effects implies total destruction."
+- **The sieve image for partial destruction** — "think of the destructive effects like a sieve: the fine destroyed particles fall through, but the large durable particles are left behind on the surface."
+- **The comic book / Bible example for partial damage.** "If you had a comic book and the top part got eroded... let's say it was just wet but the book was still intact. It's like, okay, it got eroded, but we still know it's a Bible." David extended it himself: "if a few chapters were missing, we could still tell the plot of the story." Joshua added chemical traces: "we don't necessarily need the whole. It could be very minimal. Now we can maybe know by the chemical compounds."
+- **States the answer's job in one sentence before touching the choices.** "The correct answer should rule out any of the objections we made... we're looking for something to show that's too damaged."
+- **Hands over the answer choices entirely first.** "I'll let you do the answer choices completely by yourself and then we'll do it together, because I want you to first come to it by yourself."
+- **Modern-analogy translation of an archaeology stimulus.** Compost bin near your house; "a thousand years from now they come, they see our houses, and they say, oh look, we found a garbage bin of these ancient people... oh, they had this thing called iPhone." Then the common-sense punch: "if I take something from my house and I put it into the garbage bin, it's not in my house anymore. And also it's new stuff, and that stuff had to belong to them because it's their rubbish."
+- **The "so what?" test for every answer choice.** "It's useful to remember, so what if I found this to be the case? So what? Because when I see the pits, which pits? When I see the dwellings, which dwellings? Oh, the ones in the argument. Okay, what would that do for our argument? Then what does that tell me after? Nothing."
+- **Checks before advancing.** "Does A make sense, by the way? I don't want to rush you past."
+- **Lets the student save his own pick for last.** David wanted to hold B (his chosen answer) until the end; Joshua allowed it and reordered to C.
+- **Rewards a good student analogy rather than replacing it.** David's chicken-bones analogy for scavengers taking the durable items got "no, that makes complete sense, the analogy completely works," and Joshua then reused David's own framing to close the question.
+- **Names test-difficulty as a positive signal.** "154, 152, 153, 154 are the hardest tests, so if you're performing well on these tests, I think you'll have done really well on the actual test. Very good sign."
+- **Protects the blind review from score contamination** — deliberately did not submit the test so David would not see the score before reviewing.
+- **Refuses to let anxiety attach to a finished event.** "Anything you do now won't change the outcome. It's been done... it is truly nothing can be changed about your test in November. And I'm really confident you're going to do well." Paired with an admission that the advice is unfollowable: "I know how impossible what I'm saying is."
+- **Won't oversell the outcome.** "We don't want to count our horses before we get them."
+
+## Worked examples
+
+- **PT 154, Section 2, Q3 — Resolve/Reconcile, horse populations.** Stimulus: horses thrive in grasslands although descended from a forest-dwelling ancestor; over the last two million years horse populations went through three cycles of increase followed by rapid decline; the most recent peak was about 25,000 years ago. Question: what explains the peak and subsequent rapid decline? David skipped it on the timed run because he could not locate the paradox, and returned at the end. Correct answer D: during cold periods there are extensive grasslands, but these tend to revert to forest when the climate warms. Path: the answer links the peak (cold period) to extensive grasslands, the horses' preferred habitat, and the decline to warming and reversion to forest. Joshua: "it directly resolves the paradox by proving that horses were in fact thriving in their preferred habitat." David's error under time was misreading **preceded**: "I felt that preceded meant the warming happened before the cold, but actually that means the cold happened before the warming." He was down to D and one distractor that merely reported that several cycles of cold followed by warming occurred in that two million years, which he later called "descriptive... nothing that touches the actual gap."
+- **PT 154, Section 2, Q16 — Strengthen, archaeological rubbish pits.** Stimulus: people deposited rubbish in pits near their dwellings; some claim the rubbish provides great insights into these people's possessions; but the rubbish by itself tells us relatively little about those possessions, among other reasons because the pits have been subject to erosion over long periods with destructive effects on the rubbish within. Conclusion: the rubbish is bad data. Gap: erosion is selective, so durable items may have survived intact and be perfectly informative. The correct answer must close off that survival route.
+  - **A (pits contained certain tools not found in dwellings or above-ground locations)** — David initially cut it on a referential misread, thinking "the pits" meant different pits. Actually it *weakens*: finding tools in the trash that are absent from the houses means the rubbish yields genuinely new information about possessions.
+  - **B (scavengers routinely salvaged the most durable items from the pits)** — correct. It removes exactly the surviving-durable-goods objection: "this would help shoot down a potential answer to say, could it be some stuff that hasn't been ruined? It's like, no, we took the most durable things. So now what's remaining is things that are not as durable."
+  - **C (soil surrounding the pits was sometimes removed for brick manufacture)** — David called it a bait connecting soil removal to erosion, and cut it himself: "even if the soil is being removed, we're still having erosion... that's what the premise is saying." Joshua added it is untraceable in time ("is it saying more modern human beings have used the soil for bricks? We can't really tell") and irrelevant either way: it "has nothing to do with whether or not the trash in the pit is still in good enough shape to teach us."
+  - **D (the pits had earlier been used by this group as burial sites)** — David's read: at best it does nothing, at worst it weakens, since burial suggests important items were deposited. Either way it never touches erosion, so it is out.
+  - **E (certain types of items were never discarded by this group)** — too narrow and unspecified. David: "we don't know what items were... what if garbage wasn't being discarded?" Joshua: "it leaves room for there to still be plenty of stuff that did go to trash that we could learn from."
+
+## Student state
+
+- **Score history**: last official score 162 (June). November sitting was his **fourth** attempt, not fifth as David initially said. Most recent practice test 168, "last three or four weeks ago." PT average in the high 160s. Target for November: 167 to 168 ("just because it's near my PT average"), with 170 held for a possible January retake. Stated fear: "getting a 163 or anything low."
+- **GPA 3.67**, expected not to shift much under CAS since it already covers every school attended. Attended CUNY, where A+ was not available, capping him at 4.0.
+- **Section profile**: Reading Comprehension is a strength. On the official November test he felt strong on the first two passages of one RC section, then hit a hard last RC section where even the first passage was difficult; he **skipped three questions in the first passage** to protect time on later passages, and found the later passages easier than the first.
+- **Paradox questions**: generally good at them, by Joshua's read. David's own account is more specific: "sometimes I don't understand the paradox." His current coping strategy is triage: "I just save them at the end."
+- **The real weakness surfaced was not reasoning but reading precision** — misreading "preceded" and misreading the referent of "the pits" in answer choice A both produced errors on questions whose logic he otherwise handled well.
+- **Core misconception corrected this session**: that granting a vaguely worded premise means granting its maximal reading. He took roughly fifteen minutes and repeated pushback to give this up, and did eventually reach the right formulation himself.
+- Highlighting is central to how he works; Joshua had him open the passage on his own screen rather than screen-sharing, specifically to preserve that ("I know you're going to want to highlight, that's how you naturally do it").
+- Strong self-monitoring: he narrates when he is speculating ("that's a cause I'm speculating at that point"), flags which words he highlighted, and reconstructs his timed-run decisions accurately.
+- Working full-time including Saturdays; commutes home by about 8:30pm.
+
+## Logistics and commitments
+
+- **Next session Thursday 3:00 to 4:15pm** (moved from 2:00, which another student took while they were on the call). David confirmed anything before 5:00pm works. This is the day after his November score releases on **Wednesday**; agenda is to recap the score.
+- **Next session's content is Reading Comprehension**, specifically author-inference and "what the author would likely agree with" questions. Joshua has this prepared and wants access to David's analytics first: "I wanted to go more so into inferences... more heavily fixated on practically being able to do it with more strategy."
+- David's "bullish main point" RC question from the official test is carried forward to that session.
+- **David to take a practice test this week**, targeting Friday. He has about six practice tests remaining before the next exam and wants one per week "just to make sure I still have everything down."
+- **David to write a GPA addendum** on the A+ unavailability and his upward grade trend, after finishing his diversity statement.
+- Joshua's admissions advice: **apply broadly and wait on the score.**
+
+## Notable admissions and business content
+
+- **Joshua's read on the post-affirmative-action landscape**: schools "can't do a checkbox system" since the 2023 decision, and more recently the incentive was removed from the ABA side as well, where diversity had been a ranking factor tied to funding. "Now they even took away the incentive from the ABA, which is going to be hard to say how the schools react, because different schools have different philosophies." Net advice: it will not work against David, but "it's uncharted territories, everybody that has an opinion is kind of just guessing."
+- **On the American GPA system**: "the American system is the wild west... there's no uniform system." Schools that offer A+ let students reach 4.3 while an A-capped school tops out at 4.0, and CAS does not adjust: "they don't care about what your school offers, they just do the system." Joshua rates himself "80, 85% sure" on the A+ = 4.3 mechanic, and contrasts the Canadian system as "very fair and very regulated."
+- **On addenda generally**: "it's hard to say how much the addendum actually makes a difference... it can only benefit you, so why would you not do it?"
+- **Joshua's positioning of David for T14**: high 160s plus a 3.67, combined with "your unique background... minority background, from an immigrant household, and also having the work experience that you do."
+
+## Data-quality note
+
+Joshua opened the session having **confused David's scores with another student's**, thinking David's last score was a 158 or 156 and that he had taken the test a different number of times. He caught it himself mid-conversation: "I know who I'm mixing it up with. I had a student yesterday night, she had a 156." David also misstated his own attempt count (said fifth, corrected to fourth). Treat score and attempt figures recalled from memory in transcripts as unreliable; the corrected facts here are 162 (June), November = fourth attempt.

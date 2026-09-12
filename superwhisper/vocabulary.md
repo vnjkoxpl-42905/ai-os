@@ -1,0 +1,442 @@
+---
+title: Vocabulary
+type: config
+updated: 2026-09-11
+---
+
+# Vocabulary
+
+Hints sent to the voice model with every recording. **Joshua's rule (2026-09-11): every replacement target is also a vocabulary word.** `sync.py` builds the list as the terms below plus every distinct "Wanted" value in `replacements.md`, minus the Exclude section. (Superwhisper's docs warn a long list can hurt accuracy; he chose coverage over that, and the scan will show if accuracy drops.) Each term also has a stub note in `vocabulary/`.
+
+## Tools and products
+
+- Superwhisper
+- Claude Code
+- Claude Desktop
+- Claude Design
+- Claude Opus
+- Claude Sonnet
+- Codex
+- Firecrawl
+- Lovable
+- Lovable Cloud
+- Supabase
+- Cal.com
+- Google Drive
+- Google Calendar
+- Gmail
+- Google Workspace
+- gws
+- GitHub
+- Obsidian
+- Vite
+- shadcn
+- Tailwind
+- Remotion
+- Higgsfield
+- ElevenLabs
+- Gemini
+- TutorOcean
+- Discord
+- NotebookLM
+- Postgres
+- edge function
+- RLS
+- RPC
+- MCP
+- CLI
+- API key
+- Stripe
+- Kling
+- Ghostty
+- Vercel
+- Notion
+- Slack
+- PowerShell
+- Task Scheduler
+- 7Sage
+- LSAT Demon
+- LawHub
+- LSAC
+- PowerScore
+- Khan Academy
+- Manhattan Prep
+- Blueprint
+- React
+- TypeScript
+- JSON
+- Markdown
+- CLAUDE.md
+- README
+- OpenAI
+- ChatGPT
+- Anthropic
+
+## LSAT, teaching, and the vault
+
+- LSAT
+- LSAT U
+- Aspiring Attorneys
+- Logical Reasoning
+- Reading Comprehension
+- Argumentative Writing
+- LSAT Writing
+- PrepTest
+- diagnostic
+- timed section
+- untimed
+- blind review
+- guided drill
+- drill
+- RRC
+- Read it
+- Tell it back
+- Colour it
+- The Recall
+- anti-conclusion
+- stimulus
+- question stem
+- answer choices
+- main conclusion
+- intermediate conclusion
+- premise
+- sub-conclusion
+- Must Be True
+- Most Strongly Supported
+- Necessary Assumption
+- Sufficient Assumption
+- Strengthen
+- Weaken
+- Flaw
+- Parallel Reasoning
+- Parallel Flaw
+- Principle
+- Point at Issue
+- Method of Reasoning
+- Argument Part
+- Role
+- Resolve the Paradox
+- Evaluate the Argument
+- Inference
+- Except question
+- Main Point
+- Author's Attitude
+- Comparative Reading
+- comparative passage
+- passage structure
+- conditional logic
+- contrapositive
+- sufficient condition
+- necessary condition
+- correlation versus causation
+- causal reasoning
+- sampling flaw
+- ad hominem
+- equivocation
+- quantifier
+- scope shift
+- score band
+- score report
+- percentile
+- law school admissions
+- Canadian law schools
+- Osgoode
+- U of T Law
+- Western Law
+- Queen's Law
+- UBC Law
+- McGill Law
+- consultation
+- booking link
+- booking pass
+- credits
+- session recap
+- homework
+- Activities
+- classroom
+- portal
+- AI grader
+- score band floor
+- judge model
+- feature flag
+- send ledger
+- teaching voice
+- handoff
+- wrapup
+- pickup
+- level up
+- brief me
+- second brain
+- vault
+- wiki
+- ingest
+- corpus
+- raw inbox
+- Web Clipper
+- transcript
+- Gemini transcript
+- consultation check-in
+
+## Students and prospects
+
+- Adriana Varea
+- Amanda
+- Asia Tamaami
+- Avneet Natt
+- Bella Lorenzo
+- Celia Cutler
+- Celia Syrocki
+- Charles Moore
+- Claire Alexander
+- Dakota Brown
+- David Salgado
+- Ethan
+- Favour
+- Fernande Charleus
+- Ivory Johnson
+- Kaden Forges
+- Kaia Reid
+- Kristin Silva
+- Lydia
+- Meghan Mullins
+- Nicole Spinelli
+- Ore
+- Oreoluwa James
+- Priyanka Nambiar
+- Sofia Minassian
+- Steven Morris
+- Thaniuska Vivas
+- Vinay Kalva
+- Whit Wilson
+- Yahunatan Zetvy
+- Zeina
+
+## Identity
+
+- Joshua Fisseha
+- Fisseha
+- joshua.fisseha01@gmail.com
+- lsatprep.study
+- contact@aspiringattorneys.com
+- Pre-workout
+- mattpocock
+
+## Skills (spoken names; the slash form comes in through replacements)
+
+- a11y-debugging
+- academy-guide
+- agent-development
+- algorithmic-art
+- ask-matt
+- audit
+- booking-link
+- bootcamp-builder
+- bootcamp-parity-audit
+- brainstorming
+- brand-guidelines
+- build-mcp-app
+- build-mcp-server
+- build-mcpb
+- canvas-design
+- chat-export
+- chrome-devtools
+- claude-api
+- claude-automation-recommender
+- claude-handoff
+- claude-md-improver
+- code-review
+- codebase-design
+- codex-build
+- codex-review
+- command-development
+- consultation-followup-drafts
+- consultation-inquiry-drafts
+- debug-optimize-lcp
+- decision-mapping
+- defuddle
+- design-an-interface
+- design-taste-frontend
+- diagnosing-bugs
+- discernment-nudge
+- discord-access
+- discord-configure
+- dispatching-parallel-agents
+- doc-coauthoring
+- docx
+- domain-modeling
+- edit-article
+- emil-design-eng
+- example-command
+- example-skill
+- executing-plans
+- extract-design
+- find-skills
+- finishing-a-development-branch
+- frontend-design
+- git-guardrails-claude-code
+- graphify
+- grill-me
+- grill-me-codex
+- grill-with-docs
+- grill-with-docs-codex
+- grilling
+- guided-drill-assignment
+- gws-admin-reports
+- gws-calendar
+- gws-calendar-agenda
+- gws-calendar-insert
+- gws-chat
+- gws-chat-send
+- gws-classroom
+- gws-docs
+- gws-docs-write
+- gws-drive
+- gws-drive-upload
+- gws-events
+- gws-events-renew
+- gws-events-subscribe
+- gws-forms
+- gws-gmail
+- gws-gmail-forward
+- gws-gmail-read
+- gws-gmail-reply
+- gws-gmail-reply-all
+- gws-gmail-send
+- gws-gmail-triage
+- gws-gmail-watch
+- gws-keep
+- gws-meet
+- gws-modelarmor
+- gws-modelarmor-create-template
+- gws-modelarmor-sanitize-prompt
+- gws-modelarmor-sanitize-response
+- gws-people
+- gws-shared
+- gws-sheets
+- gws-sheets-append
+- gws-sheets-read
+- gws-slides
+- gws-tasks
+- gws-workflow
+- gws-workflow-email-to-task
+- gws-workflow-file-announce
+- gws-workflow-meeting-prep
+- gws-workflow-standup-report
+- gws-workflow-weekly-digest
+- handoff
+- high-end-visual-design
+- hook-development
+- image-to-code
+- imessage-access
+- imessage-configure
+- impeccable
+- implement
+- implement-spec
+- improve-codebase-architecture
+- inbound-tutoring-replies
+- ingest
+- internal-comms
+- json-canvas
+- level-up
+- loop-me
+- lovable-migrate
+- lovable-prompt
+- lsat-lab-mega-set
+- lsat-lab-transcribe
+- lsat-u-architecture
+- lsat-u-platform-actions
+- lsat-u-topic-builder
+- lsatu-cc-handoff
+- math-olympiad
+- mcp-builder
+- mcp-integration
+- migrate-to-shoehorn
+- minimalist-ui
+- morning-brief
+- notebooklm
+- obsidian-bases
+- obsidian-cli
+- obsidian-markdown
+- obsidian-vault
+- pdf
+- pickup
+- playground
+- plugin-settings
+- plugin-structure
+- ponytail
+- pptx
+- pre-consultation-check-in
+- prompt-architect-refiner
+- prototype
+- pull-submissions
+- qa
+- receiving-code-review
+- redesign-existing-projects
+- request-refactor-plan
+- requesting-code-review
+- research
+- research-add-items
+- research-deep
+- research-report
+- resolving-merge-conflicts
+- resume
+- retro
+- review
+- scaffold-exercises
+- second-brain
+- second-brain-ingest
+- second-brain-lint
+- second-brain-query
+- send-booking-link
+- session-handoff
+- session-recap
+- setup-matt-pocock-skills
+- setup-pre-commit
+- setup-ts-deep-modules
+- shadcn
+- site-teardown
+- skill-creator
+- skill-development
+- skill-doctor
+- skill-lint
+- slack-gif-creator
+- subagent-driven-development
+- superwhisper
+- systematic-debugging
+- tdd
+- teach
+- test-driven-development
+- theme-factory
+- to-issues
+- to-questionnaire
+- to-spec
+- to-tickets
+- triage
+- troubleshooting
+- tutorocean-profile-fill
+- ubiquitous-language
+- using-superpowers
+- verification-before-completion
+- wait-what
+- watch
+- wayfinder
+- web-artifacts-builder
+- webapp-testing
+- wizard
+- wrapup
+- writing-beats
+- writing-for-agents
+- writing-fragments
+- writing-great-skills
+- writing-plans
+- writing-shape
+- writing-skills
+- xlsx
+- youtube-full
+
+## Exclude (replacement targets that should NOT be vocabulary)
+
+- Zeina's (possessive; base word covers it)
+- aspiringattorneys.com (Joshua: no, 2026-09-11)
+- mattpocock's (possessive; the base word covers it)
+- thank you (target of the silence-hallucination collapse row, not a hint)

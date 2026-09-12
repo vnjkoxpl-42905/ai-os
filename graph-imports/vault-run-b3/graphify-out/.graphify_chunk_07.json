@@ -1,0 +1,911 @@
+{
+  "nodes": [
+    {
+      "id": "agent_authoring",
+      "label": "Agent authoring",
+      "type": "capability",
+      "summary": "Create Claude Code subagents as markdown files with YAML frontmatter (name, description, model, color, tools) plus a second-person system prompt body. Covers manual and AI-assisted generation, validation rules, and triggering tests.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/agent-development/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/agent-development/examples/agent-creation-prompt.md",
+        "/Users/joshuaf/ai-os/skills/claude/agent-development/examples/complete-agent-examples.md",
+        "/Users/joshuaf/ai-os/skills/claude/agent-development/references/agent-creation-system-prompt.md"
+      ]
+    },
+    {
+      "id": "trigger_example_blocks",
+      "label": "Triggering examples in the description",
+      "type": "technique",
+      "summary": "Write 2-4 <example> blocks (Context / user / assistant / <commentary>) inside an agent or skill description so the model fires it reliably. Covers explicit, implicit, proactive, and tool-usage triggering, and debugging over- and under-triggering.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/agent-development/references/triggering-examples.md",
+        "/Users/joshuaf/ai-os/skills/claude/agent-development/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/agent-development/references/agent-creation-system-prompt.md"
+      ]
+    },
+    {
+      "id": "structured_system_prompt_template",
+      "label": "Structured system-prompt template",
+      "type": "technique",
+      "summary": "A proven skeleton for autonomous prompts: role line, Core Responsibilities, numbered Process, Quality Standards, Output Format, Edge Cases — written in second person and specific rather than vague.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/agent-development/references/system-prompt-design.md",
+        "/Users/joshuaf/ai-os/skills/claude/agent-development/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/agent-development/examples/complete-agent-examples.md",
+        "/Users/joshuaf/ai-os/skills/claude/agent-development/references/agent-creation-system-prompt.md"
+      ]
+    },
+    {
+      "id": "edge_case_enumeration",
+      "label": "Explicit edge-case handling",
+      "type": "design-principle",
+      "summary": "Every autonomous prompt names the awkward situations up front (no findings, too many findings, ambiguous input, missing context) and states how to handle each, so the agent does not improvise at the boundary.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/agent-development/references/system-prompt-design.md",
+        "/Users/joshuaf/ai-os/skills/claude/agent-development/examples/complete-agent-examples.md"
+      ]
+    },
+    {
+      "id": "severity_ranked_findings_report",
+      "label": "Severity-ranked findings report",
+      "type": "artifact-produced",
+      "summary": "The shared output shape for every review/analysis run: a short summary, then findings grouped critical / major / minor (or errors / warnings / info), each with a file:line-style location and a concrete fix.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/agent-development/references/system-prompt-design.md",
+        "/Users/joshuaf/ai-os/skills/claude/agent-development/examples/complete-agent-examples.md",
+        "/Users/joshuaf/ai-os/skills/claude/agent-development/examples/agent-creation-prompt.md",
+        "/Users/joshuaf/ai-os/skills/claude/second-brain-lint/SKILL.md"
+      ]
+    },
+    {
+      "id": "least_privilege_tool_scoping",
+      "label": "Least-privilege tool scoping",
+      "type": "design-principle",
+      "summary": "Restrict an agent or skill to the minimum tool set: Read/Grep/Glob for read-only analysis, plus Write for generation, plus Bash only for execution. Read-only is the safety default for review agents.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/agent-development/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/agent-development/examples/complete-agent-examples.md",
+        "/Users/joshuaf/ai-os/skills/claude/claude-automation-recommender/references/subagent-templates.md",
+        "/Users/joshuaf/ai-os/skills/claude/claude-automation-recommender/references/skills-reference.md"
+      ]
+    },
+    {
+      "id": "read_only_analysis_mode",
+      "label": "Read-only analysis mode",
+      "type": "constraint",
+      "summary": "A skill that only analyzes and reports, creating or modifying nothing — the user (or a separate request) implements the recommendations. Used to make recommendation and audit runs safe to trigger freely.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/claude-automation-recommender/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/claude-automation-recommender/references/subagent-templates.md",
+        "/Users/joshuaf/ai-os/skills/claude/gws-calendar-agenda/SKILL.md"
+      ]
+    },
+    {
+      "id": "automation_recommender",
+      "label": "Claude Code automation recommender",
+      "type": "capability",
+      "summary": "Scans a codebase for signals (package manifests, framework deps, test config, CI, DB) and recommends 1-2 automations per category: hooks, subagents, skills, plugins, MCP servers.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/claude-automation-recommender/SKILL.md"
+      ]
+    },
+    {
+      "id": "codebase_signal_detection",
+      "label": "Codebase signal detection",
+      "type": "technique",
+      "summary": "Map observable repo artifacts to recommendations: .prettierrc means a format hook, tsconfig.json a type-check hook, @supabase/supabase-js the Supabase MCP, auth/payment paths a security-reviewer subagent.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/claude-automation-recommender/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/claude-automation-recommender/references/hooks-patterns.md",
+        "/Users/joshuaf/ai-os/skills/claude/claude-automation-recommender/references/mcp-servers.md",
+        "/Users/joshuaf/ai-os/skills/claude/claude-automation-recommender/references/subagent-templates.md",
+        "/Users/joshuaf/ai-os/skills/claude/claude-automation-recommender/references/plugins-reference.md"
+      ]
+    },
+    {
+      "id": "hook_event_automation",
+      "label": "Hook-based event automation",
+      "type": "capability",
+      "summary": "PreToolUse / PostToolUse / Notification hooks in .claude/settings.json that format, lint, type-check, run tests, block edits to .env and lock files, or alert on permission and idle prompts.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/claude-automation-recommender/references/hooks-patterns.md",
+        "/Users/joshuaf/ai-os/skills/claude/claude-automation-recommender/SKILL.md"
+      ]
+    },
+    {
+      "id": "protective_blocking_hook",
+      "label": "Protective blocking hook",
+      "type": "constraint",
+      "summary": "PreToolUse hooks that refuse edits to sensitive paths — .env and credential files, lock files, .git internals — so secrets are not exposed and lock files only change via the package manager.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/claude-automation-recommender/references/hooks-patterns.md"
+      ]
+    },
+    {
+      "id": "mcp_server_integration",
+      "label": "MCP server integration",
+      "type": "tool-dependency",
+      "summary": "External capability reached through MCP servers (context7 docs, Playwright, Supabase/Postgres, GitHub, Linear, Sentry, Docker, Memory), configured per-project in .mcp.json and shared by checking it into git.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/claude-automation-recommender/references/mcp-servers.md",
+        "/Users/joshuaf/ai-os/skills/claude/claude-automation-recommender/SKILL.md"
+      ]
+    },
+    {
+      "id": "subagent_delegation",
+      "label": "Parallel subagent delegation",
+      "type": "technique",
+      "summary": "Hand focused review, exploration, or generation to a specialized subagent with its own context window and tool grant, so the main thread keeps working. Model choice haiku/sonnet/opus trades cost against thoroughness.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/claude-automation-recommender/references/subagent-templates.md",
+        "/Users/joshuaf/ai-os/skills/claude/claude-automation-recommender/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/improve-codebase-architecture/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/agent-development/SKILL.md"
+      ]
+    },
+    {
+      "id": "invocation_control",
+      "label": "Invocation control (model vs user invoked)",
+      "type": "design-principle",
+      "summary": "Keeping a description makes a skill model-invoked and reachable by other skills at a permanent context cost; disable-model-invocation strips it, so only the human can fire it at zero context cost but real cognitive cost. Side-effect skills go user-only.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/writing-great-skills/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/writing-great-skills/GLOSSARY.md",
+        "/Users/joshuaf/ai-os/skills/claude/claude-automation-recommender/references/skills-reference.md",
+        "/Users/joshuaf/ai-os/skills/claude/improve-codebase-architecture/SKILL.md"
+      ]
+    },
+    {
+      "id": "context_load_budget",
+      "label": "Context load budget",
+      "type": "constraint",
+      "summary": "Every model-invoked description sits in the window on every turn, spending tokens and attention. That cost is the brake on splitting skills finer and the reason descriptions are pruned harder than bodies.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/writing-great-skills/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/writing-great-skills/GLOSSARY.md"
+      ]
+    },
+    {
+      "id": "progressive_disclosure",
+      "label": "Progressive disclosure",
+      "type": "design-principle",
+      "summary": "Push reference out of SKILL.md behind a context pointer so the top of the information hierarchy stays legible; inline what every branch needs, disclose what only some branches reach.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/writing-great-skills/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/writing-great-skills/GLOSSARY.md"
+      ]
+    },
+    {
+      "id": "context_pointer_wording",
+      "label": "Context pointer wording",
+      "type": "technique",
+      "summary": "A pointer's phrasing, not its target, decides when and how reliably the agent reaches disclosed material. A must-have file behind a weak pointer is a variance bug — sharpen the wording before inlining.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/writing-great-skills/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/writing-great-skills/GLOSSARY.md",
+        "/Users/joshuaf/ai-os/skills/claude/test-driven-development/testing-anti-patterns.md"
+      ]
+    },
+    {
+      "id": "completion_criterion",
+      "label": "Completion criterion",
+      "type": "design-principle",
+      "summary": "The checkable, and where it matters exhaustive, condition that tells the agent a unit of work is done. Clarity resists premature completion; demand sets how much legwork the agent does.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/writing-great-skills/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/writing-great-skills/GLOSSARY.md"
+      ]
+    },
+    {
+      "id": "leading_word",
+      "label": "Leading word (Leitwort)",
+      "type": "technique",
+      "summary": "A compact pretrained concept repeated as a token across a skill, anchoring a whole region of behaviour in minimal tokens and sharpening invocation when the same word appears in prompts and docs.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/writing-great-skills/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/writing-great-skills/GLOSSARY.md"
+      ]
+    },
+    {
+      "id": "single_source_of_truth",
+      "label": "Single source of truth",
+      "type": "design-principle",
+      "summary": "Each meaning lives in exactly one authoritative place, so changing behaviour is a one-place edit. Its violation is duplication.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/writing-great-skills/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/writing-great-skills/GLOSSARY.md",
+        "/Users/joshuaf/ai-os/skills/codex/second-brain/SKILL.md"
+      ]
+    },
+    {
+      "id": "router_skill",
+      "label": "Router skill",
+      "type": "technique",
+      "summary": "One user-invoked skill that names the other user-invoked skills and when to reach for each, curing the cognitive load of remembering a large hand-fired catalog. It can hint but never fire them.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/writing-great-skills/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/writing-great-skills/GLOSSARY.md",
+        "/Users/joshuaf/ai-os/skills/claude/lsat-u-platform-actions/SKILL.md"
+      ]
+    },
+    {
+      "id": "premature_completion",
+      "label": "Premature completion",
+      "type": "failure-mode",
+      "summary": "Ending a step before it is genuinely done because attention slips toward being finished. Caused by a fuzzy completion criterion plus visible post-completion steps; fix the criterion first, hide later steps only if the rush persists.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/writing-great-skills/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/writing-great-skills/GLOSSARY.md"
+      ]
+    },
+    {
+      "id": "duplication_failure",
+      "label": "Duplication",
+      "type": "failure-mode",
+      "summary": "The same meaning stated in more than one place. Costs maintenance and tokens and inflates that meaning's rank on the information hierarchy past its real importance.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/writing-great-skills/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/writing-great-skills/GLOSSARY.md"
+      ]
+    },
+    {
+      "id": "sprawl_failure",
+      "label": "Sprawl",
+      "type": "failure-mode",
+      "summary": "A skill simply too long, even when every line is live and unique. Costs readability, maintainability, and tokens; cured by disclosing reference and splitting by branch or sequence.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/writing-great-skills/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/writing-great-skills/GLOSSARY.md"
+      ]
+    },
+    {
+      "id": "sediment_failure",
+      "label": "Sediment",
+      "type": "failure-mode",
+      "summary": "Stale layers that settle in a skill because adding feels safe and removing feels risky — the default fate of any skill without a pruning discipline.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/writing-great-skills/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/writing-great-skills/GLOSSARY.md"
+      ]
+    },
+    {
+      "id": "no_op_instruction",
+      "label": "No-op instruction",
+      "type": "failure-mode",
+      "summary": "A line the model already obeys by default, so you pay context load to say nothing. The test is whether it changes behaviour versus the default; a weak leading word is a no-op.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/writing-great-skills/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/writing-great-skills/GLOSSARY.md"
+      ]
+    },
+    {
+      "id": "skill_authoring_reference",
+      "label": "Skill authoring reference",
+      "type": "capability",
+      "summary": "The vocabulary and levers for writing predictable skills — invocation, information hierarchy, pruning, leading words, and the failure modes to diagnose against. All reference, user-invoked, with its glossary disclosed.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/writing-great-skills/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/writing-great-skills/GLOSSARY.md"
+      ]
+    },
+    {
+      "id": "tdd_cycle",
+      "label": "Red-green-refactor TDD cycle",
+      "type": "workflow-stage",
+      "summary": "Write one minimal failing test, watch it fail for the right reason, write the simplest code that passes, verify green, then refactor. No production code without a failing test first; code written first gets deleted.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/test-driven-development/SKILL.md"
+      ]
+    },
+    {
+      "id": "watch_it_fail",
+      "label": "Watch it fail",
+      "type": "technique",
+      "summary": "Observing the test fail — for the expected reason, not a typo — is what proves the test actually tests something. Tests written after code pass immediately and prove nothing.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/test-driven-development/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/test-driven-development/testing-anti-patterns.md"
+      ]
+    },
+    {
+      "id": "verify_before_trusting",
+      "label": "Verify before trusting",
+      "type": "design-principle",
+      "summary": "The cross-cutting rule of this catalog: never accept a surface signal as evidence. Watch the test fail, confirm the mutation returned 2xx rather than trusting a rendered UI, check a reviewer's claim against the codebase, and re-run the baseline before starting work.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/test-driven-development/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/receiving-code-review/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/lsat-u-platform-actions/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/guided-drill-assignment/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/codex/using-git-worktrees/SKILL.md"
+      ]
+    },
+    {
+      "id": "mock_isolation_failure",
+      "label": "Testing the mock instead of the code",
+      "type": "failure-mode",
+      "summary": "Asserting on mock elements, mocking a method whose side effect the test depends on, or building partial mocks that omit fields downstream code consumes. Mocks isolate; they are never the thing under test.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/test-driven-development/testing-anti-patterns.md",
+        "/Users/joshuaf/ai-os/skills/claude/test-driven-development/SKILL.md"
+      ]
+    },
+    {
+      "id": "test_only_code_in_production",
+      "label": "Test-only methods in production classes",
+      "type": "failure-mode",
+      "summary": "Adding methods used only by tests (a destroy() for cleanup) to production classes — dangerous if called for real, violates YAGNI, and confuses object lifecycle with entity lifecycle. Belongs in test utilities.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/test-driven-development/testing-anti-patterns.md"
+      ]
+    },
+    {
+      "id": "gate_function_pattern",
+      "label": "Gate function before a risky move",
+      "type": "technique",
+      "summary": "A short STOP-and-ask checklist placed immediately before a tempting action — before mocking, before adding a method, before implementing review feedback, before clicking assign — that must pass before proceeding.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/test-driven-development/testing-anti-patterns.md",
+        "/Users/joshuaf/ai-os/skills/claude/receiving-code-review/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/guided-drill-assignment/SKILL.md"
+      ]
+    },
+    {
+      "id": "yagni_check",
+      "label": "YAGNI grep check",
+      "type": "technique",
+      "summary": "Before implementing a suggested feature or 'doing it properly', grep the codebase for actual usage. Nothing calls it means propose removal rather than building it out.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/receiving-code-review/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/test-driven-development/SKILL.md"
+      ]
+    },
+    {
+      "id": "code_review_reception",
+      "label": "Receiving code review",
+      "type": "capability",
+      "summary": "Read, restate, verify against the codebase, evaluate, then respond — implementing one item at a time with a test each. Clarify every unclear item before implementing any of them.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/receiving-code-review/SKILL.md"
+      ]
+    },
+    {
+      "id": "no_performative_agreement",
+      "label": "No performative agreement",
+      "type": "constraint",
+      "summary": "Banned responses to feedback: 'You're absolutely right', 'Great point', any gratitude expression, and jumping to implement before verification. State the technical requirement or just fix it.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/receiving-code-review/SKILL.md"
+      ]
+    },
+    {
+      "id": "reasoned_pushback",
+      "label": "Reasoned pushback on external feedback",
+      "type": "technique",
+      "summary": "External feedback is suggestions to evaluate, not orders. Push back with technical reasoning when a suggestion breaks functionality, ignores context, violates YAGNI, or conflicts with prior architectural decisions.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/receiving-code-review/SKILL.md"
+      ]
+    },
+    {
+      "id": "isolated_workspace",
+      "label": "Isolated workspace setup",
+      "type": "workflow-stage",
+      "summary": "Before implementation, ensure work happens off the user's current branch: detect existing isolation first (guarding against submodules), prefer the harness's native worktree tool, and fall back to git worktree only if none exists.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/codex/using-git-worktrees/SKILL.md"
+      ]
+    },
+    {
+      "id": "clean_baseline_verification",
+      "label": "Clean test baseline",
+      "type": "workflow-stage",
+      "summary": "Run the project's test suite in the fresh workspace before touching anything, so new bugs can be told apart from pre-existing ones. Failing baseline means report and ask, not proceed.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/codex/using-git-worktrees/SKILL.md"
+      ]
+    },
+    {
+      "id": "dont_fight_the_harness",
+      "label": "Don't fight the harness",
+      "type": "design-principle",
+      "summary": "When the platform already provides a capability (native worktree tool, existing isolation), using the raw command instead creates phantom state the harness cannot see or clean up.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/codex/using-git-worktrees/SKILL.md"
+      ]
+    },
+    {
+      "id": "llm_wiki_pattern",
+      "label": "LLM wiki second brain",
+      "type": "capability",
+      "summary": "An Obsidian vault where the LLM is librarian: raw sources stay immutable in raw/, the agent compiles them into interlinked wiki pages, and every pass is appended to wiki/log.md. Scaffolded by an interactive 5-step wizard.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/codex/second-brain/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/second-brain-lint/SKILL.md"
+      ]
+    },
+    {
+      "id": "wiki_health_lint",
+      "label": "Wiki health lint",
+      "type": "capability",
+      "summary": "Eight-check audit of the wiki — broken wikilinks, orphan pages, contradictions, stale claims, missing pages, missing cross-references, index consistency, data gaps — reported by severity with a fix per finding.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/second-brain-lint/SKILL.md"
+      ]
+    },
+    {
+      "id": "interactive_wizard_one_question",
+      "label": "One-question-at-a-time wizard",
+      "type": "technique",
+      "summary": "Collect configuration by asking a single question per step, each with a sensible default the user can accept, then execute the whole scaffold at the end rather than interleaving prompts with side effects.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/codex/second-brain/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/research/SKILL.md"
+      ]
+    },
+    {
+      "id": "template_placeholder_generation",
+      "label": "Template plus placeholder substitution",
+      "type": "technique",
+      "summary": "Ship a reference template file and fill named placeholders at generation time ({{VAULT_NAME}}, {{ComponentName}}, the class-name slot in a fetch prompt) rather than writing output freehand.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/codex/second-brain/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/claude-automation-recommender/references/skills-reference.md",
+        "/Users/joshuaf/ai-os/skills/claude/site-teardown/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/research/SKILL.md"
+      ]
+    },
+    {
+      "id": "staged_research_outline",
+      "label": "Staged research outline",
+      "type": "artifact-produced",
+      "summary": "outline.yaml (topic, items, execution config) plus fields.yaml (field definitions with detail levels), built from model knowledge then supplemented by a background web-search agent, and confirmed with the user before deep research runs.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/research/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/research-add-items/SKILL.md"
+      ]
+    },
+    {
+      "id": "research_outline_supplement",
+      "label": "Outline supplementation pass",
+      "type": "capability",
+      "summary": "Re-open an existing outline.yaml, gather additions from the user and optionally a web-search agent in parallel, merge them in place while avoiding duplicates, and re-confirm.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/research-add-items/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/research/SKILL.md"
+      ]
+    },
+    {
+      "id": "verbatim_prompt_reproduction",
+      "label": "Verbatim sub-agent prompt template",
+      "type": "constraint",
+      "summary": "A hard constraint that a delegated agent's prompt be reproduced exactly, with only {variable} slots replaced — no restructuring or rewording — so fan-out results stay comparable across runs.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/research/SKILL.md"
+      ]
+    },
+    {
+      "id": "playground_builder",
+      "label": "Interactive HTML playground builder",
+      "type": "capability",
+      "summary": "Builds a self-contained single-file HTML explorer: controls on one side, live preview on the other, generated prompt with a copy button at the bottom. Six templates cover design, data, concept maps, document critique, diff review, and code maps.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/playground/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/playground/templates/design-playground.md",
+        "/Users/joshuaf/ai-os/skills/claude/playground/templates/data-explorer.md",
+        "/Users/joshuaf/ai-os/skills/claude/playground/templates/concept-map.md",
+        "/Users/joshuaf/ai-os/skills/claude/playground/templates/document-critique.md",
+        "/Users/joshuaf/ai-os/skills/claude/playground/templates/diff-review.md",
+        "/Users/joshuaf/ai-os/skills/claude/playground/templates/code-map.md"
+      ]
+    },
+    {
+      "id": "self_contained_single_file",
+      "label": "Self-contained single-file artifact",
+      "type": "constraint",
+      "summary": "Inline all CSS and JS with no external dependencies, because a dead CDN means a dead artifact. The architecture report relaxes this to two known CDNs (Tailwind, Mermaid) but is otherwise static.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/playground/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/improve-codebase-architecture/HTML-REPORT.md"
+      ]
+    },
+    {
+      "id": "prompt_output_handoff",
+      "label": "Prompt-output handoff",
+      "type": "artifact-produced",
+      "summary": "The playground's real deliverable: a live-updating natural-language instruction, mentioning only non-default choices and carrying enough context to act on without the playground, copied back into Claude.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/playground/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/playground/templates/design-playground.md",
+        "/Users/joshuaf/ai-os/skills/claude/playground/templates/data-explorer.md",
+        "/Users/joshuaf/ai-os/skills/claude/playground/templates/concept-map.md"
+      ]
+    },
+    {
+      "id": "click_to_comment_feedback",
+      "label": "Click-to-comment annotation",
+      "type": "technique",
+      "summary": "Let the user click a node, diff line, or suggestion card to attach a comment, then assemble only the annotated items into the generated prompt. Shared by the code-map, diff-review, and document-critique templates.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/playground/templates/code-map.md",
+        "/Users/joshuaf/ai-os/skills/claude/playground/templates/diff-review.md",
+        "/Users/joshuaf/ai-os/skills/claude/playground/templates/document-critique.md"
+      ]
+    },
+    {
+      "id": "single_state_object",
+      "label": "Single state object, live re-render",
+      "type": "technique",
+      "summary": "One state object every control writes to and every render reads from; each change triggers both preview re-render and prompt rebuild. No Apply button, no stale preview.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/playground/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/playground/templates/document-critique.md",
+        "/Users/joshuaf/ai-os/skills/claude/playground/templates/diff-review.md"
+      ]
+    },
+    {
+      "id": "pre_populate_with_real_data",
+      "label": "Pre-populate with real project data",
+      "type": "technique",
+      "summary": "Seed a visual tool with actual material — 15-25 real components with file paths, real edges from imports, a parsed git diff, real suggestions with line refs — so it is usable on first load rather than empty.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/playground/templates/code-map.md",
+        "/Users/joshuaf/ai-os/skills/claude/playground/templates/concept-map.md",
+        "/Users/joshuaf/ai-os/skills/claude/playground/templates/diff-review.md",
+        "/Users/joshuaf/ai-os/skills/claude/playground/templates/document-critique.md"
+      ]
+    },
+    {
+      "id": "architecture_diagram_report",
+      "label": "Visual before/after architecture report",
+      "type": "artifact-produced",
+      "summary": "A self-contained HTML file written to the temp directory and opened for the user: one card per deepening candidate with files, problem, solution, wins, a recommendation-strength badge, and a side-by-side before/after diagram.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/improve-codebase-architecture/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/improve-codebase-architecture/HTML-REPORT.md"
+      ]
+    },
+    {
+      "id": "deepening_opportunity",
+      "label": "Deepening opportunity discovery",
+      "type": "capability",
+      "summary": "Explore a codebase for architectural friction — shallow modules, leaking seams, pure functions extracted only for testability — and apply the deletion test to propose refactors that concentrate rather than move complexity.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/improve-codebase-architecture/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/improve-codebase-architecture/HTML-REPORT.md"
+      ]
+    },
+    {
+      "id": "domain_vocabulary_discipline",
+      "label": "Fixed domain vocabulary",
+      "type": "constraint",
+      "summary": "Use the project's glossary terms exactly and never drift into near-synonyms — module not component or service, interface not API, seam not boundary — with the domain's own nouns taken from CONTEXT.md.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/improve-codebase-architecture/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/improve-codebase-architecture/HTML-REPORT.md",
+        "/Users/joshuaf/ai-os/skills/claude/writing-great-skills/GLOSSARY.md"
+      ]
+    },
+    {
+      "id": "decision_record_gate",
+      "label": "ADR as re-litigation guard",
+      "type": "constraint",
+      "summary": "Existing ADRs record decisions a review must not reopen casually; contradicting one requires a marked callout justifying why the friction is real. Rejections with load-bearing reasons become new ADRs.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/improve-codebase-architecture/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/improve-codebase-architecture/HTML-REPORT.md"
+      ]
+    },
+    {
+      "id": "grilling_interview",
+      "label": "Grilling interview",
+      "type": "technique",
+      "summary": "Interview the user relentlessly to walk a decision tree or mine raw material, checkpointing as you go. Used to explore a chosen architecture candidate and to extract writing fragments.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/improve-codebase-architecture/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/writing-fragments/SKILL.md"
+      ]
+    },
+    {
+      "id": "fragment_capture",
+      "label": "Fragment capture",
+      "type": "capability",
+      "summary": "Append heterogeneous nuggets of writing — sharp sentences, vignettes, half-thoughts, quotes — to one markdown file separated by horizontal rules, imposing no structure or outline.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/writing-fragments/SKILL.md"
+      ]
+    },
+    {
+      "id": "reread_before_write",
+      "label": "Re-read before every write",
+      "type": "technique",
+      "summary": "The user edits the shared document between turns, so re-read from disk before appending and never overwrite — treat 'cut the last one' or 'merge those two' as first-class instructions.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/writing-fragments/SKILL.md"
+      ]
+    },
+    {
+      "id": "reverse_engineering_teardown",
+      "label": "Site teardown",
+      "type": "capability",
+      "summary": "Fetch a site's HTML, then its main JS and CSS with dynamically built extraction prompts seeded from real class names, and assemble a dated teardown document: tech stack, design system, effects breakdown, assets, and section-by-section build plan.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/site-teardown/SKILL.md"
+      ]
+    },
+    {
+      "id": "confirmed_vs_inferred_labeling",
+      "label": "Confirmed vs inferred labeling",
+      "type": "design-principle",
+      "summary": "Mark which findings came from actual source and which were inferred from class names and patterns, so the person building from the document knows what is solid and what may need adjusting.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/site-teardown/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/guided-drill-assignment/SKILL.md"
+      ]
+    },
+    {
+      "id": "guided_drill_assignment_workflow",
+      "label": "Guided drill assignment workflow",
+      "type": "capability",
+      "summary": "Read the newest transcript by meeting date, pick a drill matching the student's need, check repo wiring, browser-verify the drill launches, assign to exactly one student through the teacher UI, then verify rows and notifications and log it.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/guided-drill-assignment/SKILL.md"
+      ]
+    },
+    {
+      "id": "browser_driven_platform_action",
+      "label": "Browser-driven platform action",
+      "type": "capability",
+      "summary": "With no agent path to the prod Supabase backend, the logged-in Chrome admin session on lsatprep.study is the API: act through the same UI flows Joshua would use rather than inserting rows.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/lsat-u-platform-actions/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/guided-drill-assignment/SKILL.md"
+      ]
+    },
+    {
+      "id": "react_controlled_input_pitfall",
+      "label": "React controlled-input pitfall",
+      "type": "failure-mode",
+      "summary": "Programmatic form_input sets DOM values without updating React state, leaving submit buttons silently disabled and producing zero network traffic. Type with real keystrokes, confirm the button is enabled, then confirm the mutation fired.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/lsat-u-platform-actions/SKILL.md"
+      ]
+    },
+    {
+      "id": "mutation_network_verification",
+      "label": "Verify the mutation, not the UI",
+      "type": "technique",
+      "summary": "Confirm a POST to the backend actually fired and returned 2xx, and that the resulting row is visible to the student. A UI that merely looks done, or a success toast, is not evidence.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/lsat-u-platform-actions/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/guided-drill-assignment/SKILL.md"
+      ]
+    },
+    {
+      "id": "student_facing_voice_gate",
+      "label": "Student-facing voice gate",
+      "type": "constraint",
+      "summary": "Anything a real student will read — message text, homework instructions, note bodies — is written in Joshua's voice via wiki/teaching-voice.md, drafted and shown before sending when the content is open-ended.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/lsat-u-platform-actions/SKILL.md"
+      ]
+    },
+    {
+      "id": "action_logging_ledger",
+      "label": "Per-student action log",
+      "type": "artifact-produced",
+      "summary": "Every platform action is appended to students/<name>/assignment-log.md with date, item, reason, and evidence; verified drills also go to wiki/guided-drill-verification-log.md so QA is not repeated.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/lsat-u-platform-actions/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/guided-drill-assignment/SKILL.md"
+      ]
+    },
+    {
+      "id": "fail_closed_reporting",
+      "label": "Fail-closed reporting",
+      "type": "design-principle",
+      "summary": "When verification is ambiguous, state exactly what was and was not confirmed rather than claiming completion. Prefer 'verified to launch and load the runner' over broader claims.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/lsat-u-platform-actions/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/guided-drill-assignment/SKILL.md"
+      ]
+    },
+    {
+      "id": "secret_redaction",
+      "label": "Secret and PII redaction in output",
+      "type": "constraint",
+      "summary": "Never print auth tokens or service-role keys, and redact student email recipients in final reports unless the user explicitly needs them.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/guided-drill-assignment/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/claude-automation-recommender/references/hooks-patterns.md"
+      ]
+    },
+    {
+      "id": "gws_cli_dependency",
+      "label": "gws CLI surface",
+      "type": "tool-dependency",
+      "summary": "A generated family of skills wrapping the gws binary over Google Workspace — Gmail, Calendar, Tasks, Admin Reports, Workspace Events, Model Armor, cross-service workflows — each one thin frontmatter plus flags and examples.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/gws-tasks/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/gws-gmail-reply/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/gws-admin-reports/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/gws-events-subscribe/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/gws-calendar-agenda/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/gws-workflow-email-to-task/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/gws-modelarmor/SKILL.md"
+      ]
+    },
+    {
+      "id": "shared_prereq_pointer",
+      "label": "Shared prerequisite pointer",
+      "type": "technique",
+      "summary": "Every gws skill opens with the same pointer to ../gws-shared/SKILL.md for auth, global flags, and security rules, keeping that material in one place instead of restating it per command.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/gws-tasks/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/gws-gmail-reply/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/gws-admin-reports/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/gws-events-subscribe/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/gws-calendar-agenda/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/gws-modelarmor/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/gws-workflow-email-to-task/SKILL.md"
+      ]
+    },
+    {
+      "id": "schema_introspection_before_call",
+      "label": "Introspect the schema before calling",
+      "type": "technique",
+      "summary": "Run `gws <api> --help` and `gws schema <api>.<resource>.<method>` to discover required params, types, and defaults before building --params and --json flags, rather than guessing the API shape.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/gws-tasks/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/gws-admin-reports/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/gws-modelarmor/SKILL.md"
+      ]
+    },
+    {
+      "id": "write_command_confirmation",
+      "label": "Confirm before write commands",
+      "type": "constraint",
+      "summary": "Commands with side effects are flagged as writes and require user confirmation before execution; read-only commands (calendar agenda) are explicitly marked safe.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/gws-events-subscribe/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/gws-workflow-email-to-task/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/gws-calendar-agenda/SKILL.md"
+      ]
+    },
+    {
+      "id": "draft_not_send",
+      "label": "Draft instead of send",
+      "type": "technique",
+      "summary": "A --draft (or --dry-run) path that produces the outbound artifact without dispatching it, letting a human approve before anything reaches a recipient.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/gws-gmail-reply/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/lsat-u-platform-actions/SKILL.md"
+      ]
+    },
+    {
+      "id": "cross_service_workflow",
+      "label": "Cross-service workflow composition",
+      "type": "capability",
+      "summary": "Compose two Workspace services into one step — email-to-task reads a Gmail message's subject and snippet and creates a Google Tasks entry — rather than making the user chain the calls.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/gws-workflow-email-to-task/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/gws-tasks/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/gws-gmail-reply/SKILL.md"
+      ]
+    },
+    {
+      "id": "content_safety_filtering",
+      "label": "Content safety filtering",
+      "type": "capability",
+      "summary": "Model Armor templates sanitize a user prompt or a model response before it is used, providing a filtering layer for user-generated content.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/gws-modelarmor/SKILL.md"
+      ]
+    }
+  ],
+  "edges": [
+    {"source": "agent_authoring", "target": "trigger_example_blocks", "type": "depends_on", "confidence": 0.95, "evidence": "description 'is the most critical field'; must include multiple <example> blocks"},
+    {"source": "agent_authoring", "target": "structured_system_prompt_template", "type": "produces", "confidence": 0.95, "evidence": "'The markdown body becomes the agent's system prompt'"},
+    {"source": "structured_system_prompt_template", "target": "edge_case_enumeration", "type": "depends_on", "confidence": 0.9, "evidence": "'**Edge Cases:** Handle these situations' is a required section"},
+    {"source": "structured_system_prompt_template", "target": "severity_ranked_findings_report", "type": "produces", "confidence": 0.85, "evidence": "Output Format sections specify Critical/Major/Minor with file:line references"},
+    {"source": "agent_authoring", "target": "least_privilege_tool_scoping", "type": "constrains", "confidence": 0.9, "evidence": "'Limit tools to minimum needed (principle of least privilege)'"},
+    {"source": "least_privilege_tool_scoping", "target": "read_only_analysis_mode", "type": "specializes", "confidence": 0.8, "evidence": "security-reviewer uses 'Read, Grep, Glob (read-only for safety)'"},
+    {"source": "trigger_example_blocks", "target": "leading_word", "type": "overlaps_with", "confidence": 0.6, "evidence": "both make invocation reliable by matching phrasing the user actually types; INFERRED across agent-development and writing-great-skills"},
+    {"source": "automation_recommender", "target": "codebase_signal_detection", "type": "depends_on", "confidence": 0.95, "evidence": "Phase 1 Codebase Analysis feeds every recommendation table"},
+    {"source": "automation_recommender", "target": "read_only_analysis_mode", "type": "constrains", "confidence": 0.95, "evidence": "'This skill is read-only... It does NOT create or modify any files'"},
+    {"source": "codebase_signal_detection", "target": "hook_event_automation", "type": "produces", "confidence": 0.9, "evidence": "'Prettier config -> Auto-format on Edit/Write'"},
+    {"source": "codebase_signal_detection", "target": "mcp_server_integration", "type": "produces", "confidence": 0.9, "evidence": "'@supabase/supabase-js | Supabase MCP'"},
+    {"source": "codebase_signal_detection", "target": "subagent_delegation", "type": "produces", "confidence": 0.9, "evidence": "'Auth/payment code -> security-reviewer'"},
+    {"source": "hook_event_automation", "target": "protective_blocking_hook", "type": "specializes", "confidence": 0.95, "evidence": "PreToolUse hook that blocks Edit/Write to .env and lock files"},
+    {"source": "protective_blocking_hook", "target": "secret_redaction", "type": "overlaps_with", "confidence": 0.6, "evidence": "both exist to keep credentials out of view; INFERRED across hooks-patterns and guided-drill-assignment"},
+    {"source": "automation_recommender", "target": "agent_authoring", "type": "chains_into", "confidence": 0.8, "evidence": "recommends subagents at .claude/agents/[name].md, which agent-development then writes"},
+    {"source": "automation_recommender", "target": "skill_authoring_reference", "type": "chains_into", "confidence": 0.7, "evidence": "recommends creating .claude/skills/<name>/SKILL.md; writing-great-skills governs how"},
+    {"source": "subagent_delegation", "target": "deepening_opportunity", "type": "prerequisite_of", "confidence": 0.85, "evidence": "'use the Agent tool with subagent_type=Explore to walk the codebase'"},
+    {"source": "skill_authoring_reference", "target": "invocation_control", "type": "depends_on", "confidence": 0.95, "evidence": "'Invocation: Two choices, trading different costs'"},
+    {"source": "invocation_control", "target": "context_load_budget", "type": "constrains", "confidence": 0.95, "evidence": "'It contributes to context load — the description sits in the window every turn'"},
+    {"source": "invocation_control", "target": "router_skill", "type": "chains_into", "confidence": 0.85, "evidence": "'that piled-up cognitive load is cured by a router skill'"},
+    {"source": "skill_authoring_reference", "target": "progressive_disclosure", "type": "depends_on", "confidence": 0.95, "evidence": "'Progressive disclosure is the move down the ladder'"},
+    {"source": "progressive_disclosure", "target": "context_pointer_wording", "type": "depends_on", "confidence": 0.9, "evidence": "'A context pointer's wording, not its target, decides when and how reliably the agent reaches the material'"},
+    {"source": "progressive_disclosure", "target": "sprawl_failure", "type": "constrains", "confidence": 0.9, "evidence": "'The cure is the ladder: disclose reference behind pointers'"},
+    {"source": "completion_criterion", "target": "premature_completion", "type": "constrains", "confidence": 0.95, "evidence": "'a vague criterion invites premature completion'; sharpen the bound first"},
+    {"source": "leading_word", "target": "duplication_failure", "type": "constrains", "confidence": 0.85, "evidence": "'A triad spelled out at three sites (duplication)... begging to collapse into a single token'"},
+    {"source": "leading_word", "target": "no_op_instruction", "type": "alternative_to", "confidence": 0.75, "evidence": "'A weak leading word is a no-op; the fix is a stronger word'"},
+    {"source": "single_source_of_truth", "target": "duplication_failure", "type": "constrains", "confidence": 0.95, "evidence": "'Duplication is its violation'"},
+    {"source": "single_source_of_truth", "target": "sediment_failure", "type": "constrains", "confidence": 0.6, "evidence": "pruning discipline in the same section; INFERRED"},
+    {"source": "shared_prereq_pointer", "target": "single_source_of_truth", "type": "depends_on", "confidence": 0.8, "evidence": "auth and security rules live once in gws-shared rather than being restated per command"},
+    {"source": "shared_prereq_pointer", "target": "context_pointer_wording", "type": "specializes", "confidence": 0.75, "evidence": "'**PREREQUISITE:** Read ../gws-shared/SKILL.md' is a strongly-worded pointer"},
+    {"source": "tdd_cycle", "target": "watch_it_fail", "type": "depends_on", "confidence": 0.98, "evidence": "'Verify RED - Watch It Fail. MANDATORY. Never skip.'"},
+    {"source": "watch_it_fail", "target": "verify_before_trusting", "type": "specializes", "confidence": 0.9, "evidence": "'If you didn't watch the test fail, you don't know if it tests the right thing'"},
+    {"source": "tdd_cycle", "target": "mock_isolation_failure", "type": "constrains", "confidence": 0.9, "evidence": "'Following strict TDD prevents these anti-patterns'"},
+    {"source": "mock_isolation_failure", "target": "gate_function_pattern", "type": "constrains", "confidence": 0.85, "evidence": "'BEFORE mocking any method: STOP - Don't mock yet'"},
+    {"source": "test_only_code_in_production", "target": "gate_function_pattern", "type": "constrains", "confidence": 0.85, "evidence": "'BEFORE adding any method to production class: Ask: Is this only used by tests?'"},
+    {"source": "test_only_code_in_production", "target": "yagni_check", "type": "overlaps_with", "confidence": 0.8, "evidence": "'Violates YAGNI and separation of concerns'"},
+    {"source": "tdd_cycle", "target": "context_pointer_wording", "type": "depends_on", "confidence": 0.7, "evidence": "'When adding mocks or test utilities, read testing-anti-patterns.md' is a conditional pointer"},
+    {"source": "code_review_reception", "target": "verify_before_trusting", "type": "depends_on", "confidence": 0.95, "evidence": "'Verify before implementing. Ask before assuming.'"},
+    {"source": "code_review_reception", "target": "no_performative_agreement", "type": "constrains", "confidence": 0.95, "evidence": "'NEVER: You're absolutely right!'"},
+    {"source": "code_review_reception", "target": "reasoned_pushback", "type": "produces", "confidence": 0.9, "evidence": "'Push back with technical reasoning if wrong'"},
+    {"source": "reasoned_pushback", "target": "yagni_check", "type": "depends_on", "confidence": 0.9, "evidence": "'grep codebase for actual usage. IF unused: Remove it (YAGNI)?'"},
+    {"source": "code_review_reception", "target": "gate_function_pattern", "type": "depends_on", "confidence": 0.8, "evidence": "'IF any item is unclear: STOP - do not implement anything yet'"},
+    {"source": "code_review_reception", "target": "tdd_cycle", "type": "chains_into", "confidence": 0.65, "evidence": "'implement in this order... Test each fix individually'; INFERRED link to the TDD skill"},
+    {"source": "isolated_workspace", "target": "clean_baseline_verification", "type": "chains_into", "confidence": 0.95, "evidence": "Step 3 Verify Clean Baseline follows workspace creation"},
+    {"source": "clean_baseline_verification", "target": "verify_before_trusting", "type": "specializes", "confidence": 0.85, "evidence": "'Run tests to ensure workspace starts clean' so new bugs are distinguishable"},
+    {"source": "isolated_workspace", "target": "dont_fight_the_harness", "type": "constrains", "confidence": 0.95, "evidence": "'Never fight the harness'; prefer native worktree tools over git worktree add"},
+    {"source": "isolated_workspace", "target": "tdd_cycle", "type": "prerequisite_of", "confidence": 0.7, "evidence": "'before executing implementation plans - ensures an isolated workspace exists'; INFERRED chain into implementation work"},
+    {"source": "llm_wiki_pattern", "target": "wiki_health_lint", "type": "chains_into", "confidence": 0.95, "evidence": "'Health-check with /second-brain-lint — run after every 10 ingests or monthly'"},
+    {"source": "wiki_health_lint", "target": "severity_ranked_findings_report", "type": "produces", "confidence": 0.9, "evidence": "findings grouped as Errors / Warnings / Info with What, Where, Fix"},
+    {"source": "llm_wiki_pattern", "target": "interactive_wizard_one_question", "type": "depends_on", "confidence": 0.9, "evidence": "'Guide the user through these 5 steps. Ask ONE question at a time.'"},
+    {"source": "llm_wiki_pattern", "target": "template_placeholder_generation", "type": "depends_on", "confidence": 0.9, "evidence": "'replace the placeholders: {{VAULT_NAME}}, {{DOMAIN_DESCRIPTION}}...'"},
+    {"source": "llm_wiki_pattern", "target": "single_source_of_truth", "type": "depends_on", "confidence": 0.85, "evidence": "'wiki-schema.md — canonical wiki rules (single source of truth for all agent configs)'"},
+    {"source": "wiki_health_lint", "target": "duplication_failure", "type": "overlaps_with", "confidence": 0.6, "evidence": "contradictions and missing cross-references are the wiki analogue of duplicated meaning; INFERRED"},
+    {"source": "staged_research_outline", "target": "research_outline_supplement", "type": "chains_into", "confidence": 0.95, "evidence": "'/research-add-items - Supplement items' listed as follow-up; it auto-locates outline.yaml"},
+    {"source": "staged_research_outline", "target": "interactive_wizard_one_question", "type": "depends_on", "confidence": 0.8, "evidence": "repeated request_user_input confirmations at each step"},
+    {"source": "staged_research_outline", "target": "verbatim_prompt_reproduction", "type": "constrains", "confidence": 0.9, "evidence": "'Hard Constraint: The following prompt must be strictly reproduced'"},
+    {"source": "verbatim_prompt_reproduction", "target": "subagent_delegation", "type": "constrains", "confidence": 0.85, "evidence": "'Launch 1 web-search-agent (background), Prompt Template'"},
+    {"source": "staged_research_outline", "target": "template_placeholder_generation", "type": "depends_on", "confidence": 0.75, "evidence": "prompt template with {topic}, {time_range}, {step1_output} slots"},
+    {"source": "playground_builder", "target": "self_contained_single_file", "type": "constrains", "confidence": 0.95, "evidence": "'Single HTML file. Inline all CSS and JS. No external dependencies.'"},
+    {"source": "playground_builder", "target": "prompt_output_handoff", "type": "produces", "confidence": 0.95, "evidence": "'a prompt output at the bottom with a copy button'"},
+    {"source": "playground_builder", "target": "single_state_object", "type": "depends_on", "confidence": 0.9, "evidence": "'Keep a single state object. Every control writes to it, every render reads from it.'"},
+    {"source": "playground_builder", "target": "click_to_comment_feedback", "type": "depends_on", "confidence": 0.85, "evidence": "code-map, diff-review and document-critique templates all build the prompt from user comments"},
+    {"source": "click_to_comment_feedback", "target": "prompt_output_handoff", "type": "produces", "confidence": 0.9, "evidence": "'Only include comments the user added'"},
+    {"source": "playground_builder", "target": "pre_populate_with_real_data", "type": "depends_on", "confidence": 0.85, "evidence": "'Pre-populating with real data: Nodes: 15-25 key components with real file paths'"},
+    {"source": "click_to_comment_feedback", "target": "severity_ranked_findings_report", "type": "alternative_to", "confidence": 0.6, "evidence": "both structure review feedback, one human-authored per line, one agent-authored by severity; INFERRED"},
+    {"source": "deepening_opportunity", "target": "architecture_diagram_report", "type": "produces", "confidence": 0.95, "evidence": "'Present candidates as an HTML report' with before/after visualisation per candidate"},
+    {"source": "architecture_diagram_report", "target": "self_contained_single_file", "type": "depends_on", "confidence": 0.8, "evidence": "'self-contained HTML file'; only scripts are the Tailwind CDN and Mermaid ESM import"},
+    {"source": "deepening_opportunity", "target": "domain_vocabulary_discipline", "type": "constrains", "confidence": 0.95, "evidence": "'Use these terms exactly in every suggestion — don't drift into component, service, API, or boundary'"},
+    {"source": "deepening_opportunity", "target": "decision_record_gate", "type": "constrains", "confidence": 0.9, "evidence": "'ADRs in docs/adr/ record decisions this command should not re-litigate'"},
+    {"source": "deepening_opportunity", "target": "grilling_interview", "type": "chains_into", "confidence": 0.95, "evidence": "'Once the user picks a candidate, run the /grilling skill to walk the design tree'"},
+    {"source": "grilling_interview", "target": "decision_record_gate", "type": "produces", "confidence": 0.8, "evidence": "'Want me to record this as an ADR so future architecture reviews don't re-suggest it?'"},
+    {"source": "grilling_interview", "target": "fragment_capture", "type": "produces", "confidence": 0.9, "evidence": "'Run a grilling session that produces fragments'"},
+    {"source": "fragment_capture", "target": "reread_before_write", "type": "depends_on", "confidence": 0.95, "evidence": "'Before every write: re-read the file from disk'"},
+    {"source": "domain_vocabulary_discipline", "target": "leading_word", "type": "overlaps_with", "confidence": 0.7, "evidence": "both fix a token so the agent reaches the same concept each run; INFERRED across arch report and writing-great-skills"},
+    {"source": "architecture_diagram_report", "target": "playground_builder", "type": "overlaps_with", "confidence": 0.7, "evidence": "both emit a standalone HTML visual the user opens locally to drive the next conversation"},
+    {"source": "reverse_engineering_teardown", "target": "template_placeholder_generation", "type": "depends_on", "confidence": 0.9, "evidence": "'Replace the class name placeholder with real classes extracted from the HTML'"},
+    {"source": "reverse_engineering_teardown", "target": "confirmed_vs_inferred_labeling", "type": "constrains", "confidence": 0.95, "evidence": "'Distinguish confirmed vs inferred'"},
+    {"source": "confirmed_vs_inferred_labeling", "target": "fail_closed_reporting", "type": "overlaps_with", "confidence": 0.8, "evidence": "both refuse to overstate what was actually established"},
+    {"source": "guided_drill_assignment_workflow", "target": "browser_driven_platform_action", "type": "depends_on", "confidence": 0.95, "evidence": "browser verification sequence then teacher UI assign dialog"},
+    {"source": "browser_driven_platform_action", "target": "guided_drill_assignment_workflow", "type": "chains_into", "confidence": 0.9, "evidence": "'Delegate to the guided-drill-assignment skill... it is the specialist; this skill is the router'"},
+    {"source": "browser_driven_platform_action", "target": "router_skill", "type": "specializes", "confidence": 0.8, "evidence": "'this skill is the router' for platform actions, delegating to specialists"},
+    {"source": "browser_driven_platform_action", "target": "react_controlled_input_pitfall", "type": "constrains", "confidence": 0.95, "evidence": "'React controlled-input rule (hard-won 2026-07-16)'"},
+    {"source": "browser_driven_platform_action", "target": "mutation_network_verification", "type": "depends_on", "confidence": 0.95, "evidence": "'A UI that merely looks done is not evidence'"},
+    {"source": "mutation_network_verification", "target": "verify_before_trusting", "type": "specializes", "confidence": 0.9, "evidence": "confirm the POST returned 2xx rather than trusting the rendered result"},
+    {"source": "browser_driven_platform_action", "target": "student_facing_voice_gate", "type": "constrains", "confidence": 0.95, "evidence": "'Anything a student will see... is written in Joshua's voice'"},
+    {"source": "student_facing_voice_gate", "target": "draft_not_send", "type": "depends_on", "confidence": 0.9, "evidence": "'If content is open-ended... draft it and show him before sending'"},
+    {"source": "browser_driven_platform_action", "target": "action_logging_ledger", "type": "produces", "confidence": 0.95, "evidence": "'Log it: append to students/<name>/assignment-log.md'"},
+    {"source": "action_logging_ledger", "target": "guided_drill_assignment_workflow", "type": "constrains", "confidence": 0.85, "evidence": "'avoid assigning a drill already present in the student's assignment-log.md'"},
+    {"source": "browser_driven_platform_action", "target": "fail_closed_reporting", "type": "constrains", "confidence": 0.95, "evidence": "'Fail closed: if verification is ambiguous, say exactly what was and wasn't confirmed'"},
+    {"source": "guided_drill_assignment_workflow", "target": "secret_redaction", "type": "constrains", "confidence": 0.9, "evidence": "'Do not print auth tokens... Redact email recipients in final reports'"},
+    {"source": "guided_drill_assignment_workflow", "target": "gate_function_pattern", "type": "depends_on", "confidence": 0.85, "evidence": "'If there is any sign that the wrong student is selected, stop before clicking assign'"},
+    {"source": "guided_drill_assignment_workflow", "target": "tdd_cycle", "type": "depends_on", "confidence": 0.55, "evidence": "runs targeted npm test files as part of repo checks; INFERRED as a use of the project's test suite rather than the TDD skill itself"},
+    {"source": "gws_cli_dependency", "target": "shared_prereq_pointer", "type": "depends_on", "confidence": 0.95, "evidence": "every gws SKILL.md opens with the same gws-shared prerequisite line"},
+    {"source": "gws_cli_dependency", "target": "schema_introspection_before_call", "type": "depends_on", "confidence": 0.9, "evidence": "'Before calling any API method, inspect it'"},
+    {"source": "gws_cli_dependency", "target": "write_command_confirmation", "type": "constrains", "confidence": 0.9, "evidence": "'This is a **write** command — confirm with the user before executing'"},
+    {"source": "write_command_confirmation", "target": "read_only_analysis_mode", "type": "alternative_to", "confidence": 0.75, "evidence": "calendar agenda is marked 'Read-only — never modifies events' against the write-command caution"},
+    {"source": "gws_cli_dependency", "target": "draft_not_send", "type": "produces", "confidence": 0.85, "evidence": "'Use --draft to save the reply as a draft instead of sending it immediately'"},
+    {"source": "cross_service_workflow", "target": "gws_cli_dependency", "type": "depends_on", "confidence": 0.95, "evidence": "gws workflow +email-to-task composes Gmail and Tasks through the same CLI"},
+    {"source": "cross_service_workflow", "target": "write_command_confirmation", "type": "constrains", "confidence": 0.9, "evidence": "'Creates a new task — confirm with the user before executing'"},
+    {"source": "content_safety_filtering", "target": "gws_cli_dependency", "type": "depends_on", "confidence": 0.9, "evidence": "gws modelarmor +sanitize-prompt / +sanitize-response helper commands"},
+    {"source": "mcp_server_integration", "target": "gws_cli_dependency", "type": "alternative_to", "confidence": 0.6, "evidence": "both are routes to external services; the vault standardises on the gws CLI where MCP connectors also exist; INFERRED"},
+    {"source": "skill_authoring_reference", "target": "agent_authoring", "type": "overlaps_with", "confidence": 0.75, "evidence": "both govern how an autonomous unit is described, triggered, and scoped; skills vs subagents"},
+    {"source": "severity_ranked_findings_report", "target": "architecture_diagram_report", "type": "alternative_to", "confidence": 0.7, "evidence": "the architecture review deliberately replaces prose findings with diagrams: 'If the diagram needs a paragraph to be understood, redraw the diagram'"}
+  ]
+}

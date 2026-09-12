@@ -1,0 +1,23 @@
+---
+source_file: "raw/sources/claude-code-docs/en__agent-sdk__mcp.md"
+type: "document"
+community: "SDK Tools and Data Retention"
+tags:
+  - graphify/document
+  - graphify/EXTRACTED
+  - community/SDK_Tools_and_Data_Retention
+---
+
+# SDK MCP Server (In-Process)
+
+## Connections
+- [[Custom Tools]] - `implements` [EXTRACTED]
+- [[MCP Integration]] - `references` [EXTRACTED]
+- [[create_sdk_mcp_server()]] - `implements` [EXTRACTED]
+
+
+## Source
+- Full document: [[en__agent-sdk__mcp]]
+- Live docs: https://code.claude.com/docs/en/agent-sdk/mcp
+
+#graphify/document #graphify/EXTRACTED #community/SDK_Tools_and_Data_Retention

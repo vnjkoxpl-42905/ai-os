@@ -1,0 +1,129 @@
+---
+type: reference
+subject: Decisions log
+updated: 2026-07-20
+aliases: []
+---
+
+# Decisions log
+
+Append-only record of locked decisions — so nothing gets re-explained or re-litigated. Newest first. Format per entry: **Date · Decision · Reasoning · Context.** ("Save decisions, not conversations — every architectural call stored here is a paragraph you never have to type again.")
+
+---
+
+## 2026-07-20 — The second brain is a tiered distillation layer, not a RAG index
+- **Decision:** Full context is delivered by four tiers, not by embeddings or semantic search. Tier 1 is the lean always-loaded context (`CLAUDE.md`, `context/`, native memory), hand-curated. Tier 2 is synthesized and regenerable. Tier 3 is one dense prose distillate per session or artifact, roughly 7:1 compression, preserving voice and verbatim quotes. Tier 4 is immutable raw source, read only when Tier 3 is insufficient. No vector store will be built.
+- **Reasoning:** The corpus is lopsided, not large: 86% of 2.1M words are student transcripts, already partitioned per student by folder. Finding them was never the problem; reading 1.8M words is. Embeddings return chunks of transcript, which is the bulky raw material that is already too costly to use. A 500-word brief solves it outright, across ten student folders rather than ten thousand. `CLAUDE.md` already carried this instinct ("there is no semantic search and none is needed at this size") and it was correct.
+- **Context:** Grilled 2026-07-20, 13 questions, full record in `brainstorms/2026-07-20-second-brain-architecture.md`. Two live retrieval tests decided it: querying "comparative passages" against the batch-1 graph returned zero correct hits while plain `grep` on raw source returned five, and a representative graph note pulled in full had one edge and no content beyond a link home. Tier 3 already exists as `graph-imports/distillates/` (125 files, 269,935 words) and had never been wired into anything.
+
+## 2026-07-20 — Tier 2 is `_playbook.md` per topic, joining planned teaching to delivered teaching
+- **Decision:** The synthesis layer is aggregated on two axes: by LSAT concept and by curriculum arc (the order concepts are actually introduced, derived from what happened rather than what was planned). Not by teaching move, which is not separable from the concept it teaches. It lives at `corpus/Curriculum/<Topic>/_playbook.md`, one generated file per existing topic folder. `Notes/` is ingested source and stays untouched.
+- **Reasoning:** The concept axis already exists as folder structure (118 curriculum pages across Main Conclusion, Flaw, Necessary Assumption, Conditional Logic and the rest), so this enriches the tree already in use rather than growing a parallel truth. Curriculum arc is the half that would be missed: a lesson plan is sequencing and prerequisites, not only content. Keeping synthesis in a separate file from `Notes/` preserves the line between what Joshua authored and what was inferred, which for a system meant to speak in his voice is the worst possible contamination to allow.
+- **Context:** The join is the point. What he planned to teach is in `corpus/Curriculum/`; what he actually taught is in the distillates; nothing connected them. The gap between the two is also the critique signal, the computable form of "where did I miss something". De-personalizing by concept also resolves student staleness: a former student's session still teaches how Joshua teaches, and that does not expire.
+
+## 2026-07-20 — One unified graph, built after ingest, not four batches merged
+- **Decision:** The target is a single graph over the whole brain at document altitude, where every node carries real prose and is worth landing on standalone. The four existing vaults (`vault`, `vault-b2`, `vault-b3`, `claude-code-docs`, 5,406 notes) are staged batches that will not be merged into it. They stay on disk and stay visible in Obsidian, per Joshua's explicit call that he wants to see everything. Connection finding is a core organ, serving the third job of the brain (critique), alongside retrieval and synthesis.
+- **Reasoning:** Merging inherits the defect. The batches are stub quality, so assembling them yields one large stub graph, which is both unbrowsable for Joshua and token hostile for the model (pay to read a pointer, pay again for the real file). Sequencing matters more: a graph cannot create knowledge the vault does not hold, and the business half is barely written down (roughly 3,800 words against 2.1M of LSAT material). Building now yields a map with teaching richly connected to itself and the cross-domain edges most wanted having no endpoints. Joshua's objection that business and teaching are intertwined is the strongest argument for ingest-first: the connective tissue is the homework, correspondence and follow-ups, none of which is ingested.
+- **Context:** Corrected mid-interview by Joshua. The four vaults were never four intended products; they were batches deliberately held unmerged while he decided whether merging would flood the working vault. That caution was correct and the blocking question was the right one. Also established: `brainstorms/2026-07-19-takeout-deep-ingest-emulation.md` locked ten decisions that were never executed (no `students/former-students/`, no domain wiki pages), and three graph batches were built the following day instead. The inbox is tractable at 3,318 messages; most Takeout bulk is Drive.
+
+## 2026-07-20 — The booking pass is the only record of owed sessions
+- **Decision:** A booking pass is the sole record that sessions are owed to a student. **No pass means nothing is owed, by definition.** There is no reconciliation between Stripe package purchases and passes granted, and none will be built for now. A student with no pass is the normal case, not a gap: they schedule individual sessions through their Stripe-linked Cal.com link. Only a student owed sessions holds a pass. Revoked passes are dead links and are excluded everywhere; exhausted passes are live but owe nothing.
+- **Reasoning:** Matches the business as it actually runs — everything is paid upfront and `context/work.md` states plainly that no package-balance model exists. Building a Stripe reconciliation layer would invent a second source of truth for entitlement and a purchase-to-student matching rule that does not exist. **The accepted cost is a real silent failure: if someone pays for a package and the pass is never granted, nothing in the brain catches it** — the student has to say so. That trade was made knowingly, on the grounds that Joshua grants the pass at purchase time and the failure has not been observed.
+- **Context:** Grilled 2026-07-20. Corrects a modeling error shipped hours earlier, where the roster listed students without passes under "No booking pass — grant booking access before drafting anything," framing the normal case as a defect. Companion decisions the same day: contact truth is Gmail behaviour, never a pass's stored email (Ethan's pass carried an address with one message against it while he corresponded from another with 201); status stays authored but contradictions are surfaced (Yahunatan sat as `prospect` holding 9 owed sessions); one lifecycle path — prospect, active, lapsed — with no "not a student" category, since Yahunatan was a consultation on 07-07 and a paying student by 07-15; a taught session is what earns a `students/` folder; and arrangement is authored while the remaining count is regenerated from the backend, never typed by hand (the hand-written mirrors had drifted within a day). Vocabulary in `CONTEXT.md`.
+
+## 2026-07-17 — Adopt Nate's Four Cs / Three Ms layer (audit + level-up + connections + operator brain)
+- **Decision:** Graft the useful parts of the canonical AIS-OS starter kit (github.com/nateherkai/AIS-OS, MIT) onto the existing OS: the `/audit` skill (Four-Cs structural score /100), the `/level-up` skill (weekly 3Ms interview → ship one automation), `connections.md` (7-domain registry of live systems), and `references/3ms-framework.md` (the operator brain). Both skills adapted to this layout (credit the Level-2 wiki, students, corpus, native memory, gws connections) and saved-to-both (DB + activated, Claude + Codex).
+- **Reasoning:** The OS had the bones (Context + wiki) but no recurring compounding engine. `/audit` answers "where do we stand" systematically; `/level-up` is the disciplined Phase-4 build engine (EAD, autonomy-spectrum, Bike-Method guardrails baked in). Skipped `/onboard` (past it) and `EXPANSIONS.md`/intake (already have `aios/aios-intake.md` + router guardrails).
+- **Context:** Full read-through of the public AIS-OS repo 2026-07-17. Intern-Rule note: the kit warns against giving the AI passwords/bank info — Joshua deliberately overrode this (`.env` holds them), so security rests entirely on `.claude/settings.json` deny-lists.
+
+## 2026-07-17 — Slim `system/` to load-bearing plumbing only
+- **Decision:** Delete the 15 one-shot migration/rename scripts and their 7 orphaned tests from `system/scripts/`. Keep only the auto-run chain (bootstrap, scan-secrets + pre-commit hook, backup job) plus the manual validators (check-skills, gen-skill-index, cold-start, skill-smoke, run-tests).
+- **Reasoning:** The scripts were brain→ai-os rename archaeology, unreferenced by any live path; `system/` should hold only how the OS keeps itself alive.
+- **Context:** Verified none referenced by hooks/plists/settings/bootstrap before deleting. Follows the reform's "hand-edit, no generators" direction.
+
+## 2026-07-17 — Memory consolidates to native automemory
+- **Decision:** Use Claude Code's native automemory (`~/.claude/projects/-Users-joshuaf-ai-os/memory/` + `MEMORY.md` index) as the one memory system. Migrate the 28 memories from the custom `~/ai-os/memory/` store into it; retire the custom memory scripts and `.claude/rules/memory-os.md`. Codex reads the same files by path.
+- **Reasoning:** Two parallel memory systems = duplicated truth. Native automemory is zero-maintenance and is exactly the sources' model ("CLAUDE.md is the rules, memory is learned facts").
+- **Context:** Audited 2026-07-17: native store active and correctly formatted; custom store declared it "deprecated" — backwards. Reform plan Phase 2.6.
+
+## 2026-07-17 — `system/` simplifies to a hand-edited router
+- **Decision:** Retire the schema generator (`core.md` → CLAUDE.md/AGENTS.md hourly regeneration) and the churn launchd jobs (ingest 5-min, reindex 30-min, memory-distill, session-guard). Keep the secret-scan pre-commit hook and a working nightly backup. `CLAUDE.md` becomes hand-owned; on major edits, mirror to `AGENTS.md` by hand.
+- **Reasoning:** The generator structurally blocks "just tell Claude to edit the file," which Joshua explicitly wants. The sources' dual-runtime sync method is one sentence by hand, not a generator. Most jobs churned on an empty inbox; the backup job was already broken (pointed at a nonexistent script).
+- **Context:** Adversarial two-agent review (KEEP vs KILL) 2026-07-17 + the two Codex sources. Reform plan Phase 2.
+
+## 2026-07-17 — Level 1 foundation built by MOVE, not duplication
+- **Decision:** Create `context/` (about-me · work · priorities) and this `decisions/log.md` as the Level 1 layer. Content MOVES in; old locations become pointers. Stay at Level 2 overall — no vector search, no standing knowledge graph, no always-on sync (`graphify` remains on-demand).
+- **Reasoning:** One authoritative home per fact (duplication is a token-wasting error). Levels are per-folder; upgrade only on felt pain — and the sources' author himself operates at Level 2.
+- **Context:** The 5-Levels source + the 27-min EA source; reform plan Phase 1.
+
+## 2026-07-17 — Secrets = `.env` + `.gitignore`, nothing else
+- **Decision:** One `.env` at the root is the single store for API keys, passwords, and bank/account info. `.gitignore` keeps it out of Git. No `private/` tier, no macOS Keychain, no encrypted vault (the `records.sparsebundle` design is dead, not deferred). Government IDs stay outside the OS entirely. Never paste a credential into chat — add it to `.env` in the editor.
+- **Reasoning:** Matches the sources' actual model (keys in `.env`, ignored by git — that's the whole thing). The Tier A/B apparatus was invented locally, protected against threats Joshua doesn't prioritize, and complicated everything.
+- **Context:** Joshua's explicit call, overriding the earlier out-of-scope rule. `private/` + `system/migration/` (402MB) deleted the same day.
+
+## 2026-07-17 — Dual runtime: Claude Code + Codex, hand-synced
+- **Decision:** Both runtimes work this workspace. All knowledge (`context/`, `wiki/`, `students/`, `corpus/`, `projects/`, `decisions/`) is shared tool-agnostic markdown. Config is per-tool (`CLAUDE.md`+`.claude/` vs `AGENTS.md`+`.codex/`+`.agents/`). Sync on major router edits is by hand ("also make that change to AGENTS.md"). Never both agents editing the same file at once; hand off via session-handoff.
+- **Reasoning:** Tool-agnosticism ("you owe these companies zero loyalty") + adversarial cross-checking between models. The sources sync by hand; no machinery needed.
+- **Context:** The two Codex sources in SETUp; reform plan Phase 3.
+
+## 2026-07-20 — `pickup` is explicit-only
+- **Decision:** Run the `pickup` skill only when Joshua explicitly asks for it. Never trigger it automatically at the start of a session. `wrapup` remains the normal end-of-session persistence step.
+- **Reasoning:** Automatic pickup adds irrelevant orientation work when the request is already specific and self-contained.
+- **Context:** Joshua explicitly corrected the session-start behavior after an inbox and 7Sage review request.
+
+## 2026-07-20 | Consultation follow-ups use scheduled send with an intervention window
+- **Decision:** For a prospect who completed a consultation and has not paid, schedule the follow-up for 3:00 PM Toronto time on the next calendar day, including Saturdays, Sundays, and statutory holidays. It sends automatically unless Joshua stops or changes it before the scheduled time. This is a bounded exception to the general rule that AI-generated outbound messages remain drafts.
+- **Reasoning:** Joshua wants the follow-up to happen reliably without requiring an approval click, while retaining time to review, edit, or cancel it.
+- **Required guardrail:** Validate the recipient, prospect state, prices, and price-to-link mapping before scheduling and again before sending. Fail closed on placeholders, malformed links, editor links, login-token URLs, self-addressed tests, and contradictory tier mappings. This is required by failures found in Joshua's actual sent-mail archive.
+- **Context:** Resolved during a `grill-with-docs` review of the imported Email HQ consultation workflow.
+
+## 2026-07-20 | Variant C is the standard consultation follow-up template
+- **Decision:** When a completed consultation produced no special arrangement, use Variant C from `email system/Post-Consultation Follow-Up Template.md` as the canonical base. It presents the three standard tutoring offers. Bounded fields may supply one or two personalized lines, the 7Sage request when applicable, current prices, and verified action links.
+- **Reasoning:** Variant C is the stored template that matches the required three-tier offer, and Joshua's sent-mail archive supports its broader warm-recap and clear-actions structure.
+- **Context:** A special arrangement still overrides the standard price or link for the affected offer.
+
+## 2026-07-20 | Consultation intake belongs in LSAT U
+- **Decision:** Remove the application-form step from consultation follow-ups. Do not send Google Forms or `gformsapp.com` application links. Intake will happen inside LSAT U during onboarding.
+- **Reasoning:** One platform should own onboarding data. Keeping the old form step would duplicate intake and preserve links that have already failed in real correspondence.
+- **Context:** This changes Variant C's action sequence but preserves its warm recap and three-tier offer structure.
+
+## 2026-07-20 | Confirmed payment triggers onboarding
+- **Decision:** A prospect does not need to reply after purchasing. Confirmed payment triggers LSAT U onboarding automatically. Any consultation follow-up still waiting to send is cancelled if payment arrives first.
+- **Reasoning:** Stripe and Stripe-linked Cal.com are the operational authorities for standard payments, so asking the prospect to report a payment the system can observe adds friction and creates duplicate state.
+- **Context:** A special arrangement uses the payment authority stated for that arrangement.
+
+## 2026-07-20 | LSAT U account creation may precede payment
+- **Decision:** Consultation follow-ups include `https://lsatprep.study` near the end of the next steps. A prospect may create an account before payment, and the conditional 7Sage Analytics request appears beside that step. Confirmed payment is still required before Joshua grants student permissions or onboarding begins.
+- **Reasoning:** Account creation is safe before payment because Joshua controls LSAT U permissions on his side. Separating account creation from onboarding removes the earlier false equivalence between signing up and receiving student access.
+- **Context:** This corrects the earlier statement that LSAT U should appear only after payment; onboarding remains post-payment, but account creation does not.
+
+## 2026-07-20 | Special arrangements replace the standard offer
+- **Decision:** If the consultation established a verified person-specific arrangement, the follow-up presents only that arrangement. It does not show the standard three-tier menu beside it.
+- **Reasoning:** Mixing bespoke and standard terms can contradict what was agreed and confuse the prospect about which offer applies.
+- **Context:** The standard $45/$40/$35 three-tier offer is used only when no special arrangement exists.
+
+## 2026-07-20 | Standard offer is the default unless Joshua explicitly overrides it
+- **Decision:** Use the standard three-tier offer unless Joshua explicitly states a special arrangement. An explicit statement captured in the consultation notes or email thread counts; circumstances and historical links do not.
+- **Reasoning:** Different arrangements exist, but the automation must not invent discounts or bespoke terms from indirect clues.
+- **Context:** Ambiguous evidence resolves to the standard offer, not to an inferred exception.
+
+## 2026-07-20 | Consultation follow-ups do not claim a multi-day delay
+- **Decision:** Remove the breathing-room line from the standard consultation follow-up. Do not say Joshua waited a couple of days or gave the prospect time to think.
+- **Reasoning:** The workflow sends at 3:00 PM Toronto time on the next calendar day, including weekends and holidays. A claimed multi-day delay would often be false, and the sent-mail archive shows that the line was not consistently part of Joshua's actual voice.
+- **Context:** Resolved during the `grill-with-docs` review of the imported consultation templates and sent-mail evidence.
+
+## 2026-07-20 | Standard consultation emails show hourly rates only
+- **Decision:** Present the standard offers as $45/hour for a single session, $40/hour for the five-hour package, and $35/hour for the ten-hour package. Do not show package totals in the email.
+- **Reasoning:** Joshua wants the prospect-facing comparison centered on the hourly rate. The automation must still verify the total charged by each link before it schedules or sends the message.
+- **Context:** This is a presentation rule, not a change to the underlying $200 and $350 package totals.
+
+## 2026-07-20 | Consultation offer links use action-specific labels
+- **Decision:** Label the single-session action `Schedule here`. Label the five-hour and ten-hour package actions `Purchase here`.
+- **Reasoning:** Scheduling and purchasing are different actions. The labels should tell the prospect what each link does before they click it.
+- **Context:** This applies to the standard Variant C option list.
+
+## 2026-07-16 — carried forward from `aios/DECISIONS-POST-REVIEW.md` (pre-reform)
+- **D2 — Student data:** one tracked folder per student under `students/<name>/` holding everything (transcripts, correspondence, homework, notes, profile). Git history retains student data permanently — accepted; the scrub-before-any-remote checklist (`wiki/HANDLING.md`) is the compensating control.
+- **D3 — Consultation email sends:** fixed pre-approved templates may auto-send via deterministic scheduler; anything AI-generated stays a Gmail draft for approval.
+- **D4 — Operational state:** live systems are authority, the brain mirrors. Cal.com + Google Calendar = sessions; LSAT U Supabase = homework/dossier/publish; Stripe = payments; Gmail = correspondence. Backend wins on disagreement. The brain is primary for transcripts, teaching notes, judgments, prep briefs, curriculum, decisions.
+- **Architecture:** one vault = the `~/ai-os` root; three knowledge systems (`wiki/`, `corpus/`, `students/`); LSAT U code knowledge stays in the lsatu repo.

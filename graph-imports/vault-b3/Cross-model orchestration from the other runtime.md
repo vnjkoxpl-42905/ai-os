@@ -1,0 +1,24 @@
+---
+source_file: ""
+type: ""
+community: "Plan Review, MCP Building and Cross-Runtime Parity"
+tags:
+  - graphify/document
+  - graphify/0.9
+  - community/Plan_Review,_MCP_Building_and_Cross-Runtime_Parity
+---
+
+# Cross-model orchestration from the other runtime
+
+## Connections
+- [[Adversarial cross-model plan review]] - `` [0.9]
+- [[Cross-runtime skill parity baseline]] - `` [0.9]
+
+
+## Source
+Appears in 2 skill files — a concept this recurrent is load-bearing across the catalog.
+
+- [[skills/PARITY]]
+- [[skills/claude/codex-review/SKILL]]
+
+#graphify/document #graphify/0.9 #community/Plan_Review,_MCP_Building_and_Cross-Runtime_Parity

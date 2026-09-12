@@ -1,0 +1,739 @@
+---
+type: operating-layer
+subject: Log
+updated: 2026-09-11
+aliases: []
+---
+
+# Log
+
+Append-only record of wiki activity — ingests, queries, lint passes, structural changes. Each entry starts `## [YYYY-MM-DD] type | Title` so `grep "^## \[" log.md | tail -5` gives the last 5 events. The pre-rebuild log was removed from disk 2026-07-17 (recoverable from git history).
+
+## [2026-09-11] ship | RRC demo films Round 8 (text written in the air) live, audited, board published
+
+- Round 8 built in `projects/video` on new `src/pov/Air.tsx` (two-layer letters, pen light, focus pull, shimmer, seeded motes, sway); `Cards.tsx` / `RecallRoom.tsx` rewritten on it; `headState.ts` gains a deterministic natural-blink schedule. Decision after a side-by-side with Round 7: phrases write in under a second (`writeFor` 0.35 + 0.045/word, cap 0.9 s), not across the whole cue.
+- 4K masters rendered detached (`out/r8/render4k.cmd`; a Bash tool call dies at the 10-minute limit). Source pushed to private repo `vnjkoxpl-42905/lsatu-films` with filtered history; full history on local branch `local-full`.
+- App: worktree `projects/lsatu-wt-rrc-demos`, branch `feat/rrc-demos-round8`, PR #122 squash-merged as `6836bdb`, Lovable `deploy_project` -> `d0ecbeb4`. Live files verified byte for byte at 12:06 by full GET (the CDN sends no content-length on HEAD).
+- Second pass, same day: signed-in DOM check of the theatre in his Chrome (Round 8 src and poster, 3 chapters, 9 tab stops); decode check of all three files in the in-app browser (1920x1080, plays continuously); frames from the shipped bytes at 17.5 / 30 / 62 / 101.5 / 128 s.
+- Finding: Lovable static hosting returns 200 + full body for every Range request, no Accept-Ranges, no Cache-Control (mp4, jpg, JS bundle). Chrome `seekable [0,0]`: scrubber and arrow keys are no-ops in production; iPhone playback at risk per Apple's byte-range requirement. Logged as P0 in tasks, decision his.
+- `impeccable audit` of /activities/sections: 14/20 (a11y 3, perf 2, responsive 3, theming 3, anti-patterns 3). P1 em dashes in `SectionProgress.tsx:69/:49` and `SectionReportCard.tsx:1383`; P2 no main landmark, iPhone fullscreen no-op, phone-size film type; P3 duplicate load per chapter, hover lift, generic title, stale comment.
+- Progress board published: https://claude.ai/code/artifact/88636536-9e3c-40ac-bb02-1d99ec221dc4. Q3 720p copy sent in chat. Ship log appended to [[2026-09-11-rrc-video-round8-written-in-air]].
+- Not verified: the theatre in motion while signed in; his Chrome tab was hidden behind Pinterest and Chrome defers media in a never-shown tab. Did not bring his window forward.
+
+## [2026-09-09] ship | Testing Centre critique fixes, then the a11y batch (PR #104)
+
+- Six commits on main from the critique: `e1b2507` contrast, `aa6bb7e` Discard confirm, `dc25049` scroll, `776f69b` accommodated clock (real correctness bug: `timerModeForPace` mapped standard to 35 absolutely), `ece5480` and `fccaa82` accommodation spelling.
+- A11y batch in worktree `projects/lsatu-wt-a11y`: `cff2df4` section-door live regions plus timing-picker keyboard, `e2defeb` Begin button. PR #104 merged `f553f67`; confirmed in the production bundle.
+- New test file `SectionTimingPicker.test.tsx` (5 cases); two existing tests updated off the old "popup is a listbox" decision. 105 tests pass, typecheck clean.
+- Mistake carried forward: earlier in the day pushed with `HEAD:main` and carried another session's `b1a3f37`; Joshua ruled leave it. Push by explicit ref in this repo.
+- Browser pass of the a11y batch skipped: no session on the new origin, and moving the 8080 token through chat was not appropriate.
+
+## [2026-09-08] structural | Two inboxes collapsed to one — `Clippings/` retired into `raw/sources/clips/`
+
+`Clippings/` (Obsidian Web Clipper's default output folder) and `raw/inbox/` were both nominally intake queues. In practice `raw/inbox/` had never been used — one README, zero files — while `Clippings/` had accumulated 13 files over two months and was never drained, because `ingest` read clips in place and left them there. Result: three byte-identical copies of "I Turned Claude Into the Ultimate Second Brain" (`8QQ_INxAhRs`), and a repeat of the same duplicate problem already noted for the Codex clip on 2026-07-18.
+
+**Changes.** Archived the 10 processed clips to `raw/sources/clips/<slug>/`, each with `PROVENANCE.md` (source URL, author, published/clipped/archived dates, size, where the distilled output lives) and `SHA256SUMS`, matching the shape of `raw/sources/youtube/jdbOVepEtUE/`. All 10 hash-verified against their originals before anything was deleted. The one genuinely unprocessed clip (the second-brain video, clipped 2026-09-07) moved to `raw/inbox/` and is the only thing pending. `Clippings/` deleted, along with the 2 duplicates.
+
+**Link repair.** 91 `graph-imports/` markdown files pointed into `Clippings/`, and their `source_file:` frontmatter still carried the dead Mac path `/Users/joshuaf/ai-os/...`. Rewrote `source_file:` to the live archive path and converted `[[Clippings/X]]` wikilinks to bare `[[X]]` so Obsidian resolves them by basename and a future move cannot break them again. The `graphify-out/*.json` and `graph.html` run artifacts still contain the old paths and were deliberately left alone — they are records of what a past run saw, not live navigation.
+
+**Doctrine.** `ingest` gained step 8: after logging, move the clip out of `raw/inbox/` into `raw/sources/clips/` with provenance and hashes. An inbox that never empties is a pile; the archive step is what makes "empty inbox = nothing pending" a trustworthy reading. Intake path in the skill narrowed to `raw/inbox/ raw/sources/ ~/Downloads/ ~/Desktop/`. `AGENTS.md` and `CLAUDE.md` tables updated; `raw/inbox/README.md` now states the contract.
+
+**Also purged.** 2,143 `node_modules` files under `raw/data-about-me/Takeout/` — vendored dependency trees and npm caches dragged in by a Google Takeout of the old MacBook. `raw/` went from 3,254 files to 1,111. Regenerable by definition, zero evidentiary value, and they were polluting every `find` and `grep` across the vault. `projects/lsatu/node_modules` untouched.
+
+**Also fixed.** `AGENTS.md` pointed automemory at `~/.claude/projects/-Users-joshuaf-ai-os/memory/` — a dead Mac path. Corrected to `C--Users-Joshu-dev-ai-os`. Verified the live store exists and the old one does not.
+
+**Open.** The Web Clipper extension still writes to a `Clippings` folder; Joshua has to repoint it to `raw/inbox` in the extension's own settings (Templates -> note location). Until he does, new clips will recreate the folder.
+
+## [2026-07-20] ingest | Graphify → Obsidian bridge — new page + first graph import executed
+
+Ingested Chase AI "Graphify + Obsidian + Claude Code = CHEAT CODE" (`mWLDn49_8HA`, clipped 02:35 today; hash `26c1f8ac…`, not previously ingested). Wrote `references/graphify-obsidian-bridge.md`. Joshua asked to **execute** the technique, not just record it, and chose the Claude Code docs as the corpus and the quarantine-subfolder integration.
+
+Built: 170 doc pages from `code.claude.com/docs/llms.txt` (the video's `docs.claude.com` path is dead) → `raw/sources/claude-code-docs/` (immutable, 6.5M) → **963 concepts, 1,239 connections, 21 communities** → `graph-imports/claude-code-docs/` (984 generated notes + 170 `_sources/` copies + `INDEX.md`, 11M). Outputs in `graph-imports/graphify-out/` (`graph.json`, `graph.html`, `GRAPH_REPORT.md`). Every concept note wired to its source doc and live URL (963/963) — the step the video flags as the one people skip, without which the stubs are dead ends.
+
+**The finding worth keeping:** parallel extraction subagents only see their own chunk, so they only write intra-chunk edges. The naive merge came out as **27 disconnected components, largest 147 of 986 nodes** — a graph in 27 pieces answers no cross-document question, which is the whole reason to build one. Fixed by (1) collapsing duplicate-label nodes (IDs are `{stem}_{entity}`, so one concept in two files gets two IDs) → 18 components / 92%, then (2) a stitching agent over orphans-vs-hubs adding 72 bridge edges → **1 component, 100%**. `nx.connected_components` is now the ship gate; node/edge totals look identical connected or shattered. Also: 5 of 8 agents reported session-limit deaths but had already written their chunk files (check disk, not the return message); `to_json` refuses to shrink a graph and needs `force=True` after legitimate dedupe.
+
+Standing call unchanged: ai-os remains Level 2, graphify stays on-demand. `graph-imports/` is quarantined and deletable; **not committed** — 1,164 files / 13M pending Joshua's call on tracking vs `.gitignore`.
+
+## [2026-07-20] review | LSAT U booking system end-to-end code review
+
+Completed a read-only review of the booking frontend, public/authenticated Edge Functions, pass and credit RPCs, uploads, availability, Google Calendar helpers and reconciliation, migrations, and tests. Confirmed the `/book/c` root cause: slug generation permits one character while both public resolution layers require at least three. High-impact findings include dead manual-pass URLs, cancellation that refunds without cancelling Google, non-atomic credit refunds, stale-mirror double booking, missing redemption reconciliation for Google changes, non-idempotent upload retries, hidden upcoming Meet links after the final credit, no live cron for `gcal-reconcile`, paused-pass slug ambiguity, unbookable `:15`/`:45` availability, and expired-link 500s. Typecheck and all 10 booking-slot tests passed; the full suite retained only the documented unrelated failures. No code changed. Joshua approved adding the P1 repair and live-verification batch to `wiki/tasks.md` Next.
+
+## [2026-07-18] ingest | Claude Code + Codex on one project (2 clips) — new page, gap-check clean
+
+Ingested two clippings on integrating Codex alongside Claude Code: Chase AI "You're Using Claude Code Wrong (Add Codex)" (`VdxUKiF8CWI`) and Nate Herk "How to Use Your Claude Code Projects in Codex in 5 Mins" (`kB9iMD0EjT8`). Wrote `references/claude-plus-codex.md` (sibling of `obsidian-command-center`): the tandem workflow (plan↔critique + adversarial review across the two models) + the file-structure map (`CLAUDE.md`/`AGENTS.md`, `.claude`/`.codex`, skills as identical markdown, agents as TOML for Codex, 3-layer model). Full "apply" requested, but the gap-check came back clean — ai-os already runs this exact dual-runtime pattern (twin instruction files in parity, both config folders present, copy-activated skills, `session-handoff` active in both, `web-researcher.toml` global by design). No config changed; nothing to fix. Only genuinely new thing to adopt is the Codex-desktop tandem *habit* (in-app browser + annotate + plan/critique ping-pong on hard work), not a structural change. Index updated. Note: `Clippings/How to Use Your Claude Code Projects in Codex in 5 Mins 1.md` is a duplicate of the ingested file.
+
+## [2026-07-17] system | Reform Phases 1–3 — Level 1 foundation built; system/ simplified; routers hand-owned; native automemory
+
+Executed per `aios/WORKSPACE-REFORM-PLAN.md` on Joshua's approval. **Phase 1:** `context/{about-me,work,priorities}.md` created by MOVE (business page relocated from `wiki/entities/`, now a pointer stub); `decisions/log.md` seeded (reform decisions + carried D2/D3/D4); `archive/README.md` defines the standing retirement rule; routers point at all of it. **Phase 2:** schema generator retired — `CLAUDE.md`/`AGENTS.md` are hand-edited twins now (edit conversationally, mirror major changes by hand); churn jobs (ingest/reindex/memory-distill/memory-index/session-guard/lint plists+scripts) deleted — none were actually loaded; **backup fixed and live** (`jobs/backup.sh`: git bundle + `.env` → `~/ai-os-backups`, 14-day retention; nightly plist installed — the first working backup this repo has had); **memory consolidated to native automemory** (27 memories migrated to `~/.claude/projects/-Users-joshuaf-ai-os/memory/`, custom store/scripts/hook/rule/skills retired). **Phase 3:** parity verified — 9 business skills identical across runtimes, Claude-only extras (wiki/Obsidian, graphify, youtube) remain deliberate; `check-skills` PASS (167 claude / 146 codex) after fixing 4 pre-existing vendor name mismatches. Commits: `11ae157`, `ebfaec6`, `a908d35`, `c3bd811`, + this close-out. Remaining: Phase 4 EA build-out (Web Clipper → raw/, post-session dispatch skill, inbox triage).
+
+## [2026-07-17] system | Reform Phase 0 — private/+migration apparatus retired, secrets = .env only, checkpoint committed
+
+Per `aios/WORKSPACE-REFORM-PLAN.md` (grounded in the 6 SETUp NotebookLM sources). Deleted: `private/` tier (empty sparsebundle vault design — dead, not deferred), `system/migration/` (402MB one-time migration machinery), empty project stubs (briefbar/cluely/hypertrophy), `work context/` zips, and `archive/` contents (user call; recoverable at `75799f8`). Secret model simplified to `.env` + `.gitignore` only — Tier A/B classification, Keychain, and secret-exceptions retired from `system/schema/core.md`; `wiki/HANDLING.md` rewritten (scrub-before-remote checklist kept); `.env` is the single store for keys and passwords (Joshua's decision, overriding the earlier out-of-scope rule). Jobs (`memory-distill`, `ingest`) and tests repointed off retired paths; `verify.sh` + migration scripts retired; `karpathywiki-review.md` → `system/reviews/`. Checkpoint commits `11ae157` + gitlink fix bring git in sync with disk (0 dirty paths, 0 gitlinks). Next: Phase 1 — build `context/` + `decisions/` (the Level 1 foundation), then Phase 2 — simplify `system/` to a hand-edited router per the locked decision.
+
+## [2026-07-16] system | Root renamed brain → ai-os; Executive Assistant command center created
+
+Per Joshua (modeled on the "Turn Claude Code Into Your Executive Assistant" framework in NotebookLM): the OS root moved from `~/brain` to `~/ai-os`, and a thin command-center folder `~/Executive Assistant/` was created with its own `CLAUDE.md` router (routes into `~/ai-os`, whose CLAUDE.md remains the operational authority) plus `.claude/settings.json`. Rename executed as one pass: all absolute symlinks retargeted (repo `.claude/`, `~/.claude/skills`, `~/.agents/skills`), path references rewritten in repo text files (archive/ and raw/ left untouched as immutable), global `~/.claude/CLAUDE.md` + settings hook path updated, `system/schema/core.md` + adapters updated so regeneration keeps the new path, Obsidian vault registry repointed, and Claude Code per-project data copied to the new `-Users-joshuaf-ai-os` slug. `check-skills` passes post-rename.
+
+## [2026-07-16] work | D1 #5 — post-session pipeline hardened; one Lovable deploy remains
+
+Picked up D1 #5 (finish the LSAT U post-session pipeline). Verified rather than assumed the two blocking claims: the prod LSATU Supabase (`atrcqxpmqrynmtvvyjju`) is genuinely NOT reachable via the Supabase MCP (it lists only an unrelated inactive project of the same name), so deploys really do need Joshua/Lovable; and the "code complete / verified" checkboxes were real for typecheck but hid two gaps.
+
+Found and fixed a **deploy-breaking staleness**: `synthesize-session-bundle` was rewired 2026-07-09 (`a41e4917`) off the direct Lovable gateway onto the internal `gemini-proxy`, which since the Phase 0 hardening 401s any caller whose `x-internal-key` does not match `EDGE_INTERNAL_KEY`. The consolidated deploy prompt never listed that secret — a deploy from it would have left every "Build bundle" failing with a silent 401 and nothing else reporting a problem. Prompt now requires it on both functions. Also fixed a dead pointer sending Joshua to `~/Downloads/PHASE-1B-LOVABLE-PROMPT.md`, which does not exist.
+
+Found and fixed a **real defect**: an approved bundle part whose body was edited blank in review rendered to `''` and was published anyway — the student got a real notification pointing at an empty recap. Publish now fails that part closed, names it, and leaves it unposted for retry. Proved the regression test works by removing the guard and watching it fail.
+
+Added 29 tests to pure logic that had none, the important one locking the leak invariant: publishability is decided by the hardcoded `STUDENT_PART_KEYS` list, never the model-supplied `audience` field, so a `private_note` the model mislabels `audience: 'student'` still cannot reach a student. Already true in the code; now it fails loudly if changed. Confirmed the 3 pre-existing suite failures (ConclusionTypeLab, page-six-switchboard, Practice) reproduce on a clean baseline without these changes — not mine, and they fail standalone too, so they are genuine (not the documented suite-load flake) and deserve their own pass.
+
+Also repointed the lsatu adapters + HANDOFF at the rebuilt vault (docs only, no regeneration), distinguishing live pages from the archived read-only product knowledge rather than pointing every old path into the archive. Pushed `c91305d0` via the safe-push typecheck gate.
+
+## [2026-07-16] rebuild | Vault rebuilt on the Karpathy LLM-wiki pattern
+
+D1 Step 4 executed on Joshua's "go". Prior wiki (255 pages) moved intact to `archive/wiki-pre-rebuild-2026-07-16/` — never deleted, re-ingestable via `raw/`. Carried verbatim: [[teaching-voice]], [[HANDLING]], [[protected-records]], and the [[tasks]] ledger content. `students/` promoted to a root knowledge system with the D4 primary/mirror boundary marked; `corpus/` seeded for LSAT teaching knowledge. Schema (conventions, ops, folder rules) lives in `system/schema/core.md` and is injected into CLAUDE.md/AGENTS.md by the generator.
+
+## [2026-07-16] ingest | Aspiring Attorneys — the tutoring business (from onboarding intake)
+
+First ingest of the new wiki. Source: `aios/aios-intake.md` (Q1–Q7, answered and granted 2026-07-16). Created [[entities/aspiring-attorneys]]; updated [[index]].
+
+## [2026-07-16] decision | D1 #5/#6 gating adjudicated; step-4/5 export filed
+
+Continuation session. Filed the step-4/5 chat export (`d7b7682`). Joshua adjudicated the three open handoff items: (1) the Lovable deploy pass remains pending and is only executable through Lovable itself — no agent path to the Cloud backend; he also flagged that Lovable AI may no longer be coupled to Supabase, while `gemini-proxy` on `main` still targets `ai.gateway.lovable.dev`, so the gateway/`LOVABLE_API_KEY` assumption in the deploy prompt must be re-verified during the pass. (2) `ConclusionTypeLab` is already handled — no investigation; `page-six-switchboard` and `Practice` stay deferred as genuine failures. (3) D1 #6 is explicitly gated on the live E2E confirmation of the deployed pipeline. `hot.md` and `tasks.md` updated to match.
+
+## [2026-07-16] decision | Pipeline deployed; workflow pivots to Claude-first
+
+The Lovable deploy pass ran and reported fully green: `ingest-session-note` redeployed, `scan-session-notes` (+ shared core) and `synthesize-session-bundle` deployed, migration already present, all secrets set — `EDGE_INTERNAL_KEY` turns out to be project-scoped in Lovable Cloud, so the same-value requirement across `gemini-proxy` and `synthesize-session-bundle` is structurally guaranteed and the silent-401 trap documented on 2026-07-16 cannot occur. Lovable also confirmed `ai.gateway.lovable.dev/v1` remains the supported AI upstream (Joshua's decoupling concern resolved: no rewiring needed). Frontend Publish verified live in the browser: `/teacher/session-ingest` renders the Phase 1A form and Phase 1B resolution queue under the admin session.
+
+Phase 1A runbook E2E was started in Joshua's Chrome with the Lydia Jun 19 test doc but **aborted at his direction mid-run** (one test-ingest click may or may not have landed; unconfirmed, admin-side only, idempotent). His decision: **the app ingest UI is not his workflow — Claude is the workplace.** Ingestion and post-session actions run through Claude directly; the deployed pipeline stays as infrastructure. A skill converting sessions into guided-drill/bootcamp assignments is a later idea, explicitly not a priority. The "D1 #6 gated on live E2E" adjudication from earlier today predates this pivot and needs re-adjudication.
+
+## [2026-07-16] build | Claude-as-workplace: lsat-u-platform-actions skill
+
+Executing the Claude-first pivot: created the `lsat-u-platform-actions` skill (Claude + Codex DB copies, activated in the brain root for both runtimes, indexed). One entry point for every platform action from the workspace — assign guided drills / homework / activities, post classroom items and notes, message students, ingest session notes — driving lsatprep.study through Joshua's logged-in Chrome admin session, with the hard-won React controlled-input rule (real keystrokes, confirm the button enabled, confirm the mutation fired on the network) baked in as a hard gate, fail-closed verification, teaching-voice routing for student-visible text, and logging to `students/<name>/assignment-log.md`. Also repaired the stale `guided-drill-assignment` skill (pre-rebuild paths in both claude/ and codex/ copies) and restored `guided-drill-verification-log.md` from the archive into the live wiki as an operational log. `check-skills.sh` PASS (183/147). The drill-to-assignment conversion idea stays a later, non-priority extension.
+
+## [2026-07-16] query | Herk 5-levels assessment against the rebuilt brain
+
+Read both designated NotebookLM sources (6-hour course + "Every Level of a Claude Second Brain", notebook "SETUp") via the NotebookLM MCP and mapped them against the brain: full write-up at `aios/HERK-LEVELS-ASSESSMENT.md`. Verdict: the 2026-07-16 rebuild already implements Herk's model at his own operating level (Level 2, Karpathy LLM-wiki + auto-memory), exceeds Level 1, holds Level 4/5 tooling on demand (graphify, 8 launchd jobs), and deliberately skips Level 3 semantic search per both his lowest-level-that-fits rule and the router's own policy. Remaining gaps are exactly the deferred D1 step-6 cadence items: daily briefing, general inbox triage, (minor) brand assets folder.
+
+## [2026-07-16] decision | Router made explicitly the Herk-2 EA workspace; gws-CLI-only rule locked
+
+Per Joshua: (1) the router's identity section now states outright that ~/ai-os is his executive-assistant workspace ("Herk 2"), that CLAUDE.md is the router to be followed rather than searching blind, and names the EA's standing duties (student ops, correspondence drafts, platform actions, session-note ingestion, ledger upkeep). (2) A hard tool rule added to core.md and saved as a global memory: all Google access goes through the gws CLI, never the connector MCPs — faster, batchable, exports Docs to markdown. Adapters regenerated via schema-sync (PASS). Obsidian registry inspected: ~/ai-os has its .obsidian config but the app only has the old Documents vault registered — Joshua opens ~/ai-os once via "Open folder as vault" and it sticks.
+
+## [2026-07-16] ingest | Herk EA course Phase 1 guide → ea-build-plan page
+
+Joshua exported the Phase 1 guide ("Giving Your Executive Assistant a Home") from the SETUp NotebookLM notebook; filed immutable at `raw/sources/personal/herk-ea-course/2026-07-16_phase-1-onboarding-guide.md` (sha256 a96a72be…). Created `wiki/ea-build-plan.md`: phase-by-phase build plan, one phase at a time. Phase 1 mapped step-by-step against the brain — 18 of 19 steps already done or exceeded (router, git, skills DB, memory/context, decision logs, projects, archive, interview content all covered); sole structural gap is a `templates/` folder, deferred until a first real template exists. **Phase 1 cleared.** Next: re-auth NotebookLM CLI (`notebooklm login` — auth expired mid-session) and export the Phase 2 guide before opening Phase 2.
+
+## [2026-07-16] decision | Executive assistant named "Jay 2"
+
+Joshua renamed the EA from the working name "Herk 2" to **"Jay 2"**. Updated in `system/schema/core.md` (adapters regenerated via schema-sync, PASS), `Executive Assistant/CLAUDE.md`, and `wiki/ea-build-plan.md`; saved as global memory `assistant-name-jay-2`. Historical docs and immutable sources keep the old name.
+
+## [2026-07-16] system | CLAUDE 2.md harvested and deleted
+
+Merged the three wanted parts of the stray root `CLAUDE 2.md` (ex-Executive Assistant command center) into `system/schema/core.md`'s router block: (1) "launch here / command center" framing in Identity, (2) a routing-map row for other projects (`projects/<name>/`), (3) a "root stays thin" filing rule in Guardrails. Regenerated `CLAUDE.md`/`AGENTS.md` via `schema-sync.sh` (PASS), then deleted `CLAUDE 2.md`. One router again; the EA-setup session's step 1 is closed.
+
+## [2026-07-16] plan | EA build plan expanded to Phases 2-6
+
+Pulled the full Phase 2-6 arc from the SETUp notebook (saved immutable at `raw/sources/personal/herk-ea-course/2026-07-16_phases-2-5-outline.md`) and mapped every phase against the brain in `wiki/ea-build-plan.md` (done/exceeded/gap/skip). Verdicts: Phase 2 mostly exceeded (gap: permission-layer audit), Phase 3 infrastructure exceeded but missing the two skills the Gmail audit ranks highest (post-session dispatch, daily inbox triage), Phase 4 pattern-in-use without named specialists, Phase 5 (cadence/automation) is the real gap — nothing scheduled runs, Phase 6 deliberately skipped. Build order recorded: interview -> dispatch skill -> triage skill -> cadence. Also verified the two `work context/` zips are the same corpora analyzed 2026-07-16 (repo 3,003 files; mbox 3,318 messages).
+
+## [2026-07-16] reorg | Root cleanup executed (Part A)
+
+Deleted empty scaffolds (`04_Tutor_Operations_Admin/`, `06_Source_Material_Reference/` — all subfolders verified 0 files — plus `future-components/`, orphan `node_modules/`). Archived root doc sprawl to `archive/root-docs/` (PLAN.md → PLAN-config-consolidation-2026-07-15.md, PROJECT_AUDIT.md → PROJECT_AUDIT-2026-07-16.md). Sorted `output/`: live LSAT U artifacts → `projects/lsatu/docs/from-output/` (Activity Centre handoff, Teacher Workspace IA, VoiceCoach mic check, lsat-lab set docs); stale → `archive/output-lsat-u-2026-07/` (vault audit, insights, obsidian-setup, rp-hypertrophy research, plans, graphify-out); `output/` removed. Folded `projects/email-hq/` into the catalog: its two specs now live as SPEC-*.md inside `skills/claude/consultation-followup-drafts/`, the PDF at `raw/sources/personal/email-templates/`; folder (only re-activation symlinks remained) removed. Routing map: Orientation now points to `HOW-THIS-OS-WORKS.md` (root README was retired earlier); other-projects row updated. schema-sync PASS; check-skills PASS. Root is now 5 files + 14 directories. Also cloned Nate Herk's AIS-OS starter repo (with its official `onboard` skill) to `raw/sources/personal/herk-ea-course/AIS-OS/` for the onboarding.
+
+## [2026-07-17] ingest | LR curriculum recovered into corpus/ (118 pages)
+
+Joshua reported his LR/RC curriculum notes missing from `corpus/`. Investigation: **nothing was ever deleted** — `git log --diff-filter=D` shows zero deletions in `corpus/` across its entire history (created at 75799f8 with 7 files). The cause: the 2026-07-16 rebuild scaffolded `corpus/Curriculum/`'s 94 folders by mirroring the structure of `raw/sources/lsat-curriculum/_stragglers/local-ai-gather/Claude/02_PROJECTS/Curriculum/Curriculum/` but never copied that source's 118 markdown files. Empty shelves, books left behind.
+
+Fix: rsync'd the 118 `.md` files into the matching `corpus/Curriculum/` topics (additive; `raw/` untouched). Corpus went 7 -> 121 files. Real teaching content confirmed: `notes_main_conclusion.md`, `_megadoc_lecture_main_conclusion.md`, `notes_strengthen.md`, Flaw bootcamp PRODUCT docs, plus a 33-page `_question-feature-index` over PTs 101-159. `corpus/index.md` rewritten to catalog it.
+
+Side findings: (1) ~492 of the 1,362 files in `raw/sources/lsat-curriculum/` are 184-byte `.gdoc` Drive pointers, and many IDs are stale — a past migration converted the docs to PDFs/`_scan_*.md` under new Drive IDs, orphaning the local stubs; some Drive `Notes/` folders are now empty and copies sit in Drive trash. (2) Topics still unfilled (Weaken, Paradox, Quantifiers, Match Family, Must Be False, Agree Disagree, Bootcamp, RC) need a Drive-side recovery pass, not a local copy. (3) Pilot: 2 Strengthen homework docs exported live from Drive via `gws drive files export --mimeType text/markdown` -> `corpus/Curriculum/LR/`, proving the export path works.
+
+Standing rule added this session (memory `never-delete-or-move-without-asking`): never delete or move anything without asking Joshua first and getting an explicit yes; creating and copying are fine.
+
+## [2026-07-17] system | private/ trimmed to its job; .env moved to the root
+
+Deleted `private/_attic-migration/` (173 MB, 347 files) on Joshua's explicit instruction. Safe because `system/migration/FULL-ATTIC-ANALYSIS-2026-07-15.md` had already adjudicated it: AG1 "fully captured, nothing to keep" (4,474 repeat files), AG2 "18 GB, but only 68 files worth keeping" — and those 68 were already migrated. The residue was an app installer (127 MB `Lovable-1-2-1-mac-x64.dmg` = 73% of `private/`), Obsidian plugin binaries, a Playwright `.crx`, and stale tool configs. The audit itself is preserved in `system/migration/`. `private/` went 174 MB -> 176 KB.
+
+Moved `private/.env` -> `~/ai-os/.env` per Joshua's instruction; this matches the EA course's prescribed layout (root `.env` + `.gitignore` blocking it). Verified safe before moving: `.gitignore` line 13 blocks `.env` at any level (`git check-ignore -v .env` confirms), and nothing in the OS referenced the `private/.env` path, so no script broke. Confirmed post-move that git cannot see the file at all. Updated `system/schema/core.md` (both the tools section and the Tier-A classification) to name the root `.env` as the API-key home while keeping bank/ID/password material in the Keychain or `records.sparsebundle`; rewrote the `.env`'s own header comments. schema-sync PASS.
+
+`private/` now holds only `external-edits/` (148 KB, live snapshot/rollback tracking) plus eight empty-but-router-referenced scaffolds (`backups/`, `config/`, `memory/`, `memory-queue/`, `mount/`, `migration/`, `records/`, `records.sparsebundle/`). Open flag: `records.sparsebundle/` is empty despite the schema naming it the encrypted Tier-A store — never set up or not mounted; needs Joshua's call.
+
+## [2026-07-17] decision | No credential vault: passwords live outside the OS (Herk's model)
+
+Joshua: the encrypted store isn't wanted — his passwords live outside this OS. Checked what the course actually prescribes before changing anything, and it vindicates him: **Nate has no password store at all.** His model is (a) API keys in a root `.env`, git-ignored — *"Keeping keys in `.env` protects your credentials if you push to a public repository"*; (b) OAuth client secrets in `~/.config/gws/`, outside the repo; (c) cloud/remote secrets as Modal encrypted Secrets; (d) **keys, not prompts, as the permission layer** — *"Never rely purely on prompt instructions… to keep your database safe"* — scoped to specific endpoints, read-only, credit-capped. Account passwords never enter his system because of the Intern Rule (own identity, read-only default, never impersonates): the agent authenticates with its own scoped credentials and never logs in as him, so there is nothing to store. `records.sparsebundle` was this brain's invention, never Herk's.
+
+Root cause of the empty bundle, found in `wiki/HANDLING.md` itself: it was created to hold two images (`bankcard.jpeg`, `id .jpeg`) that *"did not materialize after three bounded attempts."* It never held anything. Verified 2026-07-17 that **all five** Tier-A inventory pointers are dead: `manifest-sensitive.tsv` and `unrecoverable.tsv` missing; `records/`, `config/`, `records.sparsebundle/` all zero real files.
+
+Changes: `system/schema/core.md` rewritten — root `.env` for API keys, OAuth in `~/.config/gws/`, passwords/bank/ID **out of scope entirely** ("never ask him to paste one, never store one"), keys-not-prompts named as the permission layer, sparsebundle references removed (adapters regenerated, PASS). `wiki/HANDLING.md` rewritten to match: approved stores updated, the dead inventory-pointer list replaced with an explicit "none — this is the intended state, not drift to repair." The empty `private/` scaffolds were left in place, undeleted, pending Joshua's word.
+
+## [2026-07-17] decision | Backups removed at Joshua's instruction (they were already dead)
+
+Joshua: "remove the backups, I don't want backups." Done — 5.0 GB deleted, the launchd job `com.joshua.ai-os.backup` unloaded and its plist retired, and `backup.sh` / `verify-sparsebundle.sh` / `test-backup-force.sh` moved to `archive/retired-automation/` with a README explaining what existed and why it went.
+
+**What it was** (answering "why do I have backups?"): a genuinely well-built hardlinked snapshot system — daily/monthly rotation, per-snapshot `checksums.sha256`, automatic retirement of incomplete runs, and a restore test on the 1st of each month. 03:00 daily via launchd; used an external `/Volumes/Brain Backup` drive when mounted (not currently attached), else `$HOME/Backups/brain`.
+
+**It had already been silently dead for ~30 hours.** `backup.sh:33` ran `verify-sparsebundle.sh` under `set -e`; that script hard-exits if the bundle is missing or invalid. `private/records.sparsebundle/` was an empty husk (a lone empty `bands/` dir, no `Info.plist`), so `hdiutil` said *"image not recognized"*, verify exited 1, and every run aborted before snapshotting. Last success `2026-07-16T13:29:17Z`; no failure was ever logged. The whole backup system was gated on the empty credential vault retired earlier today — deleting that folder would have silently killed backups, which is precisely why it was left alone pending Joshua's word.
+
+**Security upside:** the snapshots held **18 plaintext copies of `.env`**, frozen at the old world-readable 644 mode. All destroyed with the folder. The live `.env` was separately hardened to 600 this session.
+
+**Mystery from earlier resolved — nothing was deleted by an agent.** `brainstorms/` is intact; it was *renamed* on disk to `brainstorms 12.01.00 AM`, where the separator before "AM" is U+202F (narrow no-break space) — the macOS Finder "Keep Both" timestamp-rename artifact, i.e. a manual Finder operation, not automation. All files survive inside, including this session's interview capture. Verified `ingest.sh` (which runs every 5 min) only touches `raw/inbox/` and cannot rename root folders. Still genuinely absent and recoverable from git: `commands/` (39 files) and `HOW-THIS-OS-WORKS.md`.
+
+## [2026-07-17] decision | Commands abolished — everything is a skill
+
+Joshua: "I don't want a commands folder, we should just have skills. Put the memory command as skills." Done. The `commands/` layer is gone from the model entirely; `skills/` and `agents/` are the only catalogs.
+
+Migrated the three memory commands into real skills at `skills/claude/{memory-remember,memory-recall,memory-consolidate}/SKILL.md` (content recovered from git, `$ARGUMENTS` rewritten for skill invocation, `name`/`description` frontmatter added with trigger phrasing) and activated them by symlink into `.claude/skills/`. All three resolve and are registered.
+
+**They had been broken longer than anyone knew.** The project-level symlinks in `.claude/commands/` pointed into the deleted `commands/`, but the *global* ones in `~/.claude/commands/` pointed at `/Users/joshuaf/brain/commands/claude/…` — the **pre-rename path**. `~/brain` has not existed since the brain→ai-os rename, so `/remember`, `/recall`, and `/memory-consolidate` were dead well before this session. `check-skills.sh` never caught it because it validates skills only, not commands — one more reason the layer was not worth keeping.
+
+Cleanup: removed `.claude/commands/` and the dead global symlinks; untracked `commands/` from git; deleted the `commands/` row from the `core.md` layer map plus the stale `output/` row (that folder was retired in this session's reorg); routing map now reads "Skill / agent catalog"; the skills section states **"There are no slash commands — everything is a skill (decided 2026-07-17: one kind, one home, one activation path)"**; the Claude adapter tail updated to match. schema-sync PASS, check-skills PASS (claude=188 codex=147, activations resolve, INDEX complete).
+
+Also deleted `download.bin` at the root — a stray artifact from this session's `gws drive files export` test (the CLI writes binary responses there absent `-o`); its content was already ingested to `corpus/Curriculum/Strengthen/`. `brainstorms/` confirmed restored to its correct name by Joshua.
+
+## [2026-07-17] audit | Skill overlap audit — the interference is external, not in the DB
+
+Full pass over all 148 skills (191 folders; 43 are `_snapshots`/`_project-forks`). Verdict: **the DB is healthy** — 21 active, 127 inert costing nothing; in-DB duplicates (grill ×5, TDD ×2, debug ×2, review ×3, skill-writing ×3, design ×5, plans ×3) are tidiness, not function, since inert skills cannot fire.
+
+**The real finding: the Claude app auto-loads 30 skills** from `~/Library/Application Support/Claude/local-agent-mode-sessions/skills-plugin/<session>/skills/` — outside the DB and outside Joshua's control. Four collide by **exact name**: `graphify` (vs his ACTIVE one), `chat-export`, `find-skills`, `grill-me` (vs his global always-ons). **Demonstrated, not theoretical** — when grill-me was invoked this session the app's copy ran, not his. Six more duplicate DB entries (`frontend-design`, `skill-creator`, `webapp-testing`, `notebooklm`, `gws-gmail-read`, `gws-gmail-triage`). Separately, app skills shadow his LSAT work by trigger without name collision — notably `lsat-u-voice`, which could bypass the router's requirement that student-facing drafts route through `wiki/teaching-voice.md`.
+
+Dead weight recorded: `telegram-configure` and `troubleshooting` (no SKILL.md, warn every index run); `higgsfield-*` ×5; `migrate-to-shoehorn`; the vendor bootstrappers (`setup-matt-pocock-skills`, `ask-matt`, `using-superpowers`).
+
+Constraint captured for Joshua's stated goal of "all skills in one folder as md files": **110 of 148 are a single `SKILL.md` and flatten cleanly; 38 carry supporting files that flattening would destroy** (`skill-creator` has 18 incl. Python scripts; `tdd` has 3 reference docs; `webapp-testing` ships runnable examples). Decision deferred to Joshua. **Audit only — nothing deleted or moved**, per his instruction and the standing rule.
+
+Session exported to `raw/inbox/chat-exports/2026-07-17_folder-cleanup-corpus-recovery-skill-audit.md`.
+
+## [2026-07-18] analysis | 5-levels-of-second-brain comparison vs ai-os
+Pulled two NotebookLM `SETUp` sources ("Every Level of a Claude Second Brain Explained", Karpathy "Just 10x'd Claude Code") via `nlm source content` and compared the 5-level model against the live filesystem. Finding: **ai-os is a complete Level 2 LLM-wiki brain** — Level 1 (router + context/projects/decisions) and Level 2 (index/log/hot-cache/backlinks/automemory + corpus as a 2nd wiki) both fully built, Level 1 exceeding the video's reference. Levels 3 (semantic/vector), 4 (knowledge graph — `graphify` is on-demand only), 5 (always-on) intentionally not run — matching where the source's own author parks his EA brain. ai-os's Context/Connections split (`connections.md` + Four Cs in `references/3ms-framework.md`) is more formalized than the source. Recommendation: do not climb levels without pain; watch `corpus/`/transcripts for future L3. Wrote `references/second-brain-levels.md`. Analysis only — no structural change.
+
+## [2026-07-18] ingest | Voice profile enriched from full authored-email corpus
+Extracted 944 messages Joshua authored (from `contact@aspiringattorneys.com` + his sent replies) from the Gmail takeout mbox (`raw/sources/private/takeout/`, git-ignored), quoted-reply and signature-stripped. Delegated the read to a subagent (raw 510KB never entered main context); it tested every existing claim in `wiki/teaching-voice.md` against the real corpus and surfaced what the small original sample missed. Updated the doc with: real openings ("Hi" default, "Hey" for established students) and sign-offs ("Best,"/"Best regards,"/"Warmly,", always signed "Joshua"); his signature phrases ("let me know," "no worries at all," "more than happy to"); the **apology/accountability move** (own it first line + brief honest reason → pivot to fix) as a named pattern; corrected the exclamation-point claim ("about one, max" was wrong — he uses them genuinely and freely); softened the metaphor claim (real reach-image is "LSAT journey," not runway/climb); and added six verbatim-grounded situational micro-templates (reschedule, no-show, consultation reminder/follow-up, inbound prospect, student under stress). **Em-dash rule left fully intact** per Joshua — the corpus showed 41 historical uses but he chose to keep "no em-dashes, ever" as the standard with no note of past use. Brand register flagged as unverified by this corpus (no marketing copy in email).
+
+## [2026-07-18] system | chat-export output moved out of raw/ → handoffs/
+Joshua: chat exports/handoffs are operational artifacts, not research to ingest, so they never belonged in the knowledge inbox. Created root `handoffs/`; repointed `chat-export` (DB claude+codex + re-synced global ~/.claude & ~/.agents copies) and `resume` from `raw/inbox/chat-exports/` → `handoffs/`; updated `skills/INDEX.md`. Deleted the 9 old transcripts at his request and removed the now-empty `raw/inbox/chat-exports/`. **Left untouched:** LSAT U's own `chat-export` copies (`projects/lsatu/.claude|.agents/skills/`) — inviolate project, still write to their own paths; flag for later if he wants them aligned. `raw/inbox/` now holds only its README.
+
+## [2026-07-18] ingest | Claude Code + Obsidian command-center video (Chase AI)
+Ingested `Clippings/The Claude Code + Obsidian Setup That Now Runs My Life.md` (YouTube `glAoiBWVkmU`) — a method/architecture source about the OS itself, sibling to `references/second-brain-levels.md`. Distilled the three moving parts (custom observability dashboard plugin, one-click headless `claude -p` skill launchers, free Obsidian plugins: terminal/hot-reload/iconize/web-viewer), the Karpathy raw→wiki→output + index-at-each-level structure, and the "thin CLAUDE.md = structure + navigation + Obsidian conventions" rule. Wrote `references/obsidian-command-center.md` with a side-by-side vs the live ai-os setup: **we already match or beat everything except the visual command-center surface** — no rendered dashboard plugin, no dashboard buttons, skills fire by `/name` in-terminal not via headless launchers. Only genuinely borrowable idea is that visual layer, and only if terminal-only becomes an actual pain (same don't-build-past-the-pain doctrine). Flagged the video's `claude -p` billing claim (~$200/mo separate API-rate pool) as a dated 2026-05 claim to verify. Added a new "References (OS method / meta)" section to `wiki/index.md`. Analysis/reference only — no structural change.
+
+## [2026-07-18] ingest | Automation & workflow backlog filed from root → wiki
+Ingested the root work-product `AUTOMATION-ANALYSIS.md` (built earlier this session from the 944-email authored corpus) into `wiki/automation-backlog.md` as a durable Operations page — Obsidian-ified with wikilinks to [[teaching-voice]], [[entities/aspiring-attorneys]], [[connections]], `skills/INDEX`. Added an Operations-section entry to `wiki/index.md`. **Headline the page carries forward:** 19% of everything Joshua writes is an apology for a slow reply — a throughput problem, not a voice problem; the leverage-ranked backlog (Tier 1: morning inbox brief + draft queue, reschedule assistant, billing follow-up) targets it. This is the backlog `/level-up` walks one build at a time. Filing only — no skills built. Root copy left in place pending Joshua's OK to remove.
+
+## [2026-07-19] ingest | Lovable Cloud docs (backend platform reference)
+Ingested `Clippings/Lovable Cloud.md` (official docs.lovable.dev/integrations/cloud) into `wiki/lovable-cloud.md`. Key operational takeaways: the LSAT U backend is Lovable-managed (no supabase.com dashboard, no service-role key or DB URL outside Lovable, by design); edge functions auto-deploy on push but **migrations do NOT auto-apply** — confirmed the same day when two booking migrations sat unapplied and broke /book/lexi + the pause toggle; Lovable chat is the operator for DB-level actions ("apply the pending migrations", health checks, slow-query fixes, instance resize); daily backups ~14 days; storage private-by-default, 2 GB/file; DB export ≤5 GB 1/day is the escape hatch but Cloud→own-Supabase switching of a live project is unsupported. Decision recorded: stay on Lovable Cloud, treat Lovable as DB operator. Indexed under Hubs in `wiki/index.md`.
+
+## [2026-07-19] ingest | Live backend structural map via Cloud SQL editor
+Joshua ran Jay 2's introspection query in the Lovable Cloud SQL editor and returned the full result (CSV export). Wrote `wiki/lsatu-backend-map.md`: 82 tables grouped by domain with row counts, key RPCs, triggers, the single cron job (gcal-sync-pull-every-5-min), and the RLS posture (all tables RLS-on, students own-rows, admins via has_role). Reuse flags recorded: `external_work_uploads` and `message_attachments` are existing homes for the planned booking-time student uploads. Same session: Joshua applied the two pending booking migrations through the SQL editor — verified live (/book/lexi resolves; paused/no_show statuses accepted). Full-data copy still pending via Cloud tab → Export project data.
+
+## [2026-07-19] ingest | Full DB data snapshot (pg_dump export)
+Joshua dropped the Cloud-tab data export at `raw/lsatu_260719.backup.zip` (26 MB, sha256 eb9c9e6c…d84d771) — a PostgreSQL 17.6 custom-format dump, zstd-compressed. Reading it required a zstd-capable pg_restore: Homebrew's `libpq` build silently drops all data ("no data will be available" warning), so installed `postgresql@17` (`/usr/local/opt/postgresql@17/bin/pg_restore`) — recorded in [[lsatu-backend-map]]. Contents verified: 134 tables with data across auth/public/storage/cron schemas; 840 MB uncompressed but ~99% is `cron.job_run_details` history (936k rows) — real app data is small (question_views 698, session_replays 320, attempts 180, students 23, profiles 21, booking_passes 4). Notable: `external_work_uploads` is **empty (0 rows)**, so extending it for the booking-uploads feature carries zero data-migration risk. Storage file **bytes are not in the dump** — only `storage.objects` metadata (16 objects, all `message-attachments` bucket) — separate Cloud tab → Storage download still deferred. Row counts and snapshot provenance added to [[lsatu-backend-map]]. Raw zip left untouched in `raw/`.
+
+## [2026-07-19] ingest | Full takeout deep analysis + transcript sort (data about me /)
+Jay 2 analyzed the complete Google Takeout in `data about me /` (originals untouched): full 3,318-message mbox, main calendar ICS (662 events), and the 9.1GB Drive dump (listing + selective extraction). Findings appended as a dated addendum to `references/automation-backlog.md`: the 2026-07-18 backlog holds, sharpened by (1) a July consultation surge (~25 consults Jul 7-21) with confirmed follow-up gaps as of the Jul 16 export (Susan, Muhammad x3, Alexandria Strickland, Mehvish Naqvi); (2) 52 Gemini Meet notes recovered from Drive and sorted as copies into `data about me /transcripts-sorted/{students,consultations,unidentified}/<person>/` — Lydia 8, Dakota 7, Meghan 5, David 5 (two identified from "Meeting started" files via Next-steps names), Sofia 5, plus non-vault Adriana/Andrew/Thaniuska; 3 notes still unidentified; (3) roster gap — 10 vault student folders vs 20+ active email/calendar relationships; (4) 761 unread messages; (5) an open LSAC content-licensing thread worth tracking. Ingestion of the sorted transcripts into `students/` is the queued next step (backlog item D). No skills built this session; analysis + sort only.
+
+## [2026-07-19] system | Active booking-pass reconciliation
+
+Created student records for Favour and Lexi A, including the required index, transcript inventory, teaching notes, open loops, assignment log, and generated live-status mirror. Reconciled active booking-pass details for Sofia, Nicole, Lydia, Ethan, C. Alexander, Yahunatan Zetvy, Favour, and Lexi; Yahunatan's booking alias is `yahunathan`.
+
+Public booking pages verified active, 70 minutes, and with the expected remaining credits for Sofia (2), Nicole (2), Lydia (1), Ethan (10), Yahunatan (9), Favour (5), and Lexi (5). Seven unsent Gmail drafts were created and individually checked for recipient, subject, and private booking URL. No message was sent.
+
+Exception: `/book/c` currently returns `invalid_link`, although the booking admin roster showed C. Alexander active with one credit. C. Alexander's email draft was intentionally not created until that link is repaired and rechecked.
+
+## [2026-07-20] system | Tavily key pulled out of Codex config into .env
+
+The Tavily API key sat in plaintext in `~/.codex/config.toml` as a URL query param, outside the `.env`-is-the-only-store rule. Two discoveries while fixing it: the inlined key was **dead** (401 against api.tavily.com), and `.env` already carried the working key (`TAVILY_API_KEY`, one character different) — so Codex's Tavily had been broken, and this was a stale-copy deletion rather than a move. Claude's side was already compliant (`~/.claude.json` uses `${TAVILY_API_KEY}`).
+
+Codex's `[mcp_servers.tavily]` converted from a remote URL server to a stdio server using the same env-sourcing pattern as the youtube server in `.mcp.json`: `sh -c "set -a; . /Users/joshuaf/ai-os/.env; set +a; exec npx -y tavily-mcp@latest"`. Verified by MCP initialize handshake before writing; TOML re-parsed clean; zero `tvly-` strings left in the config. Backup at the session scratchpad.
+
+Open follow-up: the **live** key still appears in `~/.codex/.codex-global-state.json` (Codex UI prompt-history buffer, from when the MCP link was originally pasted) and across ~12 Claude/Codex session transcripts. Rotation at tavily.com is the clean fix — scrubbing every historical copy is whack-a-mole and transcripts are append-only records. Not rotated; awaiting Joshua.
+
+Unrelated observation, not acted on: `NODE_TLS_REJECT_UNAUTHORIZED=0` is set ambiently in the session environment (not from `.env`, not from the zsh dotfiles). It disables TLS certificate verification for every Node process launched from it.
+
+## [2026-07-20] system | Backup un-broken, morning brief scheduled, allowlist tuned
+
+**The backup had been silently failing for three nights.** Commit `395fafc` ("Slim system/scripts: remove 15 one-shot migration/rename scripts", 2026-07-17 22:38) deleted `watchdog.sh` and `cas-replace.sh` on the stated grounds that they were "unreferenced by ... the backup job chain." That was wrong: `with-lock.sh:13` execs `watchdog.sh` on every run, and `run-job.sh` routes every job through `with-lock.sh`. Last good backup was 2026-07-17 22:23, fifteen minutes before the commit landed; `automation.tsv` records `backup failure exit=1` on 07-18 and 07-19. This repo has no git remote, so the bundle is the only recovery path. Both scripts restored from `395fafc^`; backup re-run and verified (`ai-os-2026-07-20.bundle`, 192M, `bundle verify` clean).
+
+**Morning brief scheduled** (backlog A, closes cluster 6 of the session-mining plan). New `system/scripts/jobs/morning-brief.sh` runs the skill headlessly via `claude -p`; LaunchAgent `com.joshua.ai-os.morning-brief` fires daily at 10:00 local (launchd uses local time, so this tracks EST/EDT automatically). Auth comes from the login keychain, verified working under a launchd-like env — the constraint is that a locked or logged-out Mac skips the run.
+
+Sending is now impossible by construction rather than by instruction. `gws gmail +send` sends by default and only becomes safe with a trailing `--draft`, so no allow-list rule could distinguish the two. New `system/scripts/gmail-draft.sh` takes only `--to/--subject/--body`, forwards no caller flags, and appends `--draft` itself; negative-tested against `--send`, `--html`, and missing args, positive-tested with a real draft (`labelIds: ["DRAFT"]`). Raw `gws gmail +send`, `users.drafts.send`, and `users messages send` added to the deny list.
+
+**Cluster 3c collapsed.** The missed-consultation make-good template lived in both Claude automemory and `wiki/teaching-voice.md:55`; the vault copy is a strict superset, so the memory file and its `MEMORY.md` index line were removed. Both runtimes now read one source.
+
+**`fewer-permission-prompts` run** for the first time (the plan called for it; the allowlist had been hand-built). 50 most-recent transcripts scanned: 14 read-only rules added (browser navigate/screenshot/emulate/console/tab_list, the NotebookLM read tools, `nlm query`, Supabase `list_projects`). Deliberately excluded `browser_eval` despite being the single most-used MCP call at 160 — it executes arbitrary JavaScript against logged-in sessions. Also excluded `curl`, `codex exec`, `npm run`, and bare `python3`.
+
+Open, needs a decision: **five LaunchAgents are zombies** (`ingest`, `lint`, `reindex`, `schema-sync`, `session-guard`, plus `memory-distill`/`memory-index`), all exiting 127. Investigation shows their job scripts were **deliberately** deleted by `c3bd811` (Phase 2 retirement: churn jobs retired, memory moved to native automemory). That commit claimed "plists+scripts deleted" but only removed the in-repo copies — the installed plists in `~/Library/LaunchAgents/` were never uninstalled, and its parenthetical "none were actually loaded in launchd" was mistaken. The correct repair is to finish the uninstall, not to rebuild the scripts. Nothing unloaded or deleted pending Joshua's yes.
+
+### Follow-on, same session: the cleanup cascade traced to the end
+
+Unloading the seven retired agents (`ingest`, `lint`, `memory-distill`, `memory-index`, `reindex`, `schema-sync`, `session-guard`) exposed that the same three reform commits had removed several pieces of **load-bearing plumbing and test infrastructure** alongside the genuinely-retired churn jobs. Each was restored only after confirming the thing it supports is still live:
+
+- `system/scripts/tests/test-automation.sh` — removed by `9edba96` as an "orphaned test for deleted one-shot scripts". It was orphaned only because `watchdog.sh`/`cas-replace.sh` had just been deleted; with those restored it tests real plumbing again.
+- `system/scripts/jobs/failure-probe.sh` — removed by `c3bd811`. Its own header reads "Manual verification probe only; no launchd definition targets this job." It is a deliberately-failing fixture that proves the failure-alert path, not a churn job.
+- `automation-self-test.sh` stripped only the legacy `com.joshua.brain.` label prefix, so any agent using the current `com.joshua.ai-os.` naming was mislabelled and reported as having no job script. Now derives the job name from the final dot-component and uses the full label for the launchctl lookup — exactly the staleness the file's own comment warns about. Negative-tested with a bogus plist.
+- `cold-start-check.sh` still required `README.md`, `HOW-THIS-OS-WORKS.md` (retired by `11ae157`), root `MEMORY.md` and `system/schema/core.md` (retired by `c3bd811`). A cold start failed against the real vault while `test-cold-start.sh` passed, because the test builds its own fixture containing those files. Required list and fixture both moved to the current architecture (`CONTEXT.md`, `connections.md`, `decisions/log.md`, the five `wiki/` ledgers).
+- Global `~/.claude/CLAUDE.md` pointed every session at `~/ai-os/system/schema/core.md`, retired nine days ago. Repointed to `CONTEXT.md`.
+
+Final state: 2 launchd agents loaded (`backup`, `morning-brief`), 9 plist files retained on disk so every unload is reversible. `run-tests.sh` 6/6 PASS, `automation-self-test.sh` PASS, `cold-start-check.sh` PASS against the real vault, `check-skills.sh` PASS.
+
+The pattern worth remembering: three separate "slim/simplify" commits each verified that what they deleted was unreferenced, and each was wrong in the same way — they checked for references from *other deleted code* rather than from live runtime paths. The validators that would have caught it were themselves deleted or asserted a stale contract.
+
+## [2026-07-20] system | PARITY.md audited: five genuine Codex gaps closed
+
+The parity baseline was the last open remnant of cluster 3. It listed 54 skill names with no
+reasons, so nothing distinguished a deliberate single-runtime split from accidental drift —
+the validator was faithfully enforcing an unexamined baseline.
+
+Audited every entry by provenance and by actual dependency. The headline: **37 of the 41
+Claude-only entries are vendor/plugin snapshots** under `skills/claude/_snapshots/`, which
+document Claude's own extension surfaces and would be meaningless in Codex. The real audit set
+was 17 authored skills, not 41.
+
+Five were genuine gaps with no runtime coupling and were ported to the Codex DB:
+`site-teardown`, `pull-submissions`, `shadcn`, `tdd`, `lovable-prompt`. The two carrying
+generic "Claude Code" prose were adapted rather than copied verbatim. Ported to the **DB only**
+— Codex's activated `.agents/skills/` set stays the deliberate 12-skill ops core, since catalog
+completeness and activation are different things. Now claude=175 codex=152.
+
+The remaining twelve are declared with evidence, not assertion:
+- 4 drive Codex from Claude (`codex-build`, `codex-review`, `grill-me-codex`,
+  `grill-with-docs-codex`) — porting them would mean Codex driving Codex.
+- `youtube-full` needs a YouTube MCP; `~/.codex/config.toml` declares only `node_repl`,
+  `computer-use`, `tavily`, `notebooklm-mcp`. A capability gap, flagged to revisit.
+- `bootcamp-builder` is built on AskUserQuestion gating and subagent fan-out.
+- 5 write the wiki ledgers, where the "never have both runtimes editing the same file" rule
+  bites. Recorded honestly: `send-booking-link` and `morning-brief` are otherwise
+  runtime-neutral and held back by that rule alone, not by capability. `lovable-migrate` is
+  marked lowest-confidence rather than pretending the call is settled.
+
+`check-skills.py` updated to read declarations from backticked names anywhere in the file, so
+each entry can sit beside its justification instead of being a bare list item. Only tokens
+naming a real skill count, which ignores incidental backticks (paths, flags, MCP server names)
+without escaping, and makes a typo'd name fail as undeclared drift rather than pass silently.
+Negative-tested both directions: an undeclared new skill fails, and de-declaring `youtube-full`
+fails. `INDEX.md` regenerated. `check-skills.sh` PASS.
+
+## [2026-07-20] system | /book invalid-slug bug: root cause was a composite-return NULL
+
+The long-standing complaint was cosmetic-sounding — `/book/<bad-slug>` told visitors "You've
+used all your sessions" — but the cause was a backend correctness bug, and the frontend was
+faithfully rendering what it was handed.
+
+`resolve_booking_link_full` is declared `RETURNS public.booking_passes`. When a plpgsql
+function returning a **composite type** executes `RETURN NULL`, the result serialises as a row
+of all-null columns rather than JSON null. So in `public-booking/index.ts`, `passRow ?? null`
+never fired: an unresolvable slug arrived as a truthy object, skipped the `invalid_link` 404
+branch, and was served to the student as a genuine pass with zero credits. The SQL was correct
+the whole time; the null check was not.
+
+Confirmed against the live backend before changing anything: `lexi` returned 200 with 4
+credits and `status:"active"`; `zzz-not-real` returned **200 with 0 credits and
+`status:null`**; `ab` returned a proper 404, which showed the `length < 3` guard worked and
+narrowed the fault to the lookup-miss path specifically.
+
+Fixes, all in `projects/lsatu`:
+- `public-booking/index.ts` — key off `passRow?.id`, the only field a resolved row must carry.
+- `booking-upload/index.ts` — same defect at two sites (`if (!pass)`). The upload path failed
+  safe but reported `pass_not_bookable` for a link that does not exist; the discard path
+  silently no-opped against `booking_pass_id = null`.
+- `CalendlyBookingCard.tsx` — a failed load and a successful load with no pass rendered
+  identically, because the catch only fired a transient toast and left `info` null. Added
+  distinct states for invalid link, rate-limited, and generic failure, plus a client-side guard
+  treating a status-less pass as unresolved so the page stays honest whichever version of the
+  edge function is deployed.
+
+Verified in the running app (dev server, DOM checks): bad slug and `/book/c` both render "This
+booking link isn't valid"; `/book/lexi` is unchanged at 1 hr 10 min, 4 sessions remaining, with
+calendar and slots intact. `npm run typecheck` clean. This also explains the `/book/c`
+`invalid_link` noted on 2026-07-19 — the apparent hang there was a 6-second edge-function cold
+start, not a fault.
+
+**Not deployed.** Edge functions only take effect on push to Lovable, and the lsatu tree still
+carries unrelated pre-staged Lovable changes that the safe-push typecheck gate would sweep in.
+Until that push happens, the frontend guard is what protects students; the backend still hands
+out phantom zero-credit passes to anyone with a mistyped link.
+
+## 2026-07-20 system | Pickup changed to explicit-only
+
+Updated the Codex and Claude operating instructions plus active and catalog skill copies so
+`pickup` runs only when Joshua explicitly requests it, never automatically at session start.
+
+## 2026-07-20 ingest | Email HQ Joshua Profile and Context
+
+Reviewed `email system/email-hq-profile (1).md` as the first supervised email-system source.
+Promoted only two corrected operational rules into `context/work.md`: self-scheduling links are
+used for paid-but-unscheduled sessions, rescheduling, and paid packages; billing responses must
+be reconstructed from the specific person's arrangement and timeline. Rejected stale duplicate
+architecture, blanket auto-send restrictions, and overbroad booking rules.
+
+## 2026-07-20 ingest | Consultation Inquiry Reply Template
+
+Reviewed `email system/Consultation Inquiry Reply Template.md`. Promoted its durable reply arc,
+personalization requirement, consultation link, price-only-when-asked rule, 24-hour apology
+threshold, thread continuity, and short prose format into the active and catalog copies of the
+`consultation-inquiry-drafts` skill. Replaced archived voice/template dependencies with
+`wiki/teaching-voice.md` and `context/work.md`; replaced the retired Gmail connector workflow
+with the required `gws` CLI; added student-first identity lookup and send-ledger logging.
+
+## 2026-07-20 ingest | Gemini Session Transcripts (143 sessions)
+
+Swept Google Calendar 2025-01-01 to 2026-07-21 for events carrying a Gemini notes
+attachment and exported every referenced doc to markdown with `gws drive files export`.
+Joined sessions to students by **guest email**, not event title: the same person appears
+under many summary variants ("Fi", "FI", "Fiorella", "Fiorella / Joshua"), and collapsing
+by email reduced 98 apparent name variants to 34 distinct people.
+
+Result: 143 sessions referenced 143 docs; **130 exported, 13 unrecoverable** (the Gemini
+doc no longer exists in Drive). 103 were new this run, 27 already on disk from earlier work.
+
+Routing: existing students to `students/<name>/transcript-downloads/`; everyone without a
+vault folder to a single shared `students/_other-sessions/` (55 files), per Joshua's call
+not to create 34 folders. That folder is a reference corpus, not a student ledger, and its
+README says so: several of those people are consultations that never converted.
+
+Filenames follow the convention already in use: `YYYY-MM-DD-<person>-notes-by-gemini.md`.
+Google Drive stays upstream authority; these are unedited mirrors and should not be
+hand-edited. Refresh by re-running the export, not by patching files.
+
+The 13 unrecoverable sessions cluster oddly: 8 of them fall in 2025-10-12 to 2025-10-28,
+which looks like a Drive retention or cleanup event in that window rather than scattered
+deletions. Not investigated.
+
+Not done: the graph `--update` re-extract to fold these into `graph-imports/vault/`, and
+the vault-root merge (Joshua chose to merge once, after batch 2).
+
+## 2026-07-20 ingest | Session Transcript Distillation (125 distillates)
+
+Distilled all 125 non-empty Gemini transcripts into `graph-imports/distillates/`, mirroring
+the source paths. Chose option D over raw graphing: distillates become the graph nodes, each
+carrying a `source:` pointer back to the untouched raw transcript. Reason for not graphing raw
+text: transcripts are conversational and highly redundant, so raw extraction would either
+create dozens of near-duplicate concept nodes or collapse them into god nodes, amplifying the
+Dakota skew already visible in batch 1 (Dakota Session Arc was the largest community at 174
+nodes off 10 transcripts).
+
+Each distillate carries five sections (LSAT concepts, teaching moves, worked examples, student
+state, logistics) and preserves Joshua's verbatim phrasing, which is the asset for building
+session scripts. 5 transcripts were excluded as empty Gemini exports ("a summary wasn't
+produced for this meeting"); 1 more is `substantive: false` (a session that was entirely
+technical difficulties).
+
+**Naming decision:** the RC framework appears in transcripts as SEAR / SER / CER / Sierra /
+steer / serial, and none of those letters map to the four stable moves. Joshua ruled **CEER**
+canonical (Comparing, Explaining, Evaluating, Recommending). Distillates were normalized;
+lines documenting the ASR variants were deliberately left intact as provenance.
+
+Findings are consolidated in `wiki/transcript-ingest-findings-2026-07-20.md`: live items
+(Sofia's accommodations deadline, Kaia Reid's unanswered pricing question, an inbound referral
+via Ethan), data that should not be trusted (Meghan's pre-05-12 analytics were erased, a
+probable Gemini summary hallucination about Kevin registering for the January LSAT), a product
+defect list reported by students, and business facts that existed nowhere but transcripts.
+
+Not done: building the batch-2 graph from these distillates, and the vault-root merge.
+
+## [2026-07-20] graph | Batch-2 knowledge graph built from the 125 distillates
+
+1,368 concepts, 2,848 edges, one connected component, 17 communities. Vault at
+`graph-imports/vault-b2/` (start at its `INDEX.md`); pipeline at
+`graph-imports/vault-run-b2/`. Coverage is 125/125 distillates producing at least
+one node.
+
+**Scope renumbering.** Batch 1's index defined batch 2 as `projects/lsatu/` +
+`skills/`. Those are now batch 3. The distillates jumped the queue because they are
+the highest insight-density material in the vault, and batch 1's own index flags
+lsatu/skills as high-node-count and low-insight.
+
+**The Dakota skew is fixed.** Batch 1's largest community was "Dakota Session Arc"
+at 174 nodes off 10 transcripts. Extraction here was instructed to prefer the shared
+concept over the session, so the largest community is now a general LR-methods
+cluster (193 nodes, 14%) and Dakota holds only 9 personal-state nodes.
+
+**Two-hop provenance.** Every concept note's `## Source` links both the distillate
+and the untouched raw transcript, because the distillate is a lossy summary and any
+claim worth challenging has to be checkable. 125/125 raw transcripts resolved, via
+each distillate's own `source:` frontmatter rather than string surgery.
+
+**Honest residuals**, all recorded in the batch-2 INDEX: god nodes are all people by
+construction (every concept references the student it was taught to), so they show
+teaching volume rather than conceptual centrality; near-duplicate labels survive the
+exact-match collapse and are joined by `semantically_similar_to` rather than merged;
+22 stitch edges bridging 10 orphan components are INFERRED from labels, not source
+text; the 2026-05-10 David distillate's 12 edges are AMBIGUOUS since only a Gemini
+summary exists.
+
+Raw transcripts unmodified. No commits.
+
+Not done: the vault-root merge (Joshua gated it on batch 2, which now exists), and
+batch 3 (`projects/lsatu/`, `skills/`).
+
+## [2026-07-20] graph | Batch-3 knowledge graph built from the skill catalog
+
+Built `graph-imports/vault-b3/` from `skills/`: 750 concepts, 1,175 edges, one
+connected component, 17 communities, 768 vault files.
+
+Scope was narrowed deliberately, not sampled. 1,103 markdown files reduced to 392:
+content-hash dedup removed 478 byte-identical copies (almost all claude/ ↔ codex/
+mirrors), a scope filter dropped third-party authorship (`_snapshots`,
+`_project-forks`, `_inactive`, `reference/open-design`), and 13 vendor skills were
+read shallow — SKILL.md only — so they appear as capability nodes without dragging
+in ~250k tokens of SDK boilerplate. Dedup preserved provenance: each note's
+`## Source` names the canonical file and its byte-identical twin, so a concept
+being live in both runtimes versus one stays visible.
+
+Extraction ran as 10 parallel agents chunked by skill directory, under a
+concept-as-node-identity instruction. It worked: largest community is 11% against
+batch 2's 14% and batch 1's 174-node Dakota cluster. The skew risk here was
+`impeccable` (36 files, one indivisible chunk, 99 raw nodes) and it placed second
+by hub degree behind `gws CLI`.
+
+Pipeline changes over batch 2: `merge.py` repointed to 10 chunks, given a logged
+word-order fuzzy-collapse second pass, and fixed to union the `sources` list
+(batch 3's shape) rather than only `source_file` — without that fix every merged
+node would have silently lost its provenance. `wire_sources.py` rewritten for
+one-hop provenance plus alias recovery.
+
+Honest residuals, all recorded in the vault INDEX: one extraction agent
+misreported full coverage while having skipped an entire skill, caught only by an
+independent coverage pass — a subagent's self-report is a claim, not evidence.
+`skills/INDEX.md` was truncated by a read cap and its tail is unverified. 129
+edges are INFERRED and 32 sit below 0.65 confidence. 18 hand-authored stitch edges
+carried connectivity from 98.7% to 100%, so that figure is partly hand-made rather
+than fully emergent. One concept note was born as a hidden dotfile, invisible to
+Obsidian, and was renamed with its 10 inbound wikilinks repointed.
+
+Catalog findings worth acting on: two browser-automation stacks (`codex/playwright`
+and `claude/webapp-testing`) independently teach the same technique and failure
+mode with no shared source; `grill-me` and `grill-me-codex` share a byte-identical
+Act 1; `image-to-code` and `high-end-visual-design` give contradictory guidance on
+nested containers; `command-development` is self-declared legacy.
+
+Source corpus was never modified — verified.
+
+## [2026-07-20] graph | Batch-3 defect review, pipeline hardening, vault-merge decision
+
+Reviewed batch 3 after shipping and fixed what went wrong. Final graph: 750
+concepts, 1,174 edges, one connected component, 17 communities. `verify.py`
+reports 14 checks passing, 0 failures.
+
+Five defects. Four are fixed in the pipeline rather than in built output, because
+a fix applied only to generated files evaporates on the next rebuild.
+
+1. An extraction agent certified its own coverage falsely — "48 of 48 files read,
+   every file contributed a node" while an entire skill had produced nothing.
+   Added `verify.py`, which recomputes every number from artifacts on disk. The
+   rule it encodes: never verify a graph with a number the thing being verified
+   supplied.
+2. A concept note was born as a hidden dotfile (label `.claude/plugin-name.local.md
+   settings pattern`), invisible to Obsidian and to shell globs despite degree 8,
+   found only because two file counts disagreed by one. Added `fix_vault_names.py`
+   as an idempotent pipeline step. The label stays dotted — it names a real file,
+   and rewriting it would make the graph lie.
+3. `merge.py` unioned only `source_file` while batch 3 emits `sources`, so every
+   merged node would have silently lost provenance. Fixed before shipping.
+4. Two edges were category errors, both self-flagged in their own evidence fields.
+   Fixed via `corrections.json` + `apply_corrections.py`, kept as reviewable data.
+   One could not be dropped — it was its node's only edge, so deletion would have
+   orphaned a real capability and broken the ship gate; it was repointed instead.
+   The script now refuses any drop that would orphan a node.
+5. The `skills/INDEX.md` read-cap truncation is closed and was harmless: of 136
+   skill names in the unread tail, 20 appear nowhere else, 13 had their own
+   SKILL.md extracted, and the remaining 7 are lsatu project-fork entries the
+   scope filter excluded by design.
+
+New residual found: Louvain clustering is stochastic. Re-running it on the same
+graph produced 18 communities instead of 17 with materially shifted membership.
+The original hand-labelled partition was kept. A rebuild reproduces nodes and
+edges exactly but not necessarily these communities — community boundaries are
+one valid cut, not the cut.
+
+Decision — do NOT merge the graph vaults into the vault root. The long-open
+"does it render as one mass" question rested on a false premise: `~/ai-os` is
+itself the Obsidian vault, so `graph-imports/` is already inside it and already
+in the graph view and search. Generated notes already outnumber real ones about
+1.7:1 (5,406 vs 3,171) and `.obsidian/app.json` sets no userIgnoreFilters.
+Merging would add no reach and would remove the folder boundary that currently
+keeps real notes findable. Recommended instead: add `graph-imports/` to
+Obsidian's excluded-files setting and open each graph vault separately.
+Not verified: how any of this actually looks on screen.
+
+## 2026-09-07 — Dell rebuild: machine restored to working order
+
+New Windows machine (Dell 15 DC15250) brought up after the MacBook died. See
+[[windows-machine-profile]] for full specs and Mac-vs-Windows differences.
+
+**Root cause of "nothing works":** Node.js and GitHub CLI were installed the whole time but
+absent from PATH, so Windows reported them missing. Not a missing-software problem. PATH
+repaired; old value backed up at `~/dev/PATH-backup.txt`.
+
+**Vault restored.** `~/dev/ai-os` was an empty shell — `wiki/`, `corpus/`, `students/`, `raw/`
+all at zero files. Content was still zipped in Downloads (`AI-OS-20260906T222241Z-1-001.zip`).
+Extracted and merged: **91,456 files**. Copied no-clobber so the Windows-corrected `CLAUDE.md`
+survived. The Mac's copy of `projects/lsatu` was **not** merged over the local clone — it is
+preserved at `~/dev/_aios-restore/` (2.2 GB) and unexamined. Check it for stranded uncommitted
+work before deleting.
+
+**Installed:** Claude Code CLI 2.1.263, Codex 0.153.4, Python 3.12.10, pnpm 12.3.4, jq, uv,
+SQLite, ffmpeg, yt-dlp, Playwright (chromium + firefox). Already present: Node 24.19.0,
+gh 2.100.0, Deno 2.9.6, Git 2.55, Obsidian 1.13.7.
+
+**Open — auth, not installs:**
+- `gws` has no credentials (`auth_method: none`). **1,127 skill references depend on it** —
+  the whole `gws-*` / `persona-*` / `recipe-*` family. Nothing in the backup restores it;
+  needs a fresh Google Cloud OAuth client at `~/.config/gws/client_secret.json`.
+- `gh auth login` not yet completed.
+- Obsidian CLI not enabled; vault not yet opened in the app.
+- `git config --global core.autocrlf input` still unset — CRLF/LF churn risk. Blocked by the
+  `Bash(git config --global*)` deny rule, so Joshua runs this himself.
+- WSL wanted but **blocked: virtualization disabled in BIOS** (F2 at boot → enable VT-x).
+
+**Product state — the July entries below are stale.** Booking P1 batch is superseded. Actual
+live thread as of 2026-09-06 is **Read-Recall-Colour instruction copy simplification**:
+`instructions.json` and `SectionLibraryLaunch.test.tsx` edited in the working tree, plus an
+untracked migration `20260906220000_simplify_recall_read_step.sql` that backfills existing
+`activities` and `activity_assignments` rows (skipping completed ones). **The migration appears
+unapplied — code and database disagree.** `lsatu` is a shallow clone (depth 1), so history
+before 2026-09-05 is unavailable until `git fetch --unshallow`.
+
+## 2026-09-08 — Celia's RRC grade is stuck; the grader fix is committed but not deployed
+
+Celia finished PT1.S3 (66 min, 112 MB webm) at 01:12 UTC and messaged at 01:34 that it "says it's still being marked". No grade row. Cause, confirmed in the Lovable Cloud logs: `grade-rrc-section` downloads the whole recording into memory and dies with "Memory limit exceeded" before transcribing. The four prior grades were ~20-minute runs. The sweeper is unscheduled by design, and re-driving dies the same way.
+
+Fix committed and pushed: `2b3a0d6` (Deepgram fetches a 15-minute signed URL; the function never holds the audio) and `eecfb85` (a `build` marker on the 202 body and an `X-Grader-Build` header, so a deploy can be proven from outside). **Neither deployed.** Cloud shows the function last updated ~21:15 UTC with 22 deployments; every "Pushed from GitHub" entry since `843341d` reads "Build unsuccessful"; `deploy_project` published but did not touch the function; probes after both still answered without the marker and still crashed. `npm run build` succeeds locally, so Lovable's failure is not a code build error. Unresolved: why Lovable's builds fail, and how to deploy an edge function without Lovable's agent.
+
+Also: Lovable shows a "Payment issue detected, will revert to Free" banner, and an open plan "RRC: line-by-line marking against the answer key" awaiting Approve (Joshua's, from 02:45 UTC). Not touched.
+
+Critique of the section briefing page done: `wiki/RRC-BRIEFING-CRITIQUE-2026-09-08.md` (27/40; two P1s: the one-take/25-minute facts are not on the page despite the code comment, and the calming notice is styled as a fifth step card).
+
+Temp scripts left in `projects/lsatu/scripts/` (untracked, safe to delete): `_grade-celia.ts`, `_poll-grade.sh`, `_poll-build.sh`, plus `.impeccable/live/`.
+
+## 2026-09-08 (later) — Celia's run: the grader did deploy; the real fault is a 37-minute clock offset
+
+Correction to the entry above: Lovable deployed `grade-rrc-section` at 04:03 UTC ("Deployed latest grade-rrc-section"). With the signed-URL fix running, Celia's run transcribed in 16 s and was refused by the clock proof: 3,848 words, 1,637 inside a window, last word at 102.5 min against windows ending at 65.9 min, drift 2,201 s.
+
+Diagnosis from the file itself (downloaded, 112 MB, one WebM header, decodes to 1:56:14): the first 37 minutes are room noise at about −50 dB, her 65-minute run sits from minute 37 to 102, then 14 quiet minutes. Shifting every window by 2,195 s puts 93% of loud seconds inside windows (37% unshifted) and lines her Recall phases up with the loud stretches (8.7 dB louder than working, versus 0.6 dB unshifted). No time stretch fits. So the recorder ran about 37 minutes before the app's window clock started. Why the client did that is not yet known; the row timestamps agree with the windows, so it is not a sleep gap mid-run.
+
+Shipped `ebe0477`: the grader scans for the shift that puts the most words inside windows, applies it to every window when ≥80% then fit, and writes `clock.alignment` onto the grade. Build marker `2026-09-08c`.
+
+Also shipped and verified live today: the briefing page critique fixes, the "counting up" rewording (repo and DB, 24 rows), the staggered entrance, the type scale, and a "Recording" mark in the runner rail.
+
+Open: why the recorder started 37 minutes early on Celia's machine (look at `useSectionRecorder.start` and what happens when she leaves and returns to the same assignment); the sweeper is still unscheduled; Celia has not been replied to.
+
+## 2026-09-08 (04:50 UTC) — Celia's grade landed; alignment build deployed by asking Lovable's agent
+
+The alignment commit `ebe0477` (build `2026-09-08c`) sat undeployed for the ~10 minutes after the push; Lovable's last action was its 04:03 deploy of build b. There is no Supabase access token on this machine, so the only deploy route was Lovable's agent: one deploy-only message ("redeploy grade-rrc-section as it stands, change nothing") ran `deploy_edge_functions` and nothing else, 0.4 credits. Re-driving the grader then took ~15 s: alignment offset 2,201.5 s, 98.4% of words inside windows (42.5% before), 22 of 22 stimuli graded, grade row written 04:47:39 UTC, assignment marked completed.
+
+Her run: mean coverage 89, 6 of 22 coloured, one decoy carried (Q1), 66 minutes against the 25-minute goal.
+
+Found on the way: `scripts/student-work.ts` selected `carried_pct` and `stimuli_graded`, columns that do not exist on `activity_section_grades`; PostgREST answered 400 and the script showed no graded runs for anyone. Fixed to read `section.mean_coverage`, and it now prints the query error instead of swallowing it. The same wrong columns were in the one-off `_grade-celia.ts`, which is why the previous session kept seeing "grade rows now: []".
+
+Reply drafted, not sent: `wiki/CELIA-RRC-REPLY-DRAFT-2026-09-08.md`.
+
+Still open: why her recorder started 37 minutes early; the sweeper is unscheduled; Lovable's "Payment issue" banner and its open line-by-line plan were not re-checked. Temp files still in `projects/lsatu/scripts/` (`_grade-celia.ts`, `_rows_tmp.ts`, `_diag4.ts`, `_dl.ts`, `_poll-*.sh`) and `.impeccable/live/`; deletion was permission-blocked.
+
+## 2026-09-08 (05:20 UTC) — RRC infrastructure audit: the 37-minute offset was an orphaned recorder plus an overwriting recovery
+
+Root cause of Celia's clock offset, proven from the data: her assignment was opened at 23:28:48, the recorder that stamped her rows started at 00:06:27 (37 min 39 s later), her file uploaded at 01:12:34, and storage shows the object **updated at 01:30:49**. The first sitting's recorder was never stopped on unmount (only the finish path called `stop`), so it kept the microphone open for two hours and kept writing backup chunks; when she reloaded after finishing, the recovery pass took that orphan for a crashed run and uploaded its 116-minute file over her real 66-minute recording with `upsert: true`. Both sittings were Attempt 1 because the first wrote no rows, so both named the same path.
+
+Fixed in the app, with red-then-green tests: the recorder hook closes both recorders and the mic tracks in its own unmount cleanup; the runner discards the backup of any run that unmounts without finishing (keyed on `saving`, because `finishing` is raised on every unmount); `discard` joins the per-run write chain and marks the run so a recorder's final chunk cannot resurrect it; recovery uploads with `upsert: false`, forgets a run on a 409, and tries newest sitting first. ADR 0034 written. Tests: 96 files / 2,674 passing, typecheck clean, one pre-existing lint warning.
+
+Second victim found by the audit: **Charles** (moorecamooreca1@gmail.com) finished PT1.S3 at 21:03 UTC on 2026-09-07 (66 min, 64 MB) and sat "still being marked" for 8 hours: the old grader died on the file size and nothing ever retried, because the sweeper is unscheduled by design and the card gives up after 3 minutes. Re-driven at 05:16 UTC: 71% coverage, 16 of 22 coloured, no clock shift needed. New admin tool `scripts/rrc-ungraded.ts` lists every finished section older than 10 minutes with no complete Report Card, and `-- --grade` re-asks the grader for each. Run it daily until the sweeper is scheduled.
+
+Still open, by design or decision: the sweeper stays unscheduled (ADR 0021), so a refused or lost grade reaches nobody unless the script runs; a run the grader refuses for good (no recording, clock it cannot place) shows "still being marked" forever with no message to Joshua; `send-section-report` fails `deno check` on a missing `@lovable.dev/email-js` dependency (MCQ pipeline, not RRC); Celia's stored recording is still the 116-minute orphan file (graded correctly through alignment, but the clips on her card seek into the shifted file).
+
+## 2026-09-08 (05:50 UTC) — Line pairing rebuilt; grader on Joshua's Gemini key; the model switch moved the scale
+
+Line-by-line pairing was cutting only at silences ≥1.2 s and dealing whole bursts to lines, so a student who retold three lines in one breath had everything filed under line 1 and lines 2–3 shown as "You did not say anything for this line" while their detail lists said she carried them (Celia, PT1.S3 Q1). Replaced with a word-level monotone split by content (`supabase/functions/_shared/rrcLines.ts`): each line takes one contiguous stretch of her words in order, chosen by DP; silence and full stops are free cut points, a comma is half price, a mid-phrase cut costs 2 hits. Six Deno tests, two built from her real stimuli (`rrcLines.test.ts`). On her run: empty lines fell to 6 of 74; the "the mathe | theory" mid-phrase cut is gone.
+
+Grader now has `BUILD = "2026-09-08d"` back (Lovable's 04:03 edit had replaced it with the schema version) and an admin-only `{ diagnose: true }` call that names the deploy and judge backend and proves the key with one call. Verified live at 05:35 UTC: `judge: gemini-direct`, `judge_ok: true`, transcriber Deepgram. So the judge IS on Joshua's direct Gemini key, model `gemini-3.8-flash` (Lovable's commits a222e72…6c5556a at 05:25–05:29 switched every function's model at his request). Deploys went through Lovable's agent, deploy-only, 0.4–1 credit each; Lovable's working copy had diverged from GitHub and it resynced the three grader files by hand; its HEAD is at c95c3a8 now.
+
+**The model switch changed the answers.** Celia re-graded on 3.8-flash: mean coverage 89 → 86, Q1 82% → 59% ("Even antibiotics that are strong still struggle to keep bacteria out" now marked as dropping "even the strong ones fail"), coloured 6 → 0, Reads given 1 → 0, decoys carried 1 → 0. Charles (graded 05:16, before the switch) is on 2.5-flash. The standard's calibration (ADR 0017/0018 census, 94.7 vs judge 93.1) was measured on 2.5-flash and does not transfer. Decision needed: re-run the standard census on 3.8-flash and re-set the bands, or pin the judge back to 2.5-flash. Until then the bands and the colour verdicts are not comparable across students.
+
+Not verified live in a browser: the Report Card rendering of the new lines (component unchanged; the data shape is the same).
+
+## 2026-09-08 (08:10 UTC) — One judge, a measured floor, and a Report Card that says what to do next time
+
+Joshua's brief: one consistent judge, fair harshness with clear criteria, and a post-recording card where a student can replay, read, see the golden standard and see exactly what she missed and how to improve, unless she hit every cylinder. Drafts and student replies deprioritised by him.
+
+**The judge stays on gemini-3.8-flash and the floor was re-measured on it** (ADR 0035, `projects/lsatu/docs/adr/0035-the-band-floor-belongs-to-the-judge.md`). The 0018 census inputs live on the Mac and there is no Gemini key on this box, so the census now runs inside `grade-rrc-section` as an admin-only `{ census }` call, driven by `scripts/rrc-census.ts`: same prompt, model and key as a student grade. Result on 71 of 71: mean 91.7, median 93, p10 82, 0 decoy failures (2.5-flash had 4), reads matched 68/71, coloured 71/71. `BAND_FLOOR` moved 86 → 82 (68, 51 provisional, same widths). Rows saved at `docs/adr/census-2026-09-08-gemini-direct.json`.
+
+**Fairness in the prompt:** line verdicts strong/partial/thin/skipped now defined by what survived; "only a change of meaning counts against her" stated outright. **Advice:** every stimulus carries `next_time`, empty when nothing to fix. Grade rows now also store `stimulus_text` and `the_read`.
+
+**Report Card** (`SectionReportCard.tsx`): per stimulus, the passage (folded), a Next time block or an "Every cylinder" line, the Read the key turns on plus the judge's reason, Held per line beside Dropped, and the standard's recall of that same line paired under hers ("Done right"); the whole walkthrough shows only when it cannot be paired. Em-dash removed from the recall line. Verified in the browser on the lab fixture (`/activity-lab` → report) via Playwright screenshots; 52 card tests, 2,685 Activity Centre tests passing; typecheck clean.
+
+**Deploys:** builds `2026-09-08e` and `f` via Lovable's agent (deploy-only messages; one raced my push and asked which commit, re-sent). Both proven by the diagnose call.
+
+**Re-graded on build f, same judge, same floor:** Celia coverage 87, 17 of 22 at the standard, 0 Reads, 0 coloured; Charles coverage 66, 6 at standard, 4 lost-it, 1 Read, 5 coloured. Both rows carry next_time on all 22. Celia's 0 coloured is about her run, not the model: the census judged Joshua's runs coloured 71/71.
+
+Commits `5b5f269`, `f328be4`, `5ddf05d`, `55302ee`. Not mine but present in the working tree: mainhub/drill-hub changes from another session (`211d982` and dirty files); left untouched.
+
+Not done: no student-login browser check of Celia's real card; the two reply drafts untouched at Joshua's direction; temp scripts `scripts/_diag_build.ts`, `_ids_tmp.ts`, `_regrade_tmp.ts`, `_mr_tmp.ts`, `_shot_tmp.mjs` left for him to delete.
+
+## 2026-09-08 (09:30 UTC) — The Report Card becomes a page she can read, in colour that means something
+
+Joshua's brief, in his words: highly organised, easy to follow and run through, high-end, click to hear her recording with the transcript highlighting as it plays against the golden standard, very specific critiques and very specific congratulations, spoken in his voice. Then three corrections as it went: **not cream** ("overdone and too AI looking"), **not emerald**, and **much more colourful than grey**. Green was a typo, not a request.
+
+**Structure.** Twenty-two collapsible rows, each opening into ten stacked blocks of undifferentiated small text, became a ledger of twenty-two marks on a console plus exactly one stimulus open below it, in a fixed order she learns once: the passage, what you held, what slipped, your Read, line by line, what you said, next time. Previous/Next walks the run without going back to the ledger.
+
+**The transcript follows the sound.** The grader already stored `startMs`/`endMs` for every line she spoke, so the playhead alone drives the highlight; no word timings, no re-grade, and grades written before today get it too. Her recording and the standard's are one transport at the top rather than two text links at the foot of an expanded row. Line timings exist on 68 of 74 lines in Celia's row, and the six without simply get no play button.
+
+**Specific congratulation.** "What you held" is read off measured facts and sits ahead of the correction. Before this a stimulus at the standard got one sentence and one at 86% got nothing, so twenty of twenty-two rows were a list of what went wrong.
+
+**No Detail arithmetic on screen.** A Detail is our grading unit and a student has never seen one enumerated, so "20 of 21 details" is gone: `howMuch()` says "Almost all of it came back". Joshua's rule, and it applies to any future student-facing surface.
+
+**Colour means a KIND of feedback, never a severity** — the mechanic is Grammarly's, and it is what stops twenty-two stimuli of corrections reading as a heat map of failure. Detail plum-rose, Read teal, what she brought of her own gold, method indigo; a miss is the colour of the thing it is a miss of. Magenta is the exception and means sound. Band stays carried by FILL not hue, so the ledger survives grayscale.
+
+**Hues researched, not picked** (Firecrawl agents, server-side). Over-used in current award-winning work: acid yellow, electric cobalt, orange and coral, warm sand and terracotta, black plus one neon accent. Under-used: violet and plum, soft cyan, dusty rose as a field, cool neutrals. Orange-red was this file's first answer and is on the over-used list, so it moved. Neutrals are tinted toward violet the way Material 3's baseline is (`#fffbfe`, `#7d5260`), a system built to hold AA. A later job recommended blue for a generic "correct" token and warned gold reads as rank; it does not apply, because this card has no correct/incorrect token and gold is a category, not a verdict.
+
+**`bigMisses` promoted.** The grader has returned at most three plain-words misses since it was written and the card printed them as one grey line at the foot of the line-by-line block. They now lead "What slipped", with the full missed list folded under. Every spoken-feedback product that does this well surfaces a small actionable set (Busuu names three).
+
+**Verified:** 96 test files / 2,685 Activity Centre tests, typecheck clean, and every text node measured at 4.5:1 or better in a real browser across the default, playing and clean states (34 samples, 0 failures) via `scripts/_rc_contrast.mjs`, which converts computed colours through a canvas because Chrome serialises them as `oklch()`. Screenshots at 1180px and 390px via `scripts/_rc_shots.mjs`.
+
+**New for future RRC report work:** `src/features/activity-centre/components/report-card.css` is the scoped world (`.rc`), the design decisions are written into its docstring and into `.impeccable/surfaces/src-features-activity-centre.md` under "The Report Card (locked 2026-09-08)". `/src/dev/report-card-preview.html` renders the card at twenty-two stimuli **without `App.tsx`**, which is what made it workable while another session's CSS was mid-edit and 500ing the dev server: `?state=clean|faults|partial`, `?playing=N` to freeze the playhead.
+
+Commits `3bd7aba`, `a9cb6e2`, both on origin/main. Discarded with Joshua's confirmation: an uncommitted local edit to `questionfinder/questionFinder.css` from another session; origin's `c8e4478` already carried the better fix (it hides the shortcut hint too).
+
+**Correction to an earlier claim in this session:** I reported the "Every cylinder" branch as dead code because the judge never returns an empty `next_time` across 44 real stimuli. That was wrong. The card gates on measured criteria, not the empty string, so it fires correctly; Celia never triggers it because she gave no Read on any of the 22, which is the right answer. The narrower finding stands: the judge has never once left `next_time` empty.
+
+Not done: no student-login browser check, so the playhead has never been seen against a real recording. No retry path from a miss, which the education research was consistent about. The `next_time` voice pass is still outstanding (11 em-dashes across 44 lines, "Push past just retelling" ten times) and needs a prompt change plus a deploy.
+
+## 2026-09-08 (11:20 UTC) — Ivory could not open his drill, and nothing was watching
+
+Two mails from Ivory Johnson III. Monday: "would you know when I should be able to see the assigned work on my portal?" Tuesday, with a screenshot: "Not open yet. This part of the classroom isn't in your plan right now."
+
+**Not a broken link.** `has_activity_access` was `false` on his profile while `has_classroom_access` was `true`, which is why he could sign in and reach the classroom and it looked like the URL was at fault. One flag caused both mails: `/activities/:id` sits behind `ProtectedRoute flag="has_activity_access"`, and Classroom's own feed drops activity rows for anyone without it (`useClassroomHome.ts:189`), so his three RRC sections were invisible AND unreachable. He is the only one of nine students with RRC assigned who was missing it; his was a hand-granted subset (classroom, drill, chat, schedule) that missed activity. Turned it on at Joshua's go-ahead. There is no per-drill flag and there cannot be one, but the scoping was moot: `/activities` lists only a student's own assignments and he has zero non-RRC activities, so the flag opened exactly the three RRC sections and nothing else.
+
+**The systemic fix.** `scripts/assign.ts` now grants the flag the assigned work needs, after the write, never before, granting nothing else and revoking nothing; it fails loudly rather than reporting a clean assign. `scripts/access-audit.ts` is the read-only sweep for work arriving by other paths (admin UI, Lovable-side writes, hand-run SQL) and names problems without fixing them, because opening a feature on a student's account is Joshua's call. Currently clean: 13 students with assigned work, all able to open it. Commit `15a5a2b`.
+
+**Reply drafted, not sent:** Gmail draft in thread `1a07c3c954127a8c`, copy at `wiki/IVORY-REPLY-DRAFT-2026-09-08.md`. Owns it in the first line, names the cause, tells him the three sections and to re-sign-in if the page is stale.
+
+**The lesson, which is the point of writing this down.** The product had no opinion about whether a student could open what it had just written to their account. Every route is gated and every feed filters, so a missing flag is not a locked door, it is an empty page: the failure is silent on both sides, and the only detector was a student polite enough to send a screenshot. When a surface is gated AND its feed filters on the same flag, assigning into it needs a guarantee at the write, not a hope. Next time work is assigned by any path, check the student can reach it in the same breath.
+
+## 2026-09-11 (pickup) — RRC Steps 8 to 12: five sessions consolidated, #111 re-merged with main
+
+The 2026-09-09 sessions were never logged; this entry covers them and today's pickup.
+
+**Built 2026-09-09, branch per step, PR per branch, nothing merged.** Step 8 (`rrc-step-8`, #105): "Microphone on." with the level bar; the count waits for the first sound or six seconds; the Space instruction moved to the briefing foot. Step 9 (`rrc-step-9`, #106): three hover lifts, the traffic-light dots and the glass chip removed; `--rd-edge` at 3:1 on the close control and attempt rows. Step 10 (`rrc-step-10`, #107, based on step 8): the plan's `min(760px, 70svh)` cap measured wrong, so on phones `.mw { display: contents }` and the stage flows after the copy. Step 11 (`rrc-step-11`, #109): DESIGN.md sanctions `.ac-section` as a LawHub mirror and the door's cream as the owner's exception; 13 slate literals became `--sec-*` tokens; detector waivers recorded through `impeccable ignores` (report-card.css 6 to 0, section.css 10 to 0). Step 12 (`rrc-step-12`, #111, integration of all four): em dashes out of student copy, "Attempt" and "held" as the one name each, the Recall verdict in words, status regions always mounted, the closing line no longer hardcodes 25 min. Joshua's late call: an unheard check holds with Start anyway / Ask again / Leave this section; only she starts the count.
+
+**Found by the re-run, in my own work:** Steps 9 and 10 fought when merged (`.sl .mw` outranked the unscoped phone rules and the hero collapsed to 456px; now scoped and test-pinned), and the beat harness lacked `index.css` so `sr-only` had no rule. Also corrected: I had said the `impeccable` CLI was not installed. `npx --no-install impeccable` resolves 4.1.0. Joshua caught it.
+
+**Scores:** audit 13 to 15/20 (target 17), critique 24 to 26/40 (target 32). Both missed. The remainder is shape, not polish; the five recommended next actions are under "Step 12: done" in [[RRC-DRILL-AUDIT-CRITIQUE-2026-09-09]].
+
+**Today.** Main had moved from `9cdc04f` to `365205b` (#114 demo videos, #115 and #116 booking, plus Lovable commits), and the shared checkout was on another session's branch with a dirty tree, so #111 was merged with main in a throwaway worktree. One conflict, the briefing page's imports: Step 10's `useNoKeyboard` and #114's `SectionDemos`, both kept. Merge commit `c635b7b` pushed; 107 files / 2,795 Activity Centre tests pass; `tsc` reports errors only in `supabase/functions/_shared/transactional-email-templates/*` (Deno files that were already on main at `9cdc04f`, untouched by this branch). #105, #106, #109 also still merge clean on their own. The worktree was removed from git but the empty directory `projects/lsatu-wt-rrc12` would not delete (permission denied) and needs a manual `rmdir`.
+
+**Not done:** nothing published; Joshua merges and publishes himself. `scripts/rrc-ungraded.ts` not run. Edge function `grade-rrc-section` not re-verified. Open decision: merge #111 as one, or the four small PRs individually.
+
+## 2026-09-11 ingest + recap | Past-week transcripts pulled; four recap drafts; `session-recap` skill
+
+Swept the primary Google Calendar 2026-09-04 to 2026-09-11 (19 events) plus Drive for every "Notes by Gemini" doc in the window, attached or not. Six new docs exported as plain text (the markdown export is 10x larger and escapes everything) and filed by guest email / speaker label:
+
+- `students/avneet-natt/transcript-downloads/2026-09-08-avneet-natt-notes-by-gemini.md`
+- `students/adriana-varea/transcript-downloads/2026-09-08-adriana-varea-notes-by-gemini.md`
+- `students/sofia/transcript-downloads/2026-09-09-sofia-notes-by-gemini.md`
+- `students/charles-moore/transcript-downloads/2026-09-09-charles-moore-notes-by-gemini.md` (Drive title "Meeting started 2026/09/09 13:12"; speaker labels confirm Charles)
+- `students/_other-sessions/2026-09-08-cameron-notes-by-gemini.md` (Drive title "Meeting started 2026/09/08 19:15"; no calendar event; Cameron is new, targeting November, onboarding discussed. Folder not created pending Joshua's call.)
+- `students/_other-sessions/2026-09-10-zeina-consultation-notes-by-gemini.md` (consultation)
+
+Already on disk from the 2026-09-08 pull: Sofia 09-04, Amanda 09-04, Celia 09-07. Sessions with no Gemini doc anywhere: Steven 09-04, Ivory 09-04, Sofia 09-07, Yahunatan 09-09, and the Olivia / Venusa / Althea / Natilie consultations. The Google Classroom calendars were checked and are empty.
+
+New skill `session-recap` (`~/.claude/skills/` + `skills/claude/`): recap note in Joshua's voice from the full transcript, filed at `students/<slug>/recaps/YYYY-MM-DD-recap.md` with `posted: false`, never posted by the agent. Four drafts written: Sofia 09-09, Charles 09-09, Avneet 09-08, Adriana 09-08. Adriana's `transcripts.md` and `open-loops.md` appended.
+
+## 2026-09-11 assign | Sofia: Parallel Reasoning note + Parallel Flaw drill
+
+Assigned via `scripts/assign.ts` (drill) and the app's `createClassroomItem` + `notifyStudentOfClassroomItem` (note, copied verbatim from Celia's 2026-08-19 item). Both notified on all three channels. Logged in `students/sofia/assignment-log.md`; recap draft updated to match.
+
+## 2026-09-11 consultation follow-up template rebuilt
+
+Rebuilt the post-consultation follow-up template from five identical sends (2026-08-08 to 2026-09-08) into `wiki/CONSULTATION-FOLLOW-UP-TEMPLATE.md`; the February PDF (two steps + Google Form) is retired. `consultation-followup-drafts` skill repointed to it and to `gws` (its STEP 1 paths were dead). Sent Zeina Borji her follow-up on approval; logged in [[send-ledger]].

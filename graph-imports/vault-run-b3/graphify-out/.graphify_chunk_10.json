@@ -1,0 +1,859 @@
+{
+  "nodes": [
+    {
+      "id": "lsat_bootcamp_bootstrap",
+      "label": "LSAT topic bootcamp bootstrap",
+      "type": "capability",
+      "summary": "Audit-driven bootstrap of a new LSAT U topic bootcamp project: walk the topic corpus, tier-grade it, scan the Mac for stray related files, benchmark quality, then generate the project folder and a Claude Code kickoff prompt. v2 does real Stage-1 audit work up front (~20-40 min) instead of emitting placeholder templates.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/lsat-u-topic-builder/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/lsat-u-topic-builder/INSTALL.md",
+        "/Users/joshuaf/ai-os/skills/claude/lsat-u-topic-builder/templates/README_TEMPLATE.md"
+      ]
+    },
+    {
+      "id": "corpus_tier_grading",
+      "label": "S/A/B/C/D corpus tier grading",
+      "type": "technique",
+      "summary": "Score every source file across 10 rubric dimensions (pedagogical clarity, factual rigor, completeness, tone, voice strength, visual teaching, interaction design, polish, curriculum coherence, uniqueness multiplier) and assign a tier from S (gold standard, preserve verbatim) to D (delete). Uniqueness caps the grade so redundant files cannot score high.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/lsat-u-topic-builder/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/lsat-u-topic-builder/templates/AUDIT_REPORT_TEMPLATE.md"
+      ]
+    },
+    {
+      "id": "repetition_map",
+      "label": "Repetition map / dedupe cluster",
+      "type": "technique",
+      "summary": "Cluster source files by content overlap, name the cleanest version per cluster, and mark the rest as drops. Feeds the Gate 2 deduplication pass so the same concept is not taught twice from two files.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/lsat-u-topic-builder/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/lsat-u-topic-builder/templates/AUDIT_REPORT_TEMPLATE.md"
+      ]
+    },
+    {
+      "id": "module_gap_analysis",
+      "label": "Per-module gap analysis",
+      "type": "technique",
+      "summary": "Compare the audited corpus against the candidate six-module bootcamp structure and mark each module sufficient / marginal / insufficient, with a remediation choice (author, defer to v1.5, merge, drop). Prevents claiming a topic has enough material when it does not.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/lsat-u-topic-builder/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/lsat-u-topic-builder/templates/AUDIT_REPORT_TEMPLATE.md"
+      ]
+    },
+    {
+      "id": "audit_report_artifact",
+      "label": "AUDIT_REPORT.md",
+      "type": "artifact-produced",
+      "summary": "The Stage-1 audit deliverable: tier rankings, repetition map, garbage list, Mac-scan results, per-module gap table, named tools, worked examples, traps, opinionated recommendations. Claude Code reads it as the Gate 2 baseline instead of re-auditing, saving ~50% of Gate 1/2 time.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/lsat-u-topic-builder/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/lsat-u-topic-builder/templates/AUDIT_REPORT_TEMPLATE.md"
+      ]
+    },
+    {
+      "id": "handoff_control_document",
+      "label": "Handoff control document",
+      "type": "artifact-produced",
+      "summary": "The per-project control document Claude Code must read first and restate as an 8-point understanding before acting. Carries the gate structure, source paths, preservation rules, design scouting rules, and the what-must-not-happen list.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/lsat-u-topic-builder/templates/HANDOFF_TEMPLATE.md",
+        "/Users/joshuaf/ai-os/skills/claude/lsat-u-topic-builder/templates/CLAUDE_TEMPLATE.md",
+        "/Users/joshuaf/ai-os/skills/claude/lsat-u-topic-builder/templates/README_TEMPLATE.md"
+      ]
+    },
+    {
+      "id": "project_memory_ledger",
+      "label": "Running project-memory ledger",
+      "type": "artifact-produced",
+      "summary": "PROJECT_MEMORY.md: the single source of truth for project state, read at every session start and updated at every gate close. Holds an append-only dated decisions log, rules learned, tools approved/rejected, quality bar, and lessons that bubble back into the skill itself.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/lsat-u-topic-builder/templates/PROJECT_MEMORY_TEMPLATE.md",
+        "/Users/joshuaf/ai-os/skills/claude/lsat-u-topic-builder/templates/CLAUDE_TEMPLATE.md"
+      ]
+    },
+    {
+      "id": "gate_driven_approval_workflow",
+      "label": "Gate-driven blocking approval workflow",
+      "type": "workflow-stage",
+      "summary": "Gate 0 source-access → Gate 1 scaffolding + reference study → Gate 2 content inventory → Gate 3 architecture lock → Gate 4 per-module review → Gate 5 pre-merge. Each gate is explicit, blocking, and requires written sign-off; no production code before Gate 3.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/lsat-u-topic-builder/templates/HANDOFF_TEMPLATE.md",
+        "/Users/joshuaf/ai-os/skills/claude/lsat-u-topic-builder/templates/CLAUDE_TEMPLATE.md",
+        "/Users/joshuaf/ai-os/skills/claude/lsat-u-topic-builder/templates/PROJECT_MEMORY_TEMPLATE.md"
+      ]
+    },
+    {
+      "id": "content_parity_no_silent_drops",
+      "label": "No silent content drops",
+      "type": "constraint",
+      "summary": "The curriculum corpus is the product. Every reviewed source item must land either in the v1 inventory table or on a Not-Included-in-v1 table with a reason; anything on neither is a build failure regardless of UI quality. Enforced by machine-checkable parity artifacts under /docs/parity/.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/lsat-u-topic-builder/templates/HANDOFF_TEMPLATE.md",
+        "/Users/joshuaf/ai-os/skills/claude/lsat-u-topic-builder/templates/CLAUDE_TEMPLATE.md",
+        "/Users/joshuaf/ai-os/skills/claude/lsat-u-topic-builder/templates/PROJECT_MEMORY_TEMPLATE.md"
+      ]
+    },
+    {
+      "id": "silent_content_drop_failure",
+      "label": "Silent content drop",
+      "type": "failure-mode",
+      "summary": "Shipping a beautiful app that quietly loses questions, drills, named tools, voice passages, or reference sections. Named explicitly as the build-failure condition the whole gate + parity apparatus exists to prevent.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/lsat-u-topic-builder/templates/HANDOFF_TEMPLATE.md",
+        "/Users/joshuaf/ai-os/skills/claude/lsat-u-topic-builder/templates/README_TEMPLATE.md"
+      ]
+    },
+    {
+      "id": "two_register_voice_preservation",
+      "label": "Two-register voice preservation",
+      "type": "constraint",
+      "summary": "Register 1 (decisive, verdict-style, procedural) for reference, simulator, drill instructions; Register 2 (whimsical, parodic, metaphor-led) for lessons and drill setup. Named tools keep their exact names; voicy passages ship verbatim; never rewrite into generic editor tone.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/lsat-u-topic-builder/templates/HANDOFF_TEMPLATE.md",
+        "/Users/joshuaf/ai-os/skills/claude/lsat-u-topic-builder/templates/CLAUDE_TEMPLATE.md",
+        "/Users/joshuaf/ai-os/skills/claude/lsat-u-topic-builder/templates/PROJECT_MEMORY_TEMPLATE.md",
+        "/Users/joshuaf/ai-os/skills/claude/lsat-u-topic-builder/templates/AUDIT_REPORT_TEMPLATE.md"
+      ]
+    },
+    {
+      "id": "persistence_adapter_pattern",
+      "label": "Persistence adapter pattern",
+      "type": "design-principle",
+      "summary": "App code talks only to a `Persistence` interface, never to localStorage / IndexedDB / Supabase directly. v1 ships LocalStorage + IndexedDB implementations so a future Supabase swap is a one-file change and LSAT U absorption is a layer swap, not a rewrite.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/lsat-u-topic-builder/templates/HANDOFF_TEMPLATE.md",
+        "/Users/joshuaf/ai-os/skills/claude/lsat-u-topic-builder/templates/CLAUDE_TEMPLATE.md",
+        "/Users/joshuaf/ai-os/skills/claude/lsat-u-topic-builder/templates/PROJECT_MEMORY_TEMPLATE.md"
+      ]
+    },
+    {
+      "id": "design_scouting_primitives_only",
+      "label": "Component scouting: primitives only",
+      "type": "constraint",
+      "summary": "21st.dev MCP is allowed for primitive components only (buttons, tabs, drawers, badges, rows), never for layout-scale composition; hit rate is about 1 useful primitive per 7 calls and Magic Generate is rejected outright. Layouts come from direct reference apps (Linear, Readwise, Superhuman, Anki, UWorld).",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/lsat-u-topic-builder/templates/HANDOFF_TEMPLATE.md",
+        "/Users/joshuaf/ai-os/skills/claude/lsat-u-topic-builder/templates/PROJECT_MEMORY_TEMPLATE.md",
+        "/Users/joshuaf/ai-os/skills/claude/lsat-u-topic-builder/SKILL.md"
+      ]
+    },
+    {
+      "id": "user_override_authoritative",
+      "label": "User edits are authoritative",
+      "type": "constraint",
+      "summary": "Rule 14: any file edit or chat override by Joshua must be detected, acknowledged with a JOSHUA OVERRIDE / JOSHUA EDIT callout, logged as a dated row in the decisions log, and treated as authoritative. Conflicts with existing rules are surfaced before proceeding, never silently absorbed.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/lsat-u-topic-builder/templates/PROJECT_MEMORY_TEMPLATE.md",
+        "/Users/joshuaf/ai-os/skills/claude/lsat-u-topic-builder/templates/CLAUDE_TEMPLATE.md",
+        "/Users/joshuaf/ai-os/skills/claude/lsat-u-topic-builder/templates/HANDOFF_TEMPLATE.md"
+      ]
+    },
+    {
+      "id": "review_mode_bypass",
+      "label": "Ship a review-mode bypass with every gate",
+      "type": "constraint",
+      "summary": "Rule 18: any progressive unlock, LockedRoute, completion prerequisite, or paywall must ship simultaneously with a toggle that opens all gates for pre-ship review. Born from an incident where correct routes looked broken because gating hid them during a walkthrough.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/lsat-u-topic-builder/templates/PROJECT_MEMORY_TEMPLATE.md"
+      ]
+    },
+    {
+      "id": "premium_editorial_aesthetic",
+      "label": "Premium editorial / private-academy aesthetic",
+      "type": "design-principle",
+      "summary": "Dark-mode private academy: editorial typography, restrained 1px borders, one warm accent used only on commit/selection, Linear/Arc/Readwise-level density, 150-220ms eased motion with no spring or parallax. The shared quality bar for LSAT U surfaces.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/lsat-u-topic-builder/templates/HANDOFF_TEMPLATE.md",
+        "/Users/joshuaf/ai-os/skills/claude/lsat-u-topic-builder/templates/PROJECT_MEMORY_TEMPLATE.md",
+        "/Users/joshuaf/ai-os/skills/claude/bootcamp-parity-audit/SKILL.md"
+      ]
+    },
+    {
+      "id": "anti_generic_ai_aesthetic",
+      "label": "Reject generic AI/SaaS aesthetics",
+      "type": "design-principle",
+      "summary": "A rule shared across every UI skill here: no Inter/Roboto defaults, no purple-gradient-on-white, no heavy drop shadows, no gamification or vanity metrics, no AI copywriting cliches. Commit to a specific, intentional aesthetic instead of the model's default.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/minimalist-ui/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/frontend-design/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/lsat-u-topic-builder/templates/PROJECT_MEMORY_TEMPLATE.md"
+      ]
+    },
+    {
+      "id": "minimalist_ui_capability",
+      "label": "Minimalist editorial UI protocol",
+      "type": "capability",
+      "summary": "A prescriptive protocol for warm-monochrome, document-style interfaces: banned element list, named font stacks, exact pastel hex tokens, 1px #EAEAEA borders, bento grids, kbd chrome, and invisible motion via transform/opacity only.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/minimalist-ui/SKILL.md"
+      ]
+    },
+    {
+      "id": "frontend_design_capability",
+      "label": "Distinctive frontend design",
+      "type": "capability",
+      "summary": "Build production-grade web components, pages, and artifacts with a bold committed aesthetic direction chosen before coding. Emphasizes characterful typography, dominant color with sharp accents, unexpected spatial composition, and high-impact orchestrated motion.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/frontend-design/SKILL.md"
+      ]
+    },
+    {
+      "id": "mcp_server_build_capability",
+      "label": "Build an MCP server",
+      "type": "capability",
+      "summary": "Entry point for MCP server development: interrogate the use case, recommend a deployment model, pick a tool-design pattern and framework, scaffold, then test as a custom connector and submit to the directory. Explicitly discovery-first, not code-first.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/build-mcp-server/SKILL.md"
+      ]
+    },
+    {
+      "id": "deployment_model_selection",
+      "label": "MCP deployment model selection",
+      "type": "technique",
+      "summary": "Ranked, opinionated choice between remote streamable-HTTP (default, zero install friction, OAuth works), MCP app with UI widgets, MCPB bundled local, and local stdio (prototypes only). Picking wrong early causes painful rewrites.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/build-mcp-server/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/build-mcp-server/references/deploy-cloudflare-workers.md",
+        "/Users/joshuaf/ai-os/skills/claude/build-mcp-server/references/remote-http-scaffold.md"
+      ]
+    },
+    {
+      "id": "search_execute_tool_pattern",
+      "label": "Search + execute tool pattern",
+      "type": "technique",
+      "summary": "For large API surfaces, expose two tools (search_actions, execute_action) with the catalog held server-side, instead of one tool per endpoint. Under ~15 actions, one-tool-per-action wins; a hybrid promotes the 3-5 hottest actions to dedicated tools.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/build-mcp-server/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/build-mcp-server/references/tool-design.md"
+      ]
+    },
+    {
+      "id": "context_window_economy",
+      "label": "Context window is a public good",
+      "type": "design-principle",
+      "summary": "The shared principle behind both tool design and skill authoring: schemas and instructions land directly in the model's context, so every token must justify itself. Assume the model is already smart; add only what it does not know.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/codex/skill-creator/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/build-mcp-server/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/build-mcp-server/references/tool-design.md"
+      ]
+    },
+    {
+      "id": "progressive_disclosure",
+      "label": "Progressive disclosure loading",
+      "type": "technique",
+      "summary": "Three-level loading: metadata (~100 words, always in context), SKILL.md body (<5k words, loaded on trigger), bundled references and scripts (loaded or executed only when needed). Keeps SKILL.md under ~500 lines by pushing variant detail into references/.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/codex/skill-creator/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill_creator_capability",
+      "label": "Create or update a skill",
+      "type": "capability",
+      "summary": "Guide for authoring skills as self-contained folders (SKILL.md + optional scripts/references/assets + agents/openai.yaml UI metadata), including degrees-of-freedom calibration, forward-testing, and a ban on auxiliary README/CHANGELOG clutter.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/codex/skill-creator/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/codex/skill-creator/references/openai_yaml.md"
+      ]
+    },
+    {
+      "id": "skill_frontmatter_trigger_contract",
+      "label": "Frontmatter name+description as the trigger contract",
+      "type": "design-principle",
+      "summary": "Only `name` and `description` are read to decide whether a skill fires, so the description must comprehensively state what it does and when to use it. Every SKILL.md in this catalog follows the same contract; optional fields like argument-hint, allowed-tools, and disable-model-invocation tune invocation.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/codex/skill-creator/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/example-command/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/to-issues/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/codex/grill-me/SKILL.md"
+      ]
+    },
+    {
+      "id": "degrees_of_freedom_calibration",
+      "label": "Match degrees of freedom to task fragility",
+      "type": "design-principle",
+      "summary": "High freedom (prose heuristics) when many approaches are valid; medium (pseudocode, parameterized scripts) when a preferred pattern exists; low (specific scripts, few parameters) when operations are fragile and a sequence must be followed exactly. A narrow bridge needs guardrails, an open field does not.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/codex/skill-creator/SKILL.md"
+      ]
+    },
+    {
+      "id": "subagent_validation_integrity",
+      "label": "Protect validation integrity",
+      "type": "constraint",
+      "summary": "When using subagents to validate a skill, treat them as an evaluation surface: pass raw artifacts and minimum task-local context, never the intended answer, suspected bug, or your prior conclusions. Otherwise you learn only that another agent can reconstruct leaked context.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/codex/skill-creator/SKILL.md"
+      ]
+    },
+    {
+      "id": "example_command_layout",
+      "label": "skills/<name>/SKILL.md invocation layout",
+      "type": "capability",
+      "summary": "A reference skill demonstrating the user-invoked slash-command layout and its frontmatter options (argument-hint, allowed-tools, model override, $ARGUMENTS), functionally identical to the legacy commands/*.md format.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/example-command/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill_catalog_split_subtrees",
+      "label": "Split claude/ and codex/ catalog subtrees",
+      "type": "design-principle",
+      "summary": "The skill database is inert storage split by tool origin: Claude-sourced skills under claude/, Codex-sourced under codex/, never merged, with vendor items stored as live symlink plus frozen snapshot. Indexed by a shared INDEX.md.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/README.md",
+        "/Users/joshuaf/ai-os/skills/codex/README.md"
+      ]
+    },
+    {
+      "id": "discovery_before_build_interview",
+      "label": "Interview before building",
+      "type": "technique",
+      "summary": "Batch a set of scoping questions and resolve every branch before producing anything. Appears as build-mcp-server's Phase 1 ('discovery, not code'), the topic builder's single-batch Phase C1 confirmation, and grill-me's relentless plan interview.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/build-mcp-server/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/lsat-u-topic-builder/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/codex/grill-me/SKILL.md"
+      ]
+    },
+    {
+      "id": "grill_me_capability",
+      "label": "Grill me (plan interview)",
+      "type": "capability",
+      "summary": "A relentless interview that sharpens a plan or design before building. In the Codex catalog it is a thin, model-invocation-disabled shim that delegates to a /grilling session.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/codex/grill-me/SKILL.md"
+      ]
+    },
+    {
+      "id": "mcp_oauth_auth_model",
+      "label": "MCP auth: CIMD over DCR",
+      "type": "tool-dependency",
+      "summary": "Claude's MCP client supports oauth_dcr, oauth_cimd (preferred for directory entries), Anthropic-held creds, custom_connection, and none; user-pasted bearer tokens are unsupported. Servers must validate token audience (RFC 8707) and never pass tokens through upstream.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/build-mcp-server/references/auth.md"
+      ]
+    },
+    {
+      "id": "mcp_non_tool_primitives",
+      "label": "Resources, prompts, elicitation, sampling",
+      "type": "capability",
+      "summary": "The non-tool MCP primitives: resources (host-triggered browsable context), prompts (user slash commands), elicitation (server asks for structured input mid-tool with zero UI code), and sampling (server delegates LLM inference to the host). Elicitation needs a client capability check plus fallback.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/build-mcp-server/references/resources-and-prompts.md",
+        "/Users/joshuaf/ai-os/skills/claude/build-mcp-server/references/elicitation.md",
+        "/Users/joshuaf/ai-os/skills/claude/build-mcp-server/references/server-capabilities.md"
+      ]
+    },
+    {
+      "id": "version_sensitive_claims_ledger",
+      "label": "Version-sensitive claims ledger",
+      "type": "artifact-produced",
+      "summary": "A references/versions.md file tracking every claim in the skill that depends on a specific SDK, spec, or host version, with instructions for verifying them when the skill is updated. Guards against a skill silently going stale.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/build-mcp-server/references/versions.md"
+      ]
+    },
+    {
+      "id": "lsat_lab_transcribe_claude",
+      "label": "LSAT Lab transcription (Claude)",
+      "type": "capability",
+      "summary": "Drive the open LSAT Lab practice player through a browser and transcribe the full written explanation for every question that has one into a single markdown file per PrepTest, capturing all three explanation styles per question.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/lsat-lab-transcribe/SKILL.md"
+      ]
+    },
+    {
+      "id": "lsat_lab_transcribe_codex",
+      "label": "LSAT Lab transcription (Codex)",
+      "type": "capability",
+      "summary": "The Codex port of the same transcription job, with an added execution contract: the in-app Browser only, apply_patch for local edits, a set-log consult step, and a two-source checkpoint between the live question label and the progress file's NEXT pointer.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/codex/lsat-lab-transcribe/SKILL.md"
+      ]
+    },
+    {
+      "id": "verbatim_no_fabrication",
+      "label": "Verbatim capture, never fabricate",
+      "type": "constraint",
+      "summary": "Accuracy is the entire job: transcribe explanation text word for word, never paraphrase, never invent percentages or question-type tags. Question type is pulled from the Question Details panel rather than inferred.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/lsat-lab-transcribe/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/codex/lsat-lab-transcribe/SKILL.md"
+      ]
+    },
+    {
+      "id": "one_file_per_preptest",
+      "label": "One markdown file per PrepTest",
+      "type": "artifact-produced",
+      "summary": "Hard output rule: all sections of a PrepTest go in a single organized markdown file with per-question headings, never one file per question or per section, and never a second parallel transcription file.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/lsat-lab-transcribe/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/codex/lsat-lab-transcribe/SKILL.md"
+      ]
+    },
+    {
+      "id": "progress_checkpoint_file",
+      "label": "Progress / resume checkpoint file",
+      "type": "artifact-produced",
+      "summary": "A per-test progress file listing Done, Skipped (video-only), and a NEXT pointer, updated immediately after each validated question capture so a run can be interrupted and resumed without re-doing or skipping work.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/lsat-lab-transcribe/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/codex/lsat-lab-transcribe/SKILL.md"
+      ]
+    },
+    {
+      "id": "browser_surface_lock",
+      "label": "Single locked browser surface",
+      "type": "constraint",
+      "summary": "Codex-side rule: use the documented in-app Browser only, never claude-in-chrome, control-chrome, Chrome extensions, or standalone Playwright, and never switch surfaces to work around a connection or auth failure. Stop and report the exact blocker instead.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/codex/lsat-lab-transcribe/SKILL.md"
+      ]
+    },
+    {
+      "id": "chrome_devtools_mcp_dependency",
+      "label": "Chrome DevTools MCP",
+      "type": "tool-dependency",
+      "summary": "The tool layer behind performance tracing and page inspection: performance_start_trace, performance_analyze_insight, list_network_requests, evaluate_script, emulate, list_pages/new_page/navigate_page. Its failures are what the troubleshooting skill exists to diagnose.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/debug-optimize-lcp/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/troubleshooting/SKILL.md"
+      ]
+    },
+    {
+      "id": "lcp_optimization_capability",
+      "label": "Debug and optimize LCP",
+      "type": "capability",
+      "summary": "Diagnose slow Largest Contentful Paint by recording a trace, analyzing LCP insights, identifying the LCP element and its network timing, then fixing the specific bottleneck subpart. Good is under 2.5s; on 73% of mobile pages the LCP element is an image.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/debug-optimize-lcp/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/debug-optimize-lcp/references/lcp-breakdown.md",
+        "/Users/joshuaf/ai-os/skills/claude/debug-optimize-lcp/references/optimization-strategies.md",
+        "/Users/joshuaf/ai-os/skills/claude/debug-optimize-lcp/references/elements-and-size.md",
+        "/Users/joshuaf/ai-os/skills/claude/debug-optimize-lcp/references/lcp-snippets.md"
+      ]
+    },
+    {
+      "id": "measure_bottleneck_before_fixing",
+      "label": "Find the bottleneck before optimizing",
+      "type": "technique",
+      "summary": "Break the metric into its subparts (TTFB, resource load delay, load duration, render delay) and fix only the dominant one. Compressing an image when render delay is the real bottleneck just shifts the time. The same 'measure first, fix second' rule governs the perf branch of bug diagnosis.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/debug-optimize-lcp/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/debug-optimize-lcp/references/lcp-breakdown.md",
+        "/Users/joshuaf/ai-os/skills/claude/diagnosing-bugs/SKILL.md"
+      ]
+    },
+    {
+      "id": "reverify_under_emulation",
+      "label": "Re-verify the fix under emulation",
+      "type": "workflow-stage",
+      "summary": "Re-run the trace after the change and confirm the bottleneck subpart actually shrank, then re-test under throttled network and CPU (Fast 3G, 4x CPU) because lab conditions hide issues real users hit.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/debug-optimize-lcp/SKILL.md"
+      ]
+    },
+    {
+      "id": "mcp_connection_troubleshooting",
+      "label": "MCP connection troubleshooting wizard",
+      "type": "capability",
+      "summary": "Step-by-step diagnosis when Chrome DevTools MCP tools or server init fail: locate and read the MCP config, triage known error signatures (DevToolsActivePort, target closed, module not found, flag typos), then consult upstream known-issues docs before changing config.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/troubleshooting/SKILL.md"
+      ]
+    },
+    {
+      "id": "read_config_before_guessing",
+      "label": "Read the config before asking or changing it",
+      "type": "technique",
+      "summary": "First action is to find and interpret the actual configuration file (.mcp.json, .claude/settings.json, .vscode/launch.json) and only ask the user for it if none exists. Then verify with the cheapest probe (list_pages) rather than retrying the original complex command.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/troubleshooting/SKILL.md"
+      ]
+    },
+    {
+      "id": "bug_diagnosis_loop",
+      "label": "Bug diagnosis discipline",
+      "type": "capability",
+      "summary": "A six-phase discipline for hard bugs and performance regressions: build a feedback loop, reproduce and minimise, hypothesise, instrument, fix with a regression test, then clean up and post-mortem. Phases are skipped only with explicit justification.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/diagnosing-bugs/SKILL.md"
+      ]
+    },
+    {
+      "id": "tight_feedback_loop_first",
+      "label": "Build a tight red-capable feedback loop first",
+      "type": "technique",
+      "summary": "The core of bug diagnosis: one named command, already run at least once, that is red-capable on this exact symptom, deterministic, fast, and agent-runnable. Ten construction routes are ranked from failing test to HITL script; for flaky bugs the goal is a higher reproduction rate, not a clean repro.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/diagnosing-bugs/SKILL.md"
+      ]
+    },
+    {
+      "id": "premature_hypothesis_failure",
+      "label": "Theorising before a loop exists",
+      "type": "failure-mode",
+      "summary": "Reading code to build a theory before a red-capable command exists is named as the exact failure the diagnosis skill prevents. Related failure: single-hypothesis generation anchoring on the first plausible idea, countered by producing 3-5 ranked falsifiable hypotheses with stated predictions.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/diagnosing-bugs/SKILL.md"
+      ]
+    },
+    {
+      "id": "tagged_debug_instrumentation",
+      "label": "Tagged, removable instrumentation",
+      "type": "technique",
+      "summary": "Each probe maps to one Phase 3 prediction, one variable changes at a time, debugger beats logs, and every debug log carries a unique prefix like [DEBUG-a4f2] so cleanup is a single grep. Never 'log everything and grep'.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/diagnosing-bugs/SKILL.md"
+      ]
+    },
+    {
+      "id": "regression_test_seam",
+      "label": "Regression test needs a correct seam",
+      "type": "constraint",
+      "summary": "Write the regression test before the fix, but only where the seam exercises the real bug pattern at the call site. If no correct seam exists, that absence is itself the finding and gets escalated as an architecture problem after the fix lands.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/diagnosing-bugs/SKILL.md"
+      ]
+    },
+    {
+      "id": "parallel_agent_dispatch",
+      "label": "Dispatch parallel agents",
+      "type": "technique",
+      "summary": "One agent per independent problem domain, all dispatched in a single response so they run concurrently. Each gets specific scope, a clear goal, constraints, and a required output summary; results are then reviewed for conflicts and validated against the full suite.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/dispatching-parallel-agents/SKILL.md"
+      ]
+    },
+    {
+      "id": "isolated_agent_context",
+      "label": "Constructed, isolated subagent context",
+      "type": "design-principle",
+      "summary": "Subagents never inherit the parent session's history; the dispatcher constructs exactly the context they need. This keeps each agent focused and preserves the coordinator's own context for integration work.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/dispatching-parallel-agents/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/review/SKILL.md"
+      ]
+    },
+    {
+      "id": "agent_scope_too_broad_failure",
+      "label": "Over-broad or unconstrained agent prompt",
+      "type": "failure-mode",
+      "summary": "'Fix all the tests' loses the agent; no pasted error context leaves it hunting; no constraints invite a sweeping refactor; no output spec leaves the coordinator blind to what changed. Also a wrong fit when failures are related or state is shared.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/dispatching-parallel-agents/SKILL.md"
+      ]
+    },
+    {
+      "id": "two_axis_review",
+      "label": "Two-axis diff review (standards + spec)",
+      "type": "capability",
+      "summary": "Review the diff since a pinned fixed point along two deliberately separate axes: does it follow the repo's documented standards, and does it faithfully implement the originating issue or PRD. Each axis runs in its own sub-agent and results are reported side by side, never merged or reranked.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/review/SKILL.md"
+      ]
+    },
+    {
+      "id": "axis_separation_prevents_masking",
+      "label": "Separate axes so neither masks the other",
+      "type": "design-principle",
+      "summary": "Code can follow every standard while implementing the wrong thing, or do exactly what the issue asked while breaking conventions. Keeping the verdicts separate stops a pass on one axis from hiding a failure on the other.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/review/SKILL.md"
+      ]
+    },
+    {
+      "id": "fail_fast_on_bad_inputs",
+      "label": "Validate inputs before fanning out",
+      "type": "technique",
+      "summary": "Confirm the fixed point resolves and the diff is non-empty before spawning sub-agents; verify every source path exists at Gate 0 before any build work; stop the booking run when the roster lacks an email. Cheap upfront checks beat failures discovered downstream.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/review/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/lsat-u-topic-builder/templates/HANDOFF_TEMPLATE.md",
+        "/Users/joshuaf/ai-os/skills/claude/send-booking-link/SKILL.md"
+      ]
+    },
+    {
+      "id": "vertical_slice_issues",
+      "label": "Tracer-bullet vertical slice issues",
+      "type": "technique",
+      "summary": "Break a plan into independently-grabbable issues that each cut end-to-end through every layer (schema, API, UI, tests) rather than horizontally through one layer. Each slice is demoable on its own; prefactoring goes first; the breakdown is quizzed with the user before publishing.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/to-issues/SKILL.md"
+      ]
+    },
+    {
+      "id": "issue_tracker_dependency",
+      "label": "Project issue tracker",
+      "type": "tool-dependency",
+      "summary": "An issue-tracker workflow doc (docs/agents/issue-tracker.md) plus a triage label vocabulary, provisioned by a setup skill. Both issue publishing and spec-axis review depend on it to fetch or create tickets.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/to-issues/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/review/SKILL.md"
+      ]
+    },
+    {
+      "id": "plan_execution_capability",
+      "label": "Execute a written plan",
+      "type": "capability",
+      "summary": "Load a plan file, review it critically and raise concerns before starting, turn items into todos, execute each step exactly with its verifications, then hand off to a branch-finishing skill. Prefers subagent-driven development when subagents are available.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/executing-plans/SKILL.md"
+      ]
+    },
+    {
+      "id": "stop_and_ask_on_blocker",
+      "label": "Stop on blockers, never guess",
+      "type": "constraint",
+      "summary": "Halt immediately on a missing dependency, failing test, unclear instruction, or repeated verification failure and ask rather than forcing through. Echoed by the booking-link skill's refusal to invent an address and the transcription skill's refusal to switch browsers around a blocker.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/executing-plans/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/send-booking-link/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/codex/lsat-lab-transcribe/SKILL.md"
+      ]
+    },
+    {
+      "id": "bootcamp_parity_audit",
+      "label": "Bootcamp parity audit",
+      "type": "capability",
+      "summary": "Score a named LSAT U bootcamp against the flagship Intro to LR bootcamp and the shared quality bar, emitting a fixed 5-point delta report (feature, visual, content/pedagogy, data-quality gaps, verdict plus the single highest-leverage fix). Diagnosis only, never builds.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/bootcamp-parity-audit/SKILL.md"
+      ]
+    },
+    {
+      "id": "synthesis_docs_as_done_definition",
+      "label": "Synthesis docs define 'done'",
+      "type": "design-principle",
+      "summary": "Rather than re-reading a 216-file flagship tree each run, the quality-bar, product-spec, and design-system synthesis docs are treated as the source of truth for what shipped quality means; the codebase is spot-checked only where those docs are ambiguous. A missing entity page is itself reported as a gap.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/bootcamp-parity-audit/SKILL.md"
+      ]
+    },
+    {
+      "id": "gws_cli_dependency",
+      "label": "gws CLI",
+      "type": "tool-dependency",
+      "summary": "The Google Workspace CLI binary that every gws-* skill wraps, with a shared syntax (`gws <service> <resource> <method>`), global flags (--format, --dry-run, --sanitize), pagination flags, and OAuth or service-account auth.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/gws-shared/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/gws-calendar-insert/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/gws-modelarmor-create-template/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/gws-workflow-meeting-prep/SKILL.md"
+      ]
+    },
+    {
+      "id": "gws_shared_prerequisite",
+      "label": "gws shared reference",
+      "type": "capability",
+      "summary": "The single prerequisite doc every generated gws command skill points at for auth, global flags, security rules, and shell quoting gotchas (zsh `!` expansion in sheet ranges, single-quoting JSON payloads). Generated by `gws generate-skills`.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/gws-shared/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/gws-calendar-insert/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/gws-modelarmor-create-template/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/gws-workflow-meeting-prep/SKILL.md"
+      ]
+    },
+    {
+      "id": "confirm_before_write_commands",
+      "label": "Confirm before write/destructive commands",
+      "type": "constraint",
+      "summary": "Never output secrets; always confirm with the user before executing a write or delete; prefer --dry-run for destructive operations. Each generated write-command skill repeats the caution banner inline.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/gws-shared/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/gws-calendar-insert/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/gws-modelarmor-create-template/SKILL.md"
+      ]
+    },
+    {
+      "id": "gws_calendar_insert",
+      "label": "Create a calendar event",
+      "type": "capability",
+      "summary": "`gws calendar +insert` with summary, RFC3339 start/end, optional location, description, repeatable attendees, and --meet to attach a Google Meet link. A write command requiring confirmation.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/gws-calendar-insert/SKILL.md"
+      ]
+    },
+    {
+      "id": "gws_meeting_prep",
+      "label": "Meeting prep workflow",
+      "type": "capability",
+      "summary": "`gws workflow +meeting-prep` reads the next upcoming calendar event with its attendees, description, and linked docs. Read-only, so it never needs the write-confirmation gate.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/gws-workflow-meeting-prep/SKILL.md"
+      ]
+    },
+    {
+      "id": "model_armor_sanitization",
+      "label": "Model Armor content sanitization",
+      "type": "capability",
+      "summary": "Create a Model Armor template (default preset: jailbreak) whose name is then passed to +sanitize-prompt / +sanitize-response, or used via the global --sanitize flag to screen responses for PII and content safety.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/gws-modelarmor-create-template/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/gws-shared/SKILL.md"
+      ]
+    },
+    {
+      "id": "send_booking_link",
+      "label": "Send a student booking link",
+      "type": "capability",
+      "summary": "Rebuild the roster, look up the student's email and booking slug, draft the email in Joshua's voice, optionally send after explicit approval, then log both the follow-up loop and the send ledger row. Collapses four hand-orchestrated steps into one run, single student or batch.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/send-booking-link/SKILL.md"
+      ]
+    },
+    {
+      "id": "draft_never_send",
+      "label": "Draft by default, send only on explicit go-ahead",
+      "type": "constraint",
+      "summary": "Anything a student or prospect reads is drafted and not sent unless pre-approved and explicitly green-lit; the --draft flag is never omitted on a first pass. A batch is drafted whole and approved once, and never sent on an ambiguous 'yes'.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/send-booking-link/SKILL.md"
+      ]
+    },
+    {
+      "id": "generated_roster_never_guess",
+      "label": "Generated roster is the only address source",
+      "type": "constraint",
+      "summary": "Emails and booking slugs are read from a regenerated roster, never guessed or derived (the URL slug differs from the folder slug). Missing email, missing pass, exhausted credits, or a backend disagreement all stop the run. Never hand-edit *.generated.md.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/send-booking-link/SKILL.md"
+      ]
+    },
+    {
+      "id": "append_only_send_ledger",
+      "label": "Append-only send ledger and open-loops log",
+      "type": "artifact-produced",
+      "summary": "Two append-only surfaces: the per-student open-loops.md carrying the follow-up commitment, and wiki/send-ledger.md answering 'did X get their email'. Status is `drafted` until it actually goes out, and a failed send is logged as a failure rather than as intent.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/send-booking-link/SKILL.md"
+      ]
+    },
+    {
+      "id": "youtube_full_capability",
+      "label": "YouTube transcripts, search, channels, playlists",
+      "type": "capability",
+      "summary": "One skill covering the whole YouTube surface via TranscriptAPI: transcripts, video and channel search, channel browsing with pagination, playlists, and within-channel search. Not for uploads or account management.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/youtube-full/SKILL.md"
+      ]
+    },
+    {
+      "id": "api_key_env_and_credits",
+      "label": "API key setup and credit budgeting",
+      "type": "constraint",
+      "summary": "Requires TRANSCRIPT_API_KEY in the environment, with a documented setup path if unset, and each call costs credits (most operations 1 credit, some channel lookups free) so workflows are ordered to minimize spend.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/youtube-full/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/youtube-full/references/auth-setup.md"
+      ]
+    }
+  ],
+  "edges": [
+    {"source": "lsat_bootcamp_bootstrap", "target": "corpus_tier_grading", "type": "depends_on", "confidence": 0.95, "evidence": "Phase A5: tier-grade each source file (S/A/B/C/D)"},
+    {"source": "lsat_bootcamp_bootstrap", "target": "repetition_map", "type": "depends_on", "confidence": 0.9, "evidence": "A6. Build the repetition map"},
+    {"source": "lsat_bootcamp_bootstrap", "target": "module_gap_analysis", "type": "depends_on", "confidence": 0.9, "evidence": "A7. Identify content gaps against the six-module structure"},
+    {"source": "corpus_tier_grading", "target": "repetition_map", "type": "chains_into", "confidence": 0.8, "evidence": "grading precedes clustering by content overlap"},
+    {"source": "repetition_map", "target": "content_parity_no_silent_drops", "type": "constrains", "confidence": 0.75, "evidence": "produces the 'use this version, drop these' list that feeds Gate 2 deduplication"},
+    {"source": "lsat_bootcamp_bootstrap", "target": "audit_report_artifact", "type": "produces", "confidence": 0.95, "evidence": "C4. Generate AUDIT_REPORT.md"},
+    {"source": "lsat_bootcamp_bootstrap", "target": "handoff_control_document", "type": "produces", "confidence": 0.95, "evidence": "C3 populates the handoff template with audit-informed substitutions"},
+    {"source": "lsat_bootcamp_bootstrap", "target": "project_memory_ledger", "type": "produces", "confidence": 0.95, "evidence": "four pre-populated files including PROJECT_MEMORY.md"},
+    {"source": "audit_report_artifact", "target": "gate_driven_approval_workflow", "type": "chains_into", "confidence": 0.9, "evidence": "'The audit report is your starting baseline for Gate 2 — don't re-audit from scratch'"},
+    {"source": "handoff_control_document", "target": "gate_driven_approval_workflow", "type": "produces", "confidence": 0.85, "evidence": "Section 7 APPROVAL GATES defines Gate 0 through Gate 5"},
+    {"source": "gate_driven_approval_workflow", "target": "content_parity_no_silent_drops", "type": "depends_on", "confidence": 0.9, "evidence": "Gate 2 is a hard approval gate on the content-scope inventory"},
+    {"source": "content_parity_no_silent_drops", "target": "silent_content_drop_failure", "type": "constrains", "confidence": 0.9, "evidence": "'Anything missing from both tables is silently dropped and is a build failure'"},
+    {"source": "gate_driven_approval_workflow", "target": "review_mode_bypass", "type": "constrains", "confidence": 0.7, "evidence": "Rule 18: if you build a gate, you build the bypass at the same time"},
+    {"source": "project_memory_ledger", "target": "user_override_authoritative", "type": "consumes", "confidence": 0.85, "evidence": "overrides logged in the Decisions Log as a new dated row"},
+    {"source": "project_memory_ledger", "target": "lsat_bootcamp_bootstrap", "type": "chains_into", "confidence": 0.8, "evidence": "'Lessons For Next Topic Project' sections become the seed for refining the skill"},
+    {"source": "handoff_control_document", "target": "two_register_voice_preservation", "type": "constrains", "confidence": 0.9, "evidence": "Section 5 WHAT MUST BE PRESERVED: two-register voice"},
+    {"source": "handoff_control_document", "target": "persistence_adapter_pattern", "type": "constrains", "confidence": 0.9, "evidence": "app code talks to a Persistence interface only"},
+    {"source": "handoff_control_document", "target": "design_scouting_primitives_only", "type": "constrains", "confidence": 0.85, "evidence": "Rule 1: 21st.dev for primitives only. Never for layouts."},
+    {"source": "premium_editorial_aesthetic", "target": "anti_generic_ai_aesthetic", "type": "specializes", "confidence": 0.8, "evidence": "rejects generic SaaS, gamification, marketing heroes, vanity metrics"},
+    {"source": "minimalist_ui_capability", "target": "anti_generic_ai_aesthetic", "type": "depends_on", "confidence": 0.9, "evidence": "Section 2 Absolute Negative Constraints bans Inter/Roboto, gradients, heavy shadows, AI cliches"},
+    {"source": "frontend_design_capability", "target": "anti_generic_ai_aesthetic", "type": "depends_on", "confidence": 0.9, "evidence": "'NEVER use generic AI-generated aesthetics'"},
+    {"source": "minimalist_ui_capability", "target": "frontend_design_capability", "type": "overlaps_with", "confidence": 0.8, "evidence": "both govern building web UI with a committed aesthetic and an anti-default rule set"},
+    {"source": "minimalist_ui_capability", "target": "frontend_design_capability", "type": "specializes", "confidence": 0.7, "evidence": "minimalist-ui locks one editorial direction where frontend-design chooses a direction per project"},
+    {"source": "minimalist_ui_capability", "target": "premium_editorial_aesthetic", "type": "overlaps_with", "confidence": 0.7, "evidence": "1px hairline borders, editorial serif headings, restrained accents, invisible motion; INFERRED shared vocabulary across the two"},
+    {"source": "mcp_server_build_capability", "target": "discovery_before_build_interview", "type": "depends_on", "confidence": 0.95, "evidence": "'Your first job is discovery, not code' — Phase 1 interrogate the use case"},
+    {"source": "mcp_server_build_capability", "target": "deployment_model_selection", "type": "chains_into", "confidence": 0.95, "evidence": "Phase 2 — Recommend a deployment model"},
+    {"source": "deployment_model_selection", "target": "search_execute_tool_pattern", "type": "chains_into", "confidence": 0.85, "evidence": "Phase 3 follows Phase 2 in the decision sequence"},
+    {"source": "search_execute_tool_pattern", "target": "context_window_economy", "type": "depends_on", "confidence": 0.9, "evidence": "listing every operation 'floods the context window and degrades model performance'"},
+    {"source": "progressive_disclosure", "target": "context_window_economy", "type": "depends_on", "confidence": 0.95, "evidence": "three-level loading system to manage context efficiently"},
+    {"source": "skill_creator_capability", "target": "progressive_disclosure", "type": "depends_on", "confidence": 0.95, "evidence": "Progressive Disclosure Design Principle section"},
+    {"source": "skill_creator_capability", "target": "degrees_of_freedom_calibration", "type": "depends_on", "confidence": 0.9, "evidence": "Set Appropriate Degrees of Freedom"},
+    {"source": "skill_creator_capability", "target": "skill_frontmatter_trigger_contract", "type": "produces", "confidence": 0.9, "evidence": "name and description 'are the only fields that Codex reads to determine when the skill gets used'"},
+    {"source": "skill_creator_capability", "target": "subagent_validation_integrity", "type": "constrains", "confidence": 0.85, "evidence": "Protect Validation Integrity — avoid passing the intended answer or suspected bug"},
+    {"source": "subagent_validation_integrity", "target": "isolated_agent_context", "type": "overlaps_with", "confidence": 0.8, "evidence": "both insist the subagent gets constructed minimal context, not inherited conclusions"},
+    {"source": "example_command_layout", "target": "skill_frontmatter_trigger_contract", "type": "depends_on", "confidence": 0.8, "evidence": "Frontmatter Options Reference: name, description, argument-hint, allowed-tools, model"},
+    {"source": "skill_catalog_split_subtrees", "target": "skill_creator_capability", "type": "constrains", "confidence": 0.6, "evidence": "INFERRED: the catalog's claude/ vs codex/ split determines where a newly created skill is stored"},
+    {"source": "mcp_server_build_capability", "target": "mcp_oauth_auth_model", "type": "depends_on", "confidence": 0.9, "evidence": "Phase 1 question 5 routes OAuth cases to references/auth.md"},
+    {"source": "mcp_oauth_auth_model", "target": "deployment_model_selection", "type": "constrains", "confidence": 0.85, "evidence": "'Auth is the reason most people end up needing a remote server'"},
+    {"source": "mcp_non_tool_primitives", "target": "search_execute_tool_pattern", "type": "alternative_to", "confidence": 0.7, "evidence": "resources, prompts, elicitation and sampling are the primitives beyond tools"},
+    {"source": "version_sensitive_claims_ledger", "target": "mcp_server_build_capability", "type": "constrains", "confidence": 0.8, "evidence": "versions.md — version-sensitive claims ledger (check when updating)"},
+    {"source": "lsat_lab_transcribe_codex", "target": "lsat_lab_transcribe_claude", "type": "duplicates", "confidence": 0.95, "evidence": "identical title, output rule, three-style requirement and accuracy rules; only the execution contract differs"},
+    {"source": "lsat_lab_transcribe_claude", "target": "verbatim_no_fabrication", "type": "constrains", "confidence": 0.95, "evidence": "'Accuracy is the whole job: verbatim text, never paraphrase, never fabricate'"},
+    {"source": "lsat_lab_transcribe_codex", "target": "verbatim_no_fabrication", "type": "constrains", "confidence": 0.95, "evidence": "same accuracy-rules section in the Codex port"},
+    {"source": "lsat_lab_transcribe_claude", "target": "one_file_per_preptest", "type": "produces", "confidence": 0.95, "evidence": "Output: ONE file per test (hard rule)"},
+    {"source": "lsat_lab_transcribe_codex", "target": "one_file_per_preptest", "type": "produces", "confidence": 0.95, "evidence": "'Never use ... a second transcription file'"},
+    {"source": "lsat_lab_transcribe_codex", "target": "progress_checkpoint_file", "type": "produces", "confidence": 0.9, "evidence": "two-source checkpoint between the live S#/Q# label and the progress file's NEXT pointer"},
+    {"source": "lsat_lab_transcribe_claude", "target": "progress_checkpoint_file", "type": "produces", "confidence": 0.9, "evidence": "Progress logging (every question)"},
+    {"source": "lsat_lab_transcribe_codex", "target": "browser_surface_lock", "type": "constrains", "confidence": 0.95, "evidence": "'Do NOT invoke claude-in-chrome, control-chrome, ... Do not switch browser surfaces'"},
+    {"source": "browser_surface_lock", "target": "stop_and_ask_on_blocker", "type": "specializes", "confidence": 0.8, "evidence": "'If the in-app Browser cannot connect, stop and report the exact blocker'"},
+    {"source": "lcp_optimization_capability", "target": "chrome_devtools_mcp_dependency", "type": "depends_on", "confidence": 0.95, "evidence": "performance_start_trace, performance_analyze_insight, list_network_requests, evaluate_script"},
+    {"source": "mcp_connection_troubleshooting", "target": "chrome_devtools_mcp_dependency", "type": "depends_on", "confidence": 0.95, "evidence": "triggered when list_pages, new_page, or navigate_page fail"},
+    {"source": "mcp_connection_troubleshooting", "target": "lcp_optimization_capability", "type": "prerequisite_of", "confidence": 0.75, "evidence": "INFERRED: LCP tracing cannot start until the DevTools MCP connection issues it diagnoses are resolved"},
+    {"source": "lcp_optimization_capability", "target": "measure_bottleneck_before_fixing", "type": "depends_on", "confidence": 0.95, "evidence": "'Common Pitfall: optimizing one subpart without checking others'"},
+    {"source": "lcp_optimization_capability", "target": "reverify_under_emulation", "type": "chains_into", "confidence": 0.9, "evidence": "Verifying Fixes & Emulation — re-run the trace and compare subparts"},
+    {"source": "bug_diagnosis_loop", "target": "measure_bottleneck_before_fixing", "type": "overlaps_with", "confidence": 0.8, "evidence": "'Perf branch ... establish a baseline measurement, then bisect. Measure first, fix second.'"},
+    {"source": "bug_diagnosis_loop", "target": "lcp_optimization_capability", "type": "overlaps_with", "confidence": 0.7, "evidence": "both cover performance regressions; diagnosing-bugs is general, debug-optimize-lcp is the LCP specialization"},
+    {"source": "lcp_optimization_capability", "target": "bug_diagnosis_loop", "type": "specializes", "confidence": 0.7, "evidence": "INFERRED: LCP workflow is the metric-specific instance of the general diagnosis discipline"},
+    {"source": "bug_diagnosis_loop", "target": "tight_feedback_loop_first", "type": "depends_on", "confidence": 0.98, "evidence": "'This is the skill. Everything else is mechanical.'"},
+    {"source": "tight_feedback_loop_first", "target": "premature_hypothesis_failure", "type": "constrains", "confidence": 0.95, "evidence": "'No red-capable command, no Phase 2'"},
+    {"source": "tight_feedback_loop_first", "target": "tagged_debug_instrumentation", "type": "chains_into", "confidence": 0.85, "evidence": "Phase 4 probes each map to a Phase 3 prediction consumed by the loop"},
+    {"source": "tagged_debug_instrumentation", "target": "regression_test_seam", "type": "chains_into", "confidence": 0.85, "evidence": "Phase 5 follows Phase 4: fix + regression test"},
+    {"source": "regression_test_seam", "target": "stop_and_ask_on_blocker", "type": "overlaps_with", "confidence": 0.6, "evidence": "INFERRED: 'if no correct seam exists, that itself is the finding' rather than forcing a false-confidence test"},
+    {"source": "parallel_agent_dispatch", "target": "isolated_agent_context", "type": "depends_on", "confidence": 0.95, "evidence": "'They should never inherit your session's context or history'"},
+    {"source": "parallel_agent_dispatch", "target": "agent_scope_too_broad_failure", "type": "constrains", "confidence": 0.9, "evidence": "Common Mistakes: too broad, no context, no constraints, vague output"},
+    {"source": "parallel_agent_dispatch", "target": "bug_diagnosis_loop", "type": "alternative_to", "confidence": 0.75, "evidence": "'Don't use when failures are related' or exploratory — investigate together with the diagnosis discipline instead"},
+    {"source": "two_axis_review", "target": "parallel_agent_dispatch", "type": "depends_on", "confidence": 0.9, "evidence": "'Send a single message with two Agent tool calls' so both axes run in parallel"},
+    {"source": "two_axis_review", "target": "axis_separation_prevents_masking", "type": "depends_on", "confidence": 0.95, "evidence": "'Reporting them separately stops one axis from masking the other'"},
+    {"source": "axis_separation_prevents_masking", "target": "isolated_agent_context", "type": "depends_on", "confidence": 0.85, "evidence": "run as parallel sub-agents 'so they don't pollute each other's context'"},
+    {"source": "two_axis_review", "target": "fail_fast_on_bad_inputs", "type": "depends_on", "confidence": 0.9, "evidence": "'A bad ref or empty diff should fail here — not inside two parallel sub-agents'"},
+    {"source": "two_axis_review", "target": "issue_tracker_dependency", "type": "depends_on", "confidence": 0.85, "evidence": "fetch the originating issue via the workflow in docs/agents/issue-tracker.md"},
+    {"source": "vertical_slice_issues", "target": "issue_tracker_dependency", "type": "depends_on", "confidence": 0.9, "evidence": "publish each approved slice as a new issue with the correct triage label"},
+    {"source": "vertical_slice_issues", "target": "plan_execution_capability", "type": "chains_into", "confidence": 0.75, "evidence": "INFERRED: to-issues turns a plan into grabbable work orders that executing-plans then implements"},
+    {"source": "vertical_slice_issues", "target": "two_axis_review", "type": "chains_into", "confidence": 0.8, "evidence": "the published issue becomes the spec the Spec axis reviews the diff against"},
+    {"source": "vertical_slice_issues", "target": "discovery_before_build_interview", "type": "depends_on", "confidence": 0.85, "evidence": "Step 4 Quiz the user — iterate on granularity and dependencies until approved"},
+    {"source": "plan_execution_capability", "target": "stop_and_ask_on_blocker", "type": "constrains", "confidence": 0.95, "evidence": "'STOP executing immediately when ... Ask for clarification rather than guessing'"},
+    {"source": "plan_execution_capability", "target": "parallel_agent_dispatch", "type": "alternative_to", "confidence": 0.8, "evidence": "'If subagents are available, use subagent-driven-development instead of this skill'"},
+    {"source": "plan_execution_capability", "target": "gate_driven_approval_workflow", "type": "overlaps_with", "confidence": 0.7, "evidence": "both execute a frozen spec through review checkpoints rather than improvising; INFERRED from structure"},
+    {"source": "bootcamp_parity_audit", "target": "synthesis_docs_as_done_definition", "type": "depends_on", "confidence": 0.9, "evidence": "'use the entity/synthesis docs as the source of truth for what done means'"},
+    {"source": "bootcamp_parity_audit", "target": "premium_editorial_aesthetic", "type": "consumes", "confidence": 0.85, "evidence": "point 2 visual parity scores design-system deviations from intro-to-lr-design.md"},
+    {"source": "bootcamp_parity_audit", "target": "content_parity_no_silent_drops", "type": "overlaps_with", "confidence": 0.75, "evidence": "both are parity checks against a flagship baseline; the audit reports the delta post-ship where the gate enforces it pre-ship"},
+    {"source": "bootcamp_parity_audit", "target": "lsat_bootcamp_bootstrap", "type": "alternative_to", "confidence": 0.7, "evidence": "INFERRED: one starts a topic bootcamp, the other measures an existing one against the flagship"},
+    {"source": "gws_shared_prerequisite", "target": "gws_cli_dependency", "type": "depends_on", "confidence": 0.95, "evidence": "'The gws binary must be on $PATH'"},
+    {"source": "gws_calendar_insert", "target": "gws_shared_prerequisite", "type": "prerequisite_of", "confidence": 0.95, "evidence": "'PREREQUISITE: Read ../gws-shared/SKILL.md for auth, global flags, and security rules'"},
+    {"source": "gws_meeting_prep", "target": "gws_shared_prerequisite", "type": "prerequisite_of", "confidence": 0.95, "evidence": "same PREREQUISITE banner"},
+    {"source": "model_armor_sanitization", "target": "gws_shared_prerequisite", "type": "prerequisite_of", "confidence": 0.95, "evidence": "same PREREQUISITE banner"},
+    {"source": "gws_shared_prerequisite", "target": "confirm_before_write_commands", "type": "produces", "confidence": 0.9, "evidence": "Security Rules: always confirm before executing write/delete commands"},
+    {"source": "gws_calendar_insert", "target": "confirm_before_write_commands", "type": "constrains", "confidence": 0.95, "evidence": "'This is a write command — confirm with the user before executing'"},
+    {"source": "model_armor_sanitization", "target": "confirm_before_write_commands", "type": "constrains", "confidence": 0.95, "evidence": "same CAUTION banner on +create-template"},
+    {"source": "model_armor_sanitization", "target": "gws_cli_dependency", "type": "constrains", "confidence": 0.8, "evidence": "the template name feeds the global --sanitize flag that screens responses"},
+    {"source": "gws_meeting_prep", "target": "gws_calendar_insert", "type": "overlaps_with", "confidence": 0.7, "evidence": "both operate on the same primary calendar; one reads the next event, one creates events"},
+    {"source": "send_booking_link", "target": "generated_roster_never_guess", "type": "depends_on", "confidence": 0.95, "evidence": "'Look up — never guess an address'; the URL slug is not the folder slug"},
+    {"source": "send_booking_link", "target": "draft_never_send", "type": "constrains", "confidence": 0.95, "evidence": "'Default is draft, not send'; the --draft flag is never omitted on the first pass"},
+    {"source": "send_booking_link", "target": "append_only_send_ledger", "type": "produces", "confidence": 0.95, "evidence": "append to students/<slug>/open-loops.md and one line to wiki/send-ledger.md"},
+    {"source": "send_booking_link", "target": "gws_cli_dependency", "type": "depends_on", "confidence": 0.9, "evidence": "gws gmail +send --to ... --draft"},
+    {"source": "draft_never_send", "target": "confirm_before_write_commands", "type": "specializes", "confidence": 0.85, "evidence": "sending email is the write-command confirmation rule applied to student-facing correspondence"},
+    {"source": "generated_roster_never_guess", "target": "stop_and_ask_on_blocker", "type": "specializes", "confidence": 0.9, "evidence": "'Missing data stops the run; it does not get filled in with a guess'"},
+    {"source": "generated_roster_never_guess", "target": "fail_fast_on_bad_inputs", "type": "depends_on", "confidence": 0.85, "evidence": "no email, no pass, exhausted credits, or backend disagreement all halt before drafting"},
+    {"source": "youtube_full_capability", "target": "api_key_env_and_credits", "type": "depends_on", "confidence": 0.95, "evidence": "required_environment_variables: TRANSCRIPT_API_KEY; credit costs per call"},
+    {"source": "verbatim_no_fabrication", "target": "content_parity_no_silent_drops", "type": "overlaps_with", "confidence": 0.7, "evidence": "both forbid quietly altering or losing authored source material; INFERRED shared fidelity principle"},
+    {"source": "skill_frontmatter_trigger_contract", "target": "context_window_economy", "type": "depends_on", "confidence": 0.85, "evidence": "metadata is always in context (~100 words) so it must be both comprehensive and lean"},
+    {"source": "grill_me_capability", "target": "discovery_before_build_interview", "type": "depends_on", "confidence": 0.9, "evidence": "'A relentless interview to sharpen a plan or design'"},
+    {"source": "grill_me_capability", "target": "plan_execution_capability", "type": "chains_into", "confidence": 0.7, "evidence": "INFERRED: the interview hardens the plan that executing-plans then implements"}
+  ]
+}

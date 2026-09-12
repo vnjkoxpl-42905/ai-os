@@ -1,0 +1,30 @@
+brain verify — through phase 9
+PASS repo-health — Git worktree and object database are healthy
+PASS hooks-path — system/scripts/hooks
+PASS git-boundaries — private, LSATU nested repo, and logs are ignored
+PASS tracked-boundaries — no forbidden paths or gitlinks are tracked
+PASS phase-0-manifest — 17080 rows; 6887 bounded unreadables; sensitive annex present
+PASS phase-0-staging — local LSATU recovery staging exists
+PASS phase-1-schema — neutral schema and both adapters exist
+PASS phase-1-claude-budget — CLAUDE.md is at most 200 lines
+PASS phase-2-lsat-wiki — 249 files
+PASS phase-3-lsatu — clean canonical clone at 7f40f38; remote and instructions inviolate
+PASS phase-3-build-smoke — recorded build and production route smoke pass
+PASS phase-4-curriculum — 1362 files; all manifest candidates reconciled
+PASS phase-5-personal — handling rules, Keychain credential, and encrypted APFS bundle verified
+PASS phase-6-skills — 11 unique canonical skills and guarded runtime link plan verified
+PASS phase-7-automation — lock/CAS/watchdog suite and 7 launchd definitions verified
+PASS phase-7-link-lint — dead=0 orphans=0 broken-pointers=0 merge-markers=0
+PASS phase-8-runtime-cutover — journaled transaction complete; 53 external paths snapshotted
+PASS phase-8-skill-smoke — Claude+Codex explicit/implicit static discovery passes at root+nested cwd
+PASS phase-8-pointer-repair — global adapters/config and path-bearing skills target brain
+PASS phase-8-launchd — 7 jobs loaded after committed switch
+PASS phase-8-redacted-metadata — committed path/hash metadata present; contents remain private
+PASS phase-9-filesystem-scan — full brain filesystem clean outside approved private/nested stores
+PASS phase-9-outer-history — outer Git full history passes Tier-A/secret patterns
+PASS phase-9-nested-history — LSATU full history clean; .env/.npmrc public-client adjudication passes
+PASS phase-9-backup — snapshot=2026-07-14T100809 checksum manifest present; restored sparse bundle test-mounted
+PASS phase-9-failure-injection — intentional exit=42 produced structured log and hot alert
+PASS phase-9-cold-start — Claude+Codex pickup orientation passes at root+nested cwd
+PASS phase-9-handover — one-pager, machine-readable matrix, and final report present
+RESULT PASS

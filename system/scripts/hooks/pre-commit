@@ -1,0 +1,4 @@
+#!/bin/zsh
+set -euo pipefail
+root="$(git rev-parse --show-toplevel)"
+exec "$root/system/scripts/scan-secrets.sh" staged

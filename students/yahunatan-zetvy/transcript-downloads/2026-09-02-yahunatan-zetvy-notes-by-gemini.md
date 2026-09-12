@@ -1,0 +1,1213 @@
+﻿✍️ Quick notes
+Yahunathan session
+
+
+Sep 2, 2026
+ynproemail@gmail.com
+
+
+Logical conditional instruction merged with discussions regarding historical narratives, systematic control, and legal education.
+
+
+Logical Reasoning and Conditional Mapping
+* Joshua explained that 'unless' statements must be translated into 'if-then' form to establish a reliable baseline for logical operations.
+* Yahunatan requested specific examples of Group 4 conditional mapping to improve performance on prep tests.
+* Joshua confirmed that the placement of a conditional within a statement is not important for the transformation process.
+
+
+Socio-Historical and Biblical Perspectives
+* Yahunatan presented ancestral documents from 1667 and 1940 to challenge mainstream narratives regarding historical slavery in North America.
+* Joshua and Yahunatan analyzed the concept of 'keep the body, control the mind' as a strategic mechanism for societal control.
+* Yahunatan argued that gang-related violence is often driven by external manipulation rather than being intrinsic to the community.
+* Joshua acknowledged historical claims regarding secret service targeting of specific marginalized groups.
+* Yahunatan highlighted records of ancestral land ownership in Virginia and Maryland as evidence of complex historical realities beyond a singular narrative.
+
+
+Next steps
+* [Yahunatan] Practice Drills: Complete the assigned exercises to master conditionals and logical rephrasing.
+* [Joshua Fisseha] Send Materials: Provide the necessary conditional drilling practice content for independent study.
+* [Joshua Fisseha] Submit Work: Complete and send the agreed upon tasks and materials to Yahunatan by tomorrow.
+* [Yahunatan] Provide Resources: Provide additional information and materials as discussed with Joshua Fisseha.
+
+
+
+
+
+
+Want to see more? View the full notes
+Tip: You can always access your full notes from the left sidebar.
+
+
+
+
+
+
+You should review Gemini's notes to make sure they're accurate. Get tips and learn how Gemini takes notes
+How is the quality of these specific notes? Take a short survey to let us know your feedback, including how helpful the notes were for your needs.
+📝 Full notes
+Sep 2, 2026
+Yahunathan session
+Invited ynproemail@gmail.com
+Attachments Yahunathan session
+Meeting records Transcript 
+
+
+
+
+Summary
+Logical conditional instruction merged with discussions regarding historical narratives, systematic control, and legal education.
+
+Conditional Logic Practice
+Instruction focused on mastering if-then conditional statements and contrapositive operations. Specific drills will be created to ensure logical proficiency.
+
+Historical and Societal Perspectives
+Discussions explored controversial views on systemic control, historical land ownership, and the nature of community sabotage. Participants analyzed how these factors influence modern societal structures.
+
+Legal Education Goals
+The pursuit of legal education was identified as the primary method for achieving systemic change. Focus shifted toward acquiring institutional knowledge to serve specific community groups.
+
+
+
+
+Next steps
+* [Yahunatan] Practice Drills: Complete the assigned exercises to master conditionals and logical rephrasing.
+* [Joshua Fisseha] Send Materials: Provide the necessary conditional drilling practice content for independent study.
+* [Joshua Fisseha] Submit Work: Complete and send the agreed upon tasks and materials to Yahunatan by tomorrow.
+* [Yahunatan] Provide Resources: Provide additional information and materials as discussed with Joshua Fisseha.
+
+
+
+
+Details
+* Conditional Logic and Translation: Joshua Fisseha provides instruction to Yahunatan on how to translate the word "unless" into a standard "if-then" conditional statement, which serves as a baseline for logical reasoning. They discuss the process of negating the sufficient condition to ensure the statement remains logically equivalent, using a currency exchange analogy to explain the importance of bringing conditional phrases back to their base form. Joshua Fisseha emphasizes that once statements are properly mapped to this form, applying the contrapositive becomes the primary logical operation, making the analysis more straightforward (00:01:06).
+  
+
+* Group Four Conditional Practice: Yahunatan requests an example of a "group four" conditional mapping, noting that they frequently struggle with this during prep tests (00:01:56). Joshua Fisseha provides an example using the term "Ashkenazis," discussing how the placement of the conditional does not affect the validity of the logical statement (00:02:53).
+  
+
+* Jewish Identity and Diversity: During the discussion on conditionals, Yahunatan identifies various Jewish groups, including Kerasite, Middle Eastern, and Ethiopian Jews, and posits controversial theories regarding the European lineage of certain populations (00:04:26). Joshua Fisseha expresses confusion at some of these claims, specifically regarding the suggestion that certain African-American populations have European ancestry (00:05:35).
+* Systemic Manipulation and Control: Yahunatan argues that struggles within communities, such as gang violence and imprisonment, are not purely organic but are influenced by outside forces. Yahunatan suggests that the "enemy" manipulates individuals who look like the targeted population to incite crime and destruction, characterizing this as a strategic effort to destabilize these communities (00:07:28).
+* CIA Involvement and Agent Provocateurs: Yahunatan references the case of the "real Rick Ross" in Los Angeles, claiming that this individual worked with the CIA to infiltrate neighborhoods, leading to deaths and incarcerations while maintaining their own freedom (00:09:38). They discuss the broader concept of "black-on-black crime" as a potential misnomer for controlled sabotage, where individuals are allegedly used to harm their own communities on behalf of external entities (00:10:28).
+* Targeting of Organizations: The participants discuss the perceived compromise of organizations, including the Black Hebrew Israelites, and the potential involvement of intelligence services in these groups (00:10:28). Yahunatan claims that high-profile figures, such as Malcolm X and Tupac Shakur, were set up by people from within their own organizations rather than foreign actors (00:12:29). Yahunatan also asserts that movements like Black Lives Matter are controlled by external interests (00:13:27).
+* Historical Documentation and Land Ownership: Yahunatan presents personal historical documents, including photographs from 1940 and a land grant document from 1667, to challenge the standard historical narrative of the American slavery experience (00:15:24) (00:19:47). Yahunatan highlights that their ancestors held land and wore suits in 1940, arguing that the history of some families in America did not strictly follow the trajectory of universal enslavement often portrayed in popular media (00:16:28) (00:18:43).
+  
+
+* Slavery and Christianity: Yahunatan argues that their ancestors were not inherently Christian, using the 1667 land grant as evidence that they served in the church temporarily to secure freedom and land rather than due to faith conversion (00:21:44). They contend that Christianity was not native to these groups and that the historical record shows instances of negotiated freedom through service (00:25:21).
+* The Nature of "The Enemy": Yahunatan elaborates on the concept of "the enemy," asserting that it is often someone who shares the same appearance as the victim, such as neighborhood pimps or drug dealers, rather than a stereotypical external figure (00:27:30). Yahunatan claims that recognizing this distinction is a "red pill" realization and that these internal perpetrators are the ones causing true havoc in the community (00:28:15).
+* Slavery Narratives and Geography: Yahunatan disputes the idea that slavery was localized only to the American South, citing the existence of the first Historically Black Colleges and Universities (HBCUs) and free people of color in the North as evidence of a more complex history (00:30:34).
+* Assignment of Logical Drills: Joshua Fisseha commits to creating and assigning a specific conditional drill for Yahunatan to complete. They agree that mastering these drills by the next meeting is essential for Yahunatan to effectively rephrase conditionals and improve their understanding of complex passages (00:31:41). Joshua Fisseha expects to have the materials prepared by the following day (00:32:35).
+* Philosophy of Control: Discussing the phrase "Keep the body, control the mind," Yahunatan explains that this refers to keeping populations occupied with pursuits like professional sports and music, which distract them from their true purpose (00:33:27). Yahunatan argues that this control keeps individuals focused on foreign concepts, making it difficult for people to engage in meaningful, direct conversation (00:34:06).
+* Legal Education and Systemic Change: The participants agree that "going to the top" through legal or systemic positions is the necessary path to change laws. Yahunatan emphasizes that their interest in legal education is not for "civil rights" advocacy but for serving the "remnant," viewing the exclusion of minorities from legal fields as a strategic win for the system (00:35:13).
+* Distinctions in Engagement: Joshua Fisseha and Yahunatan distinguish between public displays of activism, such as yelling on street corners, which Yahunatan dismisses as a distraction, and more virtuous, private engagement (00:37:08). Yahunatan proposes that DNA testing could be a simple, objective way to verify identity and filter out the distractions of those they view as inauthentic (00:37:53).
+* Slavery Syndrome and Financial Illusions: Yahunatan describes "slavery syndrome" as a source of brokenness and resentment that drives emotional reactions within the community (00:39:02). They characterize money, including crypto and digital numbers on a screen, as an illusion used to control behavior and distract individuals from their purpose (00:42:19). Yahunatan also discusses how individuals are incentivized toward gang activity or the military, rather than constructive paths, due to the influence of these financial and cultural pressures (00:43:09).
+* Closing Remarks: The meeting concludes with a reflection on biblical examples, such as Judas, to illustrate that betrayal often comes from those closest to one's own circle (00:43:58). Both participants acknowledge the gravity of the discussion, with plans to reconnect for future sessions (00:45:03).
+
+
+
+
+You should review Gemini's notes to make sure they're accurate. Get tips and learn how Gemini takes notes
+How is the quality of these specific notes? Take a short survey to let us know your feedback, including how helpful the notes were for your needs.
+📖 Transcript
+Sep 2, 2026
+Yahunathan session - Transcript
+00:00:00
+
+
+Joshua Fisseha: and unless we're keeping unless not anymore
+Yahunatan: Wait. Okay.
+Joshua Fisseha: there.
+Yahunatan: So, I still keep it there. So, then you can't enter Canada unless you have a passport.
+Joshua Fisseha: Okay. No, no,
+Yahunatan: How do I change it to to read it clearly?
+Joshua Fisseha: no. Yeah. Yeah. So,
+Yahunatan: Yeah.
+Joshua Fisseha: this is a really important thing that I sometimes I think that's not taught clear enough because what you said is really big. Um, very good question. The idea is this. You're trading whenever you see an indicator word like outside of the words if and then you're essentially trading that indicator word and you're trying to bring it back to if then. So we don't like that word unless we want to so we're trying to trade it for if then.
+Yahunatan: Okay.
+Joshua Fisseha: So the way we can translate it, bring it back to our our our comfortable goal spot which is if then right um is by negating it to sufficient and then uh leave the necessary condition alone as like in this natural form and then you can say as if then and remove the word unless you're essentially doing like think of it as a currency exchange.
+
+
+
+
+00:01:06
+
+
+Joshua Fisseha: You don't like that can you actually Canadian dollar right? So you want that American dollar let's say right the golden standard. So the way that we do that is I give it like Canadian dollars in and I'll get a new American dollars in
+Yahunatan: Yeah.
+Joshua Fisseha: return, right? You don't it's not like I'm not saying forget like you're not trying to say the if then and then keep the thing that you initially had. It's to change it to if then you want to bring everything back to our base which is if that if you understand that conditional then that's the conditional like baseline. So when you do this you'll say if you can enter Canada then you can go then you have your
+Yahunatan: Dang it. The password.
+Joshua Fisseha: passport you're just you're swapping it I see the words
+Yahunatan: Okay. Oh, good.
+Joshua Fisseha: essentially you're bringing it because whenever we get into this form that means we know what to do with that we have an understanding of the only thing we can do
+Yahunatan: Yep.
+Joshua Fisseha: is contraositive which is the only the logically equivalent statement the logically equivalent statement is
+
+
+
+
+00:01:56
+
+
+Yahunatan: Sorry.
+Joshua Fisseha: the only um other thing we know to be true but once you get it here everything kind of becomes easy going the hard part is we want to get it act here. We don't want to we want to be stubborn with it. That's why we have these groups because um it's hard to process what it means to say unless right um just in normal normal everyday language.
+Yahunatan: tracking. Yes, sir.
+Joshua Fisseha: So that being said,
+Yahunatan: Can you Well, I think you probably gonna do that,
+Joshua Fisseha: um,
+Yahunatan: but still I'll still ask the question. Can you show me a group four?
+Joshua Fisseha: yeah,
+Yahunatan: Well,
+Joshua Fisseha: I said,
+Yahunatan: I know you can show it, but yeah, if you can Yeah,
+Joshua Fisseha: yeah,
+Yahunatan: give me that example for me cuz I've been,
+Joshua Fisseha: sure. So
+Yahunatan: man,
+Joshua Fisseha: like
+Yahunatan: every time I take a prep test, I forget mapping the exist. I be like, man, like I don't I don't map I maybe one
+Joshua Fisseha: It's important to map.
+Yahunatan: question
+
+
+
+
+00:02:53
+
+
+Joshua Fisseha: It's don't map. We'll say I want to use a I want to use a dicey one. I'll say I'll use a no. Okay. No according to Rich told me. So if I'm wrong take up with our
+Yahunatan: That's good
+Joshua Fisseha: true
+Yahunatan: enough. But
+Joshua Fisseha: So what do we do?
+Yahunatan: That's only you're you're you're only giving
+Joshua Fisseha: How
+Yahunatan: me.
+Joshua Fisseha: do
+Yahunatan: It's not in the middle though. So asking Nazis
+Joshua Fisseha: have to be in the middle?
+Yahunatan: are so then
+Joshua Fisseha: The placement of a conditional are not
+Yahunatan: Yeah. Okay. So,
+Joshua Fisseha: important.
+Yahunatan: so then it would be eskenazis are natural Jews.
+Joshua Fisseha: I said Hebrews, but someone here is trying to be political.
+Yahunatan: Oh, Hebrews. Oh, yeah. Hebrews.
+Joshua Fisseha: I'm joking.
+Yahunatan: Hebrews.
+Joshua Fisseha: Yeah, I got you. So, you you got it right though. So if you remember we're trying to bring back to if then it's all we're trying to do.
+Yahunatan: Yeah.
+Joshua Fisseha: So we
+
+
+
+
+00:04:26
+
+
+Yahunatan: Now there there are there are so you have Ashkenazis but
+Joshua Fisseha: take
+Yahunatan: there are other Jews. So like you got Kerasite, you got the Middle Eastern Jew, you got the ones from Ethiopia. So you know
+Joshua Fisseha: that's why this that's why the statement that's why this that's why this statement would make sense,
+Yahunatan: that's
+Joshua Fisseha: right? Because remember this is actually a good test.
+Yahunatan: Yeah.
+Joshua Fisseha: So if I say to you if you're an
+Yahunatan: Oh, so if if if Ashenazi they they
+Joshua Fisseha: Ashkanazi
+Yahunatan: wait then not Hebrews.
+Joshua Fisseha: Y so what does that tell me about caris?
+Yahunatan: If they are Hebrews,
+Joshua Fisseha: What does that tell me about
+Yahunatan: then they're not
+Joshua Fisseha: correct?
+Yahunatan: as
+Joshua Fisseha: That doesn't tell me anything about European or not European uh Middle Eastern Jews. Those what you said could be true. This doesn't have anything to do with that.
+Yahunatan: No, but you you put No, if they're Hebrews.
+Joshua Fisseha: Oh,
+Yahunatan: Yeah. Then not esenaz. That's a I that's a interesting one.
+
+
+
+
+00:05:35
+
+
+Joshua Fisseha: so that that tells that doesn't tell me anything about the car sites or the uh the other village crews. Those can be true. This this has nothing to do with the state unless they're actually I don't know if they're they're not Ashkanazi at all.
+Yahunatan: Yeah.
+Joshua Fisseha: So Ashkanazi
+Yahunatan: And then you do a DNA do a DNA test on some of the
+Joshua Fisseha: European
+Yahunatan: so-called African-Americans in America. They got European in them. So Eskenazi our Hebrews.
+Joshua Fisseha: I lost you now. Now we got So what you say people in African-Americans are European?
+Yahunatan: I just I was messing with you.
+Joshua Fisseha: I'm like, yeah, my bra you had my brain uh where's the
+Yahunatan: Don't worry. I I was just gonna mess with you on that one.
+Joshua Fisseha: overdrive?
+Yahunatan: Oh, yeah. Yeah.
+Joshua Fisseha: I'll say,"Brother,
+Yahunatan: Yeah.
+Joshua Fisseha: are you coming out as are you coming out as a European?" Say,"Are you coming out to me? You been this whole time in European?
+Yahunatan: Well,
+Joshua Fisseha: Tell me.
+
+
+
+
+00:06:21
+
+
+Yahunatan: well, yes. Yes. I I am saying that some quote unquote black people or Hebrew, whatever you want to call these people, are basically Europeans. If we go two generations,
+Joshua Fisseha: That's
+Yahunatan: their granddaddy is a white man. European man.
+Joshua Fisseha: this is getting crazier. How would that How's that possible?
+Yahunatan: Yeah.
+Joshua Fisseha: What the blow am I doing?
+Yahunatan: Because you got to think they was on they was on a plantation.
+Joshua Fisseha: Yeah.
+Yahunatan: Some was on a plantation.
+Joshua Fisseha: Oh, true. Okay. Okay. I see what you're saying.
+Yahunatan: And so when they start mixing back with their so-called people in 2026, they going to look like us.
+Joshua Fisseha: But then wouldn't the people that they married with also factor into the I I I guess I I don't know how the because if I'm if I'm let's say mixed and I marry somebody that's not mixed that's full black or full Hebrew then the I I guess I I see what you're saying because it passes down to the father. It could theoretically be true though because if there let's say if both sides had their fathers be go back and that
+
+
+
+
+00:07:28
+
+
+Yahunatan: It it's more than likely that a lot of these people that we see this is controversial.
+Joshua Fisseha: gets
+Yahunatan: Okay? Because I'm giving you another view. I'm just messing with this real quick. Right? What I'm saying is this. some think what let's say what if what if okay remember Jacob and Esau twin brothers right so what if the enemy is in the midst to kill the Hebrews let's give an example the drive by shootings the lead the the gang members the gang leaders who tell them who go tell Hebrews to go do these crimes are really the enemy.
+Joshua Fisseha: Like you're saying that there's essentially manipulating the the Hebrew people to have to be careful with public got say some crazy stuff. Um we'll call these people because that word that word will get me kicked out of here.
+Yahunatan: Yeah. E Esau.
+Joshua Fisseha: You know how they uh we'll call we'll call them Yeah.
+Yahunatan: Es. So, we got Jacob and Esau,
+Joshua Fisseha: We'll call them we'll call them sons of Jacob.
+Yahunatan: right? Jacob and Esau,
+
+
+
+
+00:08:38
+
+
+Joshua Fisseha: Sons of Jacob.
+Yahunatan: sons of Jacob,
+Joshua Fisseha: Call Sons of
+Yahunatan: right? Okay. Walk with me, though.
+Joshua Fisseha: Jacob.
+Yahunatan: What if the ones who get killed and dying in the streets or getting put in jail are motivated by the perceive the people that look like them, but they really are Europeans. It just look darker Now the DNA still running in their blood. It didn't disappear.
+Joshua Fisseha: That would be the only thing would be the hard part about that would
+Yahunatan: It will it will make sense in America.
+Joshua Fisseha: be I mean it the
+Yahunatan: I promise you it will make in America. Think about
+Joshua Fisseha: only I I I think you're on to something.
+Yahunatan: America.
+Joshua Fisseha: The thing I would say though is do you think that people that people are knowingly doing that? If you're saying spiritual forces that could probably be an answer, but if you're saying like because I don't think any of
+Yahunatan: Yes, they they're they're knownly doing it. You can look up uh for example,
+Joshua Fisseha: the
+Yahunatan: you can look up uh the real Rick Ross, not the rapper,
+
+
+
+
+00:09:38
+
+
+Joshua Fisseha: Yeah.
+Yahunatan: but the real the the the guy who was doing the stuff in LA.
+Joshua Fisseha: Yeah.
+Yahunatan: Uh you know,
+Joshua Fisseha: Yeah.
+Yahunatan: you know, his partner was the CIA.
+Joshua Fisseha: Yes. Yes. That that's true.
+Yahunatan: Oh, okay. Now,
+Joshua Fisseha: If you're saying if you're saying Yes.
+Yahunatan: walk with me. So, now let's think about that.
+Joshua Fisseha: Yeah.
+Yahunatan: If if if that's true,
+Joshua Fisseha: Yeah.
+Yahunatan: what happened to the people in the neighborhoods who was working for this guy? Some died. Some got put in jail.
+Joshua Fisseha: Yes.
+Yahunatan: And he was working with who? The enemy the whole time.
+Joshua Fisseha: Did he know that? Did he know that though?
+Yahunatan: 100% ain't.
+Joshua Fisseha: Thought he got in trouble though.
+Yahunatan: How's he out?
+Joshua Fisseha: I don't know his I know he didn't serve his time or
+Yahunatan: How's How's he out of jail right now?
+Joshua Fisseha: whatever. I don't know his situation. I'm asking
+Yahunatan: No, he he he went to jail for some time,
+
+
+
+
+00:10:28
+
+
+Joshua Fisseha: really
+Yahunatan: but how is he walking around doing interview? I mean, how how is it possible?
+Joshua Fisseha: how long was he locked up like 30 years?
+Yahunatan: It doesn't matter. He shouldn't out of jail in the
+Joshua Fisseha: I don't know if that's how it works. I don't think you're maybe maybe I'm
+Yahunatan: in the in the open. In the open. So another I give you another example what they do in these communities uh like the
+Joshua Fisseha: wrong.
+Yahunatan: shooters the ones who are willing to kill people right what if they the enemy and they're killing the real
+Joshua Fisseha: Yeah.
+Yahunatan: Hebrews in the inner city this so-called black-on-black crime and it's not really black-on-black crime it's really the enemy going and killing off Hebrews
+Joshua Fisseha: I think there's something there. The thing I would say like I think that I think I think I think that what you're what a better example
+Yahunatan: Yeah. Yeah. That that
+Joshua Fisseha: would probably be like the the the black Hebrew Israelites, right? I'm pretty sure they're compromised. a lot of the black uh a lot of the black uh like the organization that's more
+
+
+
+
+00:11:31
+
+
+Yahunatan: Yeah. Yeah. That's good. Okay.
+Joshua Fisseha: I know I've heard that a lot that they're actually feds whatever the
+Yahunatan: Let's But but okay. So, their leader is a police officer.
+Joshua Fisseha: CIA
+Yahunatan: He used to be like a lieutenant in the police force. That's one thing. But let's use them. The people that's in their midst who came to them are probably Hebrews.
+Joshua Fisseha: Yeah they don't know
+Yahunatan: are Hebrews that's getting misled by people that looks like them.
+Joshua Fisseha: there.
+Yahunatan: Kind of like how the pastor does it.
+Joshua Fisseha: Yep.
+Yahunatan: You know, like he looks this go back to slavery. They'll take a person and then they will make him over people.
+Joshua Fisseha: Yep.
+Yahunatan: Hey, let's do this. That's what Yeah.
+Joshua Fisseha: Yeah,
+Yahunatan: Take Tupac for example.
+Joshua Fisseha: that's for sure.
+Yahunatan: Tupac for example.
+Joshua Fisseha: Oh boy. Oh boy.
+Yahunatan: Yeah.
+Joshua Fisseha: You're about to You're about to probably You're about to tell me some things I should probably never know. About to find out.
+Yahunatan: No,
+
+
+
+
+00:12:29
+
+
+Joshua Fisseha: He was Yeah.
+Yahunatan: I'm just I'm just saying let's take him for example.
+Joshua Fisseha: Yeah.
+Yahunatan: That whole situation was a setup by who?
+Joshua Fisseha: Yeah.
+Yahunatan: By people that look just like him cuz they knew he had a purpose to do something in this planet.
+Joshua Fisseha: Yeah.
+Yahunatan: Yeah. Malcolm X same way.
+Joshua Fisseha: Next
+Yahunatan: who it wasn't no it wasn't nobody who came in that was foreign. Get your hand out my pocket. That was somebody who looked just like him from the same organization, same people.
+Joshua Fisseha: Yes, for sure. That that's for sure.
+Yahunatan: Yeah.
+Joshua Fisseha: That's for sure.
+Yahunatan: Yeah.
+Joshua Fisseha: There is there is a known effort.
+Yahunatan: So I digress on that.
+Joshua Fisseha: I never thought about it as Europeans.
+Yahunatan: Yeah.
+Joshua Fisseha: I maybe it is I don't know but I never knew like I that there's a lot of attacks on you guys um from like super like that's confirmed that's confirmable that's not even a that's not it's not
+Yahunatan: Look at No,
+Joshua Fisseha: even conspiracy like you guys have been
+
+
+
+
+00:13:27
+
+
+Yahunatan: no. America. America. No. No. Listen.
+Joshua Fisseha: target
+Yahunatan: Cuz we watch too much. Not you, but we as a people watch TV. Okay. Stereotypes and all this other stuff. If we make the people in America do a DNA test, you'll be surprised that them and Trump are cousins.
+Joshua Fisseha: Trump like you're talking about the bro you think Trump oh boy
+Yahunatan: 100%. Yeah.
+Joshua Fisseha: you're about to you're about to I don't know if I could buy that.
+Yahunatan: Yeah. Yeah.
+Joshua Fisseha: I don't think you see Trump and a guy that's
+Yahunatan: Black Black Lives Black Lives Matter is a movement from
+Joshua Fisseha: like
+Yahunatan: them. They got people that look like the people. None of the people from Black Lives Matter ever been in the hood of their
+Joshua Fisseha: yeah that doesn't mean that they're not like I think we're Republicans I would disagree with you I agree with you mostly the only thing I would probably say disagree I don't know if it's a I think there's differences in groups.
+Yahunatan: Yeah, I think it went out on us.
+
+
+
+
+00:14:30
+
+
+Joshua Fisseha: I don't know if it I don't think I don't think
+Yahunatan: Hey,
+Joshua Fisseha: it Oh,
+Yahunatan: you see when you when you get to talking like that,
+Joshua Fisseha: I'm saying you're telling me some stuff I shouldn't know.
+Yahunatan: you see the everything
+Joshua Fisseha: I'm going to get targeted on the back. I was going to say this. I think that I think there's a lot of secrets secret services that target you guys.
+Yahunatan: crazy.
+Joshua Fisseha: like the it's been confirmed like with the even the crack cocaine like epidemic like the the black Cuba Israelites a lot of these a lot of the black groups are actually like.
+Yahunatan: N Watch this.
+Joshua Fisseha: are very often
+Yahunatan: Let me do I'm gonna do something for you. Watch this. Okay.
+Joshua Fisseha: found.
+Yahunatan: The everything that you was taught is a it's a lie. I'm about to prove this. See, you met Rich. Hallelujah. That's brother that you ain't met a Yunan cuz your hun gonna come with some receipts that you gonna say, man. How is that possible?
+
+
+
+
+00:15:24
+
+
+Yahunatan: Okay. And let me give you my first receipt. And I'm not now for me. I know what I am. But you for sure what I'm gonna show you, right? You are not going to you'll look at things different because you'll say,
+Joshua Fisseha: It's
+Yahunatan: "Wow, I may be participated or entertained a lot because the P and I'm and I'mma be quick and then
+Joshua Fisseha: Most
+Yahunatan: we can get back at it. I promise. I'm I'm gonna shut up after this,
+Joshua Fisseha: like
+Yahunatan: but I I need to show you something. And then you going to look at you going to look at life a little different for some of us over here in America. Cuz this this little sad uh slavery story that they they continue to push is not is not reality. Never was reality for some.
+Joshua Fisseha: what?
+Yahunatan: I'm about to I'm I'm telling you for some.
+Joshua Fisseha: Oh boy. You say slavery is made
+Yahunatan: Okay.
+Joshua Fisseha: up.
+Yahunatan: No, I'm about to I'm I'm I'm trying to hurry up. I promise you it's worth it.
+
+
+
+
+00:16:28
+
+
+Joshua Fisseha: You better tell me that slavery slavery would never
+Yahunatan: You look this.
+Joshua Fisseha: happen.
+Yahunatan: Let me see. You see this? You see that?
+Joshua Fisseha: I don't see. Okay. Yeah. Yes. Yes. Yes. Yeah. What is that?
+Yahunatan: You see this picture?
+Joshua Fisseha: I see. I see. Yeah.
+Yahunatan: What year?
+Joshua Fisseha: What is that?
+Yahunatan: What What year is that?
+Joshua Fisseha: Oh, lord. I have no idea. 1940.
+Yahunatan: 1940. What that say down there?
+Joshua Fisseha: Yeah.
+Yahunatan: Gray. Right.
+Joshua Fisseha: Okay.
+Yahunatan: The This guy,
+Joshua Fisseha: Yeah.
+Yahunatan: one of them two little boys, that's my grandfather. He was a twin. Okay. This right here,
+Joshua Fisseha: Okay.
+Yahunatan: this guy is my greatgrandfather. Okay. What's the issue? What I'm showing you right now? What What is not adding up right
+Joshua Fisseha: Wait, wait, wait, wait, wait,
+Yahunatan: now?
+Joshua Fisseha: wait, wait, wait, wait, wait. Let me just process what you said.
+
+
+
+
+00:17:36
+
+
+Joshua Fisseha: That young little little one is your grandfather.
+Yahunatan: my grandfather.
+Joshua Fisseha: And then the other one's your
+Yahunatan: The the one is my great grand.
+Joshua Fisseha: great-grandfather.
+Yahunatan: Yes, sir. Yes, sir.
+Joshua Fisseha: I have no I have no idea.
+Yahunatan: I know. And it it and hold on. Greenland. Show you again. What's wrong with this picture though? You the Elsa I got. What's wrong with this picture? 1940. Should they be in
+Joshua Fisseha: Oh,
+Yahunatan: suits?
+Joshua Fisseha: Jesus Christ. Holy smokes. Okay, I just clock I clock. Yeah, I clocked. It's a very bizarre Wait. Um, you just mind blown. Okay. Wait, why are they all Yeah.
+Yahunatan: Exactly.
+Joshua Fisseha: Yeah,
+Yahunatan: 1940.
+Joshua Fisseha: we have
+Yahunatan: I thought they was pro. They was protesting, right? And civil rights and all that, right? Exactly.
+Joshua Fisseha: So wait, are you tell are you the European?
+Yahunatan: I got Hold up.
+Joshua Fisseha: Are you telling me you're European?
+Yahunatan: Who? Me?
+Joshua Fisseha: So you were like you're saying that your people like Wait, I'm losing you
+
+
+
+
+00:18:43
+
+
+Yahunatan: No, no, no, no, no, no. You You are You for sure missing out.
+Joshua Fisseha: here.
+Yahunatan: I just showed you. This is my great great I can't be European. This is plantation time almost.
+Joshua Fisseha: I'm thinking why are
+Yahunatan: this. They just 1865 they just came off the plantation.
+Joshua Fisseha: you
+Yahunatan: Ain't no way European enough.
+Joshua Fisseha: No, what what I mean
+Yahunatan: I know I'm not European. No, no, no.
+Joshua Fisseha: is
+Yahunatan: What I'm saying is I know that I know I'm I'm showing you that. This is what I'm trying to say. And I promise I get back at it. I'm showing you a guy in America who showed you his great greatgrandfather who they say they don't even know where they come from, right? who is wearing a suit in
+Joshua Fisseha: Yes. So my my question but I'm saying that if that's a time where people were
+Yahunatan: 194.
+Joshua Fisseha: why I'm saying that I have we have to we have to we have to bring you into an interrogation room is that why in that time unless I'm maybe just being in that time would that have made sense for him to have suits and stuff like that or would that have been expected for him to
+
+
+
+
+00:19:47
+
+
+Yahunatan: Oh, I'mma walk you.
+Joshua Fisseha: be
+Yahunatan: No, no. I ain't walk you there yet. I'm about to walk you in right now. So, watch this.
+Joshua Fisseha: I guess 90s could be could be I guess that's
+Yahunatan: Yeah. Yeah. That reach right. Yeah. I know it is It's hard to I'm trying to tell you. I do this all the time. You see this? What you see? Do you What do you Can you tell me?
+Joshua Fisseha: Great.
+Yahunatan: Cuz it says what?
+Joshua Fisseha: Gracefield,
+Yahunatan: Okay.
+Joshua Fisseha: Maryland.
+Yahunatan: How can I pull that up?
+Joshua Fisseha: Yeah.
+Yahunatan: How can I pull that up?
+Joshua Fisseha: I don't know what you mean. Well,
+Yahunatan: My last name is Greg.
+Joshua Fisseha: you have a count for you.
+Yahunatan: Oh,
+Joshua Fisseha: Yeah, that
+Yahunatan: my last name is Listen, my last name is Greg.
+Joshua Fisseha: count.
+Yahunatan: Okay. My greatgrandfather, the tall man that you seen right there. He owned a Negro baseball team called the Grays in Owens, Maryland. and it's a historic site.
+
+
+
+
+00:20:53
+
+
+Yahunatan: Not only that, we still have over 100 acres of land in the same location.
+Joshua Fisseha: That's crazy.
+Yahunatan: Okay, I got one more crazy
+Joshua Fisseha: But I'm saying you sound like you sound What I'm saying is you sound like one of the owners though during a time where there's
+Yahunatan: one.
+Joshua Fisseha: oppression.
+Yahunatan: Stop.
+Joshua Fisseha: That's so You got sound You got You got sound boss up.
+Yahunatan: Stop. Stop. I know. I know. I know. I know. Dang.
+Joshua Fisseha: You got sound bosed up. That's crazy.
+Yahunatan: No.
+Joshua Fisseha: That's a crazy I noticed that.
+Yahunatan: No. No. No. No. No. No. Hold on. I'm about to I'm about to I got one more for you.
+Joshua Fisseha: So, we're out here.
+Yahunatan: This my mother's side of the This is my mother's side.
+Joshua Fisseha: We're out here struggling,
+Yahunatan: This my mother's side of the family.
+Joshua Fisseha: guys.
+Yahunatan: Okay. So, let me let me take you to this right here.
+Joshua Fisseha: That's wild.
+Yahunatan: So,
+Joshua Fisseha: That's wild.
+Yahunatan: my this is Emmanuel Kumbbo, right?
+
+
+
+
+00:21:44
+
+
+Yahunatan: He was in Portugal and the guy kidnapped him and brought him to America, right, on in slavery. And then my great great great great great grandfather who is his son got he had to go serve as a Christian. He had to go serve as a Christian to get his freedom at the receipt. Tell me what year you see right here, sir. So I'm going to show you that I know for sure my people is not from Christianity. Okay. What do this say right here? What year does that say for you?
+Joshua Fisseha: uh 1667
+Yahunatan: And
+Joshua Fisseha: does not free enslaved people.
+Yahunatan: Uh-huh.
+Joshua Fisseha: had justed a few years perhaps you not he would not have achieve freedom but he did not they didn't he did make him yeah
+Yahunatan: This is a document.
+Joshua Fisseha: what
+Yahunatan: No, I'm about to about this. I'm walking you there. This is a document from 18 April 18667
+Joshua Fisseha: Okay.
+Yahunatan: land grant to my great great great great great
+Joshua Fisseha: What?
+Yahunatan: grandfather.
+Joshua Fisseha: Okay. So, he didn't convert it
+
+
+
+
+00:23:15
+
+
+Yahunatan: No, he had to serve in the church.
+Joshua Fisseha: back.
+Yahunatan: He had to serve in the church for a couple of years and then they this is the this is the agreement. They gave him all the land back in Virginia and everything. Yep.
+Joshua Fisseha: Oh,
+Yahunatan: Now,
+Joshua Fisseha: so he didn't have to converse.
+Yahunatan: what I'm just No,
+Joshua Fisseha: Okay.
+Yahunatan: no, he a have to convert.
+Joshua Fisseha: Okay.
+Yahunatan: But what I'm I'm just what I'm trying to tell you is you would never find too many people who would be able to do
+Joshua Fisseha: I'm confused though. So are you sure just to understand it better so you can explain it to me here.
+Yahunatan: that.
+Joshua Fisseha: The idea is that he your great your great like one of your great great one of your ancestors let's say um
+Yahunatan: Okay.
+Joshua Fisseha: he didn't convert to
+Yahunatan: My ancestor So my was was traveling through Portugal. Okay. The guy, the European guy. He was coming to America. He kidnapped him. When he got here to America, he put him in slavery.
+
+
+
+
+00:24:16
+
+
+Joshua Fisseha: That's wild. Yeah, that's wild.
+Yahunatan: His son, that's a document right there, right? His son is the one who got out of slavery. ain't got the land that he was supposed to have there, but he had to go serve in a Christian church for a little bit as a servant
+Joshua Fisseha: Yeah. Yeah.
+Yahunatan: before he was
+Joshua Fisseha: Yeah.
+Yahunatan: released.
+Joshua Fisseha: Okay. Okay. But then so you're saying that he wasn't a Christian.
+Yahunatan: No.
+Joshua Fisseha: Is that what you're trying to say?
+Yahunatan: Yeah. No. Why? How could a Christian go serve in? How the world do you make a Christian go serve in the church? And then once he's finished serving, he gets his land and freedom.
+Joshua Fisseha: Okay. I think I follow. Well, well, I would I would assume.
+Yahunatan: 1667.
+Joshua Fisseha: But I'm I'm confused because I don't understand
+Yahunatan: This is 1667.
+Joshua Fisseha: how that makes sense though because you're telling me that Well, I thought that was everybody though. You know, like isn't like the Africans or the black the black people that were enslaved were forced to take Christianity,
+
+
+
+
+00:25:21
+
+
+Yahunatan: Nothing.
+Joshua Fisseha: right? Isn't that what happened? I didn't think Christianity wasn't native to to the black uh or whichever groups like they were
+Yahunatan: It It It wasn't.
+Joshua Fisseha: the European.
+Yahunatan: And I'm showing you that receipt in six.
+Joshua Fisseha: Yeah.
+Yahunatan: Well, listen though. I'm showing you a receipt from
+Joshua Fisseha: Yeah.
+Yahunatan: 1667.
+Joshua Fisseha: Yeah. Yeah. Well, I'm saying Yeah.
+Yahunatan: Slavery. Slavery is abol in
+Joshua Fisseha: Maybe I thought that was
+Yahunatan: 1865.
+Joshua Fisseha: So, you're saying that your ancestors weren't always Christian, right? Is that what you're saying?
+Yahunatan: Yeah. Yeah.
+Joshua Fisseha: Maybe I'm misunderstanding you.
+Yahunatan: No,
+Joshua Fisseha: Yeah, but that's that's I thought that was a
+Yahunatan: no, no, no. I I promise I get to What I'm trying to say
+Joshua Fisseha: kill.
+Yahunatan: is I can bl I can blend in in
+Joshua Fisseha: I'm very confused.
+Yahunatan: America.
+Joshua Fisseha: Okay.
+Yahunatan: I know who I I know. I'm not guessing. When you talk to people like you think you you you know you're guard these commands.
+
+
+
+
+00:26:26
+
+
+Yahunatan: I'm not guessing that. I know it for a fact. Okay. Walk with me. I know I have purpose. It's been taught to me generations. I'm showing you stuff from 1667 right now.
+Joshua Fisseha: I maybe I'm confused. What? What are Maybe I'm lost the converation.
+Yahunatan: I'm I'm about to I'm about to I'm about to get to it.
+Joshua Fisseha: I Okay.
+Yahunatan: I'm about I'm about to get to it.
+Joshua Fisseha: Okay.
+Yahunatan: Okay.
+Joshua Fisseha: Sorry about that.
+Yahunatan: So, I know I have a purpose. I'm not guessing about my history,
+Joshua Fisseha: I agree
+Yahunatan: who I am as Right. However,
+Joshua Fisseha: Sure.
+Yahunatan: in America, I have a brother who was who was killed by people that looks just like me and you.
+Joshua Fisseha: Yeah, you were told me about that. Yeah,
+Yahunatan: I'm showing you a person who knows,
+Joshua Fisseha: that's great.
+Yahunatan: who got a purpose, who grew up the same way as I did. It was European that came in most of these neighborhoods. It's somebody that looks just like them.
+
+
+
+
+00:27:30
+
+
+Joshua Fisseha: Right.
+Yahunatan: The pimps, the murderers looks like them. Not the European.
+Joshua Fisseha: Right.
+Yahunatan: See, that's the story is like,"Oh, the white man, the white police officer came in my neighborhood." What about the drug dealers that's all up in the neighborhood right now?
+Joshua Fisseha: That's that that is true. That is valid.
+Yahunatan: What are we What are we talking about? No, we can't see them as the enemy. Why? Because look just like us.
+Joshua Fisseha: That's Max. That's that's that's that's
+Yahunatan: Now that right there,
+Joshua Fisseha: true that you're about
+Yahunatan: now something like that get live and now Yeah, that's dangerous. Yeah. Yeah. Yeah.
+Joshua Fisseha: to That's very what you just said would cause a ruckus.
+Yahunatan: Now that that that's dangerous right there, sir. Yeah.
+Joshua Fisseha: That's what I'm saying.
+Yahunatan: Yeah. Yeah. Yeah.
+Joshua Fisseha: You're about to You got to be careful.
+Yahunatan: Yeah. Yeah.
+Joshua Fisseha: That's the That kind of message might get you will get you a lot of a lot of smoke because you're right.
+
+
+
+
+00:28:15
+
+
+Yahunatan: Well, the good Oh,
+Joshua Fisseha: You're right.
+Yahunatan: this is the thing.
+Joshua Fisseha: You're actually right.
+Yahunatan: This is the thing though. people people won't believe me one and they will never see the receipts two I don't have to prove to them that I'm a Hebrew like I don't I don't got to prove I could I could tell you I got family that's living in Nigeria right now in a tribe in Nigeria who also does the Torah and everything right now I don't have to prove that to nobody nobody will ever listen to me because I'm not in no type position or nothing. I'm just trying to show that the enemy is not what people think it is. He's already mixed in with
+Joshua Fisseha: Right.
+Yahunatan: them.
+Joshua Fisseha: Right. That's facts. Like that's the that's the real red pill. That's the red pill of red pills. We expect it to look like a to come in like a in a in like a typical like slave master like European costume, but it's actually you put a point you actually put you made me actually rethink that because you're correct if you think about it like the pimps and the drug dealers are the are truly causing havoc if you think about it.
+
+
+
+
+00:29:30
+
+
+Joshua Fisseha: And if those people are if somebody were to
+Yahunatan: Yeah. Who working with Who's working with them people?
+Joshua Fisseha: target Yeah.
+Yahunatan: One more thing. I I got to shut up. Um Harriet Tutman. It was a black slave owner, Andrew Johnson, who was helping her. Okay.
+Joshua Fisseha: Stay
+Yahunatan: Where was he? Watch.
+Joshua Fisseha: master.
+Yahunatan: Yeah, he was a slave owner. Black this. But watch this though. Watch this. You ever heard of um what do they call him? They call him a coon. They call him um from Canada. Um John Tom John like you a you a you a um you a you a Tom Jones or
+Joshua Fisseha: I think I know you're I know what you're talking about. Yeah, I know what you're talking.
+Yahunatan: something like that. you know, he freed people to go to Canada and it's turned into a
+Joshua Fisseha: Yeah. Yeah.
+Yahunatan: negative.
+Joshua Fisseha: Wait.
+Yahunatan: The guy was a person who helped people enslaved get
+Joshua Fisseha: Yeah.
+Yahunatan: freed.
+Joshua Fisseha: Yeah.
+
+
+
+
+00:30:34
+
+
+Yahunatan: This my last one, the first HBCU is doing slavery. Everywhere in the United States was not slavery only in the south. There's always been free people that was color.
+Joshua Fisseha: Okay. Interesting.
+Yahunatan: So they do a part to hold all
+Joshua Fisseha: Interesting.
+Yahunatan: day. It was only in the south. Why? Where was they running to? To the north.
+Joshua Fisseha: That's crazy. That's crazy. That's crazy.
+Yahunatan: And where where did I just show you? I showed you in Maryland in Virginia.
+Joshua Fisseha: Interesting. Very interesting.
+Yahunatan: Yeah.
+Joshua Fisseha: You I feel like you could tell me to teach me a
+Yahunatan: Like I said, I I I went on a little I went on a little rant on about that,
+Joshua Fisseha: lot.
+Yahunatan: but I went too far. So, I know my time probably there. So,
+Joshua Fisseha: Yeah. No, that's that was like the the
+Yahunatan: um I got I know I got five minutes.
+Joshua Fisseha: the
+Yahunatan: So, um you helped me out right here though with this
+
+
+
+
+00:31:41
+
+
+Joshua Fisseha: what we'll do.
+Yahunatan: u um group four right here
+Joshua Fisseha: Yeah.
+Yahunatan: of the breakdown which is what I I
+Joshua Fisseha: Yeah. I I'll I'll what I'll
+Yahunatan: need.
+Joshua Fisseha: say is I'll I'll I'll what I'll do is I'm going to assign you the the the the drill or the the the practicing of that drill that I want you to do and you're going to do that.
+Yahunatan: Yeah.
+Joshua Fisseha: You're going to focus on that, but I'll also attach to you with that um conditional drill um that will force you to like master conditionals. And then we will have at least that's if you can do that it's going to be a lot of work but if you can handle that by the next time we go into questions you should be able to have a good concept of like how to rephrase conditionals and also how to get that uh understanding of the passage right into your mind right away.
+Yahunatan: Yes,
+Joshua Fisseha: Um that will probably be best that'll be best because I think that everything else is just a band-aid on a fix
+
+
+
+
+00:32:35
+
+
+Yahunatan: sir.
+Joshua Fisseha: but it's going to be quite a lot of work. I'll have it by tomorrow. Tomorrow I should have it completely done.
+Yahunatan: Appreciate it.
+Joshua Fisseha: I might I'm going to work on it and then you're going to use that to It's going to be easy to go from that to by the and also send me more. I'm actually very fascinated about what you showed me today. Very interesting. like that was uh a lot of uh had had tur had had the like uh there's a lot
+Yahunatan: Yeah. Yeah.
+Joshua Fisseha: of things like wait what's going on even the the fact that like I didn't I forgot that the northern part didn't have have slavery like the way that you forget that it's because there's a narrative of
+Yahunatan: Oh yeah. Yeah. Yeah. It's they're controlling the mind.
+Joshua Fisseha: like it's a very interesting
+Yahunatan: Yeah. The saying is I don't know if Rich I don't know if Rich ever said it to you.
+Joshua Fisseha: Yes.
+Yahunatan: It says keep the body. Control the mind.
+
+
+
+
+00:33:27
+
+
+Joshua Fisseha: Whoa. Whoa. I never heard of that one. Keep the body.
+Yahunatan: Control the mind.
+Joshua Fisseha: Control the mind.
+Yahunatan: Yes sir.
+Joshua Fisseha: Well,
+Yahunatan: Yes
+Joshua Fisseha: that that sounds next level. What does that mean?
+Yahunatan: sir.
+Joshua Fisseha: That sounds that sounds too deep for me. What does that even mean? I kind of like I'm trying to process that. You I need to Man,
+Yahunatan: Yeah.
+Joshua Fisseha: I need to My head hurts now.
+Yahunatan: Yes sir. No,
+Joshua Fisseha: Keep the body control the mind.
+Yahunatan: listen. Rich is the I'm trying to tell you, man. Rich is the is the guy, man. You know,
+Joshua Fisseha: Now you're surprising me, man.
+Yahunatan: he's one of the guys.
+Joshua Fisseha: You're telling me some stuff for sure. I I did I knew I knew that from day one.
+Yahunatan: Yeah.
+Joshua Fisseha: I think from the first conversation I was like this
+Yahunatan: Keep the body. Keep the body. Control the
+Joshua Fisseha: guy's What does that
+Yahunatan: mind.
+
+
+
+
+00:34:06
+
+
+Joshua Fisseha: mean? It sounds like keep the body control. I think I'm following you there, but I feel like I need to sit on that. That's one of those like you need to process
+Yahunatan: I I promise I'll be high level. So I'll try to give an example.
+Joshua Fisseha: that.
+Yahunatan: Uh think about football, basketball, right? They keep the body.
+Joshua Fisseha: Yeah.
+Yahunatan: They control the mind because they going to generate more that wants to just play sports, more that wants to do stuff that's not connected to their purpose.
+Joshua Fisseha: Okay.
+Yahunatan: Basketball is foreign to them. Rap music is foreign to them. All that stuff is foreign to them because their mind is controlled.
+Joshua Fisseha: I follow you.
+Yahunatan: Yes, sir.
+Joshua Fisseha: I see. I see. I
+Yahunatan: And the main thing is that we never be able to talk to them manto
+Joshua Fisseha: see.
+Yahunatan: man.
+Joshua Fisseha: Yeah. And it perpetuates and they have the most vision. like they have the most visibility like they're most they're the most prominent.
+
+
+
+
+00:35:13
+
+
+Joshua Fisseha: Unfortunately, we don't have enough Richards and the public eye.
+Yahunatan: And you want you want to know how to and you want to know how
+Joshua Fisseha: We have the other people that
+Yahunatan: you talk to them manto man face to face.
+Joshua Fisseha: do that.
+Yahunatan: Pastor Elsa.
+Joshua Fisseha: That's the truth. That's the truth.
+Yahunatan: Yes sir.
+Joshua Fisseha: You have to essentially go to the top.
+Yahunatan: Yes sir.
+Joshua Fisseha: You need to go to the top to be able to open that door.
+Yahunatan: Legal. Legal is the legal is it? That's where it's at.
+Joshua Fisseha: Yeah, that's true. That's true because everybody needs to have Yeah.
+Yahunatan: that as long as we keep as long as we keep
+Joshua Fisseha: Well, it's Yeah.
+Yahunatan: minorities out of legal, it's a win.
+Joshua Fisseha: Yeah. The system wins the best because you don't have if you don't have voices that are required to be voice that are needed.
+Yahunatan: Who can change the laws? You can.
+Joshua Fisseha: Yeah.
+Yahunatan: Yeah.
+Joshua Fisseha: Yes.
+Yahunatan: Yeah. Just to let you know, I'm not going to law school to be civil rights and fight.
+
+
+
+
+00:36:06
+
+
+Joshua Fisseha: Yes.
+Yahunatan: I ain't got time for that. We for the remnant. Okay. So, even if I share that to them and they don't come home and come back to the comm, it means nothing. You see what I'm saying? Now, if somebody came home, I give them the game. Changed their whole life. Not my game. This all comes from the Bible. Everything I'm telling you right, I promise you, is from the Torah and the New Testament. You know, I I promise you. I'll give a great example. When the Messiah, he would what would he do when it was when it when when when he talked to Caesar, he say what? You said it.
+Joshua Fisseha: That's true. That's true. You say that I am. When you asked him if he's a king. Yeah.
+Yahunatan: But when but when he talked to the people who wanted to come home,
+Joshua Fisseha: Yeah.
+Yahunatan: he always engaged with them.
+Joshua Fisseha: Move over.
+Yahunatan: Yep.
+Joshua Fisseha: Yeah. I'm just going to move over there for a second.
+
+
+
+
+00:37:08
+
+
+Joshua Fisseha: Um, this is this is very interesting.
+Yahunatan: But
+Joshua Fisseha: The question is though, my my thing that I and I I never I I I don't I don't know if I ever There's so many questions I could ask. My question though is this is the difference because I I kind of get lost when what I see from you guys and a lot of that's different is that you guys are much more um more virtuous. I'll put it like that probably because I see a lot of black people that are claiming to be Hebrew. You see them in Toronto. You see them in like a lot of different places that are yelling at the corners.
+Yahunatan: Right. Yeah. Yeah. Yeah. Yeah.
+Joshua Fisseha: Yelling at the corners and saying you guys don't do that.
+Yahunatan: A distraction. It's just a No, it's a distraction. It's all that is. So you never meet us.
+Joshua Fisseha: So, okay, that makes sense because you'll see
+Yahunatan: Yeah. Because if you have a concept of if you have this concept of
+
+
+
+
+00:37:53
+
+
+Joshua Fisseha: like
+Yahunatan: them in your mind and you run into somebody like me, you the average person who doesn't use logic is going to put put me with them and say,"Oh,
+Joshua Fisseha: Yes.
+Yahunatan: you're just like them." And they never get to hear the message because it's nothing about color. I just pro I'm going to prove it to you. You take one of those Hebrews that's sitting out there on them street corners in Toronto and just say,"Hey, before we have our conversation, let's go do a DNA test." That's it.
+Joshua Fisseha: Yes.
+Yahunatan: Simple. I'll pay for it. I will pay for it for you. Let's go do a DNA test.
+Joshua Fisseha: And
+Yahunatan: And if you are 100% whatever you are, boy, what I'm with you then. I'm gonna listen to everything you got to say. Champ, show me the receipt.
+Joshua Fisseha: for me it's like the question that I I because and I guess this is why I would respect your guys more than anybody else is because the thing I also wonder is like what's the because I what I never understood initially was but I but I start to understand it more as I the value or why it matters whether like whether you're a Hebrew or not because that's what I never understood
+
+
+
+
+00:39:02
+
+
+Yahunatan: Oh yeah. Yeah. Okay. No. No. See, I know why.
+Joshua Fisseha: initially.
+Yahunatan: Because they got slavery syndrome, man.
+Joshua Fisseha: Yes,
+Yahunatan: Yeah. Yes, sir.
+Joshua Fisseha: that's that's what it that's what it seems because you guys you guys I why I respect you
+Yahunatan: Yes, sir. cuz they they need to they need to prove look like it's like somebody being bullied in
+Joshua Fisseha: guys. That's a crazy that's crazy.
+Yahunatan: school and they finally get a real good job and then they see the guy who who no not bullied.
+Joshua Fisseha: Yeah.
+Yahunatan: Let's say they was not popular in school, right? And then they finally get that job making millions of dollars and then they run into like three
+Joshua Fisseha: Yeah.
+Yahunatan: guys who was the popular people and they be like,"Look at me now." With them popular people who back in the day going to say,
+Joshua Fisseha: Yeah.
+Yahunatan: "I don't care. I still know you as little Johnny.
+Joshua Fisseha: Yeah.
+Yahunatan: The world I care.
+Joshua Fisseha: Yeah.
+Yahunatan: I don't care how much money you get,
+
+
+
+
+00:39:48
+
+
+Joshua Fisseha: That's facts. That's facts.
+Yahunatan: you know.
+Joshua Fisseha: That's That's exactly it. That's what it seems like.
+Yahunatan: Yeah. Yeah.
+Joshua Fisseha: Like there's a there's a feeling of like
+Yahunatan: Yeah. They they are broken. Yeah. So the way you trigger black people or Hebrew people,
+Joshua Fisseha: resentment.
+Yahunatan: whatever you want to call them, you hit them at their emotion. Show them crime cop killing somebody. But let's show them little Johnny who did the driveby. No, he was a lovely child. He was in school. They always put the graduation picture of him and everything.
+Joshua Fisseha: Yo, you're crazy, bro.
+Yahunatan: If you No,
+Joshua Fisseha: You say some wild fox.
+Yahunatan: listen listen. If you look up in Philadelphia,
+Joshua Fisseha: Fox.
+Yahunatan: it was a rapper named uh you I don't know if you ever seen a million-dollar game like with Gilly the Kid
+Joshua Fisseha: Yeah. Yeah. Yeah.
+Yahunatan: or Gilly,
+Joshua Fisseha: Gilly. Gilly.
+Yahunatan: you know,
+Joshua Fisseha: Yeah. Gilly.
+Yahunatan: one of his sons got killed, right?
+
+
+
+
+00:40:37
+
+
+Joshua Fisseha: He got killed. Yeah. Yeah. Yeah.
+Yahunatan: Okay. You know who,
+Joshua Fisseha: That guy's Ethiopian to it.
+Yahunatan: right? You know what one of his sons got killed by, right?
+Joshua Fisseha: Oh, yes.
+Yahunatan: Star basketball player who had a
+Joshua Fisseha: It was some like
+Yahunatan: 4.0.
+Joshua Fisseha: Oh,
+Yahunatan: But he was a Yes,
+Joshua Fisseha: was that the case?
+Yahunatan: he was a 4.0.
+Joshua Fisseha: But he killed him.
+Yahunatan: Full No, but he was a shooter in the streets.
+Joshua Fisseha: That's crazy.
+Yahunatan: 100%.
+Joshua Fisseha: That's crazy.
+Yahunatan: Oh, yeah. This stuff crazy, man. Yeah.
+Joshua Fisseha: W That's That's very unfortunate cuz Yeah, I remember seeing that. I didn't follow it too much, but I remember his son got killed by and his son didn't have any reason to be in that world
+Yahunatan: No, but his son still want to live in that street life,
+Joshua Fisseha: at night.
+Yahunatan: you know,
+Joshua Fisseha: Yeah.
+Yahunatan: like still want to embrace it. And that's the danger thing because there's nobody in the micro system,
+
+
+
+
+00:41:18
+
+
+Joshua Fisseha: Yeah.
+Yahunatan: nobody at the community center looking for them to say go to law school. There ain't nobody coming for them.
+Joshua Fisseha: Exactly. And your dad is like worth uh how much money now? Like you didn't have to go that uh that direction.
+Yahunatan: And the money does what the B what does the Bible say? It says the money is the root of all evil.
+Joshua Fisseha: Yeah. Yeah. The love of money is the root of all
+Yahunatan: The root Yeah.
+Joshua Fisseha: people.
+Yahunatan: the love of money because it'll make you do things. Look, I I have been successful.
+Joshua Fisseha: That's facts. That's facts.
+Yahunatan: I have not been massly successful, right? But like how Shalom says or Solomon says, he says,"Give be my daily bread and don't give me enough that I'll forget
+Joshua Fisseha: H
+Yahunatan: you because that will be the key. If I give you all the money when something go wrong, you no longer want to pray to the father no more. You think you can solve it now by yourself because of that money because the world gives you something illusion.
+
+
+
+
+00:42:19
+
+
+Yahunatan: Money is is like American dollar is an illusion. I mean, when you study financial freedom of financial literacy, you'll find out that money is is is is not real. And then with crypto, it still ain't real. They even proving it to you more is not real.
+Joshua Fisseha: Yes.
+Yahunatan: We talking about if I want to if I want a loan for law school,
+Joshua Fisseha: Yes.
+Yahunatan: they are going to click a button and write some numbers. no physical money and I'm paying them back a
+Joshua Fisseha: Yeah. Yep. Yep. Yep. Brilliant.
+Yahunatan: number that they just put in.
+Joshua Fisseha: number on a screen. Yep.
+Yahunatan: Number on the screen,
+Joshua Fisseha: There's a number on the screen.
+Yahunatan: sir.
+Joshua Fisseha: And then you have to just say,
+Yahunatan: Yes,
+Joshua Fisseha: "Okay, and I'm gonna get make I'm gonna make more numbers on the screen to give you uh more of these numbers on the screen." It's kind of a funny
+Yahunatan: sir.
+Joshua Fisseha: game. It's very very funny that And people lose their lives over that number on the screen, right?
+
+
+
+
+00:43:09
+
+
+Joshua Fisseha: Like it's kind of bizarre when you think about it.
+Yahunatan: Yes, sir. Think about this.
+Joshua Fisseha: Like
+Yahunatan: Think and and I think I said this to you before.
+Joshua Fisseha: Yeah.
+Yahunatan: Think about all the shooters in Toronto doing drivebys and doing stuff for gangs and all that, right? You know, all these dummies could have went to the military and killed how many people they wanted and been called a
+Joshua Fisseha: Yeah,
+Yahunatan: hero and and get and get and
+Joshua Fisseha: that's facts. Yeah, you told me that before. That's facts. That could have been a
+Yahunatan: get a free house and get paid for it.
+Joshua Fisseha: general.
+Yahunatan: you you just got paid only like a thousand dollars that when you go 10 years from now,
+Joshua Fisseha: Yes.
+Yahunatan: you took somebody life, a trickle down effect that affect not just that person, the mother, the father, the kids, the kids they were supposed to have. You affect a lot of stuff.
+Joshua Fisseha: Yeah.
+Yahunatan: You playing the creator at that point just over something over something over $1,000.
+
+
+
+
+00:43:58
+
+
+Joshua Fisseha: Yeah.
+Yahunatan: Let's say it's $10,000. They don't know nothing about investing. They not going to flip that$10,000 to go make millions of dollars with it.
+Joshua Fisseha: Yeah.
+Yahunatan: That $10,000 is gone. It's just like we can't we seem to forget about with Yahusha the Messiah. Who set him up? His boy chasing that money with the money
+Joshua Fisseha: Yes. Money is money is Yep.
+Yahunatan: back.
+Joshua Fisseha: It's funny because that's true.
+Yahunatan: Yeah.
+Joshua Fisseha: That's true.
+Yahunatan: And and look,
+Joshua Fisseha: That's
+Yahunatan: those examples are in the in the Bible and we fail at them every day.
+Joshua Fisseha: true.
+Yahunatan: His own boy set him up. Why is people surprised when you find out that their boy's the one that did it to them?
+Joshua Fisseha: There's always those
+Yahunatan: Like this been written thousands of years ago.
+Joshua Fisseha: questions.
+Yahunatan: Now it's unfortunate because they are put in situations though, peer pressure, all types of stuff. The communities in America and in Toronto is just like even Toronto, right? Some of them are coming from second generation imig immigrants, right?
+
+
+
+
+00:45:03
+
+
+Joshua Fisseha: Yep.
+Yahunatan: They getting a new opportunity at things,
+Joshua Fisseha: Yep.
+Yahunatan: right?
+Joshua Fisseha: Yep.
+Yahunatan: What is driving them to still go do that?
+Joshua Fisseha: Yep.
+Yahunatan: It's motivated by what? what they see in America.
+Joshua Fisseha: Yep. Yep. It's true. Yeah, it's true. Um, it's it's unfortunate because like um Yeah, it's it's to be honest.
+Yahunatan: to be hidden on the mountain. They are inspired by Tupac. Biggie, hit them up.
+Joshua Fisseha: You said you said you said everything.
+Yahunatan: Get up. Get up. Get up.
+Joshua Fisseha: Yeah,
+Yahunatan: All of them.
+Joshua Fisseha: you said you said it. You said it.
+Yahunatan: That's what they inspired by because it it didn't exist in their culture.
+Joshua Fisseha: Yes.
+Yahunatan: It didn't ever exist. This is something that was made up. This is a alter reality called the metaverse.
+Joshua Fisseha: It was It's true. There's a there's there is there is it's it is biblical truths always always stand
+Yahunatan: 100%.
+Joshua Fisseha: the test of time. You know, it's a very fascinating thing to see. But I'm about to get I'm about to get kicked out of this place.
+Yahunatan: Yeah. But Okay.
+Joshua Fisseha: I'm about to get booted out of here.
+Yahunatan: Yeah. Yes, sir. Look,
+Joshua Fisseha: I'll send I'll send you the stuff.
+Yahunatan: I I I know everything. Yep. I appreciate you, man.
+Joshua Fisseha: Of course. Of course. Yeah.
+Yahunatan: And I'll see you one day in to I'll see you one day out there,
+Joshua Fisseha: They're about to boot me out.
+Yahunatan: so don't worry about it.
+Joshua Fisseha: I'm waiting on it, man. I'm waiting on it.
+Yahunatan: All right. See you.
+Joshua Fisseha: Like I'm looking forward to that. David, we're gonna have to do it.
+Yahunatan: Oh yeah. I promise. I promise you I'm gonna pull up.
+Joshua Fisseha: my brother. All right,
+Yahunatan: I know I will.
+Joshua Fisseha: we'll talk talk soon to be all right.
+Yahunatan: Yah who will see it.
+
+
+
+
+Transcription ended after 00:46:25
+
+
+This editable transcript was computer generated and might contain errors. People can also change the text after it was created.
