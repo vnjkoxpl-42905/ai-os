@@ -821,3 +821,11 @@ Applied by Superwhisper after transcription, before any AI step. Matching is cas
 | sonnet four point six | Sonnet 4.6 | 2026-09-12 | model name |
 | opus 5 | Opus 5 | 2026-09-12 | model name |
 | opus five | Opus 5 | 2026-09-12 | model name |
+| joshua.fissiah01@gmail.com | joshua.fisseha01@gmail.com | 2026-09-12 | fissiah mis-hearing |
+| joshua.fissiah 01@gmail.com | joshua.fisseha01@gmail.com | 2026-09-12 | fissiah mis-hearing |
+| joshua dot fissiah 01 at gmail dot com | joshua.fisseha01@gmail.com | 2026-09-12 | fissiah mis-hearing |
+| joshua.fisiah01@gmail.com | joshua.fisseha01@gmail.com | 2026-09-12 | fissiah mis-hearing |
+| joshua.fissia01@gmail.com | joshua.fisseha01@gmail.com | 2026-09-12 | fissiah mis-hearing |
+| fissiah | Fisseha | 2026-09-12 | fissiah mis-hearing |
+| fisiah | Fisseha | 2026-09-12 | fissiah mis-hearing |
+| joshua fissiah | Joshua Fisseha | 2026-09-12 | fissiah mis-hearing |
