@@ -1,7 +1,7 @@
 ---
 type: operating-layer
 subject: Log
-updated: 2026-09-11
+updated: 2026-09-12
 aliases: []
 ---
 
@@ -737,3 +737,10 @@ Assigned via `scripts/assign.ts` (drill) and the app's `createClassroomItem` + `
 ## 2026-09-11 consultation follow-up template rebuilt
 
 Rebuilt the post-consultation follow-up template from five identical sends (2026-08-08 to 2026-09-08) into `wiki/CONSULTATION-FOLLOW-UP-TEMPLATE.md`; the February PDF (two steps + Google Form) is retired. `consultation-followup-drafts` skill repointed to it and to `gws` (its STEP 1 paths were dead). Sent Zeina Borji her follow-up on approval; logged in [[send-ledger]].
+## [2026-09-12] transcript intake + recap | Week of 2026-09-07
+
+- Reconciled 14 primary Calendar events against 10 native Gemini transcript documents for 2026-09-07 through 2026-09-13.
+- Filed the remaining available transcripts: `students/_other-sessions/2026-09-11-venusa-consultation-notes-by-gemini.md`, `students/sofia/transcript-downloads/2026-09-11-sofia-notes-by-gemini.md`, and `students/ore/transcript-downloads/2026-09-11-ore-notes-by-gemini.md`.
+- Drafted `students/sofia/recaps/2026-09-11-recap.md`; not posted or sent.
+- Joshua confirmed that some Calendar events in the window were cancelled or did not become recorded sessions. Individual cancellation details are intentionally omitted.
+- Revised Sofia's recap into a concept-first reference after Joshua's review; updated the recap skill and copy-corrections record with the resulting rule.

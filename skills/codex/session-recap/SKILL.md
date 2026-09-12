@@ -26,6 +26,12 @@ gws drive files list --params '{"q":"name contains '"'"'Notes by Gemini'"'"' and
 gws drive files export --params '{"fileId":"<id>","mimeType":"text/plain"}' -o <scratch>/<name>.txt
 ```
 
+The Drive result can include Markdown copies uploaded by an earlier intake. Count native
+Google Docs as source transcripts and use the file ID to deduplicate. Do not count an
+uploaded `YYYY-MM-DD-<slug>-notes-by-gemini.md` copy as another session. Reconcile the
+full week against Calendar before exporting so unattached docs and events with no doc
+both remain visible in the report.
+
 File to `students/<slug>/transcript-downloads/YYYY-MM-DD-<slug>-notes-by-gemini.md`.
 Resolve the person with `students/_aliases.md`; for a "Meeting started" doc, count
 speaker labels in the transcript (`grep -o -E "^[A-Z][a-z]+( [A-Z][a-z]+)?:" | sort | uniq -c`).
@@ -37,10 +43,11 @@ primary calendar holds every session.
 
 ## 2. Read the whole transcript, not the Gemini summary
 
-The Gemini "Quick notes" flatten what he said. The recap has to name the student's
-actual moves (the answer they picked, the line they misread, what they said when it
-clicked). Read the transcript section. It is 40 to 90 KB; that is the cost of a recap
-that is true.
+The Gemini "Quick notes" flatten what he said. Read the transcript section. It is 40
+to 90 KB; that is the cost of a recap that is true. Extract the concepts, diagnostic
+checks, and assigned practice. Do not turn the recap into a play-by-play of answer
+choices. Name a specific question only when it is needed to demonstrate a reusable
+reasoning move.
 
 ## 3. Write the recap
 
@@ -64,11 +71,13 @@ posted_at:
 
 Hey <Name>,
 
-<One or two lines. What we did, in the student's own terms. Specific, not "great session".>
+<One or two lines naming the concepts the note will teach. No praise, scene-setting,
+or answer-choice recap unless it carries a useful teaching point.>
 
-## What we worked on
+## <Concept-first teaching header>
 
-- <3 to 5 bullets. The concepts, in plain words. Name the question when it matters.>
+<Build a compact, reusable reference. Use short subheads, numbered steps, or a small
+logic diagram when they make the method easier to scan.>
 
 ## The one thing to hold onto
 
@@ -111,7 +120,8 @@ Everything below is admin-only.
 - Short sentences. One idea per line. Air between ideas.
 - Teach the reasoning; never just state the answer. "A reverses the timeline: the
   symptom stops, then the boss assumes the cause was fixed" beats "A was wrong".
-- Praise names the exact skill and ties to their history. No "great job".
+- Praise only when it names a durable skill or meaningful change and ties to their
+  history. Never praise the mere fact that an answer was correct.
 - Honest about the test, never blunt about the student. When it slipped, say it is a
   normal place to slip and move to the fix.
 - **No em dashes, ever.** Periods, colons, the middot (·).

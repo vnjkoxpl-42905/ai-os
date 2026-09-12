@@ -25,6 +25,8 @@ Source: Gmail connector search for Gemini meeting notes.
 - [[students/sofia/transcript-downloads/2026-06-16-sofia-consultation-notes-by-gemini|2026-06-16 Sofia Consultation Notes by Gemini]]
 - [[students/sofia/transcript-downloads/2026-06-26-sofia-notes-by-gemini|2026-06-26 Sofia Notes by Gemini]]
 - [[students/sofia/transcript-downloads/2026-07-02-sofia-notes-by-gemini|2026-07-02 Sofia Notes by Gemini]]
+- [[students/sofia/transcript-downloads/2026-09-09-sofia-notes-by-gemini|2026-09-09 Sofia Notes by Gemini]]
+- [[students/sofia/transcript-downloads/2026-09-11-sofia-notes-by-gemini|2026-09-11 Sofia Notes by Gemini]]
 
 ## Download / Drive Links Found In Gmail
 

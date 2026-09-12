@@ -148,3 +148,20 @@ From the glossary. Internal names may stay in code, never on the page.
 | em dash, en dash | a full stop, or a colon before a list |
 
 Related: [[teaching-voice]] · [[ASSIGN-AN-ACTIVITY]] · [[STUDENT-PLATFORM-IDENTITY-MAP]]
+
+## Session recaps: write a reusable reference, not a play-by-play (2026-09-12)
+
+**Cut:** an opener saying the student got two questions right, followed by a summary of
+which answer they chose and how they explained it.
+
+**Keep:** the concept the student needs tomorrow, a visual model of the reasoning, a
+short diagnostic check, and the exact practice they need to complete.
+
+A student will not remember an isolated answer-choice exchange a day later, and the
+exchange is not useful unless it demonstrates a reusable rule. A recap should read like
+a compact study note, not a record of the conversation. Name a question only when the
+details make the concept easier to apply. Praise belongs only when it identifies a
+durable skill or meaningful change, not merely that an answer was correct.
+
+**Lesson:** organize the recap around what the student can use next. Lead with the
+concept, show the logic clearly, and finish with tangible practice.

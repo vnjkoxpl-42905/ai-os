@@ -23,3 +23,6 @@ Pending items only. Verify against live systems before acting.
 
 
 - [2026-07-19] Sent booking-link email (/book/sofia). Loop: confirm they schedule; follow up if no booking within ~5 days.
+- [ ] [2026-09-11] Reconcile two or three missed sessions and add the promised replacement credits. Joshua said he would add four if needed so the package reaches the finish line.
+- [ ] [2026-09-11] Assign high-volume conditional-diagramming practice.
+- [ ] [2026-09-11] Clean up the Read, Recall, Colour instructions/report card before Sofia's next attempt.
