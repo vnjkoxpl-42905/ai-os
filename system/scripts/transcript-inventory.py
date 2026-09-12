@@ -16,6 +16,11 @@ Usage:
     python3 system/scripts/transcript-inventory.py            # summary
     python3 system/scripts/transcript-inventory.py --unmatched  # only the gaps
     python3 system/scripts/transcript-inventory.py --json      # machine-readable
+    python3 system/scripts/transcript-inventory.py --text <file.docx>  # dump one transcript as text
+
+--text exists because neither python-docx nor pandoc is installed on the
+Windows box; a .docx is a zip with word/document.xml inside, and that is all a
+reader needs.
 """
 import json
 import os
@@ -24,7 +29,12 @@ import sys
 import unicodedata
 import zipfile
 
-BRAIN = "/Users/joshuaf/ai-os"
+# The vault root is two levels up from this file (system/scripts/), so the
+# script works on any machine. AI_OS_ROOT overrides it if the layout ever moves.
+BRAIN = os.environ.get(
+    "AI_OS_ROOT",
+    os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))),
+)
 TRANSCRIPTS = f"{BRAIN}/raw/data-about-me/transcripts"
 STUDENTS = f"{BRAIN}/students"
 
@@ -42,15 +52,30 @@ def slug(s):
     return re.sub(r"[^a-z0-9]+", "-", s.lower()).strip("-")
 
 
+FORMER = os.path.join(STUDENTS, "non-students")
+
+
 def student_dirs():
-    if not os.path.isdir(STUDENTS):
-        return {}
+    """Current student folders plus former ones under students/non-students/.
+
+    Former students moved there on 2026-09-10 and are excluded from every
+    sweep, but a transcript of theirs still needs to *resolve* -- otherwise it
+    surfaces as "no student folder" every run and tempts a session to create
+    a duplicate folder for someone who already has a record.
+    """
     out = {}
-    for n in sorted(os.listdir(STUDENTS)):
-        p = os.path.join(STUDENTS, n)
-        if os.path.isdir(p) and not n.startswith("_"):
-            out[n] = p
+    for base in (STUDENTS, FORMER):
+        if not os.path.isdir(base):
+            continue
+        for n in sorted(os.listdir(base)):
+            p = os.path.join(base, n)
+            if os.path.isdir(p) and not n.startswith("_") and n != "non-students":
+                out[n] = p
     return out
+
+
+def is_former(slug_, dirs):
+    return slug_ in dirs and dirs[slug_].startswith(FORMER)
 
 
 def parse(fname):
@@ -140,6 +165,19 @@ def match_student(subject, dirs, aliases=None):
     return None, "no student folder"
 
 
+def docx_text(path):
+    """Paragraph text of a .docx, one paragraph per line, no dependencies."""
+    with zipfile.ZipFile(path) as z:
+        xml = z.read("word/document.xml").decode("utf-8", "replace")
+    paras = re.split(r"</w:p>", xml)
+    out = []
+    for para in paras:
+        text = "".join(re.findall(r"<w:t[^>]*>([^<]*)</w:t>", para))
+        if text.strip():
+            out.append(text)
+    return "\n".join(out)
+
+
 def docx_words(path):
     """Rough word count from a .docx without any third-party dependency."""
     try:
@@ -153,6 +191,13 @@ def docx_words(path):
 
 def main():
     args = set(sys.argv[1:])
+    if "--text" in sys.argv:
+        target = sys.argv[sys.argv.index("--text") + 1]
+        if not os.path.isabs(target) and not os.path.isfile(target):
+            target = os.path.join(TRANSCRIPTS, target)
+        sys.stdout.reconfigure(encoding="utf-8")
+        print(docx_text(target))
+        return 0
     if not os.path.isdir(TRANSCRIPTS):
         print(f"no transcript dir: {TRANSCRIPTS}", file=sys.stderr)
         return 1
@@ -166,6 +211,7 @@ def main():
         info = parse(f)
         sl, how = match_student(info["subject"], dirs, aliases)
         rows.append(dict(file=f, **info, student=sl, match=how,
+                         former=bool(sl and is_former(sl, dirs)),
                          words=docx_words(p) if f.lower().endswith(".docx") else None,
                          bytes=os.path.getsize(p)))
 
@@ -173,14 +219,15 @@ def main():
         print(json.dumps(rows, indent=2))
         return 0
 
-    matched = [r for r in rows if r["student"]]
+    matched = [r for r in rows if r["student"] and not is_former(r["student"], dirs)]
+    former = [r for r in rows if r["student"] and is_former(r["student"], dirs)]
     declared = [r for r in rows if not r["student"] and r["match"] == "prospect, no record"]
     unmatched = [r for r in rows if not r["student"] and r["match"] != "prospect, no record"]
 
     if "--unmatched" not in args:
         print(f"transcripts: {len(rows)} files, {len(matched)} mapped, "
-              f"{len(declared)} prospects (no record), {len(unmatched)} unmapped, "
-              f"{len(dirs)} student folders\n")
+              f"{len(former)} former students, {len(declared)} prospects (no record), "
+              f"{len(unmatched)} unmapped, {len(dirs)} student folders\n")
         by = {}
         for r in matched:
             by.setdefault(r["student"], []).append(r)
@@ -189,6 +236,15 @@ def main():
             ds = sorted(x["date"] or "?" for x in by[s])
             print(f"  {s:20s} {len(by[s]):2d}  {ds[0]} .. {ds[-1]}")
         print()
+        if former:
+            byf = {}
+            for r in former:
+                byf.setdefault(r["student"], []).append(r)
+            print("FORMER (students/non-students/ -- record exists, excluded from sweeps)")
+            for s in sorted(byf):
+                ds = sorted(x["date"] or "?" for x in byf[s])
+                print(f"  {s:20s} {len(byf[s]):2d}  {ds[0]} .. {ds[-1]}")
+            print()
 
     print("UNMAPPED (needs a decision — new student folder, alias, or skip)")
     for r in sorted(unmatched, key=lambda x: (x["match"], x["subject"] or "")):
