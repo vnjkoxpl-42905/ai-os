@@ -69,10 +69,8 @@ posted_at:
 
 # Session recap · YYYY-MM-DD
 
-Hey <Name>,
-
-<One or two lines naming the concepts the note will teach. No praise, scene-setting,
-or answer-choice recap unless it carries a useful teaching point.>
+<Open with the concept the note will teach. Do not begin with praise, generic
+scene-setting, "Today...", or an answer-choice recap.>
 
 ## <Concept-first teaching header>
 
@@ -131,6 +129,10 @@ Everything below is admin-only.
 - Only what the transcript supports. If he did not assign it, it is not in "Before
   next session".
 - Read `wiki/COPY-CORRECTIONS.md` before writing; every past wording fix is there.
+- For conditional LSAT notes, distinguish an asserted fact from a general rule. A
+  rule states what follows if its trigger is present; it does not establish that the
+  trigger occurred. Some stimuli contain rules and no facts. Never invent a fact to
+  trigger a rule.
 
 ## 4. Log and hand back
 

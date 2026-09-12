@@ -165,3 +165,16 @@ durable skill or meaningful change, not merely that an answer was correct.
 
 **Lesson:** organize the recap around what the student can use next. Lead with the
 concept, show the logic clearly, and finish with tangible practice.
+
+### A rule is not a fact (2026-09-12)
+
+**Cut:** describing a conditional Must Be True lesson as “applying a rule to a fact”
+without checking whether the stimulus supplied a fact at all.
+
+**Keep:** a fact is an asserted true case or condition. A rule is a general conditional
+relationship. It tells you what follows if its trigger is present, but it does not say
+that the trigger occurred. Some stimuli contain rules only, so the work is to chain
+them. When a fact is present, apply a matching rule or a valid contrapositive.
+
+**Lesson:** label the role of each sentence before explaining the inference. Never
+invent a fact to make a rule fire.

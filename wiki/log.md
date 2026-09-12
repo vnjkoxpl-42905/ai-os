@@ -744,3 +744,5 @@ Rebuilt the post-consultation follow-up template from five identical sends (2026
 - Drafted `students/sofia/recaps/2026-09-11-recap.md`; not posted or sent.
 - Joshua confirmed that some Calendar events in the window were cancelled or did not become recorded sessions. Individual cancellation details are intentionally omitted.
 - Revised Sofia's recap into a concept-first reference after Joshua's review; updated the recap skill and copy-corrections record with the resulting rule.
+- Firecrawl research completed: LSAT Lab's official materials were used to correct the facts-versus-rules distinction, and a separate Firecrawl agent ranked teaching-note methods. Report: `research/2026-09-12-lsat-lab-facts-rules-and-teaching-note-writing-report.md`; raw agent outputs remain in `.firecrawl/`.
+- Refined `skills/{codex,claude}/session-recap/SKILL.md`: post-session notes now open with the concept, avoid generic “Today” scene-setting, and explicitly state that a rule does not establish its trigger.
