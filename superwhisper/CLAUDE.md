@@ -33,6 +33,8 @@ Raw evidence (docs crawl, community pages, searches) is in `raw/sources/superwhi
 7. **Verify a load, not a write.** After a restart, read `settings.json` `modeKeys`: the app rewrites it and drops any mode it rejected. That is the only trustworthy check.
 8. **Vocabulary stays short (~40).** On 2026-09-11 it was pushed to 654 (auto-adding every replacement target) and transcription got noticeably worse within the hour; Joshua reversed it the same evening. Replacement targets are never auto-added. Mis-hearings go in `replacements.md`, which costs nothing in accuracy.
 
+9. **No sync to the iPhone yet (checked 2026-09-12).** FileSync is Mac-only; the Windows docs page (`/docs/get-started/windows`) lists it as "still in development for Windows", the iOS page says modes and vocabulary "don't sync from your Mac or PC yet", and the Windows app resets `filesyncEnabled` to false at launch. The phone is kept in step by paste: the Super mode instructions and the vocabulary live on the artifact "Superwhisper on iPhone" (https://claude.ai/code/artifact/63400afd-4f6c-4139-ba82-461de066d544); republish it whenever `modes/super.md` or `vocabulary.md` changes. Re-check the Windows page after each app update.
+
 ## Where the app keeps things
 
 `C:\Users\Joshu\AppData\Local\com.superwhisper.app\`
