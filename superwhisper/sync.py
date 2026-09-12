@@ -40,15 +40,13 @@ def truthy(v):
 
 
 def read_vocabulary(reps):
-    """Terms listed in vocabulary.md, plus every distinct replacement target (Joshua's rule,
-    2026-09-11: a replacement is always also a vocabulary word), minus the Exclude section."""
+    """Exactly the "- term" lines of vocabulary.md. Replacement targets are NOT added:
+    that rule (2026-09-11, morning) pushed the list to 654 and transcription got worse
+    within the hour, so Joshua reversed it the same evening. Keep the list short."""
     text = open(os.path.join(HERE, "vocabulary.md"), encoding="utf-8").read()
-    main, _, excl = text.partition("## Exclude")
-    listed = [l[2:].strip() for l in main.splitlines() if l.startswith("- ")]
-    excluded = {l[2:].split("(")[0].strip().lower() for l in excl.splitlines() if l.startswith("- ")}
     terms = []
-    for t in listed + [r["with"] for r in reps]:
-        if t and t.lower() not in excluded and t.lower() not in {x.lower() for x in terms}:
+    for t in [l[2:].strip() for l in text.splitlines() if l.startswith("- ")]:
+        if t and t.lower() not in {x.lower() for x in terms}:
             terms.append(t)
     return terms
 

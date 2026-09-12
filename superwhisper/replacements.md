@@ -645,7 +645,6 @@ Applied by Superwhisper after transcription, before any AI step. Matching is cas
 | chad cn | shadcn | 2026-09-11 |  |
 | get hub | GitHub | 2026-09-11 |  |
 | github | GitHub | 2026-09-11 | casing pin |
-| gmail | Gmail | 2026-09-11 | casing pin |
 | google drive | Google Drive | 2026-09-11 | casing pin |
 | google calendar | Google Calendar | 2026-09-11 | casing pin |
 | google workspace | Google Workspace | 2026-09-11 | casing pin |
@@ -657,12 +656,9 @@ Applied by Superwhisper after transcription, before any AI step. Matching is cas
 | 11 labs | ElevenLabs | 2026-09-11 |  |
 | higgs field | Higgsfield | 2026-09-11 |  |
 | remotion | Remotion | 2026-09-11 | casing pin |
-| obsidian | Obsidian | 2026-09-11 | casing pin |
 | codecs | Codex | 2026-09-11 |  |
-| codex | Codex | 2026-09-11 | casing pin |
 | open ai codex | OpenAI Codex | 2026-09-11 |  |
 | l s a t | LSAT | 2026-09-11 |  |
-| lsat | LSAT | 2026-09-11 | casing pin |
 | elsat | LSAT | 2026-09-11 |  |
 | lsat you | LSAT U | 2026-09-11 |  |
 | lsat u | LSAT U | 2026-09-11 | casing pin |
@@ -694,13 +690,11 @@ Applied by Superwhisper after transcription, before any AI step. Matching is cas
 | yahu nathan | Yahunatan | 2026-09-11 |  |
 | yohanatan | Yahunatan | 2026-09-11 |  |
 | zetvy | Zetvy | 2026-09-11 | casing pin |
-| avneet | Avneet | 2026-09-11 | casing pin |
 | avnit | Avneet | 2026-09-11 |  |
 | avneet nat | Avneet Natt | 2026-09-11 |  |
 | fernand | Fernande | 2026-09-11 |  |
 | fernanda | Fernande | 2026-09-11 |  |
 | charleus | Charleus | 2026-09-11 | casing pin |
-| vinay | Vinay | 2026-09-11 | casing pin |
 | vinay calva | Vinay Kalva | 2026-09-11 |  |
 | kalva | Kalva | 2026-09-11 | casing pin |
 | whit wilson | Whit Wilson | 2026-09-11 | casing pin |
@@ -708,7 +702,6 @@ Applied by Superwhisper after transcription, before any AI step. Matching is cas
 | whitt wilson | Whit Wilson | 2026-09-11 |  |
 | ore oluwa | Oreoluwa | 2026-09-11 |  |
 | oreoluwa | Oreoluwa | 2026-09-11 | casing pin |
-| priyanka | Priyanka | 2026-09-11 | casing pin |
 | nambiar | Nambiar | 2026-09-11 | casing pin |
 | thaniuska | Thaniuska | 2026-09-11 | casing pin |
 | tanyuska | Thaniuska | 2026-09-11 |  |
@@ -716,20 +709,15 @@ Applied by Superwhisper after transcription, before any AI step. Matching is cas
 | asia tamami | Asia Tamaami | 2026-09-11 |  |
 | syrocki | Syrocki | 2026-09-11 | casing pin |
 | celia cutler | Celia Cutler | 2026-09-11 | casing pin |
-| celia | Celia | 2026-09-11 | casing pin |
-| dakota | Dakota | 2026-09-11 | casing pin |
 | salgado | Salgado | 2026-09-11 | casing pin |
 | minassian | Minassian | 2026-09-11 | casing pin |
 | sophia minassian | Sofia Minassian | 2026-09-11 |  |
-| sofia | Sofia | 2026-09-11 | casing pin |
-| sophia | Sofia | 2026-09-11 |  |
 | kaden forges | Kaden Forges | 2026-09-11 | casing pin |
 | bella lorenzo | Bella Lorenzo | 2026-09-11 | casing pin |
 | meghan mullins | Meghan Mullins | 2026-09-11 | casing pin |
 | megan mullins | Meghan Mullins | 2026-09-11 |  |
 | nicole spinelli | Nicole Spinelli | 2026-09-11 | casing pin |
 | ivory johnson | Ivory Johnson | 2026-09-11 | casing pin |
-| favour | Favour | 2026-09-11 | casing pin |
 | kaia reid | Kaia Reid | 2026-09-11 | casing pin |
 | kristin silva | Kristin Silva | 2026-09-11 | casing pin |
 | kristen silva | Kristin Silva | 2026-09-11 |  |
@@ -752,30 +740,23 @@ Applied by Superwhisper after transcription, before any AI step. Matching is cas
 | g w s | gws | 2026-09-11 |  |
 | power shell | PowerShell | 2026-09-11 |  |
 | powershell | PowerShell | 2026-09-11 | casing pin |
-| react | React | 2026-09-11 | casing pin |
 | typescript | TypeScript | 2026-09-11 | casing pin |
 | type script | TypeScript | 2026-09-11 |  |
-| tailwind | Tailwind | 2026-09-11 | casing pin |
 | vercel | Vercel | 2026-09-11 | casing pin |
-| stripe | Stripe | 2026-09-11 | casing pin |
 | postgres | Postgres | 2026-09-11 | casing pin |
 | post gres | Postgres | 2026-09-11 |  |
 | json | JSON | 2026-09-11 | casing pin |
 | jason file | JSON file | 2026-09-11 |  |
-| markdown | Markdown | 2026-09-11 | casing pin |
 | mark down file | Markdown file | 2026-09-11 |  |
 | md file | Markdown file | 2026-09-11 |  |
 | claude dot md | CLAUDE.md | 2026-09-11 |  |
 | claude md | CLAUDE.md | 2026-09-11 |  |
 | claudemd | CLAUDE.md | 2026-09-11 |  |
 | claude.md | CLAUDE.md | 2026-09-11 | casing pin |
-| readme | README | 2026-09-11 | casing pin |
 | read me file | README file | 2026-09-11 |  |
 | dot env file | .env file | 2026-09-11 |  |
 | obsidian vault | Obsidian vault | 2026-09-11 | casing pin |
 | web clipper | Web Clipper | 2026-09-11 | casing pin |
-| gemini | Gemini | 2026-09-11 | casing pin |
-| kling | Kling | 2026-09-11 | casing pin |
 | ghostty | Ghostty | 2026-09-11 | casing pin |
 | anthropic | Anthropic | 2026-09-11 | casing pin |
 | open ai | OpenAI | 2026-09-11 |  |
@@ -802,3 +783,41 @@ Applied by Superwhisper after transcription, before any AI step. Matching is cas
 | llms | LLMs | 2026-09-11 | casing pin |
 | jwt | JWT | 2026-09-11 | casing pin |
 | oauth | OAuth | 2026-09-11 | casing pin |
+| codecru | Codex | 2026-09-11 | typed by Joshua |
+| codec | Codex | 2026-09-11 | |
+| firecru | Firecrawl | 2026-09-11 | |
+| fire cru | Firecrawl | 2026-09-11 | |
+| claudecru | Claude Code | 2026-09-11 | typed by Joshua; assumed Claude Code |
+| claude cru | Claude Code | 2026-09-11 | |
+| codex cru | Codex | 2026-09-11 | |
+| joshua dott fissea 01 01 @gmail dot com | joshua.fisseha01@gmail.com | 2026-09-11 | spoken email form |
+| joshua dott fissea 01 01@gmail dot com | joshua.fisseha01@gmail.com | 2026-09-11 | spoken email form |
+| joshua dot fissea 01 at gmail dot com | joshua.fisseha01@gmail.com | 2026-09-11 | spoken email form |
+| joshua dott fissea 01 at gmail dot com | joshua.fisseha01@gmail.com | 2026-09-11 | spoken email form |
+| joshua dot fissea zero one at gmail dot com | joshua.fisseha01@gmail.com | 2026-09-11 | spoken email form |
+| joshua.fissea01@gmail.com | joshua.fisseha01@gmail.com | 2026-09-11 | spoken email form |
+| joshua.fissea 01@gmail.com | joshua.fisseha01@gmail.com | 2026-09-11 | spoken email form |
+| joshua dot fisseha 01 at gmail dot com | joshua.fisseha01@gmail.com | 2026-09-11 | spoken email form |
+| joshua dott fisseha 01 at gmail dot com | joshua.fisseha01@gmail.com | 2026-09-11 | spoken email form |
+| joshua dot fisseha 01 01 at gmail dot com | joshua.fisseha01@gmail.com | 2026-09-11 | spoken email form |
+| joshua.fisseha0101@gmail.com | joshua.fisseha01@gmail.com | 2026-09-11 | spoken email form |
+| joshua dot fissea 01 01 at gmail dot com | joshua.fisseha01@gmail.com | 2026-09-11 | spoken email form |
+| joshua.fisseha01 at gmail dot com | joshua.fisseha01@gmail.com | 2026-09-11 | spoken email form |
+| joshua.fisseha01@gmail dot com | joshua.fisseha01@gmail.com | 2026-09-11 | spoken email form |
+| joshua dot fisseha zero one at gmail com | joshua.fisseha01@gmail.com | 2026-09-11 | spoken email form |
+| joshua.fisseha01 @gmail.com | joshua.fisseha01@gmail.com | 2026-09-11 | spoken email form |
+| joshua.fisseha01@ gmail.com | joshua.fisseha01@gmail.com | 2026-09-11 | spoken email form |
+| fissea | Fisseha | 2026-09-11 | spoken email form |
+| stata 5 | Sonnet 5 | 2026-09-12 | model name |
+| stata five | Sonnet 5 | 2026-09-12 | model name |
+| sonnet five | Sonnet 5 | 2026-09-12 | model name |
+| sonet 5 | Sonnet 5 | 2026-09-12 | model name |
+| sauna 5 | Sonnet 5 | 2026-09-12 | model name |
+| sonnet 5 | Sonnet 5 | 2026-09-12 | model name |
+| sonet five | Sonnet 5 | 2026-09-12 | model name |
+| sunny 5 | Sonnet 5 | 2026-09-12 | model name |
+| stata 5. | Sonnet 5 | 2026-09-12 | model name |
+| sonnet 4.6 | Sonnet 4.6 | 2026-09-12 | model name |
+| sonnet four point six | Sonnet 4.6 | 2026-09-12 | model name |
+| opus 5 | Opus 5 | 2026-09-12 | model name |
+| opus five | Opus 5 | 2026-09-12 | model name |

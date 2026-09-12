@@ -22,14 +22,14 @@ Decide which of two files it belongs in. They do different jobs:
 
 - `replacements.md` fixes a specific mis-hearing. Deterministic, case-insensitive, applied
   after transcription. This is where almost everything goes.
-- `vocabulary.md` is a hint list sent to the voice model. Joshua's rule (2026-09-11):
-  **every replacement target is automatically a vocabulary word too**; `sync.py` unions the
-  two, so you never add the target by hand. Only edit `vocabulary.md` to add a term that has
-  no replacement yet, or to put a target in its `## Exclude` section when he says a word
-  should not be a hint (he did this for `aspiringattorneys.com`).
+- `vocabulary.md` is a hint list sent to the voice model. Keep it around 40 entries: names and
+  terms the model cannot know. On 2026-09-11 it was pushed to 654 (every replacement target
+  auto-added) and transcription got noticeably worse within the hour, so that rule is gone;
+  the sync sends exactly the listed terms. Add a vocabulary line only for a term the model
+  keeps getting wrong.
 
-A correction with an arrow is a replacement row, and the target lands in vocabulary on its
-own. "Save the word X" means a vocabulary line plus replacement rows for how it gets mangled.
+A correction with an arrow is a replacement row only. "Save the word X" means a vocabulary
+line (if the model really cannot know it) plus replacement rows for how it gets mangled.
 
 **Think through the variants before writing.** One row per spelling he sends is not enough;
 he sends the next mis-hearing ten minutes later. For each term, write rows for:
@@ -132,7 +132,7 @@ before touching anything.
   sandboxed second copy whose tray icon does not work. Only the scheduler route in
   `sync.py`.
 - Do not edit the app's JSON by hand. Edit the vault files; the sync owns the JSON.
-- Do not add replacement targets to `vocabulary.md` by hand; the sync does it. Use the Exclude section to keep one out.
+- Do not pad the vocabulary. When in doubt, it is a replacement.
 - Do not batch his corrections for later. Each one lands, syncs, restarts, and is reported in
   the turn it arrives, even mid-task.
 

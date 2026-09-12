@@ -12,6 +12,10 @@ $Snaps  = Join-Path $Drive 'snapshots'
 $LogDir = Join-Path $Drive 'logs'
 $Stamp  = Get-Date -Format 'yyyy-MM-dd HH:mm:ss'
 
+# One run at a time: skip if another backup is still going.
+$mutex = New-Object System.Threading.Mutex($false, 'Global\ClaudeCodeBackup')
+if (-not $mutex.WaitOne(0)) { Write-Host 'Another backup is running - skipping'; exit 0 }
+
 if (-not (Test-Path 'G:\My Drive')) { Write-Host "Google Drive not mounted at G:\My Drive - skipping"; exit 1 }
 foreach ($d in $Cur, $Snaps, $LogDir) { New-Item -ItemType Directory -Force -Path $d | Out-Null }
 $Log = Join-Path $LogDir ("backup-" + (Get-Date -Format 'yyyy-MM-dd') + ".log")

@@ -57,3 +57,13 @@ Context sources: ~/.claude survey (this session), global CLAUDE.md, vault CLAUDE
 - Mechanism: Windows Scheduled Task, every 10 min + at logon, mirror to `G:\My Drive\claude-code-backup\`.
 - Scope: ~/.claude (all), ~/.claude.json, ~/.codex, Superwhisper settings, full vault, lsatu minus node_modules. Secrets INCLUDED by explicit user decision.
 - Git for vault+skills: pending user's read of the tradeoff (below).
+
+### Round 4 - go
+- Captured (user's words): "go and build it." Drive folder must be "easily identifiable ... like a README doc"; the old copy should say "don't download" and point to the new one. "Also, do the plus git for the vault + skills."
+- Decision: GitHub AND Drive (different jobs: Drive = whole-machine restore, GitHub = history/merge). User accepted.
+- Built 2026-09-11:
+  - `setup/backup/backup.ps1`, `restore.ps1`, `restore.sh`, `install-task.ps1`, `README.md`, `README - START HERE.md`
+  - Drive: `G:\My Drive\CLAUDE-CODE-BACKUP - START HERE\` + top-level pointer file; old `AI-OS` renamed `_OLD AI-OS (Aug 2026) - DO NOT USE` with marker file inside (nothing deleted).
+  - GitHub: private `vnjkoxpl-42905/ai-os`, initial commit 9b1a3aa, 6,691 files; ignores projects/ raw/ tmp/ .firecrawl/ .env.
+  - Scheduled task "Claude Code Backup": every 10 min + at logon.
+Status: build in progress (first full run + restore proof pending)

@@ -6,7 +6,7 @@ This folder is the source of truth for Superwhisper on the Windows laptop. Edit 
 
 | File | What it is |
 |---|---|
-| `vocabulary.md` | Hand-listed terms plus, automatically, every replacement target (Joshua's rule 2026-09-11), minus its `## Exclude` section. One stub note per term in `vocabulary/`. |
+| `vocabulary.md` | The short hand-listed hint list (~40). Exactly what is sent; nothing is added automatically. One stub note per term in `vocabulary/`. |
 | `replacements.md` | Heard → wanted table. Deterministic, case-insensitive. This is where mis-hearings go. |
 | `modes/<key>.md` | One mode each: frontmatter is the config, body is the prompt, `## Examples` are appended to the prompt text (see rule 7). |
 | `sync.py` | Pushes all of the above into the app. `--check` shows the diff without writing. Backs up first. |
@@ -28,10 +28,10 @@ Raw evidence (docs crawl, community pages, searches) is in `raw/sources/superwhi
 2. **Never launch Superwhisper from this shell.** It spawns a sandboxed second instance whose tray icon and settings window do not work. Ask Joshua to quit from the tray and reopen. If it must be done headlessly, use a Task Scheduler task (`Register-ScheduledTask` + `Start-ScheduledTask`), which runs outside the sandbox.
 3. **The app reads config only at launch.** A sync is not live until the app restarts. Tell him every time.
 4. **Settings window.** Closing it hides it; relaunching the exe does not bring it back. Open it with `superwhisper://settings` (the "Superwhisper Settings" shortcut on his Desktop does this) or the tray icon.
-5. **Model IDs.** `sv-1` S1-Voice, `sl-1` S1-Language (both confirmed live), `sw-claude-4p5-sonnet` confirmed in the binary. Joshua's decision 2026-09-11: all AI modes run on S1-Language for speed; do not switch them to Claude/GPT without asking.
+5. **Model IDs.** The picker in the app is the only truthful list; the website and docs lag it. Proven by recordings: `sv-1` S1-Voice, `sl-1` S1-Language, `sw-claude-4p5-sonnet` Sonnet 4.5, `claude-sonnet-5` Sonnet 5 (newer models use plain IDs without the `sw-` prefix). To learn a new ID: Joshua picks it in the app, then read `modes/<key>.json` `languageModelID` and the latest `recording.language_model_key` in the sqlite. Never assert what is or is not offered without one of those two.
 6. **Prompt examples cannot be written from outside the app.** A mode with a non-empty `promptExamples` list is silently dropped from `modeKeys` at launch (verified 2026-09-11). `sync.py` folds `## Examples` into the prompt text instead. If Joshua adds examples in the UI, leave them; the sync only touches modes whose files are in `modes/`.
 7. **Verify a load, not a write.** After a restart, read `settings.json` `modeKeys`: the app rewrites it and drops any mode it rejected. That is the only trustworthy check.
-8. **Vocabulary = listed terms + all replacement targets.** Joshua chose this over the docs' keep-it-short advice on 2026-09-11. Use the Exclude section in `vocabulary.md` for the exceptions; watch the scan for accuracy drift.
+8. **Vocabulary stays short (~40).** On 2026-09-11 it was pushed to 654 (auto-adding every replacement target) and transcription got noticeably worse within the hour; Joshua reversed it the same evening. Replacement targets are never auto-added. Mis-hearings go in `replacements.md`, which costs nothing in accuracy.
 
 ## Where the app keeps things
 
