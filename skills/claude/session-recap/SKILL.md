@@ -71,7 +71,8 @@ posted_at:
 # <Concept the student needs>
 
 <Open with the decision or distinction the lesson will teach. Do not use a greeting,
-sign-off, praise, generic scene-setting, "Today...", or an answer-choice recap.>
+sign-off, praise, generic scene-setting, "Today...", or an answer-choice recap. Give
+the student one brief orientation sentence before presenting steps or categories.>
 
 ## <Concept-first teaching header>
 

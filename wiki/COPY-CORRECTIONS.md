@@ -189,3 +189,8 @@ examples, and practice that uses the lesson.
 
 **Lesson:** the note should remain useful when the session itself is no longer fresh.
 It must teach from the page instead of relying on remembered context.
+
+The concept should not arrive as an abrupt list. Begin with a short explanation of
+why the distinction matters, show the full method at a glance, and then teach each
+path in the same order. Use tables for comparisons and numbered headings for a
+procedure so the student can see the structure before reading the detail.
