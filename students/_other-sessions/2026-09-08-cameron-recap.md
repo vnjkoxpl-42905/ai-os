@@ -49,7 +49,9 @@ Reading is not sounding out the words. Reading means building an accurate model 
 
 ### Treat changes in language as warning signs
 
-Suppose the evidence says an object was **unpainted**, but the conclusion describes it as **monochromatic**. Those terms might overlap, but they are not automatically identical.
+Suppose the evidence says Maya has worked as a paramedic for ten years. The author concludes that Maya will be an excellent emergency-room nurse.
+
+Paramedic experience is relevant, but **experienced paramedic** and **excellent nurse** are not the same idea. The conclusion introduces a new standard. The argument needs a connection between the skills Maya developed as a paramedic and the skills required to excel as a nurse.
 
 Do not supply the connection for the author. Mark the change and ask what would need to be true for the new language to follow.
 
@@ -65,6 +67,22 @@ Think of a necessary assumption as a supporting block. Removing that block makes
 A sufficient assumption is stronger. Once added, it completes the support and guarantees the conclusion.
 
 For a Necessary Assumption question, do not ask whether an answer proves the conclusion. Ask whether the author can afford to lose it.
+
+### Questions you can ask
+
+These are different ways to test whether an answer choice is necessary. They are prompts, not separate steps:
+
+1. If the conclusion is true, does this have to be true?
+2. Does the author have to believe this?
+3. Does the author have to think this is true?
+4. If the conclusion is proven, does this have to be true?
+5. If the premises worked to prove the conclusion, is this required?
+6. If these premises proved this conclusion, what must the author assume?
+7. Does the argument rely on this?
+8. For the argument to make any sense, does this have to be its foundation?
+9. What must the author believe to think they actually proved this conclusion?
+
+In questions 1 and 4, treat the conclusion as proven by these premises. The conclusion could happen to be true for an unrelated reason.
 
 ## Necessary assumptions can link or defend
 
