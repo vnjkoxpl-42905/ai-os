@@ -1,14 +1,23 @@
 ---
 name: session-recap
-description: Write the post-session recap note for a student, in Joshua's voice, from the Gemini transcript, and file it in the student's folder WITHOUT posting it. Use when Joshua says "recap note", "write the recap", "take a recap for <student>", "recaps for this week", or after a transcript has just been ingested. Never posts, sends, or assigns anything. Also covers pulling the past week's Gemini transcripts from Calendar into student folders.
+description: Turn a tutoring-session transcript into a polished, concept-first set of lecture notes in Joshua's teaching voice, then file it in the student's folder. Use for "post-session note", "recap note", "write the recap", "take a recap for a student", weekly recap intake, or after a transcript is ingested. Drafts by default; post or assign only when Joshua explicitly asks.
 ---
 
 # Session recap
 
-After every session Joshua wants one set of lecture notes he can read, edit, and then
-post to the student himself. The note is drafted here, in his voice, and stays a draft.
-It is teaching content, not an email. Posting is his click (Teacher Desk, or
-`lsat-u-platform-actions`), never this skill's.
+After every session Joshua wants a durable set of lecture notes. The student should be
+able to return several days later, understand the lesson without remembering a specific
+question, and apply the method to new work. It is teaching content, not an email or a
+session summary.
+
+Read `skills/reference/session-recap-quality-reference.md` before drafting. Its Sofia
+note is the quality bar for depth, hierarchy, nuance, and practical usefulness. Copy the
+method, not the conditional-logic headings.
+
+Draft and file the note by default. If Joshua explicitly says to post, assign, publish,
+or send it to the student, complete that as a separate LSAT U platform action after the
+draft is ready and verify what landed. Never infer posting permission from a request to
+write a note.
 
 ## 1. Get the transcript on disk first
 
@@ -45,10 +54,22 @@ primary calendar holds every session.
 ## 2. Read the whole transcript, not the Gemini summary
 
 The Gemini "Quick notes" flatten what he said. Read the transcript section. It is 40
-to 90 KB; that is the cost of a recap that is true. Extract the concepts, diagnostic
-checks, and assigned practice. Do not turn the recap into a play-by-play of answer
-choices. Name a specific question only when it is needed to demonstrate a reusable
-reasoning move.
+to 90 KB; that is the cost of a recap that is true.
+
+Extract:
+
+- the governing concept and distinctions Joshua taught;
+- the student's actual confusion or decision point;
+- the reasoning procedure, including why each step works;
+- legal and illegal moves, edge cases, diagnostic checks, and shortcuts;
+- examples that can stand alone outside the original question; and
+- the exact practice and follow-ups that were assigned.
+
+Do not write a play-by-play of answer choices. A detail from a specific question belongs
+only when it demonstrates a reusable move. If the explanation needs more support, search
+Joshua's corpus first. Use an authoritative outside source only when Joshua points to it
+or the corpus cannot resolve the concept. Keep source research outside the student note.
+The session transcript remains the authority for what happened and what was assigned.
 
 ## 3. Write the recap
 
@@ -70,33 +91,32 @@ posted_at:
 
 # <Concept the student needs>
 
-<Open with the decision or distinction the lesson will teach. Do not use a greeting,
-sign-off, praise, generic scene-setting, "Today...", or an answer-choice recap. Give
-the student one brief orientation sentence before presenting steps or categories.>
+<Open directly with the governing distinction or decision. One short orientation
+paragraph. No greeting, sign-off, praise, generic scene-setting, "Today...", or recap of
+which answers were correct.>
 
-## <Concept-first teaching header>
+## <A descriptive header that teaches the first part of the method>
 
-<Build a compact, reusable reference. Use short subheads, numbered steps, or a small
-logic diagram when they make the method easier to scan.>
+<Define the idea before applying it. Build a reusable reference with the combination of
+short explanation, numbered steps, a compact table, or a spaced example that best fits
+the material.>
 
-## The one thing to hold onto
+## <The next conceptual move>
 
-<The reasoning move of the session, taught, not asserted. Two to five sentences.
-This is the part the student re-reads. The reasoning is the product.>
+<Explain why it works, how to recognize when to use it, what does not follow, and how
+the student can check the move. Add boundary cases or common traps when they mattered in
+the session.>
 
-## Where it slipped
+## <A repeatable process>
 
-<Honest, gentle, specific. The exact move that went wrong and why it is a normal
-place to slip. Bluntness at the material, warmth at the person. Omit if nothing slipped.>
+1. <A decision the student can actually make.>
+2. <The next observable check.>
+3. <How to verify the inference or reject the trap.>
 
 ## Before next session
 
 - [ ] <What was actually assigned, as the student would recognise it.>
 - [ ] <Only what the transcript supports. No invented drills.>
-
-## Next time
-
-<One line: the agenda and any promise he made ("extra time for accommodations").>
 
 ---
 
@@ -110,12 +130,18 @@ place to slip. Bluntness at the material, warmth at the person. Omit if nothing 
 Everything above the `---` rule is the student note and must stand alone when pasted.
 Everything below is admin-only.
 
+The headings above are scaffolding, not a mandatory outline. Organize around the lesson's
+logic. Use enough depth to teach the method fully, but remove any section that does not
+help the student use it.
+
 ## Voice rules (from `wiki/teaching-voice.md`, Coaching register)
 
 - A post-session note is a set of lecture notes, not an email. Use a concept title,
   descriptive headers, numbered procedures, and spaced examples. Do not use a greeting
   or sign-off.
 - Short sentences. One idea per line. Air between ideas.
+- Write for a student returning days later. Do not rely on "remember that question" or
+  unexplained references to a person, scenario, or answer choice.
 - Teach the reasoning; never just state the answer. "A reverses the timeline: the
   symptom stops, then the boss assumes the cause was fixed" beats "A was wrong".
 - Praise only when it names a durable skill or meaningful change and ties to their
@@ -134,11 +160,22 @@ Everything below is admin-only.
   trigger occurred. Some stimuli contain rules and no facts. Never invent a fact to
   trigger a rule.
 
-## 4. Log and hand back
+## 4. Validate, log, and hand back
+
+Before handoff, check that:
+
+- the opening begins with content rather than commentary about the session;
+- the note explains both the move and the reason it is valid;
+- examples make sense without the original question;
+- hierarchy is visible at a glance;
+- practice matches the transcript; and
+- the student-facing portion contains no private context, transcript references, or
+  administrative follow-ups.
 
 - Append the session line to the student's `transcripts.md` if one exists (primary,
   append-only), and any promise he made to `open-loops.md`.
 - Append one line to `wiki/log.md`: `## YYYY-MM-DD recap | <students>` with paths.
 - Report: which recaps were written, which sessions had no transcript (list them, with
   the reason if known), and anything that needs his call (a new name, a folder to
-  create). Do not post. Do not assign. Do not email.
+  create). If Joshua explicitly requested a platform action, report its verification
+  separately from the draft.

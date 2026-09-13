@@ -1,13 +1,20 @@
 ---
 type: operating-layer
 subject: Log
-updated: 2026-09-12
+updated: 2026-09-13
 aliases: []
 ---
 
 # Log
 
 Append-only record of wiki activity — ingests, queries, lint passes, structural changes. Each entry starts `## [YYYY-MM-DD] type | Title` so `grep "^## \[" log.md | tail -5` gives the last 5 events. The pre-rebuild log was removed from disk 2026-07-17 (recoverable from git history).
+
+## [2026-09-13] ship | Smart Drill buttons and analytics selection repaired
+
+- Both student hub practice actions now launch the canonical Smart Drill run instead of relying on transient route state or opening an empty `/drill` route.
+- Adaptive selection now ranks the pool produced by the student's repeat, unseen-first, and recycle settings; avoids double-counting current-session attempts; permits eligible redemption questions; shrinks sparse analytics toward a neutral prior; retries failed history hydration; and isolates engine state by signed-in student.
+- Focused Smart Drill tests passed (39/39) and the production build passed. Full-suite failures were confined to pre-existing booking tests; the existing typecheck gate still fails on Deno `npm:` imports in Supabase email code. Authenticated browser verification was unavailable because the local browser had no signed-in session.
+- Pushed `f59e11b` to `origin/main` through `.claude/safe-push.sh` with its documented emergency typecheck bypass.
 
 ## [2026-09-11] ship | RRC demo films Round 8 (text written in the air) live, audited, board published
 
@@ -757,3 +764,21 @@ Rebuilt the post-consultation follow-up template from five identical sends (2026
 - Wrote the timestamped synthesis at `research/2026-09-12-lsat-lab-must-be-true-video-33013.md`.
 - Updated Sofia's conditional lecture note with the inference mindset, the certainty test, the two valid bridge arrangements, hidden bridges through contraposition, intermediate chain links, and a practical rule for when to contrapose.
 - Did not use the vendor LSAT U voice skill for the rewrite after Joshua rejected its style; transcript and corpus language governed instead.
+
+## [2026-09-13] system | Post-session note skill rebuilt
+
+- Rebuilt `session-recap` around the approved Sofia lecture note: concept-first opening, reusable reasoning, descriptive hierarchy, standalone examples, legal and illegal moves, diagnostic checks, and transcript-supported practice.
+- Saved `skills/reference/session-recap-quality-reference.md` as the maintained quality reference.
+- Updated both catalogs, activated project copies for Codex and Claude, replaced the stale global copy that still produced email-style recaps, and validated all five skill installations.
+- Prepared Sofia's 2026-09-11 recap in the LSAT U composer. Publication remains pending the required final confirmation.
+
+## 2026-09-13 recap | Cameron
+
+- Drafted `students/_other-sessions/2026-09-08-cameron-recap.md` from the complete 2026-09-08 transcript; not posted or sent. Cameron has no canonical student folder, so the recap remains beside the source in `_other-sessions` pending Joshua's call.
+
+## [2026-09-13] system | Conditional Rephrase local grading
+
+- Replaced the Conditional Rephrase Activity's AI-dependent free-text judgment with an authoritative browser-side parser for constrained `If ..., then ...` responses.
+- The local judge accepts authored answers, contrapositives, and ordinary wording variations; identifies reversals, dropped negation, and materially trimmed conditions; and never calls the paid Coach for this Activity.
+- Corrected the lesson's treatment of `otherwise`: it means `if not` and does not create a biconditional. Added a migration to repair the Activity and active assignment snapshots.
+- Verified 60 focused tests on current `main`, a full production build, and a full typecheck on the originating feature branch. Pushed commit `baa42fa` to `origin/main`. No student assignment was created.
