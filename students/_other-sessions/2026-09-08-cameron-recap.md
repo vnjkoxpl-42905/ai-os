@@ -16,7 +16,7 @@ A necessary assumption is something the argument needs in order to survive. It d
 
 That test works only if you are attacking the argument that is actually on the page. Before you look for an assumption, make sure you can state the evidence, the conclusion, and the gap between them without changing any of the variables.
 
-## Start with the standard for a valid argument
+## First, preserve the argument
 
 An argument has two basic parts:
 
@@ -25,17 +25,15 @@ An argument has two basic parts:
 | **Premises** | Give the evidence the author wants you to accept |
 | **Conclusion** | State what the author believes the evidence proves |
 
-On the LSAT, grant the premises. Do not argue that the evidence might be false. Ask a narrower question:
+Grant the premises. Do not argue that the evidence might be false. Ask a narrower question:
 
 > If every premise is true, could the conclusion still be false?
 
 If the answer is yes, the argument is invalid. The possible exception reveals the gap in the reasoning.
 
-The evidence does not need to make the conclusion sound reasonable. It must guarantee it. Your job is to identify what the author added, assumed, or failed to rule out when moving from the premises to the conclusion.
+The evidence does not need to make the conclusion sound reasonable. It must guarantee it. Your job is to identify what the author added, assumed, or failed to rule out.
 
-## Read the argument that is there
-
-It is possible to make a strong objection to the wrong argument. That happens when the version in your head quietly changes a term, drops a comparison, or adds a fact that the stimulus never gave you.
+It is possible to make a strong objection to the wrong argument. That happens when the version in your head changes a term, drops a comparison, or adds a fact that the stimulus never gave you.
 
 Use this reading process:
 
@@ -45,13 +43,13 @@ Use this reading process:
 4. After the final sentence, remove the stimulus and restate the whole argument.
 5. Check that every person, group, time period, and measurement in your version matches the text.
 
-Reading is not sounding out the words. Reading means building an accurate model of the relationships among the ideas.
+Reading means building an accurate model of the relationships among the ideas.
 
 ### Treat changes in language as warning signs
 
 Suppose the evidence says Maya has worked as a paramedic for ten years. The author concludes that Maya will be an excellent emergency-room nurse.
 
-Paramedic experience is relevant, but **experienced paramedic** and **excellent nurse** are not the same idea. The conclusion introduces a new standard. The argument needs a connection between the skills Maya developed as a paramedic and the skills required to excel as a nurse.
+Paramedic experience is relevant, but **experienced paramedic** and **excellent nurse** are not the same idea. The argument assumes that Maya's paramedic experience gives her skills that matter to excellent emergency-room nursing.
 
 Do not supply the connection for the author. Mark the change and ask what would need to be true for the new language to follow.
 
@@ -68,9 +66,9 @@ A sufficient assumption is stronger. Once added, it completes the support and gu
 
 For a Necessary Assumption question, do not ask whether an answer proves the conclusion. Ask whether the author can afford to lose it.
 
-### Questions you can ask
+### Nine questions for testing necessity
 
-These are different ways to test whether an answer choice is necessary. They are prompts, not separate steps:
+These are nine different questions you can ask. They are not a nine-step process. Use the wording that makes the dependency easiest to see:
 
 1. If the conclusion is true, does this have to be true?
 2. Does the author have to believe this?
@@ -82,7 +80,7 @@ These are different ways to test whether an answer choice is necessary. They are
 8. For the argument to make any sense, does this have to be its foundation?
 9. What must the author believe to think they actually proved this conclusion?
 
-In questions 1 and 4, treat the conclusion as proven by these premises. The conclusion could happen to be true for an unrelated reason.
+For questions 1 and 4, treat the conclusion as proven by these premises. The conclusion could happen to be true for an unrelated reason.
 
 ## Necessary assumptions can link or defend
 
@@ -124,7 +122,7 @@ The required assumption may therefore be phrased negatively:
 The preservation process did not substantially reduce the chemical in the older sample.
 ```
 
-Causal and comparative arguments often need this kind of protection because another cause or an unfair comparison can explain the result.
+Causal and comparative arguments often need this kind of protection because another cause or an unfair comparison can explain the result. New language in the conclusion usually points toward a linking assumption. A proposed cause or comparison usually points toward a defender assumption. These are useful predictions, not guarantees.
 
 ## Use the negation test as a collapse test
 
@@ -165,31 +163,14 @@ Use this check whenever an answer discusses only one group:
 
 “Could matter” is not enough. A necessary assumption must be something the argument requires.
 
-## Build the answer from the reasoning type
+## A repeatable approach
 
-Structural patterns can tell you where to look first.
-
-| What appears in the argument | Likely assumption to test first |
-|---|---|
-| A new idea appears in the conclusion | A positive bridge connecting it to the evidence |
-| A conditional relationship has a missing connection | A linking assumption |
-| A cause is proposed | A defender assumption ruling out another cause |
-| Two groups or periods are compared | A defender assumption protecting the comparison |
-
-These are search priorities, not guarantees. Use them to predict the shape of the answer, then prove the answer with the negation test.
-
-## The complete process
-
-1. Identify the question task.
-2. Restate each sentence in plain language.
-3. Mark the premises and conclusion.
-4. Ask whether the premises guarantee the conclusion.
-5. Name one possible exception without disputing the premises.
-6. Check for a new idea that needs a bridge.
-7. For causal or comparative reasoning, look for alternative explanations and unfair comparisons.
-8. Predict whether the assumption will probably link the argument or defend it.
-9. Negate each serious answer choice and test whether the argument collapses.
-10. Choose the answer the author cannot afford to lose.
+1. Restate the premises and conclusion without changing any of the variables.
+2. Ask whether the premises guarantee the conclusion.
+3. Name one way the premises could be true while the conclusion is false.
+4. Decide whether the argument needs a link or protection from an objection.
+5. Use the necessity question that makes the dependency easiest to see.
+6. Negate the answer. Choose it only if the argument collapses.
 
 ## Before next session
 
