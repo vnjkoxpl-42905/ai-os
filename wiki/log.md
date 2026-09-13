@@ -749,3 +749,11 @@ Rebuilt the post-consultation follow-up template from five identical sends (2026
 - Reworked Sofia's conditional note as lecture material: added a natural conceptual opening, an at-a-glance comparison, numbered sections, parallel scenarios, and generic examples that do not rely on remembering a prior question.
 - Rechecked Sofia's full transcript and the Must Be True / Conditional Logic corpus. Reframed the lesson around Joshua's two operations: chaining (`rule + rule → new rule`) and triggering (`fact + rule → new fact`); expanded “bridge” as the interlocking middle term, including bridges revealed through a contrapositive.
 - Rebuilt Sofia's draft as lecture notes rather than an email: two numbered scenarios, context-free examples, spaced diagrams, a quick process, and practice. Removed the greeting, sign-off, dated-session framing, and references that depended on remembering a prior question. Updated the recap skill and copy-corrections record to make that format the default.
+
+## [2026-09-12] ingest | LSAT Lab Must Be True class recording
+
+- Retrieved the complete 97-minute English auto-generated caption track from LSAT Lab video 33013 through the authenticated in-app browser.
+- Preserved the unchanged VTT with provenance and SHA-256 verification at `raw/sources/lsat-lab/video-33013/`.
+- Wrote the timestamped synthesis at `research/2026-09-12-lsat-lab-must-be-true-video-33013.md`.
+- Updated Sofia's conditional lecture note with the inference mindset, the certainty test, the two valid bridge arrangements, hidden bridges through contraposition, intermediate chain links, and a practical rule for when to contrapose.
+- Did not use the vendor LSAT U voice skill for the rewrite after Joshua rejected its style; transcript and corpus language governed instead.
