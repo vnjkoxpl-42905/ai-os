@@ -5,9 +5,10 @@ description: Write the post-session recap note for a student, in Joshua's voice,
 
 # Session recap
 
-After every session Joshua wants one note he can read, edit, and then post to the
-student himself. The note is drafted here, in his voice, and stays a draft. Posting is
-his click (Teacher Desk, or `lsat-u-platform-actions`), never this skill's.
+After every session Joshua wants one set of lecture notes he can read, edit, and then
+post to the student himself. The note is drafted here, in his voice, and stays a draft.
+It is teaching content, not an email. Posting is his click (Teacher Desk, or
+`lsat-u-platform-actions`), never this skill's.
 
 ## 1. Get the transcript on disk first
 
@@ -67,10 +68,10 @@ posted: false
 posted_at:
 ---
 
-# Session recap · YYYY-MM-DD
+# <Concept the student needs>
 
-<Open with the concept the note will teach. Do not begin with praise, generic
-scene-setting, "Today...", or an answer-choice recap.>
+<Open with the decision or distinction the lesson will teach. Do not use a greeting,
+sign-off, praise, generic scene-setting, "Today...", or an answer-choice recap.>
 
 ## <Concept-first teaching header>
 
@@ -96,9 +97,6 @@ place to slip. Bluntness at the material, warmth at the person. Omit if nothing 
 
 <One line: the agenda and any promise he made ("extra time for accommodations").>
 
-Best,
-Joshua
-
 ---
 
 ## Notes for me (not posted)
@@ -113,8 +111,9 @@ Everything below is admin-only.
 
 ## Voice rules (from `wiki/teaching-voice.md`, Coaching register)
 
-- "Hey <Name>," for established students, "Hi <Name>," for a first or second session.
-  Sign "Joshua". "Best," is the default close.
+- A post-session note is a set of lecture notes, not an email. Use a concept title,
+  descriptive headers, numbered procedures, and spaced examples. Do not use a greeting
+  or sign-off.
 - Short sentences. One idea per line. Air between ideas.
 - Teach the reasoning; never just state the answer. "A reverses the timeline: the
   symptom stops, then the boss assumes the cause was fixed" beats "A was wrong".

@@ -178,3 +178,14 @@ them. When a fact is present, apply a matching rule or a valid contrapositive.
 
 **Lesson:** label the role of each sentence before explaining the inference. Never
 invent a fact to make a rule fire.
+
+### A post-session note is lecture material, not an email (2026-09-12)
+
+**Cut:** a greeting, a dated recap heading, references to a question the student is
+expected to remember, and a sign-off.
+
+**Keep:** a concept title, a clear opening distinction, numbered procedures, spaced
+examples, and practice that uses the lesson.
+
+**Lesson:** the note should remain useful when the session itself is no longer fresh.
+It must teach from the page instead of relying on remembered context.
