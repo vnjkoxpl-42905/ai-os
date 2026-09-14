@@ -9,6 +9,14 @@ aliases: []
 
 Append-only record of wiki activity — ingests, queries, lint passes, structural changes. Each entry starts `## [YYYY-MM-DD] type | Title` so `grep "^## \[" log.md | tail -5` gives the last 5 events. The pre-rebuild log was removed from disk 2026-07-17 (recoverable from git history).
 
+## [2026-09-14] ops | Calendar, session-note, and payment monitoring verified
+
+- Google Calendar and Drive reads succeeded through the `gws` CLI. Drive session-note folders are visible and reachable.
+- Cal.com API access was re-verified through `scripts/calcom-pending-sweep.mjs`; its key is present in the root `.env`. The connection registry now reflects this Windows verification.
+- The sweep reported nine unpaid pending bookings, two of which are future holds (2026-09-16 13:00 and 2026-09-18 16:10, both `contact@aspiringattorneys.com`). No cancellations were made.
+- Created the quiet heartbeat monitor “Monitor payments, calendar, and session notes,” running every 30 minutes and reporting only actionable changes or access failures.
+- Stripe dashboard/API access remains unverified on Windows because no Stripe key is present in the root `.env`; the LSAT U backend remains reachable through its separate admin credentials.
+
 ## [2026-09-13] ship | Smart Drill buttons and analytics selection repaired
 
 - Both student hub practice actions now launch the canonical Smart Drill run instead of relying on transient route state or opening an empty `/drill` route.
