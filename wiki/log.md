@@ -808,3 +808,10 @@ Rebuilt the post-consultation follow-up template from five identical sends (2026
 - Ported the Superwhisper maintenance runbook into `skills/codex/superwhisper/` and activated the project copy in `.agents/skills/superwhisper/`.
 - Adapted the instructions for Codex while preserving the verified workflow: edit the vault source, keep vocabulary short, generate safe replacement variants, run `sync.py --restart`, and verify the app's loaded state.
 - Removed the obsolete Claude-only parity exception and validated both Codex copies with the bundled skill validator.
+
+## [2026-09-15] system | Permanent stale booking-hold fix deployed
+
+- Diagnosed two expired single-session drafts as the reason valid 2026-09-16 availability was hidden on the reusable $45 USD booking page.
+- Pushed commit `0448d925` to LSAT U `main`: availability now treats only unexpired drafts/checkouts and confirmed bookings as busy, so a delayed cleanup worker cannot hide slots indefinitely.
+- Deployed the live `single-session` Edge Function through Lovable Cloud and restored the active `single-session-sweeper-every-minute` recovery job (`* * * * *`).
+- Verified production independently from a fresh page: Wednesday, 2026-09-16 is selectable at 2:20 PM and 3:40 PM America/Toronto. No booking, charge, calendar invite, or email was created during verification.
