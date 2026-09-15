@@ -9,6 +9,11 @@ aliases: []
 
 Append-only record of wiki activity — ingests, queries, lint passes, structural changes. Each entry starts `## [YYYY-MM-DD] type | Title` so `grep "^## \[" log.md | tail -5` gives the last 5 events. The pre-rebuild log was removed from disk 2026-07-17 (recoverable from git history).
 
+## [2026-09-15] ops | Reusable session booking notice reduced to eight hours
+
+- Updated the live `single-session` event type from 1,440 to 480 minutes of minimum notice.
+- Verified the permanent booking remains active at $45 USD for a 70-minute session. Weekly availability and existing bookings were not changed.
+
 ## [2026-09-14] ops | Calendar, session-note, and payment monitoring verified
 
 - Google Calendar and Drive reads succeeded through the `gws` CLI. Drive session-note folders are visible and reachable.
