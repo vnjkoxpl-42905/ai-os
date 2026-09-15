@@ -13,6 +13,7 @@ Append-only record of wiki activity — ingests, queries, lint passes, structura
 
 - Updated the live `single-session` event type from 1,440 to 480 minutes of minimum notice.
 - Verified the permanent booking remains active at $45 USD for a 70-minute session. Weekly availability and existing bookings were not changed.
+- Removed the obsolete 2026-09-19 8:00–9:10 PM Fernande date override. The live page now falls back to Saturday's regular 2:00–5:00 PM Toronto window and offers 2:00 PM and 3:20 PM starts around existing conflicts.
 
 ## [2026-09-14] ops | Calendar, session-note, and payment monitoring verified
 
