@@ -16,7 +16,7 @@ skills to Codex: `academy-guide`, `algorithmic-art`, `brand-guidelines`, `canvas
 `migrate-to-shoehorn`, `pdf`, `pptx`, `retro`, `session-recap`,
 `setup-ts-deep-modules`, `slack-gif-creator`, `theme-factory`,
 `web-artifacts-builder`, `wizard`, and `xlsx`. Current catalog counts:
-**claude=211 codex=187**.
+**claude=211 codex=188**.
 
 Note that DB parity is not activation. The DB is the complete catalog; Codex's activated set
 in `.agents/skills/` is a deliberately small ops core. Porting a skill here does not activate
@@ -84,13 +84,6 @@ ledgers, not a quiet port.
 - `lovable-migrate` — packages a SQL change for the Lovable UI plus a verification probe.
   Mostly runtime-neutral; kept Claude-only for now only because it reads `connections.md` and
   records outcomes alongside the other ledger writers. Lowest-confidence entry in this file.
-
-### Claude Desktop machine-specific (1)
-
-- `superwhisper` — tunes Joshua's dictation app from inside Claude Desktop on the Windows
-  laptop. Its runbook is built around that shell's MSIX sandbox (writes via `\localhost\C$`,
-  restarts via Task Scheduler) and the `dev/ai-os/superwhisper/` folder. Codex does not run
-  in that shell. Declared Claude-only 2026-09-11; port if Codex ever drives this box.
 
 ## Codex only
 

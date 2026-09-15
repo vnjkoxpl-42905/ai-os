@@ -790,6 +790,15 @@ Applied by Superwhisper after transcription, before any AI step. Matching is cas
 | claudecru | Claude Code | 2026-09-11 | typed by Joshua; assumed Claude Code |
 | claude cru | Claude Code | 2026-09-11 | |
 | codex cru | Codex | 2026-09-11 | |
+| code x | Codex | 2026-09-15 | Codex spoken as two syllables |
+| code ex | Codex | 2026-09-15 | Codex spoken as two words |
+| cod x | Codex | 2026-09-15 | clipped first syllable |
+| codexx | Codex | 2026-09-15 | doubled final letter |
+| codax | Codex | 2026-09-15 | vowel drift |
+| codix | Codex | 2026-09-15 | vowel drift |
+| codics | Codex | 2026-09-15 | phonetic plural-like spelling |
+| openai codex | OpenAI Codex | 2026-09-15 | joined OpenAI form |
+| open ai codecs | OpenAI Codex | 2026-09-15 | Codex heard as codecs |
 | joshua dott fissea 01 01 @gmail dot com | joshua.fisseha01@gmail.com | 2026-09-11 | spoken email form |
 | joshua dott fissea 01 01@gmail dot com | joshua.fisseha01@gmail.com | 2026-09-11 | spoken email form |
 | joshua dot fissea 01 at gmail dot com | joshua.fisseha01@gmail.com | 2026-09-11 | spoken email form |

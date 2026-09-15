@@ -64,7 +64,7 @@ Switch with Ctrl+Shift+M, or `superwhisper://mode?key=<key>`. Per-mode hotkeys a
 
 ## Skill
 
-The `superwhisper` skill (`skills/claude/superwhisper/SKILL.md`, installed in `~/.claude/skills/`) is the runbook: word/correction → variants → `sync.py --restart`; modes; `scan.py`. Invoke it for any Superwhisper request.
+The `superwhisper` skill is the runbook for both runtimes: `skills/claude/superwhisper/SKILL.md` for Claude and `skills/codex/superwhisper/SKILL.md` for Codex, activated in their project skill folders. It covers word/correction → variants → `sync.py --restart`; modes; `scan.py`. Invoke it for any Superwhisper request.
 
 ## Related
 

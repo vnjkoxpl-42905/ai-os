@@ -796,3 +796,9 @@ Rebuilt the post-consultation follow-up template from five identical sends (2026
 - Verified live read-only Gmail access to `contact@aspiringattorneys.com` through the `gws` CLI and OS keyring.
 - Activated project-local Codex copies of `gws-shared`, `gws-gmail`, `gws-gmail-read`, and `gws-gmail-triage` in `.agents/skills/` so inbox work resolves locally without a machine-wide fallback.
 - Updated `connections.md` with the exact mechanism, account, skill paths, message count, and verification date.
+
+## [2026-09-15] system | Superwhisper skill activated for Codex
+
+- Ported the Superwhisper maintenance runbook into `skills/codex/superwhisper/` and activated the project copy in `.agents/skills/superwhisper/`.
+- Adapted the instructions for Codex while preserving the verified workflow: edit the vault source, keep vocabulary short, generate safe replacement variants, run `sync.py --restart`, and verify the app's loaded state.
+- Removed the obsolete Claude-only parity exception and validated both Codex copies with the bundled skill validator.
