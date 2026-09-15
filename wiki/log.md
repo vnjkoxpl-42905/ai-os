@@ -790,3 +790,9 @@ Rebuilt the post-consultation follow-up template from five identical sends (2026
 - The local judge accepts authored answers, contrapositives, and ordinary wording variations; identifies reversals, dropped negation, and materially trimmed conditions; and never calls the paid Coach for this Activity.
 - Corrected the lesson's treatment of `otherwise`: it means `if not` and does not create a biconditional. Added a migration to repair the Activity and active assignment snapshots.
 - Verified 60 focused tests on current `main`, a full production build, and a full typecheck on the originating feature branch. Pushed commit `baa42fa` to `origin/main`. No student assignment was created.
+
+## [2026-09-15] system | Gmail connection routing activated
+
+- Verified live read-only Gmail access to `contact@aspiringattorneys.com` through the `gws` CLI and OS keyring.
+- Activated project-local Codex copies of `gws-shared`, `gws-gmail`, `gws-gmail-read`, and `gws-gmail-triage` in `.agents/skills/` so inbox work resolves locally without a machine-wide fallback.
+- Updated `connections.md` with the exact mechanism, account, skill paths, message count, and verification date.

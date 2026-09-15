@@ -13,9 +13,9 @@ Registry of every live system Jay 2 can reach, mapped to the 7 Tier-1 data domai
 | # | Domain | Tool | Mechanism | Auth | Last checked |
 |---|---|---|---|---|---|
 | 1 | Revenue / Financials | Stripe | Codex Stripe app (OAuth); CLI/API key (`.env`) | **verified via Codex app** - Aspiring Attorneys account listed in live mode; CLI/API key remains unverified | 2026-09-14 |
-| 2 | Customer interactions | Gmail-as-CRM · TutorOcean | `gws` CLI · manual | **verified** (Gmail) | 2026-09-07 |
+| 2 | Customer interactions | Gmail-as-CRM · TutorOcean | `gws` CLI · manual | **verified** (Gmail via OS keyring; project skills activated) | 2026-09-15 |
 | 3 | Calendar | Cal.com · Google Calendar | key+ref · `gws` CLI | GCal **verified** · Cal.com **verified** | 2026-09-14 |
-| 4 | Communication | Gmail | `gws` CLI | **verified** - 3,973 msgs | 2026-09-07 |
+| 4 | Communication | Gmail | `gws gmail users getProfile`; OAuth token in OS keyring; routing skills in `.agents/skills/{gws-shared,gws-gmail,gws-gmail-read,gws-gmail-triage}` | **verified** - `contact@aspiringattorneys.com`, 4,113 msgs | 2026-09-15 |
 | 5 | Project / task tracking | `wiki/tasks.md` ledger | local file (no external tracker) | n/a | 2026-07-17 |
 | 6 | Meeting intelligence | Gmail/Drive session notes · Gemini Meet notes | `gws` CLI (export→`raw/`) | **verified** - Gemini notes in Drive | 2026-09-07 |
 | 7 | Knowledge / files | Google Drive · this vault | `gws` CLI · local | **verified** | 2026-09-07 |
