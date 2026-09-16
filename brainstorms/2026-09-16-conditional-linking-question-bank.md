@@ -1,4 +1,4 @@
-# Conditional linking: original draft question bank
+# Conditional linking: draft question bank
 
 Date: 2026-09-16
 Status: authored draft for review. Not installed in the application or published.
@@ -21,7 +21,7 @@ Each world retains its own unfinished run and history. Opening the world selecto
 
 The drafted Missing Link and Must Be True sets each begin with one worked example, then six symbolic items and four language items. The separate Linking bank remains to be authored; it must build on the same notation and progression. This gives two difficulty ramps: learn the operation with letters, then apply it to wording. Short paragraphs contain only the premises needed for conditional work. They are optional presentation of the same task, not a separate reading mode.
 
-The ten missing-link items below are original sufficient-assumption-style exercises. They are not official LSAT questions. Each asks which ONE supplied option makes the conclusion follow. Other sufficient assumptions can exist outside the choices; the key is not claimed to be the only possible bridge or a necessary assumption.
+The first ten missing-link items are original sufficient-assumption-style exercises. The later PHOTO-ML section adds all 12 exercises from Joshua's supplied photographs. They are not official LSAT questions. Each asks which ONE supplied option makes the conclusion follow. Other sufficient assumptions can exist outside the choices; the key is not claimed to be the only possible bridge or a necessary assumption.
 
 Notation follows Joshua's supplied LSAT examples: a diagonal slash through a letter means not, as in A̸. Keep the normal directional arrow →. Write **and** and **or** as words. Do not show formal logic operator glyphs or logical grouping parentheses/brackets in student-facing diagrams. A, B, C and the other letters name conditions. Answer labels are separate.
 
@@ -409,3 +409,345 @@ All 20 final formalizations were checked by exhaustive Boolean valuation. For ea
 The check caught equivalent and indirectly sufficient draft distractors; those were replaced before this draft was finalized. Natural-language scope was reviewed against the formalization. This is logical content validation, not browser testing or evidence that the application has been updated.
 
 The next content expansion should vary the existing structures across every indicator family and include dedicated no/not-both and AND/OR contraposition items. These 20 questions establish the two requested modes; they are not a complete mastery curriculum.
+
+
+## All exercises from Joshua's six supplied photos
+
+Added 2026-09-16. These 12 photographed prompts are required content for **Missing Link**. The earlier ten original missing-link items and ten Must Be True items remain intact. Total draft inventory is now 32 entries: 22 Missing Link and 10 Must Be True. This count includes deliberate equivalent structures; it is not a count of 32 independent skills.
+
+Source: user-supplied photos of the section *Missing Links in Conditional Chains as Sufficient Assumptions*. The book's title and author are not established by the images. Photos 1–3 establish the first four prompts and their solutions; photos 3–6 establish the remaining eight. Repeated worked solutions are not counted as additional exercises. Several faint negation strokes were checked against the solution pages.
+
+The premise/conclusion pairs below transcribe the photographs. Five-choice adaptations and explanations are newly authored. The photos use an open blank for the sufficient assumption; the app retains Joshua's requested multiple-choice interaction. All 12 must be available; the earlier proposal of ten questions per sitting is not a limit on this required content, and session length remains an open design choice.
+
+### Read the target, orient the premises, then connect the gap
+
+Show each premise on its own line, followed by the target conclusion and “Which additional conditional makes the conclusion follow?” The student diagrams on paper before revealing five choices. A correct option may present the bridge in its contrapositive form. Never show a bridge and its equivalent contrapositive as two separate choices in a single-answer question.
+
+After commitment, show the needed bridge, its equivalent contrapositive, and the completed chain. Those are two forms of one answer, not competing answers. Do not expose either before submission.
+
+### PHOTO-ML01: One premise
+
+Premise 1: A → B
+
+Conclusion: A → C
+
+| Choice | Additional conditional |
+|---|---|
+| A | C → B |
+| B | B → C |
+| C | B → C̸ |
+| D | B̸ → C |
+| E | A → B |
+
+**Answer: B.** A reaches B. Add B → C to reach the target C. The completed chain is A → B → C.
+
+Equivalent answer forms: **B → C** and **C̸ → B̸**. Only one form appears among the five choices.
+
+Why the other choices fail:
+
+- Choice A: A is true; B is true; C is false. The premises and this option are true, but the target conclusion is false.
+- Choice C: A is true; B is true; C is false. The premises and this option are true, but the target conclusion is false.
+- Choice D: A is true; B is true; C is false. The premises and this option are true, but the target conclusion is false.
+- Choice E: A is true; B is true; C is false. The premises and this option are true, but the target conclusion is false.
+
+### PHOTO-ML02: One premise
+
+Premise 1: A → B
+
+Conclusion: C → B
+
+| Choice | Additional conditional |
+|---|---|
+| A | A → C |
+| B | C → A̸ |
+| C | C̸ → A |
+| D | C → B̸ |
+| E | A̸ → C̸ |
+
+**Answer: E.** The target starts at C, but the existing rule starts at A. Add C → A. The completed chain is C → A → B.
+
+Equivalent answer forms: **C → A** and **A̸ → C̸**. The correct choice uses the contrapositive form. Only one form appears among the five choices.
+
+Why the other choices fail:
+
+- Choice A: A is false; B is false; C is true. The premises and this option are true, but the target conclusion is false.
+- Choice B: A is false; B is false; C is true. The premises and this option are true, but the target conclusion is false.
+- Choice C: A is false; B is false; C is true. The premises and this option are true, but the target conclusion is false.
+- Choice D: A is false; B is false; C is true. The premises and this option are true, but the target conclusion is false.
+
+### PHOTO-ML03: One premise
+
+Premise 1: A → B
+
+Conclusion: C → A̸
+
+| Choice | Additional conditional |
+|---|---|
+| A | C → B̸ |
+| B | B̸ → C |
+| C | C → B |
+| D | C̸ → B̸ |
+| E | B → A |
+
+**Answer: A.** The target ends at A̸. Contrapose the premise to get B̸ → A̸. Add C → B̸, producing C → B̸ → A̸.
+
+Equivalent answer forms: **C → B̸** and **B → C̸**. Only one form appears among the five choices.
+
+Why the other choices fail:
+
+- Choice B: A is true; B is true; C is true. The premises and this option are true, but the target conclusion is false.
+- Choice C: A is true; B is true; C is true. The premises and this option are true, but the target conclusion is false.
+- Choice D: A is true; B is true; C is true. The premises and this option are true, but the target conclusion is false.
+- Choice E: A is true; B is true; C is true. The premises and this option are true, but the target conclusion is false.
+
+### PHOTO-ML04: One premise
+
+Premise 1: A → B
+
+Conclusion: B̸ → C
+
+| Choice | Additional conditional |
+|---|---|
+| A | C → A̸ |
+| B | A̸ → C̸ |
+| C | C̸ → A |
+| D | A → C |
+| E | A → B̸ |
+
+**Answer: C.** The target starts at B̸. Contrapose the premise: B̸ → A̸. Add A̸ → C to obtain B̸ → A̸ → C.
+
+Equivalent answer forms: **A̸ → C** and **C̸ → A**. The correct choice uses the contrapositive form. Only one form appears among the five choices.
+
+Why the other choices fail:
+
+- Choice A: A is false; B is false; C is false. The premises and this option are true, but the target conclusion is false.
+- Choice B: A is false; B is false; C is false. The premises and this option are true, but the target conclusion is false.
+- Choice D: A is false; B is false; C is false. The premises and this option are true, but the target conclusion is false.
+- Choice E: A is false; B is false; C is false. The premises and this option are true, but the target conclusion is false.
+
+### PHOTO-ML05: Two premises
+
+Premise 1: A → B
+
+Premise 2: C → D
+
+Conclusion: A → D
+
+| Choice | Additional conditional |
+|---|---|
+| A | C → B |
+| B | B → C̸ |
+| C | B̸ → C |
+| D | B → C |
+| E | C → A̸ |
+
+**Answer: D.** Starting at A reaches B. Reaching C would then lead to D. Add B → C to complete A → B → C → D.
+
+Equivalent answer forms: **B → C** and **C̸ → B̸**. Only one form appears among the five choices.
+
+Why the other choices fail:
+
+- Choice A: A is true; B is true; C is false; D is false. The premises and this option are true, but the target conclusion is false.
+- Choice B: A is true; B is true; C is false; D is false. The premises and this option are true, but the target conclusion is false.
+- Choice C: A is true; B is true; C is false; D is false. The premises and this option are true, but the target conclusion is false.
+- Choice E: A is true; B is true; C is false; D is false. The premises and this option are true, but the target conclusion is false.
+
+### PHOTO-ML06: Two premises
+
+Premise 1: A → B
+
+Premise 2: C → D
+
+Conclusion: C → B
+
+| Choice | Additional conditional |
+|---|---|
+| A | A̸ → D̸ |
+| B | A → D |
+| C | D → A̸ |
+| D | D̸ → A |
+| E | D → C |
+
+**Answer: A.** Begin with the rule containing the target start: C → D. The other rule ends at the target B: A → B. Add D → A. The completed chain is C → D → A → B.
+
+Equivalent answer forms: **D → A** and **A̸ → D̸**. The correct choice uses the contrapositive form. Only one form appears among the five choices.
+
+Why the other choices fail:
+
+- Choice B: A is false; B is false; C is true; D is true. The premises and this option are true, but the target conclusion is false.
+- Choice C: A is false; B is false; C is true; D is true. The premises and this option are true, but the target conclusion is false.
+- Choice D: A is false; B is false; C is true; D is true. The premises and this option are true, but the target conclusion is false.
+- Choice E: A is false; B is false; C is true; D is true. The premises and this option are true, but the target conclusion is false.
+
+### PHOTO-ML07: Two premises
+
+Premise 1: A → B
+
+Premise 2: C → D
+
+Conclusion: D̸ → A̸
+
+| Choice | Additional conditional |
+|---|---|
+| A | B̸ → C̸ |
+| B | C̸ → B |
+| C | C → B̸ |
+| D | C̸ → B̸ |
+| E | B̸ → D |
+
+**Answer: D.** Contrapose both premises: D̸ → C̸ and B̸ → A̸. Add C̸ → B̸ to complete D̸ → C̸ → B̸ → A̸. Alternatively, contrapose the target to A → D and find B → C. These are equivalent bridges.
+
+Equivalent answer forms: **C̸ → B̸** and **B → C**. Only one form appears among the five choices.
+
+Why the other choices fail:
+
+- Choice A: A is true; B is true; C is false; D is false. The premises and this option are true, but the target conclusion is false.
+- Choice B: A is true; B is true; C is false; D is false. The premises and this option are true, but the target conclusion is false.
+- Choice C: A is true; B is true; C is false; D is false. The premises and this option are true, but the target conclusion is false.
+- Choice E: A is true; B is true; C is false; D is false. The premises and this option are true, but the target conclusion is false.
+
+### PHOTO-ML08: Two premises
+
+Premise 1: A → B
+
+Premise 2: C → D
+
+Conclusion: B̸ → C̸
+
+| Choice | Additional conditional |
+|---|---|
+| A | A → D |
+| B | D → A |
+| C | D → A̸ |
+| D | D̸ → A |
+| E | A → B |
+
+**Answer: B.** Contrapose both premises: B̸ → A̸ and D̸ → C̸. The gap is A̸ → D̸, giving B̸ → A̸ → D̸ → C̸. Its equivalent form is D → A.
+
+Equivalent answer forms: **D → A** and **A̸ → D̸**. Only one form appears among the five choices.
+
+Why the other choices fail:
+
+- Choice A: A is false; B is false; C is true; D is true. The premises and this option are true, but the target conclusion is false.
+- Choice C: A is false; B is false; C is true; D is true. The premises and this option are true, but the target conclusion is false.
+- Choice D: A is false; B is false; C is true; D is true. The premises and this option are true, but the target conclusion is false.
+- Choice E: A is false; B is false; C is true; D is true. The premises and this option are true, but the target conclusion is false.
+
+### PHOTO-ML09: Two premises
+
+Premise 1: A → B
+
+Premise 2: C → D
+
+Conclusion: C → A̸
+
+| Choice | Additional conditional |
+|---|---|
+| A | B̸ → D |
+| B | D → B |
+| C | D̸ → B̸ |
+| D | C̸ → B̸ |
+| E | B → D̸ |
+
+**Answer: E.** Use C → D, then contrapose A → B to obtain B̸ → A̸. Add D → B̸ to complete C → D → B̸ → A̸.
+
+Equivalent answer forms: **D → B̸** and **B → D̸**. The correct choice uses the contrapositive form. Only one form appears among the five choices.
+
+Why the other choices fail:
+
+- Choice A: A is true; B is true; C is true; D is true. The premises and this option are true, but the target conclusion is false.
+- Choice B: A is true; B is true; C is true; D is true. The premises and this option are true, but the target conclusion is false.
+- Choice C: A is true; B is true; C is true; D is true. The premises and this option are true, but the target conclusion is false.
+- Choice D: A is true; B is true; C is true; D is true. The premises and this option are true, but the target conclusion is false.
+
+### PHOTO-ML10: Two premises
+
+Premise 1: A → B
+
+Premise 2: C → D
+
+Conclusion: A → C̸
+
+| Choice | Additional conditional |
+|---|---|
+| A | D̸ → B |
+| B | B → D |
+| C | B → D̸ |
+| D | B̸ → D̸ |
+| E | B̸ → A̸ |
+
+**Answer: C.** Use A → B, then contrapose C → D to obtain D̸ → C̸. Add B → D̸ to complete A → B → D̸ → C̸.
+
+Equivalent answer forms: **B → D̸** and **D → B̸**. Only one form appears among the five choices.
+
+Why the other choices fail:
+
+- Choice A: A is true; B is true; C is true; D is true. The premises and this option are true, but the target conclusion is false.
+- Choice B: A is true; B is true; C is true; D is true. The premises and this option are true, but the target conclusion is false.
+- Choice D: A is true; B is true; C is true; D is true. The premises and this option are true, but the target conclusion is false.
+- Choice E: A is true; B is true; C is true; D is true. The premises and this option are true, but the target conclusion is false.
+
+### PHOTO-ML11: Two premises
+
+Premise 1: A → B
+
+Premise 2: C → D
+
+Conclusion: D̸ → B
+
+| Choice | Additional conditional |
+|---|---|
+| A | A̸ → C |
+| B | A → C̸ |
+| C | C̸ → A̸ |
+| D | C → A |
+| E | B̸ → A̸ |
+
+**Answer: A.** Contrapose C → D to obtain D̸ → C̸. Keep A → B as written. Add C̸ → A to complete D̸ → C̸ → A → B.
+
+Equivalent answer forms: **C̸ → A** and **A̸ → C**. The correct choice uses the contrapositive form. Only one form appears among the five choices.
+
+Why the other choices fail:
+
+- Choice B: A is false; B is false; C is false; D is false. The premises and this option are true, but the target conclusion is false.
+- Choice C: A is false; B is false; C is false; D is false. The premises and this option are true, but the target conclusion is false.
+- Choice D: A is false; B is false; C is false; D is false. The premises and this option are true, but the target conclusion is false.
+- Choice E: A is false; B is false; C is false; D is false. The premises and this option are true, but the target conclusion is false.
+
+### PHOTO-ML12: Two premises
+
+Premise 1: A → B
+
+Premise 2: C → D
+
+Conclusion: B̸ → D
+
+| Choice | Additional conditional |
+|---|---|
+| A | C → A̸ |
+| B | A̸ → C̸ |
+| C | A → C |
+| D | B̸ → C̸ |
+| E | A̸ → C |
+
+**Answer: E.** Contrapose A → B to obtain B̸ → A̸. Keep C → D as written. Add A̸ → C to complete B̸ → A̸ → C → D.
+
+Equivalent answer forms: **A̸ → C** and **C̸ → A**. Only one form appears among the five choices.
+
+Why the other choices fail:
+
+- Choice A: A is false; B is false; C is false; D is false. The premises and this option are true, but the target conclusion is false.
+- Choice B: A is false; B is false; C is false; D is false. The premises and this option are true, but the target conclusion is false.
+- Choice C: A is false; B is false; C is false; D is false. The premises and this option are true, but the target conclusion is false.
+- Choice D: A is false; B is false; C is false; D is false. The premises and this option are true, but the target conclusion is false.
+
+
+### Preserve the intentional repetitions
+
+PHOTO-ML05 and PHOTO-ML07 have contraposed conclusions and equivalent bridges. So do PHOTO-ML06/PHOTO-ML08 and PHOTO-ML09/PHOTO-ML10. Keep every prompt, as Joshua requested. Use these pairs to practice recognizing equivalent forms, but do not treat success immediately after the paired explanation as fresh mastery evidence.
+
+### Validation of the photo-derived additions
+
+All 12 premises/conclusions were independently checked against the six photographs and their answer pages. Exhaustive Boolean checks confirm that the original premises alone do not establish the target, each credited bridge is consistent and nonvacuous, its contrapositive is equivalent, and exactly one of the five supplied options establishes the target. Every incorrect option has an explicit counterexample above. Equivalent answer choices were excluded, and correct positions vary.
+
+This extends the saved draft only. It does not change the deployed activity, replace the existing General Conditionals questions, or settle the remaining interview choices about pacing and progression.

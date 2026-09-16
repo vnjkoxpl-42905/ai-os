@@ -141,3 +141,15 @@ Joshua's latest clarification governs the next implementation:
 - Preserve all four indicator groups across language-based practice. New worlds build on the current framework rather than substituting another taxonomy.
 
 The companion [question bank](2026-09-16-conditional-linking-question-bank.md) has been reformatted throughout, with all 20 question identities and answer keys preserved. It now specifies the four-world entry. A separate Linking set and app implementation are still pending; these edits do not claim that the new selector is live.
+
+## 2026-09-16: All twelve photographed Missing Link exercises are required
+
+Joshua supplied six photos of “Missing Links in Conditional Chains as Sufficient Assumptions” and asked to include every question. This concretely establishes the Missing Link format: one or two premises, an explicit conditional conclusion, and a missing sufficient assumption. Preserve five-choice selection and the slash notation already settled.
+
+The photos contain four single-premise and eight two-premise exercises, plus worked explanations. All twelve prompts have been added to the companion bank as PHOTO-ML01 through PHOTO-ML12, with five-choice adaptations, newly written explanations, direct/contrapositive answer forms, and checked distractor counterexamples. The prior twenty authored items remain. The inventory is now 22 Missing Link entries and 10 Must Be True entries. Some entries intentionally share equivalent structures; entry count is not independent skill coverage.
+
+Do not cap required content at ten items. Ten questions per sitting was an assistant recommendation, not a user decision, and may not exclude any of the twelve supplied exercises. Difficulty navigation and session length remain unanswered interview choices. The photos settle Missing Link content; they do not implicitly answer those separate questions.
+
+Both a bridge and its contrapositive may be shown in post-answer explanation, but only one may appear among five choices when the task promises one correct answer. The pairs PHOTO-ML05/07, PHOTO-ML06/08 and PHOTO-ML09/10 intentionally practice contraposed conclusions and equivalent bridges. Keep them, without counting an immediate paired repeat as independent mastery.
+
+Source images remain unmodified under `C:/Users/Joshu/.codex/codex-remote-attachments/01a0a8d7-9b78-7b61-8735-7d6fd1f13ab4/EDF24AF0-6494-4A6B-9C0E-AE726382FF49/`. This update is to authored content and design notes; app implementation remains pending.
