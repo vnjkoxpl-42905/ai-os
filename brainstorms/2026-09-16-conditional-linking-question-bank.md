@@ -8,6 +8,8 @@ Design authority: [Conditional drill input design](2026-09-14-conditional-drill-
 
 Activity Center → Conditional Reasoning → choose a world. Preserve the existing activity entry and the current General Conditionals work. The new worlds are additions, not replacements.
 
+**Latest interaction clarification:** present a couple of conditional premises and a target conclusion, then ask “What's the missing link?” Each of the five choices is one candidate connecting conditional. Do not offer five completed chains. Reveal the completed chain only in the explanation after commitment. Joshua rejected the completed-chain-choice suggestion; the existing missing-link questions already use the requested answer format. Whether Linking needs a separate tile from Missing Link remains a naming/navigation decision, not a reason to invent a different answer interaction.
+
 | World | What the student practices | Existing work retained |
 |---|---|---|
 | General Conditionals | Diagram a statement, identify its direction, and recognize equivalent conditionals across all four groups. | The current Conditional Rephrase activity, its question bank, paper-first flow, and prior progress. |

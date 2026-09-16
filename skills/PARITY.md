@@ -96,3 +96,8 @@ ledgers, not a quiet port.
 Shipped with Codex or its plugins. `openai-docs` and `plugin-creator` document OpenAI's own
 surfaces; the `higgsfield-*` set and `imagegen` are media-generation integrations wired to
 Codex's MCP servers. Correct as Codex-only.
+
+
+## 2026-09-16: grill-with-docs activation repair
+
+The ordinary grill-with-docs, grilling, and domain-modeling skills are activated as complete project copies in both runtimes. Codex loads the two sibling SKILL.md files directly, with explicit-only discovery in agents/openai.yaml. Claude also reads sibling files directly because a dependency can disable model invocation. This is a runtime invocation adaptation, not a single-runtime skill exception. The separate Claude-only grill-with-docs-codex entry remains unchanged.

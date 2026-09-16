@@ -1,6 +1,7 @@
 # Conditional Drill Input Design: Brainstorm / Discovery Notes
 Date: 2026-09-14 · Goal: Decide how the conditional drill should assess diagramming and verbal if/then/because reasoning without making exact speech recognition the gate.
 Status: in progress
+Latest governing clarification: the missing-link interaction presents premises and a target conclusion, then five candidate connecting conditionals. Joshua explicitly rejected five completed chains as answer choices. See the final clarification below; earlier contrary recommendations are historical.
 Context sources: `projects/lsatu/src/pages/ActivityLab.tsx`; `projects/lsatu/ACTIVITIES-DESIGN.md`; `projects/lsatu/data/guided-drills/02_week_5_blue_lr_guided_drills.md`; `projects/lsatu/brainstorms/2026-06-15-guided-drills-upgrade.md`
 
 ## Summary / key decisions
@@ -153,3 +154,11 @@ Do not cap required content at ten items. Ten questions per sitting was an assis
 Both a bridge and its contrapositive may be shown in post-answer explanation, but only one may appear among five choices when the task promises one correct answer. The pairs PHOTO-ML05/07, PHOTO-ML06/08 and PHOTO-ML09/10 intentionally practice contraposed conclusions and equivalent bridges. Keep them, without counting an immediate paired repeat as independent mastery.
 
 Source images remain unmodified under `C:/Users/Joshu/.codex/codex-remote-attachments/01a0a8d7-9b78-7b61-8735-7d6fd1f13ab4/EDF24AF0-6494-4A6B-9C0E-AE726382FF49/`. This update is to authored content and design notes; app implementation remains pending.
+
+## Clarification: choose the missing conditional, not a completed chain
+
+Joshua rejected the assistant's Q1 suggestion of five possible completed chains. Present a couple of conditional relationships as premises plus the target conclusion. Ask “What's the missing link?” Offer five individual candidate conditionals, exactly one of which supplies a sufficient bridge. The full chain belongs in post-answer explanation only.
+
+For example: premises A → B and C → D; target A → D. The credited option is B → C, not the entire A → B → C → D chain. The existing authored Missing Link choices, including all twelve photographed exercises, already follow this interaction and stay in place.
+
+Do not force a completed-chain answer mode merely to justify a separate Linking tile. The distinction between Linking and Missing Link as navigation labels is not settled by the rejected recommendation. Preserve the requested single hub and existing General Conditionals work; use this clarified interaction when describing the linking exercise. Session length and level navigation remain unanswered rather than silently accepted.

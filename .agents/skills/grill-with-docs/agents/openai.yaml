@@ -1,0 +1,6 @@
+interface:
+  display_name: "Grill with docs"
+  short_description: "Clarify a design and document settled decisions"
+  default_prompt: "Use $grill-with-docs to clarify the open decisions and update the existing design documents."
+policy:
+  allow_implicit_invocation: false

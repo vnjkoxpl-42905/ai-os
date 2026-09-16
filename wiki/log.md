@@ -7,7 +7,13 @@ aliases: []
 
 # Log
 
-Append-only record of wiki activity — ingests, queries, lint passes, structural changes. Each entry starts `## [YYYY-MM-DD] type | Title` so `grep "^## \[" log.md | tail -5` gives the last 5 events. The pre-rebuild log was removed from disk 2026-07-17 (recoverable from git history).
+Append-only record of wiki activity — ingests, queries, lint passes, structural changes. Each entry starts `## [2026-09-16] system | Repair grill-with-docs project activation
+
+- Corrected the Codex router's dependency on an unavailable Skill tool; it now reads the sibling grilling and domain-modeling instructions directly. Preserved explicit-only invocation and gave the Claude catalog the same direct-file dependency loading.
+- Activated complete catalog copies of all three skills for Codex and Claude, including glossary and ADR templates. Verified file hashes, dependency paths, and Codex skill validation. The full check-skills.py validator passed (211 Claude and 188 Codex catalog skills; activations resolve; index complete). Updated skills/INDEX.md and documented the runtime adaptation in skills/PARITY.md. Global installations were not modified.
+- Recorded Joshua's conditional-drill correction: premises and a target conclusion, with individual missing-conditional options, never five completed chains. Preserved the original bank and all twelve photographed exercises. App implementation remains pending.
+
+## [YYYY-MM-DD] type | Title` so `grep "^## \[" log.md | tail -5` gives the last 5 events. The pre-rebuild log was removed from disk 2026-07-17 (recoverable from git history).
 
 ## [2026-09-15] ops | Reusable session booking notice reduced to eight hours
 
