@@ -815,3 +815,15 @@ Rebuilt the post-consultation follow-up template from five identical sends (2026
 - Pushed commit `0448d925` to LSAT U `main`: availability now treats only unexpired drafts/checkouts and confirmed bookings as busy, so a delayed cleanup worker cannot hide slots indefinitely.
 - Deployed the live `single-session` Edge Function through Lovable Cloud and restored the active `single-session-sweeper-every-minute` recovery job (`* * * * *`).
 - Verified production independently from a fresh page: Wednesday, 2026-09-16 is selectable at 2:20 PM and 3:40 PM America/Toronto. No booking, charge, calendar invite, or email was created during verification.
+
+## [2026-09-15] system | Reusable complimentary booking link created
+
+- Created the active reusable `complimentary-session` booking event for a 45-minute free Google Meet session.
+- Cloned the standard LSAT Session availability policy: 8 hours' notice, 10-minute buffers, 80-minute start spacing, and a six-business-day window.
+- Verified the public page and booking API report `Free`, 45 minutes, `single_use: false`, and live availability at `https://lsatprep.study/book/x/complimentary-session`.
+
+## [2026-09-15] system | Consultation booking availability expanded
+
+- Updated the reusable `consultation` event to 30-minute sessions at 40-minute start intervals, giving every consultation a 10-minute buffer before and after, with 8 hours' notice and a six-business-day window.
+- Kept the event free, active, reusable, and protected by live Google Calendar conflict checks plus authoritative booking-overlap guards.
+- Verified `https://lsatprep.study/book/x/consultation` reports 30 minutes, Free, and 34 currently open times; the first starts are 1:00 PM, 1:40 PM, 2:20 PM, 3:00 PM, and 3:40 PM America/Toronto.
