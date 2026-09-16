@@ -162,3 +162,16 @@ Joshua rejected the assistant's Q1 suggestion of five possible completed chains.
 For example: premises A → B and C → D; target A → D. The credited option is B → C, not the entire A → B → C → D chain. The existing authored Missing Link choices, including all twelve photographed exercises, already follow this interaction and stay in place.
 
 Do not force a completed-chain answer mode merely to justify a separate Linking tile. The distinction between Linking and Missing Link as navigation labels is not settled by the rejected recommendation. Preserve the requested single hub and existing General Conditionals work; use this clarified interaction when describing the linking exercise. Session length and level navigation remain unanswered rather than silently accepted.
+
+## 2026-09-16: Implementation built locally, publication pending
+
+Joshua approved implementation with “yes go.” Work is isolated in `C:/Users/Joshu/dev/lsatu-conditional-update`, based on origin/main f8971f1; app commit 23f5d62. The main existing checkout's unrelated changes were preserved. An unrelated edit to `supabase/functions/mcp/index.ts` appeared in the isolated checkout and was excluded from the commit.
+
+- Four-world hub and routes implemented. General retains 62 item identities, with correctness repairs to47,48,57,62. Single-answer semantic deduplication removes equivalent duplicate choices and the stage no longer exposes credited text before answering.
+- New bank has40 questions:22 Missing Link including all12 photographed exercises,10 Must Be True,8 Linking. All offer individual relationships where a bridge is requested; completed chains appear only in explanations. Slash negation and written and/or implemented.
+- Separate practice snapshots preserve first attempts, retries, reveals and unfinished progress. General repeat/own preview persistence is integrated; existing assignment scores are not rewritten. Local recovery and account-sync handling include lost responses, revision checks and stale-tab protection. Divergent cross-device writes are preserved locally and reported as a sync conflict; automatic conflict merging is not implemented.
+-166 targeted tests passed; aggregate TypeScript check and production build passed. Browser checked desktop and390px phone layout, paper-first choices, slash notation, wrong-answer/reveal flow and selection restoration on reload. General diagram screen also checked.
+- Database migration `20260916180000_conditional_practice_runs.sql` is prepared but not applied. Guarded definition-only correction migration `20260916180100_conditional_definition_corrections.sql` is committed as51cacbc and reviewed; it preserves assignment snapshots and existing item order. Live database query confirmed the practice table does not yet exist.
+- Explicit confirmation requested for applying the migrations and publishing through the direct Lovable tools. No Lovable AI credits spent, no database mutation, no remote push or publication performed at this checkpoint. Final deployment and real account-sync verification remain pending.
+
+Local review UI: `http://127.0.0.1:8093/conditional-lab`. The development lab uses device-only test history, not student records.

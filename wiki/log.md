@@ -1,11 +1,18 @@
 ---
 type: operating-layer
 subject: Log
-updated: 2026-09-13
+updated: 2026-09-16
 aliases: []
 ---
 
 # Log
+
+## [2026-09-16] ship | Free consultation confirmation bug fixed in code
+
+- Kelsey Regis reported that every consultation slot appeared unavailable after selection. Gmail and booking records showed six failed attempts: each temporary hold was created, then left to expire before free confirmation.
+- Verified the selected Google Calendar windows were open and respected the 10-minute consultation buffer. The backend was treating a one-row PostgREST response array as the booking record, which removed the start, end, and tentative event ID from the final calendar check.
+- Normalized the RPC row before free finalization, added a booking-stamp fallback so a tentative event cannot conflict with itself, and added regression tests. Twelve booking edge tests, the full TypeScript check, and the production build passed.
+- Pushed commit `fddf32d` to LSAT U `origin/main`. Lovable Cloud deployment remains pending fresh approval because it may consume a Lovable credit. No email was sent to Kelsey.
 
 Append-only record of wiki activity — ingests, queries, lint passes, structural changes. Each entry starts `## [2026-09-16] system | Repair grill-with-docs project activation
 
