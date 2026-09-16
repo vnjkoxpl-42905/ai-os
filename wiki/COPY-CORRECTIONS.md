@@ -147,6 +147,21 @@ From the glossary. Internal names may stay in code, never on the page.
 | Recall Rephrase Colour | Read, Recall, Colour |
 | em dash, en dash | a full stop, or a colon before a list |
 
+## Conditional Rephrase: name the student action, not the internal model (2026-09-15)
+
+**Cut:** “record the route,” “choose the route,” and a map presented as five rules.
+
+**Keep:** diagram the statement on paper, choose the matching diagram, and organize
+the map into four groups. “Required means right” is a separate takeaway because it
+explains placement; it is not a fifth group.
+
+“Route” described the system’s representation, not the student’s work. Calling five
+unlike ideas rules also flattened the teaching structure and made the layout harder to
+read.
+
+**Lesson:** name the action the student can see herself doing. Do not force a teaching
+reminder into the same hierarchy as the categories it explains.
+
 Related: [[teaching-voice]] · [[ASSIGN-AN-ACTIVITY]] · [[STUDENT-PLATFORM-IDENTITY-MAP]]
 
 ## Session recaps: write a reusable reference, not a play-by-play (2026-09-12)
