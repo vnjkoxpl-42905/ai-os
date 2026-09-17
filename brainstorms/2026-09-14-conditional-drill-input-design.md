@@ -175,3 +175,8 @@ Joshua approved implementation with “yes go.” Work is isolated in `C:/Users/
 - Explicit confirmation requested for applying the migrations and publishing through the direct Lovable tools. No Lovable AI credits spent, no database mutation, no remote push or publication performed at this checkpoint. Final deployment and real account-sync verification remain pending.
 
 Local review UI: `http://127.0.0.1:8093/conditional-lab`. The development lab uses device-only test history, not student records.
+
+## 2026-09-16 publication
+User authorized pushing to main. Pushed merged commit 48c76f43daab48cdacfff8609e32565a67e0ebb9 through safe-push; preserved remote booking changes. Applied conditional_practice_runs DDL and guarded General definition corrections through Lovable database tool; verified RLS enabled and three owner policies. Requested Lovable publication after confirming latest_commit_sha matches pushed commit. Live verification pending.
+
+Production verified: https://lsatprep.study/activities/conditionals renders the redesigned four-drill hub and Missing Link instructions. Account history load succeeds. Post-merge typecheck passed. No Lovable AI message or credit-spending action used.
