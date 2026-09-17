@@ -841,8 +841,10 @@ Rebuilt the post-consultation follow-up template from five identical sends (2026
 - Kept the event free, active, reusable, and protected by live Google Calendar conflict checks plus authoritative booking-overlap guards.
 - Verified `https://lsatprep.study/book/x/consultation` reports 30 minutes, Free, and 34 currently open times; the first starts are 1:00 PM, 1:40 PM, 2:20 PM, 3:00 PM, and 3:40 PM America/Toronto.
 
-## [2026-09-16] system | Immediate consultation cancellation cleanup prepared
+## [2026-09-16] system | Immediate consultation cancellation cleanup deployed
 
 - Diagnosed delayed cancellation cleanup: the cancellation endpoint queued Google Calendar deletion and both cancellation emails but did not wake the existing outbox worker, leaving the scheduler to process them later.
 - Pushed LSAT U commit `e0dce3d` to `origin/main`: successful cancellations now immediately wake the worker and invalidate the event's availability cache while preserving the scheduled retry as a fallback.
-- Verified six backend contract tests, twelve booking-core tests, TypeScript, the production build, and diff integrity. The updated `single-session` Edge Function still requires Lovable Cloud deployment before the fix is live.
+- Verified six backend contract tests, twelve booking-core tests, TypeScript, the production build, and diff integrity.
+- Audited the live database read-only: the prior cancellation waited about 52 seconds for the minute scheduler, while every queued Calendar and email job completed successfully with no error. Both fallback jobs remain active every minute.
+- Deployed only the `single-session` Edge Function through Lovable Cloud from commit `e0dce3d`. An independent production `info` request returned HTTP 200 for the active, reusable, free 30-minute consultation event in America/Toronto.
