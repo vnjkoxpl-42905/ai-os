@@ -848,3 +848,18 @@ Rebuilt the post-consultation follow-up template from five identical sends (2026
 - Verified six backend contract tests, twelve booking-core tests, TypeScript, the production build, and diff integrity.
 - Audited the live database read-only: the prior cancellation waited about 52 seconds for the minute scheduler, while every queued Calendar and email job completed successfully with no error. Both fallback jobs remain active every minute.
 - Deployed only the `single-session` Edge Function through Lovable Cloud from commit `e0dce3d`. An independent production `info` request returned HTTP 200 for the active, reusable, free 30-minute consultation event in America/Toronto.
+
+## 2026-09-16 (conditional diagramming phases)
+- Shipped main commit 2290cf0 and verified the new phase instructions on the live General Conditionals activity.
+- Questions 1-12 untimed; 13-37 have 45 seconds; 38-62 have 30 seconds. Students diagram with the statement visible; timed choices and retries hide it; feedback restores it.
+- 29 focused tests, typecheck, build and responsive browser checks passed.
+- First graded assignment timer resume is same-device only; saved repeats sync deadlines across devices.
+- Detailed implementation record: brainstorms/2026-09-14-conditional-drill-input-design.md.
+
+
+## 2026-09-17 (paired conditional choices published)
+- Published commits 09e37a7, 6d52725, and 486f33b to main and production.
+- Four diagram/contrapositive pairs throughout General Conditionals; all62 items checked for exactly one correctpair. Shared refined slash rendering, clearer copy, percentage progress, Exit and progress contrast fixes.
+- Preserved saved attempts and scores; fixed obsolete selection handling. Verified Joshua's existing saved session live without submitting answers.
+- 39 focused tests, typecheck, production builds and responsive browser verification passed.
+

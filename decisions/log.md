@@ -127,3 +127,7 @@ Append-only record of locked decisions — so nothing gets re-explained or re-li
 - **D3 — Consultation email sends:** fixed pre-approved templates may auto-send via deterministic scheduler; anything AI-generated stays a Gmail draft for approval.
 - **D4 — Operational state:** live systems are authority, the brain mirrors. Cal.com + Google Calendar = sessions; LSAT U Supabase = homework/dossier/publish; Stripe = payments; Gmail = correspondence. Backend wins on disagreement. The brain is primary for transcripts, teaching notes, judgments, prep briefs, curriculum, decisions.
 - **Architecture:** one vault = the `~/ai-os` root; three knowledge systems (`wiki/`, `corpus/`, `students/`); LSAT U code knowledge stays in the lsatu repo.
+
+## 2026-09-17: General Conditionals paired answers
+Joshua approved four answer options, each containing a diagram and its proposed contrapositive. Distractors must separately test translation and contraposition, including a wrong translation with a valid contrapositive of that wrong translation. Use refined slash negation and percentage-only in-session progress. Preserve existing attempts and scores. Applies throughout General Conditionals, including compound and multi-rule items.
+

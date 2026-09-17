@@ -180,3 +180,59 @@ Local review UI: `http://127.0.0.1:8093/conditional-lab`. The development lab us
 User authorized pushing to main. Pushed merged commit 48c76f43daab48cdacfff8609e32565a67e0ebb9 through safe-push; preserved remote booking changes. Applied conditional_practice_runs DDL and guarded General definition corrections through Lovable database tool; verified RLS enabled and three owner policies. Requested Lovable publication after confirming latest_commit_sha matches pushed commit. Live verification pending.
 
 Production verified: https://lsatprep.study/activities/conditionals renders the redesigned four-drill hub and Missing Link instructions. Account history load succeeds. Post-merge typecheck passed. No Lovable AI message or credit-spending action used.
+
+## 2026-09-16: Phased General Conditionals practice discovery
+
+Goal: Progress from ordinary paper diagramming to timed exposure and recall without replacing the existing drill.
+
+### User request
+- First phase: approximately 10 to 15 normal diagramming questions.
+- Later phases: some questions timed; show the conditional, then remove the statement, and have students compare the answer choices against their paper diagram.
+- Exact phase count, exposure timing, when choices appear, and retry behavior remain undecided.
+
+### Open flags
+- Does the statement disappear after diagramming, or before diagramming so students reconstruct it from memory? Joshua to clarify.
+- Phase boundaries and timer duration: pending the above decision.
+
+### Clarification: visibility during diagramming
+- Joshua: "Diagram while the statement is visible. It's not a memory exercise."
+- Students diagram with the statement visible. Later timed questions hide the statement after the diagramming interval, then students compare choices against their paper diagram.
+- No phase should require reconstructing the statement from memory. This supersedes the proposed harder memory phase.
+- Remaining decision: timed diagramming interval and whether it changes across phases.
+
+### Confirmed: timed diagramming intervals
+- Joshua approved 45 seconds initially, then 30 seconds in the next timed phase.
+- An "I'm ready" button lets students finish diagramming and open choices early.
+- The statement stays visible during diagramming and disappears when choices open, whether by timer expiry or early completion.
+- Initial 12-question untimed phase and exact subsequent boundaries remain proposed, not explicitly confirmed.
+
+### Confirmed: phase boundaries
+- Joshua approved questions 1-12 untimed, 13-37 with 45 seconds to diagram, and 38-62 with 30 seconds to diagram.
+- Timed statement disappears on expiry or "I'm ready"; choices appear with no answer-selection timer.
+- Implementation authorized by confirmation.
+
+### Implemented: phased diagramming
+- Main commit: 2290cf09f2964088aa3b19f7bcf93d0a45f319bd.
+- Confirmed split implemented by session position; timer uses persisted absolute deadlines.
+- Statement hidden for timed choices and retries, restored for resolved explanation. Failed save hides expired statement and offers a retry action.
+- First graded assignment timer resumes on the same device only; saved repeat practice timer syncs across devices.
+- Validation: 29 focused tests, typecheck, production build, phone/tablet/desktop browser checks, manual early-ready and automatic-expiry flows.
+- Direct Lovable publication requested after hosting SHA matched main; live verification pending.
+
+
+Production verified on 2026-09-16: original General activity URL now shows all three phase ranges and the timed diagramming instructions. First publication served the previous build; second direct publication 481d784d-cf1c-4605-9b98-92be69387807 succeeded. No Lovable AI message or credit-spending action used.
+
+
+## 2026-09-17: Paired choices and presentation
+- Joshua chose four options, each containing a diagram and proposed contrapositive. Distractors separately test translation and contraposition, including a wrong translation with a valid contrapositive of that wrong translation.
+- Implemented across all 62 General items, retaining compound and multi-rule content. One fully correct pair per question verified.
+- Shared refined red slash marks cover wrapped phrases and symbolic letters; updated heading and instructions; percentage completion replaces General run counts and duplicate footer.
+- Existing attempt text/verdicts remain immutable. Obsolete transient choice selections are ignored; historical response text is shown explicitly.
+- Commit 09e37a7. 39 focused tests and production build passed; phone/tablet/desktop checks and final 100 percent check passed. Push/publication pending.
+
+
+Live saved session 8d5a2ad2-49c6-46ea-b656-dfe8dd5d69f4 verified with four paired choices, updated heading, percentage-only progress, and clearer Exit control. No answers submitted during live verification. Follow-up 486f33b corrects progress label/track contrast against the actual dark theme; dev preview now mirrors that theme. Build and typecheck passed; final visual publication pending.
+
+
+Final production verification 2026-09-17: commit 486f33b is published. Existing saved session renders four paired options, refined slash marks, revised wording, a readable percentage bar with no raw question counters, and visible Exit. All existing answer records preserved; no live answer was submitted.
+
