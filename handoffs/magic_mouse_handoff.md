@@ -1,20 +1,23 @@
-# Session Handoff: Magic Mouse 2 Configuration
+# Session Handoff: Magic Mouse 2 Configuration (Revised)
 
-**Goal:** Configure Apple Magic Mouse 2 on Windows 11 with maximum functionality for $0, without compromising Secure Boot, Driver Signature Enforcement, or Memory Integrity.
+**Goal:** Configure Apple Magic Mouse 2 on Windows 11 with maximum functionality for $0, maintaining Absolute Security (no Test Signing, no disabling HVCI, no disabling Secure Boot).
 
 ## Current State
-- **Hardware Identifiers:** Magic Mouse 2 is paired via Bluetooth (`VID_05AC&PID_0269`).
-- **The Core Problem:** Generic Windows HID drivers ignore Apple's multi-touch surface data. Standalone extracted `.inf` drivers from GitHub break catalog hashes due to CRLF/LF conversion, leading to security warnings unless test signing is enabled (which violates the user's constraints).
-- **The Solution:** We are using `timsutton/brigadier` in the background to download the pristine Boot Camp 6.x package (`Macmini8,1`) directly from Apple's CDN. We are extracting the signed `AppleWirelessMouse` driver from the `.pkg` and placing it on the desktop for the user to install cleanly.
-- **Background Task:** A PowerShell script is currently running (Task 48) to download the ~1GB package, extract the mouse driver to `C:\Users\Joshu\Desktop\PristineMagicMouseDriver`, and delete the rest of the Bloatware.
+- **Pre-Install Verifications Complete:** 
+  1. `AppleWirelessMouse.cat` signature verified as Valid.
+  2. Complete hardware/instance IDs (including Touchpad/Vendor-defined nodes) mapped.
+  3. Existing filter configuration backed up to `C:\Users\Joshu\Desktop\MagicMouse_FilterBackup.txt`.
+- **Driver Readiness:** The pristine Apple Boot Camp driver (via Brigadier) is waiting at `C:\Users\Joshu\Desktop\PristineMagicMouseDriver`.
 
-## Next Steps for the Agent / User
-1. **Verify Download:** Check if `C:\Users\Joshu\Desktop\PristineMagicMouseDriver` has been created and populated with the `.inf`, `.cat`, and `.sys` files.
-2. **Install Driver:** The user needs to install the `.inf` file from the Desktop folder (Right-click -> Install, or use `pnputil`). This will grant smooth vertical and horizontal scrolling.
-3. **Run Capability Matrix:** Ask the user to confirm vertical and horizontal scrolling are active natively.
-4. **Deploy AHK Script:** Provide the user with the AutoHotkey v2 script documented in `magic_mouse_master_plan.md` to emulate Middle-Click, Virtual Desktop switching (`Alt` + Horizontal Swipe), and Task View shortcuts.
-5. **Set Natural Scrolling (Optional):** Guide the user to flip `FlipFlopWheel` in the Registry if they prefer macOS-style scroll inversion.
-
-## Key Directives
-- **Do not** attempt to install `chrischip/magic-mouse-windows` or `magicmouse-ptp`. They require Test Signing and disabling HVCI. 
-- **Do not** use Magic Utilities, as it becomes paid software after 28 days.
+## Instructions for Next Agent
+1. **Driver Installation:** Instruct the user to install the driver. *Do not assume it works on a success message.* After installation/reconnect, you must explicitly query the device nodes to verify that `applewirelessmouse.sys` has successfully attached to the Magic Mouse device node. Treat it as a lower filter unless inspection proves otherwise.
+2. **Capability Testing (STOP HERE):** Before doing anything else, run a comprehensive test with the user:
+   - Pointer, Left/Right click, Vertical/Horizontal scroll, Smoothness.
+   - Sleep/wake, Bluetooth reconnect, and Windows reboot stability.
+   - **Crucial:** Inspect what Windows actually receives (standard wheel events vs. Raw HID). Do NOT assume the driver consumes all touch data—measure it.
+3. **Present Results:** Show the user the capability matrix and wait for approval.
+4. **AutoHotkey Augmentation (Only after testing):** 
+   - Map `Alt` + horizontal scroll to Virtual Desktops (if HWHEEL exists).
+   - Use a modifier+click for Middle Click (do not rely on L+R simultaneous click due to the unified surface mechanics).
+   - Treat `Ctrl`+vertical-scroll as app zoom.
+5. **Natural Scrolling:** Target the exact Magic Mouse HID node, back up its parameters, and test `FlipFlopWheel` / `FlipFlopHScroll` individually. Do not apply globally.
