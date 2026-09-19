@@ -29,4 +29,18 @@ Append-only record of Gemini wiki activity: ingests, queries, lint passes, struc
 - Compiled strategic teardown report comparing Loophole pedagogy against LSAT U standards in `.gemini/output/conditional-sufficient-assumption-teardown.md`.
 - Enriched source note `.gemini/wiki/sources/conditional-sufficient-assumption-sa-strategy.md`.
 
+## [2026-09-19] lecture | Loophole Lecture Knowledge System
+- Created `Loophole Lecture/` archive with top-level master router `Loophole Lecture/README.md`.
+- Created concept subfolder `Loophole Lecture/Sufficient Assumption/` with subfolder router `README.md`.
+- Published verbatim 7:57 transcript with embedded images: `conditional-sa-strategy-transcript.md`.
+- Published studio teleprompter script with production cues: `conditional-sa-strategy-teleprompter.md`.
+- Archived cropped visual whiteboard assets into `Loophole Lecture/Sufficient Assumption/images/`.
+- Registered `loophole-lecture-transcribe` skill.
+
+## [2026-09-19] agent & skill | auto-auth-browser & browser-navigator
+- Created `auto-auth-browser` skill with `auto-login.mjs` and `firecrawl-recon.mjs`.
+- Created dedicated `browser-navigator.toml` agent definition in `.gemini/agents/`.
+- Established automated `.env` credential loading for instant, silent sign-in and session persistence.
+
+
 
