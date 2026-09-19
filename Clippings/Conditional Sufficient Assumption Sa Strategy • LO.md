@@ -1,0 +1,1 @@
+https://new.theloophole.com/training-camp/browse/stage/learn/video/conditional-sufficient-assumption-sa-strategy
