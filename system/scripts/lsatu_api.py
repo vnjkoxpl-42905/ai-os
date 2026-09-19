@@ -53,9 +53,11 @@ def _ssl_context():
             return ssl.create_default_context(cafile=path)
     return ssl.create_default_context()
 
-BRAIN = "/Users/joshuaf/ai-os"
-ROOT_ENV = f"{BRAIN}/.env"
-APP_ENV = f"{BRAIN}/projects/lsatu/.env"
+from pathlib import Path
+
+BRAIN = str(Path(__file__).resolve().parents[2])
+ROOT_ENV = os.path.join(BRAIN, ".env")
+APP_ENV = os.path.join(BRAIN, "projects", "lsatu", ".env")
 EXPECTED_REF = "atrcqxpmqrynmtvvyjju"  # never resolve this project by name
 
 
