@@ -15,3 +15,10 @@ Append-only record of Gemini wiki activity: ingests, queries, lint passes, struc
 - Created source summary page: `.gemini/wiki/sources/conditional-sufficient-assumption-sa-strategy.md`.
 - Created concept distillation: `.gemini/wiki/concepts/conditional-sufficient-assumption-strategy.md`.
 - Updated `.gemini/wiki/index.md`.
+
+## [2026-09-19] skill | edge-live-control
+- Built `edge-live-control` skill in `.gemini/skills/edge-live-control/` and mirrored to `skills/gemini/edge-live-control/`.
+- Created live Playwright CDP automation scripts: `edge-control.mjs`, `edge-daemon.mjs`, and `start-edge-debugging.ps1`.
+- Verified CDP connectivity to Microsoft Edge on port 9223.
+- Tested tab listing, screenshot capture, and element click primitives against live Loophole Online interface.
+
