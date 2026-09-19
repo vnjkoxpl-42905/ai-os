@@ -25,13 +25,26 @@ This video lesson covers the strategy for solving **Conditional Sufficient Assum
 
 In Logical Reasoning, Sufficient Assumption (SA) questions require finding an unstated assumption that, when added to the argument premises, guarantees that the conclusion follows with 100% logical necessity. When the stimulus features conditional reasoning, the gap is almost always a missing conditional link or an unstated rule connecting an orphaned premise term to the conclusion term.
 
-## Core Strategic Framework (Loophole SA)
-1. **Identify the question stem:** Stem asks for an assumption that allows the conclusion to "follow logically" or "be properly drawn."
-2. **Break down the core:** Separate premises from the conclusion.
-3. **Trace the conditional chain:** Look for the term in the premise that fails to connect to the conclusion.
-4. **Bridge the gap:** Prephrase the missing conditional statement: [Premise orphan] -> [Conclusion orphan].
-5. **Watch the contrapositive:** The correct answer frequently appears as the contrapositive of the expected bridge.
+### Lesson Metadata & Origins
+- **Runtime:** 7:57
+- **Origin Context (0:00):** Ellen Cassidy explains that this lesson was intentionally cut from the printed *Loophole* book to avoid dedicating two separate chapters to Sufficient Assumption.
+- **Visuals:** Split-screen layout featuring a handwritten digital whiteboard on the left and instructor on the right.
+
+### Whiteboard Scenario: Mugs vs. Cups War
+- **Premise 1:** If mugs and cups war, the mugs will undoubtedly prevail (`War -> Prevail`).
+- **Premise 2:** If the mugs prevail, drinking cold beverages will be awkward (`Prevail -> Awkward`).
+- **Premise Chain:** `War -> Prevail -> Awkward`.
+- **Conclusion:** Any war between mugs and cups must involve an unpleasant drinking experience (`War -> Unpleasant`).
+- **Sufficient Assumption Gap:** `Awkward -> Unpleasant` (Contrapositive: `~Unpleasant -> ~Awkward`).
+
+### Linked Practice Item: PT117.S4.Q26 (PT44.S4.Q26)
+- **Topic:** Political theorist on European Union foreign policy strength.
+- **Premise Chain:** `All Strong -> Respond Aggressively -> All Perceive Grave -> All Agree Threatens Economy`.
+- **Conclusion:** `Not all member countries of the EU will be strong in foreign policy` (`~All Strong`).
+- **Required Sufficient Assumption:** Contrapositive trigger proving `~All Agree Threatens Economy` (Answer Choice C: problems appearing to some members to threaten the economy will not appear so to others).
 
 ## Links to Knowledge Base
+- Strategic Teardown: `output/conditional-sufficient-assumption-teardown.md`
 - Concept Page: [[../concepts/conditional-sufficient-assumption-strategy]]
 - Raw Source Archive: `raw/sources/clips/conditional-sufficient-assumption-sa-strategy/`
+

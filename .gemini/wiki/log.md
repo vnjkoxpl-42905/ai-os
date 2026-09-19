@@ -22,3 +22,11 @@ Append-only record of Gemini wiki activity: ingests, queries, lint passes, struc
 - Verified CDP connectivity to Microsoft Edge on port 9223.
 - Tested tab listing, screenshot capture, and element click primitives against live Loophole Online interface.
 
+## [2026-09-19] teardown | Conditional Sufficient Assumption (Loophole Video Lesson)
+- Extracted and analyzed full lesson structure for Ellen Cassidy's 7:57 Training Camp video.
+- Decoded whiteboard handwritten deductive example: Mugs vs. Cups War (`War -> Prevail -> Awkward` vs. `War -> Unpleasant`; gap: `Awkward -> Unpleasant`).
+- Deconstructed official linked LSAT problem: PT117.S4.Q26 (PT44.S4.Q26) EU Foreign Policy, highlighting the existential contrapositive trigger pattern (Answer Choice C).
+- Compiled strategic teardown report comparing Loophole pedagogy against LSAT U standards in `.gemini/output/conditional-sufficient-assumption-teardown.md`.
+- Enriched source note `.gemini/wiki/sources/conditional-sufficient-assumption-sa-strategy.md`.
+
+
