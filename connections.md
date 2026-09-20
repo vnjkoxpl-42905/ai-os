@@ -20,7 +20,7 @@ Registry of every live system Jay 2 can reach, mapped to the 7 Tier-1 data domai
 | 6 | Meeting intelligence | Gmail/Drive session notes · Gemini Meet notes | `gws` CLI (export→`raw/`) | **verified** - Gemini notes in Drive | 2026-09-07 |
 | 7 | Knowledge / files | Google Drive · this vault | `gws` CLI · local | **verified** | 2026-09-07 |
 | 7b | LSAT U backend | Lovable Cloud `atrcqxpmqrynmtvvyjju` | REST + edge fns via admin JWT (`LSATPREP_ADMIN_*`) | **verified** - JWT issued, 3600s | 2026-09-07 |
-| 8 | Web access | **Firecrawl** | CLI + 28 skills, key in `.env` | **verified** | 2026-09-07 |
+| 8 | Web access | **Firecrawl** | CLI/API key (`.env`) · `references/firecrawl.md` | **verified** - `/v1/search`, `/v1/scrape`, `/v2/agent` active | 2026-09-19 |
 | 9 | Code hosting | **GitHub** | `gh` CLI (account `vnjkoxpl-42905`) | **verified** | 2026-09-07 |
 
 **Tier-2 (bonus):** NotebookLM (`nlm` CLI), YouTube Data API (**unverified (Windows)** - no key in `.env`), Integrated Browser MCP (VS Code).

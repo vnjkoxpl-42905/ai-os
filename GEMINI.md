@@ -33,6 +33,7 @@ Paths are relative to the repository root.
 | Operator brain (how to think about automation) | `references/3ms-framework.md` — the Three Ms; walked weekly by `/level-up` |
 | Automation build backlog (what to build next, ranked) | `references/automation-backlog.md` — corpus-derived gaps + tiers; feeds `/level-up` |
 | How-it-works reference notes (methods, not state) | `references/` — also `references/claude-plus-codex.md`, `references/obsidian-command-center.md`, `references/second-brain-levels.md` |
+| Web research and Firecrawl agents | `references/firecrawl.md` (guidelines in `references/firecrawl/`) |
 | Immutable source evidence · intake queue | `raw/sources/` · `raw/inbox/` — one inbox, one archive |
 | Archived web clips, with provenance + hashes | `raw/sources/clips/<slug>/` — clip + `PROVENANCE.md` + `SHA256SUMS` |
 | Raw personal-data exports (Google Takeout, Gemini session transcripts) | `raw/data-about-me/` — unprocessed PII, git-ignored; never read wholesale |
@@ -74,7 +75,13 @@ Paths are relative to the repository root.
 
 ## Skills and Workspace Separation
 
-- Dedicated Gemini workspace lives under `.gemini/` (with `.gemini/agents/` and `.gemini/skills/`).
+- Dedicated Gemini workspace lives under `.gemini/`:
+  - `.gemini/README.md`: Master directory routing for the Gemini runtime.
+  - `.gemini/skills/`: Active Gemini skills (217 installed).
+  - `.gemini/agents/`: Gemini agent configurations (`.toml`).
+  - `.gemini/wiki/`: Distilled concept and source notes maintained by Gemini (`index.md`, `concepts/`, `sources/`).
+  - `.gemini/raw/`: Immutable source intake for Gemini research.
+  - `.gemini/output/`: Generated deliverables, teardowns, and blueprints.
 - Gemini skill database lives under `skills/gemini/` containing its own copies of all skills without modifying or mutating `skills/claude/` or `skills/codex/`.
 - Claude's workspace (`.claude/`) and Codex's workspace (`.codex/` and `.agents/`) are completely isolated and never modified by Gemini.
 

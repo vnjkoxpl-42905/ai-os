@@ -863,3 +863,10 @@ Rebuilt the post-consultation follow-up template from five identical sends (2026
 - Preserved saved attempts and scores; fixed obsolete selection handling. Verified Joshua's existing saved session live without submitting answers.
 - 39 focused tests, typecheck, production builds and responsive browser verification passed.
 
+## [2026-09-19] system | Firecrawl reference suite and Gemini workspace routing
+- Added canonical Firecrawl integration suite at `references/firecrawl.md` with companion resources in `references/firecrawl/` (`agent-guidelines.md`, `schema-cookbook.md`, `runner.py`).
+- Updated `connections.md` Domain 8 (Web access) with verified `/v1/search`, `/v1/scrape`, `/v2/agent` capabilities and `references/firecrawl.md` pointer.
+- Synchronized routing map across `GEMINI.md`, `AGENTS.md`, and `CLAUDE.md`.
+- Created `.gemini/README.md` and routed the dedicated `.gemini/` workspace (`skills/`, `agents/`, `wiki/`, `raw/`, `output/`).
+
+

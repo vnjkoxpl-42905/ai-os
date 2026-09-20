@@ -33,6 +33,7 @@ Paths are relative to the repository root.
 | Operator brain (how to think about automation) | `references/3ms-framework.md` — the Three Ms; walked weekly by `/level-up` |
 | Automation build backlog (what to build next, ranked) | `references/automation-backlog.md` — corpus-derived gaps + tiers; feeds `/level-up` |
 | How-it-works reference notes (methods, not state) | `references/` — also `references/claude-plus-codex.md`, `references/obsidian-command-center.md`, `references/second-brain-levels.md` |
+| Web research and Firecrawl agents | `references/firecrawl.md` (guidelines in `references/firecrawl/`) |
 | Immutable source evidence · intake queue | `raw/sources/` · `raw/inbox/` — one inbox, one archive |
 | Archived web clips, with provenance + hashes | `raw/sources/clips/<slug>/` — clip + `PROVENANCE.md` + `SHA256SUMS` |
 | Raw personal-data exports (Google Takeout, Gemini session transcripts) | `raw/data-about-me/` — unprocessed PII, git-ignored; never read wholesale |
