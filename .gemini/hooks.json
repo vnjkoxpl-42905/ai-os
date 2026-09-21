@@ -1,0 +1,17 @@
+{
+  "codex-claude-guard": {
+    "enabled": true,
+    "PreToolUse": [
+      {
+        "matcher": "write_to_file|replace_file_content|run_command",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python C:\\Users\\Joshu\\.gemini\\config\\scripts\\guard_protected_runtime_paths.py",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}

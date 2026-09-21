@@ -27,6 +27,7 @@ The brain runs three knowledge systems: **this wiki** (Joshua, the business, dec
 ## Voice & policy
 
 - [[teaching-voice]] — canonical voice doc, 3 registers (coaching / teaching content / brand); carried verbatim through the rebuild
+- [[reddit-chat-voice]] — ground truth reference of 10 real Reddit chat conversations, tone patterns, and DM dispatch standards
 - [[HANDLING]] — Tier-A handling rules and the pre-remote scrub checklist (authority cited by core.md)
 - [[protected-records]] — where sensitive records live and how they are referenced
 

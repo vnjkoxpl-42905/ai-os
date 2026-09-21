@@ -1,0 +1,461 @@
+# Exhaustive Architecture Blueprint: Google Gemini & Antigravity Setup
+**Machine:** `J` (Windows 11 Home) | **Host Workspace:** `C:\Users\Joshu\dev\ai-os\.gemini\`
+**Global Machine Runtime:** `C:\Users\Joshu\.gemini\`
+**Operator:** Joshua Fisseha | **Assistant Persona:** Jay 2
+**Last Synchronized:** 2026-09-19
+
+---
+
+## 1. Executive Summary & Design Foundations
+
+This document provides a 100% complete, granular inventory and breakdown of the **Google Gemini and Antigravity** setup on this machine. There are no omitted files, no placeholders, and no implicit assumptions.
+
+The Gemini Antigravity system operates as a **dual-layer architecture**:
+1. **Workspace Layer (`C:\Users\Joshu\dev\ai-os\.gemini\`)**: The repository-scoped operating environment. Contains all 218 active skills, 18 autonomous subagent configurations, the Karpathy LLM-Wiki knowledge layer, immutable intake files, and permanent research deliverables. It is strictly quarantined from Claude (`.claude/`) and Codex (`.codex/`).
+2. **Global Runtime Engine (`C:\Users\Joshu\.gemini\`)**: The Windows system-level engine. Governs execution permissions, Model Context Protocol (MCP) server bindings (including dedicated Chrome port 9223), the global skill registry bridge (`skills.json`), and the unified conversation database (`conversation_summaries.db`).
+
+---
+
+## 2. Workspace Layer Breakdown (`C:\Users\Joshu\dev\ai-os\.gemini\`)
+
+```
+C:\Users\Joshu\dev\ai-os\.gemini\
+├── README.md                                  <-- Workspace router and directory map
+├── agents/                                    <-- 18 specialized TOML subagent definitions
+├── skills/                                    <-- 218 active, installed Gemini skills
+├── wiki/                                      <-- LLM-Wiki knowledge layer
+│   ├── concepts/                              <-- Distilled formal concept notes
+│   ├── sources/                               <-- Processed source extractions
+│   ├── index.md                               <-- Master knowledge catalog
+│   └── log.md                                 <-- Chronological ingest ledger
+├── raw/                                       <-- Immutable evidence intake
+│   ├── inbox/                                 <-- Unprocessed intake dropzone
+│   └── sources/                               <-- Immutable historical sources
+└── output/                                    <-- Permanent deliverables, teardowns & plans
+```
+
+---
+
+### 2.1 Router File: `.gemini/README.md`
+Establishes the internal directory boundaries for Gemini within `ai-os`. It dictates that all Gemini-generated assets must route to `.gemini/`, all canonical skill copies route to `skills/gemini/`, and that Claude (`.claude/`) and Codex (`.codex/`, `.agents/`) are completely off-limits.
+
+---
+
+### 2.2 Subagent Definitions: `.gemini/agents/` (18 TOML Profiles)
+Autonomous subagents invoked on demand via `invoke_subagent`. Each runs in its own context window and reports findings back to the main agent:
+
+#### `agent-sdk-dev-agent-sdk-verifier-py.toml` (5394 bytes)
+
+#### `agent-sdk-dev-agent-sdk-verifier-ts.toml` (5616 bytes)
+
+#### `browser-navigator.toml` (2113 bytes)
+
+#### `code-simplifier-code-simplifier.toml` (3234 bytes)
+
+#### `feature-dev-code-architect.toml` (2226 bytes)
+
+#### `feature-dev-code-explorer.toml` (2104 bytes)
+
+#### `feature-dev-code-reviewer.toml` (2978 bytes)
+
+#### `hookify-conversation-analyzer.toml` (5709 bytes)
+
+#### `plugin-dev-agent-creator.toml` (7680 bytes)
+
+#### `plugin-dev-plugin-validator.toml` (6858 bytes)
+
+#### `plugin-dev-skill-reviewer.toml` (6316 bytes)
+
+#### `pr-review-toolkit-code-reviewer.toml` (4116 bytes)
+
+#### `pr-review-toolkit-code-simplifier.toml` (5362 bytes)
+
+#### `pr-review-toolkit-comment-analyzer.toml` (5870 bytes)
+
+#### `pr-review-toolkit-pr-test-analyzer.toml` (5130 bytes)
+
+#### `pr-review-toolkit-silent-failure-hunter.toml` (8011 bytes)
+
+#### `pr-review-toolkit-type-design-analyzer.toml` (5541 bytes)
+
+#### `web-researcher.toml` (7046 bytes)
+
+---
+
+### 2.3 Permanent Deliverables: `.gemini/output/`
+Stores high-value research reports, plans, and teardowns so they persist across sessions:
+
+- **`ai_model_showdown.md`** (10813 bytes): 🧠 AI Model Showdown: Gemini 3.1 Pro vs Claude Opus 4.6 Thinking vs GPT-5.6 Luna
+- **`browser_deep_dive_report.md`** (3768 bytes): Browser Deep-Dive Research Report: Edge vs. Chrome vs. Brave
+- **`conditional-sufficient-assumption-teardown.md`** (7020 bytes): Strategic Teardown: Conditional Sufficient Assumption (SA) Strategy
+- **`conditional_logic_notes.md`** (5106 bytes): Conditional Logic Notes Assigned to Asia
+- **`edge-welcome.png`** (54408 bytes): PNG
+- **`edge_workflow_optimizations.md`** (4345 bytes): The Ultimate Edge Workflow & Productivity Guide
+- **`firecrawl-scrape-result.json`** (89171 bytes): {
+- **`laptop_setup_guide.md`** (5254 bytes): Laptop Setup & Customization Guide
+- **`magic_mouse_implementation_plan.md`** (3073 bytes): Magic Mouse 2 Setup Plan (100% Free & Secure)
+- **`magic_mouse_master_plan.md`** (3149 bytes): Magic Mouse 2 on Windows 11: Free & Secure Master Plan (Revised)
+- **`system_architecture_master.md`** (13532 bytes): Master System Architecture & Environment Blueprint
+
+---
+
+### 2.4 Knowledge Layer: `.gemini/wiki/`
+Follows the Karpathy LLM-Wiki design pattern:
+- **`index.md`**: Central directory linking all concept pages and source references.
+- **`log.md`**: Chronological record of all ingestion events, audits, and query sessions.
+- **`concepts/conditional-sufficient-assumption-strategy.md`**: Distilled pedagogy breakdown covering formal logic conditional statements, algebraic linking patterns, and student execution checklists.
+- **`sources/conditional-sufficient-assumption-sa-strategy.md`**: Source documentation derived from Ellen Cassidy's Loophole training curriculum.
+
+---
+
+### 2.5 Active Skills Inventory: `.gemini/skills/` (All 218 Skills)
+Every installed skill is listed below with its folder name and exact operational description from its `SKILL.md` frontmatter:
+
+Total Active Skills Installed: **218**
+
+| Skill Identifier | Operational Trigger & Purpose |
+|---|---|
+| **`_inactive`** | No frontmatter description available. |
+| **`_project-forks`** | No frontmatter description available. |
+| **`_snapshots`** | No frontmatter description available. |
+| **`a11y-debugging`** | Uses Chrome DevTools MCP for accessibility (a11y) debugging and auditing based on web.dev guidelines. Use when testing semantic HTML, ARIA labels, focus states, keyboard navigation, tap targets, and color contrast. |
+| **`academy-guide`** | > Stop and check this skill before finishing any reply to a question about how to use Claude or a Claude product — it recommends matching courses, tutorials, and use cases from Claude Academy (academy.claude.com), Anthropic's learning hub. Trigger on: "how do I", "how can I", "getting started with", "what can Claude do", "teach me", "learn to use"; questions about artifacts, projects, skills, plugins, connectors, MCP; requests about rolling Claude out to a team, class, or organization; and any ask for training materials, onboarding content, or learning resources. Use it when the user is learning how to use a feature or product — not when they are mid-task and just want the task done. This skill composes with other skills: after consulting product documentation to answer how a Claude feature works, also check here for a matching course or tutorial — a docs-grounded answer and an Academy recommendation belong together. Only recommend on a strong match; never invent Academy content. |
+| **`agent-development`** | This skill should be used when the user asks to "create an agent", "add an agent", "write a subagent", "agent frontmatter", "when to use description", "agent examples", "agent tools", "agent colors", "autonomous agent", or needs guidance on agent structure, system prompts, triggering conditions, or agent development best practices for Claude Code plugins. |
+| **`algorithmic-art`** | Creating algorithmic art using p5.js with seeded randomness and interactive parameter exploration. Use this when users request creating art using code, generative art, algorithmic art, flow fields, or particle systems. Create original algorithmic art rather than copying existing artists' work to avoid copyright violations. |
+| **`ask-matt`** | Ask which skill or flow fits your situation. A router over the skills in this repo. |
+| **`audit`** | Use when Joshua asks to audit the OS, score the setup against the Four Cs, or asks "is my AIOS working" / "audit my setup" / "where do we stand" / "find gaps". Produces a Four-Cs scoreboard (/100) with the top-3 leverage-ranked fixes. Read-only. Adapted for the ai-os layout (wiki, students, corpus, native memory, gws connections). |
+| **`auto-auth-browser`** | Automatically authenticate and manage session persistence for Loophole Online and LSAT platforms using Playwright CDP and .env credentials, eliminating manual login barriers. |
+| **`booking-link`** | Use whenever Joshua wants a one-off booking link for LSAT U — "make me a link for Dakota at 7:15 tomorrow", "send her a link to book tonight", "one-off link, $60", "short notice link", "I need a link she can schedule herself with". Mints a single-use URL that sells exactly one session at a price you set, optionally pinned to one exact time, and closes after she books. Also covers listing and revoking existing links. |
+| **`bootcamp-builder`** | Build a complete repo-native LSAT U bootcamp for a new topic, cloning the Intro to LR (Main Conclusion) build process end to end. Interviews Joshua, ingests the content files he feeds it plus a scan of /Curriculum/{Topic}/, then drives a gated multi-session build inside the LSATU repo (src/bootcamps/{slug}/) until bootcamp-parity-audit passes against Intro to LR. Replaces lsat-u-topic-builder. Use when Joshua says "build a [topic] bootcamp", "new bootcamp", "spin up [topic]", "/bootcamp-builder [topic]", or wants to replicate the Intro to LR process for another topic. |
+| **`bootcamp-parity-audit`** | Audit a given LSAT U bootcamp's feature and visual parity against the flagship Intro to LR (Main Conclusion) bootcamp, anchored to the quality bar doc. Use when Joshua asks to "compare against Intro to LR", "check parity", "audit [bootcamp name]", or wants to know how far a bootcamp is from shipped quality. Trigger with /bootcamp-parity-audit <bootcamp-name>. |
+| **`brainstorming`** | "You MUST use this before any creative work - creating features, building components, adding functionality, or modifying behavior. Explores user intent, requirements and design before implementation." |
+| **`brand-guidelines`** | Applies Anthropic's official brand colors and typography to any sort of artifact that may benefit from having Anthropic's look-and-feel. Use it when brand colors or style guidelines, visual formatting, or company design standards apply. |
+| **`build-mcp-app`** | This skill should be used when the user wants to build an "MCP app", add "interactive UI" or "widgets" to an MCP server, "render components in chat", build "MCP UI resources", make a tool that shows a "form", "picker", "dashboard" or "confirmation dialog" inline in the conversation, or mentions "apps SDK" in the context of MCP. Use AFTER the build-mcp-server skill has settled the deployment model, or when the user already knows they want UI widgets. |
+| **`build-mcp-server`** | This skill should be used when the user asks to "build an MCP server", "create an MCP", "make an MCP integration", "wrap an API for Claude", "expose tools to Claude", "make an MCP app", or discusses building something with the Model Context Protocol. It is the entry point for MCP server development — it interrogates the user about their use case, determines the right deployment model (remote HTTP, MCPB, local stdio), picks a tool-design pattern, and hands off to specialized skills. |
+| **`build-mcpb`** | This skill should be used when the user wants to "package an MCP server", "bundle an MCP", "make an MCPB", "ship a local MCP server", "distribute a local MCP", discusses ".mcpb files", mentions bundling a Node or Python runtime with their MCP server, or needs an MCP server that interacts with the local filesystem, desktop apps, or OS and must be installable without the user having Node/Python set up. |
+| **`canvas-design`** | Create beautiful visual art in .png and .pdf documents using design philosophy. You should use this skill when the user asks to create a poster, piece of art, design, or other static piece. Create original visual designs, never copying existing artists' work to avoid copyright violations. |
+| **`chat-export`** | Save the current conversation as a structured markdown file and generate a handoff prompt for continuing in a new chat. Use this skill whenever the user says "export this chat", "save this conversation", "create a handoff", "save this for later", "export to my chat exports folder", or anything indicating they want to preserve a conversation and carry context into a new session. Always trigger this skill proactively when a conversation has been long, complex, or has produced decisions, files, or code — even if the user hasn't explicitly asked yet. |
+| **`chrome-devtools`** | Uses Chrome DevTools via MCP for efficient debugging, troubleshooting and browser automation. Use when debugging web pages, automating browser interactions, analyzing performance, or inspecting network requests. This skill does not apply to `--slim` mode (MCP configuration). |
+| **`claude-api`** | \|- Reference for the Claude API / Anthropic SDK — model ids, pricing, params, streaming, tool use, MCP, agents, caching, token counting, model migration. TRIGGER — read BEFORE opening the target file; don't skip because it "looks like a one-liner" — whenever: the prompt names Claude/Anthropic in any form (Claude, Anthropic, Fable, Opus, Sonnet, Haiku, `anthropic`, `@anthropic-ai`, `claude-*`, `us.anthropic.*`, `[1m]`); the user asks about an LLM (pricing/model choice/limits/caching) — never answer from memory; OR the task is LLM-shaped with provider unstated (agent/MCP/tool-definition/multi-agent/RAG/LLM-judge/computer-use; generate/summarize/extract/classify/rewrite/converse over NL; debugging refusals/cutoffs/streaming/tool-calls/tokens). SKIP only when another provider is being worked on (overrides all triggers): OpenAI/GPT/Gemini/Llama/Mistral/Cohere/Ollama named in the query; OR `grep -rE 'openai\|langchain_openai\|google.generativeai\|genai\|mistralai\|cohere\|ollama'` over the project hits (run this grep FIRST if no provider named — don't Read the file). |
+| **`claude-automation-recommender`** | Analyze a codebase and recommend Claude Code automations (hooks, subagents, skills, plugins, MCP servers). Use when user asks for automation recommendations, wants to optimize their Claude Code setup, mentions improving Claude Code workflows, asks how to first set up Claude Code for a project, or wants to know what Claude Code features they should use. |
+| **`claude-handoff`** | Hand the current conversation off to a fresh background agent that picks up the work immediately. |
+| **`claude-md-improver`** | Audit and improve CLAUDE.md files in repositories. Use when user asks to check, audit, update, improve, or fix CLAUDE.md files. Scans for all CLAUDE.md files, evaluates quality against templates, outputs quality report, then makes targeted updates. Also use when the user mentions "CLAUDE.md maintenance" or "project memory optimization". |
+| **`code-review`** | "Review the changes since a fixed point (commit, branch, tag, or merge-base) along two axes: Standards (does the code follow this repo's documented coding standards?) and Spec (does the code match what the originating issue/spec asked for?). Runs both reviews in parallel sub-agents and reports them side by side. Use when the user wants to review a branch, a PR, work-in-progress changes, or asks to \"review since X\"." |
+| **`codebase-design`** | Shared vocabulary for designing deep modules. Use when the user wants to design or improve a module's interface, find deepening opportunities, decide where a seam goes, make code more testable or AI-navigable, or when another skill needs the deep-module vocabulary. |
+| **`codex-build`** | "Hand a frozen spec (PLAN.md or any locked plan) to OpenAI Codex to IMPLEMENT with full write access, while Claude stays the spec-writer and reviewer — the exact role-flip of /codex-review. Codex builds from the spec in a --yolo sandbox, Claude reads the full diff like a contributor PR, runs the proof test, and iterates fixes via the SAME Codex session up to MAX_FIX_ROUNDS before taking over. Human approves the diff before any commit. Use when the user says \"/codex-build\", \"have codex build this\", \"codex implement the plan\", \"hand the plan to codex\", \"delegate the build to codex\", or right after a plan survives /grill-me-codex, /grill-with-docs-codex, or /codex-review and they choose Codex for implementation (Act 3). Also for standalone delegation: refactors, mechanical migrations, bug fixes with a known repro, test/coverage writing — anything that reads as a work order. NOT for tiny edits (~<20 lines — delegation overhead loses), NOT for design work (if writing the spec forces decisions, that's /grill-me-codex first), NOT for reviewing existing code (/codex:review), and NOT for anything needing Claude-session tools (MCP, secrets, browser)." |
+| **`codex-review`** | A standalone adversarial PLAN-review loop where Claude Code (builder) and OpenAI Codex (read-only critic) tag-team an implementation plan before any code is written. Use this when you ALREADY have a plan or a clear idea and just want the cross-model stress-test — no requirements interview first. Claude drafts/loads the plan into PLAN.md, Codex reviews it in a read-only sandbox and returns VERDICT:APPROVED or VERDICT:REVISE, Claude revises and re-submits to the SAME Codex session (context preserved) until APPROVED or a configurable MAX_ROUNDS cap is hit. Human approves the converged plan before code. Use when the user says "/codex-review", "codex review my plan", "have Codex review my plan", "argue this plan with Codex", "adversarial plan review", "make Claude and Codex argue/fight over the plan", or is about to build something high-stakes (auth, schema, concurrency, migrations, payments) and wants a second-model sanity check on the PLAN before implementation. For a guided requirements interview BEFORE the review, use /grill-me-codex instead. NOT for reviewing already-written CODE (that is the Codex plugin's /codex:review) and NOT for trivial changes. |
+| **`command-development`** | This skill should be used when the user asks to "create a slash command", "add a command", "write a custom command", "define command arguments", "use command frontmatter", "organize commands", "create command with file references", "interactive command", "use AskUserQuestion in command", or needs guidance on slash command structure, YAML frontmatter fields, dynamic arguments, bash execution in commands, user interaction patterns, or command development best practices for Claude Code. |
+| **`consultation-followup-drafts`** | "Daily: detect past consultations with Gemini notes and draft (not send) personalized follow-up emails from the transcript" |
+| **`consultation-inquiry-drafts`** | "Daily sweep: draft, but do not send, personalized consultation-link replies to new LSAT tutoring inquiries" |
+| **`debug-optimize-lcp`** | Guides debugging and optimizing Largest Contentful Paint (LCP) using Chrome DevTools MCP tools. Use this skill whenever the user asks about LCP performance, slow page loads, Core Web Vitals optimization, or wants to understand why their page's main content takes too long to appear. Also use when the user mentions "largest contentful paint", "page load speed", "CWV", or wants to improve how fast their hero image or main content renders. |
+| **`decision-mapping`** | Turn a loose idea into a sequenced map of investigation tickets, then drive them to resolution one at a time. |
+| **`defuddle`** | Extract clean markdown content from web pages using Defuddle CLI, removing clutter and navigation to save tokens. Use instead of WebFetch when the user provides a URL to read or analyze, for online documentation, articles, blog posts, or any standard web page. Do NOT use for URLs ending in .md — those are already markdown, use WebFetch directly. |
+| **`design-an-interface`** | Generate multiple radically different interface designs for a module using parallel sub-agents. Use when user wants to design an API, explore interface options, compare module shapes, or mentions "design it twice". |
+| **`design-taste-frontend`** | Senior UI/UX Engineer. Architect digital interfaces overriding default LLM biases. Enforces metric-based rules, strict component architecture, CSS hardware acceleration, and balanced design engineering. |
+| **`diagnosing-bugs`** | Diagnosis loop for hard bugs and performance regressions. Use when the user says "diagnose"/"debug this", or reports something broken/throwing/failing/slow. |
+| **`discernment-nudge`** | > After you give a substantive answer or draft that the user may act on — advice or recommendations, drafted artifacts such as goals, plans, pitches, proposals, or emails, estimates or projections, analysis or interpretation of data, factual claims they may rely on, or a multi-step argument — invoke this skill BEFORE finalizing your reply and then, if it applies, append 2-3 short follow-up questions, each tied to something specific in what you just produced, that help the user check key facts, probe the reasoning or assumptions, and notice missing context. Do this at most once per conversation. Skip it when the user asked a trivial how-to or simple lookup, wants a purely educational explanation, asked you only to format, convert, or assemble a file from content they provided, is writing code they will run, is doing creative writing or casual chat, or already asked you to double-check, cite, or review — the skill file explains these boundaries and the exact output format. |
+| **`discord-access`** | Manage Discord channel access — approve pairings, edit allowlists, set DM/group policy. Use when the user asks to pair, approve someone, check who's allowed, or change policy for the Discord channel. |
+| **`discord-configure`** | Set up the Discord channel — save the bot token and review access policy. Use when the user pastes a Discord bot token, asks to configure Discord, asks "how do I set this up" or "who can reach me," or wants to check channel status. |
+| **`dispatching-parallel-agents`** | Use when facing 2+ independent tasks that can be worked on without shared state or sequential dependencies |
+| **`doc-coauthoring`** | Guide users through a structured workflow for co-authoring documentation. Use when user wants to write documentation, proposals, technical specs, decision docs, or similar structured content. This workflow helps users efficiently transfer context, refine content through iteration, and verify the doc works for readers. Trigger when user mentions writing docs, creating proposals, drafting specs, or similar documentation tasks. |
+| **`docx`** | "Use this skill whenever the user wants to create, read, edit, or manipulate Word documents (.docx files) or Word templates (.dotx files). Triggers include: any mention of 'Word doc', 'word document', '.docx', '.dotx', or requests to produce professional documents with formatting like tables of contents, headings, page numbers, or letterheads. Also use when extracting or reorganizing content from .docx or .dotx files, inserting or replacing images in documents, performing find-and-replace in Word files, working with tracked changes or comments, or converting content into a polished Word document. If the user asks for a 'report', 'memo', 'letter', 'template', or similar deliverable as a Word or .docx file, use this skill. Do NOT use for PDFs, spreadsheets, Google Docs, or general coding tasks unrelated to document generation." |
+| **`domain-modeling`** | Build and sharpen a project's domain model. Use when discussing codebase terminology, writing or editing a CONTEXT.md, or recording or editing an ADR. |
+| **`edge-live-control`** | Elite live automation and interactive control for Microsoft Edge on Windows via Playwright CDP. Enables inspecting active tabs, extracting authenticated DOM/media/transcripts, clicking elements, taking screenshots, and executing JavaScript. |
+| **`edit-article`** | Edit and improve articles by restructuring sections, improving clarity, and tightening prose. Use when user wants to edit, revise, or improve an article draft. |
+| **`emil-design-eng`** | This skill encodes Emil Kowalski's philosophy on UI polish, component design, animation decisions, and the invisible details that make software feel great. |
+| **`example-command`** | An example user-invoked skill that demonstrates frontmatter options and the skills/<name>/SKILL.md layout |
+| **`example-skill`** | This skill should be used when the user asks to "demonstrate skills", "show skill format", "create a skill template", or discusses skill development patterns. Provides a reference template for creating Claude Code plugin skills. |
+| **`executing-plans`** | Use when you have a written implementation plan to execute in a separate session with review checkpoints |
+| **`extract-design`** | "Extract the full design language from any website URL. Produces 8 output files including AI-optimized markdown, visual HTML preview, Tailwind config, React theme, shadcn/ui theme, Figma variables, W3C design tokens, and CSS variables. Also runs WCAG accessibility scoring. Use when user says 'extract design', 'get design system', 'design language', 'design tokens', 'what colors/fonts does this site use', or '/extract-design'." |
+| **`find-skills`** | Helps users discover and install agent skills when they ask questions like "how do I do X", "find a skill for X", "is there a skill that can...", or express interest in extending capabilities. This skill should be used when the user is looking for functionality that might exist as an installable skill. |
+| **`finishing-a-development-branch`** | Use when implementation is complete, all tests pass, and you need to decide how to integrate the work - guides completion of development work by presenting structured options for merge, PR, or cleanup |
+| **`frontend-design`** | Guidance for distinctive, intentional visual design when building new UI or reshaping an existing one. Helps with aesthetic direction, typography, and making choices that don't read as templated defaults. |
+| **`git-guardrails-claude-code`** | Set up Claude Code hooks to block dangerous git commands (push, reset --hard, clean, branch -D, etc.) before they execute. Use when user wants to prevent destructive git operations, add git safety hooks, or block git push/reset in Claude Code. |
+| **`graphify`** | "any input (code, docs, papers, images) - knowledge graph - clustered communities - HTML + JSON + audit report" |
+| **`grill-me`** | A relentless interview to sharpen a plan, design, or topic, checkpointing every answer to a brainstorm file so nothing is lost. Use when the user wants to stress-test a plan, get grilled on a design, run a brainstorm or discovery session, extract what's in their head into a doc, build up their AI OS context over time, or says "grill me". |
+| **`grill-me-codex`** | Two-act plan hardening. ACT 1 (you ↔ Claude) — Claude interviews you relentlessly about a plan or design, one question at a time, recommending an answer for each and exploring the codebase when it can answer itself, until every branch of the decision tree is resolved. ACT 2 (Claude ↔ Codex) — Claude writes the locked plan to PLAN.md and OpenAI Codex adversarially reviews it in a read-only sandbox (VERDICT:APPROVED/REVISE), Claude revises and re-submits to the SAME Codex session until APPROVED or a MAX_ROUNDS cap, then you sign off before any code. Use when the user says "/grill-me-codex", "grill me then have codex review", "grill me and stress-test the plan", "interview me about this plan then get a second model on it", or is about to build something high-stakes (auth, schema, concurrency, migrations, payments) and wants both alignment AND a cross-model sanity check before implementation. Builds on Matt Pocock's grill-me (MIT). For the docs-aware variant use /grill-with-docs-codex; if you already have a plan and want only the Codex review use /codex-review. NOT for reviewing already-written code (use /codex:review) and NOT for trivial changes. |
+| **`grill-with-docs`** | Interview the user to sharpen a plan while recording settled terminology and decisions in the project's existing documents. Use when the user invokes grill-with-docs. |
+| **`grill-with-docs-codex`** | Two-act plan hardening with living documentation. ACT 1 (you ↔ Claude) — Claude interviews you relentlessly about a plan, one question at a time, challenging it against your project's existing domain model and glossary (CONTEXT.md), sharpening fuzzy terms, stress-testing with concrete scenarios, cross-referencing code, and updating CONTEXT.md + ADRs inline as decisions crystallise. ACT 2 (Claude ↔ Codex) — Claude writes the locked plan to PLAN.md and OpenAI Codex adversarially reviews it in a read-only sandbox (VERDICT:APPROVED/REVISE), Claude revises and re-submits to the SAME Codex session until APPROVED or a MAX_ROUNDS cap, then you sign off before any code. Use when the user says "/grill-with-docs-codex", "grill me against the docs then have codex review", "stress-test this against our domain model then get a second model on it", or is about to build something high-stakes in a project with established terminology/ADRs and wants alignment, documentation, AND a cross-model sanity check. Builds on Matt Pocock's grill-with-docs (MIT). NOT for reviewing already-written code (use /codex:review) and NOT for trivial changes. |
+| **`grilling`** | Grill the user relentlessly about a plan, decision, or idea. Use when the user wants to stress-test their thinking, or uses any 'grill' trigger phrases. |
+| **`guided-drill-assignment`** | Use this whenever Joshua asks to look at a student's transcript, choose an appropriate LSAT U guided drill, verify the drill works, assign it through the platform, or confirm that the student received a clear notification. This skill covers the full workflow from transcript review to guided drill recommendation, platform/browser QA, assignment, and notification verification. |
+| **`gws-admin-reports`** | "Google Workspace Admin SDK: Audit logs and usage reports." |
+| **`gws-calendar`** | "Google Calendar: Manage calendars and events." |
+| **`gws-calendar-agenda`** | "Google Calendar: Show upcoming events across all calendars." |
+| **`gws-calendar-insert`** | "Google Calendar: Create a new event." |
+| **`gws-chat`** | "Google Chat: Manage Chat spaces and messages." |
+| **`gws-chat-send`** | "Google Chat: Send a message to a space." |
+| **`gws-classroom`** | "Google Classroom: Manage classes, rosters, and coursework." |
+| **`gws-docs`** | "Read and write Google Docs." |
+| **`gws-docs-write`** | "Google Docs: Append text to a document." |
+| **`gws-drive`** | "Google Drive: Manage files, folders, and shared drives." |
+| **`gws-drive-upload`** | "Google Drive: Upload a file with automatic metadata." |
+| **`gws-events`** | "Subscribe to Google Workspace events." |
+| **`gws-events-renew`** | "Google Workspace Events: Renew/reactivate Workspace Events subscriptions." |
+| **`gws-events-subscribe`** | "Google Workspace Events: Subscribe to Workspace events and stream them as NDJSON." |
+| **`gws-forms`** | "Read and write Google Forms." |
+| **`gws-gmail`** | "Gmail: Send, read, and manage email." |
+| **`gws-gmail-forward`** | "Gmail: Forward a message to new recipients." |
+| **`gws-gmail-read`** | "Gmail: Read a message and extract its body or headers." |
+| **`gws-gmail-reply`** | "Gmail: Reply to a message (handles threading automatically)." |
+| **`gws-gmail-reply-all`** | "Gmail: Reply-all to a message (handles threading automatically)." |
+| **`gws-gmail-send`** | "Gmail: Send an email." |
+| **`gws-gmail-triage`** | "Gmail: Show unread inbox summary (sender, subject, date)." |
+| **`gws-gmail-watch`** | "Gmail: Watch for new emails and stream them as NDJSON." |
+| **`gws-keep`** | "Manage Google Keep notes." |
+| **`gws-meet`** | "Manage Google Meet conferences." |
+| **`gws-modelarmor`** | "Google Model Armor: Filter user-generated content for safety." |
+| **`gws-modelarmor-create-template`** | "Google Model Armor: Create a new Model Armor template." |
+| **`gws-modelarmor-sanitize-prompt`** | "Google Model Armor: Sanitize a user prompt through a Model Armor template." |
+| **`gws-modelarmor-sanitize-response`** | "Google Model Armor: Sanitize a model response through a Model Armor template." |
+| **`gws-people`** | "Google People: Manage contacts and profiles." |
+| **`gws-shared`** | "gws CLI: Shared patterns for authentication, global flags, and output formatting." |
+| **`gws-sheets`** | "Google Sheets: Read and write spreadsheets." |
+| **`gws-sheets-append`** | "Google Sheets: Append a row to a spreadsheet." |
+| **`gws-sheets-read`** | "Google Sheets: Read values from a spreadsheet." |
+| **`gws-slides`** | "Google Slides: Read and write presentations." |
+| **`gws-tasks`** | "Google Tasks: Manage task lists and tasks." |
+| **`gws-workflow`** | "Google Workflow: Cross-service productivity workflows." |
+| **`gws-workflow-email-to-task`** | "Google Workflow: Convert a Gmail message into a Google Tasks entry." |
+| **`gws-workflow-file-announce`** | "Google Workflow: Announce a Drive file in a Chat space." |
+| **`gws-workflow-meeting-prep`** | "Google Workflow: Prepare for your next meeting: agenda, attendees, and linked docs." |
+| **`gws-workflow-standup-report`** | "Google Workflow: Today's meetings + open tasks as a standup summary." |
+| **`gws-workflow-weekly-digest`** | "Google Workflow: Weekly summary: this week's meetings + unread email count." |
+| **`handoff`** | Compact the current conversation into a handoff document for another agent to pick up. |
+| **`high-end-visual-design`** | Teaches the AI to design like a high-end agency. Defines the exact fonts, spacing, shadows, card structures, and animations that make a website feel expensive. Blocks all the common defaults that make AI designs look cheap or generic. |
+| **`hook-development`** | This skill should be used when the user asks to "create a hook", "add a PreToolUse/PostToolUse/Stop hook", "validate tool use", "implement prompt-based hooks", "use ${CLAUDE_PLUGIN_ROOT}", "set up event-driven automation", "block dangerous commands", or mentions hook events (PreToolUse, PostToolUse, Stop, SubagentStop, SessionStart, SessionEnd, UserPromptSubmit, PreCompact, Notification). Provides comprehensive guidance for creating and implementing Claude Code plugin hooks with focus on advanced prompt-based hooks API. |
+| **`image-to-code`** | Elite website image-to-code skill for Codex. For visually important web tasks, it must first generate the design image(s) itself, deeply analyze them, then implement the website to match them as closely as possible. In Codex, it must prefer large, readable, section-specific images instead of tiny compressed boards, generate fresh standalone images for sections or detail views instead of cropping old ones, avoid lazy under-generation, avoid cards-inside-cards-inside-cards UI, and keep the hero clean, spacious, readable, and visible on a small laptop. |
+| **`imessage-access`** | Manage iMessage channel access — approve pairings, edit allowlists, set DM/group policy. Use when the user asks to pair, approve someone, check who's allowed, or change policy for the iMessage channel. |
+| **`imessage-configure`** | Check iMessage channel setup and review access policy. Use when the user asks to configure iMessage, asks "how do I set this up" or "who can reach me," or wants to know why texts aren't reaching the assistant. |
+| **`impeccable`** | Use when the user wants to design, redesign, shape, critique, audit, polish, clarify, distill, harden, optimize, adapt, animate, colorize, extract, or otherwise improve a frontend interface. Covers websites, landing pages, dashboards, product UI, app shells, components, forms, settings, onboarding, and empty states. Handles UX review, visual hierarchy, information architecture, cognitive load, accessibility, performance, responsive behavior, theming, anti-patterns, typography, fonts, spacing, layout, alignment, color, motion, micro-interactions, UX copy, error states, edge cases, i18n, and reusable design systems or tokens. Also use for bland designs that need to become bolder or more delightful, loud designs that should become quieter, live browser iteration on UI elements, or ambitious visual effects that should feel technically extraordinary. Not for backend-only or non-UI tasks. |
+| **`implement`** | "Implement a piece of work based on a spec or set of tickets." |
+| **`implement-spec`** | "Implement a specification in code." |
+| **`improve-codebase-architecture`** | Scan a codebase for deepening opportunities, present them as a visual HTML report, then grill through whichever one you pick. |
+| **`inbound-tutoring-replies`** | Draft warm, concise replies to inbound LSAT tutoring leads. Use when Joshua receives a direct message, Facebook/Messenger message, Superprof/TutorOcean inquiry, Reddit DM, email inquiry, or asks to "make a response" to a prospective LSAT student asking whether tutoring is available, how to start, or how to book. |
+| **`ingest`** | > Front door for getting anything into the brain. Use whenever Joshua says "ingest this", "ingest the latest clips", "process the transcripts", "pull this week's transcripts", "file these notes", "I saved an article", "what's in the inbox", or drops a file, a screenshot, or a score report and expects it filed — even when he does not say "ingest". Routes each input to its pipeline (clips, Gemini session transcripts, Superwhisper recordings, student evidence, bulk exports), dedupes by hash first, and never modifies a source. |
+| **`internal-comms`** | A set of resources to help me write all kinds of internal communications, using the formats that my company likes to use. Claude should use this skill whenever asked to write some sort of internal communications (status reports, leadership updates, 3P updates, company newsletters, FAQs, incident reports, project updates, etc.). |
+| **`json-canvas`** | Create and edit JSON Canvas files (.canvas) with nodes, edges, groups, and connections. Use when working with .canvas files, creating visual canvases, mind maps, flowcharts, or when the user mentions Canvas files in Obsidian. |
+| **`kling-cli`** | >- 可灵 AI（Kling）官方 CLI 的使用技能：文生图 / 参考图生图 / 文生视频 / 图生视频。CLI 通过 MCP 服务与可灵交互： 调用 text_to_image / image_to_image / text_to_video / image_to_video（模型与参数规格由 who_am_i 动态声明）， 返回 generationId 后用 query_tasks 轮询，完成后提取 works[].url 展示给用户。命令无别名。 触发词：可灵、Kling、文生图、参考图生图、文生视频、图生视频、Omni、omni、MCP、generationId、generation_id、轮询、灵感值、 text_to_image、image_to_image、text_to_video、image_to_video、query_tasks、who_am_i、file_upload、 image generation、video generation、kling 命令、.credentials、 国内站、海外站、global、海外版、区域、region、安装、install。 |
+| **`level-up`** | Use weekly (or when Joshua says "let's level up", "what should I automate next", "find me leverage this week") to surface and ship ONE new automation. Walks the 3Ms interview — Mindset (find the candidate) → Method (scope it) → Machine (build it). One run = one shipped artifact. Adapted for the ai-os EA workspace. |
+| **`loop-me`** | Grill me about specs for the workflows I want to build, within this workspace. |
+| **`loophole-lecture-transcribe`** | Automatically transcribe, screenshot, and adapt Loophole Online video lessons into verbatim transcripts, teleprompter scripts, and structured concept routers in the Loophole Lecture archive. |
+| **`lovable-migrate`** | > Apply a schema change or SQL migration to the LSAT U backend when Claude cannot reach it directly. Packages the change as paste-ready SQL with exact Lovable Cloud SQL-editor steps and an automatic post-apply verification probe. Use when a migration, table/column change, RLS policy, or edge-function schema dependency needs to land on lsatprep.study's Supabase, or when Joshua says "apply this migration", "run this SQL", "add this column", "paste to Lovable". |
+| **`lovable-prompt`** | Produce a short, paste-ready prompt for Lovable when a change can only happen through the Lovable UI (not code Claude Code can reach directly, not a Supabase migration). Use when Joshua asks "give me the prompt for Lovable", "what do I send Lovable", or a task turns out to require Lovable-side config/UI action. Trigger with /lovable-prompt. |
+| **`lsat-lab-mega-set`** | Build one consolidated LSAT Lab Logical Reasoning practice set containing EVERY LR question for a SINGLE PrepTest, in correct order, driving Joshua's logged-in Chrome via the claude-in-chrome extension end to end (create, select-all, rename to "PT### LR (S...)", start, capture URL, log). Use when Joshua gives a bare PrepTest number to turn into a set, e.g. "create set 154", "mega set 154", "LSAT Lab set 154", "make a set for PT 154", "build the LR set for PT 154", "make an LR set for 154". Runs autonomously to completion. NOT for a CSV/list of specific questions (that is lsat-lab-set-builder) and NOT for transcribing written explanations (that is lsat-lab-transcribe). |
+| **`lsat-lab-transcribe`** | Transcribe a full LSAT Lab PrepTest's written explanations verbatim into one organized markdown file per test, capturing ALL THREE authored explanation styles (Standard, Brief, Another Way) for every question, driving Joshua's open Chrome via the claude-in-chrome browser extension. Use when Joshua says "transcribe PT###", "pull the explanations for PT###", "do the LSAT Lab transcription", "do another practice test", or points at an open LSAT Lab practice tab and wants its explanations captured. One question at a time, verbatim, skipping video-only questions. |
+| **`lsat-u-architecture`** | Architectural source of truth and entry point for LSAT U platform rules. Use this skill whenever building, modifying, speccing, or referencing LSAT U platform features. Trigger when discussing component picks, routing, state models, design tokens, drill mechanics, Foyer navigation, Supabase realtime channels, identity/admin patterns, the always-violate rules, or any decision about how LSAT U is built. Also trigger when writing Claude Code build briefs for LSAT U, when comparing topic modules to the Causation Station architectural template, when explaining LSAT U component patterns, or when reviewing code against platform rules. This skill is the indexed entry point. The canonical full sources live in the vault; this skill gives you the always-violate rules at a glance and routes you to the deeper references. Trigger automatically when Joshua mentions LSAT U code, architecture, components, drill behavior, Foyer, Supabase, build briefs, or topic module integration, even without explicit invocation. |
+| **`lsat-u-browser-verification`** | Control and verify the dedicated LSAT U persistent browser environment on port 9223 for visual inspection, DOM analysis, console checking, and multi-viewport testing on https://lsatprep.study and localhost:8080. |
+| **`lsat-u-platform-actions`** | Perform any LSAT U platform action for Joshua directly from the brain workspace — assign guided drills, homework, or activities; post classroom items and notes; send inbox messages; ingest session notes — by driving the deployed app (lsatprep.study) through his logged-in Chrome admin session, verifying the result, and logging it to the student's folder. Trigger on "assign <student> …", "post … to <student>", "message <student>", "send <student> homework", "give <student> an activity", or any request to make something happen on the platform from here. |
+| **`lsat-u-topic-builder`** | Audit-driven bootstrap for a new LSAT U topic bootcamp. Walks the topic's source corpus, tier-grades every file (S/A/B/C/D), scans the Mac for related files outside /Curriculum/, identifies content gaps, anchors the quality bar to Causation Station / Abstraction (coaching tone, comprehensive, guiding), then generates the project folder with audit findings baked into all four files. Use when Joshua wants to start a new LSAT U topic bootcamp (Causation, Comparison, Necessary Assumption, Conditional Logic, etc.) and have the build start from real corpus knowledge, not generic templates. Trigger phrases include "create a new LSAT U topic bootcamp", "spin up a [topic] bootcamp", "audit and init [topic]", "replicate Main Conclusion for [topic]", "scaffold [topic] project". |
+| **`lsatu-cc-handoff`** | Operational skill for the LSAT U build loop. Trigger whenever Joshua is working on the LSAT U codebase and needs to translate a UI screenshot, complaint, idea, or bug into a Claude Code execution prompt. Also trigger on phrases like "send to CC," "paste box," "create a CC handoff," "fix this and send to terminal," "make a CC prompt," "send this to claude code," or whenever Joshua sends a screenshot of lsatprep.study or the lovable.dev preview with a complaint or change request. The skill enforces the analyze then write-brief-to-vault then give-paste-box pattern, the file path conventions, the hard rules (no em dashes, verbatim content, brutalist palette, no silent errors, direct commits), and Joshua's voice rules (terse, opinionated, no em dashes, modules not phases). This skill is the indexed front door for the build loop. The deeper rules live in LSATU memory and the lsat-u-architecture skill. |
+| **`math-olympiad`** | "Solve competition math problems (IMO, Putnam, USAMO, AIME) with adversarial verification that catches the errors self-verification misses. Activates when asked to 'solve this IMO problem', 'prove this olympiad inequality', 'verify this competition proof', 'find a counterexample', 'is this proof correct', or for any problem with 'IMO', 'Putnam', 'USAMO', 'olympiad', or 'competition math' in it. Uses pure reasoning (no tools) — then a fresh-context adversarial verifier attacks the proof using specific failure patterns, not generic 'check logic'. Outputs calibrated confidence — will say 'no confident solution' rather than bluff. If LaTeX is available, produces a clean PDF after verification passes." |
+| **`mcp-builder`** | Guide for creating high-quality MCP (Model Context Protocol) servers that enable LLMs to interact with external services through well-designed tools. Use when building MCP servers to integrate external APIs or services, whether in Python (FastMCP) or Node/TypeScript (MCP SDK). |
+| **`mcp-integration`** | This skill should be used when the user asks to "add MCP server", "integrate MCP", "configure MCP in plugin", "use .mcp.json", "set up Model Context Protocol", "connect external service", mentions "${CLAUDE_PLUGIN_ROOT} with MCP", or discusses MCP server types (SSE, stdio, HTTP, WebSocket). Provides comprehensive guidance for integrating Model Context Protocol servers into Claude Code plugins for external tool and service integration. |
+| **`migrate-to-shoehorn`** | Migrate test files from `as` type assertions to @total-typescript/shoehorn. Use when user mentions shoehorn, wants to replace `as` in tests, or needs partial test data. |
+| **`minimalist-ui`** | Clean editorial-style interfaces. Warm monochrome palette, typographic contrast, flat bento grids, muted pastels. No gradients, no heavy shadows. |
+| **`morning-brief`** | > Daily inbox triage that produces one ranked queue of drafted replies. Use when Joshua says "morning brief", "what needs a reply", "catch me up on email", "run the brief", "am I behind", or at the start of a working day. Sweeps Gmail, classifies what is waiting, drafts each reply in his voice, and logs every draft to the send ledger. Never sends. |
+| **`notebooklm`** | Complete API for Google NotebookLM - full programmatic access including features not in the web UI. Create notebooks, add sources, generate all artifact types, download in multiple formats. Activates on explicit /notebooklm or intent like "create a podcast about X" |
+| **`obsidian-bases`** | Create and edit Obsidian Bases (.base files) with views, filters, formulas, and summaries. Use when working with .base files, creating database-like views of notes, or when the user mentions Bases, table views, card views, filters, or formulas in Obsidian. |
+| **`obsidian-cli`** | Interact with Obsidian vaults using the Obsidian CLI to read, create, search, and manage notes, tasks, properties, and more. Also supports plugin and theme development with commands to reload plugins, run JavaScript, capture errors, take screenshots, and inspect the DOM. Use when the user asks to interact with their Obsidian vault, manage notes, search vault content, perform vault operations from the command line, or develop and debug Obsidian plugins and themes. |
+| **`obsidian-markdown`** | Create and edit Obsidian Flavored Markdown with wikilinks, embeds, callouts, properties, and other Obsidian-specific syntax. Use when working with .md files in Obsidian, or when the user mentions wikilinks, callouts, frontmatter, tags, embeds, or Obsidian notes. |
+| **`obsidian-vault`** | Search, create, and manage notes in the Obsidian vault with wikilinks and index notes. Use when user wants to find, create, or organize notes in Obsidian. |
+| **`pdf`** | Use this skill whenever the user wants to do anything with PDF files. This includes reading or extracting text/tables from PDFs, combining or merging multiple PDFs into one, splitting PDFs apart, rotating pages, adding watermarks, creating new PDFs, filling PDF forms, encrypting/decrypting PDFs, extracting images, and OCR on scanned PDFs to make them searchable. If the user mentions a .pdf file or asks to produce one, use this skill. |
+| **`pickup`** | Load LSAT U project state from the Obsidian vault only when Joshua explicitly asks for pickup. Never run automatically at session start. Reports open tasks. Trigger with /pickup or an explicit request to run pickup. |
+| **`playground`** | Creates interactive HTML playgrounds — self-contained single-file explorers that let users configure something visually through controls, see a live preview, and copy out a prompt. Use when the user asks to make a playground, explorer, or interactive tool for a topic. |
+| **`plugin-settings`** | This skill should be used when the user asks about "plugin settings", "store plugin configuration", "user-configurable plugin", ".local.md files", "plugin state files", "read YAML frontmatter", "per-project plugin settings", or wants to make plugin behavior configurable. Documents the .claude/plugin-name.local.md pattern for storing plugin-specific configuration with YAML frontmatter and markdown content. |
+| **`plugin-structure`** | This skill should be used when the user asks to "create a plugin", "scaffold a plugin", "understand plugin structure", "organize plugin components", "set up plugin.json", "use ${CLAUDE_PLUGIN_ROOT}", "add commands/agents/skills/hooks", "configure auto-discovery", or needs guidance on plugin directory layout, manifest configuration, component organization, file naming conventions, or Claude Code plugin architecture best practices. |
+| **`ponytail`** | > Forces the laziest solution that actually works, simplest, shortest, most minimal. Channels a senior dev who has seen everything: question whether the task needs to exist at all (YAGNI), reach for the standard library before custom code, native platform features before dependencies, one line before fifty. Supports intensity levels: lite, full (default), ultra. Use whenever the user says "ponytail", "be lazy", "lazy mode", "simplest solution", "minimal solution", "yagni", "do less", or "shortest path", and whenever they complain about over-engineering, bloat, boilerplate, or unnecessary dependencies. |
+| **`pptx`** | "Use this skill any time a .pptx or .potx file is involved in any way — as input, output, or both. This includes: creating slide decks, pitch decks, or presentations; reading, parsing, or extracting text from any .pptx or .potx file (even if the extracted content will be used elsewhere, like in an email or summary); editing, modifying, or updating existing presentations; combining or splitting slide files; working with templates (.potx), layouts, speaker notes, or comments. Trigger whenever the user mentions \"deck,\" \"slides,\" \"presentation,\" or references a .pptx or .potx filename, regardless of what they plan to do with the content afterward. If a .pptx or .potx file needs to be opened, created, or touched, use this skill." |
+| **`pre-consultation-check-in`** | >- Schedule and send Joshua's "Consultation check-in" email 30 minutes before each upcoming Cal.com consultation, from his Google Calendar, with a run log so nothing is sent twice. Use this whenever Joshua mentions pre-consult emails, consultation check-ins or reminders, "who has a consultation coming up", "schedule the check-ins for the next N days", "did X get their check-in", "cancel the check-in for X", or asks what consultations are on the calendar this week. Also use it when he asks to look at the calendar for consultations even if he does not say "email": this skill is how consultations are found and how their coverage is reported. Not for paid tutoring sessions ("Sofia session"), not for post-consultation follow-ups (that is consultation-followup-drafts), not for booking links. |
+| **`prompt-architect-refiner`** | Use this skill when the user wants to improve, rewrite, sharpen, structure, debug, compress, expand, or create a high-quality prompt for Claude Chat, Claude Cowork, Claude Code, Gemini, ChatGPT, Lovable, NotebookLM, MCP workflows, repo audits, file organization, curriculum production, or app-building tasks. Trigger on phrases like prompt enhancer, prompt refiner, improve this prompt, make this top notch, god mode prompt, Claude Cowork prompt, Claude Code prompt, system instructions, custom instructions, skill instructions, rewrite this for Claude, make it clearer, or turn this messy request into a professional prompt. |
+| **`prototype`** | Build a throwaway prototype to answer a design question. Use when the user wants to sanity-check whether a state model or logic feels right, or explore what a UI should look like. |
+| **`pull-submissions`** | Pull booking-time student submissions (files + comments) from the LSAT U backend into students/<name>/submissions/. Use when Joshua says "pull submissions", "get the booking uploads", "sync student submissions", or as part of /pickup. On-demand only — no cron, no watcher. |
+| **`qa`** | Interactive QA session where user reports bugs or issues conversationally, and the agent files GitHub issues. Explores the codebase in the background for context and domain language. Use when user wants to report bugs, do QA, file issues conversationally, or mentions "QA session". |
+| **`receiving-code-review`** | Use when receiving code review feedback, before implementing suggestions, especially if feedback seems unclear or technically questionable - requires technical rigor and verification, not performative agreement or blind implementation |
+| **`redesign-existing-projects`** | Upgrades existing websites and apps to premium quality. Audits current design, identifies generic AI patterns, and applies high-end design standards without breaking functionality. Works with any CSS framework or vanilla CSS. |
+| **`request-refactor-plan`** | Create a detailed refactor plan with tiny commits via user interview, then file it as a GitHub issue. Use when user wants to plan a refactor, create a refactoring RFC, or break a refactor into safe incremental steps. |
+| **`requesting-code-review`** | Use when completing tasks, implementing major features, or before merging to verify work meets requirements |
+| **`research`** | Investigate a question against high-trust primary sources and capture the findings as a Markdown file in the repo. Use when the user wants a topic researched, docs or API facts gathered, or reading legwork delegated to a background agent. |
+| **`research-add-items`** | Add items (research objects) to existing research outline. |
+| **`research-deep`** | Read research outline, launch independent agent for each item for deep research. Disable task output. |
+| **`research-report`** | Summarize deep research results into markdown report, cover all fields, skip uncertain values. |
+| **`resolving-merge-conflicts`** | "Use when you need to resolve an in-progress git merge/rebase conflict." |
+| **`resume`** | Continue from the most recent chat export or handoff doc without Joshua having to hand-type a path. Finds the newest file in C:/Users/Joshu/dev/ai-os/handoffs/ and, if in the LSATU repo, the newest file in docs/agent/handoffs/ and docs/implementation-plans/, reads it, and picks up from the last open thread. Trigger with /resume. |
+| **`retro`** | "Conduct a retrospective on a coding session." |
+| **`review`** | Review the changes since a fixed point (commit, branch, tag, or merge-base) along two axes — Standards (does the code follow this repo's documented coding standards?) and Spec (does the code match what the originating issue/PRD asked for?). Runs both reviews in parallel sub-agents and reports them side by side. Use when the user wants to review a branch, a PR, work-in-progress changes, or asks to "review since X". |
+| **`scaffold-exercises`** | Create exercise directory structures with sections, problems, solutions, and explainers that pass linting. Use when user wants to scaffold exercises, create exercise stubs, or set up a new course section. |
+| **`second-brain`** | > Set up a new Obsidian knowledge base with the LLM Wiki pattern. Use when the user wants to create a second brain, initialize a vault, set up a personal knowledge base, or says "onboard". Guides through an interactive wizard to configure vault name, location, domain, agent support, and tooling. |
+| **`second-brain-ingest`** | > Process raw source documents into wiki pages. Use when the user adds files to raw/ and wants them ingested, says "process this source", "ingest this article", "I added something to raw/", or wants to incorporate new material into their knowledge base. |
+| **`second-brain-lint`** | > Health-check the wiki for contradictions, orphan pages, stale claims, and missing cross-references. Use when the user says "audit", "health check", "lint", "find problems", or wants to improve wiki quality. |
+| **`second-brain-query`** | > Answer questions against the knowledge base wiki. Use when the user asks a question about their collected knowledge, wants to explore connections between topics, says "what do I know about X", or wants to search their wiki. |
+| **`send-booking-link`** | > Draft the booking-link email to a student and log the follow-up loop. Use when Joshua says "send <student> their booking link", "send booking links to X, Y, Z", "get <student> scheduled", or asks who still needs one. Wraps the lookup / draft / send / log pipeline that has been hand-orchestrated one student at a time. Drafts by default; sends only on an explicit go-ahead. |
+| **`session-handoff`** | Use when Joshua says "session handoff", "hand off", "handoff summary", "summarize before I clear", or is about to /clear mid-work (especially near the ~250k dumb-zone). Produces a chat-only handoff — decisions, shipped changes, key files, running state, verification, deferrals, open questions — so a fresh agent (Claude or Codex) continues seamlessly. Distinct from `wrapup`, which updates the wiki ledgers; this writes nothing. |
+| **`session-recap`** | Turn a tutoring-session transcript into a polished, concept-first set of lecture notes in Joshua's teaching voice, then file it in the student's folder. Use for "post-session note", "recap note", "write the recap", "take a recap for a student", weekly recap intake, or after a transcript is ingested. Drafts by default; post or assign only when Joshua explicitly asks. |
+| **`setup-matt-pocock-skills`** | "Configure this repo for the engineering skills: set up its issue tracker, triage label vocabulary, and domain doc layout. Run once before first use of the other engineering skills." |
+| **`setup-pre-commit`** | Set up Husky pre-commit hooks with lint-staged (Prettier), type checking, and tests in the current repo. Use when user wants to add pre-commit hooks, set up Husky, configure lint-staged, or add commit-time formatting/typechecking/testing. |
+| **`setup-ts-deep-modules`** | Wire dependency-cruiser into a TypeScript repo so each package is a deep module, with implementation hidden in subfolders and reachable only through its entry-point files. User-invoked. |
+| **`shadcn`** | Manages shadcn components and projects — adding, searching, fixing, debugging, styling, and composing UI. Provides project context, component docs, and usage examples. Applies when working with shadcn/ui, component registries, presets, --preset codes, or any project with a components.json file. Also triggers for "shadcn init", "create an app with --preset", or "switch to --preset". |
+| **`site-teardown`** | "Reverse engineer any website into a complete build blueprint. Analyzes the HTML structure, fetches and extracts all animation/interaction code from the site's JavaScript, and pulls the complete design system from the CSS. Outputs a structured teardown document with tech stack, every visual effect and how it's implemented, design tokens, assets needed, and a section-by-section build plan. Use this skill whenever the user wants to analyze how a website was built, reverse engineer a site, clone or recreate a website, understand what tech stack or animations a site uses, do a site teardown, deconstruct a page, figure out how an effect works on a website, or says things like 'steal this website', 'break down this site', 'how did they build this', 'website blueprint', 'analyze this site for me', or gives you a URL and asks you to figure out how it works. Also trigger when the user pastes raw HTML source code and asks what's going on or how to recreate it." |
+| **`skill-creator`** | Create new skills, modify and improve existing skills, and measure skill performance. Use when users want to create a skill from scratch, edit, or optimize an existing skill, run evals to test a skill, benchmark skill performance with variance analysis, or optimize a skill's description for better triggering accuracy. |
+| **`skill-development`** | This skill should be used when the user wants to "create a skill", "add a skill to plugin", "write a new skill", "improve skill description", "organize skill content", or needs guidance on skill structure, progressive disclosure, or skill development best practices for Claude Code plugins. |
+| **`skill-doctor`** | Use when the user wants their agent setup graded from real conversation history, asks which installed skills are actually working, or wants evidence-backed skill edits — scores recent local Claude Code / Codex sessions against efficiency and code-quality rubrics, then drafts skill changes gated by a deterministic aggregator and renders one local shareable report. |
+| **`skill-lint`** | Use when a repo skill fails, produces errors, gives wrong instructions, or references stale information. Also use when a command from a skill returns "not found" or "unknown flag", when a skill references a file path that doesn't exist, when a skill's behavior doesn't match the codebase, or to list available skills, manage local overrides, check staleness, or optimize token usage and quality. |
+| **`slack-gif-creator`** | Knowledge and utilities for creating animated GIFs optimized for Slack. Provides constraints, validation tools, and animation concepts. Use when users request animated GIFs for Slack like "make me a GIF of X doing Y for Slack." |
+| **`subagent-driven-development`** | Use when executing implementation plans with independent tasks in the current session |
+| **`superwhisper`** | Use whenever Joshua wants anything changed in Superwhisper, his dictation app on the Windows laptop. Triggers on "save X in my vocabulary", "add X to my dictionary", "X --> Y", "X should always be Y", "replace X with Y", a bare mis-heard word with an arrow, "make a mode for ...", "scan my transcripts", "what keeps getting messed up", "what should I add to Superwhisper", "restart Superwhisper", and any mention of Superwhisper, Super Whisper, or "the dictation" in the same breath as a word, a spelling, or a mode. Also use it when a dictated message from Joshua arrives with an obvious mis-hearing of a known term, even if he does not ask: note it and offer the fix. Covers the whole loop: edit the vault files, think through the likely mis-hearing variants, sync into the app, restart it silently, verify the load, and scan the transcript history for the next improvements. |
+| **`systematic-debugging`** | Use when encountering any bug, test failure, or unexpected behavior, before proposing fixes |
+| **`tdd`** | Test-driven development. Use when the user wants to build features or fix bugs test-first, mentions "red-green-refactor", or wants integration tests. |
+| **`teach`** | Teach the user a new skill or concept, within this workspace. |
+| **`test-driven-development`** | Use when implementing any feature or bugfix, before writing implementation code |
+| **`theme-factory`** | Toolkit for styling artifacts with a theme. These artifacts can be slides, docs, reportings, HTML landing pages, etc. There are 10 pre-set themes with colors/fonts that you can apply to any artifact that has been creating, or can generate a new theme on-the-fly. |
+| **`to-issues`** | Break a plan, spec, or PRD into independently-grabbable issues on the project issue tracker using tracer-bullet vertical slices. |
+| **`to-questionnaire`** | Turn a decision you can't fully answer into a questionnaire for someone else to fill in. |
+| **`to-spec`** | "Turn the current conversation into a spec and publish it to the project issue tracker: no interview, just synthesis of what you've already discussed." |
+| **`to-tickets`** | Break a plan, spec, or the current conversation into a set of tracer-bullet tickets, each declaring its blocking edges, published to the configured tracker (edges as text in one file per ticket locally, or native blocking links on a real tracker). |
+| **`triage`** | Move issues and external PRs through a state machine of triage roles, categorise, verify, grill if needed, and write agent-ready briefs. |
+| **`troubleshooting`** | Uses Chrome DevTools MCP and documentation to troubleshoot connection and target issues. Trigger this skill when list_pages, new_page, or navigate_page fail, or when the server initialization fails. |
+| **`tutorocean-profile-fill`** | Fill and verify Joshua's TutorOcean tutor profile using vault facts, then stop before uploads, policy agreement, or final submission unless the user explicitly authorizes those actions. |
+| **`ubiquitous-language`** | Extract a DDD-style ubiquitous language glossary from the current conversation, flagging ambiguities and proposing canonical terms. Saves to UBIQUITOUS_LANGUAGE.md. Use when user wants to define domain terms, build a glossary, harden terminology, create a ubiquitous language, or mentions "domain model" or "DDD". |
+| **`using-superpowers`** | Use when starting any conversation - establishes how to find and use skills, requiring skill invocation before ANY response including clarifying questions |
+| **`verification-before-completion`** | Use when about to claim work is complete, fixed, or passing, before committing or creating PRs - requires running verification commands and confirming output before making any success claims; evidence before assertions always |
+| **`wait-what`** | "Stop. That last message did not land: re-pitch it." |
+| **`watch`** | Watch a video (URL or local path). Downloads with yt-dlp, extracts auto-scaled frames with ffmpeg, pulls the transcript from captions (or Whisper API fallback), and hands the result to Claude so it can answer questions about what's in the video. |
+| **`wayfinder`** | Plan a huge chunk of work (more than one agent session can hold) as a shared map of decision tickets on your issue tracker, and resolve them one at a time until the way to the destination is clear. |
+| **`web-artifacts-builder`** | Suite of tools for creating elaborate, multi-component claude.ai HTML artifacts using modern frontend web technologies (React, Tailwind CSS, shadcn/ui). Use for complex artifacts requiring state management, routing, or shadcn/ui components - not for simple single-file HTML/JSX artifacts. |
+| **`webapp-testing`** | Toolkit for interacting with and testing local web applications using Playwright. Supports verifying frontend functionality, debugging UI behavior, capturing browser screenshots, and viewing browser logs. |
+| **`wizard`** | Generate an interactive bash wizard that walks a human through steps only they can perform. Use when provisioning infrastructure, setting up credentials or CI secrets, walking an unfamiliar third-party dashboard, or running a one-off migration or cutover. Don't invoke this for steps the agent can perform itself. |
+| **`wrapup`** | Close an LSAT U session by updating the Obsidian vault so the next chat picks up cleanly. Marks finished tasks done (struck through) in the task ledger, refreshes the handoff cache, and appends to the log. Trigger with /wrapup. |
+| **`writing-beats`** | Writing, exploit; assemble raw material into a journey of beats, grounding each term before a beat leans on it. |
+| **`writing-for-agents`** | Writing documents for agents. Use when creating or editing skills, or modifying AGENTS.md or CLAUDE.md. |
+| **`writing-fragments`** | "Writing, explore: mine raw fragments, no structure yet." |
+| **`writing-great-skills`** | Reference for writing and editing skills well — the vocabulary and principles that make a skill predictable. |
+| **`writing-plans`** | Use when you have a spec or requirements for a multi-step task, before touching code |
+| **`writing-shape`** | "Writing, exploit: shape raw material into an article, paragraph by paragraph." |
+| **`writing-skills`** | Use when creating new skills, editing existing skills, or verifying skills work before deployment |
+| **`xlsx`** | "Use this skill any time a spreadsheet file is the primary input or output. This means any task where the user wants to: open, read, edit, or fix an existing .xlsx, .xlsm, .xltx, .csv, or .tsv file (e.g., adding columns, computing formulas, formatting, charting, cleaning messy data); create a new spreadsheet from scratch or from other data sources; or convert between tabular file formats. Trigger especially when the user references a spreadsheet file by name or path — even casually (like \"the xlsx in my downloads\") — and wants something done to it or produced from it. Also trigger for cleaning or restructuring messy tabular data files (malformed rows, misplaced headers, junk data) into proper spreadsheets. The deliverable must be a spreadsheet file. Do NOT trigger when the primary deliverable is a Word document, HTML report, standalone Python script, database pipeline, or Google Sheets API integration, even if tabular data is involved." |
+| **`youtube-full`** | "Use when YouTube is or could be relevant — even if not mentioned: pasted video/channel/playlist links, video IDs, @handles, creator lookups, video summaries, quotes, translations, topic research, tutorials, talks, lectures, expert discussions, product reviews, how-to guides, new product announcements, first looks, or anything where video content is fresher or richer than text search. Covers transcripts, video/channel search, channel browsing, playlists, and within-channel search. Not for uploads, account management, or written-source-only research." |
+
+---
+
+## 3. Machine Runtime Layer Breakdown (`C:\Users\Joshu\.gemini\`)
+
+```
+C:\Users\Joshu\.gemini\
+├── config/                                    <-- Global machine configuration
+│   ├── config.json                            <-- Execution settings, permissions, turbo policies
+│   ├── mcp_config.json                        <-- Registered MCP tool servers
+│   ├── skills.json                            <-- Global skill registry bridge
+│   ├── projects/                              <-- Registered workspace definitions
+│   │   ├── 1e181e2e...json                    <-- ai-os project mapping (Active)
+│   │   └── 2a2e3dc0...json.bak                <-- c: duplicate mapping (Archived)
+│   ├── plugins/                               <-- 5 global plugin packages
+│   └── skills/                                <-- 33 global machine skills
+└── antigravity/                               <-- Desktop application runtime data
+    ├── builtin/skills/                        <-- Installer-bundled skills
+    ├── brain/                                 <-- 52 session folders (transcripts & logs)
+    ├── conversation_summaries.db              <-- SQLite database tracking all sessions
+    ├── mcp/                                   <-- Lazy tool schemas for MCP tools
+    └── scratch/                               <-- Temporary web scraping scratchpad
+```
+
+---
+
+### 3.1 Global Configuration Files (`C:\Users\Joshu\.gemini\config\`)
+
+#### 1. `config.json` (Core Execution Settings)
+Controls the low-level automation engine:
+- `artifactReviewMode: "ARTIFACT_REVIEW_MODE_TURBO"`: Enables rapid markdown artifact streaming.
+- `autoExecutionPolicy: "CASCADE_COMMANDS_AUTO_EXECUTION_EAGER"`: Chains and executes safe terminal commands proactively.
+- `browserJsExecutionPolicy: "BROWSER_JS_EXECUTION_POLICY_TURBO"`: Accelerates DOM script evaluation.
+- `enableTerminalSandbox: false`: Grants native Windows PowerShell and Node.js command execution.
+- `globalPermissionGrants`: Explicit whitelist of trusted shell commands, directories, and URL domains (e.g., `lsatprep.study`, `superwhisper.com`, `firecrawl.dev`).
+
+#### 2. `mcp_config.json` (Model Context Protocol Servers)
+Registers external tool servers exposed to the agent:
+```json
+{
+  "mcpServers": {
+    "chrome-devtools": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "chrome-devtools-mcp@latest",
+        "--browserUrl",
+        "http://127.0.0.1:9223"
+      ]
+    },
+    "notebooks": { "command": "node", "args": [...] },
+    "visualization": { "command": "node", "args": [...] },
+    "data-agent-kit": { "command": "node", "args": [...] }
+  }
+}
+```
+
+#### 3. `skills.json` (The Global Bridge)
+Bridges the repository skills to every Antigravity session on the machine:
+```json
+{
+  "entries": [
+    { "path": "C:/Users/Joshu/dev/ai-os/.gemini/skills" },
+    { "path": "C:/Users/Joshu/dev/ai-os/.agents/skills" }
+  ]
+}
+```
+
+#### 4. `projects/` (Project Workspace Registry)
+- **Active (`1e181e2e-860b-48c6-9209-540e3e7a1965.json`)**: Binds project name `ai-os` to `file:///c%3A/Users/Joshu/dev/ai-os` with full file access.
+- **Archived (`2a2e3dc0-5f6e-44f5-9cb4-5ad0c5a2a95b.json.bak`)**: Previously registered `C:\` drive as a parallel project, causing conversation splitting. Now safely archived.
+
+---
+
+### 3.2 Global Plugins (`C:\Users\Joshu\.gemini\config\plugins\`)
+Five global plugin bundles are active, providing domain-specific skills:
+1. **`chrome-devtools-plugin`** (v0.21.0): Exposes 29 browser automation tools, memory leak debugging (`memlab`), accessibility auditing (`a11y-debugging`), and LCP performance optimization.
+2. **`data-agent-kit-plugin`**: Provides BigQuery SQL, BigFrames, Cloud Storage, Dataform, dbt, Airflow, and Cloud Composer orchestration skills.
+3. **`gemini-api`**: Direct access to upstream Google Gemini API, Interactions API, and Live API tools.
+4. **`google-antigravity-sdk`**: Agent building and multi-agent orchestration tools for Antigravity.
+5. **`modern-web-guidance-plugin`**: Modern web development standards and Chrome extension architecture guides.
+
+---
+
+### 3.3 Antigravity Runtime Engine (`C:\Users\Joshu\.gemini\antigravity\`)
+
+#### 1. Conversation Database: `conversation_summaries.db`
+A SQLite database that manages the left sidebar conversation index. Contains table `conversation_summaries`:
+- Columns: `conversation_id`, `title`, `preview`, `step_count`, `last_modified_time`, `workspace_uris`, `status`, `project_id`.
+- **Status:** All 51 lifetime conversations have been unified under `project_id = '1e181e2e-860b-48c6-9209-540e3e7a1965'` (`ai-os`). Zero conversations remain unattached.
+
+#### 2. Session Brain Stores: `brain/<conversation-id>/` (52 Folders)
+Every conversation session has a dedicated folder containing:
+- `.system_generated/logs/transcript.jsonl`: Complete, verbatim execution logs of every user prompt, model response, and tool call.
+- `.system_generated/tasks/`: Execution logs for background commands and daemons.
+- Artifacts (`*.md`): Implementation plans, walkthroughs, and research deliverables.
+
+#### 3. Builtin Skills: `builtin/skills/`
+Installer-bundled core skills:
+- `agy-customizations`: Reference manual for rules, skills, plugins, and MCP servers.
+- `generative_ui`: Dynamic inline interactive HTML widget generation.
+- `migrate-workflows`: Workflow-to-skill converter.
+
+---
+
+## 4. Master Instruction Routers (`GEMINI.md`)
+
+1. **Workspace Router (`C:\Users\Joshu\dev\ai-os\GEMINI.md`)**:  
+   Active whenever Antigravity runs inside `ai-os`. Sets Jay 2 persona, routing map, retrieval order, voice rules (no em-dashes, no AI-slop words), and tool guardrails.
+
+2. **Global Machine Router (`C:\Users\Joshu\GEMINI.md`)**:  
+   Placed at the user root. When any Antigravity window opens unattached or in scratch mode, it walks up the directory tree, reads this file, and immediately routes the agent to `C:\Users\Joshu\dev\ai-os`.
+
+---
+
+## 5. Dedicated LSAT U Browser Verification Suite
+
+- **Dedicated Profile:** `C:\Users\Joshu\AppData\Local\LSATU-Agent-Chrome`
+- **Debugging Port:** `9223` (`http://127.0.0.1:9223` with `--remote-allow-origins=*`)
+- **Desktop Shortcuts:** Desktop and Start Menu (`LSAT U Agent Browser.lnk`)
+- **Machine Automation Scripts:** `C:\Users\Joshu\Tools\LSATU-Agent\` and mirrored in `.gemini\skills\lsat-u-browser-verification\scripts\`
+- **Origins Supported:** Production (`https://lsatprep.study`) and Localhost (`http://localhost:8080`) with automatic token mirroring.
+- **Standard 5-Viewport Presets:** 1440x900, 1366x768, 1280x800, 1024x768, 390x844.
+
+---
+### End of Authoritative Blueprint

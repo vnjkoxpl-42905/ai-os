@@ -26,4 +26,5 @@ This directory is the dedicated operating workspace for Gemini and Google Antigr
 
 * **Skills Repository:** Canonical Gemini skills are kept in `skills/gemini/`. Active skills are copied into `.gemini/skills/`.
 * **Central Operating Instructions:** Governed by `GEMINI.md` at the repository root.
+* **Push to Main Protocol:** Standard procedure for pushing directly to production lives in `PUSH_TO_MAIN_PROTOCOL.md`.
 * **Firecrawl Web Intelligence:** Operational standards and schemas live in `references/firecrawl.md` and `references/firecrawl/`.
