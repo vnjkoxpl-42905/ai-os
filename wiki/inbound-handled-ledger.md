@@ -27,7 +27,7 @@ It answers: **"has this message been handled yet?"** and provides the high-water
 
 | Platform | Cursor Timestamp | Latest Message / Thread ID | Last Checked |
 |---|---|---|---|
-| lsatu | 2026-09-19T20:54:33Z | msg-zeina-20260919 | 2026-09-21 03:30 |
+| lsatu | 2026-09-22T06:05:00Z | msg-zeina-reply-20260922 | 2026-09-22 06:06 |
 | reddit | 2026-09-21T03:00:00Z | ConstantPlenty7292 | 2026-09-21 03:00 |
 | 7sage | 1970-01-01T00:00:00Z | initial | 2026-09-21 00:00 |
 | facebook | 1970-01-01T00:00:00Z | initial | 2026-09-21 00:00 |
@@ -42,6 +42,7 @@ It answers: **"has this message been handled yet?"** and provides the high-water
 
 | Handled At | Platform | Sender | Inbound At | Message ID / Ref | Action Taken / Note |
 |---|---|---|---|---|---|
-| 2026-09-21 03:30 | lsatu | Zeina | 2026-09-19 16:54 | msg-zeina-20260919 | Marked handled per Joshua instruction (previous batch considered read) |
 | 2026-09-21 03:30 | lsatu | Celia | 2026-09-19 15:16 | msg-celia-20260919b | Marked handled per Joshua instruction |
 | 2026-09-21 03:30 | lsatu | Celia | 2026-09-19 14:49 | msg-celia-20260919a | Marked handled per Joshua instruction |
+
+| 2026-09-22 06:06 | lsatu | Zeina | 2026-09-19 16:54 | platform:b46310f3-d45e-4ec8-99f2-e3f428d893fc | Replied explaining difference between concessions and rebuttals with examples |
