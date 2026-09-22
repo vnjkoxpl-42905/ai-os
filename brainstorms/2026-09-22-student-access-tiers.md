@@ -59,7 +59,7 @@ All confirmed by Joshua unless marked otherwise.
 | Tier | Meaning | Applied how |
 |---|---|---|
 | **Tier 1** | Every feature on | Manually by Joshua only. Indefinite, never expires. |
-| **Tier 2** | Joshua picks each feature individually | Manually. Instant effect. No memory of previous toggles. |
+| **Tier 2** | Joshua picks each feature individually | Manually. Instant effect. The toggles he sets persist as the student's state. What is *not* kept is a snapshot: leaving Tier 2 and returning does not restore an earlier set. |
 | **Tier 3** | Only what Joshua assigns, plus the floor | Manually, or by pressing X in the signup queue. |
 | **(no tier)** | Undecided. Same access as Tier 3, but sits in the queue | The state every new signup starts in. |
 
@@ -92,6 +92,35 @@ All confirmed by Joshua unless marked otherwise.
 ### Archive
 
 - Archiving remembers the tier and keeps access off. Unarchiving shows the previous tier; Joshua still chooses what to reopen.
+
+## Round 7 answers
+
+- **Q26 - Per-practice-test assignment:** **Recommendation rejected. Build it.** "there's only specific practice tests I do assign... I want them to be specific to whatever I assign specifically only that specific thing they can get. We don't have to assign them for the whole feature forever; just specifically that one individual practice test section or drill or whatever it is."
+- **The governing principle this establishes:** for Tier 3, access is granted **per item, never per feature**. Assigning one practice test must not hand over the Testing Centre. Assigning one drill must not hand over the question bank. This applies to every assignable kind, with no exceptions.
+- **Q27 - Which runners accept an assignment:** **Answered by implication** - "that one individual practice test section or drill or whatever it is" covers every kind. All runners learn to accept an assignment: Drill (timed sections, homework, guided drills), Activities, TA worksheets, and now the Testing Centre.
+- **Scope consequence:** full practice tests need a new per-student assignment path. `practice_test_runs` is currently self-started (`user_id` defaults to `auth.uid()`) with no assignment table, so this is genuinely new work rather than a rewire.
+
+## Round 8 answers (final)
+
+- **Q28 - What counts as one practice test:** **A practice test means the full sitting.** "If I say 'practice test,' it should be a practice test. If I want to assign a section, then build a side section." So there are two distinct assignable kinds, not one: a **Practice test** (the full Testing Centre sitting) and a **Section** (one timed 35-minute section). Do not collapse them. Sequencing between the two was not specified and is an implementation decision for the plan.
+- **Q29 - Do students see their tier:** **No.** Tier is operator language only.
+- **Q30 - History of tier changes:** **Not wanted.** Recommendation rejected; no audit trail.
+- **Q31 - Do tiers touch anything else:** **No.** Tiers control feature access only. Nothing to do with booking rates, session length or pricing.
+
+## Open flags
+
+None. Every branch answered.
+
+## Status
+
+**Complete.** Interview finished 2026-09-22. Frontier empty. Awaiting Joshua's confirmation that the write-up reads right before any code is written.
+
+### Resume point
+
+Next step is a written implementation plan built from the Summary above, for Joshua's approval. Three items from earlier in the same session remain outstanding and interact with this work:
+1. The PR #130 migration is not applied to the live database.
+2. The frontend is not published to lsatprep.study.
+3. The 14 revoked students are still classroom-only. Their fix is now folded into this plan's migration (they become Tier 3 and regain Messages and Schedule), so it should not be done separately.
 
 ## Round 6 answers
 
@@ -195,7 +224,9 @@ All confirmed by Joshua unless marked otherwise.
 
 #### Q18 - Does Tier 2 remember previous toggles
 - Recommended: No memory.
-- Captured: **Confirmed.** "it doesn't have to remember."
+- Captured: "it doesn't have to remember."
+- **Corrected 2026-09-22, same session.** "No memory" was the interviewer's wording and was too broad. Joshua's correction: "it should save what I assign or which feature that I toggle on but that's about it."
+- **Precise decision:** the toggles Joshua sets on a Tier 2 student **are saved** - they are the student's switch state and persist normally. What is not kept is a **snapshot of a previous Tier 2 configuration**: moving Tier 2 -> Tier 1 -> Tier 2 does not restore the earlier set, because Tier 1 turned everything on and that is now the truth. No history, no stored configurations.
 
 #### Q19-Q22 - Signup queue location, the X action, queue contents, plain-English labels
 - Captured: **Not answered.** Re-asked in Round 5 -> Joshua.
