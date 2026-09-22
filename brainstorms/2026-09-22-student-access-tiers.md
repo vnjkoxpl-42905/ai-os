@@ -46,7 +46,58 @@ Context sources: live `profiles` access flags (13 booleans), `admin-manage-users
 
 ## Summary / key decisions
 
-(running synthesis, updated as answers land)
+All confirmed by Joshua unless marked otherwise.
+
+### The model
+
+- A **tier is a template**. Selecting it applies a set of switch positions. The switches stay the thing the app checks, so nothing downstream changes.
+- **One tier per student.** No stacking.
+- **12 switches**, not 13: the two Wrong answer switches merge into one.
+
+### The tiers
+
+| Tier | Meaning | Applied how |
+|---|---|---|
+| **Tier 1** | Every feature on | Manually by Joshua only. Indefinite, never expires. |
+| **Tier 2** | Joshua picks each feature individually | Manually. Instant effect. No memory of previous toggles. |
+| **Tier 3** | Only what Joshua assigns, plus the floor | Manually, or by pressing X in the signup queue. |
+| **(no tier)** | Undecided. Same access as Tier 3, but sits in the queue | The state every new signup starts in. |
+
+- **The floor** (Tier 3 and no-tier alike): Classroom home, Messages, Schedule. Nothing else.
+- **Tier 1 is all-on by definition.** Turning any switch off relabels the student Tier 2. The relabel changes the label only, never access.
+- **Assigned work authorises its own runner**, following the existing BootcampGate pattern. An assigned item opens regardless of switch state. This is what makes Tier 3 mean what it says.
+
+### The governing rule
+
+**"The access should never change by itself."** Stated twice by Joshua. Consequences:
+
+- Payment no longer grants access. The existing `grantStudentAccess` automation is removed and replaced by a notification.
+- No expiry, no automatic downgrade, no automatic upgrade.
+
+### The signup queue
+
+- Lives on **both** the admin homepage (Today) and the **Students** tab.
+- Contains brand-new signups **and** everyone with no tier.
+- **Checkmark** assigns a tier (1, 2 or 3) inline.
+- **X** puts them on Tier 3 with nothing assigned, which is functionally no access. This empties the queue properly and leaves them on the student list.
+
+### Migration day
+
+- Everyone keeps their current access, with one deliberate exception.
+- 19 with everything on -> **Tier 1**.
+- 6 partial -> **Tier 2** with current toggles kept.
+- 14 classroom-only -> **Tier 3**, and they **regain Messages and Schedule**. This is the one intentional widening: the floor exists so a locked-out student can ask why.
+- Rewiring the mislabelled switches must not change anyone's effective access.
+
+### Archive
+
+- Archiving remembers the tier and keeps access off. Unarchiving shows the previous tier; Joshua still chooses what to reopen.
+
+## Round 6 answers
+
+- **Q23 - What X does:** X puts them on Tier 3. Confirmed.
+- **Q24 - The 14 revoked students:** Tier 3, regaining Messages and Schedule. Confirmed.
+- **Q25 - Archive and tiers:** Remember the tier, keep access off. Confirmed.
 
 ## Q&A log
 
