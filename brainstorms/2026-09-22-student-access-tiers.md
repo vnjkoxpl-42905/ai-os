@@ -109,6 +109,69 @@ Context sources: live `profiles` access flags (13 booleans), `admin-manage-users
 - Recommended: Map each person to the tier matching their current switches so nobody's access changes on the day.
 - Captured: **Confirmed.** "for everybody right now, their access should stay the same."
 
+### Round 3
+
+#### Q12 - How an assigned item runs when its switch is off
+- Recommended: (a) the BootcampGate pattern - an assigned item authorises its own runner.
+- Captured: **Confirmed.** "it should basically authorize its own runner." Assigned work opens regardless of switch state. This is the core mechanism of Tier 3.
+
+#### Q13 - The automatic payment grant
+- Recommended: Replace the automatic grant with a notification.
+- Captured: **Confirmed, and extended into a new requirement.** "No need for the tiers to be triggered by the actual payment." Plus the governing principle, stated twice: **"the access should never change by itself."**
+- New requirement - a signup queue on the admin dashboard: when somebody signs up they appear on Joshua's admin homepage with an inline control (checkmark / X / slash-delete). The checkmark assigns a tier (1, 2 or 3) straight from the dashboard. The queue stays on the dashboard page.
+- Also: "Every time I change the toggle, it should automatically reflect that." Already satisfied - `profiles` is in the realtime publication, so a switch change reaches an open tab immediately.
+- Existing machinery to build on: `notify_admins_on_signup` trigger fires on `profiles` INSERT; `notifications` rows carry `type='signup'`; `ClassroomLayout` already counts unread signups.
+
+#### Q14 - Tier label drift when one switch is changed
+- Recommended: The student silently becomes Tier 2, because the template no longer describes them.
+- Captured: **Not answered.** Re-ask -> Joshua.
+- Note: his principle "access should never change by itself" concerns access, not the label. The recommendation changes only the label, never access, so the two do not conflict.
+
+#### Q15 - Does Tier 2 remember previous toggles
+- Recommended: No memory.
+- Captured: **Not answered (second time).** Re-ask -> Joshua.
+
+#### Q16 - The mislabelled switches
+- Recommended: Rewire to match the labels, keeping everyone's effective access identical on the day.
+- Captured: **Confirmed.** "Please rewire them to match their labels, using simple and concise language so I can easily understand what they refer to." Labels must be plain English.
+
+### Round 4
+
+#### Q17 - Tier label drift when one switch is changed (third ask)
+- Recommended: They become Tier 2, because the template no longer describes them.
+- Captured: Joshua answered **"Tier 1 should automatically enable all of the features."** That defines Tier 1 as all-switches-on rather than addressing the drift case directly.
+- **Inferred, flagged for correction:** if Tier 1 means every feature on, then a student with one feature off is by definition not Tier 1, so the label becomes Tier 2. Recorded as the working decision. Joshua to correct if he meant something else.
+
+#### Q18 - Does Tier 2 remember previous toggles
+- Recommended: No memory.
+- Captured: **Confirmed.** "it doesn't have to remember."
+
+#### Q19-Q22 - Signup queue location, the X action, queue contents, plain-English labels
+- Captured: **Not answered.** Re-asked in Round 5 -> Joshua.
+
+### Round 5
+
+#### Q17 - Tier label drift (confirmed directly, superseding the Round 4 inference)
+- Captured: **Confirmed.** "I can't be able to turn off the drill if I have Tier One; they should become Tier Two." The Round 4 inference was correct. Tier 1 is all-on by definition; any deviation relabels the student as Tier 2. Access is unchanged by the relabel.
+
+#### Q19 - Where the signup queue lives
+- Recommended: Today only.
+- Captured: **Answered, broader than recommended.** "It should just be on my homepage for Q19. And actually, I should see my student's tab as well." The queue appears on **both** the admin homepage (Today) and the **Students** tab.
+
+#### Q20 - What the X does
+- Recommended: Archive them.
+- Captured: **Rejected archive.** "[X] should just not give them any access, leaving them in a queue or essentially like they'll be student lists but just not given any access." So X means: no access, and they stay on the student list. Not archived, not deleted.
+- Flags: **Conflicts with the Q21 answer.** If X leaves them with no tier, and the queue is keyed on "no tier", they never leave the queue and X records nothing durable. Resolution needed -> Round 6 (Q23).
+
+#### Q21 - What the queue contains
+- Captured: **Both.** "Brand new signups for question 21 and also everyone who has no tier."
+
+#### Q22 - The plain-English labels
+- Captured: **Confirmed as written.** 12 labels after the two Wrong answer switches merge:
+  - Practice: Drill · Practice tests · Activities · Bootcamps
+  - Review: Wrong answers · Flagged questions · Progress and history · Export
+  - Classroom: Classroom · Messages · Schedule and booking · TA worksheets
+
 ### Reference: the 13 switches (supplied to Joshua, not a question)
 
 | Group | Label | Column |
