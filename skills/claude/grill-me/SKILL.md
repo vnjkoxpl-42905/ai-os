@@ -5,7 +5,7 @@ description: A relentless interview to sharpen a plan, design, or topic, checkpo
 
 # Grill Me
 
-Two layers. The **interview method** comes from the `grilling` skill and is not restated here. The **capture discipline** below is what this wrapper adds: every answer lands in a durable markdown file, so nothing is lost as context fills up.
+One skill, self-contained. It holds both the **interview method** (Step 2) and the **capture discipline** (Steps 1 and 3): every answer lands in a durable markdown file, so nothing is lost as context fills up. It does not call the vendor `grilling` skill; that skill is `disable-model-invocation` and cannot be invoked from here. Its method is written inline below instead.
 
 If the topic is a feature, component, or other implementation work rather than an open-ended plan or decision, `brainstorming` runs a similar interview but gates on a written, approved design doc before any code — reach for that instead when the destination is implementation.
 
@@ -21,7 +21,29 @@ If the topic is a feature, component, or other implementation work rather than a
 
 ## Step 2: run the interview
 
-Call the Skill tool with "grilling". Follow it exactly: map the design tree, ask the whole frontier as a numbered round with a recommended answer per question, dispatch sub-agents for facts instead of asking the user, wait for answers, recompute the frontier, repeat until it is empty.
+Interview the user relentlessly until you reach a shared understanding. Map this as a **design tree**: every decision branches into the decisions that hang off it.
+
+Work the tree in **rounds**. The **frontier** is every decision whose prerequisites are already settled: the questions you can ask _now_ without guessing at answers you have not heard yet. Ask the whole frontier in one round: number each question and give your recommended answer. Then wait for the user's answers before the next round.
+
+Format a round like so:
+
+```
+**Q1 - <question title>**: <question body, may be multiple paragraphs, including choices>
+
+Recommended: <your recommended answer>
+
+---
+
+**Q2 - <question title>**: ...
+
+Recommended: ...
+```
+
+Each round the user answers reshapes the tree: settled decisions push the frontier outward and unblock questions that depended on them. Recompute the frontier and ask the next round. A question whose answer depends on another question still open in this round belongs to a _later_ round, not this one.
+
+Finding _facts_ is your job, never the user's. When a frontier question needs a fact from the environment (filesystem, tools, live site), look it up or dispatch a sub-agent; never ask the user for anything you could find yourself. Do not block on it: a running exploration is an unsettled prerequisite, so only the questions downstream of it wait; ask the rest of the frontier now. The _decisions_ are the user's: put each to them and wait.
+
+The session is done when the frontier is empty: every branch visited, nothing silently assumed. Do not act on it until the user confirms you have reached a shared understanding.
 
 Two adjustments the capture layer imposes on the method:
 
@@ -78,7 +100,7 @@ Respect an explicit stop immediately; do not add a new question. Near the end, o
 - Ensure the operating manual or an existing index routes to `brainstorms/` when capture routing is absent, using the project's conventions and preserving shared manual parity. Individual captures do not each need a root-manual entry. Raw captures are dated interview evidence, not automatically current business truth.
 - Give a short recap: clickable capture path, context pages actually updated, remaining flags, next step or resume point.
 
-As `grilling` requires: do not act on the plan until the user confirms you have reached a shared understanding.
+Do not act on the plan until the user confirms you have reached a shared understanding.
 
 ## Boundaries and verification
 
