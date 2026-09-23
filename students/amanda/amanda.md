@@ -1,12 +1,12 @@
 ---
-title: Amanda
+title: Amanda Huynh
 type: person
 record_kind: primary
 tags: [student, amanda]
 status: active
 role: student
 lifecycle: active
-email:
+email: amhuynh@asu.edu
 subject: Amanda
 updated: 2026-09-10
 aliases: [Amanda]

@@ -131,3 +131,6 @@ Append-only record of locked decisions — so nothing gets re-explained or re-li
 ## 2026-09-17: General Conditionals paired answers
 Joshua approved four answer options, each containing a diagram and its proposed contrapositive. Distractors must separately test translation and contraposition, including a wrong translation with a valid contrapositive of that wrong translation. Use refined slash negation and percentage-only in-session progress. Preserve existing attempts and scores. Applies throughout General Conditionals, including compound and multi-rule items.
 
+
+## 2026-09-23: Accommodations email is a pre-approved send template
+The "Request for Accommodations" email (Joshua's 2026-09-19 Celia wording, plus a line saying to register for a test date first and the note that removing the experimental section is written under "Other") is pre-approved. When Joshua asks for the `accommodations-email` skill for a named student, that counts as the go-ahead: it sends right away with the LSAC Qualified Professional Form attached and logs to wiki/send-ledger.md. The wording stays fixed. Only the name and the accommodations list change per student.

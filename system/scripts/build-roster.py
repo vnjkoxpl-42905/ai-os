@@ -45,7 +45,7 @@ except ImportError:  # helper missing; behave as if offline
     class BackendUnavailable(Exception):
         pass
 
-BRAIN = "/Users/joshuaf/ai-os"
+BRAIN = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 STUDENTS = f"{BRAIN}/students"
 OUT = f"{STUDENTS}/roster.generated.md"
 INVENTORY = f"{BRAIN}/system/scripts/transcript-inventory.py"

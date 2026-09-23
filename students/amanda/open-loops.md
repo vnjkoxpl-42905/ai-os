@@ -1,0 +1,1 @@
+- [2026-09-23] Sent accommodations email + QP form. Loop: confirm she registered for a test date and submitted before the accommodation deadline.
