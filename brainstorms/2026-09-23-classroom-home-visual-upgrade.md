@@ -12,6 +12,7 @@ Context sources: live page inspected in the in-app browser (signed in as Joshua,
 - Not yet seen: the student view of Home (only the teacher view was inspected).
 
 ## Summary / key decisions
+- 2026-09-23 round 7: Joshua can pin a view per student. Inbox as Home panel + bell everywhere, all six kinds, his messages pinned. Top actions: continue assigned work, Smart Drill, timed section; Question finder on top. Next seven days strip kept exactly as it is today.
 - 2026-09-23 round 6: the app picks the view automatically by fixed rules (no AI text); one main insight plus two or three small ones. No new one-question security rule; Home just gives quick access to Smart Drill and assigned work.
 - 2026-09-23 round 5: the performance area adapts to each student's work and assignments (types, sections, bootcamps, RC, or other lenses), not a fixed chart.
 - 2026-09-23 round 3: Home centers on section results, no goal score, one-question-at-a-time Smart Drill and assignments, fast access to questions and sections, one centralized inbox for messages and notifications. Sleek and high-end.
@@ -101,6 +102,19 @@ Built on the current tokens (cream #f8f1e7, orange #ff8906, ink #332f2c, Fraunce
 #### Q4 - "One question at a time"
 - Captured: Smart Drill already is one question at a time. "I'm not sure how smart drilling has to do with anything right now." There is no new security rule to design.
 - Correction: Claude misread Round 3 ("for security") as a request for a new lockdown rule. Supersedes Round 3's Smart Drill line and Round 4 Q3/Q4 and Round 5 Q4/Q5; those questions are closed. What remains from Round 3 is quick access to Smart Drill and to assigned work from Home.
+
+### Round 7 answers (Joshua, 2026-09-23)
+#### Q1 - Override
+- Captured: automatic by default, "I want to have the option to pin stuff if I want to." Joshua can pin a view for a student. Resolves the Round 6 override flag.
+#### Q2 - Inbox location
+- Captured: both. A panel on Home and a bell on every Classroom page, one shared list.
+#### Q3 - Inbox contents
+- Captured: recommendation. All six (Joshua's messages, new assignments, graded work, session reminders, booking changes, new notes and recaps), Joshua's messages pinned on top.
+#### Q4 - Top 3 actions
+- Captured: recommendation. Continue assigned work, Smart Drill, start a timed section. Open-a-specific-question stays in the top search bar (Question finder).
+#### Q5 - Next seven days
+- Captured: "The next seven days thing, I want to keep this there. That should not be removed in the design." "I don't want you to change anything." The current week strip stays exactly as it is today. Supersedes the curve version in master design v1.
+- Tentative (Claude): the month calendar from design v1 is dropped, since Joshua kept the current strip instead. Confirm.
 
 ## Open flags (pending input)
 - Confirm every practice mode (Smart Drill, timed sections, guided drills, bootcamps, RC) writes to `attempts` -> Claude
