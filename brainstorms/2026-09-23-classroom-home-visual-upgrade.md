@@ -137,3 +137,19 @@ Canvas version 5: new boards Home.dc.html (v2 Classroom Home) and Launcher.dc.ht
 ### Dual research (Claude + Codex astra, blind, 2026-09-23)
 Joshua asked for independent Firecrawl research by both, top 5 each, cross-grading, then a ranking. Output: research/2026-09-23-classroom-home-dashboard-research/. Agreed 7: diagnosis-to-action; coaching attached to the work; finishable Today sequence; review then fresh check; confidence calibration; truthful visual evidence; fast/stable/accessible release bar. Unresolved for Joshua: first place, and Today as host vs optional route.
 Still open from before: Q1 left menu (keep vs slim), Q2 empty-state rules. Joshua replied "*" (unclear) and then moved to research.
+
+### Round 10 (Joshua, 2026-09-23)
+#### Q1 - What leads the main insight card
+- Recommended (Claude): coach note first.
+- Captured: "Codex has a better idea than you for question one. I'm not gonna write a note for everybody's work; that's ridiculous." Decision: diagnosis-to-action leads the card. Coach notes are occasional, never expected per student; the page must be complete with no note at all.
+- Consequence: feature #2 narrows to Ask with evidence + an optional note only when Joshua pins a view; no workflow that asks Joshua to annotate.
+#### Q2-Q7 - not yet answered
+#### Q2-Q7 - Claude and Codex converged (Joshua asked them to agree between themselves; to be confirmed via the codex-review plan)
+- Q2 Today: optional shortcut; every card works alone, permanently.
+- Q3 Registry: Claude drafts 4-8 finding-level mappings (specific diagnosis rule -> verified resource, with reason); Joshua reviews once; unmapped findings open their evidence instead of a made-up recommendation.
+- Q4 Confidence: audit existing ratings first (when collected, coverage); no new tap everywhere. If coverage is thin, pilot an optional tap in untimed practice only.
+- Q5 Session brief: yes; student-chosen, explicit share, visible beside the booking in the Hub, no obligation to reply.
+- Q6a Menu: keep today's full shared menu.
+- Q6b Empty states: 1-2 types -> labelled simple result; no practice -> invitation; no assignment -> hide; no session -> compact Book a session (not hidden); loading/failed never shown as empty.
+- Q7 Build split: first = v3 layout, honest visuals, quality bar, small registry + diagnosis-to-action, Ask as evidence-attached draft in the existing inbox, sure-but-wrong only if the audit passes. Second = session brief, then review + fresh check, then Today.
+- Joshua then asked for /codex-review to perfect the plan with these positions.

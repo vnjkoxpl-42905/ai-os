@@ -147,3 +147,107 @@ Verdict: not yet at reference level; oversized greeting, competing numbers, crow
 Taken: fixed bubble/text overlap; hero numbers cut to two at 44px, reviews removed from hero; continuous bars with question counts and "pts vs previous 30"; last section as two labelled bars; "Inbox · 3" labelled control; "Practice Necessary Assumption"; "Continue"; "Session details"; removed "Chosen for you" and dot halo; plainer headline copy.
 Rejected: removing glows and warm gradient, shrinking the hero to a 96px header, replacing bubbles with bars. Reason: Joshua rejected v2 as too uniform and his references use exactly these (Homies tinted hero, Be.run bubbles, WeatherWise glow). Precision lives in the bar list below the bubbles.
 Empty-state rules from the critique carried into the build spec.
+
+## Act 5 - v3 build plan review (MAX_ROUNDS=3, gpt-6-astra medium, read-only)
+Plan rewritten as the v3 first build from the capture (rounds 1-10, converged Q2-Q7) and the dual research.
+
+### Round 1 - Codex (thread 01a0cf1d-8c21-7e01-ba34-e4b621c1ca13)
+NOTE: reviewed the superseded plan file (Claude's rewrite had failed to save). Findings 2-6 concern the unified-notifications design, which v3 defers whole to build two; kept for that plan.
+
+The plan needs revision before implementation. It still specifies the superseded release sequence, and several database and interaction contracts are incomplete.
+
+1. **P1 — The build order contradicts the settled decisions.** [PLAN.md:96](C:/Users/Joshu/dev/ai-os/brainstorms/2026-09-23-classroom-home-PLAN.md:96) ships layout separately from insights. The [capture:135](C:/Users/Joshu/dev/ai-os/brainstorms/2026-09-23-classroom-home-visual-upgrade.md:135) explicitly supersedes PR #133 and combines them; [capture:154](C:/Users/Joshu/dev/ai-os/brainstorms/2026-09-23-classroom-home-visual-upgrade.md:154) also requires the finding-to-resource registry and evidence-attached Ask draft, neither of which appears in the plan.
+   **Fix:** Replace the release sequence with the settled v3 split and explicitly enumerate the registry, Ask draft, and subsequent session-brief/review/Today work.
+
+2. **P1 — The proposed message uniqueness constraint cannot be created as specified.** [PLAN.md:80](C:/Users/Joshu/dev/ai-os/brainstorms/2026-09-23-classroom-home-PLAN.md:80) requires `(recipient, event_key)` on both tables, but messages contain `conversation_id` and `sender_id`, with recipients represented through participants ([schema:24](C:/Users/Joshu/dev/ai-os/projects/lsatu/supabase/migrations/20260416234013_49bfd508-03f2-4942-a636-2763f1f3af5b.sql:24)). Also, a unique index makes duplicate inserts fail; it does not make retries successful no-ops.
+   **Fix:** Define actual per-table identity columns and explicit conflict handling, including recovery when only one of the two writes succeeds.
+
+3. **P1 — Update immutability does not protect event identity at insertion.** [PLAN.md:81](C:/Users/Joshu/dev/ai-os/brainstorms/2026-09-23-classroom-home-PLAN.md:81) protects changes to `origin` and `event_key`, but the existing message INSERT policy permits participant-authored messages without restricting those new fields ([schema:110](C:/Users/Joshu/dev/ai-os/projects/lsatu/supabase/migrations/20260416234013_49bfd508-03f2-4942-a636-2763f1f3af5b.sql:110)). A student could supply a system origin and colliding event key.
+   **Fix:** Enforce ordinary-user inserts as `origin='human' AND event_key IS NULL`, reserve generated identities for authorized writers, and test forged inserts.
+
+4. **P1 — Legacy generated events have no defined read transition.** [PLAN.md:82](C:/Users/Joshu/dev/ai-os/brainstorms/2026-09-23-classroom-home-PLAN.md:82) includes legacy rows with null keys, while the following paragraph acknowledges generated events exclusively by key. Those events cannot follow the specified acknowledgement path; legacy messages also lack a defined human/system classification.
+   **Fix:** Give legacy feed events stable synthetic identities and explicit classification/read rules without rewriting historical rows.
+
+5. **P1 — The two unread systems will disagree.** [PLAN.md:79](C:/Users/Joshu/dev/ai-os/brainstorms/2026-09-23-classroom-home-PLAN.md:79) leaves `useInbox` untouched, but its unread calculation ignores acknowledgements and uses the latest message ([useInbox.ts:192](C:/Users/Joshu/dev/ai-os/projects/lsatu/src/hooks/useInbox.ts:192)). Opening a generated event can clear the Home bell while leaving the existing inbox unread; opening its conversation updates only the watermark, leaving the new event acknowledgement absent.
+   **Fix:** Specify consistent read semantics across Home, the bell, and conversations, and adapt existing unread consumers through a shared selector.
+
+6. **P1 — Rescheduled reminders reuse their old identity.** [PLAN.md:92](C:/Users/Joshu/dev/ai-os/brainstorms/2026-09-23-classroom-home-PLAN.md:92) promises re-keying on reschedule but defines the key only from booking ID and offset. Rescheduling the same booking after its first reminder makes the replacement collide with the old event or inherit its acknowledgement.
+   **Fix:** Include a booking revision or scheduled-start timestamp in the key and revalidate that revision immediately before delivery.
+
+7. **P1 — Fresh-practice actions ship before their dependency, and the named queue-building location is wrong.** [PLAN.md:72](C:/Users/Joshu/dev/ai-os/brainstorms/2026-09-23-classroom-home-PLAN.md:72) requires “Try new ones” for phase-two insights, while the filter extension sits with the later By-type work. [drillRunSpec.ts:146](C:/Users/Joshu/dev/ai-os/projects/lsatu/src/lib/drillRunSpec.ts:146) merely constructs configuration; actual bank filtering occurs in [Drill.tsx:565](C:/Users/Joshu/dev/ai-os/projects/lsatu/src/pages/Drill.tsx:565).
+   **Fix:** Ship exposure exclusion and persisted-queue resolution before the insight CTA, applying exclusion before sampling and preserving that queue on resume.
+
+8. **P1 — The new RPCs lack an authorization contract.** [PLAN.md:56](C:/Users/Joshu/dev/ai-os/brainstorms/2026-09-23-classroom-home-PLAN.md:56) accepts caller-supplied class IDs and returns question-level evidence, but specifies neither execution security nor cross-student tests; the feed RPC is similarly unspecified. Existing aggregate RPCs deliberately use `SECURITY INVOKER` ([migration:89](C:/Users/Joshu/dev/ai-os/projects/lsatu/supabase/migrations/20260709235900_phase6_query_rpcs.sql:89)).
+   **Fix:** Require invoker/RLS enforcement or explicit owner/admin authorization, pinned search paths, bounded inputs, and anonymous/cross-student denial tests for every new RPC.
+
+9. **P2 — The design’s comparative statistics cannot come from the proposed response.** [Home3.dc.html:108](C:/Users/Joshu/AppData/Local/Temp/claude/C--Users-Joshu-dev-ai-os/fe553725-d881-4068-8809-1fb7b342eee9/scratchpad/artifact-files/307bbd6c-86e0-43cd-a5df-8735d306b8fb/project/Home3.dc.html:108) shows change against the previous 30 days; [PLAN.md:56](C:/Users/Joshu/dev/ai-os/brainstorms/2026-09-23-classroom-home-PLAN.md:56) returns one window. Requesting 60 days does not produce two comparable windows because latest-attempt deduplication can select different attempts.
+   **Fix:** Return separately defined current/prior buckets with a shared cutoff and sample floors, and hide comparisons lacking sufficient evidence.
+
+10. **P2 — The visual contract omits truthful bubble sizing and accessible labels.** [Home3.dc.html:73](C:/Users/Joshu/AppData/Local/Temp/claude/C--Users-Joshu-dev-ai-os/fe553725-d881-4068-8809-1fb7b342eee9/scratchpad/artifact-files/307bbd6c-86e0-43cd-a5df-8735d306b8fb/project/Home3.dc.html:73) claims circles encode missed questions, but their diameters are hardcoded. The primary bubble also uses white labels over orange; white against `#ff8906` is approximately **2.38:1**. Keyboard testing alone will not catch that.
+    **Fix:** Specify area-proportional sizing, readable text independent of bubble size, a textual equivalent, and contrast checks across gradients and themes.
+
+11. **P2 — Empty, failed, and unavailable data remain conflated.** [PLAN.md:66](C:/Users/Joshu/dev/ai-os/brainstorms/2026-09-23-classroom-home-PLAN.md:66) offers only eligible evidence or `null`, then converts zero eligible lenses into “Start here.” A failed reader can therefore masquerade as no practice, and a failed pinned source can become “pinned view has no data,” contradicting [capture:153](C:/Users/Joshu/dev/ai-os/brainstorms/2026-09-23-classroom-home-visual-upgrade.md:153).
+    **Fix:** Define loading/error/empty/insufficient/ready adapter states and prohibit failure or pending data from producing empty-state claims.
+
+12. **P2 — RC history reuse risks truncated results and unnecessary downloads.** [PLAN.md:59](C:/Users/Joshu/dev/ai-os/brainstorms/2026-09-23-classroom-home-PLAN.md:59) points to `rcProgress.ts`, whose `getQuestionHistory()` requests all attempts without pagination and whose `listSessions()` requests all sessions. Parallelizing these reads does not make them bounded or guarantee complete results.
+    **Fix:** Add a bounded Home aggregate that explicitly handles first attempts, excluded sessions, completion, and recency; fetch detailed evidence only when opened.
+
+13. **P2 — The RC launcher duplicates an existing section launch path.** [PLAN.md:46](C:/Users/Joshu/dev/ai-os/brainstorms/2026-09-23-classroom-home-PLAN.md:46) proposes new session creation, but [rcSections.ts:131](C:/Users/Joshu/dev/ai-os/projects/lsatu/src/features/rc/lib/rcSections.ts:131) already launches complete sections with accommodations, untimed mode, and end-of-set reveal. PR #133 also does not supply the promised Section tab: at branch commit `8b4c406`, `ClassroomHomeView.tsx:287` only opens the existing finder.
+    **Fix:** Reuse the existing RC section contract, extend custom timing where necessary, and explicitly build/test Section-tab selection rather than treating PR #133 as that dependency.
+
+Read-only review; no files modified. Findings are based on the supplied documents and source inspection, not runtime or deployed-database verification.
+
+VERDICT: REVISE
+
+### Claude's response
+Saved the v3 plan properly. Applied to v3: #7 excludeAnswered applied before sampling at Drill.tsx:565 with persisted queue, same PR as the button; #8 security invoker + pinned search_path + bounded p_days + cross-student tests; #9 current/prior buckets with shared cutoff and floors; #10 computed area sizing, no white-on-orange, list as text equivalent; #11 adapter states loading/error/empty/insufficient/ready; #12 RC lens deferred; #13 Section tab deferred, will reuse rcSectionHref. #1 build order rewritten. #2-#6 carried to build two (notifications deferred whole).
+
+### Round 2 - Codex
+
+Reviewed the saved **“Act 5, Round 1 revision”**. Unified notifications remain excluded. These issues still need correction:
+
+1. **P1 — The section adapter trusts a known bad legacy denominator.** [PLAN.md:35](C:/Users/Joshu/dev/ai-os/brainstorms/2026-09-23-classroom-home-PLAN.md:35) derives totals from `total_questions`, but [sectionHistorySave.ts:324](C:/Users/Joshu/dev/ai-os/projects/lsatu/src/lib/sectionHistorySave.ts:324) documents historical rows carrying zero there while `initial_total` contains the real total. Valid work can become `19/0` or disappear as insufficient.
+   **Fix:** Prefer valid `initial_total`, fall back to positive `total_questions`, preserve unknown denominators, and require `br_used` before showing blind-review results.
+
+2. **P1 — Shared SQL logic does not guarantee matching evidence snapshots.** [PLAN.md:32](C:/Users/Joshu/dev/ai-os/brainstorms/2026-09-23-classroom-home-PLAN.md:32) uses `now()` for each RPC, while [line 42](C:/Users/Joshu/dev/ai-os/brainstorms/2026-09-23-classroom-home-PLAN.md:42) freezes the insight for the visit. Opening evidence later can include a new attempt, replace the selected attempt for a question, or exclude one crossing the window boundary.
+   **Fix:** Return a snapshot cutoff with the aggregate and pass it to evidence queries, retaining selected attempt IDs where necessary.
+
+3. **P1 — Fresh-only launches can resume an unrestricted queue.** [PLAN.md:47](C:/Users/Joshu/dev/ai-os/brainstorms/2026-09-23-classroom-home-PLAN.md:47) adds `excludeAnswered`, but the existing resume fingerprint includes only the current filter fields ([drillResumeSession.ts:93](C:/Users/Joshu/dev/ai-os/projects/lsatu/src/lib/drillResumeSession.ts:93)). Identical filters with different freshness settings therefore share a resume record unless explicitly changed.
+   **Fix:** Include freshness policy in the resume identity, preserve existing identities for unrestricted links, and test launching fresh-only after an unfinished unrestricted run.
+
+4. **P1 — “Timed section” still cannot start a timed section.** [PLAN.md:22](C:/Users/Joshu/dev/ai-os/brainstorms/2026-09-23-classroom-home-PLAN.md:22) deliberately retains #133’s finder action while deferring section launching to build two. On `feat/home-v2-phase1`, `ClassroomHomeView.tsx:287` only calls `open()`; the finder returns individual questions/passages. This leaves a promised primary action without its advertised destination.
+   **Fix:** Route the button to an existing working section-selection surface now; defer the new launcher tab independently.
+
+5. **P1 — Keyboard-selectable bubbles cannot also be hidden from assistive technology.** [PLAN.md:51](C:/Users/Joshu/dev/ai-os/brainstorms/2026-09-23-classroom-home-PLAN.md:51) makes bubbles interactive, while [line 53](C:/Users/Joshu/dev/ai-os/brainstorms/2026-09-23-classroom-home-PLAN.md:53) applies `aria-hidden`. A summary label does not restore hidden controls, leaving keyboard focus on elements screen readers cannot identify.
+   **Fix:** Either expose labelled bubble controls with selection state, or make bubbles entirely noninteractive and provide selection through accessible list controls.
+
+6. **P2 — Perfect accuracy produces invisible bubbles.** [PLAN.md:51](C:/Users/Joshu/dev/ai-os/brainstorms/2026-09-23-classroom-home-PLAN.md:51) specifies `radius = k * sqrt(missed)` but only falls back when fewer than three types qualify. Three sufficiently practised types with zero misses qualify yet produce zero-radius circles; mixed results also lose labels for perfect types.
+   **Fix:** Define an all-zero-misses result state and represent zero-miss types in the list without inventing a minimum bubble area.
+
+7. **P2 — Confidence level 3 falls outside the promised matrix.** [PLAN.md:61](C:/Users/Joshu/dev/ai-os/brainstorms/2026-09-23-classroom-home-PLAN.md:61) counts non-null confidence for coverage and requires 12 rated attempts, but its matrix includes only ratings 1–2 and 4–5. Twelve neutral ratings can satisfy the floor while populating no cells, and displayed totals can disagree with the coverage line.
+   **Fix:** Explicitly exclude and disclose neutral ratings, calculating the matrix’s eligibility floor from attempts actually represented in its cells.
+
+No files modified; findings are based on source inspection, not deployed-data verification.
+
+VERDICT: REVISE
+
+### Claude's response
+Accepted all 7 (technical). Denominator precedence initial_total > total_questions > unknown, br_used gate; aggregate returns cutoff passed to evidence; freshness in resume identity with test; Timed section now routes to /testing (verified: TestingCentre starts LR and RC sections, App.tsx:546); bubbles non-interactive, list rows are the controls; zero-miss types list-only plus all-zero result state; neutral ratings excluded and disclosed, floor counts only in-cell attempts.
+
+### Round 3 - Codex (final, MAX_ROUNDS reached)
+
+One material issue remains:
+
+**P1 — The headline practice count has no active writer in the inspected code.** [PLAN.md:22](C:/Users/Joshu/dev/ai-os/brainstorms/2026-09-23-classroom-home-PLAN.md:22) uses `daily_stats.questions_answered`, but both the current checkout and `feat/home-v2-phase1` only read that counter. `increment_daily_stats` exists as a migration-defined RPC with no application caller; the drill persistence path writes `attempts` and returns ([Drill.tsx:1482](C:/Users/Joshu/dev/ai-os/projects/lsatu/src/pages/Drill.tsx:1482)). Consequently, completed practice can leave the prominent weekly number stale or zero. No deployed-only writer was verified.
+
+**Fix:** Derive the count from persisted attempts using explicit local-day boundaries, replay exclusions, and an LR coverage label; verify that completing practice increments it.
+
+The seven previous fixes are reflected in the revision. No files modified.
+
+VERDICT: REVISE
+
+### Claude's response
+Verified: daily_stats is only read (gamification.ts, streakSystem.ts, useStudentAnalytics.ts, StudentWorkPanel.tsx); no client or function writer. Accepted: weekly count now comes from attempts via a new security-invoker RPC with local-day boundaries and replay exclusions, labelled LR, with an increment test. Applied after the final round; not re-reviewed.
+
+## Act 5 outcome
+No APPROVED within 3 rounds; no open disagreement (every finding accepted, 21 total incl. round 1 on the superseded file). Nothing for Joshua to referee. Joshua-owned items in the plan: one review of the action registry before PR 3.
