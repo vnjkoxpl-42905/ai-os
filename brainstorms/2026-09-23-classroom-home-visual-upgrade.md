@@ -12,6 +12,10 @@ Context sources: live page inspected in the in-app browser (signed in as Joshua,
 - Not yet seen: the student view of Home (only the teacher view was inspected).
 
 ## Summary / key decisions
+- 2026-09-23 round 6: the app picks the view automatically by fixed rules (no AI text); one main insight plus two or three small ones. No new one-question security rule; Home just gives quick access to Smart Drill and assigned work.
+- 2026-09-23 round 5: the performance area adapts to each student's work and assignments (types, sections, bootcamps, RC, or other lenses), not a fixed chart.
+- 2026-09-23 round 3: Home centers on section results, no goal score, one-question-at-a-time Smart Drill and assignments, fast access to questions and sections, one centralized inbox for messages and notifications. Sleek and high-end.
+- Light warm page, two dark anchor cards. Stats: latest PT, questions this week, sessions left, days to test, goal dial. Weakest types by name. Student view first. Restrained motion, reduced-motion safe. Scrollbar fixed separately. (2026-09-23)
 - Nothing is borrowed from the public landing page (auth-landing). The Classroom Home keeps its own identity. (Joshua, 2026-09-23)
 
 ## Q&A log
@@ -40,6 +44,65 @@ Canvas: https://claude.ai/artifact/6zF3FgewiMA7pCZSk766Xt (two boards: Master Ho
 Master Home, top to bottom: pill top bar (search, days-to-test, streak) / hero card with greeting, four big stats and a goal gauge / three cards: Up next (progress bar with marker), Practice test trend (line + glowing point + goal line), dark Training days calendar / Where the points are (segmented bars per question type) beside From Joshua and a black Next session card / Next seven days drawn as a curve with a glowing today point.
 Built on the current tokens (cream #f8f1e7, orange #ff8906, ink #332f2c, Fraunces / Outfit / JetBrains Mono). All numbers are bracketed samples.
 
+### Round 2 answers (Joshua, 2026-09-23): "yes to all, go with your recommendations"
+- Q1 Direction: light and warm, with two dark cards (calendar, next session). No all-dark page.
+- Q2 Numbers on Home: latest PT score, questions this week, sessions left, days to test, goal dial. Cut streak and LR accuracy.
+- Q3 Weakest question types shown by name, leading into Smart Drill: yes.
+- Q4 Student Home first, teacher view follows: yes.
+- Q5 Motion: count-up numbers, cards settle in, gentle pulse on glowing dots; all off under prefers-reduced-motion.
+- Q6 Sideways scrollbar: fix now as a separate change on its own branch.
+
+### Data feasibility (sub-agent research, 2026-09-23, verified by file refs only)
+- Questions this week: EXISTS, daily_stats.questions_answered; sum last 7 days. Low effort.
+- Sessions left: EXISTS, useStudentBooking().pass.credits_remaining, already called on Home. Trivial.
+- Days to test: EXISTS, profiles.test_date (nullable) + existing daysUntil() helper. Low.
+- Weakest question types: EXISTS, RPC attempt_accuracy_rollup (used by Analytics). Low; needs a minimum-question floor.
+- Calendar study days: EXISTS via daily_stats rows with questions > 0; session dates from useStudentBooking bookings. Low.
+- Latest PT + trend: PARTIAL. practice_test_runs table exists but nothing writes it; in-app runs live in localStorage; imported scores in student_external_metrics (pt_score). Medium.
+- Goal and starting score: PARTIAL. Only bands in profiles.onboarding (target_score_band, last_score_band), can be "not sure".
+
+### Round 3 answers (Joshua, 2026-09-23) - supersedes parts of Round 2 Q2
+- "Focus on the section results instead of the latest PT score or recent drills." Section results replace the PT card and trend. Data: section_history (initial_score/total, br_score/br_total, br_delta, time_taken_ms, by_qtype_json, pt, section, completed_at). Supersedes Round 2 Q2's "latest PT score".
+- "Don't include the goal score on the page." Goal dial removed. Supersedes Round 2 Q2's goal dial. (Round 3 Q1 and Q2 about PT saving and exact goal score are now moot.)
+- Smart Drill: "an option to access the smart drill where they can click and open one question at a time for security", and the same for homework and assignments he assigns. One question opens at a time, never a whole set on screen.
+- "A sleek, high-end design that allows quick access to questions or sections for practice."
+- "The messaging and notifications should be centralized in one place." One inbox on Home for coach messages and system notifications.
+- Round 3 Q3 (empty states) not answered; Claude applies the recommendation (one line + one action) as tentative.
+
+### Facts checked before Round 4 (Claude, 2026-09-23)
+- A `notifications` table already exists (title, body, type, link, read) with `useNotifications` hook; written by classroomNotify, sessionBundleNotify, markNoteRead. Coach messages live separately (Inbox / Messages). Centralizing = one surface that reads both.
+- Joshua asked (via /grill-me) to keep refining before anything is built. The master design canvas update for round 3 is paused.
+
+### Round 4 (asked Q1-Q8; Joshua answered Q1 and Q2 together, 2026-09-23)
+#### Q1/Q2 - What the results area shows, and from which work
+- Recommended: last 3-5 full sections as cards (Q1a); full sections only (Q2).
+- Captured (supersedes Round 3 "focus on the section results"): "It doesn't have to be practice tests or sections. It can be more of a focus on something specific, like the performance on general question types." It must include Smart Drill, sections, guided drills, "whatever they work with... really to be specific to them." "It doesn't have to be limited to one type of information."
+- Decision: the results area is a personal performance view by question type, fed by all of a student's work, not one source.
+- Fact (Claude checked): the `attempts` table records each answered question with `qtype`, `mode`, `correct`, `time_ms`, `confidence`; `attempt_accuracy_rollup` already sums it by type. Which modes write to `attempts` (Smart Drill, sections, guided drills, bootcamps) still to be confirmed per mode.
+#### Q3-Q8 - not yet answered (one-at-a-time rule and its reason, homework rule, inbox location, inbox contents, top 3 actions, what leaves Home)
+
+### Round 5 (asked Q1-Q9; Joshua answered the performance-view branch, 2026-09-23)
+#### Q1-Q3 - What the performance view shows
+- Recommended: accuracy + trend per question type, last 30 days, click opens Smart Drill on that type.
+- Captured (refines Round 4): "it can be different variations depending on what's useful for the student based on where they've been assigned." "It should depend on what they've been doing and what they've done." "Whether it's based on their work history or something creative, it doesn't have to strictly be question types. These can be sections, question types, or any other format."
+- Decision: the performance area is adaptive. It picks the lens that fits each student's recent work and assignments (question types, sections, bootcamp, RC passages, or other), rather than one fixed chart.
+- Open: how the lens is chosen, how many insights show, whether Joshua can steer it.
+#### Q4-Q9 - still unanswered (one-question rule reason, homework rule, inbox location and contents, top 3 actions, what leaves Home)
+
+### Round 6 answers (Joshua, 2026-09-23)
+#### Q1 - Who picks the view
+- Recommended: app chooses, Joshua can override.
+- Captured: "The app should choose." Automatic. Override by Joshua was not confirmed.
+- Flags: whether Joshua wants a per-student override -> Joshua
+#### Q2 - How many views
+- Captured: recommendation accepted. One main insight, two or three smaller ones under it.
+#### Q3 - How the view is chosen
+- Captured: fixed rules. No AI-written line.
+#### Q4 - "One question at a time"
+- Captured: Smart Drill already is one question at a time. "I'm not sure how smart drilling has to do with anything right now." There is no new security rule to design.
+- Correction: Claude misread Round 3 ("for security") as a request for a new lockdown rule. Supersedes Round 3's Smart Drill line and Round 4 Q3/Q4 and Round 5 Q4/Q5; those questions are closed. What remains from Round 3 is quick access to Smart Drill and to assigned work from Home.
+
 ## Open flags (pending input)
+- Confirm every practice mode (Smart Drill, timed sections, guided drills, bootcamps, RC) writes to `attempts` -> Claude
 - Which stats appear on Home and where the numbers come from (Analytics data vs new queries) -> Joshua decides, Claude checks feasibility
 - Student-view screenshot of Home -> Claude (needs a student test account or impersonation route)
