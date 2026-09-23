@@ -30,7 +30,7 @@ import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
-ROOT = Path("/Users/joshuaf/ai-os")
+ROOT = Path(__file__).resolve().parents[2]
 CURATED = ["students", "corpus", "context", "decisions", "wiki",
            "references", "research", "handoffs", "brainstorms"]
 

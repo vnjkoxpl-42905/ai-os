@@ -23,7 +23,7 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from build_roster_shared import student_dirs, frontmatter, match_pass  # noqa: E402
 
-BRAIN = "/Users/joshuaf/ai-os"
+BRAIN = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 STUDENTS = f"{BRAIN}/students"
 
 

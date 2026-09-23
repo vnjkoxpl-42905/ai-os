@@ -30,7 +30,7 @@ check_cold_start() {
       adapter="$ROOT/AGENTS.md"
     fi
     [[ -s "$adapter" && -s "$pickup" ]] || { print -u2 "$runtime cold-start discovery missing"; return 1; }
-    rg -q '(~/ai-os|/Users/joshuaf/ai-os)' "$pickup" || { print -u2 "$runtime pickup does not target brain"; return 1; }
+    rg -q '(~/ai-os|/Users/joshuaf/ai-os|dev.ai-os)' "$pickup" || { print -u2 "$runtime pickup does not target brain"; return 1; }
     if rg -q '(Obsidian Vault|Documents/AI GATHER|Documents/Claude)' "$pickup"; then
       print -u2 "$runtime pickup retains old path"
       return 1
