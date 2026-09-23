@@ -638,6 +638,9 @@ Applied by Superwhisper after transcription, before any AI step. Matching is cas
 | super base | Supabase | 2026-09-11 |  |
 | supa base | Supabase | 2026-09-11 |  |
 | soup a base | Supabase | 2026-09-11 |  |
+| superbase | Supabase | 2026-09-23 | joined mis-hearing |
+| superbase. | Supabase | 2026-09-23 | joined form with automatic punctuation |
+| super base. | Supabase | 2026-09-23 | spaced form with automatic punctuation |
 | loveable | Lovable | 2026-09-11 |  |
 | lovable cloud | Lovable Cloud | 2026-09-11 | casing pin |
 | shad cn | shadcn | 2026-09-11 |  |
