@@ -57,7 +57,11 @@ there.
 2. **Do the action** through the UI per the routing table, honoring the React rule.
 3. **Verify it landed**: the mutation request returned 2xx AND the UI reflects it
    (item appears in the student's classroom list / message thread / queue). For
-   assignments, verify the notification surface where checkable.
+   assignments, verify the notification surface where checkable. For any message
+   or student-facing text, compare the sent bubble with the approved draft in the
+   recipient-facing view. Check paragraph breaks, list lines, and intentional
+   spacing. If they differ, report the mismatch; do not claim success or resend
+   automatically.
 4. **Log it**: append to `students/<name>/assignment-log.md` (create if missing) with
    date, action, item, and evidence; drill verifications also go to
    `wiki/guided-drill-verification-log.md`.
