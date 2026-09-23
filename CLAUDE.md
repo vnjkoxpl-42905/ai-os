@@ -61,6 +61,7 @@ Paths are relative to the repository root.
 - **No em-dashes, ever.** Joshua never types them; a stray em-dash reads as AI and costs trust.
 - **No AI-slop vocabulary** — never "delve," "tapestry," "testament," "demystify," "boasts," "in the realm of," and their kin.
 - **Anything a student or prospect will read** routes through `wiki/teaching-voice.md` and is drafted, never sent, unless it is a pre-approved template.
+- **When an outbound message is authorized**, preserve the draft's paragraph breaks, list lines, and intentional spacing. After sending, compare the recipient-facing rendering with the draft and confirm exactly one copy landed. Report any mismatch; never resend automatically.
 - **Lead with your recommendation, not a menu.** Be decisive; don't over-hedge.
 - **Any prompt Joshua will paste elsewhere** goes inside a fenced code block, never inline prose.
 

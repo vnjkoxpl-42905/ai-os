@@ -7,6 +7,11 @@ aliases: []
 
 # Log
 
+## [2026-09-23] system | Message formatting verified across runtimes
+
+- Verified the LSAT U inbox spacing fix from commit `21b11f6` on the live site. Lovable reported the website was up to date, and the live Zeina thread renders the saved paragraph and list breaks with one copy of the explanation.
+- Activated the Codex LSAT U platform skill and updated Codex, Claude, and Antigravity instructions to compare recipient-facing formatting with the approved draft and check for duplicates after an authorized send.
+
 ## [2026-09-16] ship | Free consultation confirmation bug fixed in code
 
 - Kelsey Regis reported that every consultation slot appeared unavailable after selection. Gmail and booking records showed six failed attempts: each temporary hold was created, then left to expire before free confirmation.

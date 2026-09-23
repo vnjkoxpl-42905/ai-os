@@ -63,8 +63,9 @@ If product intent is genuinely ambiguous and the alternatives materially alter b
 
 For any outbound text that Joshua authorizes Antigravity to send or publish, preserve
 the approved draft's paragraph breaks, list lines, and intentional spacing. After
-delivery, inspect the recipient-facing rendering and compare it with the draft;
-an accepted request alone does not establish that the formatting survived. If the
+delivery, inspect the recipient-facing rendering, compare it with the draft, and
+confirm that exactly one copy landed. An accepted request alone does not establish
+that the formatting survived. If the
 rendered text differs, report the mismatch and do not resend automatically.
 
 ## 5. Git Discipline
@@ -114,4 +115,3 @@ The browser spawns via WMI to detach from IDE Job Object management. It runs in 
 | "pull 7Sage messages", "check 7Sage", "access 7Sage" | 7Sage LSAT Platform (Port 9225) | `node C:\Users\Joshu\Tools\7Sage-Agent\pull_7sage_messages.mjs` | `7sage-browser-operations` |
 | "pull Facebook messages", "check Facebook inbox", "who messaged me on Facebook" | Facebook Messenger (Port 9226) | `node C:\Users\Joshu\Tools\Facebook-Agent\pull_facebook_messages.mjs` | `facebook-browser-operations` |
 | "triage messages", "check inbox", "show unhandled messages", "inbound status" | Inbound Message Ledger | `python C:\Users\Joshu\dev\ai-os\system\scripts\inbound_ledger.py status` | `inbound-message-triage` |
-

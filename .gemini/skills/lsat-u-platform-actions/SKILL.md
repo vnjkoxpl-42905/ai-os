@@ -60,7 +60,8 @@ there.
    assignments, verify the notification surface where checkable. For any message
    or student-facing text, compare the sent bubble with the approved draft in the
    recipient-facing view. Check paragraph breaks, list lines, and intentional
-   spacing. If they differ, report the mismatch; do not claim success or resend
+   spacing. Confirm that exactly one copy landed. If the rendering differs or
+   duplicates appear, report the mismatch; do not claim success or resend
    automatically.
 4. **Log it**: append to `students/<name>/assignment-log.md` (create if missing) with
    date, action, item, and evidence; drill verifications also go to
