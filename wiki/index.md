@@ -40,7 +40,7 @@ The brain runs three knowledge systems: **this wiki** (Joshua, the business, dec
 
 - [[../references/second-brain-levels]] — the 5 levels of a Claude second brain; ai-os is a complete Level 2
 - [[../references/obsidian-command-center]] — Chase AI's Claude Code + Obsidian command-center setup vs ai-os; only new idea is a visual dashboard plugin + one-click headless skill launchers
-- [[../references/claude-plus-codex]] — running Claude Code + Codex on one project (Chase AI tandem workflow + Nate Herk file-structure map); ai-os already conforms, nothing to fix; new habit is the plan↔critique/adversarial ping-pong
+- [[../references/claude-plus-codex]] — running Claude Code + Codex on one project; shared-file architecture, plan/critique workflow, and the installed Herdr session layer for visible, persistent dual-agent execution
 - [[../references/graphify-obsidian-bridge]] — turning any corpus into a linked concept map in the vault (`--obsidian`); the source-wiring step and the fragmentation trap that silently guts the result
 - [[../references/3ms-framework]] — the Three Ms operator brain (walked weekly by `/level-up`)
 - [Cal.com stuck bookings](CALCOM-STUCK-BOOKINGS.md) — unpaid bookings hold slots invisibly; run scripts/calcom-pending-sweep.mjs

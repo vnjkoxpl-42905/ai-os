@@ -870,3 +870,21 @@ Rebuilt the post-consultation follow-up template from five identical sends (2026
 - Created `.gemini/README.md` and routed the dedicated `.gemini/` workspace (`skills/`, `agents/`, `wiki/`, `raw/`, `output/`).
 
 
+
+## [2026-09-22] ship | LSAT U access fixes live
+- Access snapshot of all 41 profiles saved: raw/sources/lsatu-access-snapshots/2026-09-22-profiles-access.sql (restore script).
+- PR #130 migration (archive/delete) applied via Lovable (1.7 credits); admin-manage-users deployed; frontend published to lsatprep.study.
+- Verified after: 41/41 accounts match the snapshot on all 13 flags, both admin roles intact, no one archived. Prod bundle carries PR #129 realtime and PR #130 archive code.
+- Still open: tiers plan (branch docs/student-access-tiers-plan) unapproved; Tier 3 drift question unanswered; 14 classroom-only students left as-is by Joshua's instruction.
+
+## [2026-09-22] ingest | This Repo Just Solved The #1 Claude + Codex Headache
+
+- Source: `raw/This Repo Just Solved The 1 Claude + Codex Headache.md` (SHA-256 `24DE185F4355975A3324A9EDA4C7978D1DE7E3239C6CED36D56426E8AEFD474D`).
+- Updated `references/claude-plus-codex.md` and its `wiki/index.md` entry with Herdr as the visible, persistent execution layer for the existing dual-runtime workflow.
+- Installed Herdr `0.9.1`, Claude Code `2.1.280`, Codex CLI `0.156.1`, current Claude and Codex Herdr integrations, and the global Herdr agent skill for both runtimes. Both CLIs were placed in the shared Node tools directory so native Herdr panes can resolve them.
+- Preserved the source in place and retained the rule that Claude and Codex must not edit the same file simultaneously.
+
+## [2026-09-22] build | LSAT U access tiers, all seven stages (PR #131)
+- Branch feat/student-access-tiers, PR vnjkoxpl-42905/lsatu-684d89db#131. Plan approved by Joshua; Tier 3 drift answered by default (switch off-template -> Tier 2).
+- Four migrations + admin-manage-users + booking-commerce-webhook changes are NOT applied live; waiting on Joshua's go (Lovable credits).
+- Reachability diff over the 41-row snapshot: 21/6/14 tiers; 14 gain Messages+Schedule; Saved Sets moves for Meghan, priyanka (lose), Sandra, Ivory (gain); nothing else.

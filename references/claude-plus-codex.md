@@ -1,16 +1,17 @@
 ---
 type: reference
 subject: Running Claude Code and Codex on one project the idea, and where ai-os stands
-updated: 2026-07-19
+updated: 2026-09-22
 aliases: []
 ---
 
 # Running Claude Code and Codex on one project — the idea, and where ai-os stands
 
-Distilled from two clips ingested 2026-07-18 (archived at `raw/sources/clips/youre-using-claude-code-wrong-add-codex/` and `raw/sources/clips/codex-projects-in-5-mins/`), method/architecture sources about the OS itself, not business or LSAT knowledge. Siblings of [[obsidian-command-center]] and [[second-brain-levels]].
+Distilled from three clips: two ingested 2026-07-18 (archived at `raw/sources/clips/youre-using-claude-code-wrong-add-codex/` and `raw/sources/clips/codex-projects-in-5-mins/`) and the Herdr clip ingested 2026-09-22 at `raw/This Repo Just Solved The 1 Claude + Codex Headache.md`. These are method and architecture sources about the OS itself, not business or LSAT knowledge. Siblings of [[obsidian-command-center]] and [[second-brain-levels]].
 
 - **"You're Using Claude Code Wrong (Add Codex)"** — Chase AI, YouTube `VdxUKiF8CWI`, 2026-05-07. The *why + the tandem workflow*.
 - **"How to Use Your Claude Code Projects in Codex in 5 Mins"** — Nate Herk, YouTube `kB9iMD0EjT8`, 2026-05-18. The *how of file structure* — one project, both agents.
+- **"This Repo Just Solved The #1 Claude + Codex Headache"** — Chase AI, YouTube `neK8ydl0Vlk`, 2026-07-16. The *execution and observability layer* using Herdr.
 
 ## The pitch: it's "and," not "or"
 
@@ -52,7 +53,68 @@ sure everything important converts over.
 
 **Session handoff** (Nate's own skill) is the bridge: summarize decisions / active files / next steps, paste into the other tool, keep going. When one gets stuck, hand off and the other often unsticks it in seconds.
 
-## Where ai-os stands (gap-check, 2026-07-18)
+## Herdr makes the tandem workflow visible and persistent
+
+Herdr is the terminal and session layer around Claude Code and Codex. It does not replace either agent or the shared-file architecture. It gives the workflow an operational surface:
+
+- **Workspaces** separate projects.
+- **Tabs** separate activities within a project.
+- **Panes** show Claude Code, Codex, servers, tests, and helper agents side by side.
+- **Agent status** rolls up which pane is working, idle, or blocked.
+- **Persistence** keeps pane processes running after the Herdr client detaches or its terminal window closes. Reopen `herdr` to reconnect. Use `herdr server stop` only when the processes should actually stop.
+- **Agent control** lets an agent with the Herdr skill inspect neighboring panes, split panes, run commands, read output, and wait for another agent.
+
+### Installed setup on Joshua's Windows machine
+
+Installed and verified on 2026-09-22:
+
+| Component | Installed state |
+|---|---|
+| Herdr | Stable `0.9.1`; installed under `C:\Users\Joshu\.herdr\packages\standalone\releases\0.9.1-x86_64-pc-windows-msvc`; user PATH updated |
+| Claude Code | `2.1.280`; installed in the shared Node tools directory so Herdr panes can resolve it |
+| Codex CLI | `0.156.1`; installed in the shared Node tools directory so Herdr panes can resolve it |
+| Herdr integrations | Claude `v10` and Codex `v8`, both current |
+| Herdr agent skill | Installed globally for Claude Code and Codex |
+
+Open a new PowerShell window so it receives the updated user PATH. Then:
+
+```powershell
+cd C:\Users\Joshu\dev\ai-os
+herdr
+```
+
+Inside Herdr, use the first pane for Claude Code:
+
+```powershell
+claude
+```
+
+Split right with the mouse menu or press `Ctrl+B`, release, then press `V`. In the new pane:
+
+```powershell
+codex
+```
+
+Recommended layout:
+
+| Pane | Purpose |
+|---|---|
+| Left | Claude Code as the primary operator or planner |
+| Right | Codex as reviewer, critic, or independent implementer |
+| Optional bottom pane | Dev server, tests, or logs |
+
+Herdr improves visibility but does not change the shared-worktree guardrail: Claude and Codex may read the same files, but they must not edit the same file at the same time. Assign explicit file ownership or use a worktree when both are implementing.
+
+First-run checks:
+
+```powershell
+herdr integration status
+herdr agent list
+```
+
+If an agent is detected incorrectly, run `herdr agent explain <target> --json`. The Windows config file is `%APPDATA%\herdr\config.toml`; no custom config is required for the initial setup.
+
+## Where ai-os stands (gap-check, 2026-09-22)
 
 ai-os **already runs this exact pattern** — it was built dual-runtime from the reform (see `wiki/log.md` 2026-07-17, and [[../decisions/log.md]]). Point-by-point:
 
@@ -62,9 +124,10 @@ ai-os **already runs this exact pattern** — it was built dual-runtime from the
 - **`session-handoff` skill** — Nate's skill, already installed and active in both runtimes.
 - **Agents as TOML for Codex** — catalog holds `agents/codex/web-researcher.toml`. Note: that agent is authored to activate **globally** (its module path is `~/.codex/agents/web-search-modules/`), so it is not project-activated into `~/ai-os/.codex/agents/`, and that is by design, not missing wiring.
 
-**Conclusion:** these clips validate the setup rather than expose work. ai-os conforms to both videos with nothing to fix. The one thing they add that ai-os does *not* lean on is Chase's **Codex-desktop-app tandem loop** (in-app browser, annotate-to-comment, the plan↔critique ping-pong) — worth trying when a hard problem stalls Claude, but a workflow habit, not a config change.
+**Conclusion:** the first two clips validated the shared-file architecture. The third exposed a real execution gap: there was no persistent, visible session layer for running both agents together. Herdr now fills that gap on this Windows machine. The remaining human step is Claude authentication on first launch.
 
 ## What's new vs already-known
 
-- **New / worth adopting as a habit:** the plan↔critique and adversarial-review ping-pong between the two models on genuinely hard or high-stakes work; reach for the Codex desktop app's live browser + annotation when doing front-end review.
+- **New and implemented:** Herdr as the visible, persistent execution layer for Claude Code and Codex; direct integrations and the Herdr agent skill are installed for both.
+- **Worth adopting as a habit:** the plan↔critique and adversarial-review ping-pong between the two models on genuinely hard or high-stakes work; reach for the Codex desktop app's live browser + annotation when doing front-end review.
 - **Already true in ai-os:** the whole file-structure map, twin instruction files, copy-based skill activation, session-handoff bridge, tool-agnostic stance.
