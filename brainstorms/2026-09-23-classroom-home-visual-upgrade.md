@@ -127,3 +127,13 @@ Canvas version 5: new boards Home.dc.html (v2 Classroom Home) and Launcher.dc.ht
 - Confirm every practice mode (Smart Drill, timed sections, guided drills, bootcamps, RC) writes to `attempts` -> Claude
 - Which stats appear on Home and where the numbers come from (Analytics data vs new queries) -> Joshua decides, Claude checks feasibility
 - Student-view screenshot of Home -> Claude (needs a student test account or impersonation route)
+
+### Round 9 - v2 build too uniform (Joshua, 2026-09-23)
+- Captured: the built phase 1 "is too uniform, like smart drills, time section... still not to the level of what I want." Compared against the six references.
+- Captured: model roles. gpt-6-astra helps design and write the spec; building uses gpt-6-sol at low effort. (Saved to memory: codex-model-roles.)
+- Cause (Claude): the phase 1 spec banned new data, so only equal text cards were possible; the v2 design also repeated equal-size cards. Not the model.
+- Decision: "yes, start v3 and pull the insight data in." v3 design on the canvas first (astra critiques design only), then one build that includes the insight data (phase 2 pulled forward), built by gpt-6-sol low. PR #133 stays unmerged, to be superseded.
+
+### Dual research (Claude + Codex astra, blind, 2026-09-23)
+Joshua asked for independent Firecrawl research by both, top 5 each, cross-grading, then a ranking. Output: research/2026-09-23-classroom-home-dashboard-research/. Agreed 7: diagnosis-to-action; coaching attached to the work; finishable Today sequence; review then fresh check; confidence calibration; truthful visual evidence; fast/stable/accessible release bar. Unresolved for Joshua: first place, and Today as host vs optional route.
+Still open from before: Q1 left menu (keep vs slim), Q2 empty-state rules. Joshua replied "*" (unclear) and then moved to research.

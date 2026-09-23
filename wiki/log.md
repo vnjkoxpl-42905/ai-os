@@ -904,3 +904,6 @@ Inlined the interview method from the vendor `grilling` skill into `grill-me` (g
 
 ## [2026-09-23] audit | full skill library
 Ran skill-audit across seven roots (1,749 SKILL.md files). Repaired five malformed Superwhisper YAML descriptions, restored six hash-verified Obsidian Bases references, and fixed five links in the active Gmail router. Final inventory has zero metadata/read errors; remaining scanner flags are 76 missing-reference paths and 18 manual-review placeholders, not confirmed runtime defects. Candidate behavior comparisons remain inconclusive because CLI skill isolation was not provable. Full report: `%TEMP%/skill-audit-vault-full/audit.html`.
+
+## [2026-09-23] research | Classroom Home dual research
+Claude + Codex blind top-5s, cross-grading, final 7. research/2026-09-23-classroom-home-dashboard-research/
