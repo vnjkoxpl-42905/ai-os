@@ -1,5 +1,5 @@
 # Plan: Redesign the LSAT U Classroom Home (student view first)
-_Round 2 revision by Claude, 2026-09-23, after Codex rounds 1-2 (see PLAN-REVIEW-LOG)_
+_Round 3 revision by Claude, 2026-09-23, after Codex rounds 1-3 (see PLAN-REVIEW-LOG). The two round-3 fixes were applied after the final round and were not re-reviewed by Codex._
 
 Decisions come from Joshua's grill-me interview: `brainstorms/2026-09-23-classroom-home-visual-upgrade.md`. Visual reference: https://claude.ai/artifact/6zF3FgewiMA7pCZSk766Xt (v1; its PT trend, goal dial, streak, month calendar and week curve are REJECTED).
 
@@ -43,9 +43,9 @@ Top to bottom; two columns decided by the Home container's available width (CSS 
 ### 2. Practice launcher (Joshua's "specific question / dropdown" idea)
 One panel, three tabs, all through the existing launch codec (`src/lib/drillLaunch.ts`):
 - **Question**: PrepTest → Section → Question dropdowns plus free text (exists). Contextual action changes with depth: PT+Section selected → "Start section"; +Question → "Open question". LR/RC routing stays the finder's.
-- **Section**: bank-aware dispatch: an LR section launches `kind: 'section'` (LR bank, `Drill.tsx:540`); an RC section launches through the RC route the finder already uses (`questionFinderSearch.ts:413`). PrepTest + Section, annotated with freshness ("24 of 25 unanswered", `sectionFreshness.ts:46`), fresh-only toggle, and the student's timer setting (standard / 52.5 / 70 / custom / untimed) carried into `kind: 'section'` `timerMode`. RC freshness shown as unknown until RC history is connected.
+- **Section**: bank-aware dispatch: an LR section launches `kind: 'section'` (LR bank, `Drill.tsx:540`); an RC section does NOT reuse the finder's single-passage link (`passage=<id>` opens one passage with `DEFAULT_CONFIG`, `RcPlayer.tsx:130`). New RC section launch: resolve every passage of that PT section in order, create an RC session with those passage ids and the chosen timer config (the player already accepts multiple ids and explicit config, `RcPlayer.tsx:141`), then navigate by session id. PrepTest + Section, annotated with freshness ("24 of 25 unanswered", `sectionFreshness.ts:46`), fresh-only toggle, and the student's timer setting (standard / 52.5 / 70 / custom / untimed) carried into `kind: 'section'` `timerMode`. RC freshness shown as unknown until RC history is connected.
 - **By type**: question-type multi-select + count + optional difficulty → `kind: 'filter'` (`drillLaunch.ts:163`). Adaptive Smart Drill is never repurposed for this. "Fresh only" needs an exposure-aware path: add an optional `excludeAnswered?: boolean` to the filter body (additive, old links unaffected), resolved when the queue is built (`drillRunSpec.ts:146`) against the student's answered qids; the built queue is stored in the Run Record so resume replays the same questions. If fewer fresh questions exist than `count`, say "Only N new Flaw questions left" before start, with an option to include answered ones.
-- Shelves (search-matched in the same panel): Flagged (`flaggedService.ts`) and Needs review (journal review status). _Proposed to Joshua, not yet decided._
+- Shelves (search-matched in the same panel): Flagged (`flaggedService.ts`) and Needs review (journal review status). Decided: yes (Joshua, 2026-09-23).
 
 ### 3. Insight engine (fixed rules, no AI text)
 Pure `pickInsights(signals, pin?)` in `src/components/classroom/home/insights.ts`, fixture-tested. Adapters feed it, one per source; the engine never reads Supabase.
@@ -69,7 +69,7 @@ Selection rules:
 - 0 eligible → a single "Start here" card (Smart Drill). 1–3 eligible → show only those.
 - Pinned lens becomes main if eligible; if ineligible, show it as main with its empty state + the engine's picks as minors, and flag it in Joshua's Hub as "pinned view has no data".
 - Every insight has: coverage label, sample size, date range, an **evidence drawer**, and actions. Evidence is source-specific: question addresses for LR types (evidence RPC) and sections (`questions_json`); module list for bootcamp; the assignment rows for assigned work; passage list for RC.
-- From a section diagnosis, "Practice this exact skill": when the finding's type/feature ids match launch filters (`sectionAnalysis.ts:160` to `kind: 'filter'` `qtypes`/`qfeatures`), prefill and show the filters before launch. For a weak LR type: "Try new ones" (`kind: 'filter'`, fresh only) and, when journal entries exist, "Review these" (journal). _"Review these" vs "Try new ones" pairing proposed to Joshua._
+- From a section diagnosis, "Practice this exact skill": when the finding's type/feature ids match launch filters (`sectionAnalysis.ts:160` to `kind: 'filter'` `qtypes`/`qfeatures`), prefill and show the filters before launch. For a weak LR type: "Try new ones" (`kind: 'filter'`, fresh only) and, when journal entries exist, "Review these" (journal). Pairing decided: yes (Joshua, 2026-09-23).
 
 ### 4. Pinning
 Additive table `home_insight_pins`: `class_id text primary key references profiles(class_id)`, `lens text not null check (lens in (<enum>))`, `params jsonb not null default '{}'`, `pinned_by uuid not null default auth.uid()`, `updated_at timestamptz default now()`.
@@ -80,7 +80,7 @@ RLS: admin SELECT/INSERT/UPDATE/DELETE (via existing admin role check); student 
 - **Event identity**: additive nullable `event_key text` on BOTH `notifications` and individual `messages`, plus `origin text check in ('human','system')` on individual messages (not threads). Generated writers (`classroomNotify.ts:87`, `sessionBundleNotify.ts:48`, new writers) compute one deterministic key per event (e.g. `assignment:<id>:assigned`) and insert both rows with it; partial unique indexes `(recipient, event_key) where event_key is not null` on each table make retries no-ops. Human-typed messages get `origin='human'`, no key.
 - **Protection**: extend the notifications immutability trigger (`20260506124235_...sql:120`) to cover `event_key`/`origin`, and the same on messages; tests prove a student cannot change either.
 - **One canonical visible-event model**, computed server-side in one RPC `home_feed(p_limit, p_before)`: an event with a key appears once (message wins, notification suppressed); legacy rows without keys use the 5-minute same-link heuristic inside the same RPC. The badge count comes from the same RPC, so counts never include hidden rows.
-- **Read**: opening a visible event marks every row sharing its key read (message participant timestamp + notification boolean) via `home_feed_mark_read(event)`. Mark-all-read applies to visible events only.
+- **Read**: two separate read states, never mixed. (a) Conversation read = the existing participant `last_read_at` watermark (`useInbox.ts:247`), advanced ONLY when the student opens the conversation itself. (b) Generated events = a new additive `event_acks (user_id, event_key, acked_at)` table; opening an assignment/recap/grade/reminder event acks its key, which hides its notification duplicate and marks the generated message as read for the feed, without moving the conversation watermark. A generated message with no notification twin is acked the same way. Unread for a thread row = unread human messages after the watermark; generated messages count as unread until acked. Mark-all-read acks visible events and advances watermarks only for threads shown. RLS: student reads/writes own acks only.
 - **Thread rows**: preview is Joshua's latest unread human message when one exists, else the latest message; unread = any unread human message from Joshua in the thread, not only the latest (the latest-only check in `useInbox.ts:189` is not reused).
 - Hidden types (`streak`, `signup`) filtered in SQL before paging; page size 30 with load more.
 - New notification types need the DB CHECK constraint extended (additive). Writers:
@@ -112,7 +112,7 @@ RLS: admin SELECT/INSERT/UPDATE/DELETE (via existing admin role check); student 
 - Performance: Home adds RPC + section history + feed. Plan: parallel queries, skeletons, no waterfall; measure first contentful paint before/after on a student account.
 - Legacy dedup heuristic may miss or over-hide; accept for legacy only.
 - Exact decay and floor values need tuning on real student data (fixtures from 3 anonymized students).
-- Product items for Joshua: Flagged / Needs review shelves (if yes, order Needs review by the student's own `reattempt_due_at` and show `next_action`, `wajNotesService.ts:31`); "Review these" vs "Try new ones"; whether session reminders are wanted at all.
+- Product decisions (Joshua, 2026-09-23: yes to all three): Flagged and Needs review shelves in the launcher, Needs review ordered by the student's reattempt_due_at with next_action shown; Review these next to Try new ones on weak-area insights; session reminders 24h and 1h before, via a scheduled job (Lovable deploy, confirm the route before deploying).
 
 ## Out of scope
 - Public landing page. Goal score, streaks, latest PT, recent drills list, month calendar. AI insight text. Changes to how Smart Drill or assignments run.

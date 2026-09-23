@@ -116,6 +116,13 @@ Built on the current tokens (cream #f8f1e7, orange #ff8906, ink #332f2c, Fraunce
 - Captured: "The next seven days thing, I want to keep this there. That should not be removed in the design." "I don't want you to change anything." The current week strip stays exactly as it is today. Supersedes the curve version in master design v1.
 - Tentative (Claude): the month calendar from design v1 is dropped, since Joshua kept the current strip instead. Confirm.
 
+### Round 8 - after Codex plan review (Joshua, 2026-09-23)
+- Plan: brainstorms/2026-09-23-classroom-home-PLAN.md, review log alongside (3 rounds, gpt-6-astra medium, no APPROVED verdict, no open disagreement).
+- Captured: "yes to all three": Flagged + Needs review shelves in the launcher; Review these next to Try new ones; session reminders 24h and 1h before. "update the design first" before any build.
+
+### Design v2 published (Claude, 2026-09-23)
+Canvas version 5: new boards Home.dc.html (v2 Classroom Home) and Launcher.dc.html (interactive Question / Section / By type tabs, Needs review and Flagged shelves). v1 boards kept and labelled superseded. Next: Joshua reviews v2, then build choice (Codex builds phase 1, Claude builds, or stop).
+
 ## Open flags (pending input)
 - Confirm every practice mode (Smart Drill, timed sections, guided drills, bootcamps, RC) writes to `attempts` -> Claude
 - Which stats appear on Home and where the numbers come from (Analytics data vs new queries) -> Joshua decides, Claude checks feasibility

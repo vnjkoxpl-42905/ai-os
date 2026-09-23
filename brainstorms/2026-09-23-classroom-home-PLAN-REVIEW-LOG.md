@@ -109,3 +109,27 @@ VERDICT: REVISE
 
 ### Claude's response
 Accepted all 7. Verified no reminder producer exists (reminder type appears only in the hook, the list component and migrations). Changes: bank-aware section dispatch; additive excludeAnswered on filter launches with shortfall message and queue stored for resume; shared event_key on messages and notifications with partial unique indexes; per-message origin; trigger protection; server-side home_feed RPC as the one visible-event model for list, counts and reads; human-message preview; new Sections adapter instead of the zero-filling reader, labelled Sections unless timing is proven; LR RPC returns last_attempt_at plus an evidence RPC on the same selection; source-specific evidence; session reminder producer specified as a new scheduled job. Ideas adopted: Practice this exact skill; Needs review ordering added to Joshua's product question.
+
+## Round 3 - Codex (final, MAX_ROUNDS reached)
+
+## FLAWS
+
+Two material problems remain in the revised fixes. The other addressed findings can stay closed.
+
+1. **The proposed RC dispatch opens one passage, not a section.** The finder’s RC link supplies `passage=<id>`. The player then creates a session with exactly that passage and `DEFAULT_CONFIG`, so this route does not preserve the selected full section or timer. This is confirmed by [RcPlayer.tsx:130](C:/Users/Joshu/dev/ai-os/projects/lsatu/src/features/rc/pages/RcPlayer.tsx:130). The player separately supports multiple passage IDs and explicit configuration at [RcPlayer.tsx:141](C:/Users/Joshu/dev/ai-os/projects/lsatu/src/features/rc/pages/RcPlayer.tsx:141).  
+   **Fix:** Specify an RC section launch that resolves all passages in section order, creates a session with the intended timing configuration, and navigates using its session ID.
+
+2. **Event-specific reads cannot safely use a conversation-wide read timestamp.** Suppose Joshua sends an unread human message, then an assignment event arrives. Opening the assignment and advancing `last_read_at` also marks the earlier human message read, even though the student only opened the assignment. That contradicts the revised promise to mark only the selected event’s rows read. The existing mechanism is explicitly conversation-wide: [useInbox.ts:247](C:/Users/Joshu/dev/ai-os/projects/lsatu/src/hooks/useInbox.ts:247).  
+   **Fix:** Keep generated-event read state separate from the conversation watermark; advance that watermark only when the conversation is read, and use event acknowledgements—including a fallback for message-only delivery—to synchronize generated duplicates.
+
+## IDEAS
+
+No additional ideas this round. The plan already contains enough useful additions; resolving these two behavioral contracts is more valuable than expanding scope.
+
+VERDICT: REVISE
+
+### Claude's response
+Accepted both. RC section launch now resolves all passages of the section and creates a session with the chosen timer config, navigating by session id. Read state split: conversation watermark moves only when a conversation is opened; generated events use a new event_acks table. These two fixes were applied after the final round and were NOT re-reviewed by Codex.
+
+## Outcome
+No APPROVED verdict within 3 rounds. No open disagreement: every Codex finding was accepted. Remaining product decisions for Joshua: Flagged/Needs review shelves; Review these vs Try new ones; whether session reminders are wanted.
