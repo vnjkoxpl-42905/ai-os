@@ -37,6 +37,9 @@ Raw evidence (docs crawl, community pages, searches) is in `raw/sources/superwhi
 
 10. **Official CLI + MCP exist, Mac-only (checked 2026-09-12).** `superwhisper` CLI (search/export/stats/vocab/snippets/mcp), announced 2026-07-16, released at github.com/superultrainc/superwhisper-cli-release; v0.1.0 ships only a macOS universal binary and the install script refuses non-Darwin. The Claude Code plugin (superultrainc/superwhisper-claude-code) is also Mac 2.13+. On this PC, `sync.py` is the equivalent of `superwhisper vocab`. Re-check the release assets after each Windows app update; when a Windows binary lands, add `superwhisper mcp` to Claude Code.
 
+11. **Replacements are substring matches, not word matches (proved 2026-09-23).** A rule whose heard side can sit inside a longer word will corrupt that word: `cli` turned "click" into "CLIck" 48 times, `u i` turned "you install" into "yoUInstall", `firecraw` matched inside "firecrawl" and produced "Firecrawll". Never add a bare acronym or a fragment of a longer word. Casing belongs in the mode glossary, which Sonnet 5 applies with judgment. `scan.py` section 2b lists any rule that is currently doing this; it must stay empty.
+12. **`scan.py` section 2 reads the post-replacement `result`.** Testing the raw transcript makes every rule look broken, because the raw is by definition what the voice model heard before any rule ran (that false positive stood from 2026-09-11 to 2026-09-23).
+
 ## Where the app keeps things
 
 `C:\Users\Joshu\AppData\Local\com.superwhisper.app\`
@@ -48,17 +51,17 @@ Exe: `C:\Users\Joshu\AppData\Local\superwhisper\Superwhisper.exe` (reinstalled t
 
 | Mode | Model | Use |
 |---|---|---|
-| Claude Code | S1-Language | Instructions to an agent. Keeps every detail, never answers. |
-| Student Email | S1-Language | Finished email in his voice, per `wiki/teaching-voice.md`. |
+| Claude Code | Sonnet 5 | Instructions to an agent. Keeps every detail, never answers. |
+| Student Email | Sonnet 5 | Finished email in his voice, per `wiki/teaching-voice.md`. |
 | Student Message | S1-Language | Short in-platform message or drill feedback. Coaching register. |
 | Lesson Notes | S1-Language | Spoken teaching → notes with the reasoning intact. |
 | Vault Note | S1-Language | Thinking out loud → Obsidian note, wiki-links, absolute dates. |
 | Consult Notes | S1-Language | Post-consultation debrief → structured record + follow-ups. |
-| Rewrite | S1-Language | Select text, say what to do to it. |
+| Rewrite | Sonnet 5 | Select text, say what to do to it. |
 | Message | S1-Language | Texts and DMs, light cleanup. |
 | Verbatim | none | Raw transcript. |
 | Session | none | Record a live session, nothing pasted. |
-| Super | S1-Language | His original generic mode, kept as fallback. |
+| Super | Sonnet 5 | His original generic mode, kept as fallback. |
 
 Switch with Ctrl+Shift+M, or `superwhisper://mode?key=<key>`. Per-mode hotkeys are set in the app (Modes → mode → Keyboard shortcut) and are not managed here yet.
 

@@ -8,10 +8,44 @@ Sources: decisions `brainstorms/2026-09-23-classroom-home-visual-upgrade.md` (ro
 - Home code: `src/components/classroom/home/`.
 - PR #133 (branch `feat/home-v2-phase1`, unmerged): `pickContinueWork`, `QuestionFinder` `open()` handle, container-query columns, preservation tests. v3 builds on it and closes #133. #133 has NO Section tab; "Timed section" only opens the finder.
 - Hard rules: completed student work never lost or modified; additive migrations only; branch + PR; Lovable Cloud Edge Functions deploy through Lovable (confirm first); frontend reaches lsatprep.study only via Lovable deploy; a teacher is never the student; student copy per `wiki/teaching-voice.md`, no em dashes.
-- Builder: Codex `gpt-6-sol`, low. Spec/review: Claude + `gpt-6-astra`.
+- Builder: Codex `gpt-6-luna`, high (Joshua, 2026-09-23). Spec/review: Claude + `gpt-6-astra`.
 
 ## Goal
 Ship the v3 Classroom Home for students: a warm top panel (greeting, two numbers, Question finder, Continue, Smart Drill, Timed section, Inbox), a dominant visual insight that tells the student what to do next, a precise per-type list, supporting tiles, and the unchanged Next seven days strip. Every number says what it counts; the page is fast, stable, accessible, and complete with zero coach input.
+
+## Amendment A (Act 6, Joshua rounds 11-12, 2026-09-23; revised after Codex Act 6 rounds 1-2, APPROVED round 3). Overrides sections 1, 5 and 9 where they conflict.
+State: PR 1 was built (gpt-6-luna high) in `projects/lsatu-home-v2`, uncommitted, typecheck clean, 110/110 tests. Joshua then changed the points below. Reference images re-reviewed: all six are chart-led; PR 1 had zero charts. **PR 1 is an intermediate build. The visual upgrade is accepted only after PR 2 ships real-data charts with browser evidence (populated, sparse, error and no-message states).**
+
+A1. **Booking stops being a card.** No dark Next session card. Home gets a typed `homeBooking` state: `loading | error | booked | credits | payPerSession | none`.
+- `booked`: one slim line in the top panel under the status line, "Next session: Thursday 7:15 pm". Destination: `/booking` (Schedule shell, Book tab, which lists "Your upcoming sessions"; verified `Booking.tsx:20`). It opens the booking-management surface, not a single booking; no per-session deep link is promised. No large numerals.
+- `credits` (active pass, `credits_remaining > 0`, no booking): a "Book" pill in the action row, "Book · 3 left", to `/booking`.
+- `payPerSession` (no booking, no active credits): the same-size pill "Book a session", to the offer whose id is `single-session` or `single-session-native`, chosen explicitly from `offers`, never the renewal branch. No such offer -> `none`.
+- `none`, `loading`, `error`, admin/coach: nothing rendered (loading/error never render as "none" copy). Existing schedule access gates stay.
+- Supersedes Q6b "compact Book a session card" and the 4/12 dark card.
+
+A2. **No default Read, Recall, Colour tile.** RRC shows only as assigned work. Test: an assigned RRC row still renders with its actions after the tile's removal.
+
+A3. **Analytics (PR 2).** One `security invoker` RPC `home_lr_activity(p_class_id, p_tz)` replaces `home_week_counts` (section 1). Source = `attempts` only (verified: `drill_history` SQL labels `attempts` as LR and unions RC separately). Coverage is by write path: every bank-question LR attempt, including those launched inside bootcamps (`LRQuestionModal.tsx:174`, mode `bootcamp-pf`); separately stored introductory exercises and RC are excluded and disclosed ("LR bank questions").
+- **Eligibility.** BR answers are separate `attempts` rows (`Drill.tsx:3479`) reusing the session mode. Exclude from both metrics rows where `br_selected IS TRUE` or `br_answer`/`br_outcome` is not null; `br_marked`/`br_selected`/`br_changed` default to false, so false/null flags are kept. No other "replay" predicate (recordings live in `session_replays`, not `attempts`). Accuracy: "first attempt" = the earliest eligible row per student and question across ALL history, then windowed. Volume: deduplicated within each local day only. A question with any undated eligible row is excluded from first-attempt accuracy and counted in a disclosed "n questions without dates left out". No timestamps are invented; no rows are rewritten. Tests: older original + recent retry; original followed by its BR row sharing a mode; an ordinary row with BR flags false; undated original + dated retry.
+- **Accuracy trend tile ("First-attempt accuracy, last 8 weeks").** All 8 weekly buckets are kept in the data and the accessible table. A week with >=10 eligible first attempts is a solid point; 1-9 is a hollow, unconnected marker labelled "few questions"; 0 is a gap labelled "No first attempts" (volume describes practice activity); non-overshooting monotone interpolation between adjacent points only; the current week is labelled "so far" and glows only if it is a point. Fewer than 3 weeks with at least 10 eligible first attempts (hollow markers do not count) -> a labelled simple result ("62% on 24 first attempts since Sept 1"). Each point shows correct/total on focus/hover and in an accessible table.
+- **Volume tile ("LR questions, last 7 days").** Bars per local day = distinct eligible question ids that day (a repeat on a different day counts again, disclosed). The headline = the sum of the bars. Current day labelled "today".
+- **Proportions.** Accuracy tile 7/12, volume tile 5/12, equal heights, big light numerals for the real headline values (Homies hierarchy), direct labels, plot area at least 60% of tile height. Dark surfaces with a restrained warm light behind the plot (Notton/WeatherWise depth); static under reduced motion.
+- **Per-type list (section 5)** keeps its population, "latest attempt per question within each 30-day bucket", and is labelled so; it is styled as plain continuous bars, not Be.run segments, so it does not read as task completion. The two populations are labelled distinctly and never compared as improvement.
+
+A4. **Main card is full width** (PR 1: the "pick up where you left off" hero + assigned work; text width capped around 68ch, height content-driven). PR 2: the full-width insight card has diagnosis/action on the left and bubbles on the right, stacking under 900px container width.
+
+A5. **Assigned work has a permanent home.** From PR 2 it moves out of the insight card into its own "Assigned to you" card (Coders-style compact rows: title, due date, real progress where the model has it) in the lower row, keeping open, briefing interception, Mark done and report-card seen. Be.run-style progress with a clear endpoint is used only for real completed/total counts (hero items, bootcamps).
+
+A6. **Last section (PR 2).** Needs the bounded sections adapter from section 2, not `sectionHistory.ts:107` (it zero-fills scores and can invent a completion date). Latest row with a known completion date; unknown scores or denominators shown as unknown; its Review link opens that saved result, never a new section (verified in PR 2).
+
+A7. **One authoritative order.**
+- PR 1, desktop: top panel (greeting, status, slim next-session line, days to test | finder, Continue, pills incl. Book) -> main card (full) -> From Joshua (only when a message exists, full width, compact) -> Next seven days.
+- PR 2, desktop: top panel -> insight card (full) -> chart row (accuracy 7 | volume 5) -> per-type list (7) + Last section (5) -> Assigned to you (7) + From Joshua (5) -> Next seven days.
+- Phone (one column): top panel (containing the one Continue) -> diagnosis/action -> accuracy -> volume -> bubbles -> per-type list -> Last section -> Assigned to you -> From Joshua -> week.
+- Charts must not be buried (Codex round 2). Claude keeps the insight first because Joshua chose diagnosis-to-action to lead (round 10), but bounds what sits above the charts: on phones the top panel is compact (finder, one Continue, pills in two rows), and the insight shows diagnosis + action with the bubbles moved below the chart row. Browser check: at 390x844 the chart row starts within the second screen; at 1440x900 it starts within the first screen and a half. These are acceptance checks at normal text size, never fixed heights that clip at 200% text. Codex accepted insight-first in round 3.
+- Collapse: any absent tile's partner spans the full row; a row with nothing renders nothing; loading shows layout-matched skeletons, errors show retry, neither shows as empty.
+
+A8. **Build order.** PR 1 revision on the uncommitted build: A1, A2, A4, A7 (PR 1 order); no new data beyond the existing `test_date` read. PR 2 = section 2 RPCs + A3 + A5 + A6 + bubbles/list/evidence + `excludeAnswered`. Builder: gpt-6-luna high (Joshua, 2026-09-23). Staging excludes `supabase/functions/mcp/index.ts`, which the dev server regenerates.
 
 ## Approach
 

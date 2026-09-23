@@ -1,0 +1,97 @@
+#!/usr/bin/env bash
+# One front door for acting on LSAT U headlessly. No browser.
+#
+#   lsatu assign --student "Celia" --section PT156.S2 --due 2026-09-26 [--dry-run]
+#   lsatu assign-many "Celia, Lydia, Dakota" --drill "main-conclusion-1" [--dry-run]
+#   lsatu status "Celia" | qtypes "Celia" [--days 30] | sections "Celia"
+#   lsatu overdue | quiet [--days 7] | students | inbox [--days 7] | thread "Celia"   (reads: --json)
+#   lsatu signups | access "Name" [--template standard | --grant x,y | --revoke z] | archive | unarchive
+#   lsatu items "Name" | due <item-id> YYYY-MM-DD | unassign <item-id> | passes | notifications | read "Name"
+#
+# Writes run from projects/.lsatu-ops, a detached worktree pinned to
+# origin/main and fast-forwarded before every run, so another session's branch
+# or uncommitted edits in projects/lsatu can never change what "assign" does.
+set -euo pipefail
+ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
+MAIN="$ROOT/projects/lsatu"
+OPS="$ROOT/projects/.lsatu-ops"
+
+sync_ops() {
+  if [ ! -d "$OPS" ]; then
+    git -C "$MAIN" fetch -q origin main
+    git -C "$MAIN" worktree add -q --detach "$OPS" origin/main
+  fi
+  if [ ! -e "$OPS/node_modules" ]; then
+    cmd //c "mklink /J $(cygpath -w "$OPS/node_modules") $(cygpath -w "$MAIN/node_modules")" >/dev/null
+  fi
+  # vite-node runs the @lovable.dev/mcp-js Vite plugin, which rewrites this
+  # generated entry with a local path on every run. Put the committed one back.
+  git -C "$OPS" restore supabase/functions/mcp/index.ts 2>/dev/null || true
+  if [ -n "$(git -C "$OPS" status --porcelain --untracked-files=no)" ]; then
+    echo "lsatu: $OPS has local edits; it must stay a clean copy of main. Not running." >&2
+    exit 1
+  fi
+  git -C "$OPS" fetch -q origin main
+  git -C "$OPS" checkout -q --detach origin/main
+}
+
+run_assign() {
+  local rc=0
+  # On Windows the npx shim splits argv at a newline: everything after it,
+  # including --dry-run, is silently dropped. That sent a real message on
+  # 2026-09-23. Refuse multi-line arguments until assign.ts reads text from a file.
+  for a in "$@"; do
+    case "$a" in *$'\n'*|*$'\r'*) echo "lsatu: refusing a multi-line argument (Windows would drop everything after the first line, including --dry-run). Nothing sent." >&2; return 2;; esac
+  done
+  (cd "$OPS" && npx --no-install vite-node scripts/assign.ts -- "$@") || rc=$?
+  git -C "$OPS" restore supabase/functions/mcp/index.ts 2>/dev/null || true
+  return $rc
+}
+
+cmd="${1:-}"; shift || true
+case "$cmd" in
+  assign)
+    sync_ops
+    run_assign "$@"
+    ;;
+  assign-many)
+    list="${1:?name the students, comma-separated}"; shift
+    sync_ops
+    IFS=',' read -ra names <<< "$list"
+    # Resolve every name first. One bad name stops the batch before anyone is emailed.
+    for n in "${names[@]}"; do
+      n="$(echo "$n" | xargs)"
+      run_assign --student "$n" "$@" --dry-run >/dev/null || { echo "lsatu: stopped, \"$n\" did not resolve. Nothing was assigned." >&2; exit 1; }
+    done
+    for a in "$@"; do [ "$a" = "--dry-run" ] && { echo "all ${#names[@]} resolved (dry run)"; exit 0; }; done
+    fail=0
+    for n in "${names[@]}"; do
+      n="$(echo "$n" | xargs)"
+      echo "== $n"
+      run_assign --student "$n" "$@" || fail=$((fail+1))
+    done
+    [ "$fail" -eq 0 ] || { echo "lsatu: $fail of ${#names[@]} failed; see above." >&2; exit 1; }
+    ;;
+  draft-send)
+    # Send an AI TA draft to its student as an admin message, then mark it posted.
+    id="${1:?draft id}"; shift
+    json="$(node "$ROOT/system/scripts/lsatu-admin.mjs" draft "$id" --json)"
+    email="$(printf '%s' "$json" | node -e 'let s="";process.stdin.on("data",d=>s+=d).on("end",()=>{const d=JSON.parse(s);if(!d.student_email)process.exit(1);process.stdout.write(d.student_email)})')"
+    body="$(printf '%s' "$json" | node -e 'let s="";process.stdin.on("data",d=>s+=d).on("end",()=>process.stdout.write(JSON.parse(s).draft_markdown||""))')"
+    [ -n "$body" ] || { echo "lsatu: draft $id has no text to send." >&2; exit 1; }
+    sync_ops
+    run_assign --student "$email" --message "$body" "$@"
+    for a in "$@"; do [ "$a" = "--dry-run" ] && exit 0; done
+    node "$ROOT/system/scripts/lsatu-admin.mjs" draft-set "$id" posted
+    ;;
+  signups|access|archive|unarchive|items|due|unassign|passes|notifications|read|drafts|draft|draft-set|uploads|upload-review|notes|note-resolve|note-discard|scan-notes|plans|unsend|unsend-last)
+    node "$ROOT/system/scripts/lsatu-admin.mjs" "$cmd" "$@"
+    ;;
+  status|qtypes|sections|overdue|quiet|students|inbox|thread)
+    node "$ROOT/system/scripts/lsatu-report.mjs" "$cmd" "$@"
+    ;;
+  *)
+    sed -n '2,10p' "$0" >&2
+    exit 2
+    ;;
+esac

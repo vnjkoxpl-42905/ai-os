@@ -3,7 +3,7 @@ key: student-email
 name: Student Email
 type: super
 voice_model: sv-1
-language_model: sl-1
+language_model: claude-sonnet-5
 context_application: false
 context_clipboard: true
 context_selection: true

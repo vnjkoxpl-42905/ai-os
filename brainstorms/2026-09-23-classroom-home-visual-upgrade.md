@@ -153,3 +153,32 @@ Still open from before: Q1 left menu (keep vs slim), Q2 empty-state rules. Joshu
 - Q6b Empty states: 1-2 types -> labelled simple result; no practice -> invitation; no assignment -> hide; no session -> compact Book a session (not hidden); loading/failed never shown as empty.
 - Q7 Build split: first = v3 layout, honest visuals, quality bar, small registry + diagnosis-to-action, Ask as evidence-attached draft in the existing inbox, sure-but-wrong only if the audit passes. Second = session brief, then review + fresh check, then Today.
 - Joshua then asked for /codex-review to perfect the plan with these positions.
+
+### Round 11 - booking is too dominant (Joshua, 2026-09-23, after the PR 1 build)
+- Captured (his words): "I do not want to have the booking part be such a dominant part, because if you've already paid, you don't have to worry about booking." "They could have a place where they book, where it's linked to their booking, and they still have pre-paid credits especially, they can click 'book.' But it shouldn't be such a dominant part of the day, such a dominant part of the home page."
+- Supersedes in part: Q6b "no session -> compact Book a session (not hidden)" and PR 1 layout item 2 (Next session as the dark 4/12 card). Open until Round 11 answers land.
+- Facts (Claude, from code): Home already loads the student's pass (`credits_remaining`, `total_credits`, status) and next booking; `resolveStudentBookingCta` (src/lib/studentBookingCta.ts) already picks: credits -> in-app picker "/booking" with "N of M sessions left"; pay-per-session -> single-session link; spent package -> renewal.
+- Questions asked: Q1 booked-session display, Q2 no booking with credits, Q3 no booking and no credits, Q4 where the freed column goes.
+#### Round 11 answers (Joshua, 2026-09-23)
+- Q1 booked session: recommended accepted. Slim line in the top panel ("Next session: Thursday 7:15 pm") that opens the booking; no dark card, no big numerals. Supersedes the PR 1 dark Next session card.
+- Q2 no booking, credits left: recommended accepted. Small "Book" pill in the action row with the credits left, straight to the picker.
+- Q3 no booking, no credits: recommended (nothing) REJECTED. "The pay-per-session link should be there. Shouldn't be dominant, but it should be there." So a quiet pay-per-session Book link, never a renewal pitch. (Dictated as "paper session"; read as pay-per-session.)
+- Q4 freed column: not answered.
+- New: Read, Recall, Colour tile should come off Home (dictation said "should be on the homepage"; context reads as should NOT; confirm) -> replace with "something else that will be useful" -> Claude proposes.
+- New: "what happened to the analytics?" Joshua says the builds are missing things from the original inspiration images; review those before going forward.
+
+### Reference re-review (Claude, 2026-09-23, after Round 11)
+Re-read the six original images. What the built PR 1 is missing against them, honestly:
+- Every reference is chart-led: Notton's row of four chart tiles (bars, donut, line, ranked list); Homies' big-number stat row, gauge and line chart; Be.run's bubbles, gauge, progress bar and segmented habit bars; Mountain's chart row; WeatherWise's curve with a glowing today point. PR 1 has one number (days to test) and zero charts.
+- Why: PR 1 was scoped as layout-only with no new data; the only analytics in the plan are PR 2's bubbles + per-type list and the "LR questions this week" count. A trend line, volume bars, gauge and segmented per-type bars were never planned. "No goal score, streaks or latest PT score" (Joshua) removed some, but not these.
+- Questions asked (Round 12): Q4 freed column (carried), Q5 RRC tile off Home, Q6 what replaces it, Q7 which analytics come back.
+
+### Round 12 answers (Joshua, 2026-09-23)
+- Q4 freed column: "I don't know what the main card is." Not answered; Claude to explain (the taupe card holding "pick up where you left off" + assigned work in PR 1, and the diagnosis/bubbles in PR 2). Joshua asked Claude and Codex to settle open layout points between themselves.
+- Q5 RRC tile: "It's one of my things I assigned, but that's not something that should just be defaulted there." Decision (as read): no default Read, Recall, Colour tile on Home; RRC appears only when Joshua assigns it, as assigned work.
+- Q6 replacement tile: not answered directly; delegated to the Claude/Codex review.
+- Q7 analytics: "There should be accuracy." Accuracy trend and this week's volume, "whichever is good... let's improve it." Review the inspiration images again. Segmented per-type bars and bubbles not rejected.
+- Process: Claude and Codex go back and forth and grill each other (Joshua named "grill me Codex"; the installed skill is codex-review), then bring Joshua only the remaining disagreements.
+
+### Act 6 outcome (Claude + Codex astra, 2026-09-23)
+Amendment A of the plan APPROVED after 3 rounds, no disagreement left for Joshua. Settled: Next session card removed (slim line / Book pill with credits / quiet pay-per-session pill / nothing); main card full width; chart row (first-attempt accuracy 7/12, LR questions last 7 days 5/12) in PR 2 below the insight; assigned work gets its own card in PR 2; Last section tile in PR 2; RRC only when assigned. PR 1 is intermediate; the visual upgrade is accepted only after PR 2's charts. Pending Joshua: go-ahead for the PR 1 revision build.

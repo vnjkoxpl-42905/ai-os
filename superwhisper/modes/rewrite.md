@@ -3,7 +3,7 @@ key: rewrite
 name: Rewrite
 type: super
 voice_model: sv-1
-language_model: sl-1
+language_model: claude-sonnet-5
 context_application: false
 context_clipboard: false
 context_selection: true

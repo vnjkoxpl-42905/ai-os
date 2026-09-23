@@ -251,3 +251,113 @@ Verified: daily_stats is only read (gamification.ts, streakSystem.ts, useStudent
 
 ## Act 5 outcome
 No APPROVED within 3 rounds; no open disagreement (every finding accepted, 21 total incl. round 1 on the superseded file). Nothing for Joshua to referee. Joshua-owned items in the plan: one review of the action registry before PR 3.
+
+
+# Act 6: Amendment A (booking, RRC, analytics), 2026-09-23. gpt-6-astra medium, read-only, six reference images attached. MAX_ROUNDS=5.
+
+## Act 6 Round 1 - Codex
+Amendment A needs revision. The product decisions are clear; the data contracts and final composition are not.
+
+1. **A4: choose full width, with internal columns.** Keeping an unexplained second tile beside the main insight would recreate the filler-card problem. But stretching PR 1’s text-heavy assignment card across the page will not deliver the references’ visual hierarchy.  
+   **Fix:** Use a full-width main card, with diagnosis/action beside bubbles in PR 2, bounded text width, and a compact content-driven height in PR 1; stack internally at narrow container widths.
+
+2. **A5: Last section belongs in PR 2.** It requires the honest sections adapter, not merely another read. The existing [sectionHistory.ts](C:/Users/Joshu/dev/ai-os/projects/lsatu-home-v2/src/lib/sectionHistory.ts:107) reads all rows, substitutes zero scores, and can fabricate a completion date from the current time.  
+   **Fix:** Ship Last section with a bounded adapter in PR 2; select the latest known completion date, preserve unknown scores/denominators, and verify that Review opens that saved result rather than starting a fresh section.
+
+3. **A3: LR versus RC is resolved by storage, not question-type guessing.** The inspected LR writers use `attempts`; RC uses its separate progress API. The existing `drill_history` SQL explicitly labels `attempts` as `lr` and unions RC separately. However, introductory LR work also has separate storage, so this is not automatically “all LR practice.”  
+   **Fix:** Source this release’s charts from `attempts`, document the included practice paths, and disclose excluded introductory/other activity instead of inferring LR from `qtype` or section number.
+
+4. **“First attempts only” is not implemented by excluding review modes.** [Drill.tsx](C:/Users/Joshu/dev/ai-os/projects/lsatu-home-v2/src/pages/Drill.tsx:3476) writes blind-review rows using the original session mode. Selecting the earliest row *inside eight weeks* would also misclassify an older question’s retry as first exposure.  
+   **Fix:** Exclude explicit BR/replay records, select the earliest eligible attempt per student/question across history, then apply the chart window; test older originals, retries and BR rows sharing a mode.
+
+5. **Undated rows create uncertainty beyond missing chart dates.** Dropping an undated original can make a later dated retry look like a first attempt. An “undated” count alone does not solve that.  
+   **Fix:** Exclude questions with ambiguous undated non-review history from first-attempt accuracy, report that exclusion separately, and never invent timestamps or rewrite historical rows.
+
+6. **The volume tile has conflicting definitions.** “This week,” “last seven days,” distinct questions and questions answered are different measures. Section 1 also retains a competing `home_week_counts` RPC.  
+   **Fix:** Choose “LR questions · last 7 days,” count distinct eligible question IDs per local day with repeats across days allowed and disclosed, sum those bars for the headline, and replace the obsolete count RPC with `home_lr_activity`.
+
+7. **The trend can imply evidence that does not exist.** “Three qualifying weeks” is undefined; smoothing can overshoot or bridge empty weeks; the current week is incomplete and may contain no attempts.  
+   **Fix:** Require three weeks with at least ten eligible questions, retain missing weeks as gaps, use non-overshooting interpolation, label the current week “so far,” and glow only an actual point.
+
+8. **The adjacent accuracy displays use different populations.** A3 uses first attempts, while section 2’s per-type list uses the latest attempt within each bucket. Both could show different accuracy for the same work without explanation.  
+   **Fix:** Explicitly label “First-attempt accuracy” versus “Latest attempt per question,” expose numerator/denominator and date window, and avoid presenting their differences as comparable improvement.
+
+9. **A1 assumes a booking link the Home model does not carry.** `nextBooking` has an ID/source/meeting URL, but the current session mapping retains none of those. Separately, `resolveStudentBookingCta` returns renewals and a `/booking` fallback; its result has no explicit branch identifier.  
+   **Fix:** Add a typed Home-specific booking state with numeric credits and a verified booking destination; select single-session offers explicitly, preserve schedule access gates, and distinguish loading/error from confirmed no booking.
+
+10. **PR 2’s main-card replacement risks losing assigned work.** A4 changes the taupe card from assignment hero/list to diagnosis/bubbles without specifying where the existing rows and their actions go. Continue is not a substitute for the full assignment list.  
+    **Fix:** Name a permanent assigned-work location and preserve completion, briefing and report-card actions; test that assigned RRC survives removal of its default tile.
+
+11. **The proposed chart row only partly delivers the references’ character.** Two equal dark rectangles add charts, but the references also rely on unequal visual weight, large readable numbers, substantial plotting space and compact supporting information. A tall greeting plus an unbounded assignment card could bury both charts.  
+    **Fix:** Specify a wider accuracy tile and narrower volume tile, coordinated heights, prominent real values, direct labels and generous plot areas; verify their placement in populated student views at narrow, mid, wide and docked widths.
+
+12. **The amended layout still has contradictory instructions.** Amendment A only overrides sections 1 and 9, yet also changes section 5’s bars; the old mobile order still includes Next session, and the per-type list’s final location is unclear. Optional-message removal can also leave a half-empty lower grid.  
+    **Fix:** Publish one authoritative desktop/mobile order covering assignments, insight, charts, list, Last section and optional message, with explicit collapse rules for every absent tile.
+
+13. **A6 repeats the previous delivery failure unless the release boundary changes.** PR 1 still has no charts, although their absence triggered this amendment. Separate implementation PRs are reasonable; calling PR 1 the delivered visual upgrade is not.  
+    **Fix:** Keep PR 1 as an intermediate build and make acceptance of the visual upgrade depend on PR 2’s real-data charts and browser evidence, including sparse, error and no-coach-message states.
+
+Useful reference elements still missing:
+
+- **Be.run’s progress with a clear endpoint:** use verified completed/total counts for assigned work or bootcamps; do not make segmented accuracy bars resemble task completion.
+- **Homies’ metric hierarchy:** give existing accuracy and volume values typographic prominence rather than adding more metrics.
+- **Notton/Mountain/WeatherWise’s depth:** use restrained surface gradients and chart-area lighting behind actual data, with static reduced-motion treatment; decorative landscape data would add no student value.
+- **Coders’ compact work overview:** make assignments easy to scan by title, due date and real progress, preserving the existing menu and unchanged week strip.
+
+One scope issue: the working tree also contains **589 deleted lines in `supabase/functions/mcp/index.ts`**, outside this Home amendment. **Fix:** Exclude that unrelated diff from Home staging and review it separately.
+
+This was a read-only plan and source review; I did not run the app or independently verify the recorded test results.
+
+VERDICT: REVISE
+
+### Claude response (round 1)
+Accepted all 13 as technical: typed homeBooking state with explicit single-session offer; BR excluded by br_* fields not mode; first attempt across all history then windowed; undated questions excluded and disclosed; volume = distinct qids per local day, summed; trend gaps, >=10 per point week, "so far" label; distinct population labels; assigned work gets its own card in PR 2; 7/5 chart proportions; one authoritative order + collapse rules; PR 1 declared intermediate, acceptance gated on PR 2 charts; mcp/index.ts restored and excluded from staging. Last section moved to PR 2 (sections adapter). Per-type list kept as continuous bars (not segments) per Codex reference note.
+
+## Act 6 Round 2 - Codex
+Amendment A is substantially clearer, but three implementation details still need revision.
+
+1. **BR answers are separate rows, but “`br_*` set” is an unsafe exclusion rule.** The original answer is inserted at [Drill.tsx:1609](C:/Users/Joshu/dev/ai-os/projects/lsatu-home-v2/src/pages/Drill.tsx:1609). BR completion inserts additional rows with `br_selected: true` at [Drill.tsx:3479](C:/Users/Joshu/dev/ai-os/projects/lsatu-home-v2/src/pages/Drill.tsx:3479); it does not update the original row, despite the misleading “Update attempts” comment. However, a migration gives `br_marked`, `br_selected` and `br_changed` defaults of `false`. Testing whether *any BR field is non-null* could therefore exclude ordinary answers.  
+   **Fix:** Define the predicate explicitly: exclude `br_selected IS TRUE` or populated BR-result fields such as `br_answer`/`br_outcome`; preserve false/null flags and test an original answer followed by BR.
+
+2. **BR metadata does not identify every repeat or “replay.”** A3 conflates BR rows, repeated practice and session recordings. Recorded replays live in `session_replays`; ordinary later attempts need not contain BR fields. Accuracy correctly handles those through first-attempt selection, while volume intentionally counts practice repeated on another day.  
+   **Fix:** Separate the rules: exclude BR-result rows from both metrics, deduplicate across history for accuracy and within each local day for volume, and remove the undefined “replay records” predicate.
+
+3. **A7 still risks burying the charts, especially on phones.** The current top panel contains the greeting, finder, Continue and actions. The next full-width insight then stacks diagnosis/action above bubbles below a 900px container width. Consequently, both charts follow two substantial stacked sections. Their 60% plot-area requirement controls their own interiors, not how far down the page they appear.  
+   **Fix:** Put the chart row immediately after the top panel in PR 2, followed by the full-width insight; on phones use top panel—including one Continue—then accuracy, volume and insight, with browser checks at specified viewport heights as well as widths.
+
+**`/booking` is a valid booked-session destination.** [Booking.tsx](C:/Users/Joshu/dev/ai-os/projects/lsatu-home-v2/src/pages/Booking.tsx:20) opens the Schedule shell’s Book tab. Its `CalendlyBookingCard` renders “Your upcoming sessions,” including the no-pass branch and expired/exhausted-pass states. Schedule’s existing Manage booking action also uses that tab. Keep this destination. It opens the booking-management surface, rather than selecting an individual booking; the amendment should not promise an individual-session deep link.
+
+Two smaller contracts remain worth tightening:
+
+4. **Sparse weeks silently disappear.** The revision now creates points only for weeks with at least ten questions. It specifies gaps for empty weeks but does not distinguish an empty week from one containing nine valid answers. With three qualifying weeks elsewhere, a student’s current practice could become invisible.  
+   **Fix:** Keep all eight weekly buckets in the accessible data, show sub-threshold weeks as labelled insufficient-sample gaps or hollow unconnected markers, and reserve zero/no-practice wording for actual zero counts.
+
+5. **The source disclosure overgeneralizes “bootcamp” exclusion.** [LRQuestionModal.tsx](C:/Users/Joshu/dev/ai-os/projects/lsatu-home-v2/src/components/drill/shared/LRQuestionModal.tsx:174) writes into `attempts`, with default mode `bootcamp-pf`. Thus some bootcamp work is included, while separately stored introductory exercises are excluded.  
+   **Fix:** Describe coverage by storage/write path: include bank-question attempts, including those launched inside bootcamps; exclude separately stored introductory exercises and RC.
+
+The full-width main card and Last section in PR 2 remain settled. The revised chart proportions, real-number hierarchy, restrained lighting and genuine assignment progress adequately translate the references without adding prohibited metrics. The remaining visual problem is placement, not missing decorative features.
+
+Read-only review; no files changed and no runtime verification performed.
+
+VERDICT: REVISE
+
+### Claude response (round 2)
+Accepted 1, 2, 4, 5 and the /booking note: explicit BR predicate (br_selected true or br_answer/br_outcome set); no replay predicate; volume dedup per day only; all 8 buckets kept, hollow markers for 1-9, zero wording only for real zeros; coverage by write path incl. bootcamp-launched bank questions. Partly rejected 3: insight stays first (Joshua chose diagnosis-to-action to lead, round 10); instead bounded the content above the charts on phone (compact top panel, bubbles below the charts) with viewport-height checks. Flagged to Joshua if still contested.
+
+## Act 6 Round 3 - Codex
+Amendment A is sound enough to implement. The revised BR predicate matches the inspected writer: BR answers are separate rows, while ordinary rows with false/null BR flags remain eligible. Accuracy and volume now have distinct deduplication rules, and the coverage description correctly includes bank-question attempts launched inside bootcamps.
+
+I accept insight-first ordering. Moving the mobile bubbles below the charts preserves diagnosis-to-action while reducing the content above analytics. The viewport-height checks make chart visibility testable; I don’t think chart-first ordering needs escalation to Joshua.
+
+Three small specification corrections remain, none requiring another design round:
+
+- **Zero first attempts does not mean “no practice.”** A student could spend that week answering previously attempted questions. **Fix:** Label zero accuracy buckets “No first attempts,” leaving volume to describe practice activity.
+- **“Three point-weeks” is ambiguous now that hollow markers exist.** **Fix:** Say “three weeks with at least ten eligible first attempts”; hollow markers do not count toward the line-chart threshold.
+- **The phone order omits the relocated bubbles and lists Continue separately despite placing it inside the top panel.** **Fix:** Write the order explicitly: top panel containing one Continue → diagnosis/action → accuracy → volume → bubbles → per-type list → remaining tiles.
+
+Treat the height limits as layout acceptance checks at normal text size, not fixed-height containers that clip content at 200% text enlargement. Approval is for the plan; runtime, accessibility and real-data verification remain required.
+
+VERDICT: APPROVED
+
+### Claude response (round 3)
+Applied the three wording fixes ("No first attempts"; threshold counts only solid weeks; explicit phone order with bubbles after volume; height checks are acceptance checks, not clipping heights). Converged, no open disagreement.

@@ -907,3 +907,6 @@ Ran skill-audit across seven roots (1,749 SKILL.md files). Repaired five malform
 
 ## [2026-09-23] research | Classroom Home dual research
 Claude + Codex blind top-5s, cross-grading, final 7. research/2026-09-23-classroom-home-dashboard-research/
+
+## [2026-09-23] build | LSAT U headless front door
+`system/scripts/lsatu` (assign, assign-many, status/qtypes/sections/overdue/quiet/students) + `.lsatu-ops` pinned worktree; assign-lsatu-work skill rewritten; hosted MCP lsat-u-mcp documented. Capture: brainstorms/2026-09-23-lsatu-admin-connector.md

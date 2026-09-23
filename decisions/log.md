@@ -134,3 +134,6 @@ Joshua approved four answer options, each containing a diagram and its proposed 
 
 ## 2026-09-23: Accommodations email is a pre-approved send template
 The "Request for Accommodations" email (Joshua's 2026-09-19 Celia wording, plus a line saying to register for a test date first and the note that removing the experimental section is written under "Other") is pre-approved. When Joshua asks for the `accommodations-email` skill for a named student, that counts as the go-ahead: it sends right away with the LSAC Qualified Professional Form attached and logs to wiki/send-ledger.md. The wording stays fixed. Only the name and the accommodations list change per student.
+
+## [2026-09-23] decision | LSAT U operations run through system/scripts/lsatu only
+All platform ops (assign, message, read messages, student data) go through the lsatu script; no Lovable, no credits. Hosted MCP connector left as-is, unused.

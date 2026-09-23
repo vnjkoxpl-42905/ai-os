@@ -3,7 +3,7 @@ key: claude-code
 name: Claude Code
 type: super
 voice_model: sv-1
-language_model: sl-1
+language_model: claude-sonnet-5
 context_application: true
 context_clipboard: false
 context_selection: false

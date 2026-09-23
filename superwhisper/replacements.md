@@ -88,7 +88,6 @@ Applied by Superwhisper after transcription, before any AI step. Matching is cas
 | firecrow | Firecrawl | 2026-09-11 |  |
 | fire crow | Firecrawl | 2026-09-11 |  |
 | fire crawl | Firecrawl | 2026-09-11 |  |
-| firecraw | Firecrawl | 2026-09-11 |  |
 | fire call | Firecrawl | 2026-09-11 | only when he means the tool |
 | firecall. | Firecrawl | 2026-09-11 |  |
 | fire crawler | Firecrawl | 2026-09-11 |  |
@@ -105,8 +104,6 @@ Applied by Superwhisper after transcription, before any AI step. Matching is cas
 | cloudcode | Claude Code | 2026-09-11 | scan; one word |
 | joshua.fisea01@gmail.com | joshua.fisseha01@gmail.com | 2026-09-11 | scan |
 | joshuadotfissera01@jimail.com | joshua.fisseha01@gmail.com | 2026-09-11 | scan |
-| superwhispero | Superwhisper | 2026-09-11 | scan |
-| superwhispere | Superwhisper | 2026-09-11 | scan |
 | mapacock | mattpocock | 2026-09-11 | Matt Pocock, handle form |
 | mapacock. | mattpocock | 2026-09-11 | trailing period |
 | matt pocock | mattpocock | 2026-09-11 | he wants the handle |
@@ -151,7 +148,6 @@ Applied by Superwhisper after transcription, before any AI step. Matching is cas
 | zeno's | Zeina's | 2026-09-11 |  |
 | grill with docs | /grill-with-docs | 2026-09-11 |  |
 | grill with docs. | /grill-with-docs | 2026-09-11 |  |
-| grill with doc | /grill-with-docs | 2026-09-11 |  |
 | grill with dogs | /grill-with-docs | 2026-09-11 |  |
 | grill with darks | /grill-with-docs | 2026-09-11 |  |
 | grill with dots | /grill-with-docs | 2026-09-11 |  |
@@ -630,7 +626,6 @@ Applied by Superwhisper after transcription, before any AI step. Matching is cas
 | prep test | PrepTest | 2026-09-11 |  |
 | preptest | PrepTest | 2026-09-11 | casing pin |
 | prep tests | PrepTests | 2026-09-11 |  |
-| lsat demon | LSAT Demon | 2026-09-11 | casing pin |
 | lsat daemon | LSAT Demon | 2026-09-11 |  |
 | seven stage | 7Sage | 2026-09-11 |  |
 | 7sage | 7Sage | 2026-09-11 | casing pin |
@@ -647,7 +642,6 @@ Applied by Superwhisper after transcription, before any AI step. Matching is cas
 | shad c n | shadcn | 2026-09-11 |  |
 | chad cn | shadcn | 2026-09-11 |  |
 | get hub | GitHub | 2026-09-11 |  |
-| github | GitHub | 2026-09-11 | casing pin |
 | google drive | Google Drive | 2026-09-11 | casing pin |
 | google calendar | Google Calendar | 2026-09-11 | casing pin |
 | google workspace | Google Workspace | 2026-09-11 | casing pin |
@@ -680,22 +674,17 @@ Applied by Superwhisper after transcription, before any AI step. Matching is cas
 | resolve the paradox | Resolve the Paradox | 2026-09-11 | casing pin |
 | comparative reading | Comparative Reading | 2026-09-11 | casing pin |
 | main point | Main Point | 2026-09-11 | casing pin |
-| r r c | RRC | 2026-09-11 |  |
-| rrc | RRC | 2026-09-11 | casing pin |
 | air grader | AI grader | 2026-09-11 |  |
 | a i grader | AI grader | 2026-09-11 |  |
 | recall color | Recall colour | 2026-09-11 |  |
 | color it | Colour it | 2026-09-11 |  |
 | colour it | Colour it | 2026-09-11 | casing pin |
-| aspiring attorneys | Aspiring Attorneys | 2026-09-11 | casing pin |
-| aspiring attorney | Aspiring Attorneys | 2026-09-11 |  |
 | yahunathan | Yahunatan | 2026-09-11 |  |
 | yahu nathan | Yahunatan | 2026-09-11 |  |
 | yohanatan | Yahunatan | 2026-09-11 |  |
 | zetvy | Zetvy | 2026-09-11 | casing pin |
 | avnit | Avneet | 2026-09-11 |  |
 | avneet nat | Avneet Natt | 2026-09-11 |  |
-| fernand | Fernande | 2026-09-11 |  |
 | fernanda | Fernande | 2026-09-11 |  |
 | charleus | Charleus | 2026-09-11 | casing pin |
 | vinay calva | Vinay Kalva | 2026-09-11 |  |
@@ -743,15 +732,10 @@ Applied by Superwhisper after transcription, before any AI step. Matching is cas
 | g w s | gws | 2026-09-11 |  |
 | power shell | PowerShell | 2026-09-11 |  |
 | powershell | PowerShell | 2026-09-11 | casing pin |
-| typescript | TypeScript | 2026-09-11 | casing pin |
 | type script | TypeScript | 2026-09-11 |  |
-| vercel | Vercel | 2026-09-11 | casing pin |
-| postgres | Postgres | 2026-09-11 | casing pin |
 | post gres | Postgres | 2026-09-11 |  |
-| json | JSON | 2026-09-11 | casing pin |
 | jason file | JSON file | 2026-09-11 |  |
 | mark down file | Markdown file | 2026-09-11 |  |
-| md file | Markdown file | 2026-09-11 |  |
 | claude dot md | CLAUDE.md | 2026-09-11 |  |
 | claude md | CLAUDE.md | 2026-09-11 |  |
 | claudemd | CLAUDE.md | 2026-09-11 |  |
@@ -761,33 +745,8 @@ Applied by Superwhisper after transcription, before any AI step. Matching is cas
 | obsidian vault | Obsidian vault | 2026-09-11 | casing pin |
 | web clipper | Web Clipper | 2026-09-11 | casing pin |
 | ghostty | Ghostty | 2026-09-11 | casing pin |
-| anthropic | Anthropic | 2026-09-11 | casing pin |
-| open ai | OpenAI | 2026-09-11 |  |
-| openai | OpenAI | 2026-09-11 | casing pin |
 | chat gpt | ChatGPT | 2026-09-11 |  |
-| chatgpt | ChatGPT | 2026-09-11 | casing pin |
-| mcp | MCP | 2026-09-11 | casing pin |
-| m c p | MCP | 2026-09-11 |  |
-| cli | CLI | 2026-09-11 | casing pin |
-| c l i | CLI | 2026-09-11 |  |
-| api | API | 2026-09-11 | casing pin |
-| a p i | API | 2026-09-11 |  |
-| u i | UI | 2026-09-11 |  |
-| url | URL | 2026-09-11 | casing pin |
-| u r l | URL | 2026-09-11 |  |
-| pdf | PDF | 2026-09-11 | casing pin |
-| html | HTML | 2026-09-11 | casing pin |
-| css | CSS | 2026-09-11 | casing pin |
-| sql | SQL | 2026-09-11 | casing pin |
-| s q l | SQL | 2026-09-11 |  |
-| rls | RLS | 2026-09-11 | casing pin |
-| rpc | RPC | 2026-09-11 | casing pin |
-| llm | LLM | 2026-09-11 | casing pin |
-| llms | LLMs | 2026-09-11 | casing pin |
-| jwt | JWT | 2026-09-11 | casing pin |
-| oauth | OAuth | 2026-09-11 | casing pin |
 | codecru | Codex | 2026-09-11 | typed by Joshua |
-| codec | Codex | 2026-09-11 | |
 | firecru | Firecrawl | 2026-09-11 | |
 | fire cru | Firecrawl | 2026-09-11 | |
 | claudecru | Claude Code | 2026-09-11 | typed by Joshua; assumed Claude Code |
@@ -861,3 +820,60 @@ Applied by Superwhisper after transcription, before any AI step. Matching is cas
 | //ingest | /ingest | 2026-09-12 | doubled slash |
 | ///codex-review | /codex-review | 2026-09-12 | doubled slash |
 | //codex-review | /codex-review | 2026-09-12 | doubled slash |
+| firecrawlls | Firecrawl | 2026-09-23 | scan 2026-09-23 |
+| firecrawlli | Firecrawl | 2026-09-23 | scan 2026-09-23 |
+| firecowl | Firecrawl | 2026-09-23 | scan 2026-09-23 |
+| firecowls | Firecrawl | 2026-09-23 | scan 2026-09-23 |
+| firecroll | Firecrawl | 2026-09-23 | scan 2026-09-23 |
+| firecrull | Firecrawl | 2026-09-23 | scan 2026-09-23 |
+| firecaw | Firecrawl | 2026-09-23 | scan 2026-09-23 |
+| firecrawln | Firecrawl | 2026-09-23 | scan 2026-09-23 |
+| firecrawlll | Firecrawl | 2026-09-23 | scan 2026-09-23 |
+| claudecode | Claude Code | 2026-09-23 | scan 2026-09-23 |
+| claudeco | Claude Code | 2026-09-23 | scan 2026-09-23 |
+| claude coyce | Claude Code | 2026-09-23 | scan 2026-09-23 |
+| chatclaude code | Claude Code | 2026-09-23 | scan 2026-09-23 |
+| cloud codes | Claude Code | 2026-09-23 | scan 2026-09-23 |
+| superwhishper | Superwhisper | 2026-09-23 | scan 2026-09-23 |
+| superwhusperer | Superwhisper | 2026-09-23 | scan 2026-09-23 |
+| superwhiskersco | Superwhisper | 2026-09-23 | scan 2026-09-23 |
+| superwhispers | Superwhisper | 2026-09-23 | scan 2026-09-23 |
+| coex | Codex | 2026-09-23 | scan 2026-09-23 |
+| codex6 | Codex | 2026-09-23 | scan 2026-09-23 |
+| gbt-6 | GPT-6 | 2026-09-23 | scan 2026-09-23 |
+| gbt 6 | GPT-6 | 2026-09-23 | scan 2026-09-23 |
+| gpt-6 astra | GPT-6 Astra | 2026-09-23 | scan 2026-09-23 |
+| gpt-6 luna | GPT-6 Luna | 2026-09-23 | scan 2026-09-23 |
+| gpt-6 sol | GPT-6 Sol | 2026-09-23 | scan 2026-09-23 |
+| gbt-6astra | GPT-6 Astra | 2026-09-23 | scan 2026-09-23 |
+| claude sonic | Claude Sonnet | 2026-09-23 | scan 2026-09-23 |
+| claud opus | Claude Opus | 2026-09-23 | scan 2026-09-23 |
+| anti-gravity | Antigravity | 2026-09-23 | scan 2026-09-23 |
+| anti gravity | Antigravity | 2026-09-23 | scan 2026-09-23 |
+| antigravity | Antigravity | 2026-09-23 | scan 2026-09-23 |
+| ai os | AI OS | 2026-09-23 | scan 2026-09-23 |
+| aios | AI OS | 2026-09-23 | scan 2026-09-23 |
+| a i o s | AI OS | 2026-09-23 | scan 2026-09-23 |
+| microsoft edge | Microsoft Edge | 2026-09-23 | scan 2026-09-23 |
+| figma | Figma | 2026-09-23 | scan 2026-09-23 |
+| kelsey regis | Kelsey Regis | 2026-09-23 | scan 2026-09-23 |
+| althea | Althea | 2026-09-23 | scan 2026-09-23 |
+| cameron | Cameron | 2026-09-23 | scan 2026-09-23 |
+| cameron's | Cameron's | 2026-09-23 | scan 2026-09-23 |
+| lsat-u | LSAT U | 2026-09-23 | scan 2026-09-23 |
+| lsat u is | LSAT U is | 2026-09-23 | scan 2026-09-23 |
+| lsat uis | LSAT U is | 2026-09-23 | scan 2026-09-23 |
+| lsatprep.studys | lsatprep.study | 2026-09-23 | scan 2026-09-23 |
+| post recap skill | /session-recap | 2026-09-23 | scan 2026-09-23 |
+| postrecap skill | /session-recap | 2026-09-23 | scan 2026-09-23 |
+| session recap skill | /session-recap | 2026-09-23 | scan 2026-09-23 |
+| seven sager | 7Sager | 2026-09-23 | scan 2026-09-23 |
+| 7sager | 7Sager | 2026-09-23 | scan 2026-09-23 |
+| joshua.fissiah01@jameel.com | joshua.fisseha01@gmail.com | 2026-09-23 | scan 2026-09-23 |
+| joshua.fissiah01@jimail.com | joshua.fisseha01@gmail.com | 2026-09-23 | scan 2026-09-23 |
+| joshua.fissier01@jml.com | joshua.fisseha01@gmail.com | 2026-09-23 | scan 2026-09-23 |
+| joshua fissier | Joshua Fisseha | 2026-09-23 | scan 2026-09-23 |
+| fissier | Fisseha | 2026-09-23 | scan 2026-09-23 |
+| yohunatan | Yahunatan | 2026-09-23 | scan 2026-09-23 |
+| suprabase | Supabase | 2026-09-23 | scan 2026-09-23 |
+| lovible | Lovable | 2026-09-23 | scan 2026-09-23 |
