@@ -90,6 +90,7 @@ Active in this root. Run `pickup` only when Joshua explicitly asks for it. Do no
 | `lsat-u-platform-actions` | doing anything ON lsatprep.study from here (assign, post, message, ingest) |
 | `tutorocean-profile-fill` | TutorOcean profile work |
 | `prompt-architect-refiner` | refining a prompt before it ships |
+| `accommodations-email` | "accommodations email to X" (dictation: "accommodations scale"); pre-approved send, QP form attached, self-logging |
 
 When a skill run exposes a gap, improve the skill before moving on. Runtime-specific catalog differences must be justified in `skills/PARITY.md`; undeclared differences are defects.
 

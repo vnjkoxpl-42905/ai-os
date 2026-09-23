@@ -1,107 +1,101 @@
 ---
 name: accommodations-email
 description: >
-  Send Joshua's LSAT accommodations email ("Request for Accommodations") to a
-  student, with the LSAC Qualified Professional Form PDF attached. Use when
-  Joshua says "send the accommodations email to X", "run/execute the
-  accommodations skill for X", "send X the accommodations form", or names a
-  student plus accommodations. Pre-approved template: invoking it for a named
-  student IS the go-ahead to send. Logs the send to wiki/send-ledger.md.
+  Send Joshua's LSAT accommodations email ("Request for Accommodations", LSAC
+  Qualified Professional Form PDF attached) to one or more students. Use
+  whenever Joshua mentions accommodations together with a person, in any
+  wording: "send the accommodations email to X", "accommodations for X",
+  "send X the accommodations", "X needs accommodations", "email X about extra
+  time", "send X the LSAC form", "run/execute/do the accommodations skill for
+  X", "accommodations email to X and Y". Dictation often hears "skill" as
+  "scale", so "the accommodations scale" means this skill. Pre-approved
+  template: naming the students is the go-ahead to send. Sends and logs itself.
 allowed-tools: Bash Read Edit Grep
 ---
 
 # Accommodations email
 
-A fixed template Joshua approved on 2026-09-23. It's based on his 2026-09-19 send to
-Celia; the only changes are the registration line and the "Other" note on the
-experimental-section item. Everything else is his wording. **Do not rewrite it**:
-no voice pass, no cleanup, no added steps. If the wording needs to change, Joshua
-changes `assets/body.html`.
+**What it does:** sends Joshua's fixed accommodations email to each student he names, with
+the LSAC Qualified Professional Form attached, then logs the send. Just give a name:
+"accommodations email to Gianna". The same file runs in Claude and Codex, from any folder.
 
-Files:
-- `assets/body.html`: the email body. `{FIRST}` and `{ITEMS}` are the only placeholders.
-- `assets/2026-2027-qualified-professional-form_final_accessible.pdf`: the attachment
-  (LSAC form, revised 5/2026, sha256 `14f3a40e…caf47c`).
-- `scripts/send.py`: fills in the body and sends it through `gws gmail +send` with the PDF attached.
+**Approved as a send template on 2026-09-23.** Naming students is the go-ahead, so don't ask
+again. Stop and ask only if the recipient's address is unclear (step 1).
 
-## 1. Find the recipient
-
-Joshua gives a name. Look it up in `students/roster.generated.md` first. If the name isn't
-there or has no email, rebuild it once with `python system/scripts/build-roster.py --offline`
-(a few seconds) and look again.
-
-Not in the roster (a prospect or a new student, e.g. Gianna Jean on 2026-09-23)? Search Gmail
-for their name and read the From/To headers:
+## The email (fixed; never reword it)
 
 ```
-gws gmail users messages list --params '{"userId":"me","q":"<name>","maxResults":10}'
-gws gmail users messages get --params '{"userId":"me","id":"<id>","format":"metadata","metadataHeaders":["From","To"]}'
+Hello {First}
+
+I want to make sure you get this started and the process moving.
+
+I have all the additional accommodations that might be best suited for you, listed below:
+
+- 100% extra time (double time)
+- Stop/start breaks
+- Permission to read aloud
+- Removal of Experimental Section (Has to be written under "Other")
+
+Before you can request them, you have to register for an LSAT test date. LSAC won't let you start the accommodations request until you're registered.
+
+You can go on the link below and you'll see the forms for that.
+
+https://www.lsac.org/lsat/register-lsat/accommodations/how-request-accommodations-lsat
+
+Thanks
+You must complete the Candidate Form / Statement of Need explaining why the requested accommodations are necessary.
+
+Thanks
+Joshua
 ```
 
-Use the address only if every message that matches the name agrees on it. If you found it in
-Gmail but the student's page has an empty `email:`, fill it in so the next lookup is instant.
+Subject: `Request for Accommodations`. Always a new email, never a reply in an existing thread.
+The source is `assets/body.html`, and only Joshua changes it. Skip the voice pass and don't tidy
+anything, including the doubled "Thanks", which he kept on purpose.
 
-- **No email found** → stop and ask. Never guess an address.
-- **Two possible addresses** → stop and ask which one.
-- `{FIRST}` is their first name as Joshua writes it (e.g. "Celia").
+## Step 1: Find each address
 
-## 2. Choose the accommodations list
+The vault is `~/dev/ai-os` on Windows or `~/ai-os` on the Mac.
 
-By default the list is the four standard items:
+1. **Roster:** look the name up in `<vault>/students/roster.generated.md`.
+2. **Not there, or no email:** search Gmail for the name and read the From/To headers:
+   ```
+   gws gmail users messages list --params '{"userId":"me","q":"<name>","maxResults":10}'
+   gws gmail users messages get --params '{"userId":"me","id":"<id>","format":"metadata","metadataHeaders":["From","To"]}'
+   ```
+   Use the address only if every matching message agrees. If the student's page has a blank
+   `email:`, fill it in so the next lookup is instant.
+3. **No address, or two that conflict:** stop and ask Joshua. Never guess.
 
-1. 100% extra time (double time)
-2. Stop/start breaks
-3. Permission to read aloud
-4. Removal of Experimental Section
+`--first` is the first name as Joshua writes it. `--slug` is the student's folder name under
+`students/`. Leave it out when the folder name is simply their first name, lowercased.
 
-If Joshua names different accommodations for this student, pass each one with `--item`.
-The script adds `(Has to be written under "Other")` to any experimental-section item on its
-own, so don't type that note yourself.
+## Step 2: Send
 
-## 3. Send
-
-Invoking this skill for a named student is the go-ahead. Do one dry run first so a
-broken command never reaches a student, then send:
-
-```
-python skills/claude/accommodations-email/scripts/send.py --to <email> --first <First> --dry-run
-python skills/claude/accommodations-email/scripts/send.py --to <email> --first <First>
-```
-
-(For a custom list, add `--item "..."` once per line on both commands.)
-
-Use `--draft` instead of sending only if Joshua says "draft" or you have any doubt about
-the recipient.
-
-Subject is always `Request for Accommodations`. It goes out as a new email, not a reply.
-
-## 4. Log it
-
-Append one row to `wiki/send-ledger.md`, with the message id from the `gws` output:
+`<skill>` below is this skill's own folder (the base directory shown when it loads).
 
 ```
-| YYYY-MM-DD HH:MM | <slug> | Request for Accommodations (QP form attached) | sent YYYY-MM-DD | to <email>; skill accommodations-email; items: default or custom list; Msg <id> |
+python "<skill>/scripts/send.py" --to <email> --first <First> [--slug <folder>] --dry-run
+python "<skill>/scripts/send.py" --to <email> --first <First> [--slug <folder>]
 ```
 
-If they're a student, also append a line to `students/<slug>/open-loops.md` (create it if
-missing, append only):
+- Run the dry run first. It sends nothing and catches a bad command before a student sees it.
+- If Joshua names different accommodations, pass one `--item "..."` for each line, on both
+  commands. The "Other" note is added to any experimental-section item automatically.
+- For several students, do both commands for each, one student per send. Never put two
+  students on one email.
+- Use `--draft` instead of sending only if Joshua says "draft".
 
-```
-- [YYYY-MM-DD] Sent accommodations email + QP form. Loop: confirm they registered for a test date and submitted before the accommodation deadline.
-```
+After each send, the script prints `SENT: <email> (<First>), Msg <id>; logged to ...`. It appends
+the row to `wiki/send-ledger.md` itself, and a follow-up line to the student's `open-loops.md`
+when they have a folder. Report the printed line to Joshua and stop. There's nothing to log by hand.
 
-Log what actually happened: `drafted` or `failed` if the email didn't go out.
+## Upkeep
 
-## Keeping it current
-
-- LSAC revises the Qualified Professional Form each testing year. From June 2027 on,
-  download a fresh copy from https://www.lsac.org/document-library/133, replace the PDF in
-  `assets/` and update `PDF` in `scripts/send.py` and the hash above.
-- Background on the LSAC process (deadlines, categories, why "Other") is in
-  `wiki/ACCOMMODATIONS-REQUEST-TEMPLATE.md`. It is for Joshua, not for the email.
-
-## Hard rules
-
-- Never change the email wording on your own.
-- Never send without the PDF attached. The script refuses to run if the file is missing.
-- One student per send. No CC or BCC to other students.
+- LSAC revises the form every testing year. From June 2027 on, download a fresh copy from
+  https://www.lsac.org/document-library/133 and replace it in `assets/`, updating `PDF` in
+  `scripts/send.py` if the filename changes.
+- Deadlines and LSAC background, for Joshua: `<vault>/wiki/ACCOMMODATIONS-REQUEST-TEMPLATE.md`.
+- The master copy is `<vault>/skills/claude/accommodations-email/`. The other copies (Codex
+  catalog, project `.claude/skills` and `.agents/skills`, global `~/.claude/skills` and
+  `~/.agents/skills`) must be byte-identical copies of it.
