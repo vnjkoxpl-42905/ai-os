@@ -1,5 +1,7 @@
-﻿
-Yahunathan session - Transcript
+﻿# Transcript
+
+Source tab: Gemini Meet transcript.
+
 00:00:00
 
 Joshua Fisseha: and unless we're keeping unless not anymore

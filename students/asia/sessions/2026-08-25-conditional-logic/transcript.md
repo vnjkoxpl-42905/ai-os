@@ -1,4 +1,8 @@
-﻿00:00:03
+# Transcript
+
+Source: local Google Meet transcript download.
+
+00:00:03
 
 
 Asia Tamaami: Hello.

@@ -1,4 +1,8 @@
-﻿Summary
+# Summary
+
+Source tab: Gemini auto-saved full notes.
+
+Summary
 LSAT assumption session exploring necessary types via practice questions and negation tests
 
 Understanding Necessary Assumptions
@@ -55,6 +59,3 @@ Details
 
 You should review Gemini's notes to make sure they're accurate. Get tips and learn how Gemini takes notes
 How is the quality of these specific notes? Take a short survey to let us know your feedback, including how helpful the notes were for your needs.
-?? Transcript
-Sep 8, 2026
-LSAT Session   between Joshua and Avneet Natt - Transcript

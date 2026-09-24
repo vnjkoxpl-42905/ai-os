@@ -1,4 +1,4 @@
-﻿---
+---
 title: Sofia Transcripts
 type: person
 tags: [lsat-u, student, transcript, sofia]
@@ -58,3 +58,11 @@ Source: Gmail connector search for Gemini meeting notes.
 - [[sessions/2026-09-15-conditional-sufficient-assumptions/transcript|2026-09-15-conditional-sufficient-assumptions]] Â· [[sessions/2026-09-15-conditional-sufficient-assumptions/summary|summary]] Â· [[sessions/2026-09-15-conditional-sufficient-assumptions/topic-map|topic map]]
 - [[sessions/2026-09-18-sufficient-assumptions/transcript|2026-09-18-sufficient-assumptions]] Â· [[sessions/2026-09-18-sufficient-assumptions/summary|summary]] Â· [[sessions/2026-09-18-sufficient-assumptions/topic-map|topic map]]
 - [[sessions/2026-09-23-preptest-and-conditionals/transcript|2026-09-23-preptest-and-conditionals]] Â· [[sessions/2026-09-23-preptest-and-conditionals/summary|summary]] Â· [[sessions/2026-09-23-preptest-and-conditionals/topic-map|topic map]]
+
+
+## Calendar sessions without transcript
+
+- 2026-08-28: no Meet transcript document attached to the primary-calendar tutoring event.
+- 2026-08-31: no Meet transcript document attached to the primary-calendar tutoring event.
+- 2026-09-07: no Meet transcript document attached to the primary-calendar tutoring event.
+- 2026-09-21: no Meet transcript document attached to the primary-calendar tutoring event.

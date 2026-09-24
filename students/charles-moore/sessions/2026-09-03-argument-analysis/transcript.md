@@ -1,4 +1,8 @@
-﻿00:01:24
+# Transcript
+
+Source: local Google Meet transcript download.
+
+00:01:24
 
 
 Charles Moore: Oh, okay.

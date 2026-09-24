@@ -1,5 +1,7 @@
-﻿
-Charles session - Transcript
+﻿# Transcript
+
+Source tab: Gemini Meet transcript.
+
 00:00:00
 
 Charles Moore: input.

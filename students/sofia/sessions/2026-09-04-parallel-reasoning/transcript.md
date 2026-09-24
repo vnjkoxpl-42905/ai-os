@@ -1,4 +1,8 @@
-﻿00:00:00
+# Transcript
+
+Source: local Google Meet transcript download.
+
+00:00:00
 
 
 Joshua Fisseha: when I say formulaic is like you want to think about when we say conversational and formulaic there's certain flaws that are uh there certain questions not flaws certain parallel questions that you're going to use uh more conversational approach. So you want to take something when you're reading the argument, you do want to understand, of course, what's being stated and you want to think about what's problematic with that argument if there's a problem, right? And you want to be able to identify that as more like um from the perspective of like how do I turn that into like a a rule of thumb or I can think of the problem in a like either can be a famous fallacy or it could be these are more like conversationals or specifically one issue with that argument that you can identify. Whenever you uh see arguments that are just kind of like with causal arguments or any of these arguments you notice that are non-conditional you want to kind of take this approach more conversational approach the formulaic approach.

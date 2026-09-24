@@ -1,5 +1,7 @@
-﻿
-Sofia session - Transcript
+﻿# Transcript
+
+Source tab: Gemini Meet transcript.
+
 00:00:00
 
 Joshua Fisseha: Yeah.

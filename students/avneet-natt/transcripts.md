@@ -1,4 +1,4 @@
-﻿---
+---
 title: Avneet Natt Transcripts
 type: person
 tags: [student, transcript, avneet-natt]

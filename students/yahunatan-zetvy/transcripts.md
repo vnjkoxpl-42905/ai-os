@@ -1,4 +1,4 @@
-﻿---
+---
 title: Yahunatan Zetvy Transcripts
 type: person
 record_kind: primary
@@ -28,3 +28,10 @@ The session summary and topic map should be created only after the raw source is
 
 - [[sessions/2026-09-02-conditional-logic/transcript|2026-09-02-conditional-logic]] Â· [[sessions/2026-09-02-conditional-logic/summary|summary]] Â· [[sessions/2026-09-02-conditional-logic/topic-map|topic map]]
 - [[sessions/2026-09-16-conditional-logic-and-theology/transcript|2026-09-16-conditional-logic-and-theology]] Â· [[sessions/2026-09-16-conditional-logic-and-theology/summary|summary]] Â· [[sessions/2026-09-16-conditional-logic-and-theology/topic-map|topic map]]
+
+
+## Calendar sessions without transcript
+
+- 2026-08-25: no Meet transcript document attached to the primary-calendar tutoring event.
+- 2026-09-09: no Meet transcript document attached to the primary-calendar tutoring event.
+- 2026-09-23: no Meet transcript document attached to the primary-calendar tutoring event.

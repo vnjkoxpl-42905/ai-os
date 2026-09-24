@@ -1,5 +1,7 @@
-﻿
-Sofia session - Transcript
+﻿# Transcript
+
+Source tab: Gemini Meet transcript.
+
 00:00:13
 
 Joshua Fisseha: Yeah, I'll give you uh like two and a half minutes to do this question. We need to start off here.

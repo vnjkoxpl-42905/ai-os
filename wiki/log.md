@@ -921,3 +921,8 @@ Claude + Codex blind top-5s, cross-grading, final 7. research/2026-09-23-classro
 - Migrations stage 1-3 applied by the Lovable agent (1 credit); stage 7 (practice_test_assignments, + explicit grants, f0bf642 pushed straight to main) applied directly via query_database after Lovable ran out of credits.
 - Verified: 41 accounts; 23 Tier 1 (incl. Sandra, Zeina), 18 Tier 2; every effective access matches the snapshot except Sandra (all on) and Saved Sets (Ivory gains; Meghan, Priyanka lose).
 - BLOCKED: admin-manage-users and booking-commerce-webhook not deployed; frontend NOT published on purpose (old list function returns no tier, so the new signup queue would show every student). Old webhook still auto-grants access on payment until redeployed.
+
+## [2026-09-24] ship | Access tiers frontend published (PR #134 fallback)
+- PR #134: People page, signup queue and practice-test box fall back to direct profile reads/writes when admin-manage-users is the old version. Published to lsatprep.study (bundle index-tuYjpmVD.js carries the new People page). Also shipped other sessions' merged main work.
+- Access re-verified unchanged: 23 Tier 1, 18 Tier 2, 14 classroom-only intact, partials match.
+- Still pending on Lovable credits: deploy admin-manage-users + booking-commerce-webhook (old webhook still auto-grants on payment).

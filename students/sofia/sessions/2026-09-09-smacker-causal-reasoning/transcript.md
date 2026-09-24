@@ -1,4 +1,8 @@
-﻿00:00:00
+# Transcript
+
+Source: local Google Meet transcript download.
+
+00:00:00
 
 
 Joshua Fisseha: We can think of this as being uh this applies to all questions. Strength, method, uh reasoning and then assumption.

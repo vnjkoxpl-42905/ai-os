@@ -1,4 +1,8 @@
-﻿00:01:58
+# Transcript
+
+Source: local Google Meet transcript download.
+
+00:01:58
 
 
 Sofia Minassian: Hello.

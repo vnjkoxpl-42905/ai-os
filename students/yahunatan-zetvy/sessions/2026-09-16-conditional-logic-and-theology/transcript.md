@@ -1,5 +1,7 @@
-﻿
-Yahunathan session - Transcript
+﻿# Transcript
+
+Source tab: Gemini Meet transcript.
+
 00:01:32
 
 Yahunatan: I'm done. Yeah.

@@ -1,4 +1,8 @@
-﻿00:01:30
+# Transcript
+
+Source: local Google Meet transcript download.
+
+00:01:30
 
 
 Oreoluwa James: Hello. Wait, hold on. Hello.

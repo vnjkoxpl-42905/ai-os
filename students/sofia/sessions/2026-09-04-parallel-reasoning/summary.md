@@ -1,4 +1,8 @@
-﻿Summary
+# Summary
+
+Source tab: Gemini auto-saved full notes.
+
+Summary
 Parallel reasoning techniques were analyzed and testing dates were finalized for academic success.
 
 Parallel reasoning methodology review
@@ -13,52 +17,3 @@ The testing date was officially moved to November to accommodate application dea
 Decisions
 Aligned
 * Five-star parallel question focus Sofia committed to focusing her upcoming LSAT practice sessions specifically on five-star difficulty parallel questions.
-
-
-
-
-Next steps
-* [Joshua Fisseha] Send Category List: Provide a list of category types and terms to facilitate practice for parallel questions.
-* [Joshua Fisseha] Update Explanations: Add missing credits or explanations to the study materials for previous questions.
-* [Joshua Fisseha] Explain Accommodations: Walk through the formal application process for test accommodations with the student.
-* [Joshua Fisseha] Provide Accommodations List: Present a comprehensive list of available testing accommodations.
-* [Joshua Fisseha] Reschedule Test: Assist the student in moving the test date to ensure eligibility for accommodations without financial loss.
-
-
-
-
-Details
-* Methodology for Argument Analysis: Joshua Fisseha and Sofia Minassian discussed strategies for handling parallel reasoning questions, contrasting a "conversational" approach with a "formulaic" one. Joshua Fisseha advised that students should identify conditional indicator words, track repeating concepts within the stimulus, and develop a "recipe" for the argument structure to effectively evaluate answer choices without needing to deeply master the specific content.
-  
-
-* Practice Question 1 - Initial Assessment: The participants began a practice question involving coffee served at Carl’s. Joshua Fisseha and Sofia Minassian determined the conclusion was a conditional claim (00:12:18) (00:15:49). Joshua Fisseha noted that because the argument contained multiple "and" and "if" statements, diagramming might be less efficient than using intuition to grasp the underlying structure (00:17:11).
-  
-
-* Practice Question 1 - Filtering Choices: Joshua Fisseha and Sofia Minassian analyzed the conclusion and premises of the coffee argument to filter answer choices. They looked for matching structural features, such as the limited set of options and the positive nature of the conclusion (00:18:56) (00:22:23). They discarded choices that lacked the "and" structure or contained negative conclusions that did not match the stimulus (00:21:25).
-  
-
-* Practice Question 1 - Final Selection: After evaluating the options, they identified the correct answer regarding Wordex Incorporated. They confirmed that the answer matched both the conditional conclusion and the evidence provided in the argument, while discarding other options as inefficient or structurally incorrect (00:23:16).
-  
-
-* Practice Question 2 - Structural Analysis: Moving to the next question, the pair focused on identifying the nature of the conclusion, which was a "should" or prescriptive statement. Joshua Fisseha emphasized eliminating answer choices that did not match this prescriptive nature in their conclusions (00:26:56).
-  
-
-* Practice Question 2 - Evaluating Answer Choices: The participants discussed efficient strategies for answering the second question, such as checking for the number of premises and excluding options containing "striking features" not present in the original argument, such as "some" or extra conditions (00:29:10). They successfully identified answer choice B by matching the conclusion and excluding invalid options based on these structural rules (00:30:21).
-  
-
-* Practice Question 3 - Negative Conclusion Strategy: Joshua Fisseha and Sofia Minassian worked on a third question, first identifying that the conclusion was negative, which required a matching negative answer choice (00:33:37). They filtered out incorrect answers that lacked a negative claim or failed to match the prescriptive nature of the original argument (00:37:09).
-  
-
-* Practice Question 3 - Analyzing Evidence: They analyzed the evidence in the third argument, identifying it as a conditional statement rather than a correlation. Joshua Fisseha explained that indicator words might vary, but identifying the conditional nature of the premise was essential for selecting the correct answer choice E (00:39:24).
-* Future Practice Plans: Sofia Minassian planned to continue practicing "parallel" reasoning questions, with a focus on higher-difficulty, five-star questions to avoid common pitfalls. Joshua Fisseha agreed to provide a list of category types and terms to help Sofia Minassian master the patterns and improve efficiency (00:41:35).
-* Test Logistics and Accommodations: Joshua Fisseha addressed Sofia Minassian’s testing schedule, noting that applying for accommodations for an October test date might be difficult due to pending deadlines. Joshua Fisseha recommended moving the test to November to allow enough time for the accommodation process and to maximize the score potential (00:43:43).
-* Accommodations Process and Privacy: Joshua Fisseha offered to guide Sofia Minassian through the accommodations application process and provide a list of available options. Joshua Fisseha reassured them that law schools are prohibited by law from disclosing whether a test was taken with accommodations, ensuring the process would not negatively impact their application (00:47:02).
-
-
-
-
-You should review Gemini's notes to make sure they're accurate. Get tips and learn how Gemini takes notes
-How is the quality of these specific notes? Take a short survey to let us know your feedback, including how helpful the notes were for your needs.
-?? Transcript
-Sep 4, 2026
-Sofia session - Transcript

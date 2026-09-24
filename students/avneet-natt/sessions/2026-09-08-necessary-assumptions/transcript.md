@@ -1,4 +1,8 @@
-﻿00:00:00
+# Transcript
+
+Source: local Google Meet transcript download.
+
+00:00:00
 
 
 Joshua Fisseha: Okay, let's do it. So, um, let's open up the whiteboard. Okay. So, when we say it's a necessary assumption, um, we obviously have there's two parts to that word. Um, are obviously very integral to this. um to this question type and understanding what what it is conceptually. So for necessary assumption questions um on like the broadest scale uh what is a necessary assumption? How do you understand what a necessary assumption is and how do you understand it conceptually?
