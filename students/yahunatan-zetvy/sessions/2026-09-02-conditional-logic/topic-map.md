@@ -1,0 +1,15 @@
+﻿# Topic map
+
+Generated from the source transcript timecodes and Gemini summary headings.
+
+## Source summary topics
+
+- Invited
+- Attachments
+- Meeting records
+
+## Transcript timecodes
+
+The transcript provides these time markers without topic labels:
+
+- 00:00:00 - 00:01:06 - 00:01:56 - 00:02:53 - 00:04:26 - 00:05:35 - 00:06:21 - 00:07:28 - 00:08:38 - 00:09:38 - 00:10:28 - 00:11:31 - 00:12:29 - 00:13:27 - 00:14:30 - 00:15:24 - 00:16:28 - 00:17:36 - 00:18:43 - 00:19:47 - 00:20:53 - 00:21:44 - 00:23:15 - 00:24:16 - 00:25:21 - 00:26:26 - 00:27:30 - 00:28:15 - 00:29:30 - 00:30:34 - 00:31:41 - 00:32:35 - 00:33:27 - 00:34:06 - 00:35:13 - 00:36:06 - 00:37:08 - 00:37:53 - 00:39:02 - 00:39:48 - 00:40:37 - 00:41:18 - 00:42:19 - 00:43:09 - 00:43:58 - 00:45:03

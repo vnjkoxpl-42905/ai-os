@@ -3,7 +3,7 @@ title: Adriana Varea — Transcripts and session index
 type: transcripts
 record_kind: primary
 subject: Adriana Varea - Transcripts and session index
-updated: 2026-07-20
+updated: 2026-09-24
 aliases: []
 ---
 
@@ -28,3 +28,11 @@ via `students/_aliases.md`.
 | # | Date | Focus | Recap |
 |---|---|---|---|
 | 5+ | 2026-09-08 | PT review (174 / 180 BR), comparative RC at level 4-5, T-table, two LR questions, personal statements queued | [[recaps/2026-09-08-recap]] (draft, not posted) |
+
+## Packaged sessions (2026-08-24 to 2026-09-24)
+
+| Date | Focus | Package | Source |
+|---|---|---|---|
+| 2026-09-01 | See auto-saved session summary | [[sessions/2026-09-01-adriana-lsat-session/summary]] | transcript-downloads/2026-09-01-adriana-varea-notes-by-gemini.md |
+| 2026-09-08 | See auto-saved session summary | [[sessions/2026-09-08-adriana-lsat-session/summary]] | transcript-downloads/2026-09-08-adriana-varea-notes-by-gemini.md |
+

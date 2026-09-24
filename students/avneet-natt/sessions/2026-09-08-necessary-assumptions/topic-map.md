@@ -1,0 +1,14 @@
+﻿# Topic map
+
+Generated from the source transcript timecodes and Gemini summary headings.
+
+## Source summary topics
+
+- Understanding Necessary Assumptions
+- Applying Practice Questions
+
+## Transcript timecodes
+
+The transcript provides these time markers without topic labels:
+
+- 00:00:00 - 00:01:14 - 00:02:18 - 00:03:10 - 00:04:16 - 00:05:14 - 00:06:11 - 00:07:21 - 00:09:21 - 00:10:21 - 00:11:09 - 00:12:31 - 00:13:41 - 00:14:21 - 00:15:19 - 00:16:15 - 00:17:48 - 00:18:51 - 00:19:44 - 00:20:46 - 00:22:02 - 00:23:27 - 00:24:29 - 00:25:39 - 00:28:33 - 00:31:22 - 00:32:12 - 00:33:18 - 00:34:16 - 00:35:14 - 00:36:07 - 00:36:58 - 00:39:48 - 00:40:56 - 00:41:53 - 00:43:08 - 00:45:22 - 00:48:12 - 00:49:35 - 00:50:42 - 00:51:52 - 00:52:52 - 00:56:02 - 00:57:22 - 00:58:28 - 00:59:26 - 01:00:22 - 01:01:26 - 01:02:21 - 01:03:16 - 01:04:22 - 01:05:15

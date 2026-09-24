@@ -1,4 +1,4 @@
----
+﻿---
 title: Sofia Transcripts
 type: person
 tags: [lsat-u, student, transcript, sofia]
@@ -48,3 +48,13 @@ Source: Gmail connector search for Gemini meeting notes.
 - Three full local markdown transcript downloads are saved in `transcript-downloads/`.
 - The current Jul 2 local file is the user-provided transcript-only export from Downloads, replacing the prior Drive-exported notes-plus-transcript copy.
 - Additional Drive links, if found later, should be exported into the same folder and linked here.
+
+## Session packages
+
+
+- [[sessions/2026-09-04-parallel-reasoning/transcript|2026-09-04-parallel-reasoning]] Â· [[sessions/2026-09-04-parallel-reasoning/summary|summary]] Â· [[sessions/2026-09-04-parallel-reasoning/topic-map|topic map]]
+- [[sessions/2026-09-09-smacker-causal-reasoning/transcript|2026-09-09-smacker-causal-reasoning]] Â· [[sessions/2026-09-09-smacker-causal-reasoning/summary|summary]] Â· [[sessions/2026-09-09-smacker-causal-reasoning/topic-map|topic map]]
+- [[sessions/2026-09-11-conditional-reasoning/transcript|2026-09-11-conditional-reasoning]] Â· [[sessions/2026-09-11-conditional-reasoning/summary|summary]] Â· [[sessions/2026-09-11-conditional-reasoning/topic-map|topic map]]
+- [[sessions/2026-09-15-conditional-sufficient-assumptions/transcript|2026-09-15-conditional-sufficient-assumptions]] Â· [[sessions/2026-09-15-conditional-sufficient-assumptions/summary|summary]] Â· [[sessions/2026-09-15-conditional-sufficient-assumptions/topic-map|topic map]]
+- [[sessions/2026-09-18-sufficient-assumptions/transcript|2026-09-18-sufficient-assumptions]] Â· [[sessions/2026-09-18-sufficient-assumptions/summary|summary]] Â· [[sessions/2026-09-18-sufficient-assumptions/topic-map|topic map]]
+- [[sessions/2026-09-23-preptest-and-conditionals/transcript|2026-09-23-preptest-and-conditionals]] Â· [[sessions/2026-09-23-preptest-and-conditionals/summary|summary]] Â· [[sessions/2026-09-23-preptest-and-conditionals/topic-map|topic map]]

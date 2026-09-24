@@ -1,0 +1,36 @@
+﻿
+Yahunathan session
+Invited 
+Attachments 
+Meeting records  
+
+
+Summary
+LSAT conditional logic practice transitioned into theological discussions covering Hebrew history and internet debate critique.LSAT Logical Reasoning PracticeParticipants analyzed must-be-true questions and complex conditional logic chains. Mastery of diagramming ensures accurate deduction.Hebrew History and TheologyThe discussion explored historical dispersion, the twelve tribes, and theological nuances regarding the Messiah and biblical commands. Experts rejected modern, unfounded racial mappings of historical tribes.Critique of Public DebatersAggressive online debate tactics were contrasted with genuine educational mastery. Performative rhetoric was dismissed in favor of respectful community engagement.
+
+
+Next steps
+[Joshua Fisseha] Provide conditional drills: Send the practice drills for LSAT conditional logic to the student to support mastery of diagramming.
+[Joshua Fisseha] Assign LSAT questions: Select and provide relevant LSAT questions for practice focusing on the application of conditional logic.
+[Yahunatan] Practice diagramming and conditionals: Complete the assigned conditional drills and LSAT questions to achieve automatic mastery.
+[Joshua Fisseha] Send Link: Forward the relevant link via WhatsApp to Yahunatan upon discovering it.
+[The group] Schedule Conversation: Allocate a dedicated time to continue the discussion on religious topics and analysis.
+
+
+Details
+Review of Flavonoid Must-Be-True Question: Joshua Fisseha and Yahunatan reviewed an LSAT must-be-true question involving factual premises about apple flavonoids acting as antioxidants that help prevent heart disease. Yahunatan explained that they identified the statements as situational facts rather than a conditional rule (00:01:32) (00:04:13). After walking through the premises together, Yahunatan confirmed they selected option D, which Joshua Fisseha validated as correct because the question relied on combining facts rather than complex conditional logic (00:03:05).
+
+Analysis of Conditional Logic Question on Mediation: The participants advanced to a more difficult LSAT question involving conditional logic (00:05:05). Yahunatan explained their diagramming process, which involved mapping the sufficient condition of undergoing mediation to resolve conflict and the necessary condition of being willing to compromise, along with utilizing the contrapositive (00:09:09). Joshua Fisseha guided them to flatten the conditional statements into clear English phrasing, identifying that if a person should undergo mediation, they should be willing to compromise (00:10:40).
+
+Resolution of the Conditional Logic Question: Joshua Fisseha and Yahunatan analyzed the second conditional rule regarding litigation and certainty, noting that the passage did not mandate a choice between litigation and mediation (00:13:57). They examined the final premise regarding individuals whose conflicts are based on ideology, with Joshua Fisseha clarifying how terms referring to a group apply to the entire category (00:15:19). Yahunatan successfully deduced that individuals whose conflicts are based on ideology are unwilling to compromise and therefore do not undergo mediation, matching their chosen answer (00:16:23).
+Assignment of LSAT Drills and Travel Logistics: Joshua Fisseha announced plans to assign Yahunatan specialized conditional diagramming drills to achieve automatic mastery, followed by LSAT practice questions (00:18:46). Additionally, Yahunatan shared their travel schedule to Montreal for October 14th and 15th, and Joshua Fisseha noted their current temporary location in Ottawa, Canada, agreeing to explore a potential in-person meeting if logistics aligned (00:19:25).
+Discussion on Hebrew Pronunciation and Terminology: Joshua Fisseha and Yahunatan discussed potential future in-person visits and mutual respect among their associates (00:20:15). The conversation shifted to linguistic details, where Yahunatan instructed Joshua Fisseha on the pronunciation and historical origin of the Hebrew term for Yahweh, explaining how the letter W originated from a U sound (00:21:39).
+Exploration of the Twelve Tribes and Global Dispersion: Joshua Fisseha and Yahunatan discussed historical and biblical topics surrounding the twelve tribes of Israel (00:23:19). Yahunatan rejected generalized modern racial mappings of the tribes while emphasizing that historical indicators of dispersion through slavery apply globally to populations in places like Ethiopia, Mexico, Cuba, the Philippines, India, Iran, and Panama (00:24:14). They also critiqued fringe belief systems and internet commentators focusing on theological debates (00:25:13).
+Critique of Online Public Commentators and Debate Dynamics: The participants analyzed public internet figures and online debaters, such as Captain Zaryak, discussing their bombastic debate styles against Muslims and Christians (00:26:19). Yahunatan expressed skepticism regarding the commentators' platform accessibility and motives, suggesting that true engagement should focus on restoration rather than performative victories, while also discussing DNA testing and lineage claims (00:27:55).
+Distinctions Among Israelite Groups and Theological Beliefs: Yahunatan clarified organizational distinctions between different Hebrew Israelite groups, noting that while various groups originate from a Semitic lineage and acknowledge the Messiah, they do not share identical doctrines or organizational affiliations (00:29:32). They discussed theological nuances regarding the Messiah's name (Yahusha) and the rejection of the Trinity, contrasting their peaceful community approach with more aggressive public postures (00:30:19).
+Evaluation of Public Street Preaching and Internet Persona Tactics: Joshua Fisseha and Yahunatan compared aggressive online debate tactics to educational mastery, likening rhetorical traps to LSAT test-taking (00:32:45) (00:35:44). Yahunatan argued that provocative public preachers target audiences lacking foundational knowledge for entertainment and recruitment, whereas knowledgeable practitioners maintain mutual respect despite theological disagreements (00:33:28) (00:34:54).
+Examination of the Twelve-Tribe Chart and Biblical Commands: Yahunatan criticized the origins of the popularized twelve-tribe chart, explaining that it derived from a leader's dream rather than biblical text, which instead references dispersion across the four corners of the earth (00:36:44) (00:40:41). The discussion concluded with a brief overview of biblical garment requirements, specifically wearing tzitzit (tassels) on the four corners as referenced in Numbers 15:38 (00:37:36), before Joshua Fisseha and Yahunatan wrapped up the session to review LSAT assignments (00:40:41).
+
+
+You should review Gemini's notes to make sure they're accurate. Get tips and learn how Gemini takes notes
+How is the quality of these specific notes? Take a short survey to let us know your feedback, including how helpful the notes were for your needs.
