@@ -37,3 +37,10 @@ Context sources: `wiki/teaching-voice.md`; `projects/lsatu/src/features/activity
 - Captured: Keep the material on the intro screen. The teaching copy should not be part of the large title/header; present it as instructions. Joshua also raised the possibility of an instruction page that appears when Start is pressed, so the exact Start sequence remains open.
 - Answer to Q1: Keep teaching on the intro screen; present it as instructions, not a header.
 - Q2: Not explicitly answered yet. The request to make it easy to follow supports a clearer layout, but the exact visual treatment remains to confirm.
+
+### Round 2 / implementation direction
+- Joshua clarified: “Keep them on the intro screen, but it's not supposed to be the header. It's supposed to be instructions.” He then asked for a simple, interactive layout with clear visual hierarchy and proper spacing.
+- Shared understanding used for the local implementation: the current intro remains the instruction screen; Start begins the questions. Keep the Activity title as the sole h1, place the teaching line under an Instructions label, and use a selectable three-step method beside one worked example. This follows Joshua's direct placement instruction and the visual structure recommendation.
+- Implemented locally: removed Rebuttal Rephrase's Before/After orbs; the poetry example now labels the rejected claim, the author's conclusion, and the reason separately. The step controls reveal concise reminders and preserve exact certainty/scope. The long task copy was shortened.
+- Verification: focused ActivityIntro test passes (4/4); typecheck passes; production build completes. Browser review at `/activity-lab` confirms the title/instructions separation and working step selection. Responsive stack added for narrow screens; not separately browser-tested at a mobile viewport.
+- Still not deployed. The existing migration file is only a draft artifact and has not been applied; Lovable deployment remains unconfirmed and no credits were spent.
