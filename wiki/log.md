@@ -915,3 +915,9 @@ Claude + Codex blind top-5s, cross-grading, final 7. research/2026-09-23-classro
 
 ## [2026-09-23] build | LSAT U headless front door
 `system/scripts/lsatu` (assign, assign-many, status/qtypes/sections/overdue/quiet/students) + `.lsatu-ops` pinned worktree; assign-lsatu-work skill rewritten; hosted MCP lsat-u-mcp documented. Capture: brainstorms/2026-09-23-lsatu-admin-connector.md
+
+## [2026-09-24] ship | LSAT U access tiers: database live, functions + publish blocked on Lovable credits
+- PR #131 merged to main (485f4b3). Stage 3 revised per Joshua: no current student's access changes except Sandra -> Tier 1. Pre-change snapshot: raw/sources/lsatu-access-snapshots/2026-09-24-profiles-access-pre-tiers.sql.
+- Migrations stage 1-3 applied by the Lovable agent (1 credit); stage 7 (practice_test_assignments, + explicit grants, f0bf642 pushed straight to main) applied directly via query_database after Lovable ran out of credits.
+- Verified: 41 accounts; 23 Tier 1 (incl. Sandra, Zeina), 18 Tier 2; every effective access matches the snapshot except Sandra (all on) and Saved Sets (Ivory gains; Meghan, Priyanka lose).
+- BLOCKED: admin-manage-users and booking-commerce-webhook not deployed; frontend NOT published on purpose (old list function returns no tier, so the new signup queue would show every student). Old webhook still auto-grants access on payment until redeployed.
