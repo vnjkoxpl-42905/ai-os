@@ -926,3 +926,5 @@ Claude + Codex blind top-5s, cross-grading, final 7. research/2026-09-23-classro
 - PR #134: People page, signup queue and practice-test box fall back to direct profile reads/writes when admin-manage-users is the old version. Published to lsatprep.study (bundle index-tuYjpmVD.js carries the new People page). Also shipped other sessions' merged main work.
 - Access re-verified unchanged: 23 Tier 1, 18 Tier 2, 14 classroom-only intact, partials match.
 - Still pending on Lovable credits: deploy admin-manage-users + booking-commerce-webhook (old webhook still auto-grants on payment).
+
+## [2026-09-24] deploy | admin-manage-users + booking-commerce-webhook deployed via Lovable (0.3 credits). Payment no longer grants access. Access re-verified unchanged (23 Tier 1 / 18 Tier 2).
