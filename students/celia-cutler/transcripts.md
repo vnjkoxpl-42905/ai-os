@@ -3,11 +3,25 @@ title: Celia Cutler — Transcripts and session index
 type: transcripts
 record_kind: primary
 subject: Celia Cutler - Transcripts and session index
-updated: 2026-09-24
+updated: 2026-09-25
 aliases: []
 ---
 
 # Celia Cutler — Transcripts and session index
+
+## Local session files
+
+| Date | Full local export | Local session package | Status |
+|---|---|---|---|
+| 2026-09-21 | [[transcript-downloads/2026-09-21-celia-cutler-notes-by-gemini|2026-09-21-celia-cutler-notes-by-gemini.md]] | 2026-09-21-celia-lsat-session: [[sessions/2026-09-21-celia-lsat-session/transcript|transcript]], [[sessions/2026-09-21-celia-lsat-session/summary|summary]], [[sessions/2026-09-21-celia-lsat-session/topic-map|topic map]] | Paired |
+| 2026-09-16 | [[transcript-downloads/2026-09-16-celia-cutler-notes-by-gemini|2026-09-16-celia-cutler-notes-by-gemini.md]] | 2026-09-16-celia-lsat-session: [[sessions/2026-09-16-celia-lsat-session/transcript|transcript]], [[sessions/2026-09-16-celia-lsat-session/summary|summary]], [[sessions/2026-09-16-celia-lsat-session/topic-map|topic map]] | Paired |
+| 2026-09-07 | [[transcript-downloads/2026-09-07-celia-cutler-notes-by-gemini|2026-09-07-celia-cutler-notes-by-gemini.md]] | 2026-09-07-celia-lsat-session: [[sessions/2026-09-07-celia-lsat-session/transcript|transcript]], [[sessions/2026-09-07-celia-lsat-session/summary|summary]], [[sessions/2026-09-07-celia-lsat-session/topic-map|topic map]] | Paired |
+| 2026-08-31 | [[transcript-downloads/2026-08-31-celia-cutler-notes-by-gemini|2026-08-31-celia-cutler-notes-by-gemini.md]] | 2026-08-31-celia-lsat-session: [[sessions/2026-08-31-celia-lsat-session/transcript|transcript]], [[sessions/2026-08-31-celia-lsat-session/summary|summary]], [[sessions/2026-08-31-celia-lsat-session/topic-map|topic map]] | Paired |
+| 2026-08-24 | [[transcript-downloads/2026-08-24-celia-cutler-notes-by-gemini|2026-08-24-celia-cutler-notes-by-gemini.md]] | 2026-08-24-celia-lsat-session: [[sessions/2026-08-24-celia-lsat-session/transcript|transcript]], [[sessions/2026-08-24-celia-lsat-session/summary|summary]], [[sessions/2026-08-24-celia-lsat-session/topic-map|topic map]] | Paired |
+| 2026-08-22 | [[transcript-downloads/2026-08-22-celia-cutler-notes-by-gemini|2026-08-22-celia-cutler-notes-by-gemini.md]] | None on disk | Raw export only |
+| 2026-08-17 | [[transcript-downloads/2026-08-17-celia-cutler-notes-by-gemini|2026-08-17-celia-cutler-notes-by-gemini.md]] | None on disk | Raw export only |
+| 2026-08-10 | [[transcript-downloads/2026-08-10-celia-cutler-notes-by-gemini|2026-08-10-celia-cutler-notes-by-gemini.md]] | None on disk | Raw export only |
+
 
 ## Packaged sessions (2026-08-24 to 2026-09-24)
 

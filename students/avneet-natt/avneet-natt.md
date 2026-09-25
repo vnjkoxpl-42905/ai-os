@@ -3,7 +3,7 @@ title: Avneet Natt
 type: person
 tags: [lsat-u, person, student]
 created: 2026-09-08
-updated: 2026-09-08
+updated: 2026-09-25
 status: active
 role: student
 email: avneet.2725@gmail.com
@@ -14,6 +14,14 @@ lifecycle: active
 ---
 
 # Avneet Natt
+
+## Open this record
+
+- [[transcripts|Session index]]
+- [[teaching-notes|Teaching notes]]
+- [[open-loops|Open loops]]
+- [[7sage|7Sage]]
+
 
 ## Snapshot
 
@@ -35,4 +43,4 @@ Not written yet, and deliberately not invented:
 
 - `email-context.md`, `email-correspondence.md`, `payment-links.md` — mirrors of
   Gmail and Stripe, each wants its own pass.
-- `teaching-notes.md` — wants a read of the transcripts rather than a summary.
+- The 2026-09-08 session has evidence-backed [[teaching-notes]] and [[open-loops]].

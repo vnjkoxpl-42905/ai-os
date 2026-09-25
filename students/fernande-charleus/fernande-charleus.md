@@ -15,6 +15,11 @@ lifecycle: active
 
 # Fernande Charleus
 
+## Open this record
+
+- [[transcripts|Session index]] · [[sessions/2026-08-27-fernande-lsat-session/transcript|Latest session transcript]] · [[sessions/2026-08-27-fernande-lsat-session/summary|Summary]] · [[sessions/2026-08-27-fernande-lsat-session/topic-map|Topic map]]
+- [[transcript-downloads/2026-08-27-fernande-charleus-notes-by-gemini|Full Gemini export]]
+
 ## Snapshot
 
 Current LSAT U student. 1 taught session on record, 2026-08-27 to 2026-08-27. Folder opened 2026-09-08 from the Gemini notes attached to the calendar invites.

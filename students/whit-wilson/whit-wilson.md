@@ -15,6 +15,10 @@ lifecycle: active
 
 # Whit Wilson
 
+## Open this record
+
+- [Session index](transcripts.md)
+
 ## Snapshot
 
 Current LSAT U student. 1 taught session on record, 2026-08-29 to 2026-08-29. Folder opened 2026-09-08 from the Gemini notes attached to the calendar invites.

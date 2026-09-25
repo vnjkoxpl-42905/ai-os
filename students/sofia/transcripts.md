@@ -12,6 +12,22 @@ lifecycle: active
 
 # Sofia Transcripts
 
+## Local session files
+
+| Date | Local full export | Local package | Source / status |
+|---|---|---|---|
+| 2026-09-23 | [Full export](transcript-downloads/2026-09-23-sofia-notes-by-gemini.md) | [transcript](sessions/2026-09-23-preptest-and-conditionals/transcript.md) · [summary](sessions/2026-09-23-preptest-and-conditionals/summary.md) · [topic-map](sessions/2026-09-23-preptest-and-conditionals/topic-map.md) | Sofia portion ends at 00:50:16; later conversation is separate. |
+| 2026-09-18 | [Full export](transcript-downloads/2026-09-18-sofia-notes-by-gemini.md) | [transcript](sessions/2026-09-18-sufficient-assumptions/transcript.md) · [summary](sessions/2026-09-18-sufficient-assumptions/summary.md) · [topic-map](sessions/2026-09-18-sufficient-assumptions/topic-map.md) | Original package summary is mismatched; see dated correction. |
+| 2026-09-15 | [Full export](transcript-downloads/2026-09-15-sofia-notes-by-gemini.md) | [transcript](sessions/2026-09-15-conditional-sufficient-assumptions/transcript.md) · [summary](sessions/2026-09-15-conditional-sufficient-assumptions/summary.md) · [topic-map](sessions/2026-09-15-conditional-sufficient-assumptions/topic-map.md) | Local Gemini record. |
+| 2026-09-11 | [Full export](transcript-downloads/2026-09-11-sofia-notes-by-gemini.md) | [transcript](sessions/2026-09-11-conditional-reasoning/transcript.md) · [summary](sessions/2026-09-11-conditional-reasoning/summary.md) · [topic-map](sessions/2026-09-11-conditional-reasoning/topic-map.md) | Local Gemini record. |
+| 2026-09-09 | [Full export](transcript-downloads/2026-09-09-sofia-notes-by-gemini.md) | [transcript](sessions/2026-09-09-smacker-causal-reasoning/transcript.md) · [summary](sessions/2026-09-09-smacker-causal-reasoning/summary.md) · [topic-map](sessions/2026-09-09-smacker-causal-reasoning/topic-map.md) | Local Gemini record. |
+| 2026-09-04 | [Full export](transcript-downloads/2026-09-04-sofia-notes-by-gemini.md) | [transcript](sessions/2026-09-04-parallel-reasoning/transcript.md) · [summary](sessions/2026-09-04-parallel-reasoning/summary.md) · [topic-map](sessions/2026-09-04-parallel-reasoning/topic-map.md) | Local Gemini record. |
+| 2026-08-21 | [Full export](transcript-downloads/2026-08-21-sofia-notes-by-gemini.md) | None | Local Gemini record. |
+| 2026-07-12 | [Full export](transcript-downloads/2026-07-12-sofia-minassian-notes-by-gemini.md) | None | Local Gemini record. |
+| 2026-07-02 | [Full export](transcript-downloads/2026-07-02-sofia-notes-by-gemini.md) | None | Local Gemini record. |
+| 2026-06-26 | [Full export](transcript-downloads/2026-06-26-sofia-notes-by-gemini.md) | None | Local Gemini record. |
+| 2026-06-16 | [Full export](transcript-downloads/2026-06-16-sofia-consultation-notes-by-gemini.md) | None | Consultation. |
+
 Source: Gmail connector search for Gemini meeting notes.
 
 ## Discovered Gemini Note Emails
@@ -45,7 +61,7 @@ Source: Gmail connector search for Gemini meeting notes.
 ## Export Status
 
 - Gmail links are indexed here.
-- Three full local markdown transcript downloads are saved in `transcript-downloads/`.
+- Eleven full local Markdown exports are saved in `transcript-downloads/` and indexed above.
 - The current Jul 2 local file is the user-provided transcript-only export from Downloads, replacing the prior Drive-exported notes-plus-transcript copy.
 - Additional Drive links, if found later, should be exported into the same folder and linked here.
 
@@ -80,4 +96,4 @@ Source: Gmail connector search for Gemini meeting notes.
 | 2026-09-18 | [[transcript-downloads/2026-09-18-sofia-notes-by-gemini]] | [[sessions/2026-09-18-sufficient-assumptions/transcript]] | [Source](https://docs.google.com/document/d/1ANFhV5xXI9U-L9DWK3h76ZRYZrfjyw6MdquXDTRafc8/edit) |
 | 2026-09-23 | [[transcript-downloads/2026-09-23-sofia-notes-by-gemini]] | [[sessions/2026-09-23-preptest-and-conditionals/summary]] | [Source](https://docs.google.com/document/d/1O-gl6f5tMIXUDXKaYs3LqNUNmA1H_T4kAjsX2mW7OSI/edit) |
 
-The September 18 package's `summary.md` contains a September 11 transcript and should not be used as the September 18 summary. The September 18 source export and package `transcript.md` correspond to the September 18 event. The September 23 source continues into another conversation after Sofia's session; use the Sofia portion through 00:50:16 for teaching decisions.
+The September 18 package's original `summary.md` body describes a different session. Its dated correction identifies the September 18 material; use the full local export and package transcript as the source. The September 23 source continues into another conversation after Sofia's session; use the Sofia portion through 00:50:16 for teaching decisions.

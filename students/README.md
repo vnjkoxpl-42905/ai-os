@@ -11,7 +11,7 @@ aliases: []
 
 # Students
 
-One folder per student, holding **everything** about them (D2, locked 2026-07-16): transcripts, correspondence, homework, notes, schedules, profile. Open the student's folder and their whole working record is there. This is one of the brain's three knowledge systems, beside [[../wiki/index|wiki]] and [[../corpus/index|corpus]].
+One folder per student, holding **everything** about them (D2, locked 2026-07-16): transcripts, correspondence, homework, notes, schedules, profile. These are internal working records for Joshua, Claude, and Codex, not pages for students to open. Open the student's folder and their whole working record is there. This is one of the brain's three knowledge systems, beside [[../wiki/index|wiki]] and [[../corpus/index|corpus]].
 
 ## Current students
 
@@ -36,11 +36,11 @@ Every file in a student folder is one of two kinds, and the distinction decides 
 
 This is the target layout, not a checklist to satisfy with empty files. Create a record when its source or a real teaching judgment supports it. Leave an absent record absent until there is verified content to put in it.
 
-- `<student-slug>.md` — compact student index and routing page (primary).
+- `<student-slug>.md` — internal entry page and folder router (primary). Its `## Open this record` block links only to local files that exist.
 - `email-context.md` — synthesized Gmail context.
 - `email-correspondence.md` — Gmail message-id corpus for the student's confirmed address.
 - `payment-links.md` — verified payment, billing, and scheduling links.
-- `transcripts.md` — transcript and meeting-note inventory.
+- `transcripts.md` — transcript and meeting-note inventory. Its `## Local session files` table links directly to every full local Markdown export and every session package, newest first. A Google Doc link is provenance, never the only way to read a session.
 - `teaching-notes.md` — durable, evidence-backed learning judgments and teaching patterns (primary).
 - `open-loops.md` — unfinished follow-ups and pending decisions (primary).
 - `live-status.generated.md` — currently a refreshable LSAT U booking-pass mirror. Calendar, Gmail, and payment state remain in their live systems; this file does not yet summarize them.
@@ -54,12 +54,21 @@ This is the target layout, not a checklist to satisfy with empty files. Create a
 
 - New student → new folder `students/<slug>/` with a `<slug>.md` profile page.
 - New session → `sessions/YYYY-MM-DD-session-name/` containing `transcript.md`, `summary.md`, and `topic-map.md`.
-- Keep the original Gemini export in `transcript-downloads/` when available. Build the session package from verified session evidence, and link it from `transcripts.md`; older exports may predate the package convention.
+- Keep the original full Gemini export as a local Markdown file in `transcript-downloads/` when available. Build the session package from verified session evidence, and link both the export and package from `transcripts.md`; older exports may predate the package convention.
 - `transcript.md` preserves the raw source. `summary.md` records the auto-saved summary, action items, and appended corrections. `topic-map.md` is a timestamped link index to relevant LSAT concepts, student records, and source material.
 - Session summaries are append-only. Later corrections go in a dated correction section and never erase the original summary.
 - Generated operational state is clearly marked with `generated: true` and never overrides primary teaching records.
 - Wikilink student pages into corpus concepts and LSAT U material as they become relevant.
 - Tier A note: transcripts and correspondence are trackable (Tier-A amendment, 2026-07-16). True secrets (credentials, IDs, payment instruments) still never enter Git — `private/` only.
+
+## Internal routing contract after each session
+
+1. Match the Calendar event and Gemini Doc by guest email, date, and content. Preserve the complete source export in `transcript-downloads/`; never rely on a Drive link as the record.
+2. Create or update the session's `sessions/YYYY-MM-DD-session-name/` package without replacing a primary transcript or summary. Record any source mismatch as a dated correction.
+3. Add a newest-first row to `transcripts.md` under `## Local session files`: date, direct local full-export link, local package links, and source/status. Include raw-only historical exports and packages even when the other half is absent.
+4. Update evidence-backed `teaching-notes.md` and `open-loops.md`. Refresh the student's `<slug>.md` `## Open this record` block so Joshua, Claude, and Codex can reach the latest work in two clicks. Link only to files that exist.
+5. Check that all local links resolve, that the full Markdown export contains the transcript rather than only Gemini's summary, and that the session index has no unlinked export or package. Leave attendance and missing-source uncertainty explicit.
+6. Run `python system/scripts/check-student-records.py` from the repo root before calling intake complete. It checks all student routers and every local Markdown export and session package link.
 
 ## Operating contract
 

@@ -4,11 +4,19 @@ type: transcripts
 record_kind: primary
 status: active
 subject: transcript inventory
-updated: 2026-09-24
+updated: 2026-09-25
 aliases: []
 ---
 
 # Transcript inventory
+
+## Local session files
+
+| Date | Full local export | Local session package | Status |
+|---|---|---|---|
+| 2026-09-22 | [[transcript-downloads/2026-09-22-amanda-notes-by-gemini|2026-09-22-amanda-notes-by-gemini.md]] | 2026-09-22-session: [[sessions/2026-09-22-session/transcript|transcript]], [[sessions/2026-09-22-session/summary|summary]], [[sessions/2026-09-22-session/topic-map|topic map]] | Paired |
+| 2026-09-04 | [[transcript-downloads/2026-09-04-amanda-notes-by-gemini|2026-09-04-amanda-notes-by-gemini.md]] | 2026-09-04-session: [[sessions/2026-09-04-session/transcript|transcript]], [[sessions/2026-09-04-session/summary|summary]], [[sessions/2026-09-04-session/topic-map|topic map]] | Paired |
+
 
 Scope reviewed: Google Calendar teaching sessions from 2026-08-24 through 2026-09-24 16:41 America/Toronto. Consultations excluded.
 

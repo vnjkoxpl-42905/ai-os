@@ -12,6 +12,13 @@ lifecycle: active
 
 # Nicole Transcripts
 
+## Local session files
+
+| Date | Full local export | Local package | Source/status |
+|---|---|---|---|
+| 2026-08-14 | [[transcript-downloads/2026-08-14-nicole-notes-by-gemini]] | None | Full Gemini export; raw only |
+| 2026-06-10 | [[transcript-downloads/2026-06-10-nicole-notes-by-gemini]] | None | Full Gemini export; raw only |
+
 Source: Gmail connector search for Gemini meeting notes.
 
 ## Discovered Gemini Note Emails
@@ -33,4 +40,4 @@ Source: Gmail connector search for Gemini meeting notes.
 ## Export Status
 
 - Gmail note emails are indexed.
-- Full Drive document text has not been copied into local markdown yet. Gmail exposed the note document links.
+- Two full Gemini exports, each containing transcript text, are saved locally. No session packages are present.

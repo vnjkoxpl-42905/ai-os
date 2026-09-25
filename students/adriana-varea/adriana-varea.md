@@ -7,12 +7,21 @@ status: active
 role: student
 email: adrianavarea9@gmail.com
 subject: Adriana Varea
-updated: 2026-09-10
+updated: 2026-09-25
 aliases: [Adriana]
 lifecycle: active
 ---
 
 # Adriana Varea
+
+## Open this record
+
+- [[transcripts|Session index]]
+- [[teaching-notes|Teaching notes]]
+- [[open-loops|Open loops]]
+- [[live-status.generated|Live status]]
+- [[7sage|7Sage]]
+
 
 ## Record Map
 
@@ -22,21 +31,14 @@ lifecycle: active
 
 ## Identity
 
-- Email `adrianavarea9@gmail.com`, taken from the Google Meet invite line present
-  in all four session notes.
+- Email `adrianavarea9@gmail.com`, present in the Gemini invite lines.
 
 ## Current Status
 
-**Lapsed, not confirmed closed.** Four sessions between 2026-05-11 and
-2026-06-02, then nothing. The final session was explicitly framed as the last
-one before her exam ("a focused study plan was established for the final days
-before the exam"), so the gap is consistent with her having taken the test and
-the engagement ending naturally.
-
-That is an inference from the transcripts, not a confirmed outcome. **Nobody
-knows whether she took it, how she did, or whether she wants to continue** —
-she was asked to message after the test and there is no record of a reply. See
-[[open-loops]].
+The old lapsed inference ended when Adriana resumed sessions. Local Gemini
+exports include 2026-09-01 and 2026-09-08. Check the live calendar for current
+booking status and [[open-loops]] for unverified follow-ups. The local source
+does not establish her exam result.
 
 ## Ability
 
@@ -47,7 +49,7 @@ on blind review.
 
 ## Source Boundary
 
-This folder was reconstructed on 2026-07-20 from the four Gemini session notes
-in `raw/data-about-me/transcripts/`. No correspondence, payment record, or
-platform state has been checked. The raw `.docx` files stay in `raw/`; what is
-here is distillation.
+This folder was first reconstructed on 2026-07-20 from four Gemini session notes
+in `raw/data-about-me/transcripts/`. Those `.docx` sources remain in `raw/`.
+The [[transcripts|session index]] now also routes to full local Markdown exports
+and later session packages. Calendar and platform state require live checks.

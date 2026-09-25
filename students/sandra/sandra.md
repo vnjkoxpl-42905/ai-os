@@ -15,6 +15,11 @@ aliases: [Sandra]
 
 # Sandra Kooh
 
+## Open this record
+
+- [[transcripts|Session index]] · [[sessions/2026-09-23-session/transcript|Latest session transcript]] · [[sessions/2026-09-23-session/summary|Summary]] · [[sessions/2026-09-23-session/topic-map|Topic map]]
+- [[transcript-downloads/2026-09-23-sandra-notes-by-gemini|Full Gemini export]] · [[teaching-notes|Teaching notes]] · [[open-loops|Open loops]]
+
 ## Record basis
 
 Google Calendar records LSAT U teaching sessions for Sandra Kooh at `koohsandra@gmail.com` on 2026-09-14, 2026-09-17, 2026-09-21, and 2026-09-23. This folder was created from that teaching-session evidence. Active status here means Calendar documents teaching during the review window.

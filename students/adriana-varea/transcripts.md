@@ -3,11 +3,31 @@ title: Adriana Varea — Transcripts and session index
 type: transcripts
 record_kind: primary
 subject: Adriana Varea - Transcripts and session index
-updated: 2026-09-24
+updated: 2026-09-25
 aliases: []
 ---
 
 # Adriana Varea — Transcripts and session index
+
+## Local session files
+
+| Date | Full local export | Local session package | Status |
+|---|---|---|---|
+| 2026-09-08 | [[transcript-downloads/2026-09-08-adriana-varea-notes-by-gemini|2026-09-08-adriana-varea-notes-by-gemini.md]] | 2026-09-08-adriana-lsat-session: [[sessions/2026-09-08-adriana-lsat-session/transcript|transcript]], [[sessions/2026-09-08-adriana-lsat-session/summary|summary]], [[sessions/2026-09-08-adriana-lsat-session/topic-map|topic map]] | Paired |
+| 2026-09-01 | [[transcript-downloads/2026-09-01-adriana-varea-notes-by-gemini|2026-09-01-adriana-varea-notes-by-gemini.md]] | 2026-09-01-adriana-lsat-session: [[sessions/2026-09-01-adriana-lsat-session/transcript|transcript]], [[sessions/2026-09-01-adriana-lsat-session/summary|summary]], [[sessions/2026-09-01-adriana-lsat-session/topic-map|topic map]] | Paired |
+| 2026-08-25 | [[transcript-downloads/2026-08-25-adriana-varea-notes-by-gemini|2026-08-25-adriana-varea-notes-by-gemini.md]] | None on disk | Raw export only |
+| 2026-08-20 | [[transcript-downloads/2026-08-20-adriana-varea-notes-by-gemini|2026-08-20-adriana-varea-notes-by-gemini.md]] | None on disk | Raw export only |
+| 2026-08-18 | [[transcript-downloads/2026-08-18-adriana-varea-notes-by-gemini|2026-08-18-adriana-varea-notes-by-gemini.md]] | None on disk | Raw export only |
+| 2026-08-13 | [[transcript-downloads/2026-08-13-adriana-varea-notes-by-gemini|2026-08-13-adriana-varea-notes-by-gemini.md]] | None on disk | Raw export only |
+| 2026-08-11 | [[transcript-downloads/2026-08-11-adriana-varea-notes-by-gemini|2026-08-11-adriana-varea-notes-by-gemini.md]] | None on disk | Raw export only |
+| 2026-06-02 | [[transcript-downloads/2026-06-02-adriana-varea-notes-by-gemini|2026-06-02-adriana-varea-notes-by-gemini.md]] | None on disk | Raw export only |
+| 2026-05-25 | [[transcript-downloads/2026-05-25-adriana-varea-notes-by-gemini|2026-05-25-adriana-varea-notes-by-gemini.md]] | None on disk | Raw export only |
+| 2026-05-18 | [[transcript-downloads/2026-05-18-adriana-varea-notes-by-gemini|2026-05-18-adriana-varea-notes-by-gemini.md]] | None on disk | Raw export only |
+| 2026-05-11 | [[transcript-downloads/2026-05-11-adriana-varea-notes-by-gemini|2026-05-11-adriana-varea-notes-by-gemini.md]] | None on disk | Raw export only |
+| 2026-04-20 | [[transcript-downloads/2026-04-20-adriana-varea-notes-by-gemini|2026-04-20-adriana-varea-notes-by-gemini.md]] | None on disk | Raw export only |
+| 2026-04-07 | [[transcript-downloads/2026-04-07-adriana-varea-notes-by-gemini|2026-04-07-adriana-varea-notes-by-gemini.md]] | None on disk | Raw export only |
+| 2026-03-31 | [[transcript-downloads/2026-03-31-adriana-varea-notes-by-gemini|2026-03-31-adriana-varea-notes-by-gemini.md]] | None on disk | Raw export only |
+
 
 Four sessions, all with Gemini notes. Source files live in
 `raw/data-about-me/transcripts/` and are immutable — read, never edit.

@@ -9,10 +9,16 @@ aliases: []
 
 # Favour — Transcript Index
 
+## Local session files
+
+| Date | Full local export | Local package | Source/status |
+|---|---|---|---|
+| 2026-07-07 | [[transcript-downloads/2026-07-07-favour-notes-by-gemini]] | None | Consultation; full Gemini export; raw only |
+
 ## Known source
 
-- July 7, 2026 consultation. Gemini Notes attachment is associated with the calendar event but has not yet been exported locally.
+- July 7, 2026 consultation. The Gemini Notes attachment has been exported locally with the full transcript.
 
 ## Local exports
 
-None yet. Preserve any future raw export in `transcript-downloads/` and create a corresponding session package.
+The 2026-07-07 full export is in `transcript-downloads/`. No local session package is present.

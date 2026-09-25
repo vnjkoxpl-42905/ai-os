@@ -15,6 +15,11 @@ lifecycle: active
 
 # Nicole
 
+## Open this record
+
+- [[transcripts|Session index]] · [[teaching-notes|Teaching notes]] · [[open-loops|Open loops]]
+- [[email-context|Email context]] · [[email-correspondence|Email correspondence]] · [[payment-links|Payment links]] · [[assignment-log|Assignment log]] · [[live-status.generated|Live status]]
+
 ## Snapshot
 
 Current LSAT U student.

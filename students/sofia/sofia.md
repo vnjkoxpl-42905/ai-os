@@ -15,6 +15,14 @@ lifecycle: active
 
 # Sofia
 
+## Open this record
+
+- [Session index](transcripts.md)
+- [Teaching notes](teaching-notes.md)
+- [Open loops](open-loops.md)
+- [Assignment log](assignment-log.md)
+- [Live status](live-status.generated.md)
+
 ## Snapshot
 
 Current LSAT U student.
@@ -47,7 +55,7 @@ Keep this student's full context in this folder: session notes, commitments, lea
 
 ## Transcript Downloads
 
-- Jun 16, 2026 consultation, Jun 26, 2026 session, and Jul 2, 2026 session are saved in [[students/sofia/transcripts|Transcripts]].
+- Local full exports from 2026-06-16 through 2026-09-23 are listed in [[transcripts|the session index]].
 
 ## Related
 

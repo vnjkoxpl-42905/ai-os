@@ -3,7 +3,7 @@ title: Dakota
 type: person
 tags: [lsat-u, person, student]
 created: 2026-07-03
-updated: 2026-07-03
+updated: 2026-09-25
 status: active
 role: student
 email: dakota.brown2010@gmail.com
@@ -14,6 +14,19 @@ lifecycle: active
 ---
 
 # Dakota
+
+## Open this record
+
+- [[transcripts|Session index]]
+- [[teaching-notes|Teaching notes]]
+- [[open-loops|Open loops]]
+- [[assignment-log|Assignment log]]
+- [[email-context|Email context]]
+- [[email-correspondence|Email correspondence]]
+- [[payment-links|Payment links]]
+- [[live-status.generated|Live status]]
+- [[7sage|7Sage]]
+
 
 ## Snapshot
 

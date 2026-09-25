@@ -15,6 +15,10 @@ lifecycle: active
 
 # Vinay Kalva
 
+## Open this record
+
+- [Session index](transcripts.md)
+
 ## Snapshot
 
 Current LSAT U student. 2 taught sessions on record, 2026-08-10 to 2026-08-29. Folder opened 2026-09-08 from the Gemini notes attached to the calendar invites.

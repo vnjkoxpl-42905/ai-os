@@ -12,6 +12,10 @@ This is a dated reconciliation of Calendar attachments, not proof of attendance 
 
 Every attached source in the table is now represented locally. The 26 sources for people with student folders are linked from their `transcripts.md` inventories. The two consultation-only sources are in `_other-sessions/`. Existing packages and primary notes were preserved; new teaching judgments and open loops were added only when the transcript supported them.
 
+## Internal folder routing check
+
+The student folders are Joshua's internal working records. Each of the 22 current student profiles now has an `Open this record` router, and each `transcripts.md` has a newest-first `Local session files` index with direct links to the local Markdown export and all existing package files. The read-only check `python system/scripts/check-student-records.py` passed on 2026-09-25: 22 folders, 96 local Markdown exports, 35 session packages, no missing or broken router links. Older exports without packages are indexed as raw-only sources; no summary or teaching judgment was fabricated from them.
+
 | Date | Calendar event | Filed under | Source |
 |---|---|---|---|
 | 2026-09-01 | Julian Yoo consultation | `_other-sessions/` | [Gemini Doc](https://docs.google.com/document/d/1aZaInNEpJC5PPLQDLMLFOBd9rLWV9aJglxJhLvN-5Rg/edit) |

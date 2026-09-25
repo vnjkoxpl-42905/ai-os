@@ -15,16 +15,22 @@ lifecycle: active
 
 # Steven Morris
 
+## Open this record
+
+- [Session index](transcripts.md)
+- [Teaching notes](teaching-notes.md)
+- [Open loops](open-loops.md)
+
 ## Snapshot
 
-Current LSAT U student. 4 taught sessions on record, 2026-08-24 to 2026-09-03. Folder opened 2026-09-08 from the Gemini notes attached to the calendar invites.
+Current LSAT U student. Six local Gemini exports across five dates from 2026-08-06 through 2026-09-03; four session packages. The 2026-09-03 attached document records only the first 3:45. Folder opened 2026-09-08 from Gemini notes attached to calendar invites.
 
 ## Student Context
 
 - Role: Student
 - Relationship: Current student
 - Current status: Active
-- Sessions on record: 4 (2026-08-24, 2026-08-24, 2026-08-29, 2026-09-03)
+- Local source captures: 6 (2026-08-06, 2026-08-20, two on 2026-08-24, 2026-08-29, 2026-09-03). See [[transcripts|session index]] for package status.
 - Target score: Not recorded yet.
 - Test date: Not recorded yet.
 

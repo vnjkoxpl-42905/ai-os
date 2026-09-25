@@ -1,5 +1,13 @@
 # Summary
 
+## 2026-09-25 correction: use the September 18 source
+
+The auto-saved summary body below describes a different Sofia session and is retained as historical source output. It is not a reliable summary of 2026-09-18. The source for this package is [[../../transcript-downloads/2026-09-18-sofia-notes-by-gemini]] and [[transcript]], which record a Sofia session on sufficient assumptions.
+
+Sofia solved a difficult political-systems sufficient assumption question, then worked through a tax-disclaimer argument where the missing assumption had to cover the case in which an email did not suggest anything illegal. In a moral-action argument, Joshua showed that a gap can sit between a premise and an intermediate conclusion. An artwork question turned on the new concept of what a painting symbolizes. The transcript records a plan for level 5 sufficient-assumption drills, a full practice test, and two read-recall exercises. Confirm assignment status separately; the transcript establishes the plan, not delivery.
+
+The original auto-saved body follows for provenance.
+
 
 Source tab: Gemini auto-saved full notes.
 

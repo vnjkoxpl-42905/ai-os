@@ -15,11 +15,16 @@ lifecycle: active
 
 # Ivory Johnson
 
+## Open this record
+
+- [[transcripts|Session index]] · [[sessions/2026-09-19-session/transcript|Latest session transcript]] · [[sessions/2026-09-19-session/summary|Summary]] · [[sessions/2026-09-19-session/topic-map|Topic map]]
+- [[transcript-downloads/2026-09-19-ivory-johnson-notes-by-gemini|Full Gemini export]] · [[teaching-notes|Teaching notes]] · [[open-loops|Open loops]]
+
 ## Snapshot
 
 Current LSAT U student. Folder opened 2026-09-08 from the calendar and Drive.
 
-1 taught session (2026-09-04). Consultation 2026-08-26. **No Gemini notes exist for the taught session**; the only transcript on record is the consultation, which is not in this folder.
+The folder documents a 2026-09-19 taught session with a full Gemini export and session package. The 2026-09-04 and 2026-09-17 events have no attached Gemini Doc in the reviewed Calendar records. Consultation: 2026-08-26.
 
 ## Student Context
 
@@ -35,4 +40,4 @@ Not written yet, and deliberately not invented:
 
 - `email-context.md`, `email-correspondence.md`, `payment-links.md` — mirrors of
   Gmail and Stripe, each wants its own pass.
-- `teaching-notes.md` — wants a read of the transcripts rather than a summary.
+- Teaching notes are in [[teaching-notes]].

@@ -10,6 +10,12 @@ aliases: []
 
 # Transcript inventory
 
+## Local session files
+
+| Date | Full local export | Local package | Source/status |
+|---|---|---|---|
+| 2026-09-17 | [[transcript-downloads/2026-09-17-gianna-notes-by-gemini]] | [[sessions/2026-09-17-session/transcript|Transcript]] · [[sessions/2026-09-17-session/summary|Summary]] · [[sessions/2026-09-17-session/topic-map|Topic map]] | Calendar-attached Gemini Doc; full local export and package |
+
 Scope reviewed: Google Calendar teaching sessions from 2026-08-24 through 2026-09-24 16:41 America/Toronto. Consultations excluded.
 
 | Session date | Package | Source / status |

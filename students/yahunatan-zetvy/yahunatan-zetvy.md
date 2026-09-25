@@ -16,6 +16,14 @@ lifecycle: active
 
 # Yahunatan Zetvy
 
+## Open this record
+
+- [Session index](transcripts.md)
+- [Teaching notes](teaching-notes.md)
+- [Open loops](open-loops.md)
+- [Assignment log](assignment-log.md)
+- [Live status](live-status.generated.md)
+
 ## Record Map
 
 - [[transcripts|Transcripts and session index]]
@@ -40,4 +48,4 @@ lifecycle: active
 
 ## Source Boundary
 
-The July 7 Gemini notes exist as a Google Docs attachment to the calendar event. The raw document has not yet been exported into the local student folder. No local transcript is being fabricated.
+The 2026-07-07 consultation and four later Gemini records are preserved as full local Markdown exports in [[transcripts|the session index]]. The July consultation has no three-file session package yet; the raw export remains the source.

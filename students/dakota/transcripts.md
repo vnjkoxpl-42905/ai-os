@@ -3,7 +3,7 @@ title: Dakota Transcripts
 type: person
 tags: [lsat-u, student, transcript, dakota]
 created: 2026-07-03
-updated: 2026-07-03
+updated: 2026-09-25
 status: active
 subject: Dakota Transcripts
 aliases: [Dakota]
@@ -11,6 +11,22 @@ lifecycle: active
 ---
 
 # Dakota Transcripts
+
+## Local session files
+
+| Date | Full local export | Local session package | Status |
+|---|---|---|---|
+| 2026-06-19 | [[transcript-downloads/2026-06-19-dakota-notes-by-gemini|2026-06-19-dakota-notes-by-gemini.md]] | None on disk | Raw export only |
+| 2026-06-12 | [[transcript-downloads/2026-06-12-dakota-notes-by-gemini|2026-06-12-dakota-notes-by-gemini.md]] | None on disk | Raw export only |
+| 2026-06-05 | [[transcript-downloads/2026-06-05-dakota-notes-by-gemini|2026-06-05-dakota-notes-by-gemini.md]] | None on disk | Raw export only |
+| 2026-05-29 | [[transcript-downloads/2026-05-29-dakota-notes-by-gemini|2026-05-29-dakota-notes-by-gemini.md]] | None on disk | Raw export only |
+| 2026-05-16 | [[transcript-downloads/2026-05-16-dakota-notes-by-gemini|2026-05-16-dakota-notes-by-gemini.md]] | None on disk | Raw export only |
+| 2026-05-15 | [[transcript-downloads/2026-05-15-dakota-notes-by-gemini|2026-05-15-dakota-notes-by-gemini.md]] | None on disk | Raw export only |
+| 2026-05-02 | [[transcript-downloads/2026-05-02-dakota-notes-by-gemini|2026-05-02-dakota-notes-by-gemini.md]] | None on disk | Raw export only |
+| 2026-04-25 | [[transcript-downloads/2026-04-25-dakota-notes-by-gemini|2026-04-25-dakota-notes-by-gemini.md]] | None on disk | Raw export only |
+| 2026-04-24 | [[transcript-downloads/2026-04-24-dakota-notes-by-gemini|2026-04-24-dakota-notes-by-gemini.md]] | None on disk | Raw export only |
+| 2026-03-07 | [[transcript-downloads/2026-03-07-dakota-notes-by-gemini|2026-03-07-dakota-notes-by-gemini.md]] | None on disk | Raw export only |
+
 
 Source: Gmail connector search for Gemini meeting notes.
 

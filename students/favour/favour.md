@@ -14,6 +14,11 @@ lifecycle: active
 
 # Favour
 
+## Open this record
+
+- [[transcripts|Session index]] · [[teaching-notes|Teaching notes]] · [[open-loops|Open loops]]
+- [[assignment-log|Assignment log]] · [[live-status.generated|Live status]]
+
 ## Record Map
 
 - [[transcripts|Transcripts and session index]]
@@ -35,4 +40,4 @@ lifecycle: active
 
 ## Source Boundary
 
-The consultation’s Gemini notes are referenced by the calendar event. The raw document has not yet been exported into this folder, so no transcript is reproduced here.
+The 2026-07-07 consultation’s full Gemini notes and transcript are in [[transcript-downloads/2026-07-07-favour-notes-by-gemini]]. There is no local session package for this consultation.

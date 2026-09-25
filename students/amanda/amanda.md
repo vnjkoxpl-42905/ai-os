@@ -8,11 +8,20 @@ role: student
 lifecycle: active
 email: amhuynh@asu.edu
 subject: Amanda
-updated: 2026-09-10
+updated: 2026-09-25
 aliases: [Amanda]
 ---
 
 # Amanda
+
+## Open this record
+
+- [[transcripts|Session index]]
+- [[teaching-notes|Teaching notes]]
+- [[open-loops|Open loops]]
+- [[assignment-log|Assignment log]]
+- [[7sage|7Sage]]
+
 
 ## Snapshot
 
@@ -22,7 +31,7 @@ a transcript and a 7Sage stub but had no profile page, so she was invisible to
 
 - Arizona-based, targeting the upcoming application cycle.
 - Score range as of 2026-09-04: **150–158**.
-- 1 session on record: 2026-09-04.
+- Two Gemini sessions on record: 2026-09-04 and 2026-09-22. See [[transcripts]].
 
 ## Working on
 
@@ -36,7 +45,7 @@ From [[transcript-downloads/2026-09-04-amanda-notes-by-gemini|2026-09-04]]:
 
 ## Open gaps
 
-- **Email missing.** Cannot be contacted from the brain until an address is added above.
+- Email `amhuynh@asu.edu` is recorded in this page's metadata. Verify its current use in Gmail before sending anything.
 - **No 7Sage URL.** See [[7sage]] — ask her for `https://7sage.com/u/usr_.../review`.
 - No booking pass on file.
 

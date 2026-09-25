@@ -10,6 +10,13 @@ aliases: []
 
 # Transcript inventory
 
+## Local session files
+
+| Date | Local full export | Local package | Source / status |
+|---|---|---|---|
+| 2026-09-18 | [Full export](transcript-downloads/2026-09-18-zeina-borji-notes-by-gemini.md) | [transcript](sessions/2026-09-18-session/transcript.md) · [summary](sessions/2026-09-18-session/summary.md) · [topic-map](sessions/2026-09-18-session/topic-map.md) | Local Gemini record. |
+| 2026-09-10 | [Full export](transcript-downloads/2026-09-10-zeina-borji-notes-by-gemini.md) | None | Consultation. |
+
 Scope reviewed: Google Calendar teaching sessions from 2026-08-24 through 2026-09-24 16:41 America/Toronto. Consultations excluded.
 
 | Session date | Package | Source / status |

@@ -3,7 +3,7 @@ title: Asia
 type: person
 tags: [lsat-u, person, student]
 created: 2026-09-08
-updated: 2026-09-08
+updated: 2026-09-25
 status: active
 role: student
 email: atamaami@gmail.com
@@ -15,16 +15,22 @@ lifecycle: active
 
 # Asia
 
+## Open this record
+
+- [[transcripts|Session index]]
+- [[7sage|7Sage]]
+
+
 ## Snapshot
 
-Current LSAT U student. 1 taught session on record, 2026-08-25 to 2026-08-25. Folder opened 2026-09-08 from the Gemini notes attached to the calendar invites.
+Two local Gemini session exports, 2026-08-21 and 2026-08-25. The August 25 session has a package; the August 21 export is raw only. Folder opened 2026-09-08 from Gemini notes.
 
 ## Student Context
 
 - Role: Student
 - Relationship: Current student
 - Current status: Active
-- Sessions on record: 1 (2026-08-25)
+- Local session exports: 2 (2026-08-21 and 2026-08-25)
 - Target score: Not recorded yet.
 - Test date: Not recorded yet.
 

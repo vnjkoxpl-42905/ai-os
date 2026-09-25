@@ -15,12 +15,19 @@ lifecycle: onboarding
 
 # Zeina Borji
 
+## Open this record
+
+- [Session index](transcripts.md)
+- [Teaching notes](teaching-notes.md)
+- [Open loops](open-loops.md)
+- [Email context](email-context.md)
+
 ## Record Map
 
 - [[teaching-notes|Teaching notes]]
 - [[email-context|Email context and correspondence]]
 - [[open-loops|Open loops]]
-- Raw consultation notes: [[../_other-sessions/2026-09-10-zeina-consultation-notes-by-gemini|2026-09-10 Consultation Notes]]
+- Full local consultation export: [[transcript-downloads/2026-09-10-zeina-borji-notes-by-gemini|2026-09-10 consultation notes]]
 
 ## Identity & Contact
 

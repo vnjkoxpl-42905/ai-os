@@ -15,6 +15,11 @@ lifecycle: active
 
 # Ethan
 
+## Open this record
+
+- [[transcripts|Session index]] · [[teaching-notes|Teaching notes]] · [[open-loops|Open loops]]
+- [[email-context|Email context]] · [[payment-links|Payment links]] · [[assignment-log|Assignment log]] · [[live-status.generated|Live status]]
+
 ## Snapshot
 
 Current LSAT U student.
@@ -49,7 +54,6 @@ Keep this student's full context in this folder: session notes, commitments, lea
 
 - [[students/README|Students]]
 - [[students/ethan/email-context|Email context]]
-- [[students/ethan/email-correspondence|Email correspondence]]
 - [[students/ethan/payment-links|Payment links]]
 - [[students/ethan/transcripts|Transcripts]]
 

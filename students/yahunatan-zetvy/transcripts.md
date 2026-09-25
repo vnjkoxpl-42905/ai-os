@@ -12,15 +12,25 @@ lifecycle: active
 
 # Yahunatan Zetvy Transcripts
 
+## Local session files
+
+| Date | Local full export | Local package | Source / status |
+|---|---|---|---|
+| 2026-09-16 | [Full export](transcript-downloads/2026-09-16-yahunatan-zetvy-notes-by-gemini.md) | [transcript](sessions/2026-09-16-conditional-logic-and-theology/transcript.md) · [summary](sessions/2026-09-16-conditional-logic-and-theology/summary.md) · [topic-map](sessions/2026-09-16-conditional-logic-and-theology/topic-map.md) | Local Gemini record. |
+| 2026-09-02 | [Full export](transcript-downloads/2026-09-02-yahunatan-zetvy-notes-by-gemini.md) | [transcript](sessions/2026-09-02-conditional-logic/transcript.md) · [summary](sessions/2026-09-02-conditional-logic/summary.md) · [topic-map](sessions/2026-09-02-conditional-logic/topic-map.md) | Local Gemini record. |
+| 2026-08-19 | [Full export](transcript-downloads/2026-08-19-yahunatan-zetvy-notes-by-gemini.md) | None | Local Gemini record. |
+| 2026-07-15 | [Full export](transcript-downloads/2026-07-15-yahunathan-notes-by-gemini.md) | None | Local Gemini record. |
+| 2026-07-07 | [Full export](transcript-downloads/2026-07-07-yahunathan-notes-by-gemini.md) | None | Consultation. |
+
 ## Source records
 
 - July 7, 2026 consultation: Gemini â€œNotes by Geminiâ€ Google Doc attached to the Calendar event.
 - Google Doc ID: `12tqVKS_WTJsT5otDmhSbHwITkf7HL25OF0f3Cgbt45k`
-- Local export: missing. Export before creating the raw `sessions/2026-07-07-consultation/transcript.md` record.
+- Local export: [[transcript-downloads/2026-07-07-yahunathan-notes-by-gemini]]. No 2026-07-07 three-file package exists yet.
 
 ## Session package status
 
-The session summary and topic map should be created only after the raw source is preserved locally.
+The 2026-07-07 raw source is preserved locally; a consultation package can now be created from it if needed.
 
 
 ## Session packages
