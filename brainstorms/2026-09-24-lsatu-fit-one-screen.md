@@ -64,5 +64,9 @@ Rounds 1-6 (2026-09-24) are summarised in Decisions above: names, target 1536x69
 - Supersedes decision 5 (tighten only on short screens): layouts now scale continuously with window width and height.
 - Decision 1 becomes the reference size (1536x695), checked alongside small laptop, big monitor, narrow window.
 
+### Round 8 (2026-09-25)
+- Tested on a real tester student account (live site plus injected styles). Spacing alone left Home at 872px for that student, 177 over the 695 fold.
+- Captured: Joshua approved the rearrangement after seeing it live: Assigned work and latest message side by side, four quick starts on one row, assigned rows full width. Result 672px. Built as commit 1296716 on fix/fit-viewport.
+- The tester-account flag is resolved (tester account used).
+
 ## Open flags (pending input)
-- Home must be checked as a student with assigned work: needs a test student account signed in on the local dev port -> Joshua (sign-in), me (pick the account).
