@@ -84,7 +84,7 @@ case "$cmd" in
     for a in "$@"; do [ "$a" = "--dry-run" ] && exit 0; done
     node "$ROOT/system/scripts/lsatu-admin.mjs" draft-set "$id" posted
     ;;
-  signups|access|archive|unarchive|items|due|unassign|passes|notifications|read|drafts|draft|draft-set|uploads|upload-review|notes|note-resolve|note-discard|scan-notes|plans|unsend|unsend-last)
+  signups|access|archive|unarchive|items|due|unassign|passes|credit|notifications|read|drafts|draft|draft-set|uploads|upload-review|notes|note-resolve|note-discard|scan-notes|plans|unsend|unsend-last)
     node "$ROOT/system/scripts/lsatu-admin.mjs" "$cmd" "$@"
     ;;
   status|qtypes|sections|overdue|quiet|students|inbox|thread)

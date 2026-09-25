@@ -28,3 +28,7 @@ Use dated entries for assignment-related decisions and platform evidence.
 - **Parallel Flaw + Famous Flaws (Set 2)** (guided drill `w8-04-parallel-flaw-famous-flaws-set-2`) · assignment `57cfe825-13f1-4935-a620-0e2678f865b8` · inbox ok · bell ok · email ok. Follows her 2026-09-09 request for a parallel drill.
 - **Parallel Reasoning** (Classroom note, verbatim copy of Celia's 2026-08-19 note) · item `56bc1881-4e0a-4e75-a52e-bd6a929f39e1` · `/classroom/item/56bc1881-…` · inbox ok · bell ok · email ok.
 - Not assigned: BLENDED SET: Parallel + Paradox (the second drill Celia received).
+
+## 2026-09-25
+
+- Added one session credit to Sofia Minassian's active LSAT U booking pass. The platform confirmed 15 of 18 credits used, with 3 remaining (previously 15 of 17 used, with 2 remaining). The older exhausted pass was unchanged.

@@ -45,7 +45,7 @@ const pos2 = argv[2] && !argv[2].startsWith("--") ? argv[2] : undefined;
 const flag = (n, d) => { const i = argv.indexOf(`--${n}`); return i >= 0 ? argv[i + 1] : d; };
 const has = (n) => argv.includes(`--${n}`);
 const dry = has("dry-run");
-const CMDS = ["signups", "access", "archive", "unarchive", "items", "due", "unassign", "passes", "notifications", "read", "drafts", "draft", "draft-set", "uploads", "upload-review", "notes", "note-resolve", "note-discard", "scan-notes", "plans", "unsend", "unsend-last"];
+const CMDS = ["signups", "access", "archive", "unarchive", "items", "due", "unassign", "passes", "credit", "notifications", "read", "drafts", "draft", "draft-set", "uploads", "upload-review", "notes", "note-resolve", "note-discard", "scan-notes", "plans", "unsend", "unsend-last"];
 if (!CMDS.includes(cmd)) { console.error(fs.readFileSync(fileURLToPath(import.meta.url), "utf8").split("\n").slice(5, 20).join("\n")); process.exit(2); }
 
 const tok = await (await fetch(`${URL_}/auth/v1/token?grant_type=password`, {
@@ -168,6 +168,20 @@ if (cmd === "signups") {
   if (!list.length) { console.log(pos ? "No booking pass for that student." : "No booking passes."); process.exit(0); }
   for (const p of list) console.log(`${String(p.student_name ?? p.student_email).padEnd(22)} ${p.used_credits}/${p.total_credits} used · ${p.total_credits - p.used_credits} owed · ${p.session_length_minutes} min · ${p.status}${p.expires_at ? ` · expires ${day(p.expires_at)}` : ""}`);
   console.log(`\nNew pass or link: use the booking-link skill (scripts/booking-link.ts).`);
+} else if (cmd === "credit") {
+  const u = await resolve(pos);
+  const { passes = [] } = await fn("booking-pass-admin", { action: "list" });
+  const active = passes.filter((p) => p.student_id === u.class_id && p.status === "active");
+  if (active.length !== 1) throw new Error(`Expected one active booking pass for ${nameOf(u)}; found ${active.length}. Nothing changed.`);
+  const pass = active[0];
+  const nextTotal = pass.total_credits + 1;
+  console.log(`${nameOf(u)}: ${pass.total_credits - pass.used_credits} -> ${nextTotal - pass.used_credits} remaining credits (${pass.used_credits}/${pass.total_credits} -> ${pass.used_credits}/${nextTotal} used/total)`);
+  if (dry) { console.log("(dry run — nothing changed)"); process.exit(0); }
+  await fn("booking-pass-admin", { action: "update", pass_id: pass.id, total_credits: nextTotal });
+  const { passes: updated = [] } = await fn("booking-pass-admin", { action: "list" });
+  const actual = updated.find((p) => p.id === pass.id);
+  if (!actual || actual.total_credits !== nextTotal || actual.used_credits !== pass.used_credits) throw new Error("Credit update returned, but the pass balance did not verify. Check the account before retrying.");
+  console.log(`Verified: ${actual.total_credits - actual.used_credits} remaining credits.`);
 } else if (cmd === "notifications") {
   const rows = await rest(`notifications?user_id=eq.${ADMIN_ID}${has("all") ? "" : "&read=eq.false"}&select=type,title,body,created_at&order=created_at.desc&limit=50`);
   if (!rows.length) console.log("No unread notifications.");
