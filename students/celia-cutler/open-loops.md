@@ -9,6 +9,12 @@ updated: 2026-09-25
 
 # Celia Cutler — Open Loops
 
+## Earlier September sessions
+
+- [ ] Verify Celia completed the 2026-09-07 Read Recall assignment and reported whether audio recording and transcription worked. Source: [[transcript-downloads/2026-09-07-celia-cutler-notes-by-gemini]].
+- [ ] Verify whether the conditional drills and guidance promised on 2026-09-16 were delivered. The 2026-09-19 accommodations correspondence may satisfy the forms promise; compare with what was sent before following up. Source: [[transcript-downloads/2026-09-16-celia-cutler-notes-by-gemini]].
+- [ ] Resolve the Gemini speaker-label surname “Syrocki” against the invite email `celiacutler@gmail.com` before adding an alias or treating it as a separate student. Sources: September 7, 16, and 21 Gemini exports.
+
 ## 2026-09-21 session
 
 - [ ] Confirm whether Joshua sent the promised RC passage breakdown note. Source: [[sessions/2026-09-21-celia-lsat-session/transcript]], 01:01:21.
