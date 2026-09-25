@@ -10,11 +10,11 @@ status: snapshot
 
 This is a dated reconciliation of Calendar attachments, not proof of attendance for events without one. The scan covered 2026-09-01 through 2026-09-30 on all 17 connected calendars, including cancelled events. The primary calendar had 28 events with a `Notes by Gemini` attachment: 27 confirmed and one cancelled. The other calendars had none. Future September events may acquire attachments after this snapshot.
 
-Every attached source in the table is now represented locally. The 26 sources for people with student folders are linked from their `transcripts.md` inventories. The two consultation-only sources are in `_other-sessions/`. Existing packages and primary notes were preserved; new teaching judgments and open loops were added only when the transcript supported them.
+Every attached source in the table is now represented locally. Twenty-six sources for people with student folders are linked from their `transcripts.md` inventories. Julian's consultation source is in `_other-sessions/`. Venusa's consultation source also remains there, untouched, because it records an objection to transcription; her student folder was added after the 2026-09-24 session booking was found. Existing packages and primary notes were preserved; new teaching judgments and open loops were added only when the transcript supported them.
 
 ## Internal folder routing check
 
-The student folders are Joshua's internal working records. Each of the 22 current student profiles now has an `Open this record` router, and each `transcripts.md` has a newest-first `Local session files` index with direct links to the local Markdown export and all existing package files. The read-only check `python system/scripts/check-student-records.py` passed on 2026-09-25: 22 folders, 96 local Markdown exports, 35 session packages, no missing or broken router links. Older exports without packages are indexed as raw-only sources; no summary or teaching judgment was fabricated from them.
+The student folders are Joshua's internal working records. Each current student profile has an `Open this record` router, and each `transcripts.md` has a newest-first `Local session files` index with direct links to each available local Markdown export and existing package file. The read-only check `python system/scripts/check-student-records.py` passed on 2026-09-25: 23 folders, 96 local Markdown exports, 35 session packages, no missing or broken router links. Venusa has no local export in her folder pending the recording-retention decision. Older exports without packages are indexed as raw-only sources; no summary or teaching judgment was fabricated from them.
 
 | Date | Calendar event | Filed under | Source |
 |---|---|---|---|
@@ -30,7 +30,7 @@ The student folders are Joshua's internal working records. Each of the 22 curren
 | 2026-09-08 | Adriana | `adriana-varea/` | [Gemini Doc](https://docs.google.com/document/d/1Xs5zesY5w9CP25BCHUOtVipkKfjnqD1KXDOxLxL9LPQ/edit) |
 | 2026-09-09 | Sofia | `sofia/` | [Gemini Doc](https://docs.google.com/document/d/178QAdgpV_Bx728psI9ZJ4x2ZSTAW8BC2ZvQy0hfDR9E/edit) |
 | 2026-09-10 | Zeina consultation | `zeina-borji/` | [Gemini Doc](https://docs.google.com/document/d/1L_UGswGUEWAtl29RqTI80vC3Cgzqda2Vbi5rWa5M1M0/edit) |
-| 2026-09-11 | Venusa consultation | `_other-sessions/` | [Gemini Doc](https://docs.google.com/document/d/1jlKYowP7y3Tj6E8cFzzvEVaDBWU1OadvPHa1hbVlSBg/edit) |
+| 2026-09-11 | Venusa consultation, transcription objection | `_other-sessions/` retention exception; student folder at `venusa-laveaux/` | [Gemini Doc](https://docs.google.com/document/d/1jlKYowP7y3Tj6E8cFzzvEVaDBWU1OadvPHa1hbVlSBg/edit) |
 | 2026-09-11 | Sofia | `sofia/` | [Gemini Doc](https://docs.google.com/document/d/1xwLbEPHGHOWhg-FvzXQfnhFH1f6MlMFKR7jae14cpH8/edit) |
 | 2026-09-11 | Ore | `ore/` | [Gemini Doc](https://docs.google.com/document/d/16ejBCD1WgUv1nU18nRjplcTEn6tBjKEv2wzuWjqAwGo/edit) |
 | 2026-09-14 | Charles | `charles-moore/` | [Gemini Doc](https://docs.google.com/document/d/1TNtcJz-qWMg_GNm4duV37AqYgb8SVxbZ_D6u4cFirEU/edit) |
@@ -49,7 +49,7 @@ The student folders are Joshua's internal working records. Each of the 22 curren
 
 ## Exceptions that affect use of a source
 
-- Venusa's 2026-09-11 attachment records her objection to transcription, followed by Joshua agreeing to stop. The pre-existing 39-second local file was not distilled or copied to a student folder. Retention needs Joshua's decision.
+- Venusa's 2026-09-11 attachment records her objection to transcription, followed by Joshua agreeing to stop. The pre-existing 39-second local file was not distilled or copied to her student folder. Calendar shows a subsequent 2026-09-24 “Venusa session” booked through LSAT U, so a student folder was added under Joshua's 2026-09-25 onboarding rule. Attendance at that booking remains unverified. Retention needs Joshua's decision.
 - Steven's 2026-09-03 native Doc ends after 3:45. A fresh export matched the existing source byte for byte. The record is genuinely short; do not infer the rest of a session from it.
 - Ore's 2026-09-01 Calendar event is cancelled, but its attached Doc records a full tutoring conversation. Both facts are retained in the new `ore/sessions/2026-09-01-session/` package.
 - Sofia's 2026-09-18 package summary embedded content from 2026-09-11. A dated correction points to the correct 2026-09-18 source and package transcript; the original content is retained below for provenance.

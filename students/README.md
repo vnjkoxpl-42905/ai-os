@@ -15,7 +15,7 @@ One folder per student, holding **everything** about them (D2, locked 2026-07-16
 
 ## Current students
 
-- [[adriana-varea/adriana-varea|Adriana Varea]] · [[amanda/amanda|Amanda]] · [[asia/asia|Asia]] · [[avneet-natt/avneet-natt|Avneet Natt]] · [[celia-cutler/celia-cutler|Celia Cutler]] · [[charles-moore/charles-moore|Charles Moore]] · [[dakota/dakota|Dakota]] · [[david-salgado/david-salgado|David Salgado]] · [[ethan/ethan|Ethan]] · [[favour/favour|Favour]] · [[fernande-charleus/fernande-charleus|Fernande Charleus]] · [[gianna/gianna|Gianna Jean]] · [[ivory-johnson/ivory-johnson|Ivory Johnson]] · [[nicole/nicole|Nicole]] · [[ore/ore|Ore]] · [[sandra/sandra|Sandra Kooh]] · [[sofia/sofia|Sofia]] · [[steven-morris/steven-morris|Steven Morris]] · [[vinay-kalva/vinay-kalva|Vinay Kalva]] · [[whit-wilson/whit-wilson|Whit Wilson]] · [[yahunatan-zetvy/yahunatan-zetvy|Yahunatan Zetvy]] · [[zeina-borji/zeina-borji|Zeina Borji]]
+- [[adriana-varea/adriana-varea|Adriana Varea]] · [[amanda/amanda|Amanda]] · [[asia/asia|Asia]] · [[avneet-natt/avneet-natt|Avneet Natt]] · [[celia-cutler/celia-cutler|Celia Cutler]] · [[charles-moore/charles-moore|Charles Moore]] · [[dakota/dakota|Dakota]] · [[david-salgado/david-salgado|David Salgado]] · [[ethan/ethan|Ethan]] · [[favour/favour|Favour]] · [[fernande-charleus/fernande-charleus|Fernande Charleus]] · [[gianna/gianna|Gianna Jean]] · [[ivory-johnson/ivory-johnson|Ivory Johnson]] · [[nicole/nicole|Nicole]] · [[ore/ore|Ore]] · [[sandra/sandra|Sandra Kooh]] · [[sofia/sofia|Sofia]] · [[steven-morris/steven-morris|Steven Morris]] · [[venusa-laveaux/venusa-laveaux|Venusa Laveaux]] · [[vinay-kalva/vinay-kalva|Vinay Kalva]] · [[whit-wilson/whit-wilson|Whit Wilson]] · [[yahunatan-zetvy/yahunatan-zetvy|Yahunatan Zetvy]] · [[zeina-borji/zeina-borji|Zeina Borji]]
 
 **Taught in the last month** (2026-08-08 to 2026-09-08, transcripts pulled 2026-09-08): Celia Cutler (6), Adriana Varea (5), Steven Morris (4), Sofia (2), Vinay Kalva (2), Yahunatan Zetvy (2), Asia (1), Charles Moore (1), Fernande Charleus (1), Whit Wilson (1).
 
@@ -53,6 +53,8 @@ This is the target layout, not a checklist to satisfy with empty files. Create a
 ## Conventions
 
 - New student → new folder `students/<slug>/` with a `<slug>.md` profile page.
+- A consultation followed by a subsequent student session establishes onboarding. Check the Calendar sequence and identity before creating the folder; record any uncertainty about attendance or contact aliases. Consultation-only records stay in `_other-sessions/`.
+- When Joshua explicitly says a student relationship is over or to close a folder, move the preserved record to `students/non-students/<slug>/`, remove it from the current student index, and refresh the generated roster. Do not delete the record or silently infer closure from inactivity.
 - New session → `sessions/YYYY-MM-DD-session-name/` containing `transcript.md`, `summary.md`, and `topic-map.md`.
 - Keep the original full Gemini export as a local Markdown file in `transcript-downloads/` when available. Build the session package from verified session evidence, and link both the export and package from `transcripts.md`; older exports may predate the package convention.
 - `transcript.md` preserves the raw source. `summary.md` records the auto-saved summary, action items, and appended corrections. `topic-map.md` is a timestamped link index to relevant LSAT concepts, student records, and source material.

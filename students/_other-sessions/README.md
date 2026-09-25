@@ -50,3 +50,6 @@ sessions have no file here and cannot be recovered.
 An attached Doc can be a consultation rather than a student session. Keep it here
 until a taught student relationship is verified. If a source records an objection
 to transcription, do not distill or repurpose it; resolve retention with Joshua.
+The 2026-09-11 Venusa source is a retention exception: a 2026-09-24 Calendar
+session triggered her student folder under Joshua's onboarding rule, but the
+objection source stays here untouched until he decides whether to retain it.

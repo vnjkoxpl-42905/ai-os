@@ -138,7 +138,7 @@ def main():
     claimed = set()
     for slug_ in sorted(os.listdir(STUDENTS)):
         d = os.path.join(STUDENTS, slug_)
-        if not os.path.isdir(d) or slug_.startswith("_"):
+        if not os.path.isdir(d) or slug_.startswith("_") or slug_ == "non-students":
             continue
         fm = frontmatter(os.path.join(d, f"{slug_}.md"))
         count, last = sess.get(slug_, (0, ""))

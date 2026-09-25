@@ -25,7 +25,7 @@ Revoked passes are not shown: a revoked slug is a dead link.
 
 Last-contact is deliberately absent. Gmail owns it.
 
-21 student folders. Booking state read live.
+23 student folders. Booking state read live.
 
 | Student | Email | Status | Sessions | Last session | Booking link | Pass | Credits |
 |---|---|---|---|---|---|---|---|
@@ -40,12 +40,14 @@ Last-contact is deliberately absent. Gmail owns it.
 | [[ethan/ethan\|Ethan]] | trie@usc.edu | active | 3 | 2026-06-28 | /book/ethan | active | 1/10 |
 | [[favour/favour\|Favour]] | favourx23@gmail.com | active | 1 | 2026-07-07 | **none** | - | - |
 | [[fernande-charleus/fernande-charleus\|Fernande Charleus]] | fernandecharleus@gmail.com | active | - | ? | /book/fernande-u42u7v46wzdtett29dhm2jbu56 | exhausted | 1/1 |
+| [[gianna/gianna\|Gianna Jean]] | giannajean005@gmail.com | active | - | ? | **none** | - | - |
 | [[ivory-johnson/ivory-johnson\|Ivory Johnson]] | ivoryj.johnson3@gmail.com | active | - | ? | **none** | - | - |
 | [[nicole/nicole\|Nicole]] | nspinelli44@gmail.com | active | 1 | 2026-06-10 | /book/nicole | active | 1/2 |
-| [[non-students/non-students\|Non Students]] | ? | ? | - | ? | **none** | - | - |
 | [[ore/ore\|Oreoluwa]] | oreoluwavjames@gmail.com | active | - | ? | /book/oreoluwa-pgavqgtp3weqxmuxy2axt96495 | active | 0/10 |
-| [[sofia/sofia\|Sofia]] | sofiaminassian@gmail.com | active | 6 | 2026-07-12 | /book/sofia-k2anhqmpvj6swt2fj7uvdryrvt | active | 14/17 |
+| [[sandra/sandra\|Sandra Kooh]] | koohsandra@gmail.com | active | - | ? | /book/sandra-wc4kt2xjhcbxc4bqbytas9qmad | active | 5/10 |
+| [[sofia/sofia\|Sofia]] | sofiaminassian@gmail.com | active | 6 | 2026-07-12 | /book/sofia-k2anhqmpvj6swt2fj7uvdryrvt | active | 15/17 |
 | [[steven-morris/steven-morris\|Steven Morris]] | hsmcharlotte@gmail.com | active | - | ? | /book/steven-kx5ach8v2anju9cd8xa9d5hvty | exhausted | 2/2 |
+| [[venusa-laveaux/venusa-laveaux\|Venusa Laveaux]] | lav.venusa@gmail.com | active | - | ? | **none** | - | - |
 | [[vinay-kalva/vinay-kalva\|Vinay Kalva]] | workemail.vinay@gmail.com | active | - | ? | /book/vinay-r353kkhbwdazhkrt5fk7nq9zj9 | active | 9/10 |
 | [[whit-wilson/whit-wilson\|Whit Wilson]] | whitwilson929@gmail.com | active | - | ? | **none** | - | - |
 | [[yahunatan-zetvy/yahunatan-zetvy\|Yahunatan Zetvy]] | ynproemail@gmail.com | active | 2 | 2026-07-15 | /book/yahunathan | active | 11/12 |
@@ -68,8 +70,9 @@ Has a live link, but no credits left. The page tells them "you've used all your 
 - [[avneet-natt/avneet-natt\|Avneet Natt]]
 - [[david-salgado/david-salgado\|David Salgado]]
 - [[favour/favour\|Favour]]
+- [[gianna/gianna\|Gianna Jean]]
 - [[ivory-johnson/ivory-johnson\|Ivory Johnson]]
-- [[non-students/non-students\|Non Students]]
+- [[venusa-laveaux/venusa-laveaux\|Venusa Laveaux]]
 - [[whit-wilson/whit-wilson\|Whit Wilson]]
 - [[zeina-borji/zeina-borji\|Zeina Borji]]
 
@@ -77,9 +80,9 @@ Has a live link, but no credits left. The page tells them "you've used all your 
 
 Status is your judgment and is never auto-corrected. These are flagged because the record and the evidence point different ways.
 
-- [[adriana-varea/adriana-varea\|Adriana Varea]]: recorded as active but owed nothing and not taught since 2026-06-02 (113 days)
-- [[david-salgado/david-salgado\|David Salgado]]: recorded as active but owed nothing and not taught since 2026-06-07 (108 days)
-- [[favour/favour\|Favour]]: recorded as active but owed nothing and not taught since 2026-07-07 (78 days)
+- [[adriana-varea/adriana-varea\|Adriana Varea]]: recorded as active but owed nothing and not taught since 2026-06-02 (115 days)
+- [[david-salgado/david-salgado\|David Salgado]]: recorded as active but owed nothing and not taught since 2026-06-07 (110 days)
+- [[favour/favour\|Favour]]: recorded as active but owed nothing and not taught since 2026-07-07 (80 days)
 
 ## Email disagrees with the backend
 
@@ -95,13 +98,6 @@ Usable booking passes that match nobody in `students/`. Either a missing folder 
 - `lydia` — Lydia (lydiahqllee@gmail.com), exhausted
 - `c-j85cs4pes2eedtw9ghg7cv4rgn` — C. Alexander (clairealexander.nyc@gmail.com), active
 - `sofia` — Sofia Minassian (sofiaminassian@gmail.com), exhausted
-- `sandra-wc4kt2xjhcbxc4bqbytas9qmad` — Sandra (koohsandra@gmail.com), active
-
-## Missing an email
-
-Cannot be contacted from the brain until the address is added to the student's frontmatter.
-
-- [[non-students/non-students\|Non Students]]
 
 ## Known gaps
 
