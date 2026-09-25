@@ -26,3 +26,5 @@ Pending items only. Verify against live systems before acting.
 - [ ] [2026-09-11] Reconcile two or three missed sessions and add the promised replacement credits. Joshua said he would add four if needed so the package reaches the finish line.
 - [ ] [2026-09-11] Assign high-volume conditional-diagramming practice.
 - [ ] [2026-09-11] Clean up the Read, Recall, Colour instructions/report card before Sofia's next attempt.
+- [ ] [2026-09-23] Verify whether the Sufficient Assumption boot camp was assigned. Joshua said he would assign it, and Sofia planned to complete it. Source: [[transcript-downloads/2026-09-23-sofia-notes-by-gemini]].
+- [ ] [2026-09-23] Prepare the targeted study strategy Joshua promised after reviewing Sofia's recent sections; verify whether it has already been delivered. Source: [[transcript-downloads/2026-09-23-sofia-notes-by-gemini]].

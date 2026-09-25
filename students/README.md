@@ -3,7 +3,7 @@ title: Students — one folder per student
 type: operating-layer
 tags: [students, operating-layer]
 created: 2026-07-03
-updated: 2026-09-10
+updated: 2026-09-25
 status: active
 subject: Students - one folder per student
 aliases: []
@@ -15,7 +15,7 @@ One folder per student, holding **everything** about them (D2, locked 2026-07-16
 
 ## Current students
 
-- [[adriana-varea/adriana-varea|Adriana Varea]] · [[amanda/amanda|Amanda]] · [[asia/asia|Asia]] · [[avneet-natt/avneet-natt|Avneet Natt]] · [[celia-cutler/celia-cutler|Celia Cutler]] · [[charles-moore/charles-moore|Charles Moore]] · [[dakota/dakota|Dakota]] · [[david-salgado/david-salgado|David Salgado]] · [[ethan/ethan|Ethan]] · [[favour/favour|Favour]] · [[fernande-charleus/fernande-charleus|Fernande Charleus]] · [[ivory-johnson/ivory-johnson|Ivory Johnson]] · [[nicole/nicole|Nicole]] · [[ore/ore|Ore]] · [[sofia/sofia|Sofia]] · [[steven-morris/steven-morris|Steven Morris]] · [[vinay-kalva/vinay-kalva|Vinay Kalva]] · [[whit-wilson/whit-wilson|Whit Wilson]] · [[yahunatan-zetvy/yahunatan-zetvy|Yahunatan Zetvy]] · [[zeina-borji/zeina-borji|Zeina Borji]]
+- [[adriana-varea/adriana-varea|Adriana Varea]] · [[amanda/amanda|Amanda]] · [[asia/asia|Asia]] · [[avneet-natt/avneet-natt|Avneet Natt]] · [[celia-cutler/celia-cutler|Celia Cutler]] · [[charles-moore/charles-moore|Charles Moore]] · [[dakota/dakota|Dakota]] · [[david-salgado/david-salgado|David Salgado]] · [[ethan/ethan|Ethan]] · [[favour/favour|Favour]] · [[fernande-charleus/fernande-charleus|Fernande Charleus]] · [[gianna/gianna|Gianna Jean]] · [[ivory-johnson/ivory-johnson|Ivory Johnson]] · [[nicole/nicole|Nicole]] · [[ore/ore|Ore]] · [[sandra/sandra|Sandra Kooh]] · [[sofia/sofia|Sofia]] · [[steven-morris/steven-morris|Steven Morris]] · [[vinay-kalva/vinay-kalva|Vinay Kalva]] · [[whit-wilson/whit-wilson|Whit Wilson]] · [[yahunatan-zetvy/yahunatan-zetvy|Yahunatan Zetvy]] · [[zeina-borji/zeina-borji|Zeina Borji]]
 
 **Taught in the last month** (2026-08-08 to 2026-09-08, transcripts pulled 2026-09-08): Celia Cutler (6), Adriana Varea (5), Steven Morris (4), Sofia (2), Vinay Kalva (2), Yahunatan Zetvy (2), Asia (1), Charles Moore (1), Fernande Charleus (1), Whit Wilson (1).
 
@@ -34,6 +34,8 @@ Every file in a student folder is one of two kinds, and the distinction decides 
 
 ## Standard files per student folder
 
+This is the target layout, not a checklist to satisfy with empty files. Create a record when its source or a real teaching judgment supports it. Leave an absent record absent until there is verified content to put in it.
+
 - `<student-slug>.md` — compact student index and routing page (primary).
 - `email-context.md` — synthesized Gmail context.
 - `email-correspondence.md` — Gmail message-id corpus for the student's confirmed address.
@@ -41,8 +43,8 @@ Every file in a student folder is one of two kinds, and the distinction decides 
 - `transcripts.md` — transcript and meeting-note inventory.
 - `teaching-notes.md` — durable, evidence-backed learning judgments and teaching patterns (primary).
 - `open-loops.md` — unfinished follow-ups and pending decisions (primary).
-- `live-status.generated.md` — refreshable operational summary from Calendar, Gmail, payments, and LSAT U (generated mirror).
-- `transcript-downloads/` — full local transcript exports (primary — the brain is their only home).
+- `live-status.generated.md` — currently a refreshable LSAT U booking-pass mirror. Calendar, Gmail, and payment state remain in their live systems; this file does not yet summarize them.
+- `transcript-downloads/` — preserved local exports of Gemini notes (source evidence; do not hand-edit). A raw export here is not itself a completed session package.
 - `sessions/YYYY-MM-DD-session-name/` — new self-contained session packages.
 - `assignment-log.md` — running log of assigned work and notification evidence so repeats are avoided (primary).
 - `Practice_Test_Reports/` — the student's PT score reports as received (intake form, screenshots, exports). Raw evidence — read for diagnosis, never edit.
@@ -52,6 +54,7 @@ Every file in a student folder is one of two kinds, and the distinction decides 
 
 - New student → new folder `students/<slug>/` with a `<slug>.md` profile page.
 - New session → `sessions/YYYY-MM-DD-session-name/` containing `transcript.md`, `summary.md`, and `topic-map.md`.
+- Keep the original Gemini export in `transcript-downloads/` when available. Build the session package from verified session evidence, and link it from `transcripts.md`; older exports may predate the package convention.
 - `transcript.md` preserves the raw source. `summary.md` records the auto-saved summary, action items, and appended corrections. `topic-map.md` is a timestamped link index to relevant LSAT concepts, student records, and source material.
 - Session summaries are append-only. Later corrections go in a dated correction section and never erase the original summary.
 - Generated operational state is clearly marked with `generated: true` and never overrides primary teaching records.

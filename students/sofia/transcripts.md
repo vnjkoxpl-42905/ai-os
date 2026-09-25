@@ -51,6 +51,8 @@ Source: Gmail connector search for Gemini meeting notes.
 
 ## Session packages
 
+- [[transcript-downloads/2026-09-23-sofia-notes-by-gemini|2026-09-23 Sofia Notes by Gemini, full export]] · source [Google Doc](https://docs.google.com/document/d/1O-gl6f5tMIXUDXKaYs3LqNUNmA1H_T4kAjsX2mW7OSI/edit). The attached doc continues into another conversation after Sofia's session; use the Sofia portion through 00:50:16 for her teaching record.
+
 
 - [[sessions/2026-09-04-parallel-reasoning/transcript|2026-09-04-parallel-reasoning]] Â· [[sessions/2026-09-04-parallel-reasoning/summary|summary]] Â· [[sessions/2026-09-04-parallel-reasoning/topic-map|topic map]]
 - [[sessions/2026-09-09-smacker-causal-reasoning/transcript|2026-09-09-smacker-causal-reasoning]] Â· [[sessions/2026-09-09-smacker-causal-reasoning/summary|summary]] Â· [[sessions/2026-09-09-smacker-causal-reasoning/topic-map|topic map]]

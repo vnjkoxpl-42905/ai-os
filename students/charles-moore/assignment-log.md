@@ -1,3 +1,12 @@
+---
+title: Charles Moore assignment log
+type: assignment-log
+record_kind: primary
+student: charles-moore
+updated: 2026-09-25
+status: active
+---
+
 # Assignment log — Charles Moore
 
 ## 2026-09-23 — Conditional Logic guided drills

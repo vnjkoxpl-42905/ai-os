@@ -2,7 +2,6 @@
 title: Session summary
 type: person
 record_kind: primary
-generated: true
 status: active
 subject: Session summary
 updated: 2026-07-19

@@ -1,3 +1,12 @@
+---
+title: Amanda assignment log
+type: assignment-log
+record_kind: primary
+student: amanda
+updated: 2026-09-25
+status: active
+---
+
 # Assignment log
 
 ## 2026-09-14 — PT156.S4 (LR)

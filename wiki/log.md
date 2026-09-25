@@ -931,3 +931,21 @@ Claude + Codex blind top-5s, cross-grading, final 7. research/2026-09-23-classro
 
 ## [2026-09-25] ship | LSAT U Drill page and Home fit the screen
 PR vnjkoxpl-42905/lsatu-684d89db#135 merged (e1207da) and published via deploy_project. Drill page and Home size to the window (clamps); Home puts Assigned work beside the latest message. Verified live on the tester account at 1536x695: Home ends 672 (was 1051). Plan: brainstorms/2026-09-24-lsatu-fit-one-screen.md. Question screen not yet fixed.
+
+## [2026-09-25] ingest | Celia 2026-09-21 and Amanda 2026-09-22 Gemini session notes
+
+- Exported native Google Docs to `students/celia-cutler/transcript-downloads/2026-09-21-celia-cutler-notes-by-gemini.md` and `students/amanda/transcript-downloads/2026-09-22-amanda-notes-by-gemini.md` (plain text). Both sessions already had full `sessions/` packages; the exports preserve the original docs in the standard intake location.
+- Read the full transcripts and filed evidence-backed dated entries in each student's `teaching-notes.md`; recorded pending follow-ups in `open-loops.md`; updated each `transcripts.md` inventory to point to the export and source Doc.
+- Celia's Doc is addressed to `celiacutler@gmail.com`, but its speaker label says Celia Syrocki. Keep this identity discrepancy open until Joshua confirms the relationship; no alias added.
+
+## [2026-09-25] ingest | Sofia and Sandra 2026-09-23 Gemini session notes
+
+- Exported the two attached Google Docs to `students/sofia/transcript-downloads/2026-09-23-sofia-notes-by-gemini.md` and `students/sandra/transcript-downloads/2026-09-23-sandra-notes-by-gemini.md`. Their existing session packages were preserved. Read the full transcripts, updated both inventories and teaching notes, and recorded unverified promises in open loops.
+- Sofia's source Doc is attached to her 15:30 Calendar event but has 18:33 EDT in its title. Its first approximately 50 minutes are Sofia's LSAT session; after Sofia signs off, the recording continues with a different conversation. The full source was preserved unchanged and the teaching note uses only Sofia's segment. Confirm the Calendar/Doc time relationship before using that title as session timing evidence.
+
+## [2026-09-25] audit | Calendar transcript coverage and student folder structure
+
+- Calendar sweep for 2026-09-21 through 2026-09-24: 14 past confirmed bookings, four with attached Gemini Docs, all four ingested above; ten have no attached Gemini Doc and no matching native Google Doc created in the date window: Asia, Sofia, Sandra (2026-09-21); Charles and Ore (2026-09-22); Yahunathan (2026-09-23); Angie Pasquel consultation, Ivory, Venusa, and Sandra (2026-09-24). Attendance remains unverified; “confirmed” is booking status, not proof a meeting occurred. Future 2026-09-25 and 2026-09-26 events were not counted as missing.
+- Prior week 2026-09-14 through 2026-09-20: 14 confirmed teaching/consultation events plus two personal/ambiguous blocks. Nine attached Gemini Docs all have local session packages. Five teaching/consultation bookings lack both a Calendar attachment and a native Google Doc created in the week: Celia (2026-09-14); Ivory and Sandra (2026-09-17); Ore and Ritaj Abbasi consultation (2026-09-18). Attendance remains unverified.
+- Inspected 22 current-style student folders. Corrected `students/README.md` to index Gianna and Sandra and describe the verified standard layout and limited current live-status mirror. Removed contradictory `generated: true` metadata from the primary session-summary template and seven existing summaries. Missing operational records were not fabricated; their creation requires source evidence. Steven's 2026-09-03 package has a 756-byte transcript and needs source review.
+- Dated folder matrix, calendar reconciliation, and structural backlog: `students/_audits/2026-09-25-student-records.md`.

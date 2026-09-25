@@ -17,5 +17,5 @@ aliases: []
 | 2026-08-31 | Sampling fallacies, argument flaws, answer-choice ranking | [[sessions/2026-08-31-celia-lsat-session/summary]] | transcript-downloads/2026-08-31-celia-cutler-notes-by-gemini.md |
 | 2026-09-07 | See auto-saved session summary | [[sessions/2026-09-07-celia-lsat-session/summary]] | transcript-downloads/2026-09-07-celia-cutler-notes-by-gemini.md |
 | 2026-09-16 | See auto-saved session summary | [[sessions/2026-09-16-celia-lsat-session/summary]] | Google Meet Notes by Gemini |
-| 2026-09-21 | See auto-saved session summary | [[sessions/2026-09-21-celia-lsat-session/summary]] | Google Meet Notes by Gemini |
+| 2026-09-21 | RC passage structure, viewpoints, and main point | [[sessions/2026-09-21-celia-lsat-session/summary]] | [[transcript-downloads/2026-09-21-celia-cutler-notes-by-gemini]]; [Google Doc](https://docs.google.com/document/d/1hfGQD_jWl3-KIm3RIktdm-Np5nMIRAol8bVTe-Z5a7A/edit) |
 

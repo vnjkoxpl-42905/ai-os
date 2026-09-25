@@ -15,7 +15,7 @@ Scope reviewed: Google Calendar teaching sessions from 2026-08-24 through 2026-0
 | Session date | Package | Source / status |
 |---|---|---|
 | 2026-09-04 | [[sessions/2026-09-04-session/transcript|session package]] | Existing local Google Meet export; summary and full transcript preserved. |
-| 2026-09-22 | [[sessions/2026-09-22-session/transcript|session package]] | Google Meet Notes by Gemini Doc. |
+| 2026-09-22 | [[sessions/2026-09-22-session/transcript|session package]] | [[transcript-downloads/2026-09-22-amanda-notes-by-gemini]]; [Google Doc](https://docs.google.com/document/d/1OqDJZb03OdiD6OrnwVdpzvhNtnol4KQVjj_HjOZNNiM/edit). |
 
 ## Calendar sessions without transcript packages
 
