@@ -3,6 +3,9 @@ name: lsat-u-platform-actions
 description: Perform any LSAT U platform action for Joshua directly from the brain workspace — assign guided drills, homework, or activities; post classroom items and notes; send inbox messages; ingest session notes — by driving the deployed app (lsatprep.study) through his logged-in Chrome admin session, verifying the result, and logging it to the student's folder. Trigger on "assign <student> …", "post … to <student>", "message <student>", "send <student> homework", "give <student> an activity", or any request to make something happen on the platform from here.
 ---
 
+> **Use `assign-lsatu-work` instead** for assigning, messaging, reading messages, student data, access, signups, due dates, unassign and unsend. It runs headless through `bash system/scripts/lsatu` with no browser. This skill (Chrome) is only a fallback for something that skill cannot do.
+
+
 # LSAT U Platform Actions
 
 Joshua's workplace is this brain workspace, not the app's admin UI. This skill makes
