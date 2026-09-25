@@ -928,3 +928,6 @@ Claude + Codex blind top-5s, cross-grading, final 7. research/2026-09-23-classro
 - Still pending on Lovable credits: deploy admin-manage-users + booking-commerce-webhook (old webhook still auto-grants on payment).
 
 ## [2026-09-24] deploy | admin-manage-users + booking-commerce-webhook deployed via Lovable (0.3 credits). Payment no longer grants access. Access re-verified unchanged (23 Tier 1 / 18 Tier 2).
+
+## [2026-09-25] ship | LSAT U Drill page and Home fit the screen
+PR vnjkoxpl-42905/lsatu-684d89db#135 merged (e1207da) and published via deploy_project. Drill page and Home size to the window (clamps); Home puts Assigned work beside the latest message. Verified live on the tester account at 1536x695: Home ends 672 (was 1051). Plan: brainstorms/2026-09-24-lsatu-fit-one-screen.md. Question screen not yet fixed.

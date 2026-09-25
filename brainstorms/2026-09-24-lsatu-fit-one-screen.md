@@ -1,7 +1,7 @@
 # LSAT U: every page fits one screen (2026-09-24)
 
 Date: 2026-09-24 (resumed 2026-09-25) · Goal: every Classroom page and the Question screen fit and read well on any screen size, with no scrolling for the must-see parts.
-Status: Drill page and Home built on fix/fit-viewport (PR #135), awaiting Joshua's visual approval; Question screen next
+Status: Drill page + Home PUBLISHED 2026-09-25 (PR #135, merge e1207da, bundle index-BETDQJRn.css); Question screen next - still scrolls (choice E ends 768 of 695 at 1536x695)
 Context sources: src/components/classroom/CONTEXT.md, measured live in Joshua's Chrome 2026-09-24
 
 ## Why pages feel zoomed in
