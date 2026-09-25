@@ -19,6 +19,8 @@ Scope reviewed: Google Calendar teaching sessions from 2026-08-24 through 2026-0
 
 Full 2026-09-23 source export: [[transcript-downloads/2026-09-23-sandra-notes-by-gemini]] · [Google Doc](https://docs.google.com/document/d/1L5voYoaZtl0N6AzJm85_dkYY4npiKvU81wKpNm-Tx-o/edit). Teaching judgments and follow-ups: [[teaching-notes]] · [[open-loops]].
 
+Full 2026-09-14 source export: [[transcript-downloads/2026-09-14-sandra-notes-by-gemini]] · [Google Doc](https://docs.google.com/document/d/1qqhzaYBcRKKwpqn8aZHObdGpr8dG7QLgKZHKXRkE6HQ/edit).
+
 ## Calendar sessions without transcript packages
 
 - 2026-09-17 and 2026-09-21: teaching sessions in Calendar; no attached Meet transcript Doc or local transcript export found.

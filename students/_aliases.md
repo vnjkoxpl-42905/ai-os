@@ -66,6 +66,7 @@ follow-up stays possible. Move a name into a folder once they are taught.
 
 - Kaia Reid
 - Kristin silva
+- Julian Yoo — 2026-09-01 consultation; source: `_other-sessions/2026-09-01-julian-yoo-notes-by-gemini.md`. No separate taught student session verified.
 - Susan — flagged in `references/automation-backlog.md` as a consultation with
   no follow-up ever sent
 

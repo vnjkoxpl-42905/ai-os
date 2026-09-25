@@ -19,3 +19,13 @@ aliases: []
 | 2026-09-16 | See auto-saved session summary | [[sessions/2026-09-16-celia-lsat-session/summary]] | Google Meet Notes by Gemini |
 | 2026-09-21 | RC passage structure, viewpoints, and main point | [[sessions/2026-09-21-celia-lsat-session/summary]] | [[transcript-downloads/2026-09-21-celia-cutler-notes-by-gemini]]; [Google Doc](https://docs.google.com/document/d/1hfGQD_jWl3-KIm3RIktdm-Np5nMIRAol8bVTe-Z5a7A/edit) |
 
+## September 2026 source-export reconciliation (2026-09-25)
+
+| Date | Local Gemini export | Google Doc |
+|---|---|---|
+| 2026-09-07 | [[transcript-downloads/2026-09-07-celia-cutler-notes-by-gemini]] | [Source](https://docs.google.com/document/d/17TGXGrVYJ9_zMb8ZGnLssDtNJa5wuU18UOIz9dPwY8g/edit) |
+| 2026-09-16 | [[transcript-downloads/2026-09-16-celia-cutler-notes-by-gemini]] | [Source](https://docs.google.com/document/d/1fqnHFeVY6EJHxsuPvvPrzVskm2Fo2YTMO6nHS8_i6U0/edit) |
+| 2026-09-21 | [[transcript-downloads/2026-09-21-celia-cutler-notes-by-gemini]] | [Source](https://docs.google.com/document/d/1hfGQD_jWl3-KIm3RIktdm-Np5nMIRAol8bVTe-Z5a7A/edit) |
+
+The event invite for each has `celiacutler@gmail.com`; Gemini's speaker label uses “Celia Syrocki.” The surname discrepancy is unresolved, so no alias was added.
+

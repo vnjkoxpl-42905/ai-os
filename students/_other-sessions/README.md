@@ -1,7 +1,7 @@
 ---
 type: transcript
 subject: Readme
-updated: 2026-07-20
+updated: 2026-09-25
 aliases: []
 ---
 
@@ -37,7 +37,8 @@ sort together. Multiple docs for the same person and date get a `-2`, `-3` suffi
 
 ## Provenance
 
-Exported from Google Drive with `gws drive files export` (`text/markdown`), sourced
+Exported from Google Drive with `gws drive files export` (prefer `text/plain` for new
+exports; older files used `text/markdown`), sourced
 from Gemini notes attachments on Google Calendar events. Google Drive is upstream
 authority; these are mirrors. Files are unedited exports — treat them as source
 evidence and do not hand-edit. To refresh or extend, re-run the export against the
@@ -45,3 +46,7 @@ Calendar sweep rather than patching files here.
 
 Some calendar events reference Gemini docs that no longer exist in Drive; those
 sessions have no file here and cannot be recovered.
+
+An attached Doc can be a consultation rather than a student session. Keep it here
+until a taught student relationship is verified. If a source records an objection
+to transcription, do not distill or repurpose it; resolve retention with Joshua.

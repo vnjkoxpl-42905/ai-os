@@ -42,3 +42,8 @@ a cold one — but it is Joshua's call, and nothing goes out without his say.
 - [ ] She is to send her personal statement drafts; work on them after the test.
 - [ ] Third LSAT attempt Saturday 2026-09-12. Ask how it went.
 - [ ] A Thursday 2026-09-10 session was agreed in the call but was not on the primary calendar on 2026-09-11. Confirm whether it happened.
+
+## 2026-09-01 source follow-ups (reviewed 2026-09-25)
+
+- [ ] Verify whether the oral RC recall-and-rephrase drill and other RC work promised on 2026-09-01 were assigned in LSAT U. The Gemini source records a promise, not delivery.
+- [ ] Verify Adriana's Saturday PT and review booking from the 2026-09-01 plan against Calendar and completed work.

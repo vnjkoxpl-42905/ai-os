@@ -1,5 +1,6 @@
 # Summary
 
+
 Source tab: Gemini auto-saved full notes.
 
 Summary
@@ -1124,3 +1125,9 @@ Joshua Fisseha: Um and then you'll you'll be good to go.
 Sofia Minassian: perfect. Thank you so much.
 Joshua Fisseha: Of course. Talk soon, Sophia.
 Sofia Minassian: Thank you. Bye. Bye.
+
+## Correction recorded 2026-09-25
+
+The original content above embeds a September 11 transcript and is not a reliable September 18 summary. The verified September 18 source is [[../../transcript-downloads/2026-09-18-sofia-notes-by-gemini]]. This package's [[transcript]] also covers the September 18 session. The original content is preserved for provenance.
+
+On September 18, Sofia analyzed Sufficient Assumption questions involving political systems, a tax disclaimer, morality, and art. She selected C on the first question without diagramming. Joshua showed how the tax-disclaimer argument must address the branch with legal suggestions and how a gap can sit between a premise and an intermediate conclusion. Sofia planned hard Sufficient Assumption practice before a full PrepTest; Joshua promised a mini boot camp of about ten questions. See [[../../teaching-notes#2026-09-18--intermediate-conclusions-and-sufficient-assumptions]] for the dated teaching judgment.

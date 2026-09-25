@@ -9,6 +9,15 @@ status: active
 
 # Sandra Kooh teaching notes
 
+## 2026-09-14 | Finding the author's conclusion
+
+Source: [[transcript-downloads/2026-09-14-sandra-notes-by-gemini]]; [[sessions/2026-09-14-session/transcript]].
+
+- Sandra initially treated a conclusion as the general point or summary. Joshua narrowed it to the author's specific claim that another statement attempts to support. The practical test was to ask, “Why should I believe this?” and identify the statement that answers.
+- On the cashless society stimulus, the last sentence drew her attention even though the earlier claim that society would not willingly accept the system was the main conclusion. She eventually restated that claim accurately and matched it to the answer. Continue practicing conclusions that appear before their support.
+- Joshua introduced FABS (for, after all, because, since) as premise indicators and explained that an intermediate conclusion both receives support and supports a further claim. Pivot words such as “however” can expose a rebuttal, but the support relationship is the check.
+- He promised to assign an argument-structure boot camp within about 10–20 minutes. The transcript records the promise, not delivery. Verify the assignment in LSAT U before marking it complete.
+
 ## 2026-09-23 | Argument structure and intermediate conclusions
 
 Source: [[transcript-downloads/2026-09-23-sandra-notes-by-gemini]].

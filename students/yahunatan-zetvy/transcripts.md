@@ -29,6 +29,17 @@ The session summary and topic map should be created only after the raw source is
 - [[sessions/2026-09-02-conditional-logic/transcript|2026-09-02-conditional-logic]] Â· [[sessions/2026-09-02-conditional-logic/summary|summary]] Â· [[sessions/2026-09-02-conditional-logic/topic-map|topic map]]
 - [[sessions/2026-09-16-conditional-logic-and-theology/transcript|2026-09-16-conditional-logic-and-theology]] Â· [[sessions/2026-09-16-conditional-logic-and-theology/summary|summary]] Â· [[sessions/2026-09-16-conditional-logic-and-theology/topic-map|topic map]]
 
+## Preserved September Gemini sources
+
+| Date | Export | Session package |
+|---|---|---|
+| 2026-09-02 | [[transcript-downloads/2026-09-02-yahunatan-zetvy-notes-by-gemini]] | [[sessions/2026-09-02-conditional-logic/summary]] |
+| 2026-09-16 | [[transcript-downloads/2026-09-16-yahunatan-zetvy-notes-by-gemini]] | [[sessions/2026-09-16-conditional-logic-and-theology/summary]] |
+
+Both were distilled into [[teaching-notes]] on 2026-09-25; pending promises are in [[open-loops]].
+
+Calendar attachment Google Doc IDs: 2026-09-02 `126ktrgakkCCGa0RUCE5ejsJzU1AaptVZSJA9eVodacs`; 2026-09-16 `1ZPdB1LBKXC-bVtxSJikWvwe0cC04Q9fHWl6no_Cggeg`.
+
 
 ## Calendar sessions without transcript
 

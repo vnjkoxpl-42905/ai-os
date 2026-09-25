@@ -36,3 +36,7 @@ via `students/_aliases.md`.
 | 2026-09-01 | See auto-saved session summary | [[sessions/2026-09-01-adriana-lsat-session/summary]] | transcript-downloads/2026-09-01-adriana-varea-notes-by-gemini.md |
 | 2026-09-08 | See auto-saved session summary | [[sessions/2026-09-08-adriana-lsat-session/summary]] | transcript-downloads/2026-09-08-adriana-varea-notes-by-gemini.md |
 
+The September 1 and September 8 Gemini sources were distilled into [[teaching-notes]] on 2026-09-25. Source records and session packages are retained in date order above.
+
+Calendar attachment Google Doc IDs: 2026-09-01 `1Pc4z9eOmClOSgAdeDoibFf-XWCr5SPj0en4eKdnNokc`; 2026-09-08 `1Xs5zesY5w9CP25BCHUOtVipkKfjnqD1KXDOxLxL9LPQ`.
+

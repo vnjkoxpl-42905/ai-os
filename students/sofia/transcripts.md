@@ -68,3 +68,16 @@ Source: Gmail connector search for Gemini meeting notes.
 - 2026-08-31: no Meet transcript document attached to the primary-calendar tutoring event.
 - 2026-09-07: no Meet transcript document attached to the primary-calendar tutoring event.
 - 2026-09-21: no Meet transcript document attached to the primary-calendar tutoring event.
+
+## September 2026 Gemini attachments reconciled on 2026-09-25
+
+| Session date | Source export | Session package | Google Doc |
+|---|---|---|---|
+| 2026-09-04 | [[transcript-downloads/2026-09-04-sofia-notes-by-gemini]] | [[sessions/2026-09-04-parallel-reasoning/summary]] | [Source](https://docs.google.com/document/d/1EYM5Xvz5jx_-qJSUGqbTzzXDVNPlfYVPpQmlr2Icdm0/edit) |
+| 2026-09-09 | [[transcript-downloads/2026-09-09-sofia-notes-by-gemini]] | [[sessions/2026-09-09-smacker-causal-reasoning/summary]] | [Source](https://docs.google.com/document/d/178QAdgpV_Bx728psI9ZJ4x2ZSTAW8BC2ZvQy0hfDR9E/edit) |
+| 2026-09-11 | [[transcript-downloads/2026-09-11-sofia-notes-by-gemini]] | [[sessions/2026-09-11-conditional-reasoning/summary]] | [Source](https://docs.google.com/document/d/1xwLbEPHGHOWhg-FvzXQfnhFH1f6MlMFKR7jae14cpH8/edit) |
+| 2026-09-15 | [[transcript-downloads/2026-09-15-sofia-notes-by-gemini]] | [[sessions/2026-09-15-conditional-sufficient-assumptions/summary]] | [Source](https://docs.google.com/document/d/1JUYdkLlWfJEeFqDpvRZ1TgkCLvHkbpWIuXOhddEG6oM/edit) |
+| 2026-09-18 | [[transcript-downloads/2026-09-18-sofia-notes-by-gemini]] | [[sessions/2026-09-18-sufficient-assumptions/transcript]] | [Source](https://docs.google.com/document/d/1ANFhV5xXI9U-L9DWK3h76ZRYZrfjyw6MdquXDTRafc8/edit) |
+| 2026-09-23 | [[transcript-downloads/2026-09-23-sofia-notes-by-gemini]] | [[sessions/2026-09-23-preptest-and-conditionals/summary]] | [Source](https://docs.google.com/document/d/1O-gl6f5tMIXUDXKaYs3LqNUNmA1H_T4kAjsX2mW7OSI/edit) |
+
+The September 18 package's `summary.md` contains a September 11 transcript and should not be used as the September 18 summary. The September 18 source export and package `transcript.md` correspond to the September 18 event. The September 23 source continues into another conversation after Sofia's session; use the Sofia portion through 00:50:16 for teaching decisions.
