@@ -9,6 +9,6 @@ updated: 2026-09-25
 
 # Ivory Johnson III open loops
 
-- [ ] [2026-09-19] Verify that the conditional indicator reference and practice drills Joshua promised were delivered or assigned. Source: [[transcript-downloads/2026-09-19-ivory-johnson-notes-by-gemini]].
-- [ ] [2026-09-19] Check whether Ivory still has read-and-recall work visible in LSAT U, and whether he completed it. Source: same transcript, 00:45:21.
-- [ ] [2026-09-24] Reconcile the planned 14:30 follow-up with Calendar and session records. The 2026-09-19 transcript establishes the plan, not attendance. Source: same transcript, 00:43:00–00:44:42.
+- [ ] [2026-09-19] Verify delivery of the conditional indicator reference Joshua promised. The practice drills were assigned on 2026-09-25; see [[assignment-log]]. Source: [[transcript-downloads/2026-09-19-ivory-johnson-notes-by-gemini]].
+- [x] [2026-09-19] Check whether Ivory still has read-and-recall work visible in LSAT U. On 2026-09-25, PT1.S3 and PT21.S3 were visible and both in progress. Source: LSAT U `items` read; transcript 00:45:21.
+- [x] [2026-09-24] Reconcile the planned 14:30 follow-up. Ivory's 2026-09-24 Gmail thread says he waited at the Meet link; Joshua apologized for a time mismatch and proposed rescheduling. No completed-session transcript was found in Drive. Source: Gmail thread `1a0c65a21a60ff08`.
