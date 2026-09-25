@@ -1,7 +1,7 @@
 # LSAT U: every page fits one screen (2026-09-24)
 
 Date: 2026-09-24 (resumed 2026-09-25) · Goal: every Classroom page and the Question screen fit and read well on any screen size, with no scrolling for the must-see parts.
-Status: Drill page + Home PUBLISHED 2026-09-25 (PR #135, merge e1207da, bundle index-BETDQJRn.css); Question screen next - still scrolls (choice E ends 768 of 695 at 1536x695)
+Status: Drill page + Home PUBLISHED 2026-09-25 (PR #135, merge e1207da, bundle index-BETDQJRn.css); Question screen in grilling Round 9 (Q9.1 locked 2026-09-25)
 Context sources: src/components/classroom/CONTEXT.md, measured live in Joshua's Chrome 2026-09-24
 
 ## Why pages feel zoomed in
@@ -69,4 +69,24 @@ Rounds 1-6 (2026-09-24) are summarised in Decisions above: names, target 1536x69
 - Captured: Joshua approved the rearrangement after seeing it live: Assigned work and latest message side by side, four quick starts on one row, assigned rows full width. Result 672px. Built as commit 1296716 on fix/fit-viewport.
 - The tester-account flag is resolved (tester account used).
 
+### Round 9 (2026-09-25) - Question screen
+- Starting state, measured live at 1536x695 on the tester account: page 931 tall, choice E ends at 768, header/breadcrumb/toolbar take the top 248px. LR frame does not pass fillViewport, so the whole page scrolls; RC fills the viewport with independent column scroll.
+- Data (all 3,965 LR questions, characters): stimulus p50 388 / p90 547 / max 868; stem + five choices p50 630 / p90 955 / p99 1,520 / max 2,050. The right (choices) column is the pressure, not the stimulus.
+- Joshua is worried about breaking things. Risks were laid out for both options; neither touches student data (display only, branch, approval before publish).
+
+#### Q9.1 - What gives when a question is too long
+- Joshua, in his words: "Ideally it should aim to be in scope of sight always." Goal: the full question and all five choices visible with no scrolling; scroll is a rare fallback only.
+- Locked: (1) compress header, breadcrumb and toolbar (~248px to ~100px); (2) give the choices column more width, the stimulus column has room to spare; (3) tighter gaps between choices without shrinking click targets. No change to text size and never override the student's text-size setting.
+- Locked: measure first. After 1-3 are built, measure every one of the 3,965 LR questions rendered at each laptop size and report the count that still overflows plus the list.
+- Deferred to that measurement: for the remaining overflow, either shrink text on those questions only (15px floor) or scroll the choices column with a clear "more below" cue.
+- Locked: a student who raised their own text size keeps it; their column scrolls if needed.
+
+- Chrome measured live 2026-09-25, 1536x695, tester, /drill?mode=type-drill&qids=PT101-S2-Q1: "Welcome" row 0-35, breadcrumb + Answer/Explanation/Pause row 35-80, dark gap 80-96, toolbar (Directions, find, highlighters, text size, timer, notes) 97-150, question area 150-684 (card has min-h-[700px]), question-number strip 686-737, End/Previous/Next row 737-809, bottom padding to 829. Previous/Next sits entirely below the fold: every LR question needs a scroll just to move on. Chrome totals ~295px of 695.
+
+#### Q9.2 - How the controls shrink
+- Locked (Joshua: "yes lock all four"): (1) Previous/Next always on screen, pinned to the bottom, question area takes the remaining height; (2) question-number strip and End/Previous/Next merge into one bottom bar (~50px, was 123); (3) "Welcome" text and Tutor switch fold into the title row; (4) trim toolbar and dark-gap padding. Every button stays and keeps its behaviour. Target: controls ~150px, question area ~545px at 1536x695.
+
 ## Open flags (pending input)
+- Temp preview hook: removed 2026-09-25 (__fitPreview.ts deleted, ClassroomHome.tsx hand-reverted to HEAD).
+- supabase/functions/mcp/index.ts in the lsatu-fit worktree: Joshua approved the restore, but `git checkout --` is blocked by the permission deny list. Still gutted; Joshua to run the restore himself. Never commit it.
+- Tester account's started Smart Drill session: left as is (Joshua, 2026-09-25).
