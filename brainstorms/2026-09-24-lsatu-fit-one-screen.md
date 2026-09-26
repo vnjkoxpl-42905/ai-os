@@ -1,7 +1,7 @@
 # LSAT U: every page fits one screen (2026-09-24)
 
 Date: 2026-09-24 (resumed 2026-09-25) · Goal: every Classroom page and the Question screen fit and read well on any screen size, with no scrolling for the must-see parts.
-Status: Drill page + Home PUBLISHED 2026-09-25 (PR #135, merge e1207da, bundle index-BETDQJRn.css); Question screen in grilling Round 9 (Q9.1 locked 2026-09-25)
+Status: Drill page + Home PUBLISHED 2026-09-25 (PR #135). Question screen BUILT 2026-09-26 on fix/fit-question-screen, PR #136 open, awaiting Joshua's approval; not merged, not published.
 Context sources: src/components/classroom/CONTEXT.md, measured live in Joshua's Chrome 2026-09-24
 
 ## Why pages feel zoomed in
@@ -89,6 +89,15 @@ Rounds 1-6 (2026-09-24) are summarised in Decisions above: names, target 1536x69
 #### Q9.3 - Which screens
 - Locked (Joshua: "all five, go ahead and build it"): the shared OfficialDrillFrame change applies to all five users: LR Question screen, RC question screen, Blind Review, section review walk-through, Recall section stage. Each checked at every laptop size.
 - Grilling round 9 closed 2026-09-26. Build on a new branch off main.
+
+### Build result (2026-09-26)
+- PR vnjkoxpl-42905/lsatu-684d89db#136, commit 887bdb3. Frame fills viewport by default; one header row; ovals inside the bottom bar; LR split 42/58; tighter choice gaps (LR + RC); "More below" cue (ScrollMoreCue) on LR columns and RC question column.
+- Controls ~160px (was ~295); question area 540px at 1536x695; Next always on screen.
+- Measured fit, all 3,965 LR questions rendered in the real pane (current text sizes): 1920x950 3,903 · 1440x790 3,767 · 1536x695 3,558 · 1366x625 2,149 · 1280x600 873.
+- If the short-screen text floor dropped (continuous, vh-based like today, multiplied by the student's setting): 1536x695 3,690 at 16px / 3,793 at 15px; 1366x625 3,135 / 3,454; 1280x600 1,917 / 2,879.
+- OPEN for Joshua: lower the short-screen text floor (16px or 15px) or keep 17px and rely on the cue.
+- Recall section stage does not use OfficialDrillFrame; it already fits via its own CSS (min(700px, 100vh - 7rem)). Not changed.
+- Not viewed live: Blind Review, section review walk-through, timed full-section navigator.
 
 ## Open flags (pending input)
 - Temp preview hook: removed 2026-09-25 (__fitPreview.ts deleted, ClassroomHome.tsx hand-reverted to HEAD).
