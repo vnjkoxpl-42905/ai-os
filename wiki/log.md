@@ -971,3 +971,6 @@ PR vnjkoxpl-42905/lsatu-684d89db#135 merged (e1207da) and published via deploy_p
 
 ## [2026-09-25] skill | assign-lsatu-work pointer for Codex
 Thin pointer at .agents/skills/assign-lsatu-work (+ catalog skills/{codex,claude}/) -> canonical ~/.agents/skills/assign-lsatu-work/SKILL.md. lsat-u-platform-actions now redirects to it.
+
+## [2026-09-26] ship | LSAT U Question screen fits one laptop screen
+PR vnjkoxpl-42905/lsatu-684d89db#136 merged (28e46d7) and published via deploy_project (second deploy; the first ran before Lovable synced the merge). Next always on screen, one header row, ovals in the bottom bar, LR split 42/58, tighter choice gaps, "More below" cue, 16px short-screen text floor. Fit over 3,965 LR questions: 3,690 at 1536x695, 3,136 at 1366x625, 3,903 at 1920x950. Verified live at 1536x695 (bundle index-Dgu3ZgHh.css). Plan: brainstorms/2026-09-24-lsatu-fit-one-screen.md.
