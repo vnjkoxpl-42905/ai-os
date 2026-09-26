@@ -8,6 +8,7 @@ This folder is the source of truth for Superwhisper on the Windows laptop. Edit 
 |---|---|
 | `vocabulary.md` | The short hand-listed hint list (~40). Exactly what is sent; nothing is added automatically. One stub note per term in `vocabulary/`. |
 | `replacements.md` | Heard → wanted table. Deterministic, case-insensitive. This is where mis-hearings go. |
+| `shared.md` | The glossary and house rules every AI mode gets. `sync.py` appends it to each mode's prompt, before its examples. Edit once, every mode updates (2026-09-26). Voice-only modes have no AI step and are untouched. |
 | `modes/<key>.md` | One mode each: frontmatter is the config, body is the prompt, `## Examples` are appended to the prompt text (see rule 7). |
 | `sync.py` | Pushes all of the above into the app. `--check` shows the diff without writing. Backs up first. |
 | `scan.py` | Scans every transcript for mis-heard known terms, rules that stopped firing, and new candidates. Writes `research/SCAN-<date>.md`. |
@@ -39,6 +40,8 @@ Raw evidence (docs crawl, community pages, searches) is in `raw/sources/superwhi
 
 11. **Replacements are substring matches, not word matches (proved 2026-09-23).** A rule whose heard side can sit inside a longer word will corrupt that word: `cli` turned "click" into "CLIck" 48 times, `u i` turned "you install" into "yoUInstall", `firecraw` matched inside "firecrawl" and produced "Firecrawll". Never add a bare acronym or a fragment of a longer word. Casing belongs in the mode glossary, which Sonnet 5 applies with judgment. `scan.py` section 2b lists any rule that is currently doing this; it must stay empty.
 12. **`scan.py` section 2 reads the post-replacement `result`.** Testing the raw transcript makes every rule look broken, because the raw is by definition what the voice model heard before any rule ran (that false positive stood from 2026-09-11 to 2026-09-23).
+
+13. **One glossary, every mode.** Vocabulary and replacements were always global (they live in `settings.json` and run before any mode sees the text). The mode *prompt* was not: until 2026-09-26 only Super had the glossary and the house rules. `shared.md` now holds them and `sync.py` appends it to every mode with a language model. Add a term there, not in one mode.
 
 ## Where the app keeps things
 

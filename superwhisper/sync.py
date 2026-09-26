@@ -66,7 +66,15 @@ def read_replacements(existing):
     return rows
 
 
+def read_shared():
+    """The glossary and house rules every AI mode gets, from shared.md (2026-09-26).
+    Body only: everything after the frontmatter and the explanatory paragraph."""
+    text = open(os.path.join(HERE, "shared.md"), encoding="utf-8").read()
+    return text.split("<house_rules>", 1)[1].rsplit("</glossary>", 1)[0].join(
+        ("<house_rules>", "</glossary>")).strip()
+
 def read_modes(existing_dir):
+    shared = read_shared()
     modes = []
     for path in sorted(glob.glob(os.path.join(HERE, "modes", "*.md"))):
         meta, body = frontmatter(open(path, encoding="utf-8").read())
@@ -76,6 +84,8 @@ def read_modes(existing_dir):
         prompt = parts[0].strip()
         if meta.get("type") == "voice":
             prompt = ""
+        elif shared not in prompt:
+            prompt = prompt.rstrip() + "\n\n" + shared
         # The app rejects a mode whose promptExamples list was written from outside its UI
         # (verified 2026-09-11: the struct has a third field we could not name), so examples
         # are folded into the prompt text in the same shape the app itself sends to the model.
