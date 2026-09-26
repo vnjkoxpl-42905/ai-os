@@ -7,6 +7,12 @@ aliases: []
 
 # Log
 
+## [2026-09-26] ship | PT118 scoring and question identities repaired in code
+
+- Matched PT118 against the official test PDF. Section I Q5 and Section III Q22 are removed positions; Section III is unscored. Corrected Section I numbering, Section II answer keys, and the scored test structure.
+- Added official-number navigation, legacy sitting protection, a scoped saved-drill migration, and audit tests. Typecheck, targeted tests, the question-bank audit, the production build, and a running browser check passed.
+- Pushed LSAT U commit `37fce4a` to `origin/main`. Lovable reported the website updated, and the live site served the corrected PT118 JSON and deployed scoring/legacy-guard code. Historical database repair remains a draft because stored QIDs need provenance and collision checks before any write.
+
 ## [2026-09-23] system | Message formatting verified across runtimes
 
 - Verified the LSAT U inbox spacing fix from commit `21b11f6` on the live site. Lovable reported the website was up to date, and the live Zeina thread renders the saved paragraph and list breaks with one copy of the explanation.
@@ -974,3 +980,9 @@ Thin pointer at .agents/skills/assign-lsatu-work (+ catalog skills/{codex,claude
 
 ## [2026-09-26] ship | LSAT U Question screen fits one laptop screen
 PR vnjkoxpl-42905/lsatu-684d89db#136 merged (28e46d7) and published via deploy_project (second deploy; the first ran before Lovable synced the merge). Next always on screen, one header row, ovals in the bottom bar, LR split 42/58, tighter choice gaps, "More below" cue, 16px short-screen text floor. Fit over 3,965 LR questions: 3,690 at 1536x695, 3,136 at 1366x625, 3,903 at 1920x950. Verified live at 1536x695 (bundle index-Dgu3ZgHh.css). Plan: brainstorms/2026-09-24-lsatu-fit-one-screen.md.
+
+## [2026-09-26] query | LR explanation coverage
+Live lr_* tables vs question bank: 354 missing, 298 partial (choice notes only), 194 never loaded = 846. Filed as wiki/lr-missing-explanations.md and wiki/lr-missing-explanations-by-category.md. RC not checked.
+
+## [2026-09-26] fix | global grill-with-docs was stale
+~/.claude/skills/grill-with-docs still called grilling through the Skill tool, which grilling blocks (disable-model-invocation). A global skill takes priority over a project skill with the same name, so it shadowed the fixed vault copy. Replaced it with skills/claude/grill-with-docs/SKILL.md, which reads the sibling grilling and domain-modeling files directly. Old copy kept in the session scratchpad.
