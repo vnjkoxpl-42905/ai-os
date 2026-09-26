@@ -10,6 +10,7 @@ This folder is the source of truth for Superwhisper on the Windows laptop. Edit 
 | `replacements.md` | Heard → wanted table. Deterministic, case-insensitive. This is where mis-hearings go. |
 | `shared.md` | The glossary and house rules every AI mode gets. `sync.py` appends it to each mode's prompt, before its examples. Edit once, every mode updates (2026-09-26). Voice-only modes have no AI step and are untouched. |
 | `modes/<key>.md` | One mode each: frontmatter is the config, body is the prompt, `## Examples` are appended to the prompt text (see rule 7). |
+| `sw.py` | The terminal CLI (`sw search / last / stats / add / vocab / rules / export / scan / sync / mode`). Superwhisper's own CLI is macOS-only, so this does the same jobs against the same local files. Launcher: `dev/tools/bin/sw.cmd`, on PATH. |
 | `sync.py` | Pushes all of the above into the app. `--check` shows the diff without writing. Backs up first. |
 | `scan.py` | Scans every transcript for mis-heard known terms, rules that stopped firing, and new candidates. Writes `research/SCAN-<date>.md`. |
 | `research/` | The 2026-09-11 customization report, the source list, and dated scans. Read the report before changing a prompt. |

@@ -995,3 +995,9 @@ system/scripts/sync-mattpocock-skills.py pulls github.com/mattpocock/skills and 
 
 ## [2026-09-26] skills | installed mattpocock pr; grill-me wording
 Installed pr globally via the skills CLI (lock-tracked, so the daily sync covers it) and copied it into skills/claude|codex|gemini; INDEX regenerated. grill-me (global + skills/claude): replaced the stale claim that grilling cannot be invoked. Sync now covers 38 skills, all at upstream c55ee46 except the two kept rewrites.
+
+## [2026-09-26] skills | grill-with-docs to upstream, grill-me kept
+All grill-with-docs copies now upstream SKILL.md + agents/openai.yaml; removed from the sync KEEP list. grill-me stays a local rewrite, reason in skills/PARITY.md. Two leftover files (ADR-FORMAT.md, CONTEXT-FORMAT.md) remain in .agents/skills/grill-with-docs and skills/codex/grill-with-docs pending delete approval.
+
+## [2026-09-26] skills | leftover grill-with-docs files deleted
+Deleted ADR-FORMAT.md and CONTEXT-FORMAT.md from .agents/skills/grill-with-docs and skills/codex/grill-with-docs (Joshua approved). domain-modeling keeps its own copies. Sync dry run: all grill-with-docs copies match upstream.

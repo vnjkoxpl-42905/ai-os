@@ -101,3 +101,9 @@ Codex's MCP servers. Correct as Codex-only.
 ## 2026-09-16: grill-with-docs activation repair
 
 The ordinary grill-with-docs, grilling, and domain-modeling skills are activated as complete project copies in both runtimes. Codex loads the two sibling SKILL.md files directly, with explicit-only discovery in agents/openai.yaml. Claude also reads sibling files directly because a dependency can disable model invocation. This is a runtime invocation adaptation, not a single-runtime skill exception. The separate Claude-only grill-with-docs-codex entry remains unchanged.
+
+## 2026-09-26: grill-with-docs back to upstream; grill-me kept as a local rewrite
+
+Supersedes the 2026-09-16 note above. The sibling-file workaround existed only because a local edit had added `disable-model-invocation: true` to `grilling`, which upstream (mattpocock/skills) never carries. That line is removed from every copy, so upstream `grill-with-docs` ("call the Skill tool twice, for grilling and domain-modeling") works again and is now installed verbatim in every runtime. The daily sync (`system/scripts/sync-mattpocock-skills.py`) keeps it current.
+
+`grill-me` is deliberately NOT upstream in the Claude and Gemini copies (global, `skills/claude`, `skills/gemini`). Upstream's `grill-me` is a one-line call to `grilling`; Joshua's version adds the capture discipline (every answer checkpointed to a brainstorm file) that his brainstorm and AI OS context sessions depend on. Decided by Joshua 2026-09-26. The sync script lists it in `KEEP` and never overwrites it. The Codex copy is upstream.

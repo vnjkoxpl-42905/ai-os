@@ -28,7 +28,7 @@ ROOTS = [HOME / ".agents/skills", HOME / ".claude/skills", VAULT / ".claude/skil
          VAULT / ".agents/skills", VAULT / "skills/claude", VAULT / "skills/codex",
          VAULT / "skills/gemini"]
 # Deliberate local rewrites: never replaced, reported quietly as KEEP.
-KEEP = {"grill-me", "grill-with-docs"}
+KEEP = {"grill-me"}  # why: skills/PARITY.md
 DRY = "--dry-run" in sys.argv
 ADOPT = "--adopt" in sys.argv
 
