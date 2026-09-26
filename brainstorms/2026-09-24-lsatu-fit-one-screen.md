@@ -95,7 +95,7 @@ Rounds 1-6 (2026-09-24) are summarised in Decisions above: names, target 1536x69
 - Controls ~160px (was ~295); question area 540px at 1536x695; Next always on screen.
 - Measured fit, all 3,965 LR questions rendered in the real pane (current text sizes): 1920x950 3,903 · 1440x790 3,767 · 1536x695 3,558 · 1366x625 2,149 · 1280x600 873.
 - If the short-screen text floor dropped (continuous, vh-based like today, multiplied by the student's setting): 1536x695 3,690 at 16px / 3,793 at 15px; 1366x625 3,135 / 3,454; 1280x600 1,917 / 2,879.
-- OPEN for Joshua: lower the short-screen text floor (16px or 15px) or keep 17px and rely on the cue.
+- Text floor: Joshua said "Do what you think is best" (2026-09-26). Set to 16px (commit bee289c). Re-measured: 1536x695 3,690 · 1366x625 3,136 · 1280x600 1,927; 1440x790 and 1920x950 unchanged.
 - Recall section stage does not use OfficialDrillFrame; it already fits via its own CSS (min(700px, 100vh - 7rem)). Not changed.
 - Not viewed live: Blind Review, section review walk-through, timed full-section navigator.
 
