@@ -5,7 +5,7 @@ description: A relentless interview to sharpen a plan, design, or topic, checkpo
 
 # Grill Me
 
-One skill, self-contained. It holds both the **interview method** (Step 2) and the **capture discipline** (Steps 1 and 3): every answer lands in a durable markdown file, so nothing is lost as context fills up. It does not call the vendor `grilling` skill; that skill is `disable-model-invocation` and cannot be invoked from here. Its method is written inline below instead.
+One skill, self-contained. It holds both the **interview method** (Step 2) and the **capture discipline** (Steps 1 and 3): every answer lands in a durable markdown file, so nothing is lost as context fills up. It does not call the vendor `grilling` skill: the method is written inline below so this skill can add the capture steps around it and keep working even if `grilling` changes upstream.
 
 If the topic is a feature, component, or other implementation work rather than an open-ended plan or decision, `brainstorming` runs a similar interview but gates on a written, approved design doc before any code — reach for that instead when the destination is implementation.
 

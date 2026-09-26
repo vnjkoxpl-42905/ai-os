@@ -52,6 +52,8 @@ More tools he now uses daily: Antigravity (Google's editor; "anti-gravity" is th
 More people: Cameron, Althea, Kelsey Regis, Amanda, Ivory Johnson.
 
 Vault words: second brain, vault, wiki, corpus, ingest, raw inbox, Web Clipper, teaching voice, send ledger, handoff, wrapup, pickup, AI OS.
+
+"Scale" is almost always "skill": the voice model hears his word "skill" as "scale". "Remember the scale", "execute the full scale", "the scale we set up" all mean skill. Only leave "scale" alone when he is plainly talking about size or a scale of measurement.
 </glossary>
 
 <output>

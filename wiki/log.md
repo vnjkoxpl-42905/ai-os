@@ -986,3 +986,12 @@ Live lr_* tables vs question bank: 354 missing, 298 partial (choice notes only),
 
 ## [2026-09-26] fix | global grill-with-docs was stale
 ~/.claude/skills/grill-with-docs still called grilling through the Skill tool, which grilling blocks (disable-model-invocation). A global skill takes priority over a project skill with the same name, so it shadowed the fixed vault copy. Replaced it with skills/claude/grill-with-docs/SKILL.md, which reads the sibling grilling and domain-modeling files directly. Old copy kept in the session scratchpad.
+
+## [2026-09-26] fix | grilling matched to mattpocock/skills upstream
+Corrects the entry above. Checked github.com/mattpocock/skills (grilling last changed 85f83d3, 2026-08-20): upstream grilling has never carried disable-model-invocation. It was added locally and blocked grill-with-docs from calling it. Removed that one line from all six copies (global, .claude, .agents, skills/claude|codex|gemini); each is now byte-identical to upstream. Global grill-with-docs restored to upstream. The vault copy that reads the sibling files directly stays as it is and still works.
+
+## [2026-09-26] automation | mattpocock skills auto-sync
+system/scripts/sync-mattpocock-skills.py pulls github.com/mattpocock/skills and refreshes every copy of the 37 lock-file skills (~/.agents, ~/.claude, vault .claude/.agents, skills/claude|codex|gemini). Compare-and-swap: replaces only copies that match a known upstream version; grill-me and grill-with-docs are kept as local rewrites. Windows task "AI-OS\mattpocock skills sync", daily 06:30. Log: system/logs/mattpocock-skill-sync.log. First run brought retro, tdd, research and codex grill-me up to c55ee46.
+
+## [2026-09-26] skills | installed mattpocock pr; grill-me wording
+Installed pr globally via the skills CLI (lock-tracked, so the daily sync covers it) and copied it into skills/claude|codex|gemini; INDEX regenerated. grill-me (global + skills/claude): replaced the stale claim that grilling cannot be invoked. Sync now covers 38 skills, all at upstream c55ee46 except the two kept rewrites.

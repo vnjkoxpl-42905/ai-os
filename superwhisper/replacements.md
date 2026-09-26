@@ -877,3 +877,10 @@ Applied by Superwhisper after transcription, before any AI step. Matching is cas
 | yohunatan | Yahunatan | 2026-09-23 | scan 2026-09-23 |
 | suprabase | Supabase | 2026-09-23 | scan 2026-09-23 |
 | lovible | Lovable | 2026-09-23 | scan 2026-09-23 |
+| scale | skill | 2026-09-26 | dictation hears skill as scale |
+| scales | skills | 2026-09-26 | dictation hears skill as scale |
+| scale. | skill | 2026-09-26 | dictation hears skill as scale |
+| skilled set | skill set | 2026-09-26 | dictation hears skill as scale |
+| scale set | skill set | 2026-09-26 | dictation hears skill as scale |
+| scale creator | /skill-creator | 2026-09-26 | dictation hears skill as scale |
+| scale doctor | /skill-doctor | 2026-09-26 | dictation hears skill as scale |

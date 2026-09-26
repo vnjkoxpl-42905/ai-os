@@ -56,3 +56,4 @@ Hints sent to the voice model with every recording. **Keep this short.** On 2026
 ## Other
 
 - Pre-workout
+- skill
