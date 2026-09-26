@@ -86,6 +86,10 @@ Rounds 1-6 (2026-09-24) are summarised in Decisions above: names, target 1536x69
 #### Q9.2 - How the controls shrink
 - Locked (Joshua: "yes lock all four"): (1) Previous/Next always on screen, pinned to the bottom, question area takes the remaining height; (2) question-number strip and End/Previous/Next merge into one bottom bar (~50px, was 123); (3) "Welcome" text and Tutor switch fold into the title row; (4) trim toolbar and dark-gap padding. Every button stays and keeps its behaviour. Target: controls ~150px, question area ~545px at 1536x695.
 
+#### Q9.3 - Which screens
+- Locked (Joshua: "all five, go ahead and build it"): the shared OfficialDrillFrame change applies to all five users: LR Question screen, RC question screen, Blind Review, section review walk-through, Recall section stage. Each checked at every laptop size.
+- Grilling round 9 closed 2026-09-26. Build on a new branch off main.
+
 ## Open flags (pending input)
 - Temp preview hook: removed 2026-09-25 (__fitPreview.ts deleted, ClassroomHome.tsx hand-reverted to HEAD).
 - supabase/functions/mcp/index.ts in the lsatu-fit worktree: Joshua approved the restore, but `git checkout --` is blocked by the permission deny list. Still gutted; Joshua to run the restore himself. Never commit it.
