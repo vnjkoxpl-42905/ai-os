@@ -1023,3 +1023,6 @@ Read-only pull of the full LR explanation corpus (3,891 explanations, PT101-PT15
 ## [2026-09-27] survey | LR explanation quality scan
 Read-only scan of all 3,419 DB explanations (191 read in full). Wrote corpus/lr-explanations/fixes/{revamp-list,choice-note-issues,side-issues}.md and revamp-inventory.csv; fix list folded into fixes/index.md (one list, detail files beside it). Findings: 5 explanations belong to another question; question bank key wrong on 18 questions; PT158-S4-Q22 breakdown points at the wrong answer; 523 weak explanations (192 Revamp). Thin local PT140-explanations.md removed in PR vnjkoxpl-42905/lsatu-684d89db#142.
 
+
+## [2026-09-27] build | Stripe payments ledger
+stripe_payments table + admin RPCs applied to LSAT U prod via SQL; 37 charges (90 days) backfilled, 33 matched, $5,929 net. PR vnjkoxpl-42905/lsatu-684d89db#143 (stripe-sync fn, webhook ledger, no auto-grant, PaymentsPanel on Today). Stripe webhook we_1U9Sw2 widened from 5 to 15 events (charge.*, dispute.*, async checkout) via API. Pending: merge, Lovable function deploy, frontend publish.

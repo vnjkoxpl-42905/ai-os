@@ -6,6 +6,8 @@
 - The live Stripe event destination points to LSAT U's `booking-commerce-webhook`. A completed Checkout event returned 200 on 2026-09-23. A completed Checkout event on 2026-09-21 had a 500 attempt and was marked recovered after retry. The precise exception behind that 500 still needs a Lovable Cloud log lookup.
 - The Codex Stripe connector independently requires reauthentication. This does not invalidate the server API key or existing Stripe webhook.
 - The current webhook handles booking Checkout completion/expiration and refunds. It is not a complete transaction feed. The teacher's `/classroom` Home is still the student Home.
+- A fresh Stripe Dashboard view on 2026-09-27 showed the destination subscribed to 15 event types: eight `charge.*` and `charge.dispute.*` types, two asynchronous Checkout outcomes, `checkout.session.completed`, `checkout.session.expired`, and three `refund.*` types. The current handler processes only the final five and returns success for the other ten. An older open tab still showed five, so use the fresh 15-event view as the current setting and recheck before changing subscriptions.
+- Stripe Account status showed an unstarted business-liquidity information request for a routine credit review. Payments and payouts were active; Cartes Bancaires payments were paused. This is an account status matter separate from webhook delivery.
 
 ## Fastest implementation path
 

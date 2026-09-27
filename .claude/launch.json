@@ -122,6 +122,21 @@
         "--strictPort"
       ],
       "port": 8094
+    },
+    {
+      "name": "lsatu-stripe-dev",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "--prefix",
+        "projects/lsatu-stripe",
+        "run",
+        "dev",
+        "--",
+        "--port",
+        "8093",
+        "--strictPort"
+      ],
+      "port": 8093
     }
   ]
 }

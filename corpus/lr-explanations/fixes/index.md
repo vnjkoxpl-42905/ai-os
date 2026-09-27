@@ -20,7 +20,7 @@ The database is the source of truth for explanations, not the local `Explanation
 - [ ] **Fix individual Choice Note problems.** Misquotes, reversed logic, typos, verdict-only notes. Detail: [[choice-note-issues]].
 
 ### Data and question bank
-- [ ] **The question bank's answer key is wrong on 18 questions** (the DB is right in all 5 checked). PT113-S3-Q21 to Q24 all show key A, which looks like a placeholder. Anything reading the bank key (drills, analytics) marks students wrong. Detail: [[side-issues]] section 2.
+- [ ] **The question bank holds the wrong question in 155 slots** (verified 2026-09-27, replaces the "18 wrong keys" item). Whole blocks were copied from another section: PT113-S3 holds PT112-S3; PT117-S2 holds PT116-S2; PT119-S2/S3 hold PT113-S2/S3; PT129-S3 holds PT128-S3; PT148-S4 holds PT142-S4; PT149-S3 holds PT148-S3; smaller runs in PT101, PT116, PT117-S3, PT129-S2, PT130-S3, PT131-S2/S3, PT154-S4, PT155-S4. The app shows and grades from the bank, and shows explanations from the database, so in these slots the student answers one question and reads the explanation for another. The database text is right (web-checked PT113-S3-Q21 on 7Sage, LSAT Lab and LSAT Hacks). 28 correct questions already sit elsewhere in the bank and can be moved; 127 need their answer choices sourced.
 - [ ] **Bank misalignment:** PT119-S2-Q19 is matched to a different question, and PT101-S3-Q1's bank text differs from the DB. Detail: [[side-issues]] section 3.
 - [ ] **Transcription damage, LSAT Lab leftovers, and small typos in explanations.** Detail: [[side-issues]] sections 5, 6 and 8.
 - [ ] **Rename the "Games-y LR" feature tag.** There are no Logic Games on the LSAT.
