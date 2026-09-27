@@ -14,6 +14,8 @@ Context sources: `brainstorms/2026-09-27-stripe-admin-home.md`; `brainstorms/202
 - User-confirmed in Round 2: access grants need a quick action for tier 1, 2, or 3, plus a path to adjust individual features. The Home queue should make students awaiting a grant obvious and connect to the existing Teacher Workspace access controls.
 - User-confirmed in Round 3: show every event from Joshua's Google Calendar in the teacher dashboard, including sessions and consultations, with upcoming events visible and clickable through to Calendar. After a completed tutoring session, show an assignment-or-notes task. The task stays until Joshua explicitly marks it handled; it must not disappear automatically when an assignment is saved.
 - User-confirmed in Round 3: importing transcripts into LSAT U is not necessary for this dashboard. Joshua says Friday Calendar events have notes/transcripts attached and asked for a read-only check. Calendar events are the source for upcoming schedule visibility.
+- User-confirmed in Round 4: use one Google Calendar, specifically Joshua's primary calendar; show its events. Do not create a backlog of task rows for historical sessions at launch. For an existing student's completed session, surface homework and notes to handle. For a consultation, surface a follow-up or check-in task, with exact wording/timing still unclear.
+- User-confirmed in Round 4: add a second, manually editable to-do area where Joshua can add items and cross them off. He also wants appropriate automatic tasks, such as an enrollment action after a package payment, and a student-oriented task/checklist view with progress or blocker tracking. The meaning of “course through the district checklist” is unclear and not treated as a confirmed feature name.
 - Tentative: a completed session could show its transcript or a link to it. Joshua expects the Google Calendar event may have an attached note/transcript. Code inspection on 2026-09-27 found a different current path: Gemini Notes email/Doc ingestion stores transcripts with sessions, while Calendar title/time help with matching. No automatic extraction from Calendar event notes was found. This is code evidence, not live verification.
 - Verified earlier on 2026-09-27: `/teacher/today` has a Payments panel with 37 charges from the last 90 days and a manual Stripe sync. `/classroom` still shows the student-style Home to the signed-in teacher. These observations do not prove a full payment reconciliation or immediate arrival of every event.
 - Visual references: image 2 offers the clearest light command-center information hierarchy; image 3 suggests a compact schedule and task layout; image 6 suggests an approachable left-rail and progress cards. Images 1, 4, and 5 contribute atmosphere or chart styling, but their ornamental data should not dictate the teacher's metrics. This is an interpretation, not Joshua's selected direction.
@@ -139,9 +141,37 @@ Context sources: `brainstorms/2026-09-27-stripe-admin-home.md`; `brainstorms/202
 - Captured: Joshua wants all Calendar events, future events visible on Home, click through to Calendar, and a synchronized schedule. He asked whether this is possible and for the best implementation route.
 - Flags: inspect current Calendar sync, event fields, Friday examples, and upcoming schedule -> Codex.
 
+### Round 4
+#### Q17 - Which calendars
+- Asked: primary calendar versus all visible calendars.
+- Recommended: primary calendar initially.
+- Captured: “Stick with my Google Calendar. Just stick with one calendar.” Use the primary calendar already connected to LSAT U.
+
+#### Q18 - Which events create a task
+- Asked: tutoring sessions only versus consultations and other events.
+- Recommended: tutoring sessions create work/notes tasks; other events visible without task.
+- Captured: sessions for existing students should create homework-and-notes work. Consultations should create a follow-up or check-in task. Joshua's phrase “And three consultations, check-in” needs clarification before defining timing or a sequence.
+- Flags: exact consultation action/timing and detection of consultation versus existing student -> Joshua and implementation audit.
+
+#### Q19 - Existing sessions
+- Asked: create a backlog from sessions before launch or start after launch.
+- Recommended: start after launch.
+- Captured: “No, it shouldn't fill sessions.” No historical session-task flood at launch.
+
+#### Q20 - Marking handled
+- Asked: move checked tasks into searchable Handled history with reopen.
+- Recommended: yes, with history and reopen.
+- Captured: “As long as I clear it, it should be…” Joshua wants a clear action that removes a handled task from the active list. He did not explicitly confirm searchable handled history or reopening.
+- Flags: desired handled history and reopen behavior -> Joshua, can be resolved with a mockup.
+
+#### New topic - Two to-do areas and student task tracking
+- Captured: a second to-do list supports manual add and crossing off. Automatic items may include enrollment after package payment. Joshua wants quick visual task widgets that open a fuller page, with tasks grouped by student or task and a progress/blocker measure such as percentage or count completed.
+- Tentative: there may be a course or district checklist; dictation was unclear, so no product definition is assumed.
+- Flags: task-list ownership and separation, package enrollment exact action, student versus teacher task visibility, progress denominator, and meaning of the named checklist -> Joshua.
+
 ## Open flags (pending input)
 - Queue priority rules and any additional teacher tasks -> Joshua.
-- Define which Calendar events trigger an assignment-or-notes task -> Joshua.
+- Primary Calendar selected. Define how to distinguish tutoring sessions and consultations, plus exact consultation follow-up timing -> Joshua and Codex.
 - Confirm whether manual handled is reversible and whether an optional note is needed -> Joshua.
 - Clarify when exactly a message becomes read -> Joshua.
 - Decide whether academic performance creates Home queue items; recent results stay brief -> Joshua.
@@ -149,3 +179,5 @@ Context sources: `brainstorms/2026-09-27-stripe-admin-home.md`; `brainstorms/202
 - Transcript ingestion is out of scope for this dashboard per Joshua's Round 3 correction.
 - Tier/feature access model and existing grant actions checked in code; live grant behavior untested.
 - Define quick-grant defaults and triggers after the access-model check -> Joshua.
+- Define manual list, generated task list, student grouping, and progress/blocker tracker -> Joshua.
+- Clarify the “course through the district checklist” phrase -> Joshua.
