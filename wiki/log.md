@@ -1014,3 +1014,6 @@ PR vnjkoxpl-42905/lsatu-684d89db#140 (`8517a2e`): the unlabeled clipboard switch
 ## [2026-09-26] build | LR explanation golden set (proposed)
 Read-only pull of the full LR explanation corpus (3,891 explanations, PT101-PT159) to the session scratchpad; surveyed ~125 in full. Wrote corpus/lr-explanations/golden-set.md (50 picks, rubric), -observations.md, -candidates.md. Glossary terms Explanation Source + Coverage State in LSAT U PR vnjkoxpl-42905/lsatu-684d89db#141. Pilot stays at 20 questions. Awaiting Joshua's skim of the set.
 
+## [2026-09-27] survey | LR explanation quality scan
+Read-only scan of all 3,419 DB explanations (191 read in full). Wrote corpus/lr-explanations/fixes/{revamp-list,choice-note-issues,side-issues}.md and revamp-inventory.csv; fix list folded into fixes/index.md (one list, detail files beside it). Findings: 5 explanations belong to another question; question bank key wrong on 18 questions; PT158-S4-Q22 breakdown points at the wrong answer; 523 weak explanations (192 Revamp). Thin local PT140-explanations.md removed in PR vnjkoxpl-42905/lsatu-684d89db#142.
+

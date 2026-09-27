@@ -110,6 +110,6 @@ Context sources: User screenshots and browser comment (2026-09-26); `wiki/hot.md
 
 ## Open flags (pending input)
 
-- Legacy browser-only full exams have no stored account identity. Decide whether to offer a deliberate one-time move into the signed-in account or leave pre-change runs on their original browser while new runs become account-backed. -> Joshua (product decision); implementation to enforce.
-- Decide how an active exam behaves during a temporary connection loss while the database is authoritative. -> Joshua (product decision); implementation to enforce.
-- Q10 pause boundary and Q11 handoff are confirmed; implementation must save elapsed time and enforce one active device with account-backed revision/lease logic. -> Implementation design.
+- On 2026-09-27 Joshua directed implementation without asking students to claim or approve old work. New exams and account-tagged device copies are saved to the account automatically. Earlier browser-only full-exam records contain no account ID, and their section results have no reliable exam link. They cannot be safely attributed to a specific student; those copies remain intact rather than being attached to whoever next signs in on that browser. This is a technical migration limit, not a request for student approval.
+- Account writes are authoritative. A failed write keeps a device backup and pauses exam progression until it can be saved. This is the implementation choice for connection loss; Joshua had not separately confirmed Q14.
+- Q10 pause boundary and Q11 handoff are implemented for the new flow, pending database migration and production verification.
