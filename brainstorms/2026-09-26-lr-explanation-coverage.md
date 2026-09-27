@@ -91,4 +91,14 @@ Asked Q5 (record who wrote each explanation), Q6 (review gate and pilot), Q7 (St
 - **Correction to R1 Q3 premise:** PT156 and PT159 were NOT untranscribed-but-loadable. Their files hold only the 15 and 14 questions LSAT Lab wrote; the rest are video-only (PT159-TRANSCRIPTION-PROGRESS.md confirms). Everything in those files is already loaded. Their 36 + 37 Unloaded questions have no source text and go to Claude.
 - Coverage now: 354 Unexplained, 224 Notes-only, 194 Unloaded = 772 of 3,965 (was 846). Regenerate with system/scripts/lr-explanation-coverage.py.
 
+### Round 5 (golden set, 2026-09-26)
+#### Q1 - Top-tier tests
+- Captured: build the tests by comparing strong vs loose explanations in the corpus. "It has to be complete." Weigh value to the learner: "what person is trying to learn and be able to use this as a way to understand."
+#### Q2 - Size and spread
+- Captured: "30 to 50." Cover question types AND features AND difficulty levels: "all these variations."
+#### Q3 - Sources
+- Captured: model on the LSAT Lab corpus; "consistent with teaching, shouldn't be freestyle." LSAT Hacks may inform. "Look for ways to even improve it or refine it."
+- Fact: local Explanations/ files cover PT139-PT159 (~1,000+ questions). DB shows ~3,190 Complete; PT101-PT140 "v2 corpus" source dir is not on this machine.
+#### Q4, Q5 - no answer yet -> R6.
+
 ## Open flags (pending input)
