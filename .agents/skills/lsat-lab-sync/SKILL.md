@@ -18,7 +18,7 @@ Full answer-choice text is on neither (public pages cut choices short). Choice t
 
 ## 1. Refresh the logged-in data (only when tags may have changed)
 
-Use the Codex browser (in-app pane; Joshua prefers it, and its JS results come back whole). Joshua must already be logged in to `app.lsatlab.com`; never enter his password. Run the two snippets in the README with the browser JavaScript tool: `properties.json` comes back inline; the big question list downloads to Downloads, then move it to `data/questions-props.json`.
+Codex has no logged-in browser: hand this step to Claude, or skip it and use the existing data/ files. Joshua must already be logged in to `app.lsatlab.com`; never enter his password. Run the two snippets in the README with the browser JavaScript tool: `properties.json` comes back inline; the big question list downloads to Downloads, then move it to `data/questions-props.json`.
 
 ## 2. Crawl the public pages
 

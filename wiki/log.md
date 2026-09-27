@@ -1059,5 +1059,9 @@ Pilot rewritten after a neighbor scan (system/scripts/lr-explanations/neighbors.
 
 Inspected LSAT Lab's signed-in student and tutor UI across navigation, study plan, classes, library, tests, practice, analytics, history, review, discussion, skills training, booking, and authoring. Compared with LSAT U source and wrote the running log at `research/2026-09-27-lsat-platform-ui-audit.md`, with a later 7Sage section reserved. Joshua accepted My Work, Review, Progress, and teacher rail consolidation. Main prerequisite: repair cross-feature attempt and flag coverage before treating combined Progress and Review as complete. No LSAT U code or live platform state changed.
 
+## [2026-09-27] research | 7Sage platform UI audit added
+
+Inspected 7Sage's signed-in study menu, plan, lesson library, drill/section/test flows, completed test result and question review, analytics, priorities, question table, preferences, classes, community, import, and visible tutor dashboard. Added surface-by-surface findings, micro UI notes, and an LSAT U sequence to `research/2026-09-27-lsat-platform-ui-audit.md`. Recommended a seven-item student rail with Practice tabs and a four-item teacher workspace rail. No app implementation or live data changes.
+
 ## [2026-09-27] build | LR explanation model library (334 models)
 corpus/lr-explanations/models/: 10-20 top-tier existing explanations per LR type (17 types), picked by score_corpus.py + full reads by 9 parallel readers, each with the moves that make it a model and a per-type "what the best ones do". 192 defects in existing explanations logged in fixes/model-library-defects.md. PT148-S3-Q26 correct-answer text fixed in the bank (#154). Full-text choice comparison found ~30 bank/DB meaning differences, queued.
