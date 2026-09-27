@@ -140,3 +140,7 @@ All platform ops (assign, message, read messages, student data) go through the l
 
 ## 2026-09-27: Stripe payments inform, the teacher grants
 Joshua chose all three entitlement rules for the Stripe ledger. (1) A payment recognized as a session package never grants booking passes on its own. It appears on the teacher Home with a one-click "Grant N passes" confirmation, so the 2026-07-20 rule stands: passes are the record of sessions owed. (2) A payer who cannot be matched to a student confidently goes into a review queue on the teacher Home with a link-to-student picker. Nothing is granted until Joshua links it. (3) Only booking Checkout and session/package products turn on platform access automatically. All other charges are logged and nothing more. This narrows the current webhook, which tries to grant access for any paid Checkout.
+
+## 2026-09-27: LSAT U navigation consolidation
+
+Joshua accepted three directions before the LSAT Lab and 7Sage UI audit. Student **My Work** combines Assigned work and Notes & recaps as internal tabs for To do, Completed, and Notes & recaps. **Review** groups Wrong answers and Flagged; **Progress** groups Analytics and History. The teacher gets a shorter, separate workspace rail with a View student experience shortcut. Teacher Bootcamps and Activities remain separate tabs inside Library. Preserve the different records and direct links while merging destinations. The running comparison and data prerequisites are in `research/2026-09-27-lsat-platform-ui-audit.md`. No video production is planned for this phase.

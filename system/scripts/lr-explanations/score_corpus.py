@@ -30,6 +30,7 @@ def family(stem, label):
     if re.search(r'(pattern of|similar to|parallel|most closely parallels|most similar)', s):
         return 'Parallel Flaw' if re.search(r'flaw|questionable|erroneous|vulnerable', s) else 'Parallel'
     if re.search(r'disagree|point at issue|agree (that|about|over|on)|committed to (dis)?agreeing', s): return 'Agree-Disagree'
+    if re.search(r'if assumed|enables|follows logically if|properly drawn if|properly inferred if', s): return 'Sufficient Assumption'
     if re.search(r'main (conclusion|point)|overall conclusion|expresses the conclusion|conclusion drawn|most accurately expresses', s): return 'Main Conclusion'
     if re.search(r'\brole\b|figures in the argument|plays which|function', s): return 'Role'
     if 'principle' in s:
@@ -40,7 +41,6 @@ def family(stem, label):
     if re.search(r'issue in dispute|dispute between', s): return 'Agree-Disagree'
     if re.search(r'explain|resolve|reconcile|discrepancy|paradox|conflict', s): return 'Paradox'
     if re.search(r'evaluat|most useful to (know|determine|establish)|most relevant', s): return 'Evaluate'
-    if re.search(r'if assumed|enables|follows logically if|properly drawn if|properly inferred if', s): return 'Sufficient Assumption'
     if re.search(r'assum|depends|relies|presuppos|requires', s): return 'Necessary Assumption'
     if re.search(r'weaken|undermine|doubt|calls? into question|limits the effectiveness', s): return 'Weaken'
     if re.search(r'must be false|cannot be true|could be true except|incompatible|violat|reject', s): return 'Must Be False'

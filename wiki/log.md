@@ -1054,3 +1054,10 @@ All 39 SQL files ran (batch-27 retried after a 499). +760 steps, +60 choice note
 
 ## [2026-09-27] draft | Pilot revised from nearest DB neighbors
 Pilot rewritten after a neighbor scan (system/scripts/lr-explanations/neighbors.py: type + shared features + stimulus shape + quality) and Joshua's cram sheet + LR guideline PDFs. Each draft names the explanations it was modelled on; trap tags use the DB vocabulary per type. Still not in the DB; waiting for Joshua's read.
+
+## [2026-09-27] research | LSAT Lab platform UI audit and navigation direction
+
+Inspected LSAT Lab's signed-in student and tutor UI across navigation, study plan, classes, library, tests, practice, analytics, history, review, discussion, skills training, booking, and authoring. Compared with LSAT U source and wrote the running log at `research/2026-09-27-lsat-platform-ui-audit.md`, with a later 7Sage section reserved. Joshua accepted My Work, Review, Progress, and teacher rail consolidation. Main prerequisite: repair cross-feature attempt and flag coverage before treating combined Progress and Review as complete. No LSAT U code or live platform state changed.
+
+## [2026-09-27] build | LR explanation model library (334 models)
+corpus/lr-explanations/models/: 10-20 top-tier existing explanations per LR type (17 types), picked by score_corpus.py + full reads by 9 parallel readers, each with the moves that make it a model and a per-type "what the best ones do". 192 defects in existing explanations logged in fixes/model-library-defects.md. PT148-S3-Q26 correct-answer text fixed in the bank (#154). Full-text choice comparison found ~30 bank/DB meaning differences, queued.

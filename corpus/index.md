@@ -43,7 +43,9 @@ Fills through supervised ingests, one source at a time, logged in [[../wiki/log|
 
 ### `lr-explanations/` — models for writing LR explanations (2026-09-26)
 
-- [[lr-explanations/golden-set]] — the 50 LSAT Lab explanations new LSAT U explanations are modelled on, with the quality rubric.
+- [[lr-explanations/golden-set]] — the 51 LSAT Lab explanations new LSAT U explanations are modelled on, with the quality rubric.
+- [[lr-explanations/models/index]] — model library: 334 top-tier existing explanations, 10 to 20 per LR type, with what the best ones do for each type.
+- [[lr-explanations/drafts/pilot-2026-09-27]] — 20-question pilot of new explanations, waiting for Joshua.
 - [[lr-explanations/golden-set-observations]] — strong-vs-loose comparison, step structure per type, voice notes.
 - [[lr-explanations/golden-set-candidates]] — all 80 candidates and the type x feature coverage grid.
 - [[lr-explanations/fixes/index]] — the fix list: one line per issue, with detail files beside it (revamp list, Choice Note issues).
