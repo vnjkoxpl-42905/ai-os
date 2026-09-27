@@ -1,6 +1,6 @@
 # LR explanation coverage: Brainstorm / Discovery Notes
 Date: 2026-09-26 · Goal: decide what the coverage states are called, what counts as "explained", and how the 846 gaps get closed.
-Status: in progress
+Status: complete. Shared understanding confirmed by Joshua 2026-09-26; interpretation of R4 Q9 confirmed ("yes that's right"). Execution started.
 Context sources: [[../wiki/lr-missing-explanations]], [[../wiki/lr-missing-explanations-by-category]], `projects/lsatu/src/components/drill/CONTEXT.md` (Question Explanation, Argument Breakdown, Choice Note, Question Type, Reasoning Type), `projects/lsatu/src/hooks/useLrExplanation.ts`
 
 ## Starting facts (looked up, not decisions)
@@ -24,7 +24,10 @@ Context sources: [[../wiki/lr-missing-explanations]], [[../wiki/lr-missing-expla
 - **Notes-only (R3 Q8):** they count as missing ("half explained"). Claude writes the Argument Breakdown; LSAT Lab's Choice Notes stay unchanged.
 - **Golden set (R3 Q10):** Claude proposes it; Joshua approves before any writing.
 - **Latitude (R3 Q11):** match the top-tier explanations and optimise them so students "can execute their goal better." Not one-size-fits-all: no fixed rules like short sentences or one idea per step. "Some fluidity," but "a strong framework."
-- Order of work: open (R3 Q9).
+- ~~Order of work: open (R3 Q9).~~ Settled R4: any order Claude chooses. Each explanation specific to its question but "extrapolatable" (the reasoning generalises to similar questions). Follows the structure of the existing explanations (confirmed by Joshua).
+- **Framework guide (R4 Q12):** one guide in the vault, "elaborate, extensive, and specific."
+- **Suspected mis-keyed answers (R4 Q13):** verify on the web (Firecrawl) first, then tell Joshua "I think this question is marked wrong" and confirm with him before writing anything.
+- **Drafts (R4 Q14):** same markdown format as the transcribed files, in a separate folder, loaded by the existing ingest script with LSAT U marked as the writer.
 
 ## Q&A log
 ### Round 1
@@ -71,5 +74,21 @@ Asked Q5 (record who wrote each explanation), Q6 (review gate and pilot), Q7 (St
 - Captured: improve clarity yes, but "it doesn't have to be shorter sentences or one idea per step ... not a one-size-fits-all approach." "They should match what's in the top tier explanations ... optimized so people can execute their goal better. You don't have to actually match identically. There's some fluidity there, but we should have a strong framework and get the best outcome possible."
 - Superseded: my R3 recommendation of fixed sentence rules.
 
+### Round 4
+#### Q9 - Order of work
+- Captured: "You can do them in any order you want, but make sure they're all particular to that question but also extrapolatable. They should be following the order of questions that we have explained before."
+- Tentative: "order of questions we have explained before" read as following the step order and structure of the existing explanations. Confirm.
+#### Q12 - Framework guide
+- Captured: yes, "one guide in the vault ... elaborate, extensive, and specific."
+#### Q13 - Mis-keyed answers
+- Captured: verify "by searching the web ... those questions are able to be found." Then ask Joshua: "I think this question is marked as wrong," and verify with him.
+#### Q14 - Drafts
+- Captured: separate folder; "go through recommendation."
+
+## Execution log
+### 2026-09-26: Step 1, load PT154/156/159
+- PT154: the file had full breakdowns in an italic-label layout the parser dropped. Parser fixed (PR vnjkoxpl-42905/lsatu-684d89db#138, test added, output for every other file unchanged). 286 steps inserted for 74 questions via query_database, steps only, ON CONFLICT DO NOTHING; every row verified identical to parser output. Pre-load snapshot: raw/sources/lsatu-lr-snapshots/2026-09-26-PT154-pre-reload.json. S2 Q3-Q5 have no authored breakdown: stay Notes-only for Claude.
+- **Correction to R1 Q3 premise:** PT156 and PT159 were NOT untranscribed-but-loadable. Their files hold only the 15 and 14 questions LSAT Lab wrote; the rest are video-only (PT159-TRANSCRIPTION-PROGRESS.md confirms). Everything in those files is already loaded. Their 36 + 37 Unloaded questions have no source text and go to Claude.
+- Coverage now: 354 Unexplained, 224 Notes-only, 194 Unloaded = 772 of 3,965 (was 846). Regenerate with system/scripts/lr-explanation-coverage.py.
+
 ## Open flags (pending input)
-- Why PT154/156/159 did not load -> Claude (diagnose before loading)
