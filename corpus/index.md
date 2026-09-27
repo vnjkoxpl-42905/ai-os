@@ -46,7 +46,5 @@ Fills through supervised ingests, one source at a time, logged in [[../wiki/log|
 - [[lr-explanations/golden-set]] — the 50 LSAT Lab explanations new LSAT U explanations are modelled on, with the quality rubric.
 - [[lr-explanations/golden-set-observations]] — strong-vs-loose comparison, step structure per type, voice notes.
 - [[lr-explanations/golden-set-candidates]] — all 80 candidates and the type x feature coverage grid.
-- [[lr-explanations/revamp-list]] — existing explanations weak enough to rewrite later; Revamp / Weak / Watch.
-- [[lr-explanations/fix-list]] — running list of side issues noticed during the work.
-- [[lr-explanations/choice-note-issues]] — problems in individual Choice Notes.
+- [[lr-explanations/fixes/index]] — the fix list: one line per issue, with detail files beside it (revamp list, Choice Note issues).
 

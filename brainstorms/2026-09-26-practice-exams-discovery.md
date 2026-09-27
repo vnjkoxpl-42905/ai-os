@@ -13,6 +13,7 @@ Context sources: User screenshots and browser comment (2026-09-26); `wiki/hot.md
 - User-confirmed: Attempts should show both in-progress and completed full exams and timed sections, with available result links. All Exams should have PrepTest detail pages showing sections, start options, and the student's attempts.
 - User-confirmed: Preserve attempts and results after PrepTest access is lost, while preventing resume into questions the student can no longer access.
 - User-confirmed: An active timed section pauses when the browser is closed. Time away must not count against the student. This supersedes the prior wall-clock recommendation.
+- User-confirmed on 2026-09-27: Switching to another tab keeps the section clock running; leaving the exam page or closing the browser pauses it at saved elapsed time. A second device may take over only after a clear "Continue on this device" action, and the first device must stop saving.
 - Unresolved: Joshua rejected a one-time manual claim prompt for older browser-only full-exam runs, expecting work to be tied to the student's database account. The existing full-exam implementation is browser-only and legacy keys carry no user identity. A safe migration path still needs a decision.
 - The user requested a grill-me interview after inspecting the example and current product.
 - Verified current behavior: LSAT U already has an "Unfinished sittings" list for in-progress full PrepTests, shown when the current browser has one. It uses local browser storage. Standalone LR and RC sections resume through separate stores and do not appear in that list.
@@ -68,7 +69,25 @@ Context sources: User screenshots and browser comment (2026-09-26); `wiki/hot.md
 - Recommended: Yes, using a wall-clock deadline; this recommendation was rejected.
 - Captured: Joshua said the section "should pause" when the browser is closed; time should definitely not keep running.
 
+### Round 3 (2026-09-27)
+
+#### Q9 - Older unfinished full exams
+- Asked: Should older browser-only runs remain usable on their original browser without automatic migration, while new runs sync to the account?
+- Recommended: Yes, to avoid attaching a shared browser's old run to the wrong account.
+- Captured: Joshua invoked wait-what for this question. No decision yet; explain the existing storage distinction in simpler terms before asking again.
+- Flag: Do not infer agreement to leave older runs on one device.
+
+#### Q10 - Pause boundary
+- Asked: Should switching tabs keep the clock running while leaving the exam page or closing the browser pauses it?
+- Recommended: Yes.
+- Captured: Joshua accepted the recommendation.
+
+#### Q11 - Two-device handoff
+- Asked: Should a second device explicitly take over an unfinished section and stop the first device from saving?
+- Recommended: Yes, with a clear "Continue on this device" action.
+- Captured: Joshua accepted the recommendation.
+
 ## Open flags (pending input)
 
 - Legacy browser-only full exams have no stored account identity. Manual claim was rejected; decide how to preserve old local runs without attaching another user's work on a shared browser. -> Joshua (product decision); implementation to enforce.
-- Define how a paused section is detected, saved, and resumed across devices without granting duplicate active clocks. -> Implementation design; confirm the intended pause boundary with Joshua.
+- Q10 pause boundary and Q11 handoff are confirmed; implementation must save elapsed time and enforce one active device with account-backed revision/lease logic. -> Implementation design.

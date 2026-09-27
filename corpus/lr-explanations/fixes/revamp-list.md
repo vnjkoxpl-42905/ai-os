@@ -7,7 +7,7 @@ status: scan running; filled when the survey of all 3,891 database explanations 
 
 # Existing explanations to revamp
 
-Existing LR explanations weak enough to rewrite in the golden-set voice ([[golden-set]]). The source is the database, never the local markdown. Revamping starts after the 772 missing explanations are written, unless Joshua says otherwise.
+Existing LR explanations weak enough to rewrite in the golden-set voice ([[../golden-set]]). The source is the database, never the local markdown. Revamping starts after the 772 missing explanations are written, unless Joshua says otherwise.
 
 Severity: **Revamp** (fails as teaching or has errors), **Weak** (complete but loose; read it), **Watch** (minor).
 

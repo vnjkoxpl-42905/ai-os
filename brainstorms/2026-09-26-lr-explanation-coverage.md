@@ -136,4 +136,9 @@ Asked Q5 (record who wrote each explanation), Q6 (review gate and pilot), Q7 (St
 - Captured: the database is the priority source; ignore local Explanations/*.md.
 - Unclear: "we do not want to have any type of status or something" -> asked.
 
+### Round 10 (2026-09-27)
+- Captured: remove the thin local PT140 file; "we don't need both." Done: PR vnjkoxpl-42905/lsatu-684d89db#142.
+- Captured: one fix list, not several kinds. Folder corpus/lr-explanations/fixes/: index.md is the list (one line per issue), detail files beside it. Revamp list is one item on it: "I'll come fix this later."
+- Unclear, not acted on: the reply to the "status" question was not intelligible in the transcript; no rule added from it.
+
 ## Open flags (pending input)
