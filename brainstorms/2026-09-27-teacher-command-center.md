@@ -23,6 +23,18 @@ Context sources: `brainstorms/2026-09-27-stripe-admin-home.md`; `brainstorms/202
 - The active student dossier has overview, work, notes, messages, and schedule routes, but no dedicated analytics route. Its work view does not expose individual homework questions and answers even though assignment records can include question ids (`src/App.tsx`, `src/pages/teacher/students/DossierWork.tsx`, `src/components/hub/HubAssignments.tsx`).
 - Session transcripts are ingested through Gemini Notes email/Doc workflows with manual scan/match steps. The dossier Notes area lists stored sessions and transcripts. Calendar metadata supports matching; there is no code path found that automatically imports a transcript from an event note or creates a post-session assignment task (`src/pages/teacher/TeacherSessionIngest.tsx`, `supabase/functions/scan-session-notes/index.ts`, `src/pages/teacher/students/DossierNotes.tsx`).
 - These are code findings from `projects/lsatu-stripe`, not confirmation of live behavior. Claude's uncommitted `supabase/functions/mcp/index.ts` was not edited.
+- Tier access code: null `access_tier` on a non-admin, non-archived account defines the current signup queue. Tier 1 enables all 12 feature switches; Tier 3 enables Classroom, Messages, and Schedule (assigned work remains visible); Tier 2 preserves customized switches. The active dossier has per-feature toggles. Payment package pass grants use a separate `grant_state='awaiting'` and must remain a distinct queue (`src/lib/adminUsers.ts`, `src/components/teacher/SignupQueue.tsx`, `src/pages/teacher/students/DossierOverview.tsx`, `src/components/teacher/PaymentsPanel.tsx`). Code finding only.
+
+## Live Calendar fact check (2026-09-27, read-only)
+- Google Calendar CLI on Joshua's primary calendar returned three confirmed tutoring sessions on Friday 2026-09-25. All three have one attached Google Doc titled “Notes by Gemini.” This confirms Joshua's observation that Friday event records have a notes attachment. The event descriptions themselves are booking metadata, not the transcript text.
+- A primary-calendar query for 2026-09-27 through 2026-10-05 returned the first upcoming tutoring session on 2026-09-28 at 15:20 Eastern and additional sessions later that week. The 2026-10-02 primary-calendar query returned no events at inspection time. The CLI also lists several secondary calendars; those have not been checked for upcoming events, so “all my calendar events” needs an explicit calendar-set decision or a cross-calendar aggregation.
+- These are live Calendar observations, not evidence that LSAT U currently displays or syncs all those events.
+
+## Calendar implementation finding (2026-09-27, code only)
+- `gcal-sync-pull` syncs one configured calendar (default `primary`) into `schedule_events`, from 14 days behind through 90 days ahead on a full pull, then incrementally. It stores title, description, time, status, Calendar link, and related fields, but drops attachments. Friday's Gemini Notes attachments therefore exist in Google Calendar but are not mirrored into LSAT U (`supabase/functions/gcal-sync-pull/index.ts`, `supabase/functions/_shared/googleCalendar.ts`).
+- Teacher Today triggers a Calendar pull on mount and every 120 seconds while visible; its event list refetches every 60 seconds. A production cron is mentioned in migration comments, but its actual active status was not verified. The Today query is limited to roughly 24 hours and the surface narrows further to the current day, which explains why the 2026-09-28 upcoming session is not shown on Sunday 2026-09-27 (`src/pages/teacher/desk/scheduleEvents.ts`, `src/pages/teacher/shell/DeskTodaySurface.tsx`).
+- Best proposed path, subject to Joshua's remaining decisions: show a longer upcoming agenda from the already synced schedule; use each event's stored Google Calendar link to open the event and its attached note there; create a per-session, manually handled assignment-or-notes task after the event ends. Keep upcoming events and outstanding tasks distinct. No transcript ingestion is required for this scope.
+- An event's scheduled end is not proof the lesson occurred. The follow-up should be worded as a review/assignment reminder, with a way to dismiss if no action is needed.
 
 ## Q&A log
 
@@ -133,7 +145,7 @@ Context sources: `brainstorms/2026-09-27-stripe-admin-home.md`; `brainstorms/202
 - Confirm whether manual handled is reversible and whether an optional note is needed -> Joshua.
 - Clarify when exactly a message becomes read -> Joshua.
 - Decide whether academic performance creates Home queue items; recent results stay brief -> Joshua.
-- Verify Friday Calendar examples and current sync/upcoming-event behavior -> Codex.
+- LSAT U Calendar sync/upcoming behavior checked in code; whether secondary calendars should be included remains Joshua's decision.
 - Transcript ingestion is out of scope for this dashboard per Joshua's Round 3 correction.
-- Verify tier/feature access model and existing grant actions -> Codex.
+- Tier/feature access model and existing grant actions checked in code; live grant behavior untested.
 - Define quick-grant defaults and triggers after the access-model check -> Joshua.
