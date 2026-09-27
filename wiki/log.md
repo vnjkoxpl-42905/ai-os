@@ -1032,3 +1032,10 @@ stripe_payments table + admin RPCs applied to LSAT U prod via SQL; 37 charges (9
 
 ## [2026-09-27] ops | Stripe package links registered
 8 used hour-package links added to booking_offers (1 credit/hour, student_visible=false, new column; resolver filters it). 10 Stripe packages now recognized; 19 ledger rows labeled. Students still see package-5, package-10, single-session-native. PR vnjkoxpl-42905/lsatu-684d89db#144 mirrors the SQL.
+
+## [2026-09-27] build | Payment alerts
+notifications + stripe_payments added to supabase_realtime (SQL). PR #145 merged (786c425): one in-app admin notice + one email (payment-received template -> contact@aspiringattorneys.com, keyed on charge id) per new paid charge, incl. Cal.com; Payments panel live. Needs Lovable deploy of booking-commerce-webhook.
+
+## [2026-09-27] fix | Question bank misfiled slots + explanation corrections
+The app shows and grades LR questions from the bank (public/data) but shows explanations from the DB. 155 bank slots held a different question than the DB (whole runs copied from the wrong section). Repaired from the official PDFs Joshua supplied: PR vnjkoxpl-42905/lsatu-684d89db#146, 0 mismatches after. DB edits (snapshots in raw/sources/lsatu-lr-snapshots/): 4 wrong-speaker explanations, PT158-S4-Q22 breakdown, PT147-S4-Q3/Q4 placeholder notes. 28 student attempts on the broken slots left untouched.
+
