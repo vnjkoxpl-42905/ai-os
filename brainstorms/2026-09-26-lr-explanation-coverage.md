@@ -101,4 +101,24 @@ Asked Q5 (record who wrote each explanation), Q6 (review gate and pilot), Q7 (St
 - Fact: local Explanations/ files cover PT139-PT159 (~1,000+ questions). DB shows ~3,190 Complete; PT101-PT140 "v2 corpus" source dir is not on this machine.
 #### Q4, Q5 - no answer yet -> R6.
 
+### Round 6 (golden set, 2026-09-26)
+#### Q6 - Corpus access
+- Captured: "I want you to have access to all of them. Shouldn't be limited to just 1,000 local ones." Downloading is fine.
+- Done: read-only REST pull of lr_questions (3,771), lr_explanations (3,891), lr_explanation_steps (13,373), lr_explanation_choice_notes (19,280) to the session scratchpad. Nothing written to the DB.
+#### Q7 - LSAT Hacks
+- Captured: use it for extra context, to catch features or patterns missed. Not limited to specific questions.
+#### Q8 - Improvements
+- Captured: "we are not here to improve the current ones. We may do that another time but not right now."
+#### Q4 - Review
+- Captured: "I'm not going to review all of the explanations cause there's so many of them." Review load must be light. Exact shape -> R7.
+#### Q5 - New terms
+- Captured: Joshua asked what "new terms" means. Explained in R7.
+
+### Round 7 (2026-09-26)
+#### Q4 - Review load
+- Captured: "Only give me a couple previews or things that you feel a little bit less confident in ... I don't need to review every simple one." Supersedes the 20-question full-read pilot: Joshua sees a few previews plus every low-confidence draft.
+- Captured: output "should not have any detectability of AI ... personalized and well fit for the question ... duplicating the voice of the other explanation."
+#### Q5 - Glossary terms
+- Joshua asked for definitions of Explanation Source and Coverage State before deciding.
+
 ## Open flags (pending input)
