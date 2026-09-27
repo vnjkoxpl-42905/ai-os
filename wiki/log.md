@@ -1076,3 +1076,7 @@ Reconciled 18 primary Calendar bookings with native Gemini Docs. Eight full tran
 ## [2026-09-27] research | AdeptLR and LSAT Demon UI audit added
 
 Inspected AdeptLR's signed-in dashboard, LR/RC drill builder, timed-section launcher, completed question review, notes, explanations, history, and settings. Inspected LSAT Demon's dashboard branches, drill filters/history/search, Practice, lessons/skills, resources, classes, Review Inbox, completed question review, and settings; skipped Admissions, Crushing 1L, and Tutor as Joshua requested. Added the detailed findings, visual rules, four-platform comparison, and revised LSAT U sequence to `research/2026-09-27-lsat-platform-ui-audit.md`. A new answer submission and paid-only flows were not verified. No LSAT U implementation or live records changed.
+
+## [2026-09-27] design | Four-platform findings turned into an LSAT U adoption plan
+
+Created `brainstorms/2026-09-27-lsatu-platform-adoption-game-plan.md` with the ranked adoption inventory, student and teacher page blueprint, question-review behavior, shared data contracts, responsive targets, and release gates. Reconciled the newer My Work decision with the older Notes rename draft; preserved the current Today/Inbox/Library/Insights teacher shell and its existing Bootcamps/Activities tabs after source inspection; kept timed Testing distinct inside the proposed Practice parent. The approved Home v3 design remains the base. Linked the plan from the running platform audit. No LSAT U code or live records changed.
