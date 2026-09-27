@@ -1,6 +1,6 @@
 # Stripe integration and admin Home: Brainstorm / Discovery Notes
 Date: 2026-09-27 · Goal: Define a complete Stripe-to-LSAT U payment workflow and a teacher-specific admin Home, grounded in the current platform.
-Status: in progress
+Status: requirements resolved for payment visibility and entitlement rules; implementation pending
 Context sources: `context/work.md`; `decisions/log.md`; `brainstorms/2026-07-19-booking-admin-redesign.md`; `brainstorms/2026-09-23-classroom-home-PLAN.md`; `brainstorms/2026-09-24-lsatu-fit-one-screen.md`; LSAT U code audit in progress.
 
 ## Summary / key decisions
@@ -11,10 +11,10 @@ Context sources: `context/work.md`; `decisions/log.md`; `brainstorms/2026-07-19-
 - Verified live on `https://lsatprep.study/classroom` in Joshua's signed-in Teacher account on 2026-09-27: the page shows “Nothing is due today. Drill whatever you feel like,” Smart Drill, Timed section, and a student-style Next seven days strip. It shows no payment feed.
 - Code audit: `/classroom` renders the student `ClassroomHome` for teachers too. A separate `/teacher/today` exists, but its work queue has no payment source. The Stripe webhook currently handles specific booking/payment-link flows; it does not build a universal Stripe transaction ledger, and the current booking events are sparse. These are repository findings, not a live Stripe reconciliation.
 - Code audit: generic invoices, subscriptions, direct Payment Intents, manual Dashboard charges, and unknown payment links are not covered by the current webhook. The Checkout handler currently grants feature access before product classification; this requires a guarded fix before broadening event ingestion. The existing email matching has no durable Stripe customer ID mapping. A live endpoint/deployment check remains necessary.
-- Live Stripe account verification attempted 2026-09-27 through the connected Stripe app; the app requires reauthentication. Do not treat repository configuration as proof of live account coverage.
-- Live Stripe Dashboard checked 2026-09-27 in the signed-in Aspiring Attorneys account. One active account event destination points to `https://atrcqxpmqrynmtvvyjju.supabase.co/functions/v1/booking-commerce-webhook?provider=stripe`, described as LSAT U booking commerce for packages and single sessions. It listens to five events. Stripe shows 12 deliveries and 3 failed attempts for the dashboard's “This week” view. At least one `checkout.session.completed` attempt returned HTTP 500 with `provider_processing_failed` and was later marked “Delivery recovered,” so failed attempts must not be misreported as permanently lost payments. A 2026-09-23 `checkout.session.completed` returned HTTP 200 with `status: booked`, confirming that one native booking completed end to end. The signing secret was masked; no secret was read or copied. The live status of every payment remains unverified.
+- The Codex Stripe app requires reauthentication, but a direct read-only call using the stored server key returned HTTP 200 for live Stripe account `acct_1PJnXRIULVCj6rqq` and for a PaymentIntent list request on 2026-09-27. This proves server API authentication and read access, not complete application coverage.
+- Live Stripe Dashboard checked 2026-09-27 in the signed-in Aspiring Attorneys account. One active account event destination points to `https://atrcqxpmqrynmtvvyjju.supabase.co/functions/v1/booking-commerce-webhook?provider=stripe`, described as LSAT U booking commerce for packages and single sessions. A fresh view listed 15 subscribed events; an older open tab still showed five. The current code handles five of the 15. Stripe shows 12 deliveries and 3 failed attempts for the dashboard's “This week” view. At least one `checkout.session.completed` attempt returned HTTP 500 with `provider_processing_failed` and was later marked “Delivery recovered,” so failed attempts must not be misreported as permanently lost payments. A 2026-09-23 `checkout.session.completed` returned HTTP 200 with `status: booked`, confirming that one native booking completed end to end. The signing secret was masked; no secret was read or copied. The live status of every payment remains unverified.
 - Stripe Dashboard account status has one active task, “Provide information about your business liquidity.” It lists Payments and Payouts as active, with Cartes Bancaires payments paused. This is an account-status task, not evidence that LSAT U's webhook is disconnected. Joshua may need to provide the business information in Stripe; no form was submitted.
-- Codex's separate Stripe connector still reports “requires reauthentication” after the Dashboard opened successfully. Dashboard sign-in and the Codex connector are distinct. LSAT U's server-side API key permissions and current environment remain unverified.
+- Codex's separate Stripe connector still reports “requires reauthentication” after the Dashboard opened successfully. Dashboard sign-in and the Codex connector are distinct. LSAT U's server-side key authenticated to the correct live account and can read PaymentIntents; its full permission scope and Lovable Cloud secret values remain unverified.
 
 ## Technical recommendation (tentative, not approved)
 1. Correct the current webhook so payment classification and live-mode checks precede any student access grant. Preserve the existing native single-session path while broadening account coverage.
@@ -74,12 +74,10 @@ Context sources: `context/work.md`; `decisions/log.md`; `brainstorms/2026-07-19-
 - Captured: awaiting answer.
 
 ## Open flags (pending input)
-- Three-month historical backfill depth is tentative; confirm final cutoff before import -> Joshua.
-- Whether payouts and fees belong in “all new activity” -> Joshua.
-- Exact action for each verified payment type -> Joshua.
-- Admin Home priorities beyond payment activity -> Joshua.
-- Whether to supersede the 2026-07-20 booking-pass decision -> Joshua.
-- Meaning of “maximum amount of permissions” for the platform connection -> Joshua; recommend the smallest server-side permissions that still cover every required Stripe read and payment action.
+- Three-month historical backfill is the working scope; calculate the exact cutoff from activation date.
+- Payouts and fees are included in the financial ledger plan as separate account movements, not customer purchases or entitlement triggers.
+- Admin Home section order beyond payment activity can be refined after the core teacher-specific Home exists.
+- Use only the server-side API permissions required for complete visibility and approved actions; do not widen credentials solely because Joshua said “maximum connection.”
 
 ## Resolved 2026-09-27
 - Package passes: teacher confirms with one click; no auto-grant. The 2026-07-20 decision stands.

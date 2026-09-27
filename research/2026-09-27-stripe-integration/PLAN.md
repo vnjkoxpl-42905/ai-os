@@ -1,5 +1,11 @@
 # Stripe connection and teacher Home, 2026-09-27
 
+## Goal and definition of done
+
+LSAT U uses the existing authenticated live Stripe account as its source of payment truth. Every new Stripe financial event is visible to Joshua on a teacher-specific Home within seconds of normal webhook delivery, with its actual status and a link to the underlying Stripe record. The previous three months are searchable. The ledger reconciles against Stripe, never counts one sale twice, and makes failed or unmatched processing visible. Only recognized session/package payments can enable platform access; package booking passes require Joshua's one-click approval.
+
+“Full capability” means complete visibility and the approved downstream actions. It does not mean an unrestricted API key or automatically granting a benefit for every charge.
+
 ## Verified connection state
 
 - A read-only call using the locally stored `STRIPE_SECRET_KEY` returned HTTP 200 from `GET /v1/account` for `acct_1PJnXRIULVCj6rqq` and HTTP 200 from `GET /v1/payment_intents?limit=1`. No key or payment data was copied into this report.
@@ -11,13 +17,22 @@
 
 ## Fastest implementation path
 
-1. Inspect the 2026-09-21 Lovable Cloud function error and fix its cause. Keep existing destination in place while adding coverage.
-2. Create a dedicated, signed Stripe event ingest with an append-only event inbox, event-ID deduplication, processing status, and an exception queue. Add only the Stripe events needed for the actual payment channels. Keep the existing booking processing intact until the new ledger is reconciled.
-3. Normalize Checkout Sessions, PaymentIntents, invoices, charges, refunds, and disputes to one payment activity record per underlying transaction. Store Stripe object IDs, UTC timestamps, amount/currency, customer, payment status, and provenance. Display failed and pending events as such; do not label them paid.
-4. Use server-side Stripe API reads and cursor pagination to backfill the 3 months before activation. Read historical activity first; do not automatically grant old sessions or access. Reconcile the count and totals against Stripe and flag missing/ambiguous records.
-5. Match future payments using an internal student ID in Checkout `client_reference_id` or metadata, then Stripe customer ID, with verified email as a fallback. Put ambiguous payments in the teacher exception queue for review.
-6. Route teacher/admin Home to a teacher dashboard showing new payments, bookings, package balances, exceptions, webhook health, and searchable payment history. Keep the student study Home for students.
-7. Test in Stripe sandbox, deploy through Lovable Cloud, add the required events to the existing live Stripe destination, then verify a new payment, refund, replay, duplicate event, and 3-month reconciliation in production.
+1. **Baseline and repair.** Read the Lovable Cloud log for the 2026-09-21 recovered 500. Inventory the live destination, payment channels, product/payment links, and current secret scopes. Reconcile that event against the resulting booking/pass state. Do not replace the working booking path blindly.
+2. **Durable ingest.** Add a signature-verified Stripe receiver and an event inbox keyed by Stripe event ID. Persist receipt and processing state before responding. Process asynchronously, with retries, dead-letter/exception visibility, and idempotent updates. Keep webhook responses fast. Record every subscribed type or deliberately mark it ignored with a reason; never return 200 for a relevant event without traceability.
+3. **Canonical financial ledger.** Normalize Checkout Sessions, PaymentIntents/charges, invoices/subscriptions, refunds, disputes, balance transactions, fees, and payouts into linked records. Use underlying object IDs to deduplicate one payment represented by several events. Track gross amount, refund, fee/net where available, currency, status, source object, timestamps, payer identity, and product classification. Keep customer-facing payment events distinct from internal balance movements so totals are not double-counted.
+4. **Coverage.** Handle the ten currently subscribed event types that the existing booking function ignores, especially delayed Checkout outcomes and charge/dispute changes. After the receiver is ready, add only the missing event types required for actual invoice, subscription, PaymentIntent, payout, or balance flows. Audit active Stripe products and payment methods before choosing subscriptions. Do not subscribe to `*` merely to claim broad coverage.
+5. **Three-month backfill.** Read Stripe objects with a server-side read key, created-time filters, and cursor pagination for the three months before activation. Import historical activity as ledger records without retroactive pass/access grants. Run reconciliation against Stripe totals and identify gaps/ambiguous records. Continue periodic reconciliation after launch to recover missed webhooks.
+6. **Identity and actions.** Put the LSAT U user ID and offer/booking ID in new Checkout `client_reference_id` or metadata; save Stripe customer ID when available. For old Payment Links, use the mapped link and verified email as fallback. Unmatched payments go to a teacher review queue. Recognized session/package payments can enable platform access; package purchases create a proposed “Grant N passes” action that Joshua confirms once. All other charges are logged only. This follows the locked 2026-09-27 decision.
+7. **Teacher Home.** Route teacher/admin `/classroom` to a separate Home. Lead with new money and exceptions, then upcoming sessions and actions. Show searchable history with filters for date, payer/student, product, type, status, and amount. Each row shows source, matching confidence, and the next action. Keep student Home unchanged.
+8. **Rollout and proof.** Exercise new payments, delayed success/failure, refunds, partial refunds, disputes, unmatched payers, duplicate and out-of-order events, retries, package approval, and three-month import in Stripe sandbox. Deploy Lovable Cloud functions through the confirmed Lovable path. Change live event subscriptions only after the receiver is ready. Verify a production payment appears on teacher Home and reconcile the imported range against Stripe.
+
+## Acceptance checks
+
+- A new Stripe payment or status change appears on teacher Home within one minute of normal webhook delivery; any processing delay or failure is visible.
+- Every Stripe activity record in the selected three-month period is searchable, with no duplicate sale rows or duplicate booking actions. Exceptions are counted and reviewable.
+- A payment with no confident student/offer match never grants access or passes. A recognized package presents one approval action and cannot be granted twice.
+- Payments, refunds, disputes, payouts, and fees remain distinguishable. Stripe remains the authority if totals disagree.
+- Only teacher/admin roles can see financial activity. Stripe keys and signing secrets stay server-side; no card details are stored in the teacher ledger.
 
 ## Stripe-side configuration
 
@@ -28,8 +43,8 @@
 
 ## Current blockers and decisions
 
-- The old decision that booking passes are the sole source of sessions owed conflicts with automatic package entitlement grants. Supersede it explicitly before enabling grants.
-- Decide whether unmatched payers and unrelated Stripe payments appear only in the teacher ledger or also receive student access. Default: show every transaction, grant nothing without a confirmed product and student match.
+- The 2026-09-27 decision in `decisions/log.md` resolves the entitlement rules: package passes need teacher confirmation, unmatched payers wait for review, and unrelated charges are logged without access. Do not ask Joshua to decide these again.
+- The exact three-month cutoff is tied to the actual import/activation date. Three months is the working scope from Joshua's request.
 - Lovable Cloud deployment requires confirmation of that route. Any Lovable action that may spend credits requires a separate confirmation immediately before the action.
 
 ## Stripe documentation
