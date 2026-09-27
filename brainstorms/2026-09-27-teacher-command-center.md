@@ -16,6 +16,9 @@ Context sources: `brainstorms/2026-09-27-stripe-admin-home.md`; `brainstorms/202
 - User-confirmed in Round 3: importing transcripts into LSAT U is not necessary for this dashboard. Joshua says Friday Calendar events have notes/transcripts attached and asked for a read-only check. Calendar events are the source for upcoming schedule visibility.
 - User-confirmed in Round 4: use one Google Calendar, specifically Joshua's primary calendar; show its events. Do not create a backlog of task rows for historical sessions at launch. For an existing student's completed session, surface homework and notes to handle. For a consultation, surface a follow-up or check-in task, with exact wording/timing still unclear.
 - User-confirmed in Round 4: add a second, manually editable to-do area where Joshua can add items and cross them off. He also wants appropriate automatic tasks, such as an enrollment action after a package payment, and a student-oriented task/checklist view with progress or blocker tracking. The meaning of “course through the district checklist” is unclear and not treated as a confirmed feature name.
+- User-confirmed after Round 4: a quick manual to-do list must appear directly on the teacher Home/dashboard, with a link to a full, more expansive Tasks page in the platform.
+- User-confirmed in Round 5: Joshua accepted the recommendations for Q21-Q25. The Home should show separate “Needs your attention” and “My list” areas; consultations get one follow-up task after ending; task progress counts Joshua's tasks per student and blockers are manual; manually added tasks stay private to Joshua; a paid package creates an “Enroll and grant passes” item for Joshua instead of automatic grant. The unclear checklist phrase remains unresolved despite this acceptance.
+- New idea in Round 5, corrected by Joshua in Round 6: a prominent shortcut to generate a link for an individual student with a custom number of session credits such as five. This is **not a payment request**. The mechanism of redemption and credit grant is still open.
 - Tentative: a completed session could show its transcript or a link to it. Joshua expects the Google Calendar event may have an attached note/transcript. Code inspection on 2026-09-27 found a different current path: Gemini Notes email/Doc ingestion stores transcripts with sessions, while Calendar title/time help with matching. No automatic extraction from Calendar event notes was found. This is code evidence, not live verification.
 - Verified earlier on 2026-09-27: `/teacher/today` has a Payments panel with 37 charges from the last 90 days and a manual Stripe sync. `/classroom` still shows the student-style Home to the signed-in teacher. These observations do not prove a full payment reconciliation or immediate arrival of every event.
 - Visual references: image 2 offers the clearest light command-center information hierarchy; image 3 suggests a compact schedule and task layout; image 6 suggests an approachable left-rail and progress cards. Images 1, 4, and 5 contribute atmosphere or chart styling, but their ornamental data should not dictate the teacher's metrics. This is an interpretation, not Joshua's selected direction.
@@ -37,6 +40,11 @@ Context sources: `brainstorms/2026-09-27-stripe-admin-home.md`; `brainstorms/202
 - Teacher Today triggers a Calendar pull on mount and every 120 seconds while visible; its event list refetches every 60 seconds. A production cron is mentioned in migration comments, but its actual active status was not verified. The Today query is limited to roughly 24 hours and the surface narrows further to the current day, which explains why the 2026-09-28 upcoming session is not shown on Sunday 2026-09-27 (`src/pages/teacher/desk/scheduleEvents.ts`, `src/pages/teacher/shell/DeskTodaySurface.tsx`).
 - Best proposed path, subject to Joshua's remaining decisions: show a longer upcoming agenda from the already synced schedule; use each event's stored Google Calendar link to open the event and its attached note there; create a per-session, manually handled assignment-or-notes task after the event ends. Keep upcoming events and outstanding tasks distinct. No transcript ingestion is required for this scope.
 - An event's scheduled end is not proof the lesson occurred. The follow-up should be worded as a review/assignment reminder, with a way to dismiss if no action is needed.
+
+## Link generation implementation finding (2026-09-27, code only)
+- The active teacher UI has no Stripe payment-link generator for a named student and custom session quantity. Existing 5- and 10-hour package links are fixed offers shown to students. An older booking-pass creator can make a private 1/5/10/custom-session pass immediately, without a Stripe charge, and its former route now redirects; it must not be presented as a paid-link action (`src/pages/teacher/BookingPasses.tsx`, `src/App.tsx`, `src/components/booking/BookingOfferHub.tsx`).
+- Current package recognition relies on a registered Stripe Payment Link ID, validated paid amount/currency, and email matching. A paid recognized package can reach `grant_state=awaiting`; teacher grants passes with one click. A new custom student-specific Checkout flow would need its own verified mapping from local quote/student to Stripe Checkout Session and ledger, then the existing teacher grant pattern. It cannot safely assume that any custom Stripe link automatically creates credits (`supabase/functions/booking-commerce-webhook/index.ts`, `supabase/functions/_shared/stripeLedger.ts`, `src/components/teacher/PaymentsPanel.tsx`).
+- Superseded recommendation (Round 6 correction): a “Create payment request” action using Stripe Checkout was proposed before Joshua clarified that his requested link is **not for payment**. Do not build that proposal for this shortcut. Stripe's Checkout docs were consulted for that discarded branch: https://docs.stripe.com/api/checkout/sessions/create .
 
 ## Q&A log
 
@@ -169,15 +177,53 @@ Context sources: `brainstorms/2026-09-27-stripe-admin-home.md`; `brainstorms/202
 - Tentative: there may be a course or district checklist; dictation was unclear, so no product definition is assumed.
 - Flags: task-list ownership and separation, package enrollment exact action, student versus teacher task visibility, progress denominator, and meaning of the named checklist -> Joshua.
 
+### Round 5
+#### Q21 - Two task areas
+- Asked: separate auto-generated Needs your attention and manually editable My list on Home, each linking to full Tasks page.
+- Recommended: yes, with student/type filters in full page.
+- Captured: Joshua explicitly wants a quick to-do list on Home and a link to an expansive platform page; he then accepted the recommendation for all Q21-Q25.
+
+#### Q22 - Consultations
+- Asked: whether consultations create a follow-up when they end, and what “three consultations” meant.
+- Recommended: one follow-up at consultation end, manual handled.
+- Captured: Joshua accepted the recommendation. The phrase “three consultations” remains unparsed and is not treated as a three-day reminder.
+
+#### Q23 - Student task tracker
+- Asked: progress count for Joshua's tasks per student and manually set blocked state.
+- Recommended: yes.
+- Captured: accepted.
+
+#### Q24 - Student visibility
+- Asked: manually added student-linked item private to Joshua versus visible to student.
+- Recommended: private; student assignment separate.
+- Captured: accepted.
+
+#### Q25 - Package payment
+- Asked: paid package creates “Enroll and grant passes” for Joshua rather than automatically granting.
+- Recommended: yes, preserving prior one-click teacher grant decision.
+- Captured: accepted.
+
+#### New idea - Quick link generator
+- Captured: Joshua wants an easy shortcut to create an individual-student link for a chosen session quantity, such as five, and possibly add a credit when the link is used. He asked for a judgment on whether this is a good feature.
+- Superseded by Round 6: the link is not for requesting payment.
+- Flags: inspect existing booking-pass flow -> Codex; determine redemption/grant behavior and why a link is needed versus direct admin grant -> Joshua.
+
+### Round 6 (correction)
+#### Q26-Q29 - Link type
+- Asked about paid Checkout link, price, payment follow-up, and copy/send behavior.
+- Captured: “not requesting payment.” Joshua corrected the premise. Treat this as a credit/access link with no charge; do not infer Stripe Checkout, a price, or an enrollment/payment task from this shortcut.
+- Flags: does opening/redeeming the link create credits, or is it a shortcut to an admin grant screen; is it single use and bound to one student; should generated links be copied only -> Joshua.
+
 ## Open flags (pending input)
 - Queue priority rules and any additional teacher tasks -> Joshua.
 - Primary Calendar selected. Define how to distinguish tutoring sessions and consultations, plus exact consultation follow-up timing -> Joshua and Codex.
 - Confirm whether manual handled is reversible and whether an optional note is needed -> Joshua.
 - Clarify when exactly a message becomes read -> Joshua.
 - Decide whether academic performance creates Home queue items; recent results stay brief -> Joshua.
-- LSAT U Calendar sync/upcoming behavior checked in code; whether secondary calendars should be included remains Joshua's decision.
+- LSAT U Calendar sync/upcoming behavior checked in code; Joshua confirmed one primary calendar in Round 4.
 - Transcript ingestion is out of scope for this dashboard per Joshua's Round 3 correction.
 - Tier/feature access model and existing grant actions checked in code; live grant behavior untested.
 - Define quick-grant defaults and triggers after the access-model check -> Joshua.
-- Define manual list, generated task list, student grouping, and progress/blocker tracker -> Joshua.
+- Two Home task areas, full Tasks page, private manual tasks, student grouping/progress, and manual blockers confirmed by Joshua in Round 5. Details of task creation and layout remain for design.
 - Clarify the “course through the district checklist” phrase -> Joshua.
+- Existing booking-pass behavior checked in code. Joshua clarified the new shortcut is not a payment request; define its link/redemption mechanics and student binding -> Joshua.
