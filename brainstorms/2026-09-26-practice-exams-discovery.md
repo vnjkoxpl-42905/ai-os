@@ -10,11 +10,12 @@ Context sources: User screenshots and browser comment (2026-09-26); `wiki/hot.md
 - User-confirmed: Use the LexPrep example for the initial Practice Exams structure: landing page, All Exams, and Attempts. Do not copy the paywall, payments, or unrelated features.
 - User-confirmed: Keep an "Unfinished exams and sections" area on the Practice Exams landing page, with a resume action for full exams and standalone timed LR and RC sections. Custom drills remain in Drill per the accepted recommendation.
 - User-confirmed: Make unfinished work persist across devices under the student's account, even though this requires a larger persistence change.
+- User-confirmed on 2026-09-27: The student's account database must be the authoritative home for every new full PrepTest attempt, including its answers, place in the exam, paused time, and result. Browser storage may be a temporary safety copy, but must not be the only saved copy.
 - User-confirmed: Attempts should show both in-progress and completed full exams and timed sections, with available result links. All Exams should have PrepTest detail pages showing sections, start options, and the student's attempts.
 - User-confirmed: Preserve attempts and results after PrepTest access is lost, while preventing resume into questions the student can no longer access.
 - User-confirmed: An active timed section pauses when the browser is closed. Time away must not count against the student. This supersedes the prior wall-clock recommendation.
 - User-confirmed on 2026-09-27: Switching to another tab keeps the section clock running; leaving the exam page or closing the browser pauses it at saved elapsed time. A second device may take over only after a clear "Continue on this device" action, and the first device must stop saving.
-- Unresolved: Joshua rejected a one-time manual claim prompt for older browser-only full-exam runs, expecting work to be tied to the student's database account. The existing full-exam implementation is browser-only and legacy keys carry no user identity. A safe migration path still needs a decision.
+- Unresolved legacy case: Joshua wants full-exam work saved to the account database. Older browser-only runs still carry no account identity, so moving those specific runs safely needs a separate decision. The prior recommendation to leave old runs only on their original browser is superseded as a general design for future exams.
 - The user requested a grill-me interview after inspecting the example and current product.
 - Verified current behavior: LSAT U already has an "Unfinished sittings" list for in-progress full PrepTests, shown when the current browser has one. It uses local browser storage. Standalone LR and RC sections resume through separate stores and do not appear in that list.
 - Verified reference: LexPrep's Practice Exams landing has two start actions and an "Unfinished exams and sections" area. Its sidebar has Attempts and All Exams subpages. The Attempts page is paywalled for the inspected free account; All Exams lists PrepTests and a detail page shows sections and attempts.
@@ -75,7 +76,7 @@ Context sources: User screenshots and browser comment (2026-09-26); `wiki/hot.md
 - Asked: Should older browser-only runs remain usable on their original browser without automatic migration, while new runs sync to the account?
 - Recommended: Yes, to avoid attaching a shared browser's old run to the wrong account.
 - Captured: Joshua invoked wait-what for this question. No decision yet; explain the existing storage distinction in simpler terms before asking again.
-- Flag: Do not infer agreement to leave older runs on one device.
+- Superseded: The old-browser recommendation is not the design for future attempts; Joshua clarified in Round 4 that new full-exam work must be account-backed. The treatment of pre-change runs remains open.
 
 #### Q10 - Pause boundary
 - Asked: Should switching tabs keep the clock running while leaving the exam page or closing the browser pauses it?
@@ -87,7 +88,28 @@ Context sources: User screenshots and browser comment (2026-09-26); `wiki/hot.md
 - Recommended: Yes, with a clear "Continue on this device" action.
 - Captured: Joshua accepted the recommendation.
 
+### Round 4 (2026-09-27)
+
+#### Q12 - Account-backed exam saving
+- Asked by Joshua: Why does the browser hold full-exam work, and can exams always save to the student's account database instead?
+- Captured: Joshua requires every new full-exam attempt to save to the specific student's account in the database and persist across devices. He views browser-only saving as insufficient.
+- Verified implementation fact: The `practice_test_runs` table already exists with owner-based access and a revision field, but the current full-exam UI reads and writes only browser storage. Connecting the UI to this table, then storing answers, progress, paused time, and results with conflict-safe writes, is feasible.
+- Flag: Decide how to handle pre-change browser-only runs and temporary connection loss without misattributing or losing work.
+
+### Round 5 (2026-09-27)
+
+#### Q13 - Old browser-only exam work
+- Asked: Should each pre-change unfinished exam have a one-time "Move this unfinished exam to my account" action?
+- Recommended: Yes, because its old browser copy does not identify the student account.
+- Captured: Joshua invoked wait-what. He asked whether the work can simply be saved to the student's profile or backend database. No migration decision yet; explain that this is the goal for all new attempts, while old copies lack ownership information.
+
+#### Q14 - Connection loss during an exam
+- Asked: Should the student keep working during an outage using a temporary device copy that syncs later?
+- Recommended: Yes, with a visible pending-save state and no second-device takeover until sync completes.
+- Captured: Joshua invoked wait-what and asked about saving directly to the backend. No offline-behavior decision yet; explain that a disconnected device cannot reach the database until its connection returns.
+
 ## Open flags (pending input)
 
-- Legacy browser-only full exams have no stored account identity. Manual claim was rejected; decide how to preserve old local runs without attaching another user's work on a shared browser. -> Joshua (product decision); implementation to enforce.
+- Legacy browser-only full exams have no stored account identity. Decide whether to offer a deliberate one-time move into the signed-in account or leave pre-change runs on their original browser while new runs become account-backed. -> Joshua (product decision); implementation to enforce.
+- Decide how an active exam behaves during a temporary connection loss while the database is authoritative. -> Joshua (product decision); implementation to enforce.
 - Q10 pause boundary and Q11 handoff are confirmed; implementation must save elapsed time and enforce one active device with account-backed revision/lease logic. -> Implementation design.
