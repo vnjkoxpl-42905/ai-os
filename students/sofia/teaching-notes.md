@@ -72,3 +72,12 @@ Source: [[transcript-downloads/2026-09-23-sofia-notes-by-gemini]] (LSAT discussi
 - She distinguished Sufficient Assumption from Must Be True: the former supplies a missing connection; the latter extracts a connection already supported by the given rules.
 - Joshua advised a section, immediate wrong-answer review, targeted repair, then another section. Sofia moved her planned full PrepTest from Friday to later in the week so she could focus on sections first.
 - Sofia said she had about 30 questions left in the conditional boot camp and planned to finish them, complete the Sufficient Assumption boot camp once assigned, and do a Logical Reasoning section. Verify completion in LSAT U before treating these as done.
+
+## 2026-09-25 | Proof direction and exact claims
+
+Source: [[transcript-downloads/2026-09-25-sofia-notes-by-gemini]].
+
+- Sofia initially associated “follows logically” with Sufficient Assumption. Joshua showed that in Must Be True the stimulus proves the answer, while in Sufficient Assumption the added answer premise proves the stated conclusion (00:05:43–00:08:39). The lesson arose after Joshua shared the wrong browser tab, so it should not be mistaken for a planned Sufficient Assumption question.
+- In a crop-failure Must Be True question, Sofia first considered answers that weakened the trigger from crop failure to below-average rain or introduced farmers' responsibility. She then traced the exact chain and identified a conservative conclusion: connected businesses can also suffer (00:10:57–00:35:26).
+- On the animal-anatomy Sufficient Assumption question, Sofia named the shift from observations about living animals to a claim about extinct animals and selected the bridging answer. Joshua's repeated questioning made her second guess a sound answer; she said she would have chosen it under timed conditions (00:42:54–00:50:23).
+- Sofia planned Must Be True drills and a Sunday practice test. Joshua promised to assign a Sufficient Assumption boot camp and to add a booking link for a missed Monday meeting. Verify those actions in the live systems before treating them as complete (00:51:01–00:53:37).

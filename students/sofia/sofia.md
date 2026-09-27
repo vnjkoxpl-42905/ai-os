@@ -22,6 +22,9 @@ lifecycle: active
 - [Open loops](open-loops.md)
 - [Assignment log](assignment-log.md)
 - [Live status](live-status.generated.md)
+- [Latest session · 2026-09-25](sessions/2026-09-25-must-be-true-and-sufficient-assumption/summary.md)
+- [Draft recap · 2026-09-25](recaps/2026-09-25-recap.md)
+- [Draft recap · 2026-09-23](recaps/2026-09-23-recap.md)
 
 ## Snapshot
 
@@ -55,7 +58,7 @@ Keep this student's full context in this folder: session notes, commitments, lea
 
 ## Transcript Downloads
 
-- Local full exports from 2026-06-16 through 2026-09-23 are listed in [[transcripts|the session index]].
+- Local full exports from 2026-06-16 through 2026-09-25 are listed in [[transcripts|the session index]].
 
 ## Related
 

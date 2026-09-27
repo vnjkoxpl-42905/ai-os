@@ -32,3 +32,5 @@ Pending items only. Verify against live systems before acting.
 - [ ] [2026-09-09] Verify whether the requested parallel-reasoning drill was assigned. Source: [[transcript-downloads/2026-09-09-sofia-notes-by-gemini]].
 - [ ] [2026-09-15] Verify the promised conditional practice and RC materials, and whether Sofia booked four additional meetings. Source: [[transcript-downloads/2026-09-15-sofia-notes-by-gemini]].
 - [ ] [2026-09-18] Verify whether the promised hard Sufficient Assumption mini boot camp was assigned and whether Sofia completed the planned full PrepTest. Source: [[transcript-downloads/2026-09-18-sofia-notes-by-gemini]].
+- [ ] [2026-09-25] Verify that Joshua assigned the Sufficient Assumption boot camp promised at 00:51:01; the transcript does not confirm publication. Source: [[transcript-downloads/2026-09-25-sofia-notes-by-gemini]].
+- [ ] [2026-09-25] Verify that the booking link promised for the missed Monday meeting was added; Joshua said Sofia would receive it within five minutes (00:52:25–00:53:37). Source: [[transcript-downloads/2026-09-25-sofia-notes-by-gemini]].

@@ -13,7 +13,7 @@ aliases: []
 
 | Date | Full local export | Local session package | Status |
 |---|---|---|---|
-| 2026-09-21 | [[transcript-downloads/2026-09-21-celia-cutler-notes-by-gemini|2026-09-21-celia-cutler-notes-by-gemini.md]] | 2026-09-21-celia-lsat-session: [[sessions/2026-09-21-celia-lsat-session/transcript|transcript]], [[sessions/2026-09-21-celia-lsat-session/summary|summary]], [[sessions/2026-09-21-celia-lsat-session/topic-map|topic map]] | Paired |
+| 2026-09-21 | [[transcript-downloads/2026-09-21-celia-cutler-notes-by-gemini|2026-09-21-celia-cutler-notes-by-gemini.md]] | 2026-09-21-celia-lsat-session: [[sessions/2026-09-21-celia-lsat-session/transcript|transcript]], [[sessions/2026-09-21-celia-lsat-session/summary|summary]], [[sessions/2026-09-21-celia-lsat-session/topic-map|topic map]], [[recaps/2026-09-21-recap|draft recap]] | Paired |
 | 2026-09-16 | [[transcript-downloads/2026-09-16-celia-cutler-notes-by-gemini|2026-09-16-celia-cutler-notes-by-gemini.md]] | 2026-09-16-celia-lsat-session: [[sessions/2026-09-16-celia-lsat-session/transcript|transcript]], [[sessions/2026-09-16-celia-lsat-session/summary|summary]], [[sessions/2026-09-16-celia-lsat-session/topic-map|topic map]] | Paired |
 | 2026-09-07 | [[transcript-downloads/2026-09-07-celia-cutler-notes-by-gemini|2026-09-07-celia-cutler-notes-by-gemini.md]] | 2026-09-07-celia-lsat-session: [[sessions/2026-09-07-celia-lsat-session/transcript|transcript]], [[sessions/2026-09-07-celia-lsat-session/summary|summary]], [[sessions/2026-09-07-celia-lsat-session/topic-map|topic map]] | Paired |
 | 2026-08-31 | [[transcript-downloads/2026-08-31-celia-cutler-notes-by-gemini|2026-08-31-celia-cutler-notes-by-gemini.md]] | 2026-08-31-celia-lsat-session: [[sessions/2026-08-31-celia-lsat-session/transcript|transcript]], [[sessions/2026-08-31-celia-lsat-session/summary|summary]], [[sessions/2026-08-31-celia-lsat-session/topic-map|topic map]] | Paired |
@@ -42,4 +42,3 @@ aliases: []
 | 2026-09-21 | [[transcript-downloads/2026-09-21-celia-cutler-notes-by-gemini]] | [Source](https://docs.google.com/document/d/1hfGQD_jWl3-KIm3RIktdm-Np5nMIRAol8bVTe-Z5a7A/edit) |
 
 The event invite for each has `celiacutler@gmail.com`; Gemini's speaker label uses “Celia Syrocki.” The surname discrepancy is unresolved, so no alias was added.
-

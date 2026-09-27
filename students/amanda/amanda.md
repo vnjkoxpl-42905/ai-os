@@ -17,6 +17,7 @@ aliases: [Amanda]
 ## Open this record
 
 - [[transcripts|Session index]]
+- [[recaps/2026-09-22-recap|Draft recap · 2026-09-22]]
 - [[teaching-notes|Teaching notes]]
 - [[open-loops|Open loops]]
 - [[assignment-log|Assignment log]]

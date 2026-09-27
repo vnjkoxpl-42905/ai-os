@@ -3,7 +3,7 @@ title: Oreoluwa
 type: person
 tags: [lsat-u, person, student]
 created: 2026-09-08
-updated: 2026-09-08
+updated: 2026-09-27
 status: active
 role: student
 email: oreoluwavjames@gmail.com
@@ -18,14 +18,14 @@ lifecycle: active
 
 ## Open this record
 
-- [[transcripts|Session index]] · [[sessions/2026-09-11-argument-structure/transcript|Latest session transcript]] · [[sessions/2026-09-11-argument-structure/summary|Summary]] · [[sessions/2026-09-11-argument-structure/topic-map|Topic map]]
-- [[transcript-downloads/2026-09-11-ore-notes-by-gemini|Full Gemini export]] · [[teaching-notes|Teaching notes]] · [[open-loops|Open loops]]
+- [[transcripts|Session index]] · [[sessions/2026-09-25-counterexample-and-necessary-assumption/transcript|Latest session transcript]] · [[sessions/2026-09-25-counterexample-and-necessary-assumption/summary|Summary]] · [[sessions/2026-09-25-counterexample-and-necessary-assumption/topic-map|Topic map]] · [[recaps/2026-09-25-recap|Recap draft]]
+- [[transcript-downloads/2026-09-25-ore-notes-by-gemini|Full Gemini export]] · [[teaching-notes|Teaching notes]] · [[open-loops|Open loops]]
 
 ## Snapshot
 
 Current LSAT U student. Folder opened 2026-09-08 from the calendar and Drive.
 
-The folder holds full exports and session packages for 2026-09-01 and 2026-09-11. Calendar marks the September 1 event cancelled, although its attached Gemini Doc contains a conversation; attendance status remains unresolved.
+The folder holds full exports and session packages for 2026-09-01, 2026-09-11, and 2026-09-25. Calendar marks the September 1 event cancelled, although its attached Gemini Doc contains a conversation; attendance status remains unresolved. The September 25 Gemini Doc is a recorded conversation with Ore but has no matching Calendar event. It is distinct from the September 22 booking, which remains without a transcript.
 
 ## Student Context
 

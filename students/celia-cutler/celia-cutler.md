@@ -18,6 +18,7 @@ lifecycle: active
 ## Open this record
 
 - [[transcripts|Session index]]
+- [[recaps/2026-09-21-recap|Draft recap · 2026-09-21]]
 - [[teaching-notes|Teaching notes]]
 - [[open-loops|Open loops]]
 - [[7sage|7Sage]]

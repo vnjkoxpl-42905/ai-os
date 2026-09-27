@@ -21,6 +21,7 @@ lifecycle: onboarding
 - [Teaching notes](teaching-notes.md)
 - [Open loops](open-loops.md)
 - [Email context](email-context.md)
+- [2026-09-25 session](sessions/2026-09-25-conditional-foundations/summary.md) · [draft recap](recaps/2026-09-25-recap.md)
 
 ## Record Map
 

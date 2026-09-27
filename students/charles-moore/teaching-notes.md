@@ -8,6 +8,14 @@ updated: 2026-09-25
 
 # Charles Moore Teaching Notes
 
+## [2026-09-25] Quantity logic and direction of inference
+
+- Charles reported finishing two easy conditional sets (9/9 and 4/7) but not the medium set. He asked whether `no` stays in the proposition after applying the Group 4 translation. Joshua explained that the indicator is exchanged for the if/then form; the resulting negation appears on the necessary side. Recheck with fresh examples before advancing.
+- Charles understood that `some` is reversible but needed repeated checks on `most`: most A are B guarantees some B are A, not most B are A, and does not establish any A outside B. He asked directly whether most could include all.
+- He reasoned through two majorities of the same base group producing at least some overlap, and through a universal rule extending a `some` or `most` relationship when the middle group is aligned. Avoid teaching an unqualified `some` plus `most` chaining rule; the source's spoken summary is loose here.
+- In the banjo/guitar question he moved to the correct group-size answer, then noted he initially got there for the wrong reason. Recheck the denominator of each `most` statement and have him explain why the shared overlap is above half of one group and below half of the other.
+- Source: [[transcript-downloads/2026-09-25-charles-moore-notes-by-gemini]], especially 00:01–00:12, 00:22–00:51, and 01:00–01:10. [[sessions/2026-09-25-quantity-logic/topic-map]] records caveats.
+
 ## [2026-09-03] Argument structure and answer verification
 
 - Joshua taught Charles to isolate the claim the author wants accepted, then ask “Why should I believe this?” to find support. In the reviewed argument-part question, Charles initially tried answer choices that implied the author disproved objections or claimed scientific superiority. He selected B after recognizing that the author conceded the objections and treated them as less important than therapeutic success.

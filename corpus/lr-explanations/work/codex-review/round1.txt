@@ -1,0 +1,30 @@
+## 1. What is good
+
+The method serves the goal: use strong existing explanations, write a varied pilot, and let Joshua read all 20 before loading it. The pilot covers several reasoning patterns well. PT159-S1-Q21 builds a useful counterexample, PT156-S4-Q10 handles the EXCEPT distinction, and PT115-S2-Q8 preserves the argument’s structure. All 20 draft answers and difficulties match the **question bank**; the two corrected type labels match their stems. That is a bank check, not independent verification of the official keys. [Pilot](</C:/Users/Joshu/dev/ai-os/corpus/lr-explanations/drafts/pilot-2026-09-27.md:19>)
+
+The reference work has value. All 334 library picks resolve to bank slots with matching keys and database explanations containing steps and five choice notes. Keep the strong picks as a searchable reference. [Model library](</C:/Users/Joshu/dev/ai-os/corpus/lr-explanations/models/index.md:9>)
+
+## 2. What is wrong or weak
+
+- **Correct the pilot before showing it.** For PT120-S4-Q9, the note says principle A cannot support collaborating with “a writer” because A requires the *same* writer. The same collaborator is still “a writer”; A helps, though C supports the broader claim better. For PT114-S4-Q12, the purported proof changes “cannot **help**” higher functions into “cannot **affect**” them. E is keyed, but that wording difference prevents the exact proof the draft claims. PT128-S3-Q16 also calls “professors must conduct research” a premise when the stimulus says staying informed requires research, and adds an unsupported “10%” statistic. [PT120 note](</C:/Users/Joshu/dev/ai-os/corpus/lr-explanations/drafts/pilot-2026-09-27.md:804>) · [PT114 proof](</C:/Users/Joshu/dev/ai-os/corpus/lr-explanations/drafts/pilot-2026-09-27.md:673>) · [PT128 breakdown](</C:/Users/Joshu/dev/ai-os/corpus/lr-explanations/drafts/pilot-2026-09-27.md:970>)
+
+- **Two golden picks teach faulty logic.** PT145-S2-Q23’s correct-answer note reverses predicates about mines that *never* violated a rule; the golden set flags only one of its slips. PT138-S2-Q25 calls the term after “only if” the sufficient condition when it is necessary. These should be quarantined or repaired before anyone imitates them. The golden set also has no Must Be False exemplar. [Golden pick #2](</C:/Users/Joshu/dev/ai-os/corpus/lr-explanations/golden-set.md:44>) · [pick #35](</C:/Users/Joshu/dev/ai-os/corpus/lr-explanations/golden-set.md:77>)
+
+- **The score is a shortlist aid, not a quality measure.** The checked-in [scorer](</C:/Users/Joshu/dev/ai-os/system/scripts/lr-explanations/score_corpus.py:47>) has a syntax error. Its scoring formula rewards length, labels, keywords, and note length; it does not check whether a prediction is right or a choice note matches the choice. The library’s claim that it scored 3,640 complete explanations is unreproducible from the supplied dump: 3,391 rows meet the script’s own steps-and-five-notes rule. The library itself says only 8 of 17 Must Be False picks and about 12 of 17 Evaluate picks are truly top tier. [Scoring formula](</C:/Users/Joshu/dev/ai-os/system/scripts/lr-explanations/score_corpus.py:74>) · [library account](</C:/Users/Joshu/dev/ai-os/corpus/lr-explanations/models/index.md:11>)
+
+- **The load path is unfinished and potentially destructive.** The pilot’s headings do not match the [existing parser](</C:/Users/Joshu/dev/ai-os/projects/lsatu-wt-glossary/scripts/knowledge/parse-lr-explanations.mjs:178>). The bulk [loader](</C:/Users/Joshu/dev/ai-os/projects/lsatu-wt-glossary/scripts/knowledge/ingest-lr-explanations.mjs:183>) updates staged question text and keys, then deletes and rebuilds their steps and notes. Reusing it on stale local source files could undo database fixes. A loader for only approved slots is needed.
+
+- **The remaining count is understated.** The saved gap list has 560 slots before the pilot. Seven additional slots have a breakdown but only three or four notes and are outside that list, making **at least 567 incomplete slots**. If all 20 pilot slots load successfully, at least 547 remain. The “551” in the fix list is arithmetic from an older count. These are snapshot counts; I did not query the live database or independently verify the reported 221 loads against a pre-load snapshot. [Partial-note list](</C:/Users/Joshu/dev/ai-os/corpus/lr-explanations/fixes/side-issues.md:47>) · [fix list](</C:/Users/Joshu/dev/ai-os/corpus/lr-explanations/fixes/index.md:16>)
+
+## 3. What is not worth continuing
+
+Do not fill a 10-to-20-per-type quota with explanations the library already calls weak. Do not build more guides or treat lexical scores as approval to publish. Leave the separate revamp of hundreds of existing explanations for later, as Joshua directed. Keep the good references and use them selectively.
+
+## 4. What I would do next, ranked
+
+1. Fix the three pilot issues above, then give Joshua the full 20-question pilot to read. **It is worth showing after that correction pass**, without restarting it.
+2. Mark faulty and filler models “reference only,” and choose a few clean, close examples for each new draft.
+3. Build a slot-scoped loader that preserves existing database content, checks each draft against the bank’s stem, choices, and key, and verifies what the student screen renders.
+4. After pilot approval, work through the remaining slots in batches. Check the correct-answer reasoning and the tempting wrong choices against the actual question; send Joshua low-confidence drafts and a few previews. Track partial-note repairs in the same coverage count.
+
+VERDICT: REVISE

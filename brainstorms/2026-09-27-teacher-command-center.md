@@ -1,28 +1,21 @@
 # Teacher command center: Brainstorm / Discovery Notes
 Date: 2026-09-27 · Goal: Define a distinct, functional teacher Home for Joshua that brings together student progress, requests, work, messages, schedule, and Stripe activity.
-Status: in progress
+Status: awaiting final shared-understanding confirmation before design or implementation
 Context sources: `brainstorms/2026-09-27-stripe-admin-home.md`; `brainstorms/2026-09-23-classroom-home-PLAN.md`; live Teacher Workspace audit from 2026-09-27; six user-supplied dashboard reference images.
 
 ## Summary / key decisions
-- User-confirmed in the request: the teacher/admin Home should be distinct from the student Home; it should show student performance and provide access to individual analytics, new signup or teacher requests, tasks students need to do, messages, and payments in one command center.
-- User-confirmed earlier: show all new Stripe activity and searchable history for roughly the prior three months. Package payments require a one-click teacher grant; unmatched payers go to review; only session/package payments can create platform access.
-- User-confirmed in Round 1: lead with items needing Joshua's attention, grouped into distinct queues. Also show upcoming sessions and payments. Recent test results should be brief on Home. Clicking any student should open a full view of their work, performance data, and questions attempted in homework.
-- User-confirmed in Round 1: the dashboard should include homework to do, be utility oriented, and remain visually easy to scan. Use the best ideas across the six references and other suitable patterns, rather than copying a single reference.
-- User-confirmed in Round 2: do not make tutoring requests, student homework review, missed homework, or generic session follow-ups into Home queues. Focus the queue on Joshua's tasks: unread student messages, paid packages awaiting a grant, student access awaiting a grant, and work Joshua needs to assign after a session.
-- User-confirmed in Round 2: calendar sessions should drive a task to assign work after teaching. The assignment varies by student; Joshua wants a workflow that helps determine what to assign from the session context or notes. This workflow is still to be designed.
-- User-confirmed in Round 2: upcoming sessions should link to a useful prep view. Student message alerts should clear on opening the message or notifications, but the precise read behavior needs one clarification.
-- User-confirmed in Round 2: access grants need a quick action for tier 1, 2, or 3, plus a path to adjust individual features. The Home queue should make students awaiting a grant obvious and connect to the existing Teacher Workspace access controls.
-- User-confirmed in Round 3: show every event from Joshua's Google Calendar in the teacher dashboard, including sessions and consultations, with upcoming events visible and clickable through to Calendar. After a completed tutoring session, show an assignment-or-notes task. The task stays until Joshua explicitly marks it handled; it must not disappear automatically when an assignment is saved.
-- User-confirmed in Round 3: importing transcripts into LSAT U is not necessary for this dashboard. Joshua says Friday Calendar events have notes/transcripts attached and asked for a read-only check. Calendar events are the source for upcoming schedule visibility.
-- User-confirmed in Round 4: use one Google Calendar, specifically Joshua's primary calendar; show its events. Do not create a backlog of task rows for historical sessions at launch. For an existing student's completed session, surface homework and notes to handle. For a consultation, surface a follow-up or check-in task, with exact wording/timing still unclear.
-- User-confirmed in Round 4: add a second, manually editable to-do area where Joshua can add items and cross them off. He also wants appropriate automatic tasks, such as an enrollment action after a package payment, and a student-oriented task/checklist view with progress or blocker tracking. The meaning of “course through the district checklist” is unclear and not treated as a confirmed feature name.
-- User-confirmed after Round 4: a quick manual to-do list must appear directly on the teacher Home/dashboard, with a link to a full, more expansive Tasks page in the platform.
-- User-confirmed in Round 5: Joshua accepted the recommendations for Q21-Q25. The Home should show separate “Needs your attention” and “My list” areas; consultations get one follow-up task after ending; task progress counts Joshua's tasks per student and blockers are manual; manually added tasks stay private to Joshua; a paid package creates an “Enroll and grant passes” item for Joshua instead of automatic grant. The unclear checklist phrase remains unresolved despite this acceptance.
-- New idea in Round 5, corrected by Joshua in Round 6: a prominent shortcut to generate a link for an individual student with a custom number of session credits such as five. This is **not a payment request**. The mechanism of redemption and credit grant is still open.
-- User-confirmed in Round 7: there should be no separate redemption step. When Joshua sends a student the link, the student should be able to use the sessions immediately and without friction. Code inspection found the existing private `/book/{slug}` pass link is the closest match. It becomes usable immediately on teacher Create and needs no student account. This supersedes the earlier recommendation to require student sign-in or use `/booking` as the shared link.
-- Tentative: a completed session could show its transcript or a link to it. Joshua expects the Google Calendar event may have an attached note/transcript. Code inspection on 2026-09-27 found a different current path: Gemini Notes email/Doc ingestion stores transcripts with sessions, while Calendar title/time help with matching. No automatic extraction from Calendar event notes was found. This is code evidence, not live verification.
-- Verified earlier on 2026-09-27: `/teacher/today` has a Payments panel with 37 charges from the last 90 days and a manual Stripe sync. `/classroom` still shows the student-style Home to the signed-in teacher. These observations do not prove a full payment reconciliation or immediate arrival of every event.
-- Visual references: image 2 offers the clearest light command-center information hierarchy; image 3 suggests a compact schedule and task layout; image 6 suggests an approachable left-rail and progress cards. Images 1, 4, and 5 contribute atmosphere or chart styling, but their ornamental data should not dictate the teacher's metrics. This is an interpretation, not Joshua's selected direction.
+- **Teacher Home:** Distinct from the student Home, led by clear action queues and a useful upcoming agenda. Joshua wants a visually easy, utility-first command center using the strongest ideas from all six reference images, without copying one.
+- **Needs your attention:** Unread student messages, paid packages awaiting teacher enrollment/pass grant, new accounts awaiting access-tier choice, and post-event teaching tasks. No tutoring-request queue, student homework review queue, missed-homework queue, or routine test-result task.
+- **Calendar:** Use only Joshua's primary Google Calendar; show every upcoming event and open its Google Calendar event. A clearly identified tutoring session produces “Assign work or add notes” after it ends; a consultation produces one follow-up task. Ambiguous events remain visible and can be manually labelled. No historical task flood at launch. Importing transcripts is outside this dashboard scope; Friday 2026-09-25 events were verified to have attached “Notes by Gemini” Docs in Google Calendar.
+- **Tasks:** Session/consultation tasks remain active until Joshua marks them handled. Handled tasks move to history and can be reopened. Separate Home area “My list” supports private manual tasks and check-off. A full Tasks page filters by student/type and shows per-student task progress counts and manually set blockers.
+- **Messages:** Opening the specific student message clears its unread alert; opening the notification list alone does not.
+- **Payments:** Show new Stripe activity and searchable roughly three-month history on teacher Home. A recognized paid package creates an “Enroll and grant passes” task; unmatched payer needs review. Only session/package payments can drive access actions, and a package pass grant remains Joshua's one-click decision.
+- **Student access:** A new non-admin account without a tier needs a grant decision. Quick controls are Tier 1 full, Tier 3 basic, and Customize for Tier 2. Individual feature switches remain available.
+- **Students and analytics:** Show only brief recent test results on Home. Opening any student should show detailed performance and all work, including the individual questions attempted in homework. Upcoming session rows should link to useful student preparation context.
+- **Quick booking-pass link:** This is not a payment request. Joshua selects a named student and session count; creating the private `/book/{slug}` link makes the sessions usable immediately without login. Adding sessions preserves the current balance (2 + 5 = 7). The link has status and revoke controls. Current code's pass replacement must be fixed before surfacing this top-up shortcut.
+- **Excluded:** The “course through the district checklist” phrase was accidental dictation. There is no student redemption step and no transcript import requirement for this dashboard.
+- **Observed state:** Live `/teacher/today` already had a searchable 90-day Payments panel with 37 charges on 2026-09-27; `/classroom` still showed the student-style Home to the signed-in teacher. This does not prove every Stripe event reconciles or the new dashboard behavior exists.
+- **Visual interpretation for proposal:** Image 2 provides a clear hierarchy, image 3 a compact schedule, and image 6 warm task cards. Charts should have real teaching meaning and not become decoration. Joshua has not approved a specific mockup yet.
 
 ## Code fact check (2026-09-27, read-only)
 - `/teacher/today` already renders signup, payment, calendar, and task areas. Its calendar query is roughly a 24-hour window and includes general Google events, so it does not yet provide a reliable upcoming student-session preview (`src/pages/teacher/shell/DeskTodaySurface.tsx`, `src/pages/teacher/desk/scheduleEvents.ts`).
@@ -33,8 +26,9 @@ Context sources: `brainstorms/2026-09-27-stripe-admin-home.md`; `brainstorms/202
 
 ## Live Calendar fact check (2026-09-27, read-only)
 - Google Calendar CLI on Joshua's primary calendar returned three confirmed tutoring sessions on Friday 2026-09-25. All three have one attached Google Doc titled “Notes by Gemini.” This confirms Joshua's observation that Friday event records have a notes attachment. The event descriptions themselves are booking metadata, not the transcript text.
-- A primary-calendar query for 2026-09-27 through 2026-10-05 returned the first upcoming tutoring session on 2026-09-28 at 15:20 Eastern and additional sessions later that week. The 2026-10-02 primary-calendar query returned no events at inspection time. The CLI also lists several secondary calendars; those have not been checked for upcoming events, so “all my calendar events” needs an explicit calendar-set decision or a cross-calendar aggregation.
+- A primary-calendar query for 2026-09-27 through 2026-10-05 returned the first upcoming tutoring session on 2026-09-28 at 15:20 Eastern and additional sessions later that week. The 2026-10-02 primary-calendar query returned no events at inspection time. The CLI also lists several secondary calendars; Joshua later chose the primary calendar only (Round 4).
 - These are live Calendar observations, not evidence that LSAT U currently displays or syncs all those events.
+- A search of the primary calendar's 2026-09-01 to 2026-09-27 events returned 12 confirmed events with “Consultation” in the title and Cal.com details in the description. This gives a reliable-looking current pattern for consultation classification, but other/manual event naming has not been exhaustively checked. Tutoring examples on 2026-09-25 used “<student> session” titles and “Booked via LSAT U” descriptions. All events should remain visible even if their task type cannot be classified.
 
 ## Calendar implementation finding (2026-09-27, code only)
 - `gcal-sync-pull` syncs one configured calendar (default `primary`) into `schedule_events`, from 14 days behind through 90 days ahead on a full pull, then incrementally. It stores title, description, time, status, Calendar link, and related fields, but drops attachments. Friday's Gemini Notes attachments therefore exist in Google Calendar but are not mirrored into LSAT U (`supabase/functions/gcal-sync-pull/index.ts`, `supabase/functions/_shared/googleCalendar.ts`).
@@ -48,6 +42,17 @@ Context sources: `brainstorms/2026-09-27-stripe-admin-home.md`; `brainstorms/202
 - Superseded recommendation (Round 6 correction): a “Create payment request” action using Stripe Checkout was proposed before Joshua clarified that his requested link is **not for payment**. Do not build that proposal for this shortcut. Stripe's Checkout docs were consulted for that discarded branch: https://docs.stripe.com/api/checkout/sessions/create .
 - The dormant `BookingPasses` screen already defaults to five credits, 70-minute sessions, and no expiry; it supports 1/5/10/custom credits up to 50 and accepts a name or email. Creating the pass calls `booking-pass-admin`, which immediately returns a private public `/book/{slug}` URL. Anyone holding the private URL can book without LSAT U sign-in. The screen's former route redirects to Students, so this creation control is not currently exposed there (`src/pages/teacher/BookingPasses.tsx`, `supabase/functions/booking-pass-admin/index.ts`, `src/pages/PublicBooking.tsx`).
 - Critical behavior: when the provided email matches an existing student, the admin endpoint's `grant_booking_access` path revokes the prior active pass and creates a new one. A “five more sessions” top-up shortcut would therefore erase remaining credits unless the flow is changed to preserve/top up the existing balance. This must be resolved before surfacing the shortcut. Code finding, not live tested (`supabase/functions/booking-pass-admin/index.ts`).
+
+## Proposed teacher Home composition (awaiting confirmation)
+- Teacher account's Home opens the teacher command center, not the student `/classroom` content. Student Home remains student-specific. Reuse the existing Teacher Today feeds where appropriate.
+- **Top:** date, concise greeting, student search, and quick actions for Add task, Create session link, and Assign work.
+- **Primary row:** Needs your attention with distinct counts/queues for unread messages, package grants, access-tier grants, and post-session or consultation tasks. Each row opens its actual action. Group by type; within a group, overdue/due work precedes recent items.
+- **Alongside:** upcoming agenda from the primary Google Calendar, initially the next seven days; all event types visible; event click opens Google Calendar. A recognized past teaching session or consultation creates its durable follow-up only from launch forward. Unknown event types can be manually labelled.
+- **Next row:** My list quick add/check-off, linked to full Tasks page. Payments panel shows recent account activity and opens the searchable roughly 90-day history. A paid package creates a separate grant task; a free session link never appears as payment.
+- **Student area:** compact recent test results and a searchable student list. Student detail needs real analytics, all work, and per-question homework evidence. Session rows link to student prep context when identity is known.
+- **Full Tasks page:** combined view with source/type/student filters, handled history and reopen, private manual tasks, per-student progress counts, and manual blocker status.
+- **Create session link:** named student, 1/5/10/custom count, adjustable duration and expiry, explicit additive top-up, then Copy private `/book/{slug}` URL. No payment or redemption step. Show status and revoke action. Fix current pass replacement before release.
+- Visual proposal: clear light grid from reference image 2; compact schedule rhythm from image 3; warm task-card treatment from image 6. Use dark emphasis sparingly, with no ornamental analytics.
 
 ## Q&A log
 
@@ -224,16 +229,48 @@ Context sources: `brainstorms/2026-09-27-stripe-admin-home.md`; `brainstorms/202
 - Superseded recommendation: provide a signed-in `/booking` link. Existing code actually provides a public private `/book/{slug}` link, which fits Joshua's no-friction requirement better.
 - Flags: confirm that this existing private booking-pass link is the intended shortcut; decide whether adding sessions to an existing student must preserve unused credits -> Joshua.
 
+### Round 8
+#### Q31 - Additional sessions
+- Asked: if a student has 2 sessions left and Joshua creates a 5-session link, should the student have 7.
+- Recommended: yes, preserve existing sessions.
+- Captured: “yes to both.” The grant is additive, not replacement. This supersedes the current `grant_booking_access` replacement behavior for this shortcut.
+
+#### Q32 - Private no-login link
+- Asked: whether an easy private link that can be forwarded is acceptable, with status and revocation controls.
+- Recommended: yes.
+- Captured: “yes to both.” Private `/book/{slug}` remains usable without login; Joshua needs visibility into its status and an option to revoke it.
+
+### Round 9
+#### Q33 - Unclassified Calendar events
+- Asked: leave uncertain events visible and let Joshua label them Session or Consultation; auto-create tasks only for clearly classified events.
+- Recommended: yes.
+- Captured: Joshua approved the recommendation.
+
+#### Q34 - Quick access grants
+- Asked: Tier 1 full, Tier 3 basic, and Customize for Tier 2.
+- Recommended: yes; Tier 2 opens feature picker.
+- Captured: approved.
+
+#### Q35 - Message alerts
+- Asked: specific message open clears its unread alert; opening notification list alone does not.
+- Recommended: yes.
+- Captured: approved.
+
+#### Q36 - Test results
+- Asked: brief Home result linking to full analytics, not a task to clear.
+- Recommended: yes.
+- Captured: approved.
+
+#### Q37 - Handled tasks
+- Asked: checked task leaves active queue but remains in Handled history with reopen.
+- Recommended: yes.
+- Captured: approved.
+
+#### Checklist phrase
+- Asked: meaning of “course through the district checklist.”
+- Captured: Joshua said it was accidental dictation. No such checklist is part of this dashboard brief.
+
 ## Open flags (pending input)
-- Queue priority rules and any additional teacher tasks -> Joshua.
-- Primary Calendar selected. Define how to distinguish tutoring sessions and consultations, plus exact consultation follow-up timing -> Joshua and Codex.
-- Confirm whether manual handled is reversible and whether an optional note is needed -> Joshua.
-- Clarify when exactly a message becomes read -> Joshua.
-- Decide whether academic performance creates Home queue items; recent results stay brief -> Joshua.
-- LSAT U Calendar sync/upcoming behavior checked in code; Joshua confirmed one primary calendar in Round 4.
-- Transcript ingestion is out of scope for this dashboard per Joshua's Round 3 correction.
-- Tier/feature access model and existing grant actions checked in code; live grant behavior untested.
-- Define quick-grant defaults and triggers after the access-model check -> Joshua.
-- Two Home task areas, full Tasks page, private manual tasks, student grouping/progress, and manual blockers confirmed by Joshua in Round 5. Details of task creation and layout remain for design.
-- Clarify the “course through the district checklist” phrase -> Joshua.
-- Existing booking-pass behavior checked in code. The public `/book/{slug}` link needs no account; ask Joshua to confirm this is the intended shortcut and whether additional sessions must top up rather than replace active credits.
+- Final shared-understanding confirmation of the consolidated teacher dashboard brief -> Joshua.
+- The current tier, pass, and Calendar findings are code-level. Live behavior of newly proposed flows is untested because no implementation has begun.
+- Queue ordering and visual composition can be settled in the mockup if Joshua approves the brief. Proposed defaults: due/urgent work before recent activity; compact light layout with warm accents and limited charting.

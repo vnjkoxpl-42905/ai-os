@@ -89,6 +89,15 @@ For each slot: steps exist and positions run 0..n; exactly 5 choice notes; the n
 2. About 30 answer choices differ in meaning between the bank and the database (list in `fixes/index.md`). Should they be settled against LSAT Lab's `/api/questions` (needs LSAT Lab logged in; method in `skills/codex/lsat-lab-sync/SKILL.md`, which is in the catalog but not activated for Codex)? Unanswered.
 3. Whatever Codex's review (section 4) recommends that changes the plan. Put those to him as decisions, don't act on them silently.
 
+## 9b. Codex review (2026-09-27) and what was done about it
+
+Full text: `corpus/lr-explanations/work/codex-review/round1.txt` (VERDICT: REVISE). Accepted and DONE 2026-09-27 by Claude (pilot has a "Fixed 2026-09-27 after Codex review" note; golden-set picks #2 and #35 are marked REFERENCE ONLY):
+- Pilot errors: PT120-S4-Q9 (note wrongly rules out A), PT114-S4-Q12 (proof swaps "cannot help" for "cannot affect"), PT128-S3-Q16 (invented premise and a "10%" figure).
+- Golden picks PT145-S2-Q23 (reversed predicates in the correct-answer note) and PT138-S2-Q25 (calls the "only if" term sufficient) marked reference-only.
+- Gap count is at least 567, not 560: also count the 7 slots with a breakdown but only 3 or 4 notes (`fixes/side-issues.md` section 4).
+- Every load must touch only approved slots and never delete. Do not use the app's `scripts/knowledge/ingest-lr-explanations.mjs`; it deletes and rebuilds.
+Rejected: "score_corpus.py has a syntax error" (it compiles). The scorer only builds shortlists; it is not a quality measure, and nothing publishes on its score.
+
 ## 10. Next actions, in order
 
 1. Read this file, then the decision log, `golden-set.md`, `models/index.md`, the pilot, and the review in `work/codex-review/`.

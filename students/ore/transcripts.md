@@ -3,7 +3,7 @@ title: Ore Transcripts
 type: person
 tags: [student, transcript, ore]
 created: 2026-09-24
-updated: 2026-09-24
+updated: 2026-09-27
 status: active
 subject: Ore Transcripts
 ---
@@ -14,6 +14,7 @@ subject: Ore Transcripts
 
 | Date | Full local export | Local package | Source/status |
 |---|---|---|---|
+| 2026-09-25 | [[transcript-downloads/2026-09-25-ore-notes-by-gemini]] | [[sessions/2026-09-25-counterexample-and-necessary-assumption/transcript|Transcript]] · [[sessions/2026-09-25-counterexample-and-necessary-assumption/summary|Summary]] · [[sessions/2026-09-25-counterexample-and-necessary-assumption/topic-map|Topic map]] · [[recaps/2026-09-25-recap|Recap draft]] | Native Gemini Doc, “Meeting started 2026/09/25 18:38 EDT”; Ore identified by speaker. No matching Calendar event or attachment. Distinct from 2026-09-22 booking. |
 | 2026-09-11 | [[transcript-downloads/2026-09-11-ore-notes-by-gemini]] | [[sessions/2026-09-11-argument-structure/transcript|Transcript]] · [[sessions/2026-09-11-argument-structure/summary|Summary]] · [[sessions/2026-09-11-argument-structure/topic-map|Topic map]] | Calendar-attached Gemini Doc; full local export and package |
 | 2026-09-01 | [[transcript-downloads/2026-09-01-ore-notes-by-gemini]] | [[sessions/2026-09-01-session/transcript|Transcript]] · [[sessions/2026-09-01-session/summary|Summary]] · [[sessions/2026-09-01-session/topic-map|Topic map]] | Calendar says cancelled; attached Doc contains a conversation; attendance unresolved |
 

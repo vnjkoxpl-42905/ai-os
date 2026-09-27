@@ -1065,3 +1065,10 @@ Inspected 7Sage's signed-in study menu, plan, lesson library, drill/section/test
 
 ## [2026-09-27] build | LR explanation model library (334 models)
 corpus/lr-explanations/models/: 10-20 top-tier existing explanations per LR type (17 types), picked by score_corpus.py + full reads by 9 parallel readers, each with the moves that make it a model and a per-type "what the best ones do". 192 defects in existing explanations logged in fixes/model-library-defects.md. PT148-S3-Q26 correct-answer text fixed in the bank (#154). Full-text choice comparison found ~30 bank/DB meaning differences, queued.
+
+## [2026-09-27] review | Codex review of LR explanation work
+Codex (gpt-6-sol, high, read-only) reviewed the golden set, model library, scorer and pilot: VERDICT REVISE (corpus/lr-explanations/work/codex-review/round1.txt). Fixed: three pilot drafts (PT114-S4-Q12, PT120-S4-Q9, PT128-S3-Q16); golden picks PT145-S2-Q23 and PT138-S2-Q25 marked reference only; gap count corrected to at least 567. Rejected: "scorer has a syntax error" (it compiles). Codex handoff written: handoffs/2026-09-27-lr-explanations-codex-handoff.md; working files moved from scratchpad to corpus/lr-explanations/work/; lsat-lab-sync activated for Codex in .agents/skills/.
+
+## [2026-09-27] ingest | Week of 2026-09-21 student transcripts
+
+Reconciled 18 primary Calendar bookings with native Gemini Docs. Eight full transcript sources were filed or confirmed locally (Celia 09-21, Amanda 09-22, Sofia and Sandra 09-23, Charles, Zeina, Sofia, and Ore 09-25). Four 09-25 sources received new full exports, packages, teaching-note and open-loop updates; eight draft recaps are indexed across the week. Eleven bookings had no matching Gemini Doc; attendance is not inferred. Ore's 09-25 Doc is unattached and distinct from her 09-22 booking. Full reconciliation and source caveats: `students/_audits/2026-09-27-weekly-transcript-intake.md`. Student-record link check passed (23 folders, 100 exports, 39 packages). No student-facing action was taken.
