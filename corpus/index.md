@@ -40,3 +40,10 @@ Fills through supervised ingests, one source at a time, logged in [[../wiki/log|
 - `Curriculum/LR/` — 2 homework pages exported live from Google Drive (pilot, 2026-07-17).
 
 **Known gaps:** topics scaffolded but still unfilled — Agree Disagree, Bootcamp, Match Family, Must Be False, Paradox, Quantifiers, Weaken, Reading Comprehension. Their source material is split between `raw/sources/lsat-curriculum/LSAT DUMP/` (many entries are stale `.gdoc` Drive pointers whose IDs no longer resolve) and Google Drive itself, where a past migration converted docs to PDFs/scans under new IDs. Recovering those needs a Drive-side pass, not a local copy.
+
+### `lr-explanations/` — models for writing LR explanations (2026-09-26)
+
+- [[lr-explanations/golden-set]] — the 50 LSAT Lab explanations new LSAT U explanations are modelled on, with the quality rubric.
+- [[lr-explanations/golden-set-observations]] — strong-vs-loose comparison, step structure per type, voice notes.
+- [[lr-explanations/golden-set-candidates]] — all 80 candidates and the type x feature coverage grid.
+

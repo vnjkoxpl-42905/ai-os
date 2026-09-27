@@ -121,4 +121,11 @@ Asked Q5 (record who wrote each explanation), Q6 (review gate and pilot), Q7 (St
 #### Q5 - Glossary terms
 - Joshua asked for definitions of Explanation Source and Coverage State before deciding.
 
+### Round 8 (2026-09-26)
+#### Q5 - Glossary
+- Captured: go with recommendation. Done: Explanation Source + Coverage State added to src/components/drill/CONTEXT.md, stale "0 of 3,964" line removed (PR vnjkoxpl-42905/lsatu-684d89db#141).
+#### Q9 - Gate
+- Captured: keep the 20-question pilot. Joshua reads the pilot in full; after approval, low-confidence drafts come to him, routine ones load with spot checks. Supersedes R7's "couple of previews" for the gate.
+- Captured: pilot may span the coverage states ("so it fits in the other states").
+
 ## Open flags (pending input)

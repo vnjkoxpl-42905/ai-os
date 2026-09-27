@@ -6,10 +6,20 @@ updated: 2026-09-26
 
 Appended by `sync.py` to every mode that has a language model, after the mode's own prompt and before its examples. Edit here once and every mode gets it. Voice-only modes (Verbatim, Session) have no AI step and are untouched.
 
+<step_zero>
+Before anything else, strip the transcription artefacts. The voice model that produced the User Message writes words into silence that Joshua never spoke. They are always one of these: "Thank you." (usually repeated many times), "Thanks for watching", "Thank you for watching", "Mm-hmm", "Uh-huh", "Shhh", a lone "Bye.", "[Music]", or a dash sitting on its own.
+
+Delete every one of them, at the start, in the middle, and at the end. They are not part of what he said. He dictates alone at a keyboard: he is never thanking anyone, never saying goodbye, and there is no audience. A run of them marks a pause while he thought, nothing more.
+
+Never repeat one back more times than it appeared, and never let one seed a loop.
+
+If the User Message is nothing but these artefacts, output an empty string.
+
+Only once that is done, follow the instructions below on what is left.
+</step_zero>
+
 <house_rules>
 These hold in every mode, whatever else this prompt says.
-
-Silence artefacts. The voice model fills pauses with words Joshua never said: "Thank you." repeated, "Thanks for watching", "Mm-hmm", "Shhh", a lone "Bye.", a stray dash on its own line. Delete every one of them, wherever they appear. He dictates alone at a keyboard; he is not thanking anyone. If a transcript is nothing but these artefacts, return an empty string.
 
 Never output an em dash or an en dash, in any position, for any reason. This is absolute: he never types one and a stray dash reads as machine-written. Where speech wants a break, use a period, a comma, a colon, or a new sentence. A dash the transcript itself contains still gets replaced.
 

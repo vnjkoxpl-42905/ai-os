@@ -1010,3 +1010,7 @@ PR vnjkoxpl-42905/lsatu-684d89db#139 (`ad99d31`): hero Smart Drill button 54px /
 
 ## [2026-09-26] ship | Auto-reveal switch removed from drill bar
 PR vnjkoxpl-42905/lsatu-684d89db#140 (`8517a2e`): the unlabeled clipboard switch in the Smart Drill / built-set bottom bar is gone; Submit always reveals the correct answer, and the Answer pill in the header stays. Reason: the switch duplicated the Answer pill and could silently hide feedback. Published with free deploy_project; live `OfficialSmartDrillBar-xyTfkSkz.js` no longer contains the switch.
+
+## [2026-09-26] build | LR explanation golden set (proposed)
+Read-only pull of the full LR explanation corpus (3,891 explanations, PT101-PT159) to the session scratchpad; surveyed ~125 in full. Wrote corpus/lr-explanations/golden-set.md (50 picks, rubric), -observations.md, -candidates.md. Glossary terms Explanation Source + Coverage State in LSAT U PR vnjkoxpl-42905/lsatu-684d89db#141. Pilot stays at 20 questions. Awaiting Joshua's skim of the set.
+

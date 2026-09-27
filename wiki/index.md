@@ -35,7 +35,8 @@ The brain runs three knowledge systems: **this wiki** (Joshua, the business, dec
 ## Operations
 
 - [[guided-drill-verification-log]] — living QA log of guided drills verified to launch on the platform (restored from the pre-rebuild archive 2026-07-16; skills cite it before re-verifying)
-- [[lr-missing-explanations]] + [[lr-missing-explanations-by-category]]: the 846 LR questions with no, partial, or never-loaded explanations (PT/S/Q list, then by type, reasoning, feature, difficulty); snapshot 2026-09-26
+- [[lr-missing-explanations]] + [[lr-missing-explanations-by-category]]: the 772 LR questions with no, partial, or never-loaded explanations (PT/S/Q list, then by type, reasoning, feature, difficulty); snapshot 2026-09-26
+- [[../corpus/lr-explanations/golden-set|LR golden set]]: the 50 model explanations (and rubric) the missing ones are written from; 2026-09-26
 - [[automation-backlog]] — how Joshua's email/ops time actually breaks down (from 944 authored emails) + the leverage-ranked build backlog; the 19% "apology tax" is the north-star target. Walked by `/level-up`
 
 ## References (OS method / meta)

@@ -67,14 +67,16 @@ def read_replacements(existing):
 
 
 def read_shared():
-    """The glossary and house rules every AI mode gets, from shared.md (2026-09-26).
-    Body only: everything after the frontmatter and the explanatory paragraph."""
+    """Two blocks from shared.md. `first` is prepended to every mode prompt: the silence-artefact
+    strip has to be the model's first instruction, not a footnote (measured 2026-09-26: appended
+    at the bottom it cleaned 5% of them). `rest` is the house rules and glossary, appended."""
     text = open(os.path.join(HERE, "shared.md"), encoding="utf-8").read()
-    return text.split("<house_rules>", 1)[1].rsplit("</glossary>", 1)[0].join(
-        ("<house_rules>", "</glossary>")).strip()
+    first = "<step_zero>" + text.split("<step_zero>", 1)[1].split("</step_zero>", 1)[0] + "</step_zero>"
+    rest = "<house_rules>" + text.split("<house_rules>", 1)[1].rsplit("</glossary>", 1)[0] + "</glossary>"
+    return first.strip(), rest.strip()
 
 def read_modes(existing_dir):
-    shared = read_shared()
+    shared_first, shared = read_shared()
     modes = []
     for path in sorted(glob.glob(os.path.join(HERE, "modes", "*.md"))):
         meta, body = frontmatter(open(path, encoding="utf-8").read())
@@ -84,8 +86,11 @@ def read_modes(existing_dir):
         prompt = parts[0].strip()
         if meta.get("type") == "voice":
             prompt = ""
-        elif shared not in prompt:
-            prompt = prompt.rstrip() + "\n\n" + shared
+        else:
+            if shared_first not in prompt:
+                prompt = shared_first + "\n\n" + prompt.lstrip()
+            if shared not in prompt:
+                prompt = prompt.rstrip() + "\n\n" + shared
         # The app rejects a mode whose promptExamples list was written from outside its UI
         # (verified 2026-09-11: the struct has a third field we could not name), so examples
         # are folded into the prompt text in the same shape the app itself sends to the model.
