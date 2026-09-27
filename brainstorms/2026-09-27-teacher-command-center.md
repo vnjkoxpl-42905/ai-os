@@ -12,6 +12,8 @@ Context sources: `brainstorms/2026-09-27-stripe-admin-home.md`; `brainstorms/202
 - User-confirmed in Round 2: calendar sessions should drive a task to assign work after teaching. The assignment varies by student; Joshua wants a workflow that helps determine what to assign from the session context or notes. This workflow is still to be designed.
 - User-confirmed in Round 2: upcoming sessions should link to a useful prep view. Student message alerts should clear on opening the message or notifications, but the precise read behavior needs one clarification.
 - User-confirmed in Round 2: access grants need a quick action for tier 1, 2, or 3, plus a path to adjust individual features. The Home queue should make students awaiting a grant obvious and connect to the existing Teacher Workspace access controls.
+- User-confirmed in Round 3: show every event from Joshua's Google Calendar in the teacher dashboard, including sessions and consultations, with upcoming events visible and clickable through to Calendar. After a completed tutoring session, show an assignment-or-notes task. The task stays until Joshua explicitly marks it handled; it must not disappear automatically when an assignment is saved.
+- User-confirmed in Round 3: importing transcripts into LSAT U is not necessary for this dashboard. Joshua says Friday Calendar events have notes/transcripts attached and asked for a read-only check. Calendar events are the source for upcoming schedule visibility.
 - Tentative: a completed session could show its transcript or a link to it. Joshua expects the Google Calendar event may have an attached note/transcript. Code inspection on 2026-09-27 found a different current path: Gemini Notes email/Doc ingestion stores transcripts with sessions, while Calendar title/time help with matching. No automatic extraction from Calendar event notes was found. This is code evidence, not live verification.
 - Verified earlier on 2026-09-27: `/teacher/today` has a Payments panel with 37 charges from the last 90 days and a manual Stripe sync. `/classroom` still shows the student-style Home to the signed-in teacher. These observations do not prove a full payment reconciliation or immediate arrival of every event.
 - Visual references: image 2 offers the clearest light command-center information hierarchy; image 3 suggests a compact schedule and task layout; image 6 suggests an approachable left-rail and progress cards. Images 1, 4, and 5 contribute atmosphere or chart styling, but their ornamental data should not dictate the teacher's metrics. This is an interpretation, not Joshua's selected direction.
@@ -96,12 +98,42 @@ Context sources: `brainstorms/2026-09-27-stripe-admin-home.md`; `brainstorms/202
 - Captured: Joshua wants a visible queue of students who need access, a quick grant for tier 1/2/3 or full access, and a more detailed feature-permission path, using or connecting to the existing Teacher Workspace controls.
 - Flags: inspect existing tier/feature model and grant paths -> Codex; define safe quick-grant defaults and trigger -> Joshua.
 
+### Round 3 (partial answers)
+#### Q11 - When to create an assignment task
+- Asked: task creation on tutoring-session end, transcript timing, and exclusion of consultations/cancellations.
+- Recommended: create on completed tutoring session; attach transcript later; exclude consultations/cancellations.
+- Captured: all Google Calendar events should be visible on Home, including sessions and consultations. After a completed session, a task should say Joshua needs to assign work or notes. Transcript ingestion is unnecessary.
+- Flags: whether consultation and non-teaching events create any handled task, and how the system distinguishes tutoring from other Calendar events -> Joshua plus code check.
+
+#### Q12 - Figuring out what to assign
+- Asked: open a student-context workspace and optionally draft suggestions for Joshua to approve.
+- Recommended: context and drafts; no automatic assignment.
+- Captured: Joshua narrowed the Home requirement to a reminder/task to assign work or notes after the session. He did not request automated assignment suggestions in this answer.
+- Flags: whether a separate assignment-planning workspace is in scope -> Joshua, can be deferred beyond the Home build.
+
+#### Q13 - Finishing that task
+- Asked: automatic completion on saved assignment, manual completion, or either.
+- Recommended: automatic on assignment save plus “No assignment needed.”
+- Captured: task should stay in the queue until Joshua presses a check mark or similar “handled” control. He may leave it there if unfinished. This supersedes the automatic-completion recommendation.
+- Flags: whether “handled” is reversible and whether a note is optional -> Joshua.
+
+#### Q15 - Transcript home
+- Asked: LSAT U transcript storage versus Calendar event note as source.
+- Recommended: LSAT U session record with Calendar link.
+- Captured: transcript ingestion is not needed for this teacher dashboard. Joshua believes Friday Calendar events already have attached notes/transcripts and requested inspection. Calendar event should open in Calendar.
+- Flags: inspect Friday Calendar events and avoid moving transcript data without a later request -> Codex.
+
+#### New question - Calendar scope
+- Captured: Joshua wants all Calendar events, future events visible on Home, click through to Calendar, and a synchronized schedule. He asked whether this is possible and for the best implementation route.
+- Flags: inspect current Calendar sync, event fields, Friday examples, and upcoming schedule -> Codex.
+
 ## Open flags (pending input)
 - Queue priority rules and any additional teacher tasks -> Joshua.
-- Define post-session assignment task creation and completion -> Joshua.
+- Define which Calendar events trigger an assignment-or-notes task -> Joshua.
+- Confirm whether manual handled is reversible and whether an optional note is needed -> Joshua.
 - Clarify when exactly a message becomes read -> Joshua.
 - Decide whether academic performance creates Home queue items; recent results stay brief -> Joshua.
-- Decide whether the post-session task should wait for a transcript or appear as soon as the Calendar event ends -> Joshua.
-- Decide transcript placement and whether Calendar event notes should be added as a source -> Joshua.
+- Verify Friday Calendar examples and current sync/upcoming-event behavior -> Codex.
+- Transcript ingestion is out of scope for this dashboard per Joshua's Round 3 correction.
 - Verify tier/feature access model and existing grant actions -> Codex.
 - Define quick-grant defaults and triggers after the access-model check -> Joshua.
