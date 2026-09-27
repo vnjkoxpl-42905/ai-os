@@ -8,9 +8,19 @@ Context sources: `brainstorms/2026-09-27-stripe-admin-home.md`; `brainstorms/202
 - User-confirmed earlier: show all new Stripe activity and searchable history for roughly the prior three months. Package payments require a one-click teacher grant; unmatched payers go to review; only session/package payments can create platform access.
 - User-confirmed in Round 1: lead with items needing Joshua's attention, grouped into distinct queues. Also show upcoming sessions and payments. Recent test results should be brief on Home. Clicking any student should open a full view of their work, performance data, and questions attempted in homework.
 - User-confirmed in Round 1: the dashboard should include homework to do, be utility oriented, and remain visually easy to scan. Use the best ideas across the six references and other suitable patterns, rather than copying a single reference.
-- Tentative: a completed session could show its transcript or a link to it. Joshua expects the Google Calendar event may have an attached note/transcript; the actual storage and linking workflow need verification.
+- User-confirmed in Round 2: do not make tutoring requests, student homework review, missed homework, or generic session follow-ups into Home queues. Focus the queue on Joshua's tasks: unread student messages, paid packages awaiting a grant, student access awaiting a grant, and work Joshua needs to assign after a session.
+- User-confirmed in Round 2: calendar sessions should drive a task to assign work after teaching. The assignment varies by student; Joshua wants a workflow that helps determine what to assign from the session context or notes. This workflow is still to be designed.
+- User-confirmed in Round 2: upcoming sessions should link to a useful prep view. Student message alerts should clear on opening the message or notifications, but the precise read behavior needs one clarification.
+- User-confirmed in Round 2: access grants need a quick action for tier 1, 2, or 3, plus a path to adjust individual features. The Home queue should make students awaiting a grant obvious and connect to the existing Teacher Workspace access controls.
+- Tentative: a completed session could show its transcript or a link to it. Joshua expects the Google Calendar event may have an attached note/transcript. Code inspection on 2026-09-27 found a different current path: Gemini Notes email/Doc ingestion stores transcripts with sessions, while Calendar title/time help with matching. No automatic extraction from Calendar event notes was found. This is code evidence, not live verification.
 - Verified earlier on 2026-09-27: `/teacher/today` has a Payments panel with 37 charges from the last 90 days and a manual Stripe sync. `/classroom` still shows the student-style Home to the signed-in teacher. These observations do not prove a full payment reconciliation or immediate arrival of every event.
 - Visual references: image 2 offers the clearest light command-center information hierarchy; image 3 suggests a compact schedule and task layout; image 6 suggests an approachable left-rail and progress cards. Images 1, 4, and 5 contribute atmosphere or chart styling, but their ornamental data should not dictate the teacher's metrics. This is an interpretation, not Joshua's selected direction.
+
+## Code fact check (2026-09-27, read-only)
+- `/teacher/today` already renders signup, payment, calendar, and task areas. Its calendar query is roughly a 24-hour window and includes general Google events, so it does not yet provide a reliable upcoming student-session preview (`src/pages/teacher/shell/DeskTodaySurface.tsx`, `src/pages/teacher/desk/scheduleEvents.ts`).
+- The active student dossier has overview, work, notes, messages, and schedule routes, but no dedicated analytics route. Its work view does not expose individual homework questions and answers even though assignment records can include question ids (`src/App.tsx`, `src/pages/teacher/students/DossierWork.tsx`, `src/components/hub/HubAssignments.tsx`).
+- Session transcripts are ingested through Gemini Notes email/Doc workflows with manual scan/match steps. The dossier Notes area lists stored sessions and transcripts. Calendar metadata supports matching; there is no code path found that automatically imports a transcript from an event note or creates a post-session assignment task (`src/pages/teacher/TeacherSessionIngest.tsx`, `supabase/functions/scan-session-notes/index.ts`, `src/pages/teacher/students/DossierNotes.tsx`).
+- These are code findings from `projects/lsatu-stripe`, not confirmation of live behavior. Claude's uncommitted `supabase/functions/mcp/index.ts` was not edited.
 
 ## Q&A log
 
@@ -51,10 +61,47 @@ Context sources: `brainstorms/2026-09-27-stripe-admin-home.md`; `brainstorms/202
 - Tentative: the Calendar note may be the source; this is not verified.
 - Flags: inspect existing session/transcript data path -> Codex; decide where it appears and whether any automation is desired -> Joshua.
 
+### Round 2
+#### Q6 - Attention queues
+- Asked: which events should wait for Joshua.
+- Recommended: separate queues by type and put time-sensitive items first.
+- Captured: unread messages; package payments requiring a grant; students requiring an access grant; Joshua's post-session work assignment. Joshua explicitly excluded tutoring requests, student homework needing review, missed homework, and generic session follow-ups.
+- Flags: how to determine when a grant is actually pending and whether any other teacher tasks join this queue -> Joshua after code fact check.
+
+#### Q7 - Homework
+- Asked: student work owed, work needing Joshua's review, and work Joshua needs to assign.
+- Recommended: include all three with distinct labels.
+- Captured: only homework Joshua needs to assign matters on this dashboard. Student homework completion or missed homework is not a problem to surface here.
+- Flags: post-session assignment task generation and completion rules -> Joshua.
+
+#### Q8 - Messages
+- Asked: whether opening a message clears the alert or whether it persists until reply/handling.
+- Recommended: separate unread from needs-reply.
+- Captured: opening a student's message should clear its alert. Joshua also said opening notifications might clear it; the exact trigger is ambiguous.
+- Flags: whether viewing the notification list alone marks each item read, versus opening the specific message -> Joshua.
+
+#### Q9 - Upcoming sessions
+- Asked: whether a session should open latest homework, recent result, prior note, agenda, or all behind one click.
+- Recommended: time, student, and short prep cue on Home; full context one click away.
+- Captured: yes, upcoming sessions should provide this preparation help. No narrower field selection was given.
+- Flags: inspect available source data -> Codex; choose concise Home fields after seeing a proposed design -> Joshua.
+
+#### Q10 - Student attention
+- Asked: flag meaningful changes versus show every student's latest activity.
+- Recommended: flag only changes needing teaching action; full activity on student view.
+- Captured: Joshua emphasized an organized place for his tasks. He did not choose a student-performance alert rule.
+- Flags: whether any academic-performance item belongs in the Home action queue -> Joshua.
+
+#### New topic raised - Tier and feature access
+- Captured: Joshua wants a visible queue of students who need access, a quick grant for tier 1/2/3 or full access, and a more detailed feature-permission path, using or connecting to the existing Teacher Workspace controls.
+- Flags: inspect existing tier/feature model and grant paths -> Codex; define safe quick-grant defaults and trigger -> Joshua.
+
 ## Open flags (pending input)
-- Queue categories and priority rules -> Joshua.
-- Distinguish student outstanding homework from Joshua's own follow-ups -> Joshua.
-- Decide which notifications persist and what action resolves each -> Joshua.
-- Decide which student performance signals deserve a Home alert; recent test results stay brief -> Joshua.
-- Verify Calendar/session/transcript data path -> Codex.
-- Decide transcript placement and automation after the data-path check -> Joshua.
+- Queue priority rules and any additional teacher tasks -> Joshua.
+- Define post-session assignment task creation and completion -> Joshua.
+- Clarify when exactly a message becomes read -> Joshua.
+- Decide whether academic performance creates Home queue items; recent results stay brief -> Joshua.
+- Decide whether the post-session task should wait for a transcript or appear as soon as the Calendar event ends -> Joshua.
+- Decide transcript placement and whether Calendar event notes should be added as a source -> Joshua.
+- Verify tier/feature access model and existing grant actions -> Codex.
+- Define quick-grant defaults and triggers after the access-model check -> Joshua.
