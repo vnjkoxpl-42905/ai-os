@@ -11,6 +11,8 @@ The model set for writing the 772 missing LR explanations (plan: [[../../brainst
 
 - Full rubric, strong-vs-loose comparison, step structure per type, voice notes: [[golden-set-observations]]
 - All 80 candidates, scores and the family x feature coverage grid: [[golden-set-candidates]]
+- Joshua's reference sheets (added 2026-09-27): `C:\Users\Joshu\OneDrive\Desktop\2024-Updated-LR-cram-sheet.pdf` and `C:\Users\Joshu\Downloads\LR GUIDELINE QUESTION TYPE AND REASONING TYPE.pdf` (famous flaw names, per-type reading and prephrase goals, trap names).
+- Nearest-neighbor scan: `system/scripts/lr-explanations/neighbors.py` ranks every complete DB explanation by type, shared features, stimulus shape and quality for a given question; `show.py SLOT ...` prints one in full. Each draft names the neighbors it was modelled on.
 
 ## What separates a top-tier explanation from a loose one
 

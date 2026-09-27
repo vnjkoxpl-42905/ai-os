@@ -1048,3 +1048,9 @@ The bank's PT128-S2-Q26 was modern PT124-S2-Q26 (old PrepTest 41, S3, Q26) with 
 
 ## [2026-09-27] load | 221 LSAT Lab breakdowns loaded
 All 39 SQL files ran (batch-27 retried after a 499). +760 steps, +60 choice notes, +8 questions, +12 explanations; every one of the 221 slots has steps, 0 glued emphasis markers. Codex's redundant repair branch/worktree deleted (patch kept in raw/sources/lsatu-lr-snapshots/). Writer-mark column dropped by Joshua.
+
+## [2026-09-27] draft | LR explanation pilot (20)
+20 explanations written from the golden set, no intermediate guides (Joshua: "don't make this complicated"). corpus/lr-explanations/drafts/pilot-2026-09-27.md. 13 families, difficulty 1-5, all four gap kinds. Not in the DB; waiting for Joshua's read. 560 LR questions still lack a complete explanation (348 nothing, 179 not loaded, 17 notes-only, 16 steps-only).
+
+## [2026-09-27] draft | Pilot revised from nearest DB neighbors
+Pilot rewritten after a neighbor scan (system/scripts/lr-explanations/neighbors.py: type + shared features + stimulus shape + quality) and Joshua's cram sheet + LR guideline PDFs. Each draft names the explanations it was modelled on; trap tags use the DB vocabulary per type. Still not in the DB; waiting for Joshua's read.
