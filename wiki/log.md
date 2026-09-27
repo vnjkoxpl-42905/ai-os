@@ -7,6 +7,12 @@ aliases: []
 
 # Log
 
+## [2026-09-27] build | Practice Exams account persistence prepared
+
+- Committed LSAT U Practice Exams navigation, unfinished and completed attempts, account-backed full-exam state, section resume, device handoff, and pause-on-exit timing on branch `codex/practice-exams-account-sync` at `9face76`.
+- Build, typecheck, focused tests, and responsive preview checks passed. The branch is local and is not live; Lovable Cloud migration `20260927010000_practice_test_account_sync.sql` must be applied before deploying the frontend.
+- Existing browser copies with a verified account owner can import automatically. Older ownerless browser copies remain preserved locally because assigning them to the currently signed-in user could transfer another person's work.
+
 ## [2026-09-26] ship | PT118 scoring and question identities repaired in code
 
 - Matched PT118 against the official test PDF. Section I Q5 and Section III Q22 are removed positions; Section III is unscored. Corrected Section I numbering, Section II answer keys, and the scored test structure.

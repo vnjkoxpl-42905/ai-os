@@ -80,3 +80,9 @@ Context sources: `context/work.md`; `decisions/log.md`; `brainstorms/2026-07-19-
 - Admin Home priorities beyond payment activity -> Joshua.
 - Whether to supersede the 2026-07-20 booking-pass decision -> Joshua.
 - Meaning of “maximum amount of permissions” for the platform connection -> Joshua; recommend the smallest server-side permissions that still cover every required Stripe read and payment action.
+
+## Resolved 2026-09-27
+- Package passes: teacher confirms with one click; no auto-grant. The 2026-07-20 decision stands.
+- Unmatched payer: review queue with a link-to-student picker; no grant until linked.
+- Access: session/package payments only; other charges logged only.
+Logged in `decisions/log.md`.

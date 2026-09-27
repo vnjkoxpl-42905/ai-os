@@ -137,3 +137,6 @@ The "Request for Accommodations" email (Joshua's 2026-09-19 Celia wording, plus 
 
 ## [2026-09-23] decision | LSAT U operations run through system/scripts/lsatu only
 All platform ops (assign, message, read messages, student data) go through the lsatu script; no Lovable, no credits. Hosted MCP connector left as-is, unused.
+
+## 2026-09-27: Stripe payments inform, the teacher grants
+Joshua chose all three entitlement rules for the Stripe ledger. (1) A payment recognized as a session package never grants booking passes on its own. It appears on the teacher Home with a one-click "Grant N passes" confirmation, so the 2026-07-20 rule stands: passes are the record of sessions owed. (2) A payer who cannot be matched to a student confidently goes into a review queue on the teacher Home with a link-to-student picker. Nothing is granted until Joshua links it. (3) Only booking Checkout and session/package products turn on platform access automatically. All other charges are logged and nothing more. This narrows the current webhook, which tries to grant access for any paid Checkout.
