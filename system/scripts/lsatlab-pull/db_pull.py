@@ -1,5 +1,5 @@
 # Read-only REST pull of the LR question + explanation tables. Run from the vault root.
-# Usage: python system/scripts/lsatlab-pull/db_pull.py [out_dir]  (default: data/db next to this file)
+# Usage: python system/scripts/lsatlab-pull/db_pull.py [out_dir] [table ...]  (default: data/db next to this file; the four LR explanation tables)
 import sys
 import json, re, urllib.request, os
 env={}
@@ -14,7 +14,7 @@ def req(p,body=None,tok=None):
 tok=req('/auth/v1/token?grant_type=password',{'email':env['LSATPREP_ADMIN_EMAIL'],'password':env['LSATPREP_ADMIN_PASSWORD']})['access_token']
 out=sys.argv[1] if len(sys.argv)>1 else os.path.join(os.path.dirname(os.path.abspath(__file__)),'data','db')
 os.makedirs(out,exist_ok=True)
-for t in ['lr_questions','lr_explanations','lr_explanation_steps','lr_explanation_choice_notes']:
+for t in (sys.argv[2:] or ['lr_questions','lr_explanations','lr_explanation_steps','lr_explanation_choice_notes']):
   rows=[];o=0
   while True:
     b=req(f'/rest/v1/{t}?select=*&limit=1000&offset={o}',tok=tok);rows+=b;o+=1000
