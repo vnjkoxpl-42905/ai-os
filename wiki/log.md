@@ -1007,3 +1007,6 @@ Parser missed the italic-label layout PT154 uses, so its 77 questions loaded not
 
 ## [2026-09-26] ship | Smart Drill button bigger, visible pulse
 PR vnjkoxpl-42905/lsatu-684d89db#139 (`ad99d31`): hero Smart Drill button 54px / 16px text, pulse now a swell plus fading ring every 2s (old 16% outline read as static). Published with free deploy_project; live CSS `index-CNN4ruNM.css` carries it. Deploy also shipped `37fce4a` (PT118 repair, another session). Standing rule saved: free deploy_project is pre-authorized.
+
+## [2026-09-26] ship | Auto-reveal switch removed from drill bar
+PR vnjkoxpl-42905/lsatu-684d89db#140 (`8517a2e`): the unlabeled clipboard switch in the Smart Drill / built-set bottom bar is gone; Submit always reveals the correct answer, and the Answer pill in the header stays. Reason: the switch duplicated the Answer pill and could silently hide feedback. Published with free deploy_project; live `OfficialSmartDrillBar-xyTfkSkz.js` no longer contains the switch.
