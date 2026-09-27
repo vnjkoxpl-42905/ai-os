@@ -2,12 +2,12 @@
 type: teaching-notes
 subject: Golden set of LR Standard explanations
 updated: 2026-09-26
-status: proposed, awaiting Joshua's skim
+status: in use; PT106-S2-Q26 added at Joshua's request 2026-09-26, no swaps requested
 ---
 
-# LR golden set: the 50 explanations new ones are modelled on
+# LR golden set: the 51 explanations new ones are modelled on
 
-The model set for writing the 772 missing LR explanations (plan: [[../../brainstorms/2026-09-26-lr-explanation-coverage]]). Every pick is an existing LSAT Lab explanation in the LSAT U database, read in full and scored against a rubric built by comparing strong and loose explanations. They are references, not edits: nothing here changes an existing explanation.
+The model set for writing the 772 missing LR explanations (plan: [[../../brainstorms/2026-09-26-lr-explanation-coverage]]). Every pick is an existing LSAT Lab explanation in the LSAT U database (the database, not the local markdown, is the source of truth), read in full and scored against a rubric built by comparing strong and loose explanations. They are references, not edits: nothing here changes an existing explanation.
 
 - Full rubric, strong-vs-loose comparison, step structure per type, voice notes: [[golden-set-observations]]
 - All 80 candidates, scores and the family x feature coverage grid: [[golden-set-candidates]]
@@ -26,13 +26,15 @@ Complete (full breakdown plus all five Choice Notes) is a gate, not a score.
 
 ## Do not copy from the corpus
 
-- Asides that disparage the test or its writers (PT102-S2-Q9's note on D: "They're too politically correct").
+Joshua, 2026-09-26: a personal jab at the test is fine; it makes the voice personal.
+
+
 - The PT157/158 explicit-Standard register: heavy em-dashes and formulaic phrasing. None of those made the set.
 - Typos and slips carried in the source (flagged in the table).
 
 ## The set
 
-Difficulty 1-5. Mix: 27 easy, 13 medium, 10 hard, which tracks the gap list (480 of the 772 are difficulty 1-2).
+Difficulty 1-5. Mix: 27 easy, 13 medium, 11 hard, which tracks the gap list (480 of the 772 are difficulty 1-2).
 
 | # | Question | Family | Diff | Features | Why it is here | Weakness |
 |---|---|---|---|---|---|---|
@@ -86,10 +88,11 @@ Difficulty 1-5. Mix: 27 easy, 13 medium, 10 hard, which tracks the gap list (480
 | 48 | PT146-S2-Q3 | Sufficient Assumption | 1 | Missing Link / Idea; New Concept in Conclusion | Missing-link subtraction for a new concept in the conclusion, with the contrapositive shown as an equally correct form and "unless = if not" taught in the correct note. | Formal house voice; no analogies. |
 | 49 | PT116-S3-Q16 | Sufficient Assumption | 2 | Missing Link / Idea; Quantifiers | Quantified sufficient assumption: states what must be proven (at least one thing in both groups) and why a "some" statement combined with the "all" premise proves it. | C through E share a pasted opening. |
 | 50 | PT141-S4-Q6 | Evaluate | 1 | Argue the Anti-Conclusion; Plans / Recommendations | Easy model: generate objections to the plan, then test each question by imagining answers to it ("whether we say two or two hundred, no effect"). | None significant. |
+| 51 | PT106-S2-Q26 | Paradox | 5 | EXCEPT | Paradox EXCEPT: explains that three of the four working answers usually resolve the paradox one way and one works another, lists both routes (fewer bed fires but more deaths per fire; more fires of other kinds), then shows B only restates why bed fires are dangerous. Added 2026-09-26 to fill the hard and EXCEPT Paradox gaps. | Goal step is one long paragraph. |
 
 ## Where the set is thin
 
 - **Refute a Conditional**: 14 gap questions, no strong exemplar anywhere in the corpus. The guide for it will lean on the conditional picks (#2, #9, #35, #44) and LSAT Hacks for context.
-- **Paradox** has no hard pick and no EXCEPT pick, though 10 gap questions are Paradox EXCEPT.
+- **Paradox**: hard and EXCEPT now covered by #51 (PT106-S2-Q26).
 - **Method on Plans / Recommendations** (15 gap questions) has no pick.
 - Most other empty cells are topic features (Science, Medical) that do not change how an explanation is built, so they do not need their own model.

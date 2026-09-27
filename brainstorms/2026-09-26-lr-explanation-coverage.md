@@ -128,4 +128,12 @@ Asked Q5 (record who wrote each explanation), Q6 (review gate and pilot), Q7 (St
 - Captured: keep the 20-question pilot. Joshua reads the pilot in full; after approval, low-confidence drafts come to him, routine ones load with spot checks. Supersedes R7's "couple of previews" for the gate.
 - Captured: pilot may span the coverage states ("so it fits in the other states").
 
+### Round 9 (2026-09-26)
+- Captured: add PT106-S2-Q26 to the golden set (now 51). No swaps requested.
+- Captured: build a revamp list of weak existing explanations. PT157/158 explicit-Standard are in it. "We can add those too once we'll be able to revamp it." Tag each by type. This opens a later revamp track; it does not change the rule for the current 772 (existing explanations untouched for now).
+- Captured: personal jabs at the test are fine ("makes it more personal"). Removed from the do-not-copy list.
+- Captured: keep running markdown lists: side fixes, Choice Note issues. Actionable items also go on the task list.
+- Captured: the database is the priority source; ignore local Explanations/*.md.
+- Unclear: "we do not want to have any type of status or something" -> asked.
+
 ## Open flags (pending input)
