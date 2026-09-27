@@ -13,8 +13,13 @@ The database is the source of truth for explanations, not the local `Explanation
 ## Open
 
 ### Explanation content
-- [ ] **LSAT Lab has a written Argument Breakdown for 247 questions LSAT U lacks** (full LSAT Lab audit 2026-09-27, [[lsatlab-audit-2026-09-27]]): all 224 Notes-only questions (202 with full breakdown + all five choice explanations, 22 partial), plus 14 Unexplained/Unloaded with full and 9 with partial. These can be loaded from LSAT Lab instead of written, which shrinks the 772 writing list to about 525. Needs Joshua's go.
-- [ ] **Full LSAT Lab audit flags (2026-09-27):** 4 answer-key disagreements, 4 stimulus, 15 stem, 22 choice-text flags, 2 bank rows with no LSAT Lab page. Being verified one by one; results replace this line.
+- [ ] **LSAT Lab has a written Argument Breakdown for 247 questions LSAT U lacks** (221 written, 26 video-only). Joshua approved the load 2026-09-27; loading from the full app text (the public pages redact predictions). Status replaces this line when done. (full LSAT Lab audit 2026-09-27, [[lsatlab-audit-2026-09-27]]): all 224 Notes-only questions (202 with full breakdown + all five choice explanations, 22 partial), plus 14 Unexplained/Unloaded with full and 9 with partial. These can be loaded from LSAT Lab instead of written, which shrinks the 772 writing list to about 525. Needs Joshua's go.
+- [x] ~~**Full LSAT Lab audit flags (2026-09-27).**~~ 50 flags verified: 19 real, 29 false alarms, 2 unclear. Fixed in PR vnjkoxpl-42905/lsatu-684d89db#151 (11 stems, 3 choice sets, keys PT128-S2-Q5→C, PT139-S4-Q22→E, PT149-S4-Q14→B, Joshua approved) and #150 (PT101-S2-Q8 truncated stimulus). Verdicts: scratchpad flags/verdicts.json (not kept).
+- [ ] **PT128-S2-Q26 is a copy of PT124-S2-Q26 with the wrong key (E, real B); LSAT Lab's PT128 S2 has 25 questions.** Recommend `status: removed`; check student attempts first. Needs Joshua.
+- [ ] **Two unclear choice spellings, no PDF:** PT102-S4-Q2 C ("ensure" vs LSAT Lab "insure"), PT104-S4-Q8 A ("Packaging" vs "Packing"). Wrong answers, low stakes.
+- [ ] **Database carries LSAT Lab typos in 4 stimuli:** PT108-S2-Q18 "grass:", PT141-S2-Q5 "Lemaitre", PT143-S1-Q13 "Bums", PT143-S4-Q1 "Trinidadians". Bank is right; DB copy is not shown to students but feeds the guard fixture.
+- [ ] **Answer-key test fails on PT118's two removed questions** because it doesn't skip `status: removed`. Make it skip them.
+- [ ] **~364 bank rows have hard PDF line breaks inside text** (rough count). Separate cleanup.
 - [x] ~~**Five explanations belong to a different question** (students see reasoning for the wrong question). PT108-S3-Q6 (whole explanation, even the stimulus), PT137-S3-Q25, PT143-S4-Q18, PT135-S4-Q25, PT133-S3-Q4. Highest priority. Detail: [[side-issues]] section 1.~~ 2026-09-27: PT108-S3-Q6 was the bank's fault (fixed by #146); the other four had wrong speaker names, corrected in the DB. Snapshot: raw/sources/lsatu-lr-snapshots/2026-09-27-wrong-speaker-rows-pre-fix.json.
 - [x] ~~**PT158-S4-Q22 breakdown steers students to D; the key is E.** Rewrite the breakdown. Detail: [[side-issues]] section 2.~~ 2026-09-27: Conclusion, Evaluate and Goal rewritten in the DB. Snapshot: raw/sources/lsatu-lr-snapshots/2026-09-27-pt147-pt158-rows-pre-fix.json.
 - [ ] **Revamp weak existing explanations: 523 found** (192 Revamp, 100 Weak, 231 Watch), plus ~136 unread rows that probably rate Weak. Joshua does this later, after the 772. Detail: [[revamp-list]]; scores in `revamp-inventory.csv`.
@@ -41,6 +46,7 @@ The database is the source of truth for explanations, not the local `Explanation
 - [ ] **`targeted-questions/` layout is unreadable by the parser.** PT134-S1-Q16 and PT158-S4-Q24, in LSAT U's voice. Convert and load, or drop.
 
 ### Repo housekeeping
+- [ ] **2026-09-27 Lovable rollback (Codex, accidental "revert and resend", b998596) undid #146-#148.** Restored in #149, guard test + never-roll-back rule in #150. Codex's unpushed branch `codex/restore-question-bank-after-lovable-revert` (f48fd18) and worktree `projects/lsatu-wt-repair-lovable-revert` are now redundant: delete after Joshua confirms. Its worktree holds an uncommitted `supabase/functions/mcp/index.ts` with a local absolute path: never commit it. Codex's separate Practice Exams commit 9face76 is unpushed and unrelated.
 - [ ] **Merge PR vnjkoxpl-42905/lsatu-684d89db#138** (PT154 parser fix), then remove the `projects/lsatu-wt-parser` worktree.
 - [ ] **Merge PR vnjkoxpl-42905/lsatu-684d89db#141** (glossary), then remove the `projects/lsatu-wt-glossary` worktree.
 - [ ] **Merge PR vnjkoxpl-42905/lsatu-684d89db#142** (removes the thin local `PT140-explanations.md`).

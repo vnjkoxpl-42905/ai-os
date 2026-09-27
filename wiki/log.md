@@ -1039,3 +1039,6 @@ notifications + stripe_payments added to supabase_realtime (SQL). PR #145 merged
 ## [2026-09-27] fix | Question bank misfiled slots + explanation corrections
 The app shows and grades LR questions from the bank (public/data) but shows explanations from the DB. 155 bank slots held a different question than the DB (whole runs copied from the wrong section). Repaired from the official PDFs Joshua supplied: PR vnjkoxpl-42905/lsatu-684d89db#146, 0 mismatches after. DB edits (snapshots in raw/sources/lsatu-lr-snapshots/): 4 wrong-speaker explanations, PT158-S4-Q22 breakdown, PT147-S4-Q3/Q4 placeholder notes. 28 student attempts on the broken slots left untouched.
 
+## [2026-09-27] fix | Lovable rollback recovered; full LSAT Lab audit applied
+Codex's accidental Lovable "revert and resend" (b998596, 07:15 UTC) undid #146-#148. Restored in vnjkoxpl-42905/lsatu-684d89db#149; #150 adds a slot-fingerprint guard test (bank vs DB question per slot) and a never-roll-back rule in LSAT U CLAUDE.md + AGENTS.md; #151 applies 14 text fixes and 3 approved answer keys from the full LSAT Lab audit. Found LSAT Lab's full question API (/api/questions/<id>: full text, all five choices, key, full explanation), recorded in system/scripts/lsatlab-pull/README.md. Loading 221 LSAT Lab breakdowns into the DB (snapshot raw/sources/lsatu-lr-snapshots/2026-09-27-pre-lsatlab-load/).
+
