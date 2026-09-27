@@ -69,6 +69,8 @@ def main():
         bad = [L for L, c in (b.get('answerChoices') or {}).items() if nz(c)[:12] and nz(c)[:12] not in t]
         if bad: F['choice_not_on_lsatlab'].append({'slot': slot, 'choices': bad})
         if d and opening(d['stimulus']) not in t: F['db_stimulus_not_on_lsatlab'].append(slot)
+        TEMPLATE = {'Your task', 'Common trap', 'Winning move'}  # generic page furniture, not an explanation
+        r['steps'] = [x for x in r.get('steps', []) if x not in TEMPLATE]
         written = bool(r.get('steps')) and sum(1 for x in r['answers'].values() if x.get('explanation')) >= 5
         partial = bool(r.get('steps')) or any(x.get('explanation') for x in r['answers'].values())
         cov = coverage(k)
