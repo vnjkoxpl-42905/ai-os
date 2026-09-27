@@ -1029,3 +1029,6 @@ stripe_payments table + admin RPCs applied to LSAT U prod via SQL; 37 charges (9
 
 ## [2026-09-27] ops | Stripe payment links pruned
 99 payment links with no paid use since 2026-01-30 deactivated via API (Joshua authorized). Kept: the 11 used links, the $60 single-session link in CONSULTATION-FOLLOW-UP-TEMPLATE, and the $90 two-session link in Meghan's file. 13 remain active. IDs in research/2026-09-27-stripe-integration/deactivated-payment-links-2026-09-27.json; reactivate with active=true.
+
+## [2026-09-27] ops | Stripe package links registered
+8 used hour-package links added to booking_offers (1 credit/hour, student_visible=false, new column; resolver filters it). 10 Stripe packages now recognized; 19 ledger rows labeled. Students still see package-5, package-10, single-session-native. PR vnjkoxpl-42905/lsatu-684d89db#144 mirrors the SQL.
