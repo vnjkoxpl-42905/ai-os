@@ -13,7 +13,7 @@ The database is the source of truth for explanations, not the local `Explanation
 ## Open
 
 ### Explanation content
-- [ ] **LSAT Lab has a written Argument Breakdown for 247 questions LSAT U lacks** (221 written, 26 video-only). Joshua approved the load 2026-09-27; loading from the full app text (the public pages redact predictions). Status replaces this line when done. (full LSAT Lab audit 2026-09-27, [[lsatlab-audit-2026-09-27]]): all 224 Notes-only questions (202 with full breakdown + all five choice explanations, 22 partial), plus 14 Unexplained/Unloaded with full and 9 with partial. These can be loaded from LSAT Lab instead of written, which shrinks the 772 writing list to about 525. Needs Joshua's go.
+- [x] ~~**LSAT Lab has a written Argument Breakdown for 247 questions LSAT U lacks.**~~ 2026-09-27: 221 loaded from the full app text (26 are video-only, skipped). Verified: all 221 have steps, 0 glued emphasis markers. +760 steps, +60 choice notes, +8 questions, +12 explanations. About 551 of the 772 remain to write.
 - [x] ~~**Full LSAT Lab audit flags (2026-09-27).**~~ 50 flags verified: 19 real, 29 false alarms, 2 unclear. Fixed in PR vnjkoxpl-42905/lsatu-684d89db#151 (11 stems, 3 choice sets, keys PT128-S2-Q5→C, PT139-S4-Q22→E, PT149-S4-Q14→B, Joshua approved) and #150 (PT101-S2-Q8 truncated stimulus). Verdicts: scratchpad flags/verdicts.json (not kept).
 - [x] ~~**PT128-S2-Q26 is a copy of PT124-S2-Q26 with the wrong key (E, real B); LSAT Lab's PT128 S2 has 25 questions.**~~ 2026-09-27: it is modern PT124-S2-Q26 (old PrepTest 41, S3, Q26), confirmed on 7Sage; 7Sage, LSAT Lab and the DB all end PT128 S2 at Q25. Zero attempts, runs or journal rows. Deleted from the bank (not `status: removed`, which means an LSAC-removed position) in PR vnjkoxpl-42905/lsatu-684d89db#153. Origin unknown: already present in the recovered 2026-09-05 snapshot, so git has no earlier history.
 - [ ] **Two unclear choice spellings, no PDF:** PT102-S4-Q2 C ("ensure" vs LSAT Lab "insure"), PT104-S4-Q8 A ("Packaging" vs "Packing"). Wrong answers, low stakes.
@@ -41,11 +41,11 @@ The database is the source of truth for explanations, not the local `Explanation
 
 ### App and loading
 - [ ] **The app has two explanation paths.** `useLrExplanation` reads the database; `questionLoader.mergeExplanationSidecars` also fetches `public/data/explanations/PT<n>-explanations.json`, built from the local markdown for PT139 to PT159. Find out which one students see, and retire the sidecars if the database has replaced them. Until then, the PT140 sidecar JSON still carries the thin text.
-- [ ] **Where the LSAT U writer mark (Explanation Source) lives.** Probably a column on `lr_explanations`; a migration, needs Joshua's OK. Blocks loading any LSAT U explanation.
+- [x] ~~**Where the LSAT U writer mark (Explanation Source) lives.**~~ 2026-09-27: Joshua dropped it; not needed.
 - [ ] **`targeted-questions/` layout is unreadable by the parser.** PT134-S1-Q16 and PT158-S4-Q24, in LSAT U's voice. Convert and load, or drop.
 
 ### Repo housekeeping
-- [ ] **2026-09-27 Lovable rollback (Codex, accidental "revert and resend", b998596) undid #146-#148.** Restored in #149, guard test + never-roll-back rule in #150. Codex's unpushed branch `codex/restore-question-bank-after-lovable-revert` (f48fd18) and worktree `projects/lsatu-wt-repair-lovable-revert` are now redundant: delete after Joshua confirms. Its worktree holds an uncommitted `supabase/functions/mcp/index.ts` with a local absolute path: never commit it. Codex's separate Practice Exams commit 9face76 was merged as #152 and is live.
+- [x] ~~**Codex's redundant repair branch and worktree.**~~ 2026-09-27: deleted on Joshua's OK. Its uncommitted changes kept at raw/sources/lsatu-lr-snapshots/2026-09-27-codex-repair-worktree-uncommitted.patch.
 - [ ] **Merge PR vnjkoxpl-42905/lsatu-684d89db#138** (PT154 parser fix), then remove the `projects/lsatu-wt-parser` worktree.
 - [ ] **Merge PR vnjkoxpl-42905/lsatu-684d89db#141** (glossary), then remove the `projects/lsatu-wt-glossary` worktree.
 - [ ] **Merge PR vnjkoxpl-42905/lsatu-684d89db#142** (removes the thin local `PT140-explanations.md`).

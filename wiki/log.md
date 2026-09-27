@@ -1045,3 +1045,6 @@ Codex's accidental Lovable "revert and resend" (b998596, 07:15 UTC) undid #146-#
 
 ## [2026-09-27] fix | Stray PT128-S2-Q26 removed
 The bank's PT128-S2-Q26 was modern PT124-S2-Q26 (old PrepTest 41, S3, Q26) with key E instead of B; real PT128 S2 ends at Q25 (7Sage, LSAT Lab, DB agree). Zero student attempts. Deleted in vnjkoxpl-42905/lsatu-684d89db#153, which also makes the answer-key test skip LSAC-removed positions (PT118-S1-Q5, PT118-S3-Q22). Origin predates the recovered 2026-09-05 repo snapshot, so git cannot say who added it.
+
+## [2026-09-27] load | 221 LSAT Lab breakdowns loaded
+All 39 SQL files ran (batch-27 retried after a 499). +760 steps, +60 choice notes, +8 questions, +12 explanations; every one of the 221 slots has steps, 0 glued emphasis markers. Codex's redundant repair branch/worktree deleted (patch kept in raw/sources/lsatu-lr-snapshots/). Writer-mark column dropped by Joshua.
