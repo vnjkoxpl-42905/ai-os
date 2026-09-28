@@ -1181,3 +1181,11 @@ Joshua approved the 20-question pilot. Snapshotted the affected rows in `raw/sou
 ## [2026-09-28] ingest | Calendar sweep follow-ups resolved
 
 Joshua confirmed Priyanka Nambiar is not a student: her 2026-08-07 session export went to `students/_other-sessions/`. Lexi is finished: her four August Docs (08-01, 08-02, 08-04, 08-05) are preserved in `non-students/lexi/transcript-downloads/` and indexed in her `transcripts.md`; no packages. Venusa's 2026-09-24 session took place and is her one official session; no Gemini Doc exists for it in Calendar or Drive. Her records are updated to match. The 2026-09-11 retention decision remains open.
+
+## [2026-09-28] delete | Venusa 2026-09-11 consultation source removed
+
+On Joshua's instruction, deleted the 39-second Gemini source from Venusa's 2026-09-11 consultation, where she declined transcription. Moved to Drive trash: the Google Doc, its `Google Meet` folder, and three `.md` copies (Claude Code backup plus two Codex-worktree backups). Removed locally: `students/_other-sessions/2026-09-11-venusa-consultation-notes-by-gemini.md` (git rm) and the copies in both Codex worktrees. Still present: Drive trash (auto-purges after 30 days) and git history, including the private GitHub `ai-os` repo. Venusa's records and the `_other-sessions` README are updated.
+
+## [2026-09-28] LSAT U | LR choice-text repairs and first Flaw batch drafted
+
+Checked material bank/database answer-choice differences in the logged-in Codex browser against LSAT Lab and the available official PT108/PT155 PDFs. Corrected 17 bank choices across 11 JSON files in [PR #181](https://github.com/vnjkoxpl-42905/lsatu-684d89db/pull/181), merged 2026-09-28; no answer keys changed. Corrected PT108-S2-Q7 C/E in the database to match the official PDF after a snapshot, and filled PT124-S3-Q17 D's empty database choice from bank and LSAT Lab after a snapshot. Unresolved source disputes remain in `corpus/lr-explanations/fixes/choice-adjudication-2026-09-28.md`. Drafted the next 40 Flaw explanations in two batch-01 files; none have been loaded pending Joshua's batch approval.

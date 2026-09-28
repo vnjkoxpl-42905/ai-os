@@ -13,6 +13,16 @@ Bank wording and keys were checked against `projects/lsatu-wt-glossary/public/da
 
 **Modelled on:** PT150-S2-Q4 (comparison), PT141-S4-Q3 (exposure and baseline), PT139-S4-Q18 (quantity distinction).
 
+> The radiation absorbed by someone during an ordinary commercial airline flight is no more dangerous than that received during an ordinary dental X-ray. Since a dental X-ray does negligible harm to a person, we can conclude that the radiation absorbed by members of commercial airline flight crews will also do them negligible harm.
+>
+> A flaw in the argument is its failure to consider that
+>
+> (A) there may be many forms of dangerous radiation other than X-rays and the kinds of radiation absorbed by members of commercial airline flight crews
+> (B) receiving a dental X-ray may mitigate other health risks, whereas flying does not
+> (C) exposure to X-rays of higher intensity than dental X-rays may be harmful
+> (D) the longer and the more often one is exposed to radiation, the more radiation one absorbs and the more seriously one is harmed
+> (E) flying at high altitude involves risks in addition to exposure to minor radiation
+
 ### Argument Breakdown
 
 **Conclusion:** Radiation absorbed by airline flight crews does negligible harm.
@@ -38,6 +48,16 @@ Bank wording and keys were checked against `projects/lsatu-wt-glossary/public/da
 ## PT110-S3-Q4 | Flaw | E
 
 **Modelled on:** PT147-S1-Q6 (unrepresentative sample), PT120-S3-Q8 (rate versus cause), PT109-S4-Q1 (sampling).
+
+> A group of 1,000 students was randomly selected from three high schools in a medium-sized city and asked the question, “Do you plan to finish your high school education?” More than 89 percent answered “Yes. ” This shows that the overwhelming majority of students want to finish high school, and that if the national dropout rate among high school students is high, it cannot be due to a lack of desire on the part of the students.
+>
+> The reasoning of the argument above is questionable because the argument
+>
+> (A) fails to justify its presumption that 89 percent is an overwhelming majority
+> (B) attempts to draw two conflicting conclusions from the results of one survey
+> (C) overlooks the possibility that there may in fact not be a high dropout rate among high school students
+> (D) contradicts itself by admitting that there may be a high dropout rate among students while claiming that most students want to finish high school
+> (E) treats high school students from a particular medium-sized city as if they are representative of high school students nationwide
 
 ### Argument Breakdown
 
@@ -65,6 +85,16 @@ Bank wording and keys were checked against `projects/lsatu-wt-glossary/public/da
 
 **Modelled on:** PT148-S1-Q2 (rate and total), PT120-S4-Q23 (timeframe), PT151-S4-Q23 (track the conclusion's exact claim).
 
+> President of the Regional Chamber of Commerce: We are all aware of the painful fact that almost no new businesses have moved into our region or started up here over the last ten years. But the Planning Board is obviously guilty of a gross exaggeration in its recent estimate that businesses are leaving the region at the rate of about four a week. After all, there were never more than about one thousand businesses in the region, so if they were really leaving at such a rate, they would all have been gone long ago.
+>
+> The argument is most vulnerable to criticism on the ground that it
+>
+> (A) focuses on what is going out of a system while ignoring the issue of what is coming into the system
+> (B) confuses a claim about a rate of change within a system with a claim about the absolute size of the system
+> (C) argues against a position simply by showing that the position serves the interest of the Planning Board
+> (D) treats a claim about what is currently the case as if it were a claim about what has been the case for an extended period
+> (E) attacks what was offered as an estimate on the ground that it is not precise
+
 ### Argument Breakdown
 
 **Conclusion:** The Planning Board exaggerates when it estimates that businesses are leaving at about four a week.
@@ -90,6 +120,16 @@ Bank wording and keys were checked against `projects/lsatu-wt-glossary/public/da
 ## PT111-S3-Q25 | Flaw | D
 
 **Modelled on:** PT134-S3-Q6 (causal assumption), PT128-S3-Q14 (correlation language), PT120-S3-Q8 (one factor versus only factor).
+
+> Physician: Heart disease generally affects men at an earlier age than it does women, who tend to experience heart disease after menopause. Both sexes have the hormones estrogen and testosterone, but when they are relatively young, men have ten times as much testosterone as women, and women abruptly lose estrogen after menopause. We can conclude, then, that testosterone tends to promote, and estrogen tends to inhibit, heart disease.
+>
+> The physician’s argument is questionable because it presumes which one of the following without providing sufficient justification?
+>
+> (A) Hormones are the primary factors that account for the differences in age-related heart disease risks between women and men.
+> (B) Estrogen and testosterone are the only hormones that promote or inhibit heart disease.
+> (C) Men with high testosterone levels have a greater risk for heart disease than do postmenopausal women.
+> (D) Because hormone levels are correlated with heart disease they influence heart disease.
+> (E) Hormone levels do not vary from person to person, especially among those of the same age and gender.
 
 ### Argument Breakdown
 
@@ -117,6 +157,16 @@ Bank wording and keys were checked against `projects/lsatu-wt-glossary/public/da
 
 **Modelled on:** PT141-S4-Q3 (equal outcomes mask unequal baselines), PT147-S1-Q6 (measure does not establish broad conclusion), PT134-S3-Q6 (alternate explanation).
 
+> It is widely believed that by age 80, perception and memory are each significantly reduced from their functioning levels at age 30. However, a recent study showed no difference in the abilities of 80-year-olds and 30-year-olds to play a card game devised to test perception and memory. Therefore, the belief that perception and memory are significantly reduced by age 80 is false.
+>
+> The reasoning above is most vulnerable to criticism on the grounds that it fails to consider the possibility that
+>
+> (A) the study’s card game does not test cognitive abilities other than perception and memory
+> (B) card games are among the most difficult cognitive tasks one can attempt to perform
+> (C) perception and memory are interrelated in ways of which we are not currently aware
+> (D) the belief that 80-year-olds’ perception and memory are reduced results from prejudice against senior citizens
+> (E) playing the study’s card game perfectly requires fairly low levels of perception and memory
+
 ### Argument Breakdown
 
 **Conclusion:** The belief that perception and memory are significantly reduced by age 80 is false.
@@ -142,6 +192,16 @@ Bank wording and keys were checked against `projects/lsatu-wt-glossary/public/da
 ## PT112-S3-Q25 | Flaw | D
 
 **Modelled on:** PT154-S2-Q12 (false choice), PT134-S3-Q6 (alternative causal stories), PT120-S3-Q8 (one factor versus only factor).
+
+> Anthropologist: All music is based on a few main systems of scale building. Clearly, if the popularity of a musical scale were a result of social conditioning, we would expect, given the diversity of social systems, a diverse mixture of diatonic and nondiatonic scales in the world's music. Yet diatonic scales have always dominated the music of most of the world. Therefore, the popularity of diatonic music can be attributed only to innate dispositions of the human mind.
+>
+> The anthropologist's argument is most vulnerable to criticism on the grounds that it fails to
+>
+> (A) consider the possibility that some people appreciate nondiatonic music more than they do diatonic music
+> (B) explain how innate dispositions increase appreciation of nondiatonic music
+> (C) explain the existence of diatonic scales as well as the existence of nondiatonic scales
+> (D) consider that innate dispositions and social conditioning could jointly affect the popularity of a type of music
+> (E) consider whether any appreciation of nondiatonic music is demonstrated by some nonhuman species of animals
 
 ### Argument Breakdown
 
@@ -169,6 +229,16 @@ Bank wording and keys were checked against `projects/lsatu-wt-glossary/public/da
 
 **Modelled on:** PT154-S1-Q12 (rebuttal structure), PT155-S1-Q20 (conclusion stronger than reply), PT134-S3-Q6 (alternate evidence).
 
+> Archaeologist: The fact that the ancient Egyptians and the Maya both built pyramids is often taken as evidence of a historical link between Old- and New-World civilizations that is earlier than any yet documented. But while these buildings are similar to each other, there are important differences in both design and function. The Egyptian pyramids were exclusively tombs for rulers, whereas the Mayan pyramids were used as temples. This shows conclusively that there was no such link between Old- and New-World civilizations.
+>
+> Which one of the following most accurately describes a flaw in the archaeologist's argument?
+>
+> (A) The argument equivocates with respect to the term "evidence."
+> (B) The argument appeals to emotion rather than to reason.
+> (C) The argument assumes the conclusion it is trying to prove.
+> (D) The argument incorrectly relies on words whose meanings are vague or imprecise.
+> (E) The argument presumes that no other evidence is relevant to the issue at hand.
+
 ### Argument Breakdown
 
 **Conclusion:** There was *no* early historical link between Old- and New-World civilizations.
@@ -194,6 +264,16 @@ Bank wording and keys were checked against `projects/lsatu-wt-glossary/public/da
 ## PT113-S4-Q16 | Flaw | C
 
 **Modelled on:** PT147-S1-Q6 (population mismatch), PT150-S2-Q4 (salient difference), PT134-S3-Q6 (overlooked alternative).
+
+> In determining the authenticity of a painting, connoisseurs claim to be guided by the emotional impact the work has on them. For example, if a painting purportedly by Rembrandt is expressive and emotionally moving in a certain way, then this is supposedly evidence that the work was created by Rembrandt himself, and not by one of his students. But the degree to which an artwork has an emotional impact differs wildly from person to person. So a connoisseur's assessment cannot be given credence.
+>
+> The reasoning in the argument is most vulnerable to criticism on the grounds that the argument
+>
+> (A) ignores the fact that anybody, not just a connoisseur, can give an assessment of the emotional impact of a painting
+> (B) is based on the consideration of the nature of just one painter's works, even though the conclusion is about paintings in general
+> (C) neglects the possibility that there may be widespread agreement among connoisseurs about emotional impact even when the public's assessment varies wildly
+> (D) presumes, without giving justification, that a painting's emotional impact is irrelevant to the determination of that painting's authenticity
+> (E) presumes, without offering evidence, that Rembrandt was better at conveying emotions in painting than were other painters
 
 ### Argument Breakdown
 
@@ -221,6 +301,16 @@ Bank wording and keys were checked against `projects/lsatu-wt-glossary/public/da
 
 **Modelled on:** PT134-S3-Q6 (alternative explanation), PT155-S1-Q20 (rebuttal overreach), PT120-S3-Q8 (one aspect versus whole claim).
 
+> Every year, new reports appear concerning the health risks posed by certain substances, such as coffee and sugar. One year an article claimed that coffee is dangerous to one's health. The next year, another article argued that coffee has some benefits for one's health. From these contradictory opinions, we see that experts are useless for guiding one's decisions about one's health.
+>
+> Which one of the following most accurately describes a flaw in the argument above?
+>
+> (A) The argument takes for granted that coffee is dangerous to one's health.
+> (B) The argument presumes, without providing warrant, that one always wants expert guidance in making decisions about one's health.
+> (C) The argument fails to consider the nature of expert opinion in areas other than health.
+> (D) The argument presumes, without providing justification, that because expert opinion is trustworthy in one case, it must therefore be trustworthy in all cases.
+> (E) The argument fails to consider that coffee may be harmful to one's health in some respects and beneficial in others.
+
 ### Argument Breakdown
 
 **Conclusion:** Experts are useless for guiding health decisions.
@@ -246,6 +336,16 @@ Bank wording and keys were checked against `projects/lsatu-wt-glossary/public/da
 ## PT114-S1-Q8 | Flaw | E
 
 **Modelled on:** PT154-S1-Q12 (conflicting behavior ad hominem), PT155-S1-Q20 (source versus merits), PT150-S2-Q4 (plan objection).
+
+> Pundit: The only airline providing service for our town announced that because the service is unprofitable it will discontinue this service next year. Town officials have urged the community to use the airline's service more frequently so that the airline will change its decision. There is no reason to comply with their recommendation, however, for just last week these same officials drove to an out-of-town conference instead of flying.
+>
+> The pundit's reasoning is most vulnerable to criticism on the grounds that it presumes, without providing justification, that
+>
+> (A) increasing the number of tickets sold without increasing ticket prices will be sufficient to make continued air service economically feasible
+> (B) suspending service and losing money by continuing service are the airline's only options
+> (C) the town officials paid for their trip with taxpayers' money rather than their own money
+> (D) ground transportation is usually no less expensive than airplane transportation
+> (E) if the town officials did not follow their own advice then that advice is not worth following
 
 ### Argument Breakdown
 
@@ -273,6 +373,16 @@ Bank wording and keys were checked against `projects/lsatu-wt-glossary/public/da
 
 **Modelled on:** PT147-S1-Q6 (unrepresentative sample), PT148-S1-Q2 (proportion versus total), PT120-S3-Q8 (base rate).
 
+> In our solar system only one of the nine planets—Earth— qualifies as fit to sustain life. Nonetheless, using this ratio, and considering the astonishingly large number of planetary systems in the universe, we must conclude that the number of planets fit to sustain some form of life is extremely large.
+>
+> The argument is questionable because it presumes which one of the following without providing justification?
+>
+> (A) If a planet is Earthlike, then life will arise on it.
+> (B) Our solar system is similar to many other planetary systems in the universe.
+> (C) The conditions necessary for life to begin are well understood.
+> (D) Life similar to Earth's could evolve under conditions very different from those on Earth.
+> (E) Most other planetary systems in the universe have nine planets.
+
 ### Argument Breakdown
 
 **Conclusion:** The universe contains an extremely large number of planets fit to sustain some form of life.
@@ -298,6 +408,16 @@ Bank wording and keys were checked against `projects/lsatu-wt-glossary/public/da
 ## PT114-S4-Q8 | Flaw | D
 
 **Modelled on:** PT154-S1-Q12 (hypocrisy and merits), PT155-S1-Q20 (evaluate the rebuttal), PT113-S2-Q3 (prefix test).
+
+> Politician: My opponent says our zoning laws too strongly promote suburban single-family dwellings and should be changed to encourage other forms of housing like apartment buildings. Yet he lives in a house in the country. His lifestyle contradicts his own argument, which should therefore not be taken seriously.
+>
+> The politician’s reasoning is most vulnerable to criticism on the grounds that
+>
+> (A) its characterization of the opponent’s lifestyle reveals the politician’s own prejudice against constructing apartment buildings
+> (B) it neglects the fact that apartment buildings can be built in the suburbs just as easily as in the center of the city
+> (C) it fails to mention the politician’s own living situation
+> (D) its discussion of the opponent’s lifestyle is irrelevant to the merits of the opponent’s argument
+> (E) it ignores the possibility that the opponent may have previously lived in an apartment building
 
 ### Argument Breakdown
 
@@ -325,6 +445,16 @@ Bank wording and keys were checked against `projects/lsatu-wt-glossary/public/da
 
 **Modelled on:** PT154-S2-Q12 (false choice), PT150-S2-Q4 (plan/recommendation), PT120-S3-Q8 (one factor not only factor).
 
+> Activist: Although the environmental bill before the legislature is popular with voters, it will have mainly negative economic consequences if it is passed, especially when we try to lure new businesses to our country. Great leaders have the courage to look beyond popularity to what is sound policy; legislators ought to do the same by not voting for this bill.
+>
+> The activist's argumentation is most vulnerable to criticism on the grounds that it
+>
+> (A) presumes, without providing justification, that most of the legislators are great leaders
+> (B) presumes, without providing justification, that a bill is less likely to pass if it is deemed to have negative economic consequences
+> (C) fails to consider whether there are noneconomic reasons for supporting the bill that outweigh the reason given for rejecting it
+> (D) fails to specify whether legislators usually consider economic consequences when a bill is before the legislature
+> (E) takes for granted that if a bill is popular, it will not be sound economically
+
 ### Argument Breakdown
 
 **Conclusion:** Legislators should vote against the environmental bill.
@@ -350,6 +480,16 @@ Bank wording and keys were checked against `projects/lsatu-wt-glossary/public/da
 ## PT115-S4-Q21 | Flaw | B
 
 **Modelled on:** PT147-S1-Q6 (sampling), PT120-S3-Q8 (base-rate alternative), PT148-S1-Q2 (relative versus absolute).
+
+> In a small town, every complaint filed about a plumber's work was filed against Moore, who has a relatively small business. So there is good evidence that Moore is a poor plumber who cannot be counted on to do a good job.
+>
+> The argument is questionable because it fails to consider
+>
+> (A) the interests of Moore's customers who have not filed complaints
+> (B) that there may be few if any other plumbers working in Moore's town
+> (C) whether Moore's business is too small to warrant the kind of generalization drawn
+> (D) the number of complaints filed in Moore's town about tradespeople other than plumbers
+> (E) whether each person who was dissatisfied with Moore's work filed a complaint against Moore
 
 ### Argument Breakdown
 
@@ -377,6 +517,17 @@ Bank wording and keys were checked against `projects/lsatu-wt-glossary/public/da
 
 **Modelled on:** PT113-S2-Q3 (necessary versus sufficient), PT151-S4-Q23 (conditional translation), PT154-S1-Q9 (contrapositive).
 
+> Shipping Coordinator: If we send your shipment by air express, it will arrive tomorrow morning. If we send your shipment via ground carrier, it will arrive either tomorrow or the next day. Ground carrier is less expensive than air express, so which do you prefer?
+> Customer: If I don't choose air express, then I will not receive my shipment tomorrow, so I clearly have no choice but to spend the extra money and have it sent via air express.
+>
+> The customer's response can best be explained on the assumption that she has misinterpreted the shipping coordinator to mean which one of the following?
+>
+> (A) Ground carrier is as reliable a shipping method as air express.
+> (B) If the shipment is sent by air express, it will arrive tomorrow.
+> (C) Ground carrier is not more expensive than air express.
+> (D) Unless the shipment is sent by air express, it will not arrive tomorrow.
+> (E) The greater the shipping cost, the faster the shipment will arrive.
+
 ### Argument Breakdown
 
 **Conclusion (customer):** She must pay for air express to receive the shipment tomorrow.
@@ -402,6 +553,16 @@ Bank wording and keys were checked against `projects/lsatu-wt-glossary/public/da
 ## PT117-S3-Q4 | Flaw | A
 
 **Modelled on:** PT113-S2-Q3 (necessary condition mistaken), PT150-S2-Q4 (comparison across contexts), PT134-S3-Q6 (alternative route).
+
+> Maria: Thomas Edison was one of the most productive inventors of his time, perhaps of all time. His contributions significantly shaped the development of modern lighting and communication systems. Yet he had only a few months of formal schooling. Therefore, you do not need a formal education to make crucial contributions to technological advancement.Frank: That is definitely not true anymore. Since Edison’s day there have been many new developments in technology; to make crucial contributions today you need much more extensive technical knowledge than was needed then.
+>
+> Frank's reasoning in his response to Maria is most vulnerable to criticism on the grounds that it
+>
+> (A) fails to address the possibility that technical knowledge may be acquired without formal education
+> (B) does not consider whether there have been improvements in formal education since Edison's day
+> (C) relies on using the term "crucial" differently from the way Maria used it
+> (D) presumes that no other inventor of Edison's time could have been as productive as Edison
+> (E) fails to criticize or question any of Maria's statements about Edison
 
 ### Argument Breakdown
 
@@ -429,6 +590,16 @@ Bank wording and keys were checked against `projects/lsatu-wt-glossary/public/da
 
 **Modelled on:** PT134-S3-Q6 (alternate explanation), PT150-S2-Q4 (comparison difference), PT120-S3-Q8 (one factor versus only factor).
 
+> Manager: When Sullivan was passed over for promotion, people said that the deciding factor was his being much older than the competition. But this is clearly not the case. Several recent promotions have been given to people older than Sullivan.
+>
+> The manager’s argument is most vulnerable to criticism because it fails to consider the possibility that
+>
+> (A) Sullivan was well qualified for the promotion
+> (B) age is only one of a number of factors that kept Sullivan from being promoted
+> (C) people often associate age with experience and good judgment
+> (D) the people older than Sullivan who were promoted had no younger competitors
+> (E) Sullivan’s employer tries to keep deliberations involving promotion decisions confidential
+
 ### Argument Breakdown
 
 **Conclusion:** Sullivan's older age was not the deciding factor in his failed promotion.
@@ -454,6 +625,16 @@ Bank wording and keys were checked against `projects/lsatu-wt-glossary/public/da
 ## PT118-S3-Q6 | Flaw | C
 
 **Modelled on:** PT154-S1-Q12 (source attack), PT155-S1-Q20 (rebuttal overreach), PT114-S1-Q8 (advice versus advisor).
+
+> Editorial: The premier’s economic advisor assures her that with the elimination of wasteful spending the goal of reducing taxes while not significantly decreasing government services can be met. But the premier should not listen to this advisor, who in his youth was convicted of embezzlement. Surely his economic advice is as untrustworthy as he is himself, and so the premier should discard any hope of reducing taxes without a significant decrease in government services.
+>
+> Which one of the following is a questionable argumentative strategy employed in the editorial’s argument?
+>
+> (A) rejecting a proposal on the grounds that a particular implementation of the proposal is likely to fail
+> (B) trying to win support for a proposal by playing on people’s fears of what could happen otherwise
+> (C) criticizing the source of a claim rather than examining the claim itself
+> (D) taking lack of evidence for a claim as evidence undermining that claim
+> (E) presupposing what it sets out to establish
 
 ### Argument Breakdown
 
@@ -481,6 +662,16 @@ Bank wording and keys were checked against `projects/lsatu-wt-glossary/public/da
 
 **Modelled on:** PT155-S1-Q20 (absence of proof versus proof), PT112-S4-Q8 (one piece of evidence does not settle history), PT148-S1-Q2 (word-level distinction).
 
+> It is now clear that the ancient Egyptians were the first society to produce alcoholic beverages. It had been thought that the ancient Babylonians were the first; they had mastered the process of fermentation for making wine as early as 1500 B.C. However, archaeologists have discovered an Egyptian cup dating from 2000 B.C. whose sides depict what appears to be an Egyptian brewery, and whose chemical residue reveals that it contained a form of alcoholic beer.
+>
+> The reasoning above is most vulnerable to criticism on which one of the following grounds?
+>
+> (A) It makes a generalization about Egyptian society based on a sample so small that it is likely to be unrepresentative.
+> (B) It uses the term "alcoholic beverage" in a different sense in the premises than in the conclusion.
+> (C) It presumes, without providing justification, that because one society developed a technology before another, the development in the latter was dependent on the development in the former.
+> (D) It ignores the possibility that the first known instance of a kind is not the first instance of that kind.
+> (E) It provides no evidence for the claim that the Babylonians produced wine as early as 1500 B.C.
+
 The existing database explanation already has Conclusion, Evidence, Evaluate, and Goal steps. The notes below complete that explanation; the existing steps should be retained.
 
 ### Choice Notes
@@ -498,6 +689,16 @@ The existing database explanation already has Conclusion, Evidence, Evaluate, an
 ## PT119-S3-Q2 | Flaw | C
 
 **Modelled on:** PT154-S2-Q12 (answer the current proposal), PT155-S1-Q20 (weak rebuttal does not settle opposing claim), PT150-S2-Q4 (conditions can differ across times).
+
+> Benson: In order to maintain the quality of life in our city, we need to restrict growth. That is why I support the new zoning regulations.Willett: I had heard such arguments ten years ago, and again five years ago. Each time the city council was justified in deciding not to restrict growth. Since there is nothing new in this idea of restricting growth, I oppose the regulations.
+>
+> Which one of the following most accurately describes a way in which Willett's reasoning is questionable?
+>
+> (A) It presumes that growth is necessarily good without offering support for that position.
+> (B) It is based on attacking Benson personally rather than responding to Benson's reasoning.
+> (C) It ignores the possibility that new reasons for restricting growth have arisen in the past five years.
+> (D) It fails to take into account the variety of factors that contribute to the quality of life in a city.
+> (E) It overlooks the possibility that the city council of ten years ago was poorly qualified to decide on zoning regulations.
 
 ### Argument Breakdown
 

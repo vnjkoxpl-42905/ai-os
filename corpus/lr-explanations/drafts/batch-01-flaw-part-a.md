@@ -580,7 +580,7 @@ for failure to do which one of the following?
 
 ### Choice Notes
 
-**(A) Bad Description.** The argument is not reasoning about what causes a result. It reasons from some members of a class to all members.
+**(A) Bad Description.** The criminal cases and the proposed exclusion might make this seem like a cause-and-effect claim. Check the actual conclusion: it says no wealthy person should be appointed, not that wealth caused crime or that a committee appointment caused an outcome. The evidence is about a *number* of wealthy criminals, and the conclusion bars *all* wealthy people. The change in quantity, not cause and effect, is the problem.
 
 **(B) Bad Description.** Nothing is said to follow another event in time, and no causal inference is made from a sequence.
 
