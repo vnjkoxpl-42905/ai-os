@@ -6,6 +6,8 @@ Source: [LSAT Lab, 7Sage, AdeptLR, and LSAT Demon running audit](../research/202
 
 Student-facing companion: [2026-09-28 student experience design and clickable prototype](2026-09-28-lsatu-student-experience-design.md). It maps every current student rail item from Joshua's screenshot into the proposed seven-page shell, including persistent Inbox and question search.
 
+Decision tracking: [LSAT U student and teacher experience: decision map](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/155). It holds the remaining implementation-spec questions and their blocking relationships. This plan remains the design direction; the map records decisions still to make before tickets are written.
+
 ## The product we should build
 
 Make LSAT U feel like one coached study system. A student should see what Joshua assigned, do it, inspect a missed question, understand the error, and know what to do next without hunting through the rail. Joshua should see the same attempt and review state from his workspace and connect it to the next session.
@@ -138,11 +140,11 @@ At wide desktop sizes, use stimulus, choices, and an explanation pane with a rea
 - **Review item:** one record or derived view carries the source attempt, one or more entry reasons, queued/reviewed state, and the student's written diagnosis. Flag state is related but not confused with “reviewed.” Joshua's note is linked to the same question and student.
 - **Assignment and recap:** assigned-but-not-started work must exist in the work ledger even with no attempt. Notes, session recaps, and assignment records remain typed objects and are shown together through My Work links.
 - **Metrics:** one time window and a declared set of included sources drive every visible numerator and denominator. An unattempted topic has no accuracy percentage. Any teacher query uses an authorized student scope and the same calculation as the student view.
-- **Navigation:** each local tab and filter has a stable URL. Existing links and saved rail customization are migrated deliberately; hidden tabs retain their current permission rules.
+- **Navigation:** each local tab and filter has a stable URL. Existing links and saved rail customization are migrated deliberately. All tabs stay visible; unavailable tabs show a lock and retain their current permission gates, including on direct links.
 
 ### States and accessibility
 
-Every page needs loading, empty, permission-limited, partial-data, error, and complete states. Empty is not zero accuracy. An inaccessible tab is hidden or clearly explained according to the existing permission rule; a parent page never grants a child permission. Keep focus visible, local tabs keyboard-operable, color states labeled, page landmarks present, and reduced-motion behavior respected. Test the rail, filters, question workspace, and teacher preview with keyboard, screen reader, mobile, mid-width laptop, wide desktop, zoom, and the sidecar-docked case.
+Every page needs loading, empty, permission-limited, partial-data, error, and complete states. Empty is not zero accuracy. An inaccessible tab stays visible with a lock, cannot open its page, and has an accessible explanation of its state; a parent page never grants a child permission. A locked direct link is denied. Keep focus visible, local tabs keyboard-operable, color states labeled, page landmarks present, and reduced-motion behavior respected. Test the rail, filters, question workspace, and teacher preview with keyboard, screen reader, mobile, mid-width laptop, wide desktop, zoom, and the sidecar-docked case.
 
 ## Build sequence with exit gates
 

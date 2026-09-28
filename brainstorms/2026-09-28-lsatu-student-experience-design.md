@@ -29,7 +29,7 @@ The student design keeps the product's warm tone and the approved Home v3 direct
 | Schedule | Schedule | The next session and Book a session are visible without leaving the student shell. |
 | Find question | Persistent top-bar search | Keep exact PT/S/Q and text lookup, then return to the originating page. |
 
-The seven primary rail destinations are Home, My Work, Practice, Review, Progress, Library, and Schedule. Settings and account controls stay with the profile. A student with restricted access sees only allowed tabs, using existing permission rules. Existing deep links and saved rail preferences need migration as specified in the main game plan.
+The seven primary rail destinations are Home, My Work, Practice, Review, Progress, Library, and Schedule. Settings and account controls stay with the profile. A student with restricted access still sees every tab; unavailable tabs show a lock and cannot open their pages. Existing child permission rules still apply to direct links. Existing deep links and saved rail preferences need migration as specified in the main game plan.
 
 ## Student screen behavior
 

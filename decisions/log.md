@@ -152,3 +152,7 @@ Joshua accepted one **Practice** destination in the shorter student rail, with *
 ## 2026-09-28: Impeccable reviews the completed LSAT U redesign before release
 
 Joshua wants an Impeccable pass at the end of the student and teacher experience work to find improvements. Run its critique and technical audit on the functional application, resolve material findings through polish or targeted passes, and verify the affected screens again before the core rollout. Use LSAT U's product, design, and Classroom surface rules as context. Keep data correctness and task walks as separate release checks. This decision adds a quality gate to the adoption game plan; it does not authorize application implementation or a Lovable credit spend.
+
+## 2026-09-28: Locked tabs remain visible in the student redesign
+
+Joshua chose to show all tabs, including unavailable ones. An unavailable tab shows a lock and cannot open its page; a direct link remains subject to the same permission gate. This resolves [grouped student page access](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/156). Joshua also confirmed that Mark reviewed clears the review task while preserving the separate flag and answer history, and that View student experience is read-only. Those are partial answers on the still-open [Review lifecycle](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/159) and [teacher preview](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/162) tickets.

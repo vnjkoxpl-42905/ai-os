@@ -1129,3 +1129,11 @@ Joshua approved Practice as the short student-rail destination with a complete P
 ## [2026-09-28] design | Impeccable review added to LSAT U rollout
 
 Added a final Impeccable critique, technical audit, fix, and recheck gate to the platform adoption plan. Confirmed the LSAT U repo has `PRODUCT.md` and `DESIGN.md`; the review will also use the Classroom surface rules and the functional application when the core slices are complete. Logged Joshua's decision in `decisions/log.md`. No application code changed.
+
+## [2026-09-28] planning | LSAT U experience Wayfinder map charted
+
+Joshua chose one implementation-ready spec for student and teacher experiences, with student flows built first and usable slices released incrementally. Created [the Wayfinder map](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/155) in the private LSAT U repo with eight child decision tickets and native blocking edges. Linked it from the adoption game plan. Three product choices remain pending Joshua's answers; no decision ticket was resolved or app code changed during charting.
+
+## [2026-09-28] decision | Locked tabs, Review state, and teacher preview
+
+Joshua answered three Wayfinder choices. Closed grouped access: every tab remains visible, with a lock on unavailable tabs and no access through direct links. Updated the student design and adoption plan to remove the older hidden-tab language. Captured the partial decisions to keep flag/history after Mark reviewed and to make teacher student preview read-only on their open tickets. The [Wayfinder map](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/155) now links the closed access decision. No application code changed.
