@@ -1125,3 +1125,7 @@ Joshua approved sending the reviewed reply to Whitney. Sent existing Gmail draft
 ## [2026-09-28] design | Practice Exams placement confirmed in student prototype
 
 Joshua approved Practice as the short student-rail destination with a complete Practice Exams area inside it. Revised the clickable student prototype, student design note, adoption game plan, and competitor audit to preserve Practice Exams Overview, Unfinished exams and sections, All Exams, and Attempts. Logged the decision in `decisions/log.md`. The prototype uses sample data and no LSAT U application code or live records changed.
+
+## [2026-09-28] design | Impeccable review added to LSAT U rollout
+
+Added a final Impeccable critique, technical audit, fix, and recheck gate to the platform adoption plan. Confirmed the LSAT U repo has `PRODUCT.md` and `DESIGN.md`; the review will also use the Classroom surface rules and the functional application when the core slices are complete. Logged Joshua's decision in `decisions/log.md`. No application code changed.

@@ -156,9 +156,19 @@ Every page needs loading, empty, permission-limited, partial-data, error, and co
 | 5. Progress | Mount one timeframe-aware analytics/history engine for student and teacher. Add evidence-backed priorities, advanced history filters, topic detail, and deep links into Review or Practice. | Every displayed numerator and denominator traces to the same underlying attempt set. The selected timeframe affects all visible metrics; teacher/student views agree. |
 | 6. Home integration | Keep the approved Home v3 workstream and wire its first action, assignment cards, chart drill links, and next-session row into the new destinations. | A real student's Home recommendation says why it is there, leads to the right task, and reflects completion without manual refresh or invented data. |
 | 7. Library and teacher coaching | Refine two text-first Activities and one topic hub. Surface student review needs and next actions in existing teacher rooms and dossier. Link session prep, recap, and follow-up. | Joshua can assign, preview, inspect the result, add a note, and point the student to the next exercise from one student context. |
+| Final Impeccable review | After slices 0–7 are functionally complete, review the real student and teacher flows against LSAT U's `PRODUCT.md`, `DESIGN.md`, and Classroom surface brief. Run Impeccable critique and technical audit, fix the material findings with polish or targeted passes, then review the changed screens again. | No unresolved P0/P1 findings; the key task walks and data checks still pass; accessibility, responsive behavior, and the question reading experience are verified in the running app. Record the disposition of remaining findings. |
 | 8. Optional controls | Add capacity-aware planning, a broader topic index, and outside-result import only after use shows demand and the data/rights gates pass. Prototype the earlier 3D analytics idea separately. | Each optional item has a measured user need, defined source and rights, an accessible fallback, and a clear effect on core workflows. |
 
 Slices 1 and the approved Home v3 design can be prototyped while slice 0 proceeds. Do not publish combined Review or Progress counts until slice 0's data checks pass. Each UI slice must be viewed in the running app at narrow, mid, wide, and sidecar-docked widths before it is called done. No Lovable agent action or credit spend is part of this planning document.
+
+### How the Impeccable review works
+
+1. Load the Impeccable product and design context from the LSAT U repo and check the Classroom surface rules before judging the student design. Use the real application, not just the local prototype.
+2. Run `critique` on the student Home, My Work, Practice, Review, Progress, Library, and Schedule flows, plus the teacher desk and student preview. Include its independent design assessment and detector pass. Walk representative paths with keyboard and at narrow, laptop, wide, and sidecar-docked widths.
+3. Run `audit` for accessibility, responsive behavior, performance, theme consistency, and interface anti-patterns. Keep its issue severity and evidence in the release review.
+4. Fix functional and data defects first. Use `polish` for the final hierarchy, copy, spacing, states, and interaction details; use targeted Impeccable passes where a finding needs more specific work. Rerun the relevant checks after fixes. The audit is a report, so fixes and verification are separate work.
+
+This review is the final quality gate for the core rollout, before optional controls. It supplements the slice-specific data checks and task walks; visual polish cannot establish that an attempt, assignment, or metric is correct.
 
 ## Prototype and research checks before implementation
 
