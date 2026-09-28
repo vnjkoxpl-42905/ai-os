@@ -8,6 +8,8 @@ Student-facing companion: [2026-09-28 student experience design and clickable pr
 
 Decision tracking: [LSAT U student and teacher experience: decision map](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/155). It holds the remaining implementation-spec questions and their blocking relationships. This plan remains the design direction; the map records decisions still to make before tickets are written.
 
+The [route and saved-rail decision](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/157) sets stable paths for the seven destinations and local tabs, preserves old question and work links, and migrates saved rail choices once. The exact cross-source question detail path waits for the Review identity decision. [Admissions access](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/164) remains open because its current route allows any signed-in account while the design draft described a restricted tab.
+
 ## The product we should build
 
 Make LSAT U feel like one coached study system. A student should see what Joshua assigned, do it, inspect a missed question, understand the error, and know what to do next without hunting through the rail. Joshua should see the same attempt and review state from his workspace and connect it to the next session.

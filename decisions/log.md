@@ -156,3 +156,7 @@ Joshua wants an Impeccable pass at the end of the student and teacher experience
 ## 2026-09-28: Locked tabs remain visible in the student redesign
 
 Joshua chose to show all tabs, including unavailable ones. An unavailable tab shows a lock and cannot open its page; a direct link remains subject to the same permission gate. This resolves [grouped student page access](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/156). Joshua also confirmed that Mark reviewed clears the review task while preserving the separate flag and answer history, and that View student experience is read-only. Those are partial answers on the still-open [Review lifecycle](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/159) and [teacher preview](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/162) tickets.
+
+## 2026-09-28: Student route and saved rail migration
+
+The [canonical path decision](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/157) keeps seven stable student destinations with URL-backed local tabs. Old links forward to the equivalent place and preserve the selected question, filter, and return destination. Saved rail choices move once to a versioned seven-item preference without overwriting the old record. Full-screen question, test, and Activity runners keep their existing routes. The exact cross-source Review detail path remains for the Review ticket. A code/design mismatch in Admissions access is tracked separately in [Admissions access](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/164).

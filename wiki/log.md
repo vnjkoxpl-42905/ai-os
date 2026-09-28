@@ -1137,3 +1137,7 @@ Joshua chose one implementation-ready spec for student and teacher experiences, 
 ## [2026-09-28] decision | Locked tabs, Review state, and teacher preview
 
 Joshua answered three Wayfinder choices. Closed grouped access: every tab remains visible, with a lock on unavailable tabs and no access through direct links. Updated the student design and adoption plan to remove the older hidden-tab language. Captured the partial decisions to keep flag/history after Mark reviewed and to make teacher student preview read-only on their open tickets. The [Wayfinder map](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/155) now links the closed access decision. No application code changed.
+
+## [2026-09-28] planning | Student links and saved rail decision resolved
+
+Closed the [route and saved-rail decision](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/157). The implementation spec will use stable URLs for the seven destinations, preserve old deep links and return paths, and migrate saved rail preferences without erasing the old record. Kept full-screen runners at their existing routes. Found that Admissions currently allows any signed-in account, despite the design draft's restricted-access wording; opened [Admissions access](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/164) and corrected the draft. No app code changed.
