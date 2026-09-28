@@ -24,7 +24,7 @@ lifecycle: active
 
 Current LSAT U student. 1 taught session on record, 2026-08-29 to 2026-08-29. Folder opened 2026-09-08 from the Gemini notes attached to the calendar invites.
 
-Whitney reported sending a $55 CAD e-transfer on 2026-09-23, and Joshua stated in chat that she paid. A one-credit, 70-minute booking pass was created on 2026-09-28 and linked to her LSAT U account. Schedule access was enabled; the reply with the prepaid link is a Gmail draft awaiting review. See [payment and booking link](payment-links.md).
+Whitney reported sending a $55 CAD e-transfer on 2026-09-23, and Joshua stated in chat that she paid. A one-credit, 70-minute booking pass was created on 2026-09-28 and linked to her LSAT U account. Schedule access was enabled, and the reply with the prepaid link was sent on 2026-09-28. See [payment and booking link](payment-links.md).
 
 ## Student Context
 

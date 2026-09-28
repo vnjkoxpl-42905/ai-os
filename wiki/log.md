@@ -1117,3 +1117,7 @@ Gmail metadata showed message `1a0cf6dfd4dc3165` had the DRAFT label, despite an
 ## [2026-09-28] student operations | Whitney scheduling access and reply draft
 
 Enabled Schedule access for Whitney's LSAT U account at `whitwilson929@gmail.com` through `system/scripts/lsatu`; admin read confirmed Classroom, Schedule, and TA enabled. Booking admin confirmed one active 70-minute pass credit, zero used, no single-session booking. Updated existing Gmail draft `r790915509299354042` in thread `1a0a811c3b49e369` with her prepaid booking URL and verified the recipient-facing text in draft message `1a0e688041b52df7`. Draft remains unsent; Whitney's personal sign-in was not tested.
+
+## [2026-09-28] correspondence | Whitney booking email sent
+
+Joshua approved sending the reviewed reply to Whitney. Sent existing Gmail draft `r790915509299354042` in thread `1a0a811c3b49e369`; Gmail returned Sent message `1a0e6b88e935e2f8` to `whitwilson929@gmail.com`. Read the sent body and confirmed it matched the approved draft, including the prepaid booking link, platform link, and offer to try to fit a specific time. Exactly one new Sent copy appeared in the thread. Updated the student record and send ledger.
