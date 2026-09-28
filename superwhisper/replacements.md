@@ -148,6 +148,8 @@ Applied by Superwhisper after transcription, before any AI step. Matching is cas
 | zeno's | Zeina's | 2026-09-11 |  |
 | grill with docs | /grill-with-docs | 2026-09-11 |  |
 | grill with docs. | /grill-with-docs | 2026-09-11 |  |
+| grilla docs | /grill-with-docs | 2026-09-28 | phonetic mis-hearing |
+| grilla docs. | /grill-with-docs | 2026-09-28 | phonetic form with automatic punctuation |
 | grill with dogs | /grill-with-docs | 2026-09-11 |  |
 | grill with darks | /grill-with-docs | 2026-09-11 |  |
 | grill with dots | /grill-with-docs | 2026-09-11 |  |
