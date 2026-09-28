@@ -160,3 +160,7 @@ Joshua chose to show all tabs, including unavailable ones. An unavailable tab sh
 ## 2026-09-28: Student route and saved rail migration
 
 The [canonical path decision](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/157) keeps seven stable student destinations with URL-backed local tabs. Old links forward to the equivalent place and preserve the selected question, filter, and return destination. Saved rail choices move once to a versioned seven-item preference without overwriting the old record. Full-screen question, test, and Activity runners keep their existing routes. The exact cross-source Review detail path remains for the Review ticket. A code/design mismatch in Admissions access is tracked separately in [Admissions access](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/164).
+
+## 2026-09-28: My Work keeps each assignment and requires a real finish
+
+Joshua chose a complete assignment history, including repeated guided drills. Practice work moves to Completed only when its source saves a finish or submission; merely opening it is not In progress. The student's own notes join Joshua's notes and session recaps in Notes & recaps, with author and type labels. The full [My Work record and status contract](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/158) also keeps unfinished overdue work in To do and requires student/teacher parity from the same scoped ledger.

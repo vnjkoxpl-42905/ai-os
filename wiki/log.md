@@ -1141,3 +1141,7 @@ Joshua answered three Wayfinder choices. Closed grouped access: every tab remain
 ## [2026-09-28] planning | Student links and saved rail decision resolved
 
 Closed the [route and saved-rail decision](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/157). The implementation spec will use stable URLs for the seven destinations, preserve old deep links and return paths, and migrate saved rail preferences without erasing the old record. Kept full-screen runners at their existing routes. Found that Admissions currently allows any signed-in account, despite the design draft's restricted-access wording; opened [Admissions access](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/164) and corrected the draft. No app code changed.
+
+## [2026-09-28] planning | My Work record and completion rules resolved
+
+Joshua chose to keep every issued assignment, require saved finish/submission before measurable practice counts as Completed, include student-authored notes with clear labels, and keep opened-only work out of In progress. Closed the [My Work decision](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/158) and updated the adoption and student design notes. Current student and teacher feeds differ, so the build spec must verify both against one scoped ledger. No app code changed.
