@@ -7,6 +7,11 @@ aliases: []
 
 # Log
 
+## [2026-09-28] decision | Teacher mode retains full admin actions
+
+- Joshua corrected the proposed read-only student preview. View student experience will keep Joshua/admin controls available for the selected student, with changes attributed to the acting teacher/admin.
+- Teacher answers to questions stay under the teacher account and cannot affect the student's score, History, completion, or Review. The full contract is in [teacher scope issue #162](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/162), now closed. This is a design decision, not a live feature.
+
 ## [2026-09-28] decision | Progress calculation contract accepted
 
 - Joshua accepted first saved, graded responses as the diagnostic accuracy basis for each distinct LR or RC question. Repeats remain in History and volume. Inspect, blind-review, and unfinished ungraded work do not enter that denominator.

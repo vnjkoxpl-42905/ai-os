@@ -1,7 +1,7 @@
 # LSAT U redesign decisions: Brainstorm / Discovery Notes
 
 Date: 2026-09-28 · Goal: Settle the remaining independent product decisions for the student and teacher redesign before the implementation spec.
-Status: Progress decision accepted; teacher preview next; legacy browser-only recovery remains open
+Status: Wayfinder decisions complete; legacy browser-only recovery deferred outside the first release
 Context sources: [Wayfinder decision map](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/155); [platform adoption game plan](2026-09-27-lsatu-platform-adoption-game-plan.md); [student experience design](2026-09-28-lsatu-student-experience-design.md); [Practice Exams discovery](2026-09-26-practice-exams-discovery.md).
 
 ## Summary / key decisions
@@ -69,7 +69,23 @@ Earlier approved choices are in the linked decision map and discovery notes. Jos
 - Captured: Joshua said, "yes thats good." This accepts the Progress recommendation; the existing Analytics and History screens have conflicting calculations and require a shared rebuild.
 - Flags: Keep LR and RC separate, show insufficient evidence below three eligible questions per breakdown, and label three to nine as an early signal. These are implementation details in the adoption plan.
 
+### Round 5
+
+#### Q10 - Teacher/admin access while viewing a student
+
+- Context: The earlier plan called View student experience a read-only preview.
+- Captured: Joshua corrected it: "I want to have total access to do whatever I want as the teacher. and admin." Teacher/admin controls therefore remain available while viewing a selected student's experience. The earlier read-only restriction is superseded.
+- Follow-up asked: If Joshua answers a question there, should it count in that student's score and history?
+- Captured: Joshua chose "No, keep teacher answers separate." Teacher practice is attributed to the teacher/admin account and excluded from the student's attempts, accuracy, completion, and review state. Other changes Joshua makes to the student record remain teacher/admin actions with visible attribution.
+- Flags: The implementation needs authorized admin read/write paths scoped to the selected student; it must not silently replace the signed-in identity with the student's account.
+
 ## Open flags (pending input)
 
-- Older browser-only runs: no user display/recovery choice after two explanations. Preserve the underlying local data; do not attach it to any account. Revisit only with a concrete safe recovery proposal.
+- Older browser-only runs: no user display/recovery choice after two explanations. Preserve the underlying local data; do not attach it to any account or include it in account Attempts. Recovery/import is outside the first release and can be revisited only with a concrete, safe proposal. This is a scoped deferral, not a claim that Joshua chose a recovery design.
 - Admissions lock: app commit `dcd75e3` was pushed to `main` and published through Lovable. The signed-in student rail showed a disabled Admissions item with a lock, and `/classroom/admissions` showed "Not open yet" on the live site. Admin access passed the route test; a live admin account was not used.
+
+## Wayfinder completion check, 2026-09-28
+
+- All decision tickets #156-#162 and #164 are resolved. #163 was closed after Joshua chose not to wait for a current-student prototype test.
+- #160 sets the new account-backed exam contract and safely defers ownerless legacy-run recovery. Latest `origin/main` contains account-backed full PrepTest sync, while the older dirty feature checkout retains a browser-only runner. The approved blocking save-failure pause across timed LR/RC and live backend verification remain build work. Plan from `main`, not the feature checkout.
+- No further product answer is required before an implementation spec and blocker-aware tickets. The final Impeccable review belongs after functional student and teacher slices are built.
