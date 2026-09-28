@@ -1145,3 +1145,7 @@ Closed the [route and saved-rail decision](https://github.com/vnjkoxpl-42905/lsa
 ## [2026-09-28] planning | My Work record and completion rules resolved
 
 Joshua chose to keep every issued assignment, require saved finish/submission before measurable practice counts as Completed, include student-authored notes with clear labels, and keep opened-only work out of In progress. Closed the [My Work decision](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/158) and updated the adoption and student design notes. Current student and teacher feeds differ, so the build spec must verify both against one scoped ledger. No app code changed.
+
+## [2026-09-28] planning | Review lifecycle decision resolved
+
+Joshua told the Wayfinder work to move forward with the recommended Review choices. Closed the [Review lifecycle decision](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/159): missed, flagged, post-session skipped, and explicitly teacher-selected items can queue; missed answers need a short written diagnosis before Mark reviewed; flags and answer history remain after review; a later miss creates a new task. Updated the adoption plan and student design note. No app code changed.

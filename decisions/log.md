@@ -164,3 +164,7 @@ The [canonical path decision](https://github.com/vnjkoxpl-42905/lsatu-684d89db/i
 ## 2026-09-28: My Work keeps each assignment and requires a real finish
 
 Joshua chose a complete assignment history, including repeated guided drills. Practice work moves to Completed only when its source saves a finish or submission; merely opening it is not In progress. The student's own notes join Joshua's notes and session recaps in Notes & recaps, with author and type labels. The full [My Work record and status contract](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/158) also keeps unfinished overdue work in To do and requires student/teacher parity from the same scoped ledger.
+
+## 2026-09-28: Review keeps source, reason, and history
+
+Joshua directed the Wayfinder work to move ahead with the recommended Review rules. Missed, flagged, skipped after a session, and explicitly Joshua-selected items can create To review tasks. A missed answer needs a short written explanation before Mark reviewed. Mark reviewed closes that task but retains its independent flag and answer history; a new miss creates a new task. A typed source reference prevents LR, RC, Activity, and bootcamp items from being collapsed into an LR qid. The full [Review lifecycle decision](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/159) preserves first and blind answers and requires truthful coverage labels while source adapters are added.
