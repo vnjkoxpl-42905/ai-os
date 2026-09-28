@@ -28,14 +28,14 @@ The bank JSON is what students answer. The database `lr_answer_choices` is the s
 | PT105-S4-Q14 | D | Logged-in LSAT Lab question 7446 agrees with database | Follow-up bank branch; changed `would` to `could` in correct choice |
 | PT148-S3-Q7 | A | Logged-in LSAT Lab question 135 agrees with database | Follow-up bank branch; removed extra `food` |
 | PT152-S2-Q1 | B, C | Logged-in LSAT Lab question 3830 agrees with database | Follow-up bank branch; removed extra `student` before `housing` |
+| PT114-S1-Q12 | D | Bank wording `different individual companies` is quoted by [Apollo Test Prep](https://www.apollotestprep.com/apollo-explanations/2023/05/23/38-1-12-explanation) for old PT38-S1-Q12 and used in [7Sage's explanation](https://7sage.com/lsat_explanations/lsat-114-section-1-question-12/); LSAT Lab/database omit `different` | Database choice updated with exact old-value guard after snapshot `raw/sources/lsatu-lr-snapshots/2026-09-28-pre-pt114-s1-q12-choice-repair.json` |
 
-The PT108 database repair used `corpus/lr-explanations/work/pilot-inputs/pt108-s2-q7-choice-repair.sql`. A post-write read confirmed both exact values. The PT124 D update was guarded on the exact empty value and returned the complete text. The bank repairs changed 17 choices in 11 JSON files in [PR #181](https://github.com/vnjkoxpl-42905/lsatu-684d89db/pull/181), merged 2026-09-28. No answer keys changed.
+The database repairs use SQL files in `corpus/lr-explanations/work/pilot-inputs/` and snapshots in `raw/sources/lsatu-lr-snapshots/`. Each update returned the expected row with the corrected full text. The bank repairs changed 21 choices across [PR #181](https://github.com/vnjkoxpl-42905/lsatu-684d89db/pull/181) and [PR #182](https://github.com/vnjkoxpl-42905/lsatu-684d89db/pull/182), both merged 2026-09-28. No answer keys changed.
 
 ## Still needs source verification
 
 | Slot | Choice | Issue |
 |---|---|---|
-| PT114-S1-Q12 | D | Bank differs from LSAT Lab/database. No official PDF found locally. |
 | PT135-S1-Q1 | B | Bank differs from LSAT Lab/database; the latter says `oils in included`. No official PDF found locally. |
 | PT106-S1-Q2 | B | Bank differs from LSAT Lab/database; the latter repeats `funding for`. No official PDF found locally. |
 | PT105-S4-Q12 | E | Database adds `the` before `technology`; pilot bank text was preserved. |

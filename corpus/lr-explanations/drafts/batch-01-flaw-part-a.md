@@ -415,8 +415,8 @@ Source: current designated bank (`projects/lsatu-wt-glossary/public/data`) and f
 > according to the schools’ figures.
 >
 > The school official can most properly criticize the
-reasoning by which the survey report reached its result
-for failure to do which one of the following?
+> reasoning by which the survey report reached its result
+> for failure to do which one of the following?
 >
 > (A) take into account instances of respondents’ dropping out that occurred before the respondents reached high school
 > (B) ask residents whether they had completed their high school work in fewer than the usual number of years
