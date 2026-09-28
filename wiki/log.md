@@ -1208,3 +1208,7 @@ Pushed `2db154e` to LSAT U `main` through the guarded safe-push script and publi
 
 ## [2026-09-28] copy | Session recap wording corrected
 Joshua rejected abstract wording in the quantity recap. Revised the concept-and-arrow draft to open with direct definitions and a ten-cookie example, and recorded the correction in wiki/COPY-CORRECTIONS.md and the active, Codex, and Claude session-recap skills. The draft remains unposted.
+
+## [2026-09-28] LSAT U | Eighth connected-experience slice published
+
+Pushed `70257a2` to LSAT U `main` through the guarded safe-push script and used Lovable's free Publish control. Lovable displayed "Your website was updated." A fresh signed-in `lsatprep.study/review/to-review?reason=skipped` page showed the Left blank filter and completed standalone LR section source copy. The queue records each completed sitting separately when a question was opened and left unanswered, with an actor-owned read-only exact-item route. It does not infer that the student deliberately skipped it, expose never-visited questions, or include PrepTest legs. The answer marker moved into a small shared module to keep the Review bundle lighter. Twenty-eight focused tests, typecheck, production build, and a scoped code review passed. This teacher account had no qualifying sitting to inspect live; the exact-item rendering and owner guard were tested locally. Bootcamp, active RC, full PrepTest, and teacher-selected Review sources remain open in the app repo coverage matrix.

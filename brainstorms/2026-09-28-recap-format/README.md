@@ -18,7 +18,8 @@ Status: prototypes for Joshua's review. Nothing in this folder has been posted o
 | `02-full-lesson.md` | Standalone lecture note with worked reasons and cases | Strongest as a durable teaching resource; longest to read. |
 | `03-guided-self-checks.md` | Short explanations followed by try/check prompts | Encourages active recall; repeated prompts may interrupt reference reading. |
 | `04-visual-lesson.md` | Cookie examples, count ranges, and a one-way implication diagram before the later inferences | More intuitive entry point; the images need a usable URL when posted. |
-| `05-concept-and-arrow-lesson.md` | Concept-only explanation of ranges, arrow directions, and the inference patterns that do and do not work | Best match for the latest direction; longer because it explains the boundaries of each rule. |
+| `05-concept-and-arrow-lesson.md` | Concept-only explanation of ranges, arrow directions, and the inference patterns that do and do not work | Earlier concept draft, before the source-informed reorganization. |
+| `06-some-most-all-note.md` | Teaches some, then most, then all individually before comparison, chaining, and overlap | Current working draft based on Joshua's supplied PDFs and screenshots. |
 
 ## 2026-09-28 wording and visual revision
 
@@ -27,6 +28,8 @@ Joshua rejected “starting group” as an unexplained term. The fourth draft as
 Joshua then clarified that the note should teach concepts, not revisit the banjo question. The fifth draft removes that question and the scheduling/conditional-indicator detours. It covers the quantity meanings, reversals, conditional interpretation of “all,” valid chaining, invalid chaining, and the two-majority overlap. Its diagrams show the arrow directions and why two majorities of the same group intersect.
 
 Joshua rejected the fifth draft's abstract opening, “how much of a group fits a description,” and asked for his teaching voice throughout. The revised fifth draft opens with the ten cookies and direct definitions, removes repeated summary language, and explains each inference by asking what the statement actually proves. Keep future notes concrete and direct; do not lead with invented umbrella descriptions of the concept.
+
+Joshua supplied `Quantifier Math Takeaways.pdf`, `Quantifiers_Diagram.pdf`, and three screenshots on 2026-09-28. The sixth draft uses their core models: some is reversible, most is directed and yields some in reverse, all is a conditional, a second all-rule carries the first quantifier forward, and two most claims about the same group force a some overlap. It also explains the rarer group-size comparison without revisiting the banjo question. The diagrams are teaching references, not student-note instructions. The supplied shared-start all + all diagram needs an existence premise before it can establish some; the draft does not copy that inference without the premise. Ambiguous synonyms such as “often” and “can be” are also omitted because their meaning depends on context.
 
 The student Classroom page renders `content_markdown` as plain text. Formatted posts use sanitized `content_html`; tables and HTTPS image URLs are supported there. Keep Markdown as the editable source, convert it to HTML for posting, and host the visual assets at usable HTTPS URLs. Relative image paths in this draft are for local review and will not by themselves display on the student page.
 
