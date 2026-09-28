@@ -17,6 +17,16 @@ Status: prototypes for Joshua's review. Nothing in this folder has been posted o
 | `01-concise-reference.md` | Quick reference with compressed explanations | Easiest to scan; leaves fewer worked reasons to revisit later. |
 | `02-full-lesson.md` | Standalone lecture note with worked reasons and cases | Strongest as a durable teaching resource; longest to read. |
 | `03-guided-self-checks.md` | Short explanations followed by try/check prompts | Encourages active recall; repeated prompts may interrupt reference reading. |
+| `04-visual-lesson.md` | Cookie examples, count ranges, and a one-way implication diagram before the later inferences | More intuitive entry point; the images need a usable URL when posted. |
+| `05-concept-and-arrow-lesson.md` | Concept-only explanation of ranges, arrow directions, and the inference patterns that do and do not work | Best match for the latest direction; longer because it explains the boundaries of each rule. |
+
+## 2026-09-28 wording and visual revision
+
+Joshua rejected “starting group” as an unexplained term. The fourth draft asks “What are we counting?” and defines some, most, and all individually before using them in inferences. It distinguishes a permitted count from a guaranteed count, uses a 10-cookie range chart and concrete examples, and shows all → most → some as a one-way guarantee.
+
+Joshua then clarified that the note should teach concepts, not revisit the banjo question. The fifth draft removes that question and the scheduling/conditional-indicator detours. It covers the quantity meanings, reversals, conditional interpretation of “all,” valid chaining, invalid chaining, and the two-majority overlap. Its diagrams show the arrow directions and why two majorities of the same group intersect.
+
+The student Classroom page renders `content_markdown` as plain text. Formatted posts use sanitized `content_html`; tables and HTTPS image URLs are supported there. Keep Markdown as the editable source, convert it to HTML for posting, and host the visual assets at usable HTTPS URLs. Relative image paths in this draft are for local review and will not by themselves display on the student page.
 
 ## Accuracy checks
 

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 450" role="img" aria-labelledby="title desc">
+  <title id="title">How many of 10 cookies could be chocolate?</title>
+  <desc id="desc">Some allows 1 through 10 chocolate cookies. Most allows 6 through 10. All requires exactly 10.</desc>
+  <rect width="900" height="450" rx="24" fill="#f8f5ee"/>
+  <text x="44" y="58" fill="#152d36" font-family="Arial,sans-serif" font-size="29" font-weight="700">How many of 10 cookies?</text>
+  <text x="44" y="88" fill="#49606a" font-family="Arial,sans-serif" font-size="17">Possible counts when the sentence says they are chocolate</text>
+  <g font-family="Arial,sans-serif" font-size="18" fill="#49606a" text-anchor="middle">
+    <text x="250" y="139">1</text><text x="310" y="139">2</text><text x="370" y="139">3</text><text x="430" y="139">4</text><text x="490" y="139">5</text><text x="550" y="139">6</text><text x="610" y="139">7</text><text x="670" y="139">8</text><text x="730" y="139">9</text><text x="790" y="139">10</text>
+  </g>
+  <line x1="250" y1="152" x2="790" y2="152" stroke="#b8c5c5" stroke-width="2"/>
+  <g font-family="Arial,sans-serif" font-size="24" font-weight="700" fill="#152d36">
+    <text x="44" y="205">SOME</text><text x="44" y="291">MOST</text><text x="44" y="377">ALL</text>
+  </g>
+  <g font-family="Arial,sans-serif" font-size="16" fill="#49606a">
+    <text x="44" y="231">At least one</text><text x="44" y="317">More than half</text><text x="44" y="403">Every one</text>
+  </g>
+  <line x1="250" y1="199" x2="790" y2="199" stroke="#b3ded6" stroke-width="28" stroke-linecap="round"/>
+  <line x1="250" y1="199" x2="790" y2="199" stroke="#168d82" stroke-width="18" stroke-linecap="round"/>
+  <line x1="550" y1="285" x2="790" y2="285" stroke="#efd7a8" stroke-width="28" stroke-linecap="round"/>
+  <line x1="550" y1="285" x2="790" y2="285" stroke="#c57916" stroke-width="18" stroke-linecap="round"/>
+  <circle cx="790" cy="371" r="22" fill="#6d53a5"/>
+  <g font-family="Arial,sans-serif" font-size="15" font-weight="700" text-anchor="middle">
+    <text x="790" y="234" fill="#146a63">1–10</text><text x="790" y="320" fill="#9b5b0c">6–10</text><text x="790" y="408" fill="#6d53a5">10 only</text>
+  </g>
+</svg>
