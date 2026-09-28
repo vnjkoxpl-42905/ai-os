@@ -24,7 +24,7 @@ The student design keeps the product's warm tone and the approved Home v3 direct
 | Activities | Library > Activities | The assigned instance also appears in My Work. |
 | Review, Wrong answers, Flagged | Review > To review / Wrong answers / Flagged | A single queue explains why each question is there. |
 | Analytics and History | Progress > Overview / History / Topics | Counts disclose the included source and sample size. |
-| Admissions | Library > Admissions | Keep the tab visible. Its access rule needs a separate decision: the current route allows any signed-in account, while the earlier design described restricted access. |
+| Admissions | Library > Admissions | Keep the tab visible and locked for students while the page is unfinished. Joshua/admins retain access. This is an immediate access decision, not a change that waits for the redesign. |
 | Messages | Persistent Inbox control in the top bar, with full thread view | Badge and recent message remain visible from Home. Preserve direct message links. |
 | Schedule | Schedule | The next session and Book a session are visible without leaving the student shell. |
 | Find question | Persistent top-bar search | Keep exact PT/S/Q and text lookup, then return to the originating page. |
@@ -38,7 +38,7 @@ The seven primary rail destinations are Home, My Work, Practice, Review, Progres
 3. **Practice separates stakes.** Its first level has Drills and Practice Exams. Drills holds Smart Drill, Choose questions, and Saved sets. Practice Exams retains an Overview landing page, All Exams, and Attempts. The landing page has two start actions and one list for unfinished full exams and standalone timed LR/RC sections. Opening a test shows its sections and the student's attempts. Timed work gets a start summary. Inspecting a known question is clearly different from scoring a new attempt.
 4. **Review is a task, then a record.** To review includes missed, flagged, skipped, and explicitly Joshua-selected questions or responses. Wrong answers and Flagged let students audit the underlying history. The view keeps the first answer, any blind answer, written diagnosis, explanation, and Joshua's note. For a missed answer, a short error explanation is required before Mark reviewed. That action clears the task but retains the flag and history; a new miss creates a new task.
 5. **Progress explains a next action.** Summary cards link to the underlying attempts and to a relevant review or drill. Empty data says there is not enough evidence, rather than displaying zero accuracy.
-6. **Library holds longer-lived material.** Lessons, Activities, Bootcamps, and Admissions live here. Admissions access is still being decided. Assigned Activities also appear in My Work so the student can find them through either task or resource context.
+6. **Library holds longer-lived material.** Lessons, Activities, Bootcamps, and Admissions live here. Students see Admissions locked while it is unfinished; Joshua/admins retain access. Assigned Activities also appear in My Work so the student can find them through either task or resource context.
 7. **Schedule closes the loop.** Preparation links to the upcoming session, which links to the recap and follow-up work. Booking remains a clear action.
 
 ## Visual decisions for this version

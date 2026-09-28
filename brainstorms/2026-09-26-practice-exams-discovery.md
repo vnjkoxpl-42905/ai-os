@@ -15,6 +15,7 @@ Context sources: User screenshots and browser comment (2026-09-26); `wiki/hot.md
 - User-confirmed: Preserve attempts and results after PrepTest access is lost, while preventing resume into questions the student can no longer access.
 - User-confirmed: An active timed section pauses when the browser is closed. Time away must not count against the student. This supersedes the prior wall-clock recommendation.
 - User-confirmed on 2026-09-27: Switching to another tab keeps the section clock running; leaving the exam page or closing the browser pauses it at saved elapsed time. A second device may take over only after a clear "Continue on this device" action, and the first device must stop saving.
+- User-confirmed on 2026-09-28: If account saving fails during a new timed exam, keep a temporary device backup, pause the exam and clock, show the save problem, and resume only when saving works.
 - Unresolved legacy case: Joshua wants full-exam work saved to the account database. Older browser-only runs still carry no account identity, so moving those specific runs safely needs a separate decision. The prior recommendation to leave old runs only on their original browser is superseded as a general design for future exams.
 - The user requested a grill-me interview after inspecting the example and current product.
 - Verified current behavior: LSAT U already has an "Unfinished sittings" list for in-progress full PrepTests, shown when the current browser has one. It uses local browser storage. Standalone LR and RC sections resume through separate stores and do not appear in that list.
@@ -107,6 +108,7 @@ Context sources: User screenshots and browser comment (2026-09-26); `wiki/hot.md
 - Asked: Should the student keep working during an outage using a temporary device copy that syncs later?
 - Recommended: Yes, with a visible pending-save state and no second-device takeover until sync completes.
 - Captured: Joshua invoked wait-what and asked about saving directly to the backend. No offline-behavior decision yet; explain that a disconnected device cannot reach the database until its connection returns.
+- Superseded by the 2026-09-28 Grill Me answer in [the redesign capture](2026-09-28-lsatu-wayfinder-grill.md): Joshua chose a visible save failure with a temporary device backup and paused exam/clock until account saving succeeds.
 
 ## Open flags (pending input)
 

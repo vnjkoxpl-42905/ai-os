@@ -168,3 +168,15 @@ Joshua chose a complete assignment history, including repeated guided drills. Pr
 ## 2026-09-28: Review keeps source, reason, and history
 
 Joshua directed the Wayfinder work to move ahead with the recommended Review rules. Missed, flagged, skipped after a session, and explicitly Joshua-selected items can create To review tasks. A missed answer needs a short written explanation before Mark reviewed. Mark reviewed closes that task but retains its independent flag and answer history; a new miss creates a new task. A typed source reference prevents LR, RC, Activity, and bootcamp items from being collapsed into an LR qid. The full [Review lifecycle decision](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/159) preserves first and blind answers and requires truthful coverage labels while source adapters are added.
+
+## 2026-09-28: Pause timed exams when account saving fails
+
+Joshua confirmed that a new timed exam should keep a temporary device backup, pause the exam and clock, and show the problem if account saving fails. Progress resumes when saving works. This clarifies the [Practice Exams discovery](../brainstorms/2026-09-26-practice-exams-discovery.md). Older browser-only progress without a student ID still cannot be attached safely to an account; Joshua made no decision about its optional display or recovery after asking for a simpler explanation.
+
+## 2026-09-28: Admissions is admin-only while unfinished
+
+Joshua directed an immediate lock on the unfinished Admissions page. Students should see its navigation item as locked and be denied the direct route. Joshua and admins retain access. This reverses the earlier recommendation to leave the current signed-in access unchanged. The [Admissions access ticket](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/164) tracks implementation and live verification.
+
+## 2026-09-28: Do not wait for a current-student prototype test
+
+Joshua chose not to make a current-student walkthrough of the clickable prototype a prerequisite to the build spec. The [Wayfinder test ticket](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/163) was closed as outside the map's required path. Internal task walks and app verification remain in the plan.
