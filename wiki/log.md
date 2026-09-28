@@ -7,6 +7,12 @@ aliases: []
 
 # Log
 
+## [2026-09-28] ship | Admissions locked for students while unfinished
+
+- Joshua confirmed that only he and admins may open Admissions. Pushed LSAT U commit `dcd75e3` to `origin/main` and published it through Lovable.
+- The student rail keeps Admissions visible with a disabled lock. The direct `/classroom/admissions` URL shows "Not open yet" to a signed-in student. Verified both on the live site with the tester account. Admin access passed the route test but was not checked in a live admin session.
+- Focused route and rail tests (44), TypeScript, and the production build passed. The broader redesign remains in discovery; the old browser-only exam recovery policy remains unresolved.
+
 ## [2026-09-27] build | Practice Exams account persistence prepared
 
 - Committed LSAT U Practice Exams navigation, unfinished and completed attempts, account-backed full-exam state, section resume, device handoff, and pause-on-exit timing on branch `codex/practice-exams-account-sync` at `9face76`.

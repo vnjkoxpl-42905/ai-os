@@ -1,12 +1,12 @@
 # LSAT U redesign decisions: Brainstorm / Discovery Notes
 
 Date: 2026-09-28 · Goal: Settle the remaining independent product decisions for the student and teacher redesign before the implementation spec.
-Status: in progress
+Status: round complete; legacy browser-only recovery remains open
 Context sources: [Wayfinder decision map](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/155); [platform adoption game plan](2026-09-27-lsatu-platform-adoption-game-plan.md); [student experience design](2026-09-28-lsatu-student-experience-design.md); [Practice Exams discovery](2026-09-26-practice-exams-discovery.md).
 
 ## Summary / key decisions
 
-Earlier approved choices are in the linked decision map and discovery notes. Joshua directed Admissions to be locked now because it is not prepared, with access kept for Joshua and admins only. He said not to wait for a current-student prototype test before the build spec. For a new timed exam, a failed account save should keep a device backup and pause the exam and clock with a visible problem until saving works. Joshua remained confused by the old browser-only progress question after a second explanation. No product choice was recorded for its display. The assistant will preserve ownerless records without assigning them to any account and leave any later recovery policy flagged.
+Earlier approved choices are in the linked decision map and discovery notes. Joshua directed Admissions to be locked now because it is not prepared, with access kept for Joshua and admins only. That lock was published and verified in a signed-in student view: the rail item is disabled with a lock, and the direct URL shows "Not open yet." He said not to wait for a current-student prototype test before the build spec. For a new timed exam, a failed account save should keep a device backup and pause the exam and clock with a visible problem until saving works. Joshua remained confused by the old browser-only progress question after a second explanation. No product choice was recorded for its display. Preserve ownerless records without assigning them to any account and leave any later recovery policy flagged.
 
 ## Q&A log
 
@@ -64,4 +64,4 @@ Earlier approved choices are in the linked decision map and discovery notes. Jos
 ## Open flags (pending input)
 
 - Older browser-only runs: no user display/recovery choice after two explanations. Preserve the underlying local data; do not attach it to any account. Revisit only with a concrete safe recovery proposal.
-- Admissions lock implementation and live verification: assistant. Joshua chose an immediate admin-only lock; the current code still allows any signed-in account.
+- Admissions lock: app commit `dcd75e3` was pushed to `main` and published through Lovable. The signed-in student rail showed a disabled Admissions item with a lock, and `/classroom/admissions` showed "Not open yet" on the live site. Admin access passed the route test; a live admin account was not used.
