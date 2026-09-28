@@ -7,6 +7,11 @@ aliases: []
 
 # Log
 
+## [2026-09-28] decision | Progress calculation contract accepted
+
+- Joshua accepted first saved, graded responses as the diagnostic accuracy basis for each distinct LR or RC question. Repeats remain in History and volume. Inspect, blind-review, and unfinished ungraded work do not enter that denominator.
+- The 7/14/21/30/All filter, visible numerator/denominator and coverage labels, explicit assignment attribution, and identical student/teacher calculations are recorded in the adoption plan and [Progress issue #161](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/161), now closed. Existing analytics screens still disagree and need implementation work.
+
 ## [2026-09-28] ship | Admissions locked for students while unfinished
 
 - Joshua confirmed that only he and admins may open Admissions. Pushed LSAT U commit `dcd75e3` to `origin/main` and published it through Lovable.
