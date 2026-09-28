@@ -5,6 +5,7 @@
 //
 //   signups [--days 30]                      new signups, with their access state
 //   access  "Name"                           show every access flag
+//   tier    "Name" tier_1                     apply an account access tier
 //   access  "Name" --template standard       trial | standard | full (what the dashboard applies)
 //   access  "Name" --grant drill,activity    turn flags on  (short names or has_*_access)
 //   access  "Name" --revoke chat             turn flags off
@@ -45,7 +46,7 @@ const pos2 = argv[2] && !argv[2].startsWith("--") ? argv[2] : undefined;
 const flag = (n, d) => { const i = argv.indexOf(`--${n}`); return i >= 0 ? argv[i + 1] : d; };
 const has = (n) => argv.includes(`--${n}`);
 const dry = has("dry-run");
-const CMDS = ["signups", "access", "archive", "unarchive", "items", "due", "unassign", "passes", "credit", "notifications", "read", "drafts", "draft", "draft-set", "uploads", "upload-review", "notes", "note-resolve", "note-discard", "scan-notes", "plans", "unsend", "unsend-last"];
+const CMDS = ["signups", "access", "tier", "archive", "unarchive", "items", "due", "unassign", "passes", "pass-detail", "pass-create", "credit", "notifications", "read", "drafts", "draft", "draft-set", "uploads", "upload-review", "notes", "note-resolve", "note-discard", "scan-notes", "plans", "unsend", "unsend-last"];
 if (!CMDS.includes(cmd)) { console.error(fs.readFileSync(fileURLToPath(import.meta.url), "utf8").split("\n").slice(5, 20).join("\n")); process.exit(2); }
 
 const tok = await (await fetch(`${URL_}/auth/v1/token?grant_type=password`, {
@@ -114,6 +115,15 @@ if (cmd === "signups") {
     console.log(`${day(n.created_at)}  ${n.read ? " " : "*"} ${nm.padEnd(24)} ${u ? `<${u.email}>`.padEnd(36) : "".padEnd(36)} ${state}`);
   }
   console.log(`\n* = unread. Give access: lsatu access "<name>" --template standard`);
+} else if (cmd === "tier") {
+  const u = await resolve(pos);
+  const tier = pos2;
+  if (!["tier_1", "tier_2", "tier_3"].includes(tier)) { console.error("tier must be tier_1, tier_2, or tier_3"); process.exit(2); }
+  console.log(`${nameOf(u)} <${u.email}>: ${u.access_tier ?? "none"} → ${tier}`);
+  if (dry) { console.log("(dry run — nothing changed)"); process.exit(0); }
+  await fn("admin-manage-users", { action: "set_tier", class_id: u.class_id, tier });
+  const after = await resolve(u.email);
+  console.log(`Done. ${after.access_tier}\n  ${accessLine(after)}`);
 } else if (cmd === "access") {
   const u = await resolve(pos);
   const t = flag("template");
@@ -168,6 +178,25 @@ if (cmd === "signups") {
   if (!list.length) { console.log(pos ? "No booking pass for that student." : "No booking passes."); process.exit(0); }
   for (const p of list) console.log(`${String(p.student_name ?? p.student_email).padEnd(22)} ${p.used_credits}/${p.total_credits} used · ${p.total_credits - p.used_credits} owed · ${p.session_length_minutes} min · ${p.status}${p.expires_at ? ` · expires ${day(p.expires_at)}` : ""}`);
   console.log(`\nNew pass or link: use the booking-link skill (scripts/booking-link.ts).`);
+} else if (cmd === "pass-detail") {
+  const u = await resolve(pos);
+  const detail = await fn("booking-pass-admin", { action: "get_for_student", student_id: u.class_id });
+  console.log(JSON.stringify({ student: nameOf(u), email: u.email, ...detail }, null, 2));
+} else if (cmd === "pass-create") {
+  const u = await resolve(pos);
+  const credits = Number(flag("credits", 1));
+  const minutes = Number(flag("minutes", 70));
+  if (!Number.isInteger(credits) || credits < 1 || credits > 50) throw new Error("credits must be an integer from 1 to 50");
+  if (![30, 45, 60, 70, 90, 120].includes(minutes)) throw new Error("minutes must be 30, 45, 60, 70, 90, or 120");
+  const detail = await fn("booking-pass-admin", { action: "get_for_student", student_id: u.class_id });
+  if (detail.pass?.status === "active") throw new Error(`${nameOf(u)} already has an active pass; use credit or edit instead`);
+  console.log(`${nameOf(u)} <${u.email}>: create ${credits} credit(s), ${minutes} minutes, no expiry`);
+  if (dry) { console.log("(dry run — nothing changed)"); process.exit(0); }
+  const result = await fn("booking-pass-admin", {
+    action: "create", student_id: u.class_id, student_name: nameOf(u), student_email: u.email,
+    total_credits: credits, session_length_minutes: minutes, expires_at: null,
+  });
+  console.log(JSON.stringify(result, null, 2));
 } else if (cmd === "credit") {
   const u = await resolve(pos);
   const { passes = [] } = await fn("booking-pass-admin", { action: "list" });

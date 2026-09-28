@@ -4,6 +4,8 @@ Date: 2026-09-27
 Status: recommended design and build sequence, based on the four-platform audit  
 Source: [LSAT Lab, 7Sage, AdeptLR, and LSAT Demon running audit](../research/2026-09-27-lsat-platform-ui-audit.md)
 
+Student-facing companion: [2026-09-28 student experience design and clickable prototype](2026-09-28-lsatu-student-experience-design.md). It maps every current student rail item from Joshua's screenshot into the proposed seven-page shell, including persistent Inbox and question search.
+
 ## The product we should build
 
 Make LSAT U feel like one coached study system. A student should see what Joshua assigned, do it, inspect a missed question, understand the error, and know what to do next without hunting through the rail. Joshua should see the same attempt and review state from his workspace and connect it to the next session.

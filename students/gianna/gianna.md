@@ -9,7 +9,7 @@ lifecycle: active
 email: giannajean005@gmail.com
 subject: Gianna Jean
 created: 2026-09-24
-updated: 2026-09-24
+updated: 2026-09-28
 aliases: [Gianna]
 ---
 
@@ -23,6 +23,8 @@ aliases: [Gianna]
 ## Record basis
 
 Google Calendar records an LSAT U teaching session for Gianna at `giannajean005@gmail.com` on 2026-09-17. This folder was created from that teaching-session evidence. Active status here means Calendar documents teaching during the review window.
+
+Transcript intake was rechecked against Calendar and Drive on 2026-09-28. The 2026-09-17 Gemini notes remain the only session transcript found. Her LSAT U account and Tier 1 access were verified on 2026-09-28; orientation completion is still open.
 
 ## Session records
 

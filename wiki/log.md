@@ -1084,3 +1084,36 @@ Created `brainstorms/2026-09-27-lsatu-platform-adoption-game-plan.md` with the r
 ## [2026-09-27] ops | Gianna Jean 10-session booking pass
 Verified Stripe checkout cs_live_a1R8sSKZ3LG56mBT8CJiSSFkZTsMQ6QsAbKe6jNbAAIGiud5S17ZO3NTlc was paid for the 10 hour reduced package (USD 350). Created Gianna's LSAT U booking pass, 10 sessions at 70 minutes, no expiry. Verified it is active with 0/10 used and its private booking page returns HTTP 200. Link generated for Joshua to share; no message sent.
 
+
+## [2026-09-27] product | Booking calendar month navigation fixed
+Fixed the shared pass-booking calendar resetting to its first September slot when a student clicked Next month. Added a regression test covering navigation into October and selecting an available Thursday. Typecheck, production build, targeted test, and local browser verification passed. Pushed app commits bb0b7da and 155b223 to main, then used Lovable manual Publish with Joshua's approval. Verified the published Gianna booking page stays on October and shows five times on 2026-10-01. No booking was made.
+
+
+## [2026-09-28] platform | Gianna Tier 1 access
+Set Gianna Jean <giannajean005@gmail.com> to access_tier=tier_1 through admin-manage-users. Verified Tier 1 on live read; all Tier 1 feature flags on except WAJ, as defined by the tier template. Existing 10-session booking pass remained active with 0/10 used. Added a tier command to system/scripts/lsatu for account-tier changes.
+
+## [2026-09-28] booking | Gianna short account-bound link
+Published frontend route /book/gianna (commit afd30c9) through Lovable manual Publish. Route redirects to /booking, which requires sign-in and reads the pass by authenticated account; the old high-entropy public link remains unchanged. Live browser verified /book/gianna redirected to /booking after publish. Gianna's pass remains bound to her platform class_id with 0/10 used. Gmail draft r-6664624807132742590 updated to short link and removed October-date language; not sent. Full authenticated test as Gianna was not possible without her credentials, so no booking was placed.
+
+## [2026-09-28] correction | Gianna booking destination
+Joshua clarified the email must open Gianna's original no-login pass calendar, not the signed-in account scheduler. Removed the /book/gianna alias in commit 43f00f3 and published the correction. The Gmail draft r-6664624807132742590 now has a visible 'Book your sessions' hyperlink targeting the original high-entropy URL. Live original link showed 10 available sessions, October 1 times, and reached the Book 1:00 PM button without booking. The high-entropy slug remains necessary because the public link itself grants use of prepaid credits. No credits changed; draft not sent.
+
+## [2026-09-28] student operations | Gianna transcript intake reconciled
+
+Rechecked Google Calendar teaching events through 2026-09-30 and Google Drive files named for Gianna on 2026-09-28. Only the 2026-09-17 session and its Gemini Doc were found; the full local export and transcript, summary, and topic-map package were already present. Updated the student router, transcript inventory, and open loops to reflect this check and her verified LSAT U Tier 1 account. Orientation completion remains unverified. `check-student-records.py` passed.
+
+## [2026-09-28] booking | Whitney one-credit lesson pass
+
+Matched Whitney to `whitwilson929@gmail.com`. Joshua's 2026-09-23 sent Gmail message confirmed a $55 CAD e-transfer for one lesson. Live booking admin showed no prior pass or single-session booking, and September Calendar showed no Whitney booking. Created account-linked pass `7331ccde-f822-4de2-8d4d-55910f1bcfb8` with one 70-minute credit and no expiry. Verified via booking admin: active, one remaining, zero used. Its public booking page showed one session and available times. Recorded the link in her student folder. No booking was made and no message was sent.
+
+## [2026-09-28] design | Student-side platform adoption prototype
+
+Added a student-specific navigation and page design from Joshua's classroom screenshot. The clickable local prototype shows a seven-destination rail, persistent Inbox and question search, My Work tabs, separate timed start, a Review queue and reasoning gate, Progress, Library, and Schedule. Updated the main adoption plan to link the student design. Verified Home, My Work, and Review interactions in a local browser. Design sample only; no LSAT U application or live data changed.
+
+## [2026-09-28] correction | Whitney payment reply remained a draft
+
+Gmail metadata showed message `1a0cf6dfd4dc3165` had the DRAFT label, despite an earlier read of its body suggesting a sent reply. Corrected Whitney's local payment note. Whitney herself reported the e-transfer on 2026-09-23, and Joshua stated in chat that she paid. The old draft's general `/book/session` URL was never sent.
+
+## [2026-09-28] student operations | Whitney scheduling access and reply draft
+
+Enabled Schedule access for Whitney's LSAT U account at `whitwilson929@gmail.com` through `system/scripts/lsatu`; admin read confirmed Classroom, Schedule, and TA enabled. Booking admin confirmed one active 70-minute pass credit, zero used, no single-session booking. Updated existing Gmail draft `r790915509299354042` in thread `1a0a811c3b49e369` with her prepaid booking URL and verified the recipient-facing text in draft message `1a0e688041b52df7`. Draft remains unsent; Whitney's personal sign-in was not tested.
