@@ -1121,3 +1121,7 @@ Enabled Schedule access for Whitney's LSAT U account at `whitwilson929@gmail.com
 ## [2026-09-28] correspondence | Whitney booking email sent
 
 Joshua approved sending the reviewed reply to Whitney. Sent existing Gmail draft `r790915509299354042` in thread `1a0a811c3b49e369`; Gmail returned Sent message `1a0e6b88e935e2f8` to `whitwilson929@gmail.com`. Read the sent body and confirmed it matched the approved draft, including the prepaid booking link, platform link, and offer to try to fit a specific time. Exactly one new Sent copy appeared in the thread. Updated the student record and send ledger.
+
+## [2026-09-28] design | Practice Exams placement confirmed in student prototype
+
+Joshua approved Practice as the short student-rail destination with a complete Practice Exams area inside it. Revised the clickable student prototype, student design note, adoption game plan, and competitor audit to preserve Practice Exams Overview, Unfinished exams and sections, All Exams, and Attempts. Logged the decision in `decisions/log.md`. The prototype uses sample data and no LSAT U application code or live records changed.

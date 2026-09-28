@@ -1,7 +1,7 @@
 # LSAT U student experience, first visual version
 
 Date: 2026-09-28  
-Status: design prototype, not an app change  
+Status: revised design prototype; Practice Exams placement confirmed 2026-09-28; not an app change
 Companion: [platform adoption game plan](2026-09-27-lsatu-platform-adoption-game-plan.md)  
 Prototype: [clickable student view](prototypes/lsatu-student-experience.html)
 
@@ -17,7 +17,7 @@ The student design keeps the product's warm tone and the approved Home v3 direct
 |---|---|---|
 | Home | Home | Next action, assignments, teacher message, review due, and week ahead. |
 | Drill | Practice > Drills | Smart Drill stays one action away from Home and Practice. |
-| Practice Exams / Testing Centre | Practice > Timed Sections / PrepTests | The timed launch screen names the clock and requires a deliberate start. |
+| Practice Exams / Testing Centre | Practice > Practice Exams | Keep its own landing page with two start actions, Unfinished exams and sections, All Exams, and Attempts. A timed launch names the clock and requires a deliberate start. |
 | Assigned work | My Work > To do / Completed | Each work row links to the right Practice, Activity, or test surface. |
 | Notes and recaps | My Work > Notes & recaps | Notes and recaps retain their own record types and context. |
 | Bootcamps | Library > Bootcamps | Continue and progress appear on the item card. |
@@ -35,7 +35,7 @@ The seven primary rail destinations are Home, My Work, Practice, Review, Progres
 
 1. **Home answers what to do next.** The first recommendation states its source, why it is next, and a single Continue action. A message and a second assignment stay nearby. A short review-due line links directly into Review. The seven-day strip stays, but it does not crowd out the work.
 2. **My Work is the teacher relationship.** To do, Completed, and Notes & recaps show assignment source and state. A student's own note is not presented as a teacher recap. An unstarted assignment appears before any attempt exists.
-3. **Practice separates stakes.** Drills, Timed Sections, PrepTests, and Saved sets are local tabs. Timed work gets a start summary. Inspecting a known question is clearly different from scoring a new attempt.
+3. **Practice separates stakes.** Its first level has Drills and Practice Exams. Drills holds Smart Drill, Choose questions, and Saved sets. Practice Exams retains an Overview landing page, All Exams, and Attempts. The landing page has two start actions and one list for unfinished full exams and standalone timed LR/RC sections. Opening a test shows its sections and the student's attempts. Timed work gets a start summary. Inspecting a known question is clearly different from scoring a new attempt.
 4. **Review is a task, then a record.** To review leads. Wrong answers and Flagged let students audit the queue. The question view keeps the first answer, any blind answer, written diagnosis, explanation, Joshua's note, and a deliberate Mark reviewed action.
 5. **Progress explains a next action.** Summary cards link to the underlying attempts and to a relevant review or drill. Empty data says there is not enough evidence, rather than displaying zero accuracy.
 6. **Library holds longer-lived material.** Lessons, Activities, Bootcamps, and permission-gated Admissions live here. Assigned Activities also appear in My Work so the student can find them through either task or resource context.
@@ -49,6 +49,16 @@ The seven primary rail destinations are Home, My Work, Practice, Review, Progres
 - Local tabs sit directly below each page title. Their active states and URL state should match; the static prototype demonstrates the interaction, while production must retain browser history and direct links.
 - Main buttons name the exact action: Continue assignment, Start timed section, Open recap, Mark reviewed. Labels for first answer, correct answer, and review state use words as well as color.
 - Responsive behavior preserves question reading width. On phones the rail becomes a drawer, cards stack, and the top bar keeps Inbox and search available.
+
+## The approved Practice Exams flow inside Practice
+
+Joshua confirmed on 2026-09-28 that Practice is the student rail destination and Practice Exams is a distinct area inside it. This keeps the shorter rail without losing the [2026-09-26 Practice Exams decisions](2026-09-26-practice-exams-discovery.md). The first level is **Drills | Practice Exams**. Practice Exams then has **Overview | All Exams | Attempts** with links that reopen the same selected view.
+
+Overview starts with **Start a full PrepTest** and **Start a timed section**. Below them, **Unfinished exams and sections** shows both kinds of work with a clear Continue action. All Exams lists PrepTests; a detail page shows sections, start options, and that student's attempts. Attempts lists in-progress and completed full exams and timed sections, with Results for completed work. General question history remains in Progress.
+
+New full-exam attempts save answers, position, elapsed time, and results to the student's account database. The clock runs when the student changes browser tabs, but pauses when they leave the exam page or close the browser. A second device must explicitly take over and stop the first from saving. Existing results remain visible after access changes, while resume into inaccessible questions is blocked. Earlier browser-only runs without an account identity remain a separate migration limit; do not attach them to the next person who signs in.
+
+The prototype illustrates these screens and states. It has no backend, does not start a clock, and does not prove cross-device resume or access behavior. The implementation must verify those against the real account and permission model.
 
 ## What to validate before adopting the design
 
