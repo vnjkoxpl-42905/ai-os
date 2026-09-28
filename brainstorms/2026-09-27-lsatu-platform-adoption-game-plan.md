@@ -6,7 +6,7 @@ Source: [LSAT Lab, 7Sage, AdeptLR, and LSAT Demon running audit](../research/202
 
 Student-facing companion: [2026-09-28 student experience design and clickable prototype](2026-09-28-lsatu-student-experience-design.md). It maps every current student rail item from Joshua's screenshot into the proposed seven-page shell, including persistent Inbox and question search.
 
-Decision tracking: [LSAT U student and teacher experience: decision map](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/155). It holds the remaining implementation-spec questions and their blocking relationships. This plan remains the design direction; the map records decisions still to make before tickets are written.
+Decision tracking: [Wayfinder decision map](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/155) is resolved. The [implementation spec](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/165) and [ordered build sequence](2026-09-28-lsatu-build-sequence.md) carry the approved design into student-first, blocker-aware tickets. This document remains the design direction.
 
 The [route and saved-rail decision](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/157) sets stable paths for the seven destinations and local tabs, preserves old question and work links, and migrates saved rail choices once. Joshua has chosen to lock unfinished Admissions for students now while retaining Joshua/admin access; the [Admissions access ticket](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/164) tracks the live change.
 

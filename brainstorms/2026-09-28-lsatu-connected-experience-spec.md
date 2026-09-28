@@ -61,7 +61,7 @@ Ship student-first, usable vertical slices. Reconcile current `main` before impl
 ### Progress and Home
 
 30. As a student, Progress has **Overview, History, Topics**, and one 7/14/21/30/All control applies to each visible statistic and history set.
-31. As a student, diagnostic LR and RC accuracy uses only my first saved, graded answer to each distinct question in the chosen window. Repeats appear in History and volume; Inspect, blind answers, and ungraded work do not enter accuracy.
+31. As a student, diagnostic LR and RC accuracy uses only my first saved, graded answer ever to each distinct question, and the timeframe filters that first answer by its graded date. A repeat inside the window cannot become eligible merely because the first answer predates it. Full-test and timed-section answers enter only after saved finish/submission makes them graded. Repeats appear in History and volume; Inspect, blind answers, and ungraded work do not enter accuracy.
 32. As a student, each percentage shows its numerator, eligible-question denominator, source and mode coverage, and any missing sources. LR and RC remain separate. Fewer than three eligible questions shows insufficient evidence; three to nine is labeled an early signal.
 33. As a student, a priority explains its evidence and links to a relevant Review queue or prefilled Practice drill. Assignment attribution appears only when the attempt stores an explicit assignment link.
 34. As Joshua, I see the selected student's Progress from the same calculation and scope, with no discrepancy caused by a second analytics formula.

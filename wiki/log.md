@@ -1165,3 +1165,7 @@ Joshua chose to keep every issued assignment, require saved finish/submission be
 ## [2026-09-28] planning | Review lifecycle decision resolved
 
 Joshua told the Wayfinder work to move forward with the recommended Review choices. Closed the [Review lifecycle decision](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/159): missed, flagged, post-session skipped, and explicitly teacher-selected items can queue; missed answers need a short written diagnosis before Mark reviewed; flags and answer history remain after review; a later miss creates a new task. Updated the adoption plan and student design note. No app code changed.
+
+## [2026-09-28] planning | LSAT U Wayfinder completed and build tickets published
+
+Resolved the remaining exam decision without assigning ownerless browser records to an account; optional recovery is deferred. Corrected an initial code-read error after comparing the older dirty feature checkout with latest `main`: full PrepTest account sync exists on `main`, but blocking failed-save pause is incomplete across timed LR/RC. Published [implementation spec #165](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/165) and thirteen child build tickets #166-#178 with native dependency links and a final Impeccable gate. Local spec and [build sequence](../brainstorms/2026-09-28-lsatu-build-sequence.md) preserve the handoff. No redesign code, deployment, or Lovable credit spend occurred.
