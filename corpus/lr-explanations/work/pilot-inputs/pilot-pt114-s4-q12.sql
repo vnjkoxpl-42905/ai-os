@@ -32,4 +32,6 @@ Does the trigger apply? Take the contrapositive: if computers don't affect the h
 
 Watch the words. "Help" and "affect" are not quite the same: something could affect understanding by getting in its way. Morris's evidence only rules out helping. So (E) doesn't seal the conclusion with perfect force. It is still the only answer that ties "appreciable impact" to the higher functions, which is the gap the argument leaves open, and in context Morris is plainly using "affect" in the helping sense. Every other answer either fails to link the new concept or works against Morris. Pick the answer that closes the real gap, even when its wording is a shade looser than the evidence.
 
-On Sufficient Assumption, when the conclusion has a concept the evidence never mentions, the right answer almost always defines that new concept in terms of something the evidence did cover.$pilot$)) v(letter,body) WHERE q.qid=$pilot$PT114-S4-Q12$pilot$ AND e.style='single' AND NOT EXISTS (SELECT 1 FROM lr_explanation_choice_note
+On Sufficient Assumption, when the conclusion has a concept the evidence never mentions, the right answer almost always defines that new concept in terms of something the evidence did cover.$pilot$)) v(letter,body) WHERE q.qid=$pilot$PT114-S4-Q12$pilot$ AND e.style='single' AND NOT EXISTS (SELECT 1 FROM lr_explanation_choice_notes n WHERE n.explanation_id=e.id) ON CONFLICT DO NOTHING;
+
+COMMIT;

@@ -35,4 +35,6 @@ Does the trigger apply? Yes: his last book sold well because of the collaboratio
 writer collaborates + is    →   usually produces
 a good writer                    books that sell well
 ```
-Does the trigger apply? We don't know whether our writer is a good writer. And "usually" is weaker than the writer's conclusion. Two strikes.$pilot$)) v(letter,body) WHERE q.qid=$pilot$PT120-S4-Q9$pilot$ AND e.style='single' AND NOT EXISTS (SELECT 1 FROM lr_explanation_choice_note
+Does the trigger apply? We don't know whether our writer is a good writer. And "usually" is weaker than the writer's conclusion. Two strikes.$pilot$)) v(letter,body) WHERE q.qid=$pilot$PT120-S4-Q9$pilot$ AND e.style='single' AND NOT EXISTS (SELECT 1 FROM lr_explanation_choice_notes n WHERE n.explanation_id=e.id) ON CONFLICT DO NOTHING;
+
+COMMIT;

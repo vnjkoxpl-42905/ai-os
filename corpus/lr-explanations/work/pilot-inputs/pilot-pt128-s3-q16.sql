@@ -22,4 +22,6 @@ INSERT INTO lr_explanation_choice_notes (explanation_id, letter, body) SELECT e.
 - "Lack of funds for research": a lack of funds for research.
 - "reduces the quality of education a university provides": adversely affects how well a university fulfills its central mission (educating).
 
-The only work required is swapping "central mission" for "education," which is exactly what the Goal step set up.$pilot$), ($pilot$E$pilot$, $pilot$The author never proposes a fix. She only says underfunding hurts education. Calling for new funding sources is a What Next answer: something the author might say next, but didn't.$pi
+The only work required is swapping "central mission" for "education," which is exactly what the Goal step set up.$pilot$), ($pilot$E$pilot$, $pilot$The author never proposes a fix. She only says underfunding hurts education. Calling for new funding sources is a What Next answer: something the author might say next, but didn't.$pilot$)) v(letter,body) WHERE q.qid=$pilot$PT128-S3-Q16$pilot$ AND e.style='single' AND NOT EXISTS (SELECT 1 FROM lr_explanation_choice_notes n WHERE n.explanation_id=e.id) ON CONFLICT DO NOTHING;
+
+COMMIT;

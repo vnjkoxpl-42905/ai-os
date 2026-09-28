@@ -25,4 +25,6 @@ Parallel Flaw questions love a wrong answer that copies the *topic*. Match the f
 - No individual member can afford a tent. (No individual should hold the power.)
 - So the club, a collection of members, can't afford one either. (So society, a collection of individuals, shouldn't hold it either.)
 
-Same flaw, same direction: part to whole. It fails for the same reason too. Members can pool their money, just like a society can pool its judgment.$pilot$), ($pilot$E$pilot$, $pilot$This goes the other way: society might be mistaken, so every individual might be. Whole to part. That's a flaw too, but it's the mirror image of the historian's. It also only concludes that being mistaken is *possible*, which is much weaker than the historian's firm conclusion.$pilot$)) v(letter,body) WHERE q.qid=$pilot$PT104-S4-Q13$pilot$ AND e.style='single' AND NOT EXISTS (SELECT 1 FROM lr_explanation_choice_note
+Same flaw, same direction: part to whole. It fails for the same reason too. Members can pool their money, just like a society can pool its judgment.$pilot$), ($pilot$E$pilot$, $pilot$This goes the other way: society might be mistaken, so every individual might be. Whole to part. That's a flaw too, but it's the mirror image of the historian's. It also only concludes that being mistaken is *possible*, which is much weaker than the historian's firm conclusion.$pilot$)) v(letter,body) WHERE q.qid=$pilot$PT104-S4-Q13$pilot$ AND e.style='single' AND NOT EXISTS (SELECT 1 FROM lr_explanation_choice_notes n WHERE n.explanation_id=e.id) ON CONFLICT DO NOTHING;
+
+COMMIT;

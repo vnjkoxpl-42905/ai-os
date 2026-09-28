@@ -18,4 +18,6 @@ Usually, on EXCEPT questions, three of the four answers we eliminate come at the
 
 Most students only think of road 1, because the wastewater feels like it must be hurting the fish. But road 2 is just as good. If half the anglers stop showing up, half as many bass get caught, even if the bass are thriving.$pilot$), (3, $pilot$Goal$pilot$, $pilot$Eliminate four answers that explain fewer bass caught, by either road. The correct answer will do neither, or it will push the other way: more bass or more fishing, which should mean *more* bass caught.
 
-Be careful with any answer about anglers. It isn't out of scope. Anglers are half the equation.$pilot$)) v(position,label,body) WHERE q.qid=$pilot$PT108-S3-Q6$pilot$ AND e.id=$pilot$7aca97bc-3629-4277-bbd4-5597bdda2c4c$pilot$ AND NOT EXISTS (SELECT 1 FROM lr_explanation_steps s WHERE s.explanation_id=e.id) ON CONFLICT D
+Be careful with any answer about anglers. It isn't out of scope. Anglers are half the equation.$pilot$)) v(position,label,body) WHERE q.qid=$pilot$PT108-S3-Q6$pilot$ AND e.id=$pilot$7aca97bc-3629-4277-bbd4-5597bdda2c4c$pilot$ AND NOT EXISTS (SELECT 1 FROM lr_explanation_steps s WHERE s.explanation_id=e.id) ON CONFLICT DO NOTHING;
+
+COMMIT;

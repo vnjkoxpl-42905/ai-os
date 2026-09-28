@@ -32,4 +32,6 @@ On "does not follow because of the possibility that" questions, ask of each answ
 
 Now bring in the rule. Any O'Brien student who heard it from the beginning *would* have found it fascinating. So if an O'Brien student had heard it from the beginning, that student would be exactly the kind of person (D) says doesn't exist. The only way (D) and the rule can both be true is if no O'Brien student heard it from the beginning.
 
-That makes the conclusion false while both premises still stand: the fascinated students must have come in late. That's the world we predicted.$pilot$), ($pilot$E$pilot$, $pilot$Disruptions affect who heard the *entire* lecture. The argument is about who heard the *beginning*. Someone who arrived on time and then got distracted by latecomers still heard the start. (E) doesn't stop any O'Brien student from hearing the beginning, so the conclusion survives.$pi
+That makes the conclusion false while both premises still stand: the fascinated students must have come in late. That's the world we predicted.$pilot$), ($pilot$E$pilot$, $pilot$Disruptions affect who heard the *entire* lecture. The argument is about who heard the *beginning*. Someone who arrived on time and then got distracted by latecomers still heard the start. (E) doesn't stop any O'Brien student from hearing the beginning, so the conclusion survives.$pilot$)) v(letter,body) WHERE q.qid=$pilot$PT159-S1-Q21$pilot$ AND e.style='single' AND NOT EXISTS (SELECT 1 FROM lr_explanation_choice_notes n WHERE n.explanation_id=e.id) ON CONFLICT DO NOTHING;
+
+COMMIT;
