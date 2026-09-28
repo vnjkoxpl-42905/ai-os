@@ -209,3 +209,19 @@ The concept should not arrive as an abrupt list. Begin with a short explanation 
 why the distinction matters, show the full method at a glance, and then teach each
 path in the same order. Use tables for comparisons and numbered headings for a
 procedure so the student can see the structure before reading the detail.
+
+### Define the concept in Joshua's language (2026-09-28)
+
+**Cut:** “Some, most, and all tell you how much of a group fits a description.”
+
+**Keep:** “Some means at least one. Most means more than half. All means every one,”
+grounded in a concrete set of ten cookies before drawing conclusions from the words.
+
+The cut line is vague and does not sound like Joshua teaching. It makes the reader
+decode “fits a description” before learning any of the three words. It also risks
+blurring the difference between a count that is possible and one that is guaranteed.
+
+**Lesson:** open with the actual distinction or definition Joshua taught. Use a
+concrete example to show what each statement proves, then introduce notation and
+the inferences. Do not write an abstract umbrella sentence merely to announce the
+topic.

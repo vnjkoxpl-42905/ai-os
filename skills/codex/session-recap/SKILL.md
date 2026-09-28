@@ -139,6 +139,10 @@ help the student use it.
 - A post-session note is a set of lecture notes, not an email. Use a concept title,
   descriptive headers, numbered procedures, and spaced examples. Do not use a greeting
   or sign-off.
+- Open with Joshua's concrete explanation of the concept. Define the words the student
+  needs in plain language before diagrams or inference rules. Do not invent abstract
+  umbrella wording such as “how much of a group fits a description” when the direct
+  definition is “some means at least one; most means more than half; all means every one.”
 - Short sentences. One idea per line. Air between ideas.
 - Write for a student returning days later. Do not rely on "remember that question" or
   unexplained references to a person, scenario, or answer choice.

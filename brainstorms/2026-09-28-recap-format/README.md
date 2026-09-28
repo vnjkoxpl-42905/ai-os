@@ -26,6 +26,8 @@ Joshua rejected “starting group” as an unexplained term. The fourth draft as
 
 Joshua then clarified that the note should teach concepts, not revisit the banjo question. The fifth draft removes that question and the scheduling/conditional-indicator detours. It covers the quantity meanings, reversals, conditional interpretation of “all,” valid chaining, invalid chaining, and the two-majority overlap. Its diagrams show the arrow directions and why two majorities of the same group intersect.
 
+Joshua rejected the fifth draft's abstract opening, “how much of a group fits a description,” and asked for his teaching voice throughout. The revised fifth draft opens with the ten cookies and direct definitions, removes repeated summary language, and explains each inference by asking what the statement actually proves. Keep future notes concrete and direct; do not lead with invented umbrella descriptions of the concept.
+
 The student Classroom page renders `content_markdown` as plain text. Formatted posts use sanitized `content_html`; tables and HTTPS image URLs are supported there. Keep Markdown as the editable source, convert it to HTML for posting, and host the visual assets at usable HTTPS URLs. Relative image paths in this draft are for local review and will not by themselves display on the student page.
 
 ## Accuracy checks
