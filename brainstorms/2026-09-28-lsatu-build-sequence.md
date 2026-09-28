@@ -1,7 +1,7 @@
 # LSAT U connected experience: build sequence
 
 Date: 2026-09-28  
-Status: Implementation-ready planning set, app work not started by this plan  
+Status: Implementation started in a clean LSAT U worktree; most slices remain open  
 Specification: [#165](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/165)  
 Decision map: [#155](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/155)
 
@@ -21,6 +21,8 @@ The tickets below have native parent and blocker links in GitHub. They describe 
 | 7A | [#175 Library and exercises](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/175) | #166, #168 | Text-first Activities/bootcamps resume and one topic hub. |
 | 7B | [#176 Schedule chain](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/176) | #169, #175 | Session prep, recap, follow-up links in student and teacher views. |
 | 7C | [#177 Selected-student Teacher mode](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/177) | #166, #168, #169, #170, #173, #175, #176 | Full teacher controls under Joshua's identity, teacher answers isolated from student results. |
+| 8A | [#179 Question study tools](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/179) | #170, #171 | Bookmarks, reading tools, optional attributed explanations, distinct feedback controls. |
+| 8B | [#180 Weekly plan and settings](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/180) | #169, #173, #174 | Scannable prescribed week and consequence-aware study settings. |
 | Final | [#178 Impeccable review and fixes](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/178) | All functional slices | Critique, audit, material fixes, recheck, and final task/data verification. |
 
 ## How to run the work
@@ -29,7 +31,7 @@ The tickets below have native parent and blocker links in GitHub. They describe 
 2. Release #169 and #170 as working student pages. Keep direct old links and locked tab behavior intact on each release.
 3. Build #171, #172, and #173 in parallel where teams do not edit the same files. Do not publish Review or Progress totals without their source coverage checks.
 4. Connect #174, then finish #175 and #176. #177 can prototype its selected-student shell earlier, but its completion depends on the shared facts and coaching actions.
-5. Run #178 only after the functional slices pass. Its fixes and recheck are part of the core release, not a report handed off for later.
+5. Complete #179 and #180 for the remaining viable audit details, then run #178. Its fixes and recheck are part of the core release, not a report handed off for later.
 
 ## What remains deliberately open
 

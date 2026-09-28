@@ -75,6 +75,12 @@ Ship student-first, usable vertical slices. Reconcile current `main` before impl
 39. As Joshua, my edits to a student's work are attributed to me. If I answer a question, the answer belongs to my teacher practice and never affects that student's attempts, score, History, completion, Review, or Progress.
 40. As Joshua, Today and the dossier show overdue work, latest attempt, review due, and next session from the same data used on the student's pages.
 41. As a student, Admissions stays visible but locked while unfinished; Joshua and admins retain authorized access, including by direct URL. The existing published lock is verified as a prerequisite, not rebuilt.
+42. As a student, Practice Drills groups Create, In progress, Completed, and Saved setups. Continue, Results, and Review appear beside the relevant run; the actual launched question count and RC passage or question unit are clear.
+43. As a student, a finished exam shows a compact result summary and an expandable question table with first and optional blind answer, time, source, notes, flags, and review state.
+44. As a student or Joshua, I can open an advanced Review or History table with useful filters and return to the same filtered question without losing context. The default screen stays concise.
+45. As a student, I can bookmark a question separately from a wrong answer or flag, use relevant passage find, highlighting, and answer elimination tools, and read a second attributed written explanation when Joshua provides one. These tools do not change the original answer.
+46. As a student, I can scan Joshua's prescribed week with status, reliable estimated size, and finish rule. His endorsed priority remains visible ahead of automated suggestions; Home explains any recommendation.
+47. As a student, study settings explain the effect of timing accommodations, feedback timing, review rules, analytics inclusion, contrast, and text size before I change them. Future attempts retain mode/source provenance and old results are not silently recalculated.
 
 ## Implementation decisions
 
@@ -101,7 +107,7 @@ Ship student-first, usable vertical slices. Reconcile current `main` before impl
 
 ## Out of scope for this release
 
-New video production; broad forum, group-class catalog, leaderboards, tutor marketplace, generic streak pressure; outside-result import; capacity-aware auto-planning; a 3D analytics hero; automatic ownership recovery for old browser-only runs; a required current-student prototype test before building; redesigning the teacher desk into new rooms. Optional topic expansion and settings controls follow measured demand after the core loop works.
+New video production; broad forum, group-class catalog, leaderboards, tutor marketplace, generic streak pressure; outside-result import; capacity-aware auto-planning; a 3D analytics hero; automatic ownership recovery for old browser-only runs; a required current-student prototype test before building; redesigning the teacher desk into new rooms. The viable question tools and study settings are now included in follow-on slices #179 and #180 rather than deferred.
 
 ## Further notes
 
