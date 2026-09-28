@@ -1,7 +1,7 @@
 # LSAT U redesign decisions: Brainstorm / Discovery Notes
 
 Date: 2026-09-28 · Goal: Settle the remaining independent product decisions for the student and teacher redesign before the implementation spec.
-Status: round complete; legacy browser-only recovery remains open
+Status: Progress decision accepted; teacher preview next; legacy browser-only recovery remains open
 Context sources: [Wayfinder decision map](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/155); [platform adoption game plan](2026-09-27-lsatu-platform-adoption-game-plan.md); [student experience design](2026-09-28-lsatu-student-experience-design.md); [Practice Exams discovery](2026-09-26-practice-exams-discovery.md).
 
 ## Summary / key decisions
@@ -60,6 +60,14 @@ Earlier approved choices are in the linked decision map and discovery notes. Jos
 - Recommended: Preserve without assigning an owner.
 - Captured: Joshua said, "im confused." No product decision about whether to display or recover these old records was made. The assistant stopped asking the same question.
 - Flags: Ownerless progress cannot safely be attached to any account. Preserve it without reassignment; defer any optional recovery or local display design until concrete evidence and a clearer user need exist. Owner: assistant/product team.
+
+### Round 4
+
+#### Q9 - Progress calculation rule
+
+- Proposed: Diagnostic accuracy uses the first saved, graded answer to each distinct LR or RC question. Repeats remain in History and volume, while Inspect and blind-review answers stay out of diagnostic accuracy. Keep the already approved 7/14/21/30/All filter, disclose numerator, denominator, sources and missing coverage, and use only explicit assignment links. Student and teacher views share the calculation.
+- Captured: Joshua said, "yes thats good." This accepts the Progress recommendation; the existing Analytics and History screens have conflicting calculations and require a shared rebuild.
+- Flags: Keep LR and RC separate, show insufficient evidence below three eligible questions per breakdown, and label three to nine as an early signal. These are implementation details in the adoption plan.
 
 ## Open flags (pending input)
 

@@ -180,3 +180,7 @@ Joshua directed an immediate lock on the unfinished Admissions page. Students sh
 ## 2026-09-28: Do not wait for a current-student prototype test
 
 Joshua chose not to make a current-student walkthrough of the clickable prototype a prerequisite to the build spec. The [Wayfinder test ticket](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/163) was closed as outside the map's required path. Internal task walks and app verification remain in the plan.
+
+## 2026-09-28: Progress uses first graded answers and discloses its evidence
+
+Joshua accepted the recommended [Progress calculation contract](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/161). Diagnostic accuracy uses the first saved, graded answer to each distinct LR or RC question for the student. Repeat attempts remain in History and practice volume; Inspect visits, blind-review answers, and ungraded work do not enter diagnostic accuracy. LR and RC are labeled separately. Every percentage names its included sources and modes and shows the correct count and eligible-question denominator; missing coverage is disclosed instead of appearing as zero. The approved 7/14/21/30/All timeframe governs statistics and History. Assignment attribution requires an explicit stored link, and Joshua's view uses the same calculation under authorized student scope. The existing student Analytics, legacy Analytics, History, and teacher Insights count retries differently, so this is a rebuild rule, not a claim about current live behavior.
