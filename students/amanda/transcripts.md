@@ -16,6 +16,7 @@ aliases: []
 |---|---|---|---|
 | 2026-09-22 | [[transcript-downloads/2026-09-22-amanda-notes-by-gemini|2026-09-22-amanda-notes-by-gemini.md]] | 2026-09-22-session: [[sessions/2026-09-22-session/transcript|transcript]], [[sessions/2026-09-22-session/summary|summary]], [[sessions/2026-09-22-session/topic-map|topic map]], [[recaps/2026-09-22-recap|draft recap]] | Paired; Calendar local date 2026-09-22, Gemini header 2026-09-23 (UTC rollover inferred). |
 | 2026-09-04 | [[transcript-downloads/2026-09-04-amanda-notes-by-gemini|2026-09-04-amanda-notes-by-gemini.md]] | 2026-09-04-session: [[sessions/2026-09-04-session/transcript|transcript]], [[sessions/2026-09-04-session/summary|summary]], [[sessions/2026-09-04-session/topic-map|topic map]] | Paired |
+| 2026-08-26 | [[transcript-downloads/2026-08-26-amanda-notes-by-gemini|2026-08-26-amanda-notes-by-gemini.md]] | None | Consultation; Calendar-attached Gemini Doc ([Google Doc](https://docs.google.com/document/d/171YgJ6gabSzZZ2pZgcbOfQSUK4FvAK0Wq82Kgb2WSUg/edit)), full transcript. Filed 2026-09-28 from the two-month Calendar sweep. |
 
 
 Scope reviewed: Google Calendar teaching sessions from 2026-08-24 through 2026-09-24 16:41 America/Toronto. Consultations excluded.

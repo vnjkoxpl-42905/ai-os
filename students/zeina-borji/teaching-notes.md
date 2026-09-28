@@ -4,7 +4,7 @@ type: concept
 record_kind: primary
 tags: [student, zeina-borji, teaching-notes]
 created: 2026-09-14
-updated: 2026-09-14
+updated: 2026-09-27
 ---
 
 # Zeina Borji — Teaching Notes

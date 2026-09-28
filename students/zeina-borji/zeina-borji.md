@@ -3,14 +3,14 @@ title: Zeina Borji
 type: person
 record_kind: primary
 tags: [student, zeina-borji]
-status: onboarding
+status: active
 role: student
 email: zeina.borji5@gmail.com
 subject: Zeina Borji
 created: 2026-09-14
-updated: 2026-09-14
+updated: 2026-09-28
 aliases: [Zeina]
-lifecycle: onboarding
+lifecycle: active
 ---
 
 # Zeina Borji
@@ -22,6 +22,8 @@ lifecycle: onboarding
 - [Open loops](open-loops.md)
 - [Email context](email-context.md)
 - [2026-09-25 session](sessions/2026-09-25-conditional-foundations/summary.md) · [draft recap](recaps/2026-09-25-recap.md)
+- [2026-09-18 session](sessions/2026-09-18-session/summary.md)
+- [2026-09-10 consultation export](transcript-downloads/2026-09-10-zeina-borji-notes-by-gemini.md)
 
 ## Record Map
 

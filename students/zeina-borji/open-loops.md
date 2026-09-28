@@ -4,7 +4,7 @@ type: operating-layer
 record_kind: primary
 tags: [student, zeina-borji, open-loops]
 created: 2026-09-14
-updated: 2026-09-14
+updated: 2026-09-27
 ---
 
 # Zeina Borji — Open Loops

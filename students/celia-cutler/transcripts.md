@@ -21,6 +21,7 @@ aliases: []
 | 2026-08-22 | [[transcript-downloads/2026-08-22-celia-cutler-notes-by-gemini|2026-08-22-celia-cutler-notes-by-gemini.md]] | None on disk | Raw export only |
 | 2026-08-17 | [[transcript-downloads/2026-08-17-celia-cutler-notes-by-gemini|2026-08-17-celia-cutler-notes-by-gemini.md]] | None on disk | Raw export only |
 | 2026-08-10 | [[transcript-downloads/2026-08-10-celia-cutler-notes-by-gemini|2026-08-10-celia-cutler-notes-by-gemini.md]] | None on disk | Raw export only |
+| 2026-08-03 | [[transcript-downloads/2026-08-03-celia-cutler-notes-by-gemini|2026-08-03-celia-cutler-notes-by-gemini.md]] | None | Session; Calendar-attached Gemini Doc ([Google Doc](https://docs.google.com/document/d/1H6xH8GwIz1CVCPbvO9oX4PkwzdWmt7sbAXdtjB_bdzE/edit)), full transcript. Filed 2026-09-28 from the two-month Calendar sweep. |
 
 
 ## Packaged sessions (2026-08-24 to 2026-09-24)

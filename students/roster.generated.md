@@ -40,18 +40,18 @@ Last-contact is deliberately absent. Gmail owns it.
 | [[ethan/ethan\|Ethan]] | trie@usc.edu | active | 3 | 2026-06-28 | /book/ethan | active | 1/10 |
 | [[favour/favour\|Favour]] | favourx23@gmail.com | active | 1 | 2026-07-07 | **none** | - | - |
 | [[fernande-charleus/fernande-charleus\|Fernande Charleus]] | fernandecharleus@gmail.com | active | - | ? | /book/fernande-u42u7v46wzdtett29dhm2jbu56 | exhausted | 1/1 |
-| [[gianna/gianna\|Gianna Jean]] | giannajean005@gmail.com | active | - | ? | **none** | - | - |
+| [[gianna/gianna\|Gianna Jean]] | giannajean005@gmail.com | active | - | ? | /book/gianna-4b39x4768vz5b65ka7uxhjt6j3 | active | 0/10 |
 | [[ivory-johnson/ivory-johnson\|Ivory Johnson]] | ivoryj.johnson3@gmail.com | active | - | ? | **none** | - | - |
 | [[nicole/nicole\|Nicole]] | nspinelli44@gmail.com | active | 1 | 2026-06-10 | /book/nicole | active | 1/2 |
 | [[ore/ore\|Oreoluwa]] | oreoluwavjames@gmail.com | active | - | ? | /book/oreoluwa-pgavqgtp3weqxmuxy2axt96495 | active | 0/10 |
-| [[sandra/sandra\|Sandra Kooh]] | koohsandra@gmail.com | active | - | ? | /book/sandra-wc4kt2xjhcbxc4bqbytas9qmad | active | 5/10 |
-| [[sofia/sofia\|Sofia]] | sofiaminassian@gmail.com | active | 6 | 2026-07-12 | /book/sofia-k2anhqmpvj6swt2fj7uvdryrvt | active | 15/17 |
+| [[sandra/sandra\|Sandra Kooh]] | koohsandra@gmail.com | active | - | ? | /book/sandra-wc4kt2xjhcbxc4bqbytas9qmad | active | 7/10 |
+| [[sofia/sofia\|Sofia]] | sofiaminassian@gmail.com | active | 6 | 2026-07-12 | /book/sofia-k2anhqmpvj6swt2fj7uvdryrvt | active | 15/18 |
 | [[steven-morris/steven-morris\|Steven Morris]] | hsmcharlotte@gmail.com | active | - | ? | /book/steven-kx5ach8v2anju9cd8xa9d5hvty | exhausted | 2/2 |
 | [[venusa-laveaux/venusa-laveaux\|Venusa Laveaux]] | lav.venusa@gmail.com | active | - | ? | **none** | - | - |
 | [[vinay-kalva/vinay-kalva\|Vinay Kalva]] | workemail.vinay@gmail.com | active | - | ? | /book/vinay-r353kkhbwdazhkrt5fk7nq9zj9 | active | 9/10 |
-| [[whit-wilson/whit-wilson\|Whit Wilson]] | whitwilson929@gmail.com | active | - | ? | **none** | - | - |
-| [[yahunatan-zetvy/yahunatan-zetvy\|Yahunatan Zetvy]] | ynproemail@gmail.com | active | 2 | 2026-07-15 | /book/yahunathan | active | 11/12 |
-| [[zeina-borji/zeina-borji\|Zeina Borji]] | zeina.borji5@gmail.com | onboarding | - | ? | **none** | - | - |
+| [[whit-wilson/whit-wilson\|Whit Wilson]] | whitwilson929@gmail.com | active | - | ? | /book/whitney-d2qktg3bry93gqha7eb39at5sv | active | 0/1 |
+| [[yahunatan-zetvy/yahunatan-zetvy\|Yahunatan Zetvy]] | ynproemail@gmail.com | active | 2 | 2026-07-15 | /book/yahunathan | exhausted | 12/12 |
+| [[zeina-borji/zeina-borji\|Zeina Borji]] | zeina.borji5@gmail.com | active | - | ? | **none** | - | - |
 
 ## Booking pass exhausted
 
@@ -60,6 +60,7 @@ Has a live link, but no credits left. The page tells them "you've used all your 
 - [[celia-cutler/celia-cutler\|Celia Cutler]] (10/10 used)
 - [[fernande-charleus/fernande-charleus\|Fernande Charleus]] (1/1 used)
 - [[steven-morris/steven-morris\|Steven Morris]] (2/2 used)
+- [[yahunatan-zetvy/yahunatan-zetvy\|Yahunatan Zetvy]] (12/12 used)
 
 ## No booking pass (normal)
 
@@ -70,19 +71,18 @@ Has a live link, but no credits left. The page tells them "you've used all your 
 - [[avneet-natt/avneet-natt\|Avneet Natt]]
 - [[david-salgado/david-salgado\|David Salgado]]
 - [[favour/favour\|Favour]]
-- [[gianna/gianna\|Gianna Jean]]
 - [[ivory-johnson/ivory-johnson\|Ivory Johnson]]
 - [[venusa-laveaux/venusa-laveaux\|Venusa Laveaux]]
-- [[whit-wilson/whit-wilson\|Whit Wilson]]
 - [[zeina-borji/zeina-borji\|Zeina Borji]]
 
 ## Status disagrees with the evidence
 
 Status is your judgment and is never auto-corrected. These are flagged because the record and the evidence point different ways.
 
-- [[adriana-varea/adriana-varea\|Adriana Varea]]: recorded as active but owed nothing and not taught since 2026-06-02 (115 days)
-- [[david-salgado/david-salgado\|David Salgado]]: recorded as active but owed nothing and not taught since 2026-06-07 (110 days)
-- [[favour/favour\|Favour]]: recorded as active but owed nothing and not taught since 2026-07-07 (80 days)
+- [[adriana-varea/adriana-varea\|Adriana Varea]]: recorded as active but owed nothing and not taught since 2026-06-02 (118 days)
+- [[david-salgado/david-salgado\|David Salgado]]: recorded as active but owed nothing and not taught since 2026-06-07 (113 days)
+- [[favour/favour\|Favour]]: recorded as active but owed nothing and not taught since 2026-07-07 (83 days)
+- [[yahunatan-zetvy/yahunatan-zetvy\|Yahunatan Zetvy]]: recorded as active but owed nothing and not taught since 2026-07-15 (75 days)
 
 ## Email disagrees with the backend
 

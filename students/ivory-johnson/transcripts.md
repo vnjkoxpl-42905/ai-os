@@ -15,6 +15,7 @@ aliases: []
 | Date | Full local export | Local package | Source/status |
 |---|---|---|---|
 | 2026-09-19 | [[transcript-downloads/2026-09-19-ivory-johnson-notes-by-gemini]] | [[sessions/2026-09-19-session/transcript|Transcript]] · [[sessions/2026-09-19-session/summary|Summary]] · [[sessions/2026-09-19-session/topic-map|Topic map]] | Calendar-attached Gemini Doc; full local export and package |
+| 2026-08-26 | [[transcript-downloads/2026-08-26-ivory-johnson-notes-by-gemini|2026-08-26-ivory-johnson-notes-by-gemini.md]] | None | Consultation; Calendar-attached Gemini Doc ([Google Doc](https://docs.google.com/document/d/1HThCCXdzXVUbaXvBytKBYtpBbV2cdfpSUXteSjbgmWk/edit)), full transcript. Filed 2026-09-28 from the two-month Calendar sweep. |
 
 Scope reviewed: Google Calendar teaching sessions from 2026-08-24 through 2026-09-24 16:41 America/Toronto. Consultations excluded.
 

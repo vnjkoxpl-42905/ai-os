@@ -16,6 +16,7 @@ subject: Asia Transcripts
 |---|---|---|---|
 | 2026-08-25 | [[transcript-downloads/2026-08-25-asia-notes-by-gemini|2026-08-25-asia-notes-by-gemini.md]] | 2026-08-25-conditional-logic: [[sessions/2026-08-25-conditional-logic/transcript|transcript]], [[sessions/2026-08-25-conditional-logic/summary|summary]], [[sessions/2026-08-25-conditional-logic/topic-map|topic map]] | Paired |
 | 2026-08-21 | [[transcript-downloads/2026-08-21-asia-notes-by-gemini|2026-08-21-asia-notes-by-gemini.md]] | None on disk | Raw export only |
+| 2026-08-06 | [[transcript-downloads/2026-08-06-asia-notes-by-gemini|2026-08-06-asia-notes-by-gemini.md]] | None | Consultation; Calendar-attached Gemini Doc ([Google Doc](https://docs.google.com/document/d/1eAqfA6FllcJCVQWzqomEXo9fX7WWK0sJuNFfYOmptA0/edit)), full transcript. Filed 2026-09-28 from the two-month Calendar sweep. |
 
 
 ## Session packages

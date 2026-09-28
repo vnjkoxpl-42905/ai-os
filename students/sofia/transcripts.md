@@ -24,6 +24,7 @@ lifecycle: active
 | 2026-09-09 | [Full export](transcript-downloads/2026-09-09-sofia-notes-by-gemini.md) | [transcript](sessions/2026-09-09-smacker-causal-reasoning/transcript.md) · [summary](sessions/2026-09-09-smacker-causal-reasoning/summary.md) · [topic-map](sessions/2026-09-09-smacker-causal-reasoning/topic-map.md) | Local Gemini record. |
 | 2026-09-04 | [Full export](transcript-downloads/2026-09-04-sofia-notes-by-gemini.md) | [transcript](sessions/2026-09-04-parallel-reasoning/transcript.md) · [summary](sessions/2026-09-04-parallel-reasoning/summary.md) · [topic-map](sessions/2026-09-04-parallel-reasoning/topic-map.md) | Local Gemini record. |
 | 2026-08-21 | [Full export](transcript-downloads/2026-08-21-sofia-notes-by-gemini.md) | None | Local Gemini record. |
+| 2026-08-07 | [Full export](transcript-downloads/2026-08-07-sofia-notes-by-gemini.md) | None | Session; Calendar-attached Gemini Doc ([Google Doc](https://docs.google.com/document/d/10nbNotArl2ywQXvAv4d4oSaZia4vn_2hyloII25rLIQ/edit)), full transcript. Filed 2026-09-28 from the two-month Calendar sweep. |
 | 2026-07-12 | [Full export](transcript-downloads/2026-07-12-sofia-minassian-notes-by-gemini.md) | None | Local Gemini record. |
 | 2026-07-02 | [Full export](transcript-downloads/2026-07-02-sofia-notes-by-gemini.md) | None | Local Gemini record. |
 | 2026-06-26 | [Full export](transcript-downloads/2026-06-26-sofia-notes-by-gemini.md) | None | Local Gemini record. |

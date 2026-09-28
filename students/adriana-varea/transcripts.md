@@ -20,6 +20,8 @@ aliases: []
 | 2026-08-18 | [[transcript-downloads/2026-08-18-adriana-varea-notes-by-gemini|2026-08-18-adriana-varea-notes-by-gemini.md]] | None on disk | Raw export only |
 | 2026-08-13 | [[transcript-downloads/2026-08-13-adriana-varea-notes-by-gemini|2026-08-13-adriana-varea-notes-by-gemini.md]] | None on disk | Raw export only |
 | 2026-08-11 | [[transcript-downloads/2026-08-11-adriana-varea-notes-by-gemini|2026-08-11-adriana-varea-notes-by-gemini.md]] | None on disk | Raw export only |
+| 2026-08-06 | [[transcript-downloads/2026-08-06-adriana-varea-notes-by-gemini|2026-08-06-adriana-varea-notes-by-gemini.md]] | None | Session; Calendar-attached Gemini Doc ([Google Doc](https://docs.google.com/document/d/1-u2_HL9Cwce9GGine4AJyVS4y7qs1jgOXP9_KJneXbY/edit)), full transcript. Filed 2026-09-28 from the two-month Calendar sweep. |
+| 2026-08-04 | [[transcript-downloads/2026-08-04-adriana-varea-notes-by-gemini|2026-08-04-adriana-varea-notes-by-gemini.md]] | None | Session; Calendar-attached Gemini Doc ([Google Doc](https://docs.google.com/document/d/1p_PGbX-RjCJhqVH94loX3CTDJaEJgSoqO3zdRUHdSz8/edit)), full transcript. Filed 2026-09-28 from the two-month Calendar sweep. |
 | 2026-06-02 | [[transcript-downloads/2026-06-02-adriana-varea-notes-by-gemini|2026-06-02-adriana-varea-notes-by-gemini.md]] | None on disk | Raw export only |
 | 2026-05-25 | [[transcript-downloads/2026-05-25-adriana-varea-notes-by-gemini|2026-05-25-adriana-varea-notes-by-gemini.md]] | None on disk | Raw export only |
 | 2026-05-18 | [[transcript-downloads/2026-05-18-adriana-varea-notes-by-gemini|2026-05-18-adriana-varea-notes-by-gemini.md]] | None on disk | Raw export only |

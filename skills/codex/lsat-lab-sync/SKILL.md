@@ -12,13 +12,14 @@ Everything lives in `system/scripts/lsatlab-pull/` in the vault; its `README.md`
 | Need | Source | Login |
 |---|---|---|
 | Difficulty, question type, features, reasoning type for all 10,171 LSAT Lab questions | `app.lsatlab.com/my/services/get-questions-just-props.php` + `/api/question-properties`, fetched inside a logged-in tab | Yes |
+| Full question and answer-choice text, answer key, and written explanations for one question | `app.lsatlab.com/api/questions/<id>`, using `qid` from `data/questions-props.json` | Yes |
 | Answer key, answer %, trap labels, written explanation, question text, first words of each choice, each test's question list | public pages `www.lsatlab.com/lsat-explanations/PT<n>-S<s>-Q<q>` via `crawl_public.py` | No |
 
-Full answer-choice text is on neither (public pages cut choices short). Choice text comes from the official PrepTest PDFs Joshua keeps in Downloads.
+The public pages cut choices short. Use the logged-in `/api/questions/<id>` response's `answers[]` for full choice text; the official PrepTest PDFs Joshua keeps in Downloads are another source for adjudicating a disagreement.
 
 ## 1. Refresh the logged-in data (only when tags may have changed)
 
-Codex has no logged-in browser: hand this step to Claude, or skip it and use the existing data/ files. Joshua must already be logged in to `app.lsatlab.com`; never enter his password. Run the two snippets in the README with the browser JavaScript tool: `properties.json` comes back inline; the big question list downloads to Downloads, then move it to `data/questions-props.json`.
+Use a logged-in Codex browser tab, or skip this step and use the existing data/ files. Joshua must already be logged in to `app.lsatlab.com`; never enter his password. Run the two snippets in the README with the browser JavaScript tool: `properties.json` comes back inline; the big question list downloads to Downloads, then move it to `data/questions-props.json`.
 
 ## 2. Crawl the public pages
 
