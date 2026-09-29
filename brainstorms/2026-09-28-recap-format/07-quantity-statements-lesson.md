@@ -42,6 +42,10 @@ Books  ←some→  Hardcover
 
 The double arrow tells us that at least one thing belongs to both groups. It does not tell us that every book is hardcover or that every hardcover item is a book.
 
+### What would make “some” false?
+
+If **some books are hardcover** is false, then **no books are hardcover**. There is not even one book in both groups. Notice the difference between **no books are hardcover** and **some books are not hardcover**. The second sentence still allows other books to be hardcover, so it does not negate “some.”
+
 ## Most guarantees more than half
 
 Now I tell you that **most of the eight books are hardcover**. We need at least **five** hardcover books. Four would be exactly half, and half is not most. Five, six, seven, or eight could satisfy the sentence.
@@ -75,6 +79,10 @@ The first arrow gives the majority claim. The second line is the overlap that th
 
 </details>
 
+### What would make “most” false?
+
+“Most of the eight books are hardcover” needs at least five hardcover books. Its negation permits **four or fewer**. Four is exactly half, so it already makes “most” false. The opposite of “most are hardcover” is **half or fewer are hardcover**, not “most are paperback.” Both kinds could make up exactly half.
+
 ## All leaves no exception
 
 If **all eight books are hardcover**, every book on the shelf is hardcover. One paperback on that shelf would make the statement false.
@@ -100,6 +108,10 @@ The paperback cannot be one of these eight books. A hardcover book from another 
 
 There is a small qualification. “All A are B” gives a rule about A. By itself, it does not tell us that any A exist. When we already know the group exists, all also guarantees most and some.
 
+### What would make “all” false?
+
+One exception is enough. “Not all eight books are hardcover” means **at least one of the eight is not hardcover**. The other seven could still be hardcover. This is the negation of the all claim. By contrast, “not hardcover → not one of these eight books” is its **contrapositive**: another way to state the original rule, not a way to deny it.
+
 ## Put the three statements side by side
 
 The same shelf can help us see the whole range.
@@ -124,6 +136,8 @@ Library books  ←some→  Fiction
 ```
 
 The all arrow points **away from** the mystery group we reached. That is why the chain works. If the second sentence said only “most mysteries are fiction,” the mystery books we found could be among the exceptions.
+
+![A marked library book is inside the mysteries group, which is entirely inside the fiction group.](./assets/some-all-witness.svg)
 
 **Quick check:** Some archive documents are letters. All letters are handwritten. What follows?
 
@@ -155,17 +169,20 @@ Suppose a club has ten members. **Most members study law**, and **most members w
 
 ![Ten club members. Six study law, six work part time, and at least two do both.](./assets/club-majority-overlap.svg)
 
-So **some law students work part time**. We can also say **some part-time workers study law**. These are the same people, described from opposite sides of a some statement.
+**What is given?** More than half of the *same ten members* study law. More than half of those same ten work part time. The claims count club members, not all law students or all part-time workers everywhere.
+
+**Why must they meet?** Each group needs at least six members. If the groups were separate, we would need twelve different club members. There are only ten. At least two members must be in both groups.
+
+**What follows?** **Some law students work part time.** We can reverse that some claim: **some part-time workers study law**. Both sentences describe the same overlapping members. We know at least one exists; we do not know that most law students or most part-time workers have the other trait.
 
 ```text
-Club members  ─most→  Law students
-Club members  ─most→  Part-time workers
-Law students  ←some→  Part-time workers
+Given:       Most club members study law.
+             Most club members work part time.
+Must follow: Some law students work part time.
+Why:         Both majorities count the same club members.
 ```
 
-Both statements count **club members**. That is why the two majorities must overlap. The conclusion is **some**, not most. We know the two groups meet; we do not know what fraction of either group lies in the overlap.
-
-**Quick check:** A club has 25 members. Most are lawyers, and most play an instrument. What is the smallest possible number who are both lawyers and musicians?
+**Quick check:** A club has 25 members. Most are lawyers, and most play an instrument. What is the smallest possible number who are both lawyers and play an instrument?
 
 <details><summary>Show the answer</summary>
 
@@ -186,9 +203,11 @@ No. Two separate majorities would require more members than the club has. At lea
 There is another way to guarantee an overlap. Suppose **most club members study law**, and **all club members work part time**. We already know there are law students in the club. The all rule tells us that *each one of those members* also works part time. So **some law students work part time**.
 
 ```text
-Club members  ─most→  Law students
-Club members  →        Part-time workers
-Law students  ←some→  Part-time workers
+Given:       Most club members study law.
+             All club members work part time.
+Must follow: Some law students work part time.
+Why:         The law students already found are club members,
+             so the all rule applies to each of them.
 ```
 
 We can make the same move with **some**. If **some club members study law** and **all club members work part time**, take the member guaranteed by “some.” That person has both traits. Again, **some law students work part time**. The sentences can be stated in the other order: **all club members work part time; some club members study law**. The same person still proves the overlap.
@@ -222,6 +241,8 @@ Some Spanish speakers are trained.
 
 The trained Spanish speakers could all be people who do not volunteer. We cannot conclude that any volunteers are trained.
 
+![Two different Spanish speakers satisfy the two some claims without any volunteer being trained.](./assets/some-some-gap.svg)
+
 Replacing the second “some” with “most” does not fix the gap. The Spanish-speaking volunteers could sit in the untrained minority. Even two most statements that count different groups do not automatically produce a new majority claim.
 
 Before drawing a conclusion, ask: **Am I carrying a known group through an all rule? Or do two majorities count the same group?** If neither is true, check whether the groups could miss each other.
@@ -252,9 +273,21 @@ Use the sentence behind each arrow to check what it guarantees.
 
 ## Nearby words need a closer look
 
-Some test sentences use less exact language. **Many**, **often**, **few**, and **not many** tell us something about frequency or size, but they do not set a universal numerical cutoff. A hundred menu items could make five feel like few; in a menu of six, five would not feel like few. Do not quietly replace these words with a fixed number.
+The words around a quantity statement can look familiar without making the same promise. Sort them by **what they guarantee**, then check the sentence in front of you:
 
-**Most** is different: it crosses a precise line, **more than half**. Words such as **the majority** plainly express that idea. Words such as **usually**, **typically**, **likely**, and **probably** can suggest it in context, but pay attention to what the sentence actually counts. “Probably” about one event, for example, is a likelihood claim, not a headcount of a group.
+| Word or phrase | What it guarantees |
+|---|---|
+| **Some**, **at least one**, **one or more** | One or more members fit. All may fit too. |
+| **A few**, **several**, **many** | A positive number in ordinary use, but no universal cutoff. They imply at least one. |
+| **Most**, **more than half**, **a majority of** | Strictly more than half of the named group fit. |
+| **All**, **every**, **each**, **without exception** | Every member of the named group fits. The group may still need a separate existence premise. |
+| **Few**, **not many**, **not often** | A small number or low frequency in context. No exact numerical boundary follows. |
+| **No**, **none**, **zero** | Not a single member fits. |
+| **Not all** | At least one member does **not** fit. |
+
+**Few** is worth separating from **a few**. “A few books are hardcover” affirms that at least some are. “Few books are hardcover” stresses how small the number is. It often suggests some in ordinary speech, but it does not set a dependable numerical minimum. “Not many” can include zero. A hundred menu items could make five feel like few; in a menu of six, five would not feel like few. Do not quietly replace any of these phrases with a fixed number.
+
+**Most** is different: it crosses a precise line, **more than half**. Words such as **the majority** plainly express that idea. Words such as **usually**, **typically**, **generally**, **commonly**, **frequently**, **often**, **likely**, and **probably** can suggest prevalence in context, but pay attention to what the sentence actually counts. “Probably” about one event, for example, is a likelihood claim, not a headcount of a group.
 
 **Not all** *does* give us a precise minimum: at least one exception. “Not all club members are lawyers” means **at least one club member is not a lawyer**. It does not tell us whether the other members are lawyers.
 

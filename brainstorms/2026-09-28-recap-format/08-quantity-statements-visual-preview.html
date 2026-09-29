@@ -21,8 +21,10 @@
   .classroom-root .quantity-note blockquote p { margin-bottom: 12px; }
   .classroom-root .quantity-note figure { width: 100%; margin: 35px 0 39px; }
   .classroom-root .quantity-note figure img { display: block; width: 100%; max-width: 100%; height: auto; border-radius: 13px; margin: 0; left: auto; right: auto; transform: none; border: 1px solid var(--classroom-line); }
-  .classroom-root .quantity-note .quantity-figure figcaption { display: flex; gap: 15px; align-items: baseline; border-bottom: 1px solid #dce5e3; color: #4e6669; font: 400 14px/1.45 'Outfit',sans-serif; padding: 11px 4px 13px; }
-  .classroom-root .quantity-note .quantity-figure figcaption span { flex: none; color: #087e83; font: 600 11px 'IBM Plex Mono',monospace; letter-spacing: .08em; }
+  .classroom-root .quantity-note .quantity-venn { border-top: 1px solid #d0e2df; margin-top: 22px; padding-top: 18px; }
+  .classroom-root .quantity-note .quantity-venn p { font: 400 16px/1.5 'Outfit',sans-serif; margin: 0 0 12px; }
+  .classroom-root .quantity-note .quantity-venn svg { display: block; width: 100%; height: auto; }
+  .classroom-root .quantity-note .quantity-venn small { display: block; color: #4e6669; font: 400 12px/1.5 'Outfit',sans-serif; margin-top: 8px; }
   .classroom-root .quantity-note .quantity-overlap-lab { max-width: 820px; margin: 38px auto 46px; padding: 29px 31px 28px; border: 1px solid oklch(82% .035 210); border-radius: 15px; background: oklch(97% .012 205); }
   .classroom-root .quantity-note .quantity-overlap-head span { color: var(--quantity-teal); text-transform: uppercase; letter-spacing: .09em; font: 700 11px 'IBM Plex Mono',monospace; }
   .classroom-root .quantity-note .quantity-overlap-head h3 { color: var(--quantity-ink); font: 600 24px/1.24 'Outfit',sans-serif; letter-spacing: -.025em; margin: 12px 0 7px; }
@@ -54,10 +56,8 @@
   .classroom-root .quantity-note .quantity-answer-body { padding: 16px 18px 1px; }
   .classroom-root .quantity-note .quantity-answer-body p { font-size: 15px; line-height: 1.65; }
   .classroom-root .quantity-note .quantity-answer-body pre { margin-top: 0; }
-  .preview-stamp { position: fixed; top: 14px; right: 18px; z-index: 50; padding: 7px 11px; border-radius: 999px; color: #173047; background: #dff3f1; border: 1px solid #9dcfca; font: 700 12px 'Outfit', sans-serif; letter-spacing: .04em; text-transform: uppercase; }
-  .preview-note { font-size: 13px; color: var(--classroom-meta-text); margin: -6px 0 28px; }
   .preview-rail-label { display: block; color: var(--classroom-meta-text); font: 600 11px 'IBM Plex Mono', monospace; letter-spacing: .07em; text-transform: uppercase; margin: 25px 8px 8px; }
-  @media (max-width: 1023px) { .preview-stamp { top: 8px; right: 10px; } .classroom-root .classroom-column { min-width: 0; } }
+  @media (max-width: 1023px) { .classroom-root .classroom-column { min-width: 0; } }
   html.dark .classroom-root .quantity-note blockquote, html.dark .classroom-root .quantity-note pre, html.dark .classroom-root .quantity-note th { background: #1d1c28; color: #e5e5e5; }
   html.dark .classroom-root .quantity-note .quantity-answer { background: #0a0913; border-color: #3d3c48; }
   html.dark .classroom-root .quantity-note .quantity-answer summary { color: #7bd5d2; }
@@ -127,12 +127,20 @@
   .classroom-root .quantity-note .quantity-jump a:hover,
   .classroom-root .quantity-note .quantity-jump a:focus-visible { color: #087e83; border-bottom-color: #087e83; outline-offset: 2px; }
   .classroom-root .quantity-note pre { border: 1px solid #c6dfdc; border-radius: 9px; background: #f4f8f8; font-size: 16px; line-height: 1.8; }
-  .classroom-root .quantity-note .quantity-check { background: #f1f8f7; border: 1px solid #c6dfdc; border-radius: 14px; padding: 20px 22px 2px; max-width: 620px; margin: 30px 0 34px; }
-  .classroom-root .quantity-note .quantity-check-question { margin: 0 0 14px; max-width: none; }
-  .classroom-root .quantity-note .quantity-check-question > span { display: block; color: #087e83; font: 700 13px 'Outfit',sans-serif; letter-spacing: .02em; margin-bottom: 7px; }
-  .classroom-root .quantity-note .quantity-check .quantity-answer { margin: 0 0 19px; background: #fff; border-color: #b5d1cd; }
-  .classroom-root .quantity-note .quantity-check .quantity-answer summary { color: #075d63; padding: 10px 15px; font-size: 14px; }
-  .classroom-root .quantity-note .quantity-check .quantity-answer-body p { font-size: 16px; }
+  .classroom-root .quantity-note .quantity-check { background: #f1f8f7; border: 1px solid #c6dfdc; border-radius: 14px; padding: 20px 22px; max-width: 620px; margin: 30px 0 34px; }
+  .classroom-root .quantity-note .quantity-check [hidden] { display: none !important; }
+  .classroom-root .quantity-note .quantity-check-top { display: flex; justify-content: space-between; color: #087e83; font: 700 12px 'IBM Plex Mono',monospace; letter-spacing: .04em; text-transform: uppercase; margin-bottom: 15px; }
+  .classroom-root .quantity-note .quantity-check-question { margin: 0 0 17px; max-width: none; font-size: 19px; }
+  .classroom-root .quantity-note .quantity-check-form label { display: block; color: #385b60; font: 700 13px 'Outfit',sans-serif; margin-bottom: 7px; }
+  .classroom-root .quantity-note .quantity-check-form textarea { box-sizing: border-box; display: block; width: 100%; min-height: 75px; resize: vertical; border: 1px solid #b5d1cd; border-radius: 8px; padding: 11px 13px; background: #fff; color: #173047; font: 400 16px/1.5 'Outfit',sans-serif; }
+  .classroom-root .quantity-note .quantity-check button { cursor: pointer; border: 0; border-radius: 7px; min-height: 42px; padding: 9px 15px; background: #006d70; color: #fff; font: 700 14px 'Outfit',sans-serif; margin-top: 12px; }
+  .classroom-root .quantity-note .quantity-check button:hover { background: #005658; }
+  .classroom-root .quantity-note .quantity-check button:focus-visible, .classroom-root .quantity-note .quantity-check textarea:focus-visible { outline: 2px solid #006d70; outline-offset: 3px; }
+  .classroom-root .quantity-note .quantity-check-result { border-top: 1px solid #c6dfdc; margin-top: 18px; padding-top: 18px; animation: quantity-feedback-enter 420ms cubic-bezier(.19,1,.22,1) both; }
+  .classroom-root .quantity-note .quantity-check-result > strong { display: block; color: #075d63; font: 700 17px 'Outfit',sans-serif; margin-bottom: 8px; }
+  .classroom-root .quantity-note .quantity-check-worked { background: #fff; border: 1px solid #c6dfdc; border-radius: 9px; padding: 13px 16px 1px; }
+  .classroom-root .quantity-note .quantity-check-worked p { font-size: 16px; margin: 0 0 12px; }
+  .classroom-root .quantity-note .quantity-check-again { background: transparent !important; color: #075d63 !important; padding-left: 0 !important; }
   .classroom-root .quantity-note .quantity-summary { border: 1px solid #c9dddb; border-radius: 15px; padding: 0 28px 14px; margin: 72px 0 35px; background: #f9fcfb; }
   .classroom-root .quantity-note .quantity-summary h2 { margin-top: 0; border-top: 0; padding-top: 28px; }
   .classroom-root .quantity-note .quantity-summary table { margin-top: 16px; }
@@ -213,6 +221,7 @@
     .classroom-root .quantity-note .quantity-drill { padding-left: 16px; padding-right: 16px; }
   }
   @media (min-width: 601px) and (max-width: 900px) { .classroom-root .quantity-note .quantity-opening { display: block; } .classroom-root .quantity-note .quantity-lab { margin-top: 30px; max-width: 620px; } }
+  @media (min-width: 601px) and (max-width: 1023px) { .classroom-root .quantity-note .quantity-quiz { margin-left: 0; margin-right: 0; } }
   html.dark .classroom-root .quantity-note .quantity-opening .quantity-lead { color: #e5f3f2; }
   html.dark .classroom-root .quantity-note .quantity-opening-question,
   html.dark .classroom-root .quantity-note .quantity-check,
@@ -237,7 +246,6 @@
 </style>
 </head><body>
 <div class="quantity-progress" aria-hidden="true"></div>
-<span class="preview-stamp">Visual study preview</span>
 <div class="classroom-root">
   <aside class="classroom-sidebar"><div class="classroom-sidebar-card"><div class="classroom-panel-inner">
     <div class="classroom-brand"><i>U</i><span>LSAT U</span></div>
@@ -249,13 +257,10 @@
       <div class="classroom-nav">Flagged</div>
       <div class="classroom-nav">Wrong answers</div>
     </div>
-    <span class="preview-rail-label">Preview</span>
-    <p style="font-size:13px;line-height:1.6;color:var(--classroom-meta-text);padding:0 8px">This shows the draft in the Classroom reading layout. Nothing has been posted to a student.</p>
   </div></div></aside>
   <main class="classroom-stage"><div class="classroom-column">
     <div class="classroom-dateline"><time>September 29, 2026</time><span>|</span><span>Note</span></div>
     <h1 class="classroom-title">Some, Most, and All</h1>
-    <p class="preview-note">Interactive draft. Move the book count and open the answers as you read.</p>
     <article class="classroom-prose quantity-note"><header class="quantity-opening">
   <div class="quantity-opening-story">
   <p class="quantity-lead">Quantity statements tell us whether a claim applies to some members of a group, most of them, or all of them.</p>
@@ -279,10 +284,10 @@
 <nav class="quantity-jump" aria-label="Jump through the lesson"><a href="#some">Some</a><a href="#most">Most</a><a href="#all">All</a><a href="#inferences">Inferences</a><a href="#quantity-quiz">Practice</a><a href="#drill">Drill</a></nav><h2 id="some" class="quantity-chapter"><span class="quantity-chapter-number">01</span>Some guarantees at least one</h2>
 <p>Imagine a shelf with eight books. I tell you that <strong>some of the books are hardcover</strong>. How many hardcover books must there be?</p>
 <p>At least <strong>one</strong>. There could be one, four, or all eight. “Some” rules out zero. It does not rule out “most” or “all.”</p>
-<figure class="quantity-figure"><img src="./assets/some-books.svg" alt="Eight books showing that one hardcover book and eight hardcover books both satisfy some."><figcaption><span>FIG 01</span>One is enough. All eight are still possible.</figcaption></figure>
+<figure class="quantity-figure"><img src="./assets/some-books.svg" alt="Eight books showing that one hardcover book and eight hardcover books both satisfy some."></figure>
 <p>This is easy to miss because in ordinary conversation “some” often suggests “some, but not all.” On the LSAT, that extra phrase is not part of the statement. If all eight books are hardcover, it is still true that some are hardcover.</p>
-<aside class="quantity-check"><p class="quantity-check-question"><span>Try it</span> “Some applicants received an interview.” Could every applicant have received one? Does the sentence tell us that anyone was denied an interview?</p><details class="quantity-answer"><summary>Check your answer</summary><div class="quantity-answer-body"><p>Every applicant could have received an interview. The sentence does not tell us that anyone was denied one. “Some” guarantees at least one applicant received an interview, but it leaves open how many others did.</p>
-</div></details></aside>
+<aside class="quantity-check" data-check="0"><div class="quantity-check-top"><span>Try it</span><span>01</span></div><p class="quantity-check-question"> “Some applicants received an interview.” Could every applicant have received one? Does the sentence tell us that anyone was denied an interview?</p><form class="quantity-check-form"><label for="quantity-check-0">Your answer</label><textarea id="quantity-check-0" rows="2" placeholder="Write your answer here…" required></textarea><button type="submit">Check my answer <span aria-hidden="true">↗</span></button></form><div class="quantity-check-result" hidden aria-live="polite"><strong></strong><div class="quantity-check-worked"><div class="quantity-answer-body"><p>Every applicant could have received an interview. The sentence does not tell us that anyone was denied one. “Some” guarantees at least one applicant received an interview, but it leaves open how many others did.</p>
+</div></div><button type="button" class="quantity-check-again">Edit my answer</button></div></aside>
 
 <p>Whenever you read <strong>some</strong>, replace it with <strong>at least one</strong> in your head. That tells you exactly what the sentence guarantees:</p>
 <blockquote>
@@ -298,36 +303,42 @@
 <pre><code class="language-text">Books  ←some→  Hardcover
 </code></pre>
 <p>The double arrow tells us that at least one thing belongs to both groups. It does not tell us that every book is hardcover or that every hardcover item is a book.</p>
+<h3>What would make “some” false?</h3>
+<p>If <strong>some books are hardcover</strong> is false, then <strong>no books are hardcover</strong>. There is not even one book in both groups. Notice the difference between <strong>no books are hardcover</strong> and <strong>some books are not hardcover</strong>. The second sentence still allows other books to be hardcover, so it does not negate “some.”</p>
 <h2 id="most" class="quantity-chapter"><span class="quantity-chapter-number">02</span>Most guarantees more than half</h2>
 <p>Now I tell you that <strong>most of the eight books are hardcover</strong>. We need at least <strong>five</strong> hardcover books. Four would be exactly half, and half is not most. Five, six, seven, or eight could satisfy the sentence.</p>
-<figure class="quantity-figure"><img src="./assets/most-books.svg" alt="Eight books showing that five hardcover books and eight hardcover books both satisfy most."><figcaption><span>FIG 02</span>The fifth book crosses the halfway line.</figcaption></figure>
+<figure class="quantity-figure"><img src="./assets/most-books.svg" alt="Eight books showing that five hardcover books and eight hardcover books both satisfy most."></figure>
 <p>Notice that all eight could still be hardcover. “Most” does not tell us that an exception exists.</p>
-<aside class="quantity-check"><p class="quantity-check-question"><span>Try it</span> If most of the eight books are hardcover, must some of them be hardcover? Must any be paperback?</p><details class="quantity-answer"><summary>Check your answer</summary><div class="quantity-answer-body"><p>At least five are hardcover, so <strong>some are hardcover</strong>. No paperback book is required. All eight could be hardcover.</p>
-</div></details></aside>
+<aside class="quantity-check" data-check="1"><div class="quantity-check-top"><span>Try it</span><span>02</span></div><p class="quantity-check-question"> If most of the eight books are hardcover, must some of them be hardcover? Must any be paperback?</p><form class="quantity-check-form"><label for="quantity-check-1">Your answer</label><textarea id="quantity-check-1" rows="2" placeholder="Write your answer here…" required></textarea><button type="submit">Check my answer <span aria-hidden="true">↗</span></button></form><div class="quantity-check-result" hidden aria-live="polite"><strong></strong><div class="quantity-check-worked"><div class="quantity-answer-body"><p>At least five are hardcover, so <strong>some are hardcover</strong>. No paperback book is required. All eight could be hardcover.</p>
+</div></div><button type="button" class="quantity-check-again">Edit my answer</button></div></aside>
 
 <p>Here is where the direction of the statement matters. From “most books are hardcover,” we know that <strong>some hardcover things are books</strong>. We cannot say that <strong>most hardcover things are books</strong>. Five of our eight shelf books could be hardcover, while a library holds hundreds of other hardcover items. The first statement counts the eight books; the reversed statement counts a different group.</p>
 <pre><code class="language-text">Books  ─most→  Hardcover
 Hardcover  ←some→  Books
 </code></pre>
 <p>The first arrow gives the majority claim. The second line is the overlap that the majority guarantees. When we read a most statement backward, the word becomes <strong>some</strong>.</p>
-<aside class="quantity-check"><p class="quantity-check-question"><span>Quick check</span> A program has 100 applicants. Most speak Spanish. What is the smallest possible number who speak Spanish? What is the largest?</p><details class="quantity-answer"><summary>Show the answer</summary><div class="quantity-answer-body"><p><strong>51 to 100.</strong> Fifty is only half. “Most” also permits all 100, so it does not establish an exception.</p>
-</div></details></aside>
+<aside class="quantity-check" data-check="2"><div class="quantity-check-top"><span>Quick check</span><span>03</span></div><p class="quantity-check-question"> A program has 100 applicants. Most speak Spanish. What is the smallest possible number who speak Spanish? What is the largest?</p><form class="quantity-check-form"><label for="quantity-check-2">Your answer</label><textarea id="quantity-check-2" rows="2" placeholder="Write your answer here…" required></textarea><button type="submit">Check my answer <span aria-hidden="true">↗</span></button></form><div class="quantity-check-result" hidden aria-live="polite"><strong></strong><div class="quantity-check-worked"><div class="quantity-answer-body"><p><strong>51 to 100.</strong> Fifty is only half. “Most” also permits all 100, so it does not establish an exception.</p>
+</div></div><button type="button" class="quantity-check-again">Edit my answer</button></div></aside>
 
+<h3>What would make “most” false?</h3>
+<p>“Most of the eight books are hardcover” needs at least five hardcover books. Its negation permits <strong>four or fewer</strong>. Four is exactly half, so it already makes “most” false. The opposite of “most are hardcover” is <strong>half or fewer are hardcover</strong>, not “most are paperback.” Both kinds could make up exactly half.</p>
 <h2 id="all" class="quantity-chapter"><span class="quantity-chapter-number">03</span>All leaves no exception</h2>
 <p>If <strong>all eight books are hardcover</strong>, every book on the shelf is hardcover. One paperback on that shelf would make the statement false.</p>
-<figure class="quantity-figure"><img src="./assets/all-books.svg" alt="Eight books showing that all eight must be hardcover to satisfy all."><figcaption><span>FIG 03</span>One exception would break the claim.</figcaption></figure>
+<figure class="quantity-figure"><img src="./assets/all-books.svg" alt="Eight books showing that all eight must be hardcover to satisfy all."></figure>
 <p>An all statement gives us a rule: <strong>if it is one of these eight books, then it is hardcover</strong>.</p>
 <pre><code class="language-text">One of these books  →  Hardcover
 Not hardcover       →  Not one of these books
 </code></pre>
 <p>The second line is the contrapositive. Both lines go with the same rule. We cannot turn the first line around and conclude that every hardcover thing is a book on this shelf.</p>
-<aside class="quantity-check"><p class="quantity-check-question"><span>Try it</span> You pick up a paperback. What does the rule tell you? What if you pick up a hardcover book from another shelf?</p><details class="quantity-answer"><summary>Check your answer</summary><div class="quantity-answer-body"><p>The paperback cannot be one of these eight books. A hardcover book from another shelf does not become one of these eight just because it is hardcover. Being hardcover is required, but it is not enough to identify one of these books.</p>
-</div></details></aside>
+<aside class="quantity-check" data-check="3"><div class="quantity-check-top"><span>Try it</span><span>04</span></div><p class="quantity-check-question"> You pick up a paperback. What does the rule tell you? What if you pick up a hardcover book from another shelf?</p><form class="quantity-check-form"><label for="quantity-check-3">Your answer</label><textarea id="quantity-check-3" rows="2" placeholder="Write your answer here…" required></textarea><button type="submit">Check my answer <span aria-hidden="true">↗</span></button></form><div class="quantity-check-result" hidden aria-live="polite"><strong></strong><div class="quantity-check-worked"><div class="quantity-answer-body"><p>The paperback cannot be one of these eight books. A hardcover book from another shelf does not become one of these eight just because it is hardcover. Being hardcover is required, but it is not enough to identify one of these books.</p>
+</div></div><button type="button" class="quantity-check-again">Edit my answer</button></div></aside>
 
 <p>There is a small qualification. “All A are B” gives a rule about A. By itself, it does not tell us that any A exist. When we already know the group exists, all also guarantees most and some.</p>
+<h3>What would make “all” false?</h3>
+<p>One exception is enough. “Not all eight books are hardcover” means <strong>at least one of the eight is not hardcover</strong>. The other seven could still be hardcover. This is the negation of the all claim. By contrast, “not hardcover → not one of these eight books” is its <strong>contrapositive</strong>: another way to state the original rule, not a way to deny it.</p>
 <h2 class="quantity-chapter"><span class="quantity-chapter-number">04</span>Put the three statements side by side</h2>
 <p>The same shelf can help us see the whole range.</p>
-<figure class="quantity-figure"><img src="./assets/book-quantity-ranges.svg" alt="For eight existing books: some permits one through eight hardcover, most permits five through eight, and all requires eight."><figcaption><span>FIG 04</span>The permitted ranges nest inside one another.</figcaption></figure>
+<figure class="quantity-figure"><img src="./assets/book-quantity-ranges.svg" alt="For eight existing books: some permits one through eight hardcover, most permits five through eight, and all requires eight."></figure>
 <p>Read the implications in one direction:</p>
 <pre><code class="language-text">ALL  →  MOST  →  SOME       (when the group exists)
 </code></pre>
@@ -338,8 +349,9 @@ Not hardcover       →  Not one of these books
 Library books  ←some→  Fiction
 </code></pre>
 <p>The all arrow points <strong>away from</strong> the mystery group we reached. That is why the chain works. If the second sentence said only “most mysteries are fiction,” the mystery books we found could be among the exceptions.</p>
-<aside class="quantity-check"><p class="quantity-check-question"><span>Quick check</span> Some archive documents are letters. All letters are handwritten. What follows?</p><details class="quantity-answer"><summary>Show the answer</summary><div class="quantity-answer-body"><p><strong>Some archive documents are handwritten.</strong> Take a document guaranteed to be a letter. The all rule applies to that document.</p>
-</div></details></aside>
+<figure class="quantity-figure"><img src="./assets/some-all-witness.svg" alt="A marked library book is inside the mysteries group, which is entirely inside the fiction group."></figure>
+<aside class="quantity-check" data-check="4"><div class="quantity-check-top"><span>Quick check</span><span>05</span></div><p class="quantity-check-question"> Some archive documents are letters. All letters are handwritten. What follows?</p><form class="quantity-check-form"><label for="quantity-check-4">Your answer</label><textarea id="quantity-check-4" rows="2" placeholder="Write your answer here…" required></textarea><button type="submit">Check my answer <span aria-hidden="true">↗</span></button></form><div class="quantity-check-result" hidden aria-live="polite"><strong></strong><div class="quantity-check-worked"><div class="quantity-answer-body"><p><strong>Some archive documents are handwritten.</strong> Take a document guaranteed to be a letter. The all rule applies to that document.</p>
+</div></div><button type="button" class="quantity-check-again">Edit my answer</button></div></aside>
 
 <p>The same reasoning preserves the first quantity word:</p>
 <table>
@@ -366,43 +378,48 @@ Library books  ←some→  Fiction
 <td>All library books are fiction.</td>
 </tr>
 </tbody></table>
-<aside class="quantity-check"><p class="quantity-check-question"><span>Try it</span> “Most library books are mysteries. All fiction is mystery.” Can we conclude that most library books are fiction?</p><details class="quantity-answer"><summary>Check your answer</summary><div class="quantity-answer-body"><p>No. The all arrow goes from fiction to mystery. We cannot start at mystery and travel backward to fiction.</p>
-</div></details></aside>
+<aside class="quantity-check" data-check="5"><div class="quantity-check-top"><span>Try it</span><span>06</span></div><p class="quantity-check-question"> “Most library books are mysteries. All fiction is mystery.” Can we conclude that most library books are fiction?</p><form class="quantity-check-form"><label for="quantity-check-5">Your answer</label><textarea id="quantity-check-5" rows="2" placeholder="Write your answer here…" required></textarea><button type="submit">Check my answer <span aria-hidden="true">↗</span></button></form><div class="quantity-check-result" hidden aria-live="polite"><strong></strong><div class="quantity-check-worked"><div class="quantity-answer-body"><p>No. The all arrow goes from fiction to mystery. We cannot start at mystery and travel backward to fiction.</p>
+</div></div><button type="button" class="quantity-check-again">Edit my answer</button></div></aside>
 
 <h2 class="quantity-chapter"><span class="quantity-chapter-number">06</span>Two majorities of the same group must meet</h2>
 <p>Suppose a club has ten members. <strong>Most members study law</strong>, and <strong>most members work part time</strong>. Each “most” needs at least six of the ten members. Those two sets cannot fit inside the club without sharing at least two people.</p>
 <section class="quantity-overlap-lab" aria-label="Explore why two majorities overlap">
-    <div class="quantity-overlap-head"><span>FIG 05 / A living diagram</span><h3>Try to separate the majorities.</h3><p>Six of ten club members study law. Six work part time. Rearrange the workers and watch what cannot change.</p></div>
+    <div class="quantity-overlap-head"><h3>Try to separate the majorities.</h3><p>Six of ten club members study law. Six work part time. Rearrange the workers and watch what cannot change.</p></div>
     <div class="quantity-overlap-people" id="quantity-overlap-people" aria-label="Ten club members"><span class="quantity-person studies-law " role="img" aria-label="Member 1: studies law, does not work part time">01</span><span class="quantity-person studies-law " role="img" aria-label="Member 2: studies law, does not work part time">02</span><span class="quantity-person studies-law " role="img" aria-label="Member 3: studies law, does not work part time">03</span><span class="quantity-person studies-law " role="img" aria-label="Member 4: studies law, does not work part time">04</span><span class="quantity-person studies-law works-part-time" role="img" aria-label="Member 5: studies law, works part time">05</span><span class="quantity-person studies-law works-part-time" role="img" aria-label="Member 6: studies law, works part time">06</span><span class="quantity-person works-part-time" role="img" aria-label="Member 7: does not study law, works part time">07</span><span class="quantity-person works-part-time" role="img" aria-label="Member 8: does not study law, works part time">08</span><span class="quantity-person works-part-time" role="img" aria-label="Member 9: does not study law, works part time">09</span><span class="quantity-person works-part-time" role="img" aria-label="Member 10: does not study law, works part time">10</span></div>
     <div class="quantity-overlap-legend"><span><i class="law"></i>Studies law</span><span><i class="work"></i>Works part time</span><span><i class="both"></i>Both</span></div>
     <div class="quantity-overlap-footer"><p aria-live="polite"><b id="quantity-overlap-count">2</b> members have both traits. <span id="quantity-overlap-message">Even the smallest possible overlap is not zero.</span></p><button id="quantity-overlap-shuffle" type="button">Rearrange the workers <span aria-hidden="true">↻</span></button></div>
+    <div class="quantity-venn"><p><b>The universe is the ten club members.</b> The shared middle cannot be empty.</p><svg viewBox="0 0 640 278" role="img" aria-label="Venn diagram of ten club members, updated as the members are rearranged"><rect x="8" y="8" width="624" height="262" rx="18" fill="#fffdfa" stroke="#bed6d3" stroke-width="2"/><text x="30" y="37" fill="#173047" font-size="16" font-family="Outfit, sans-serif">All ten club members</text><circle cx="259" cy="151" r="98" fill="#48b0a9" fill-opacity=".36" stroke="#00847f" stroke-width="2"/><circle cx="381" cy="151" r="98" fill="#bb9bdf" fill-opacity=".36" stroke="#7650a3" stroke-width="2"/><text x="195" y="98" fill="#173047" font-size="14" font-family="Outfit, sans-serif">Study law</text><text x="380" y="98" fill="#173047" font-size="14" font-family="Outfit, sans-serif">Work part time</text><text id="venn-law-only" x="206" y="165" fill="#173047" font-size="27" font-weight="700" font-family="Outfit, sans-serif">4</text><text id="venn-both" x="312" y="165" fill="#173047" font-size="27" font-weight="700" font-family="Outfit, sans-serif">2</text><text id="venn-work-only" x="415" y="165" fill="#173047" font-size="27" font-weight="700" font-family="Outfit, sans-serif">4</text><text x="30" y="247" fill="#173047" font-size="13" font-family="Outfit, sans-serif">Neither: <tspan id="venn-neither">0</tspan></text></svg><small>The circle areas are schematic. The numbers count members and change when you rearrange them.</small></div>
   </section>
-<p>So <strong>some law students work part time</strong>. We can also say <strong>some part-time workers study law</strong>. These are the same people, described from opposite sides of a some statement.</p>
-<pre><code class="language-text">Club members  ─most→  Law students
-Club members  ─most→  Part-time workers
-Law students  ←some→  Part-time workers
+<p><strong>What is given?</strong> More than half of the <em>same ten members</em> study law. More than half of those same ten work part time. The claims count club members, not all law students or all part-time workers everywhere.</p>
+<p><strong>Why must they meet?</strong> Each group needs at least six members. If the groups were separate, we would need twelve different club members. There are only ten. At least two members must be in both groups.</p>
+<p><strong>What follows?</strong> <strong>Some law students work part time.</strong> We can reverse that some claim: <strong>some part-time workers study law</strong>. Both sentences describe the same overlapping members. We know at least one exists; we do not know that most law students or most part-time workers have the other trait.</p>
+<pre><code class="language-text">Given:       Most club members study law.
+             Most club members work part time.
+Must follow: Some law students work part time.
+Why:         Both majorities count the same club members.
 </code></pre>
-<p>Both statements count <strong>club members</strong>. That is why the two majorities must overlap. The conclusion is <strong>some</strong>, not most. We know the two groups meet; we do not know what fraction of either group lies in the overlap.</p>
-<aside class="quantity-check"><p class="quantity-check-question"><span>Quick check</span> A club has 25 members. Most are lawyers, and most play an instrument. What is the smallest possible number who are both lawyers and musicians?</p><details class="quantity-answer"><summary>Show the answer</summary><div class="quantity-answer-body"><p><strong>One.</strong> Each majority needs at least 13 members. If none overlapped, those groups would require 26 different people, but the club has only 25. All 25 could also have both traits.</p>
-</div></details></aside>
+<aside class="quantity-check" data-check="6"><div class="quantity-check-top"><span>Quick check</span><span>07</span></div><p class="quantity-check-question"> A club has 25 members. Most are lawyers, and most play an instrument. What is the smallest possible number who are both lawyers and play an instrument?</p><form class="quantity-check-form"><label for="quantity-check-6">Your answer</label><textarea id="quantity-check-6" rows="2" placeholder="Write your answer here…" required></textarea><button type="submit">Check my answer <span aria-hidden="true">↗</span></button></form><div class="quantity-check-result" hidden aria-live="polite"><strong></strong><div class="quantity-check-worked"><div class="quantity-answer-body"><p><strong>One.</strong> Each majority needs at least 13 members. If none overlapped, those groups would require 26 different people, but the club has only 25. All 25 could also have both traits.</p>
+</div></div><button type="button" class="quantity-check-again">Edit my answer</button></div></aside>
 
-<aside class="quantity-check"><p class="quantity-check-question"><span>Try it</span> If most club members study law and most club members work part time, could the two groups of members be completely separate?</p><details class="quantity-answer"><summary>Check your answer</summary><div class="quantity-answer-body"><p>No. Two separate majorities would require more members than the club has. At least one member must have both traits.</p>
-</div></details></aside>
+<aside class="quantity-check" data-check="7"><div class="quantity-check-top"><span>Try it</span><span>08</span></div><p class="quantity-check-question"> If most club members study law and most club members work part time, could the two groups of members be completely separate?</p><form class="quantity-check-form"><label for="quantity-check-7">Your answer</label><textarea id="quantity-check-7" rows="2" placeholder="Write your answer here…" required></textarea><button type="submit">Check my answer <span aria-hidden="true">↗</span></button></form><div class="quantity-check-result" hidden aria-live="polite"><strong></strong><div class="quantity-check-worked"><div class="quantity-answer-body"><p>No. Two separate majorities would require more members than the club has. At least one member must have both traits.</p>
+</div></div><button type="button" class="quantity-check-again">Edit my answer</button></div></aside>
 
 <h3>When all describes that same group</h3>
 <p>There is another way to guarantee an overlap. Suppose <strong>most club members study law</strong>, and <strong>all club members work part time</strong>. We already know there are law students in the club. The all rule tells us that <em>each one of those members</em> also works part time. So <strong>some law students work part time</strong>.</p>
-<pre><code class="language-text">Club members  ─most→  Law students
-Club members  →        Part-time workers
-Law students  ←some→  Part-time workers
+<pre><code class="language-text">Given:       Most club members study law.
+             All club members work part time.
+Must follow: Some law students work part time.
+Why:         The law students already found are club members,
+             so the all rule applies to each of them.
 </code></pre>
 <p>We can make the same move with <strong>some</strong>. If <strong>some club members study law</strong> and <strong>all club members work part time</strong>, take the member guaranteed by “some.” That person has both traits. Again, <strong>some law students work part time</strong>. The sentences can be stated in the other order: <strong>all club members work part time; some club members study law</strong>. The same person still proves the overlap.</p>
-<figure class="quantity-figure"><img src="./assets/all-and-overlap.svg" alt="An all rule covers every club member. A highlighted law student is therefore also a part-time worker."><figcaption><span>FIG 06</span>The all rule applies to the member already found.</figcaption></figure>
-<aside class="quantity-check"><p class="quantity-check-question"><span>Try it</span> All A are B. All A are C. Must some B be C?</p><details class="quantity-answer"><summary>Check your answer</summary><div class="quantity-answer-body"><p>Not yet. The two all rules tell us what is true <strong>if</strong> something is A, but neither tells us that any A exists. Add “at least one A exists,” and the overlap follows.</p>
-</div></details></aside>
+<figure class="quantity-figure"><img src="./assets/all-and-overlap.svg" alt="An all rule covers every club member. A highlighted law student is therefore also a part-time worker."></figure>
+<aside class="quantity-check" data-check="8"><div class="quantity-check-top"><span>Try it</span><span>09</span></div><p class="quantity-check-question"> All A are B. All A are C. Must some B be C?</p><form class="quantity-check-form"><label for="quantity-check-8">Your answer</label><textarea id="quantity-check-8" rows="2" placeholder="Write your answer here…" required></textarea><button type="submit">Check my answer <span aria-hidden="true">↗</span></button></form><div class="quantity-check-result" hidden aria-live="polite"><strong></strong><div class="quantity-check-worked"><div class="quantity-answer-body"><p>Not yet. The two all rules tell us what is true <strong>if</strong> something is A, but neither tells us that any A exists. Add “at least one A exists,” and the overlap follows.</p>
+</div></div><button type="button" class="quantity-check-again">Edit my answer</button></div></aside>
 
 <h2 class="quantity-chapter"><span class="quantity-chapter-number">07</span>Two majorities can also compare group sizes</h2>
 <p>Here is a different comparison. <strong>Most debate team members are seniors</strong>, but <strong>most seniors are not on the debate team</strong>. The seniors on the team are more than half of the team and less than half of the seniors. The same overlap takes up a larger share of the team than of the senior class. Therefore, <strong>there are more seniors than debate team members</strong>.</p>
-<figure class="quantity-figure"><img src="./assets/group-size-comparison.svg" alt="An example in which six of ten debate team members are seniors, while six of twenty seniors are on the team."><figcaption><span>FIG 07</span>The same overlap can be a majority of one group and a minority of another.</figcaption></figure>
+<figure class="quantity-figure"><img src="./assets/group-size-comparison.svg" alt="An example in which six of ten debate team members are seniors, while six of twenty seniors are on the team."></figure>
 <p>The numbers in the picture are one possible case. The conclusion follows from the two majority claims, not from those particular numbers.</p>
 <h2 class="quantity-chapter"><span class="quantity-chapter-number">08</span>Similar chains can leave a gap</h2>
 <p>Two some statements need not describe the same person or thing:</p>
@@ -410,10 +427,11 @@ Law students  ←some→  Part-time workers
 Some Spanish speakers are trained.
 </code></pre>
 <p>The trained Spanish speakers could all be people who do not volunteer. We cannot conclude that any volunteers are trained.</p>
+<figure class="quantity-figure"><img src="./assets/some-some-gap.svg" alt="Two different Spanish speakers satisfy the two some claims without any volunteer being trained."></figure>
 <p>Replacing the second “some” with “most” does not fix the gap. The Spanish-speaking volunteers could sit in the untrained minority. Even two most statements that count different groups do not automatically produce a new majority claim.</p>
 <p>Before drawing a conclusion, ask: <strong>Am I carrying a known group through an all rule? Or do two majorities count the same group?</strong> If neither is true, check whether the groups could miss each other.</p>
-<aside class="quantity-check"><p class="quantity-check-question"><span>Quick check</span> A club has 13 members. Most are women, and some are dancers. How many female dancers are guaranteed? How many are possible?</p><details class="quantity-answer"><summary>Show the answer</summary><div class="quantity-answer-body"><p><strong>Zero are guaranteed; as many as 13 are possible.</strong> Seven women and one dancer meet the statements even if that dancer is one of the six men. Both traits could also belong to every member. A most claim and a some claim about the same group do not force the two traits to meet.</p>
-</div></details></aside>
+<aside class="quantity-check" data-check="9"><div class="quantity-check-top"><span>Quick check</span><span>10</span></div><p class="quantity-check-question"> A club has 13 members. Most are women, and some are dancers. How many female dancers are guaranteed? How many are possible?</p><form class="quantity-check-form"><label for="quantity-check-9">Your answer</label><textarea id="quantity-check-9" rows="2" placeholder="Write your answer here…" required></textarea><button type="submit">Check my answer <span aria-hidden="true">↗</span></button></form><div class="quantity-check-result" hidden aria-live="polite"><strong></strong><div class="quantity-check-worked"><div class="quantity-answer-body"><p><strong>Zero are guaranteed; as many as 13 are possible.</strong> Seven women and one dancer meet the statements even if that dancer is one of the six men. Both traits could also belong to every member. A most claim and a some claim about the same group do not force the two traits to meet.</p>
+</div></div><button type="button" class="quantity-check-again">Edit my answer</button></div></aside>
 
 <section class="quantity-summary"><h2 class="quantity-chapter"><span class="quantity-chapter-number">09</span>The moves to keep</h2>
 <table>
@@ -455,14 +473,51 @@ Some Spanish speakers are trained.
 <p>Two <strong>all</strong> claims about A guarantee that every A has both traits. They guarantee <strong>some B are C</strong> only when we also know that at least one A exists.</p>
 <p>Use the sentence behind each arrow to check what it guarantees.</p>
 </section><section class="quantity-language"><h2 class="quantity-chapter"><span class="quantity-chapter-number">10</span>Nearby words need a closer look</h2>
-<p>Some test sentences use less exact language. <strong>Many</strong>, <strong>often</strong>, <strong>few</strong>, and <strong>not many</strong> tell us something about frequency or size, but they do not set a universal numerical cutoff. A hundred menu items could make five feel like few; in a menu of six, five would not feel like few. Do not quietly replace these words with a fixed number.</p>
-<p><strong>Most</strong> is different: it crosses a precise line, <strong>more than half</strong>. Words such as <strong>the majority</strong> plainly express that idea. Words such as <strong>usually</strong>, <strong>typically</strong>, <strong>likely</strong>, and <strong>probably</strong> can suggest it in context, but pay attention to what the sentence actually counts. “Probably” about one event, for example, is a likelihood claim, not a headcount of a group.</p>
+<p>The words around a quantity statement can look familiar without making the same promise. Sort them by <strong>what they guarantee</strong>, then check the sentence in front of you:</p>
+<table>
+<thead>
+<tr>
+<th>Word or phrase</th>
+<th>What it guarantees</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Some</strong>, <strong>at least one</strong>, <strong>one or more</strong></td>
+<td>One or more members fit. All may fit too.</td>
+</tr>
+<tr>
+<td><strong>A few</strong>, <strong>several</strong>, <strong>many</strong></td>
+<td>A positive number in ordinary use, but no universal cutoff. They imply at least one.</td>
+</tr>
+<tr>
+<td><strong>Most</strong>, <strong>more than half</strong>, <strong>a majority of</strong></td>
+<td>Strictly more than half of the named group fit.</td>
+</tr>
+<tr>
+<td><strong>All</strong>, <strong>every</strong>, <strong>each</strong>, <strong>without exception</strong></td>
+<td>Every member of the named group fits. The group may still need a separate existence premise.</td>
+</tr>
+<tr>
+<td><strong>Few</strong>, <strong>not many</strong>, <strong>not often</strong></td>
+<td>A small number or low frequency in context. No exact numerical boundary follows.</td>
+</tr>
+<tr>
+<td><strong>No</strong>, <strong>none</strong>, <strong>zero</strong></td>
+<td>Not a single member fits.</td>
+</tr>
+<tr>
+<td><strong>Not all</strong></td>
+<td>At least one member does <strong>not</strong> fit.</td>
+</tr>
+</tbody></table>
+<p><strong>Few</strong> is worth separating from <strong>a few</strong>. “A few books are hardcover” affirms that at least some are. “Few books are hardcover” stresses how small the number is. It often suggests some in ordinary speech, but it does not set a dependable numerical minimum. “Not many” can include zero. A hundred menu items could make five feel like few; in a menu of six, five would not feel like few. Do not quietly replace any of these phrases with a fixed number.</p>
+<p><strong>Most</strong> is different: it crosses a precise line, <strong>more than half</strong>. Words such as <strong>the majority</strong> plainly express that idea. Words such as <strong>usually</strong>, <strong>typically</strong>, <strong>generally</strong>, <strong>commonly</strong>, <strong>frequently</strong>, <strong>often</strong>, <strong>likely</strong>, and <strong>probably</strong> can suggest prevalence in context, but pay attention to what the sentence actually counts. “Probably” about one event, for example, is a likelihood claim, not a headcount of a group.</p>
 <p><strong>Not all</strong> <em>does</em> give us a precise minimum: at least one exception. “Not all club members are lawyers” means <strong>at least one club member is not a lawyer</strong>. It does not tell us whether the other members are lawyers.</p>
-<aside class="quantity-check"><p class="quantity-check-question"><span>Quick check</span> A menu lists 100 beers. “Many are Belgian,” “few are Belgian,” and “not many are Belgian” are three claims. Can you assign each one an exact minimum and maximum? What does “not all are Belgian” guarantee?</p><details class="quantity-answer"><summary>Show the answer</summary><div class="quantity-answer-body"><p>The first three do <strong>not</strong> have fixed numerical boundaries. “Many” suggests more than an isolated example, while “few” and “not many” suggest a small number relative to the context. None alone licenses a specific cutoff such as five or ten. “Not all” is exact about one thing: <strong>at least one beer is not Belgian</strong>.</p>
-</div></details></aside>
+<aside class="quantity-check" data-check="10"><div class="quantity-check-top"><span>Quick check</span><span>11</span></div><p class="quantity-check-question"> A menu lists 100 beers. “Many are Belgian,” “few are Belgian,” and “not many are Belgian” are three claims. Can you assign each one an exact minimum and maximum? What does “not all are Belgian” guarantee?</p><form class="quantity-check-form"><label for="quantity-check-10">Your answer</label><textarea id="quantity-check-10" rows="2" placeholder="Write your answer here…" required></textarea><button type="submit">Check my answer <span aria-hidden="true">↗</span></button></form><div class="quantity-check-result" hidden aria-live="polite"><strong></strong><div class="quantity-check-worked"><div class="quantity-answer-body"><p>The first three do <strong>not</strong> have fixed numerical boundaries. “Many” suggests more than an isolated example, while “few” and “not many” suggest a small number relative to the context. None alone licenses a specific cutoff such as five or ten. “Not all” is exact about one thing: <strong>at least one beer is not Belgian</strong>.</p>
+</div></div><button type="button" class="quantity-check-again">Edit my answer</button></div></aside>
 
 </section><section class="quantity-quiz" id="quantity-quiz" aria-labelledby="quantity-quiz-title">
-  <div class="quantity-quiz-top"><span class="quantity-quiz-eyebrow">Inference studio</span><span class="quantity-quiz-progress" id="quantity-quiz-progress">01 / 07</span></div>
+  <div class="quantity-quiz-top"><span>Practice</span><span class="quantity-quiz-progress" id="quantity-quiz-progress">01 / 07</span></div>
   <div class="quantity-quiz-track" aria-hidden="true"><span id="quantity-quiz-track-fill"></span></div>
   <h3 id="quantity-quiz-title">Can you prove the overlap?</h3>
   <p class="quantity-quiz-intro">Seven short answers. Make a call, explain it, then compare your reasoning.</p>
@@ -495,25 +550,7 @@ Some Spanish speakers are trained.
 <li>Most volunteers are students.</li>
 <li>Most weekend workers are trained.</li>
 </ol>
-<p>First, diagram each statement. Then answer these without looking below:</p>
-<ol>
-<li>Which two statements prove that <strong>some volunteers are trained</strong>?</li>
-<li>Which two statements prove that <strong>some students work weekends</strong>?</li>
-<li>Do statements 3 and 5 prove that <strong>most volunteers are trained</strong>? Explain the gap or draw a counterexample.</li>
-<li>Can you write either valid <strong>some</strong> conclusion in the reverse order?</li>
-</ol>
-<details class="quantity-answer"><summary>Show the diagrams and worked answers</summary><div class="quantity-answer-body"><pre><code class="language-text">1. Volunteers       ←some→  Spanish speakers
-2. Spanish speakers →       Trained people
-3. Volunteers       ─most→  Weekend workers
-4. Volunteers       ─most→  Students
-5. Weekend workers  ─most→  Trained people
-</code></pre>
-<p><strong>1. Statements 1 and 2.</strong> At least one volunteer speaks Spanish. Every Spanish speaker is trained. That volunteer is trained, so <strong>some volunteers are trained</strong>.</p>
-<p><strong>2. Statements 3 and 4.</strong> Both majorities count the volunteers. The weekend workers and students must share at least one volunteer. So <strong>some students work weekends</strong>.</p>
-<p><strong>3. No.</strong> Statement 3 says most volunteers work weekends. Statement 5 counts all weekend workers, a different group. The volunteers who work weekends could be among the untrained weekend workers. Nothing requires most volunteers to be trained.</p>
-<p><strong>4. Yes.</strong> A some statement describes an overlap in either direction: <strong>some trained people are volunteers</strong>, and <strong>some weekend workers are students</strong>.</p>
-</div></details>
-</section></article>
+<p class="quantity-drill-diagram-note">Diagram the five statements for yourself. Then work through these four questions. Your answer stays on the page while you compare it with the worked reason.</p><section class="quantity-check quantity-drill-check" data-drill="0"><div class="quantity-check-top"><span>Question 1</span><span>01 / 04</span></div><p class="quantity-check-question">Which two statements prove that some volunteers are trained?</p><form class="quantity-check-form"><label for="quantity-drill-0">Your answer</label><textarea id="quantity-drill-0" rows="2" placeholder="Write your answer here…" required></textarea><button type="submit">Check my answer <span aria-hidden="true">↗</span></button></form><div class="quantity-check-result" hidden aria-live="polite"><strong></strong><div class="quantity-check-worked"><p>Statements 1 and 2. At least one volunteer speaks Spanish. Every Spanish speaker is trained. That volunteer is trained.</p></div><button type="button" class="quantity-check-again">Edit my answer</button></div></section><section class="quantity-check quantity-drill-check" data-drill="1"><div class="quantity-check-top"><span>Question 2</span><span>02 / 04</span></div><p class="quantity-check-question">Which two statements prove that some students work weekends?</p><form class="quantity-check-form"><label for="quantity-drill-1">Your answer</label><textarea id="quantity-drill-1" rows="2" placeholder="Write your answer here…" required></textarea><button type="submit">Check my answer <span aria-hidden="true">↗</span></button></form><div class="quantity-check-result" hidden aria-live="polite"><strong></strong><div class="quantity-check-worked"><p>Statements 3 and 4. Both majorities count volunteers, so the students and weekend workers must share at least one volunteer.</p></div><button type="button" class="quantity-check-again">Edit my answer</button></div></section><section class="quantity-check quantity-drill-check" data-drill="2"><div class="quantity-check-top"><span>Question 3</span><span>03 / 04</span></div><p class="quantity-check-question">Do statements 3 and 5 prove that most volunteers are trained? Explain.</p><form class="quantity-check-form"><label for="quantity-drill-2">Your answer</label><textarea id="quantity-drill-2" rows="2" placeholder="Write your answer here…" required></textarea><button type="submit">Check my answer <span aria-hidden="true">↗</span></button></form><div class="quantity-check-result" hidden aria-live="polite"><strong></strong><div class="quantity-check-worked"><p>No. Statement 3 counts volunteers; statement 5 counts all weekend workers. The volunteer weekend workers could be in the untrained minority of weekend workers.</p></div><button type="button" class="quantity-check-again">Edit my answer</button></div></section><section class="quantity-check quantity-drill-check" data-drill="3"><div class="quantity-check-top"><span>Question 4</span><span>04 / 04</span></div><p class="quantity-check-question">Can either valid some conclusion be reversed? Give an example.</p><form class="quantity-check-form"><label for="quantity-drill-3">Your answer</label><textarea id="quantity-drill-3" rows="2" placeholder="Write your answer here…" required></textarea><button type="submit">Check my answer <span aria-hidden="true">↗</span></button></form><div class="quantity-check-result" hidden aria-live="polite"><strong></strong><div class="quantity-check-worked"><p>Yes. Some trained people are volunteers. Some weekend workers are students. Each sentence describes the same overlap in reverse.</p></div><button type="button" class="quantity-check-again">Edit my answer</button></div></section></section></article>
     <div class="classroom-detail-actions"><button class="classroom-button classroom-button-primary" type="button" disabled>Ask</button><button class="classroom-button" type="button" disabled>Back to notes</button></div>
   </div></main>
 </div>
@@ -528,7 +565,9 @@ const progress=document.querySelector('.quantity-progress');let pending=false;
 function updateProgress(){const max=document.documentElement.scrollHeight-innerHeight;progress.style.transform='scaleX('+Math.max(0,Math.min(1,max>0?scrollY/max:0))+')';pending=false}
 addEventListener('scroll',()=>{if(!pending){requestAnimationFrame(updateProgress);pending=true}},{passive:true});addEventListener('resize',updateProgress);updateProgress();
 const workerArrangements=[[4,5,6,7,8,9],[0,1,2,3,4,5],[2,3,4,5,6,7],[1,3,5,7,8,9]];let arrangement=0;
-document.getElementById('quantity-overlap-shuffle').addEventListener('click',()=>{arrangement=(arrangement+1)%workerArrangements.length;const working=new Set(workerArrangements[arrangement]);const people=[...document.querySelectorAll('.quantity-person')];let overlap=0;people.forEach((person,index)=>{const both=index<6&&working.has(index);person.classList.toggle('works-part-time',working.has(index));person.setAttribute('aria-label','Member '+(index+1)+': '+(index<6?'studies law':'does not study law')+', '+(working.has(index)?'works part time':'does not work part time'));if(both)overlap++});document.getElementById('quantity-overlap-count').textContent=overlap;document.getElementById('quantity-overlap-message').textContent=overlap===2?'Even the smallest possible overlap is not zero.':'The overlap changed, but it did not disappear.'});
+document.getElementById('quantity-overlap-shuffle').addEventListener('click',()=>{arrangement=(arrangement+1)%workerArrangements.length;const working=new Set(workerArrangements[arrangement]);const people=[...document.querySelectorAll('.quantity-person')];let overlap=0;people.forEach((person,index)=>{const both=index<6&&working.has(index);person.classList.toggle('works-part-time',working.has(index));person.setAttribute('aria-label','Member '+(index+1)+': '+(index<6?'studies law':'does not study law')+', '+(working.has(index)?'works part time':'does not work part time'));if(both)overlap++});document.getElementById('quantity-overlap-count').textContent=overlap;document.getElementById('quantity-overlap-message').textContent=overlap===2?'Even the smallest possible overlap is not zero.':'The overlap changed, but it did not disappear.';document.getElementById('venn-law-only').textContent=6-overlap;document.getElementById('venn-both').textContent=overlap;document.getElementById('venn-work-only').textContent=6-overlap;document.getElementById('venn-neither').textContent=overlap-2});
+const inlineCheckRules=[[{"source":"\\b(yes|every|all)\\b","flags":"i"},{"source":"\\b(no|not|none|doesn.t)\\b","flags":"i"}],[{"source":"\\b(yes|must|some)\\b","flags":"i"},{"source":"\\b(no|not|none)\\b","flags":"i"}],[{"source":"\\b51\\b","flags":""},{"source":"\\b100\\b","flags":""}],[{"source":"\\b(not|cannot|can.t|outside)\\b","flags":"i"}],[{"source":"\\b(some|at least one)\\b","flags":"i"},{"source":"\\b(handwritten)\\b","flags":"i"}],[{"source":"\\b(no|cannot|can.t|not)\\b","flags":"i"}],[{"source":"\\b(1|one)\\b","flags":"i"}],[{"source":"\\b(no|cannot|can.t|not)\\b","flags":"i"}],[{"source":"\\b(no|not|cannot|can.t)\\b","flags":"i"},{"source":"\\b(exist|exists|existence|empty|at least one)\\b","flags":"i"}],[{"source":"\\b(0|zero|none)\\b","flags":"i"},{"source":"\\b13|thirteen\\b","flags":"i"}],[{"source":"\\b(no|not|cannot|can.t)\\b","flags":"i"},{"source":"\\b(at least one|one|some)\\b","flags":"i"}]];
+document.querySelectorAll('.quantity-check').forEach(card=>{const form=card.querySelector('form');const input=form.querySelector('textarea');const result=card.querySelector('.quantity-check-result');form.addEventListener('submit',event=>{event.preventDefault();const response=input.value.trim();if(!response)return;const index=card.dataset.check;let matched=false;if(index!==undefined){matched=inlineCheckRules[Number(index)].every(pattern=>new RegExp(pattern.source,pattern.flags).test(response))}else{const drill=Number(card.dataset.drill);const lower=response.toLowerCase();matched=drill===0?lower.includes('1')&&lower.includes('2'):drill===1?lower.includes('3')&&lower.includes('4'):drill===2?['no','not','cannot',"can't"].some(word=>lower.includes(word)):['yes','can','trained','weekend'].some(word=>lower.includes(word))}result.querySelector('strong').textContent=matched?'Your answer has the key idea. Check the reason below.':'Compare your answer with the worked reason.';result.hidden=false;result.scrollIntoView({block:'nearest',behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});});card.querySelector('.quantity-check-again').addEventListener('click',()=>{result.hidden=true;input.focus()})});
 const quizQuestions=[{"premises":["Some A are B.","All B are C."],"answer":"yes","explanation":"The A that is B must also be C because every B is C. That one A proves the overlap."},{"premises":["Some A are B.","Most A are C."],"answer":"no","explanation":"The A that is B could be outside the majority of A that is C. Those parts of A can miss each other."},{"premises":["All A are B.","Some B are C."],"answer":"no","explanation":"The B that is C could be outside A. The all rule points from A to B, not back from B to A."},{"premises":["Some A are B.","Most B are C."],"answer":"no","explanation":"The known A that is B could be among the B that are not C. A majority of B does not tell us which B are C."},{"premises":["Some A are B.","Some B are C."],"answer":"no","explanation":"The B in the first statement could differ from the B in the second. Two some claims need not share a witness."},{"premises":["Most A are B.","Most A are C."],"answer":"yes","explanation":"Both majorities count the same A group. They must share at least one A, and that person or thing is both B and C."},{"premises":["All A are B.","All A are C."],"answer":"no","explanation":"Every A would be both B and C, but neither all claim tells us an A exists. Add at least one A, and the overlap follows."}];
 const quizForm=document.getElementById('quantity-quiz-form');
 const quizInput=document.getElementById('quantity-quiz-input');

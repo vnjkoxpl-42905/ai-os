@@ -11,27 +11,16 @@ const withReveals = noteBody.replace(
   (_match, summary, answer) =>
     `<details class="quantity-answer"><summary>${summary}</summary><div class="quantity-answer-body">${marked.parse(answer)}</div></details>`,
 );
-const figureNotes = {
-  "some-books.svg": "One is enough. All eight are still possible.",
-  "most-books.svg": "The fifth book crosses the halfway line.",
-  "all-books.svg": "One exception would break the claim.",
-  "book-quantity-ranges.svg": "The permitted ranges nest inside one another.",
-  "club-majority-overlap.svg": "Two majorities cannot avoid sharing a member.",
-  "all-and-overlap.svg": "The all rule applies to the member already found.",
-  "group-size-comparison.svg": "The same overlap can be a majority of one group and a minority of another.",
-};
-let figureIndex = 0;
 let contentHtml = marked.parse(withReveals).replace(/<p><img([^>]+)><\/p>/g, (_match, attributes) => {
   const fileName = /src="[^"]*\/([^"]+)"/.exec(attributes)?.[1];
-  const caption = figureNotes[fileName] ?? "A quantity statement made visible.";
-  figureIndex++;
   if (fileName === "club-majority-overlap.svg") return `<section class="quantity-overlap-lab" aria-label="Explore why two majorities overlap">
-    <div class="quantity-overlap-head"><span>FIG ${String(figureIndex).padStart(2, "0")} / A living diagram</span><h3>Try to separate the majorities.</h3><p>Six of ten club members study law. Six work part time. Rearrange the workers and watch what cannot change.</p></div>
+    <div class="quantity-overlap-head"><h3>Try to separate the majorities.</h3><p>Six of ten club members study law. Six work part time. Rearrange the workers and watch what cannot change.</p></div>
     <div class="quantity-overlap-people" id="quantity-overlap-people" aria-label="Ten club members">${Array.from({ length: 10 }, (_, index) => `<span class="quantity-person ${index < 6 ? "studies-law " : ""}${index >= 4 ? "works-part-time" : ""}" role="img" aria-label="Member ${index + 1}: ${index < 6 ? "studies law" : "does not study law"}, ${index >= 4 ? "works part time" : "does not work part time"}">${String(index + 1).padStart(2, "0")}</span>`).join("")}</div>
     <div class="quantity-overlap-legend"><span><i class="law"></i>Studies law</span><span><i class="work"></i>Works part time</span><span><i class="both"></i>Both</span></div>
     <div class="quantity-overlap-footer"><p aria-live="polite"><b id="quantity-overlap-count">2</b> members have both traits. <span id="quantity-overlap-message">Even the smallest possible overlap is not zero.</span></p><button id="quantity-overlap-shuffle" type="button">Rearrange the workers <span aria-hidden="true">↻</span></button></div>
+    <div class="quantity-venn"><p><b>The universe is the ten club members.</b> The shared middle cannot be empty.</p><svg viewBox="0 0 640 278" role="img" aria-label="Venn diagram of ten club members, updated as the members are rearranged"><rect x="8" y="8" width="624" height="262" rx="18" fill="#fffdfa" stroke="#bed6d3" stroke-width="2"/><text x="30" y="37" fill="#173047" font-size="16" font-family="Outfit, sans-serif">All ten club members</text><circle cx="259" cy="151" r="98" fill="#48b0a9" fill-opacity=".36" stroke="#00847f" stroke-width="2"/><circle cx="381" cy="151" r="98" fill="#bb9bdf" fill-opacity=".36" stroke="#7650a3" stroke-width="2"/><text x="195" y="98" fill="#173047" font-size="14" font-family="Outfit, sans-serif">Study law</text><text x="380" y="98" fill="#173047" font-size="14" font-family="Outfit, sans-serif">Work part time</text><text id="venn-law-only" x="206" y="165" fill="#173047" font-size="27" font-weight="700" font-family="Outfit, sans-serif">4</text><text id="venn-both" x="312" y="165" fill="#173047" font-size="27" font-weight="700" font-family="Outfit, sans-serif">2</text><text id="venn-work-only" x="415" y="165" fill="#173047" font-size="27" font-weight="700" font-family="Outfit, sans-serif">4</text><text x="30" y="247" fill="#173047" font-size="13" font-family="Outfit, sans-serif">Neither: <tspan id="venn-neither">0</tspan></text></svg><small>The circle areas are schematic. The numbers count members and change when you rearrange them.</small></div>
   </section>`;
-  return `<figure class="quantity-figure"><img${attributes}><figcaption><span>FIG ${String(figureIndex).padStart(2, "0")}</span>${caption}</figcaption></figure>`;
+  return `<figure class="quantity-figure"><img${attributes}></figure>`;
 });
 const firstLessonSection = contentHtml.indexOf("<h2>Some guarantees at least one</h2>");
 if (firstLessonSection < 0) throw new Error("Could not find the first lesson section");
@@ -74,7 +63,25 @@ for (const [label, index] of [
   ["Nearby words need a closer look", "10"],
   ["Short drill: diagram, combine, decide", "11"],
 ]) contentHtml = contentHtml.replace(new RegExp(`<h2([^>]*)>${label}</h2>`), `<h2$1 class="quantity-chapter"><span class="quantity-chapter-number">${index}</span>${label}</h2>`);
-contentHtml = contentHtml.replace(/<p><strong>(Try it|Quick check):<\/strong>([\s\S]*?)<\/p>\s*(<details class="quantity-answer">[\s\S]*?<\/details>)/g, (_match, label, question, reveal) => `<aside class="quantity-check"><p class="quantity-check-question"><span>${label}</span>${question}</p>${reveal}</aside>`);
+const checkKeys = [
+  [/\b(yes|every|all)\b/i, /\b(no|not|none|doesn.t)\b/i],
+  [/\b(yes|must|some)\b/i, /\b(no|not|none)\b/i],
+  [/\b51\b/, /\b100\b/],
+  [/\b(not|cannot|can.t|outside)\b/i],
+  [/\b(some|at least one)\b/i, /\b(handwritten)\b/i],
+  [/\b(no|cannot|can.t|not)\b/i],
+  [/\b(1|one)\b/i],
+  [/\b(no|cannot|can.t|not)\b/i],
+  [/\b(no|not|cannot|can.t)\b/i, /\b(exist|exists|existence|empty|at least one)\b/i],
+  [/\b(0|zero|none)\b/i, /\b13|thirteen\b/i],
+  [/\b(no|not|cannot|can.t)\b/i, /\b(at least one|one|some)\b/i],
+];
+let checkIndex = 0;
+contentHtml = contentHtml.replace(/<p><strong>(Try it|Quick check):<\/strong>([\s\S]*?)<\/p>\s*(<details class="quantity-answer">[\s\S]*?<\/details>)/g, (_match, label, question, reveal) => {
+  const number = checkIndex++;
+  return `<aside class="quantity-check" data-check="${number}"><div class="quantity-check-top"><span>${label}</span><span>${String(number + 1).padStart(2, "0")}</span></div><p class="quantity-check-question">${question}</p><form class="quantity-check-form"><label for="quantity-check-${number}">Your answer</label><textarea id="quantity-check-${number}" rows="2" placeholder="Write your answer here…" required></textarea><button type="submit">Check my answer <span aria-hidden="true">↗</span></button></form><div class="quantity-check-result" hidden aria-live="polite"><strong></strong><div class="quantity-check-worked">${reveal.replace(/<details class="quantity-answer"><summary>[^<]*<\/summary>/, "").replace(/<\/details>$/, "")}</div><button type="button" class="quantity-check-again">Edit my answer</button></div></aside>`;
+});
+if (checkIndex !== checkKeys.length) throw new Error(`Expected ${checkKeys.length} inline checks, found ${checkIndex}`);
 const quizQuestions = [
   { premises: ["Some A are B.", "All B are C."], answer: "yes", explanation: "The A that is B must also be C because every B is C. That one A proves the overlap." },
   { premises: ["Some A are B.", "Most A are C."], answer: "no", explanation: "The A that is B could be outside the majority of A that is C. Those parts of A can miss each other." },
@@ -85,7 +92,7 @@ const quizQuestions = [
   { premises: ["All A are B.", "All A are C."], answer: "no", explanation: "Every A would be both B and C, but neither all claim tells us an A exists. Add at least one A, and the overlap follows." },
 ];
 const quizMarkup = `<section class="quantity-quiz" id="quantity-quiz" aria-labelledby="quantity-quiz-title">
-  <div class="quantity-quiz-top"><span class="quantity-quiz-eyebrow">Inference studio</span><span class="quantity-quiz-progress" id="quantity-quiz-progress">01 / 07</span></div>
+  <div class="quantity-quiz-top"><span>Practice</span><span class="quantity-quiz-progress" id="quantity-quiz-progress">01 / 07</span></div>
   <div class="quantity-quiz-track" aria-hidden="true"><span id="quantity-quiz-track-fill"></span></div>
   <h3 id="quantity-quiz-title">Can you prove the overlap?</h3>
   <p class="quantity-quiz-intro">Seven short answers. Make a call, explain it, then compare your reasoning.</p>
@@ -122,6 +129,14 @@ contentHtml = contentHtml.slice(0, summaryAt)
   + '<section class="quantity-language">' + contentHtml.slice(languageAt, quizAt) + '</section>'
   + contentHtml.slice(quizAt, drillAt)
   + '<section class="quantity-drill">' + contentHtml.slice(drillAt) + '</section>';
+const drillItems = [
+  { question: "Which two statements prove that some volunteers are trained?", key: "1 and 2", explanation: "Statements 1 and 2. At least one volunteer speaks Spanish. Every Spanish speaker is trained. That volunteer is trained." },
+  { question: "Which two statements prove that some students work weekends?", key: "3 and 4", explanation: "Statements 3 and 4. Both majorities count volunteers, so the students and weekend workers must share at least one volunteer." },
+  { question: "Do statements 3 and 5 prove that most volunteers are trained? Explain.", key: "No", explanation: "No. Statement 3 counts volunteers; statement 5 counts all weekend workers. The volunteer weekend workers could be in the untrained minority of weekend workers." },
+  { question: "Can either valid some conclusion be reversed? Give an example.", key: "Yes", explanation: "Yes. Some trained people are volunteers. Some weekend workers are students. Each sentence describes the same overlap in reverse." },
+];
+const drillCards = drillItems.map((item, index) => `<section class="quantity-check quantity-drill-check" data-drill="${index}"><div class="quantity-check-top"><span>Question ${index + 1}</span><span>${String(index + 1).padStart(2, "0")} / 04</span></div><p class="quantity-check-question">${item.question}</p><form class="quantity-check-form"><label for="quantity-drill-${index}">Your answer</label><textarea id="quantity-drill-${index}" rows="2" placeholder="Write your answer here…" required></textarea><button type="submit">Check my answer <span aria-hidden="true">↗</span></button></form><div class="quantity-check-result" hidden aria-live="polite"><strong></strong><div class="quantity-check-worked"><p>${item.explanation}</p></div><button type="button" class="quantity-check-again">Edit my answer</button></div></section>`).join("");
+contentHtml = contentHtml.replace(/(<section class="quantity-drill">[\s\S]*?)<p>First, diagram each statement\. Then answer these without looking below:<\/p>[\s\S]*?(<\/section>)$/, (_match, opening, ending) => `${opening}<p class="quantity-drill-diagram-note">Diagram the five statements for yourself. Then work through these four questions. Your answer stays on the page while you compare it with the worked reason.</p>${drillCards}${ending}`);
 const appCss = "../../projects/lsatu/src/components/classroom/classroom.css";
 
 const noteCss = `
@@ -139,8 +154,10 @@ const noteCss = `
   .classroom-root .quantity-note blockquote p { margin-bottom: 12px; }
   .classroom-root .quantity-note figure { width: 100%; margin: 35px 0 39px; }
   .classroom-root .quantity-note figure img { display: block; width: 100%; max-width: 100%; height: auto; border-radius: 13px; margin: 0; left: auto; right: auto; transform: none; border: 1px solid var(--classroom-line); }
-  .classroom-root .quantity-note .quantity-figure figcaption { display: flex; gap: 15px; align-items: baseline; border-bottom: 1px solid #dce5e3; color: #4e6669; font: 400 14px/1.45 'Outfit',sans-serif; padding: 11px 4px 13px; }
-  .classroom-root .quantity-note .quantity-figure figcaption span { flex: none; color: #087e83; font: 600 11px 'IBM Plex Mono',monospace; letter-spacing: .08em; }
+  .classroom-root .quantity-note .quantity-venn { border-top: 1px solid #d0e2df; margin-top: 22px; padding-top: 18px; }
+  .classroom-root .quantity-note .quantity-venn p { font: 400 16px/1.5 'Outfit',sans-serif; margin: 0 0 12px; }
+  .classroom-root .quantity-note .quantity-venn svg { display: block; width: 100%; height: auto; }
+  .classroom-root .quantity-note .quantity-venn small { display: block; color: #4e6669; font: 400 12px/1.5 'Outfit',sans-serif; margin-top: 8px; }
   .classroom-root .quantity-note .quantity-overlap-lab { max-width: 820px; margin: 38px auto 46px; padding: 29px 31px 28px; border: 1px solid oklch(82% .035 210); border-radius: 15px; background: oklch(97% .012 205); }
   .classroom-root .quantity-note .quantity-overlap-head span { color: var(--quantity-teal); text-transform: uppercase; letter-spacing: .09em; font: 700 11px 'IBM Plex Mono',monospace; }
   .classroom-root .quantity-note .quantity-overlap-head h3 { color: var(--quantity-ink); font: 600 24px/1.24 'Outfit',sans-serif; letter-spacing: -.025em; margin: 12px 0 7px; }
@@ -172,10 +189,8 @@ const noteCss = `
   .classroom-root .quantity-note .quantity-answer-body { padding: 16px 18px 1px; }
   .classroom-root .quantity-note .quantity-answer-body p { font-size: 15px; line-height: 1.65; }
   .classroom-root .quantity-note .quantity-answer-body pre { margin-top: 0; }
-  .preview-stamp { position: fixed; top: 14px; right: 18px; z-index: 50; padding: 7px 11px; border-radius: 999px; color: #173047; background: #dff3f1; border: 1px solid #9dcfca; font: 700 12px 'Outfit', sans-serif; letter-spacing: .04em; text-transform: uppercase; }
-  .preview-note { font-size: 13px; color: var(--classroom-meta-text); margin: -6px 0 28px; }
   .preview-rail-label { display: block; color: var(--classroom-meta-text); font: 600 11px 'IBM Plex Mono', monospace; letter-spacing: .07em; text-transform: uppercase; margin: 25px 8px 8px; }
-  @media (max-width: 1023px) { .preview-stamp { top: 8px; right: 10px; } .classroom-root .classroom-column { min-width: 0; } }
+  @media (max-width: 1023px) { .classroom-root .classroom-column { min-width: 0; } }
   html.dark .classroom-root .quantity-note blockquote, html.dark .classroom-root .quantity-note pre, html.dark .classroom-root .quantity-note th { background: #1d1c28; color: #e5e5e5; }
   html.dark .classroom-root .quantity-note .quantity-answer { background: #0a0913; border-color: #3d3c48; }
   html.dark .classroom-root .quantity-note .quantity-answer summary { color: #7bd5d2; }
@@ -245,12 +260,20 @@ const noteCss = `
   .classroom-root .quantity-note .quantity-jump a:hover,
   .classroom-root .quantity-note .quantity-jump a:focus-visible { color: #087e83; border-bottom-color: #087e83; outline-offset: 2px; }
   .classroom-root .quantity-note pre { border: 1px solid #c6dfdc; border-radius: 9px; background: #f4f8f8; font-size: 16px; line-height: 1.8; }
-  .classroom-root .quantity-note .quantity-check { background: #f1f8f7; border: 1px solid #c6dfdc; border-radius: 14px; padding: 20px 22px 2px; max-width: 620px; margin: 30px 0 34px; }
-  .classroom-root .quantity-note .quantity-check-question { margin: 0 0 14px; max-width: none; }
-  .classroom-root .quantity-note .quantity-check-question > span { display: block; color: #087e83; font: 700 13px 'Outfit',sans-serif; letter-spacing: .02em; margin-bottom: 7px; }
-  .classroom-root .quantity-note .quantity-check .quantity-answer { margin: 0 0 19px; background: #fff; border-color: #b5d1cd; }
-  .classroom-root .quantity-note .quantity-check .quantity-answer summary { color: #075d63; padding: 10px 15px; font-size: 14px; }
-  .classroom-root .quantity-note .quantity-check .quantity-answer-body p { font-size: 16px; }
+  .classroom-root .quantity-note .quantity-check { background: #f1f8f7; border: 1px solid #c6dfdc; border-radius: 14px; padding: 20px 22px; max-width: 620px; margin: 30px 0 34px; }
+  .classroom-root .quantity-note .quantity-check [hidden] { display: none !important; }
+  .classroom-root .quantity-note .quantity-check-top { display: flex; justify-content: space-between; color: #087e83; font: 700 12px 'IBM Plex Mono',monospace; letter-spacing: .04em; text-transform: uppercase; margin-bottom: 15px; }
+  .classroom-root .quantity-note .quantity-check-question { margin: 0 0 17px; max-width: none; font-size: 19px; }
+  .classroom-root .quantity-note .quantity-check-form label { display: block; color: #385b60; font: 700 13px 'Outfit',sans-serif; margin-bottom: 7px; }
+  .classroom-root .quantity-note .quantity-check-form textarea { box-sizing: border-box; display: block; width: 100%; min-height: 75px; resize: vertical; border: 1px solid #b5d1cd; border-radius: 8px; padding: 11px 13px; background: #fff; color: #173047; font: 400 16px/1.5 'Outfit',sans-serif; }
+  .classroom-root .quantity-note .quantity-check button { cursor: pointer; border: 0; border-radius: 7px; min-height: 42px; padding: 9px 15px; background: #006d70; color: #fff; font: 700 14px 'Outfit',sans-serif; margin-top: 12px; }
+  .classroom-root .quantity-note .quantity-check button:hover { background: #005658; }
+  .classroom-root .quantity-note .quantity-check button:focus-visible, .classroom-root .quantity-note .quantity-check textarea:focus-visible { outline: 2px solid #006d70; outline-offset: 3px; }
+  .classroom-root .quantity-note .quantity-check-result { border-top: 1px solid #c6dfdc; margin-top: 18px; padding-top: 18px; animation: quantity-feedback-enter 420ms cubic-bezier(.19,1,.22,1) both; }
+  .classroom-root .quantity-note .quantity-check-result > strong { display: block; color: #075d63; font: 700 17px 'Outfit',sans-serif; margin-bottom: 8px; }
+  .classroom-root .quantity-note .quantity-check-worked { background: #fff; border: 1px solid #c6dfdc; border-radius: 9px; padding: 13px 16px 1px; }
+  .classroom-root .quantity-note .quantity-check-worked p { font-size: 16px; margin: 0 0 12px; }
+  .classroom-root .quantity-note .quantity-check-again { background: transparent !important; color: #075d63 !important; padding-left: 0 !important; }
   .classroom-root .quantity-note .quantity-summary { border: 1px solid #c9dddb; border-radius: 15px; padding: 0 28px 14px; margin: 72px 0 35px; background: #f9fcfb; }
   .classroom-root .quantity-note .quantity-summary h2 { margin-top: 0; border-top: 0; padding-top: 28px; }
   .classroom-root .quantity-note .quantity-summary table { margin-top: 16px; }
@@ -331,6 +354,7 @@ const noteCss = `
     .classroom-root .quantity-note .quantity-drill { padding-left: 16px; padding-right: 16px; }
   }
   @media (min-width: 601px) and (max-width: 900px) { .classroom-root .quantity-note .quantity-opening { display: block; } .classroom-root .quantity-note .quantity-lab { margin-top: 30px; max-width: 620px; } }
+  @media (min-width: 601px) and (max-width: 1023px) { .classroom-root .quantity-note .quantity-quiz { margin-left: 0; margin-right: 0; } }
   html.dark .classroom-root .quantity-note .quantity-opening .quantity-lead { color: #e5f3f2; }
   html.dark .classroom-root .quantity-note .quantity-opening-question,
   html.dark .classroom-root .quantity-note .quantity-check,
@@ -365,7 +389,6 @@ const page = `<!doctype html>
   <style>html,body{margin:0;min-height:100%;}body{background:#fff;} ${noteCss}</style>
 </head><body>
 <div class="quantity-progress" aria-hidden="true"></div>
-<span class="preview-stamp">Visual study preview</span>
 <div class="classroom-root">
   <aside class="classroom-sidebar"><div class="classroom-sidebar-card"><div class="classroom-panel-inner">
     <div class="classroom-brand"><i>U</i><span>LSAT U</span></div>
@@ -377,13 +400,10 @@ const page = `<!doctype html>
       <div class="classroom-nav">Flagged</div>
       <div class="classroom-nav">Wrong answers</div>
     </div>
-    <span class="preview-rail-label">Preview</span>
-    <p style="font-size:13px;line-height:1.6;color:var(--classroom-meta-text);padding:0 8px">This shows the draft in the Classroom reading layout. Nothing has been posted to a student.</p>
   </div></div></aside>
   <main class="classroom-stage"><div class="classroom-column">
     <div class="classroom-dateline"><time>September 29, 2026</time><span>|</span><span>Note</span></div>
     <h1 class="classroom-title">Some, Most, and All</h1>
-    <p class="preview-note">Interactive draft. Move the book count and open the answers as you read.</p>
     <article class="classroom-prose quantity-note">${contentHtml}</article>
     <div class="classroom-detail-actions"><button class="classroom-button classroom-button-primary" type="button" disabled>Ask</button><button class="classroom-button" type="button" disabled>Back to notes</button></div>
   </div></main>
@@ -399,7 +419,9 @@ const progress=document.querySelector('.quantity-progress');let pending=false;
 function updateProgress(){const max=document.documentElement.scrollHeight-innerHeight;progress.style.transform='scaleX('+Math.max(0,Math.min(1,max>0?scrollY/max:0))+')';pending=false}
 addEventListener('scroll',()=>{if(!pending){requestAnimationFrame(updateProgress);pending=true}},{passive:true});addEventListener('resize',updateProgress);updateProgress();
 const workerArrangements=[[4,5,6,7,8,9],[0,1,2,3,4,5],[2,3,4,5,6,7],[1,3,5,7,8,9]];let arrangement=0;
-document.getElementById('quantity-overlap-shuffle').addEventListener('click',()=>{arrangement=(arrangement+1)%workerArrangements.length;const working=new Set(workerArrangements[arrangement]);const people=[...document.querySelectorAll('.quantity-person')];let overlap=0;people.forEach((person,index)=>{const both=index<6&&working.has(index);person.classList.toggle('works-part-time',working.has(index));person.setAttribute('aria-label','Member '+(index+1)+': '+(index<6?'studies law':'does not study law')+', '+(working.has(index)?'works part time':'does not work part time'));if(both)overlap++});document.getElementById('quantity-overlap-count').textContent=overlap;document.getElementById('quantity-overlap-message').textContent=overlap===2?'Even the smallest possible overlap is not zero.':'The overlap changed, but it did not disappear.'});
+document.getElementById('quantity-overlap-shuffle').addEventListener('click',()=>{arrangement=(arrangement+1)%workerArrangements.length;const working=new Set(workerArrangements[arrangement]);const people=[...document.querySelectorAll('.quantity-person')];let overlap=0;people.forEach((person,index)=>{const both=index<6&&working.has(index);person.classList.toggle('works-part-time',working.has(index));person.setAttribute('aria-label','Member '+(index+1)+': '+(index<6?'studies law':'does not study law')+', '+(working.has(index)?'works part time':'does not work part time'));if(both)overlap++});document.getElementById('quantity-overlap-count').textContent=overlap;document.getElementById('quantity-overlap-message').textContent=overlap===2?'Even the smallest possible overlap is not zero.':'The overlap changed, but it did not disappear.';document.getElementById('venn-law-only').textContent=6-overlap;document.getElementById('venn-both').textContent=overlap;document.getElementById('venn-work-only').textContent=6-overlap;document.getElementById('venn-neither').textContent=overlap-2});
+const inlineCheckRules=${JSON.stringify(checkKeys.map(group => group.map(pattern => ({ source: pattern.source, flags: pattern.flags }))))};
+document.querySelectorAll('.quantity-check').forEach(card=>{const form=card.querySelector('form');const input=form.querySelector('textarea');const result=card.querySelector('.quantity-check-result');form.addEventListener('submit',event=>{event.preventDefault();const response=input.value.trim();if(!response)return;const index=card.dataset.check;let matched=false;if(index!==undefined){matched=inlineCheckRules[Number(index)].every(pattern=>new RegExp(pattern.source,pattern.flags).test(response))}else{const drill=Number(card.dataset.drill);const lower=response.toLowerCase();matched=drill===0?lower.includes('1')&&lower.includes('2'):drill===1?lower.includes('3')&&lower.includes('4'):drill===2?['no','not','cannot',"can't"].some(word=>lower.includes(word)):['yes','can','trained','weekend'].some(word=>lower.includes(word))}result.querySelector('strong').textContent=matched?'Your answer has the key idea. Check the reason below.':'Compare your answer with the worked reason.';result.hidden=false;result.scrollIntoView({block:'nearest',behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});});card.querySelector('.quantity-check-again').addEventListener('click',()=>{result.hidden=true;input.focus()})});
 const quizQuestions=${JSON.stringify(quizQuestions)};
 const quizForm=document.getElementById('quantity-quiz-form');
 const quizInput=document.getElementById('quantity-quiz-input');

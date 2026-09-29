@@ -1267,3 +1267,7 @@ Refined the complete local LSAT U quantity lesson preview after Joshua's whole-n
 ## [2026-09-29] system | Git remote rule removed
 
 ## [2026-09-29] system | Remote barriers cleared: log formatting fixed, GEMINI.md checked, snapshots marked historical, Claude Code git permissions added
+
+## [2026-09-29] Teaching notes | Quantity lesson final review pass
+
+Removed preview labels, figure captions, and “Inference Studio” from the local quantity lesson. Reworked the majority inference into given, reason, and conclusion, with a responsive circle view of the ten club members. Added set visuals for a valid all-rule chain and an invalid two-some chain, explanations of the negation of some/most/all, and a word-family table that distinguishes exact guarantees from contextual language. Converted eleven inline checks and four final-drill prompts to typed responses with immediate worked feedback. Local browser verification found eight loaded images, working interactions, and no horizontal overflow at 430px or 960px. The lesson remains a local prototype and has not been posted to LSAT U.

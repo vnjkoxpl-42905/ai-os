@@ -112,6 +112,8 @@
 <pre><code class="language-text">Books  ←some→  Hardcover
 </code></pre>
 <p>The double arrow tells us that at least one thing belongs to both groups. It does not tell us that every book is hardcover or that every hardcover item is a book.</p>
+<h3>What would make “some” false?</h3>
+<p>If <strong>some books are hardcover</strong> is false, then <strong>no books are hardcover</strong>. There is not even one book in both groups. Notice the difference between <strong>no books are hardcover</strong> and <strong>some books are not hardcover</strong>. The second sentence still allows other books to be hardcover, so it does not negate “some.”</p>
 <h2>Most guarantees more than half</h2>
 <p>Now I tell you that <strong>most of the eight books are hardcover</strong>. We need at least <strong>five</strong> hardcover books. Four would be exactly half, and half is not most. Five, six, seven, or eight could satisfy the sentence.</p>
 <figure><img src="./assets/most-books.svg" alt="Eight books showing that five hardcover books and eight hardcover books both satisfy most."></figure>
@@ -129,6 +131,8 @@ Hardcover  ←some→  Books
 <details class="quantity-answer"><summary>Show the answer</summary><div class="quantity-answer-body"><p><strong>51 to 100.</strong> Fifty is only half. “Most” also permits all 100, so it does not establish an exception.</p>
 </div></details>
 
+<h3>What would make “most” false?</h3>
+<p>“Most of the eight books are hardcover” needs at least five hardcover books. Its negation permits <strong>four or fewer</strong>. Four is exactly half, so it already makes “most” false. The opposite of “most are hardcover” is <strong>half or fewer are hardcover</strong>, not “most are paperback.” Both kinds could make up exactly half.</p>
 <h2>All leaves no exception</h2>
 <p>If <strong>all eight books are hardcover</strong>, every book on the shelf is hardcover. One paperback on that shelf would make the statement false.</p>
 <figure><img src="./assets/all-books.svg" alt="Eight books showing that all eight must be hardcover to satisfy all."></figure>
@@ -142,6 +146,8 @@ Not hardcover       →  Not one of these books
 </div></details>
 
 <p>There is a small qualification. “All A are B” gives a rule about A. By itself, it does not tell us that any A exist. When we already know the group exists, all also guarantees most and some.</p>
+<h3>What would make “all” false?</h3>
+<p>One exception is enough. “Not all eight books are hardcover” means <strong>at least one of the eight is not hardcover</strong>. The other seven could still be hardcover. This is the negation of the all claim. By contrast, “not hardcover → not one of these eight books” is its <strong>contrapositive</strong>: another way to state the original rule, not a way to deny it.</p>
 <h2>Put the three statements side by side</h2>
 <p>The same shelf can help us see the whole range.</p>
 <figure><img src="./assets/book-quantity-ranges.svg" alt="For eight existing books: some permits one through eight hardcover, most permits five through eight, and all requires eight."></figure>
@@ -155,6 +161,7 @@ Not hardcover       →  Not one of these books
 Library books  ←some→  Fiction
 </code></pre>
 <p>The all arrow points <strong>away from</strong> the mystery group we reached. That is why the chain works. If the second sentence said only “most mysteries are fiction,” the mystery books we found could be among the exceptions.</p>
+<figure><img src="./assets/some-all-witness.svg" alt="A marked library book is inside the mysteries group, which is entirely inside the fiction group."></figure>
 <p><strong>Quick check:</strong> Some archive documents are letters. All letters are handwritten. What follows?</p>
 <details class="quantity-answer"><summary>Show the answer</summary><div class="quantity-answer-body"><p><strong>Some archive documents are handwritten.</strong> Take a document guaranteed to be a letter. The all rule applies to that document.</p>
 </div></details>
@@ -191,13 +198,15 @@ Library books  ←some→  Fiction
 <h2>Two majorities of the same group must meet</h2>
 <p>Suppose a club has ten members. <strong>Most members study law</strong>, and <strong>most members work part time</strong>. Each “most” needs at least six of the ten members. Those two sets cannot fit inside the club without sharing at least two people.</p>
 <figure><img src="./assets/club-majority-overlap.svg" alt="Ten club members. Six study law, six work part time, and at least two do both."></figure>
-<p>So <strong>some law students work part time</strong>. We can also say <strong>some part-time workers study law</strong>. These are the same people, described from opposite sides of a some statement.</p>
-<pre><code class="language-text">Club members  ─most→  Law students
-Club members  ─most→  Part-time workers
-Law students  ←some→  Part-time workers
+<p><strong>What is given?</strong> More than half of the <em>same ten members</em> study law. More than half of those same ten work part time. The claims count club members, not all law students or all part-time workers everywhere.</p>
+<p><strong>Why must they meet?</strong> Each group needs at least six members. If the groups were separate, we would need twelve different club members. There are only ten. At least two members must be in both groups.</p>
+<p><strong>What follows?</strong> <strong>Some law students work part time.</strong> We can reverse that some claim: <strong>some part-time workers study law</strong>. Both sentences describe the same overlapping members. We know at least one exists; we do not know that most law students or most part-time workers have the other trait.</p>
+<pre><code class="language-text">Given:       Most club members study law.
+             Most club members work part time.
+Must follow: Some law students work part time.
+Why:         Both majorities count the same club members.
 </code></pre>
-<p>Both statements count <strong>club members</strong>. That is why the two majorities must overlap. The conclusion is <strong>some</strong>, not most. We know the two groups meet; we do not know what fraction of either group lies in the overlap.</p>
-<p><strong>Quick check:</strong> A club has 25 members. Most are lawyers, and most play an instrument. What is the smallest possible number who are both lawyers and musicians?</p>
+<p><strong>Quick check:</strong> A club has 25 members. Most are lawyers, and most play an instrument. What is the smallest possible number who are both lawyers and play an instrument?</p>
 <details class="quantity-answer"><summary>Show the answer</summary><div class="quantity-answer-body"><p><strong>One.</strong> Each majority needs at least 13 members. If none overlapped, those groups would require 26 different people, but the club has only 25. All 25 could also have both traits.</p>
 </div></details>
 
@@ -207,9 +216,11 @@ Law students  ←some→  Part-time workers
 
 <h3>When all describes that same group</h3>
 <p>There is another way to guarantee an overlap. Suppose <strong>most club members study law</strong>, and <strong>all club members work part time</strong>. We already know there are law students in the club. The all rule tells us that <em>each one of those members</em> also works part time. So <strong>some law students work part time</strong>.</p>
-<pre><code class="language-text">Club members  ─most→  Law students
-Club members  →        Part-time workers
-Law students  ←some→  Part-time workers
+<pre><code class="language-text">Given:       Most club members study law.
+             All club members work part time.
+Must follow: Some law students work part time.
+Why:         The law students already found are club members,
+             so the all rule applies to each of them.
 </code></pre>
 <p>We can make the same move with <strong>some</strong>. If <strong>some club members study law</strong> and <strong>all club members work part time</strong>, take the member guaranteed by “some.” That person has both traits. Again, <strong>some law students work part time</strong>. The sentences can be stated in the other order: <strong>all club members work part time; some club members study law</strong>. The same person still proves the overlap.</p>
 <figure><img src="./assets/all-and-overlap.svg" alt="An all rule covers every club member. A highlighted law student is therefore also a part-time worker."></figure>
@@ -227,6 +238,7 @@ Law students  ←some→  Part-time workers
 Some Spanish speakers are trained.
 </code></pre>
 <p>The trained Spanish speakers could all be people who do not volunteer. We cannot conclude that any volunteers are trained.</p>
+<figure><img src="./assets/some-some-gap.svg" alt="Two different Spanish speakers satisfy the two some claims without any volunteer being trained."></figure>
 <p>Replacing the second “some” with “most” does not fix the gap. The Spanish-speaking volunteers could sit in the untrained minority. Even two most statements that count different groups do not automatically produce a new majority claim.</p>
 <p>Before drawing a conclusion, ask: <strong>Am I carrying a known group through an all rule? Or do two majorities count the same group?</strong> If neither is true, check whether the groups could miss each other.</p>
 <p><strong>Quick check:</strong> A club has 13 members. Most are women, and some are dancers. How many female dancers are guaranteed? How many are possible?</p>
@@ -273,8 +285,45 @@ Some Spanish speakers are trained.
 <p>Two <strong>all</strong> claims about A guarantee that every A has both traits. They guarantee <strong>some B are C</strong> only when we also know that at least one A exists.</p>
 <p>Use the sentence behind each arrow to check what it guarantees.</p>
 <h2>Nearby words need a closer look</h2>
-<p>Some test sentences use less exact language. <strong>Many</strong>, <strong>often</strong>, <strong>few</strong>, and <strong>not many</strong> tell us something about frequency or size, but they do not set a universal numerical cutoff. A hundred menu items could make five feel like few; in a menu of six, five would not feel like few. Do not quietly replace these words with a fixed number.</p>
-<p><strong>Most</strong> is different: it crosses a precise line, <strong>more than half</strong>. Words such as <strong>the majority</strong> plainly express that idea. Words such as <strong>usually</strong>, <strong>typically</strong>, <strong>likely</strong>, and <strong>probably</strong> can suggest it in context, but pay attention to what the sentence actually counts. “Probably” about one event, for example, is a likelihood claim, not a headcount of a group.</p>
+<p>The words around a quantity statement can look familiar without making the same promise. Sort them by <strong>what they guarantee</strong>, then check the sentence in front of you:</p>
+<table>
+<thead>
+<tr>
+<th>Word or phrase</th>
+<th>What it guarantees</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Some</strong>, <strong>at least one</strong>, <strong>one or more</strong></td>
+<td>One or more members fit. All may fit too.</td>
+</tr>
+<tr>
+<td><strong>A few</strong>, <strong>several</strong>, <strong>many</strong></td>
+<td>A positive number in ordinary use, but no universal cutoff. They imply at least one.</td>
+</tr>
+<tr>
+<td><strong>Most</strong>, <strong>more than half</strong>, <strong>a majority of</strong></td>
+<td>Strictly more than half of the named group fit.</td>
+</tr>
+<tr>
+<td><strong>All</strong>, <strong>every</strong>, <strong>each</strong>, <strong>without exception</strong></td>
+<td>Every member of the named group fits. The group may still need a separate existence premise.</td>
+</tr>
+<tr>
+<td><strong>Few</strong>, <strong>not many</strong>, <strong>not often</strong></td>
+<td>A small number or low frequency in context. No exact numerical boundary follows.</td>
+</tr>
+<tr>
+<td><strong>No</strong>, <strong>none</strong>, <strong>zero</strong></td>
+<td>Not a single member fits.</td>
+</tr>
+<tr>
+<td><strong>Not all</strong></td>
+<td>At least one member does <strong>not</strong> fit.</td>
+</tr>
+</tbody></table>
+<p><strong>Few</strong> is worth separating from <strong>a few</strong>. “A few books are hardcover” affirms that at least some are. “Few books are hardcover” stresses how small the number is. It often suggests some in ordinary speech, but it does not set a dependable numerical minimum. “Not many” can include zero. A hundred menu items could make five feel like few; in a menu of six, five would not feel like few. Do not quietly replace any of these phrases with a fixed number.</p>
+<p><strong>Most</strong> is different: it crosses a precise line, <strong>more than half</strong>. Words such as <strong>the majority</strong> plainly express that idea. Words such as <strong>usually</strong>, <strong>typically</strong>, <strong>generally</strong>, <strong>commonly</strong>, <strong>frequently</strong>, <strong>often</strong>, <strong>likely</strong>, and <strong>probably</strong> can suggest prevalence in context, but pay attention to what the sentence actually counts. “Probably” about one event, for example, is a likelihood claim, not a headcount of a group.</p>
 <p><strong>Not all</strong> <em>does</em> give us a precise minimum: at least one exception. “Not all club members are lawyers” means <strong>at least one club member is not a lawyer</strong>. It does not tell us whether the other members are lawyers.</p>
 <p><strong>Quick check:</strong> A menu lists 100 beers. “Many are Belgian,” “few are Belgian,” and “not many are Belgian” are three claims. Can you assign each one an exact minimum and maximum? What does “not all are Belgian” guarantee?</p>
 <details class="quantity-answer"><summary>Show the answer</summary><div class="quantity-answer-body"><p>The first three do <strong>not</strong> have fixed numerical boundaries. “Many” suggests more than an isolated example, while “few” and “not many” suggest a small number relative to the context. None alone licenses a specific cutoff such as five or ten. “Not all” is exact about one thing: <strong>at least one beer is not Belgian</strong>.</p>
