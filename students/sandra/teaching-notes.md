@@ -3,7 +3,7 @@ title: Sandra Kooh teaching notes
 type: teaching-notes
 record_kind: primary
 student: sandra
-updated: 2026-09-25
+updated: 2026-09-28
 status: active
 ---
 
@@ -28,3 +28,11 @@ Source: [[transcript-downloads/2026-09-23-sandra-notes-by-gemini]].
 - The reason to locate an intermediate conclusion extends beyond main conclusion questions: a reasoning gap may lie between premise and intermediate conclusion or between intermediate and main conclusion. She asked about that purpose directly.
 - Joshua recommended using indicator words when present, while retaining the support test when they are absent or incomplete. He also recommended highlighting the main conclusion before comparing answer choices so she need not hold its wording in memory.
 - Joshua promised intermediate conclusion question drills and said he would add a replacement session on Monday, with other moved sessions reconciled. Verify assignment and schedule in their live systems before closing those loops.
+
+## 2026-09-28 | Conditional logic from the ground up
+
+Source: [[transcript-downloads/2026-09-28-sandra-notes-by-gemini]]; [[sessions/2026-09-28-conditional-logic-foundations/topic-map]].
+
+- Sandra's instinct is to treat a conditional as a connection between events and to bring in outside knowledge (00:00:12, 00:14:28). The fix that worked was literal reading: only what must be true.
+- Once the five-step process was on the table she applied it correctly on every practice sentence, including negative requirements and "every" statements (00:41:41–00:53:04). The concept is in place; speed and automaticity are not yet.
+- Next session should test whether it held without prompting, then move to the variations Joshua deferred (01:00:12).

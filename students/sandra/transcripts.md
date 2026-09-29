@@ -4,7 +4,7 @@ type: transcripts
 record_kind: primary
 status: active
 subject: transcript inventory
-updated: 2026-09-24
+updated: 2026-09-28
 aliases: []
 ---
 
@@ -14,6 +14,7 @@ aliases: []
 
 | Date | Full local export | Local package | Source/status |
 |---|---|---|---|
+| 2026-09-28 | [[transcript-downloads/2026-09-28-sandra-notes-by-gemini|2026-09-28-sandra-notes-by-gemini.md]] | 2026-09-28-conditional-logic-foundations: [[sessions/2026-09-28-conditional-logic-foundations/transcript|transcript]], [[sessions/2026-09-28-conditional-logic-foundations/summary|summary]], [[sessions/2026-09-28-conditional-logic-foundations/topic-map|topic map]] | Paired; Calendar-attached Gemini Doc ([Google Doc](https://docs.google.com/document/d/1Cy_MNBB4SVLj5bFakfpDoGKMaaoqZfOOvZGTnEhaiR8/edit)). |
 | 2026-09-23 | [[transcript-downloads/2026-09-23-sandra-notes-by-gemini]] | [[sessions/2026-09-23-session/transcript|Transcript]] · [[sessions/2026-09-23-session/summary|Summary]] · [[sessions/2026-09-23-session/topic-map|Topic map]] · [[recaps/2026-09-23-recap|Draft recap]] | Calendar-attached Gemini Doc; full local export and package |
 | 2026-09-14 | [[transcript-downloads/2026-09-14-sandra-notes-by-gemini]] | [[sessions/2026-09-14-session/transcript|Transcript]] · [[sessions/2026-09-14-session/summary|Summary]] · [[sessions/2026-09-14-session/topic-map|Topic map]] | Calendar-attached Gemini Doc; full local export and package |
 

@@ -67,6 +67,14 @@ Hardcover  ←some→  Books
 
 The first arrow gives the majority claim. The second line is the overlap that the majority guarantees. When we read a most statement backward, the word becomes **some**.
 
+**Quick check:** A program has 100 applicants. Most speak Spanish. What is the smallest possible number who speak Spanish? What is the largest?
+
+<details><summary>Show the answer</summary>
+
+**51 to 100.** Fifty is only half. “Most” also permits all 100, so it does not establish an exception.
+
+</details>
+
 ## All leaves no exception
 
 If **all eight books are hardcover**, every book on the shelf is hardcover. One paperback on that shelf would make the statement false.
@@ -117,6 +125,14 @@ Library books  ←some→  Fiction
 
 The all arrow points **away from** the mystery group we reached. That is why the chain works. If the second sentence said only “most mysteries are fiction,” the mystery books we found could be among the exceptions.
 
+**Quick check:** Some archive documents are letters. All letters are handwritten. What follows?
+
+<details><summary>Show the answer</summary>
+
+**Some archive documents are handwritten.** Take a document guaranteed to be a letter. The all rule applies to that document.
+
+</details>
+
 The same reasoning preserves the first quantity word:
 
 | First statement | Rule | What follows |
@@ -149,11 +165,41 @@ Law students  ←some→  Part-time workers
 
 The two most arrows begin with the **same group**. That shared starting point is what forces the overlap. The conclusion is **some**, not most. We know the two groups meet; we do not know what fraction of either group lies in the overlap.
 
+**Quick check:** A club has 25 members. Most are lawyers, and most have criminal records. What is the smallest possible number of members who are both?
+
+<details><summary>Show the answer</summary>
+
+**One.** Each majority needs at least 13 members. If none overlapped, those groups would require 26 different people, but the club has only 25. All 25 could also have both traits.
+
+</details>
+
 **Try it:** If most club members study law and most club members work part time, could the two groups of members be completely separate?
 
 <details><summary>Check your answer</summary>
 
 No. Two separate majorities would require more members than the club has. At least one member must have both traits.
+
+</details>
+
+### When all describes that same group
+
+There is another way to guarantee an overlap. Suppose **most club members study law**, and **all club members work part time**. We already know there are law students in the club. The all rule tells us that *each one of those members* also works part time. So **some law students work part time**.
+
+```text
+Club members  ─most→  Law students
+Club members  →        Part-time workers
+Law students  ←some→  Part-time workers
+```
+
+We can make the same move with **some**. If **some club members study law** and **all club members work part time**, take the member guaranteed by “some.” That person has both traits. Again, **some law students work part time**. The sentences can be stated in the other order: **all club members work part time; some club members study law**. The same person still proves the overlap.
+
+![An all rule covers every club member. A highlighted law student is therefore also a part-time worker.](./assets/all-and-overlap.svg)
+
+**Try it:** All club members study law. All club members work part time. Must some law students work part time?
+
+<details><summary>Check your answer</summary>
+
+Not yet. The two all rules tell us what is true **if** someone is in the club, but neither tells us that the club has a member. Add “at least one person belongs to the club,” and the overlap follows.
 
 </details>
 
@@ -180,6 +226,14 @@ Replacing the second “some” with “most” does not fix the gap. The Spanis
 
 Before drawing a conclusion, ask: **Am I carrying a known group through an all rule? Or do two majorities count the same group?** If neither is true, check whether the groups could miss each other.
 
+**Quick check:** A club has 13 members. Most are women, and some are dancers. How many female dancers are guaranteed? How many are possible?
+
+<details><summary>Show the answer</summary>
+
+**Zero are guaranteed; as many as 13 are possible.** Seven women and one dancer meet the statements even if that dancer is one of the six men. Both traits could also belong to every member. A most claim and a some claim about the same group do not force the two traits to meet.
+
+</details>
+
 ## The moves to keep
 
 | What you have | What you may conclude |
@@ -189,8 +243,54 @@ Before drawing a conclusion, ask: **Am I carrying a known group through an all r
 | All A are B | A → B, and not B → not A |
 | Some/most/all A are B; all B are C | The same first quantity of A are C |
 | Most A are B; most A are C | Some B are C |
+| Most A are B; all A are C | Some B are C |
+| Some A are B; all A are C | Some B are C |
+
+Two **all** claims about A guarantee that every A has both traits. They guarantee **some B are C** only when we also know that at least one A exists.
 
 These are the useful moves. The arrows show exactly where each one is allowed to go.
+
+## Nearby words need a closer look
+
+Some test sentences use less exact language. **Many**, **often**, **few**, and **not many** tell us something about frequency or size, but they do not set a universal numerical cutoff. A hundred menu items could make five feel like few; in a menu of six, five would not feel like few. Do not quietly replace these words with a fixed number.
+
+**Most** is different: it crosses a precise line, **more than half**. Words such as **the majority** plainly express that idea. Words such as **usually**, **typically**, **likely**, and **probably** can suggest it in context, but pay attention to what the sentence actually counts. “Probably” about one event, for example, is a likelihood claim, not a headcount of a group.
+
+**Not all** *does* give us a precise minimum: at least one exception. “Not all club members are lawyers” means **at least one club member is not a lawyer**. It does not tell us whether the other members are lawyers.
+
+**Quick check:** A menu lists 100 beers. “Many are Belgian,” “few are Belgian,” and “not many are Belgian” are three claims. Can you assign each one an exact minimum and maximum? What does “not all are Belgian” guarantee?
+
+<details><summary>Show the answer</summary>
+
+The first three do **not** have fixed numerical boundaries. “Many” suggests more than an isolated example, while “few” and “not many” suggest a small number relative to the context. None alone licenses a specific cutoff such as five or ten. “Not all” is exact about one thing: **at least one beer is not Belgian**.
+
+</details>
+
+### Pop quiz: decide whether the overlap follows
+
+For each pair, decide whether it guarantees **some A are C**. Draw a witness or explain where the groups could miss each other before opening the answers.
+
+1. Some A are B. All B are C.
+2. Some A are B. Most A are C.
+3. All A are B. Some B are C.
+4. Some A are B. Most B are C.
+5. Some A are B. Some B are C.
+6. Most A are B. Most A are C.
+7. All A are B. All A are C.
+
+<details><summary>Show the worked answers</summary>
+
+1. **Yes.** The A that is B must also be C because every B is C.
+2. **No.** The A that is B could be outside the majority of A that is C.
+3. **No.** The B that is C could be outside A. The all rule runs from A to B, not back from B to A.
+4. **No.** The known A that is B could be among the B that are not C.
+5. **No.** The B in the first statement could differ from the B in the second.
+6. **Yes.** Two majorities of the same A group must share at least one member, who is both B and C.
+7. **Not from these statements alone.** Every A would be both B and C, but the statements do not establish that an A exists. If at least one A exists, the answer becomes yes.
+
+“No” here means **no guaranteed A–C overlap**. The premises may still imply a different, smaller fact. For example, statement 3's “some B are C” is already given.
+
+</details>
 
 ## Short drill: diagram, combine, decide
 

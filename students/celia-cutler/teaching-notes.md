@@ -4,7 +4,7 @@ type: teaching-notes
 record_kind: primary
 tags: [student, celia-cutler, teaching-notes]
 created: 2026-09-25
-updated: 2026-09-25
+updated: 2026-09-28
 ---
 
 # Celia Cutler — Teaching Notes
@@ -37,3 +37,11 @@ Source: [[transcript-downloads/2026-09-21-celia-cutler-notes-by-gemini]]; [[sess
 - On the main-point question, she first described the disagreement itself as the point because the author did not state a direct preference. Joshua guided her to Garber's position through the passage's emphasis. She selected D, then rejected A's unsupported claim about economists, C's overbroad bubble definition, and E's premise presented as a conclusion (00:40:31–00:54:37). Check that she can identify the author's position from textual support rather than treating passage length alone as conclusive.
 - She correctly predicted that the second paragraph's function was to explain McKay's view and selected C on the structural-purpose question. She distinguished a rival explanation from an allegation that McKay's facts were wrong (00:56:18–01:00:38).
 - Practice agreed: map each RC paragraph's move, identify the main point, and, in a two-view passage, identify the exact point of agreement and disagreement. Joshua promised to send a note on the passage breakdown method (01:00:38–01:01:21).
+
+## 2026-09-28 | RC by authorial moves; meaning over wording
+
+Source: [[transcript-downloads/2026-09-28-celia-cutler-notes-by-gemini]]; [[sessions/2026-09-28-rc-authorial-moves/topic-map]].
+
+- Celia defined comparing and explaining correctly without prompting (00:03:39) and handled a hard passage well: correct analogy (00:22:19), correct purpose question (00:48:55), and she avoided the universal-language trap on the Mackay question (00:46:12).
+- Her first pick on the Garber inference question was right but needed verification against the text (00:27:06–00:34:56). Underlining the source sentence for every answer is the habit being built.
+- The weak point Joshua flagged is expecting verbatim matches (00:56:58). The paragraph-by-paragraph RRC drill for RC is the week's work.

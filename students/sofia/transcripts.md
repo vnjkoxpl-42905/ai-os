@@ -3,7 +3,7 @@ title: Sofia Transcripts
 type: person
 tags: [lsat-u, student, transcript, sofia]
 created: 2026-07-03
-updated: 2026-07-03
+updated: 2026-09-28
 status: active
 subject: Sofia Transcripts
 aliases: [Sofia]
@@ -16,6 +16,7 @@ lifecycle: active
 
 | Date | Local full export | Local package | Source / status |
 |---|---|---|---|
+| 2026-09-28 | [Full export](transcript-downloads/2026-09-28-sofia-notes-by-gemini.md) | [transcript](sessions/2026-09-28-flaw-questions-and-pt-plan/transcript.md) · [summary](sessions/2026-09-28-flaw-questions-and-pt-plan/summary.md) · [topic-map](sessions/2026-09-28-flaw-questions-and-pt-plan/topic-map.md) | Calendar-attached Gemini Doc ([Google Doc](https://docs.google.com/document/d/1dP4I3A7lSle-aQsHzShWg1pcG8zUIZ_DApn7daFtdO4/edit)); full transcript. |
 | 2026-09-25 | [Full export](transcript-downloads/2026-09-25-sofia-notes-by-gemini.md) | [transcript](sessions/2026-09-25-must-be-true-and-sufficient-assumption/transcript.md) · [summary](sessions/2026-09-25-must-be-true-and-sufficient-assumption/summary.md) · [topic-map](sessions/2026-09-25-must-be-true-and-sufficient-assumption/topic-map.md) · [draft recap](recaps/2026-09-25-recap.md) | Calendar event and Gemini Doc match Sofia; full transcript present. |
 | 2026-09-23 | [Full export](transcript-downloads/2026-09-23-sofia-notes-by-gemini.md) | [transcript](sessions/2026-09-23-preptest-and-conditionals/transcript.md) · [summary](sessions/2026-09-23-preptest-and-conditionals/summary.md) · [topic-map](sessions/2026-09-23-preptest-and-conditionals/topic-map.md) · [draft recap](recaps/2026-09-23-recap.md) | Sofia portion ends at 00:50:16; later conversation is separate. Doc title time 18:33 EDT conflicts with attached Calendar event at 15:30 EDT. |
 | 2026-09-18 | [Full export](transcript-downloads/2026-09-18-sofia-notes-by-gemini.md) | [transcript](sessions/2026-09-18-sufficient-assumptions/transcript.md) · [summary](sessions/2026-09-18-sufficient-assumptions/summary.md) · [topic-map](sessions/2026-09-18-sufficient-assumptions/topic-map.md) | Original package summary is mismatched; see dated correction. |

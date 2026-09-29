@@ -5,7 +5,7 @@ record_kind: primary
 tags: [student, teaching-notes, sofia]
 status: active
 subject: Sofia Teaching Notes
-updated: 2026-07-19
+updated: 2026-09-28
 aliases: [Sofia]
 lifecycle: active
 ---
@@ -81,3 +81,12 @@ Source: [[transcript-downloads/2026-09-25-sofia-notes-by-gemini]].
 - In a crop-failure Must Be True question, Sofia first considered answers that weakened the trigger from crop failure to below-average rain or introduced farmers' responsibility. She then traced the exact chain and identified a conservative conclusion: connected businesses can also suffer (00:10:57–00:35:26).
 - On the animal-anatomy Sufficient Assumption question, Sofia named the shift from observations about living animals to a claim about extinct animals and selected the bridging answer. Joshua's repeated questioning made her second guess a sound answer; she said she would have chosen it under timed conditions (00:42:54–00:50:23).
 - Sofia planned Must Be True drills and a Sunday practice test. Joshua promised to assign a Sufficient Assumption boot camp and to add a booking link for a missed Monday meeting. Verify those actions in the live systems before treating them as complete (00:51:01–00:53:37).
+
+## 2026-09-28 | Flaw questions: intentions, contradictions, part to whole
+
+Source: [[transcript-downloads/2026-09-28-sofia-notes-by-gemini]]; [[sessions/2026-09-28-flaw-questions-and-pt-plan/topic-map]].
+
+- On the hardest Flaw questions Sofia's reasoning is coherent but she misses structural features that are not cookie-cutter: more than one conclusion, and an argument that commits the very fault it criticizes (00:02:21–00:16:24). Teach her to ask "does the author do what they object to?" as a standing check.
+- She reaches for causal readings (A and C on Roheimer, 00:18:10). The reversibility test gave her a way to reject them (00:25:54).
+- On question 24 she switched from D to E, choosing part-to-whole where the evidence was about each regulation, not the set (00:37:05–00:38:13). The distinction between "each" and "the whole" is worth another drill.
+- Stamina is now a real constraint: RC after LR brings burnout and migraines (00:44:17). Her practice score is 159 to 160 and her goal is the low 160s, so test selection (130s PrepTests) and pacing matter more than new concepts.

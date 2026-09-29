@@ -1234,3 +1234,17 @@ Pushed `44cc9ff` to LSAT U `main` through the guarded safe-push script and used 
 ## [2026-09-28] Teaching notes | Quantity statements lesson prototype
 
 Drafted `brainstorms/2026-09-28-recap-format/07-quantity-statements-lesson.md` from the Charles Moore session, Joshua's quantifier sources, and the photographed lesson structure. The note introduces quantity statements, teaches some, most, and all with book diagrams, works through chaining and majority overlap, and ends with a five-statement cumulative drill. Local SVGs were checked for valid markup and visually reviewed in Chrome. It remains a draft; no LSAT U post or asset upload occurred.
+
+## [2026-09-29] ingest | Sessions since the last sweep (2026-09-25 to 2026-09-29)
+
+Calendar showed 9 events. The 2026-09-25 Charles, Zeina and Sofia sessions were already filed. New and filed with full exports, session packages, index rows, teaching notes, open loops and router links: Sofia 2026-09-28 (Flaw questions, PT 130/131 plan), Sandra 2026-09-28 (conditional logic foundations), Celia 2026-09-28 (RC authorial moves). New packages use corrected frontmatter types (`session-summary`, `session-topic-map`) instead of the template's `person`. Nicole 2026-09-26 has no Gemini Doc attached or in Drive. Yahunatan and Sofia 2026-09-29 had not happened at sweep time. `check-student-records.py` passes (112 exports, 42 packages).
+
+## [2026-09-29] Teaching notes | Quantity overlap patterns added
+
+Integrated the additional quantifier inference sheet into the draft quantity statements lesson. Added the common-start most + all and some + all overlap patterns, an original witness diagram, and an explicit existence qualification for all + all. Rebuilt the local Classroom previews and checked that all seven images load, seven answer reveals work, and the 430px view has no horizontal overflow. The lesson remains a draft.
+
+
+## [2026-09-29] Teaching notes | Quantifier practice integrated
+
+Added distributed checks and a mixed inference pop quiz to the draft quantity statements lesson using the fourteen supplied flashcard screenshots. The checks cover exact most ranges, majority overlap, chaining through all, and counterexamples. Added a short language section for many, few, not many, and not all; rejected the source cards' invented fixed cutoffs for vague quantity words. Rebuilt the local Classroom preview and verified seven images, thirteen answer reveals, and zero horizontal overflow at 430px. No student post was made.
+

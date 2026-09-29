@@ -3,7 +3,7 @@ title: Sofia
 type: person
 tags: [lsat-u, person, student]
 created: 2026-07-03
-updated: 2026-07-03
+updated: 2026-09-29
 status: active
 role: student
 email: sofiaminassian@gmail.com
@@ -22,7 +22,8 @@ lifecycle: active
 - [Open loops](open-loops.md)
 - [Assignment log](assignment-log.md)
 - [Live status](live-status.generated.md)
-- [Latest session · 2026-09-25](sessions/2026-09-25-must-be-true-and-sufficient-assumption/summary.md)
+- [Latest session · 2026-09-28](sessions/2026-09-28-flaw-questions-and-pt-plan/summary.md)
+- [Previous session · 2026-09-25](sessions/2026-09-25-must-be-true-and-sufficient-assumption/summary.md)
 - [Draft recap · 2026-09-25](recaps/2026-09-25-recap.md)
 - [Draft recap · 2026-09-23](recaps/2026-09-23-recap.md)
 

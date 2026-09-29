@@ -9,7 +9,7 @@ lifecycle: active
 email: koohsandra@gmail.com
 subject: Sandra Kooh
 created: 2026-09-24
-updated: 2026-09-24
+updated: 2026-09-29
 aliases: [Sandra]
 ---
 
@@ -17,8 +17,8 @@ aliases: [Sandra]
 
 ## Open this record
 
-- [[transcripts|Session index]] · [[sessions/2026-09-23-session/transcript|Latest session transcript]] · [[sessions/2026-09-23-session/summary|Summary]] · [[sessions/2026-09-23-session/topic-map|Topic map]]
-- [[transcript-downloads/2026-09-23-sandra-notes-by-gemini|Full Gemini export]] · [[teaching-notes|Teaching notes]] · [[open-loops|Open loops]]
+- [[transcripts|Session index]] · [[sessions/2026-09-28-conditional-logic-foundations/transcript|Latest session transcript (2026-09-28)]] · [[sessions/2026-09-28-conditional-logic-foundations/summary|Summary]] · [[sessions/2026-09-28-conditional-logic-foundations/topic-map|Topic map]]
+- [[transcript-downloads/2026-09-28-sandra-notes-by-gemini|Full Gemini export]] · [[teaching-notes|Teaching notes]] · [[open-loops|Open loops]]
 - [[recaps/2026-09-23-recap|Draft recap · 2026-09-23]]
 
 ## Record basis

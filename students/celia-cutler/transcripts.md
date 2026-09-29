@@ -3,7 +3,7 @@ title: Celia Cutler — Transcripts and session index
 type: transcripts
 record_kind: primary
 subject: Celia Cutler - Transcripts and session index
-updated: 2026-09-25
+updated: 2026-09-28
 aliases: []
 ---
 
@@ -13,6 +13,7 @@ aliases: []
 
 | Date | Full local export | Local session package | Status |
 |---|---|---|---|
+| 2026-09-28 | [[transcript-downloads/2026-09-28-celia-cutler-notes-by-gemini|2026-09-28-celia-cutler-notes-by-gemini.md]] | 2026-09-28-rc-authorial-moves: [[sessions/2026-09-28-rc-authorial-moves/transcript|transcript]], [[sessions/2026-09-28-rc-authorial-moves/summary|summary]], [[sessions/2026-09-28-rc-authorial-moves/topic-map|topic map]] | Paired; Calendar-attached Gemini Doc ([Google Doc](https://docs.google.com/document/d/1xVO9oUUolWEJW8n_xEKu5ik_KkPYjfsBoSNhtpruZ5A/edit)). |
 | 2026-09-21 | [[transcript-downloads/2026-09-21-celia-cutler-notes-by-gemini|2026-09-21-celia-cutler-notes-by-gemini.md]] | 2026-09-21-celia-lsat-session: [[sessions/2026-09-21-celia-lsat-session/transcript|transcript]], [[sessions/2026-09-21-celia-lsat-session/summary|summary]], [[sessions/2026-09-21-celia-lsat-session/topic-map|topic map]], [[recaps/2026-09-21-recap|draft recap]] | Paired |
 | 2026-09-16 | [[transcript-downloads/2026-09-16-celia-cutler-notes-by-gemini|2026-09-16-celia-cutler-notes-by-gemini.md]] | 2026-09-16-celia-lsat-session: [[sessions/2026-09-16-celia-lsat-session/transcript|transcript]], [[sessions/2026-09-16-celia-lsat-session/summary|summary]], [[sessions/2026-09-16-celia-lsat-session/topic-map|topic map]] | Paired |
 | 2026-09-07 | [[transcript-downloads/2026-09-07-celia-cutler-notes-by-gemini|2026-09-07-celia-cutler-notes-by-gemini.md]] | 2026-09-07-celia-lsat-session: [[sessions/2026-09-07-celia-lsat-session/transcript|transcript]], [[sessions/2026-09-07-celia-lsat-session/summary|summary]], [[sessions/2026-09-07-celia-lsat-session/topic-map|topic map]] | Paired |

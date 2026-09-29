@@ -5,7 +5,7 @@ record_kind: primary
 tags: [student, open-loops, sofia]
 status: active
 subject: Sofia Open Loops
-updated: 2026-07-19
+updated: 2026-09-28
 aliases: [Sofia]
 lifecycle: active
 ---
@@ -34,3 +34,9 @@ Pending items only. Verify against live systems before acting.
 - [ ] [2026-09-18] Verify whether the promised hard Sufficient Assumption mini boot camp was assigned and whether Sofia completed the planned full PrepTest. Source: [[transcript-downloads/2026-09-18-sofia-notes-by-gemini]].
 - [ ] [2026-09-25] Verify that Joshua assigned the Sufficient Assumption boot camp promised at 00:51:01; the transcript does not confirm publication. Source: [[transcript-downloads/2026-09-25-sofia-notes-by-gemini]].
 - [ ] [2026-09-25] Verify that the booking link promised for the missed Monday meeting was added; Joshua said Sofia would receive it within five minutes (00:52:25–00:53:37). Source: [[transcript-downloads/2026-09-25-sofia-notes-by-gemini]].
+
+## 2026-09-28 session
+
+- [ ] Confirm Sofia completed PT 130 sections 1 and 2, and review them at the 2026-09-29 meeting. Source: [[sessions/2026-09-28-flaw-questions-and-pt-plan/transcript]], 00:53:02–00:54:47.
+- [ ] Confirm PT 131 was taken as a full test (planned Wednesday 2026-09-30) and PT 130 sections 3 and 4 (planned Thursday or Friday).
+- [ ] Ask whether Sofia contacted her doctor about removing the experimental section. She currently has extra time and stop-and-start breaks only. Source: same transcript, 00:47:37–00:48:24.

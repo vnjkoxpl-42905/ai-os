@@ -3,7 +3,7 @@ title: Sandra Kooh open loops
 type: open-loops
 record_kind: primary
 student: sandra
-updated: 2026-09-25
+updated: 2026-09-28
 status: active
 ---
 
@@ -13,3 +13,7 @@ status: active
 
 - [ ] [2026-09-23] Verify that intermediate conclusion LSAT question drills were assigned, as Joshua promised. Source: [[transcript-downloads/2026-09-23-sandra-notes-by-gemini]].
 - [ ] [2026-09-23] Verify the promised Monday replacement session and the other moved sessions against Calendar and Cal.com. Source: [[transcript-downloads/2026-09-23-sandra-notes-by-gemini]].
+
+## 2026-09-28 session
+
+- [ ] Verify the conditional-logic homework and practice materials were sent. Joshua promised them at the end of the session. Source: [[sessions/2026-09-28-conditional-logic-foundations/transcript]], 01:00:12–01:02:01.

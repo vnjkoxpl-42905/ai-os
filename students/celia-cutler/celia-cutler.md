@@ -3,7 +3,7 @@ title: Celia Cutler
 type: person
 tags: [lsat-u, person, student]
 created: 2026-09-08
-updated: 2026-09-25
+updated: 2026-09-29
 status: active
 role: student
 email: celiacutler@gmail.com
@@ -18,6 +18,7 @@ lifecycle: active
 ## Open this record
 
 - [[transcripts|Session index]]
+- [[sessions/2026-09-28-rc-authorial-moves/summary|Latest session · 2026-09-28]] · [[sessions/2026-09-28-rc-authorial-moves/topic-map|Topic map]]
 - [[recaps/2026-09-21-recap|Draft recap · 2026-09-21]]
 - [[teaching-notes|Teaching notes]]
 - [[open-loops|Open loops]]

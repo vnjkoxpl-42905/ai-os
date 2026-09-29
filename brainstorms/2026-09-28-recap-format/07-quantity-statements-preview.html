@@ -125,6 +125,10 @@
 Hardcover  ←some→  Books
 </code></pre>
 <p>The first arrow gives the majority claim. The second line is the overlap that the majority guarantees. When we read a most statement backward, the word becomes <strong>some</strong>.</p>
+<p><strong>Quick check:</strong> A program has 100 applicants. Most speak Spanish. What is the smallest possible number who speak Spanish? What is the largest?</p>
+<details class="quantity-answer"><summary>Show the answer</summary><div class="quantity-answer-body"><p><strong>51 to 100.</strong> Fifty is only half. “Most” also permits all 100, so it does not establish an exception.</p>
+</div></details>
+
 <h2>All leaves no exception</h2>
 <p>If <strong>all eight books are hardcover</strong>, every book on the shelf is hardcover. One paperback on that shelf would make the statement false.</p>
 <figure><img src="./assets/all-books.svg" alt="Eight books showing that all eight must be hardcover to satisfy all."></figure>
@@ -151,6 +155,10 @@ Not hardcover       →  Not a book on this shelf
 Library books  ←some→  Fiction
 </code></pre>
 <p>The all arrow points <strong>away from</strong> the mystery group we reached. That is why the chain works. If the second sentence said only “most mysteries are fiction,” the mystery books we found could be among the exceptions.</p>
+<p><strong>Quick check:</strong> Some archive documents are letters. All letters are handwritten. What follows?</p>
+<details class="quantity-answer"><summary>Show the answer</summary><div class="quantity-answer-body"><p><strong>Some archive documents are handwritten.</strong> Take a document guaranteed to be a letter. The all rule applies to that document.</p>
+</div></details>
+
 <p>The same reasoning preserves the first quantity word:</p>
 <table>
 <thead>
@@ -189,8 +197,24 @@ Club members  ─most→  Part-time workers
 Law students  ←some→  Part-time workers
 </code></pre>
 <p>The two most arrows begin with the <strong>same group</strong>. That shared starting point is what forces the overlap. The conclusion is <strong>some</strong>, not most. We know the two groups meet; we do not know what fraction of either group lies in the overlap.</p>
+<p><strong>Quick check:</strong> A club has 25 members. Most are lawyers, and most have criminal records. What is the smallest possible number of members who are both?</p>
+<details class="quantity-answer"><summary>Show the answer</summary><div class="quantity-answer-body"><p><strong>One.</strong> Each majority needs at least 13 members. If none overlapped, those groups would require 26 different people, but the club has only 25. All 25 could also have both traits.</p>
+</div></details>
+
 <p><strong>Try it:</strong> If most club members study law and most club members work part time, could the two groups of members be completely separate?</p>
 <details class="quantity-answer"><summary>Check your answer</summary><div class="quantity-answer-body"><p>No. Two separate majorities would require more members than the club has. At least one member must have both traits.</p>
+</div></details>
+
+<h3>When all describes that same group</h3>
+<p>There is another way to guarantee an overlap. Suppose <strong>most club members study law</strong>, and <strong>all club members work part time</strong>. We already know there are law students in the club. The all rule tells us that <em>each one of those members</em> also works part time. So <strong>some law students work part time</strong>.</p>
+<pre><code class="language-text">Club members  ─most→  Law students
+Club members  →        Part-time workers
+Law students  ←some→  Part-time workers
+</code></pre>
+<p>We can make the same move with <strong>some</strong>. If <strong>some club members study law</strong> and <strong>all club members work part time</strong>, take the member guaranteed by “some.” That person has both traits. Again, <strong>some law students work part time</strong>. The sentences can be stated in the other order: <strong>all club members work part time; some club members study law</strong>. The same person still proves the overlap.</p>
+<figure><img src="./assets/all-and-overlap.svg" alt="An all rule covers every club member. A highlighted law student is therefore also a part-time worker."></figure>
+<p><strong>Try it:</strong> All club members study law. All club members work part time. Must some law students work part time?</p>
+<details class="quantity-answer"><summary>Check your answer</summary><div class="quantity-answer-body"><p>Not yet. The two all rules tell us what is true <strong>if</strong> someone is in the club, but neither tells us that the club has a member. Add “at least one person belongs to the club,” and the overlap follows.</p>
 </div></details>
 
 <h2>A second way two most statements can work</h2>
@@ -205,6 +229,10 @@ Some Spanish speakers are trained.
 <p>The trained Spanish speakers could all be people who do not volunteer. We cannot conclude that any volunteers are trained.</p>
 <p>Replacing the second “some” with “most” does not fix the gap. The Spanish-speaking volunteers could sit in the untrained minority. Even two most statements chained through different starting groups do not automatically produce a new majority claim.</p>
 <p>Before drawing a conclusion, ask: <strong>Am I carrying a known group through an all rule? Or do two majorities count the same group?</strong> If neither is true, check whether the groups could miss each other.</p>
+<p><strong>Quick check:</strong> A club has 13 members. Most are women, and some are dancers. How many female dancers are guaranteed? How many are possible?</p>
+<details class="quantity-answer"><summary>Show the answer</summary><div class="quantity-answer-body"><p><strong>Zero are guaranteed; as many as 13 are possible.</strong> Seven women and one dancer meet the statements even if that dancer is one of the six men. Both traits could also belong to every member. A most claim and a some claim about the same group do not force the two traits to meet.</p>
+</div></details>
+
 <h2>The moves to keep</h2>
 <table>
 <thead>
@@ -233,8 +261,48 @@ Some Spanish speakers are trained.
 <td>Most A are B; most A are C</td>
 <td>Some B are C</td>
 </tr>
+<tr>
+<td>Most A are B; all A are C</td>
+<td>Some B are C</td>
+</tr>
+<tr>
+<td>Some A are B; all A are C</td>
+<td>Some B are C</td>
+</tr>
 </tbody></table>
+<p>Two <strong>all</strong> claims about A guarantee that every A has both traits. They guarantee <strong>some B are C</strong> only when we also know that at least one A exists.</p>
 <p>These are the useful moves. The arrows show exactly where each one is allowed to go.</p>
+<h2>Nearby words need a closer look</h2>
+<p>Some test sentences use less exact language. <strong>Many</strong>, <strong>often</strong>, <strong>few</strong>, and <strong>not many</strong> tell us something about frequency or size, but they do not set a universal numerical cutoff. A hundred menu items could make five feel like few; in a menu of six, five would not feel like few. Do not quietly replace these words with a fixed number.</p>
+<p><strong>Most</strong> is different: it crosses a precise line, <strong>more than half</strong>. Words such as <strong>the majority</strong> plainly express that idea. Words such as <strong>usually</strong>, <strong>typically</strong>, <strong>likely</strong>, and <strong>probably</strong> can suggest it in context, but pay attention to what the sentence actually counts. “Probably” about one event, for example, is a likelihood claim, not a headcount of a group.</p>
+<p><strong>Not all</strong> <em>does</em> give us a precise minimum: at least one exception. “Not all club members are lawyers” means <strong>at least one club member is not a lawyer</strong>. It does not tell us whether the other members are lawyers.</p>
+<p><strong>Quick check:</strong> A menu lists 100 beers. “Many are Belgian,” “few are Belgian,” and “not many are Belgian” are three claims. Can you assign each one an exact minimum and maximum? What does “not all are Belgian” guarantee?</p>
+<details class="quantity-answer"><summary>Show the answer</summary><div class="quantity-answer-body"><p>The first three do <strong>not</strong> have fixed numerical boundaries. “Many” suggests more than an isolated example, while “few” and “not many” suggest a small number relative to the context. None alone licenses a specific cutoff such as five or ten. “Not all” is exact about one thing: <strong>at least one beer is not Belgian</strong>.</p>
+</div></details>
+
+<h3>Pop quiz: decide whether the overlap follows</h3>
+<p>For each pair, decide whether it guarantees <strong>some A are C</strong>. Draw a witness or explain where the groups could miss each other before opening the answers.</p>
+<ol>
+<li>Some A are B. All B are C.</li>
+<li>Some A are B. Most A are C.</li>
+<li>All A are B. Some B are C.</li>
+<li>Some A are B. Most B are C.</li>
+<li>Some A are B. Some B are C.</li>
+<li>Most A are B. Most A are C.</li>
+<li>All A are B. All A are C.</li>
+</ol>
+<details class="quantity-answer"><summary>Show the worked answers</summary><div class="quantity-answer-body"><ol>
+<li><strong>Yes.</strong> The A that is B must also be C because every B is C.</li>
+<li><strong>No.</strong> The A that is B could be outside the majority of A that is C.</li>
+<li><strong>No.</strong> The B that is C could be outside A. The all rule runs from A to B, not back from B to A.</li>
+<li><strong>No.</strong> The known A that is B could be among the B that are not C.</li>
+<li><strong>No.</strong> The B in the first statement could differ from the B in the second.</li>
+<li><strong>Yes.</strong> Two majorities of the same A group must share at least one member, who is both B and C.</li>
+<li><strong>Not from these statements alone.</strong> Every A would be both B and C, but the statements do not establish that an A exists. If at least one A exists, the answer becomes yes.</li>
+</ol>
+<p>“No” here means <strong>no guaranteed A–C overlap</strong>. The premises may still imply a different, smaller fact. For example, statement 3&#39;s “some B are C” is already given.</p>
+</div></details>
+
 <h2>Short drill: diagram, combine, decide</h2>
 <p>Here are five statements about one volunteer program. <strong>Volunteer</strong>, <strong>Spanish speaker</strong>, <strong>trained person</strong>, <strong>weekend worker</strong>, and <strong>student</strong> name groups of people. Treat each sentence as true.</p>
 <ol>
