@@ -1,3 +1,4 @@
+> Historical snapshot. The "no Git remote" rule quoted below was removed on 2026-09-29. Current rule: see AGENTS.md line 75.
 # AIOS Phase 1: Instruction Control-Plane Design Report
 
 **Document Role:** Architectural Analysis & Control-Plane Specification  

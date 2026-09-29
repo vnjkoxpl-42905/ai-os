@@ -192,5 +192,6 @@ Joshua corrected the earlier read-only preview proposal. When he opens a selecte
 ## 2026-09-28: Wayfinder handoff and legacy exam boundary
 
 The [Wayfinder map](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/155) is complete. The [implementation spec](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/165) and fifteen blocker-aware build tickets cover student flows first, the existing teacher desk, viable question tools and weekly settings, and final Impeccable review. For ownerless older browser-only exam runs, Joshua did not choose a display or recovery design after repeated clarification attempts. The first release will preserve those local copies untouched, keep them out of account Attempts, and defer optional recovery. This is a safe scope boundary, not an attributed preference about a future recovery design. The latest `main` contains account-backed full PrepTest sync; timed LR/RC failed-save pause and live backend verification remain implementation work.
+
 ## 2026-09-29 Git remote enabled
 - Decision: the "no Git remote, ever" rule is removed. origin on GitHub is the setup. Reason: lets Claude Code cloud sessions and other machines work on the repo. Never-track list still holds (.env, projects/lsatu/, logs, locks, gitlinks). wiki/HANDLING.md scrub checklist is now advisory.

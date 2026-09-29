@@ -1,3 +1,4 @@
+> Historical snapshot. The "no Git remote" rule quoted below was removed on 2026-09-29. Current rule: see AGENTS.md line 75.
 # AIOS Phase 0: Current-State Freeze for External Architect
 
 **Document Role:** Raw Control-Plane Evidence Report  

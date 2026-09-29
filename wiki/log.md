@@ -1265,3 +1265,5 @@ LSAT U rollout update: Lovable reported "Your website was updated" for `70ba8a1`
 Refined the complete local LSAT U quantity lesson preview after Joshua's whole-note design direction. Added a seven-step typed-answer inference studio that checks the yes/no verdict and reveals worked reasoning, a movable ten-member majority-overlap proof, a wider reading canvas, figure captions, chapter numbers, and semantic color and state motion. Corrected the source note's all + all existence check, which previously contradicted an established ten-member club, and tightened the most-reversal explanation and other wording. Browser verification covered all seven quiz questions, invalid and incorrect answers, slider thresholds, overlap arrangements, image loading, and mobile overflow. The interactive HTML is a prototype; no student note or app feature was published.
 
 ## [2026-09-29] system | Git remote rule removed
+
+## [2026-09-29] system | Remote barriers cleared: log formatting fixed, GEMINI.md checked, snapshots marked historical, Claude Code git permissions added
