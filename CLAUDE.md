@@ -72,7 +72,7 @@ Paths are relative to the repository root.
 - **Connected live systems:** Cal.com, Google Calendar, LSAT U Supabase, Stripe, Gmail. Full registry in `connections.md`.
 - **Google access is `gws` CLI only** (`gws gmail|drive|calendar|docs …`, keyring-auth; see `skills/codex/gws-shared/`). Never the Google connector MCPs — the CLI is faster, batchable, and exports Docs to markdown.
 - **Government IDs stay outside this OS.** Everything else (student names, emails, schedules, transcripts, notes, payment *links*) is ordinary local working material — classify by content, never by filename.
-- **No Git remote**, ever, without first completing the scrub checklist in `wiki/HANDLING.md`. The outer repo never tracks `.env`, `projects/lsatu/` (own repo), runtime logs, or locks. Do not create gitlinks.
+- **Git remote is enabled.** `origin` is GitHub (`vnjkoxpl-42905/ai-os`, decided 2026-09-29). The outer repo never tracks `.env`, `projects/lsatu/` (own repo), runtime logs, or locks. Do not create gitlinks.
 
 ## Skills
 

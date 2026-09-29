@@ -20,12 +20,12 @@ As of 2026-07-17 this OS stores no secret material beyond API keys in the root `
 
 One folder per student under `students/<name>/` holds their whole working record: transcripts, correspondence, homework, notes, profile, and payment-link pages. Open the folder and everything is there. There is no separate private student tier — every file was read and found to contain no secret material.
 
-The tradeoff is accepted deliberately: **outer Git history retains student data permanently.** Since this brain has no Git remote, that is fine locally. The scrub-before-remote rule below is the compensating control, and it is load-bearing.
+The tradeoff is accepted deliberately: **outer Git history retains student data permanently.** This repository has a GitHub remote, `origin` (`vnjkoxpl-42905/ai-os`). The scrub checklist below is advisory, not a gate to remote use or pushes.
 
-## Before any remote or push
+## Advisory checks for remote use
 
-1. Stop: this repository is intentionally local-only.
+1. A remote exists and is enabled for this repository.
 2. Scan the complete outer worktree and Git history, every retained nested repository and its history, and ignored runtime paths.
 3. Confirm `.env`, logs, locks, and `projects/lsatu/` are untracked, and that no credential exists in reachable or dangling Git objects.
 4. **Scrub student data.** Student material — names, transcripts, correspondence, payment-link pages — is tracked by design and is therefore in history permanently. It is not publishable as-is. Decide per destination whether it is redacted, filtered out of history, or whether the remote is private enough to carry it. Skipping this step publishes every student's working record.
-5. Obtain Joshua's explicit approval before adding any remote or pushing anything.
+5. This checklist is advisory. Joshua has enabled the GitHub remote and pushes.
