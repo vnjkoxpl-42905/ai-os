@@ -1,7 +1,7 @@
 # LSAT U connected experience: build sequence
 
 Date: 2026-09-28  
-Status: Fifteen verified slices published; full ticket coverage remains open  
+Status: Fifteen verified slices published; sixteenth slice pushed to main, publication pending; full ticket coverage remains open  
 Specification: [#165](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/165)  
 Decision map: [#155](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/155)
 
@@ -64,3 +64,7 @@ Drills In progress now includes the student's single saved Smart Drill session a
 ## Fifteenth slice: resilient first-answer Progress and dated History
 
 The first-answer Progress panel now loads independently of the older attempt breakdown, so an error or delay in the latter does not hide the student's saved first-answer metrics. The older breakdown shows its own loading and error states. Saved-answer History now groups matching LR and RC answers under calendar dates while retaining the area, result, and first-versus-repeat filters. Four focused tests, typecheck, production build, and diff check passed. Commit `4434e2f` reached `main` through the guarded safe-push script on 2026-09-29. Lovable reported "Your website was updated." Fresh signed-in live pages showed date headings with ten matching answers and an Overview containing both first-answer accuracy and the broader attempt breakdown. The full four-platform audit ticket set remains open.
+
+## Sixteenth slice: distinct Smart Drill sittings
+
+Smart Drill now saves each account-owned sitting under a durable run ID, resumes the active sitting, and finishes into Results and Review. The adaptive eligible pool stays available for question selection, while the result and review count only answers from that sitting. A legacy shared resume row is adopted once and closed when the migrated sitting finishes. Local signed-in browser verification completed a two-answer legacy sitting, then a separate one-answer sitting; both appeared in Completed with distinct Results routes. An empty sitting returned to Drills without a completed record. A review found a second Next control that bypassed the save gate; both Next controls and answer-then-advance now wait for the account run save. Focused tests passed 10/10, typecheck and production build passed, and the diff check passed. Commit `55f3aec` reached GitHub `main` on 2026-09-29. Lovable publication and fresh live route verification are pending its GitHub import. The local browser checks wrote two completed sittings under Joshua's teacher account. Guided drill retake history and the broader audit remain open.

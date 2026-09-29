@@ -1287,3 +1287,7 @@ Made the student-facing session note the standard output of the LSAT session les
 ## [2026-09-29] LSAT U | Progress reliability and dated History
 
 Pushed `4434e2f` to LSAT U `main` through the guarded safe-push script. Lovable reported "Your website was updated." Fresh signed-in live History showed ten saved answers grouped under September 28, September 13, and September 1, 2026. Live Overview showed first-answer accuracy and the broader attempt breakdown together. The first-answer panel now loads independently of the older breakdown, which has its own loading and error states. Four focused tests, typecheck, production build, and diff check passed. The larger four-platform audit implementation remains open.
+
+## [2026-09-29] LSAT U | Distinct Smart Drill sittings pushed
+
+Pushed `55f3aec` to LSAT U `main` through the guarded safe-push script. Smart Drill now stores separate account-owned sittings, resumes the active one, and shows Results and Review for only its answered questions. Local signed-in checks finished the prior two-answer Smart Drill and a new one-answer sitting under Joshua's teacher account; both appeared separately in Completed. An empty sitting returned without creating a completed result. A review caught a second Next control that bypassed the account-save gate; it was corrected before push. Ten focused tests, typecheck, production build, and diff check passed. Lovable had not yet imported `55f3aec` at the last check, so publication and live verification remain pending.
