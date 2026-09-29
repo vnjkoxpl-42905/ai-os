@@ -1,6 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
-import { fileURLToPath, pathToFileURL } from "node:url";
+import { fileURLToPath } from "node:url";
 import { marked } from "file:///C:/Program%20Files/WindowsApps/OpenAI.CodexPrimaryRuntime.v26-923-495-0_26.923.495.0_x64__3k8sg7r9htsxt/dependencies/node/node_modules/marked/lib/marked.esm.js";
 
 const here = path.dirname(fileURLToPath(import.meta.url));
@@ -12,20 +12,21 @@ const withReveals = noteBody.replace(
     `<details class="quantity-answer"><summary>${summary}</summary><div class="quantity-answer-body">${marked.parse(answer)}</div></details>`,
 );
 const contentHtml = marked.parse(withReveals).replace(/<p><img([^>]+)><\/p>/g, "<figure><img$1></figure>");
-const appCss = pathToFileURL(path.resolve(here, "../../projects/lsatu/src/components/classroom/classroom.css")).href;
+const appCss = "../../projects/lsatu/src/components/classroom/classroom.css";
 
 const noteCss = `
-  .classroom-root .quantity-note { padding-bottom: 80px; }
+  .classroom-root .quantity-note { width: 100%; max-width: 720px; min-width: 0; padding-bottom: 80px; overflow-wrap: anywhere; }
   .classroom-root .quantity-note h2 { margin-top: 56px; padding-top: 18px; border-top: 1px solid var(--classroom-line); font-size: 23px; }
   .classroom-root .quantity-note h2:first-of-type { margin-top: 34px; }
-  .classroom-root .quantity-note p { margin-bottom: 20px; }
+  .classroom-root .quantity-note p { max-width: 56ch; margin-bottom: 20px; }
   .classroom-root .quantity-note strong { font-weight: 700; color: var(--classroom-ink); }
   .classroom-root .quantity-note blockquote { background: #f8f5ee; border-left: 4px solid #087e83; border-radius: 0 10px 10px 0; padding: 14px 18px 2px; }
   .classroom-root .quantity-note blockquote p { margin-bottom: 12px; }
-  .classroom-root .quantity-note img { display: block; width: min(100%, 720px); height: auto; border-radius: 16px; margin: 28px 0 30px; border: 1px solid var(--classroom-line); }
+  .classroom-root .quantity-note figure { width: 100%; margin: 28px 0 30px; }
+  .classroom-root .quantity-note figure img { display: block; width: 100%; max-width: 100%; height: auto; border-radius: 16px; margin: 0; left: auto; right: auto; transform: none; border: 1px solid var(--classroom-line); }
   .classroom-root .quantity-note pre { background: #f8f5ee; border: 1px solid #e6e6e0; border-radius: 12px; color: #173047; overflow-x: auto; padding: 18px 20px; margin: 18px 0 28px; font-size: 15px; line-height: 1.7; }
   .classroom-root .quantity-note code { font-family: 'IBM Plex Mono', Consolas, monospace; }
-  .classroom-root .quantity-note table { border-collapse: collapse; width: min(720px, 100%); margin: 24px 0 32px; font-size: 15px; line-height: 1.5; }
+  .classroom-root .quantity-note table { border-collapse: collapse; display: block; width: min(720px, 100%); max-width: 100%; overflow-x: auto; margin: 24px 0 32px; font-size: 15px; line-height: 1.5; }
   .classroom-root .quantity-note th { text-align: left; background: #f8f5ee; color: #173047; }
   .classroom-root .quantity-note td, .classroom-root .quantity-note th { border-bottom: 1px solid #dce2e3; padding: 11px 12px; vertical-align: top; }
   .classroom-root .quantity-note .quantity-answer { border: 1px solid #d8e4e6; border-radius: 12px; margin: -3px 0 28px; overflow: hidden; background: #fff; }
@@ -38,7 +39,7 @@ const noteCss = `
   .preview-stamp { position: fixed; top: 14px; right: 18px; z-index: 50; padding: 7px 11px; border-radius: 999px; color: #173047; background: #dff3f1; border: 1px solid #9dcfca; font: 700 12px 'Outfit', sans-serif; letter-spacing: .04em; text-transform: uppercase; }
   .preview-note { font-size: 13px; color: var(--classroom-meta-text); margin: -6px 0 28px; }
   .preview-rail-label { display: block; color: var(--classroom-meta-text); font: 600 11px 'IBM Plex Mono', monospace; letter-spacing: .07em; text-transform: uppercase; margin: 25px 8px 8px; }
-  @media (max-width: 1023px) { .preview-stamp { top: 8px; right: 10px; } }
+  @media (max-width: 1023px) { .preview-stamp { top: 8px; right: 10px; } .classroom-root .classroom-column { min-width: 0; } }
   html.dark .classroom-root .quantity-note blockquote, html.dark .classroom-root .quantity-note pre, html.dark .classroom-root .quantity-note th { background: #1d1c28; color: #e5e5e5; }
   html.dark .classroom-root .quantity-note .quantity-answer { background: #0a0913; border-color: #3d3c48; }
   html.dark .classroom-root .quantity-note .quantity-answer summary { color: #7bd5d2; }
