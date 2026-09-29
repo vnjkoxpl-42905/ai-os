@@ -1,7 +1,7 @@
 # LSAT U connected experience: build sequence
 
 Date: 2026-09-28  
-Status: Sixteen verified slices published; full ticket coverage remains open  
+Status: Seventeen verified slices published; full ticket coverage remains open  
 Specification: [#165](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/165)  
 Decision map: [#155](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/155)
 
@@ -68,3 +68,7 @@ The first-answer Progress panel now loads independently of the older attempt bre
 ## Sixteenth slice: distinct Smart Drill sittings
 
 Smart Drill now saves each account-owned sitting under a durable run ID, resumes the active sitting, and finishes into Results and Review. The adaptive eligible pool stays available for question selection, while the result and review count only answers from that sitting. A legacy shared resume row is adopted once and closed when the migrated sitting finishes. Local signed-in browser verification completed a two-answer legacy sitting, then a separate one-answer sitting; both appeared in Completed with distinct Results routes. An empty sitting returned to Drills without a completed record. A review found a second Next control that bypassed the save gate; both Next controls and answer-then-advance now wait for the account run save. Focused tests passed 10/10, typecheck and production build passed, and the diff check passed. Commit `55f3aec` reached GitHub `main` on 2026-09-29. Lovable missed that push notification, so an empty `a6deac2` commit was sent through the guarded safe-push script to trigger sync, following Lovable's documented recovery path. Lovable imported both commits and reported "Your website was updated." A fresh signed-in live Drills page showed two separate Smart Drill sittings; the newer Results showed one answered question and Review showed exactly that question. The local browser checks wrote two completed sittings under Joshua's teacher account. Guided drill retake history and the broader audit remain open.
+
+## Seventeenth slice: distinct guided drill sittings
+
+Guided assignments and direct guided drills now preserve each account-owned sitting under its own run ID. Students can resume a frozen question queue, inspect earlier Results and Review, and start a new sitting without overwriting history. Answer navigation waits for an account save. Finishing freezes the saved answers before writing analytics, and retries use stable attempt IDs to avoid duplicate or changed results. An early End counts only attempted questions. Local signed-in checks saved three sittings under Joshua's teacher account, resumed the same unfinished run, and showed a one-answer result of `0 / 1`. Focused tests passed 35/35, typecheck and production build passed, and a scoped review found no material regression. Commit `a33fcac` reached GitHub `main` on 2026-09-29. The first Lovable Publish attempt failed while the revision still showed Previewing; a retry updated the site. Fresh signed-in live pages showed all three completed guided sittings and the one-answer `0 / 1` Results. Teacher-selected review, broader Library and Schedule integration, study tools, settings, and other audit ticket details remain open.

@@ -1294,3 +1294,7 @@ Pushed `55f3aec` to LSAT U `main` through the guarded safe-push script. Smart Dr
 ## [2026-09-29] system | Clarified GitHub and new-laptop restore boundaries
 
 Updated root runtime instructions to distinguish the tracked GitHub repo from private machine backups. New-laptop restore guidance points to `setup/backup/README.md`; credentials, raw personal data, and active browser tokens stay out of GitHub.
+
+## [2026-09-29] LSAT U | Distinct guided drill sittings published
+
+Pushed `a33fcac` to LSAT U `main` through the guarded safe-push script. Guided drills now retain separate account-owned sittings, resume a frozen question queue, and show Results and Review for each completed sitting. The Finish path freezes the saved answers and uses stable attempt IDs so retries do not double-count; an early End counts only answered questions. Local signed-in checks created three completed sittings under Joshua's teacher account and resumed one unfinished sitting. Focused tests passed 35/35, typecheck and production build passed, and a scoped review found no material regression. Lovable's first Publish attempt failed while the revision still showed Previewing; a retry updated the site. Fresh signed-in live pages listed three completed guided sittings and displayed `0 / 1` from one answered question. The larger four-platform audit implementation remains open.
