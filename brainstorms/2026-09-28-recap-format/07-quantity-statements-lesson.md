@@ -58,7 +58,7 @@ At least five are hardcover, so **some are hardcover**. No paperback book is req
 
 </details>
 
-Here is where the direction of the statement matters. From “most books are hardcover,” we know that **some hardcover things are books**. We cannot say that **most hardcover things are books**. The original sentence counts the books on this shelf. The reversed sentence would count every hardcover thing, including things outside that group.
+Here is where the direction of the statement matters. From “most books are hardcover,” we know that **some hardcover things are books**. We cannot say that **most hardcover things are books**. Five of our eight shelf books could be hardcover, while a library holds hundreds of other hardcover items. The first statement counts the eight books; the reversed statement counts a different group.
 
 ```text
 Books  ─most→  Hardcover
@@ -81,20 +81,20 @@ If **all eight books are hardcover**, every book on the shelf is hardcover. One 
 
 ![Eight books showing that all eight must be hardcover to satisfy all.](./assets/all-books.svg)
 
-An all statement gives us a rule: **if it is a book on this shelf, then it is hardcover**.
+An all statement gives us a rule: **if it is one of these eight books, then it is hardcover**.
 
 ```text
-Book on this shelf  →  Hardcover
-Not hardcover       →  Not a book on this shelf
+One of these books  →  Hardcover
+Not hardcover       →  Not one of these books
 ```
 
 The second line is the contrapositive. Both lines go with the same rule. We cannot turn the first line around and conclude that every hardcover thing is a book on this shelf.
 
-**Try it:** You pick up a paperback. What does the rule tell you? What if you pick up a hardcover notebook?
+**Try it:** You pick up a paperback. What does the rule tell you? What if you pick up a hardcover book from another shelf?
 
 <details><summary>Check your answer</summary>
 
-The paperback cannot be one of these books. The hardcover notebook tells us nothing about whether it is one of these books. Being hardcover is required of the books, but it is not enough to identify one.
+The paperback cannot be one of these eight books. A hardcover book from another shelf does not become one of these eight just because it is hardcover. Being hardcover is required, but it is not enough to identify one of these books.
 
 </details>
 
@@ -163,9 +163,9 @@ Club members  ─most→  Part-time workers
 Law students  ←some→  Part-time workers
 ```
 
-The two most arrows begin with the **same group**. That shared starting point is what forces the overlap. The conclusion is **some**, not most. We know the two groups meet; we do not know what fraction of either group lies in the overlap.
+Both statements count **club members**. That is why the two majorities must overlap. The conclusion is **some**, not most. We know the two groups meet; we do not know what fraction of either group lies in the overlap.
 
-**Quick check:** A club has 25 members. Most are lawyers, and most have criminal records. What is the smallest possible number of members who are both?
+**Quick check:** A club has 25 members. Most are lawyers, and most play an instrument. What is the smallest possible number who are both lawyers and musicians?
 
 <details><summary>Show the answer</summary>
 
@@ -195,15 +195,15 @@ We can make the same move with **some**. If **some club members study law** and 
 
 ![An all rule covers every club member. A highlighted law student is therefore also a part-time worker.](./assets/all-and-overlap.svg)
 
-**Try it:** All club members study law. All club members work part time. Must some law students work part time?
+**Try it:** All A are B. All A are C. Must some B be C?
 
 <details><summary>Check your answer</summary>
 
-Not yet. The two all rules tell us what is true **if** someone is in the club, but neither tells us that the club has a member. Add “at least one person belongs to the club,” and the overlap follows.
+Not yet. The two all rules tell us what is true **if** something is A, but neither tells us that any A exists. Add “at least one A exists,” and the overlap follows.
 
 </details>
 
-## A second way two most statements can work
+## Two majorities can also compare group sizes
 
 Here is a different comparison. **Most debate team members are seniors**, but **most seniors are not on the debate team**. The seniors on the team are more than half of the team and less than half of the seniors. The same overlap takes up a larger share of the team than of the senior class. Therefore, **there are more seniors than debate team members**.
 
@@ -248,7 +248,7 @@ Before drawing a conclusion, ask: **Am I carrying a known group through an all r
 
 Two **all** claims about A guarantee that every A has both traits. They guarantee **some B are C** only when we also know that at least one A exists.
 
-These are the useful moves. The arrows show exactly where each one is allowed to go.
+Use the sentence behind each arrow to check what it guarantees.
 
 ## Nearby words need a closer look
 

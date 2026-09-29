@@ -42,6 +42,43 @@ for (const [label, id, index] of [
 contentHtml = contentHtml.replace("<h2>Carry a claim through an all rule</h2>", '<h2 id="inferences">Carry a claim through an all rule</h2>');
 contentHtml = contentHtml.replace("<h2>Short drill: diagram, combine, decide</h2>", '<h2 id="drill">Short drill: diagram, combine, decide</h2>');
 contentHtml = contentHtml.replace(/<p><strong>(Try it|Quick check):<\/strong>([\s\S]*?)<\/p>\s*(<details class="quantity-answer">[\s\S]*?<\/details>)/g, (_match, label, question, reveal) => `<aside class="quantity-check"><p class="quantity-check-question"><span>${label}</span>${question}</p>${reveal}</aside>`);
+const quizQuestions = [
+  { premises: ["Some A are B.", "All B are C."], answer: "yes", explanation: "The A that is B must also be C because every B is C. That one A proves the overlap." },
+  { premises: ["Some A are B.", "Most A are C."], answer: "no", explanation: "The A that is B could be outside the majority of A that is C. Those parts of A can miss each other." },
+  { premises: ["All A are B.", "Some B are C."], answer: "no", explanation: "The B that is C could be outside A. The all rule points from A to B, not back from B to A." },
+  { premises: ["Some A are B.", "Most B are C."], answer: "no", explanation: "The known A that is B could be among the B that are not C. A majority of B does not tell us which B are C." },
+  { premises: ["Some A are B.", "Some B are C."], answer: "no", explanation: "The B in the first statement could differ from the B in the second. Two some claims need not share a witness." },
+  { premises: ["Most A are B.", "Most A are C."], answer: "yes", explanation: "Both majorities count the same A group. They must share at least one A, and that person or thing is both B and C." },
+  { premises: ["All A are B.", "All A are C."], answer: "no", explanation: "Every A would be both B and C, but neither all claim tells us an A exists. Add at least one A, and the overlap follows." },
+];
+const quizMarkup = `<section class="quantity-quiz" id="quantity-quiz" aria-labelledby="quantity-quiz-title">
+  <div class="quantity-quiz-top"><span class="quantity-quiz-eyebrow">Inference studio</span><span class="quantity-quiz-progress" id="quantity-quiz-progress">01 / 07</span></div>
+  <div class="quantity-quiz-track" aria-hidden="true"><span id="quantity-quiz-track-fill"></span></div>
+  <h3 id="quantity-quiz-title">Can you prove the overlap?</h3>
+  <p class="quantity-quiz-intro">Seven short answers. Make a call, explain it, then compare your reasoning.</p>
+  <div class="quantity-quiz-stage">
+    <div class="quantity-quiz-premises" id="quantity-quiz-premises"><span>Given</span><strong>Some A are B.</strong><strong>All B are C.</strong></div>
+    <div class="quantity-quiz-bridge" id="quantity-quiz-bridge" aria-hidden="true"><span>A</span><i></i><span>C</span></div>
+    <form id="quantity-quiz-form" class="quantity-quiz-form">
+      <label for="quantity-quiz-input">Must some A be C?</label>
+      <p>Start with <b>Yes</b> or <b>No</b>, then tell me why.</p>
+      <textarea id="quantity-quiz-input" rows="3" placeholder="No, because…" required></textarea>
+      <div class="quantity-quiz-actions"><button type="submit">Check my answer <span aria-hidden="true">↗</span></button><span id="quantity-quiz-error" role="alert"></span></div>
+    </form>
+    <div class="quantity-quiz-feedback" id="quantity-quiz-feedback" hidden tabindex="-1" aria-live="polite">
+      <div class="quantity-quiz-feedback-label" id="quantity-quiz-feedback-label"></div>
+      <p class="quantity-quiz-verdict" id="quantity-quiz-verdict"></p>
+      <p class="quantity-quiz-explanation" id="quantity-quiz-explanation"></p>
+      <p class="quantity-quiz-reflection">Compare your explanation with this one. Did you identify the same person or the same gap?</p>
+      <button class="quantity-quiz-next" id="quantity-quiz-next" type="button">Next question <span aria-hidden="true">→</span></button>
+    </div>
+  </div>
+  <div class="quantity-quiz-done" id="quantity-quiz-done" hidden><span>Practice complete</span><strong id="quantity-quiz-score"></strong><p>You checked each conclusion against a witness or a possible gap. Review any answer where your reason differed, even if your yes or no matched.</p><button id="quantity-quiz-restart" type="button">Try the seven again ↺</button></div>
+</section>`;
+const quizStart = contentHtml.indexOf("<h3>Pop quiz: decide whether the overlap follows</h3>");
+const quizEnd = contentHtml.indexOf("</details>", quizStart);
+if (quizStart < 0 || quizEnd < 0) throw new Error("Could not locate the pop quiz in the lesson");
+contentHtml = contentHtml.slice(0, quizStart) + quizMarkup + contentHtml.slice(quizEnd + "</details>".length);
 const summaryAt = contentHtml.indexOf("<h2>The moves to keep</h2>");
 const drillAt = contentHtml.indexOf('<h2 id="drill">');
 if (summaryAt < 0 || drillAt < 0) throw new Error("Could not find summary or drill");
@@ -151,7 +188,54 @@ const noteCss = `
   .classroom-root .quantity-note .quantity-drill > ol li::before { counter-increment: drill; content: counter(drill) "."; color: #087e83; font: 700 14px 'IBM Plex Mono',Consolas,monospace; left: 15px; position: absolute; top: 14px; }
   .classroom-root .quantity-note .quantity-drill > ol li:first-child { border-top: 1px solid #dce7e5; }
   .classroom-root .quantity-note .quantity-drill > .quantity-answer { margin-top: 24px; }
+  .classroom-root .quantity-note .quantity-quiz { position: relative; isolation: isolate; overflow: hidden; max-width: none; margin: 58px -28px 55px; padding: 33px 40px 40px; border-radius: 18px; background: oklch(24% .043 224); color: oklch(96% .012 190); }
+  .classroom-root .quantity-note .quantity-quiz [hidden] { display: none !important; }
+  .classroom-root .quantity-note .quantity-quiz::before { content: ''; position: absolute; width: 420px; height: 420px; top: -230px; right: -170px; border-radius: 50%; background: radial-gradient(circle, oklch(59% .09 188 / .25), transparent 69%); z-index: -1; pointer-events: none; }
+  .classroom-root .quantity-note .quantity-quiz-top { display: flex; justify-content: space-between; align-items: center; gap: 18px; color: oklch(77% .075 188); font: 600 12px 'IBM Plex Mono',monospace; letter-spacing: .11em; text-transform: uppercase; }
+  .classroom-root .quantity-note .quantity-quiz-progress { font-variant-numeric: tabular-nums; color: oklch(90% .025 190); }
+  .classroom-root .quantity-note .quantity-quiz-track { height: 2px; width: 100%; margin: 16px 0 34px; background: oklch(42% .035 224); }
+  .classroom-root .quantity-note .quantity-quiz-track span { display: block; width: 14.285%; height: 100%; background: oklch(77% .08 188); transition: width 450ms cubic-bezier(.19,1,.22,1); }
+  .classroom-root .quantity-note .quantity-quiz h3 { color: oklch(98% .007 190); font: 600 33px/1.13 'Outfit',sans-serif; letter-spacing: -.035em; margin: 0 0 10px; }
+  .classroom-root .quantity-note .quantity-quiz .quantity-quiz-intro { color: oklch(78% .018 190); font: 400 16px/1.55 'Source Serif 4',Georgia,serif; margin: 0 0 36px; max-width: 56ch; }
+  .classroom-root .quantity-note .quantity-quiz-stage { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1.05fr); column-gap: 38px; align-items: start; }
+  .classroom-root .quantity-note .quantity-quiz-premises { grid-column: 1; display: grid; gap: 9px; padding: 23px 23px 25px; border: 1px solid oklch(53% .045 218); border-radius: 12px; background: oklch(29% .04 224); }
+  .classroom-root .quantity-note .quantity-quiz-premises span { color: oklch(76% .065 188); text-transform: uppercase; letter-spacing: .11em; font: 600 11px 'IBM Plex Mono',monospace; margin-bottom: 6px; }
+  .classroom-root .quantity-note .quantity-quiz-premises strong { color: oklch(97% .01 190); font: 500 21px/1.35 'Outfit',sans-serif; }
+  .classroom-root .quantity-note .quantity-quiz-bridge { grid-column: 1; display: flex; align-items: center; justify-content: center; gap: 0; height: 100px; margin: 8px 0; }
+  .classroom-root .quantity-note .quantity-quiz-bridge span { display: grid; place-items: center; width: 48px; height: 48px; border: 1px solid oklch(72% .08 188); border-radius: 50%; color: oklch(92% .03 188); font: 600 20px 'Outfit',sans-serif; }
+  .classroom-root .quantity-note .quantity-quiz-bridge i { width: 85px; height: 1px; background: repeating-linear-gradient(90deg,oklch(70% .05 188) 0 6px,transparent 6px 13px); transform-origin: left; transition: background 350ms, transform 500ms cubic-bezier(.19,1,.22,1); }
+  .classroom-root .quantity-note .quantity-quiz-bridge.is-yes i { height: 2px; background: oklch(77% .08 188); animation: quantity-bridge 500ms cubic-bezier(.19,1,.22,1) both; }
+  .classroom-root .quantity-note .quantity-quiz-bridge.is-no i { opacity: .35; transform: scaleX(.68); }
+  @keyframes quantity-bridge { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+  .classroom-root .quantity-note .quantity-quiz-form, .classroom-root .quantity-note .quantity-quiz-feedback { grid-column: 2; grid-row: 1 / span 2; }
+  .classroom-root .quantity-note .quantity-quiz-form label { display: block; color: oklch(98% .007 190); font: 600 22px/1.3 'Outfit',sans-serif; margin: 1px 0 6px; }
+  .classroom-root .quantity-note .quantity-quiz-form p { color: oklch(75% .018 190); font: 400 14px/1.5 'Outfit',sans-serif; margin: 0 0 17px; }
+  .classroom-root .quantity-note .quantity-quiz-form textarea { box-sizing: border-box; width: 100%; min-height: 133px; resize: vertical; border: 1px solid oklch(60% .035 220); border-radius: 9px; padding: 15px 16px; background: oklch(31% .035 224); color: oklch(97% .01 190); font: 400 17px/1.5 'Outfit',sans-serif; }
+  .classroom-root .quantity-note .quantity-quiz-form textarea::placeholder { color: oklch(72% .018 210); }
+  .classroom-root .quantity-note .quantity-quiz-form textarea:focus-visible, .classroom-root .quantity-note .quantity-quiz button:focus-visible { outline: 2px solid oklch(84% .085 188); outline-offset: 3px; }
+  .classroom-root .quantity-note .quantity-quiz-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 13px; margin-top: 15px; }
+  .classroom-root .quantity-note .quantity-quiz button { min-height: 44px; cursor: pointer; border: 0; border-radius: 7px; padding: 10px 17px; background: oklch(81% .065 187); color: oklch(21% .04 224); font: 700 14px 'Outfit',sans-serif; transition: background 180ms; }
+  .classroom-root .quantity-note .quantity-quiz button:hover { background: oklch(91% .045 187); }
+  .classroom-root .quantity-note .quantity-quiz-actions button span { margin-left: 16px; font-size: 17px; }
+  .classroom-root .quantity-note .quantity-quiz-actions [role='alert'] { color: oklch(88% .1 35); font: 500 13px/1.4 'Outfit',sans-serif; }
+  .classroom-root .quantity-note .quantity-quiz-feedback { border-top: 1px solid oklch(49% .04 220); padding-top: 18px; animation: quantity-feedback-enter 420ms cubic-bezier(.19,1,.22,1) both; }
+  @keyframes quantity-feedback-enter { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+  .classroom-root .quantity-note .quantity-quiz-feedback-label { color: oklch(78% .08 188); text-transform: uppercase; letter-spacing: .09em; font: 700 11px 'IBM Plex Mono',monospace; }
+  .classroom-root .quantity-note .quantity-quiz .quantity-quiz-verdict { color: oklch(98% .005 190); font: 600 24px/1.25 'Outfit',sans-serif; margin: 9px 0 11px; }
+  .classroom-root .quantity-note .quantity-quiz .quantity-quiz-explanation { color: oklch(92% .016 190); font: 400 17px/1.55 'Source Serif 4',Georgia,serif; margin: 0 0 15px; }
+  .classroom-root .quantity-note .quantity-quiz .quantity-quiz-reflection { color: oklch(75% .018 190); font: 400 13px/1.5 'Outfit',sans-serif; margin: 0 0 17px; }
+  .classroom-root .quantity-note .quantity-quiz .quantity-quiz-next span { margin-left: 16px; }
+  .classroom-root .quantity-note .quantity-quiz-done { padding: 13px 0 4px; }
+  .classroom-root .quantity-note .quantity-quiz-done span { color: oklch(77% .08 188); text-transform: uppercase; letter-spacing: .1em; font: 700 12px 'IBM Plex Mono',monospace; }
+  .classroom-root .quantity-note .quantity-quiz-done strong { display: block; color: oklch(98% .007 190); font: 600 38px/1.15 'Outfit',sans-serif; letter-spacing: -.03em; margin: 14px 0; }
+  .classroom-root .quantity-note .quantity-quiz .quantity-quiz-done p { color: oklch(84% .015 190); font: 400 16px/1.55 'Source Serif 4',Georgia,serif; max-width: 60ch; }
+  .classroom-root .quantity-note .quantity-quiz-done button { margin-top: 8px; }
   @media (max-width: 600px) {
+    .classroom-root .quantity-note .quantity-quiz { margin-left: -12px; margin-right: -12px; padding: 23px 19px 29px; border-radius: 13px; }
+    .classroom-root .quantity-note .quantity-quiz h3 { font-size: 29px; }
+    .classroom-root .quantity-note .quantity-quiz-stage { display: flex; flex-direction: column; gap: 0; }
+    .classroom-root .quantity-note .quantity-quiz-premises, .classroom-root .quantity-note .quantity-quiz-form, .classroom-root .quantity-note .quantity-quiz-feedback { width: 100%; box-sizing: border-box; }
+    .classroom-root .quantity-note .quantity-quiz-bridge { align-self: center; height: 76px; }
     .classroom-root .quantity-note .quantity-lab { padding: 19px 17px; }
     .classroom-root .quantity-note .quantity-lab-books { gap: 4px; }
     .classroom-root .quantity-note .quantity-lab-book { height: 53px; }
@@ -170,7 +254,7 @@ const noteCss = `
   html.dark .classroom-root .quantity-note .quantity-summary { border-color: #315456; }
   html.dark .classroom-root .quantity-note .quantity-claim b,
   html.dark .classroom-root .quantity-note .quantity-chapter-number { color: #7bd5d2; }
-  @media (prefers-reduced-motion: reduce) { .quantity-progress, .classroom-root .quantity-note .quantity-lab-book, .classroom-root .quantity-note .quantity-lab-verdicts span { transition: none !important; animation: none !important; } .classroom-root .quantity-note .quantity-lab-book.is-new::after { display: none; } }
+  @media (prefers-reduced-motion: reduce) { .quantity-progress, .classroom-root .quantity-note .quantity-lab-book, .classroom-root .quantity-note .quantity-lab-verdicts span, .classroom-root .quantity-note .quantity-quiz * { transition: none !important; animation: none !important; } .classroom-root .quantity-note .quantity-lab-book.is-new::after { display: none; } }
 `;
 
 const page = `<!doctype html>
@@ -217,6 +301,18 @@ slider.addEventListener('input',()=>{const value=Number(slider.value);count.text
 const progress=document.querySelector('.quantity-progress');let pending=false;
 function updateProgress(){const max=document.documentElement.scrollHeight-innerHeight;progress.style.transform='scaleX('+Math.max(0,Math.min(1,max>0?scrollY/max:0))+')';pending=false}
 addEventListener('scroll',()=>{if(!pending){requestAnimationFrame(updateProgress);pending=true}},{passive:true});addEventListener('resize',updateProgress);updateProgress();
+const quizQuestions=${JSON.stringify(quizQuestions)};
+const quizForm=document.getElementById('quantity-quiz-form');
+const quizInput=document.getElementById('quantity-quiz-input');
+const quizFeedback=document.getElementById('quantity-quiz-feedback');
+const quizStage=document.querySelector('.quantity-quiz-stage');
+const quizDone=document.getElementById('quantity-quiz-done');
+const quizBridge=document.getElementById('quantity-quiz-bridge');
+let quizIndex=0,quizMatches=0;
+function renderQuiz(){const q=quizQuestions[quizIndex];document.getElementById('quantity-quiz-progress').textContent=String(quizIndex+1).padStart(2,'0')+' / 07';document.getElementById('quantity-quiz-track-fill').style.width=((quizIndex+1)/quizQuestions.length*100)+'%';document.getElementById('quantity-quiz-premises').replaceChildren(Object.assign(document.createElement('span'),{textContent:'Given'}),...q.premises.map(line=>Object.assign(document.createElement('strong'),{textContent:line})));quizInput.value='';quizForm.hidden=false;quizFeedback.hidden=true;quizBridge.classList.remove('is-yes','is-no');document.getElementById('quantity-quiz-error').textContent='';}
+quizForm.addEventListener('submit',event=>{event.preventDefault();const response=quizInput.value.trim();const choice=/^(yes|yeah|yep|no|not guaranteed|cannot|can't|does not|doesn't)\b/i.exec(response);if(!choice){document.getElementById('quantity-quiz-error').textContent='Begin with Yes or No, then give your reason.';quizInput.focus();return}const verdict=/^(yes|yeah|yep)/i.test(choice[1])?'yes':'no';const q=quizQuestions[quizIndex];const match=verdict===q.answer;if(match)quizMatches++;document.getElementById('quantity-quiz-error').textContent='';document.getElementById('quantity-quiz-feedback-label').textContent=match?'Your conclusion matches':'Your conclusion needs another look';document.getElementById('quantity-quiz-verdict').textContent=q.answer==='yes'?'Yes. The overlap follows.':'No. The overlap is not guaranteed.';document.getElementById('quantity-quiz-explanation').textContent=q.explanation;document.getElementById('quantity-quiz-next').innerHTML=quizIndex===quizQuestions.length-1?'See your review <span aria-hidden="true">→</span>':'Next question <span aria-hidden="true">→</span>';quizBridge.classList.add(q.answer==='yes'?'is-yes':'is-no');quizForm.hidden=true;quizFeedback.hidden=false;quizFeedback.focus();});
+document.getElementById('quantity-quiz-next').addEventListener('click',()=>{if(quizIndex===quizQuestions.length-1){quizStage.hidden=true;quizDone.hidden=false;document.getElementById('quantity-quiz-score').textContent=quizMatches+' of 7 conclusions matched';document.getElementById('quantity-quiz-progress').textContent='07 / 07';}else{quizIndex++;renderQuiz();quizInput.focus()}});
+document.getElementById('quantity-quiz-restart').addEventListener('click',()=>{quizIndex=0;quizMatches=0;quizDone.hidden=true;quizStage.hidden=false;renderQuiz();quizInput.focus()});
 </script>
 </body></html>`;
 

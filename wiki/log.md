@@ -1257,3 +1257,5 @@ Pushed `70ba8a1` to LSAT U `main` through the guarded safe-push script. Standalo
 
 Applied the impeccable review to the local Classroom quantity lesson preview. Added an eight-book slider whose some, most, and all states update at exact thresholds, brief state-change pulses, and a reading-progress line. Replaced heavy leading accent borders and styled the new quick checks. The motion stops under reduced-motion preference. Browser checks passed at counts 0, 1, 4, 5, and 8; seven images load, thirteen answer panels reveal, and mobile has no horizontal overflow. This remains a local preview, not a deployed LSAT U feature.
 
+
+LSAT U rollout update: Lovable reported "Your website was updated" for `70ba8a1`. A fresh signed-in live page showed the Completed exam filter and combined LR/RC drill list with repeated LR sittings and three RC sittings. The weekly-plan source-status change passed focused tests, but a live teacher-to-student status transition was not exercised.

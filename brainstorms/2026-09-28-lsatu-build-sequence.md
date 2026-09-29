@@ -1,7 +1,7 @@
 # LSAT U connected experience: build sequence
 
 Date: 2026-09-28  
-Status: Twelve verified slices published; thirteenth slice pushed to `main` and awaiting live publication; full ticket coverage remains open  
+Status: Thirteen verified slices published; full ticket coverage remains open  
 Specification: [#165](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/165)  
 Decision map: [#155](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/155)
 
@@ -55,4 +55,4 @@ These are improvements drawn from the first eleven published slices, not claims 
 
 ## Thirteenth slice: connected practice and weekly work
 
-Custom LR and standalone RC sittings now share the Drills In progress and Completed lists, with distinct repeated runs and exact Continue, Results, and Review routes. Practice Exams uses canonical Overview, All Exams, detail, and Attempts links; Attempts can filter Unfinished and Completed using the URL. Home and My Work read weekly-plan completion from the source task instead of relying on a stale classroom mirror. The combined focused suite passed 34 tests, and typecheck, production build, and diff check passed. Commit `70ba8a1` reached `main` on 2026-09-29. Lovable publication and a fresh live check are pending. Smart Drill, guided drills, and assigned drills still have separate histories. The broader ticket set remains open. Joshua waived the final Impeccable pass for now.
+Custom LR and standalone RC sittings now share the Drills In progress and Completed lists, with distinct repeated runs and exact Continue, Results, and Review routes. Practice Exams uses canonical Overview, All Exams, detail, and Attempts links; Attempts can filter Unfinished and Completed using the URL. Home and My Work read weekly-plan completion from the source task instead of relying on a stale classroom mirror. The combined focused suite passed 34 tests, and typecheck, production build, and diff check passed. Commit `70ba8a1` reached `main` on 2026-09-29. Lovable reported "Your website was updated." A fresh signed-in live page showed the Completed exam filter and the unified list with repeated LR and three RC sittings. The weekly-plan change has focused tests but no live teacher-to-student status transition was exercised. Smart Drill, guided drills, and assigned drills still have separate histories. The broader ticket set remains open. Joshua waived the final Impeccable pass for now.
