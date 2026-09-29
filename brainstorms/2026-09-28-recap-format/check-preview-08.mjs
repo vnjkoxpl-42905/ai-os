@@ -3,6 +3,7 @@ const browser = await chromium.launch({ executablePath: "C:/Program Files/Google
 const url = "http://127.0.0.1:8765/brainstorms/2026-09-28-recap-format/08-quantity-statements-visual-preview.html";
 const page = await browser.newPage({ viewport: { width: 1440, height: 900 } });
 await page.goto(url);
+await page.screenshot({ path: "C:/Users/Joshu/AppData/Local/Temp/quantity-08-top.png" });
 for (const [name, selector] of [["some", "#some"], ["inferences", "#inferences"], ["drill", "#drill"]]) {
   await page.locator(selector).scrollIntoViewIfNeeded();
   await page.screenshot({ path: `C:/Users/Joshu/AppData/Local/Temp/quantity-08-${name}.png` });
@@ -20,9 +21,39 @@ for (const value of [0, 1, 4, 5, 8]) {
     trueRules: [...document.querySelectorAll(".quantity-lab-verdicts .is-true")].map((element) => element.dataset.rule),
   })));
 }
+const overlapCounts = [Number(await page.locator("#quantity-overlap-count").textContent())];
+for (let index = 0; index < 4; index++) {
+  await page.locator("#quantity-overlap-shuffle").click();
+  overlapCounts.push(Number(await page.locator("#quantity-overlap-count").textContent()));
+}
+await page.locator(".quantity-overlap-lab").scrollIntoViewIfNeeded();
+await page.screenshot({ path: "C:/Users/Joshu/AppData/Local/Temp/quantity-08-overlap.png" });
+await page.locator("#quantity-quiz").scrollIntoViewIfNeeded();
+await page.screenshot({ path: "C:/Users/Joshu/AppData/Local/Temp/quantity-08-quiz.png" });
+const quizAnswers = ["Yes, every B is C.", "No, these parts of A can miss.", "No, the B could be outside A.", "No, the A can be in the minority.", "No, they could be different B.", "Yes, two majorities of A overlap.", "No, A might be empty."];
+await page.locator("#quantity-quiz-input").fill("Maybe they overlap.");
+await page.locator("#quantity-quiz-form button").click();
+const invalidAnswerPrompt = await page.locator("#quantity-quiz-error").textContent();
+const quizChecks = [];
+for (let index = 0; index < quizAnswers.length; index++) {
+  await page.locator("#quantity-quiz-input").fill(quizAnswers[index]);
+  await page.locator("#quantity-quiz-form button").click();
+  quizChecks.push(await page.locator("#quantity-quiz-feedback-label").textContent());
+  if (index === 0) { await page.waitForTimeout(500); await page.screenshot({ path: "C:/Users/Joshu/AppData/Local/Temp/quantity-08-quiz-feedback.png" }); }
+  await page.locator("#quantity-quiz-next").click();
+}
+const quizScore = await page.locator("#quantity-quiz-score").textContent();
+await page.locator("#quantity-quiz-restart").click();
+await page.locator("#quantity-quiz-input").fill("No, because I disagree.");
+await page.locator("#quantity-quiz-form button").click();
+const mismatchFeedback = await page.locator("#quantity-quiz-feedback-label").textContent();
 const mobile = await browser.newPage({ viewport: { width: 430, height: 900 } });
 await mobile.goto(url);
 await mobile.screenshot({ path: "C:/Users/Joshu/AppData/Local/Temp/quantity-08-mobile.png" });
+await mobile.locator(".quantity-overlap-lab").scrollIntoViewIfNeeded();
+await mobile.screenshot({ path: "C:/Users/Joshu/AppData/Local/Temp/quantity-08-overlap-mobile.png" });
+await mobile.locator("#quantity-quiz").scrollIntoViewIfNeeded();
+await mobile.screenshot({ path: "C:/Users/Joshu/AppData/Local/Temp/quantity-08-quiz-mobile.png" });
 const overflow = await mobile.evaluate(() => document.documentElement.scrollWidth - innerWidth);
-console.log(JSON.stringify({ imageStatus, revealCount, firstRevealWorks, sliderStates, mobileOverflowPixels: overflow }, null, 2));
+console.log(JSON.stringify({ imageStatus, revealCount, firstRevealWorks, sliderStates, overlapCounts, invalidAnswerPrompt, quizChecks, quizScore, mismatchFeedback, mobileOverflowPixels: overflow }, null, 2));
 await browser.close();

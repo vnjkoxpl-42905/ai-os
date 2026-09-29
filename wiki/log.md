@@ -1259,3 +1259,8 @@ Applied the impeccable review to the local Classroom quantity lesson preview. Ad
 
 
 LSAT U rollout update: Lovable reported "Your website was updated" for `70ba8a1`. A fresh signed-in live page showed the Completed exam filter and combined LR/RC drill list with repeated LR sittings and three RC sittings. The weekly-plan source-status change passed focused tests, but a live teacher-to-student status transition was not exercised.
+
+## [2026-09-29] Teaching notes | Full interactive quantity lesson preview
+
+Refined the complete local LSAT U quantity lesson preview after Joshua's whole-note design direction. Added a seven-step typed-answer inference studio that checks the yes/no verdict and reveals worked reasoning, a movable ten-member majority-overlap proof, a wider reading canvas, figure captions, chapter numbers, and semantic color and state motion. Corrected the source note's all + all existence check, which previously contradicted an established ten-member club, and tightened the most-reversal explanation and other wording. Browser verification covered all seven quiz questions, invalid and incorrect answers, slider thresholds, overlap arrangements, image loading, and mobile overflow. The interactive HTML is a prototype; no student note or app feature was published.
+

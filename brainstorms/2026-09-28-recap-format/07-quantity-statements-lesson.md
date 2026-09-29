@@ -222,7 +222,7 @@ Some Spanish speakers are trained.
 
 The trained Spanish speakers could all be people who do not volunteer. We cannot conclude that any volunteers are trained.
 
-Replacing the second “some” with “most” does not fix the gap. The Spanish-speaking volunteers could sit in the untrained minority. Even two most statements chained through different starting groups do not automatically produce a new majority claim.
+Replacing the second “some” with “most” does not fix the gap. The Spanish-speaking volunteers could sit in the untrained minority. Even two most statements that count different groups do not automatically produce a new majority claim.
 
 Before drawing a conclusion, ask: **Am I carrying a known group through an all rule? Or do two majorities count the same group?** If neither is true, check whether the groups could miss each other.
 
