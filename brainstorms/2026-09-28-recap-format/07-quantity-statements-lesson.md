@@ -1,8 +1,8 @@
 # Some, Most, and All
 
-A quantity statement tells us whether a claim holds for at least one member of a group, for more than half, or for every member. **Some**, **most**, and **all** give us different guarantees. Before we combine quantity statements, we need to know what each one proves and what it leaves open.
+Quantity statements tell us whether a claim applies to some members of a group, most of them, or all of them. Suppose a class has been assigned a case to read. “Some students read it,” “most students read it,” and “all students read it” are three different claims about that same class. We do not need an exact headcount to understand the difference.
 
-We need to know two things about each statement: what it guarantees, and what it still leaves open. Once that is clear, we can combine statements without asking an arrow to do more than it can.
+For each sentence, ask: **What must be true? What could still be true?** The answer changes with the word we use.
 
 ## Some guarantees at least one
 
@@ -14,21 +14,33 @@ At least **one**. There could be one, four, or all eight. “Some” rules out z
 
 This is easy to miss because in ordinary conversation “some” often suggests “some, but not all.” On the LSAT, that extra phrase is not part of the statement. If all eight books are hardcover, it is still true that some are hardcover.
 
-**Try it:** If some books on the shelf are hardcover, could seven be hardcover? Could none be hardcover?
+**Try it:** “Some applicants received an interview.” Could every applicant have received one? Does the sentence tell us that anyone was denied an interview?
 
 <details><summary>Check your answer</summary>
 
-Seven could be hardcover. None could not. “Some” guarantees at least one and tells us nothing more about the count.
+Every applicant could have received an interview. The sentence does not tell us that anyone was denied one. “Some” guarantees at least one applicant received an interview, but it leaves open how many others did.
 
 </details>
 
-There is one more feature of “some” that matters later. If some books are hardcover, then some hardcover things are books. Both sentences describe the same overlap.
+Whenever you read **some**, replace it with **at least one** in your head. That tells you exactly what the sentence guarantees:
+
+> **Some of the books are hardcover.**
+>
+> **At least one of the books is hardcover.**
+
+Now focus on that one book. It belongs to both groups: it is a book, and it is hardcover. If we describe the same object from the hardcover side, we can say:
+
+> **Some hardcover items are books.**
+>
+> **At least one hardcover item is a book.**
+
+We have not found a new object. We have described the same overlap in the other direction. That is why a **some** statement works both ways:
 
 ```text
 Books  ←some→  Hardcover
 ```
 
-The double arrow means we may read a **some** statement in either direction. It does not turn the sentence into an **all** statement.
+The double arrow tells us that at least one thing belongs to both groups. It does not tell us that every book is hardcover or that every hardcover item is a book.
 
 ## Most guarantees more than half
 

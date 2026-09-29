@@ -1,7 +1,7 @@
 # LSAT U connected experience: build sequence
 
 Date: 2026-09-28  
-Status: Implementation started in a clean LSAT U worktree; most slices remain open  
+Status: Eleven verified slices published; full ticket coverage remains open  
 Specification: [#165](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/165)  
 Decision map: [#155](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/155)
 
@@ -38,4 +38,16 @@ The tickets below have native parent and blocker links in GitHub. They describe 
 - Old ownerless browser-only exam recovery is outside the first release. Copies remain untouched and do not enter any account's Attempts. No display or import design was attributed to Joshua.
 - The exact list of Impeccable findings cannot be known before functional screens exist. #178 requires recording and resolving material findings when they appear.
 - A current-student prototype test may inform later refinement, but Joshua chose not to wait for it before this spec or these tickets.
-- The plan does not authorize Lovable credit spend, a deployment, or new video production.
+- Joshua later authorized building and deploying verified slices. Lovable credit spend still requires separate approval immediately before the action. No new video production is planned.
+
+## Rollout execution notes
+
+These are improvements drawn from the first eleven published slices, not claims that the remaining tickets are done.
+
+1. Trace the saved, owner-scoped record and exact return route before designing a new queue item. Teacher-selected Review and bootcamp work need durable source contracts before they can be displayed honestly.
+2. Freeze the exact question or passage selection before offering Inspect. The LR builder already did this; RC preview and Start currently select separately, which is why RC Inspect is next.
+3. Identify a live account fixture at the start of each slice. If none exists, verify the adapter, owner guard, and empty state locally, and state plainly which live interaction could not be checked. Do not create practice records just to make a demo look complete.
+4. Run focused tests while changing code, then one integrated typecheck and production build when the slice stabilizes. Repeat a gate only after a relevant fix or because the guarded push requires it. This avoids the several-minute duplicate checks that slowed the earlier slices.
+5. After a build, restore only its known generated-file churn (`public/data/_bank.generated.json`, `public/data/finder-address-index.json`, `supabase/functions/mcp/index.ts`) and inspect the diff before committing.
+6. Treat `main` push, Lovable Publish, and fresh live task walk as three separate checkpoints. Publish once per verified slice and wait for Lovable's completion state; a pushed commit alone is not a live release.
+7. Reuse read-only question views and narrow source adapters. They kept owner checks, labels, return links, and no-write behavior easier to verify than duplicated page logic.
