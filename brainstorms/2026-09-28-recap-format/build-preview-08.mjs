@@ -24,6 +24,13 @@ const introduction = `<header class="quantity-opening">
   </div>
   <p class="quantity-scenario">We do not need an exact headcount to understand the difference.</p>
   <div class="quantity-opening-question"><p>What must be true?</p><p>What could still be true?</p><small>The answer changes with the word we use.</small></div>
+  <div class="quantity-lab" aria-label="Explore quantity statements with eight books">
+    <div class="quantity-lab-head"><span class="quantity-lab-kicker">A little experiment</span><span class="quantity-lab-count" aria-live="polite"><b id="quantity-count">1</b> of 8 books are hardcover</span></div>
+    <div class="quantity-lab-books" aria-hidden="true">${Array.from({ length: 8 }, (_, index) => `<span class="quantity-lab-book${index === 0 ? " is-hardcover" : ""}"><i></i></span>`).join("")}</div>
+    <label class="quantity-lab-instruction" for="quantity-slider">Move the count. Watch which statements become true.</label>
+    <input id="quantity-slider" class="quantity-lab-slider" type="range" min="0" max="8" value="1" aria-label="Number of hardcover books">
+    <div class="quantity-lab-verdicts" aria-live="polite"><span data-rule="some" class="is-true"><i></i>Some</span><span data-rule="most"><i></i>Most</span><span data-rule="all"><i></i>All</span></div>
+  </div>
 </header>
 <nav class="quantity-jump" aria-label="Jump through the lesson"><a href="#some">Some</a><a href="#most">Most</a><a href="#all">All</a><a href="#inferences">Inferences</a><a href="#drill">Drill</a></nav>`;
 contentHtml = introduction + contentHtml.slice(firstLessonSection);
@@ -34,7 +41,7 @@ for (const [label, id, index] of [
 ]) contentHtml = contentHtml.replace(`<h2>${label}</h2>`, `<h2 id="${id}" class="quantity-chapter"><span class="quantity-chapter-number">${index}</span>${label}</h2>`);
 contentHtml = contentHtml.replace("<h2>Carry a claim through an all rule</h2>", '<h2 id="inferences">Carry a claim through an all rule</h2>');
 contentHtml = contentHtml.replace("<h2>Short drill: diagram, combine, decide</h2>", '<h2 id="drill">Short drill: diagram, combine, decide</h2>');
-contentHtml = contentHtml.replace(/<p><strong>Try it:<\/strong>([\s\S]*?)<\/p>\s*(<details class="quantity-answer">[\s\S]*?<\/details>)/g, (_match, question, reveal) => `<aside class="quantity-check"><p class="quantity-check-question"><span>Try it</span>${question}</p>${reveal}</aside>`);
+contentHtml = contentHtml.replace(/<p><strong>(Try it|Quick check):<\/strong>([\s\S]*?)<\/p>\s*(<details class="quantity-answer">[\s\S]*?<\/details>)/g, (_match, label, question, reveal) => `<aside class="quantity-check"><p class="quantity-check-question"><span>${label}</span>${question}</p>${reveal}</aside>`);
 const summaryAt = contentHtml.indexOf("<h2>The moves to keep</h2>");
 const drillAt = contentHtml.indexOf('<h2 id="drill">');
 if (summaryAt < 0 || drillAt < 0) throw new Error("Could not find summary or drill");
@@ -42,12 +49,14 @@ contentHtml = contentHtml.slice(0, summaryAt) + '<section class="quantity-summar
 const appCss = "../../projects/lsatu/src/components/classroom/classroom.css";
 
 const noteCss = `
+  :root { --quantity-ink: oklch(31% .045 225); --quantity-teal: oklch(52% .09 192); --quantity-warm: oklch(92% .03 75); }
+  .quantity-progress { position: fixed; inset: 0 auto auto 0; height: 3px; width: 100%; transform-origin: left; transform: scaleX(0); background: var(--quantity-teal); z-index: 70; pointer-events: none; }
   .classroom-root .quantity-note { width: 100%; max-width: 720px; min-width: 0; padding-bottom: 80px; overflow-wrap: anywhere; }
   .classroom-root .quantity-note h2 { margin-top: 56px; padding-top: 18px; border-top: 1px solid var(--classroom-line); font-size: 23px; }
   .classroom-root .quantity-note h2:first-of-type { margin-top: 34px; }
   .classroom-root .quantity-note p { max-width: 56ch; margin-bottom: 20px; }
   .classroom-root .quantity-note strong { font-weight: 700; color: var(--classroom-ink); }
-  .classroom-root .quantity-note blockquote { background: #f8f5ee; border-left: 4px solid #087e83; border-radius: 0 10px 10px 0; padding: 14px 18px 2px; }
+  .classroom-root .quantity-note blockquote { background: #f8f5ee; border: 1px solid #e4e0d6; border-radius: 10px; padding: 14px 18px 2px; }
   .classroom-root .quantity-note blockquote p { margin-bottom: 12px; }
   .classroom-root .quantity-note figure { width: 100%; margin: 28px 0 30px; }
   .classroom-root .quantity-note figure img { display: block; width: 100%; max-width: 100%; height: auto; border-radius: 16px; margin: 0; left: auto; right: auto; transform: none; border: 1px solid var(--classroom-line); }
@@ -94,15 +103,37 @@ const noteCss = `
   .classroom-root .quantity-note .quantity-claim { display: grid; grid-template-columns: 100px 1fr; align-items: baseline; gap: 16px; padding: 11px 4px; font-family: 'Source Serif 4', Georgia, serif; font-size: 19px; line-height: 1.45; }
   .classroom-root .quantity-note .quantity-claim + .quantity-claim { border-top: 1px solid #e2eceb; }
   .classroom-root .quantity-note .quantity-claim b { color: #087e83; font: 700 23px 'Outfit',sans-serif; }
-  .classroom-root .quantity-note .quantity-opening-question { border-left: 4px solid #087e83; background: #eff8f7; padding: 17px 22px 16px; max-width: 590px; margin: 22px 0 33px; }
+  .classroom-root .quantity-note .quantity-opening-question { border: 1px solid #c6dfdc; border-radius: 12px; background: #eff8f7; padding: 17px 22px 16px; max-width: 590px; margin: 22px 0 33px; }
   .classroom-root .quantity-note .quantity-opening-question p { color: #173047; font-size: 20px; font-weight: 600; line-height: 1.4; margin: 0; }
   .classroom-root .quantity-note .quantity-opening-question small { color: #45656a; display: block; font: 500 13px 'Outfit',sans-serif; margin-top: 12px; }
+  .classroom-root .quantity-note .quantity-lab { max-width: 620px; margin: 42px 0 22px; padding: 27px 29px 25px; border: 1px solid oklch(85% .025 198); border-radius: 16px; background: radial-gradient(circle at 84% 0%, var(--quantity-warm), transparent 36%), oklch(98% .008 187); }
+  .classroom-root .quantity-note .quantity-lab-head { display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 8px 20px; font-family: 'Outfit',sans-serif; }
+  .classroom-root .quantity-note .quantity-lab-kicker { text-transform: uppercase; letter-spacing: .11em; font: 700 12px 'IBM Plex Mono',monospace; color: var(--quantity-teal); }
+  .classroom-root .quantity-note .quantity-lab-count { color: var(--quantity-ink); font-size: 16px; }
+  .classroom-root .quantity-note .quantity-lab-count b { font-size: 27px; font-variant-numeric: tabular-nums; }
+  .classroom-root .quantity-note .quantity-lab-books { display: flex; justify-content: space-between; align-items: end; gap: 6px; margin: 30px 0 27px; min-height: 72px; }
+  .classroom-root .quantity-note .quantity-lab-book { flex: 1; max-width: 48px; height: 65px; border-radius: 3px 6px 6px 3px; background: oklch(88% .015 213); border: 1px solid oklch(73% .025 213); position: relative; transform: translateY(0); transition: background 240ms cubic-bezier(.19,1,.22,1), transform 240ms cubic-bezier(.19,1,.22,1), border-color 240ms; }
+  .classroom-root .quantity-note .quantity-lab-book::before { content: ''; position: absolute; inset: 7px auto 7px 6px; width: 2px; background: currentColor; opacity: .45; }
+  .classroom-root .quantity-note .quantity-lab-book i { position: absolute; left: 14px; right: 8px; top: 13px; border-top: 2px solid currentColor; box-shadow: 0 8px currentColor; opacity: .6; }
+  .classroom-root .quantity-note .quantity-lab-book.is-hardcover { color: oklch(90% .03 192); border-color: oklch(44% .09 192); background: var(--quantity-teal); transform: translateY(-5px); }
+  .classroom-root .quantity-note .quantity-lab-book.is-new::after { content: ''; position: absolute; inset: -10px; border-radius: 13px; background: oklch(82% .08 75 / .75); z-index: -1; animation: quantity-warm-pulse 650ms cubic-bezier(.19,1,.22,1) both; pointer-events: none; }
+  @keyframes quantity-warm-pulse { from { opacity: .9; transform: scale(.8); } to { opacity: 0; transform: scale(1.22); } }
+  .classroom-root .quantity-note .quantity-lab-instruction { display: block; color: var(--quantity-ink); font: 500 14px 'Outfit',sans-serif; margin-bottom: 12px; }
+  .classroom-root .quantity-note .quantity-lab-slider { display: block; width: 100%; height: 30px; margin: 0; accent-color: var(--quantity-teal); cursor: pointer; }
+  .classroom-root .quantity-note .quantity-lab-slider:focus-visible { outline: 2px solid var(--quantity-ink); outline-offset: 3px; }
+  .classroom-root .quantity-note .quantity-lab-verdicts { display: flex; gap: 9px; flex-wrap: wrap; margin-top: 19px; }
+  .classroom-root .quantity-note .quantity-lab-verdicts span { display: inline-flex; align-items: center; gap: 8px; border: 1px solid oklch(84% .015 213); border-radius: 999px; padding: 7px 12px; color: oklch(49% .02 213); font: 600 13px 'Outfit',sans-serif; background: oklch(96% .006 213); transition: background 220ms, color 220ms, border-color 220ms; }
+  .classroom-root .quantity-note .quantity-lab-verdicts i { width: 7px; height: 7px; border-radius: 50%; background: currentColor; opacity: .5; }
+  .classroom-root .quantity-note .quantity-lab-verdicts .is-true { color: var(--quantity-ink); border-color: oklch(73% .07 192); background: oklch(90% .045 192); }
+  .classroom-root .quantity-note .quantity-lab-verdicts .is-true i { background: var(--quantity-teal); opacity: 1; }
+  .classroom-root .quantity-note .quantity-lab-verdicts .is-new { animation: quantity-truth-pulse 550ms cubic-bezier(.19,1,.22,1) both; }
+  @keyframes quantity-truth-pulse { 0% { transform: scale(.94); } 60% { transform: scale(1.06); } 100% { transform: scale(1); } }
   .classroom-root .quantity-note .quantity-jump { display: flex; flex-wrap: wrap; gap: 0; border-bottom: 1px solid #d9e4e3; margin: 20px 0 42px; }
   .classroom-root .quantity-note .quantity-jump a { color: #536366; font: 600 14px 'Outfit',sans-serif; padding: 10px 15px 13px; border-bottom: 2px solid transparent; }
   .classroom-root .quantity-note .quantity-jump a:first-child { padding-left: 0; }
   .classroom-root .quantity-note .quantity-jump a:hover,
   .classroom-root .quantity-note .quantity-jump a:focus-visible { color: #087e83; border-bottom-color: #087e83; outline-offset: 2px; }
-  .classroom-root .quantity-note pre { border-left: 4px solid #087e83; border-radius: 0 9px 9px 0; background: #f4f8f8; font-size: 16px; line-height: 1.8; }
+  .classroom-root .quantity-note pre { border: 1px solid #c6dfdc; border-radius: 9px; background: #f4f8f8; font-size: 16px; line-height: 1.8; }
   .classroom-root .quantity-note .quantity-check { background: #f1f8f7; border: 1px solid #c6dfdc; border-radius: 14px; padding: 20px 22px 2px; max-width: 620px; margin: 30px 0 34px; }
   .classroom-root .quantity-note .quantity-check-question { margin: 0 0 14px; max-width: none; }
   .classroom-root .quantity-note .quantity-check-question > span { display: block; color: #087e83; font: 700 13px 'Outfit',sans-serif; letter-spacing: .02em; margin-bottom: 7px; }
@@ -121,6 +152,9 @@ const noteCss = `
   .classroom-root .quantity-note .quantity-drill > ol li:first-child { border-top: 1px solid #dce7e5; }
   .classroom-root .quantity-note .quantity-drill > .quantity-answer { margin-top: 24px; }
   @media (max-width: 600px) {
+    .classroom-root .quantity-note .quantity-lab { padding: 19px 17px; }
+    .classroom-root .quantity-note .quantity-lab-books { gap: 4px; }
+    .classroom-root .quantity-note .quantity-lab-book { height: 53px; }
     .classroom-root .quantity-note .quantity-opening .quantity-lead { font-size: 22px; }
     .classroom-root .quantity-note .quantity-claim { grid-template-columns: 80px 1fr; gap: 8px; font-size: 17px; }
     .classroom-root .quantity-note .quantity-claim b { font-size: 20px; }
@@ -136,6 +170,7 @@ const noteCss = `
   html.dark .classroom-root .quantity-note .quantity-summary { border-color: #315456; }
   html.dark .classroom-root .quantity-note .quantity-claim b,
   html.dark .classroom-root .quantity-note .quantity-chapter-number { color: #7bd5d2; }
+  @media (prefers-reduced-motion: reduce) { .quantity-progress, .classroom-root .quantity-note .quantity-lab-book, .classroom-root .quantity-note .quantity-lab-verdicts span { transition: none !important; animation: none !important; } .classroom-root .quantity-note .quantity-lab-book.is-new::after { display: none; } }
 `;
 
 const page = `<!doctype html>
@@ -148,6 +183,7 @@ const page = `<!doctype html>
   <link href="${appCss}" rel="stylesheet">
   <style>html,body{margin:0;min-height:100%;}body{background:#fff;} ${noteCss}</style>
 </head><body>
+<div class="quantity-progress" aria-hidden="true"></div>
 <span class="preview-stamp">Visual study preview</span>
 <div class="classroom-root">
   <aside class="classroom-sidebar"><div class="classroom-sidebar-card"><div class="classroom-panel-inner">
@@ -166,12 +202,22 @@ const page = `<!doctype html>
   <main class="classroom-stage"><div class="classroom-column">
     <div class="classroom-dateline"><time>September 29, 2026</time><span>|</span><span>Note</span></div>
     <h1 class="classroom-title">Some, Most, and All</h1>
-    <p class="preview-note">An alternate visual treatment for review. The answer panels can be opened.</p>
+    <p class="preview-note">Interactive draft. Move the book count and open the answers as you read.</p>
     <article class="classroom-prose quantity-note"><style>${noteCss}</style>${contentHtml}</article>
     <div class="classroom-detail-actions"><button class="classroom-button classroom-button-primary" type="button" disabled>Ask</button><button class="classroom-button" type="button" disabled>Back to notes</button></div>
   </div></main>
 </div>
-<script>if(new URLSearchParams(location.search).get('theme')==='dark')document.documentElement.classList.add('dark')</script>
+<script>
+if(new URLSearchParams(location.search).get('theme')==='dark')document.documentElement.classList.add('dark');
+const slider=document.getElementById('quantity-slider');
+const count=document.getElementById('quantity-count');
+const books=[...document.querySelectorAll('.quantity-lab-book')];
+const rules={some:1,most:5,all:8};
+slider.addEventListener('input',()=>{const value=Number(slider.value);count.textContent=value;books.forEach((book,index)=>{const was=book.classList.contains('is-hardcover');const now=index<value;book.classList.toggle('is-hardcover',now);if(now&&!was){book.classList.remove('is-new');void book.offsetWidth;book.classList.add('is-new');setTimeout(()=>book.classList.remove('is-new'),700)}});for(const [rule,minimum] of Object.entries(rules)){const pill=document.querySelector('[data-rule="'+rule+'"]');const was=pill.classList.contains('is-true');const now=value>=minimum;pill.classList.toggle('is-true',now);if(now&&!was){pill.classList.remove('is-new');void pill.offsetWidth;pill.classList.add('is-new');setTimeout(()=>pill.classList.remove('is-new'),600)}}});
+const progress=document.querySelector('.quantity-progress');let pending=false;
+function updateProgress(){const max=document.documentElement.scrollHeight-innerHeight;progress.style.transform='scaleX('+Math.max(0,Math.min(1,max>0?scrollY/max:0))+')';pending=false}
+addEventListener('scroll',()=>{if(!pending){requestAnimationFrame(updateProgress);pending=true}},{passive:true});addEventListener('resize',updateProgress);updateProgress();
+</script>
 </body></html>`;
 
 const out = path.join(here, "08-quantity-statements-visual-preview.html");

@@ -1248,3 +1248,12 @@ Integrated the additional quantifier inference sheet into the draft quantity sta
 
 Added distributed checks and a mixed inference pop quiz to the draft quantity statements lesson using the fourteen supplied flashcard screenshots. The checks cover exact most ranges, majority overlap, chaining through all, and counterexamples. Added a short language section for many, few, not many, and not all; rejected the source cards' invented fixed cutoffs for vague quantity words. Rebuilt the local Classroom preview and verified seven images, thirteen answer reveals, and zero horizontal overflow at 430px. No student post was made.
 
+
+## [2026-09-29] LSAT U | Connected practice and weekly-work slice
+
+Pushed `70ba8a1` to LSAT U `main` through the guarded safe-push script. Standalone LR and RC sittings now share In progress and Completed drill history. Practice Exams has canonical navigation and URL-backed Attempts status filters. Home and My Work reconcile weekly-plan completion with the source task. Focused tests passed 34/34; typecheck, production build, and diff check passed. Local signed-in UI checks covered saved LR/RC sittings and Practice Exams navigation. Lovable publication and a fresh live check were still pending when this entry was written. The full audit rollout remains incomplete, and Joshua deferred the Impeccable pass.
+
+## [2026-09-29] Teaching notes | Interactive quantity preview refined
+
+Applied the impeccable review to the local Classroom quantity lesson preview. Added an eight-book slider whose some, most, and all states update at exact thresholds, brief state-change pulses, and a reading-progress line. Replaced heavy leading accent borders and styled the new quick checks. The motion stops under reduced-motion preference. Browser checks passed at counts 0, 1, 4, 5, and 8; seven images load, thirteen answer panels reveal, and mobile has no horizontal overflow. This remains a local preview, not a deployed LSAT U feature.
+

@@ -1,7 +1,7 @@
 # LSAT U connected experience: build sequence
 
 Date: 2026-09-28  
-Status: Twelve verified slices published; full ticket coverage remains open  
+Status: Twelve verified slices published; thirteenth slice pushed to `main` and awaiting live publication; full ticket coverage remains open  
 Specification: [#165](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/165)  
 Decision map: [#155](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/155)
 
@@ -23,7 +23,7 @@ The tickets below have native parent and blocker links in GitHub. They describe 
 | 7C | [#177 Selected-student Teacher mode](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/177) | #166, #168, #169, #170, #173, #175, #176 | Full teacher controls under Joshua's identity, teacher answers isolated from student results. |
 | 8A | [#179 Question study tools](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/179) | #170, #171 | Bookmarks, reading tools, optional attributed explanations, distinct feedback controls. |
 | 8B | [#180 Weekly plan and settings](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/180) | #169, #173, #174 | Scannable prescribed week and consequence-aware study settings. |
-| Final | [#178 Impeccable review and fixes](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/178) | All functional slices | Critique, audit, material fixes, recheck, and final task/data verification. |
+| Final | [#178 Impeccable review and fixes](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/178) | All functional slices | Deferred by Joshua on 2026-09-29 while functional work continues. |
 
 ## How to run the work
 
@@ -52,3 +52,7 @@ These are improvements drawn from the first eleven published slices, not claims 
 6. Treat `main` push, Lovable Publish, and fresh live task walk as three separate checkpoints. Publish once per verified slice and wait for Lovable's completion state; a pushed commit alone is not a live release.
 7. Reuse read-only question views and narrow source adapters. They kept owner checks, labels, return links, and no-write behavior easier to verify than duplicated page logic.
 8. Confirm Lovable's project preview is ready before Publish. The first RC Inspect publish attempt failed while its new GitHub commit still showed Previewing. That timing is an observation, not a proven cause; wait for preview readiness and check the explicit publish result.
+
+## Thirteenth slice: connected practice and weekly work
+
+Custom LR and standalone RC sittings now share the Drills In progress and Completed lists, with distinct repeated runs and exact Continue, Results, and Review routes. Practice Exams uses canonical Overview, All Exams, detail, and Attempts links; Attempts can filter Unfinished and Completed using the URL. Home and My Work read weekly-plan completion from the source task instead of relying on a stale classroom mirror. The combined focused suite passed 34 tests, and typecheck, production build, and diff check passed. Commit `70ba8a1` reached `main` on 2026-09-29. Lovable publication and a fresh live check are pending. Smart Drill, guided drills, and assigned drills still have separate histories. The broader ticket set remains open. Joshua waived the final Impeccable pass for now.
