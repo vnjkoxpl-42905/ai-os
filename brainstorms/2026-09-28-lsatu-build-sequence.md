@@ -1,7 +1,7 @@
 # LSAT U connected experience: build sequence
 
 Date: 2026-09-28  
-Status: Thirteen verified slices published; full ticket coverage remains open  
+Status: Fifteen verified slices published; full ticket coverage remains open  
 Specification: [#165](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/165)  
 Decision map: [#155](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/155)
 
@@ -56,3 +56,11 @@ These are improvements drawn from the first eleven published slices, not claims 
 ## Thirteenth slice: connected practice and weekly work
 
 Custom LR and standalone RC sittings now share the Drills In progress and Completed lists, with distinct repeated runs and exact Continue, Results, and Review routes. Practice Exams uses canonical Overview, All Exams, detail, and Attempts links; Attempts can filter Unfinished and Completed using the URL. Home and My Work read weekly-plan completion from the source task instead of relying on a stale classroom mirror. The combined focused suite passed 34 tests, and typecheck, production build, and diff check passed. Commit `70ba8a1` reached `main` on 2026-09-29. Lovable reported "Your website was updated." A fresh signed-in live page showed the Completed exam filter and the unified list with repeated LR and three RC sittings. The weekly-plan change has focused tests but no live teacher-to-student status transition was exercised. Smart Drill, guided drills, and assigned drills still have separate histories. The broader ticket set remains open. Joshua waived the final Impeccable pass for now.
+
+## Fourteenth slice: saved Smart Drill and guided completion
+
+Drills In progress now includes the student's single saved Smart Drill session after at least one answer, with a Continue route and an honest saved-answer count. It does not claim distinct completed Smart Drill sittings, because the existing adaptive resume key is reused and attempts have no run ID. Both natural finish and End Drill now update an assigned guided drill's source assignment and linked task under the student guard. Focused tests passed 27/27, typecheck and production build passed, and local UI inspection corrected a misleading full-pool denominator. Commit `f33a793` reached `main` on 2026-09-29. Lovable reported "Your website was updated," and a fresh signed-in live Drills page displayed the saved Smart Drill beside RC. A live guided assignment was not ended for verification. Distinct Smart Drill sittings, direct guided retake history, and the remaining source coverage still need implementation.
+
+## Fifteenth slice: resilient first-answer Progress and dated History
+
+The first-answer Progress panel now loads independently of the older attempt breakdown, so an error or delay in the latter does not hide the student's saved first-answer metrics. The older breakdown shows its own loading and error states. Saved-answer History now groups matching LR and RC answers under calendar dates while retaining the area, result, and first-versus-repeat filters. Four focused tests, typecheck, production build, and diff check passed. Commit `4434e2f` reached `main` through the guarded safe-push script on 2026-09-29. Lovable reported "Your website was updated." Fresh signed-in live pages showed date headings with ten matching answers and an Overview containing both first-answer accuracy and the broader attempt breakdown. The full four-platform audit ticket set remains open.

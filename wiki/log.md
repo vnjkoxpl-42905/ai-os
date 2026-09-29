@@ -1271,3 +1271,19 @@ Refined the complete local LSAT U quantity lesson preview after Joshua's whole-n
 ## [2026-09-29] Teaching notes | Quantity lesson final review pass
 
 Removed preview labels, figure captions, and “Inference Studio” from the local quantity lesson. Reworked the majority inference into given, reason, and conclusion, with a responsive circle view of the ten club members. Added set visuals for a valid all-rule chain and an invalid two-some chain, explanations of the negation of some/most/all, and a word-family table that distinguishes exact guarantees from contextual language. Converted eleven inline checks and four final-drill prompts to typed responses with immediate worked feedback. Local browser verification found eight loaded images, working interactions, and no horizontal overflow at 430px or 960px. The lesson remains a local prototype and has not been posted to LSAT U.
+
+## [2026-09-29] Skills | LSAT session lesson workflow
+
+Created and activated `lsat-session-lesson` for Codex and Claude. It turns a full tutoring transcript plus the relevant corpus into an editable lecture note, original explanatory visuals, typed checks, a cumulative drill, and a responsive LSAT U preview. It uses `session-recap` for transcript intake while keeping routine recaps lightweight. Publishing remains a separate authorized platform action.
+
+## [2026-09-29] LSAT U | Saved Smart Drill and guided completion
+
+Pushed `f33a793` to LSAT U `main` after the safe-push retry recovered from a transient HTTPS helper abort. Lovable reported "Your website was updated." A fresh signed-in live Drills page showed Smart Drill with two saved answers alongside a saved RC run. Guided drills now mark the owned assignment and linked task complete through both the last-question and End Drill finish paths. Focused tests passed 27/27; typecheck, build, and diff check passed. No real student's guided assignment was ended solely to test production. Smart Drill still needs distinct sitting IDs and a result route before Completed history can be honest.
+
+## [2026-09-29] Skills | Session lesson quality upgrade
+
+Made the student-facing session note the standard output of the LSAT session lesson skill. Brought in session-recap's full-transcript verification, student sticking point, exact assignments, canonical recap record, and private continuation. Added a concrete teaching and preview quality gate, plus reuse of the existing visual shell so each session gets an appropriate lesson without forcing unnecessary animation. Synced Codex and Claude catalog and active copies; regenerated the skill index. No student note was published.
+
+## [2026-09-29] LSAT U | Progress reliability and dated History
+
+Pushed `4434e2f` to LSAT U `main` through the guarded safe-push script. Lovable reported "Your website was updated." Fresh signed-in live History showed ten saved answers grouped under September 28, September 13, and September 1, 2026. Live Overview showed first-answer accuracy and the broader attempt breakdown together. The first-answer panel now loads independently of the older breakdown, which has its own loading and error states. Four focused tests, typecheck, production build, and diff check passed. The larger four-platform audit implementation remains open.
