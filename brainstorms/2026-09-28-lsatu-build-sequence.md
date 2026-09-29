@@ -1,7 +1,7 @@
 # LSAT U connected experience: build sequence
 
 Date: 2026-09-28  
-Status: Eleven verified slices published; full ticket coverage remains open  
+Status: Twelve verified slices published; full ticket coverage remains open  
 Specification: [#165](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/165)  
 Decision map: [#155](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/155)
 
@@ -45,9 +45,10 @@ The tickets below have native parent and blocker links in GitHub. They describe 
 These are improvements drawn from the first eleven published slices, not claims that the remaining tickets are done.
 
 1. Trace the saved, owner-scoped record and exact return route before designing a new queue item. Teacher-selected Review and bootcamp work need durable source contracts before they can be displayed honestly.
-2. Freeze the exact question or passage selection before offering Inspect. The LR builder already did this; RC preview and Start currently select separately, which is why RC Inspect is next.
+2. Freeze the exact question or passage selection before offering Inspect. Both LR and RC builders now use the inspected IDs at launch; future builders should follow the same contract.
 3. Identify a live account fixture at the start of each slice. If none exists, verify the adapter, owner guard, and empty state locally, and state plainly which live interaction could not be checked. Do not create practice records just to make a demo look complete.
 4. Run focused tests while changing code, then one integrated typecheck and production build when the slice stabilizes. Repeat a gate only after a relevant fix or because the guarded push requires it. This avoids the several-minute duplicate checks that slowed the earlier slices.
 5. After a build, restore only its known generated-file churn (`public/data/_bank.generated.json`, `public/data/finder-address-index.json`, `supabase/functions/mcp/index.ts`) and inspect the diff before committing.
 6. Treat `main` push, Lovable Publish, and fresh live task walk as three separate checkpoints. Publish once per verified slice and wait for Lovable's completion state; a pushed commit alone is not a live release.
 7. Reuse read-only question views and narrow source adapters. They kept owner checks, labels, return links, and no-write behavior easier to verify than duplicated page logic.
+8. Confirm Lovable's project preview is ready before Publish. The first RC Inspect publish attempt failed while its new GitHub commit still showed Previewing. That timing is an observation, not a proven cause; wait for preview readiness and check the explicit publish result.

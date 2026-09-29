@@ -7,6 +7,12 @@ aliases: []
 
 # Log
 
+## [2026-09-28] ship | Exact RC set inspection and rollout lessons
+
+- LSAT U commit `cde8578` reached `main`. Lovable's Publish panel ultimately showed the website up to date after an initial failed attempt. A fresh signed-in live route at `lsatprep.study/practice/drills?section=rc&stage=type-drill` showed Inspect set, then a frozen six-question PT114 passage with passage text, prompts, and answer choices. No practice session was started during verification.
+- The RC builder now freezes the IDs it inspects and uses those IDs when Start this drill is chosen. Setting or link changes invalidate the preview. Existing auto-start links retain direct launch. Focused tests (8), typecheck, production build, and local signed-in browser inspection passed.
+- Updated the existing [build sequence](../brainstorms/2026-09-28-lsatu-build-sequence.md) with eight concrete efficiency lessons from twelve slices: trace source records first, freeze selection, identify fixtures early, avoid duplicate gates, restore only generated build churn, separate push/publish/live checks, reuse read-only adapters, and wait for Lovable preview readiness before publishing. The cause of the initial publish failure is unconfirmed. The full audit implementation and final Impeccable pass remain open.
+
 ## [2026-09-28] decision | Teacher mode retains full admin actions
 
 - Joshua corrected the proposed read-only student preview. View student experience will keep Joshua/admin controls available for the selected student, with changes attributed to the acting teacher/admin.
