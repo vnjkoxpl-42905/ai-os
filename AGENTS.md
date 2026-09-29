@@ -73,6 +73,7 @@ Paths are relative to the repository root.
 - **Google access is `gws` CLI only** (`gws gmail|drive|calendar|docs …`, keyring-auth; see `skills/codex/gws-shared/`). Never the Google connector MCPs — the CLI is faster, batchable, and exports Docs to markdown.
 - **Government IDs stay outside this OS.** Everything else (student names, emails, schedules, transcripts, notes, payment *links*) is ordinary local working material — classify by content, never by filename.
 - **Git remote is enabled.** `origin` is GitHub (`vnjkoxpl-42905/ai-os`, decided 2026-09-29). The outer repo never tracks `.env`, `projects/lsatu/` (own repo), runtime logs, or locks. Do not create gitlinks.
+- **New laptop restore:** GitHub contains tracked ai-os files and skills. It deliberately excludes `.env`, `raw/`, app repos, credentials, and machine sessions. Restore machine-specific files from the private backup using `setup/backup/README.md` and its `README - START HERE.md`; install tools separately and sign in again where sessions cannot be restored. Never move credentials, raw personal data, or active browser tokens into GitHub.
 
 ## Skills
 
