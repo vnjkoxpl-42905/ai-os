@@ -72,15 +72,16 @@ server.registerTool('search_guided_drills', {
   const catalog = JSON.parse(fs.readFileSync(path.join(vault, 'references/lsatu-guided-drill-catalog.json'), 'utf8'));
   const words = query.toLowerCase().trim().split(/\s+/).filter(Boolean);
   function eligible(d) {
+    if (d.pool_summary.pinned_qids) return { min: d.pool_summary.pinned_difficulty_min, max: d.pool_summary.pinned_difficulty_max, count: d.pool_summary.pinned_known_count };
     const band = level ? catalog.bands[level] : [1, 5];
     const difficulties = Object.entries(d.pool_summary.difficulty_counts).filter(([difficulty, count]) => count > 0 && Number(difficulty) >= band[0] && Number(difficulty) <= band[1]);
     return { min: difficulties.length ? Number(difficulties[0][0]) : null, max: difficulties.length ? Number(difficulties.at(-1)[0]) : null, count: difficulties.reduce((sum, [, count]) => sum + count, 0) };
   }
   const matching = catalog.drills.filter(d => {
     const selected = eligible(d);
-    return d.is_published && (include_pinned || !d.pool_summary.pinned_qids) && words.every(word => JSON.stringify([d.slug, d.title, d.bank_filter, d.reasoning_types]).toLowerCase().includes(word)) && selected.count >= (d.question_count ?? 1) && (min_difficulty == null || (selected.min != null && selected.min >= min_difficulty)) && (max_difficulty == null || (selected.max != null && selected.max <= max_difficulty));
+    return d.is_published && (include_pinned || !d.pool_summary.pinned_qids) && !d.pool_summary.missing_pinned_qids.length && words.every(word => JSON.stringify([d.slug, d.title, d.bank_filter, d.reasoning_types]).toLowerCase().includes(word)) && selected.count >= (d.pool_summary.pinned_qids || d.question_count || 1) && (min_difficulty == null || (selected.min != null && selected.min >= min_difficulty)) && (max_difficulty == null || (selected.max != null && selected.max <= max_difficulty));
   }).sort((a, b) => Number(words.every(word => b.title.toLowerCase().includes(word))) - Number(words.every(word => a.title.toLowerCase().includes(word))));
-  const result = { snapshot: catalog.meta.generated_at, total_matches: matching.length, drills: matching.slice(0, limit).map(d => ({ slug: d.slug, title: d.title, count: d.question_count, minutes: d.estimated_minutes, catalog_level: d.level, native_band: [d.bank_filter.difficulty_min, d.bank_filter.difficulty_max], selectable_at_level: level ?? 'native', eligible: eligible(d), pool_difficulty_counts: d.pool_summary.difficulty_counts, pinned_count: d.pool_summary.pinned_qids })) };
+  const result = { snapshot: catalog.meta.generated_at, total_matches: matching.length, drills: matching.slice(0, limit).map(d => ({ slug: d.slug, title: d.title, count: d.pool_summary.pinned_qids || d.question_count, minutes: d.estimated_minutes, catalog_level: d.level, native_band: [d.bank_filter.difficulty_min, d.bank_filter.difficulty_max], selectable_at_level: d.pool_summary.pinned_qids ? 'exact pins; level ignored' : level ?? 'native', eligible: eligible(d), pool_difficulty_counts: d.pool_summary.difficulty_counts, pinned_count: d.pool_summary.pinned_qids })) };
   return { content: [{ type: 'text', text: JSON.stringify(result) }], structuredContent: result };
 });
 

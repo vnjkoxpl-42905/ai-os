@@ -15,11 +15,13 @@ The current LLM Wiki operating rules are [[system/schema/llm-wiki]]. The first a
 
 ## Most recent (2026-09-30): Yahunatan's conditional Must Be True schedule assigned
 
-- Live account is Yahunathan. [Assignment log](../students/yahunatan-zetvy/assignment-log.md) records all four assignments and IDs.
+- Live account is Yahunathan. [Assignment log](../students/yahunatan-zetvy/assignment-log.md) records all seven assignments and IDs.
 - Four-question untimed guided drills unlock and are due 2026-09-30 (difficulty 1-2), 2026-10-01 (2-3), and 2026-10-03 (3 only). Friday 2026-10-02 is off.
 - PT101.S3 LR is assigned for Sunday 2026-10-04: 26 questions, standard 35-minute timer. Nothing assigned Monday 2026-10-05.
+- Added existing conditional guided drills beside MBT on the same dates: Easier Set 4 on 2026-09-30 (9 questions, 1-2), Easier Set 2 on 2026-10-01 (7 questions, 2-3), Medium Set 4 on 2026-10-03 (9 questions, 3 only via beginner assignment). Verified source rows, access, Classroom visibility and dates; inbox/bell/email OK. Repeat batch returned the same three IDs and no notifications.
 - All 12 questions are conditional Must Be True in the deployed bank; no cross-drill or Sunday overlap. Saved content, student access, Classroom visibility, exact dates and one unread bell per drill verified headlessly. All four assignment calls returned inbox/bell/email OK; email receipt not independently verified.
 - Added authored guided-spec support to the existing headless assignment wrapper and a read-only verifier. Browser launch QA skipped at Joshua's request. Two primary-checkout question labels disagree with operational/live data; discrepancy recorded in the student's log. Tasks ledger unchanged.
+- Mapped all 119 guided drills in the [generated catalog](../references/lsatu-guided-drill-catalog.md). Extended local lsat-u-lessons MCP with search, preview and batch assignment; all three additional assignments used one sign-in and lookup, runner 15.3 seconds. The short project assignment skill routes directly to this path, with existing content first and a current-chat MCP fallback. No app deployment or Lovable credits.
 
 ## Previous (2026-09-30): Applications separated from Obsidian
 

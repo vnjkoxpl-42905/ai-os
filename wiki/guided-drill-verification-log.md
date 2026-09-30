@@ -3,7 +3,7 @@ title: Guided Drill Verification Log
 type: project
 tags: [lsat-u, guided-drills, verification, assignments]
 created: 2026-07-03
-updated: 2026-07-03
+updated: 2026-09-30
 status: active
 subject: Guided Drill Verification Log
 aliases: []
@@ -43,3 +43,6 @@ These are `verified-headless`, not browser runner launch checks. Joshua explicit
 | 2026-09-30 | `yahunathan-mbt-conditionals-2026-09-30` | Four deployed conditional MBT questions, difficulty 1-2; complete stimulus and five choices; saved catalog matches specification; one assignment and visible Classroom item; correct local dates; one unread bell; inbox/bell/email returned OK | verified-headless |
 | 2026-09-30 | `yahunathan-mbt-conditionals-2026-10-01` | Four deployed conditional MBT questions, difficulty 2-3; complete stimulus and five choices; saved catalog matches specification; one assignment and visible Classroom item; correct local dates; one unread bell; inbox/bell/email returned OK | verified-headless |
 | 2026-09-30 | `yahunathan-mbt-conditionals-2026-10-03` | Four deployed conditional MBT questions, difficulty 3; complete stimulus and five choices; saved catalog matches specification; one assignment and visible Classroom item; correct local dates; one unread bell; inbox/bell/email returned OK | verified-headless |
+| 2026-09-30 | `w5-02-conditional-logic-easier-set-4` | Existing published drill; deployed pool 56 questions difficulty 1-2, native count 9; level/count/source row and Classroom dates/visibility verified; one bell; inbox/bell/email OK; repeat returned same ID without notification | verified-headless |
+| 2026-09-30 | `w3-12-conditional-logic-easier-set-2` | Existing published drill; deployed pool 87 questions difficulty 2-3, native count 7; level/count/source row and Classroom dates/visibility verified; one bell; inbox/bell/email OK; repeat returned same ID without notification | verified-headless |
+| 2026-09-30 | `w7-08-conditional-logic-medium-set-4` | Existing published drill; native pool 3-4, beginner assignment selects 52 eligible difficulty-3 questions without fallback, native count 9; source row and Classroom dates/visibility verified; one bell; inbox/bell/email OK; repeat returned same ID without notification | verified-headless |
