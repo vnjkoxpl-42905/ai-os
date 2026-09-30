@@ -1,11 +1,36 @@
 # LSAT U connected experience: build sequence
 
-Date: 2026-09-28  
-Status: Eighteen slices published; the latest has no positive real-row live check; full ticket coverage remains open
+Started: 2026-09-28
+Last reconciled: 2026-09-29
+Status: Eighteen slices published; every implementation ticket remains open until its full acceptance checks pass. The latest slice lacks a positive real-row live check.
 Specification: [#165](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/165)  
 Decision map: [#155](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/155)
 
-The tickets below have native parent and blocker links in GitHub. They describe usable vertical slices, with student flows first and the existing teacher desk retained. A slice is complete only after its live route, relevant backend state, permission checks, and task walk agree. Current `main` must be reconciled before coding from the older dirty feature checkout.
+## The end state we are building
+
+Students have seven dependable destinations: Home, My Work, Practice, Review, Progress, Library, and Schedule. Tabs keep related tasks on one page; the rail stays short. Every assignment, practice sitting, review episode, and session note opens its own saved record and returns to the right place. Home recommends a real next action. Scores and Progress use disclosed, account-owned evidence. Joshua keeps full teacher controls in a clearly identified selected-student mode while his practice answers remain separate from student results. The design adapts useful patterns from LSAT Lab, 7Sage, LSAT Demon, and AdeptLR without copying features that do not fit one-to-one teaching. No new video catalog is required.
+
+**Status rule:** published means code is on the live site; it does not close a ticket. A ticket closes only when its source data, permission checks, deep links, error states, responsive UI, and a live task walk satisfy its acceptance list. The [coverage matrix](https://github.com/vnjkoxpl-42905/lsatu-684d89db/blob/main/docs/specs/2026-09-28-competitor-audit-coverage.md) is the feature-by-feature checklist; the GitHub tickets hold the full checks. The local app copy is `C:\Users\Joshu\dev\lsatu-connected-experience\docs\specs\2026-09-28-competitor-audit-coverage.md`.
+
+The opening status text in specification #165 predates implementation. Use its requirements, the current ticket checks, and this reconciled status section when deciding what has shipped.
+
+## What is already on the live site
+
+| Area | Verified work | Still required before its ticket closes |
+|---|---|---|
+| Navigation | Seven-destination student rail and URL tabs. | Legacy-link and phone/sidecar sweeps, access locks and preference migration checks. |
+| My Work and Home | Combined work and notes, source-linked weekly status, actor-owned next action. | Investigate My Work refetch blanking; check every assignment source, duplicate assignments, saved-start and finish, and post-completion Home behavior with real rows. |
+| Practice | LR and RC Inspect, canonical exam pages, distinct custom LR, RC, Smart Drill, and guided sittings with resume and results. | Complete feedback/mode behavior, assigned-run task walks, exam result details, timed failure and second-device cases. |
+| Review | Exact items from LR, RC, Activities, completed tests and sections, plus historical Intro to LR interactive misses. | Native bootcamp labs, Hard Sentences, teacher-selected reasons, new review episodes, flag independence, first/blind/reveal workflow, and a positive live saved-row check for the latest slice. |
+| Progress | First-answer panel, dated saved-answer History, filters and topic views. | Reconcile every numerator, denominator, source, timeframe, and student/teacher view; disclose missing coverage. |
+| Library and Schedule | Main Conclusion written topic pilot and existing Activity, bootcamp, and booking surfaces. | Saved resume and finish across representative exercises; one session's prep, recap, and follow-up chain across both views. |
+| Teacher and study tools | Selected-student Review and Progress entry points. | Full teacher actions with actor attribution; teacher answers isolated from students; bookmarks, reading tools, explanations, weekly settings. |
+
+The chronological release notes below record what was checked when each slice shipped. Earlier notes that say a later-shipped feature was still open are historical, not the current state.
+
+## Ticket map, not a completion claim
+
+The tickets below have native parent and blocker links in GitHub. They remain open while the remaining acceptance checks are worked through.
 
 | Order | Ticket | Blocked by | Shippable result |
 |---|---|---|---|
@@ -25,13 +50,32 @@ The tickets below have native parent and blocker links in GitHub. They describe 
 | 8B | [#180 Weekly plan and settings](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/180) | #169, #173, #174 | Scannable prescribed week and consequence-aware study settings. |
 | Final | [#178 Impeccable review and fixes](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/178) | All functional slices | Deferred by Joshua on 2026-09-29 while functional work continues. |
 
-## How to run the work
+## Build from here, in verified slices
 
-1. Start #166 and #168 as independent early slices. #167 follows the shared scope contract; verify current production behavior and migrations before changing exam code.
-2. Release #169 and #170 as working student pages. Keep direct old links and locked tab behavior intact on each release.
-3. Build #171, #172, and #173 in parallel where teams do not edit the same files. Do not publish Review or Progress totals without their source coverage checks.
-4. Connect #174, then finish #175 and #176. #177 can prototype its selected-student shell earlier, but its completion depends on the shared facts and coaching actions.
-5. Complete #179 and #180 for the remaining viable audit details, then run #178. Its fixes and recheck are part of the core release, not a report handed off for later.
+The order below is the current priority, not a request to rebuild shipped screens. A step may yield more than one release. Keep student flows usable after each release, then finish the teacher view on the same underlying records.
+
+| Step | Build and decision | Completion evidence |
+|---|---|---|
+| **0. Stabilize My Work** | Reproduce Lovable's report that weekly-plan refetch blanks the assigned list or flashes loading. If confirmed, make source refresh independent so one failing lookup cannot hide other loaded work. Preserve existing rows and statuses. | Tab switch and background refetch keep prior content visible; a weekly lookup failure shows a local error; live student and teacher task walk. If not reproducible, record the attempted cases instead of treating the monitoring report as proven. |
+| **1. Close the data and save foundation** | Finish [#166](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/166): trace LR, RC, Activity, bootcamp, assignments, and teacher actor/subject scope. Then finish [#167](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/167): timed PT/LR/RC and break save failure, retry, second-device takeover, and revoked-access behavior. | Owner and cross-account checks, authorized teacher attribution, explicit missing-source disclosures; network-failure task walks pause clock/navigation and resume exactly once. Ownerless old browser copies stay outside account Attempts. |
+| **2. Complete Review** | Finish [#170](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/170): adapt current native bootcamp labs and Hard Sentences, add a durable teacher-selected review record and reason, then finish review episodes, first/blind/reveal states, flag independence, return filters, and optional detailed table. Get a real owned historical Intro to LR miss fixture if one exists; do not fabricate one for a demo. | Four source types and teacher selection open exact content and return to filters. Marking reviewed leaves the flag and attempt intact; a later miss opens a new episode; positive live detail where a genuine row exists. Unsupported sources remain disclosed. |
+| **3. Close the coached work loop** | Finish [#169](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/169), [#174](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/174), and the weekly-plan portion of [#180](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/180). Trace two instances of one assignment, saved start, submitted finish, notes, teacher-to-student weekly status, and Home's next action after completion. | My Work, Home, and the student dossier agree on each owned source record. Opening alone never claims progress; finishing is saved before Completed; the recommended next action changes for the right reason. |
+| **4. Finish Practice and Progress** | Close remaining [#171](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/171), [#172](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/172), and [#173](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/173) checks: mode and feedback labels, exact inspected/started set, deliberate exam start, compact results and expanded question detail, first/blind answers, then one calculation contract across Progress, History, Topics, and teacher view. | Repeated sittings remain separate; Continue/Results/Review target the same run; no Inspect write; timed and exam errors are safe; every displayed percentage names its source, count, denominator, window, and missing coverage. |
+| **5. Connect learning and sessions** | Finish [#175](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/175) with two text-first Activities, one bootcamp, assigned exact exercise links, resume/finish, and authored topic pages. Then finish [#176](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/176) with one session's prep, recap, and follow-up through Schedule, My Work, and teacher dossier. | Saved work resumes exactly; completion is source-backed; authored explanations remain Joshua's; session links refer to the same event with correct timezone and honest absent states. No video dependency. |
+| **6. Complete Teacher mode** | Finish [#177](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/177) on the shared student records. Give Joshua/admins selected-student assignment, review, note, and exact inspection controls while keeping an explicit Teacher mode banner and actor attribution. | A teacher can act on a selected student's work without impersonating them. Teacher practice answers never change student attempts, score, completion, History, or Review. Verify with two accounts and denied cross-student access. |
+| **7. Add the remaining useful study controls** | Finish [#179](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/179) and settings in [#180](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/180): separate bookmark from flag, supported passage find/highlight/elimination, optional attributed second explanation, and consequence-aware accommodations, feedback, text size, contrast, and analytics choices. | Tools preserve the first answer and saved attempt; settings record provenance and affect future work only where specified. Keyboard, laptop, phone, and sidecar checks pass. |
+| **8. Final acceptance and design pass** | Recheck every still-open ticket against its own acceptance list, resolve material failures, and publish the integrated release. [#178](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/178) Impeccable review remains deferred by Joshua; run it when he resumes that request. | The live student and teacher task walks, source coverage matrix, permissions, responsive layouts, and tickets agree. Record anything intentionally deferred without calling it complete. |
+
+**Next build:** Step 0. First confirm or disprove the My Work refetch report on a real signed-in page. If confirmed, fix that failure before adding more sources to the same work loop. Step 1 follows with the shared data and timed-save checks.
+
+## Release method for every remaining step
+
+1. Read the ticket's current acceptance checks and the coverage-matrix row. Identify an existing owned live fixture before changing code, if one exists.
+2. Trace the durable source record, actor and subject, exact route, return route, and save failure behavior. Add the smallest source adapter or state change that makes one usable slice.
+3. Run focused tests for the meaningful failure and permission cases, then typecheck and production build. Review the diff and restore only known build-generated churn.
+4. Check changed UI in a running browser, including the relevant phone/laptop/sidecar sizes for responsive work. Keep the source error and empty states honest.
+5. Commit and push the app through its guarded `.claude/safe-push.sh`. Confirm Lovable imported that commit; publish through its free control when ready. Any action that may spend Lovable credits still needs Joshua's immediate approval.
+6. Open the fresh production route and walk the actual task. Record GitHub, publication, backend, permissions, and live evidence separately. Update the coverage matrix and this plan; close only the acceptance checks actually proved.
 
 ## What remains deliberately open
 

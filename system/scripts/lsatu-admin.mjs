@@ -21,6 +21,7 @@
 // Every write prints what it changed. --dry-run on any write shows the change and stops.
 import fs from "node:fs";
 import path from "node:path";
+import { createHash } from "node:crypto";
 import { fileURLToPath } from "node:url";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
@@ -46,7 +47,7 @@ const pos2 = argv[2] && !argv[2].startsWith("--") ? argv[2] : undefined;
 const flag = (n, d) => { const i = argv.indexOf(`--${n}`); return i >= 0 ? argv[i + 1] : d; };
 const has = (n) => argv.includes(`--${n}`);
 const dry = has("dry-run");
-const CMDS = ["signups", "access", "tier", "archive", "unarchive", "items", "due", "unassign", "passes", "pass-detail", "pass-create", "credit", "notifications", "read", "drafts", "draft", "draft-set", "uploads", "upload-review", "notes", "note-resolve", "note-discard", "scan-notes", "plans", "unsend", "unsend-last"];
+const CMDS = ["signups", "access", "tier", "archive", "unarchive", "items", "post-lesson", "due", "unassign", "passes", "pass-detail", "pass-create", "credit", "notifications", "read", "drafts", "draft", "draft-set", "uploads", "upload-review", "notes", "note-resolve", "note-discard", "scan-notes", "plans", "unsend", "unsend-last"];
 if (!CMDS.includes(cmd)) { console.error(fs.readFileSync(fileURLToPath(import.meta.url), "utf8").split("\n").slice(5, 20).join("\n")); process.exit(2); }
 
 const tok = await (await fetch(`${URL_}/auth/v1/token?grant_type=password`, {
@@ -99,7 +100,50 @@ const short = (f) => f.replace(/^has_|_access$/g, "");
 const toFlag = (s) => { const f = s.startsWith("has_") ? s : `has_${s}_access`; if (!FLAGS.includes(f)) { console.error(`unknown flag "${s}". Known: ${FLAGS.map(short).join(", ")}`); process.exit(2); } return f; };
 const accessLine = (u) => `on: ${FLAGS.filter((f) => u[f]).map(short).join(", ") || "nothing"}\n  off: ${FLAGS.filter((f) => !u[f]).map(short).join(", ") || "nothing"}`;
 
-if (cmd === "signups") {
+if (cmd === "post-lesson") {
+  const u = await resolve(pos);
+  const file = fs.realpathSync(pos2 ?? "");
+  if (!file.startsWith(ROOT + path.sep) || path.extname(file).toLowerCase() !== ".html") {
+    throw new Error("Lesson must be an HTML file inside the AI OS workspace");
+  }
+  const html = fs.readFileSync(file, "utf8");
+  if (Buffer.byteLength(html) > 500000 || !html.includes('<meta name="lsatu-interactive-lesson"')) {
+    throw new Error("Lesson must be a marked, self-contained HTML file under 500 KB");
+  }
+  const title = flag("title", "Some, Most, and All");
+  const key = `interactive-${createHash("sha256").update(u.class_id).update(html).digest("hex").slice(0, 48)}`;
+  const previous = (await rest(`classroom_items?student_id=eq.${u.class_id}&status=not.eq.archived&select=id,type,title,status,visible_to_student&order=created_at.desc`))
+    .filter((item) => item.title === title);
+  console.log(`${nameOf(u)} <${u.email}>: post interactive lesson "${title}" (${Buffer.byteLength(html)} bytes)`);
+  console.log(`  current same-title items: ${previous.map((i) => i.id).join(", ") || "none"}`);
+  if (dry) { console.log("(dry run — nothing changed)"); process.exit(0); }
+  const result = await rest("rpc/mcp_post_classroom_note", {
+    method: "POST",
+    body: JSON.stringify({
+      p_student_id: u.class_id,
+      p_title: title,
+      p_content_html: html,
+      p_idempotency_key: key,
+      p_description: "An interactive lesson on some, most, all, and the inferences they support.",
+      p_notify: true,
+    }),
+  });
+  if (!result?.ok || !result?.item_id) throw new Error("LSAT U did not confirm the new lesson");
+  const [posted] = await rest(`classroom_items?id=eq.${result.item_id}&student_id=eq.${u.class_id}&select=id,title,status,visible_to_student,content_html`);
+  if (!posted?.visible_to_student || posted.status !== "assigned" || posted.content_html !== html) {
+    throw new Error(`New item ${result.item_id} did not verify; previous lesson was left visible`);
+  }
+  const archived = [];
+  for (const old of previous) {
+    if (old.id === result.item_id || !["note", "session_recap"].includes(old.type)) continue;
+    await rest(`classroom_items?id=eq.${old.id}&student_id=eq.${u.class_id}`, {
+      method: "PATCH",
+      body: JSON.stringify({ status: "archived", visible_to_student: false, updated_at: new Date().toISOString() }),
+    });
+    archived.push(old.id);
+  }
+  console.log(JSON.stringify({ ...result, archived_previous: archived, verified: true }, null, 2));
+} else if (cmd === "signups") {
   const days = Number(flag("days", 30));
   const since = new Date(Date.now() - days * 864e5).toISOString();
   const [notes, all] = await Promise.all([

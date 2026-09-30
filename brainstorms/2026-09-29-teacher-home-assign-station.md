@@ -1,6 +1,6 @@
 # Teacher Home: access changes and assigning station: Brainstorm / Discovery Notes
 Date: 2026-09-29 · Goal: Define (1) changing a current student's access tier from teacher Home and (2) a fast "assigning station" on teacher Home, browsable by topic and difficulty.
-Status: in progress
+Status: complete (2026-09-29), awaiting Joshua's shared-understanding confirmation before mockup/build
 Context sources: `brainstorms/2026-09-27-teacher-command-center.md`; mockup https://claude.ai/artifact/3sQ2ivCXrRMkRaksoq8Suf; `src/data/guidedDrillHtmlManifest.ts` (lsatu).
 
 ## Starting request (Joshua, 2026-09-29, paraphrased)
@@ -17,6 +17,8 @@ Context sources: `brainstorms/2026-09-27-teacher-command-center.md`; mockup http
 - **Station assigns:** guided drills, Activities, practice sections, and whole practice tests.
 - **Multiple students per assign:** yes.
 - ~~**Notes in the station:** Joshua's private session notes about the student.~~ **Superseded (Round 3):** "Notes" means a **reusable notes library**: Joshua writes a note once, saves it to the database, and assigns it to any student's page to read, just like a guided drill. Reusable for future students. Not session notes, not a message.
+- **Notes library (Rounds 4-7):** backfill every posted `note` and `session_recap` (no whiteboards, no announcements); Claude drafts de-personalized copies, Joshua approves each; identical duplicates kept once; each library note records its first recipient. Future posts copy into the library automatically at the database level, whoever posts; the posted student copy never changes, and library edits affect only future assignments. Notes are written in Claude/Codex, never in LSAT U. Notes carry Topic (required) and Level (optional) tags so station filters find them.
+- **Station:** "Assign work" opens a side panel; student(s) first; filters search + Topic + Reasoning + Level, week order.
 - **Due date:** optional, blank by default.
 - **Tiers panel:** separate expandable panel on Home, current students, tier + Change menu.
 - **Practice tests:** both whole PrepTest and single timed section.
@@ -96,6 +98,16 @@ Context sources: `brainstorms/2026-09-27-teacher-command-center.md`; mockup http
 - Captured: no whiteboards. "Session recaps and notes are the only things we need to save for this portion."
 - Q19 not answered.
 
+### Round 7
+#### Q28 - Unclear phrases
+- Captured: both guesses confirmed. (1) A library note records which student it was first posted to. (2) On each post, check whether the note is already in the library; a repeat makes no second copy.
+#### Q29 - Auto-save mechanism
+- Captured: recommendation accepted. The database copies every new `note` and `session_recap` into the library at post time, whoever posts it (Claude, Codex, Lovable, the app).
+#### Q19 - Editing a library note
+- Captured: recommendation accepted. Students keep what they were sent; a library fix applies only to future assignments.
+#### Q30 - Anything else
+- Captured: "that should be it." Frontier empty.
+
 ## Open flags (pending input)
-- Q19 edit propagation; Q28 unclear phrases; Q29 auto-save mechanism -> Joshua.
+- None from Joshua. Build-time: count existing `note` + `session_recap` rows (Claude); confirm Lovable Cloud migration route before any schema change (Joshua, per CLAUDE.md).
 - Count of existing posted notes -> Claude (query `classroom_items`).

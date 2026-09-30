@@ -2,6 +2,7 @@
 
 from pathlib import Path
 import base64
+import html as html_escape
 import re
 import shutil
 
@@ -98,6 +99,16 @@ output = here / "10-quantity-statements-student.html"
 output.write_text(embedded, encoding="utf-8")
 if output.stat().st_size > 500000:
     raise RuntimeError("The classroom note exceeds the MCP post size limit")
+
+iframe_preview = here / "11-quantity-statements-sandbox-check.html"
+iframe_preview.write_text(
+    '<!doctype html><meta charset="utf-8"><title>Sandbox check</title>'
+    '<iframe title="Interactive lesson" sandbox="allow-scripts" '
+    'style="display:block;width:100%;height:100dvh;border:0" srcdoc="'
+    + html_escape.escape(embedded, quote=True)
+    + '"></iframe>',
+    encoding="utf-8",
+)
 
 print(target / "index.html")
 print(f"{output} ({output.stat().st_size} bytes)")
