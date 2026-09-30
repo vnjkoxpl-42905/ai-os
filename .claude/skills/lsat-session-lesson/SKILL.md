@@ -1,15 +1,34 @@
 ---
 name: lsat-session-lesson
-description: Turn an LSAT tutoring session or transcript into a complete post-session lesson in Joshua's voice. Trigger on "Curray session," "current session," "[student] session," "make a recap," "session notes," "write up this transcript," and similar requests, even without the skill name. Own transcript intake, student record, lecture note, interactive preview, verification, and filing. A transcript lookup alone stops after intake.
+description: Create the complete LSAT post-session lesson from a tutoring session or transcript. Activate for "session write up", "session write-up", "make a post-session recap", "write up the session", "recap my last session", "make session notes", "[student] session", or similar requests to turn a completed tutoring session into a lesson. In an established tutoring-session context, "write up", "recap", and "make notes" also activate it. Own transcript intake, student record, teaching note, interactive preview, verification, and filing. Explicit transcript lookup or inspection stays narrow; posting and assignment require authorization.
 ---
 
 # LSAT session lesson
 
 ## When to activate
 
-Treat a named student plus “session,” “transcript,” “recap,” or “notes” as enough to start intake. The same applies when Joshua says “today's session,” “the current session,” “Curray session,” “make a recap,” “make notes from this,” “what should the student review,” or attaches a session transcript and asks for a write-up. Do not wait for the exact skill name or a slash command. Create the full lesson when he asks for a recap, notes, a write-up, or what the student should review. If the request is only to locate, read, or answer a narrow question about a transcript, stop at that scope. A recap or note should teach the concept rather than stop at a chronological summary.
+Recognize the intent to turn an LSAT tutoring session into a finished post-session lesson. The examples below are natural language, not required commands. Accept capitalization, punctuation, hyphenation, and ordinary wording variations. Do not require the exact skill name or a second instruction to create the lesson after intake.
 
-When the request is to make a note or recap, create a student-facing lesson. The student should be able to return days later, understand the concept without the original question, test the method, and see why each answer works. The [lesson quality bar](references/lesson-quality-bar.md) describes the finished experience. Meet its teaching standard every time; vary the visual treatment to fit the subject. A skill does not monitor the calendar or schedule itself.
+**Clear activation phrases:**
+
+- "Session write up" or "session write-up."
+- "Make a post-session recap for the session" or "create a post session recap."
+- "Write up the session," "write up my last session," or "write up the session I just finished."
+- "Recap the session," "recap my last session," or "make a recap of today's tutoring session."
+- "Make session notes," "prepare the post-session notes," or "turn the session into a lesson."
+- "[Student] session," "write up [student]'s session," or "make [student]'s session recap."
+- "Write up this transcript," "make a lesson from this session transcript," or an attached tutoring transcript with a request for notes or a recap.
+- "Make a review note for the student from our session" or "write up what the student should review after the session."
+
+**Short requests use context:** "write up," "recap," "make notes," "today's session," "the last session," and "the current session" activate the full workflow when the conversation clearly refers to an LSAT tutoring session. In an unrelated or empty context, bare "write up," "recap," or "notes" is not enough to assume a tutoring request. Ask one short clarification if its subject cannot be established. A named student's session is enough to activate the full workflow, not merely intake.
+
+**Resolve the session without requiring a magic phrase:** Honor an explicit student, date, or supplied transcript first. Otherwise use the session already identified in this conversation. If no session is identified, an explicit session write-up or post-session recap request refers to the most recent completed tutoring session; verify it through Calendar and the intake procedure, using America/Toronto for relative dates. "[Student] session" without a date refers to that student's most recent completed tutoring session. Confirm student and absolute date from the evidence before writing. Ask only when multiple plausible sessions remain or the evidence cannot establish the intended session. Never substitute another session because its transcript is easier to find; never select a future or ongoing session as the latest completed one.
+
+**Route overlapping requests by the requested result:** This is the single owner of session write-ups, post-session recaps, and student-facing lessons. Use it for those requests even when a transcript also needs filing. `ingest` handles filing or distilling sources when no lesson is requested; `guided-drill-assignment` handles choosing or assigning drills when that is requested. Their transcript language does not replace this lesson workflow. `lsat-u-platform-actions` supports an authorized post or assignment after the lesson is prepared. The archived `session-recap` is an internal reference, not an active alternative.
+
+**Keep explicit narrow requests narrow:** "Find the transcript," "read the transcript," "show me the session recording," or a specific question about a transcript does not authorize a complete lesson. Retrieve or inspect the source and answer the request. Mentioning a session in scheduling, payment, cancellation, or consultation correspondence does not activate this skill. Posting or assigning is a separate authorized action, as described below.
+
+A recap, write-up, or session note means the complete student-facing lesson, not a chronological summary. The student should be able to return days later, understand the concept without the original question, test the method, and see why each answer works. The [lesson quality bar](references/lesson-quality-bar.md) describes the finished experience. Meet its teaching standard every time; vary the visual treatment to fit the subject. A skill does not monitor the calendar or schedule itself.
 
 This skill owns the entire post-session path. Follow the [transcript intake and primary-record procedure](references/transcript-intake-and-record.md), then create the student-facing lesson and preview. Keep one canonical note per session in `students/<slug>/recaps/YYYY-MM-DD-recap.md`; build its visual review artifacts in a dated `brainstorms/` folder. When a course-wide lesson grows out of it, link the two rather than copying the complete text into both.
 

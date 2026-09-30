@@ -1,11 +1,18 @@
 ---
 type: operating-layer
 subject: Log
-updated: 2026-09-29
+updated: 2026-09-30
 aliases: []
 ---
 
 # Log
+
+## [2026-09-30] ship | Guided progress agrees across views; RC recovery waits for account saves
+
+- Guided status now uses answered, owner-checked sitting evidence for the exact assignment across legacy sessions and distinct runs. A saved answer in an existing designated test-student assignment changed its live status to In progress; the separate same-title assignment stayed Assigned. The live selected-student teacher Work page showed the same states under Joshua's teacher account.
+- RC pauses and hides questions on failed saved-answer reads, saves elapsed time and destination before navigation, restores the saved question, and holds newer device-clock recovery until account acknowledgment. Local blocked-save checks advanced once from Question 1 to Question 2 after retry. A fresh production session restored Question 2; a blocked answer read showed the paused retry state, and recovery completed only after its account clock save succeeded. Save and exit returned to Practice; all network blocks were cleared.
+- Nine focused files passed 62 tests; typecheck, build, lint with no errors, diff check, and guarded push passed. Commit `7c79b4a` reached GitHub `main`, Lovable imported it, and the free Publish control reported "Your website was updated." No schema or Edge Function deployment occurred. Verification saved one guided answer and elapsed RC time in existing test-account fixtures, without completing either run or sending messages.
+- Normal RLS reads denied student access to admin-owned sources and allowed teacher reads of the tester sources. Activity mirror/source reconciliation and Unassign, LR reload guards, full PrepTest failures, second-device concurrency, revoked access, and teacher mutation attribution remain open. #166 and #167 remain open. Updated the [build sequence](../brainstorms/2026-09-28-lsatu-build-sequence.md); app coverage and local evidence are committed with the release. Production screenshots live in `research/2026-09-30-lsatu-foundation-evidence/`.
 
 ## [2026-09-29] ship | Offline PrepTest reload shows a paused recovery state
 
@@ -1334,3 +1341,7 @@ Moved the local `lsat-u-lessons` MCP entry point into AI OS `system/scripts/` so
 ## [2026-09-30] Skills | One post-session lesson skill
 
 Consolidated transcript intake, primary student recap, private follow-ups, lecture-style teaching note, and interactive preview into `lsat-session-lesson`. Natural triggers include named-student sessions, “Curray session,” “make a recap,” session notes, and transcript write-ups; lookup-only requests remain narrow. Retired the duplicate `session-recap` skill from active and catalog locations, preserving its copies under `skills/_retired/session-recap-2026-09-30/`. Synced the unified skill across Codex, Claude, and Gemini runtimes and regenerated `skills/INDEX.md`.
+
+## [2026-09-30] Skills | Clear post-session lesson activation
+
+Made "session write up" and "make a post-session recap" explicit triggers for `lsat-session-lesson`, with natural variations and contextual shorthand. Named-student session requests start the complete workflow. Session selection honors explicit sources, then conversation context, then the latest completed tutoring session; unresolved ambiguity requires clarification. Explicit transcript lookup remains narrow. Removed the mistaken "Curray session" trigger from current copies. Synced all three runtime/catalog pairs and documented the post-session lesson term in `CONTEXT.md`.

@@ -131,3 +131,9 @@ _Avoid_: 7Sage login-token URL, drill link, settings link, generic 7Sage URL
   bought is authored and permanent; what remains is mirrored and regenerated. A
   count that is typed by hand is the failure mode, not the feature: the
   hand-written mirrors drifted within a day of being written.
+
+### Teaching after a session
+
+**Post-session lesson**:
+A student-facing teaching note grounded in a completed tutoring session, with worked reasoning and opportunities to check understanding. Joshua also calls it a session write-up, post-session recap, or session notes.
+_Avoid_: Chronological summary (that describes a different, narrower artifact)
