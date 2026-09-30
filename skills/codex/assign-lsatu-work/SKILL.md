@@ -19,8 +19,10 @@ The short version, in case the file cannot be read:
   `bash system/scripts/lsatu <command> ...`
   Examples: `bash system/scripts/lsatu status "Celia"`,
   `bash system/scripts/lsatu assign --student "Celia" --section PT156.S2 --due 2026-09-30`.
-- No browser, no Chrome, no Lovable, no hosted MCP. Do NOT use the lsat-u-platform-actions
-  skill (it drives Chrome) for anything this skill covers.
+- No browser, no Chrome, no Lovable for routine content or assignments. Use
+  `lsat-u-platform-actions` for a complete interactive Classroom lesson: its
+  local MCP posts the HTML directly and verifies the saved copy headlessly.
+  This skill handles other assignments and student operations.
 - Reads never need permission. One named student assign / message: run it, then report.
   Confirm first: 3+ students, revoke/archive/unarchive/unassign/all-off, unsend.
 - Never pass a multi-line argument. On Windows a newline drops `--dry-run` and sends for real

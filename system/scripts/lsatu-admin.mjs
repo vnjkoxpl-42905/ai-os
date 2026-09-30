@@ -23,6 +23,8 @@ import fs from "node:fs";
 import path from "node:path";
 import { createHash } from "node:crypto";
 import { fileURLToPath } from "node:url";
+import os from "node:os";
+import { lessonMarkerId, validateInteractiveLesson } from "./lsatu-lesson-validate.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
 function readEnv(f) {
@@ -107,43 +109,67 @@ if (cmd === "post-lesson") {
     throw new Error("Lesson must be an HTML file inside the AI OS workspace");
   }
   const html = fs.readFileSync(file, "utf8");
-  if (Buffer.byteLength(html) > 500000 || !html.includes('<meta name="lsatu-interactive-lesson"')) {
-    throw new Error("Lesson must be a marked, self-contained HTML file under 500 KB");
-  }
+  if (Buffer.byteLength(html) > 500000) throw new Error("Lesson exceeds the 500 KB post limit");
+  const lessonId = validateInteractiveLesson(html);
   const title = flag("title", null)?.trim();
   if (!title) throw new Error("post-lesson requires --title");
-  const key = `interactive-${createHash("sha256").update(u.class_id).update(title).update(html).digest("hex").slice(0, 48)}`;
-  const previous = (await rest(`classroom_items?student_id=eq.${u.class_id}&status=not.eq.archived&select=id,type,title,status,visible_to_student&order=created_at.desc`))
-    .filter((item) => item.title === title);
-  console.log(`${nameOf(u)} <${u.email}>: post interactive lesson "${title}" (${Buffer.byteLength(html)} bytes)`);
-  console.log(`  current same-title items: ${previous.map((i) => i.id).join(", ") || "none"}`);
-  if (dry) { console.log("(dry run — nothing changed)"); process.exit(0); }
-  const result = await rest("rpc/mcp_post_classroom_note", {
-    method: "POST",
-    body: JSON.stringify({
-      p_student_id: u.class_id,
-      p_title: title,
-      p_content_html: html,
-      p_idempotency_key: key,
-      p_description: `Interactive lesson: ${title}`,
-      p_notify: true,
-    }),
-  });
-  if (!result?.ok || !result?.item_id) throw new Error("LSAT U did not confirm the new lesson");
-  const [posted] = await rest(`classroom_items?id=eq.${result.item_id}&student_id=eq.${u.class_id}&select=id,title,status,visible_to_student,content_html`);
-  if (!posted?.visible_to_student || posted.status !== "assigned" || posted.content_html !== html) {
-    throw new Error(`New item ${result.item_id} did not verify; previous lesson was left visible`);
+  const lock = path.join(os.tmpdir(), `lsatu-lesson-${createHash("sha256").update(u.class_id).update(lessonId).digest("hex")}.lock`);
+  const start = Date.now();
+  while (true) {
+    try { fs.mkdirSync(lock); break; }
+    catch (error) {
+      if (error.code !== "EEXIST" || Date.now() - start > 30000) throw new Error("Another publish is running for this student and lesson; retry after it finishes");
+      await new Promise((done) => setTimeout(done, 150));
+    }
   }
-  const archived = [];
-  for (const old of previous) {
-    if (old.id === result.item_id || !["note", "session_recap"].includes(old.type)) continue;
-    await rest(`classroom_items?id=eq.${old.id}&student_id=eq.${u.class_id}`, {
-      method: "PATCH",
-      body: JSON.stringify({ status: "archived", visible_to_student: false, updated_at: new Date().toISOString() }),
-    });
-    archived.push(old.id);
-  }
-  console.log(JSON.stringify({ ...result, archived_previous: archived, verified: true }, null, 2));
+  try {
+    const rows = await rest(`classroom_items?student_id=eq.${u.class_id}&type=eq.note&title=eq.${encodeURIComponent(title)}&select=id,type,title,status,visible_to_student,content_html&order=created_at.desc&limit=1000`);
+    const sameLesson = rows.filter((item) => item.content_html && lessonMarkerId(item.content_html) === lessonId);
+    const previous = sameLesson.filter((item) => item.status !== "archived" && item.visible_to_student);
+    console.log(`${nameOf(u)} <${u.email}>: post interactive lesson "${title}" [${lessonId}] (${Buffer.byteLength(html)} bytes)`);
+    console.log(`  previous versions: ${previous.map((i) => i.id).join(", ") || "none"}`);
+    if (dry) { console.log("(dry run — nothing changed)"); }
+    else {
+      const current = previous.find((item) => item.content_html === html);
+      let result;
+      if (current) result = { ok: true, item_id: current.id, route: `/classroom/item/${current.id}`, already_current: true, notified: false };
+      else {
+        // Archived copies count as prior generations. Reusing an old RPC key
+        // would return the archived row instead of creating a visible copy.
+        const generation = sameLesson.filter((item) => item.status === "archived").length;
+        const key = `interactive-${createHash("sha256").update(u.class_id).update(lessonId).update(title).update(html).update(String(generation)).digest("hex").slice(0, 48)}`;
+        result = await rest("rpc/mcp_post_classroom_note", {
+          method: "POST",
+          body: JSON.stringify({
+            p_student_id: u.class_id,
+            p_title: title,
+            p_content_html: html,
+            p_idempotency_key: key,
+            p_description: `Interactive lesson [${lessonId}]: ${title}`,
+            p_notify: true,
+          }),
+        });
+      }
+      if (!result?.ok || !result?.item_id) throw new Error("LSAT U did not confirm the new lesson");
+      const [posted] = await rest(`classroom_items?id=eq.${result.item_id}&student_id=eq.${u.class_id}&select=id,title,status,visible_to_student,content_html`);
+      if (!posted?.visible_to_student || posted.status === "archived" || posted.content_html !== html) {
+        throw new Error(`New item ${result.item_id} did not verify; previous lesson was left visible`);
+      }
+      const archived = [];
+      for (const old of previous) {
+        if (old.id === result.item_id) continue;
+        await rest(`classroom_items?id=eq.${old.id}&student_id=eq.${u.class_id}`, {
+          method: "PATCH",
+          body: JSON.stringify({ status: "archived", visible_to_student: false, updated_at: new Date().toISOString() }),
+        });
+        archived.push(old.id);
+      }
+      const active = await rest(`classroom_items?student_id=eq.${u.class_id}&type=eq.note&title=eq.${encodeURIComponent(title)}&status=not.eq.archived&visible_to_student=eq.true&select=id,content_html&limit=1000`);
+      const copies = active.filter((item) => item.content_html && lessonMarkerId(item.content_html) === lessonId);
+      if (copies.length !== 1 || copies[0].id !== result.item_id) throw new Error("Publish landed, but exactly one active lesson could not be verified; inspect the student's items before retrying");
+      console.log(JSON.stringify({ ...result, lesson_id: lessonId, archived_previous: archived, verified: true, html_sha256: createHash("sha256").update(html).digest("hex") }, null, 2));
+    }
+  } finally { fs.rmdirSync(lock); }
 } else if (cmd === "signups") {
   const days = Number(flag("days", 30));
   const since = new Date(Date.now() - days * 864e5).toISOString();

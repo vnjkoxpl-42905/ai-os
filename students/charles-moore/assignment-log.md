@@ -29,3 +29,7 @@ Assigned through LSAT U's `scripts/assign.ts` as Charles, matching the email in 
 | 3 | Conditional Logic (Medium) Set 1 | `w5-09-conditional-logic-medium-set-1` | `7b44370a-c91f-416c-ae7a-9515eedde1ed` | Assigned |
 
 Each command returned `inbox ok · bell ok · email ok`. These are the assignment flow's notification results; email delivery was not independently checked. The script uses the app's `assignWork()` flow to create the classroom item and notifications.
+
+## 2026-09-29 — Interactive lesson package refreshed
+
+Replaced the earlier interactive “Some, Most, and All” item with a fully embedded package. The new active Classroom item is `c9228402-da0e-4411-984e-17831a798e5c` at `/classroom/item/c9228402-da0e-4411-984e-17831a798e5c`; the prior interactive item `0890252d-3ab8-4bb2-9227-362cf0e52947` was archived. The posting RPC returned `notified: true`. The headless readback verified Charles's student ID, visibility, exactly one active copy, and exact HTML SHA-256 `a623b9445ccb10d7e7fb53188bf94a706da41eb5e7293fa209fb630e787c1538`. A repeat call returned this same item with `notified: false`, confirming no duplicate notification. The new package embeds its fonts and passes the resource preflight. No student-login browser view of this refreshed item was performed.
