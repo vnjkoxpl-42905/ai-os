@@ -64,7 +64,7 @@ Everything for a test goes into a single file. See [[explanation-file-layout]] m
 
 ### Folder organization (keep it clean)
 
-- Deliverables live in `Explanations/` at the repo root (`C:/Users/Joshu/dev/ai-os/projects/lsatu`).
+- Deliverables live in `Explanations/` at the repo root (`C:/Users/Joshu/dev/ai-os-projects/lsatu`).
 - Filename convention, one per test: `Explanations/PT<NNN>-explanations.md` (e.g. `PT158-explanations.md`). Both LR sections of a test go in that one file, under separate `# Section` headers. Do NOT use the older per-section naming (`PT154-S1-LR-explanations.md`) for new work.
 - The progress/handoff file for each test lives at `docs/agent/handoffs/PT<NNN>-TRANSCRIPTION-PROGRESS.md`.
 - The multi-test master log lives at `docs/agent/handoffs/LR-TRANSCRIPTION-PROJECT.md`. Update its status when a test's LR is finished and name the next test.

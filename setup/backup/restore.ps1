@@ -10,16 +10,19 @@ if (-not (Test-Path $Cur)) { throw "Backup not found at $Cur. Is Google Drive si
 $info = Get-Content (Join-Path $Cur 'machine-info.json') -Raw | ConvertFrom-Json
 Write-Host "Restoring backup from $($info.machine) taken $($info.backedUpAt) into $Target"
 
-function Put($src, $dst) {
+function Put($src, $dst, $exclude = @()) {
     if (-not (Test-Path $src)) { Write-Host "  skip (not in backup): $src"; return }
     New-Item -ItemType Directory -Force -Path $dst | Out-Null
-    & robocopy $src $dst /E /XJ /R:2 /W:2 /NFL /NDL /NP /NJH | Out-Null
+    $copyArgs = @($src, $dst, '/E','/XJ','/R:2','/W:2','/NFL','/NDL','/NP','/NJH')
+    if ($exclude.Count) { $copyArgs += '/XD'; $copyArgs += $exclude }
+    & robocopy @copyArgs | Out-Null
     Write-Host "  restored $dst"
 }
 Put (Join-Path $Cur 'claude')       (Join-Path $Target '.claude')
 Copy-Item (Join-Path $Cur 'claude.json') (Join-Path $Target '.claude.json') -Force
 Put (Join-Path $Cur 'codex')        (Join-Path $Target '.codex')
-Put (Join-Path $Cur 'ai-os')        (Join-Path $Target 'dev\ai-os')
+Put (Join-Path $Cur 'ai-os')        (Join-Path $Target 'dev\ai-os') @('projects')
+Put (Join-Path $Cur 'ai-os\projects') (Join-Path $Target 'dev\ai-os-projects')
 # App data lands in the real AppData only for a real restore; a test restore keeps everything under -Target.
 $real = ($Target -eq $env:USERPROFILE)
 $la = if ($real) { $env:LOCALAPPDATA } else { Join-Path $Target 'AppData\Local' }
@@ -51,7 +54,7 @@ if ($oldPrefix -ne $newPrefix) {
 }
 
 if (-not $SkipInstall) {
-    $lsatu = Join-Path $Target 'dev\ai-os\projects\lsatu'
+    $lsatu = Join-Path $Target 'dev\ai-os-projects\lsatu'
     if ((Test-Path $lsatu) -and (Get-Command npm -ErrorAction SilentlyContinue)) { Push-Location $lsatu; npm install; Pop-Location }
     # Re-register the 10-minute backup on this machine.
     & (Join-Path $Target 'dev\ai-os\setup\backup\install-task.ps1')

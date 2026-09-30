@@ -7,7 +7,7 @@ description: Build a complete repo-native LSAT U bootcamp for a new topic, cloni
 
 Turn a topic + content into a shipped, repo-native LSAT U bootcamp that matches Intro to LR quality. This is the productized version of the Intro to LR (Main Conclusion) build process. It replaces `lsat-u-topic-builder`.
 
-**The template is the code, not a doc:** `C:/Users/Joshu/dev/ai-os/projects/lsatu/src/bootcamps/main-conclusion/` (the Intro to LR build). Read it before scaffolding anything. Its structure:
+**The template is the code, not a doc:** `C:/Users/Joshu/dev/ai-os-projects/lsatu/src/bootcamps/main-conclusion/` (the Intro to LR build). Read it before scaffolding anything. Its structure:
 
 ```
 src/bootcamps/{slug}/

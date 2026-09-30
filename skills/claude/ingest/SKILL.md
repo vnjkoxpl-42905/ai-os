@@ -6,7 +6,7 @@ description: >
   my second brain", "ingest the latest clips", or a supplied document meant
   to become saved knowledge. Finds the input, checks content hashes, preserves
   provenance, and compiles it into linked wiki pages. Session write-ups and
-  student-facing post-session recaps belong to lsat-session-lesson.
+  student-facing post-session recaps belong to post-session-recap.
 allowed-tools: Bash Read Write Edit Glob Grep
 ---
 
@@ -42,7 +42,7 @@ ambiguous, ask once. Do not guess and file it somewhere wrong.
 | A source document meant to become wiki knowledge | `raw/` | dedupe below, then read `references/wiki-compilation.md` |
 | Takeout or platform dump | `raw/data-about-me/` | [Bulk exports](#bulk-exports) |
 
-Knowledge-source compilation is this skill's internal reference. `lsat-session-lesson`
+Knowledge-source compilation is this skill's internal reference. `post-session-recap`
 owns the complete student-facing session write-up workflow. A request only to
 retrieve or file a transcript stays narrow; a recap request goes directly to that
 skill without asking for a second activation.
@@ -104,7 +104,7 @@ or contradictory evidence materially changes what should be written.
 Gemini writes "Notes by Gemini" docs to Google Drive after each Meet session.
 The brain's copy is `students/<slug>/transcript-downloads/YYYY-MM-DD-<slug>-notes-by-gemini.md`
 (primary record: the brain is its only home). Getting them there is step 1 of
-`lsat-session-lesson/references/transcript-intake-and-record.md`; follow that section exactly (Calendar sweep by guest email,
+`post-session-recap/references/transcript-intake-and-record.md`; follow that section exactly (Calendar sweep by guest email,
 Drive sweep for unattached docs, export as `text/plain`, resolve the person
 with `students/_aliases.md`, consultations and unknowns to
 `students/_other-sessions/`). It is the single source of truth for the pull;
@@ -128,7 +128,7 @@ Done means every session in the window either has its transcript on disk and
 distilled, or is listed in the log as "no Gemini doc anywhere" with the date and
 student, so the next session does not sweep it again.
 
-If Joshua requests a session write-up or recap, activate `lsat-session-lesson`
+If Joshua requests a session write-up or recap, activate `post-session-recap`
 and complete its workflow; do not stop at telling him another skill is needed.
 
 ## Transcripts, archival

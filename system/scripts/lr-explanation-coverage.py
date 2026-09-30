@@ -7,10 +7,13 @@ not in lr_questions). Read-only against the database.
 
 Run from the vault root: python system/scripts/lr-explanation-coverage.py
 """
+from project_paths import project_path, VAULT_ROOT
+
+from project_paths import project_path, VAULT_ROOT
 import collections, glob, json, re, urllib.request, datetime
 
 env={}
-for f in ['.env','projects/lsatu/.env']:
+for f in [VAULT_ROOT / '.env', project_path('lsatu', '.env')]:
   for l in open(f,encoding='utf-8'):
     m=re.match(r'([A-Z_]+)=(.*)',l.strip())
     if m: env[m[1]]=m[2].strip('"')
@@ -38,7 +41,7 @@ for q in Q:
   st[k]='Notes-only' if any(i in notes for i in ids) else 'Unexplained'
 indb={(q['preptest'],q['section'],q['question_number']) for q in Q}
 M={}
-for f in glob.glob('projects/lsatu/public/data/PT*-LR.json'):
+for f in glob.glob(str(project_path('lsatu', 'public', 'data', 'PT*-LR.json'))):
   for x in json.load(open(f,encoding='utf-8')):
     k=(int(str(x['practiceTest']).lstrip('PT')),int(x['sectionNumber']),int(x['questionNumber']))
     M[k]=x
@@ -48,7 +51,7 @@ ORDER=['Unexplained','Notes-only','Unloaded']
 lst=lambda x:x if isinstance(x,list) else ([x] if x else [])
 o=[f"""# LR questions missing explanations
 
-Generated {D} by `system/scripts/lr-explanation-coverage.py` from the live LSAT U database and the question bank (`projects/lsatu/public/data/PT*-LR.json`). LR only. Regenerate; do not hand-edit.
+Generated {D} by `system/scripts/lr-explanation-coverage.py` from the live LSAT U database and the question bank (`{project_path("lsatu", "public", "data", "PT*-LR.json")}`). LR only. Regenerate; do not hand-edit.
 
 States follow [[../brainstorms/2026-09-26-lr-explanation-coverage]]. Only Complete (Argument Breakdown plus Choice Notes) counts as explained.
 

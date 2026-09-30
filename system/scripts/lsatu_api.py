@@ -9,7 +9,7 @@ the `lovable-migrate` skill instead. See connections.md.
 
 Credentials, never hardcoded:
   LSATPREP_ADMIN_EMAIL / LSATPREP_ADMIN_PASSWORD   root .env
-  VITE_SUPABASE_URL / VITE_SUPABASE_PUBLISHABLE_KEY  projects/lsatu/.env
+  VITE_SUPABASE_URL / VITE_SUPABASE_PUBLISHABLE_KEY  lsatu application .env
 
 Everything here raises BackendUnavailable rather than exiting, so callers can
 degrade to local-only output instead of dying when offline or uncredentialed.
@@ -22,6 +22,9 @@ Usage:
     except BackendUnavailable as e:
         ...  # fall back to local data, and SAY the data is local
 """
+from project_paths import project_path, VAULT_ROOT
+
+from project_paths import project_path, VAULT_ROOT
 import json
 import os
 import re
@@ -57,7 +60,7 @@ from pathlib import Path
 
 BRAIN = str(Path(__file__).resolve().parents[2])
 ROOT_ENV = os.path.join(BRAIN, ".env")
-APP_ENV = os.path.join(BRAIN, "projects", "lsatu", ".env")
+APP_ENV = str(project_path("lsatu", ".env"))
 EXPECTED_REF = "atrcqxpmqrynmtvvyjju"  # never resolve this project by name
 
 

@@ -39,7 +39,7 @@ ACTIVE_HEALTHY. SQL sent there applies cleanly and reports success while the
 real app is untouched.
 
 - Real target: **`atrcqxpmqrynmtvvyjju`** — verify against
-  `projects/lsatu/supabase/config.toml` (`project_id`) every run.
+  `../ai-os-projects/lsatu/supabase/config.toml` (`project_id`) every run.
 - If a tool offers you a project list, match the ref exactly. Never pick by name.
 - If you cannot confirm the ref, stop and say so.
 
@@ -48,7 +48,7 @@ real app is untouched.
 Circumstances change and this skill should retire itself.
 
 ```
-grep -n 'project_id' projects/lsatu/supabase/config.toml
+grep -n 'project_id' ../ai-os-projects/lsatu/supabase/config.toml
 ```
 
 Then check whether direct access now exists: a `SUPABASE_ACCESS_TOKEN` or
@@ -58,7 +58,7 @@ Joshua the relay is no longer needed so `connections.md` can be updated.
 
 ## 2. Write the migration
 
-- Write the SQL to `projects/lsatu/supabase/migrations/<timestamp>_<name>.sql`
+- Write the SQL to `../ai-os-projects/lsatu/supabase/migrations/<timestamp>_<name>.sql`
   so the repo keeps the history, matching the existing file convention.
 - Make it **idempotent and re-runnable**. Joshua may paste it twice, or paste a
   partially-applied version. Use `IF NOT EXISTS`, `IF EXISTS`,

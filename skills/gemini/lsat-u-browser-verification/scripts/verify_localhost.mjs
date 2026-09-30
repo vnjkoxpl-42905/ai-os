@@ -2,7 +2,7 @@
 // Phase 8: Verify Localhost Dev Server via Agent Browser CDP
 
 import { createRequire } from 'module';
-const require = createRequire('c:/Users/Joshu/dev/ai-os/projects/lsatu/package.json');
+const require = createRequire(new URL('../../../../../ai-os-projects/lsatu/package.json', import.meta.url));
 const { chromium } = require('playwright-core');
 
 const LOCAL_URL = 'http://localhost:8080/classroom/drill?section=lr';

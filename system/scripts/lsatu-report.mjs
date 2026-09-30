@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 // Read-only LSAT U reports, headless. Signs in as the admin account from the
-// root .env (same path as projects/lsatu/scripts/assign.ts) and reads through
+// root .env (also used by lsatu/scripts/assign.ts) and reads through
 // PostgREST under normal admin RLS. Never writes.
 //
 //   node system/scripts/lsatu-report.mjs status  "Celia"
@@ -13,6 +13,7 @@
 //   node system/scripts/lsatu-report.mjs thread  "Celia" [--limit 20]
 //
 // Add --json to any command for machine-readable output.
+import { projectPath } from './project-paths.mjs';
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -29,7 +30,7 @@ function readEnv(f) {
   }
   return out;
 }
-const env = { ...readEnv(path.join(ROOT, "projects/lsatu/.env")), ...readEnv(path.join(ROOT, ".env")) };
+const env = { ...readEnv(projectPath('lsatu', '.env')), ...readEnv(path.join(ROOT, ".env")) };
 const URL_ = env.VITE_SUPABASE_URL;
 const KEY = env.VITE_SUPABASE_PUBLISHABLE_KEY;
 
@@ -43,7 +44,7 @@ if (!cmd || !["status", "qtypes", "sections", "overdue", "quiet", "students", "i
   console.error("usage: lsatu-report.mjs (status|qtypes|sections|thread) <student> | inbox [--days N] | overdue | quiet [--days N] | students  [--json]");
   process.exit(2);
 }
-if (!URL_ || !KEY) { console.error("lsatu-report: VITE_SUPABASE_URL / _PUBLISHABLE_KEY not found in projects/lsatu/.env"); process.exit(2); }
+if (!URL_ || !KEY) { console.error("lsatu-report: VITE_SUPABASE_URL / _PUBLISHABLE_KEY not found in the lsatu application .env"); process.exit(2); }
 if (!env.LSATPREP_ADMIN_EMAIL || !env.LSATPREP_ADMIN_PASSWORD) { console.error("lsatu-report: LSATPREP_ADMIN_* missing from root .env"); process.exit(2); }
 
 const tok = await (await fetch(`${URL_}/auth/v1/token?grant_type=password`, {

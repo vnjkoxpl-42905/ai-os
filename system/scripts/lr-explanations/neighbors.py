@@ -1,7 +1,11 @@
+import sys
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from project_paths import project_path, VAULT_ROOT
 import json,glob,collections,re,sys
 sys.stdout.reconfigure(encoding='utf-8')
 DB='C:/Users/Joshu/dev/ai-os/system/scripts/lsatlab-pull/data/db/'
-BANK='C:/Users/Joshu/dev/ai-os/projects/lsatu-wt-glossary/public/data/'
+BANK=str(project_path('lsatu-wt-glossary', 'public', 'data')) + '/' 
 L=lambda t: json.load(open(DB+t+'.json',encoding='utf-8'))
 qs=L('lr_questions'); ex=L('lr_explanations'); st=L('lr_explanation_steps'); nt=L('lr_explanation_choice_notes')
 S=collections.defaultdict(list); N=collections.defaultdict(dict)

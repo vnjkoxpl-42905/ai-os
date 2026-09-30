@@ -1,5 +1,6 @@
+import { projectPath } from './project-paths.mjs';
 import { createRequire } from 'module';
-const require = createRequire('c:/Users/Joshu/dev/ai-os/projects/lsatu/package.json');
+const require = createRequire(projectPath('lsatu', 'package.json'));
 const { chromium } = require('playwright-core');
 
 const PORT = 9223;

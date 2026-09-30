@@ -8,13 +8,15 @@
 #   lsatu signups | access "Name" [--template standard | --grant x,y | --revoke z] | archive | unarchive
 #   lsatu items "Name" | due <item-id> YYYY-MM-DD | unassign <item-id> | passes | notifications | read "Name"
 #
-# Writes run from projects/.lsatu-ops, a detached worktree pinned to
+# Writes run from the applications root/.lsatu-ops, a detached worktree pinned to
 # origin/main and fast-forwarded before every run, so another session's branch
-# or uncommitted edits in projects/lsatu can never change what "assign" does.
+# or uncommitted edits in the lsatu repository can never change what "assign" does.
 set -euo pipefail
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
-MAIN="$ROOT/projects/lsatu"
-OPS="$ROOT/projects/.lsatu-ops"
+PROJECTS="$(dirname "$ROOT")/ai-os-projects"
+[ -d "$PROJECTS" ] || PROJECTS="$ROOT/projects"
+MAIN="$PROJECTS/lsatu"
+OPS="$PROJECTS/.lsatu-ops"
 
 sync_ops() {
   if [ ! -d "$OPS" ]; then

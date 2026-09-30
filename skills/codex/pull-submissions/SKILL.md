@@ -23,7 +23,7 @@ bash ~/ai-os/skills/claude/pull-submissions/pull-submissions.sh            # pul
 bash ~/ai-os/skills/claude/pull-submissions/pull-submissions.sh --dry-run  # list only, write nothing
 ```
 
-Requires `curl` and `jq`. Reads `VITE_SUPABASE_URL` / `VITE_SUPABASE_PUBLISHABLE_KEY` from `projects/lsatu/.env` and the admin creds from the root `.env` (both sourced with absolute paths — cwd is unreliable).
+Requires `curl` and `jq`. Reads `VITE_SUPABASE_URL` / `VITE_SUPABASE_PUBLISHABLE_KEY` from `../ai-os-projects/lsatu/.env` and the admin creds from the root `.env` (both sourced with absolute paths — cwd is unreliable).
 
 ## Output layout
 

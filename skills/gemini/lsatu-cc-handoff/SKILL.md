@@ -13,7 +13,7 @@ The loop: input -> analyze -> write brief to vault -> hand paste box back to Jos
 
 Before writing a single line of brief, do all of the following:
 
-1. **Read the actual current code.** Do not write recommendations from memory. The LSATU repo is at `~/ai-os/projects/lsatu/`. The topic modules live in `src/topics/<topic>/`. Read the relevant view files, data files, and store files before recommending changes.
+1. **Read the actual current code.** Do not write recommendations from memory. The LSATU repo is at `~/ai-os-projects/lsatu/`. The topic modules live in `src/topics/<topic>/`. Read the relevant view files, data files, and store files before recommending changes.
 
 2. **Read the existing vault docs.** Curriculum work lives in `~/ai-os/raw/sources/lsat-u/curriculum/<topic>/`. Look for `_BUILD_SPEC*.md`, `MODULE_PLAN.md`, `_HANDOFF/`, `_source/`, `_archive/`. Existing briefs that contradict the new direction must be archived (move to `_archive/`).
 
@@ -105,10 +105,10 @@ After the brief is saved, give Joshua a paste-box prompt as a markdown code bloc
 ## Pointers to deeper sources
 
 - LSATU architecture rules: `C:/Users/Joshu/dev/ai-os/skills/lsat-u-architecture/SKILL.md`
-- LSATU repo: `~/ai-os/projects/lsatu/`
+- LSATU repo: `~/ai-os-projects/lsatu/`
 - Abstract bootcamp vault: `~/ai-os/raw/sources/lsat-u/curriculum/Abstract/`
 - Skills strategy: `~/ai-os/raw/sources/lsat-u/skills-reference/00_skills-strategy.md`
-- Claude folder system: `~/ai-os/projects/`, `~/ai-os/raw/sources/lsat-u/prompts/`, `~/ai-os/raw/inbox/chat-exports/`, `~/ai-os/archive/`
+- Claude folder system: `~/ai-os-projects/`, `~/ai-os/raw/sources/lsat-u/prompts/`, `~/ai-os/raw/inbox/chat-exports/`, `~/ai-os/archive/`
 - Cowork prompts: `~/ai-os/raw/sources/lsat-u/prompts/`
 
 When in doubt about a convention, check the lsat-u-architecture skill or the Abstract vault for an existing example. Then conform.

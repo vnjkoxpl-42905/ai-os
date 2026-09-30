@@ -1,5 +1,6 @@
 // Local MCP entry point. Content operations live in AI OS, so changing this
 // server never requires an LSAT U app deployment.
+import { projectPath } from './project-paths.mjs';
 import { createRequire } from 'node:module';
 import { pathToFileURL, fileURLToPath } from 'node:url';
 import { execFile } from 'node:child_process';
@@ -7,7 +8,7 @@ import { promisify } from 'node:util';
 import path from 'node:path';
 
 const vault = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..');
-const appRequire = createRequire(path.join(vault, 'projects', 'lsatu', 'package.json'));
+const appRequire = createRequire(projectPath('lsatu', 'package.json'));
 const [{ McpServer }, { StdioServerTransport }, { z }] = await Promise.all([
   import(pathToFileURL(appRequire.resolve('@modelcontextprotocol/sdk/server/mcp.js')).href),
   import(pathToFileURL(appRequire.resolve('@modelcontextprotocol/sdk/server/stdio.js')).href),

@@ -26,6 +26,9 @@ Checks:
   (j) Codex agent TOML files are valid, complete, and activated from the catalog.
 Exit 0 = PASS, 1 = FAIL.
 """
+from project_paths import project_path, VAULT_ROOT
+
+from project_paths import project_path, VAULT_ROOT
 import os, re, sys, filecmp, tomllib
 from pathlib import Path
 
@@ -38,7 +41,7 @@ SPECIAL = {"_snapshots", "_project-forks", "_inactive", "README.md", "INDEX.md"}
 PROJECT_ACTIVE_ROOTS = [
     os.path.join(BRAIN, ".claude", "skills"),
     os.path.join(BRAIN, ".agents", "skills"),
-    os.path.join(BRAIN, "projects", "email-hq", ".claude", "skills"),
+    str(project_path("email-hq", ".claude", "skills")),
 ]
 
 # Home-level roots also contain skills installed and managed by external plugins.

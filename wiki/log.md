@@ -1361,3 +1361,6 @@ Implemented the current-vault LLM Wiki schema, shared runtime routing, one publi
 ## [2026-09-30] lint | Current wiki structure
 
 Checked all wiki Markdown pages for local target existence, source metadata, and possible orphans, then reviewed new source/concept/schema links. The generated report records inherited findings for later adjudication. Link anchors and historical semantic truth were not automatically validated. No historical source or log entry was rewritten.
+
+## [2026-09-30] skill | Post Session Recap
+Renamed lsat-session-lesson to post-session-recap (display title: Post Session Recap) across active Codex, Claude, and Gemini copies and their catalogs. Updated live ingest routing, skill index, and LLM Wiki schema references. Workflow behavior is unchanged; historical retired skill references are preserved.

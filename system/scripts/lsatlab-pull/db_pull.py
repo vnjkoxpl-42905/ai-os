@@ -1,9 +1,13 @@
 # Read-only REST pull of the LR question + explanation tables. Run from the vault root.
 # Usage: python system/scripts/lsatlab-pull/db_pull.py [out_dir] [table ...]  (default: data/db next to this file; the four LR explanation tables)
 import sys
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from project_paths import project_path, VAULT_ROOT
+import sys
 import json, re, urllib.request, os
 env={}
-for f in ['.env','projects/lsatu/.env']:
+for f in [VAULT_ROOT / '.env', project_path('lsatu', '.env')]:
   for l in open(f,encoding='utf-8'):
     m=re.match(r'([A-Z_]+)=(.*)',l.strip())
     if m: env[m[1]]=m[2].strip('"')

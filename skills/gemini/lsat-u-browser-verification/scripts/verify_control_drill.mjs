@@ -2,7 +2,7 @@
 // Phase 7: Comprehensive Read-Only Control Verification on /classroom/drill?section=lr
 
 import { createRequire } from 'module';
-const require = createRequire('c:/Users/Joshu/dev/ai-os/projects/lsatu/package.json');
+const require = createRequire(new URL('../../../../../ai-os-projects/lsatu/package.json', import.meta.url));
 const { chromium } = require('playwright-core');
 
 const TARGET_URL = 'https://lsatprep.study/classroom/drill?section=lr';

@@ -25,7 +25,7 @@ If the student identity is ambiguous and cannot be safely inferred from local co
 For LSAT U vault work, follow the vault operating order before making a recommendation:
 
 1. Read `wiki/hot.md`.
-2. Read `projects/lsatu/README.md`.
+2. Read `../ai-os-projects/lsatu/README.md`.
 3. Read `wiki/dashboard.md`.
 4. Read the relevant student page under `students/`.
 5. Read the student's `assignment-log.md` if it exists so you do not repeat assigned work unless Joshua explicitly asks for a repeat.

@@ -2,7 +2,7 @@
 import { execSync } from 'child_process';
 import { createRequire } from 'module';
 
-const require = createRequire('c:/Users/Joshu/dev/ai-os/projects/lsatu/package.json');
+const require = createRequire(new URL('../../../../../ai-os-projects/lsatu/package.json', import.meta.url));
 const { chromium } = require('playwright-core');
 
 console.log('=== Step 1: Closing dedicated Chrome browser completely ===');

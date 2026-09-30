@@ -41,8 +41,11 @@ Copy-Item (Join-Path $Home_ '.claude.json') (Join-Path $Cur 'claude.json') -Forc
 Mirror (Join-Path $Home_ '.codex') (Join-Path $Cur 'codex') @('cache')
 # 4. Superwhisper app data (modes, vocabulary, settings).
 Mirror (Join-Path $env:LOCALAPPDATA 'Superwhisper') (Join-Path $Cur 'superwhisper') @()
-# 5. The vault, including code repos, minus dependency caches that reinstall.
-Mirror $Vault (Join-Path $Cur 'ai-os') @('node_modules','.venv','venv','.vite','.turbo','.next','dist','__pycache__','.cache','Main Conclusion ','Videos ')
+# 5. Keep the historical private-backup layout, with apps sourced outside the vault.
+Mirror $Vault (Join-Path $Cur 'ai-os') @('projects','node_modules','.venv','venv','.vite','.turbo','.next','dist','__pycache__','.cache','Main Conclusion ','Videos ')
+$Projects = Join-Path (Split-Path $Vault -Parent) 'ai-os-projects'
+if (-not (Test-Path $Projects)) { $Projects = Join-Path $Vault 'projects' }
+Mirror $Projects (Join-Path $Cur 'ai-os\projects') @('node_modules','.venv','venv','.vite','.turbo','.next','dist','__pycache__','.cache')
 # (Two empty raw/ folders whose names end in a space are excluded above: Google Drive cannot create them.)
 # 6. Other dotfiles that matter on a new machine.
 $dot = Join-Path $Cur 'dotfiles'; New-Item -ItemType Directory -Force -Path $dot | Out-Null

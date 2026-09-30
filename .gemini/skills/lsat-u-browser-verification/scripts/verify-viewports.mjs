@@ -5,7 +5,7 @@ import { createRequire } from 'module';
 import path from 'path';
 import fs from 'fs';
 
-const require = createRequire('c:/Users/Joshu/dev/ai-os/projects/lsatu/package.json');
+const require = createRequire(new URL('../../../../../ai-os-projects/lsatu/package.json', import.meta.url));
 const { chromium } = require('playwright-core');
 
 const PORT = 9223;

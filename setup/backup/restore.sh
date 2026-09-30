@@ -14,7 +14,9 @@ put(){ [ -d "$1" ] || { echo "  skip: $1"; return; }; mkdir -p "$2"; rsync -a "$
 put "$CUR/claude"        "$TARGET/.claude"
 cp  "$CUR/claude.json"   "$TARGET/.claude.json"
 put "$CUR/codex"         "$TARGET/.codex"
-put "$CUR/ai-os"         "$TARGET/dev/ai-os"
+mkdir -p "$TARGET/dev/ai-os"
+rsync -a --exclude='/projects/' "$CUR/ai-os/" "$TARGET/dev/ai-os/"
+put "$CUR/ai-os/projects" "$TARGET/dev/ai-os-projects"
 put "$CUR/dotfiles/config" "$TARGET/.config"
 for f in .gitconfig .npmrc .bashrc .bash_profile; do [ -f "$CUR/dotfiles/$f" ] && cp "$CUR/dotfiles/$f" "$TARGET/"; done
 # Superwhisper on Mac stores modes/vocabulary here; copy the modes + vocabulary we have.
@@ -30,6 +32,6 @@ done
 OLDWIN=$(printf '%s' "$OLDHOME" | sed 's#\#\\\\#g')   # C:\Users\Joshu as it appears inside JSON
 grep -rl --include='*.jsonl' --include='*.json' "$OLDWIN" "$TARGET/.claude" "$TARGET/.claude.json" 2>/dev/null | \
   xargs -r sed -i '' -e "s#$OLDWIN#$TARGET#g" -e "s#$(printf '%s' "$OLDHOME" | sed 's#\#/#g')#$TARGET#g"
-[ -d "$TARGET/dev/ai-os/projects/lsatu" ] && (cd "$TARGET/dev/ai-os/projects/lsatu" && npm install)
+[ -d "$TARGET/dev/ai-os-projects/lsatu" ] && (cd "$TARGET/dev/ai-os-projects/lsatu" && npm install)
 echo; echo "Done. cd $TARGET/dev/ai-os && claude --resume"
 echo "Sign in once if gh / gws / claude ask. Set up the Mac backup with: setup/backup/README.md"

@@ -1,6 +1,6 @@
 // C:\Users\Joshu\Tools\LSATU-Agent\check_auth.mjs
 import { createRequire } from 'module';
-const require = createRequire('c:/Users/Joshu/dev/ai-os/projects/lsatu/package.json');
+const require = createRequire(new URL('../../../../../ai-os-projects/lsatu/package.json', import.meta.url));
 const { chromium } = require('playwright-core');
 
 const browser = await chromium.connectOverCDP('http://127.0.0.1:9223');

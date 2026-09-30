@@ -19,6 +19,7 @@
 //   read    "Name"                           mark your thread with her as read
 //
 // Every write prints what it changed. --dry-run on any write shows the change and stops.
+import { projectPath } from './project-paths.mjs';
 import fs from "node:fs";
 import path from "node:path";
 import { createHash } from "node:crypto";
@@ -38,7 +39,7 @@ function readEnv(f) {
   }
   return out;
 }
-const env = { ...readEnv(path.join(ROOT, "projects/lsatu/.env")), ...readEnv(path.join(ROOT, ".env")) };
+const env = { ...readEnv(projectPath('lsatu', '.env')), ...readEnv(path.join(ROOT, ".env")) };
 const URL_ = env.VITE_SUPABASE_URL;
 const KEY = env.VITE_SUPABASE_PUBLISHABLE_KEY;
 

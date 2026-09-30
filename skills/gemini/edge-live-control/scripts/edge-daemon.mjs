@@ -10,9 +10,9 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const possiblePaths = [
-  path.resolve(__dirname, '../../../../projects/lsatu/package.json'),
-  path.resolve(process.cwd(), 'projects/lsatu/package.json'),
-  'C:/Users/Joshu/dev/ai-os/projects/lsatu/package.json'
+  path.resolve(__dirname, '../../../../../ai-os-projects/lsatu/package.json'),
+  path.resolve(process.cwd(), '../ai-os-projects/lsatu/package.json'),
+  'C:/Users/Joshu/dev/ai-os-projects/lsatu/package.json'
 ];
 let pkgPath = possiblePaths.find(p => fs.existsSync(p)) || possiblePaths[0];
 const requireLsatu = createRequire(pkgPath);

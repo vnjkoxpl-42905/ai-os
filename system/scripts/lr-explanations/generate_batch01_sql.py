@@ -1,5 +1,9 @@
 """Validate 40 Flaw drafts and emit guarded insert-only SQL. No database writes."""
 
+import sys
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from project_paths import project_path, VAULT_ROOT
 import json
 import re
 import unicodedata
@@ -9,7 +13,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[3]
 DRAFTS = [ROOT / f"corpus/lr-explanations/drafts/batch-01-flaw-part-{p}.md" for p in "ab"]
 DB = ROOT / "system/scripts/lsatlab-pull/data/db"
-BANK = ROOT / "projects/lsatu-wt-glossary/public/data"
+BANK = project_path("lsatu-wt-glossary", "public", "data")
 OUTPUT = ROOT / "corpus/lr-explanations/work/batch-01-inputs"
 NOTES_ONLY = {"PT102-S3-Q14", "PT119-S2-Q24"}
 # These source disagreements are independently known and must remain visible.

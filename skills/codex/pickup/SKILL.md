@@ -6,7 +6,7 @@ description: Load LSAT U project state from the Obsidian vault only when Joshua 
 Load the current LSAT U / Aspiring Attorneys project state from the Obsidian vault so this session can continue immediately, with no re-explaining from Joshua. Be fast and terse. Do NOT start doing work after this; brief, then wait.
 
 Vault root: `~/ai-os/`.
-Live LSAT U repo locator: `~/ai-os/projects/lsatu`.
+Live LSAT U repo locator: `~/ai-os-projects/lsatu`.
 
 ## Steps (in order)
 

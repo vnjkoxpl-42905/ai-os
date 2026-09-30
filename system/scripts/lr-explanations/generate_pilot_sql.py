@@ -4,6 +4,10 @@ This script reads local snapshots only. It never connects to the database.
 Run from any directory: python system/scripts/lr-explanations/generate_pilot_sql.py
 """
 
+import sys
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from project_paths import project_path, VAULT_ROOT
 import json
 import re
 import unicodedata
@@ -13,7 +17,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[3]
 DRAFT = ROOT / "corpus/lr-explanations/drafts/pilot-2026-09-27.md"
 DB = ROOT / "system/scripts/lsatlab-pull/data/db"
-BANK = ROOT / "projects/lsatu-wt-glossary/public/data"
+BANK = project_path("lsatu-wt-glossary", "public", "data")
 OUTPUT = ROOT / "corpus/lr-explanations/work/pilot-inputs/pilot-20-insert-only.sql"
 SLOTS = (
     "PT109-S4-Q1", "PT114-S1-Q23", "PT159-S1-Q21", "PT104-S4-Q23",

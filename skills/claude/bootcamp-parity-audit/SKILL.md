@@ -19,7 +19,7 @@ The bootcamp name/slug (e.g. "Abstract", "Flaw & Famous Flaws", "Causation Stati
 
 ## Codebase pass
 
-In the LSATU repo (`C:/Users/Joshu/dev/ai-os/projects/lsatu/`):
+In the LSATU repo (`C:/Users/Joshu/dev/ai-os-projects/lsatu/`):
 1. Find the target bootcamp's source directory under `src/bootcamps/`.
 2. Compare its file/component structure against the Intro to LR structure (`src/bootcamps/main-conclusion/`) at a glance, don't read every file, sample the key surfaces (overview, drill/practice flow, data layer).
 3. Note any surface Intro to LR has that the target bootcamp lacks entirely.

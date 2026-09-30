@@ -9,13 +9,13 @@ import fs from 'fs';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Resolve Playwright from projects/lsatu
+// Resolve Playwright from ../ai-os-projects/lsatu
 let chromium;
 try {
   const possiblePaths = [
-    path.resolve(__dirname, '../../../../projects/lsatu/package.json'),
-    path.resolve(process.cwd(), 'projects/lsatu/package.json'),
-    'C:/Users/Joshu/dev/ai-os/projects/lsatu/package.json'
+    path.resolve(__dirname, '../../../../../ai-os-projects/lsatu/package.json'),
+    path.resolve(process.cwd(), '../ai-os-projects/lsatu/package.json'),
+    'C:/Users/Joshu/dev/ai-os-projects/lsatu/package.json'
   ];
   let pkgPath = possiblePaths.find(p => fs.existsSync(p));
   if (!pkgPath) pkgPath = possiblePaths[0];
@@ -28,7 +28,7 @@ try {
     const pw = await import('playwright');
     chromium = pw.chromium;
   } catch (err) {
-    console.error('Failed to load Playwright. Ensure projects/lsatu has playwright installed. Details:', e.message);
+    console.error('Failed to load Playwright. Ensure ../ai-os-projects/lsatu has playwright installed. Details:', e.message);
     process.exit(1);
   }
 }

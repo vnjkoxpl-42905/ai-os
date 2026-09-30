@@ -30,7 +30,7 @@ Everything else is optional. Ask for nothing you were not given.
 
 ## Running it
 
-From `~/ai-os/projects/lsatu`:
+From `~/ai-os-projects/lsatu`:
 
 ```bash
 npm run booking:link -- --for "Dakota" --price 45 --at "2026-09-10 19:15"

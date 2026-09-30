@@ -1,6 +1,6 @@
 # Transcript intake and student record
 
-This is an internal procedure for `lsat-session-lesson`. It covers source retrieval, the primary student record, and private follow-ups. A request only to find or inspect a transcript stops at that narrower task.
+This is an internal procedure for `post-session-recap`. It covers source retrieval, the primary student record, and private follow-ups. A request only to find or inspect a transcript stops at that narrower task.
 
 After every session Joshua wants a durable set of lecture notes. The student should be
 able to return several days later, understand the lesson without remembering a specific

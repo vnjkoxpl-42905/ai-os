@@ -20,7 +20,8 @@ set -a
 # shellcheck disable=SC1090
 source "$AIOS/.env"
 # shellcheck disable=SC1091
-source "$AIOS/projects/lsatu/.env"
+LSATU_ROOT="${LSATU_ROOT:-$(dirname "$AIOS")/ai-os-projects/lsatu}"
+source "$LSATU_ROOT/.env"
 set +a
 
 SUPABASE_URL="${VITE_SUPABASE_URL:?missing VITE_SUPABASE_URL}"

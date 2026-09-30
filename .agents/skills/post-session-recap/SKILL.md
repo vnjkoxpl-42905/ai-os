@@ -1,9 +1,9 @@
 ---
-name: lsat-session-lesson
+name: post-session-recap
 description: Create the complete LSAT post-session lesson from a tutoring session or transcript. Activate for "session write up", "session write-up", "make a post-session recap", "write up the session", "recap my last session", "make session notes", "[student] session", or similar requests to turn a completed tutoring session into a lesson. In an established tutoring-session context, "write up", "recap", and "make notes" also activate it. Own transcript intake, student record, teaching note, interactive preview, verification, and filing. Explicit transcript lookup or inspection stays narrow; posting and assignment require authorization.
 ---
 
-# LSAT session lesson
+# Post Session Recap
 
 ## When to activate
 

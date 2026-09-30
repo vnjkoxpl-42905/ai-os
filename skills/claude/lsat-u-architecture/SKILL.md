@@ -43,7 +43,7 @@ These are the daily-use rules. Every contributor follows them without exception.
 
 For anything beyond the daily-use rules above, route to the canonical content. Authority order when sources conflict, from highest to lowest:
 
-1. **Live repo `~/ai-os/projects/lsatu/`**. Code is ground truth when documentation drifts.
+1. **Live repo `~/ai-os-projects/lsatu/`**. Code is ground truth when documentation drifts.
 2. **April 2026 audit bundle `~/ai-os/archive/wiki-pre-rebuild-2026-07-16/domains/lsat-u/sources/april-2026-audit.md/`**. 14 files documenting verified bugs (F-IDs), the schema drift chain, audit corrections, persistence layer status. Entry points: `PLAYBOOK.md`, `master-reference.md`, `00-index.md`.
 3. **Vault `~/ai-os/CLAUDE.md`**. Architecture rules section plus curriculum/pedagogy rules.
 4. **Joshua's memory, edit #4** ("LSAT U architecture rules, never violate"). Short reminder list.

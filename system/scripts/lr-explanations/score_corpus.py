@@ -2,12 +2,16 @@
 Usage: python score_corpus.py OUT_DIR [per_type=30]
 Reads system/scripts/lsatlab-pull/data/db/*.json (run db_pull.py first, including lr_answer_choices)
 and the LSAT U bank for features, difficulty and choice text."""
+import sys
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from project_paths import project_path, VAULT_ROOT
 import json, glob, collections, re, sys, os
 
 sys.stdout.reconfigure(encoding='utf-8')
 ROOT = os.path.dirname(os.path.abspath(__file__))
 DB = os.path.join(ROOT, '..', 'lsatlab-pull', 'data', 'db')
-BANK = 'C:/Users/Joshu/dev/ai-os/projects/lsatu-wt-glossary/public/data/'
+BANK = str(project_path('lsatu-wt-glossary', 'public', 'data')) + '/' 
 L = lambda t: json.load(open(os.path.join(DB, t + '.json'), encoding='utf-8'))
 qs = L('lr_questions'); ex = L('lr_explanations'); st = L('lr_explanation_steps')
 nt = L('lr_explanation_choice_notes'); ac = L('lr_answer_choices')
