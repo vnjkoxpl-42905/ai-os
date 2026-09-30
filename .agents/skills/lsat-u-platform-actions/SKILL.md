@@ -18,6 +18,8 @@ The HTML must be a complete document inside AI OS, under 500 KB, with `<meta nam
 
 Routine verification is headless: the publisher reads the new item back, compares its HTML byte for byte, checks that it is visible to the intended student, and confirms one active version. The result includes its route and SHA-256. Use Codex's in-app browser only when a visual or interaction defect is suspected or the page design or renderer changed. A teacher login cannot open another student's `/classroom/item/<id>` route directly. Do not claim a student-session visual check unless one was actually performed.
 
+The student opens the full lesson from Classroom **Notes and recaps**, the in-app notification, or its Inbox link. Classroom Home may show a recent note as a “Read” row, but it has a four-row limit shared with urgent work, so do not promise that every assigned note stays on Home. This does not affect the note's visibility in Notes and recaps or its direct item route.
+
 ## UI fallback routing
 
 The current student verification route is `/teacher/students/<student-id>/notes`. Its “Posted to their Classroom” section shows active notes and labels archived notes as hidden from the student. Use the browser's normal controls for any unsupported action, then verify the saved state through a fresh read. In Codex, use the in-app browser, not Chrome. Do not rely on old `/teacher?ws=` routes or old browser-tool names.
