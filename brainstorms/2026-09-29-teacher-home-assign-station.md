@@ -16,6 +16,10 @@ Context sources: `brainstorms/2026-09-27-teacher-command-center.md`; mockup http
 - **Topic and level:** use the existing `guided_drills` categorization; do not re-tag.
 - **Station assigns:** guided drills, Activities, practice sections, and whole practice tests.
 - **Multiple students per assign:** yes.
+- **Notes in the station:** Joshua's private session notes about the student (not a message to the student).
+- **Due date:** optional, blank by default.
+- **Tiers panel:** separate expandable panel on Home, current students, tier + Change menu.
+- **Practice tests:** both whole PrepTest and single timed section.
 
 ## Q&A log
 ### Round 1
@@ -36,6 +40,18 @@ Context sources: `brainstorms/2026-09-27-teacher-command-center.md`; mockup http
 #### Q7 - Several students at once
 - Captured: accepted recommendation (yes).
 
+### Round 2
+#### Q8 - Browse filters
+- Recommended: search + Topic (question type and feature) + Reasoning + Level, sorted by curriculum week.
+- Captured: not answered.
+#### Q9 - Notes
+- Captured: "b": private session notes about that student. Resolves the Q5 flag.
+#### Q10 - Due date
+- Captured: "a": optional, blank by default. Resolves Q6.
+#### Q11 - Tiers panel
+- Captured: "a": separate expandable panel on Home.
+#### Q12 - Practice tests
+- Captured: "both": whole PrepTest and single section.
+
 ## Open flags (pending input)
-- Meaning of "notes" in the station -> Joshua.
-- Due date / fields at assign time (Q6) -> Joshua.
+- Browse filters (Q8) -> Joshua.
