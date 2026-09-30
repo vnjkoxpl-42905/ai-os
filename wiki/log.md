@@ -1,11 +1,17 @@
 ---
 type: operating-layer
 subject: Log
-updated: 2026-09-16
+updated: 2026-09-29
 aliases: []
 ---
 
 # Log
+
+## [2026-09-29] ship | Interactive quantity lesson assigned headlessly
+
+- Published LSAT U commit `6023e09` with a sandboxed interactive Classroom renderer and a local `lsat-u-lessons` MCP server. Lovable's manual Publish confirmed the site update. The self-contained “Some, Most, and All” lesson was assigned to Charles Moore through the headless LSAT U RPC as item `0890252d-3ab8-4bb2-9227-362cf0e52947`; the earlier plain-text recap `6b0607cc-602a-4bfa-bfbd-ceab1542443e` was archived after the new item verified.
+- Codex's in-app browser verified the slider, answer feedback, quiz verdict, and repaired overlap diagrams in a sandboxed preview. Charles's live Teacher Workspace Notes page displayed the interactive lesson and labeled the old recap hidden. A teacher login cannot open Charles's item route, so no signed-in Charles rendering claim was made.
+- Updated `connections.md`, the LSAT U platform skill, and Charles's assignment log with the headless publish and verification path. The MCP is registered for future Codex sessions; the current session used its underlying Node command because newly registered tools are not hot-loaded.
 
 ## [2026-09-28] ship | Exact RC set inspection and rollout lessons
 

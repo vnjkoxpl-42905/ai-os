@@ -42,6 +42,8 @@ This covers essentially all **data**-level work — reading and writing rows, ca
 `grant_booking_access` and `regenerate_booking_link`, driving the booking/homework/messaging
 admin functions. The JWT expires in 3600s; re-auth rather than caching it.
 
+**Interactive Classroom lesson path (verified 2026-09-29):** Codex has a local stdio MCP server named `lsat-u-lessons` at `projects/lsatu/scripts/lsatu-lesson-mcp.mjs`. Its `publish_interactive_lesson` tool takes an exact student email, title, and absolute path to marked self-contained HTML under 500 KB. It wraps `system/scripts/lsatu-admin.mjs post-lesson`, calls LSAT U's `mcp_post_classroom_note` RPC under the admin JWT, verifies the new assigned item and its exact HTML, then archives older same-title notes. Use `dry_run: true` first. This is a local wrapper over the verified REST path, not the separate Supabase MCP described below. A newly registered MCP may need a new Codex session to become callable; the Node command runs the same operation immediately. Visual checks use Codex's in-app browser, while the assignment itself uses no browser.
+
 **CANNOT do — genuinely Lovable-UI-only, Joshua must drive:** DDL and migrations, secrets,
 storage file browsing/download, backups and restore, instance sizing, auth provider config,
 DB exports. There is no service-role key or DB connection string outside Lovable, by design.

@@ -11,7 +11,11 @@ status: active
 
 ## 2026-09-29 — Some, Most, and All lesson
 
-Posted the complete readable lesson as a session recap to Charles's LSAT U Classroom through the visible teacher UI. Verified Charles's email (`moorecamooreca1@gmail.com`), the success message "Recap posted to Classroom," and one "Some, Most, and All" item under "Posted to their Classroom" on his Notes page. The post includes the worked examples, checks, pop quiz, and final drill. The local animated HTML preview was not published through the recap editor.
+Replaced the plain-text recap with the self-contained interactive lesson. Charles is `moorecamooreca1@gmail.com` (`c84f8758-1a58-4be1-a585-297a0609f785`). The new Classroom note is `0890252d-3ab8-4bb2-9227-362cf0e52947`, assigned and visible. The previous recap `6b0607cc-602a-4bfa-bfbd-ceab1542443e` is archived and hidden. LSAT U's `mcp_post_classroom_note` returned `notified: true`; this confirms the in-app notification request, not email delivery.
+
+The Classroom iframe renderer was published through Lovable's manual Publish control after app commit `6023e09`; Lovable confirmed “Your website was updated.” The headless post verified the new row's full HTML, assigned status, and student visibility before archiving the previous item. A second read listed one active “Some, Most, and All” note, and Charles's Teacher Workspace Notes page showed the new “Interactive lesson: Some, Most, and All” entry with the old session recap marked hidden. In Codex's in-app browser, the exact HTML ran inside a sandboxed iframe: slider, inline answer feedback, and quiz verdict worked; the overlap diagrams were visually checked. A teacher login cannot open Charles's student-owned item route, so a signed-in Charles view was not tested.
+
+Future path: use `lsat-u-lessons.publish_interactive_lesson` with the exact student email, title, and marked self-contained HTML path (dry run first). The local MCP server calls `system/scripts/lsatu-admin.mjs post-lesson`; new Codex sessions load the registered tool. If the lesson renderer changes, publish the app first. Verify both the LSAT U item list and the student's Teacher Workspace Notes page in Codex's browser.
 
 
 ## 2026-09-23 — Conditional Logic guided drills

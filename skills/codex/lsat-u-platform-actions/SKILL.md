@@ -1,71 +1,34 @@
 ---
 name: lsat-u-platform-actions
-description: Perform any LSAT U platform action for Joshua directly from the brain workspace — assign guided drills, homework, or activities; post classroom items and notes; send inbox messages; ingest session notes — by driving the deployed app (lsatprep.study) through his logged-in Chrome admin session, verifying the result, and logging it to the student's folder. Trigger on "assign <student> …", "post … to <student>", "message <student>", "send <student> homework", "give <student> an activity", or any request to make something happen on the platform from here.
+description: Operate LSAT U from the AI OS workspace. Publish interactive Classroom lessons through the local lsat-u-lessons MCP server, use the headless admin CLI for other supported actions, verify live state, and log student assignments. In Codex, use its in-app browser for visual verification.
 ---
 
-> **Use `assign-lsatu-work` instead** for assigning, messaging, reading messages, student data, access, signups, due dates, unassign and unsend. It runs headless through `bash system/scripts/lsatu` with no browser. This skill (Chrome) is only a fallback for something that skill cannot do.
+For drills, messages, student data, access, signups, due dates, unassign, and unsend, use `assign-lsatu-work`. On Windows, invoke its Node entry point directly instead of relying on Bash being on PATH.
 
 
 # LSAT U Platform Actions
 
-Joshua's workplace is this brain workspace, not the app's admin UI. This skill makes
-Claude the operator: he says what should happen to a student on LSAT U, Claude drives
-the deployed platform to make it happen, verifies it landed, and records it.
+Joshua's workplace is this brain workspace. LSAT U operations should run headlessly when a supported tool exists. The browser is for checking what a person sees.
 
 ## Mechanism
 
-Use the **claude-in-chrome** browser tools against `https://lsatprep.study` with
-Joshua's logged-in Chrome admin session. There is no agent path to the prod Supabase
-backend (Lovable-managed, not in MCP scope) — the browser + admin JWT IS the API.
-Do not insert rows backend-style; act through the same UI flows Joshua would use,
-unless he explicitly asks for a backend repair.
+For a self-contained interactive HTML lesson, call the `lsat-u-lessons` MCP tool `publish_interactive_lesson` with the student's exact email, the absolute HTML path, and the title. The local stdio server is `projects/lsatu/scripts/lsatu-lesson-mcp.mjs`; Codex registration is `lsat-u-lessons`. It calls `system/scripts/lsatu-admin.mjs post-lesson`, which authenticates with the workspace's existing LSAT U credentials, posts through `mcp_post_classroom_note`, verifies the new assigned item, and only then archives older notes with the same title. Start with `dry_run: true` to confirm the student and replacement IDs. MCP tools registered during a session may only appear in a new Codex session; the same Node entry point can be used directly in the current session.
 
-**React controlled-input rule (hard-won 2026-07-16):** `form_input` sets DOM values
-but often does NOT update React state, leaving submit buttons silently disabled and
-producing zero network traffic. For every form:
+The HTML must be self-contained, under 500 KB, inside AI OS, and marked with `<meta name="lsatu-interactive-lesson" ...>`. The Classroom renderer loads it in an opaque-origin sandboxed iframe with scripts and forms enabled. Ordinary notes still go through the sanitizer. If the renderer has changed, deploy the app first and verify Lovable's manual Publish completed before posting the lesson.
 
-1. Click the field and type with real keystrokes (`computer` type action); for
-   `<select>`s, click to focus then choose with keyboard (first-letter + Enter) or a
-   real option click.
-2. Before clicking submit, confirm the button is actually enabled (full-opacity, or
-   check `disabled` via read_page).
-3. After clicking, confirm via `read_network_requests` that the mutation actually
-   fired (POST to `…supabase.co/functions/v1/…` or `/rest/v1/…`) and returned 2xx.
-   A UI that merely looks done is not evidence.
+For visual verification in Codex, use its in-app browser at `https://lsatprep.study`; in another runtime, use its available browser. A teacher login cannot open another student's `/classroom/item/<id>` route directly. Confirm the item in the student's Teacher Workspace Notes page and in the headless `items --all` result; test slider and answer feedback in a sandboxed preview of the exact HTML. Do not claim a student-session visual check unless one was actually performed.
 
-## Routing — where each action lives
+## UI fallback routing
 
-All under `/teacher` (Teacher Desk). Workspaces via `?ws=`: `people` / `students`,
-`library`, `messages`/`inbox`, `admin`, `gmail`, `drive`.
-
-| Action | Surface |
-|---|---|
-| Assign a guided drill | `/teacher?ws=library&tab=guided-drills` → drill card → Assign. **Delegate to the `guided-drill-assignment` skill** for selection/QA/logging — it is the specialist; this skill is the router. |
-| Assign homework / quiz | Teacher Desk library or the student's detail page (`TeacherStudentDetail`) → assign flow → creates classroom item + notification |
-| Assign an activity (e.g. Negation Station) | Library activities surface → Assign; verify resume + notification (see `wiki/tasks.md` activity-centre notes) |
-| Post a classroom item / note | Student detail page → classroom/dossier tabs |
-| Message a student | `ws=messages` (admin side of the 1:1 inbox); supports PDF attachments |
-| Ingest a session transcript | `/teacher/session-ingest` (Phase 1A form: Doc URL + student + optional Gmail message id) or the scan/resolve queue on the same page |
-| Review/publish a session bundle | Student detail → dossier/review tabs (`SessionBundleReview`); publish is approval-gated |
-
-If a flow's exact clicks are unknown, discover them live with read_page/find on the
-real surface — do not guess selectors from memory, and do not invent UI that isn't
-there.
+The current student verification route is `/teacher/students/<student-id>/notes`. Its “Posted to their Classroom” section shows active notes and labels archived notes as hidden from the student. Use the browser's normal controls for any unsupported action, then verify the saved state through a fresh read. In Codex, use the in-app browser, not Chrome. Do not rely on old `/teacher?ws=` routes or old browser-tool names.
 
 ## Order of operations (every action)
 
 1. **Identify the student** exactly (roster names include email; ambiguity → one
    concise clarifying question). Check `students/<name>/` for context and
    `assignment-log.md` to avoid repeats.
-2. **Do the action** through the UI per the routing table, honoring the React rule.
-3. **Verify it landed**: the mutation request returned 2xx AND the UI reflects it
-   (item appears in the student's classroom list / message thread / queue). For
-   assignments, verify the notification surface where checkable. For any message
-   or student-facing text, compare the sent bubble with the approved draft in the
-   recipient-facing view. Check paragraph breaks, list lines, and intentional
-   spacing. Confirm that exactly one copy landed. If the rendering differs or
-   duplicates appear, report the mismatch; do not claim success or resend
-   automatically.
+2. **Do the action** through MCP or the headless Node CLI when supported. Use the UI fallback only for unsupported actions.
+3. **Verify it landed**: read the new item from LSAT U, confirm `assigned` and student-visible, confirm the prior same-title item is archived, and inspect the student's Teacher Workspace Notes page in Codex's browser. Check notifications where available. Confirm exactly one active copy; never resend automatically.
 4. **Log it**: append to `students/<name>/assignment-log.md` (create if missing) with
    date, action, item, and evidence; drill verifications also go to
    `wiki/guided-drill-verification-log.md`.
