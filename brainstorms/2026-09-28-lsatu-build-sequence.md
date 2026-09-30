@@ -71,7 +71,7 @@ The order below is the current priority, not a request to rebuild shipped screen
 
 ## Release method for every remaining step
 
-Foundation follow-up identified on 2026-09-30: `ActivityRunner.tsx` still routes historical `status = completed` rows to an empty report without a completion timestamp or saved responses. Require confirmed completion consistently for hydration, routing and stored-score display; acknowledge completion writes before showing Done. The existing tester Spot the Relationship assignment opened 48 unchecked items in that report. No historical record was rewritten. Preserve this acceptance case alongside source revocation. Proposed server work is documented in `docs/implementation-plans/2026-09-30-timed-write-contract.md` in the app repo.
+Foundation follow-up identified on 2026-09-30 and resolved by the twenty-fourth slice: `ActivityRunner.tsx` previously routed historical `status = completed` rows to an empty report without a completion timestamp or saved responses. Confirmed completion now governs hydration, routing and stored-score display; completion writes are acknowledged before showing Done. The tester Spot the Relationship assignment now opens Intro. No historical record was rewritten. Preserve this regression case alongside source revocation. Separate RRC section closeout remains open. Proposed server work is documented in `docs/implementation-plans/2026-09-30-timed-write-contract.md` in the app repo.
 
 1. Read the ticket's current acceptance checks and the coverage-matrix row. Identify an existing owned live fixture before changing code, if one exists.
 2. Trace the durable source record, actor and subject, exact route, return route, and save failure behavior. Add the smallest source adapter or state change that makes one usable slice.
@@ -81,6 +81,17 @@ Foundation follow-up identified on 2026-09-30: `ActivityRunner.tsx` still routes
 6. Open the fresh production route and walk the actual task. Record GitHub, publication, backend, permissions, and live evidence separately. Update the coverage matrix and this plan; close only the acceptance checks actually proved.
 
 ## What remains deliberately open
+
+### Next-pass scope agreed on 2026-09-30
+
+Fourteen functional tickets (#166 through #180, excluding deferred #178) remain open; this counts acceptance scope, not fourteen untouched features. Finish the foundation before advancing to navigation. Aim for one integrated foundation batch, splitting releases only where backend approval or a material verification failure requires it:
+
+1. Repair separate RRC closeout so failed completion retains saved recordings/responses and offers retry before opening the report. Verify failure, reload, retry and successful completion.
+2. Trace and implement true Activity source revocation with teacher actor attribution and student direct-route denial. Verify the student source, My Work and teacher mirror together; preserve original records.
+3. Complete the remaining source/permission evidence: owned LR, RC, Activity, bootcamp and repeated assignments; denied cross-student mutations; authorized teacher actions; explicit missing-source disclosures. Exercise genuine graded Activity completion only after immediate approval for its possible Lovable AI credits.
+4. Prepare the atomic timed-write implementation and adapters from the proposed contract. Confirm the Lovable Cloud deployment route before deployment, and obtain immediate approval before any potentially credit-spending action. After deployment, prove stale-writer rejection, revoked in-flight writes, answer/checkpoint atomicity and cross-device recovery. Do not substitute simulated takeover or client pause tests for server acceptance.
+
+Run focused failure/permission tests, independent review, typecheck and build; then guarded push, exact GitHub/Lovable revision verification, free publication and fresh live student/teacher task walks. Record passed and blocked checks separately. If backend approval is unavailable, finish the independent client/source work and concrete backend implementation for review; leave #167 open. Once foundation acceptance passes, sweep navigation/access paths as the next batch. No reliable whole-plan percentage or single-pass completion date is supported by current evidence.
 
 - Old ownerless browser-only exam recovery is outside the first release. Copies remain untouched and do not enter any account's Attempts. No display or import design was attributed to Joshua.
 - The exact list of Impeccable findings cannot be known before functional screens exist. #178 requires recording and resolving material findings when they appear.
