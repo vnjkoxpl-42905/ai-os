@@ -26,6 +26,10 @@ surface that renders them is covered, including surfaces not written yet.
 
 ## Corrections
 
+### Fact and rule definitions must explain the inference (2026-09-30)
+
+Joshua rejected definitions that remained abstract and an explanation that did not clearly distinguish applying a rule from linking rules. Define the inputs with examples, then show the matching step and exact output. A case fact plus a rule proves something about that case. Two connecting rules produce another conditional rule without establishing a case exists. Adding a fact to the chain is a separate step. Explain all four fact situations and a hidden chain revealed by contraposition rather than leaving them implicit in an interactive model. Rules include general logical relationships, not only policies or obligations.
+
 ### Boxed `L -> R` → bold teaching notation **L → R** (2026-09-30)
 
 Joshua rejected the recap's small monospace arrow inside a pale code box. It looked like implementation text and weakened the explanation. Use a real, clearly weighted arrow in ordinary teaching typography. Explain its complete conditions before shortening them. The Some, Most, and All reference also governs the progression: introduce the whole idea, develop the individual components, then compare and combine them. A visual refresh must review that sequence, not only colors and boxes.
