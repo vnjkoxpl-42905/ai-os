@@ -19,6 +19,10 @@ Fills through supervised ingests, one source at a time, logged in [[../wiki/log|
 
 ## Pages
 
+### `lectures/` · read-aloud scripts and teaching visuals
+
+- [[lectures/index]] · LSAT Lab source transcripts, teleprompter scripts, initial concept boards, and worked-question visuals. Packages preserve source timestamps and explicit completeness checks.
+
 ### `Curriculum/` — the LR curriculum (ingested 2026-07-17)
 
 118 markdown pages recovered from `raw/sources/lsat-curriculum/_stragglers/local-ai-gather/…/Curriculum/` — the corpus folder tree had been scaffolded from this source in the 2026-07-16 rebuild, but the files themselves were never copied. Each topic carries `Notes/` (the teaching) and `Homework/` (the assigned drills).
