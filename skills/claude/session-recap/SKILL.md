@@ -1,9 +1,11 @@
 ---
 name: session-recap
-description: Turn a tutoring-session transcript into a polished, concept-first set of lecture notes in Joshua's teaching voice, then file it in the student's folder. Use for "post-session note", "recap note", "write the recap", "take a recap for a student", weekly recap intake, or after a transcript is ingested. Drafts by default; post or assign only when Joshua explicitly asks.
+description: Find, verify, and file an LSAT tutoring-session transcript and its student record. Use whenever Joshua mentions a student's session, Gemini notes, or a transcript, including recap intake. For "make a recap," "session notes," or any student-facing write-up, also activate lsat-session-lesson; that skill owns the lecture lesson and interactive preview. Drafts by default; post or assign only when Joshua explicitly asks.
 ---
 
 # Session recap
+
+For a request to make or improve a student-facing recap, note, or lesson from a session, use `lsat-session-lesson` for the teaching content and this skill for transcript intake, assignment accuracy, and filing. This handoff applies even when Joshua simply says “make a recap” or names a student and says “session.” A request only to find or inspect a transcript stops at the narrower task.
 
 After every session Joshua wants a durable set of lecture notes. The student should be
 able to return several days later, understand the lesson without remembering a specific

@@ -1,11 +1,15 @@
 ---
 name: lsat-session-lesson
-description: Create a top-tier student-facing note from any completed LSAT tutoring session. Read the full transcript and relevant corpus, write a standalone lecture lesson in Joshua's voice, add useful visual and answer-as-you-go practice, and show a reviewable LSAT U preview. Use for post-session notes, recaps, or a lesson like Some, Most, and All; session-recap supplies transcript intake and the student record.
+description: Use whenever Joshua mentions an LSAT tutoring session or transcript and wants a recap, session notes, student note, lecture note, or lesson made, improved, or filed. Trigger on natural shorthand such as "Curray session," "current session," "[student] session," "make a recap," "write up the session," or "turn this transcript into notes," even if he does not say "lesson" or name this skill. Create a concept-first student-facing lesson in Joshua's voice with examples, visuals when useful, and answer-as-you-go practice. Use session-recap for transcript intake and the student record. For a transcript lookup alone, use its intake steps and stop at the requested scope.
 ---
 
 # LSAT session lesson
 
-Create a student-facing note from every session this skill processes. The student should be able to return days later, understand the concept without the original question, test the method, and see why each answer works. The [lesson quality bar](references/lesson-quality-bar.md) describes the finished experience. Meet its teaching standard every time; vary the visual treatment to fit the subject. Run when Joshua requests a post-session note or an explicitly configured post-session workflow invokes it. A skill does not monitor the calendar or schedule itself.
+## When to activate
+
+Treat a named student plus “session,” “transcript,” “recap,” or “notes” as enough to start intake. The same applies when Joshua says “today's session,” “the current session,” “Curray session,” “make a recap,” “make notes from this,” “what should the student review,” or attaches a session transcript and asks for a write-up. Do not wait for the exact skill name or a slash command. Create the full lesson when he asks for a recap, notes, a write-up, or what the student should review. If the request is only to locate, read, or answer a narrow question about a transcript, stop at that scope. A recap or note should teach the concept rather than stop at a chronological summary.
+
+When the request is to make a note or recap, create a student-facing lesson. The student should be able to return days later, understand the concept without the original question, test the method, and see why each answer works. The [lesson quality bar](references/lesson-quality-bar.md) describes the finished experience. Meet its teaching standard every time; vary the visual treatment to fit the subject. A skill does not monitor the calendar or schedule itself.
 
 Use `session-recap` for transcript intake, the primary student record, assigned-work accuracy, and private continuation. This skill owns the student-facing teaching and preview. Keep one canonical note per session in `students/<slug>/recaps/YYYY-MM-DD-recap.md`; build its visual review artifacts in a dated `brainstorms/` folder. When a course-wide lesson grows out of it, link the two rather than copying the complete text into both.
 
