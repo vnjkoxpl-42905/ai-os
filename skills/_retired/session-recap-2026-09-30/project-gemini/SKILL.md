@@ -1,11 +1,9 @@
 ---
 name: session-recap
-description: Find, verify, and file an LSAT tutoring-session transcript and its student record. Use whenever Joshua mentions a student's session, Gemini notes, or a transcript, including recap intake. For "make a recap," "session notes," or any student-facing write-up, also activate lsat-session-lesson; that skill owns the lecture lesson and interactive preview. Drafts by default; post or assign only when Joshua explicitly asks.
+description: Turn a tutoring-session transcript into a polished, concept-first set of lecture notes in Joshua's teaching voice, then file it in the student's folder. Use for "post-session note", "recap note", "write the recap", "take a recap for a student", weekly recap intake, or after a transcript is ingested. Drafts by default; post or assign only when Joshua explicitly asks.
 ---
 
 # Session recap
-
-For a request to make or improve a student-facing recap, note, or lesson from a session, use `lsat-session-lesson` for the teaching content and this skill for transcript intake, assignment accuracy, and filing. This handoff applies even when Joshua simply says “make a recap” or names a student and says “session.” A request only to find or inspect a transcript stops at the narrower task.
 
 After every session Joshua wants a durable set of lecture notes. The student should be
 able to return several days later, understand the lesson without remembering a specific
@@ -141,10 +139,6 @@ help the student use it.
 - A post-session note is a set of lecture notes, not an email. Use a concept title,
   descriptive headers, numbered procedures, and spaced examples. Do not use a greeting
   or sign-off.
-- Open with Joshua's concrete explanation of the concept. Define the words the student
-  needs in plain language before diagrams or inference rules. Do not invent abstract
-  umbrella wording such as “how much of a group fits a description” when the direct
-  definition is “some means at least one; most means more than half; all means every one.”
 - Short sentences. One idea per line. Air between ideas.
 - Write for a student returning days later. Do not rely on "remember that question" or
   unexplained references to a person, scenario, or answer choice.

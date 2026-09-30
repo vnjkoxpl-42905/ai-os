@@ -1330,3 +1330,7 @@ Pushed `ac4456b` to LSAT U `main` through the guarded safe-push script. The stud
 ## [2026-09-29] LSAT U | Direct interactive lesson publishing hardened
 
 Moved the local `lsat-u-lessons` MCP entry point into AI OS `system/scripts/` so routine tool changes do not require an app deployment. The headless publisher now checks for missing resources, compares stored HTML exactly, treats a repeat of the active version as a no-op, and archives only matching lesson IDs rather than every same-title note. Repackaged “Some, Most, and All” with embedded fonts and assigned the refreshed version to Charles Moore as `c9228402-da0e-4411-984e-17831a798e5c`; the prior interactive version was archived. The MCP dry run and live readback succeeded. Updated the session lesson, platform action, and assignment skills to describe the direct daily path. No Lovable or browser step was used for this content update.
+
+## [2026-09-30] Skills | One post-session lesson skill
+
+Consolidated transcript intake, primary student recap, private follow-ups, lecture-style teaching note, and interactive preview into `lsat-session-lesson`. Natural triggers include named-student sessions, “Curray session,” “make a recap,” session notes, and transcript write-ups; lookup-only requests remain narrow. Retired the duplicate `session-recap` skill from active and catalog locations, preserving its copies under `skills/_retired/session-recap-2026-09-30/`. Synced the unified skill across Codex, Claude, and Gemini runtimes and regenerated `skills/INDEX.md`.

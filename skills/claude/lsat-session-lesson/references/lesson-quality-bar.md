@@ -30,4 +30,4 @@ Use the existing LSAT U preview shell and answer-check interaction as a starting
 
 ## Output boundary
 
-Markdown is the editable teaching source. The student recap is the primary session record. Marked, self-contained interactive HTML can be assigned directly through the live Classroom renderer and local `lsat-u-lessons` MCP. Keep private continuation in the student's folder under `session-recap`; do not put private context into a reusable course lesson. Publication, assignment, and student messages are separate actions.
+Markdown is the editable teaching source. The student recap is the primary session record. Marked, self-contained interactive HTML can be assigned directly through the live Classroom renderer and local `lsat-u-lessons` MCP. Keep private continuation below the student-facing divider in the recap; do not put private context into a reusable course lesson. Publication, assignment, and student messages are separate actions.

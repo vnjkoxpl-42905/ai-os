@@ -1,6 +1,6 @@
 ---
 name: session-recap
-description: Find, verify, and file an LSAT tutoring-session transcript and its student record. Use whenever Joshua mentions a student's session, Gemini notes, or a transcript, including recap intake. For "make a recap," "session notes," or any student-facing write-up, also activate lsat-session-lesson; that skill owns the lecture lesson and interactive preview. Drafts by default; post or assign only when Joshua explicitly asks.
+description: Find, verify, and file an LSAT tutoring-session transcript and its student record. Trigger on a student's session, "Curray session," Gemini notes, or a transcript, including recap intake. For "make a recap," "session notes," or any student-facing write-up, also activate lsat-session-lesson; that skill owns the lecture lesson and interactive preview. Drafts by default; post or assign only when Joshua explicitly asks.
 ---
 
 # Session recap

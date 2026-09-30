@@ -25,9 +25,9 @@ Use the existing LSAT U preview shell and answer-check interaction as a starting
 - The session date, student, central mistake, and assigned work match the full transcript and current student record. Uncertain details are marked for review instead of filled in.
 - The first sentence names the idea in ordinary language. A worked example shows why the method works. The note covers the relevant trap or boundary and ends with a fresh transfer question and explained answer.
 - Every check accepts a student response and gives useful feedback. It does not claim to grade open-ended reasoning it cannot actually evaluate.
-- Any diagram is logically accurate. The page has been opened at desktop and narrow widths; text, controls, and answers remain readable, keyboard usable, and compatible with reduced motion.
+- Any diagram is logically accurate. A new or changed design is checked at desktop and narrow widths; text, controls, and answers remain readable, keyboard usable, and compatible with reduced motion. A routine repost of a reviewed design needs the headless package and backend checks.
 - The student recap is the primary record, with private continuation below its divider. The interactive preview and any reusable course lesson are linked from it. Report which files were made and whether anything was posted.
 
 ## Output boundary
 
-Markdown is the editable teaching source. The student recap is the primary session record. Interactive HTML is a local review artifact until LSAT U supports its behavior in the app. Keep private continuation in the student's folder under `session-recap`; do not put private context into a reusable course lesson. Publication, assignment, and student messages are separate actions.
+Markdown is the editable teaching source. The student recap is the primary session record. Marked, self-contained interactive HTML can be assigned directly through the live Classroom renderer and local `lsat-u-lessons` MCP. Keep private continuation below the student-facing divider in the recap; do not put private context into a reusable course lesson. Publication, assignment, and student messages are separate actions.

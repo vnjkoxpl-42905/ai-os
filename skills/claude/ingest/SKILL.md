@@ -35,7 +35,7 @@ ambiguous, ask once. Do not guess and file it somewhere wrong.
 | A source document meant to become wiki knowledge | `raw/` | dedupe below, then hand to `second-brain-ingest` |
 | Takeout or platform dump | `raw/data-about-me/` | [Bulk exports](#bulk-exports) |
 
-`second-brain-ingest` owns `raw/` to `wiki/` knowledge pages. `session-recap`
+`second-brain-ingest` owns `raw/` to `wiki/` knowledge pages. `lsat-session-lesson`
 owns writing the student-facing recap. This skill gets the source on disk,
 archived, and distilled; it does not duplicate either of them.
 
@@ -98,7 +98,7 @@ One clip at a time, supervised, unless Joshua says batch.
 Gemini writes "Notes by Gemini" docs to Google Drive after each Meet session.
 The brain's copy is `students/<slug>/transcript-downloads/YYYY-MM-DD-<slug>-notes-by-gemini.md`
 (primary record: the brain is its only home). Getting them there is step 1 of
-`session-recap`; follow that section exactly (Calendar sweep by guest email,
+`lsat-session-lesson/references/transcript-intake-and-record.md`; follow that section exactly (Calendar sweep by guest email,
 Drive sweep for unattached docs, export as `text/plain`, resolve the person
 with `students/_aliases.md`, consultations and unknowns to
 `students/_other-sessions/`). It is the single source of truth for the pull;
@@ -122,7 +122,7 @@ Done means every session in the window either has its transcript on disk and
 distilled, or is listed in the log as "no Gemini doc anywhere" with the date and
 student, so the next session does not sweep it again.
 
-If Joshua wants the recap note as well, that is `session-recap`; say so rather
+If Joshua wants the recap note as well, that is `lsat-session-lesson`; say so rather
 than writing one here.
 
 ## Transcripts, archival
