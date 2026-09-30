@@ -7,6 +7,12 @@ aliases: []
 
 # Log
 
+## [2026-09-29] ship | Teacher Work parity and safer PrepTest breaks
+
+- Added owned guided and Activity assignments to the selected-student Work page while retaining the existing homework, TA, and classroom controls. Partial source failures are named; a failed TA refresh keeps only the selected student's cached rows.
+- Full PrepTest breaks now save a periodic account heartbeat. A failed break save freezes the device backup and blocks the next section until account acknowledgment; a retry preserves the remaining break time. Focused tests passed 26/26, typecheck and production build passed, and lint reported no errors.
+- LSAT U commit `5c35a15` reached GitHub `main`. Lovable reported “Your website was updated.” A fresh signed-in live teacher Work page showed the new section and the existing Activity mirror with its Unassign control. A live network-failure break walk, offline reload, second-device behavior, revoked access, and full two-account assignment parity remain open. The [build sequence](../brainstorms/2026-09-28-lsatu-build-sequence.md) now names these next checks; #166 and #167 remain open.
+
 ## [2026-09-29] ship | My Work refresh keeps cached assignments visible
 
 - Fixed the assigned feed dropping weekly-plan tasks and replacing My Work during a background status refresh. A partial read error now leaves available assignments visible with a retry notice; homework and TA reads keep their last successful rows.
@@ -1314,3 +1320,7 @@ Pushed `a33fcac` to LSAT U `main` through the guarded safe-push script. Guided d
 ## [2026-09-29] LSAT U | Historical Intro to LR misses added to Review
 
 Pushed `ac4456b` to LSAT U `main` through the guarded safe-push script. The student Review queue now reads each owner-scoped missed attempt from earlier authored Intro to LR interactive exercises 3.1 through 3.5, 3.7, and 3.9. Exact detail is read-only and shows the saved answer with current authored reasoning. A review caught omitted historical 3.7 pronoun-replacement attempts before release. Seven focused tests, typecheck, production build, and diff check passed. Fresh signed-in live Review showed the updated source statement and the exact route showed an owner-safe unavailable state for a nonexistent attempt. Joshua's teacher account had no matching historical missed row, so a real-row live detail was not verified. Current native labs, Hard Sentences, other bootcamp sources, and teacher-selected Review remain open. Lovable monitoring separately flagged a My Work refetch/blank-state issue not addressed by this slice.
+
+## [2026-09-29] LSAT U | Direct interactive lesson publishing hardened
+
+Moved the local `lsat-u-lessons` MCP entry point into AI OS `system/scripts/` so routine tool changes do not require an app deployment. The headless publisher now checks for missing resources, compares stored HTML exactly, treats a repeat of the active version as a no-op, and archives only matching lesson IDs rather than every same-title note. Repackaged “Some, Most, and All” with embedded fonts and assigned the refreshed version to Charles Moore as `c9228402-da0e-4411-984e-17831a798e5c`; the prior interactive version was archived. The MCP dry run and live readback succeeded. Updated the session lesson, platform action, and assignment skills to describe the direct daily path. No Lovable or browser step was used for this content update.
