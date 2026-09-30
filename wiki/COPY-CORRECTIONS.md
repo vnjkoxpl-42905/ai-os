@@ -26,6 +26,10 @@ surface that renders them is covered, including surfaces not written yet.
 
 ## Corrections
 
+### Generic reasoning prompts → concrete numbered demonstrations (2026-09-30)
+
+Joshua marked four parts of the V6 opening: "Read each whole idea," "Find what the statements guarantee," the abstract first sentence about information, and the paragraph combining application and linking. They named goals without showing a useful action or explanation. Replace them with numbered, separate scenarios. Show the fact and rule that prove a conclusion about one case; separately show two matching rules and their new conditional conclusion. Labels should identify actual inputs or outputs. Review the whole note for repeated umbrella instructions and make task instructions executable. This follows the teaching voice: specific, concrete, short sentences, with air between distinct ideas.
+
 ### Fact and rule definitions must explain the inference (2026-09-30)
 
 Joshua rejected definitions that remained abstract and an explanation that did not clearly distinguish applying a rule from linking rules. Define the inputs with examples, then show the matching step and exact output. A case fact plus a rule proves something about that case. Two connecting rules produce another conditional rule without establishing a case exists. Adding a fact to the chain is a separate step. Explain all four fact situations and a hidden chain revealed by contraposition rather than leaving them implicit in an interactive model. Rules include general logical relationships, not only policies or obligations.

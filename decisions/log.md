@@ -208,3 +208,7 @@ Joshua authorized moving the entire application tree to sibling C:/Users/Joshu/d
 ## 2026-09-30: Shared lecture library for live teaching
 
 Joshua specified a standalone teaching library, separate from student records. Route through corpus/lectures by Logical Reasoning or Reading Comprehension, topic, Core or Advanced, then the individual lecture. Core is the easier level. Topic names may represent question types, question families, or reasoning skills; use tags and cross-links for overlapping concepts while keeping one canonical package. Every folder level has an MD index. Each lecture and level index identifies exact PrepTest section/question numbers in original presentation order. Prepare a pre-lecture teaching brief before the teleprompter so Joshua can retrieve a lecture by topic, level, or covered concept and use it during live video calls. The Must Be True lecture dated2026-08-27, video33013, is LR/Core.
+
+## 2026-09-30: Deploy the LSAT U audit backend while preserving current work
+
+Joshua explicitly authorized the Lovable Cloud backend/database deployment and continued implementation of the audit plan. Preserve current assignments, answers, results, and history; use additive installation and verify original row values before and after deployment. Free Lovable database and publication controls are authorized. Any action that may spend Lovable credits still requires immediate, specific confirmation. No account data cleanup or deletion is authorized by this deployment approval.
