@@ -26,6 +26,10 @@ surface that renders them is covered, including surfaces not written yet.
 
 ## Corrections
 
+### Boxed `L -> R` → bold teaching notation **L → R** (2026-09-30)
+
+Joshua rejected the recap's small monospace arrow inside a pale code box. It looked like implementation text and weakened the explanation. Use a real, clearly weighted arrow in ordinary teaching typography. Explain its complete conditions before shortening them. The Some, Most, and All reference also governs the progression: introduce the whole idea, develop the individual components, then compare and combine them. A visual refresh must review that sequence, not only colors and boxes.
+
 ### "Concept lesson" → the actual reasoning title (2026-09-30)
 
 The recap preview exposed an internal label above the student lesson. Joshua explicitly rejected it. Use a title such as "Facts, Rules, and What Follows" and headings that teach the reasoning. Keep production labels, version metadata, and design commentary in private records. Check the rendered HTML, since its shell can introduce wording absent from the Markdown source.
