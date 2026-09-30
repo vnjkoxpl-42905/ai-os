@@ -1,7 +1,11 @@
 ---
 name: grill-me-codex
-description: Interview the user about a plan, then use the current Claudex loop for independent review and optional implementation. Compatibility entry point for the former grill-me-codex workflow.
+description: "Claude-host entry point: Codex handles independent review or scoped delegation. Interview the user about a plan, then use the current Claudex loop for independent review and optional implementation. Compatibility entry point for the former grill-me-codex workflow."
 ---
+
+## Installed direction: Claude to Codex
+
+This copy is for the Claude host. The current Claude conversation coordinates. Use `host=claude` in the shared runner. The default independent reviewer and cross-provider handoff target is Codex. Preserve explicit user provider/model choices and authorized scope. For the loop, the host builds by default and the other provider inspects; the build compatibility entry point separately selects the other provider as builder.
 
 # Grill a plan with the current Claudex loop
 

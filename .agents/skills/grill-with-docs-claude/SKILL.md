@@ -1,7 +1,11 @@
 ---
-name: grill-with-docs-codex
-description: Interview and review a plan with persistent context, a glossary, and architecture decisions using the current Claudex loop. Compatibility entry point for the former document-backed grilling workflow.
+name: grill-with-docs-claude
+description: "Codex-host entry point: Claude handles independent review or scoped delegation. Interview and review a plan with persistent context, a glossary, and architecture decisions using the current Claudex loop. Compatibility entry point for the former document-backed grilling workflow."
 ---
+
+## Installed direction: Codex to Claude
+
+This copy is for the Codex host. The current Codex conversation coordinates. Use `host=codex` in the shared runner. The default independent reviewer and cross-provider handoff target is Claude. Preserve explicit user provider/model choices and authorized scope. For the loop, the host builds by default and the other provider inspects; the build compatibility entry point separately selects the other provider as builder.
 
 # Grill a plan and preserve its decisions
 

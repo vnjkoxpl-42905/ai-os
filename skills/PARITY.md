@@ -37,23 +37,22 @@ These live under `skills/claude/_snapshots/` and ship with Claude plugins. They 
 Claude's own extension surfaces (hooks, plugins, MCP authoring) or vendor integrations. A
 Codex copy would describe machinery Codex does not have. Correct as Claude-only, permanently.
 
-### Claudex package: both runtimes since 2026-09-30
+### Claudex package: mirrored runtime directions since 2026-09-30
 
-Joshua explicitly authorized universal activation and upstream updates. `claudex-loop`,
-`claudex-route`, `codex-build` and `codex-review` now use the current host-aware package
-from `chaseai-yt/claudex-loop`. Codex routes review to Claude; Claude routes review to
-Codex. Complete copies, including the shared CLI runner, exist in both catalogs,
-project activation directories and global runtime homes.
+Joshua authorized universal activation and an inverse Codex version of every skill in chaseai-yt/claudex-loop. All six package workflows are available in both catalogs and project/global activation roots. Codex uses claude-review, claude-build, grill-me-claude, and grill-with-docs-claude; Claude retains codex-review, codex-build, grill-me-codex, and grill-with-docs-codex. These deliberate name differences are paired equivalents, not missing skills. Their SKILL.md entry points deliberately differ by runtime; shared upstream supporting files remain complete.
 
-`grill-me-codex` and `grill-with-docs-codex` are also available in both runtimes as
-locally maintained compatibility aliases to `claudex-loop`. The docs variant also
-preserves glossary, context, and architecture decisions. Their outdated instructions
-are removed from active copies. Alias sources live in `system/skill-overrides/claudex`.
+| Skill | Claude host | Codex host |
+|---|---|---|
+| claudex-loop | Claude plans, Codex reviews; host builds by default | Codex plans, Claude reviews; host builds by default |
+| claudex-route | Default cross-provider handoff to Codex | Default cross-provider handoff to Claude |
+| codex-review | Codex reviews, Claude revises | Claude reviews, Codex revises |
+| codex-build | Codex builds, Claude inspects | Claude builds, Codex inspects |
+| grill-me-codex | Claude interviews, Codex reviews | Codex interviews, Claude reviews |
+| grill-with-docs-codex | Same direction with context, glossary, ADRs | Inverse direction with context, glossary, ADRs |
 
-`system/scripts/sync-claudex-skills.py` updates four upstream skills and two local aliases daily through
-the Codex automation "Update Claudex skills". Whole-tree compare-and-swap preserves
-local edits. Previous copies live outside activation roots under
-`~/.agents/claudex-backups`. No source links or junctions join the vault to the clone.
+Codex entry-point names identify Claude as the delegate. The updater maps upstream names to these installed names and retires the old Codex-side copies into inactive backups. Explicit user provider/model choices still take precedence in the general loop and route. The additional grill-by-claude shortcut is intended for a Codex host.
+
+system/scripts/sync-claudex-skills.py updates four upstream support trees and three local entry points through the existing daily Codex automation. It computes separate runtime hashes, inserts runtime directions, and overlays the Codex review/build entry points from system/skill-overrides/claudex/codex. Local aliases remain under system/skill-overrides/claudex. Whole-tree compare-and-swap preserves local edits. Previous copies live outside activation roots under ~/.agents/claudex-backups. No source links or junctions join the vault to the clone.
 
 ### Blocked by a missing Codex dependency (1)
 

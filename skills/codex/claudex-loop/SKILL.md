@@ -1,7 +1,11 @@
 ---
 name: claudex-loop
-description: "Harden a plan with independent Claude/Codex review, then optionally build and cross-inspect it. Start in either Claude Code or Codex: the host plans and the other provider reviews. Use for claudex this plan, claudex-loop, or the legacy crucible trigger; not for trivial edits."
+description: "Codex-host entry point: Claude handles independent review or scoped delegation. Harden a plan with independent Claude/Codex review, then optionally build and cross-inspect it. Start in either Claude Code or Codex: the host plans and the other provider reviews. Use for claudex this plan, claudex-loop, or the legacy crucible trigger; not for trivial edits."
 ---
+
+## Installed direction: Codex to Claude
+
+This copy is for the Codex host. The current Codex conversation coordinates. Use `host=codex` in the shared runner. The default independent reviewer and cross-provider handoff target is Claude. Preserve explicit user provider/model choices and authorized scope. For the loop, the host builds by default and the other provider inspects; the build compatibility entry point separately selects the other provider as builder.
 
 # Claudex Loop
 

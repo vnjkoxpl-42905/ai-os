@@ -1,7 +1,11 @@
 ---
 name: claudex-route
-description: "Recommend a model and a scoped handoff for a task in Claude Code or Codex. Use when choosing who should handle a task, seeking a second opinion, getting unstuck, or delegating focused work; execute one handoff when requested."
+description: "Claude-host entry point: Codex handles independent review or scoped delegation. Recommend a model and a scoped handoff for a task in Claude Code or Codex. Use when choosing who should handle a task, seeking a second opinion, getting unstuck, or delegating focused work; execute one handoff when requested."
 ---
+
+## Installed direction: Claude to Codex
+
+This copy is for the Claude host. The current Claude conversation coordinates. Use `host=claude` in the shared runner. The default independent reviewer and cross-provider handoff target is Codex. Preserve explicit user provider/model choices and authorized scope. For the loop, the host builds by default and the other provider inspects; the build compatibility entry point separately selects the other provider as builder.
 
 # Claudex Route
 

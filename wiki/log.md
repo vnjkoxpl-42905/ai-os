@@ -1544,3 +1544,18 @@ The skill audits accessible recent workflow history for bounded recurring judgme
 ## [2026-09-30] Claudex grill entries modernized
 
 Joshua authorized removing outdated versions and choosing the best outcome. Replaced active grill-me-codex and grill-with-docs-codex legacy instruction trees with local compatibility aliases to the current host-aware claudex-loop in all seven Codex/Claude activation and catalog roots. Previous trees are retained only in inactive backups. Updated sync-claudex-skills.py to source four skills upstream and two aliases from system/skill-overrides/claudex, preventing automatic restoration of legacy instructions. Updated parity, reference, and generated skill catalog. Verified all 14 alias copies and sibling routing, repeat-sync idempotence, and local-edit preservation in an isolated fixture. Offline dry run: zero changes and zero conflicts. Independent read-only review found no material bugs. Catalog generation retains 15 pre-existing unrelated weak-description warnings. No live model review/build launched.
+
+
+## [2026-09-30] Named Codex-to-Claude grilling entry point
+
+Added grill-by-claude to local overrides, both catalogs, and all five global/project activation roots. Uses the current claudex-loop with explicit Claude review from Codex; requirements and revision stay in the Codex chat. Added to the updater allowlist. Runner roles verified Codex planner and Claude reviewer. No live Claude review was launched for this installation.
+
+
+## [2026-09-30] All six Claudex skills mirrored by runtime
+
+Joshua approved an inverse Codex version of every package skill while preserving Claude-to-Codex copies in Claude. Updated sync to render runtime-specific entry points and hashes across seven activation/catalog roots. Codex review/build adapters explicitly select Claude reviewer/builder; Claude entry points retain Codex reviewer/builder. Loop, route, and both grill names now declare their installed host and opposite-provider direction. Shared upstream support files remain intact and automatically updated; local adaptations are maintained in system/skill-overrides/claudex. Updated PARITY, reference, and generated catalog. Verified all 49 installed trees, metadata, both inverse runner role maps, repeated-sync idempotence, local-edit preservation, and independent read-only review. Final offline dry run: zero pending changes, zero conflicts. One initial metadata check failed because the validator subprocess used Windows cp1252; rerunning explicitly with UTF-8 passed. Fifteen unrelated pre-existing catalog description warnings remain. No live model review or build launched.
+
+
+## [2026-09-30] Codex-side Claudex skills renamed
+
+Applied Joshua's approved names: claude-review, claude-build, grill-me-claude, and grill-with-docs-claude in all four Codex activation/catalog roots. Claude's three roots retain original Codex names. Updated sync name mapping and frontmatter; retired 16 managed obsolete copies to inactive backups after verifying replacements. Catalog regenerated, parity and reference updated. Verified 16 renamed copies and 12 preserved Claude copies, metadata, sibling routing, and all 49 expected trees through independent review. Offline dry run reports zero changes and zero conflicts. No live model review/build launched.

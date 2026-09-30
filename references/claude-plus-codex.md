@@ -141,4 +141,21 @@ Prefer `claudex-route` for one scoped handoff, and `claudex-loop` for repeated i
 
 Both CLIs authenticated on 2026-09-30: Codex 0.156.1 and Claude Code 2.1.280. Metadata validation, 23 package tests, and both role-routing checks pass. These checks do not establish a completed live model review; the earlier stalled review remains a failed run.
 
-Automatic updater: `system/scripts/sync-claudex-skills.py`. Codex app automation `update-claudex-skills` runs daily at 07:00 America/Toronto while the local automation host is available. It fast-forwards the clean clone and updates only six declared skill names, preserving older copies under `~/.agents/claudex-backups` and refusing to overwrite locally edited trees. State is `~/.agents/claudex-sync-state.json`. Run without `--install` for routine updates; that flag explicitly adopts existing versions and is only for supervised initial installation. No deletions, commits, pushes, CLI upgrades or review/build launches occur during sync. Skills INDEX is regenerated after changes.
+Automatic updater: `system/scripts/sync-claudex-skills.py`. Codex app automation `update-claudex-skills` runs daily at 07:00 America/Toronto while the local automation host is available. It fast-forwards the clean clone and updates only seven declared skill names, preserving older copies under `~/.agents/claudex-backups` and refusing to overwrite locally edited trees. State is `~/.agents/claudex-sync-state.json`. Run without `--install` for routine updates; that flag explicitly adopts existing versions and is only for supervised initial installation. No deletions, commits, pushes, CLI upgrades or review/build launches occur during sync. Skills INDEX is regenerated after changes.
+
+
+### Ask Codex to grill by Claude
+
+`grill-by-claude` is a locally maintained entry point installed in both catalogs and all five activation roots. Say "grill by Claude" in Codex: Codex interviews and prepares the plan, calls the authenticated Claude Code CLI for independent review, evaluates findings, and revises within the shared loop limits. Review alone does not authorize implementation. Verified runner roles select Codex planner and Claude reviewer; this installation check did not perform a live model review. The updater maintains this alias alongside the other two local compatibility names.
+
+
+### Every Claudex skill has the inverse Codex direction (2026-09-30)
+
+Supersedes the shared-entry-point installation details above. All six package skills now have runtime-specific entry points. Claude installations coordinate toward Codex; Codex installations coordinate toward Claude. codex-review retains its familiar name but asks Claude to review in Codex. codex-build delegates to Claude in Codex, using build --host codex --builder claude and fresh inspect --host codex --builder claude. The Claude copy retains Codex builder and Claude inspector. The loop defaults to the host builder with other-provider inspection, and route defaults to the other provider for cross-provider handoffs while honoring explicit user choices.
+
+The updater renders separate entry points and hashes for each runtime, preserving complete upstream supporting files. Codex review/build adaptations are locally maintained in system/skill-overrides/claudex/codex; future upstream support updates do not overwrite these intentional directions. Seven roots contain matching copies for their runtime. Verified metadata, both inverse role maps, idempotent repeat sync, and preservation of edited targets. These checks did not launch a live provider review/build.
+
+
+### Codex entry points renamed (2026-09-30)
+
+Supersedes retained-name descriptions above. Codex now exposes claude-review, claude-build, grill-me-claude, and grill-with-docs-claude. Claude retains the corresponding Codex names. claudex-loop and claudex-route remain unchanged in both runtimes. The sync maps source names to installed names, updates frontmatter, and moves previously managed old Codex copies into inactive backups after verifying their replacements. Edited old copies are preserved as conflicts. The grill-by-claude shortcut remains available.
