@@ -77,11 +77,11 @@ def emit(f, sub):
     authored = [e for e in authored if not e[0].startswith("gws-")]
     f.write(f"\n## {sub}/\n")
     f.write(f"\n{len(authored)} authored/project · {len(gws)} google-workspace · "
-            f"{len(vendor)} vendor-plugin · {len(forks)} project-fork\n")
+            f"{len(vendor)} vendor-plugin · {sum(1 for _, _, _, w in forks if w != 'no SKILL.md')} project-fork\n")
     if gws:
         f.write("\n### Google Workspace (gws) skills\n\n")
-        f.write("_Full `gws` CLI skill set. Inert in the DB — symlink the ones you want into a "
-                "project's `.claude/skills/` to activate; not loaded globally._\n\n")
+        f.write("_Full `gws` CLI skill set. Inert in the DB. Copy selected skills into "
+                f"the project's `{'.claude' if sub == 'claude' else '.agents'}/skills/` to activate. Global availability depends on explicit installation._\n\n")
         for n, st, d, w in gws:
             f.write(f"- **{n}** — {d or '_(' + w + ')_'}\n")
     if authored:
@@ -92,10 +92,16 @@ def emit(f, sub):
         f.write("\n### Vendor / plugin skills (live symlink + snapshot)\n\n")
         for n, st, d, w in vendor:
             f.write(f"- **{n}** — {d or '_(' + w + ')_'}\n")
+    support = [(proj, n) for proj, n, d, w in forks if w == "no SKILL.md"]
+    forks = [(proj, n, d, w) for proj, n, d, w in forks if w != "no SKILL.md"]
     if forks:
         f.write("\n### Project forks (divergent project-local versions)\n\n")
         for proj, n, d, w in forks:
             f.write(f"- **{proj}: {n}** — {d or '_(' + w + ')_'}\n")
+    if support:
+        f.write("\n### Archived project support folders (not invokable skills)\n\n")
+        for proj, n in support:
+            f.write(f"- [{proj}/{n}]({sub}/_project-forks/{proj}/{n}/): preserved supporting files; no SKILL.md entry point.\n")
     return entries, forks
 
 def main():

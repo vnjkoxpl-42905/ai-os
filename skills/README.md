@@ -18,4 +18,4 @@ Creating a new skill (via skill-creator or by hand) always writes to **both**: t
 - `claude/README.md` and `codex/README.md` index that tool's skills.
 - `INDEX.md` (once generated) is the full one-line-per-skill index across both, grouped by source-type.
 
-See `/Users/joshuaf/ai-os/PLAN.md` for the consolidation build plan and decision log.
+See [PARITY.md](PARITY.md) for runtime decisions and [the decision log](../decisions/log.md) for the consolidation rationale.

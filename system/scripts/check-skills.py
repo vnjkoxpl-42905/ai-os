@@ -27,9 +27,7 @@ Checks:
 Exit 0 = PASS, 1 = FAIL.
 """
 from project_paths import project_path, VAULT_ROOT
-
-from project_paths import project_path, VAULT_ROOT
-import os, re, sys, filecmp, tomllib
+import os, re, sys, filecmp, tomllib, subprocess
 from pathlib import Path
 
 BRAIN = str(Path(__file__).resolve().parents[2])
@@ -60,6 +58,33 @@ def db_names(sub):
         return set()
     return {n for n in os.listdir(base)
             if n not in SPECIAL and (os.path.isdir(os.path.join(base, n)) or os.path.islink(os.path.join(base, n)))}
+
+
+def entrypoints_match(first, second):
+    """Resolve valid local links so documented relocation is not content drift."""
+    first, second = Path(first), Path(second)
+    a = first.read_text(encoding="utf-8").replace("\r\n", "\n")
+    b = second.read_text(encoding="utf-8").replace("\r\n", "\n")
+    if a == b:
+        return True
+    pattern = r"\]\(([^)]+)\)"
+    left, right = list(re.finditer(pattern, a)), list(re.finditer(pattern, b))
+    if len(left) != len(right):
+        return False
+    if re.sub(pattern, "](<link>)", a) != re.sub(pattern, "](<link>)", b):
+        return False
+    for x, y in zip(left, right):
+        t1, t2 = x.group(1), y.group(1)
+        if t1 == t2:
+            continue
+        if any(re.match(r"[a-zA-Z][a-zA-Z0-9+.-]*:", t) for t in (t1, t2)):
+            return False
+        p1, _, anchor1 = t1.partition("#")
+        p2, _, anchor2 = t2.partition("#")
+        r1, r2 = (first.parent / p1).resolve(), (second.parent / p2).resolve()
+        if anchor1 != anchor2 or r1 != r2 or not r1.exists():
+            return False
+    return True
 
 def main():
     fails = []
@@ -112,7 +137,7 @@ def main():
                 act_skf = os.path.join(p, "SKILL.md")
                 db_skf = os.path.join(db_dir, "SKILL.md")
                 if os.path.isfile(act_skf) and os.path.isfile(db_skf):
-                    if not filecmp.cmp(act_skf, db_skf, shallow=False):
+                    if not entrypoints_match(act_skf, db_skf):
                         fails.append(f"stale activation copy: {root}/{n} differs from skills/{sub}/{n} — re-copy from DB")
 
     # (c) INDEX coverage
@@ -130,6 +155,11 @@ def main():
 
     # (f) dead paths in the routing maps. Only multi-segment paths (a/b) are checked;
     # bare fragments like `codex/` are prose, not routing targets.
+    remote_ids = set()
+    remote = subprocess.run(["git", "-C", BRAIN, "remote", "get-url", "origin"], capture_output=True, text=True)
+    match = re.search(r"github\.com[:/]([^/]+/[^/\s]+?)(?:\.git)?$", remote.stdout.strip())
+    if match:
+        remote_ids.add(match.group(1))
     for fname in ("CLAUDE.md", "AGENTS.md"):
         fpath = os.path.join(BRAIN, fname)
         if not os.path.isfile(fpath):
@@ -138,7 +168,7 @@ def main():
         with open(fpath, encoding="utf-8") as f:
             text = f.read()
         for cand in sorted(set(re.findall(r"`([^`\s]+/[^`\s]+)`", text))):
-            if cand.startswith("http") or any(c in cand for c in "<>*{}|"):
+            if cand.startswith("http") or cand in remote_ids or any(c in cand for c in "<>*{}|"):
                 continue
             p = cand.rstrip("/")
             if p.startswith("~"):
@@ -165,6 +195,15 @@ def main():
         known = claude_db | codex_db
         declared = {t for t in re.findall(r"`([A-Za-z0-9][A-Za-z0-9._-]*)`", ptext)
                     if t in known}
+        pairs = {}
+        pair_file = Path(DB) / "runtime-pairs.toml"
+        if pair_file.exists():
+            pairs = tomllib.loads(pair_file.read_text(encoding="utf-8")).get("pairs", {})
+            for claude_name, codex_name in pairs.items():
+                if claude_name not in claude_db or codex_name not in codex_db:
+                    fails.append(f"missing paired runtime skill: {claude_name} -> {codex_name}")
+                else:
+                    declared.update((claude_name, codex_name))
         for n in sorted((claude_db - codex_db) - declared):
             fails.append(f"undeclared parity drift: skills/claude/{n} has no codex counterpart "
                          f"(activate for both, or declare in skills/PARITY.md)")
@@ -187,6 +226,9 @@ def main():
                         and os.path.isfile(os.path.join(root, n, "SKILL.md"))
                     )
             effective[runtime] = names
+        for claude_name, codex_name in pairs.items():
+            if (claude_name in effective["claude"]) != (codex_name in effective["codex"]):
+                fails.append(f"incomplete paired activation: Claude {claude_name} / Codex {codex_name}")
         for n in sorted((effective["claude"] - effective["codex"]) - declared):
             fails.append(f"undeclared activation drift: {n} is available to Claude but not Codex")
         for n in sorted((effective["codex"] - effective["claude"]) - declared):

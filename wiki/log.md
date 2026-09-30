@@ -1559,3 +1559,14 @@ Joshua approved an inverse Codex version of every package skill while preserving
 ## [2026-09-30] Codex-side Claudex skills renamed
 
 Applied Joshua's approved names: claude-review, claude-build, grill-me-claude, and grill-with-docs-claude in all four Codex activation/catalog roots. Claude's three roots retain original Codex names. Updated sync name mapping and frontmatter; retired 16 managed obsolete copies to inactive backups after verifying replacements. Catalog regenerated, parity and reference updated. Verified 16 renamed copies and 12 preserved Claude copies, metadata, sibling routing, and all 49 expected trees through independent review. Offline dry run reports zero changes and zero conflicts. No live model review/build launched.
+
+## [2026-09-30] system | Session wrapup: protected PrepTests and source diagnostics published
+
+Updated the [canonical audit sequence](../brainstorms/2026-09-28-lsatu-build-sequence.md) with the twenty-seventh published functional slice, `db55fd4`, free Lovable deployment `bc780126-a168-4a3d-b3bf-787e590783f3`. Protected PrepTest release `1644ce7` also reached production. Focused tests, typechecks, production builds and independent reviews passed. Production RC failure/retry retained its saved state; current production LR retained paused 30:03 with overlays suppressed. Source failure disclosures were verified on production selected-student Work; its production retry remains unverified after a browser interruption. Local student, Home and teacher retries passed. App checkout was clean at this status check.
+
+Managed backend Activity revocation, atomic timed writes and attempts attribution guard were deployed with preservation checks. The attribution fix preserved all 1,173 existing attempts and unrelated policies. SQL-role foreign INSERT checks are not real-JWT HTTP acceptance. No records deleted, no paid Lovable prompts or AI grading used. Fourteen functional tickets plus deferred design remain open; no task status changed. Next: remaining Step 1 source/save/permission acceptance, then navigation/access and Review/coached work. Isolated PostgreSQL was stopped gracefully with data retained; current dev-server availability was not reverified here.
+
+
+## [2026-09-30] Skills audit defects repaired
+
+Fixed validation of inverse runtime-name pairs, valid path relocation and remote IDs. Replaced symlink-only smoke with portable static copy checks. Catalog separates 15 support-only folders and corrects activation wording; README Mac path repaired. Audit v2 mirrors/resources restored; lint and doctor runtime/privacy instructions corrected; written-explanation transcription uses current browser tools and valid set-log location. Main validator, 3 regression tests and static smoke pass; Claudex offline dry run has zero changes/conflicts. No skill folders deleted or live model/browser workflow launched. Repair receipt: audits/skill-repairs-2026-09-30-b4daa3.md.

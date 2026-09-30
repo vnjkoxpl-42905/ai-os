@@ -4,11 +4,11 @@ One line per skill in the master DB, grouped by source-type within the `claude/`
 
 ## claude/
 
-178 authored/project · 42 google-workspace · 0 vendor-plugin · 18 project-fork
+178 authored/project · 42 google-workspace · 0 vendor-plugin · 9 project-fork
 
 ### Google Workspace (gws) skills
 
-_Full `gws` CLI skill set. Inert in the DB — symlink the ones you want into a project's `.claude/skills/` to activate; not loaded globally._
+_Full `gws` CLI skill set. Inert in the DB. Copy selected skills into the project's `.claude/skills/` to activate. Global availability depends on explicit installation._
 
 - **gws-admin-reports** — Google Workspace Admin SDK: Audit logs and usage reports.
 - **gws-calendar** — Google Calendar: Manage calendars and events.
@@ -62,7 +62,7 @@ _Full `gws` CLI skill set. Inert in the DB — symlink the ones you want into a 
 - **algorithmic-art** — Creating algorithmic art using p5.js with seeded randomness and interactive parameter exploration. Use this when users request creating art using code, generative art, algorithmic art, flow fields, or particle systems. Create original algorithmic art rather than copying existing artists' work to avoid copyright violations.
 - **ask-matt** — Ask which skill or flow fits your situation. A router over the skills in this repo.
 - **assign-lsatu-work** — Operate LSAT U headlessly. Assign guided drills and daily schedules through a mapped catalog and verified batch MCP; assign activities or timed sections, read student progress, manage access and Classroom work, and handle platform messages.
-- **audit** — Use when Joshua asks to audit the OS, score the setup against the Four Cs, or asks "is my AIOS working" / "audit my setup" / "where do we stand" / "find gaps". Produces a Four-Cs scoreboard (/100) with the top-3 leverage-ranked fixes. Read-only. Adapted for the ai-os layout (wiki, students, corpus, native memory, gws connections).
+- **audit** — Use when someone asks to audit their AIOS, score the Four Cs, find stale paths or unlinked projects, compare AGENTS.md and CLAUDE.md, check Claude/Codex skill compatibility, or assess migration readiness. Automatically saves dated reports and tracks evidence-backed improvements across runs.
 - **booking-link** — Use whenever Joshua wants a one-off booking link for LSAT U — "make me a link for Dakota at 7:15 tomorrow", "send her a link to book tonight", "one-off link, $60", "short notice link", "I need a link she can schedule herself with". Mints a single-use URL that sells exactly one session at a price you set, optionally pinned to one exact time, and closes after she books. Also covers listing and revoking existing links.
 - **bootcamp-builder** — Build a complete repo-native LSAT U bootcamp for a new topic, cloning the Intro to LR (Main Conclusion) build process end to end. Interviews Joshua, ingests the content files he feeds it plus a scan of /Curriculum/{Topic}/, then drives a gated multi-session build inside the LSATU repo (src/bootcamps/{slug}/) until bootcamp-parity-audit passes against Intro to LR. Replaces lsat-u-topic-builder. Use when Joshua says "build a [topic] bootcamp", "new bootcamp", "spin up [topic]", "/bootcamp-builder [topic]", or wants to replicate the Intro to LR process for another topic.
 - **bootcamp-parity-audit** — Audit a given LSAT U bootcamp's feature and visual parity against the flagship Intro to LR (Main Conclusion) bootcamp, anchored to the quality bar doc. Use when Joshua asks to "compare against Intro to LR", "check parity", "audit [bootcamp name]", or wants to know how far a bootcamp is from shipped quality. Trigger with /bootcamp-parity-audit <bootcamp-name>.
@@ -198,7 +198,7 @@ _Full `gws` CLI skill set. Inert in the DB — symlink the ones you want into a 
 - **skill-creator** — Create new skills, modify and improve existing skills, and measure skill performance. Use when users want to create a skill from scratch, edit, or optimize an existing skill, run evals to test a skill, benchmark skill performance with variance analysis, or optimize a skill's description for better triggering accuracy.
 - **skill-development** — This skill should be used when the user wants to "create a skill", "add a skill to plugin", "write a new skill", "improve skill description", "organize skill content", or needs guidance on skill structure, progressive disclosure, or skill development best practices for Claude Code plugins.
 - **skill-doctor** — Use when the user wants their agent setup graded from real conversation history, asks which installed skills are actually working, or wants evidence-backed skill edits — scores recent local Claude Code / Codex sessions against efficiency and code-quality rubrics, then drafts skill changes gated by a deterministic aggregator and renders one local shareable report.
-- **skill-lint** — Use when a repo skill fails, produces errors, gives wrong instructions, or references stale information. Also use when a command from a skill returns "not found" or "unknown flag", when a skill references a file path that doesn't exist, when a skill's behavior doesn't match the codebase, or to list available skills, manage local overrides, check staleness, or optimize token usage and quality.
+- **skill-lint** — Diagnose broken skill paths, missing dependencies, stale commands, conflicting runtime copies, or wasteful instructions; list skills and propose scoped local repairs.
 - **slack-gif-creator** — Knowledge and utilities for creating animated GIFs optimized for Slack. Provides constraints, validation tools, and animation concepts. Use when users request animated GIFs for Slack like "make me a GIF of X doing Y for Slack.
 - **subagent-driven-development** — Use when executing implementation plans with independent tasks in the current session
 - **superwhisper** — Use whenever Joshua wants anything changed in Superwhisper, his dictation app on the Windows laptop. Triggers on \"save X in my vocabulary\", \"add X to my dictionary\", \"X --> Y\", \"X should always be Y\", \"replace X with Y\", a bare mis-heard word with an arrow, \"make a mode for ...\", \"scan my transcripts\", \"what keeps getting messed up\", \"what should I add to Superwhisper\", \"restart Superwhisper\", and any mention of Superwhisper, Super Whisper, or \"the dictation\" in the same breath as a word, a spelling, or a mode. Also use it when a dictated message from Joshua arrives with an obvious mis-hearing of a known term, even if he does not ask: note it and offer the fix. Covers the whole loop: edit the vault files, think through the likely mis-hearing variants, sync into the app, restart it silently, verify the load, and scan the transcript history for the next improvements.
@@ -236,32 +236,35 @@ _Full `gws` CLI skill set. Inert in the DB — symlink the ones you want into a 
 
 ### Project forks (divergent project-local versions)
 
-- **lsatu: brainstorming** — _(no SKILL.md)_
 - **lsatu: emil-design-eng** — This skill encodes Emil Kowalski's philosophy on UI polish, component design, animation decisions, and the invisible details that make software feel great.
 - **lsatu: extract-design** — Extract the full design language from any website URL. Produces 8 output files including AI-optimized markdown, visual HTML preview, Tailwind config, React theme, shadcn/ui theme, Figma variables, W3C design tokens, and CSS variables. Also runs WCAG accessibility scoring. Use when user says 'extract design', 'get design system', 'design language', 'design tokens', 'what colors/fonts does this site use', or '/extract-design'.
 - **lsatu: find-skills** — Helps users discover and install agent skills when they ask questions like "how do I do X", "find a skill for X", "is there a skill that can...", or express interest in extending capabilities. This skill should be used when the user is looking for functionality that might exist as an installable skill.
-- **lsatu: lsat-u-topic-builder** — _(no SKILL.md)_
 - **lsatu: notebooklm** — Complete API for Google NotebookLM - full programmatic access including features not in the web UI. Create notebooks, add sources, generate all artifact types, download in multiple formats. Activates on explicit /notebooklm or intent like "create a podcast about X
-- **lsatu: obsidian-bases** — _(no SKILL.md)_
 - **lsatu: pickup** — Load LSAT U project state from the Obsidian vault at the start of a session so a fresh chat knows exactly where to continue. Runs the vault Session Start Protocol and reports open tasks. Trigger with /pickup.
 - **lsatu: ponytail** — Forces the laziest solution that actually works, simplest, shortest, most minimal. Channels a senior dev who has seen everything: question whether the task needs to exist at all (YAGNI), reach for the standard library before custom code, native platform features before dependencies, one line before fifty. Supports intensity levels: lite, full (default), ultra. Use whenever the user says "ponytail", "be lazy", "lazy mode", "simplest solution", "minimal solution", "yagni", "do less", or "shortest path", and whenever they complain about over-engineering, bloat, boilerplate, or unnecessary dependencies.
 - **lsatu: skill-creator** — Create new skills, modify and improve existing skills, and measure skill performance. Use when users want to create a skill from scratch, edit, or optimize an existing skill, run evals to test a skill, benchmark skill performance with variance analysis, or optimize a skill's description for better triggering accuracy.
 - **lsatu: subagent-driven-development** — Use when executing implementation plans with independent tasks in the current session
-- **lsatu: systematic-debugging** — _(no SKILL.md)_
 - **lsatu: using-git-worktrees** — Use when starting feature work that needs isolation from current workspace or before executing implementation plans - creates isolated git worktrees with smart directory selection and safety verification
-- **lsatu: using-superpowers** — _(no SKILL.md)_
-- **lsatu: watch** — _(no SKILL.md)_
-- **lsatu: webapp-testing** — _(no SKILL.md)_
-- **lsatu: writing-plans** — _(no SKILL.md)_
-- **lsatu: writing-skills** — _(no SKILL.md)_
+
+### Archived project support folders (not invokable skills)
+
+- [lsatu/brainstorming](claude/_project-forks/lsatu/brainstorming/): preserved supporting files; no SKILL.md entry point.
+- [lsatu/lsat-u-topic-builder](claude/_project-forks/lsatu/lsat-u-topic-builder/): preserved supporting files; no SKILL.md entry point.
+- [lsatu/obsidian-bases](claude/_project-forks/lsatu/obsidian-bases/): preserved supporting files; no SKILL.md entry point.
+- [lsatu/systematic-debugging](claude/_project-forks/lsatu/systematic-debugging/): preserved supporting files; no SKILL.md entry point.
+- [lsatu/using-superpowers](claude/_project-forks/lsatu/using-superpowers/): preserved supporting files; no SKILL.md entry point.
+- [lsatu/watch](claude/_project-forks/lsatu/watch/): preserved supporting files; no SKILL.md entry point.
+- [lsatu/webapp-testing](claude/_project-forks/lsatu/webapp-testing/): preserved supporting files; no SKILL.md entry point.
+- [lsatu/writing-plans](claude/_project-forks/lsatu/writing-plans/): preserved supporting files; no SKILL.md entry point.
+- [lsatu/writing-skills](claude/_project-forks/lsatu/writing-skills/): preserved supporting files; no SKILL.md entry point.
 
 ## codex/
 
-160 authored/project · 42 google-workspace · 0 vendor-plugin · 17 project-fork
+160 authored/project · 42 google-workspace · 0 vendor-plugin · 11 project-fork
 
 ### Google Workspace (gws) skills
 
-_Full `gws` CLI skill set. Inert in the DB — symlink the ones you want into a project's `.claude/skills/` to activate; not loaded globally._
+_Full `gws` CLI skill set. Inert in the DB. Copy selected skills into the project's `.agents/skills/` to activate. Global availability depends on explicit installation._
 
 - **gws-admin-reports** — Google Workspace Admin SDK: Audit logs and usage reports.
 - **gws-calendar** — Google Calendar: Manage calendars and events.
@@ -313,7 +316,7 @@ _Full `gws` CLI skill set. Inert in the DB — symlink the ones you want into a 
 - **algorithmic-art** — Creating algorithmic art using p5.js with seeded randomness and interactive parameter exploration. Use this when users request creating art using code, generative art, algorithmic art, flow fields, or particle systems. Create original algorithmic art rather than copying existing artists' work to avoid copyright violations.
 - **ask-matt** — Ask which skill or flow fits your situation. A router over the skills in this repo.
 - **assign-lsatu-work** — Operate LSAT U headlessly. Assign guided drills and daily schedules through a mapped catalog and verified batch MCP; assign activities or timed sections, read student progress, manage access and Classroom work, and handle platform messages.
-- **audit** — Use when Joshua asks to audit the OS, score the setup against the Four Cs, or asks "is my AIOS working" / "audit my setup" / "where do we stand" / "find gaps". Produces a Four-Cs scoreboard (/100) with the top-3 leverage-ranked fixes. Read-only. Adapted for the ai-os layout (wiki, students, corpus, native memory, gws connections).
+- **audit** — Use when someone asks to audit their AIOS, score the Four Cs, find stale paths or unlinked projects, compare AGENTS.md and CLAUDE.md, check Claude/Codex skill compatibility, or assess migration readiness. Automatically saves dated reports and tracks evidence-backed improvements across runs.
 - **booking-link** — Use whenever Joshua wants a one-off booking link for LSAT U — "make me a link for Dakota at 7:15 tomorrow", "send her a link to book tonight", "one-off link, $60", "short notice link", "I need a link she can schedule herself with". Mints a single-use URL that sells exactly one session at a price you set, optionally pinned to one exact time, and closes after she books. Also covers listing and revoking existing links.
 - **brainstorming** — You MUST use this before any creative work - creating features, building components, adding functionality, or modifying behavior. Explores user intent, requirements and design before implementation.
 - **brand-guidelines** — Applies Anthropic's official brand colors and typography to any sort of artifact that may benefit from having Anthropic's look-and-feel. Use it when brand colors or style guidelines, visual formatting, or company design standards apply.
@@ -433,7 +436,7 @@ _Full `gws` CLI skill set. Inert in the DB — symlink the ones you want into a 
 - **skill-creator** — Guide for creating effective skills. This skill should be used when users want to create a new skill (or update an existing skill) that extends Codex's capabilities with specialized knowledge, workflows, or tool integrations.
 - **skill-doctor** — Use when the user wants their agent setup graded from real conversation history, asks which installed skills are actually working, or wants evidence-backed skill edits — scores recent local Claude Code / Codex sessions against efficiency and code-quality rubrics, then drafts skill changes gated by a deterministic aggregator and renders one local shareable report.
 - **skill-installer** — Install Codex skills into $CODEX_HOME/skills from a curated list or a GitHub repo path. Use when a user asks to list installable skills, install a curated skill, or install a skill from another repo (including private repos).
-- **skill-lint** — Use when a repo skill fails, produces errors, gives wrong instructions, or references stale information. Also use when a command from a skill returns "not found" or "unknown flag", when a skill references a file path that doesn't exist, when a skill's behavior doesn't match the codebase, or to list available skills, manage local overrides, check staleness, or optimize token usage and quality.
+- **skill-lint** — Diagnose broken skill paths, missing dependencies, stale commands, conflicting runtime copies, or wasteful instructions; list skills and propose scoped local repairs.
 - **slack-gif-creator** — Knowledge and utilities for creating animated GIFs optimized for Slack. Provides constraints, validation tools, and animation concepts. Use when users request animated GIFs for Slack like "make me a GIF of X doing Y for Slack.
 - **subagent-driven-development** — Use when executing implementation plans with independent tasks in the current session
 - **superwhisper** — Maintain Joshua's Superwhisper dictation setup on this Windows laptop. Use for vocabulary requests, spoken correction mappings, custom modes, transcript-error scans, configuration checks, or restarting Superwhisper.
@@ -471,20 +474,23 @@ _Full `gws` CLI skill set. Inert in the DB — symlink the ones you want into a 
 
 ### Project forks (divergent project-local versions)
 
-- **lsatu: brainstorming** — _(no SKILL.md)_
 - **lsatu: dispatching-parallel-agents** — Use when facing 2+ independent tasks that can be worked on without shared state or sequential dependencies
 - **lsatu: extract-design** — Extract the full design language from any website URL. Produces 8 output files including AI-optimized markdown, visual HTML preview, Tailwind config, React theme, shadcn/ui theme, Figma variables, W3C design tokens, and CSS variables. Also runs WCAG accessibility scoring. Use when user says 'extract design', 'get design system', 'design language', 'design tokens', 'what colors/fonts does this site use', or '/extract-design'.
 - **lsatu: find-skills** — Helps users discover and install agent skills when they ask questions like "how do I do X", "find a skill for X", "is there a skill that can...", or express interest in extending capabilities. This skill should be used when the user is looking for functionality that might exist as an installable skill.
-- **lsatu: lsat-u-topic-builder** — _(no SKILL.md)_
 - **lsatu: notebooklm** — Complete API for Google NotebookLM - full programmatic access including features not in the web UI. Create notebooks, add sources, generate all artifact types, download in multiple formats. Activates on explicit /notebooklm or intent like "create a podcast about X
 - **lsatu: obsidian-bases** — Create and edit Obsidian Bases (.base files) with views, filters, formulas, and summaries. Use when working with .base files, creating database-like views of notes, or when the user mentions Bases, table views, card views, filters, or formulas in Obsidian.
-- **lsatu: second-brain** — _(no SKILL.md)_
 - **lsatu: second-brain-query** — Answer questions against the knowledge base wiki. Use when the user asks a question about their collected knowledge, wants to explore connections between topics, says "what do I know about X", or wants to search their wiki.
-- **lsatu: skill-creator** — _(no SKILL.md)_
-- **lsatu: subagent-driven-development** — _(no SKILL.md)_
-- **lsatu: systematic-debugging** — _(no SKILL.md)_
 - **lsatu: using-superpowers** — Use when starting any conversation - establishes how to find and use skills, requiring Skill tool invocation before ANY response including clarifying questions
 - **lsatu: verification-before-completion** — Use when about to claim work is complete, fixed, or passing, before committing or creating PRs - requires running verification commands and confirming output before making any success claims; evidence before assertions always
 - **lsatu: webapp-testing** — Toolkit for interacting with and testing local web applications using Playwright. Supports verifying frontend functionality, debugging UI behavior, capturing browser screenshots, and viewing browser logs.
 - **lsatu: writing-plans** — Use when you have a spec or requirements for a multi-step task, before touching code
 - **lsatu: writing-skills** — Use when creating new skills, editing existing skills, or verifying skills work before deployment
+
+### Archived project support folders (not invokable skills)
+
+- [lsatu/brainstorming](codex/_project-forks/lsatu/brainstorming/): preserved supporting files; no SKILL.md entry point.
+- [lsatu/lsat-u-topic-builder](codex/_project-forks/lsatu/lsat-u-topic-builder/): preserved supporting files; no SKILL.md entry point.
+- [lsatu/second-brain](codex/_project-forks/lsatu/second-brain/): preserved supporting files; no SKILL.md entry point.
+- [lsatu/skill-creator](codex/_project-forks/lsatu/skill-creator/): preserved supporting files; no SKILL.md entry point.
+- [lsatu/subagent-driven-development](codex/_project-forks/lsatu/subagent-driven-development/): preserved supporting files; no SKILL.md entry point.
+- [lsatu/systematic-debugging](codex/_project-forks/lsatu/systematic-debugging/): preserved supporting files; no SKILL.md entry point.

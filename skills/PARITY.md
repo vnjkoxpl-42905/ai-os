@@ -114,3 +114,8 @@ Supersedes the 2026-09-16 note above. The sibling-file workaround existed only b
 ## 2026-09-30: LLM Wiki workflows shared across runtimes
 
 `ingest` is now catalogued and activated for Codex and Claude, with matching Gemini copies. The obsolete Claude-only exception is removed. `second-brain-ingest` is a compatibility alias for public `ingest`; query and lint are separate shared workflows. Current-vault policy lives in `system/schema/llm-wiki.md`. Existing global copies were updated without creating new global activations. The 2026-09-12 counts above are historical audit counts.
+
+
+## 2026-09-30: validated runtime name pairs
+
+Machine-readable equivalents live in `skills/runtime-pairs.toml`. The validator requires both sides of each pair to exist before treating their distinct names as intentional. Activation relocation is compared by resolved existing link destinations, rather than raw Markdown path spelling. Archived project support folders without SKILL.md stay preserved and appear separately from invokable skills in the generated index.

@@ -9,7 +9,7 @@ Use Codex's in-app Browser to operate the open LSAT Lab practice player and tran
 
 ## Codex execution contract
 
-- Browser surface: use the `control-in-app-browser` skill and its `iab` browser only. Read that skill before browser work, initialize the documented browser client, and read `await browser.documentation()` completely once per browser session.
+- Browser surface: use the available `mcp__cua_repl.js` tool and its `iab` browser. Read its supplied entry-point instructions and returned documentation before browser work. There is no dependency on a separately installed browser skill. The `computer-use` skill describes native Windows automation; it is not this browser API and must not be substituted for it.
 - Do NOT invoke `claude-in-chrome`, `control-chrome`, Chrome extension tools, standalone Playwright, web search, or any external browser. Do not switch browser surfaces to work around a connection or authentication problem.
 - Browser actions must use the documented in-app Browser API, preferably accessible locators/roles and text reads. Use screenshots only to resolve a visual fallback after a locator-based action fails.
 - Local files are edited with `apply_patch` after reading the current file. Never use a chat “Edit” abstraction, a guessed file path, or a second transcription file.
@@ -60,7 +60,7 @@ Some authored questions have only ONE written explanation and NO "Explanation st
 
 ## Output: ONE file per test (hard rule)
 
-Everything for a test goes into a single file. See [[explanation-file-layout]] memory. NEVER make per-question files or per-section folders.
+Everything for a test goes into a single file. The structure below is the complete layout contract; no separate memory file is required. NEVER make per-question files or per-section folders.
 
 ### Folder organization (keep it clean)
 
@@ -135,7 +135,7 @@ Breakdown headers vary by question type — transcribe whatever the panel shows,
 
 When Joshua's trigger names a PrepTest (e.g. "transcribe PT154"), BEFORE touching the browser:
 
-1. Read `C:/Users/Joshu/dev/ai-os/output/lsat-u/lsat-lab-set-log.md` (written by the `lsat-lab-mega-set` skill).
+1. Read the existing set log at `<LSATU_ROOT>/docs/from-output/lsat-lab-set-log.md`. Resolve `LSATU_ROOT` from the AI OS sibling `../ai-os-projects/lsatu` and verify it exists before writing. Do not create an alternative ledger when the expected file is missing; report that absence and use live discovery.
 2. Find the `## PT <num>` block matching the requested PT. If more than one ever exists, take the most recent by `Built:` date.
 3. If found, pin these as the run's ground truth for the rest of the skill:
    - **Set URL** — the backtick-wrapped `https://app.lsatlab.com/practice?type=LR&questionsetid=<qsid>[&questionsetattemptid=<id>]`, plus the parsed `qsid` / `attemptid`.
@@ -147,10 +147,20 @@ When Joshua's trigger names a PrepTest (e.g. "transcribe PT154"), BEFORE touchin
 
 ## STEP 0 — in-app Browser access + tab
 
-Use the Codex `control-in-app-browser` skill. Initialize the browser client exactly as that skill documents, select `agent.browsers.get("iab")`, and read the complete browser documentation before interacting with the page. Then:
+Use `mcp__cua_repl.js`. On its first invocation, or after resetting its session, execute exactly one documented entry-point call and nothing else. For this workflow, inventory existing surfaces first:
+
+```javascript
+await cua.getState();
+```
+
+Read the returned documentation before continuing. On a subsequent invocation, select the observed existing LSAT Lab tab with `cua.getTab(tabId, { browser: "iab" })`, using an ID from that inventory. A specifically mentioned tab instead uses `cua.getTab({ mention: completeMentionUrl })` as the initial call. Never invent a browser ID, tab ID, navigation method, locator API, or page-text reader. To create a missing tab, the documented entry point is `cua.createBrowserTab("iab", setUrl, { visible: true })`. After a compacted computer-use session, call `await cua.rewriteDocumentation()` before continuing.
+
+Only use action, locator, screenshot, and text-read APIs described by the tool or its returned documentation. Examples from retired browser clients do not apply to this runtime. If `mcp__cua_repl.js` or the in-app surface is unavailable, report the blocker without starting a different browser.
+
+Then:
 1. Inspect the existing in-app tabs and identify the LSAT Lab tab by URL and `questionsetid`, not by a session-specific tab id.
 2. Position the tab:
-   - **If STEP 0a produced a logged URL:** target that exact URL. First check whether a tab is already open whose URL carries the SAME `questionsetid` — if so, reuse it (re-navigating an already-correct tab reloads it to item 1 and loses your place, so avoid it). Only when no such tab exists, `navigate` the tab to the logged URL (or open one with `createIfEmpty: true` and navigate). This is the auto-navigate path: do not wait for Joshua to have opened a tab.
+   - **If STEP 0a produced a logged URL:** target that exact URL. First check whether a tab is already open whose URL carries the SAME `questionsetid` — if so, reuse it (re-navigating an already-correct tab reloads it to item 1 and loses your place, so avoid it). Only when no such tab exists, use the navigation API returned by the current CUA documentation, or create a tab with `cua.createBrowserTab("iab", setUrl, { visible: true })`. This is the auto-navigate path: do not wait for Joshua to have opened a tab.
    - **If STEP 0a found nothing:** reuse the tab Joshua already has open on the set, matched by URL (`https://app.lsatlab.com/practice?type=LR&questionsetid=<ID>`). Navigate or create a tab only when no matching tab exists.
 3. If continuing a prior run, read the current page and confirm the bottom-left `PrepTest <NNN> · S# · Q#` label matches the progress file's `NEXT` pointer. If it matches the next item, capture it directly; do not click Next first. If the tab is parked on the last completed item, click Next once.
 4. **Cold start or reload:** never click Next dozens of times. Use the documented pager or a text/role locator for the resume item, jump once, and verify the visible `S# · Q#` label before capturing.
@@ -175,7 +185,7 @@ These four actions make every later question cheap and reliable; skipping them i
 - **The style control may be a dropdown OR a segmented toggle.** With the right-side panel (e.g. Question Details) open, the Standard/Brief/Another Way control may collapse into a single **"Explanation style"** dropdown button. With the panel closed it may show as three inline buttons. Resolve the current control by accessible name and inspect the resulting page state.
 - **The documented page-text read is the reliable reader AND style verifier.** It should return stimulus + prompt + breakdown + per-choice explanations + `% of students` badges cleanly, and once Question Details is open it should expose the real Question Type. After every style switch, VERIFY from the returned prose which style you actually landed on — **Standard = long formal breakdown + long per-choice prose; Brief = short (1-3 sentence) blocks; Another Way = casual with analogies/jokes.** If the text did not change style, the action missed or the page has not settled; re-read and retry.
 - **The post-Next collapse quirk is state-dependent.** After advancing, the first style-control activation may collapse the drawer instead of opening the dropdown. Recover by reading the page, restoring **Show explanations** if needed, waiting for the drawer to settle, then activating **Explanation style** again. Verify the dropdown options are visible before selecting one.
-- **Dropdown option y-coords shift with stimulus height.** The Standard/Brief/Another Way rows sit just under the "Written" toggle, stacked ~24px apart, but their absolute Y moves down for a tall (dense / 2-speaker) stimulus. Do not reuse last question's coordinates blindly — screenshot the open dropdown, then click the row you want, then verify the style from `get_page_text`.
+- **Dropdown option y-coords shift with stimulus height.** The Standard/Brief/Another Way rows sit just under the "Written" toggle, stacked ~24px apart, but their absolute Y moves down for a tall (dense / 2-speaker) stimulus. Do not reuse last question's coordinates blindly — screenshot the open dropdown, then click the row you want, then verify the style from the documented page-text read.
 - **Prefer option locators over coordinates.** Dropdown options move with stimulus height and viewport changes. Resolve the specific Standard / Brief / Another Way option after opening the dropdown. Use a fresh screenshot only as a fallback, then verify the resulting style from the page text.
 - **If the drawer gets stuck, recover without losing position.** First try restoring the drawer and re-reading the page. If a reload is necessary, assume the site may return to item 1, then use the direct pager/locator to jump back to the progress pointer and verify the label before continuing.
 
@@ -210,7 +220,7 @@ For each question, in order:
 - If a choice's blue label has two tag lines (e.g. `Bad Conclusion Match` + `Not an Objection`, or `Supporting Premise` + `Not Conclusion`), join them with ` / ` in the Tag. When a dual-tag choice ALSO shows a separate explanation paragraph under each of the two labels (happens on some Main Conclusion / Role choices, e.g. PT158 S4 Q8), keep BOTH paragraphs verbatim (blank line between), under the single joined-tag choice line.
 - A tag string can itself contain a real em dash (e.g. `Plays No Logical Role — Plainly Wrong`, `Expert Has Bias — Opposite Logic`). Keep it verbatim; that em dash lives inside the Tag, after the delimiter.
 - The answer-choice separator uses a real em dash (U+2014) in `**A. text** — Tag (N% of students)`. This is the ONE intentional em dash you insert. Everywhere else in your own prose, follow Joshua's no-em-dash rule. Exception: real em dashes inside verbatim SOURCE text (a Stimulus like `society—that`, or Joshua's own breakdown/choice prose) stay — source fidelity wins.
-- **Normalize extracted `--` to `—` on append.** `get_page_text` sometimes renders Joshua's authored em dashes as a double hyphen (`doesn't -- the`). Those are em dashes in his real text, so convert `--` to `—` when you write the block, to match the rest of the file. (Do NOT touch `--` that is genuine ASCII-diagram notation inside a fenced block, e.g. `HB <--s--> CP`.)
+- **Normalize extracted `--` to `—` on append.** the documented page-text read sometimes renders Joshua's authored em dashes as a double hyphen (`doesn't -- the`). Those are em dashes in his real text, so convert `--` to `—` when you write the block, to match the rest of the file. (Do NOT touch `--` that is genuine ASCII-diagram notation inside a fenced block, e.g. `HB <--s--> CP`.)
 - Preserve italics as `*word*`. Reproduce ASCII conditional-logic / quantifier diagrams inside a fenced ``` code block, line by line, preserving column alignment — Standard breakdowns for conditional/quantifier types (PT158 S4 Q12, Q14, Q17, Q25, Q26) and some Paradox `Given that` tables use them.
 
 ## Progress logging (every question)
@@ -250,7 +260,7 @@ If Joshua only wants LR, skip Reading Comp. STOP only when the bottom-left label
 - The output file's `## S# · Q#` headings reconcile with the set-log structure plus the progress log's Done / Skipped entries. No section may be missing behind a misleading `COMPLETE` marker.
 - Video-only skips and any type-inferred / unreadable items are listed in the progress log.
 - `LR-TRANSCRIPTION-PROJECT.md` updated and the next test named.
-- **Close the loop in the set log:** if the PT has an entry in `output/lsat-lab-set-log.md`, append one line to that PT's block: `- **Transcribed:** <YYYY-MM-DD> -> Explanations/PT<NNN>-explanations.md (<done> done, <skipped> skipped)` and refresh the file's `updated:` frontmatter. The shared ledger then shows both halves of a PT's lifecycle: built AND transcribed.
+- **Close the loop in the set log:** if the PT has an entry in `<LSATU_ROOT>/docs/from-output/lsat-lab-set-log.md`, append one line to that PT's block: `- **Transcribed:** <YYYY-MM-DD> -> Explanations/PT<NNN>-explanations.md (<done> done, <skipped> skipped)` and refresh the file's `updated:` frontmatter. The shared ledger then shows both halves of a PT's lifecycle: built AND transcribed.
 - Report a short final summary: questions done, skips, flags.
 
 ## Do NOT

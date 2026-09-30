@@ -23,7 +23,7 @@ A question is not "done" until all three styles are captured and appended.
 
 ## Output: ONE file per test (hard rule)
 
-Everything for a test goes into a single file. See [[explanation-file-layout]] memory. NEVER make per-question files or per-section folders.
+Everything for a test goes into a single file. The structure below is the complete layout contract; no separate memory file is required. NEVER make per-question files or per-section folders.
 
 ### Folder organization (keep it clean)
 
@@ -92,14 +92,14 @@ Breakdown headers vary by question type — transcribe whatever the panel shows,
 
 ## STEP 0 — browser access + tab
 
-You DO have a Claude-in-Chrome browser tool. Prove it before starting:
-1. Invoke the `claude-in-chrome` skill.
-2. Load tools in ONE ToolSearch call: `select:mcp__claude-in-chrome__tabs_context_mcp,mcp__claude-in-chrome__navigate,mcp__claude-in-chrome__computer,mcp__claude-in-chrome__get_page_text,mcp__claude-in-chrome__read_page,mcp__claude-in-chrome__find,mcp__claude-in-chrome__browser_batch`.
+Check the current Claude runtime for its Chrome extension tools before starting.
+1. Read current tool documentation. Read `claude-in-chrome` instructions only if that skill is actually available; it is not a mandatory local dependency.
+2. Discover only exposed tools, for example through ToolSearch when available: `select:mcp__claude-in-chrome__tabs_context_mcp,mcp__claude-in-chrome__navigate,mcp__claude-in-chrome__computer,mcp__claude-in-chrome__get_page_text,mcp__claude-in-chrome__read_page,mcp__claude-in-chrome__find,mcp__claude-in-chrome__browser_batch`.
 3. Call `tabs_context_mcp`. **Reuse the tab Joshua already has open** on the set when there is one — match it by URL (`https://app.lsatlab.com/practice?type=LR&questionsetid=<ID>`), not by tabId (tabIds differ per session). Only pass `createIfEmpty: true` / navigate to the set URL if no such tab exists. Re-navigating an already-correct tab reloads it to item 1 and loses your place, so avoid it.
 4. If continuing a prior run: the tab is likely parked on the last-captured question with the Question Details panel open. `get_page_text` to confirm the bottom-left `PrepTest <NNN> · S# · Q#` label matches the progress file's NEXT pointer, then click Next once to advance.
 5. **Cold start (tab reloaded to item 1)?** Do NOT click Next dozens of times. The bottom pager exposes direct `Item <N>` buttons — `read_page filter: interactive`, `find` the "Item <N>" button for your resume item, click it once to jump straight there, then verify the label. (Note the site often auto-restores your last position on load, so check the counter before jumping.)
 
-If the extension reports "not connected": tell Joshua to fully quit Chrome (Cmd+Q), reopen, re-sign the extension into the SAME Anthropic account as this session, then retry.
+If the extension is unavailable or reports "not connected", stop and report the exact blocker. Use recovery steps from the current extension documentation, appropriate to the current operating system. Do not assume a macOS shortcut on Windows or invent missing tools.
 
 ## Critical mechanics (learned the hard way)
 
