@@ -92,7 +92,7 @@
       "section_id": "concept-1",
       "type": "say",
       "title": "Accept the facts and learn the three conditional moves",
-      "text": "Must Be True and Must Be False have these nauseating difficulty curves.\n\nThere are so many level-three, level-four, and level-five questions, and very few level-one questions.\n\nWhy?\n\nThe instructor's explanation is that these types are dominated by conditional logic.\n\nThese questions can feel difficult because so many of them involve conditional logic.\n\nIf conditional logic is a stumbling block, it's worth working on directly.\n\nFlashcards and conditional rephrasing are useful: look at a statement, then turn it into conditional form."
+      "text": "Must Be True and Must Be False have these nauseating difficulty curves.\n\nThere are so many level-three, level-four, and level-five questions, and very few level-one questions.\n\nWhy?\n\nIt's because these types are dominated by conditional logic.\n\nThese questions can feel difficult because so many of them involve conditional logic.\n\nIf conditional logic is a stumbling block, it's worth working on directly.\n\nFlashcards and conditional rephrasing are useful: look at a statement, then turn it into conditional form."
     },
     {
       "id": "step-004",
@@ -134,8 +134,9 @@
       "section_id": "concept-1",
       "type": "board",
       "title": "Contrapositive: copy to the board",
-      "text": "A -> (not B AND C)\n(B OR not C) -> not A\n\nSource board warning: missing not before C is corrected here.",
-      "image_path": "screenshots/01-board-02m35s.png"
+      "text": "A -> (not B AND C)\n(B OR not C) -> not A",
+      "image_path": "screenshots/01-board-02m35s.png",
+      "teacher_note": "Source board omits not before C; these formulas correct it."
     },
     {
       "id": "step-010",
@@ -149,7 +150,7 @@
       "section_id": "concept-1",
       "type": "say",
       "title": "Accept the facts and learn the three conditional moves",
-      "text": "The original board drops the not before C; keep that negative in your version."
+      "text": "Make sure I keep the not before C on the board.\n\nDropping that negative would change the contrapositive."
     },
     {
       "id": "step-012",
@@ -255,7 +256,7 @@
       "section_id": "concept-1",
       "type": "say",
       "title": "Accept the facts and learn the three conditional moves",
-      "text": "When we have a chain, we're often looking from the beginning to the end.\n\nBut don't become attached to the longest possible inference.\n\nThe instructor observes that older tests often reward the full head-to-tail inference, while more recent questions may hide the result by testing a shorter stretch.\n\nIf there's a four-part chain, an answer can test A to C or B to D rather than A to D."
+      "text": "When we have a chain, we're often looking from the beginning to the end.\n\nBut don't become attached to the longest possible inference.\n\nOn older tests, they often reward the full head-to-tail inference.\n\nOn more recent tests, they may hide it by testing a shorter stretch.\n\nIf there's a four-part chain, an answer can test A to C or B to D rather than A to D."
     },
     {
       "id": "step-027",
@@ -439,30 +440,34 @@
       "title": "PT8 S1 Q19",
       "text": "Read the original stimulus, stem, and all five choices. Keep the question visible during the walkthrough.",
       "question_id": "Q1",
-      "image_path": "screenshots/extra-1490.png"
+      "image_path": "screenshots/extra-1490.png",
+      "spoken_intro": "Give this a read and see if you can make a prediction."
+    },
+    {
+      "id": "step-054",
+      "section_id": "question-1",
+      "type": "wait",
+      "title": "Give them time to work",
+      "text": "Give the student time to work on the question independently first. Start the two-minute timer as a suggested pace, or pause it if more time is useful. When finished, ask for their reasoning.",
+      "question_id": "Q1",
+      "duration_seconds": 120,
+      "pacing_note": "Suggested facilitation pace, not a timing value stated in the source lecture."
     },
     {
       "id": "step-053",
       "section_id": "question-1",
       "type": "ask",
       "title": "Ask the student",
-      "text": "What relationship or boundary does the passage supply? Can you predict a supported inference before reading the answers?",
-      "question_id": "Q1"
-    },
-    {
-      "id": "step-054",
-      "section_id": "question-1",
-      "type": "wait",
-      "title": "Wait for reasoning",
-      "text": "Pause. Let the student answer and explain the move before revealing the expected response.",
-      "question_id": "Q1"
+      "text": "Do you see any conditionals to begin with?",
+      "question_id": "Q1",
+      "image_path": "screenshots/extra-1490.png"
     },
     {
       "id": "step-055",
       "section_id": "question-1",
       "type": "expected",
       "title": "Expected response",
-      "text": "Identify the actual rule, fact, chain, qualification checklist, or numerical boundary. Keep the prediction provisional; do not add information.",
+      "text": "If introduces the first rule; only also appears in the final information. The bestselling-magazines fact activates the first rule's contrapositive: fulfillment of both moral and intellectual responsibilities fails. At least one responsibility fails; do not infer both fail or change universities to purchasers.",
       "question_id": "Q1"
     },
     {
@@ -526,9 +531,10 @@
       "section_id": "question-1",
       "type": "board",
       "title": "Preserve the not-both conclusion",
-      "text": "Fulfill BOTH (M AND I) -> not T\nT -> not (M AND I)\nT -> (not M OR not I)\n\nnot BOTH does not mean BOTH fail.\nKeep the most-bookstores fact separate from claims about purchasers.",
+      "text": "Fulfill BOTH (M AND I) -> not T\nT -> not (M AND I)\nT -> (not M OR not I)\n\nnot BOTH does not mean BOTH fail.",
       "question_id": "Q1",
-      "image_path": "screenshots/06-q1-board-23m20s.png"
+      "image_path": "screenshots/06-q1-board-23m20s.png",
+      "teacher_note": "Keep the most-bookstores fact separate from claims about purchasers."
     },
     {
       "id": "step-064",
@@ -646,7 +652,7 @@
       "section_id": "concept-2",
       "type": "say",
       "title": "Four kinds of pivot tension",
-      "text": "When the last fact begins with a pivot, pay attention to the tension it creates.\n\nThe instructor calls this a huge pattern in Must Be True and Most Strongly Supported: when the last fact starts with a pivot, the answer very often addresses the tension created by that pivot.\n\nThat tension tells us which ideas to examine together."
+      "text": "When the last fact begins with a pivot, pay attention to the tension it creates.\n\nThat is a huge pattern in Must Be True and Most Strongly Supported: when your last fact starts with a pivot, the answer very often addresses the tension created by that pivot.\n\nThat tension tells us which ideas to examine together."
     },
     {
       "id": "step-079",
@@ -697,30 +703,34 @@
       "title": "PT14 S2 Q2",
       "text": "Read the original stimulus, stem, and all five choices. Keep the question visible during the walkthrough.",
       "question_id": "Q2",
-      "image_path": "screenshots/09-q2-34m23s.png"
+      "image_path": "screenshots/09-q2-34m23s.png",
+      "spoken_intro": "Give this a read and see if you can make a prediction."
+    },
+    {
+      "id": "step-087",
+      "section_id": "question-2",
+      "type": "wait",
+      "title": "Give them time to work",
+      "text": "Give the student time to work on the question independently first. Start the two-minute timer as a suggested pace, or pause it if more time is useful. When finished, ask for their reasoning.",
+      "question_id": "Q2",
+      "duration_seconds": 120,
+      "pacing_note": "Suggested facilitation pace, not a timing value stated in the source lecture."
     },
     {
       "id": "step-086",
       "section_id": "question-2",
       "type": "ask",
       "title": "Ask the student",
-      "text": "What relationship or boundary does the passage supply? Can you predict a supported inference before reading the answers?",
-      "question_id": "Q2"
-    },
-    {
-      "id": "step-087",
-      "section_id": "question-2",
-      "type": "wait",
-      "title": "Wait for reasoning",
-      "text": "Pause. Let the student answer and explain the move before revealing the expected response.",
-      "question_id": "Q2"
+      "text": "What are the two routes an applicant can use to meet the requirements?",
+      "question_id": "Q2",
+      "image_path": "screenshots/09-q2-34m23s.png"
     },
     {
       "id": "step-088",
       "section_id": "question-2",
       "type": "expected",
       "title": "Expected response",
-      "text": "Identify the actual rule, fact, chain, qualification checklist, or numerical boundary. Keep the prediction provisional; do not add information.",
+      "text": "An earned doctorate AND a track record of published research, OR five years of work experience. Keep the paired first route intact. The relevant fields for these requirements are sociology, psychology, and education.",
       "question_id": "Q2"
     },
     {
@@ -825,7 +835,7 @@
       "section_id": "question-2",
       "type": "say",
       "title": "Applicants: keep both qualification routes intact",
-      "text": "The listed relevant fields are sociology, psychology, and education.\n\nThe stimulus says these fields apply to these requirements, so keep that restriction in view when applying both qualification routes.\n\nFor Alvin, seven years of psychology research satisfies the experience route.\n\nThe original spoken explanation says the doctorate and research can be in any field, but that conflicts with the wording shown in the question.\n\nFollow the question text.",
+      "text": "The listed relevant fields are sociology, psychology, and education.\n\nThe stimulus says these fields apply to these requirements, so keep that restriction in view when applying both qualification routes.\n\nFor Alvin, seven years of psychology research satisfies the experience route.\n\nWe can't say the doctorate and research can be in any field.\n\nThat conflicts with the wording shown in the question.\n\nFollow the question text.",
       "question_id": "Q2"
     },
     {
@@ -923,30 +933,34 @@
       "title": "PT113 S2 Q2",
       "text": "Read the original stimulus, stem, and all five choices. Keep the question visible during the walkthrough.",
       "question_id": "Q3",
-      "image_path": "screenshots/extra-2960.png"
+      "image_path": "screenshots/extra-2960.png",
+      "spoken_intro": "Give this a read and see if you can make a prediction."
+    },
+    {
+      "id": "step-115",
+      "section_id": "question-3",
+      "type": "wait",
+      "title": "Give them time to work",
+      "text": "Give the student time to work on the question independently first. Start the two-minute timer as a suggested pace, or pause it if more time is useful. When finished, ask for their reasoning.",
+      "question_id": "Q3",
+      "duration_seconds": 120,
+      "pacing_note": "Suggested facilitation pace, not a timing value stated in the source lecture."
     },
     {
       "id": "step-114",
       "section_id": "question-3",
       "type": "ask",
       "title": "Ask the student",
-      "text": "What relationship or boundary does the passage supply? Can you predict a supported inference before reading the answers?",
-      "question_id": "Q3"
-    },
-    {
-      "id": "step-115",
-      "section_id": "question-3",
-      "type": "wait",
-      "title": "Wait for reasoning",
-      "text": "Pause. Let the student answer and explain the move before revealing the expected response.",
-      "question_id": "Q3"
+      "text": "Do we see any conditionals? What does the standard for refusal actually require?",
+      "question_id": "Q3",
+      "image_path": "screenshots/extra-2960.png"
     },
     {
       "id": "step-116",
       "section_id": "question-3",
       "type": "expected",
       "title": "Expected response",
-      "text": "Identify the actual rule, fact, chain, qualification checklist, or numerical boundary. Keep the prediction provisional; do not add information.",
+      "text": "The useful definitional relationship is no greater than two inches of additional penetration after twenty-four hammer blows -> refusal standard met. No greater than two does not require zero. Further positive movement can be compatible with the standard.",
       "question_id": "Q3"
     },
     {
@@ -1125,30 +1139,34 @@
       "title": "PT10 S1 Q24",
       "text": "Read the original stimulus, stem, and all five choices. Keep the question visible during the walkthrough.",
       "question_id": "Q4",
-      "image_path": "screenshots/extra-3760.png"
+      "image_path": "screenshots/extra-3760.png",
+      "spoken_intro": "Give this a read and see if you can make a prediction."
+    },
+    {
+      "id": "step-140",
+      "section_id": "question-4",
+      "type": "wait",
+      "title": "Give them time to work",
+      "text": "Give the student time to work on the question independently first. Start the two-minute timer as a suggested pace, or pause it if more time is useful. When finished, ask for their reasoning.",
+      "question_id": "Q4",
+      "duration_seconds": 120,
+      "pacing_note": "Suggested facilitation pace, not a timing value stated in the source lecture."
     },
     {
       "id": "step-139",
       "section_id": "question-4",
       "type": "ask",
       "title": "Ask the student",
-      "text": "What relationship or boundary does the passage supply? Can you predict a supported inference before reading the answers?",
-      "question_id": "Q4"
-    },
-    {
-      "id": "step-140",
-      "section_id": "question-4",
-      "type": "wait",
-      "title": "Wait for reasoning",
-      "text": "Pause. Let the student answer and explain the move before revealing the expected response.",
-      "question_id": "Q4"
+      "text": "Apart from conditional language, what else is drawing our attention here?",
+      "question_id": "Q4",
+      "image_path": "screenshots/extra-3760.png"
     },
     {
       "id": "step-141",
       "section_id": "question-4",
       "type": "expected",
       "title": "Expected response",
-      "text": "Identify the actual rule, fact, chain, qualification checklist, or numerical boundary. Keep the prediction provisional; do not add information.",
+      "text": "The timeline: production after a week, increases for the next year or so, and a first-year positive test estimating elapsed infection time to within a month. Keep timing distinct from unsupported claims about recovery, other defenses, exclusive tests, or indefinite growth. This stem asks best supported.",
       "question_id": "Q4"
     },
     {
@@ -1228,9 +1246,10 @@
       "section_id": "question-4",
       "type": "board",
       "title": "Keep the timeline visible",
-      "text": "Day 0: infection\nAfter a week: antibody production\nNext year or so: antibody count increases\nPositive test during first year:\nestimates elapsed infection time within a month\n\nEarly infection can precede detectable antibodies (E).\nThis question asks BEST SUPPORTED, not Must Be True.",
+      "text": "Day 0: infection\nAfter a week: antibody production\nNext year or so: antibody count increases\nPositive test during first year:\nestimates elapsed infection time within a month\n\nEarly infection can precede detectable antibodies (E).",
       "question_id": "Q4",
-      "image_path": "screenshots/16-q4-board-60m50s.png"
+      "image_path": "screenshots/16-q4-board-60m50s.png",
+      "teacher_note": "This question asks BEST SUPPORTED, not Must Be True."
     },
     {
       "id": "step-152",
@@ -1437,7 +1456,7 @@
       "section_id": "question-4",
       "type": "say",
       "title": "Virus X: an infection can precede detectable antibodies",
-      "text": "Here, the lecture reads after a week produce as the delayed start.\n\nThat reading supports E: an early test can miss an infection because the marker being tested hasn't appeared yet.",
+      "text": "I'm reading after a week produce as the delayed start.\n\nThat reading supports E: an early test can miss an infection because the marker being tested hasn't appeared yet.",
       "question_id": "Q4"
     },
     {
@@ -1495,30 +1514,34 @@
       "title": "PT121 S1 Q26",
       "text": "Read the original stimulus, stem, and all five choices. Keep the question visible during the walkthrough.",
       "question_id": "Q5",
-      "image_path": "screenshots/extra-5110.png"
+      "image_path": "screenshots/extra-5110.png",
+      "spoken_intro": "Give this a read and see if you can make a prediction."
+    },
+    {
+      "id": "step-186",
+      "section_id": "question-5",
+      "type": "wait",
+      "title": "Give them time to work",
+      "text": "Give the student time to work on the question independently first. Start the two-minute timer as a suggested pace, or pause it if more time is useful. When finished, ask for their reasoning.",
+      "question_id": "Q5",
+      "duration_seconds": 120,
+      "pacing_note": "Suggested facilitation pace, not a timing value stated in the source lecture."
     },
     {
       "id": "step-185",
       "section_id": "question-5",
       "type": "ask",
       "title": "Ask the student",
-      "text": "What relationship or boundary does the passage supply? Can you predict a supported inference before reading the answers?",
-      "question_id": "Q5"
-    },
-    {
-      "id": "step-186",
-      "section_id": "question-5",
-      "type": "wait",
-      "title": "Wait for reasoning",
-      "text": "Pause. Let the student answer and explain the move before revealing the expected response.",
-      "question_id": "Q5"
+      "text": "How do these rules chain together? Which ideas are repeated?",
+      "question_id": "Q5",
+      "image_path": "screenshots/extra-5110.png"
     },
     {
       "id": "step-187",
       "section_id": "question-5",
       "type": "expected",
       "title": "Expected response",
-      "text": "Identify the actual rule, fact, chain, qualification checklist, or numerical boundary. Keep the prediction provisional; do not add information.",
+      "text": "Language -> verbal signs for objects -> ability to distinguish objects from other objects -> conceptual thought. Verbal signs and distinguishing objects are repeated links; which continues the latter relationship. Therefore language requires conceptual thought, answer A.",
       "question_id": "Q5"
     },
     {
@@ -1944,5 +1967,31 @@
       "text": "Build the conditional moves until they're fluent, but keep reading the actual information.\n\nThen ask what it supports, what it rules out, and what it leaves open."
     }
   ],
-  "facilitation_note": "All SAY text preserves the complete manifest reading script, with whitespace-only chunking. Added ASK, WAIT, EXPECTED, and BOARD steps are adapted facilitation for teaching, not verbatim lecture quotations. Exact question text was visually transcribed from the listed source screenshots. BOARD formulas use plain ASCII; source logical slips remain explicitly flagged."
+  "facilitation_note": "All SAY text preserves the complete manifest script with explicit voice_replacements and whitespace-only chunking. Added ASK, WAIT, EXPECTED, and BOARD steps are adapted teaching facilitation, not verbatim quotations. Every question is followed by independent-work WAIT with an optional 120-second suggested timer before ASK and EXPECTED. Exact question text was visually transcribed from listed source screenshots. BOARD formulas use plain ASCII; source corrections remain in package coverage and board warnings.",
+  "voice_replacements": [
+    {
+      "old": "The instructor's explanation is that these types are dominated by conditional logic.",
+      "new": "It's because these types are dominated by conditional logic."
+    },
+    {
+      "old": "The instructor observes that older tests often reward the full head-to-tail inference, while more recent questions may hide the result by testing a shorter stretch.",
+      "new": "On older tests, they often reward the full head-to-tail inference. On more recent tests, they may hide it by testing a shorter stretch."
+    },
+    {
+      "old": "The instructor calls this a huge pattern in Must Be True and Most Strongly Supported: when the last fact starts with a pivot, the answer very often addresses the tension created by that pivot.",
+      "new": "That is a huge pattern in Must Be True and Most Strongly Supported: when your last fact starts with a pivot, the answer very often addresses the tension created by that pivot."
+    },
+    {
+      "old": "The original board drops the not before C; keep that negative in your version.",
+      "new": "Make sure I keep the not before C on the board. Dropping that negative would change the contrapositive."
+    },
+    {
+      "old": "The original spoken explanation says the doctorate and research can be in any field, but that conflicts with the wording shown in the question.",
+      "new": "We can't say the doctorate and research can be in any field. That conflicts with the wording shown in the question."
+    },
+    {
+      "old": "Here, the lecture reads after a week produce as the delayed start.",
+      "new": "I'm reading after a week produce as the delayed start."
+    }
+  ]
 }

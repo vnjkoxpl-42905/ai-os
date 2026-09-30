@@ -181,6 +181,7 @@ def package(manifest_path, transcript_path, output):
         teaching_document, teaching_assets, teaching_cards = renderer.render(lesson, manifest, output, render_brief(brief))
         assets.update(teaching_assets)
         outputs["full-script.html"] = document.encode("utf-8")
+        outputs["continuous-script.html"] = document.encode("utf-8")
         outputs["teleprompter.html"] = teaching_document.encode("utf-8")
         outputs["lesson-steps.json"] = lesson_path.read_bytes()
     if not (output / "PROVENANCE.md").exists():

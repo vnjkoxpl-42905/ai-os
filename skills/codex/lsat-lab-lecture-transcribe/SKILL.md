@@ -22,7 +22,9 @@ Joshua has stated that, as an LSAT Lab tutor, he is authorized to use and adapt 
 
 ## Read-aloud deliverable
 
-Keep the reading surface large and uncluttered, with navigation by concept/question, each screenshot beside the corresponding script, and timestamp cues visually distinct from speech. Autoscroll is optional and initially paused; respect reduced-motion preferences. The untouched transcript is evidence, the teleprompter is the cleaned reading copy, and coverage is the reconciliation between them.
+The default `teleprompter.html` is a private teacher cue sheet, one teaching moment at a time. Use short SAY chunks of roughly 40-80 spoken words, clear exact ASK wording, separate WAIT instructions, hidden EXPECTED RESPONSE, and copyable plain-ASCII BOARD content. Show each complete QUESTION's stimulus, stem, and five choices, with its original frame available to enlarge. Copy-question text must exclude answers and teacher notes. Put a suggested editable 120-second work timer before each question's walkthrough; identify this as teacher pacing, not a claimed source timing. Start/Pause/Reset never advances automatically; the teacher continues when ready. Keep the related question or board alongside its Socratic prompts.
+
+Prepare sibling `lesson-steps.json` using [the contract](references/manifest.md). Preserve every substantive script passage across SAY steps, allowing only tracked voice substitutions. The helper verifies this coverage. It renders Previous/Next, section selection, step progress, copy buttons, optional text-size settings, and clipboard-selection fallback. The brief is closed by default and opens separately. Any optional SAY-only automatic pacing starts disabled and stops at every ASK, WAIT, BOARD, or QUESTION. The full continuous lecture remains in `teleprompter.md` and `continuous-script.html`; do not lose teaching detail to shorten the visible cards. This UI is for Joshua to read privately, not a student presentation page.
 
 ## Retrieve an existing lecture
 
