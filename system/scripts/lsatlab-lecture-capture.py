@@ -45,7 +45,6 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--video-id', required=True)
     parser.add_argument('--player-url', help='Observed Vimeo embed URL including its existing hash')
-    parser.add_argument('--lesson-url')
     parser.add_argument('--video', action='store_true', help='Retrieve video for local exact-time frame captures')
     parser.add_argument('--normalize-to', type=Path)
     parser.add_argument('--frames', type=Path, help='JSON array: path (output filename), at_seconds')
@@ -72,17 +71,29 @@ def main():
             parser.error('frames requires screenshots output and downloaded source.mp4')
         args.screenshots.mkdir(parents=True, exist_ok=True)
         frames = json.loads(args.frames.read_text(encoding='utf-8'))
+        time_map_path = args.screenshots / 'frame-times.json'
+        time_map = json.loads(time_map_path.read_text(encoding='utf-8')) if time_map_path.exists() else {}
+        probe = subprocess.run(['ffprobe', '-v', 'error', '-show_entries', 'format=duration', '-of', 'json', str(media)], check=True, capture_output=True, text=True)
+        duration = float(json.loads(probe.stdout)['format']['duration'])
+        if not isinstance(frames, list):
+            raise ValueError('Frame plan must be an array')
         for frame in frames:
             name = frame['path']
             if Path(name).name != name or Path(name).suffix.lower() not in ('.png', '.jpg'):
                 raise ValueError('Frame path must be an image basename')
             stamp = float(frame['at_seconds'])
-            if stamp < 0:
-                raise ValueError('Negative frame timestamp')
+            if not 0 <= stamp < duration:
+                raise ValueError('Frame timestamp outside video duration')
             target = args.screenshots / name
             if target.exists():
+                if name not in time_map or float(time_map[name]) != stamp:
+                    raise ValueError(f'Existing frame lacks matching timestamp provenance: {name}')
                 continue
             run(['ffmpeg', '-hide_banner', '-loglevel', 'error', '-ss', str(stamp), '-i', str(media), '-frames:v', '1', '-update', '1', '-n', str(target)])
+            if not target.is_file() or not target.stat().st_size:
+                raise ValueError(f'Frame extraction produced no image: {name}')
+            time_map[name] = stamp
+            time_map_path.write_text(json.dumps(time_map, indent=2) + '\n', encoding='utf-8')
     hashes = {p.name: hashlib.sha256(p.read_bytes()).hexdigest() for p in (captions, media) if p.exists()}
     print(json.dumps({'archive': str(archive), 'sha256': hashes, 'caption_cues': len(cues) if cues else None, 'last_caption_end': cues[-1]['end'] if cues else None}, indent=2))
 

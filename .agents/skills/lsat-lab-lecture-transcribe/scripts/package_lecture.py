@@ -94,6 +94,7 @@ def package(manifest_path, transcript_path, output):
     if source.exists() and source.read_bytes() != transcript:
         raise ValueError("Preserved transcript differs; refusing to overwrite source")
     hashes = output / "SHA256SUMS"
+    preserved_assets = {}
     if hashes.exists():
         for record in hashes.read_text(encoding="utf-8").splitlines():
             old_hash, name = record.split("  ", 1)
@@ -101,6 +102,8 @@ def package(manifest_path, transcript_path, output):
                 current = output / name
                 if not current.is_file() or digest(current.read_bytes()) != old_hash:
                     raise ValueError(f"Preserved source changed: {name}")
+                if name.startswith("screenshots/"):
+                    preserved_assets[name] = current.read_bytes()
     e = html.escape
     title = manifest["title"]
     state = "Source marked complete; review verification notes." if manifest["source_complete"] else "INCOMPLETE CAPTURE: consult coverage and gaps."
@@ -114,25 +117,28 @@ def package(manifest_path, transcript_path, output):
         times = f"{stamp(segment['start_seconds'])} to {stamp(segment['end_seconds'])}"
         cue = f"Source {times}; transcript lines {segment['source_lines'][0]}-{segment['source_lines'][1]}"
         markdown += [f"## {heading}", "", f"> UNSPOKEN: {cue}", ""]
-        visuals = []
-        for frame in segment.get("images", []):
+        visuals, image_buttons = [], []
+        for frame_index, frame in enumerate(segment.get("images", [])):
             caption = f"{stamp(frame['at_seconds'])}: {frame['caption']}"
             name = Path(frame["path"]).as_posix()
             markdown += [f"> SHOW: {caption}", f"![{frame['caption']}]({name})", ""]
             mime = mimetypes.guess_type(name)[0] or "image/png"
             encoded = base64.b64encode(assets[name]).decode("ascii")
-            visuals.append(f'<figure><img alt="{e(frame["caption"])}" src="data:{mime};base64,{encoded}"><figcaption>{e(caption)}</figcaption></figure>')
+            hidden = " hidden" if frame_index else ""
+            visuals.append(f'<figure data-frame="{frame_index}"{hidden}><img alt="{e(frame["caption"])}" src="data:{mime};base64,{encoded}" title="Click to enlarge"><figcaption>{e(caption)}</figcaption></figure>')
+            image_buttons.append(f'<button type="button" data-show-frame="{frame_index}" aria-label="Show {e(caption)}">{stamp(frame["at_seconds"])}</button>')
         cues = " | ".join(segment.get("cues", []))
         if cues:
             markdown += [f"> UNSPOKEN: {cues}", ""]
         markdown += [segment["script"], ""]
         navigation.append(f'<a href="#{anchor}">{e(heading)}</a>')
-        sections.append(f'<section id="{anchor}"><h2>{e(heading)}</h2><p class="cue">{e(cue)}</p><div class="reading"><div><p class="cue">{e(cues)}</p><div class="spoken">{e(segment["script"])}</div></div><div class="visuals">{"".join(visuals)}</div></div></section>')
-    document = f'<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{e(title)}</title><style>{STYLE}</style><header><h1>{e(title)}</h1><nav>{"".join(navigation)}</nav><div class="controls"><button id="run">Start</button><label>Speed <input id="speed" type="range" min="5" max="90" value="24" aria-label="Scroll pixels per second"></label><span id="status" role="status"></span></div></header><main><p class="cue">{e(state)}</p>{"".join(sections)}</main><script>{CONTROLS}</script></html>'
+        sections.append(f'<section id="{anchor}"><h2>{e(heading)}</h2><p class="cue">{e(cue)}</p><div class="reading"><div><p class="cue">{e(cues)}</p><div class="spoken">{e(segment["script"])}</div></div><div class="visuals"><div class="controls">{"".join(image_buttons)}</div>{"".join(visuals)}</div></div></section>')
+    gallery = """const zoom=document.querySelector('#zoom');document.addEventListener('click',event=>{const pick=event.target.closest('[data-show-frame]');if(pick){const panel=pick.closest('.visuals');panel.querySelectorAll('figure').forEach(f=>{f.hidden=f.dataset.frame!==pick.dataset.showFrame;});}const image=event.target.closest('figure img');if(image){stop();zoom.querySelector('img').src=image.src;zoom.querySelector('img').alt=image.alt;zoom.showModal();}});zoom.querySelector('button').onclick=()=>zoom.close();"""
+    document = f'<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{e(title)}</title><style>{STYLE} [hidden]{{display:none!important}} dialog{{width:94vw;max-width:1800px;border:0;padding:12px}} dialog::backdrop{{background:#000b}} dialog img{{width:100%}} figure img{{cursor:zoom-in}} </style><header><h1>{e(title)}</h1><nav>{"".join(navigation)}</nav><div class="controls"><button id="run">Start</button><label>Speed <input id="speed" type="range" min="5" max="90" value="24" aria-label="Scroll pixels per second"></label><span id="status" role="status"></span></div></header><main><p class="cue">{e(state)}</p>{"".join(sections)}</main><dialog id="zoom"><button type="button">Close full-size image</button><img alt=""></dialog><script>{CONTROLS}{gallery}</script></html>'
     coverage = [f"# Coverage: {title}", "", state, "", "## Teaching-point mapping", ""]
     for point in manifest.get("teaching_points", []):
         coverage.append(f"- {point['id']}: {point['description']} -> {', '.join(point['segment_ids'])}")
-    for key, heading in (("verification_notes", "Actual verification"), ("gaps", "Unresolved gaps"), ("omissions", "Removed from the spoken script")):
+    for key, heading in (("verification_notes", "Actual verification"), ("gaps", "Unresolved gaps"), ("omissions", "Removed from the spoken script"), ("source_corrections", "Explicit source corrections")):
         coverage += ["", f"## {heading}", ""]
         coverage += [f"- {item}" for item in manifest.get(key, [])] or ["- None recorded. This is not proof of completeness."]
     coverage += ["", "Mapping and file integrity were checked by the helper. Content completeness, image legibility, and logical correctness require human/agent review."]
@@ -142,7 +148,7 @@ def package(manifest_path, transcript_path, output):
         outputs["PROVENANCE.md"] = provenance.encode()
     for name, data in outputs.items():
         (output / name).write_bytes(data)
-    records = {**assets, **{name: (output / name).read_bytes() for name in (*outputs, "PROVENANCE.md")}}
+    records = {**preserved_assets, **assets, **{name: (output / name).read_bytes() for name in (*outputs, "PROVENANCE.md")}}
     hashes.write_text("\n".join(f"{digest(data)}  {name}" for name, data in sorted(records.items()))+"\n", encoding="utf-8")
     return {"output": str(output), "segments": len(manifest["segments"]), "images": len(assets), "source_complete": manifest["source_complete"]}
 
