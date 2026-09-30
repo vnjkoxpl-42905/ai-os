@@ -3,6 +3,7 @@ import argparse
 import base64
 import hashlib
 import html
+import importlib.util
 import json
 import mimetypes
 import re
@@ -169,13 +170,26 @@ def package(manifest_path, transcript_path, output):
     outputs = {"transcript.md": transcript, "teleprompter.md": "\n".join(markdown).encode(), "teleprompter.html": document.encode(), "timeline.json": (json.dumps(manifest, ensure_ascii=False, indent=2)+"\n").encode(), "coverage.md": "\n".join(coverage).encode()}
     if brief:
         outputs["teaching-brief.md"] = brief.encode("utf-8")
+    lesson_path = output / "lesson-steps.json"
+    teaching_cards = None
+    if lesson_path.exists():
+        lesson = json.loads(lesson_path.read_text(encoding="utf-8-sig"))
+        module_path = Path(__file__).with_name("teaching_view.py")
+        specification = importlib.util.spec_from_file_location("lecture_teaching_view", module_path)
+        renderer = importlib.util.module_from_spec(specification)
+        specification.loader.exec_module(renderer)
+        teaching_document, teaching_assets, teaching_cards = renderer.render(lesson, manifest, output, render_brief(brief))
+        assets.update(teaching_assets)
+        outputs["full-script.html"] = document.encode("utf-8")
+        outputs["teleprompter.html"] = teaching_document.encode("utf-8")
+        outputs["lesson-steps.json"] = lesson_path.read_bytes()
     if not (output / "PROVENANCE.md").exists():
         outputs["PROVENANCE.md"] = provenance.encode()
     for name, data in outputs.items():
         (output / name).write_bytes(data)
     records = {**preserved_assets, **assets, **{name: (output / name).read_bytes() for name in (*outputs, "PROVENANCE.md")}}
     hashes.write_text("\n".join(f"{digest(data)}  {name}" for name, data in sorted(records.items()))+"\n", encoding="utf-8")
-    return {"output": str(output), "segments": len(manifest["segments"]), "images": len(assets), "source_complete": manifest["source_complete"]}
+    return {"output": str(output), "segments": len(manifest["segments"]), "images": len(assets), "teaching_moments": teaching_cards, "source_complete": manifest["source_complete"]}
 
 
 if __name__ == "__main__":
