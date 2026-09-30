@@ -1,0 +1,159 @@
+"""Package already captured lecture material. No browser or network access."""
+import argparse
+import base64
+import hashlib
+import html
+import json
+import mimetypes
+from pathlib import Path
+
+
+def stamp(value):
+    seconds = int(value)
+    return f"{seconds // 3600:02}:{seconds // 60 % 60:02}:{seconds % 60:02}"
+
+
+def digest(data):
+    return hashlib.sha256(data).hexdigest()
+
+
+def validate(manifest, transcript, output):
+    for key in ("title", "source_url", "duration_seconds", "transcript_method", "capture_date", "source_complete"):
+        if key not in manifest:
+            raise ValueError(f"Missing manifest field: {key}")
+    if not isinstance(manifest["source_complete"], bool):
+        raise ValueError("source_complete must be a boolean")
+    duration = manifest["duration_seconds"]
+    if not isinstance(duration, (int, float)) or duration <= 0:
+        raise ValueError("Invalid lecture duration")
+    segments = manifest.get("segments", [])
+    if not segments:
+        raise ValueError("No captured script segments")
+    lines = len(transcript.decode("utf-8-sig").splitlines())
+    ids, questions, pictured = set(), set(), set()
+    previous_end, initial_board = 0, False
+    assets = {}
+    for segment in segments:
+        identifier = segment["id"]
+        if not isinstance(identifier, str) or not identifier or identifier in ids:
+            raise ValueError("Segment IDs must be unique nonempty strings")
+        ids.add(identifier)
+        start, end = segment["start_seconds"], segment["end_seconds"]
+        if not 0 <= previous_end <= start < end <= duration:
+            raise ValueError(f"Invalid/overlapping source times: {identifier}")
+        previous_end = end
+        first_line, last_line = segment["source_lines"]
+        if not 1 <= first_line <= last_line <= lines:
+            raise ValueError(f"Invalid transcript line range: {identifier}")
+        if not segment.get("script", "").strip():
+            raise ValueError(f"Empty spoken script: {identifier}")
+        if segment["kind"] not in {"concept", "question", "closing"}:
+            raise ValueError(f"Invalid segment kind: {identifier}")
+        if segment["kind"] == "question":
+            question = segment.get("question_id")
+            if not question or not initial_board:
+                raise ValueError("Questions need question_id and an earlier introductory concept board")
+            questions.add(question)
+        for frame in segment.get("images", []):
+            relative = Path(frame["path"])
+            path = (output / relative).resolve()
+            if relative.is_absolute() or not path.is_relative_to((output / "screenshots").resolve()):
+                raise ValueError(f"Image must stay beneath screenshots/: {relative}")
+            if path.suffix.lower() not in {".png", ".jpg", ".jpeg", ".webp"} or not path.is_file():
+                raise ValueError(f"Missing or unsupported image: {relative}")
+            if not start <= frame["at_seconds"] <= end:
+                raise ValueError(f"Image time outside segment: {relative}")
+            if frame["kind"] not in {"concept_board", "question", "annotated_board"}:
+                raise ValueError(f"Invalid image kind: {relative}")
+            if frame["kind"] == "concept_board" and segment["kind"] == "concept":
+                initial_board = True
+            if frame["kind"] == "question" and segment["kind"] == "question":
+                pictured.add(segment["question_id"])
+            assets[relative.as_posix()] = path.read_bytes()
+    if questions != pictured:
+        raise ValueError(f"Question screenshots missing: {sorted(questions - pictured)}")
+    if not initial_board:
+        raise ValueError("Initial concept board is missing")
+    for point in manifest.get("teaching_points", []):
+        if not point.get("segment_ids") or not set(point["segment_ids"]) <= ids:
+            raise ValueError(f"Unmapped teaching point: {point.get('id')}")
+    if manifest["source_complete"] and manifest.get("gaps"):
+        raise ValueError("A complete source cannot have unresolved gaps")
+    return assets
+
+
+STYLE = """body{margin:0;background:#f7f4ed;color:#172d35;font-family:Georgia,serif}header{position:sticky;top:0;background:#fff;padding:12px 24px;z-index:2;border-bottom:1px solid #c8d0ce}nav{display:flex;gap:12px;overflow:auto;font:16px system-ui}button,input,label{font:16px system-ui}main{max-width:1120px;margin:auto;padding:32px 24px 65vh}section{padding:24px 0;scroll-margin-top:150px;border-bottom:1px solid #c8d0ce}.spoken{font-size:30px;line-height:1.65;white-space:pre-wrap}.cue,figcaption{font:16px/1.5 system-ui;color:#4b6068}.cue{border-left:3px solid #738f94;padding:10px;background:#eaf0ef}figure{margin:18px 0}img{width:100%;height:auto}h1{font-size:26px}h2{font-size:24px}a{color:#185a73}.controls{display:flex;gap:14px;flex-wrap:wrap;margin:10px 0} @media(min-width:950px){.reading{display:grid;grid-template-columns:1.1fr 1fr;gap:26px}.visuals{position:sticky;top:155px;align-self:start}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}"""
+CONTROLS = """const button=document.querySelector('#run'),speed=document.querySelector('#speed'),status=document.querySelector('#status');let active=false,last=0;const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;status.textContent=reduce?'Reduced motion: use manual scrolling.':'Space: start/pause. Left/right: previous/next section.';function stop(){active=false;button.textContent='Start';}button.onclick=()=>{if(reduce){status.textContent='Reduced motion: use manual scrolling.';return;}active=!active;last=0;button.textContent=active?'Pause':'Start';};function tick(time){if(active){if(last)scrollBy(0,(time-last)*Number(speed.value)/1000);last=time;if(innerHeight+scrollY>=document.documentElement.scrollHeight-2)stop();}requestAnimationFrame(tick);}requestAnimationFrame(tick);document.addEventListener('keydown',event=>{if(['INPUT','BUTTON','TEXTAREA','SELECT','A'].includes(event.target.tagName))return;if(event.code==='Space'){event.preventDefault();button.click();}if(event.code==='ArrowRight'||event.code==='ArrowLeft'){event.preventDefault();stop();const sections=[...document.querySelectorAll('section')];let current=0;sections.forEach((s,i)=>{if(s.getBoundingClientRect().top<=170)current=i;});const next=Math.max(0,Math.min(sections.length-1,current+(event.code==='ArrowRight'?1:-1)));sections[next].scrollIntoView({behavior:'auto'});}});document.querySelector('nav').addEventListener('click',stop);"""
+
+
+def package(manifest_path, transcript_path, output):
+    manifest = json.loads(manifest_path.read_text(encoding="utf-8-sig"))
+    transcript = transcript_path.read_bytes()
+    assets = validate(manifest, transcript, output)
+    source = output / "transcript.md"
+    if source.exists() and source.read_bytes() != transcript:
+        raise ValueError("Preserved transcript differs; refusing to overwrite source")
+    hashes = output / "SHA256SUMS"
+    if hashes.exists():
+        for record in hashes.read_text(encoding="utf-8").splitlines():
+            old_hash, name = record.split("  ", 1)
+            if name == "transcript.md" or name.startswith("screenshots/"):
+                current = output / name
+                if not current.is_file() or digest(current.read_bytes()) != old_hash:
+                    raise ValueError(f"Preserved source changed: {name}")
+    e = html.escape
+    title = manifest["title"]
+    state = "Source marked complete; review verification notes." if manifest["source_complete"] else "INCOMPLETE CAPTURE: consult coverage and gaps."
+    markdown = [f"# {title}", "", state, "", f"Source: {manifest['source_url']}", ""]
+    sections, navigation = [], []
+    for index, segment in enumerate(manifest["segments"]):
+        anchor = f"segment-{index+1}"
+        heading = segment["title"]
+        if segment["kind"] == "question":
+            heading = f"{segment['question_id']}: {heading}"
+        times = f"{stamp(segment['start_seconds'])} to {stamp(segment['end_seconds'])}"
+        cue = f"Source {times}; transcript lines {segment['source_lines'][0]}-{segment['source_lines'][1]}"
+        markdown += [f"## {heading}", "", f"> UNSPOKEN: {cue}", ""]
+        visuals = []
+        for frame in segment.get("images", []):
+            caption = f"{stamp(frame['at_seconds'])}: {frame['caption']}"
+            name = Path(frame["path"]).as_posix()
+            markdown += [f"> SHOW: {caption}", f"![{frame['caption']}]({name})", ""]
+            mime = mimetypes.guess_type(name)[0] or "image/png"
+            encoded = base64.b64encode(assets[name]).decode("ascii")
+            visuals.append(f'<figure><img alt="{e(frame["caption"])}" src="data:{mime};base64,{encoded}"><figcaption>{e(caption)}</figcaption></figure>')
+        cues = " | ".join(segment.get("cues", []))
+        if cues:
+            markdown += [f"> UNSPOKEN: {cues}", ""]
+        markdown += [segment["script"], ""]
+        navigation.append(f'<a href="#{anchor}">{e(heading)}</a>')
+        sections.append(f'<section id="{anchor}"><h2>{e(heading)}</h2><p class="cue">{e(cue)}</p><div class="reading"><div><p class="cue">{e(cues)}</p><div class="spoken">{e(segment["script"])}</div></div><div class="visuals">{"".join(visuals)}</div></div></section>')
+    document = f'<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{e(title)}</title><style>{STYLE}</style><header><h1>{e(title)}</h1><nav>{"".join(navigation)}</nav><div class="controls"><button id="run">Start</button><label>Speed <input id="speed" type="range" min="5" max="90" value="24" aria-label="Scroll pixels per second"></label><span id="status" role="status"></span></div></header><main><p class="cue">{e(state)}</p>{"".join(sections)}</main><script>{CONTROLS}</script></html>'
+    coverage = [f"# Coverage: {title}", "", state, "", "## Teaching-point mapping", ""]
+    for point in manifest.get("teaching_points", []):
+        coverage.append(f"- {point['id']}: {point['description']} -> {', '.join(point['segment_ids'])}")
+    for key, heading in (("verification_notes", "Actual verification"), ("gaps", "Unresolved gaps"), ("omissions", "Removed from the spoken script")):
+        coverage += ["", f"## {heading}", ""]
+        coverage += [f"- {item}" for item in manifest.get(key, [])] or ["- None recorded. This is not proof of completeness."]
+    coverage += ["", "Mapping and file integrity were checked by the helper. Content completeness, image legibility, and logical correctness require human/agent review."]
+    provenance = f"# Source provenance\n\nSource: {manifest['source_url']}\n\nCaptured: {manifest['capture_date']}\n\nMethod: {manifest['transcript_method']}\n\nInstructor: {manifest.get('instructor', 'Not verified')}\n\nLecture date: {manifest.get('lecture_date', 'Not verified')}\n\nRights: Joshua stated that, as an LSAT Lab tutor, he is authorized to use and adapt the selected lecture.\n\nThe source transcript and screenshots are preserved. The teleprompter is an adapted reading copy.\n"
+    outputs = {"transcript.md": transcript, "teleprompter.md": "\n".join(markdown).encode(), "teleprompter.html": document.encode(), "timeline.json": (json.dumps(manifest, ensure_ascii=False, indent=2)+"\n").encode(), "coverage.md": "\n".join(coverage).encode()}
+    if not (output / "PROVENANCE.md").exists():
+        outputs["PROVENANCE.md"] = provenance.encode()
+    for name, data in outputs.items():
+        (output / name).write_bytes(data)
+    records = {**assets, **{name: (output / name).read_bytes() for name in (*outputs, "PROVENANCE.md")}}
+    hashes.write_text("\n".join(f"{digest(data)}  {name}" for name, data in sorted(records.items()))+"\n", encoding="utf-8")
+    return {"output": str(output), "segments": len(manifest["segments"]), "images": len(assets), "source_complete": manifest["source_complete"]}
+
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--manifest", type=Path, required=True)
+    parser.add_argument("--transcript", type=Path, required=True)
+    parser.add_argument("--output", type=Path, required=True)
+    arguments = parser.parse_args()
+    try:
+        print(json.dumps(package(arguments.manifest, arguments.transcript, arguments.output.resolve())))
+    except (ValueError, KeyError, OSError, UnicodeError) as error:
+        parser.exit(1, f"Packaging stopped: {error}\n")
