@@ -60,9 +60,8 @@ Correct as Claude-only, permanently.
 - `bootcamp-builder` — built around AskUserQuestion gating and subagent fan-out. A Codex copy
   would need a rewrite, not a port.
 
-### Wiki-coupled: writes the ledgers (5)
+### Other ledger workflows held to one runtime (4)
 
-- `ingest` — the wiki ingestion pipeline itself
 - `resume` — restores session state by reading the wiki ledgers (Codex uses `session-handoff`,
   which is chat-only and writes nothing)
 - `bootcamp-parity-audit` — writes findings into the wiki
@@ -70,9 +69,7 @@ Correct as Claude-only, permanently.
   (the launchd job shells out to `claude -p`)
 - `send-booking-link` — appends to `wiki/send-ledger.md` and `students/<name>/open-loops.md`
 
-CLAUDE.md scopes Codex to "the same catalog minus the wiki/Obsidian and `graphify` skills,"
-and separately warns never to have both runtimes editing the same file at once. Ledger writers
-are exactly where that collision would happen, so they stay single-runtime.
+The LLM Wiki ingest, query, and lint workflows are shared by Codex and Claude as of 2026-09-30. Other ledger workflows listed here retain their declared single-runtime scope. Never have separate runtimes editing the same page concurrently.
 
 **Honest caveat:** `send-booking-link` and `morning-brief` are otherwise runtime-neutral ops
 skills. They are held back by the ledger-collision rule, not by anything they cannot do. If
@@ -107,3 +104,7 @@ The ordinary grill-with-docs, grilling, and domain-modeling skills are activated
 Supersedes the 2026-09-16 note above. The sibling-file workaround existed only because a local edit had added `disable-model-invocation: true` to `grilling`, which upstream (mattpocock/skills) never carries. That line is removed from every copy, so upstream `grill-with-docs` ("call the Skill tool twice, for grilling and domain-modeling") works again and is now installed verbatim in every runtime. The daily sync (`system/scripts/sync-mattpocock-skills.py`) keeps it current.
 
 `grill-me` is deliberately NOT upstream in the Claude and Gemini copies (global, `skills/claude`, `skills/gemini`). Upstream's `grill-me` is a one-line call to `grilling`; Joshua's version adds the capture discipline (every answer checkpointed to a brainstorm file) that his brainstorm and AI OS context sessions depend on. Decided by Joshua 2026-09-26. The sync script lists it in `KEEP` and never overwrites it. The Codex copy is upstream.
+
+## 2026-09-30: LLM Wiki workflows shared across runtimes
+
+`ingest` is now catalogued and activated for Codex and Claude, with matching Gemini copies. The obsolete Claude-only exception is removed. `second-brain-ingest` is a compatibility alias for public `ingest`; query and lint are separate shared workflows. Current-vault policy lives in `system/schema/llm-wiki.md`. Existing global copies were updated without creating new global activations. The 2026-09-12 counts above are historical audit counts.

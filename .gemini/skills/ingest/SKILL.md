@@ -1,23 +1,30 @@
 ---
 name: ingest
 description: >
-  Front door for getting anything into the brain. Use whenever Joshua says
-  "ingest this", "ingest the latest clips", "process the transcripts", "pull
-  this week's transcripts", "file these notes", "I saved an article", "what's
-  in the inbox", or drops a file, a screenshot, or a score report and expects
-  it filed — even when he does not say "ingest". Routes each input to its
-  pipeline (clips, Gemini session transcripts, Superwhisper recordings, student
-  evidence, bulk exports), dedupes by hash first, and never modifies a source.
+  The single front door for adding sources to the current knowledge base. Use
+  for "ingest this", "process this source", "file these notes", "add this to
+  my second brain", "ingest the latest clips", or a supplied document meant
+  to become saved knowledge. Finds the input, checks content hashes, preserves
+  provenance, and compiles it into linked wiki pages. Session write-ups and
+  student-facing post-session recaps belong to lsat-session-lesson.
 allowed-tools: Bash Read Write Edit Glob Grep
 ---
 
-# Ingest
+# Ingest sources into the current brain
 
-One front door. Joshua should never have to know which pipeline a thing belongs
-to, and no session should spend its first minutes hunting for a file he just
-saved. The skill ends when the source is archived with provenance, the
-distillation is filed where the next session will look, and `wiki/log.md`
-says so. Anything short of that is a pile, not an inbox.
+One public skill owns discovery, duplicate checks, preservation, routing, and
+wiki compilation. `second-brain-ingest` is a compatibility name for this same
+workflow, not another pipeline. Read the internal
+`references/wiki-compilation.md` when processing knowledge sources.
+
+## Resolve the vault and schema first
+
+Find the vault root from the current workspace and its nearest instruction files.
+Read `system/schema/llm-wiki.md` relative to that root. It is the authority for
+folder conventions, page metadata, provenance, index, log, and ingest/query/lint
+workflows. Do not assume a saved Windows or Mac path. If no schema exists in the
+target vault, report that gap before changing its structure; never initialize a
+second vault to solve a request about an existing one.
 
 ## Route first
 
@@ -32,12 +39,13 @@ ambiguous, ask once. Do not guess and file it somewhere wrong.
 | Archival Gemini `.docx` / `.txt` (Apr to Jul 2026 Takeout batch) | `raw/data-about-me/transcripts/` | [Transcripts, archival](#transcripts-archival) |
 | Superwhisper `recordings/` dirs (`meta.json` + `output.wav`) or `settings.json` | wherever they were dropped | hand to `superwhisper`; not this skill's |
 | Student evidence: PT score report, screenshot, homework export | `~/Downloads`, chat attachment | [Student evidence](#student-evidence) |
-| A source document meant to become wiki knowledge | `raw/` | dedupe below, then hand to `second-brain-ingest` |
+| A source document meant to become wiki knowledge | `raw/` | dedupe below, then read `references/wiki-compilation.md` |
 | Takeout or platform dump | `raw/data-about-me/` | [Bulk exports](#bulk-exports) |
 
-`second-brain-ingest` owns `raw/` to `wiki/` knowledge pages. `lsat-session-lesson`
-owns writing the student-facing recap. This skill gets the source on disk,
-archived, and distilled; it does not duplicate either of them.
+Knowledge-source compilation is this skill's internal reference. `lsat-session-lesson`
+owns the complete student-facing session write-up workflow. A request only to
+retrieve or file a transcript stays narrow; a recap request goes directly to that
+skill without asking for a second activation.
 
 ## Always, before any pipeline
 
@@ -49,19 +57,22 @@ archived, and distilled; it does not duplicate either of them.
    times. `raw/inbox/` is the single intake queue; the old top-level
    `Clippings/` folder was folded into `raw/sources/clips/` on 2026-09-08, so a
    `Clippings/` path in an old note is stale.
-2. **Dedupe by content hash, not by name.**
-   ```
-   sha256sum <candidate>
-   grep -rl "<hash>" raw/sources/*/*/SHA256SUMS
-   ```
-   A hit means it has been ingested; say so and stop. Byte-identical copies
-   under different names are how three copies of one clip piled up before
-   2026-09-08. Never delete the duplicate without asking.
-3. **Check the log.** `grep -n "<source name>" wiki/log.md`. Already there
-   means confirm with Joshua before re-running.
-4. **Never modify the source.** `raw/` is immutable. Sources are read and
-   archived, never edited in place, and never moved except by the archive step
-   of the pipeline that owns them.
+2. **Dedupe by SHA-256, not by name.** On Windows use `Get-FileHash` or
+   Python `hashlib`. Check existing archive manifests, source-page metadata,
+   and dated ingest entries. A matching filename alone is not proof. A matching
+   hash with completed wiki output means report the existing output and stop.
+   An archived hash without finished output means resume compilation, not
+   discard the source. Never delete duplicates.
+3. **Check the log and source summary.** Record whether the candidate was
+   previously processed and whether this is a new revision. Preserve both
+   generations when content changed. A deliberate re-ingest updates the
+   existing source page with revision provenance, not a duplicate truth.
+4. **Preserve the input byte-for-byte.** Copy external attachments or inbox
+   inputs to an appropriate `raw/sources/` archive and verify the SHA-256 before
+   citing the preserved copy. Record origin, URL/author/date when known,
+   capture date, archived date, filename, size, and hash. Do not move, delete,
+   overwrite, or edit original source bytes. Do not follow symlinks outside a
+   registered source root. Existing archived inputs can be read in place.
 
 ## Clips
 
@@ -73,25 +84,20 @@ here.
 1. List `raw/inbox/*.md` newest-first. "The latest" means the newest; a named
    topic means match on it; several new ones means list them and ask which.
 2. Dedupe (above).
-3. Read the clip fully. If it is a video page with no transcript in the clip,
-   run `watch` on the URL to get one; the clip alone is a thumbnail.
-4. Summarize 3 to 5 takeaways and ask which to emphasize or skip. Wait.
-5. Write or update the wiki page(s) the clip touches. One authoritative page per
-   subject; grow the existing page rather than a parallel one.
-6. Update `wiki/index.md`.
-7. Append to `wiki/log.md`: `## [YYYY-MM-DD] ingest | <title>` with the source
-   path and the pages changed.
-8. **Archive.** Move the clip from `raw/inbox/` to `raw/sources/clips/<slug>/`
-   (kebab-cased title) with:
-   - `PROVENANCE.md`: source URL, author, published date, clipped date,
-     archived date, size, where the distilled output landed. Copy the shape from
-     any sibling folder.
-   - `SHA256SUMS`: `sha256sum <clip> PROVENANCE.md > SHA256SUMS`.
+3. Read the clip fully. If it is a video page with no transcript, use the
+   appropriate transcript intake workflow; do not treat its thumbnail as evidence.
+4. Copy and hash-verify the clip into `raw/sources/clips/<slug>/`, using
+   `PROVENANCE.md` and `SHA256SUMS`. Reuse an existing identical archive.
+   Preserve the inbox original. Processed status comes from its hash, source
+   page, and log, not from whether the original still exists in the inbox.
+5. Follow `references/wiki-compilation.md` through the source summary,
+   relevant existing pages, index update, log entry, and verification.
 
-   Done means `raw/inbox/` no longer contains the clip. A file still there
-   means "not yet processed" and nothing else.
-
-One clip at a time, supervised, unless Joshua says batch.
+One source at a time unless Joshua explicitly asks for batch work. Discuss
+important takeaways as part of the work. An explicit instruction to implement,
+file, or ingest with a stated focus authorizes completing that scope; do not
+introduce an extra confirmation step. Ask when unresolved emphasis, identity,
+or contradictory evidence materially changes what should be written.
 
 ## Transcripts, live
 
@@ -122,8 +128,8 @@ Done means every session in the window either has its transcript on disk and
 distilled, or is listed in the log as "no Gemini doc anywhere" with the date and
 student, so the next session does not sweep it again.
 
-If Joshua wants the recap note as well, that is `lsat-session-lesson`; say so rather
-than writing one here.
+If Joshua requests a session write-up or recap, activate `lsat-session-lesson`
+and complete its workflow; do not stop at telling him another skill is needed.
 
 ## Transcripts, archival
 
@@ -189,13 +195,14 @@ Takeout and platform dumps land in `raw/data-about-me/` and are git-ignored PII.
 
 ## Hard rules
 
-- **Never delete or move a source** except the archive step of its own
-  pipeline. Flag duplicates; Joshua decides.
-- **Never create a student folder without asking.**
-- **Never write to `*.generated.md`.**
-- **Dedupe before ingesting, every time.**
-- **One source at a time, supervised,** unless Joshua explicitly says batch.
-- **Government IDs stay out.** If an export contains them, stop and say so.
-- Commands here are for this Windows box (Git Bash: `sha256sum`, `python`).
-  A note that says `shasum -a 256`, `python3`, or `/Users/joshuaf/...` is from
-  the Mac and is stale, not a different pipeline.
+- Never move, delete, or modify original sources. Preserve revisions and hashes.
+- Never create a student folder without resolving the relationship with Joshua.
+- Never hand-edit `*.generated.md`; use its owning generator.
+- Dedupe before ingesting. Distinguish archived from successfully compiled.
+- Process one source at a time unless batch work is explicitly requested.
+- Government IDs stay outside this OS. Do not ingest them.
+- Use the current machine's tools and paths, resolved from the vault root.
+- No email, platform publishing, or assignment is implied by local ingestion.
+- Read current target contents before changing pages. Automated writes only
+  modify generated files or fenced generated sections and compare their expected
+  hash before writing; on a mismatch, re-read and merge instead of overwriting.

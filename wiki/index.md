@@ -1,15 +1,20 @@
 ---
 type: operating-layer
 subject: Index
-updated: 2026-07-20
+updated: 2026-09-30
 aliases: []
 ---
 
 # Index
 
-Content catalog of the wiki — every page, one line each, by category. The LLM updates this on every ingest; read it first when answering a query, then drill into pages. Rebuilt fresh 2026-07-16 (Karpathy LLM-wiki rebuild; prior wiki preserved at `archive/wiki-pre-rebuild-2026-07-16/`).
+Content catalog of the wiki. Curated navigation appears first; the complete catalog below lists every wiki Markdown page by category. The LLM updates this on every ingest; read it first when answering a query, then drill into pages. Rebuilt fresh 2026-07-16 (Karpathy LLM-wiki rebuild; prior wiki preserved at `archive/wiki-pre-rebuild-2026-07-16/`).
 
 The brain runs three knowledge systems: **this wiki** (Joshua, the business, decisions), **[corpus](../corpus/index.md)** (LSAT teaching knowledge), **[students](../students/README.md)** (one folder per student).
+
+## How this wiki is maintained
+
+- [[system/schema/llm-wiki|LLM Wiki operating schema]]: folder conventions, provenance, ingest, query, index/log maintenance, and lint.
+- [[wiki/sources/llm-wiki-pattern|First ingest example]]: preserved idea file, factual summary, and linked concept.
 
 ## Hubs
 
@@ -50,3 +55,65 @@ The brain runs three knowledge systems: **this wiki** (Joshua, the business, dec
 - [LSAT U booking policy](LSATU-BOOKING-POLICY.md) — one generator, one predicate, one config row; mirrors Cal.com session-link (buffer 10, pitch 80, 45 days)
 
 - `superwhisper/` (vault root): dictation setup, source of truth for Superwhisper vocabulary, replacements, and modes; `sync.py` pushes it to the app. Research report inside. Ledger: [[SUPERWHISPER-DICTIONARY]].
+
+<!-- BEGIN GENERATED WIKI CATALOG -->
+
+## Complete wiki catalog
+
+Every Markdown page under `wiki/` is listed below; this index is the catalog itself.
+Regenerate this section after page changes with `py system/scripts/wiki-maintenance.py --index`.
+
+### Operating pages
+
+- [[wiki/ACCOMMODATIONS-REQUEST-TEMPLATE|Accommodations request email]]: The email Joshua sends a student after they've talked through LSAT testing accommodations.
+- [[wiki/ACTIVE-STUDENTS-LAST-MONTH-2026-09-08|Active students, last month : 2026-08-08 to 2026-09-08]]: Pulled 2026-09-08 from the calendar (82 events) and Drive (40 Gemini docs).
+- [[wiki/ASSIGN-AN-ACTIVITY|Assign an Activity : the runbook]]: The repeatable path for putting an LSAT U Activity into a student's hands.
+- [[wiki/automation-backlog|Automation & Workflow Analysis : Joshua's tutoring operation]]: Related: entities/aspiring-attorneys · teaching-voice · ../skills/INDEX · ../references/3ms-framework
+- [[wiki/CALCOM-STUCK-BOOKINGS|Cal.com stuck bookings]]: When a student says scheduling or payment "isn't working", first ask **which link**. A
+- [[wiki/CELIA-RRC-REPLY-DRAFT-2026-09-08|Celia · reply to "still being marked" (DRAFT, not sent)]]: Channel: LSAT U platform message, from Joshua's admin account. Send via the assign-lsatu-work skill only after Joshua approves the text.
+- [[wiki/CONSULTATION-FOLLOW-UP-TEMPLATE|Consultation follow-up email]]: The email Joshua sends after a free consultation. Reconstructed 2026-09-11 from the
+- [[wiki/COPY-CORRECTIONS|Copy corrections]]: Every student-facing wording fix, with the reason it was wrong. Read this before
+- [[wiki/dashboard|Dashboard : ground-truth pointers]]: Rebuilt fresh 2026-07-16. This page points at authorities; it never accumulates state itself (D4: live systems are authority, the brain mirrors, backend wins on conflict).
+- [[wiki/DRILL-HUB-IMPECCABLE-AUDIT-2026-09-08-RUN2|Drill hub: impeccable audit and critique, run 2 (2026-09-08)]]: Second pass after the fixes from DRILL-HUB-IMPECCABLE-AUDIT-2026-09-08 shipped (commits 211d982, 1d1d351, f4cf062, f791016, published to lsatprep.study). Measured live on productio
+- [[wiki/DRILL-HUB-IMPECCABLE-AUDIT-2026-09-08-RUN3|Drill hub, run 3]]: Written 2026-09-09 by Claude (Opus 5), executing DRILL-HUB-PERFECT-SCORE-PLAN-2026-09-08 from Part 1g. Run 2 is DRILL-HUB-IMPECCABLE-AUDIT-2026-09-08-RUN2: audit 16/20, critique 31
+- [[wiki/DRILL-HUB-IMPECCABLE-AUDIT-2026-09-08|Drill hub: impeccable audit and critique (2026-09-08)]]: Target: `/classroom/drill` on production (lsatprep.study), signed in as Joshua. LR section, default stage, the Build a Set launcher stage, desktop (~740px pane) and phone (375px).
+- [[wiki/DRILL-HUB-PERFECT-SCORE-PLAN-2026-09-08|Drill hub: plan to reach 20/20 audit and 40/40 critique]]: Written 2026-09-08 by Claude (Fable 5.1) for hand-off to another executor. Starting point: run 2 of DRILL-HUB-IMPECCABLE-AUDIT-2026-09-08-RUN2, published as commit f791016. Audit 1
+- [[wiki/guided-drill-verification-log|Guided Drill Verification Log]]: Running log of guided drills that have already been verified in the live platform. Once a drill is listed here as `verified-working`, do not repeat full browser launch QA before as
+- [[wiki/HANDLING|Personal-data handling]]: As of 2026-07-17 this OS stores no secret material beyond API keys in the root `.env`. The earlier design's private stores (`private/records.sparsebundle`, migration manifests, `pr
+- [[wiki/hot|Hot : last-session cache]]: Freshest working state; the first page `/pickup` reads. Rebuilt fresh in the 2026-07-16 vault rebuild (the old cache is archived).
+- [[wiki/inbound-handled-ledger|Inbound handled ledger]]: Append-only and stateful record of inbound messages, questions, and inquiries across platforms (LSAT U, Reddit, 7Sage, Facebook).
+- [[wiki/IVORY-REPLY-DRAFT-2026-09-08|IVORY-REPLY-DRAFT-2026-09-08]]: Hi Ivory,
+- [[wiki/log|Log]]: Append-only record of wiki activity ,  ingests, queries, lint passes, structural changes. Each entry starts `## [2026-09-16] system / Repair grill-with-docs project activation
+- [[wiki/lovable-cloud|Lovable Cloud (LSAT U backend platform)]]: Source: Lovable Cloud docs clipping (`raw/sources/clips/lovable-cloud/`) (docs.lovable.dev/integrations/cloud, ingested 2026-07-19). This is what runs the LSAT U production backend
+- [[wiki/lr-missing-explanations-by-category|LR missing explanations, by category]]: Same 772 questions as lr-missing-explanations, generated 2026-09-26. Type, reasoning, features and difficulty come from the question bank. A question with several reasoning types o
+- [[wiki/lr-missing-explanations|LR questions missing explanations]]: Generated 2026-09-26 by `system/scripts/lr-explanation-coverage.py` from the live LSAT U database and the question bank (`projects/lsatu/public/data/PT*-LR.json`). LR only. Regener
+- [[wiki/lsatu-backend-map|LSAT U backend map (live database structure)]]: Captured 2026-07-19 via the Lovable Cloud SQL editor (source CSV: `query-results-export-2026-07-19_03-00-03.csv` in Joshua's downloads; introspection query in log). This is the **s
+- [[wiki/LSATU-BOOKING-POLICY|LSAT U booking policy]]: Every LSAT U booking page (pass link `/book/<slug>`, in-app `/schedule`, single session
+- [[wiki/magic-mouse-log|Apple Magic Mouse 2 Execution Log]]: Date: 2026-09-18
+- [[wiki/PRE-CONSULT-LOG|Pre-consultation check-in log]]: One row per Cal.com consultation the `pre-consultation-check-in` skill has
+- [[wiki/protected-records|Protected records]]: Sensitive records are intentionally not linked file-by-file from Git-tracked pages.
+- [[wiki/reddit-chat-voice|Reddit Chat Voice Reference]]: Ground truth reference for Joshua's actual communication style in Reddit DMs (`attornkas`), derived directly from the real conversation history across 10 different prospects and st
+- [[wiki/RRC-BRIEFING-CRITIQUE-2026-09-08|Read, Recall, Colour section briefing page: design critique]]: Date: 2026-09-08. Method: `$impeccable critique` on
+- [[wiki/RRC-DRILL-AUDIT-CRITIQUE-2026-09-09|Read, Recall, Colour: full audit, critique and fix plan]]: Date: 2026-09-09. Method: `$impeccable audit` then `$impeccable critique` over the whole drill: the door (library and section pages), the briefing page, the runner, the handover an
+- [[wiki/send-ledger|Send ledger]]: Append-only record of every outbound message Jay 2 drafts or sends on Joshua's
+- [[wiki/SEVENSAGE-ANALYTICS-INDEX|7Sage analytics index]]: Built 2026-09-09 by sweeping Joshua's mailbox for `7sage.com/u/usr_...` links.
+- [[wiki/STUDENT-PLATFORM-IDENTITY-MAP|Student ↔ Platform Identity Map]]: Built 2026-09-07. **Emails verified** against the live platform via
+- [[wiki/SUPERWHISPER-DICTIONARY|Superwhisper dictionary]]: ../superwhisper/CLAUDE explains it; `superwhisper/vocabulary.md`, `superwhisper/replacements.md`,
+- [[wiki/tasks|Tasks]]: Living ledger of project state. `/pickup` reads this first; `/wrapup` updates it.
+- [[wiki/teaching-voice|Teaching Voice]]: How LSAT U sounds, across every surface. This is the canonical voice doc: route all student-facing and brand copy through it. Built from a grill with Joshua (2026-06-13), then test
+- [[wiki/transcript-ingest-findings-2026-07-20|Transcript ingest findings, 2026-07-20]]: Surfaced by distilling 125 Gemini session transcripts (2025-05 to 2026-07). Every claim
+- [[wiki/VIDEO-GENERATION-OPTIONS-2026-09-09|Making videos from Claude Code: the options, priced]]: Date: 2026-09-09. Method: five Firecrawl `agent` jobs (spark-1-pro) plus two
+
+### Concepts
+
+- [[wiki/concepts/compiled-knowledge|Let each source and useful answer improve the next answer]]: Compiled knowledge is a maintained explanation built from preserved sources, rather than a fresh reconstruction from those sources for every question.
+
+### Entities
+
+- [[wiki/entities/aspiring-attorneys|Aspiring Attorneys : moved]]: The authoritative business page now lives at **`context/work.md`** (Level 1 authored context, per the workspace reform). This stub exists only so old links resolve; do not add cont
+
+### Sources
+
+- [[wiki/sources/llm-wiki-pattern|Compile knowledge once, then keep it current]]: The supplied idea file describes an LLM-maintained wiki between curated source documents and the questions a person asks.
+
+<!-- END GENERATED WIKI CATALOG -->

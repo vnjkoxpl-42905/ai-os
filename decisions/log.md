@@ -195,3 +195,7 @@ The [Wayfinder map](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/155)
 
 ## 2026-09-29 Git remote enabled
 - Decision: the "no Git remote, ever" rule is removed. origin on GitHub is the setup. Reason: lets Claude Code cloud sessions and other machines work on the repo. Never-track list still holds (.env, projects/lsatu/, logs, locks, gitlinks). wiki/HANDLING.md scrub checklist is now advisory.
+
+## 2026-09-30: Apply the LLM Wiki pattern to the existing second brain
+
+Joshua directed implementation of the supplied LLM Wiki idea file in the current vault and use of its schema for future knowledge work. Preserve raw evidence, compile and maintain linked knowledge, retrieve through indexes, save durable findings, and record changes in append-only logs. Keep one public `ingest` workflow; retain `second-brain-ingest` as a compatibility alias. Query and lint remain distinct; setup applies only to a new vault. Preserve student/corpus homes and live-system authority. The detailed contract is [the operating schema](../system/schema/llm-wiki.md), grounded in [the supplied source](../wiki/sources/llm-wiki-pattern.md).

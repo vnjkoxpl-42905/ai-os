@@ -1,13 +1,19 @@
 ---
 type: operating-layer
 subject: Hot last-session cache
-updated: 2026-09-11
+updated: 2026-09-30
 aliases: []
 ---
 
 # Hot — last-session cache
 
 Freshest working state; the first page `/pickup` reads. Rebuilt fresh in the 2026-07-16 vault rebuild (the old cache is archived).
+
+## Current schema change (2026-09-30)
+
+The current LLM Wiki operating rules are [[system/schema/llm-wiki]]. The first authorized ingest example is [[wiki/sources/llm-wiki-pattern]], linked to [[wiki/concepts/compiled-knowledge]]. The wiki index now contains a complete fenced catalog maintained by `system/scripts/wiki-maintenance.py`; structural lint is separate from source-grounded semantic review.
+
+The sections below preserve earlier session snapshots. They are historical context, not verified current operational state; use current instructions and live backends when they disagree.
 
 ## Most recent (2026-09-11): RRC demo films Round 8 live, audited, board published
 

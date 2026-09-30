@@ -1,123 +1,52 @@
 ---
 name: second-brain-lint
 description: >
-  Health-check the wiki for contradictions, orphan pages, stale claims,
-  and missing cross-references. Use when the user says "audit",
-  "health check", "lint", "find problems", or wants to improve wiki quality.
+  Check wiki health when asked to "lint my wiki", "check knowledge links",
+  "find stale wiki claims", or "find contradictions in my second brain".
+  General AI OS scoring belongs to audit, not this knowledge-health workflow.
 allowed-tools: Bash Read Write Edit Glob Grep
 ---
 
-# Second Brain — Lint
+# Check links, evidence, and accumulated knowledge
 
-Health-check the wiki and report issues with actionable fixes.
+## Resolve the vault and schema first
 
-## Audit Steps
+Find the vault root from the current workspace and its nearest instruction files.
+Read `system/schema/llm-wiki.md` relative to that root. It is the authority for
+folder conventions, page metadata, provenance, index, log, and ingest/query/lint
+workflows. Do not assume a saved Windows or Mac path. If no schema exists in the
+target vault, report that gap before changing its structure; never initialize a
+second vault to solve a request about an existing one.
 
-Run all checks below, then present a consolidated report.
+1. Read the schema and `wiki/index.md`, plus the domain indexes it links.
+   Establish the requested scope. Structural checks cover indexed knowledge
+   and existing wiki pages, including legacy flat pages; do not assume every
+   page lives in entities/concepts/sources/synthesis.
+2. In ai-os run `py system/scripts/wiki-maintenance.py --lint` for structural
+   checks. Its generated findings are a starting point, not semantic verification.
+   Use `py system/scripts/wiki-maintenance.py --index` when index repair is
+   authorized. Check both Markdown links and vault wikilinks, including path-qualified
+   targets, aliases and anchors. Resolve targets against actual vault paths;
+   avoid false broken-link reports from headings, code blocks, or external URLs.
+3. Check index coverage and metadata/provenance on new schema pages. Detect
+   missing targets, duplicate subject pages, unindexed pages, and orphans.
+   Distinguish navigation-only inbound links from useful knowledge connections.
+4. Check related pages for contradictions, unsupported claims, missing source
+   citations, confusing facts versus judgments, and stale operational snapshots.
+   Age alone is not proof a claim is false. Cite both sources for disagreements.
+5. Identify missing useful cross-references, significant subjects lacking pages,
+   source coverage gaps, and unanswered questions. Suggest specific evidence to
+   investigate. Do not create empty pages or launch bulk web research as a lint.
+6. Report actionable errors, warnings, and questions with file/line evidence,
+   proposed fixes, and the inspected scope. Label anything not inspected; a
+   structural pass is not verification of every factual claim in the vault.
+7. Apply routine reversible link/index corrections when authorized by a request
+   to maintain or fix the wiki. A check-only request stays diagnostic. Preserve
+   conflicts until adjudicated; no deletion, source modification, or invented
+   facts. Use owning generators for generated content and compare-and-swap.
+8. Append `## [YYYY-MM-DD] lint | Scope` to `wiki/log.md` with coverage, findings,
+   fixes actually applied, and unresolved items. Verify affected links/indexes.
 
-### 1. Broken wikilinks
-
-Scan all wiki pages for `[[wikilink]]` references. For each link, verify the target page exists. Report any broken links.
-
-```bash
-# Find all wikilinks across wiki pages
-grep -roh '\[\[[^]]*\]\]' wiki/ | sort -u
-```
-
-Cross-reference against actual files in `wiki/`.
-
-### 2. Orphan pages
-
-Find pages with no inbound links — no other page references them via `[[wikilink]]`.
-
-For each `.md` file in `wiki/sources/`, `wiki/entities/`, `wiki/concepts/`, `wiki/synthesis/`:
-- Extract the page name (filename without extension)
-- Search all other wiki pages for `[[Page Name]]`
-- If no other page links to it, it's an orphan
-
-### 3. Contradictions
-
-Read pages that share entities or concepts and look for conflicting claims. Flag when:
-- Two source summaries make opposing claims about the same topic
-- An entity page contains information that conflicts with a source summary
-- Dates, figures, or factual claims differ between pages
-
-### 4. Stale claims
-
-Cross-reference source dates with wiki content. Flag when:
-- A concept page cites only old sources and newer sources exist on the same topic
-- Entity information hasn't been updated despite newer sources mentioning that entity
-
-### 5. Missing pages
-
-Scan for `[[wikilinks]]` that point to pages that don't exist yet. These are topics the wiki mentions but hasn't given their own page. Assess whether they warrant a page.
-
-### 6. Missing cross-references
-
-Find pages that discuss the same topics but don't link to each other. Look for:
-- Entity pages that mention concepts without linking them
-- Concept pages that mention entities without linking them
-- Source summaries that cover the same topic but don't reference each other
-
-### 7. Index consistency
-
-Verify `wiki/index.md` is complete and accurate:
-- Every page in `wiki/sources/`, `wiki/entities/`, `wiki/concepts/`, `wiki/synthesis/` has an index entry
-- No index entries point to deleted pages
-- Entries are under the correct category header
-
-### 8. Data gaps
-
-Based on the wiki's current coverage, suggest:
-- Topics mentioned frequently but lacking depth
-- Questions the wiki can't answer well
-- Areas where a web search could fill in missing information
-
-## Report Format
-
-Present findings grouped by severity:
-
-### Errors (must fix)
-- Broken wikilinks
-- Contradictions between pages
-- Index entries pointing to missing pages
-
-### Warnings (should fix)
-- Orphan pages with no inbound links
-- Stale claims from outdated sources
-- Missing pages for frequently referenced topics
-
-### Info (nice to fix)
-- Potential cross-references to add
-- Data gaps that could be filled
-- Index entries that could be more descriptive
-
-For each finding, include:
-- **What:** description of the issue
-- **Where:** the specific file(s) and line(s)
-- **Fix:** what to do about it
-
-## After the Report
-
-Ask the user:
-> "Found N errors, N warnings, and N info items. Want me to fix any of these?"
-
-If the user agrees, fix issues and report what changed.
-
-## Log the lint pass
-
-Append to `wiki/log.md`:
-
-    ## [YYYY-MM-DD] lint | Health check
-    Found N errors, N warnings, N info items. Fixed: [list of fixes applied].
-
-## When to Lint
-
-- **After every 10 ingests** — catches cross-reference gaps while they're fresh
-- **Monthly at minimum** — catches stale claims and orphan pages over time
-- **Before major queries** — ensures the wiki is healthy before you rely on it for analysis
-
-## Related Skills
-
-- `/second-brain-ingest` — process new sources into wiki pages
-- `/second-brain-query` — ask questions against the wiki
+Run on request, after a substantial ingest batch, or when persistent gaps emerge.
+No recurring automation is created by this skill. Source compilation is `ingest`;
+answer synthesis is `second-brain-query`.

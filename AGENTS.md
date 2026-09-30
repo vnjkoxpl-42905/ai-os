@@ -20,6 +20,7 @@ Paths are relative to the repository root.
 | **Current priorities** (the 90-day slate) | `context/priorities.md` |
 | **What we decided and why** (locked decisions) | `decisions/log.md` |
 | Freshest session state (hot cache) | `wiki/hot.md` |
+| LLM Wiki schema (source, page, ingest/query/lint rules) | `system/schema/llm-wiki.md` |
 | Master index · work ledger · dated history | `wiki/index.md` · `wiki/tasks.md` · `wiki/log.md` |
 | Product ground truth (pointers to live backends) | `wiki/dashboard.md` |
 | LSAT teaching knowledge | `corpus/index.md` |
@@ -40,7 +41,7 @@ Paths are relative to the repository root.
 | Design/plan thinking, dated (grill-me + interview outputs) | `brainstorms/` — supersedes the retired `aios/` reform folder |
 | Session handoffs · chat exports | `handoffs/` — operational records, deliberately OUTSIDE `raw/`; `session-handoff` writes here |
 | External teardowns and research, dated | `research/` |
-| Web-clipped articles (Obsidian Web Clipper) | `raw/inbox/` — unprocessed only; `ingest` moves them to `raw/sources/clips/` when done |
+| Web-clipped articles (Obsidian Web Clipper) | `raw/inbox/` — unprocessed only; `ingest` copies and hash-verifies them into `raw/sources/clips/`; processed originals stay until removal is authorized |
 | Application code | `projects/lsatu/` — own repo, own instructions, own remote |
 | Other projects (life-path, …) | `projects/<name>/` — each with its own `CLAUDE.md` + `.claude/` |
 
@@ -53,6 +54,8 @@ Paths are relative to the repository root.
 **Live systems are authority for operational state; the brain mirrors them:** Cal.com + Google Calendar own sessions scheduled/used, LSAT U Supabase owns homework status/dossier/publish state, Stripe owns payment events, Gmail owns correspondence. On any disagreement, the backend wins. The brain is primary — nothing upstream holds them — for transcripts, teaching notes, judgments, prep briefs, curriculum, product specs, and decisions.
 
 **Do not read the wiki unless the task needs it.** Retrieval costs context every turn. Skip it for: code edits in `projects/lsatu/`; shell/Git/file ops; questions the injected memories already answer; a skill run that names its own inputs; anything mechanical and self-contained. Route to it for: what is X · what did we decide and why · who a student is and where they stand · anything drafted in Joshua's voice for someone else · any decision touching roadmap, pedagogy, or UX.
+
+**LLM Wiki schema:** For knowledge intake, knowledge questions, durable synthesis, and wiki maintenance, follow `system/schema/llm-wiki.md`. Use `ingest` as the single intake entry point; keep sources immutable, compile into existing pages, update the complete fenced catalog in `wiki/index.md`, and append changes to `wiki/log.md`. Preserve domain homes and live-system authority. Mechanical tasks retain the retrieval exceptions above.
 
 **Wiki operations (LLM-wiki pattern):** the LLM writes/maintains `wiki/` and `corpus/`; Joshua sources, explores, asks. Raw sources are immutable — read, never modify. *Ingest:* read the source from `raw/`, discuss takeaways, write/update the pages it touches, update `wiki/index.md`, append to `wiki/log.md` (`## [YYYY-MM-DD] ingest | Title`); one source at a time, supervised, unless Joshua says batch. *Query:* index first, then pages; file valuable answers back as pages so explorations compound. *Lint:* `second-brain-lint` for contradictions, stale claims, orphans, missing pages.
 
@@ -118,5 +121,5 @@ When a skill run exposes a gap, improve the skill before moving on. Runtime-spec
 - Keep root instructions inside the runtime byte budget. Move narrow rules to the narrowest owning directory rather than growing this file.
 - Activated skills are **copies** in `.agents/skills/` (from `skills/codex/`); agent definitions convert to `.codex/agents/*.toml` with the instructions in `developer_instructions`.
 - Claude reads `CLAUDE.md` and never this file. Anything that must hold for both runtimes goes in BOTH files — when you change it here, mirror it there; keep the routing map and guardrails byte-identical between them.
-- Activation is unequal by design: Codex reads copies in `.agents/skills/`, Claude reads copies in `.claude/skills/`. Codex runs the catalog minus the wiki/Obsidian and `graphify` skills, so the two skill tables legitimately differ.
+- Activation is unequal by design: Codex reads copies in `.agents/skills/`, Claude reads copies in `.claude/skills/`. Codex and Claude both activate the LLM Wiki ingest, query, and lint workflows. Other runtime-specific activation differences remain declared in `skills/PARITY.md`. Never have separate runtimes writing the same page concurrently.
 - Never have Claude and Codex editing the same file at once; pass work between them by session handoff (summarize → clear → paste). At ~250k tokens, hand off rather than riding autocompact.

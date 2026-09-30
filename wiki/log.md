@@ -1345,3 +1345,19 @@ Consolidated transcript intake, primary student recap, private follow-ups, lectu
 ## [2026-09-30] Skills | Clear post-session lesson activation
 
 Made "session write up" and "make a post-session recap" explicit triggers for `lsat-session-lesson`, with natural variations and contextual shorthand. Named-student session requests start the complete workflow. Session selection honors explicit sources, then conversation context, then the latest completed tutoring session; unresolved ambiguity requires clarification. Explicit transcript lookup remains narrow. Removed the mistaken "Curray session" trigger from current copies. Synced all three runtime/catalog pairs and documented the post-session lesson term in `CONTEXT.md`.
+
+## [2026-09-30] ingest | LLM Wiki pattern
+
+- Source: [[wiki/sources/llm-wiki-pattern]]; byte-identical archive, provenance, and SHA-256 are linked there.
+- Changed: [[wiki/concepts/compiled-knowledge]], [[system/schema/llm-wiki]], root runtime pointers, [[wiki/index]], and [[wiki/hot]].
+- Finding: preserve sources and compile durable knowledge into linked pages; keep existing student and teaching domains.
+- Verification: source hash, complete catalog coverage, new evidence paths, and workflow scope checked.
+- Open: inherited structural findings remain in `system/generated/wiki-lint.generated.tsv`; historical semantic claims were not comprehensively revalidated.
+
+## [2026-09-30] system | One intake workflow and maintained wiki catalog
+
+Implemented the current-vault LLM Wiki schema, shared runtime routing, one public `ingest` with internal wiki compilation, a compatibility `second-brain-ingest` alias, and distinct query/lint/setup responsibilities. Synced catalog, project activations, and existing global copies without new global activations. Added compare-before-write catalog and structural lint tooling in `system/scripts/wiki-maintenance.py`. Sources were copied and hash-verified, not moved or deleted. No tools were installed and no live application state was changed.
+
+## [2026-09-30] lint | Current wiki structure
+
+Checked all wiki Markdown pages for local target existence, source metadata, and possible orphans, then reviewed new source/concept/schema links. The generated report records inherited findings for later adjudication. Link anchors and historical semantic truth were not automatically validated. No historical source or log entry was rewritten.
