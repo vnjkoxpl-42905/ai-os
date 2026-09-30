@@ -22,6 +22,9 @@ Use the existing LSAT U preview shell and answer-check interaction as a starting
 
 ## Before handoff
 
+- The opening defines the reusable concept before any notation or original-question detail. Read it without the session transcript: the learner should know what the lesson teaches. A rejected question-centered draft is rebuilt into a coherent lesson, rather than supplemented by another block of prose.
+- Compare the actual rendered page with the Some, Most, and All reference. The opening example, visual explanation, section hierarchy, nearby checks, and cumulative drill should work together. Confirm the page does more than repeat uniform text cards.
+
 - The session date, student, central mistake, and assigned work match the full transcript and current student record. Uncertain details are marked for review instead of filled in.
 - The first sentence names the idea in ordinary language. A worked example shows why the method works. The note covers the relevant trap or boundary and ends with a fresh transfer question and explained answer.
 - Every check accepts a student response and gives useful feedback. It does not claim to grade open-ended reasoning it cannot actually evaluate.

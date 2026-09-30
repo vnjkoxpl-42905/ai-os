@@ -115,14 +115,14 @@ the session.>
 - **Watch:** <a teaching judgment worth carrying into teaching-notes.md if it repeats>
 ```
 
-Everything above the `---` rule is the student note and must stand alone when pasted.
+For an initial recap, everything above the `---` private divider is the student note and must stand alone when pasted. When a complete dated revision is appended, mark its exact beginning and end and identify it as the current student-facing version in the record router. Export only that current version to the preview or platform. Preserved historical drafts, revision bookkeeping, and the private continuation are not part of the exported lesson. Never concatenate all pre-divider generations into the current student note.
 Everything below is admin-only.
 
 The headings above are scaffolding, not a mandatory outline. Organize around the lesson's
 logic. Use enough depth to teach the method fully, but remove any section that does not
 help the student use it.
 
-## Voice rules (from `wiki/teaching-voice.md`, Coaching register)
+## Voice rules (from `wiki/teaching-voice.md`, teaching-content register)
 
 - A post-session note is a set of lecture notes, not an email. Use a concept title,
   descriptive headers, numbered procedures, and spaced examples. Do not use a greeting
