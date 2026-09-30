@@ -2,7 +2,7 @@
 
 Started: 2026-09-28
 Last reconciled: 2026-09-30
-Status: Twenty-two slices published; every implementation ticket remains open until its full acceptance checks pass. The historical Intro to LR slice lacks a positive real-row live check.
+Status: Twenty-three slices published; every implementation ticket remains open until its full acceptance checks pass. The historical Intro to LR slice lacks a positive real-row live check.
 Specification: [#165](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/165)  
 Decision map: [#155](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/155)
 
@@ -151,3 +151,13 @@ Local RC checks blocked account saves, held Question 1, retried once to Question
 Normal student-authenticated cross-account reads returned no admin-owned rows for guided assignments, Activities, bootcamp keys, RC sessions, and PrepTest runs; authorized teacher reads of the tester sources succeeded. These were read checks, not revoked-access or denied-mutation proof. Historical Activity rows with completed status but no completion timestamp still disagree with teacher classroom mirrors. They were not repaired without source evidence. Classroom Unassign currently removes the mirror without clearing its Activity source; the LR reload path needs an active-session guard; full PrepTest outages, two-device concurrency, revoked access, and teacher mutation attribution remain open. #166 and #167 remain open. No schema or Edge Function deployment occurred.
 
 Detailed local evidence is in the [app verification record](https://github.com/vnjkoxpl-42905/lsatu-684d89db/blob/main/docs/agent/verification/2026-09-30-foundation.md). Production screenshots are in `research/2026-09-30-lsatu-foundation-evidence/`: `production-guided-student.png`, `production-guided-teacher.png`, `production-rc-question-2.png`, and `production-rc-read-failure.png`.
+
+## Twenty-third slice: owned work parity and guarded timed recovery
+
+Activity mirrors now share source-backed student status and disclose unavailable evidence. Mirror-only Activity Unassign is disabled with a visible explanation until genuine source revocation exists. Guided resume restores its owned frozen queue before current-pool selection. Official LR device records stay outside generic background upload queues and require guarded account acknowledgment. RC section readback counts selected answers and saved elapsed time; early finish leaves unmeasured blanks without duplicating dwell time.
+
+161 tests across 18 files, typecheck, production build, changed-file lint with no errors, independent review and diff check passed. The guarded push reran typecheck and published `2fac0ef` to GitHub main. Lovable imported that exact commit; free deployment `967f1f53-2aec-4db2-9343-8c4787826af9` completed with the Publish panel showing Published and no pending changes. A fresh live selected-student Work route confirmed both Activity mirrors Assigned and both safe disabled Unassign controls. Screenshot: `research/2026-09-30-lsatu-foundation-evidence/production-activity-source-parity.png`.
+
+Real tester PrepTest 101 outage checks covered RC/LR save failure, one retry advance, paused break writes, offline break reload, takeover detection, separate-origin reclaim and revoked route access. Access flags were restored and all network blocks cleared. The third leg remains paused and unfinished. One early-finished RC leg has genuine one-answer source evidence; its parent cached result was created by the old reader and remains historically incorrect, rather than being silently repaired. Details and test limitations are in the app foundation verification record.
+
+Live read-only SQL metadata confirmed missing atomic timed writer/access/terminal enforcement. The timed-write contract is prepared but not implemented or deployed. Full Activity completion/source revocation, teacher attribution, source coverage and server-protected race/revocation checks remain open. A further Activity runner fix is being prepared for the historical empty-completion case. No backend deployment or credit-spending action occurred; #166 and #167 remain open.
