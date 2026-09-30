@@ -1,0 +1,496 @@
+<div class="lsatu-quantity"><style>
+.lsatu-quantity { color:#223544; font: 17px/1.68 Georgia,serif; max-width:760px; margin:auto; }
+.lsatu-quantity * { box-sizing:border-box; }
+.lsatu-quantity .quantity-note { width:100%; }
+.lsatu-quantity h2,.lsatu-quantity h3,.lsatu-quantity strong,.lsatu-quantity summary,.lsatu-quantity .quantity-check-top,.lsatu-quantity .quantity-quiz-top { font-family:Arial,sans-serif; }
+.lsatu-quantity h2 { color:#0f3645; font-size:1.58em; line-height:1.22; margin:2.2em 0 .65em; padding-top:.55em; border-top:2px solid #087c80; }
+.lsatu-quantity h3 { color:#0d6268; font-size:1.1em; margin:1.6em 0 .5em; }
+.lsatu-quantity p { margin:.8em 0 1.15em; }
+.lsatu-quantity .quantity-lead { font-size:1.55em; line-height:1.35; color:#12344e; margin-top:0; }
+.lsatu-quantity .quantity-claims { display:grid; gap:5px; margin:22px 0; }
+.lsatu-quantity .quantity-claim { display:flex; gap:24px; padding:9px 13px; border-bottom:1px solid #d5e3e5; }
+.lsatu-quantity .quantity-claim b { min-width:65px; color:#007e80; font-family:Arial,sans-serif; }
+.lsatu-quantity .quantity-claim:nth-child(2) b { color:#af6816; }
+.lsatu-quantity .quantity-claim:nth-child(3) b { color:#65509a; }
+.lsatu-quantity .quantity-opening-question,.lsatu-quantity .quantity-static-range { border:1px solid #bed9dc; background:#f1f8f7; border-radius:14px; padding:17px 21px; margin:22px 0; }
+.lsatu-quantity .quantity-opening-question p { margin:2px 0; font-family:Arial,sans-serif; font-weight:700; }
+.lsatu-quantity .quantity-static-range { display:flex; flex-wrap:wrap; gap:8px 18px; font-family:Arial,sans-serif; }
+.lsatu-quantity .quantity-static-range strong,.lsatu-quantity .quantity-static-range small { width:100%; }
+.lsatu-quantity .quantity-static-range span { border-radius:30px; padding:4px 12px; background:#fff; border:1px solid #c9dddf; }
+.lsatu-quantity .quantity-figure { margin:25px 0; padding:18px; border:1px solid #e6dcd0; border-radius:14px; background:#faf8f3; }
+.lsatu-quantity .quantity-figure svg { display:block; width:100%; height:auto; max-height:460px; }
+.lsatu-quantity pre { white-space:pre-wrap; overflow-wrap:anywhere; background:#eef5f4; color:#12344e; border-radius:9px; padding:14px; font-size:.82em; }
+.lsatu-quantity blockquote { border-left:3px solid #007d7e; margin:23px 0; padding:4px 18px; background:#f5f9f8; }
+.lsatu-quantity .quantity-chapter-number { color:#008184; font-size:.55em; vertical-align:middle; margin-right:.75em; }
+.lsatu-quantity .quantity-check,.lsatu-quantity .quantity-quiz-card { border:1px solid #b8d7d8; border-radius:13px; padding:18px 21px; background:#f0f8f7; margin:24px 0; }
+.lsatu-quantity .quantity-check-top,.lsatu-quantity .quantity-quiz-card>span { display:flex; justify-content:space-between; color:#007c7f; font-size:.73em; font-weight:700; text-transform:uppercase; letter-spacing:.09em; }
+.lsatu-quantity .quantity-check-question { font-size:1.05em; }
+.lsatu-quantity .quantity-answer { border:1px solid #b9d4d6; background:white; border-radius:8px; margin-top:14px; }
+.lsatu-quantity .quantity-answer summary { cursor:pointer; color:#006a71; padding:9px 13px; font-size:.85em; font-weight:700; }
+.lsatu-quantity .quantity-answer[open] summary { border-bottom:1px solid #d4e5e5; }
+.lsatu-quantity .quantity-answer>div { padding:4px 14px; }
+.lsatu-quantity .quantity-quiz { background:#072b39; color:#f0fbf8; padding:28px; border-radius:16px; margin:42px 0; }
+.lsatu-quantity .quantity-quiz h2 { color:#fff; border:0; padding:0; margin:.4em 0; }
+.lsatu-quantity .quantity-quiz-card { background:#123d4b; color:#fff; border-color:#568184; }
+.lsatu-quantity .quantity-quiz-card>span { color:#90d5d2; }
+.lsatu-quantity .quantity-quiz .quantity-answer { color:#12344e; }
+.lsatu-quantity .quantity-overlap-footer button,.lsatu-quantity input,.lsatu-quantity textarea,.lsatu-quantity form { display:none; }
+.lsatu-quantity [hidden] { display:none!important; }
+@media(max-width:600px){.lsatu-quantity{font-size:16px}.lsatu-quantity .quantity-figure{padding:8px}.lsatu-quantity .quantity-quiz{padding:17px}.lsatu-quantity h2{font-size:1.35em}}
+@media(prefers-reduced-motion:reduce){.lsatu-quantity *{animation:none!important;transition:none!important}}
+</style><article class="classroom-prose quantity-note"><header class="quantity-opening">
+  <div class="quantity-opening-story">
+  <p class="quantity-lead">Quantity statements tell us whether a claim applies to some members of a group, most of them, or all of them.</p>
+  <p class="quantity-scenario">Suppose a class has been assigned a case to read. These are three different claims about that same class:</p>
+  <div class="quantity-claims" aria-label="Three claims about the same class">
+    <div class="quantity-claim"><b>Some</b><span>students read it.</span></div>
+    <div class="quantity-claim"><b>Most</b><span>students read it.</span></div>
+    <div class="quantity-claim"><b>All</b><span>students read it.</span></div>
+  </div>
+  <p class="quantity-scenario">We do not need an exact headcount to understand the difference.</p>
+  <div class="quantity-opening-question"><p>What must be true?</p><p>What could still be true?</p><small>The answer changes with the word we use.</small></div>
+  </div>
+  <div class="quantity-static-range"><strong>One shelf. Three thresholds.</strong><span>Some <b>1–8</b></span><span>Most <b>5–8</b></span><span>All <b>8</b></span><small>Number of hardcover books out of eight.</small></div>
+</header>
+<h2 id="some" class="quantity-chapter"><span class="quantity-chapter-number">01</span>Some guarantees at least one</h2>
+<p>Imagine a shelf with eight books. I tell you that <strong>some of the books are hardcover</strong>. How many hardcover books must there be?</p>
+<p>At least <strong>one</strong>. There could be one, four, or all eight. “Some” rules out zero. It does not rule out “most” or “all.”</p>
+<figure class="quantity-figure" role="img" aria-label="Eight books showing that one hardcover book and eight hardcover books both satisfy some."><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 320" role="img" aria-labelledby="title desc">
+<title id="title">SOME: at least one</title><desc id="desc">Eight books. Hardcover counts shown: 1, 8.</desc>
+<rect width="920" height="320" rx="22" fill="#f7f6f1"></rect>
+<text x="38" y="48" fill="#173047" font-family="Arial,sans-serif" font-size="27" font-weight="700">SOME: at least one</text>
+<text x="38" y="79" fill="#526679" font-family="Arial,sans-serif" font-size="17" font-weight="400">Teal books are hardcover.</text>
+<text x="38" y="147" fill="#173047" font-family="Arial,sans-serif" font-size="19" font-weight="700">Minimum: 1 of 8</text>
+<g transform="translate(335,105)"><rect width="52" height="70" rx="5" fill="#087e83" stroke="#087e83" stroke-width="2"></rect><line x1="10" y1="3" x2="10" y2="67" stroke="#ffffff" stroke-width="2"></line><line x1="20" y1="19" x2="43" y2="19" stroke="#ffffff" stroke-width="3"></line><line x1="20" y1="27" x2="39" y2="27" stroke="#ffffff" stroke-width="3"></line></g>
+<g transform="translate(403,105)"><rect width="52" height="70" rx="5" fill="#d8e4e6" stroke="#8fa6af" stroke-width="2"></rect><line x1="10" y1="3" x2="10" y2="67" stroke="#607987" stroke-width="2"></line><line x1="20" y1="19" x2="43" y2="19" stroke="#607987" stroke-width="3"></line><line x1="20" y1="27" x2="39" y2="27" stroke="#607987" stroke-width="3"></line></g>
+<g transform="translate(471,105)"><rect width="52" height="70" rx="5" fill="#d8e4e6" stroke="#8fa6af" stroke-width="2"></rect><line x1="10" y1="3" x2="10" y2="67" stroke="#607987" stroke-width="2"></line><line x1="20" y1="19" x2="43" y2="19" stroke="#607987" stroke-width="3"></line><line x1="20" y1="27" x2="39" y2="27" stroke="#607987" stroke-width="3"></line></g>
+<g transform="translate(539,105)"><rect width="52" height="70" rx="5" fill="#d8e4e6" stroke="#8fa6af" stroke-width="2"></rect><line x1="10" y1="3" x2="10" y2="67" stroke="#607987" stroke-width="2"></line><line x1="20" y1="19" x2="43" y2="19" stroke="#607987" stroke-width="3"></line><line x1="20" y1="27" x2="39" y2="27" stroke="#607987" stroke-width="3"></line></g>
+<g transform="translate(607,105)"><rect width="52" height="70" rx="5" fill="#d8e4e6" stroke="#8fa6af" stroke-width="2"></rect><line x1="10" y1="3" x2="10" y2="67" stroke="#607987" stroke-width="2"></line><line x1="20" y1="19" x2="43" y2="19" stroke="#607987" stroke-width="3"></line><line x1="20" y1="27" x2="39" y2="27" stroke="#607987" stroke-width="3"></line></g>
+<g transform="translate(675,105)"><rect width="52" height="70" rx="5" fill="#d8e4e6" stroke="#8fa6af" stroke-width="2"></rect><line x1="10" y1="3" x2="10" y2="67" stroke="#607987" stroke-width="2"></line><line x1="20" y1="19" x2="43" y2="19" stroke="#607987" stroke-width="3"></line><line x1="20" y1="27" x2="39" y2="27" stroke="#607987" stroke-width="3"></line></g>
+<g transform="translate(743,105)"><rect width="52" height="70" rx="5" fill="#d8e4e6" stroke="#8fa6af" stroke-width="2"></rect><line x1="10" y1="3" x2="10" y2="67" stroke="#607987" stroke-width="2"></line><line x1="20" y1="19" x2="43" y2="19" stroke="#607987" stroke-width="3"></line><line x1="20" y1="27" x2="39" y2="27" stroke="#607987" stroke-width="3"></line></g>
+<g transform="translate(811,105)"><rect width="52" height="70" rx="5" fill="#d8e4e6" stroke="#8fa6af" stroke-width="2"></rect><line x1="10" y1="3" x2="10" y2="67" stroke="#607987" stroke-width="2"></line><line x1="20" y1="19" x2="43" y2="19" stroke="#607987" stroke-width="3"></line><line x1="20" y1="27" x2="39" y2="27" stroke="#607987" stroke-width="3"></line></g>
+<text x="38" y="257" fill="#173047" font-family="Arial,sans-serif" font-size="19" font-weight="700">Also possible: 8 of 8</text>
+<g transform="translate(335,215)"><rect width="52" height="70" rx="5" fill="#087e83" stroke="#087e83" stroke-width="2"></rect><line x1="10" y1="3" x2="10" y2="67" stroke="#ffffff" stroke-width="2"></line><line x1="20" y1="19" x2="43" y2="19" stroke="#ffffff" stroke-width="3"></line><line x1="20" y1="27" x2="39" y2="27" stroke="#ffffff" stroke-width="3"></line></g>
+<g transform="translate(403,215)"><rect width="52" height="70" rx="5" fill="#087e83" stroke="#087e83" stroke-width="2"></rect><line x1="10" y1="3" x2="10" y2="67" stroke="#ffffff" stroke-width="2"></line><line x1="20" y1="19" x2="43" y2="19" stroke="#ffffff" stroke-width="3"></line><line x1="20" y1="27" x2="39" y2="27" stroke="#ffffff" stroke-width="3"></line></g>
+<g transform="translate(471,215)"><rect width="52" height="70" rx="5" fill="#087e83" stroke="#087e83" stroke-width="2"></rect><line x1="10" y1="3" x2="10" y2="67" stroke="#ffffff" stroke-width="2"></line><line x1="20" y1="19" x2="43" y2="19" stroke="#ffffff" stroke-width="3"></line><line x1="20" y1="27" x2="39" y2="27" stroke="#ffffff" stroke-width="3"></line></g>
+<g transform="translate(539,215)"><rect width="52" height="70" rx="5" fill="#087e83" stroke="#087e83" stroke-width="2"></rect><line x1="10" y1="3" x2="10" y2="67" stroke="#ffffff" stroke-width="2"></line><line x1="20" y1="19" x2="43" y2="19" stroke="#ffffff" stroke-width="3"></line><line x1="20" y1="27" x2="39" y2="27" stroke="#ffffff" stroke-width="3"></line></g>
+<g transform="translate(607,215)"><rect width="52" height="70" rx="5" fill="#087e83" stroke="#087e83" stroke-width="2"></rect><line x1="10" y1="3" x2="10" y2="67" stroke="#ffffff" stroke-width="2"></line><line x1="20" y1="19" x2="43" y2="19" stroke="#ffffff" stroke-width="3"></line><line x1="20" y1="27" x2="39" y2="27" stroke="#ffffff" stroke-width="3"></line></g>
+<g transform="translate(675,215)"><rect width="52" height="70" rx="5" fill="#087e83" stroke="#087e83" stroke-width="2"></rect><line x1="10" y1="3" x2="10" y2="67" stroke="#ffffff" stroke-width="2"></line><line x1="20" y1="19" x2="43" y2="19" stroke="#ffffff" stroke-width="3"></line><line x1="20" y1="27" x2="39" y2="27" stroke="#ffffff" stroke-width="3"></line></g>
+<g transform="translate(743,215)"><rect width="52" height="70" rx="5" fill="#087e83" stroke="#087e83" stroke-width="2"></rect><line x1="10" y1="3" x2="10" y2="67" stroke="#ffffff" stroke-width="2"></line><line x1="20" y1="19" x2="43" y2="19" stroke="#ffffff" stroke-width="3"></line><line x1="20" y1="27" x2="39" y2="27" stroke="#ffffff" stroke-width="3"></line></g>
+<g transform="translate(811,215)"><rect width="52" height="70" rx="5" fill="#087e83" stroke="#087e83" stroke-width="2"></rect><line x1="10" y1="3" x2="10" y2="67" stroke="#ffffff" stroke-width="2"></line><line x1="20" y1="19" x2="43" y2="19" stroke="#ffffff" stroke-width="3"></line><line x1="20" y1="27" x2="39" y2="27" stroke="#ffffff" stroke-width="3"></line></g>
+</svg></figure>
+<p>This is easy to miss because in ordinary conversation “some” often suggests “some, but not all.” On the LSAT, that extra phrase is not part of the statement. If all eight books are hardcover, it is still true that some are hardcover.</p>
+<aside class="quantity-check" data-check="0"><div class="quantity-check-top"><span>Try it</span><span>01</span></div><p class="quantity-check-question"> “Some applicants received an interview.” Could every applicant have received one? Does the sentence tell us that anyone was denied an interview?</p><details class="quantity-answer"><summary>Show the worked answer</summary><div><div class="quantity-answer-body"><p>Every applicant could have received an interview. The sentence does not tell us that anyone was denied one. “Some” guarantees at least one applicant received an interview, but it leaves open how many others did.</p>
+</div></div></details></aside>
+
+<p>Whenever you read <strong>some</strong>, replace it with <strong>at least one</strong> in your head. That tells you exactly what the sentence guarantees:</p>
+<blockquote>
+<p><strong>Some of the books are hardcover.</strong></p>
+<p><strong>At least one of the books is hardcover.</strong></p>
+</blockquote>
+<p>Now focus on that one book. It belongs to both groups: it is a book, and it is hardcover. If we describe the same object from the hardcover side, we can say:</p>
+<blockquote>
+<p><strong>Some hardcover items are books.</strong></p>
+<p><strong>At least one hardcover item is a book.</strong></p>
+</blockquote>
+<p>We have not found a new object. We have described the same overlap in the other direction. That is why a <strong>some</strong> statement works both ways:</p>
+<pre><code class="language-text">Books  ←some→  Hardcover
+</code></pre>
+<p>The double arrow tells us that at least one thing belongs to both groups. It does not tell us that every book is hardcover or that every hardcover item is a book.</p>
+<h3>What would make “some” false?</h3>
+<p>If <strong>some books are hardcover</strong> is false, then <strong>no books are hardcover</strong>. There is not even one book in both groups. Notice the difference between <strong>no books are hardcover</strong> and <strong>some books are not hardcover</strong>. The second sentence still allows other books to be hardcover, so it does not negate “some.”</p>
+<h2 id="most" class="quantity-chapter"><span class="quantity-chapter-number">02</span>Most guarantees more than half</h2>
+<p>Now I tell you that <strong>most of the eight books are hardcover</strong>. We need at least <strong>five</strong> hardcover books. Four would be exactly half, and half is not most. Five, six, seven, or eight could satisfy the sentence.</p>
+<figure class="quantity-figure" role="img" aria-label="Eight books showing that five hardcover books and eight hardcover books both satisfy most."><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 320" role="img" aria-labelledby="title desc">
+<title id="title">MOST: more than half</title><desc id="desc">Eight books. Hardcover counts shown: 5, 8.</desc>
+<rect width="920" height="320" rx="22" fill="#f7f6f1"></rect>
+<text x="38" y="48" fill="#173047" font-family="Arial,sans-serif" font-size="27" font-weight="700">MOST: more than half</text>
+<text x="38" y="79" fill="#526679" font-family="Arial,sans-serif" font-size="17" font-weight="400">Teal books are hardcover.</text>
+<text x="38" y="147" fill="#173047" font-family="Arial,sans-serif" font-size="19" font-weight="700">Minimum: 5 of 8</text>
+<g transform="translate(335,105)"><rect width="52" height="70" rx="5" fill="#087e83" stroke="#087e83" stroke-width="2"></rect><line x1="10" y1="3" x2="10" y2="67" stroke="#ffffff" stroke-width="2"></line><line x1="20" y1="19" x2="43" y2="19" stroke="#ffffff" stroke-width="3"></line><line x1="20" y1="27" x2="39" y2="27" stroke="#ffffff" stroke-width="3"></line></g>
+<g transform="translate(403,105)"><rect width="52" height="70" rx="5" fill="#087e83" stroke="#087e83" stroke-width="2"></rect><line x1="10" y1="3" x2="10" y2="67" stroke="#ffffff" stroke-width="2"></line><line x1="20" y1="19" x2="43" y2="19" stroke="#ffffff" stroke-width="3"></line><line x1="20" y1="27" x2="39" y2="27" stroke="#ffffff" stroke-width="3"></line></g>
+<g transform="translate(471,105)"><rect width="52" height="70" rx="5" fill="#087e83" stroke="#087e83" stroke-width="2"></rect><line x1="10" y1="3" x2="10" y2="67" stroke="#ffffff" stroke-width="2"></line><line x1="20" y1="19" x2="43" y2="19" stroke="#ffffff" stroke-width="3"></line><line x1="20" y1="27" x2="39" y2="27" stroke="#ffffff" stroke-width="3"></line></g>
+<g transform="translate(539,105)"><rect width="52" height="70" rx="5" fill="#087e83" stroke="#087e83" stroke-width="2"></rect><line x1="10" y1="3" x2="10" y2="67" stroke="#ffffff" stroke-width="2"></line><line x1="20" y1="19" x2="43" y2="19" stroke="#ffffff" stroke-width="3"></line><line x1="20" y1="27" x2="39" y2="27" stroke="#ffffff" stroke-width="3"></line></g>
+<g transform="translate(607,105)"><rect width="52" height="70" rx="5" fill="#087e83" stroke="#087e83" stroke-width="2"></rect><line x1="10" y1="3" x2="10" y2="67" stroke="#ffffff" stroke-width="2"></line><line x1="20" y1="19" x2="43" y2="19" stroke="#ffffff" stroke-width="3"></line><line x1="20" y1="27" x2="39" y2="27" stroke="#ffffff" stroke-width="3"></line></g>
+<g transform="translate(675,105)"><rect width="52" height="70" rx="5" fill="#d8e4e6" stroke="#8fa6af" stroke-width="2"></rect><line x1="10" y1="3" x2="10" y2="67" stroke="#607987" stroke-width="2"></line><line x1="20" y1="19" x2="43" y2="19" stroke="#607987" stroke-width="3"></line><line x1="20" y1="27" x2="39" y2="27" stroke="#607987" stroke-width="3"></line></g>
+<g transform="translate(743,105)"><rect width="52" height="70" rx="5" fill="#d8e4e6" stroke="#8fa6af" stroke-width="2"></rect><line x1="10" y1="3" x2="10" y2="67" stroke="#607987" stroke-width="2"></line><line x1="20" y1="19" x2="43" y2="19" stroke="#607987" stroke-width="3"></line><line x1="20" y1="27" x2="39" y2="27" stroke="#607987" stroke-width="3"></line></g>
+<g transform="translate(811,105)"><rect width="52" height="70" rx="5" fill="#d8e4e6" stroke="#8fa6af" stroke-width="2"></rect><line x1="10" y1="3" x2="10" y2="67" stroke="#607987" stroke-width="2"></line><line x1="20" y1="19" x2="43" y2="19" stroke="#607987" stroke-width="3"></line><line x1="20" y1="27" x2="39" y2="27" stroke="#607987" stroke-width="3"></line></g>
+<text x="38" y="257" fill="#173047" font-family="Arial,sans-serif" font-size="19" font-weight="700">Also possible: 8 of 8</text>
+<g transform="translate(335,215)"><rect width="52" height="70" rx="5" fill="#087e83" stroke="#087e83" stroke-width="2"></rect><line x1="10" y1="3" x2="10" y2="67" stroke="#ffffff" stroke-width="2"></line><line x1="20" y1="19" x2="43" y2="19" stroke="#ffffff" stroke-width="3"></line><line x1="20" y1="27" x2="39" y2="27" stroke="#ffffff" stroke-width="3"></line></g>
+<g transform="translate(403,215)"><rect width="52" height="70" rx="5" fill="#087e83" stroke="#087e83" stroke-width="2"></rect><line x1="10" y1="3" x2="10" y2="67" stroke="#ffffff" stroke-width="2"></line><line x1="20" y1="19" x2="43" y2="19" stroke="#ffffff" stroke-width="3"></line><line x1="20" y1="27" x2="39" y2="27" stroke="#ffffff" stroke-width="3"></line></g>
+<g transform="translate(471,215)"><rect width="52" height="70" rx="5" fill="#087e83" stroke="#087e83" stroke-width="2"></rect><line x1="10" y1="3" x2="10" y2="67" stroke="#ffffff" stroke-width="2"></line><line x1="20" y1="19" x2="43" y2="19" stroke="#ffffff" stroke-width="3"></line><line x1="20" y1="27" x2="39" y2="27" stroke="#ffffff" stroke-width="3"></line></g>
+<g transform="translate(539,215)"><rect width="52" height="70" rx="5" fill="#087e83" stroke="#087e83" stroke-width="2"></rect><line x1="10" y1="3" x2="10" y2="67" stroke="#ffffff" stroke-width="2"></line><line x1="20" y1="19" x2="43" y2="19" stroke="#ffffff" stroke-width="3"></line><line x1="20" y1="27" x2="39" y2="27" stroke="#ffffff" stroke-width="3"></line></g>
+<g transform="translate(607,215)"><rect width="52" height="70" rx="5" fill="#087e83" stroke="#087e83" stroke-width="2"></rect><line x1="10" y1="3" x2="10" y2="67" stroke="#ffffff" stroke-width="2"></line><line x1="20" y1="19" x2="43" y2="19" stroke="#ffffff" stroke-width="3"></line><line x1="20" y1="27" x2="39" y2="27" stroke="#ffffff" stroke-width="3"></line></g>
+<g transform="translate(675,215)"><rect width="52" height="70" rx="5" fill="#087e83" stroke="#087e83" stroke-width="2"></rect><line x1="10" y1="3" x2="10" y2="67" stroke="#ffffff" stroke-width="2"></line><line x1="20" y1="19" x2="43" y2="19" stroke="#ffffff" stroke-width="3"></line><line x1="20" y1="27" x2="39" y2="27" stroke="#ffffff" stroke-width="3"></line></g>
+<g transform="translate(743,215)"><rect width="52" height="70" rx="5" fill="#087e83" stroke="#087e83" stroke-width="2"></rect><line x1="10" y1="3" x2="10" y2="67" stroke="#ffffff" stroke-width="2"></line><line x1="20" y1="19" x2="43" y2="19" stroke="#ffffff" stroke-width="3"></line><line x1="20" y1="27" x2="39" y2="27" stroke="#ffffff" stroke-width="3"></line></g>
+<g transform="translate(811,215)"><rect width="52" height="70" rx="5" fill="#087e83" stroke="#087e83" stroke-width="2"></rect><line x1="10" y1="3" x2="10" y2="67" stroke="#ffffff" stroke-width="2"></line><line x1="20" y1="19" x2="43" y2="19" stroke="#ffffff" stroke-width="3"></line><line x1="20" y1="27" x2="39" y2="27" stroke="#ffffff" stroke-width="3"></line></g>
+</svg></figure>
+<p>Notice that all eight could still be hardcover. “Most” does not tell us that an exception exists.</p>
+<aside class="quantity-check" data-check="1"><div class="quantity-check-top"><span>Try it</span><span>02</span></div><p class="quantity-check-question"> If most of the eight books are hardcover, must some of them be hardcover? Must any be paperback?</p><details class="quantity-answer"><summary>Show the worked answer</summary><div><div class="quantity-answer-body"><p>At least five are hardcover, so <strong>some are hardcover</strong>. No paperback book is required. All eight could be hardcover.</p>
+</div></div></details></aside>
+
+<p>Here is where the direction of the statement matters. From “most books are hardcover,” we know that <strong>some hardcover things are books</strong>. We cannot say that <strong>most hardcover things are books</strong>. Five of our eight shelf books could be hardcover, while a library holds hundreds of other hardcover items. The first statement counts the eight books; the reversed statement counts a different group.</p>
+<pre><code class="language-text">Books  ─most→  Hardcover
+Hardcover  ←some→  Books
+</code></pre>
+<p>The first arrow gives the majority claim. The second line is the overlap that the majority guarantees. When we read a most statement backward, the word becomes <strong>some</strong>.</p>
+<aside class="quantity-check" data-check="2"><div class="quantity-check-top"><span>Quick check</span><span>03</span></div><p class="quantity-check-question"> A program has 100 applicants. Most speak Spanish. What is the smallest possible number who speak Spanish? What is the largest?</p><details class="quantity-answer"><summary>Show the worked answer</summary><div><div class="quantity-answer-body"><p><strong>51 to 100.</strong> Fifty is only half. “Most” also permits all 100, so it does not establish an exception.</p>
+</div></div></details></aside>
+
+<h3>What would make “most” false?</h3>
+<p>“Most of the eight books are hardcover” needs at least five hardcover books. Its negation permits <strong>four or fewer</strong>. Four is exactly half, so it already makes “most” false. The opposite of “most are hardcover” is <strong>half or fewer are hardcover</strong>, not “most are paperback.” Both kinds could make up exactly half.</p>
+<h2 id="all" class="quantity-chapter"><span class="quantity-chapter-number">03</span>All leaves no exception</h2>
+<p>If <strong>all eight books are hardcover</strong>, every book on the shelf is hardcover. One paperback on that shelf would make the statement false.</p>
+<figure class="quantity-figure" role="img" aria-label="Eight books showing that all eight must be hardcover to satisfy all."><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 215" role="img" aria-labelledby="title desc">
+<title id="title">ALL: every one</title><desc id="desc">Eight books. Hardcover counts shown: 8.</desc>
+<rect width="920" height="215" rx="22" fill="#f7f6f1"></rect>
+<text x="38" y="48" fill="#173047" font-family="Arial,sans-serif" font-size="27" font-weight="700">ALL: every one</text>
+<text x="38" y="79" fill="#526679" font-family="Arial,sans-serif" font-size="17" font-weight="400">Teal books are hardcover.</text>
+<text x="38" y="147" fill="#173047" font-family="Arial,sans-serif" font-size="19" font-weight="700">Required: 8 of 8</text>
+<g transform="translate(335,105)"><rect width="52" height="70" rx="5" fill="#087e83" stroke="#087e83" stroke-width="2"></rect><line x1="10" y1="3" x2="10" y2="67" stroke="#ffffff" stroke-width="2"></line><line x1="20" y1="19" x2="43" y2="19" stroke="#ffffff" stroke-width="3"></line><line x1="20" y1="27" x2="39" y2="27" stroke="#ffffff" stroke-width="3"></line></g>
+<g transform="translate(403,105)"><rect width="52" height="70" rx="5" fill="#087e83" stroke="#087e83" stroke-width="2"></rect><line x1="10" y1="3" x2="10" y2="67" stroke="#ffffff" stroke-width="2"></line><line x1="20" y1="19" x2="43" y2="19" stroke="#ffffff" stroke-width="3"></line><line x1="20" y1="27" x2="39" y2="27" stroke="#ffffff" stroke-width="3"></line></g>
+<g transform="translate(471,105)"><rect width="52" height="70" rx="5" fill="#087e83" stroke="#087e83" stroke-width="2"></rect><line x1="10" y1="3" x2="10" y2="67" stroke="#ffffff" stroke-width="2"></line><line x1="20" y1="19" x2="43" y2="19" stroke="#ffffff" stroke-width="3"></line><line x1="20" y1="27" x2="39" y2="27" stroke="#ffffff" stroke-width="3"></line></g>
+<g transform="translate(539,105)"><rect width="52" height="70" rx="5" fill="#087e83" stroke="#087e83" stroke-width="2"></rect><line x1="10" y1="3" x2="10" y2="67" stroke="#ffffff" stroke-width="2"></line><line x1="20" y1="19" x2="43" y2="19" stroke="#ffffff" stroke-width="3"></line><line x1="20" y1="27" x2="39" y2="27" stroke="#ffffff" stroke-width="3"></line></g>
+<g transform="translate(607,105)"><rect width="52" height="70" rx="5" fill="#087e83" stroke="#087e83" stroke-width="2"></rect><line x1="10" y1="3" x2="10" y2="67" stroke="#ffffff" stroke-width="2"></line><line x1="20" y1="19" x2="43" y2="19" stroke="#ffffff" stroke-width="3"></line><line x1="20" y1="27" x2="39" y2="27" stroke="#ffffff" stroke-width="3"></line></g>
+<g transform="translate(675,105)"><rect width="52" height="70" rx="5" fill="#087e83" stroke="#087e83" stroke-width="2"></rect><line x1="10" y1="3" x2="10" y2="67" stroke="#ffffff" stroke-width="2"></line><line x1="20" y1="19" x2="43" y2="19" stroke="#ffffff" stroke-width="3"></line><line x1="20" y1="27" x2="39" y2="27" stroke="#ffffff" stroke-width="3"></line></g>
+<g transform="translate(743,105)"><rect width="52" height="70" rx="5" fill="#087e83" stroke="#087e83" stroke-width="2"></rect><line x1="10" y1="3" x2="10" y2="67" stroke="#ffffff" stroke-width="2"></line><line x1="20" y1="19" x2="43" y2="19" stroke="#ffffff" stroke-width="3"></line><line x1="20" y1="27" x2="39" y2="27" stroke="#ffffff" stroke-width="3"></line></g>
+<g transform="translate(811,105)"><rect width="52" height="70" rx="5" fill="#087e83" stroke="#087e83" stroke-width="2"></rect><line x1="10" y1="3" x2="10" y2="67" stroke="#ffffff" stroke-width="2"></line><line x1="20" y1="19" x2="43" y2="19" stroke="#ffffff" stroke-width="3"></line><line x1="20" y1="27" x2="39" y2="27" stroke="#ffffff" stroke-width="3"></line></g>
+</svg></figure>
+<p>An all statement gives us a rule: <strong>if it is one of these eight books, then it is hardcover</strong>.</p>
+<pre><code class="language-text">One of these books  →  Hardcover
+Not hardcover       →  Not one of these books
+</code></pre>
+<p>The second line is the contrapositive. Both lines go with the same rule. We cannot turn the first line around and conclude that every hardcover thing is a book on this shelf.</p>
+<aside class="quantity-check" data-check="3"><div class="quantity-check-top"><span>Try it</span><span>04</span></div><p class="quantity-check-question"> You pick up a paperback. What does the rule tell you? What if you pick up a hardcover book from another shelf?</p><details class="quantity-answer"><summary>Show the worked answer</summary><div><div class="quantity-answer-body"><p>The paperback cannot be one of these eight books. A hardcover book from another shelf does not become one of these eight just because it is hardcover. Being hardcover is required, but it is not enough to identify one of these books.</p>
+</div></div></details></aside>
+
+<p>There is a small qualification. “All A are B” gives a rule about A. By itself, it does not tell us that any A exist. When we already know the group exists, all also guarantees most and some.</p>
+<h3>What would make “all” false?</h3>
+<p>One exception is enough. “Not all eight books are hardcover” means <strong>at least one of the eight is not hardcover</strong>. The other seven could still be hardcover. This is the negation of the all claim. By contrast, “not hardcover → not one of these eight books” is its <strong>contrapositive</strong>: another way to state the original rule, not a way to deny it.</p>
+<h2 class="quantity-chapter"><span class="quantity-chapter-number">04</span>Put the three statements side by side</h2>
+<p>The same shelf can help us see the whole range.</p>
+<figure class="quantity-figure" role="img" aria-label="For eight existing books: some permits one through eight hardcover, most permits five through eight, and all requires eight."><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 340" role="img" aria-labelledby="title desc">
+<title id="title">What each word permits</title><desc id="desc">For eight existing books, some permits one to eight hardcover, most permits five to eight, and all permits exactly eight.</desc>
+<rect width="920" height="340" rx="22" fill="#f7f6f1"></rect>
+<text x="38" y="48" fill="#173047" font-family="Arial,sans-serif" font-size="27" font-weight="700">What each word permits</text>
+<text x="38" y="80" fill="#526679" font-family="Arial,sans-serif" font-size="17" font-weight="400">Number of hardcover books, out of eight</text>
+<text x="38" y="154" fill="#173047" font-family="Arial,sans-serif" font-size="20" font-weight="700">Some</text>
+<circle cx="262" cy="146" r="23" fill="#d8e4e6"></circle>
+<text x="262" y="153" text-anchor="middle" fill="#526679" font-family="Arial,sans-serif" font-size="20" font-weight="700">0</text>
+<circle cx="334" cy="146" r="23" fill="#087e83"></circle>
+<text x="334" y="153" text-anchor="middle" fill="#ffffff" font-family="Arial,sans-serif" font-size="20" font-weight="700">1</text>
+<circle cx="406" cy="146" r="23" fill="#087e83"></circle>
+<text x="406" y="153" text-anchor="middle" fill="#ffffff" font-family="Arial,sans-serif" font-size="20" font-weight="700">2</text>
+<circle cx="478" cy="146" r="23" fill="#087e83"></circle>
+<text x="478" y="153" text-anchor="middle" fill="#ffffff" font-family="Arial,sans-serif" font-size="20" font-weight="700">3</text>
+<circle cx="550" cy="146" r="23" fill="#087e83"></circle>
+<text x="550" y="153" text-anchor="middle" fill="#ffffff" font-family="Arial,sans-serif" font-size="20" font-weight="700">4</text>
+<circle cx="622" cy="146" r="23" fill="#087e83"></circle>
+<text x="622" y="153" text-anchor="middle" fill="#ffffff" font-family="Arial,sans-serif" font-size="20" font-weight="700">5</text>
+<circle cx="694" cy="146" r="23" fill="#087e83"></circle>
+<text x="694" y="153" text-anchor="middle" fill="#ffffff" font-family="Arial,sans-serif" font-size="20" font-weight="700">6</text>
+<circle cx="766" cy="146" r="23" fill="#087e83"></circle>
+<text x="766" y="153" text-anchor="middle" fill="#ffffff" font-family="Arial,sans-serif" font-size="20" font-weight="700">7</text>
+<circle cx="838" cy="146" r="23" fill="#087e83"></circle>
+<text x="838" y="153" text-anchor="middle" fill="#ffffff" font-family="Arial,sans-serif" font-size="20" font-weight="700">8</text>
+<text x="38" y="227" fill="#173047" font-family="Arial,sans-serif" font-size="20" font-weight="700">Most</text>
+<circle cx="262" cy="219" r="23" fill="#d8e4e6"></circle>
+<text x="262" y="226" text-anchor="middle" fill="#526679" font-family="Arial,sans-serif" font-size="20" font-weight="700">0</text>
+<circle cx="334" cy="219" r="23" fill="#d8e4e6"></circle>
+<text x="334" y="226" text-anchor="middle" fill="#526679" font-family="Arial,sans-serif" font-size="20" font-weight="700">1</text>
+<circle cx="406" cy="219" r="23" fill="#d8e4e6"></circle>
+<text x="406" y="226" text-anchor="middle" fill="#526679" font-family="Arial,sans-serif" font-size="20" font-weight="700">2</text>
+<circle cx="478" cy="219" r="23" fill="#d8e4e6"></circle>
+<text x="478" y="226" text-anchor="middle" fill="#526679" font-family="Arial,sans-serif" font-size="20" font-weight="700">3</text>
+<circle cx="550" cy="219" r="23" fill="#d8e4e6"></circle>
+<text x="550" y="226" text-anchor="middle" fill="#526679" font-family="Arial,sans-serif" font-size="20" font-weight="700">4</text>
+<circle cx="622" cy="219" r="23" fill="#087e83"></circle>
+<text x="622" y="226" text-anchor="middle" fill="#ffffff" font-family="Arial,sans-serif" font-size="20" font-weight="700">5</text>
+<circle cx="694" cy="219" r="23" fill="#087e83"></circle>
+<text x="694" y="226" text-anchor="middle" fill="#ffffff" font-family="Arial,sans-serif" font-size="20" font-weight="700">6</text>
+<circle cx="766" cy="219" r="23" fill="#087e83"></circle>
+<text x="766" y="226" text-anchor="middle" fill="#ffffff" font-family="Arial,sans-serif" font-size="20" font-weight="700">7</text>
+<circle cx="838" cy="219" r="23" fill="#087e83"></circle>
+<text x="838" y="226" text-anchor="middle" fill="#ffffff" font-family="Arial,sans-serif" font-size="20" font-weight="700">8</text>
+<text x="38" y="300" fill="#173047" font-family="Arial,sans-serif" font-size="20" font-weight="700">All</text>
+<circle cx="262" cy="292" r="23" fill="#d8e4e6"></circle>
+<text x="262" y="299" text-anchor="middle" fill="#526679" font-family="Arial,sans-serif" font-size="20" font-weight="700">0</text>
+<circle cx="334" cy="292" r="23" fill="#d8e4e6"></circle>
+<text x="334" y="299" text-anchor="middle" fill="#526679" font-family="Arial,sans-serif" font-size="20" font-weight="700">1</text>
+<circle cx="406" cy="292" r="23" fill="#d8e4e6"></circle>
+<text x="406" y="299" text-anchor="middle" fill="#526679" font-family="Arial,sans-serif" font-size="20" font-weight="700">2</text>
+<circle cx="478" cy="292" r="23" fill="#d8e4e6"></circle>
+<text x="478" y="299" text-anchor="middle" fill="#526679" font-family="Arial,sans-serif" font-size="20" font-weight="700">3</text>
+<circle cx="550" cy="292" r="23" fill="#d8e4e6"></circle>
+<text x="550" y="299" text-anchor="middle" fill="#526679" font-family="Arial,sans-serif" font-size="20" font-weight="700">4</text>
+<circle cx="622" cy="292" r="23" fill="#d8e4e6"></circle>
+<text x="622" y="299" text-anchor="middle" fill="#526679" font-family="Arial,sans-serif" font-size="20" font-weight="700">5</text>
+<circle cx="694" cy="292" r="23" fill="#d8e4e6"></circle>
+<text x="694" y="299" text-anchor="middle" fill="#526679" font-family="Arial,sans-serif" font-size="20" font-weight="700">6</text>
+<circle cx="766" cy="292" r="23" fill="#d8e4e6"></circle>
+<text x="766" y="299" text-anchor="middle" fill="#526679" font-family="Arial,sans-serif" font-size="20" font-weight="700">7</text>
+<circle cx="838" cy="292" r="23" fill="#087e83"></circle>
+<text x="838" y="299" text-anchor="middle" fill="#ffffff" font-family="Arial,sans-serif" font-size="20" font-weight="700">8</text>
+</svg></figure>
+<p>Read the implications in one direction:</p>
+<pre><code class="language-text">ALL  →  MOST  →  SOME       (when the group exists)
+</code></pre>
+<p>If all eight books are hardcover, then most are, and some are. If only “some” is given, all eight <strong>could</strong> be hardcover, but we cannot conclude that they <strong>are</strong>. Keep the distinction between a possible situation and a required one.</p>
+<h2 id="inferences" class="quantity-chapter"><span class="quantity-chapter-number">05</span>Carry a claim through an all rule</h2>
+<p>Now we can combine statements. Suppose <strong>some library books are mysteries</strong> and <strong>all mysteries are fiction</strong>. We have at least one book that is a mystery. The all rule applies to every mystery, including that one. So <strong>some library books are fiction</strong>.</p>
+<pre><code class="language-text">Library books  ←some→  Mysteries  →  Fiction
+Library books  ←some→  Fiction
+</code></pre>
+<p>The all arrow points <strong>away from</strong> the mystery group we reached. That is why the chain works. If the second sentence said only “most mysteries are fiction,” the mystery books we found could be among the exceptions.</p>
+<figure class="quantity-figure" role="img" aria-label="A marked library book is inside the mysteries group, which is entirely inside the fiction group."><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 320" role="img" aria-labelledby="title desc">
+  <title id="title">A known mystery book stays inside the fiction group</title>
+  <desc id="desc">A library-book circle overlaps a mystery circle. The mystery circle sits entirely inside the fiction circle. A marked point in the library-book and mystery overlap is therefore also in fiction.</desc>
+  <rect x="1" y="1" width="718" height="318" rx="18" fill="#f8fbfa" stroke="#c9dddb"></rect>
+  <text x="28" y="40" fill="#173047" font-family="Arial,sans-serif" font-size="19" font-weight="700">Follow the book we already know exists</text>
+  <circle cx="485" cy="173" r="125" fill="#ded1ec" fill-opacity=".75" stroke="#7650a3" stroke-width="2"></circle>
+  <circle cx="448" cy="179" r="72" fill="#e9bd79" fill-opacity=".82" stroke="#a26a17" stroke-width="2"></circle>
+  <circle cx="282" cy="183" r="125" fill="#94d8d1" fill-opacity=".7" stroke="#087e83" stroke-width="2"></circle>
+  <text x="140" y="214" fill="#173047" font-family="Arial,sans-serif" font-size="17" font-weight="700">Library books</text>
+  <text x="411" y="165" fill="#173047" font-family="Arial,sans-serif" font-size="16" font-weight="700">Mysteries</text>
+  <text x="524" y="118" fill="#173047" font-family="Arial,sans-serif" font-size="17" font-weight="700">Fiction</text>
+  <circle cx="390" cy="183" r="12" fill="#173047" stroke="#fff" stroke-width="4"></circle>
+  <text x="27" y="286" fill="#173047" font-family="Arial,sans-serif" font-size="15">This dot is a library book and a mystery. All mysteries are fiction, so this dot is fiction too.</text>
+</svg>
+</figure>
+<aside class="quantity-check" data-check="4"><div class="quantity-check-top"><span>Quick check</span><span>05</span></div><p class="quantity-check-question"> Some archive documents are letters. All letters are handwritten. What follows?</p><details class="quantity-answer"><summary>Show the worked answer</summary><div><div class="quantity-answer-body"><p><strong>Some archive documents are handwritten.</strong> Take a document guaranteed to be a letter. The all rule applies to that document.</p>
+</div></div></details></aside>
+
+<p>The same reasoning preserves the first quantity word:</p>
+<table>
+<thead>
+<tr>
+<th>First statement</th>
+<th>Rule</th>
+<th>What follows</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Some library books are mysteries.</td>
+<td>All mysteries are fiction.</td>
+<td>Some library books are fiction.</td>
+</tr>
+<tr>
+<td>Most library books are mysteries.</td>
+<td>All mysteries are fiction.</td>
+<td>Most library books are fiction.</td>
+</tr>
+<tr>
+<td>All library books are mysteries.</td>
+<td>All mysteries are fiction.</td>
+<td>All library books are fiction.</td>
+</tr>
+</tbody></table>
+<aside class="quantity-check" data-check="5"><div class="quantity-check-top"><span>Try it</span><span>06</span></div><p class="quantity-check-question"> “Most library books are mysteries. All fiction is mystery.” Can we conclude that most library books are fiction?</p><details class="quantity-answer"><summary>Show the worked answer</summary><div><div class="quantity-answer-body"><p>No. The all arrow goes from fiction to mystery. We cannot start at mystery and travel backward to fiction.</p>
+</div></div></details></aside>
+
+<h2 class="quantity-chapter"><span class="quantity-chapter-number">06</span>Two majorities of the same group must meet</h2>
+<p>Suppose a club has ten members. <strong>Most members study law</strong>, and <strong>most members work part time</strong>. Each “most” needs at least six of the ten members. Those two sets cannot fit inside the club without sharing at least two people.</p>
+<section class="quantity-overlap-lab" aria-label="Explore why two majorities overlap">
+    <div class="quantity-overlap-head"><h3>Try to separate the majorities.</h3><p>Six of ten club members study law. Six work part time. Rearrange the workers and watch what cannot change.</p></div>
+    <div class="quantity-overlap-people" id="quantity-overlap-people" aria-label="Ten club members"><span class="quantity-person studies-law " role="img" aria-label="Member 1: studies law, does not work part time">01</span><span class="quantity-person studies-law " role="img" aria-label="Member 2: studies law, does not work part time">02</span><span class="quantity-person studies-law " role="img" aria-label="Member 3: studies law, does not work part time">03</span><span class="quantity-person studies-law " role="img" aria-label="Member 4: studies law, does not work part time">04</span><span class="quantity-person studies-law works-part-time" role="img" aria-label="Member 5: studies law, works part time">05</span><span class="quantity-person studies-law works-part-time" role="img" aria-label="Member 6: studies law, works part time">06</span><span class="quantity-person works-part-time" role="img" aria-label="Member 7: does not study law, works part time">07</span><span class="quantity-person works-part-time" role="img" aria-label="Member 8: does not study law, works part time">08</span><span class="quantity-person works-part-time" role="img" aria-label="Member 9: does not study law, works part time">09</span><span class="quantity-person works-part-time" role="img" aria-label="Member 10: does not study law, works part time">10</span></div>
+    <div class="quantity-overlap-legend"><span><i class="law"></i>Studies law</span><span><i class="work"></i>Works part time</span><span><i class="both"></i>Both</span></div>
+    <div class="quantity-overlap-footer"><p aria-live="polite"><b id="quantity-overlap-count">2</b> members have both traits. <span id="quantity-overlap-message">Even the smallest possible overlap is not zero.</span></p></div>
+    <div class="quantity-venn"><p><b>The universe is the ten club members.</b> The shared middle cannot be empty.</p><svg viewBox="0 0 640 278" role="img" aria-label="Venn diagram of ten club members, updated as the members are rearranged"><rect x="8" y="8" width="624" height="262" rx="18" fill="#fffdfa" stroke="#bed6d3" stroke-width="2"></rect><text x="30" y="37" fill="#173047" font-size="16" font-family="Outfit, sans-serif">All ten club members</text><circle cx="259" cy="151" r="98" fill="#48b0a9" fill-opacity=".36" stroke="#00847f" stroke-width="2"></circle><circle cx="381" cy="151" r="98" fill="#bb9bdf" fill-opacity=".36" stroke="#7650a3" stroke-width="2"></circle><text x="195" y="98" fill="#173047" font-size="14" font-family="Outfit, sans-serif">Study law</text><text x="380" y="98" fill="#173047" font-size="14" font-family="Outfit, sans-serif">Work part time</text><text id="venn-law-only" x="206" y="165" fill="#173047" font-size="27" font-weight="700" font-family="Outfit, sans-serif">4</text><text id="venn-both" x="312" y="165" fill="#173047" font-size="27" font-weight="700" font-family="Outfit, sans-serif">2</text><text id="venn-work-only" x="415" y="165" fill="#173047" font-size="27" font-weight="700" font-family="Outfit, sans-serif">4</text><text x="30" y="247" fill="#173047" font-size="13" font-family="Outfit, sans-serif">Neither: <tspan id="venn-neither">0</tspan></text></svg><small>The circle areas are schematic. The numbers count members and change when you rearrange them.</small></div>
+  </section>
+<p><strong>What is given?</strong> More than half of the <em>same ten members</em> study law. More than half of those same ten work part time. The claims count club members, not all law students or all part-time workers everywhere.</p>
+<p><strong>Why must they meet?</strong> Each group needs at least six members. If the groups were separate, we would need twelve different club members. There are only ten. At least two members must be in both groups.</p>
+<p><strong>What follows?</strong> <strong>Some law students work part time.</strong> We can reverse that some claim: <strong>some part-time workers study law</strong>. Both sentences describe the same overlapping members. We know at least one exists; we do not know that most law students or most part-time workers have the other trait.</p>
+<pre><code class="language-text">Given:       Most club members study law.
+             Most club members work part time.
+Must follow: Some law students work part time.
+Why:         Both majorities count the same club members.
+</code></pre>
+<aside class="quantity-check" data-check="6"><div class="quantity-check-top"><span>Quick check</span><span>07</span></div><p class="quantity-check-question"> A club has 25 members. Most are lawyers, and most play an instrument. What is the smallest possible number who are both lawyers and play an instrument?</p><details class="quantity-answer"><summary>Show the worked answer</summary><div><div class="quantity-answer-body"><p><strong>One.</strong> Each majority needs at least 13 members. If none overlapped, those groups would require 26 different people, but the club has only 25. All 25 could also have both traits.</p>
+</div></div></details></aside>
+
+<aside class="quantity-check" data-check="7"><div class="quantity-check-top"><span>Try it</span><span>08</span></div><p class="quantity-check-question"> If most club members study law and most club members work part time, could the two groups of members be completely separate?</p><details class="quantity-answer"><summary>Show the worked answer</summary><div><div class="quantity-answer-body"><p>No. Two separate majorities would require more members than the club has. At least one member must have both traits.</p>
+</div></div></details></aside>
+
+<h3>When all describes that same group</h3>
+<p>There is another way to guarantee an overlap. Suppose <strong>most club members study law</strong>, and <strong>all club members work part time</strong>. We already know there are law students in the club. The all rule tells us that <em>each one of those members</em> also works part time. So <strong>some law students work part time</strong>.</p>
+<pre><code class="language-text">Given:       Most club members study law.
+             All club members work part time.
+Must follow: Some law students work part time.
+Why:         The law students already found are club members,
+             so the all rule applies to each of them.
+</code></pre>
+<p>We can make the same move with <strong>some</strong>. If <strong>some club members study law</strong> and <strong>all club members work part time</strong>, take the member guaranteed by “some.” That person has both traits. Again, <strong>some law students work part time</strong>. The sentences can be stated in the other order: <strong>all club members work part time; some club members study law</strong>. The same person still proves the overlap.</p>
+<figure class="quantity-figure" role="img" aria-label="An all rule covers every club member. A highlighted law student is therefore also a part-time worker."><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 245" role="img" aria-labelledby="title desc">
+  <title id="title">A witness from some or most passes through an all rule</title>
+  <desc id="desc">A club member who studies law is highlighted. Since all club members work part time, that same person has both traits.</desc>
+  <rect width="760" height="245" rx="18" fill="#f7f5f0"></rect>
+  <text x="34" y="40" fill="#17364c" font-family="Arial,sans-serif" font-size="17" font-weight="700">One person is enough to prove the overlap</text>
+  <rect x="34" y="70" width="190" height="112" rx="14" fill="#fff" stroke="#bed1d8" stroke-width="2"></rect>
+  <text x="129" y="100" text-anchor="middle" fill="#17364c" font-family="Arial,sans-serif" font-size="14" font-weight="700">Club member</text>
+  <circle cx="129" cy="137" r="18" fill="#008b8f"></circle>
+  <path d="M125 137l4 4 8-10" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+  <path d="M234 126h50" stroke="#17364c" stroke-width="3"></path>
+  <path d="M276 119l10 7-10 7" fill="none" stroke="#17364c" stroke-width="3"></path>
+  <text x="260" y="109" text-anchor="middle" fill="#506875" font-family="Arial,sans-serif" font-size="12">same person</text>
+  <rect x="294" y="70" width="190" height="112" rx="14" fill="#e7f4f2" stroke="#008b8f" stroke-width="2"></rect>
+  <text x="389" y="100" text-anchor="middle" fill="#17364c" font-family="Arial,sans-serif" font-size="14" font-weight="700">Studies law</text>
+  <circle cx="389" cy="137" r="18" fill="#008b8f"></circle>
+  <path d="M385 137l4 4 8-10" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+  <path d="M494 126h50" stroke="#17364c" stroke-width="3"></path>
+  <path d="M536 119l10 7-10 7" fill="none" stroke="#17364c" stroke-width="3"></path>
+  <text x="519" y="109" text-anchor="middle" fill="#506875" font-family="Arial,sans-serif" font-size="12">same person</text>
+  <rect x="554" y="70" width="172" height="112" rx="14" fill="#e7f4f2" stroke="#008b8f" stroke-width="2"></rect>
+  <text x="640" y="100" text-anchor="middle" fill="#17364c" font-family="Arial,sans-serif" font-size="14" font-weight="700">Works part time</text>
+  <circle cx="640" cy="137" r="18" fill="#008b8f"></circle>
+  <path d="M636 137l4 4 8-10" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+  <text x="380" y="217" text-anchor="middle" fill="#17364c" font-family="Arial,sans-serif" font-size="15">The same person makes “some law students work part time” true.</text>
+</svg>
+</figure>
+<aside class="quantity-check" data-check="8"><div class="quantity-check-top"><span>Try it</span><span>09</span></div><p class="quantity-check-question"> All A are B. All A are C. Must some B be C?</p><details class="quantity-answer"><summary>Show the worked answer</summary><div><div class="quantity-answer-body"><p>Not yet. The two all rules tell us what is true <strong>if</strong> something is A, but neither tells us that any A exists. Add “at least one A exists,” and the overlap follows.</p>
+</div></div></details></aside>
+
+<h2 class="quantity-chapter"><span class="quantity-chapter-number">07</span>Two majorities can also compare group sizes</h2>
+<p>Here is a different comparison. <strong>Most debate team members are seniors</strong>, but <strong>most seniors are not on the debate team</strong>. The seniors on the team are more than half of the team and less than half of the seniors. The same overlap takes up a larger share of the team than of the senior class. Therefore, <strong>there are more seniors than debate team members</strong>.</p>
+<figure class="quantity-figure" role="img" aria-label="An example in which six of ten debate team members are seniors, while six of twenty seniors are on the team."><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 330" role="img" aria-labelledby="title desc">
+  <title id="title">The same overlap takes a larger share of the smaller group</title>
+  <desc id="desc">An illustrative count: six of ten debate team members are seniors, while six of twenty seniors are on the debate team. The same six-person overlap is a majority of the debate team but a minority of seniors.</desc>
+  <rect width="900" height="330" rx="24" fill="#f8f5ee"></rect>
+  <text x="42" y="52" fill="#152d36" font-family="Arial,sans-serif" font-size="25" font-weight="700">Compare the same overlap to each total</text>
+  <text x="42" y="81" fill="#49606a" font-family="Arial,sans-serif" font-size="16">These numbers are one example of the two “most” claims.</text>
+  <g font-family="Arial,sans-serif" fill="#152d36" font-size="19" font-weight="700">
+    <text x="42" y="149">Debate team · 10</text><text x="42" y="244">Seniors · 20</text>
+  </g>
+  <rect x="260" y="117" width="180" height="48" rx="12" fill="#6d53a5"></rect>
+  <rect x="440" y="117" width="120" height="48" rx="12" fill="#168d82"></rect>
+  <rect x="260" y="212" width="180" height="48" rx="12" fill="#6d53a5"></rect>
+  <rect x="440" y="212" width="420" height="48" rx="12" fill="#c57916"></rect>
+  <g font-family="Arial,sans-serif" font-size="16" font-weight="700" text-anchor="middle" fill="#ffffff">
+    <text x="350" y="147">6 are both</text><text x="500" y="147">4 others</text>
+    <text x="350" y="242">6 are both</text><text x="650" y="242">14 are not on the team</text>
+  </g>
+  <text x="42" y="304" fill="#49606a" font-family="Arial,sans-serif" font-size="16">Six is more than half of ten, but less than half of twenty.</text>
+</svg>
+</figure>
+<p>The numbers in the picture are one possible case. The conclusion follows from the two majority claims, not from those particular numbers.</p>
+<h2 class="quantity-chapter"><span class="quantity-chapter-number">08</span>Similar chains can leave a gap</h2>
+<p>Two some statements need not describe the same person or thing:</p>
+<pre><code class="language-text">Some volunteers speak Spanish.
+Some Spanish speakers are trained.
+</code></pre>
+<p>The trained Spanish speakers could all be people who do not volunteer. We cannot conclude that any volunteers are trained.</p>
+<figure class="quantity-figure" role="img" aria-label="Two different Spanish speakers satisfy the two some claims without any volunteer being trained."><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 320" role="img" aria-labelledby="title desc">
+  <title id="title">Two some claims can use different people</title>
+  <desc id="desc">The volunteer and trained circles do not touch. Both overlap the Spanish-speaker circle in different places, with a separate person in each overlap.</desc>
+  <rect x="1" y="1" width="718" height="318" rx="18" fill="#f8fbfa" stroke="#c9dddb"></rect>
+  <text x="28" y="41" fill="#173047" font-family="Arial,sans-serif" font-size="19" font-weight="700">The two witnesses can be different people</text>
+  <circle cx="355" cy="176" r="121" fill="#dcebe8" stroke="#477e7a" stroke-width="2"></circle>
+  <circle cx="214" cy="184" r="81" fill="#9ad8d2" fill-opacity=".75" stroke="#087e83" stroke-width="2"></circle>
+  <circle cx="496" cy="184" r="81" fill="#dbc5ed" fill-opacity=".75" stroke="#7650a3" stroke-width="2"></circle>
+  <text x="86" y="186" fill="#173047" font-family="Arial,sans-serif" font-size="16" font-weight="700">Volunteers</text>
+  <text x="280" y="103" fill="#173047" font-family="Arial,sans-serif" font-size="16" font-weight="700">Spanish speakers</text>
+  <text x="501" y="186" fill="#173047" font-family="Arial,sans-serif" font-size="16" font-weight="700">Trained</text>
+  <circle cx="282" cy="181" r="11" fill="#173047" stroke="#fff" stroke-width="4"></circle>
+  <circle cx="428" cy="181" r="11" fill="#173047" stroke="#fff" stroke-width="4"></circle>
+  <text x="28" y="292" fill="#173047" font-family="Arial,sans-serif" font-size="15">Both dots speak Spanish. Only the left one volunteers; only the right one is trained.</text>
+</svg>
+</figure>
+<p>Replacing the second “some” with “most” does not fix the gap. The Spanish-speaking volunteers could sit in the untrained minority. Even two most statements that count different groups do not automatically produce a new majority claim.</p>
+<p>Before drawing a conclusion, ask: <strong>Am I carrying a known group through an all rule? Or do two majorities count the same group?</strong> If neither is true, check whether the groups could miss each other.</p>
+<aside class="quantity-check" data-check="9"><div class="quantity-check-top"><span>Quick check</span><span>10</span></div><p class="quantity-check-question"> A club has 13 members. Most are women, and some are dancers. How many female dancers are guaranteed? How many are possible?</p><details class="quantity-answer"><summary>Show the worked answer</summary><div><div class="quantity-answer-body"><p><strong>Zero are guaranteed; as many as 13 are possible.</strong> Seven women and one dancer meet the statements even if that dancer is one of the six men. Both traits could also belong to every member. A most claim and a some claim about the same group do not force the two traits to meet.</p>
+</div></div></details></aside>
+
+<section class="quantity-summary"><h2 class="quantity-chapter"><span class="quantity-chapter-number">09</span>The moves to keep</h2>
+<table>
+<thead>
+<tr>
+<th>What you have</th>
+<th>What you may conclude</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Some A are B</td>
+<td>Some B are A</td>
+</tr>
+<tr>
+<td>Most A are B</td>
+<td>Some A are B, and some B are A</td>
+</tr>
+<tr>
+<td>All A are B</td>
+<td>A → B, and not B → not A</td>
+</tr>
+<tr>
+<td>Some/most/all A are B; all B are C</td>
+<td>The same first quantity of A are C</td>
+</tr>
+<tr>
+<td>Most A are B; most A are C</td>
+<td>Some B are C</td>
+</tr>
+<tr>
+<td>Most A are B; all A are C</td>
+<td>Some B are C</td>
+</tr>
+<tr>
+<td>Some A are B; all A are C</td>
+<td>Some B are C</td>
+</tr>
+</tbody></table>
+<p>Two <strong>all</strong> claims about A guarantee that every A has both traits. They guarantee <strong>some B are C</strong> only when we also know that at least one A exists.</p>
+<p>Use the sentence behind each arrow to check what it guarantees.</p>
+</section><section class="quantity-language"><h2 class="quantity-chapter"><span class="quantity-chapter-number">10</span>Nearby words need a closer look</h2>
+<p>The words around a quantity statement can look familiar without making the same promise. Sort them by <strong>what they guarantee</strong>, then check the sentence in front of you:</p>
+<table>
+<thead>
+<tr>
+<th>Word or phrase</th>
+<th>What it guarantees</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Some</strong>, <strong>at least one</strong>, <strong>one or more</strong></td>
+<td>One or more members fit. All may fit too.</td>
+</tr>
+<tr>
+<td><strong>A few</strong>, <strong>several</strong>, <strong>many</strong></td>
+<td>A positive number in ordinary use, but no universal cutoff. They imply at least one.</td>
+</tr>
+<tr>
+<td><strong>Most</strong>, <strong>more than half</strong>, <strong>a majority of</strong></td>
+<td>Strictly more than half of the named group fit.</td>
+</tr>
+<tr>
+<td><strong>All</strong>, <strong>every</strong>, <strong>each</strong>, <strong>without exception</strong></td>
+<td>Every member of the named group fits. The group may still need a separate existence premise.</td>
+</tr>
+<tr>
+<td><strong>Few</strong>, <strong>not many</strong>, <strong>not often</strong></td>
+<td>A small number or low frequency in context. No exact numerical boundary follows.</td>
+</tr>
+<tr>
+<td><strong>No</strong>, <strong>none</strong>, <strong>zero</strong></td>
+<td>Not a single member fits.</td>
+</tr>
+<tr>
+<td><strong>Not all</strong></td>
+<td>At least one member does <strong>not</strong> fit.</td>
+</tr>
+</tbody></table>
+<p><strong>Few</strong> is worth separating from <strong>a few</strong>. “A few books are hardcover” affirms that at least some are. “Few books are hardcover” stresses how small the number is. It often suggests some in ordinary speech, but it does not set a dependable numerical minimum. “Not many” can include zero. A hundred menu items could make five feel like few; in a menu of six, five would not feel like few. Do not quietly replace any of these phrases with a fixed number.</p>
+<p><strong>Most</strong> is different: it crosses a precise line, <strong>more than half</strong>. Words such as <strong>the majority</strong> plainly express that idea. Words such as <strong>usually</strong>, <strong>typically</strong>, <strong>generally</strong>, <strong>commonly</strong>, <strong>frequently</strong>, <strong>often</strong>, <strong>likely</strong>, and <strong>probably</strong> can suggest prevalence in context, but pay attention to what the sentence actually counts. “Probably” about one event, for example, is a likelihood claim, not a headcount of a group.</p>
+<p><strong>Not all</strong> <em>does</em> give us a precise minimum: at least one exception. “Not all club members are lawyers” means <strong>at least one club member is not a lawyer</strong>. It does not tell us whether the other members are lawyers.</p>
+<aside class="quantity-check" data-check="10"><div class="quantity-check-top"><span>Quick check</span><span>11</span></div><p class="quantity-check-question"> A menu lists 100 beers. “Many are Belgian,” “few are Belgian,” and “not many are Belgian” are three claims. Can you assign each one an exact minimum and maximum? What does “not all are Belgian” guarantee?</p><details class="quantity-answer"><summary>Show the worked answer</summary><div><div class="quantity-answer-body"><p>The first three do <strong>not</strong> have fixed numerical boundaries. “Many” suggests more than an isolated example, while “few” and “not many” suggest a small number relative to the context. None alone licenses a specific cutoff such as five or ten. “Not all” is exact about one thing: <strong>at least one beer is not Belgian</strong>.</p>
+</div></div></details></aside>
+
+</section><section class="quantity-quiz" id="quantity-quiz" aria-labelledby="quantity-quiz-title"><div class="quantity-quiz-top"><span class="quantity-quiz-eyebrow">Practice</span></div><h2>Can you prove the overlap?</h2><p>For each pair, decide whether some A must be C. Say why before opening the answer.</p><section class="quantity-quiz-card"><span>Question 1 / 7</span><p><strong>Some A are B.</strong><br><strong>All B are C.</strong></p><details class="quantity-answer"><summary>Show the worked answer</summary><div><p>Yes. The A that is B must also be C.</p></div></details></section><section class="quantity-quiz-card"><span>Question 2 / 7</span><p><strong>Some A are B.</strong><br><strong>Most A are C.</strong></p><details class="quantity-answer"><summary>Show the worked answer</summary><div><p>No. The A that is B could sit outside the C majority.</p></div></details></section><section class="quantity-quiz-card"><span>Question 3 / 7</span><p><strong>All A are B.</strong><br><strong>Some B are C.</strong></p><details class="quantity-answer"><summary>Show the worked answer</summary><div><p>No. The B that is C could be outside A.</p></div></details></section><section class="quantity-quiz-card"><span>Question 4 / 7</span><p><strong>Some A are B.</strong><br><strong>Most B are C.</strong></p><details class="quantity-answer"><summary>Show the worked answer</summary><div><p>No. The A that is B could be in the B minority that is not C.</p></div></details></section><section class="quantity-quiz-card"><span>Question 5 / 7</span><p><strong>Some A are B.</strong><br><strong>Some B are C.</strong></p><details class="quantity-answer"><summary>Show the worked answer</summary><div><p>No. The two statements may describe different Bs.</p></div></details></section><section class="quantity-quiz-card"><span>Question 6 / 7</span><p><strong>Most A are B.</strong><br><strong>Most A are C.</strong></p><details class="quantity-answer"><summary>Show the worked answer</summary><div><p>Yes. Two majorities of the same A group must overlap.</p></div></details></section><section class="quantity-quiz-card"><span>Question 7 / 7</span><p><strong>All A are B.</strong><br><strong>All A are C.</strong></p><details class="quantity-answer"><summary>Show the worked answer</summary><div><p>No. Neither statement guarantees that any A exists.</p></div></details></section></section>
+
+<section class="quantity-drill"><h2 id="drill" class="quantity-chapter"><span class="quantity-chapter-number">11</span>Short drill: diagram, combine, decide</h2>
+<p>Here are five statements about one volunteer program. <strong>Volunteer</strong>, <strong>Spanish speaker</strong>, <strong>trained person</strong>, <strong>weekend worker</strong>, and <strong>student</strong> name groups of people. Treat each sentence as true.</p>
+<ol>
+<li>Some volunteers speak Spanish.</li>
+<li>All Spanish speakers are trained.</li>
+<li>Most volunteers work weekends.</li>
+<li>Most volunteers are students.</li>
+<li>Most weekend workers are trained.</li>
+</ol>
+<p class="quantity-drill-diagram-note">Diagram the five statements for yourself. Then work through these four questions. Your answer stays on the page while you compare it with the worked reason.</p><section class="quantity-check quantity-drill-check" data-drill="0"><div class="quantity-check-top"><span>Question 1</span><span>01 / 04</span></div><p class="quantity-check-question">Which two statements prove that some volunteers are trained?</p><details class="quantity-answer"><summary>Show the worked answer</summary><div><p>Statements 1 and 2. At least one volunteer speaks Spanish. Every Spanish speaker is trained. That volunteer is trained.</p></div></details></section><section class="quantity-check quantity-drill-check" data-drill="1"><div class="quantity-check-top"><span>Question 2</span><span>02 / 04</span></div><p class="quantity-check-question">Which two statements prove that some students work weekends?</p><details class="quantity-answer"><summary>Show the worked answer</summary><div><p>Statements 3 and 4. Both majorities count volunteers, so the students and weekend workers must share at least one volunteer.</p></div></details></section><section class="quantity-check quantity-drill-check" data-drill="2"><div class="quantity-check-top"><span>Question 3</span><span>03 / 04</span></div><p class="quantity-check-question">Do statements 3 and 5 prove that most volunteers are trained? Explain.</p><details class="quantity-answer"><summary>Show the worked answer</summary><div><p>No. Statement 3 counts volunteers; statement 5 counts all weekend workers. The volunteer weekend workers could be in the untrained minority of weekend workers.</p></div></details></section><section class="quantity-check quantity-drill-check" data-drill="3"><div class="quantity-check-top"><span>Question 4</span><span>04 / 04</span></div><p class="quantity-check-question">Can either valid some conclusion be reversed? Give an example.</p><details class="quantity-answer"><summary>Show the worked answer</summary><div><p>Yes. Some trained people are volunteers. Some weekend workers are students. Each sentence describes the same overlap in reverse.</p></div></details></section></section></article></div>

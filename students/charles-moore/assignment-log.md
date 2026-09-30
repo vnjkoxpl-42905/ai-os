@@ -3,11 +3,16 @@ title: Charles Moore assignment log
 type: assignment-log
 record_kind: primary
 student: charles-moore
-updated: 2026-09-25
+updated: 2026-09-29
 status: active
 ---
 
 # Assignment log — Charles Moore
+
+## 2026-09-29 — Some, Most, and All lesson
+
+Posted the complete readable lesson as a session recap to Charles's LSAT U Classroom through the visible teacher UI. Verified Charles's email (`moorecamooreca1@gmail.com`), the success message "Recap posted to Classroom," and one "Some, Most, and All" item under "Posted to their Classroom" on his Notes page. The post includes the worked examples, checks, pop quiz, and final drill. The local animated HTML preview was not published through the recap editor.
+
 
 ## 2026-09-23 — Conditional Logic guided drills
 

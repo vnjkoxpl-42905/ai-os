@@ -16,7 +16,7 @@ Context sources: `brainstorms/2026-09-27-teacher-command-center.md`; mockup http
 - **Topic and level:** use the existing `guided_drills` categorization; do not re-tag.
 - **Station assigns:** guided drills, Activities, practice sections, and whole practice tests.
 - **Multiple students per assign:** yes.
-- **Notes in the station:** Joshua's private session notes about the student (not a message to the student).
+- ~~**Notes in the station:** Joshua's private session notes about the student.~~ **Superseded (Round 3):** "Notes" means a **reusable notes library**: Joshua writes a note once, saves it to the database, and assigns it to any student's page to read, just like a guided drill. Reusable for future students. Not session notes, not a message.
 - **Due date:** optional, blank by default.
 - **Tiers panel:** separate expandable panel on Home, current students, tier + Change menu.
 - **Practice tests:** both whole PrepTest and single timed section.
@@ -53,5 +53,11 @@ Context sources: `brainstorms/2026-09-27-teacher-command-center.md`; mockup http
 #### Q12 - Practice tests
 - Captured: "both": whole PrepTest and single section.
 
+### Round 3 (correction)
+- Asked (Q13, Q14): where private session notes save; whether a note links to a session. Both withdrawn; they rested on the wrong reading of Q9.
+- Captured: "I want to have a database of notes I can assign to students' page so they can read. Just like guided drills, I can have notes assigned... save notes to the database so I can just assign the note that I created before... for another student in the future." Supersedes Q9 "b".
+- Fact check (code, 2026-09-29): no notes library exists. Teacher glossary rule: "Library holds only things a student can receive", so assignable notes fit the Library. `origin/main` has one hard-coded "Written lesson" pilot page (`src/pages/StudentLibraryLessons.tsx`, Intro to LR Lesson 2), not a database. Student Classroom already has a "Notes and recaps" section. Recaps are separate (AI-drafted from transcripts).
+- Q8, Q15, Q16 still unanswered.
+
 ## Open flags (pending input)
-- Browse filters (Q8) -> Joshua.
+- Browse filters (Q8), station order (Q15), station placement (Q16) -> Joshua.
