@@ -1,7 +1,7 @@
 ---
 type: operating-layer
 subject: Tasks
-updated: 2026-09-11
+updated: 2026-09-30
 aliases: []
 ---
 
@@ -13,6 +13,8 @@ struck through with a date, so a future session never re-runs them.
 [[hot]] holds the narrative handoff; [[log]] holds the full immutable history; [[dashboard]] holds product ground-truth.
 
 ## Now (in progress)
+
+- **LSAT U competitor audit implementation (2026-09-30).** Continue the authoritative [build sequence](../brainstorms/2026-09-28-lsatu-build-sequence.md), Step 1 source/save foundation. `2fac0ef` is verified on GitHub main and published; #166/#167 remain open. Activity confirmed completion is the active follow-on fix. Atomic timed server enforcement, genuine Activity source revocation/completion, full source coverage and teacher attribution remain acceptance gaps. Later steps and the deferred Impeccable pass are recorded in the plan; do not infer completion from release count.
 
 - **LR explanations: write the 772 missing (2026-09-26).** Golden set of 51 chosen ([[../corpus/lr-explanations/golden-set]]). Next: per-type guides, writer-mark column (migration, needs his OK), then the 20-question pilot he reads in full. Plan: [[../brainstorms/2026-09-26-lr-explanation-coverage]].
 - **LR explanations: running lists.** One fix list, [[../corpus/lr-explanations/fixes/index|fixes/index]], with detail files beside it (revamp list of weak existing explanations, Choice Note problems). Scan of all DB explanations done 2026-09-27: 5 explanations show the wrong question (fix first), bank answer key wrong on 18 questions, 523 weak explanations queued for later revamp. Revamping waits until after the 772. Work items from those lists are copied here as they become actionable.

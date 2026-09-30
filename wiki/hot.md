@@ -22,6 +22,10 @@ The current LLM Wiki operating rules are [[system/schema/llm-wiki]]. The first a
 - Obsidian remained stuck at Loading cache after relocation. Preserved its old IndexedDB directory at `C:/Users/Joshu/AppData/Roaming/obsidian/IndexedDB.pre-relocation-2026-09-30` and restarted it to rebuild the cache.
 - Verified the vault opened and displayed `wiki/index.md` through the Obsidian URI handoff. A real browser Web Clipper save remains unverified; do not report that separate extension test as passed.
 
+## Current LSAT U audit implementation (2026-09-30)
+
+Use the [build sequence](../brainstorms/2026-09-28-lsatu-build-sequence.md) as the audit authority. `2fac0ef` passed 161 tests, typecheck/build, review and guarded push; GitHub main, Lovable import/publication and fresh teacher Work were verified. The active follow-on fix is Activity confirmed completion and account acknowledgment. #166/#167 stay open for the remaining source, teacher attribution, Activity revocation/completion and atomic timed server checks. Live failure checks and their limits are in the plan and app verification record. Test access was restored; network blocks were cleared; the genuine tester PrepTest third leg remains paused/unfinished. No credit-spending action or backend deployment occurred.
+
 The sections below preserve earlier session snapshots. They are historical context, not verified current operational state; use current instructions and live backends when they disagree.
 
 ## Most recent (2026-09-11): RRC demo films Round 8 live, audited, board published
