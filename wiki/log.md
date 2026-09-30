@@ -1393,3 +1393,6 @@ Verified all 26 project repositories retain their captured HEAD and tracked work
 
 ## [2026-09-30] skill | Recap approval authorizes posting
 Post Session Recap now explicitly posts the approved draft to the identified student through lsat-u-lessons publish_interactive_lesson, verifies saved HTML and visibility, and logs the post. Approval of the shown draft is authorization; no second confirmation. Documented Node fallback applies when MCP is unavailable.
+
+## [2026-09-30] recap | Yahunatan Zetvy
+Created students/yahunatan-zetvy/recaps/2026-09-16-recap.md from the latest session on file, explicitly selected by Joshua after the 2026-09-29 booking had no source transcript. Preview and source map: brainstorms/2026-09-30-yahunatan-post-session-recap/. Preserved should/action and negation distinctions; private conflicts excluded from student HTML. Logic reviewed, all four model states and typed worked-feedback tested, desktop/mobile layout verified. Publishing dry run passed; no post or notification. Existing homework open loops retained.

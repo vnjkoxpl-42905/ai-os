@@ -56,3 +56,6 @@ Calendar attachment Google Doc IDs: 2026-09-02 `126ktrgakkCCGa0RUCE5ejsJzU1AaptV
 - 2026-08-25: no Meet transcript document attached to the primary-calendar tutoring event.
 - 2026-09-09: no Meet transcript document attached to the primary-calendar tutoring event.
 - 2026-09-23: no Meet transcript document attached to the primary-calendar tutoring event.
+
+## Recap prepared 2026-09-30
+- 2026-09-16: [[recaps/2026-09-16-recap|Conditional Must Be True: Keep the Whole Statement]]. Full existing transcript used. [[../../brainstorms/2026-09-30-yahunatan-post-session-recap/conditional-reasoning.html|Interactive preview]]. Draft; not posted. Conditional-drill and follow-on-question promises remain in [[open-loops]].
