@@ -59,5 +59,43 @@ Context sources: `brainstorms/2026-09-27-teacher-command-center.md`; mockup http
 - Fact check (code, 2026-09-29): no notes library exists. Teacher glossary rule: "Library holds only things a student can receive", so assignable notes fit the Library. `origin/main` has one hard-coded "Written lesson" pilot page (`src/pages/StudentLibraryLessons.tsx`, Intro to LR Lesson 2), not a database. Student Classroom already has a "Notes and recaps" section. Recaps are separate (AI-drafted from transcripts).
 - Q8, Q15, Q16 still unanswered.
 
+### Round 4
+#### Q21 - Existing notes
+- Captured: "First find all the notes I've ever posted on somebody's page up to this point, and we'll store them in a database." Remove personalized details for the individual so each can be assigned to someone else. "Future notes I'll post, I want them to be saved into my database of notes as well."
+- Fact check (code, 2026-09-29): posted notes live in `classroom_items` (one row per student), types include `note`, `session_recap`, `announcement`, `smartboard_recap`, `upload_summary`. Count of existing rows not yet queried.
+- Q8, Q15-Q20 not answered this round.
+
+### Round 5
+#### Q22 - What counts as a note
+- Recommended: `note` only.
+- Captured: "any notes, any recaps, so notes plus recaps." Backfill = `note` + `session_recap` (and `smartboard_recap`? tentative, not confirmed). Recommendation overruled.
+#### Q23, Q24 - De-personalize drafts, merge duplicates
+- Captured: not answered.
+#### Q25 - Future notes
+- Recommended: "Save to library" checkbox on by default.
+- Captured: "automatically save to library every time." Recommendation overruled: every posted note and recap saves to the library.
+#### Q26 - Personal details in future notes
+- Captured: yes. Student's posted version stays as posted; a separate de-personalized library copy is saved and shown to Joshua to confirm.
+- Joshua asked to have the earlier open questions resent in full.
+
+### Round 6
+#### Q8, Q15, Q16
+- Captured: recommendations accepted. Filters = search + Topic + Reasoning + Level, week order. Student first. Station opens as a side panel from "Assign work".
+#### Q17 - How notes are written
+- Captured: notes are NOT written in LSAT U. "It will be done in Codex or in Claude", posted to the student through Joshua's existing skill, and "it should be automatically saved to my database". The station on Home only assigns saved notes; no in-app editor.
+- Unclear: "and also we say that I signed as that person" -> Joshua (Q28).
+#### Q18 - Tags on notes
+- Captured: yes. Unclear aside: "when I assign notes, so you can see if your name is a new one" -> Joshua (Q28).
+#### Q20 - Where notes are created
+- Captured: moot (notes are created outside LSAT U).
+#### Q23 - Cleaning existing notes
+- Captured: recommendation accepted (Claude drafts clean copies, Joshua approves each, originals untouched).
+#### Q24 - Duplicates
+- Captured: "just keep the one note... no need to merge them because they are duplicates." Keep one library copy of identical notes. Tentative: still record who received it (not confirmed).
+#### Q27 - Whiteboards
+- Captured: no whiteboards. "Session recaps and notes are the only things we need to save for this portion."
+- Q19 not answered.
+
 ## Open flags (pending input)
-- Browse filters (Q8), station order (Q15), station placement (Q16) -> Joshua.
+- Q19 edit propagation; Q28 unclear phrases; Q29 auto-save mechanism -> Joshua.
+- Count of existing posted notes -> Claude (query `classroom_items`).

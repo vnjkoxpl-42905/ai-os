@@ -1,7 +1,7 @@
 # LSAT U connected experience: build sequence
 
 Date: 2026-09-28  
-Status: Eighteen verified slices published; full ticket coverage remains open
+Status: Eighteen slices published; the latest has no positive real-row live check; full ticket coverage remains open
 Specification: [#165](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/165)  
 Decision map: [#155](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/155)
 
