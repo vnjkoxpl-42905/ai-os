@@ -13,6 +13,15 @@ Freshest working state; the first page `/pickup` reads. Rebuilt fresh in the 202
 
 The current LLM Wiki operating rules are [[system/schema/llm-wiki]]. The first authorized ingest example is [[wiki/sources/llm-wiki-pattern]], linked to [[wiki/concepts/compiled-knowledge]]. The wiki index now contains a complete fenced catalog maintained by `system/scripts/wiki-maintenance.py`; structural lint is separate from source-grounded semantic review.
 
+## Most recent (2026-09-30): Applications separated from Obsidian
+
+- Joshua authorized moving application folders after Obsidian stalled at Loading vault.
+- All 33 project folders now live in `C:/Users/Joshu/dev/ai-os-projects`; the vault stays at `C:/Users/Joshu/dev/ai-os`.
+- Git worktree links, operational tools, skill paths, and backup conventions were updated. Existing application edits were preserved.
+- The old `projects/` tree contains only empty directories. No files were deleted and no junction reconnects it to the applications.
+- Obsidian remained stuck at Loading cache after relocation. Preserved its old IndexedDB directory at `C:/Users/Joshu/AppData/Roaming/obsidian/IndexedDB.pre-relocation-2026-09-30` and restarted it to rebuild the cache.
+- Verified the vault opened and displayed `wiki/index.md` through the Obsidian URI handoff. A real browser Web Clipper save remains unverified; do not report that separate extension test as passed.
+
 The sections below preserve earlier session snapshots. They are historical context, not verified current operational state; use current instructions and live backends when they disagree.
 
 ## Most recent (2026-09-11): RRC demo films Round 8 live, audited, board published

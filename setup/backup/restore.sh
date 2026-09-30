@@ -17,6 +17,16 @@ put "$CUR/codex"         "$TARGET/.codex"
 mkdir -p "$TARGET/dev/ai-os"
 rsync -a --exclude='/projects/' "$CUR/ai-os/" "$TARGET/dev/ai-os/"
 put "$CUR/ai-os/projects" "$TARGET/dev/ai-os-projects"
+# Repair local worktree paths without pruning unavailable external worktrees.
+if command -v git >/dev/null && [ -d "$TARGET/dev/ai-os-projects/lsatu/.git" ]; then
+  worktrees=()
+  for project in "$TARGET/dev/ai-os-projects/"* "$TARGET/dev/ai-os-projects/".[!.]*; do
+    [ -d "$project" ] && [ -f "$project/.git" ] && worktrees+=("$project")
+  done
+  if [ "${#worktrees[@]}" -gt 0 ]; then
+    git -C "$TARGET/dev/ai-os-projects/lsatu" worktree repair "${worktrees[@]}"
+  fi
+fi
 put "$CUR/dotfiles/config" "$TARGET/.config"
 for f in .gitconfig .npmrc .bashrc .bash_profile; do [ -f "$CUR/dotfiles/$f" ] && cp "$CUR/dotfiles/$f" "$TARGET/"; done
 # Superwhisper on Mac stores modes/vocabulary here; copy the modes + vocabulary we have.

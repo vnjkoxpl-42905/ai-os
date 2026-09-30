@@ -23,6 +23,16 @@ Copy-Item (Join-Path $Cur 'claude.json') (Join-Path $Target '.claude.json') -For
 Put (Join-Path $Cur 'codex')        (Join-Path $Target '.codex')
 Put (Join-Path $Cur 'ai-os')        (Join-Path $Target 'dev\ai-os') @('projects')
 Put (Join-Path $Cur 'ai-os\projects') (Join-Path $Target 'dev\ai-os-projects')
+# Repair registered worktree paths after restoring to a different machine.
+# Missing external worktrees remain registered; never prune them here.
+$ProjectsRoot = Join-Path $Target 'dev\ai-os-projects'
+$MainRepo = Join-Path $ProjectsRoot 'lsatu'
+if ((Test-Path (Join-Path $MainRepo '.git')) -and (Get-Command git -ErrorAction SilentlyContinue)) {
+    $Worktrees = @(Get-ChildItem -LiteralPath $ProjectsRoot -Directory | Where-Object {
+        Test-Path -LiteralPath (Join-Path $_.FullName '.git') -PathType Leaf
+    } | Select-Object -ExpandProperty FullName)
+    if ($Worktrees.Count) { & git -C $MainRepo worktree repair @Worktrees }
+}
 # App data lands in the real AppData only for a real restore; a test restore keeps everything under -Target.
 $real = ($Target -eq $env:USERPROFILE)
 $la = if ($real) { $env:LOCALAPPDATA } else { Join-Path $Target 'AppData\Local' }

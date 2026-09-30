@@ -1368,3 +1368,7 @@ Renamed lsat-session-lesson to post-session-recap (display title: Post Session R
 ## [2026-09-30] system | Application folders moved outside Obsidian
 
 Joshua authorized separating development files after Obsidian stalled loading the vault. Moved all 33 project folders from the vault projects directory to C:/Users/Joshu/dev/ai-os-projects, preserving repositories, worktrees, dependencies, ignored files, and existing edits. Repaired LSAT U Git worktree links, updated operational tools and skill paths, and adjusted private backup/restore conventions. The wiki, corpus, students, and raw sources remain in the original ai-os vault. Empty old directories remain; no files were deleted. Application folder inventory contained 1,561,422 files before relocation. Obsidian was restarted; UI loading and actual browser clipping remain to be confirmed.
+
+## [2026-09-30] system | Obsidian loading recovered
+
+After relocation, visually verified Obsidian was still stalled at Loading cache. Closed the stalled app and preserved its 230 MB IndexedDB directory as C:/Users/Joshu/AppData/Roaming/obsidian/IndexedDB.pre-relocation-2026-09-30, without deleting it. Restarted Obsidian and visually verified the ai-os vault opened, rendered wiki/index.md, and displayed the folder list. The app initially showed background indexing after opening. Obsidian URI opening is verified; a real Chrome/Edge Web Clipper save remains unverified because extension settings access is blocked by the browser tool. No tasks ledger status changes were needed.
