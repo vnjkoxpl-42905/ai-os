@@ -42,8 +42,8 @@ Paths are relative to the repository root.
 | Session handoffs · chat exports | `handoffs/` — operational records, deliberately OUTSIDE `raw/`; `session-handoff` writes here |
 | External teardowns and research, dated | `research/` |
 | Web-clipped articles (Obsidian Web Clipper) | `raw/inbox/` — unprocessed only; `ingest` copies and hash-verifies them into `raw/sources/clips/`; processed originals stay until removal is authorized |
-| Application code | `projects/lsatu/` — own repo, own instructions, own remote |
-| Other projects (life-path, …) | `projects/<name>/` — each with its own `CLAUDE.md` + `.claude/` |
+| Application code | `../ai-os-projects/lsatu/` — own repo, own instructions, own remote |
+| Other projects (life-path, …) | `../ai-os-projects/<name>/` — each with its own `CLAUDE.md` + `.claude/` |
 
 ## Retrieval order
 
@@ -53,7 +53,7 @@ Paths are relative to the repository root.
 
 **Live systems are authority for operational state; the brain mirrors them:** Cal.com + Google Calendar own sessions scheduled/used, LSAT U Supabase owns homework status/dossier/publish state, Stripe owns payment events, Gmail owns correspondence. On any disagreement, the backend wins. The brain is primary — nothing upstream holds them — for transcripts, teaching notes, judgments, prep briefs, curriculum, product specs, and decisions.
 
-**Do not read the wiki unless the task needs it.** Retrieval costs context every turn. Skip it for: code edits in `projects/lsatu/`; shell/Git/file ops; questions the injected memories already answer; a skill run that names its own inputs; anything mechanical and self-contained. Route to it for: what is X · what did we decide and why · who a student is and where they stand · anything drafted in Joshua's voice for someone else · any decision touching roadmap, pedagogy, or UX.
+**Do not read the wiki unless the task needs it.** Retrieval costs context every turn. Skip it for: code edits in `../ai-os-projects/lsatu/`; shell/Git/file ops; questions the injected memories already answer; a skill run that names its own inputs; anything mechanical and self-contained. Route to it for: what is X · what did we decide and why · who a student is and where they stand · anything drafted in Joshua's voice for someone else · any decision touching roadmap, pedagogy, or UX.
 
 **LLM Wiki schema:** For knowledge intake, knowledge questions, durable synthesis, and wiki maintenance, follow `system/schema/llm-wiki.md`. Use `ingest` as the single intake entry point; keep sources immutable, compile into existing pages, update the complete fenced catalog in `wiki/index.md`, and append changes to `wiki/log.md`. Preserve domain homes and live-system authority. Mechanical tasks retain the retrieval exceptions above.
 
@@ -75,7 +75,7 @@ Paths are relative to the repository root.
 - **Connected live systems:** Cal.com, Google Calendar, LSAT U Supabase, Stripe, Gmail. Full registry in `connections.md`.
 - **Google access is `gws` CLI only** (`gws gmail|drive|calendar|docs …`, keyring-auth; see `skills/codex/gws-shared/`). Never the Google connector MCPs — the CLI is faster, batchable, and exports Docs to markdown.
 - **Government IDs stay outside this OS.** Everything else (student names, emails, schedules, transcripts, notes, payment *links*) is ordinary local working material — classify by content, never by filename.
-- **Git remote is enabled.** `origin` is GitHub (`vnjkoxpl-42905/ai-os`, decided 2026-09-29). The outer repo never tracks `.env`, `projects/lsatu/` (own repo), runtime logs, or locks. Do not create gitlinks.
+- **Git remote is enabled.** `origin` is GitHub (`vnjkoxpl-42905/ai-os`, decided 2026-09-29). The outer repo never tracks `.env`, `../ai-os-projects/lsatu/` (own repo), runtime logs, or locks. Do not create gitlinks.
 - **New laptop restore:** GitHub contains tracked ai-os files and skills. It deliberately excludes `.env`, `raw/`, app repos, credentials, and machine sessions. Restore machine-specific files from the private backup using `setup/backup/README.md` and its `README - START HERE.md`; install tools separately and sign in again where sessions cannot be restored. Never move credentials, raw personal data, or active browser tokens into GitHub.
 
 ## Skills

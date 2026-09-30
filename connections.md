@@ -36,7 +36,7 @@ both names appear. Full platform detail in [[wiki/lovable-cloud]]; live schema i
 
 **CAN do programmatically** — no browser, no paste. Authenticate as admin against the public
 auth API with `LSATPREP_ADMIN_EMAIL` / `LSATPREP_ADMIN_PASSWORD` from the root `.env`, using
-the anon key in `projects/lsatu/.env`, then call PostgREST and the deployed edge functions
+the anon key in `../ai-os-projects/lsatu/.env`, then call PostgREST and the deployed edge functions
 with that JWT. Verified: token issued, and `booking_passes` read back through RLS as admin.
 This covers essentially all **data**-level work — reading and writing rows, calling RPCs like
 `grant_booking_access` and `regenerate_booking_link`, driving the booking/homework/messaging
