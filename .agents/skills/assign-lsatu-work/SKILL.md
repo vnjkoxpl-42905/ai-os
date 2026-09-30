@@ -27,3 +27,9 @@ The short version, in case the file cannot be read:
   Confirm first: 3+ students, revoke/archive/unarchive/unassign/all-off, unsend.
 - Never pass a multi-line argument. On Windows a newline drops `--dry-run` and sends for real
   (this happened on 2026-09-23). The wrapper refuses it; do not work around it.
+
+## AI OS authored guided sets (2026-09-30)
+
+For exact teacher-selected guided questions, add `--guided-spec <absolute JSON path>` alongside `--drill <matching slug>`. Store the authored specification under the student's `assignments/` folder. The wrapper validates complete conditional Must Be True questions and their declared difficulty bands, creates or reuses the matching catalog content, and still calls the app's own `assignWork()` for assignments and notifications. It refuses a duplicate assignment for the same student, drill, and date. Run a dry run first.
+
+Verify with `node system/scripts/verify-guided-spec.mjs <exact student name> <spec.json> ...`. It checks saved content, exact deployed question types and difficulty, student access, one assignment, Classroom visibility, local dates, and one bell notification. It also accepts `PT101.S3@2026-10-04` to verify a timed section. CLI notification output remains the email evidence. This is headless verification; do not claim a browser launch check. Never hand-write assignment rows.

@@ -13,7 +13,15 @@ Freshest working state; the first page `/pickup` reads. Rebuilt fresh in the 202
 
 The current LLM Wiki operating rules are [[system/schema/llm-wiki]]. The first authorized ingest example is [[wiki/sources/llm-wiki-pattern]], linked to [[wiki/concepts/compiled-knowledge]]. The wiki index now contains a complete fenced catalog maintained by `system/scripts/wiki-maintenance.py`; structural lint is separate from source-grounded semantic review.
 
-## Most recent (2026-09-30): Applications separated from Obsidian
+## Most recent (2026-09-30): Yahunatan's conditional Must Be True schedule assigned
+
+- Live account is Yahunathan. [Assignment log](../students/yahunatan-zetvy/assignment-log.md) records all four assignments and IDs.
+- Four-question untimed guided drills unlock and are due 2026-09-30 (difficulty 1-2), 2026-10-01 (2-3), and 2026-10-03 (3 only). Friday 2026-10-02 is off.
+- PT101.S3 LR is assigned for Sunday 2026-10-04: 26 questions, standard 35-minute timer. Nothing assigned Monday 2026-10-05.
+- All 12 questions are conditional Must Be True in the deployed bank; no cross-drill or Sunday overlap. Saved content, student access, Classroom visibility, exact dates and one unread bell per drill verified headlessly. All four assignment calls returned inbox/bell/email OK; email receipt not independently verified.
+- Added authored guided-spec support to the existing headless assignment wrapper and a read-only verifier. Browser launch QA skipped at Joshua's request. Two primary-checkout question labels disagree with operational/live data; discrepancy recorded in the student's log. Tasks ledger unchanged.
+
+## Previous (2026-09-30): Applications separated from Obsidian
 
 - Joshua authorized moving application folders after Obsidian stalled at Loading vault.
 - All 33 project folders now live in `C:/Users/Joshu/dev/ai-os-projects`; the vault stays at `C:/Users/Joshu/dev/ai-os`.
@@ -24,7 +32,15 @@ The current LLM Wiki operating rules are [[system/schema/llm-wiki]]. The first a
 
 ## Current LSAT U audit implementation (2026-09-30)
 
-Use the [build sequence](../brainstorms/2026-09-28-lsatu-build-sequence.md) as the audit authority. `2fac0ef` and `749ff99` passed their 161-test foundation and 74-test Activity checks, typecheck/build, independent review and guarded pushes. GitHub main, Lovable import/publication and fresh live routes were verified. Generic Activity completion now requires saved responses and a confirmed completion row; a blocked live response read showed Retry loading, then recovered to Intro. #166/#167 stay open for separate RRC closeout acknowledgment, true Activity source revocation, genuine graded completion, full source and teacher attribution coverage and atomic timed server checks. Live failure checks and their limits are in the plan and app verification record. Test access was restored; network blocks were cleared; the genuine tester PrepTest third leg remains paused/unfinished. No credit-spending action or backend deployment occurred.
+Use the [build sequence](../brainstorms/2026-09-28-lsatu-build-sequence.md) as the audit authority.
+
+- `122eadf` passed 132 tests, typecheck/build, lint, independent review and guarded push. Exact GitHub main, Lovable import/publication and fresh live routes were verified on 2026-09-30.
+- RRC closeout now retains exact-take recording/response evidence and requires account completion acknowledgment; failures retry before the report. Fresh live history failure blocked recording. The genuine section remains unfinished.
+- Teacher Activity Unassign is wired behind a backend capability. The source-preserving SQL draft passes 35 isolated checks but is not deployed; current live controls remain disabled. Required Lovable Cloud route confirmation is pending.
+- Six owned source ID sets matched in ordinary student/teacher reads. Six exact cross-owner identity UPDATE attempts returned zero rows against teacher-confirmed foreign fixtures. INSERT and teacher mutation attribution remain open.
+- The timed backend implementation design and control/receipt/binding preparation remain inactive. Full parent/child writer, content manifest, lease/closeout contract, adapter adoption and two-client race acceptance are still needed.
+- #166/#167 and the later functional tickets remain open; #178 design review remains deferred. No backend deployment or credit-spending action occurred. Browser interceptions/blocks and synthetic state were cleared.
+- Active isolated app checkout remains `C:/Users/Joshu/dev/lsatu-connected-experience`, branch `codex/connected-experience`; dev server exec session `14309` serves port 8080. This separate worktree was not moved with the primary applications. Unrelated outer repo edits remain preserved.
 
 The sections below preserve earlier session snapshots. They are historical context, not verified current operational state; use current instructions and live backends when they disagree.
 

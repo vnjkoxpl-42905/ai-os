@@ -17,7 +17,9 @@ generated = 'import { isDeepStrictEqual } from "node:util";\n' + generated;
 const drillNeedle = 'const d = await resolveDrill(drillQuery);';
 if (source.split(drillNeedle).length !== 2) throw new Error('assign.ts drill resolver changed; review before running.');
 generated = generated.replace(drillNeedle, 'const d = arg("guided-spec") ? await resolveGuidedSpec(arg("guided-spec")!) : await resolveDrill(drillQuery);');
-generated = generated.replace('if (item.kind === "homework_set") {', `
+const homeworkNeedle = 'if (item.kind === "homework_set") {';
+if (source.split(homeworkNeedle).length !== 2) throw new Error('assign.ts homework guard changed; review before running.');
+generated = generated.replace(homeworkNeedle, `
   if (item.kind === "guided_drill" && arg("guided-spec") && item.drillId !== '(new)') {
     let query = supabase.from('guided_drill_assignments').select('id,status,scheduled_for').eq('student_id', student.class_id).eq('guided_drill_id', item.drillId);
     query = scheduleFor ? query.eq('scheduled_for', scheduleFor) : query.is('scheduled_for', null);
@@ -26,10 +28,13 @@ generated = generated.replace('if (item.kind === "homework_set") {', `
     if (existing?.length) throw new Error('This guided spec is already assigned for this date; verify it instead of reassigning: ' + existing[0].id);
   }
   if (item.kind === "homework_set") {`);
-generated = generated.replace('async function main() {', `
+const mainNeedle = 'async function main() {';
+if (source.split(mainNeedle).length !== 2) throw new Error('assign.ts main entry changed; review before running.');
+generated = generated.replace(mainNeedle, `
 async function resolveGuidedSpec(file: string) {
   const spec = JSON.parse(fs.readFileSync(path.resolve(file), 'utf8'));
   if (spec.slug !== drillQuery || !spec.title || !Array.isArray(spec.question_qids) || spec.question_qids.length < 1) throw new Error('Invalid guided spec or slug mismatch');
+  if (spec.question_count !== spec.question_qids.length || !Number.isInteger(spec.difficulty_min) || !Number.isInteger(spec.difficulty_max) || spec.difficulty_min < 1 || spec.difficulty_max > 5 || spec.difficulty_min > spec.difficulty_max) throw new Error('Invalid guided count or difficulty range');
   if (new Set(spec.question_qids).size !== spec.question_qids.length) throw new Error('Duplicate question IDs in guided spec');
   for (const qid of spec.question_qids) {
     const m = /^PT(\\d+)-S(\\d+)-Q(\\d+)$/.exec(qid);

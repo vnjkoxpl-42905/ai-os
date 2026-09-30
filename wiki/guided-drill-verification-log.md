@@ -33,3 +33,13 @@ Add entries here if a verified drill later needs re-checking.
 
 | Date flagged | Drill | Slug | Reason | Resolution |
 |---|---|---|---|---|
+
+## Headless assignment and content verification (2026-09-30)
+
+These are `verified-headless`, not browser runner launch checks. Joshua explicitly requested headless guided assignments. The [student assignment log](../students/yahunatan-zetvy/assignment-log.md) records full IDs and exact content specifications.
+
+| Date | Drill slug | Evidence | Status |
+|---|---|---|---|
+| 2026-09-30 | `yahunathan-mbt-conditionals-2026-09-30` | Four deployed conditional MBT questions, difficulty 1-2; complete stimulus and five choices; saved catalog matches specification; one assignment and visible Classroom item; correct local dates; one unread bell; inbox/bell/email returned OK | verified-headless |
+| 2026-09-30 | `yahunathan-mbt-conditionals-2026-10-01` | Four deployed conditional MBT questions, difficulty 2-3; complete stimulus and five choices; saved catalog matches specification; one assignment and visible Classroom item; correct local dates; one unread bell; inbox/bell/email returned OK | verified-headless |
+| 2026-09-30 | `yahunathan-mbt-conditionals-2026-10-03` | Four deployed conditional MBT questions, difficulty 3; complete stimulus and five choices; saved catalog matches specification; one assignment and visible Classroom item; correct local dates; one unread bell; inbox/bell/email returned OK | verified-headless |
