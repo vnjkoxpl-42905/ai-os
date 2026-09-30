@@ -13,14 +13,14 @@ Freshest working state; the first page `/pickup` reads. Rebuilt fresh in the 202
 
 The current LLM Wiki operating rules are [[system/schema/llm-wiki]]. The first authorized ingest example is [[wiki/sources/llm-wiki-pattern]], linked to [[wiki/concepts/compiled-knowledge]]. The wiki index now contains a complete fenced catalog maintained by `system/scripts/wiki-maintenance.py`; structural lint is separate from source-grounded semantic review.
 
-## Most recent (2026-09-30): Yahunatan recap V4 ready for review
+## Most recent (2026-09-30): Yahunatan recap V5 ready for review
 
-- Current draft is [Facts, Rules, and What Follows V4](../brainstorms/2026-09-30-yahunatan-post-session-recap/conditional-reasoning-v4.html), opened in Codex. The [canonical 2026-09-16 recap](../students/yahunatan-zetvy/recaps/2026-09-16-recap.md) contains its exact current export block; earlier versions remain history.
-- The expressive blue design uses spacious fact/rule/conclusion definitions and examples, direct fact buttons, animated inference paths, contrasting pop quizzes, six typed checks and four mixed problems. Definitions explain what is true and what must follow, with arrows explicitly running from condition to required result.
-- Actual browser checks passed fact and chain cases, objective feedback, practice navigation, keyboard fact buttons, pause/resume, emulated reduced motion, and desktop/375px layouts with no horizontal overflow. Student links and publishing dry run passed.
-- Shared [Must Be True Core teleprompter](../corpus/lectures/logical-reasoning/must-be-true/core/2026-08-27-33013/teleprompter.html) now has 189 moments, including an authored fact/rule explanation with an existence check and two concrete arrow-wording clarifications. Source-preservation/package checks and the new moment's expected-response reveal passed. Original captions and question bank remain intact.
-- Saved the explicit prohibition on internal labels such as "concept lesson" in student copy to native memory, copy corrections and all four recap-skill/quality-bar copies. Definitions and examples should stay together without a duplicated compact glossary.
-- Nothing posted; await Joshua's approval of this exact draft before publishing to Yahunathan through the lessons connector. Assigned work and task statuses are unchanged.
+- Current draft is [Facts, Rules, and What Follows V5](../brainstorms/2026-09-30-yahunatan-post-session-recap/conditional-reasoning-v5.html), opened in Codex. The [canonical 2026-09-16 recap](../students/yahunatan-zetvy/recaps/2026-09-16-recap.md) contains its exact current V5 export block. Prior versions are preserved history.
+- Compared the actual content sequence with Some, Most, and All. The revised order is overall idea, facts, rules and complete conditions, applying a rule, compound negation, linking rules, invalid connections, mixed practice, then recorded assigned work. Definitions and their examples precede combination; the contrapositive is taught before the interactive fact cases use it.
+- Bold real arrows such as **L → R** replace code boxes. Full English conditions appear first in large open diagrams with semantic color and connecting lines. Seven typed checks, two objective quizzes and four mixed problems remain; typed explanations are honest self-comparison rather than automatic grading.
+- Actual browser checks passed the new facts-only check, four fact cases, four chain cases, wrong/correct objective feedback, all four practice solutions, keyboard comparison, pause/play, emulated reduced motion, and desktop/375px layout without horizontal overflow. Saved opening, arrow and narrow-arrow screenshots. Student links and publishing dry run passed. Package is self-contained, 79,009 bytes, with stable lesson ID.
+- The shared [Must Be True Core teleprompter](../corpus/lectures/logical-reasoning/must-be-true/core/2026-08-27-33013/teleprompter.html) remains separate and at its verified 189 moments. Its authored fact/rule explanation and concrete arrow wording were completed with V4; original captions and question bank remain intact.
+- Saved component-first teaching flow and clean bold notation to copy corrections and all four recap quality-bar copies. No internal production labels in student copy. Nothing posted; await approval of the exact current V5 package. Assigned work and task statuses are unchanged.
 
 ## Previous (2026-09-30): Yahunatan's conditional Must Be True schedule assigned
 
@@ -83,7 +83,7 @@ The sections below preserve earlier session snapshots. They are historical conte
 
 ## Open threads
 
-- Yahunatan: await approval of the V4 recap before posting the exact reviewed package. Current preview and primary record are linked above.
+- Yahunatan: await approval of the V5 recap before posting the exact reviewed package. Current preview and primary record are linked above.
 - RRC films: seeking is dead on production because the host ignores Range; hosting move is a P0 decision in [[tasks]] Next.
 - Testing Centre: copy decisions, P3 design notes, practice-test freshness filter, scoped-world question, pre-`776f69b` run repair. All in [[tasks]] Next.
 - Booking is not production-safe on cancellation or recent Google Calendar changes until the P1 batch is fixed and live-verified.
