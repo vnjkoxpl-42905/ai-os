@@ -7,6 +7,7 @@ The reviewed example is `brainstorms/2026-09-28-recap-format/07-quantity-stateme
 - A title names the concept. The first sentence explains it in ordinary language.
 - Student-facing text never calls the material a "concept lesson" or exposes internal draft, production, or design labels. Name the reasoning being taught. Check the generated HTML opening as well as the editable source.
 - The first example makes the distinction visible before formal symbols or combined inferences appear.
+- Define the terms before relying on shorthand. A fact establishes what is true in a case; a rule states what must follow if its condition is met. When describing an arrow's direction, name its starting condition and required result. Keep definitions and their examples together, with enough space to read each step; avoid a compact glossary followed by the same examples again.
 - Each section teaches one move, asks a question, and explains the answer with a *different* example when possible.
 - Visuals do reasoning work: a changing count reveals a threshold; a group diagram reveals an overlap; a counterexample shows why a proposed inference fails.
 - The reader answers inline checks and a cumulative drill directly on the page. Feedback exposes the governing reason, not just a verdict.

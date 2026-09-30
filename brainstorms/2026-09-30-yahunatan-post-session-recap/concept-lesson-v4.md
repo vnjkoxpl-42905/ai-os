@@ -2,17 +2,16 @@
 
 Start with what is given. Then find what follows.
 
-**Fact:** What is true in this case.
-**Rule:** What must follow if its condition is met.
-**Conclusion:** What those statements prove.
+**Fact:** A fact tells you what is true in a particular case.
+**Example:** This application was submitted after the deadline.
 
-**The rule:** Every application submitted after the deadline requires special approval.
+**Rule:** A rule tells you what must follow if its condition is met.
+**Example:** Every application submitted after the deadline requires special approval.
 
-**The fact:** This application was submitted after the deadline.
+**Conclusion:** A conclusion is what the fact and rule prove together.
+**Example:** This application requires special approval.
 
-**The result:** This application requires special approval.
-
-That is a valid move. Now change the fact. Does the same result still follow?
+The fact meets the rule's condition. The conclusion follows. Change the fact to test what we can prove.
 
 <!-- FACT-LAB -->
 
@@ -30,7 +29,7 @@ The rule alone does not tell us that any applications were submitted late. We ne
 
 Now give the two complete ideas short names. Let **L** mean “submitted after the deadline” and **R** mean “requires special approval.” The notation saves space; it should not change the meaning.
 
-`L -> R` means: if L is true, R must be true.
+`L -> R` means: if L is true, R must be true. The arrow points from the condition to the required result. A fact that establishes L lets us follow the arrow to R.
 
 **Try it:** Every file marked confidential requires restricted storage. This file is marked confidential. What follows? Does the rule alone establish that a confidential file exists?
 
@@ -110,7 +109,7 @@ Before joining two arrows, find the destination of the first and the starting co
 
 A rule can tell us what someone **should** do or what they **may** do. That is different from telling us what they actually did.
 
-Suppose **every damaged item should be inspected**. If this item is damaged, it should be inspected. We cannot conclude it has been inspected. If it is not true that an item should be inspected, it cannot be damaged under this rule. But “has not been inspected” is not the same as “should not be inspected.” An inspection could be overdue.
+Suppose **every damaged item should be inspected**. If this item is damaged, it should be inspected. We cannot conclude it has been inspected. If it is not true that an item should be inspected, it cannot be damaged under this rule. But “has not been inspected” is not the same as “it is not true that it should be inspected.” An inspection could be overdue.
 
 Suppose **a visitor may enter the archive only if the visitor has a badge**. A badge is necessary for permission to enter. The rule is **May enter -> Has a badge**. Without a badge, the visitor does not have permission to enter under this rule. Having a badge alone does not establish permission; another requirement might still apply.
 
