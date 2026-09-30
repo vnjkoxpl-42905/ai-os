@@ -22,3 +22,11 @@ Student teaching-notes shorthand currently drops should in the inference. This i
 Interactive checks are typed self-comparison with model explanations. No score and no claim of automatic reasoning evaluation. All four truth-model states are derived from M → W; only M true/W false violates the rule. Static fallback in the recap includes the full truth table and worked answers.
 
 Build: `build-preview.py` writes one self-contained HTML document with CSS/scripts inline, no dependencies or external resources. It deliberately refuses to overwrite an existing primary recap. Publication was not performed.
+
+## 2026-09-30 concept enrichment
+
+Joshua requested integration of the lecture's reusable concepts into this student's existing recap. Source: corpus/lectures/logical-reasoning/must-be-true/core/2026-08-27-33013/teaching-brief.md and its adapted script. Added original examples and explanations in integration-upgrade.md; no LSAT Lab worked-question text, screenshots, instructor dialogue, or teacher pacing controls enter the student lesson.
+
+The extension develops fact-versus-rule identification, exact predicate matching, forward triggering, contraposition, open cases, valid rule chains, shared-trigger/result counterexamples, and AND/OR negation. It preserves the September 16 distinctions about should/may versus actual behavior. The original recap remains intact, with a dated extension before its private continuation. The v2 preview integrates the addition into the reading flow rather than showing the internal version heading. The three guided drills and 2026-10-04 PT101 Section 3 plan are a separate later operational assignment; no new work is assigned by this extension.
+
+Logic review attempted counterexamples to every major inference and found no material errors. Supplemental concepts are enrichment, not claims about the recorded session. Publication remains pending approval.

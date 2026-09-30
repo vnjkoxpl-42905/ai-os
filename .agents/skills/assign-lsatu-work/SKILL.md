@@ -1,16 +1,18 @@
 ---
 name: assign-lsatu-work
-description: Use whenever Joshua wants to do anything on LSAT U headlessly, with no browser. That covers assigning an Activity, a guided drill, a homework set, or a timed PT section to one or many students ("assign this to Celia", "give Lydia the Negation Station", "put PT156.S2 on Avneet due Friday", "assign RRC to Celia, Lydia and Dakota"). It covers messaging a student from his admin account ("send Dakota a message", "tell Celia to start with PT105.S2"). It covers reading how students are doing ("how is Celia doing", "what does Lydia have", "who is overdue", "who has gone quiet", "Celia's weakest question types", "Avneet's last sections"). It covers accounts and upkeep: new signups ("who signed up", "did anyone new join"), access ("give Venusa access", "turn on drills for X", "what can X see"), archiving, moving a due date, unassigning, booking passes ("how many sessions does Sandra have left"), notifications, and reading or marking messages ("who messaged me", "show my thread with Celia"). It is the one place for any operation on the LSAT U platform, and none of it uses Lovable.
+description: Operate LSAT U headlessly. Assign guided drills and daily schedules through a mapped catalog and verified batch MCP; assign activities or timed sections, read student progress, manage access and Classroom work, and handle platform messages.
 ---
 
-# assign-lsatu-work (pointer)
+# Assign LSAT U work
+
+For guided-drill selection or schedules, follow [the guided-drill workflow](references/guided-drill-workflow.md). Use the mapped catalog, one live preview and one batch MCP assignment. This local branch contains its authorization and verification rules; do not load the global reference for a routine guided schedule.
 
 This is a pointer. The full skill lives in ONE place:
 
     C:\Users\Joshu\.agents\skills\assign-lsatu-work\SKILL.md
     (identical to C:\Users\Joshu\.claude\skills\assign-lsatu-work\SKILL.md, which Claude uses)
 
-**Read that file in full before every LSAT U operation, and follow it exactly.**
+For other LSAT U operations, read that file in full and follow it exactly.
 Do not copy its contents here; this file must stay a pointer so the two runtimes never drift.
 
 The short version, in case the file cannot be read:
@@ -28,8 +30,4 @@ The short version, in case the file cannot be read:
 - Never pass a multi-line argument. On Windows a newline drops `--dry-run` and sends for real
   (this happened on 2026-09-23). The wrapper refuses it; do not work around it.
 
-## AI OS authored guided sets (2026-09-30)
-
-For exact teacher-selected guided questions, add `--guided-spec <absolute JSON path>` alongside `--drill <matching slug>`. Store the authored specification under the student's `assignments/` folder. The wrapper validates complete conditional Must Be True questions and their declared difficulty bands, creates or reuses the matching catalog content, and still calls the app's own `assignWork()` for assignments and notifications. It refuses a duplicate assignment for the same student, drill, and date. Run a dry run first.
-
-Verify with `node system/scripts/verify-guided-spec.mjs <exact student name> <spec.json> ...`. It checks saved content, exact deployed question types and difficulty, student access, one assignment, Classroom visibility, local dates, and one bell notification. It also accepts `PT101.S3@2026-10-04` to verify a timed section. CLI notification output remains the email evidence. This is headless verification; do not claim a browser launch check. Never hand-write assignment rows.
+Guided-drill catalog and MCP details live in the [guided workflow reference](references/guided-drill-workflow.md), including the authored-content exception and immediate fallback when new MCP tools have not appeared in a chat yet.

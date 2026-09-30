@@ -66,13 +66,21 @@ const guidedSchema = {
 server.registerTool('search_guided_drills', {
   title: 'Find matching LSAT U guided drills',
   description: 'Search the mapped guided drill catalog by title, question type, reasoning, feature, or slug. Returns compact difficulty/pool metadata and snapshot time; assignment preflight rechecks live data.',
-  inputSchema: { query: z.string().default(''), max_difficulty: z.number().int().min(1).max(5).optional(), limit: z.number().int().min(1).max(30).default(12) },
+  inputSchema: { query: z.string().default(''), level: z.enum(['beginner', 'intermediate', 'advanced']).optional(), min_difficulty: z.number().int().min(1).max(5).optional(), max_difficulty: z.number().int().min(1).max(5).optional(), include_pinned: z.boolean().default(false), limit: z.number().int().min(1).max(30).default(12) },
   annotations: { readOnlyHint: true },
-}, ({ query, max_difficulty, limit }) => {
+}, ({ query, level, min_difficulty, max_difficulty, include_pinned, limit }) => {
   const catalog = JSON.parse(fs.readFileSync(path.join(vault, 'references/lsatu-guided-drill-catalog.json'), 'utf8'));
   const words = query.toLowerCase().trim().split(/\s+/).filter(Boolean);
-  const matching = catalog.drills.filter(d => d.is_published && words.every(word => JSON.stringify([d.slug, d.title, d.bank_filter, d.reasoning_types]).toLowerCase().includes(word)) && (max_difficulty == null || (d.pool_summary.difficulty_max != null && d.pool_summary.difficulty_max <= max_difficulty)));
-  const result = { snapshot: catalog.meta.generated_at, total_matches: matching.length, drills: matching.slice(0, limit).map(d => ({ slug: d.slug, title: d.title, count: d.question_count, minutes: d.estimated_minutes, catalog_level: d.level, native_band: [d.bank_filter.difficulty_min, d.bank_filter.difficulty_max], pool: d.pool_summary, bank_filter: d.bank_filter })) };
+  function eligible(d) {
+    const band = level ? catalog.bands[level] : [1, 5];
+    const difficulties = Object.entries(d.pool_summary.difficulty_counts).filter(([difficulty, count]) => count > 0 && Number(difficulty) >= band[0] && Number(difficulty) <= band[1]);
+    return { min: difficulties.length ? Number(difficulties[0][0]) : null, max: difficulties.length ? Number(difficulties.at(-1)[0]) : null, count: difficulties.reduce((sum, [, count]) => sum + count, 0) };
+  }
+  const matching = catalog.drills.filter(d => {
+    const selected = eligible(d);
+    return d.is_published && (include_pinned || !d.pool_summary.pinned_qids) && words.every(word => JSON.stringify([d.slug, d.title, d.bank_filter, d.reasoning_types]).toLowerCase().includes(word)) && selected.count >= (d.question_count ?? 1) && (min_difficulty == null || (selected.min != null && selected.min >= min_difficulty)) && (max_difficulty == null || (selected.max != null && selected.max <= max_difficulty));
+  }).sort((a, b) => Number(words.every(word => b.title.toLowerCase().includes(word))) - Number(words.every(word => a.title.toLowerCase().includes(word))));
+  const result = { snapshot: catalog.meta.generated_at, total_matches: matching.length, drills: matching.slice(0, limit).map(d => ({ slug: d.slug, title: d.title, count: d.question_count, minutes: d.estimated_minutes, catalog_level: d.level, native_band: [d.bank_filter.difficulty_min, d.bank_filter.difficulty_max], selectable_at_level: level ?? 'native', eligible: eligible(d), pool_difficulty_counts: d.pool_summary.difficulty_counts, pinned_count: d.pool_summary.pinned_qids })) };
   return { content: [{ type: 'text', text: JSON.stringify(result) }], structuredContent: result };
 });
 

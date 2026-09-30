@@ -2,7 +2,7 @@
 
 Started: 2026-09-28
 Last reconciled: 2026-09-30
-Status: Twenty-four slices published; every implementation ticket remains open until its full acceptance checks pass. The historical Intro to LR slice lacks a positive real-row live check.
+Status: Twenty-five slices published; every implementation ticket remains open until its full acceptance checks pass. The historical Intro to LR slice lacks a positive real-row live check.
 Specification: [#165](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/165)  
 Decision map: [#155](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/155)
 

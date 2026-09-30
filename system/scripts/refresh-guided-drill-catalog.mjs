@@ -51,20 +51,23 @@ for (const entry of sections) {
 const all = [...bank.values()];
 const bands = { beginner: [1, 3], intermediate: [2, 4], advanced: [3, 5] };
 const lower = values => new Set((values || []).map(x => x.toLowerCase()));
-function matches(q, filter) {
+function poolMatcher(filter) {
   const f = filter || {};
   const types = lower(f.qtypes), features = lower(f.features), reasoning = lower(f.reasoning_types);
-  return (!types.size || types.has(q.qtype.toLowerCase())) && (!features.size || q.questionFeatures.some(x => features.has(x.toLowerCase()))) && (!reasoning.size || q.reasoningType.some(x => reasoning.has(x.toLowerCase()))) && (f.difficulty_min == null || q.difficulty >= f.difficulty_min) && (f.difficulty_max == null || q.difficulty <= f.difficulty_max);
+  return q => (!types.size || types.has(q.qtype.toLowerCase())) && (!features.size || q.questionFeatures.some(x => features.has(x.toLowerCase()))) && (!reasoning.size || q.reasoningType.some(x => reasoning.has(x.toLowerCase()))) && (f.difficulty_min == null || q.difficulty >= f.difficulty_min) && (f.difficulty_max == null || q.difficulty <= f.difficulty_max);
 }
+const difficultyCounts = questions => Object.fromEntries([1, 2, 3, 4, 5].map(d => [d, questions.filter(q => q.difficulty === d).length]));
 const rows = drills.map(drill => {
-  const pool = all.filter(q => matches(q, drill.bank_filter));
-  const histogram = Object.fromEntries([1, 2, 3, 4, 5].map(d => [d, pool.filter(q => q.difficulty === d).length]));
+  const pool = all.filter(poolMatcher(drill.bank_filter));
+  const histogram = difficultyCounts(pool);
+  // Match the app's exact-list resolver: remove unknown and duplicate pins.
+  const pinned = [...new Set(drill.question_qids || [])].map(qid => bank.get(qid)).filter(Boolean);
   const count = drill.question_count ?? Math.min(pool.length, 10);
   const eligible = Object.fromEntries(Object.entries(bands).map(([level, [min, max]]) => {
     const inBand = pool.filter(q => q.difficulty >= min && q.difficulty <= max).length;
     return [level, { in_band: inBand, default_count: count, fallback_needed: inBand < Math.min(count, pool.length) }];
   }));
-  return { ...drill, pool_summary: { total: pool.length, difficulty_counts: histogram, difficulty_min: pool.length ? Math.min(...pool.map(q => q.difficulty)) : null, difficulty_max: pool.length ? Math.max(...pool.map(q => q.difficulty)) : null, levels: eligible, pinned_qids: (drill.question_qids || []).length, missing_pinned_qids: (drill.question_qids || []).filter(qid => !bank.has(qid)) } };
+  return { ...drill, pool_summary: { total: pool.length, difficulty_counts: histogram, difficulty_min: pool.length ? Math.min(...pool.map(q => q.difficulty)) : null, difficulty_max: pool.length ? Math.max(...pool.map(q => q.difficulty)) : null, levels: eligible, pinned_qids: (drill.question_qids || []).length, pinned_known_count: pinned.length, pinned_difficulty_counts: difficultyCounts(pinned), pinned_difficulty_min: pinned.length ? Math.min(...pinned.map(q => q.difficulty)) : null, pinned_difficulty_max: pinned.length ? Math.max(...pinned.map(q => q.difficulty)) : null, missing_pinned_qids: (drill.question_qids || []).filter(qid => !bank.has(qid)) } };
 });
 const commit = execFileSync('git', ['rev-parse', 'HEAD'], { cwd: ops, encoding: 'utf8' }).trim();
 const meta = { generated_at: new Date().toISOString(), source: `${base}/rest/v1/guided_drills`, question_bank: 'https://lsatprep.study/data/_bank.generated.json', catalog_sha256: hash(catalogBytes), bank_sha256: hash(bankBytes), ops_commit: commit, question_count: bank.size, drill_count: rows.length, published_count: rows.filter(d => d.is_published).length };
