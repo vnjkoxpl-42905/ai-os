@@ -23,7 +23,11 @@ lifecycle: active
 - [Open loops](open-loops.md)
 - [Assignment log](assignment-log.md)
 - [2026-09-16 recap, enriched on 2026-09-30](recaps/2026-09-16-recap.md)
-- [Enriched recap preview for approval](../../brainstorms/2026-09-30-yahunatan-post-session-recap/conditional-reasoning-v2.html)
+
+## Recap review
+
+- [Current concept-first recap for approval](../../brainstorms/2026-09-30-yahunatan-post-session-recap/conditional-reasoning-v3.html)
+- [Earlier enriched recap preview, retained as history](../../brainstorms/2026-09-30-yahunatan-post-session-recap/conditional-reasoning-v2.html)
 - [Live status](live-status.generated.md)
 
 ## Record Map

@@ -1,6 +1,6 @@
 # Facts, Rules, and What Follows
 
-A rule tells you what follows **if a condition is met**. A fact tells you whether you have reached that condition. Put them together, and you can prove something new.
+A rule tells you what follows **if a condition is met**. A fact tells you what is true in a particular case. Put them together, and you can prove something new.
 
 Suppose a program has this policy: **Every application submitted after the deadline requires special approval.** One application was submitted after the deadline. That application requires special approval. We have a rule, a fact that fits its starting condition, and a conclusion the rule guarantees.
 
@@ -146,6 +146,8 @@ Start by separating **facts about a case** from **rules about cases**. Then choo
 | Only the required result, or only the absence of the starting condition | Leave the other side open | Could another explanation fit the rule? |
 
 When an inference seems tempting, try to build a case in which the statements are true and the proposed conclusion is false. If you can, the conclusion is not guaranteed. The counterexamples above work this way: an on-time application can still require approval; a requirement can remain unfulfilled; a trained person can be outside the panel.
+
+Keep the scope of the fact too. **Some applications were submitted late. Every late application requires special approval. Therefore, some applications require special approval.** We cannot change “some” to “all.” The rule covers every late case, but the fact establishes only at least one. Other applications could be on time and require no special approval.
 
 ## 08 | Mix the moves
 
