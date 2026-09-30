@@ -7,6 +7,12 @@ aliases: []
 
 # Log
 
+## [2026-09-29] ship | My Work refresh keeps cached assignments visible
+
+- Fixed the assigned feed dropping weekly-plan tasks and replacing My Work during a background status refresh. A partial read error now leaves available assignments visible with a retry notice; homework and TA reads keep their last successful rows.
+- Focused regression tests passed 22/22. Typecheck, production build, local signed-in My Work/Home/Practice checks, and the guarded push passed. LSAT U commit `9d4a119` reached `main` in merge `6c89783`; Lovable reported “Your website was updated,” and a fresh live My Work page showed 11 To do items. A live induced network failure was not tested.
+- Updated the existing [build sequence](../brainstorms/2026-09-28-lsatu-build-sequence.md). Next is selected-student Work source parity under #166, then the account-backed break-clock failure under #167. Those tickets remain open.
+
 ## [2026-09-29] ship | Interactive quantity lesson assigned headlessly
 
 - Published LSAT U commit `6023e09` with a sandboxed interactive Classroom renderer and a local `lsat-u-lessons` MCP server. Lovable's manual Publish confirmed the site update. The self-contained “Some, Most, and All” lesson was assigned to Charles Moore through the headless LSAT U RPC as item `0890252d-3ab8-4bb2-9227-362cf0e52947`; the earlier plain-text recap `6b0607cc-602a-4bfa-bfbd-ceab1542443e` was archived after the new item verified.
