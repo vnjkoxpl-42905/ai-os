@@ -14,7 +14,7 @@ Each lecture package keeps the source transcript, read-aloud script, visual time
 ## Choose a section
 
 | Section | Archive |
-|---|---|---|
+|---|---|
 | Logical Reasoning | [Topics, core lectures, and advanced lectures](logical-reasoning/index.md) |
 | Reading Comprehension | [Topics and lecture levels](reading-comprehension/index.md) |
 
@@ -30,12 +30,20 @@ Concept tags: contrapositives, linking conditional rules, applying facts to rule
 | Conditional logic | `conditional-logic` | [Before teaching: Core Must Be True](logical-reasoning/must-be-true/core/2026-08-27-33013/teaching-brief.md) |
 | Contraposition | `contrapositive` | [Before teaching: Core Must Be True](logical-reasoning/must-be-true/core/2026-08-27-33013/teaching-brief.md) |
 
-## Package layout
+## Call up a lecture during preparation
+
+Ask: "Open the Core Must Be True lecture," "Use the lecture on applying facts to rules," or "Find the lecture on linking rules." Follow the concept links above for preparation, then open the lecture's `teleprompter.html`. The files are saved in this second brain; the localhost URL is a viewing convenience and may need its local server restarted after a reboot.
+
+The teleprompter is a private teacher guide. Read SAY and ASK aloud. WAIT tells you when to pause; EXPECTED RESPONSE gives private answer guidance and likely wrong turns. BOARD and QUESTION copy only the material you need for the whiteboard. Next up previews the following moment, and Read ahead lets you inspect the upcoming sequence. Advance manually when the student is ready. The continuous script remains available when you want to read the whole lesson before teaching.
+
+## Files kept with each lecture
 
 `<logical-reasoning-or-reading-comprehension>/<topic>/<core-or-advanced>/<lecture-date>-<video-id>/` holds:
 
 - `transcript.md`: faithful timestamped source text, with raw evidence and hash references.
-- `teleprompter.md` and `teleprompter.html`: read-aloud script with adjacent images and unspoken cues.
+- teleprompter.html: private teacher view with short spoken passages, Socratic guidance, previews, and copy controls.
+- lesson-steps.json: ordered teacher cues, questions, expected reasoning, likely mistakes, and follow-up prompts.
+- teleprompter.md and full-script.html: continuous reading script with images and unspoken cues.
 - `screenshots/`: initial teaching board, every worked question, and important annotated board states.
 - `timeline.json`: source ranges, concepts, question identifiers when verified, script segments, and visual links.
 - `coverage.md`: full-lecture concept/question coverage, intentional cuts, and unresolved gaps.

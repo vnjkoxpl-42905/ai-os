@@ -1414,3 +1414,15 @@ Joshua clarified that lecture capture is a standalone library for his live teach
 Library routing now uses LR/RC, topic, Core/Advanced, and individual lecture indexes, with exact question IDs in teaching order and concept tags for retrieval. A pre-lecture teaching brief precedes the teleprompter. The lecture skill maintains these shared routes and opens the brief/reader when asked to use a lecture. It does not imply a student assignment. Locked structure is recorded in decisions/log.md.
 
 Verification: 74 local Markdown links resolved; package hashes matched after final regeneration. Browser displayed the preparation brief with rendered headings, ordered teaching flow, corrected pivot concepts, and direct lecture navigation. Canonical reader was left open in Codex. RC and Advanced indexes explicitly record no captured lectures yet.
+
+## [2026-09-30] lecture | Private teacher cue reader
+
+Rebuilt the shared Must Be True Core lecture's default teleprompter as a private guide for Joshua's live calls. It shows 188 teaching moments with short SAY passages, exact ASK prompts, separate WAIT directions, hidden expected responses, nine copyable boards, and five complete questions. Each question has an editable work timer before its discussion; completing a timer does not advance the lesson. The continuous script and original source materials remain available. The library remains separate from student folders.
+
+Verified question copy, board copy through the browser clipboard, question image viewing, expected-response reveal, manual navigation, and timer completion without advancement. Regenerated the reader after correcting the timer's completed-state button label and teacher action wording to Continue to discussion. Opened the finished teacher view in Codex and saved teacher-view-preview.png in the lecture folder.
+
+## [2026-09-30] system | Retrieve and anticipate private lecture steps
+
+Updated [the lecture library](../corpus/lectures/index.md), its [Must Be True Core package](../corpus/lectures/logical-reasoning/must-be-true/core/2026-08-27-33013/index.md), and the main wiki index with explicit retrieval and private-teaching instructions. The library remains independent of student folders. Verified the full wiki-to-corpus-to-section-to-topic-to-level-to-lecture routing and local index links.
+
+Added four targeted Socratic checkpoints without removing source SAY content. All 23 expected-response panels now identify a likely wrong turn and give an exact recovery question. Reviewed the reasoning against the five worked questions. The reader now previews Next up and permits Read ahead through the next five teaching moments while preserving the current place. The continuous script remains available for preparation. These are teacher facilitation additions, distinct from original source wording.

@@ -15,6 +15,12 @@ tags: [lsat, lectures, must-be-true, inference-family, conditional-logic, condit
 
 [Core lectures](../index.md) · [Must Be True](../../index.md)
 
+## Use this privately during a live call
+
+Open the teleprompter above. Read SAY and ASK aloud; the other labels guide you privately. Next up shows the next action, and Read ahead opens the upcoming sequence. After a question, use the work timer, then continue to discussion when the student is ready. Expected responses, likely mistakes, and follow-up questions help you guide the reasoning. Copy BOARD or QUESTION into your whiteboard as needed.
+
+For preparation, read [the whole continuous script](full-script.html) or the Markdown script above. Ask your assistant to "open the Core Must Be True lecture" to retrieve this package again. These files are saved in the second brain; a localhost browser link depends on the local viewing server being running.
+
 Source: [Patrick Tyrrell, LSAT Lab, video 33013](https://app.lsatlab.com/video-library/?videoid=33013). Lecture date: 2026-08-27. Capture date: 2026-09-30. Runtime: 5820.2 seconds.
 
 ## Five questions, in presentation order

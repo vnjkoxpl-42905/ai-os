@@ -11,6 +11,8 @@ Content catalog of the wiki. Curated navigation appears first; the complete cata
 
 The brain runs three knowledge systems: **this wiki** (Joshua, the business, decisions), **[corpus](../corpus/index.md)** (LSAT teaching knowledge), **[students](../students/README.md)** (one folder per student).
 
+[Private teaching lecture library](../corpus/lectures/index.md): reusable teacher teleprompters, Socratic prompts, boards, and worked questions, routed by Logical Reasoning/Reading Comprehension, topic, and Core/Advanced. Ask for "Core Must Be True," "applying facts to rules," or "linking rules" to retrieve the saved lecture.
+
 ## How this wiki is maintained
 
 - [[system/schema/llm-wiki|LLM Wiki operating schema]]: folder conventions, provenance, ingest, query, index/log maintenance, and lint.

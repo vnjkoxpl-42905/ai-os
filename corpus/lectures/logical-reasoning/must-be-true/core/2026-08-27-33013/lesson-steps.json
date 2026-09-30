@@ -127,7 +127,9 @@
       "section_id": "concept-1",
       "type": "expected",
       "title": "Expected response",
-      "text": "B OR not C -> not A. Negating an AND result gives OR; not B becomes B, and C becomes not C."
+      "text": "B OR not C -> not A. Negating an AND result gives OR; not B becomes B, and C becomes not C.",
+      "likely_mistake": "Keeps AND, or forgets to negate C.",
+      "recovery_prompt": "What is the negation of not B AND C? Which connective changes, and what happens to each part?"
     },
     {
       "id": "step-009",
@@ -178,7 +180,9 @@
       "section_id": "concept-1",
       "type": "expected",
       "title": "Expected response",
-      "text": "The same idea is the result of one rule and the trigger of the next: A -> B -> C, so A -> C."
+      "text": "The same idea is the result of one rule and the trigger of the next: A -> B -> C, so A -> C.",
+      "likely_mistake": "Chains merely because the statements mention the same letters.",
+      "recovery_prompt": "Where does B appear in each rule? Does the first rule's result supply the second rule's trigger?"
     },
     {
       "id": "step-016",
@@ -220,7 +224,9 @@
       "section_id": "concept-1",
       "type": "expected",
       "title": "Expected response",
-      "text": "Contrapose not A -> C to not C -> A. Then not C -> A -> B."
+      "text": "Contrapose not A -> C to not C -> A. Then not C -> A -> B.",
+      "likely_mistake": "Concludes B -> C directly from the two triggers.",
+      "recovery_prompt": "Contrapose not A -> C first. What becomes the new trigger, and where can that rule now connect?"
     },
     {
       "id": "step-022",
@@ -250,6 +256,29 @@
       "type": "say",
       "title": "Accept the facts and learn the three conditional moves",
       "text": "If we have the same idea in the same position, that doesn't establish this kind of chain.\n\nA to B and A to C can be consolidated: A gives us both B and C.\n\nBut we don't get B to C, or C to B.\n\nLikewise, A to B and C to B share a result; contraposing both shows that not B leads to both not A and not C.\n\nThat still doesn't create a relationship between A and C."
+    },
+    {
+      "id": "facil-shared-trigger-ask",
+      "section_id": "concept-1",
+      "type": "ask",
+      "title": "Ask the student",
+      "text": "A -> B and A -> C. Does that give us B -> C?"
+    },
+    {
+      "id": "facil-shared-trigger-wait",
+      "section_id": "concept-1",
+      "type": "wait",
+      "title": "Wait for reasoning",
+      "text": "Pause. Let the student explain the inference before revealing the expected response."
+    },
+    {
+      "id": "facil-shared-trigger-expected",
+      "section_id": "concept-1",
+      "type": "expected",
+      "title": "Expected response",
+      "text": "No. A supplies both outcomes, but B alone need not come from A and need not supply C. A case with not A, B, and not C fits both rules.",
+      "likely_mistake": "Chains two outcomes because they share a trigger.",
+      "recovery_prompt": "Try making A false, B true, and C false. Does either original rule fail?"
     },
     {
       "id": "step-026",
@@ -298,7 +327,9 @@
       "section_id": "concept-1",
       "type": "expected",
       "title": "Expected response",
-      "text": "Pam is not A. The fact activates not B -> not A, the contrapositive."
+      "text": "Pam is not A. The fact activates not B -> not A, the contrapositive.",
+      "likely_mistake": "Says Pam is A, or treats not B as irrelevant.",
+      "recovery_prompt": "Could A be true while the required B is absent? Which combination does A -> B forbid?"
     },
     {
       "id": "step-033",
@@ -385,6 +416,29 @@
       "text": "Only is a clue.\n\nAll is a clue.\n\nIf is a clue.\n\nBut the keyword alone doesn't settle it."
     },
     {
+      "id": "facil-certainty-ask",
+      "section_id": "concept-1",
+      "type": "ask",
+      "title": "Ask the student",
+      "text": "When water is drawn from aquifers, chlorine is often added. Does when make this an all-or-nothing rule?"
+    },
+    {
+      "id": "facil-certainty-wait",
+      "section_id": "concept-1",
+      "type": "wait",
+      "title": "Wait for reasoning",
+      "text": "Pause. Let the student explain the inference before revealing the expected response."
+    },
+    {
+      "id": "facil-certainty-expected",
+      "section_id": "concept-1",
+      "type": "expected",
+      "title": "Expected response",
+      "text": "No. Often qualifies the result. The wording does not guarantee chlorine is added every time.",
+      "likely_mistake": "Translates a keyword without preserving often.",
+      "recovery_prompt": "If chlorine were absent on one occasion, would the statement often added become false?"
+    },
+    {
       "id": "step-045",
       "section_id": "concept-1",
       "type": "say",
@@ -468,7 +522,9 @@
       "type": "expected",
       "title": "Expected response",
       "text": "If introduces the first rule; only also appears in the final information. The bestselling-magazines fact activates the first rule's contrapositive: fulfillment of both moral and intellectual responsibilities fails. At least one responsibility fails; do not infer both fail or change universities to purchasers.",
-      "question_id": "Q1"
+      "question_id": "Q1",
+      "likely_mistake": "Stops at spotting if and never connects the final fact.",
+      "recovery_prompt": "What does the final sentence establish about the two magazines? Does that match the rule, or its contrapositive?"
     },
     {
       "id": "step-056",
@@ -524,7 +580,9 @@
       "type": "expected",
       "title": "Expected response",
       "text": "Fulfillment of both fails: at least one responsibility fails. This does not prove both fail or that every university fails.",
-      "question_id": "Q1"
+      "question_id": "Q1",
+      "likely_mistake": "Negates both responsibilities, or changes the claim into every university.",
+      "recovery_prompt": "If BOTH conditions are not fulfilled, must BOTH fail? Could one hold while the other fails?"
     },
     {
       "id": "step-063",
@@ -598,6 +656,32 @@
       "type": "say",
       "title": "University bookstores: a fact activates the contrapositive",
       "text": "Be careful with the negation: we do not get that every university fails both responsibilities.\n\nWe get that the original combined condition is not satisfied.\n\nAt least some universities fail a moral responsibility, an intellectual responsibility, or both.",
+      "question_id": "Q1"
+    },
+    {
+      "id": "facil-scope-ask",
+      "section_id": "question-1",
+      "type": "ask",
+      "title": "Ask the student",
+      "text": "The majority claim is about bookstores. Can we move it to most purchasers?",
+      "question_id": "Q1"
+    },
+    {
+      "id": "facil-scope-wait",
+      "section_id": "question-1",
+      "type": "wait",
+      "title": "Wait for reasoning",
+      "text": "Pause. Let the student explain the inference before revealing the expected response.",
+      "question_id": "Q1"
+    },
+    {
+      "id": "facil-scope-expected",
+      "section_id": "question-1",
+      "type": "expected",
+      "title": "Expected response",
+      "text": "No. Most stores and most individual purchasers are different groups. The passage supplies no connection that establishes a majority of purchasers.",
+      "likely_mistake": "Changes the denominator from institutions to people.",
+      "recovery_prompt": "What exactly is being counted in the premise: stores or purchasers? Where does a majority of purchasers get established?",
       "question_id": "Q1"
     },
     {
@@ -731,7 +815,9 @@
       "type": "expected",
       "title": "Expected response",
       "text": "An earned doctorate AND a track record of published research, OR five years of work experience. Keep the paired first route intact. The relevant fields for these requirements are sociology, psychology, and education.",
-      "question_id": "Q2"
+      "question_id": "Q2",
+      "likely_mistake": "Splits doctorate and research into separate alternatives.",
+      "recovery_prompt": "Read either and or else. Which two ideas stay together before we reach the alternative?"
     },
     {
       "id": "step-089",
@@ -779,7 +865,9 @@
       "type": "expected",
       "title": "Expected response",
       "text": "Earned doctorate AND published-research track record, OR five years of work experience. Relevant fields: sociology, psychology, education.",
-      "question_id": "Q2"
+      "question_id": "Q2",
+      "likely_mistake": "Makes OR exclusive, or drops the relevant-field restriction.",
+      "recovery_prompt": "Would an applicant who meets both routes fail? Where does the sentence about relevant fields say the restriction applies?"
     },
     {
       "id": "step-095",
@@ -868,7 +956,9 @@
       "type": "expected",
       "title": "Expected response",
       "text": "Neither is established. Edward fails the specified routes; answer C.",
-      "question_id": "Q2"
+      "question_id": "Q2",
+      "likely_mistake": "Treats any publication as research or any work as relevant experience.",
+      "recovery_prompt": "Which exact noun follows published? Which three fields are actually named?"
     },
     {
       "id": "step-106",
@@ -961,7 +1051,9 @@
       "type": "expected",
       "title": "Expected response",
       "text": "The useful definitional relationship is no greater than two inches of additional penetration after twenty-four hammer blows -> refusal standard met. No greater than two does not require zero. Further positive movement can be compatible with the standard.",
-      "question_id": "Q3"
+      "question_id": "Q3",
+      "likely_mistake": "Forces depends largely into a strict requirement or treats refusal as zero movement.",
+      "recovery_prompt": "Does largely give us an absolute requirement? Now read the numerical standard: does no greater than two mean zero?"
     },
     {
       "id": "step-117",
@@ -1033,7 +1125,9 @@
       "type": "expected",
       "title": "Expected response",
       "text": "No. For example, 1.5 inches is no greater than two. The standard can be met while further movement remains possible.",
-      "question_id": "Q3"
+      "question_id": "Q3",
+      "likely_mistake": "Confuses a maximum with a required value of zero.",
+      "recovery_prompt": "Would one and a half inches satisfy no greater than two inches? Is one and a half zero?"
     },
     {
       "id": "step-126",
@@ -1167,7 +1261,9 @@
       "type": "expected",
       "title": "Expected response",
       "text": "The timeline: production after a week, increases for the next year or so, and a first-year positive test estimating elapsed infection time to within a month. Keep timing distinct from unsupported claims about recovery, other defenses, exclusive tests, or indefinite growth. This stem asks best supported.",
-      "question_id": "Q4"
+      "question_id": "Q4",
+      "likely_mistake": "Imports recovery or continuous-growth biology not supplied in the passage.",
+      "recovery_prompt": "Which times are stated? Where does the passage tell us what happens when the virus is defeated?"
     },
     {
       "id": "step-142",
@@ -1239,7 +1335,9 @@
       "type": "expected",
       "title": "Expected response",
       "text": "Infection first; production follows after a week. The first-year test estimates elapsed infection time within a month.",
-      "question_id": "Q4"
+      "question_id": "Q4",
+      "likely_mistake": "Places production at the moment of infection.",
+      "recovery_prompt": "What event starts the timeline? What delay does after a week describe?"
     },
     {
       "id": "step-151",
@@ -1345,7 +1443,9 @@
       "type": "expected",
       "title": "Expected response",
       "text": "No. Mentioning one method does not exclude alternatives; B adds exclusivity.",
-      "question_id": "Q4"
+      "question_id": "Q4",
+      "likely_mistake": "Infers exclusive availability from one mentioned test.",
+      "recovery_prompt": "Could another method exist without contradicting anything in this passage? Where is an exclusivity statement supplied?"
     },
     {
       "id": "step-164",
@@ -1377,6 +1477,32 @@
       "type": "say",
       "title": "Virus X: an infection can precede detectable antibodies",
       "text": "But the passage doesn't say forever.\n\nIt says the antibodies increase for the next year or so.\n\nThat wording gives us a limited description of what happens.\n\nIt doesn't establish unlimited growth.\n\nWe can't take a trend described over roughly a year and extrapolate it indefinitely.",
+      "question_id": "Q4"
+    },
+    {
+      "id": "facil-duration-ask",
+      "section_id": "question-4",
+      "type": "ask",
+      "title": "Ask the student",
+      "text": "They increase for the next year or so. Does that establish there is no upper limit forever?",
+      "question_id": "Q4"
+    },
+    {
+      "id": "facil-duration-wait",
+      "section_id": "question-4",
+      "type": "wait",
+      "title": "Wait for reasoning",
+      "text": "Pause. Let the student explain the inference before revealing the expected response.",
+      "question_id": "Q4"
+    },
+    {
+      "id": "facil-duration-expected",
+      "section_id": "question-4",
+      "type": "expected",
+      "title": "Expected response",
+      "text": "No. A trend described for about a year does not establish indefinite, unlimited growth. D extends beyond the supplied timeframe.",
+      "likely_mistake": "Extrapolates a limited trend indefinitely.",
+      "recovery_prompt": "Would a count that stops increasing after the described period contradict the information we received?",
       "question_id": "Q4"
     },
     {
@@ -1433,7 +1559,9 @@
       "type": "expected",
       "title": "Expected response",
       "text": "An infected person may not yet have the antibodies the test detects during the initial delay. E is best supported; the lecture discusses the wording rather than asserting a new biology fact.",
-      "question_id": "Q4"
+      "question_id": "Q4",
+      "likely_mistake": "Claims a universal biological impossibility instead of the supported early-testing inference.",
+      "recovery_prompt": "What does this best-supported stem ask us to establish? What does the wording after a week produce most naturally suggest about the first few days?"
     },
     {
       "id": "step-175",
@@ -1542,7 +1670,9 @@
       "type": "expected",
       "title": "Expected response",
       "text": "Language -> verbal signs for objects -> ability to distinguish objects from other objects -> conceptual thought. Verbal signs and distinguishing objects are repeated links; which continues the latter relationship. Therefore language requires conceptual thought, answer A.",
-      "question_id": "Q5"
+      "question_id": "Q5",
+      "likely_mistake": "Treats humans as the useful starting point or overlooks which.",
+      "recovery_prompt": "Which idea is repeated between adjacent rules? What does which refer back to in the final sentence?"
     },
     {
       "id": "step-188",
@@ -1606,7 +1736,9 @@
       "type": "expected",
       "title": "Expected response",
       "text": "Language -> verbal signs for objects -> distinguishing objects -> conceptual thought. Language requires conceptual thought.",
-      "question_id": "Q5"
+      "question_id": "Q5",
+      "likely_mistake": "Reverses one requirement or collapses naming an object into distinguishing it.",
+      "recovery_prompt": "What is required at each link? Could an animal distinguish two objects without saying their names?"
     },
     {
       "id": "step-196",
@@ -1799,7 +1931,9 @@
       "type": "expected",
       "title": "Expected response",
       "text": "Conceptual thought. Language -> conceptual thought. Passive voice changes word order, not the requirement; A.",
-      "question_id": "Q5"
+      "question_id": "Q5",
+      "likely_mistake": "Places language on the right because required for is passive.",
+      "recovery_prompt": "Say the same thought as language requires what? Which idea is the requirement?"
     },
     {
       "id": "step-220",
@@ -1911,7 +2045,9 @@
       "type": "expected",
       "title": "Expected response",
       "text": "No. That is illegal negation. Lacking a sufficient condition does not establish absence of its necessary condition.",
-      "question_id": "Q5"
+      "question_id": "Q5",
+      "likely_mistake": "Assumes absence of language proves absence of conceptual thought.",
+      "recovery_prompt": "Does a rule require its necessary condition to produce its sufficient condition? Can the required condition exist without the trigger?"
     },
     {
       "id": "step-234",
@@ -1993,5 +2129,6 @@
       "old": "Here, the lecture reads after a week produce as the delayed start.",
       "new": "I'm reading after a week produce as the delayed start."
     }
-  ]
+  ],
+  "socratic_revision_note": "Four additional authored facilitation checks target shared-trigger chaining, qualified conditional language, bookstore-to-purchaser scope, and indefinite extrapolation. All 23 expected-response steps include anticipated wrong turns and exact recovery questions. These are teaching facilitation, not source quotations; existing SAY content and order are unchanged."
 }
