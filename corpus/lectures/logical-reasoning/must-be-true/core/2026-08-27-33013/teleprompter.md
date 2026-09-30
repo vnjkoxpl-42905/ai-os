@@ -8,11 +8,11 @@ Source: https://app.lsatlab.com/video-library/?videoid=33013
 
 > UNSPOKEN: Source 00:00:02 to 00:18:12; transcript lines 1-307
 
-> SHOW: 00:02:35: Initial concept board
-![Initial concept board](screenshots/01-board-02m35s.png)
-
 > SHOW: 00:06:05: Linking rules; original board omits negation before C: correct contrapositive B OR not C -> not A
 ![Linking rules; original board omits negation before C: correct contrapositive B OR not C -> not A](screenshots/02-board-06m05s.png)
+
+> SHOW: 00:02:35: Initial concept board
+![Initial concept board](screenshots/01-board-02m35s.png)
 
 > SHOW: 00:12:43: Three moves and inference clues; original board contrapositive typo corrected in script
 ![Three moves and inference clues; original board contrapositive typo corrected in script](screenshots/03-board-12m43s.png)
@@ -90,11 +90,11 @@ For Must Be True, immediately consider conditional logic. For Most Strongly Supp
 
 > UNSPOKEN: Source 00:18:12 to 00:28:56; transcript lines 308-466
 
-> SHOW: 00:23:20: Q1 rule diagram
-![Q1 rule diagram](screenshots/06-q1-board-23m20s.png)
-
 > SHOW: 00:24:50: Q1 full stimulus and choices: PT8 S1 Q19
 ![Q1 full stimulus and choices: PT8 S1 Q19](screenshots/extra-1490.png)
+
+> SHOW: 00:23:20: Q1 rule diagram
+![Q1 rule diagram](screenshots/06-q1-board-23m20s.png)
 
 > SHOW: 00:26:55: Q1 worked answer
 ![Q1 worked answer](screenshots/07-q1-answer-26m55s.png)
@@ -121,6 +121,8 @@ When you know what you're looking for, you don't always have to read all five an
 
 E is the answer. Its wording is softer than our prediction. At least some universities fail in at least one of the relevant responsibilities. That's a consequence of the broader failure we derived. The answer doesn't have to repeat our prediction word for word or preserve its full strength. A weaker statement can follow from a stronger one.
 
+Be careful with the negation: we do not get that every university fails both responsibilities. We get that the original combined condition is not satisfied. At least some universities fail a moral responsibility, an intellectual responsibility, or both.
+
 Now check the tempting alternatives. C talks about most people who purchase publications at university bookstores. Where did our most statement apply? To university bookstores, not to purchasers.
 
 Those are different groups. Most stores having a particular bestseller doesn't establish what most individual buyers do. You have to be able to derive the answer from the paragraph. For this answer to say most people who purchase publications, we would need some information supporting a majority of those people. The majority claim we actually received was about stores. You can't change the group simply because those people are involved in the stores. The passage hasn't supplied a relationship that lets us change the denominator from stores to people. That is why this most claim cannot be derived here.
@@ -133,8 +135,8 @@ The useful checks here are simple. Does the fact activate the original rule or i
 
 > UNSPOKEN: Source 00:28:56 to 00:33:25; transcript lines 467-532
 
-> SHOW: 00:32:35: Pivot facts: supposedly blank-page journals
-![Pivot facts: supposedly blank-page journals](screenshots/08-pivot-board-32m35s.png)
+> SHOW: 00:32:35: Four pivot relationships: comparison, contest, unfair situation, and paradox
+![Four pivot relationships: comparison, contest, unfair situation, and paradox](screenshots/08-pivot-board-32m35s.png)
 
 > UNSPOKEN: Show the pivot board. | Pause after each example before supplying the inference.
 
@@ -155,6 +157,9 @@ The pivot doesn't give us permission to invent information. It tells us where to
 ## Q2: Applicants: keep both qualification routes intact
 
 > UNSPOKEN: Source 00:33:25 to 00:43:09; transcript lines 533-674
+
+> SHOW: 00:33:45: Q2 stimulus and exact NOT-meet-manager-requirements stem: PT14 S2 Q2; use with 34:23 all-choices frame
+![Q2 stimulus and exact NOT-meet-manager-requirements stem: PT14 S2 Q2; use with 34:23 all-choices frame](screenshots/q2-stem-2025.png)
 
 > SHOW: 00:34:23: Q2 complete question; relevant fields apply to these requirements
 ![Q2 complete question; relevant fields apply to these requirements](screenshots/09-q2-34m23s.png)
@@ -203,11 +208,11 @@ Throughout conditional work, whether it's Parallel, Must Be True, or Sufficient 
 
 > UNSPOKEN: Source 00:43:09 to 00:54:54; transcript lines 675-847
 
-> SHOW: 00:48:27: Q3 exceptions and competing motives
-![Q3 exceptions and competing motives](screenshots/13-q3-board-48m27s.png)
-
 > SHOW: 00:49:20: Q3 full stimulus and choices: PT113 S2 Q2
 ![Q3 full stimulus and choices: PT113 S2 Q2](screenshots/extra-2960.png)
+
+> SHOW: 00:48:27: Refusal standard and 24 blows producing two inches of penetration
+![Refusal standard and 24 blows producing two inches of penetration](screenshots/13-q3-board-48m27s.png)
 
 > SHOW: 00:53:35: Q3 worked answer
 ![Q3 worked answer](screenshots/14-q3-answer-53m35s.png)
@@ -248,11 +253,11 @@ E is the answer. When a numerical standard says no more than a certain amount, t
 
 > UNSPOKEN: Source 00:54:54 to 01:16:26; transcript lines 848-1192
 
-> SHOW: 01:00:50: Q4 virus and human-outcome board
-![Q4 virus and human-outcome board](screenshots/16-q4-board-60m50s.png)
-
 > SHOW: 01:02:40: Q4 full stimulus and choices: PT10 S1 Q24, Most Strongly Supported
 ![Q4 full stimulus and choices: PT10 S1 Q24, Most Strongly Supported](screenshots/extra-3760.png)
+
+> SHOW: 01:00:50: Antibody production timeline
+![Antibody production timeline](screenshots/16-q4-board-60m50s.png)
 
 > SHOW: 01:15:25: Q4 worked answer
 ![Q4 worked answer](screenshots/17-q4-answer-75m25s.png)
@@ -323,11 +328,11 @@ Our final answer is E. The initial prediction wasn't the answer, and that's okay
 
 > UNSPOKEN: Source 01:16:26 to 01:36:23; transcript lines 1193-1501
 
-> SHOW: 01:23:55: Q5 chain and contraposition
-![Q5 chain and contraposition](screenshots/19-q5-board-83m55s.png)
-
 > SHOW: 01:25:10: Q5 full stimulus and choices: PT121 S1 Q26
 ![Q5 full stimulus and choices: PT121 S1 Q26](screenshots/extra-5110.png)
+
+> SHOW: 01:23:55: Q5 chain and contraposition
+![Q5 chain and contraposition](screenshots/19-q5-board-83m55s.png)
 
 > SHOW: 01:30:05: Q5 worked answer
 ![Q5 worked answer](screenshots/20-q5-answer-90m05s.png)

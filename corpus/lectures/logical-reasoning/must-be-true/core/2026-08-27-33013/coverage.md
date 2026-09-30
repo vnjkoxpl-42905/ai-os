@@ -55,10 +55,12 @@ Source marked complete; review verification notes.
 - Draft adapted from all 1509 native automated-caption cues. Exact question text requires screenshots; read prompts refer to displayed original rather than fabricate absent wording.
 - Clear spoken/ASR logical slips corrected in adapted narrator text and listed below; script is an adaptation, not a verbatim quotation.
 - Source ranges use physical cue-line numbers in source-transcript.txt.
-- Fidelity enhancement preserves additional original examples and explanation: difficulty discussion, opposite-position recognition, partial-chain observation, bookstore repeated-term rationale, case-by-case diagramming, until/context caution, pigeon-label analogy, measurement prediction, passive-voice example. Q4 C specific restriction added from parent screenshot extraction; exact wording still to verify against image.
+- Fidelity enhancement preserves additional original examples and explanation: difficulty discussion, opposite-position recognition, partial-chain observation, bookstore repeated-term rationale, case-by-case diagramming, until/context caution, pigeon-label analogy, measurement prediction, passive-voice example. Q4 C specific restriction added from parent screenshot extraction; exact wording visually verified against extra-3760.png: antibodies are produced only for viral infections that cannot be fought by any other body defenses.
 - Full native caption file captured through 96:54 of 97:00 runtime; automated speech recognition remains unverified against all audio.
 - Parent visually checked initial board and full stimulus/stem/all answer choices for five worked questions.
 - Original board negation error and Q2 modifier-scope conflict explicitly corrected in reading script and image captions.
+- Parent browser verification passed: compact navigation, dynamic header spacing, 22 mapped images loaded with none broken, Q2 stem/choices picker, adjustable speed, image gallery/zoom, and Start/Pause. Keyboard handler implemented but keyboard focus test failed; keyboard interaction remains unverified.
+- Codex browser verification 2026-09-30: compact section navigation, header/section positioning, timestamp image selection, full-size dialog, start/pause, speed slider and 22 image loads passed. Keyboard shortcuts implemented but end-to-end keyboard navigation remains unverified.
 
 ## Unresolved gaps
 

@@ -1396,3 +1396,12 @@ Post Session Recap now explicitly posts the approved draft to the identified stu
 
 ## [2026-09-30] recap | Yahunatan Zetvy
 Created students/yahunatan-zetvy/recaps/2026-09-16-recap.md from the latest session on file, explicitly selected by Joshua after the 2026-09-29 booking had no source transcript. Preview and source map: brainstorms/2026-09-30-yahunatan-post-session-recap/. Preserved should/action and negation distinctions; private conflicts excluded from student HTML. Logic reviewed, all four model states and typed worked-feedback tested, desktop/mobile layout verified. Publishing dry run passed; no post or notification. Existing homework open loops retained.
+
+
+## [2026-09-30] lecture | Must Be True reader and reusable capture workflow
+
+Captured LSAT Lab video 33013, Patrick Tyrrell, 2026-08-27, using the observed Vimeo player URL. Preserved 1,509 native automated-caption cues and the video-only stream with source hashes under raw/sources/lsat-lab-lectures/33013/. The full caption timeline was reviewed, not audited word by word against audio.
+
+Built corpus/lectures/lsat-lab/must-be-true/2026-08-27-33013/ with a cleaned reading script, full transcript, introductory boards, five worked questions, timestamped image mapping, coverage, and explicit source corrections. Original missing negation and conflicting applicant field-scope explanation are preserved and corrected in the adaptation. Opened teleprompter.html in Codex on local port 8790; verified navigation, image selection/enlargement, start/pause, speed control, and all 22 mapped images loading. Fixed header overlap. Keyboard shortcuts remain implemented but not end-to-end verified.
+
+Reusable system/scripts/lsatlab-lecture-capture.py pulls captions/video once, extracts selected frames, preserves timestamp provenance, and reuses matching captures. The lsat-lab-lecture-transcribe skill packages local captures into a standalone HTML reader and source/coverage files; activated and cataloged for Codex and Claude. No lecture or student recap was posted.

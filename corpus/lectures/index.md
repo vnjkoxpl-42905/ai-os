@@ -15,7 +15,9 @@ Each lecture package keeps the source transcript, read-aloud script, visual time
 
 | Topic | Source | Package status |
 |---|---|---|
-| Must Be True | [Patrick Tyrrell, 2026-08-27, video 33013](https://app.lsatlab.com/video-library/?videoid=33013) | Selected; full transcript, images, and script not yet captured. |
+| Must Be True | [Patrick Tyrrell, 2026-08-27, video 33013](https://app.lsatlab.com/video-library/?videoid=33013) | [Read the lecture](lsat-lab/must-be-true/2026-08-27-33013/teleprompter.html). Full automated captions, opening boards, five worked questions, cleaned script, and [coverage/corrections](lsat-lab/must-be-true/2026-08-27-33013/coverage.md). |
+
+Concept tags: contrapositives, linking conditional rules, applying facts to rules, illegal reversal, illegal negation, AND/OR, quantifier scope, inference pivots, numerical boundaries, requirement language, and passive voice.
 
 ## Package layout
 
