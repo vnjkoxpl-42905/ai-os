@@ -1,6 +1,6 @@
 # Claude Code cloud setup for LSAT U
 
-This reference describes the LSAT U app repository at `projects/lsatu/`. The app repository is a separate private GitHub repository, `vnjkoxpl-42905/lsatu-684d89db`, with `origin` set to `https://github.com/vnjkoxpl-42905/lsatu-684d89db.git`. The repository was inspected locally on 2026-09-29. Do not treat this note as permission to publish or deploy. A push to app `main` can trigger production deployment. Follow the app repo's own `AGENTS.md` and `CLAUDE.md` before changing it.
+This reference describes the LSAT U app repository at `../ai-os-projects/lsatu/`, relocated outside the vault on 2026-09-30. The app repository is a separate private GitHub repository, `vnjkoxpl-42905/lsatu-684d89db`, with `origin` set to `https://github.com/vnjkoxpl-42905/lsatu-684d89db.git`. The repository was inspected locally on 2026-09-29. Do not treat this note as permission to publish or deploy. A push to app `main` can trigger production deployment. Follow the app repo's own `AGENTS.md` and `CLAUDE.md` before changing it.
 
 ## Runtime and commands
 

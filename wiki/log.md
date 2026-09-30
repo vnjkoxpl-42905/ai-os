@@ -1364,3 +1364,7 @@ Checked all wiki Markdown pages for local target existence, source metadata, and
 
 ## [2026-09-30] skill | Post Session Recap
 Renamed lsat-session-lesson to post-session-recap (display title: Post Session Recap) across active Codex, Claude, and Gemini copies and their catalogs. Updated live ingest routing, skill index, and LLM Wiki schema references. Workflow behavior is unchanged; historical retired skill references are preserved.
+
+## [2026-09-30] system | Application folders moved outside Obsidian
+
+Joshua authorized separating development files after Obsidian stalled loading the vault. Moved all 33 project folders from the vault projects directory to C:/Users/Joshu/dev/ai-os-projects, preserving repositories, worktrees, dependencies, ignored files, and existing edits. Repaired LSAT U Git worktree links, updated operational tools and skill paths, and adjusted private backup/restore conventions. The wiki, corpus, students, and raw sources remain in the original ai-os vault. Empty old directories remain; no files were deleted. Application folder inventory contained 1,561,422 files before relocation. Obsidian was restarted; UI loading and actual browser clipping remain to be confirmed.

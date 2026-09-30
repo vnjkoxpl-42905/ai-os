@@ -45,7 +45,10 @@ run_assign() {
   for a in "$@"; do
     case "$a" in *$'\n'*|*$'\r'*) echo "lsatu: refusing a multi-line argument (Windows would drop everything after the first line, including --dry-run). Nothing sent." >&2; return 2;; esac
   done
-  (cd "$OPS" && npx --no-install vite-node scripts/assign.ts -- "$@") || rc=$?
+  # Keep the pinned worktree clean while pointing its credential reader at the
+  # separate knowledge vault. This ignored copy contains a path, never secrets.
+  node "$ROOT/system/scripts/prepare-assign.mjs" "$OPS"
+  (cd "$OPS" && npx --no-install vite-node scripts/.ai-os-assign.generated.ts -- "$@") || rc=$?
   git -C "$OPS" restore supabase/functions/mcp/index.ts 2>/dev/null || true
   return $rc
 }

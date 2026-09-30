@@ -45,6 +45,8 @@ Paths are relative to the repository root.
 | Application code | `../ai-os-projects/lsatu/` — own repo, own instructions, own remote |
 | Other projects (life-path, …) | `../ai-os-projects/<name>/` — each with its own `CLAUDE.md` + `.claude/` |
 
+Application repositories and dependencies stay outside this Obsidian vault, in sibling `../ai-os-projects/`. Do not create a junction from the vault back into that directory.
+
 ## Retrieval order
 
 1. `wiki/hot.md` — current-session narrative and open threads.

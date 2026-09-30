@@ -199,3 +199,7 @@ The [Wayfinder map](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/155)
 ## 2026-09-30: Apply the LLM Wiki pattern to the existing second brain
 
 Joshua directed implementation of the supplied LLM Wiki idea file in the current vault and use of its schema for future knowledge work. Preserve raw evidence, compile and maintain linked knowledge, retrieve through indexes, save durable findings, and record changes in append-only logs. Keep one public `ingest` workflow; retain `second-brain-ingest` as a compatibility alias. Query and lint remain distinct; setup applies only to a new vault. Preserve student/corpus homes and live-system authority. The detailed contract is [the operating schema](../system/schema/llm-wiki.md), grounded in [the supplied source](../wiki/sources/llm-wiki-pattern.md).
+
+## 2026-09-30: Keep application repositories outside the Obsidian vault
+
+Joshua authorized moving the entire application tree to sibling C:/Users/Joshu/dev/ai-os-projects after the vault stalled loading. The ai-os directory remains the knowledge vault and raw/inbox remains web-clip intake. Do not link heavy application/dependency trees back into the vault. Preserve application repos and working copies as separate operational roots.
