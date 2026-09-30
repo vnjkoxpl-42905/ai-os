@@ -1,7 +1,7 @@
 # LSAT U connected experience: build sequence
 
 Date: 2026-09-28  
-Status: Seventeen verified slices published; full ticket coverage remains open  
+Status: Eighteen verified slices published; full ticket coverage remains open
 Specification: [#165](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/165)  
 Decision map: [#155](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/155)
 
@@ -72,3 +72,7 @@ Smart Drill now saves each account-owned sitting under a durable run ID, resumes
 ## Seventeenth slice: distinct guided drill sittings
 
 Guided assignments and direct guided drills now preserve each account-owned sitting under its own run ID. Students can resume a frozen question queue, inspect earlier Results and Review, and start a new sitting without overwriting history. Answer navigation waits for an account save. Finishing freezes the saved answers before writing analytics, and retries use stable attempt IDs to avoid duplicate or changed results. An early End counts only attempted questions. Local signed-in checks saved three sittings under Joshua's teacher account, resumed the same unfinished run, and showed a one-answer result of `0 / 1`. Focused tests passed 35/35, typecheck and production build passed, and a scoped review found no material regression. Commit `a33fcac` reached GitHub `main` on 2026-09-29. The first Lovable Publish attempt failed while the revision still showed Previewing; a retry updated the site. Fresh signed-in live pages showed all three completed guided sittings and the one-answer `0 / 1` Results. Teacher-selected review, broader Library and Schedule integration, study tools, settings, and other audit ticket details remain open.
+
+## Eighteenth slice: saved Intro to LR interactive misses in Review
+
+The student Review queue now includes owner-scoped, missed `intro_lr_attempts` from earlier authored interactive exercises 3.1 through 3.5, 3.7, and 3.9. Each saved attempt has its own read-only detail route with its recorded answer and current authored question and reasoning. Viewing it cannot launch the exercise runner or write another attempt. Unknown authored IDs remain out of the queue. A code review caught missing historical 3.7 pronoun-replacement questions; these and a regression test were added before release. Seven focused tests, typecheck, production build, and diff check passed. Commit `ac4456b` reached GitHub `main` on 2026-09-29. Lovable imported it, and fresh signed-in live Review showed the new source statement; the exact-detail route displayed an owner-safe unavailable state for a nonexistent ID. Joshua's teacher account had no matching historical missed attempt, so a positive live detail with a real row was not verified. Current native Intro to LR labs, Hard Sentences, other bootcamp sources, and teacher-selected Review remain open. Lovable project monitoring separately reported a My Work refetch/blank-state issue; this release did not address it.
