@@ -34,3 +34,11 @@ Logic review attempted counterexamples to every major inference and found no mat
 ## 2026-09-30 concept-first rebuild after review
 
 Joshua rejected v2 because it retained the original mediation question as its opening and organizing structure. The requested standard is the concept-first and visual teaching experience of the Some, Most, and All lesson, not a question walkthrough with a generic appendix. V3 is a complete standalone student lesson using fresh application/permission examples, interactive conditional cases, and rule-connection visuals. The original session grounds the learning needs, not the new lesson's narrative. Earlier drafts remain historical; the exact marked current student-facing block is the only export source. The post-session-recap skill, quality bar, and intake/version boundary were updated in all four active/catalog copies.
+
+## 2026-09-30 expressive redesign request and design evidence
+
+Joshua rejected V3's flat presentation and asked for a vivid, creative design with a clearer opening, stronger hierarchy, visible examples, meaningful motion, and pop quizzes. He explicitly prohibited the internal label "concept lesson" in student copy. This preference is saved in native memory, the copy corrections log, and all four recap-skill/quality-bar copies.
+
+Firecrawl search and inspected page reads informed the design. [Ciechanowski's Cameras and Lenses](https://ciechanow.ski/cameras-and-lenses/) illustrates nearby interactive demonstrations and controllable animation. [Comeau's interactive Grid guide](https://www.joshwcomeau.com/css/interactive-guide-to-grid/) makes invisible relationships visible with guides and labeled parts. [Case's design patterns](https://blog.ncase.me/neurotic-neurons-design-patterns/) informed direct manipulation and immediate explanatory feedback. These are design references, not LSAT content sources, and their prose or layouts are not copied. Saved research is under `.firecrawl/conditional-inspiration-*`.
+
+The V4 draft preserves the nine-part teaching progression and original assigned-work sequence. A precision correction distinguishes the absence of an obligation to inspect from an obligation not to inspect; this applies the lesson's own complete-predicate standard.

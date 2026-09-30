@@ -1,6 +1,10 @@
 # Facts, Rules, and What Follows
 
-A fact gives you a case. A rule gives you a direction.
+Start with what is given. Then find what follows.
+
+**Fact:** What is true in this case.
+**Rule:** What must follow if its condition is met.
+**Conclusion:** What those statements prove.
 
 **The rule:** Every application submitted after the deadline requires special approval.
 
@@ -106,7 +110,7 @@ Before joining two arrows, find the destination of the first and the starting co
 
 A rule can tell us what someone **should** do or what they **may** do. That is different from telling us what they actually did.
 
-Suppose **every damaged item should be inspected**. If this item is damaged, it should be inspected. We cannot conclude it has been inspected. If an item should not be inspected, then it is not damaged under that rule. But “has not been inspected” is not the same as “should not be inspected.” An inspection could be overdue.
+Suppose **every damaged item should be inspected**. If this item is damaged, it should be inspected. We cannot conclude it has been inspected. If it is not true that an item should be inspected, it cannot be damaged under this rule. But “has not been inspected” is not the same as “should not be inspected.” An inspection could be overdue.
 
 Suppose **a visitor may enter the archive only if the visitor has a badge**. A badge is necessary for permission to enter. The rule is **May enter -> Has a badge**. Without a badge, the visitor does not have permission to enter under this rule. Having a badge alone does not establish permission; another requirement might still apply.
 
