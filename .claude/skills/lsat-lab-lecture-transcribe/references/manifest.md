@@ -8,6 +8,8 @@ python .agents/skills/lsat-lab-lecture-transcribe/scripts/package_lecture.py --m
 
 The transcript is copied byte-for-byte into `transcript.md` on initial preservation. It can contain timestamps; use its actual physical lines in `source_lines`. If an existing source differs, the helper stops. Screenshots must already exist beneath the output folder's `screenshots/` directory. The output folder must be dedicated to this lecture.
 
+Canonical output home: `corpus/lectures/<logical-reasoning-or-reading-comprehension>/<topic>/<core-or-advanced>/<date>-<videoid>/`. Add metadata `section`, `topic`, `topic_type`, `difficulty`, `platform`, and `tags`. Topic type may be `question-type`, `question-family`, or `reasoning-skill`. Add `teaching_brief` containing the unspoken preparation text; the helper writes `teaching-brief.md` and an initially expanded preparation panel before the first script section. The helper accepts older manifests without this field, but new lecture packages require it under the skill workflow. Optional segment `nav_label` keeps navigation compact.
+
 ```json
 {
   "title": "Example lecture",

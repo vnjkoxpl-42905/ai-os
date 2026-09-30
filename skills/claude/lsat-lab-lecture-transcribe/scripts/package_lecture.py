@@ -5,6 +5,7 @@ import hashlib
 import html
 import json
 import mimetypes
+import re
 from pathlib import Path
 
 
@@ -15,6 +16,23 @@ def stamp(value):
 
 def digest(data):
     return hashlib.sha256(data).hexdigest()
+
+
+def render_brief(text):
+    """Render the limited headings, paragraphs, lists and local links used by briefs."""
+    blocks = []
+    for paragraph in text.split("\n\n"):
+        paragraph = html.escape(paragraph.strip())
+        paragraph = re.sub(r"\[([^\]]+)\]\(([^)]+)\)", lambda match: f'<a href="{match[2]}">{match[1]}</a>' if not re.match(r"(?:javascript|data):", match[2], re.I) else match[1], paragraph)
+        if paragraph.startswith("## "):
+            blocks.append("<h3>"+paragraph[3:]+"</h3>")
+        elif paragraph.startswith("# "):
+            blocks.append("<h2>"+paragraph[2:]+"</h2>")
+        elif re.match(r"\d+\. ", paragraph):
+            blocks.append("<ol>"+"".join("<li>"+re.sub(r"^\d+\. ", "", line)+"</li>" for line in paragraph.splitlines())+"</ol>")
+        else:
+            blocks.append("<p>"+paragraph.replace("\n", " ")+"</p>")
+    return "".join(blocks)
 
 
 def validate(manifest, transcript, output):
@@ -135,6 +153,11 @@ def package(manifest_path, transcript_path, output):
         sections.append(f'<section id="{anchor}"><h2>{e(heading)}</h2><p class="cue">{e(cue)}</p><div class="reading"><div><p class="cue">{e(cues)}</p><div class="spoken">{e(segment["script"])}</div></div><div class="visuals"><div class="controls">{"".join(image_buttons)}</div>{"".join(visuals)}</div></div></section>')
     gallery = """const zoom=document.querySelector('#zoom');const header=document.querySelector('header');new ResizeObserver(()=>document.documentElement.style.setProperty('--headerheight',header.getBoundingClientRect().height+'px')).observe(header);document.addEventListener('click',event=>{const pick=event.target.closest('[data-show-frame]');if(pick){const panel=pick.closest('.visuals');panel.querySelectorAll('figure').forEach(f=>{f.hidden=f.dataset.frame!==pick.dataset.showFrame;});}const image=event.target.closest('figure img');if(image){stop();zoom.querySelector('img').src=image.src;zoom.querySelector('img').alt=image.alt;zoom.showModal();}});zoom.querySelector('button').onclick=()=>zoom.close();"""
     document = f'<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{e(title)}</title><style>{STYLE} section{{scroll-margin-top:calc(var(--headerheight,150px) + 12px)}} .visuals{{top:calc(var(--headerheight,150px) + 12px)}} [hidden]{{display:none!important}} dialog{{width:94vw;max-width:1800px;border:0;padding:12px}} dialog::backdrop{{background:#000b}} dialog img{{width:100%}} figure img{{cursor:zoom-in}} </style><header><h1>{e(title)}</h1><nav>{"".join(navigation)}</nav><div class="controls"><button id="run">Start</button><label>Speed <input id="speed" type="range" min="5" max="90" value="24" aria-label="Scroll pixels per second"></label><span id="status" role="status"></span></div></header><main><p class="cue">{e(state)}</p>{"".join(sections)}</main><dialog id="zoom"><button type="button">Close full-size image</button><img alt=""></dialog><script>{CONTROLS}{gallery}</script></html>'
+    brief = manifest.get("teaching_brief", "")
+    if brief:
+        document = document.replace('<nav>', '<nav><a href="#teaching-brief">Before teaching</a>', 1)
+        preparation = f'<details id="teaching-brief" open style="scroll-margin-top:calc(var(--headerheight,150px) + 12px);font:18px/1.6 system-ui;padding:20px;background:#eaf0ef"><summary>Before teaching: unspoken preparation</summary><div>{render_brief(brief)}</div></details>'
+        document = document.replace('<main>', '<main>'+preparation, 1)
     coverage = [f"# Coverage: {title}", "", state, "", "## Teaching-point mapping", ""]
     for point in manifest.get("teaching_points", []):
         coverage.append(f"- {point['id']}: {point['description']} -> {', '.join(point['segment_ids'])}")
@@ -144,6 +167,8 @@ def package(manifest_path, transcript_path, output):
     coverage += ["", "Mapping and file integrity were checked by the helper. Content completeness, image legibility, and logical correctness require human/agent review."]
     provenance = f"# Source provenance\n\nSource: {manifest['source_url']}\n\nCaptured: {manifest['capture_date']}\n\nMethod: {manifest['transcript_method']}\n\nInstructor: {manifest.get('instructor', 'Not verified')}\n\nLecture date: {manifest.get('lecture_date', 'Not verified')}\n\nRights: Joshua stated that, as an LSAT Lab tutor, he is authorized to use and adapt the selected lecture.\n\nThe source transcript and screenshots are preserved. The teleprompter is an adapted reading copy.\n"
     outputs = {"transcript.md": transcript, "teleprompter.md": "\n".join(markdown).encode(), "teleprompter.html": document.encode(), "timeline.json": (json.dumps(manifest, ensure_ascii=False, indent=2)+"\n").encode(), "coverage.md": "\n".join(coverage).encode()}
+    if brief:
+        outputs["teaching-brief.md"] = brief.encode("utf-8")
     if not (output / "PROVENANCE.md").exists():
         outputs["PROVENANCE.md"] = provenance.encode()
     for name, data in outputs.items():

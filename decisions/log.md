@@ -203,3 +203,8 @@ Joshua directed implementation of the supplied LLM Wiki idea file in the current
 ## 2026-09-30: Keep application repositories outside the Obsidian vault
 
 Joshua authorized moving the entire application tree to sibling C:/Users/Joshu/dev/ai-os-projects after the vault stalled loading. The ai-os directory remains the knowledge vault and raw/inbox remains web-clip intake. Do not link heavy application/dependency trees back into the vault. Preserve application repos and working copies as separate operational roots.
+
+
+## 2026-09-30: Shared lecture library for live teaching
+
+Joshua specified a standalone teaching library, separate from student records. Route through corpus/lectures by Logical Reasoning or Reading Comprehension, topic, Core or Advanced, then the individual lecture. Core is the easier level. Topic names may represent question types, question families, or reasoning skills; use tags and cross-links for overlapping concepts while keeping one canonical package. Every folder level has an MD index. Each lecture and level index identifies exact PrepTest section/question numbers in original presentation order. Prepare a pre-lecture teaching brief before the teleprompter so Joshua can retrieve a lecture by topic, level, or covered concept and use it during live video calls. The Must Be True lecture dated2026-08-27, video33013, is LR/Core.

@@ -135,8 +135,8 @@ The useful checks here are simple. Does the fact activate the original rule or i
 
 > UNSPOKEN: Source 00:28:56 to 00:33:25; transcript lines 467-532
 
-> SHOW: 00:32:35: Four pivot relationships: comparison, contest, unfair situation, and paradox
-![Four pivot relationships: comparison, contest, unfair situation, and paradox](screenshots/08-pivot-board-32m35s.png)
+> SHOW: 00:32:35: Four inference pivots: contrapositive, rebuttal, numerical/mathy, and contrast
+![Four inference pivots: contrapositive, rebuttal, numerical/mathy, and contrast](screenshots/08-pivot-board-32m35s.png)
 
 > UNSPOKEN: Show the pivot board. | Pause after each example before supplying the inference.
 

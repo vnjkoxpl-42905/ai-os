@@ -1405,3 +1405,10 @@ Captured LSAT Lab video 33013, Patrick Tyrrell, 2026-08-27, using the observed V
 Built corpus/lectures/lsat-lab/must-be-true/2026-08-27-33013/ with a cleaned reading script, full transcript, introductory boards, five worked questions, timestamped image mapping, coverage, and explicit source corrections. Original missing negation and conflicting applicant field-scope explanation are preserved and corrected in the adaptation. Opened teleprompter.html in Codex on local port 8790; verified navigation, image selection/enlargement, start/pause, speed control, and all 22 mapped images loading. Fixed header overlap. Keyboard shortcuts remain implemented but not end-to-end verified.
 
 Reusable system/scripts/lsatlab-lecture-capture.py pulls captions/video once, extracts selected frames, preserves timestamp provenance, and reuses matching captures. The lsat-lab-lecture-transcribe skill packages local captures into a standalone HTML reader and source/coverage files; activated and cataloged for Codex and Claude. No lecture or student recap was posted.
+
+
+## [2026-09-30] lecture | Shared LR/RC topic and level routing
+
+Joshua clarified that lecture capture is a standalone library for his live teaching. Removed the accidental Yahunatan/student routing edits; preserved the withdrawn new router outside student records. Moved the derived Must Be True package to corpus/lectures/logical-reasoning/must-be-true/core/2026-08-27-33013/, preserving transcript and screenshots; all 23 previously hashed source records matched after relocation. Raw video/caption evidence was untouched. Legacy reader links redirect to the canonical package.
+
+Library routing now uses LR/RC, topic, Core/Advanced, and individual lecture indexes, with exact question IDs in teaching order and concept tags for retrieval. A pre-lecture teaching brief precedes the teleprompter. The lecture skill maintains these shared routes and opens the brief/reader when asked to use a lecture. It does not imply a student assignment. Locked structure is recorded in decisions/log.md.
