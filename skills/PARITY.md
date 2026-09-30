@@ -37,16 +37,23 @@ These live under `skills/claude/_snapshots/` and ship with Claude plugins. They 
 Claude's own extension surfaces (hooks, plugins, MCP authoring) or vendor integrations. A
 Codex copy would describe machinery Codex does not have. Correct as Claude-only, permanently.
 
-### Drives Codex from Claude (4)
+### Claudex package: both runtimes since 2026-09-30
 
-- `codex-build` — hands a frozen spec to Codex to implement
-- `codex-review` — Codex adversarially reviews a Claude-authored plan
-- `grill-me-codex` — interview, then Codex review
-- `grill-with-docs-codex` — same, docs-aware
+Joshua explicitly authorized universal activation and upstream updates. `claudex-loop`,
+`claudex-route`, `codex-build` and `codex-review` now use the current host-aware package
+from `chaseai-yt/claudex-loop`. Codex routes review to Claude; Claude routes review to
+Codex. Complete copies, including the shared CLI runner, exist in both catalogs,
+project activation directories and global runtime homes.
 
-These exist to orchestrate Codex *from the other runtime*. Giving them to Codex would mean
-Codex driving Codex, which defeats the cross-model check that is their entire purpose.
-Correct as Claude-only, permanently.
+`grill-me-codex` and `grill-with-docs-codex` are also available in both runtimes as
+locally maintained compatibility aliases to `claudex-loop`. The docs variant also
+preserves glossary, context, and architecture decisions. Their outdated instructions
+are removed from active copies. Alias sources live in `system/skill-overrides/claudex`.
+
+`system/scripts/sync-claudex-skills.py` updates four upstream skills and two local aliases daily through
+the Codex automation "Update Claudex skills". Whole-tree compare-and-swap preserves
+local edits. Previous copies live outside activation roots under
+`~/.agents/claudex-backups`. No source links or junctions join the vault to the clone.
 
 ### Blocked by a missing Codex dependency (1)
 

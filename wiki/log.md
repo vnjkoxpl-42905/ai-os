@@ -1523,3 +1523,24 @@ Revised [Facts, Rules, and What Follows V7](../brainstorms/2026-09-30-yahunatan-
 Filed the exact V7 source in the canonical recap, preserved V6 history and updated student routing. Recorded the teaching-copy correction and mirrored it across all four skill quality bars. Independent editorial/conceptual review, JavaScript syntax, skill validation and student-router checks passed. Actual browser verified typed comparison, keyboard chapter navigation and desktop/phone layout without horizontal overflow. Corrected an inherited explanation-background style; saved final numbered-opening and mobile proof. Normal viewport restored. Confirmed-account publishing dry run accepted the 92,531-byte standalone package without writes.
 
 V7 is open in Codex for review. Nothing posted, sent, newly assigned, committed or pushed. Shared teacher lecture and immutable sources unchanged. Task statuses unchanged; publication still awaits Joshua's approval of the current draft.
+
+
+## [2026-09-30] system | Claudex package globally installed with daily upstream sync
+
+Joshua explicitly authorized updating older versions, universal activation and automatic upstream updates. Installed all six skills from chaseai-yt/claudex-loop commit 8cf5e2c1771c5151d90c12642391d0ba8fa71b0e across seven global/project/catalog roots (42 complete trees), retaining previous copies outside activation roots. The four current host-aware skills include their shared Python runner; two legacy grill entries remain available. Updated parity declarations and regenerated the catalog. Codex 0.156.1 and Claude Code 2.1.280 are installed and authenticated; role checks correctly choose the opposite provider. Package metadata validation and 23 tests passed. Updater fixture proved backup preservation, exact copying, idempotence and refusal to overwrite a local edit. Offline whole-tree verification found zero pending changes or conflicts.
+
+Created active local Codex automation update-claudex-skills, daily 07:00 America/Toronto, to run system/scripts/sync-claudex-skills.py and regenerate the index after changes. Clean fast-forward only, six-name allowlist, compare-and-swap, local conflict reporting, no deletion or automatic force-adoption. Existing global skill versions preserved under ~/.agents/claudex-backups. Operational reference updated at references/claude-plus-codex.md.
+
+Broad vault checker still reports three unrelated existing issues: stale gws-gmail activation and two GitHub-path false/dead-path warnings in root instructions. These were not modified. No live cross-model review completed by this install; the earlier stalled review remains failed. No student publication, assignment, commit or push.
+
+
+## [2026-09-30] system | Jev audit skill installed globally
+
+Joshua requested cloning, checking and installing chaseai-yt/jev-audit. No existing installation found. Cloned outside the vault at C:/Users/Joshu/dev/ai-os-projects/jev-audit, commit 194a058c5983c96d5e5f2e25075e551b743710fc. Installed complete jev-audit trees, including references and Python helper scripts, into seven Codex/Claude global/project/catalog locations. Verified file hashes match source; skill validation and all 26 synthetic/mock tests passed. Regenerated skills/INDEX.md.
+
+The skill audits accessible recent workflow history for bounded recurring judgments suitable for TypeSafe Jev, compares ordinary rules/code and smaller models, and recommends zero to three opportunities plus one measurable pilot. No Jev key is needed for the audit. No audit of personal/task history was run, no live provider request or paid call occurred, and no hooks, routing changes or update automation were installed. Global discovery may require a new session. No commit or push.
+
+
+## [2026-09-30] Claudex grill entries modernized
+
+Joshua authorized removing outdated versions and choosing the best outcome. Replaced active grill-me-codex and grill-with-docs-codex legacy instruction trees with local compatibility aliases to the current host-aware claudex-loop in all seven Codex/Claude activation and catalog roots. Previous trees are retained only in inactive backups. Updated sync-claudex-skills.py to source four skills upstream and two aliases from system/skill-overrides/claudex, preventing automatic restoration of legacy instructions. Updated parity, reference, and generated skill catalog. Verified all 14 alias copies and sibling routing, repeat-sync idempotence, and local-edit preservation in an isolated fixture. Offline dry run: zero changes and zero conflicts. Independent read-only review found no material bugs. Catalog generation retains 15 pre-existing unrelated weak-description warnings. No live model review/build launched.

@@ -131,3 +131,14 @@ ai-os **already runs this exact pattern** — it was built dual-runtime from the
 - **New and implemented:** Herdr as the visible, persistent execution layer for Claude Code and Codex; direct integrations and the Herdr agent skill are installed for both.
 - **Worth adopting as a habit:** the plan↔critique and adversarial-review ping-pong between the two models on genuinely hard or high-stakes work; reach for the Codex desktop app's live browser + annotation when doing front-end review.
 - **Already true in ai-os:** the whole file-structure map, twin instruction files, copy-based skill activation, session-handoff bridge, tool-agnostic stance.
+
+
+## Claudex skills installed globally (2026-09-30)
+
+Current upstream: https://github.com/chaseai-yt/claudex-loop, installed from commit `8cf5e2c1771c5151d90c12642391d0ba8fa71b0e`. Clone: `C:/Users/Joshu/dev/ai-os-projects/claudex-loop`, outside the vault. All four current skills (`claudex-route`, `claudex-loop`, `codex-review`, `codex-build`) and both local compatibility aliases (`grill-me-codex`, `grill-with-docs-codex`) are complete copies in both catalogs and project activation directories, plus global `.agents/skills`, `.codex/skills`, and `.claude/skills`. No linking into the application directory.
+
+Prefer `claudex-route` for one scoped handoff, and `claudex-loop` for repeated independent review and implementation. The host-aware loop sends Codex work to Claude for review and Claude work to Codex. Both grill names now delegate to this current loop; the docs variant preserves context, glossary, and architecture decisions. Local alias sources live in `system/skill-overrides/claudex`. The updater copies these instead of upstream legacy instructions. Shared references and Python runner ship with the complete current package. Existing conversations may need a new session to refresh discovery.
+
+Both CLIs authenticated on 2026-09-30: Codex 0.156.1 and Claude Code 2.1.280. Metadata validation, 23 package tests, and both role-routing checks pass. These checks do not establish a completed live model review; the earlier stalled review remains a failed run.
+
+Automatic updater: `system/scripts/sync-claudex-skills.py`. Codex app automation `update-claudex-skills` runs daily at 07:00 America/Toronto while the local automation host is available. It fast-forwards the clean clone and updates only six declared skill names, preserving older copies under `~/.agents/claudex-backups` and refusing to overwrite locally edited trees. State is `~/.agents/claudex-sync-state.json`. Run without `--install` for routine updates; that flag explicitly adopts existing versions and is only for supervised initial installation. No deletions, commits, pushes, CLI upgrades or review/build launches occur during sync. Skills INDEX is regenerated after changes.
