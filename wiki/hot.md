@@ -92,4 +92,7 @@ The sections below preserve earlier session snapshots. They are historical conte
 - Booking is not production-safe on cancellation or recent Google Calendar changes until the P1 batch is fixed and live-verified.
 - Archived knowledge (product specs, entities, concepts) re-enters organically via `raw/` ingests when actually needed — do not bulk re-import.
 - Corpus is empty by design; it fills from teaching materials and transcripts as they are ingested.
-- **Failing lsatu tests, updated 2026-07-16:** `ConclusionTypeLab` is already handled per Joshua — do not investigate. `page-six-switchboard` and `Practice` remain genuinely failing (pre-existing, reproduce
+- **Failing lsatu tests, updated 2026-07-16:** `ConclusionTypeLab` is already handled per Joshua — do not investigate. `page-six-switchboard` and `Practice` remain genuinely failing (pre-existing, reproduce on a clean baseline, fail standalone — NOT the documented suite-load flake) and are deferred, not resolved.
+
+<!-- brain-automation-alerts:start -->
+<!-- brain-automation-alerts:end -->
