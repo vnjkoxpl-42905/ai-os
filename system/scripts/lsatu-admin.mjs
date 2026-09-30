@@ -110,8 +110,9 @@ if (cmd === "post-lesson") {
   if (Buffer.byteLength(html) > 500000 || !html.includes('<meta name="lsatu-interactive-lesson"')) {
     throw new Error("Lesson must be a marked, self-contained HTML file under 500 KB");
   }
-  const title = flag("title", "Some, Most, and All");
-  const key = `interactive-${createHash("sha256").update(u.class_id).update(html).digest("hex").slice(0, 48)}`;
+  const title = flag("title", null)?.trim();
+  if (!title) throw new Error("post-lesson requires --title");
+  const key = `interactive-${createHash("sha256").update(u.class_id).update(title).update(html).digest("hex").slice(0, 48)}`;
   const previous = (await rest(`classroom_items?student_id=eq.${u.class_id}&status=not.eq.archived&select=id,type,title,status,visible_to_student&order=created_at.desc`))
     .filter((item) => item.title === title);
   console.log(`${nameOf(u)} <${u.email}>: post interactive lesson "${title}" (${Buffer.byteLength(html)} bytes)`);
@@ -124,7 +125,7 @@ if (cmd === "post-lesson") {
       p_title: title,
       p_content_html: html,
       p_idempotency_key: key,
-      p_description: "An interactive lesson on some, most, all, and the inferences they support.",
+      p_description: `Interactive lesson: ${title}`,
       p_notify: true,
     }),
   });

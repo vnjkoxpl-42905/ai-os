@@ -103,7 +103,7 @@ if output.stat().st_size > 500000:
 iframe_preview = here / "11-quantity-statements-sandbox-check.html"
 iframe_preview.write_text(
     '<!doctype html><meta charset="utf-8"><title>Sandbox check</title>'
-    '<iframe title="Interactive lesson" sandbox="allow-scripts" '
+    '<iframe title="Interactive lesson" sandbox="allow-scripts allow-forms" '
     'style="display:block;width:100%;height:100dvh;border:0" srcdoc="'
     + html_escape.escape(embedded, quote=True)
     + '"></iframe>',
