@@ -5,11 +5,13 @@ The reviewed example is `brainstorms/2026-09-28-recap-format/07-quantity-stateme
 ## What the reader experiences
 
 - A title names the concept. The first sentence explains it in ordinary language.
+- Student-facing text never calls the material a "concept lesson" or exposes internal draft, production, or design labels. Name the reasoning being taught. Check the generated HTML opening as well as the editable source.
 - The first example makes the distinction visible before formal symbols or combined inferences appear.
 - Each section teaches one move, asks a question, and explains the answer with a *different* example when possible.
 - Visuals do reasoning work: a changing count reveals a threshold; a group diagram reveals an overlap; a counterexample shows why a proposed inference fails.
 - The reader answers inline checks and a cumulative drill directly on the page. Feedback exposes the governing reason, not just a verdict.
 - The page feels like one lesson, not a stack of uniform cards. Typography, space, restrained color, and motion guide attention without competing with the argument.
+- When Joshua requests an expressive visual treatment, build a distinctive topic-specific design. Split the opening into clear teaching beats, make examples visible as facts, rules, and conclusions, and use color and motion to show the reasoning. Prediction quizzes should reveal why an answer follows. Do not treat a new palette on an unchanged prose layout as a redesign.
 - Every image has meaningful alternative text; controls work by keyboard; motion can be reduced; mobile stays within the viewport.
 
 ## Reasoning review

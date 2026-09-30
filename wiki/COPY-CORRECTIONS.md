@@ -26,6 +26,10 @@ surface that renders them is covered, including surfaces not written yet.
 
 ## Corrections
 
+### "Concept lesson" → the actual reasoning title (2026-09-30)
+
+The recap preview exposed an internal label above the student lesson. Joshua explicitly rejected it. Use a title such as "Facts, Rules, and What Follows" and headings that teach the reasoning. Keep production labels, version metadata, and design commentary in private records. Check the rendered HTML, since its shell can introduce wording absent from the Markdown source.
+
 ### "Recall Rephrase Colour" → "Read, Recall, Colour"
 The door's heading was hardcoded to a name the product does not have, one line
 under a chip reading "Read, Recall, Colour". "Rephrase" belongs to a different
