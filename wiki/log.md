@@ -7,11 +7,17 @@ aliases: []
 
 # Log
 
+## [2026-09-29] ship | Offline PrepTest reload shows a paused recovery state
+
+- When the account read fails on reload, the PrepTest page now checks for an unsynced device copy, reports that progress is paused, and offers an account-load retry. It does not advance or score from that copy. A missing account run also keeps the unsynced copy visible for recovery.
+- Seven focused break tests, typecheck, production build, lint with no errors, and diff check passed. LSAT U commit `a2ecdbc` reached GitHub `main`. Lovable showed Published with no changes waiting; a fresh signed-in live completed PrepTest report loaded. The backup recovery transition passed a focused test, not a live induced outage. Two-device and revoked-access acceptance remain open under #167.
+- Updated the [build sequence](../brainstorms/2026-09-28-lsatu-build-sequence.md) and app coverage matrix without closing #167.
+
 ## [2026-09-29] ship | Teacher Work parity and safer PrepTest breaks
 
 - Added owned guided and Activity assignments to the selected-student Work page while retaining the existing homework, TA, and classroom controls. Partial source failures are named; a failed TA refresh keeps only the selected student's cached rows.
 - Full PrepTest breaks now save a periodic account heartbeat. A failed break save freezes the device backup and blocks the next section until account acknowledgment; a retry preserves the remaining break time. Focused tests passed 26/26, typecheck and production build passed, and lint reported no errors.
-- LSAT U commit `5c35a15` reached GitHub `main`. Lovable reported “Your website was updated.” A fresh signed-in live teacher Work page showed the new section and the existing Activity mirror with its Unassign control. A live network-failure break walk, offline reload, second-device behavior, revoked access, and full two-account assignment parity remain open. The [build sequence](../brainstorms/2026-09-28-lsatu-build-sequence.md) now names these next checks; #166 and #167 remain open.
+- LSAT U commit `5c35a15` reached GitHub `main`. Lovable reported “Your website was updated.” A fresh signed-in live teacher Work page showed the new section and the existing Activity mirror with its Unassign control. A live network-failure break walk, second-device behavior, revoked access, and full two-account assignment parity remain open. The [build sequence](../brainstorms/2026-09-28-lsatu-build-sequence.md) names these next checks; #166 and #167 remain open.
 
 ## [2026-09-29] ship | My Work refresh keeps cached assignments visible
 
