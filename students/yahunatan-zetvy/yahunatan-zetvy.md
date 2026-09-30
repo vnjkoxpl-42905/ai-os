@@ -26,7 +26,8 @@ lifecycle: active
 
 ## Recap review
 
-- [Current recap for approval](../../brainstorms/2026-09-30-yahunatan-post-session-recap/conditional-reasoning-v5.html)
+- [Current recap for approval](../../brainstorms/2026-09-30-yahunatan-post-session-recap/conditional-reasoning-v6.html)
+- [Earlier V5 preview, retained as history](../../brainstorms/2026-09-30-yahunatan-post-session-recap/conditional-reasoning-v5.html)
 - [Earlier V4 preview, retained as history](../../brainstorms/2026-09-30-yahunatan-post-session-recap/conditional-reasoning-v4.html)
 - [Earlier V3 preview, retained as history](../../brainstorms/2026-09-30-yahunatan-post-session-recap/conditional-reasoning-v3.html)
 - [Earlier enriched recap preview, retained as history](../../brainstorms/2026-09-30-yahunatan-post-session-recap/conditional-reasoning-v2.html)

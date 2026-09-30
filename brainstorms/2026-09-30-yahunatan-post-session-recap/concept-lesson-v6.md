@@ -243,6 +243,8 @@ When opposite ideas sit in the same position, try a contrapositive to expose a m
 
 ## 06 | Shared beginnings do not create a chain
 
+Use only the rules given in this new example. Rules from earlier examples do not carry over.
+
 Compare a different pair of rules: **Every late application requires special approval. Every late application needs a supervisor's signature.** Both rules start at “late.” Neither starts where the other ends.
 
 <!-- SHARED-TRIGGER -->
@@ -276,7 +278,7 @@ Keep the scope of the fact too. **Some applications were submitted late. Every l
 
 ## 08 | Mix the moves
 
-For each problem, write what follows and name the move. If a proposed conclusion is not guaranteed, explain a situation that would make it false while keeping the given statements true.
+Use only the information given in each problem. For each problem, write what follows and name the move. If a proposed conclusion is not guaranteed, explain a situation that would make it false while keeping the given statements true.
 
 **Practice 1:** Every confidential file requires restricted storage. File K does not require restricted storage. What follows?
 

@@ -41,9 +41,9 @@ def quiz(number, question, choices, correct, answer):
 
 class Renderer(base.Renderer):
     def prose(self, block):
-        for label in ['Definition', 'Concrete example', 'Given fact', 'Match', 'Therefore', 'Why', 'What follows', 'New conditional']:
+        for label in ['Definition', 'Concrete example', 'Given fact', 'Rule', 'Match', 'Therefore', 'Why', 'What follows', 'New conditional']:
             prefix = '**' + label + ':**'
-            if block.startswith(prefix):
+            if block.startswith(prefix) and not (label == 'Rule' and ' → ' in block):
                 kind = 'definition' if label == 'Definition' else 'result' if label in ['Therefore', 'What follows', 'New conditional'] else 'given' if label == 'Given fact' else 'explanation'
                 return '<div class="teaching-line teaching-' + kind + '"><span class="teaching-label">' + label + '</span><p>' + base.inline(block[len(prefix):].strip()) + '</p></div>'
         if ' → ' in block and block.startswith('**') and ':**' in block:
@@ -110,6 +110,8 @@ base.VISUALS['HIDDEN-CHAIN'] = '''<figure class="hidden-chain"><span class="teac
 V6_CSS += r'''
 .teaching-line{margin:24px 0;padding:0 0 0 20px;border-left:3px solid #d2dced}.teaching-label{display:block;color:var(--blue);font-size:13px;line-height:1.5;font-weight:800;letter-spacing:.04em;margin-bottom:9px}.teaching-line p{margin:0;line-height:1.7}.teaching-definition{border-color:var(--blue);padding-top:12px;padding-bottom:12px;margin:28px 0 34px}.teaching-definition p{font-size:24px;line-height:1.55;font-weight:700}.teaching-result{border-color:var(--teal)}.teaching-result .teaching-label{color:var(--teal)}.teaching-result p{font-size:23px;font-weight:700}.teaching-given{border-color:var(--violet)}.teaching-given .teaching-label{color:var(--violet)}.application-proof,.hidden-chain{border-top:2px solid var(--blue);border-bottom:1px solid var(--line);padding:26px 0;margin:35px 0}.output-comparison{display:grid;grid-template-columns:1fr 1fr;gap:35px;padding:30px 0;border-top:3px solid var(--teal);border-bottom:1px solid var(--line)}.output-comparison>div+div{border-left:1px solid var(--line);padding-left:30px}.output-comparison strong{display:block;font-size:27px;line-height:1.4;color:var(--teal)}.output-comparison p{font-size:17px;line-height:1.65}.output-comparison figcaption{grid-column:1/-1}.chapter h3{margin-top:45px}.hidden-chain .route{flex-wrap:wrap}@media(max-width:600px){.teaching-definition p{font-size:21px}.teaching-line{padding-left:15px}.teaching-result p{font-size:21px}.output-comparison{grid-template-columns:1fr;gap:20px}.output-comparison>div+div{border-left:0;border-top:1px solid var(--line);padding-left:0;padding-top:25px}.output-comparison strong{font-size:25px}}
 '''
+
+V6_CSS += r'''@media(max-width:600px){.route{flex-direction:column;align-items:flex-start;gap:10px}.route .node{flex:0 1 auto;min-width:0;max-width:100%;overflow-wrap:anywhere}.route>.arrow{transform:rotate(90deg);margin-left:7px;font-size:34px}}'''
 
 def main():
     text, origin = source_text()

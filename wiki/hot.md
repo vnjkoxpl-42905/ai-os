@@ -13,14 +13,14 @@ Freshest working state; the first page `/pickup` reads. Rebuilt fresh in the 202
 
 The current LLM Wiki operating rules are [[system/schema/llm-wiki]]. The first authorized ingest example is [[wiki/sources/llm-wiki-pattern]], linked to [[wiki/concepts/compiled-knowledge]]. The wiki index now contains a complete fenced catalog maintained by `system/scripts/wiki-maintenance.py`; structural lint is separate from source-grounded semantic review.
 
-## Most recent (2026-09-30): Yahunatan recap V5 ready for review
+## Most recent (2026-09-30): Yahunatan recap V6 ready for review
 
-- Current draft is [Facts, Rules, and What Follows V5](../brainstorms/2026-09-30-yahunatan-post-session-recap/conditional-reasoning-v5.html), opened in Codex. The [canonical 2026-09-16 recap](../students/yahunatan-zetvy/recaps/2026-09-16-recap.md) contains its exact current V5 export block. Prior versions are preserved history.
-- Compared the actual content sequence with Some, Most, and All. The revised order is overall idea, facts, rules and complete conditions, applying a rule, compound negation, linking rules, invalid connections, mixed practice, then recorded assigned work. Definitions and their examples precede combination; the contrapositive is taught before the interactive fact cases use it.
-- Bold real arrows such as **L → R** replace code boxes. Full English conditions appear first in large open diagrams with semantic color and connecting lines. Seven typed checks, two objective quizzes and four mixed problems remain; typed explanations are honest self-comparison rather than automatic grading.
-- Actual browser checks passed the new facts-only check, four fact cases, four chain cases, wrong/correct objective feedback, all four practice solutions, keyboard comparison, pause/play, emulated reduced motion, and desktop/375px layout without horizontal overflow. Saved opening, arrow and narrow-arrow screenshots. Student links and publishing dry run passed. Package is self-contained, 79,009 bytes, with stable lesson ID.
-- The shared [Must Be True Core teleprompter](../corpus/lectures/logical-reasoning/must-be-true/core/2026-08-27-33013/teleprompter.html) remains separate and at its verified 189 moments. Its authored fact/rule explanation and concrete arrow wording were completed with V4; original captions and question bank remain intact.
-- Saved component-first teaching flow and clean bold notation to copy corrections and all four recap quality-bar copies. No internal production labels in student copy. Nothing posted; await approval of the exact current V5 package. Assigned work and task statuses are unchanged.
+- Current draft is [Facts, Rules, and What Follows V6](../brainstorms/2026-09-30-yahunatan-post-session-recap/conditional-reasoning-v6.html), open in Codex at the rule definition. The [canonical 2026-09-16 recap](../students/yahunatan-zetvy/recaps/2026-09-16-recap.md) contains its exact current V6 export block. Prior versions are preserved history.
+- Re-read the actual LSAT Lab transcript and teacher script. Facts and conditional rules now have prominently labeled plain definitions and examples. Applying a rule uses a case fact to prove a result about that same case. Linking rules produces a new conditional rule; adding a case fact to the chain is taught separately.
+- Four fact scenarios are explicitly explained before the selector: starting condition, absent result, result alone and absent starting condition. Added given/rule/match/therefore/why sequences and a hidden chain revealed through contraposition. General conditional relationships precede qualified should/may examples; scope and existence limits remain explicit. Independent examples do not carry prior rules forward.
+- New visuals show same-case application, rules-only versus rules-plus-fact outputs, and the hidden chain. Seven typed checks, two objective quizzes and four cumulative problems remain. Typed writing is self-comparison. Qualifier-mismatch practice was checked against its worked answer in the actual browser.
+- Independent conceptual/visual review passed. Generated JavaScript, clean notation, visual markers, seven-check structure and skill mirrors pass. Browser verified new definitions, outputs and hidden chain; corrected a long-chain mobile overflow and confirmed 375px page width. Current standalone package is 89,284 bytes. Student links and confirmed-account publishing dry run pass without writes.
+- Shared teacher lecture remains separate at its previously verified 189 moments; original sources are unchanged. Nothing posted, sent or newly assigned. Await approval of this exact V6 package. Task statuses are unchanged.
 
 ## Previous (2026-09-30): Yahunatan's conditional Must Be True schedule assigned
 
@@ -83,7 +83,7 @@ The sections below preserve earlier session snapshots. They are historical conte
 
 ## Open threads
 
-- Yahunatan: await approval of the V5 recap before posting the exact reviewed package. Current preview and primary record are linked above.
+- Yahunatan: await approval of the V6 recap before posting the exact reviewed package. Current preview and primary record are linked above.
 - RRC films: seeking is dead on production because the host ignores Range; hosting move is a P0 decision in [[tasks]] Next.
 - Testing Centre: copy decisions, P3 design notes, practice-test freshness filter, scoped-world question, pre-`776f69b` run repair. All in [[tasks]] Next.
 - Booking is not production-safe on cancellation or recent Google Calendar changes until the P1 batch is fixed and live-verified.
