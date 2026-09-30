@@ -13,7 +13,16 @@ Freshest working state; the first page `/pickup` reads. Rebuilt fresh in the 202
 
 The current LLM Wiki operating rules are [[system/schema/llm-wiki]]. The first authorized ingest example is [[wiki/sources/llm-wiki-pattern]], linked to [[wiki/concepts/compiled-knowledge]]. The wiki index now contains a complete fenced catalog maintained by `system/scripts/wiki-maintenance.py`; structural lint is separate from source-grounded semantic review.
 
-## Most recent (2026-09-30): Yahunatan's conditional Must Be True schedule assigned
+## Most recent (2026-09-30): Yahunatan recap V4 ready for review
+
+- Current draft is [Facts, Rules, and What Follows V4](../brainstorms/2026-09-30-yahunatan-post-session-recap/conditional-reasoning-v4.html), opened in Codex. The [canonical 2026-09-16 recap](../students/yahunatan-zetvy/recaps/2026-09-16-recap.md) contains its exact current export block; earlier versions remain history.
+- The expressive blue design uses spacious fact/rule/conclusion definitions and examples, direct fact buttons, animated inference paths, contrasting pop quizzes, six typed checks and four mixed problems. Definitions explain what is true and what must follow, with arrows explicitly running from condition to required result.
+- Actual browser checks passed fact and chain cases, objective feedback, practice navigation, keyboard fact buttons, pause/resume, emulated reduced motion, and desktop/375px layouts with no horizontal overflow. Student links and publishing dry run passed.
+- Shared [Must Be True Core teleprompter](../corpus/lectures/logical-reasoning/must-be-true/core/2026-08-27-33013/teleprompter.html) now has 189 moments, including an authored fact/rule explanation with an existence check and two concrete arrow-wording clarifications. Source-preservation/package checks and the new moment's expected-response reveal passed. Original captions and question bank remain intact.
+- Saved the explicit prohibition on internal labels such as "concept lesson" in student copy to native memory, copy corrections and all four recap-skill/quality-bar copies. Definitions and examples should stay together without a duplicated compact glossary.
+- Nothing posted; await Joshua's approval of this exact draft before publishing to Yahunathan through the lessons connector. Assigned work and task statuses are unchanged.
+
+## Previous (2026-09-30): Yahunatan's conditional Must Be True schedule assigned
 
 - Live account is Yahunathan. [Assignment log](../students/yahunatan-zetvy/assignment-log.md) records all seven assignments and IDs.
 - Four-question untimed guided drills unlock and are due 2026-09-30 (difficulty 1-2), 2026-10-01 (2-3), and 2026-10-03 (3 only). Friday 2026-10-02 is off.
@@ -40,7 +49,10 @@ Use the [build sequence](../brainstorms/2026-09-28-lsatu-build-sequence.md) as t
 - RRC closeout now retains exact-take recording/response evidence and requires account completion acknowledgment; failures retry before the report. Fresh live history failure blocked recording. The genuine section remains unfinished.
 - Teacher Activity Unassign is wired behind a backend capability. The source-preserving SQL draft passes 35 isolated checks but is not deployed; current live controls remain disabled. Required Lovable Cloud route confirmation is pending.
 - Six owned source ID sets matched in ordinary student/teacher reads. Six exact cross-owner identity UPDATE attempts returned zero rows against teacher-confirmed foreign fixtures. INSERT and teacher mutation attribution remain open.
-- Inactive timed control/receipt/LR-binding SQL passes 34 isolated checks; full parent/child writer, content manifest, lease/closeout contract, adapter adoption and two-client race acceptance are still needed. Drafts and acceptance notes reached GitHub main as `de5e1d3` and were imported by Lovable. This follow-up changes no frontend source; the published functional slice is `122eadf`.
+- Prepared inactive atomic PrepTest batch `bcd7eec1a05b5ef0619d3b07290f57a6ecc5234b` is verified on GitHub main through guarded push. It includes protected parent/LR/RC writes, actual grant locks, server lease/device/epoch rules, stable receipts, atomic LR journal/history and RC closeout, frozen content for 59 PTs/177 legs/222 source hashes, and unused client/parent/LR/RC adapters. Existing runners are not switched; no backend installation or activation occurred. The published functional slice remains `122eadf`.
+- Final integrated verification passed 309 tests across 11 files, 154 isolated writer assertions, 36 foundation assertions, 46 real PostgreSQL multi-connection assertions and 10 managed-role assertions. Typecheck, build, scoped lint, manifest freshness, diff checks and independent backend/client review passed. Native two-tab Web Locks retained one exact pending command and rejected the contender; synthetic browser state/tabs were cleared. Fresh read-only live ACL evidence led to corrected deployment SET membership and auth identity delegation. The isolated PostgreSQL cluster was stopped gracefully; diagnostic data was preserved.
+- Next: complete official runner/report/review integration and explicit legacy handling; confirm backend route and reviewed lease configuration; install and prove production lost-response, revoked in-flight writes and second-device acceptance. Full source/INSERT/teacher attribution and genuine Activity completion/revocation remain open. No ticket status was changed.
+- Lovable imported exact `bcd7eec` and reported preview ready. This inactive checkpoint was not published; live functional acceptance remains `122eadf`. See the app writer/client/child readiness documents and foundation verification record before continuing.
 - #166/#167 and the later functional tickets remain open; #178 design review remains deferred. No backend deployment or credit-spending action occurred. Browser interceptions/blocks and synthetic state were cleared.
 - Active isolated app checkout remains `C:/Users/Joshu/dev/lsatu-connected-experience`, branch `codex/connected-experience`; dev server exec session `14309` serves port 8080. This separate worktree was not moved with the primary applications. Unrelated outer repo edits remain preserved.
 
@@ -71,6 +83,7 @@ The sections below preserve earlier session snapshots. They are historical conte
 
 ## Open threads
 
+- Yahunatan: await approval of the V4 recap before posting the exact reviewed package. Current preview and primary record are linked above.
 - RRC films: seeking is dead on production because the host ignores Range; hosting move is a P0 decision in [[tasks]] Next.
 - Testing Centre: copy decisions, P3 design notes, practice-test freshness filter, scoped-world question, pre-`776f69b` run repair. All in [[tasks]] Next.
 - Booking is not production-safe on cancellation or recent Google Calendar changes until the P1 batch is fixed and live-verified.

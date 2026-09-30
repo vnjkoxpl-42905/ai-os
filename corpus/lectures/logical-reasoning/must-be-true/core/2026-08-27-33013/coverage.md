@@ -84,5 +84,6 @@ Source marked complete; review verification notes.
 - Instructor numerical frequency estimates treated as lecture emphasis rather than independently verified statistical fact.
 - Opening board visually verified by parent: A -> (not B AND C), but handwritten contrapositive says (B OR C) -> not A. Correct adaptation is (B OR not C) -> not A. Original screenshot must be captioned as containing missing negation; do not silently teach the typo.
 - Q2 screenshot09 verified by parent: stimulus says The relevant fields for these requirements are sociology, psychology, and education. Instructor at 00:39:32-00:39:42 limits fields only to experience and says doctorate/research any field; adaptation follows displayed requirements and explicitly flags spoken conflict.
+- 2026-09-30 authored teaching clarification: opening fact/rule definition and existence check added; steps 223 and 237 now identify the starting condition and what must follow. These additions are not attributed to the original instructor; original caption/source bytes remain unchanged.
 
 Mapping and file integrity were checked by the helper. Content completeness, image legibility, and logical correctness require human/agent review.

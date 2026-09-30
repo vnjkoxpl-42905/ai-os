@@ -42,3 +42,13 @@ Joshua rejected V3's flat presentation and asked for a vivid, creative design wi
 Firecrawl search and inspected page reads informed the design. [Ciechanowski's Cameras and Lenses](https://ciechanow.ski/cameras-and-lenses/) illustrates nearby interactive demonstrations and controllable animation. [Comeau's interactive Grid guide](https://www.joshwcomeau.com/css/interactive-guide-to-grid/) makes invisible relationships visible with guides and labeled parts. [Case's design patterns](https://blog.ncase.me/neurotic-neurons-design-patterns/) informed direct manipulation and immediate explanatory feedback. These are design references, not LSAT content sources, and their prose or layouts are not copied. Saved research is under `.firecrawl/conditional-inspiration-*`.
 
 The V4 draft preserves the nine-part teaching progression and original assigned-work sequence. A precision correction distinguishes the absence of an obligation to inspect from an obligation not to inspect; this applies the lesson's own complete-predicate standard.
+
+## 2026-09-30 V4 verification and wording clarification
+
+V4 is filed in the canonical student recap as its exact marked current export block. The builder regenerates the HTML from that block. The V3 block is preserved unchanged as history. Student routing points to V4. Publishing preflight accepted the package and stable marker without writing anything to the platform.
+
+Actual browser checks covered four fact states and four rule-linking states, objective quiz correction and success feedback, a typed explanation comparison, all four cumulative problems, direct fact buttons and keyboard activation, pause/resume, and emulated reduced-motion behavior. At 375 CSS pixels and the normal desktop width, page width equaled viewport width. Mobile opening and quiz screenshots, plus desktop proof, are saved beside the preview. Typed answers remain self-comparisons, not automatic reasoning grades.
+
+Joshua then requested a clearer fact definition, rejected vague "direction" shorthand, and asked for more space. The opening now integrates each definition with its example in one roomy step. Chapter 1 says that the arrow points from the condition to the required result.
+
+The shared teacher lecture at `corpus/lectures/logical-reasoning/must-be-true/core/2026-08-27-33013/` received a separately tracked authored clarification and Socratic existence check, plus two concrete arrow-wording corrections. Its private teaching view now contains 189 moments. Package/source-preservation checks passed, and the new moment and expected-response reveal were verified in the browser. The original captions and question bank were untouched. No recap, message, or new assignment was posted.

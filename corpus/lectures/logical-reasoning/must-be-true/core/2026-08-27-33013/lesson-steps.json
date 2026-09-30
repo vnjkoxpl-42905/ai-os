@@ -88,6 +88,44 @@
       "text": "When we think about the inference family, we're thinking: I'm accepting the information I'm reading.\n\nI'm not fighting a conclusion or looking for an assumption.\n\nThat's a different mindset from much of the test.\n\nHere, you accept the supplied facts, but it may be unclear what to do with them.\n\nThey're sitting there as information, without necessarily giving you an opinion to evaluate."
     },
     {
+      "section_id": "concept-1",
+      "authored_clarification": true,
+      "teacher_note": "Authored clarification added on 2026-09-30 at Joshua's request; not a source quotation.",
+      "id": "clarity-fact-rule-say",
+      "type": "say",
+      "title": "Separate a fact from a rule",
+      "text": "A fact tells us that something is true. For example, Bob is trained.\n\nA rule tells us what follows if a condition is met: if someone is trained, that person is eligible.\n\nThe rule does not tell us that Bob, or anyone else, is trained."
+    },
+    {
+      "section_id": "concept-1",
+      "authored_clarification": true,
+      "teacher_note": "Authored clarification added on 2026-09-30 at Joshua's request; not a source quotation.",
+      "id": "clarity-fact-rule-ask",
+      "type": "ask",
+      "title": "Ask the student",
+      "text": "If all I give you is 'Every trained person is eligible,' have I told you that anyone is trained?"
+    },
+    {
+      "section_id": "concept-1",
+      "authored_clarification": true,
+      "teacher_note": "Authored clarification added on 2026-09-30 at Joshua's request; not a source quotation.",
+      "id": "clarity-fact-rule-wait",
+      "type": "wait",
+      "title": "Wait for the answer",
+      "text": "Allow the student to distinguish the relationship from the existence of a trained person."
+    },
+    {
+      "section_id": "concept-1",
+      "authored_clarification": true,
+      "teacher_note": "Authored clarification added on 2026-09-30 at Joshua's request; not a source quotation.",
+      "id": "clarity-fact-rule-expected",
+      "type": "expected",
+      "title": "Expected response",
+      "text": "No. The rule tells us what follows if someone is trained. It does not establish that a trained person exists.",
+      "likely_mistake": "Treats the general rule as evidence that someone is trained.",
+      "recovery_prompt": "Could this rule still be true if there were no trained people? What fact would let us apply it to Bob?"
+    },
+    {
       "id": "step-003",
       "section_id": "concept-1",
       "type": "say",
@@ -1964,8 +2002,9 @@
       "section_id": "question-5",
       "type": "say",
       "title": "Language: connect a chain of requirements",
-      "text": "The order of words in the sentence isn't the direction of the arrow.",
-      "question_id": "Q5"
+      "text": "The word that comes first in the sentence does not automatically go before the arrow.\n\nPut the activity before the arrow and what it requires after it: practising law -> passing the bar.",
+      "question_id": "Q5",
+      "teacher_note": "Authored wording clarification on 2026-09-30; same logical claim, made concrete."
     },
     {
       "id": "step-224",
@@ -2078,8 +2117,9 @@
       "section_id": "question-5",
       "type": "say",
       "title": "Language: connect a chain of requirements",
-      "text": "Write the chain when it helps, read the arrows as requirements, and test each answer against the direction actually supported.",
-      "question_id": "Q5"
+      "text": "For each answer, ask what condition it starts with and what it claims must follow.\n\nCheck whether our rules support that move.\n\nLanguage requires conceptual thought; conceptual thought alone does not establish language.",
+      "question_id": "Q5",
+      "teacher_note": "Authored wording clarification on 2026-09-30; same logical claim, made concrete."
     },
     {
       "id": "step-238",
@@ -2130,5 +2170,32 @@
       "new": "I'm reading after a week produce as the delayed start."
     }
   ],
-  "socratic_revision_note": "Four additional authored facilitation checks target shared-trigger chaining, qualified conditional language, bookstore-to-purchaser scope, and indefinite extrapolation. All 23 expected-response steps include anticipated wrong turns and exact recovery questions. These are teaching facilitation, not source quotations; existing SAY content and order are unchanged."
+  "socratic_revision_note": "Four additional authored facilitation checks target shared-trigger chaining, qualified conditional language, bookstore-to-purchaser scope, and indefinite extrapolation. All 23 expected-response steps include anticipated wrong turns and exact recovery questions. These are teaching facilitation, not source quotations; existing SAY content and order are unchanged.",
+  "authored_clarifications": [
+    {
+      "date": "2026-09-30",
+      "source_status": "Authored pedagogical addition, not verbatim lecture or caption text",
+      "added_step_ids": [
+        "clarity-fact-rule-say",
+        "clarity-fact-rule-ask",
+        "clarity-fact-rule-wait",
+        "clarity-fact-rule-expected"
+      ],
+      "added_spoken_text": "A fact tells us that something is true. For example, Bob is trained.\n\nA rule tells us what follows if a condition is met: if someone is trained, that person is eligible.\n\nThe rule does not tell us that Bob, or anyone else, is trained.",
+      "wording_changes": [
+        {
+          "step_id": "step-223",
+          "old": "The order of words in the sentence isn't the direction of the arrow.",
+          "new": "The word that comes first in the sentence does not automatically go before the arrow.\n\nPut the activity before the arrow and what it requires after it: practising law -> passing the bar.",
+          "reason": "Replace abstract direction wording with the starting condition and what must follow."
+        },
+        {
+          "step_id": "step-237",
+          "old": "Write the chain when it helps, read the arrows as requirements, and test each answer against the direction actually supported.",
+          "new": "For each answer, ask what condition it starts with and what it claims must follow.\n\nCheck whether our rules support that move.\n\nLanguage requires conceptual thought; conceptual thought alone does not establish language.",
+          "reason": "Replace abstract direction wording with the starting condition and what must follow."
+        }
+      ]
+    }
+  ]
 }

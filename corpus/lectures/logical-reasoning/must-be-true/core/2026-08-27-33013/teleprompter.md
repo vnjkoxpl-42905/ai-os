@@ -26,6 +26,12 @@ We're talking about Must Be True. We might come across Must Be False at the same
 
 When we think about the inference family, we're thinking: I'm accepting the information I'm reading. I'm not fighting a conclusion or looking for an assumption. That's a different mindset from much of the test. Here, you accept the supplied facts, but it may be unclear what to do with them. They're sitting there as information, without necessarily giving you an opinion to evaluate.
 
+A fact tells us that something is true. For example, Bob is trained.
+
+A rule tells us what follows if a condition is met: if someone is trained, that person is eligible.
+
+The rule does not tell us that Bob, or anyone else, is trained.
+
 Must Be True and Must Be False have these nauseating difficulty curves. There are so many level-three, level-four, and level-five questions, and very few level-one questions. Why? The instructor's explanation is that these types are dominated by conditional logic. These questions can feel difficult because so many of them involve conditional logic. If conditional logic is a stumbling block, it's worth working on directly. Flashcards and conditional rephrasing are useful: look at a statement, then turn it into conditional form. Memorize the rules until using them becomes automatic. In the end, these questions are very doable. You just have to acquire a skill that people don't normally have. Conditional logic isn't necessarily an intuitive skill you brought into the LSAT. You acquire it through practice.
 
 Here's what they're testing us on. First and foremost: contrapositives. Look at the statement on the board. What is its contrapositive?
@@ -396,7 +402,9 @@ So A says language to conceptual thought. That's exactly the inference we predic
 
 Why might this have looked wrong? The passive wording can make the relationship seem reversed. Conceptual thought is required for language means the same thing as language requires conceptual thought.
 
-Compare: practising law requires passing the bar. Passing the bar is required to practise law. Both put passing the bar on the necessary side. Think of active and passive voice. LeBron dunks the ball. The ball is dunked by LeBron. The subject comes first in one version and later in the other, but the action hasn't reversed. Likewise, practising law requires passing the bar and passing the bar is required to practise law express the same requirement. The order of words in the sentence isn't the direction of the arrow.
+Compare: practising law requires passing the bar. Passing the bar is required to practise law. Both put passing the bar on the necessary side. Think of active and passive voice. LeBron dunks the ball. The ball is dunked by LeBron. The subject comes first in one version and later in the other, but the action hasn't reversed. Likewise, practising law requires passing the bar and passing the bar is required to practise law express the same requirement. The word that comes first in the sentence does not automatically go before the arrow.
+
+Put the activity before the arrow and what it requires after it: practising law -> passing the bar.
 
 Focus on what the statement identifies as required. Active and passive voice can rearrange the sentence without changing the logical relationship.
 
@@ -416,7 +424,11 @@ That is illegal negation. Language to conceptual thought doesn't support not lan
 
 The correct answer isn't complicated once the translation is right. We have an ordered chain, and A states its first-to-last requirement. Passive voice disguises the familiar relationship, but it doesn't change it.
 
-Some people thought A looked too easy. But it really isn't a hard structure once the translation is right: a chain in order, then the first-to-last requirement stated in passive voice. We should allow Must Be True to be easier when the logic is clear. The main difficulties are seeing the conditional relationships clearly and staying vigilant about the invalid alternatives. Write the chain when it helps, read the arrows as requirements, and test each answer against the direction actually supported.
+Some people thought A looked too easy. But it really isn't a hard structure once the translation is right: a chain in order, then the first-to-last requirement stated in passive voice. We should allow Must Be True to be easier when the logic is clear. The main difficulties are seeing the conditional relationships clearly and staying vigilant about the invalid alternatives. For each answer, ask what condition it starts with and what it claims must follow.
+
+Check whether our rules support that move.
+
+Language requires conceptual thought; conceptual thought alone does not establish language.
 
 ## Conditional fluency and careful inference
 
