@@ -1,5 +1,7 @@
 # Facts, Rules, and What Follows
 
+Conditional reasoning uses rules to work out what must follow from the information given.
+
 Treat the given statements as true. Your job is to find what else must be true.
 
 Before you combine statements, identify what each one says. A **fact** describes a case. A **rule** tells you what must follow if its condition is met.
@@ -16,6 +18,10 @@ A fact can also describe more than one case. **“Some applications were submitt
 For now, keep those claims separate from anything you might infer. “J was late” is given. Whether J requires special approval is a different claim. We need a rule connecting lateness to that requirement before we can prove it.
 
 <!-- FACT-SCOPE -->
+
+**Try it:** Some reports are missing pages. Does at least one report with missing pages exist? Must every report be missing pages?
+
+**Worked answer:** At least one report is missing pages. The statement establishes that such a report exists, but does not establish that every report is missing pages. Other reports could be complete.
 
 Keep the whole description. “Requires special approval” is different from “has received special approval.” Each could be a fact about an application, but a requirement does not establish that it has been fulfilled.
 
@@ -40,7 +46,7 @@ The rule alone does not establish that any application was late. It tells us wha
 
 A rule can tell us what someone **should** do or what they **may** do. That is different from telling us what they actually did.
 
-Suppose **every damaged item should be inspected**. If this item is damaged, it should be inspected. We cannot conclude it has been inspected. If it is not true that an item should be inspected, it cannot be damaged under this rule. But “has not been inspected” is not the same as “it is not true that it should be inspected.” An inspection could be overdue.
+Suppose **every damaged item should be inspected**. If this item is damaged, it should be inspected. We cannot conclude it has been inspected. But “has not been inspected” is not the same as “it is not true that it should be inspected.” An inspection could be overdue.
 
 Suppose **a visitor may enter the archive only if the visitor has a badge**. A badge is necessary for permission to enter. The rule is **May enter → Has a badge**. Without a badge, the visitor does not have permission to enter under this rule. Having a badge alone does not establish permission; another requirement might still apply.
 
@@ -64,8 +70,6 @@ Now combine a rule with a fact that meets its condition.
 
 The fact supplies the condition. The rule supplies the connection to the result. Together, they prove the conclusion.
 
-<!-- FACT-LAB -->
-
 **Try it:** Every file marked confidential requires restricted storage. This file is marked confidential. What follows? Does the rule alone establish that a confidential file exists?
 
 **Worked answer:** This file requires restricted storage. The fact establishes that this particular file is confidential. The rule alone establishes a requirement for any confidential file, without establishing that any such file exists.
@@ -80,9 +84,13 @@ There are two ways to use the application policy. A late application must requir
 
 The contrapositive states the same rule from its other end. Reverse the direction **and negate both complete ideas**. Simply reversing the arrow would say that requiring approval proves lateness. The original policy never said that.
 
+Keep any qualifier inside the condition when you negate it. For “damaged → should be inspected,” the contrapositive begins with “it is not true that it should be inspected,” and concludes “not damaged.” Whether the item has actually been inspected is a separate claim.
+
 Simply negating both ideas without reversing would also add something: “not late → does not require approval.” An on-time application could require approval for a different reason. That situation does not break the policy.
 
 The only combination the original rule rules out is **late, but does not require approval**. The other three combinations can fit the rule.
+
+<!-- FACT-LAB -->
 
 <!-- CASE-GRID -->
 
