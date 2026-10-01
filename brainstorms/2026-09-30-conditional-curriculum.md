@@ -18,6 +18,10 @@ Date: 2026-09-30 · Goal: Define a complete conditional-reasoning curriculum tha
 - Confirmed assignment scopes: whole curriculum, area, and specific skill. These belong to one shared curriculum rather than separate disconnected courses.
 - Accepted initial six-area skill map: understand rules; translate language; use rules with facts; connect rules; handle complex conditionals; solve LSAT questions. This is a coverage map, not yet a fixed learning order.
 - Quantifier reasoning (some, most, all) is a subsequent phase after the conditional phase in the full pathway, and must also be independently assignable.
+- Assignment has two independent dimensions: scope (general practice or specific area/skill) and difficulty. All intended difficulty levels must exist for both general practice and specific skills.
+- Translation coverage explicitly includes Groups 1, 2, 3, and 4, each with its own difficulty progression and targeted assignment. Group 3 examples never limit the scope to that group.
+- Confirmed difficulty labels: Beginner, Medium, Advanced. Three levels apply to general practice and each specific skill; Expert is not a fourth assignment level.
+- Timing is available for Medium and Advanced work. Joshua said "medium and expert" after selecting three levels; Jay 2 provisionally maps expert to Advanced, without adding a fourth level.
 - Stage definitions, placement criteria, progression criteria, and the curriculum's home remain undecided.
 
 ## Q&A log
@@ -79,6 +83,31 @@ Date: 2026-09-30 · Goal: Define a complete conditional-reasoning curriculum tha
 - Not decided: What conditional readiness is required for direct quantifier assignment; distinction between introductory universal conditional language and the later quantifier phase.
 - Q10 mastery policy remains unanswered: this message resolves quantifier sequencing, not automatic advancement criteria.
 
+### Q11 and Q12 clarification: Scope and difficulty are separate
+- Asked: Conditional readiness check before direct quantifier assignment; mastery checks controlling or recommending advancement.
+- Captured: Joshua invoked wait-what and clarified the core assignment requirement: medium general practice, harder/expert general practice, beginner practice for one component, and medium/expert practice for that same specific skill. "all of these levels for both the general and the specifics."
+- Decision: Scope and difficulty are independent assignment choices. Narrow assignment is not synonymous with beginner work; general assignment is not synonymous with the full beginning-to-end pathway.
+- Correction: Jay 2 moved prematurely to readiness/advancement policies before explaining the assignment model. Explain the general/specific by difficulty grid first.
+- Unanswered: Neither a readiness check nor an automatic advancement/remediation policy is approved. Do not infer approval from the interrupted "Yes ... no" wording.
+- Still unresolved: Exact level labels and number; observable difficulty definitions for each skill; general-practice composition.
+
+### All four language groups explicitly confirmed
+- Captured: Joshua clarified that Group 1, Group 2, Group 3, and Group 4 language must all be covered; Group 3 alone is insufficient. He asked to continue grilling.
+- Decision: Each of the four language groups is a targetable part of translation with the full intended range of difficulty levels.
+- Correction: Earlier Group 3 examples were illustrations, not the complete list of translation subsections.
+
+### Q13: Three difficulty levels
+- Asked: Use four levels (Beginner, Medium, Advanced, Expert), or another distinction?
+- Captured: "beginner, medium, and advanced. I would say three is enough."
+- Decision: Exactly three difficulty levels: Beginner, Medium, Advanced. Earlier beginner-to-expert descriptions refer to coverage ambition, not four level labels.
+- Q14 remains open: Define reasoning/language difficulty versus timed fluency as separate controls.
+
+### Q14: Timing at higher difficulty levels
+- Asked: Should timing be separate from difficulty so the same Medium work can be untimed or timed?
+- Captured: "we can add timing to the medium and expert difficulty."
+- Decision: Timing can be added to Medium and the highest level. Given Q13's explicit three-level decision, "expert" is provisionally read as Advanced; no fourth level added.
+- Not settled: Default timing, durations, time effects on progression, or whether Beginner timing is prohibited. Do not infer these policies from availability at higher levels.
+
 ## Existing materials: Local inventory
 
 ### Scope correction during expanded inventory
@@ -111,5 +140,6 @@ Date: 2026-09-30 · Goal: Define a complete conditional-reasoning curriculum tha
 - Define observable expert outcome and conditional curriculum boundaries -> Joshua, with proposed criteria from Jay 2.
 - Define readiness for direct quantifier assignment and the treatment of universal conditional wording -> Joshua.
 - Define subsection contents, mastery checks, and advancement rules -> Joshua.
+- Define concrete Beginner/Medium/Advanced criteria per skill and the relation of timing to difficulty -> Joshua.
 - Define intended curriculum home, placement, advancement, and remediation -> Joshua, after scope is settled.
 - Verify live availability of selected materials -> live systems when needed; local inventory completed.
