@@ -1,7 +1,7 @@
 ---
 type: draft
 subject: LR Flaw batch 02, part A, 20 slots
-status: draft, not loaded
+status: loaded 2026-10-01
 created: 2026-10-01
 ---
 
