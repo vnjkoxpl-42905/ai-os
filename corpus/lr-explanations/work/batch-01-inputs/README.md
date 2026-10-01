@@ -2,7 +2,7 @@
 
 Generated from the 40 drafts in `corpus/lr-explanations/drafts/batch-01-flaw-part-a.md` and `batch-01-flaw-part-b.md`, the designated app bank in `projects/lsatu-wt-glossary/public/data`, and the read-only database pull dated 2026-09-28. Run `python system/scripts/lr-explanations/generate_batch01_sql.py` to refresh after any draft or source changes.
 
-**Status: draft, not approved or loaded.** The manifest lists 40 per-slot transactions. Each uses exact current database text guards, inserts only explanation rows, breakdown steps, and choice notes, and aborts if the relevant database rows have changed. `PT102-S3-Q14` and `PT119-S2-Q24` retain their four existing breakdown steps and receive only five missing choice notes. No question, choice, answer key, or existing explanation text is changed.
+**Status: approved and loaded 2026-10-01 (see wiki/log.md).** The manifest lists 40 per-slot transactions. Each uses exact current database text guards, inserts only explanation rows, breakdown steps, and choice notes, and aborts if the relevant database rows have changed. `PT102-S3-Q14` and `PT119-S2-Q24` retain their four existing breakdown steps and receive only five missing choice notes. No question, choice, answer key, or existing explanation text is changed.
 
 Preexisting bank/database text disagreements found during preflight:
 
