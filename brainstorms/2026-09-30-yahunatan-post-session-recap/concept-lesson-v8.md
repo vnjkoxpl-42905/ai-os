@@ -34,9 +34,9 @@ Treat the statements given in an inference question as true. Use them to prove t
 
 ## 01 | Facts state what is true
 
-**Definition:** A fact tells us something is true about a particular case or group. A fact given in the question is treated as true. A fact you infer must be proved from the given information.
+A fact supplied by the question is your starting point. A new fact needs proof from what you were given.
 
-**Concrete example:** “Mira is trained.” That tells us something about Mira. It does not tell us whether other people are trained, whether Mira has a badge, or how training relates to badges.
+“Mira is trained” establishes training for Mira. It does not establish anyone else's training, a badge for Mira, or a relationship between training and badges.
 
 A fact can be negative: **“Niko does not have a badge.”** It can describe a group: **“Some staff members are trained.”** That last statement establishes at least one trained staff member, without establishing that every staff member is trained.
 
@@ -48,9 +48,9 @@ A fact can be negative: **“Niko does not have a badge.”** It can describe a 
 
 ## 02 | Rules connect conditions
 
-**Definition:** A conditional rule tells us what must be true if a condition is met. It applies to every case that meets that condition. A rule connects conditions; it does not identify a particular case that meets them.
+A conditional rule covers **every case that meets its starting condition**. It does not establish that any such case exists.
 
-**Concrete example:** “Everyone who is trained has a badge.” This connects being trained with having a badge. It says that every trained person actually has a badge.
+In **“Everyone who is trained has a badge,”** training is the starting condition. Having a badge is the result that must follow for that same person.
 
 <!-- RULE-PARTS -->
 
@@ -168,7 +168,7 @@ The contrapositive states the same rule. It does not deny the original rule, and
 
 The rule is **Trained → Has a badge**. The rule stays the same. Change only what we know about the person.
 
-### Fact 1: The person is trained
+#### Fact 1: The person is trained
 
 **Match:** The original starting condition is met.
 
@@ -176,7 +176,7 @@ The rule is **Trained → Has a badge**. The rule stays the same. Change only wh
 
 **Why:** Every trained person has a badge under this rule. Apply it to this person.
 
-### Fact 2: The person has no badge
+#### Fact 2: The person has no badge
 
 **Match:** The required result is absent. This meets the contrapositive's starting condition.
 
@@ -184,7 +184,7 @@ The rule is **Trained → Has a badge**. The rule stays the same. Change only wh
 
 **Why:** A trained person without a badge would contradict the rule.
 
-### Fact 3: The person has a badge
+#### Fact 3: The person has a badge
 
 **Match:** We have only the original result. The rule does not say that everyone with a badge is trained.
 
@@ -192,7 +192,7 @@ The rule is **Trained → Has a badge**. The rule stays the same. Change only wh
 
 **Why:** An untrained visitor with a badge fits the rule. A trained person with a badge also fits it.
 
-### Fact 4: The person is not trained
+#### Fact 4: The person is not trained
 
 **Match:** The original starting condition is absent. The rule only guarantees badges for trained people.
 
@@ -215,7 +215,13 @@ You do not have to write every contrapositive automatically. If the fact clearly
 
 ### Carry a negative fact through a chain
 
-You can also use the chain's contrapositive: **Does not need signature → Does not require approval → Was not late**. A fact denying the final result can be carried backward through both connections.
+Return to the two application rules: **Submitted late → Requires special approval → Needs a supervisor's signature**.
+
+Now add a different fact: **Application R does not need a supervisor's signature.** If R required special approval, the second rule would require a signature. So R does not require approval. If R were late, the first rule would require approval. So R was not late.
+
+**Contrapositive chain:** Does not need signature → Does not require approval → Was not late.
+
+**Therefore:** Application R does not require special approval and was not late.
 
 ### A contrapositive can uncover the match
 
@@ -239,7 +245,7 @@ Again, that is a general rule. It does not prove that someone lacks a badge. If 
 
 <!-- HIDDEN-CHAIN -->
 
-If the matching condition is not visible, try a contrapositive. Here, rewriting **Trained → Has a badge** as **No badge → Not trained** creates the connection. If the match is already visible, link the rules directly.
+If the middle condition already matches, link the rules directly. You only need to restate a rule when doing so reveals a connection you could not use as written.
 
 ## 08 | Translate the complete claim
 
@@ -267,11 +273,11 @@ A rule can tell us what someone **should** do or what they **may** do. That is d
 
 Suppose **every damaged item should be inspected**. If this item is damaged, it should be inspected. We cannot conclude it has been inspected. But “has not been inspected” is not the same as “it is not true that it should be inspected.” An inspection could be overdue.
 
+<!-- MODALITY -->
+
 For **Damaged → Should be inspected**, the contrapositive starts with “it is not true that it should be inspected” and concludes “not damaged.” Negate the complete claim about what should happen. Whether the item has actually been inspected is a different claim.
 
 Suppose **a visitor may enter the archive only if the visitor has a badge**. A badge is necessary for permission to enter. The rule is **May enter → Has a badge**. Without a badge, the visitor does not have permission to enter under this rule. Having a badge alone does not establish permission; another requirement might still apply.
-
-<!-- MODALITY -->
 
 The rule concerns permission. It does not prove that someone physically cannot enter without permission. Keep the same kind of claim throughout your reasoning: a requirement stays a requirement, advice stays advice, and permission stays permission.
 
@@ -305,6 +311,8 @@ Negating a compound condition changes **AND to OR**, or **OR to AND**, while neg
 
 Ask what you have: a fact that can activate a rule, or two rules that can connect? The matching condition determines the move.
 
+Keep the scope of the fact too. **Some applications were submitted late. Every late application requires special approval. Therefore, some applications require special approval.** We cannot change “some” to “all.” The rule covers every late case, but the fact establishes only at least one. Other applications could be on time and require no special approval.
+
 | What you have | The move | What to check |
 | --- | --- | --- |
 | A fact meeting a rule's starting condition | Apply the rule forward | Does the whole fact match the whole condition? |
@@ -314,27 +322,25 @@ Ask what you have: a fact that can activate a rule, or two rules that can connec
 
 To disprove a proposed inference, keep every given statement true and make the proposed conclusion false. For example, an on-time application that requires approval fits **Late → Requires approval**, but disproves **Requires approval → Late**.
 
-Keep the scope of the fact too. **Some applications were submitted late. Every late application requires special approval. Therefore, some applications require special approval.** We cannot change “some” to “all.” The rule covers every late case, but the fact establishes only at least one. Other applications could be on time and require no special approval.
-
 ## 10 | Mix the moves
 
 Use only the information given in each problem. For each problem, write what follows and name the move. If a proposed conclusion is not guaranteed, explain a situation that would make it false while keeping the given statements true.
 
-**Practice 1:** Every confidential file requires restricted storage. File K does not require restricted storage. What follows?
+**Practice 1:** Every certified instructor has a license. Every person who is not a certified instructor requires supervision. Instructor Q has no license. What follows? Show the connection between the rules.
 
-**Worked answer:** File K is not confidential. Use the contrapositive: does not require restricted storage → not confidential.
+**Worked answer:** Q is not a certified instructor and requires supervision. Contrapose the first rule: no license → not a certified instructor. That result meets the second rule's starting condition. The chain is no license → not certified → requires supervision. Q's fact activates it.
 
-**Practice 2:** Every late application requires special approval. Every application requiring special approval needs a supervisor's signature. Application J was late. What follows?
+**Practice 2:** A visitor may enter a lab only if the visitor has a pass or an invitation. Visitor S has no pass and no invitation. What follows? If S had an invitation, would that alone establish permission to enter?
 
-**Worked answer:** Application J requires special approval and needs a supervisor's signature. Apply the first rule to the fact, then carry its result through the second rule.
+**Worked answer:** S may not enter. Permission requires at least one of the two alternatives, and S has neither. An invitation alone would not prove permission: the rule says what permission requires, not that meeting this requirement is sufficient.
 
-**Practice 3:** Every panel member has training. Every panel member has a security badge. Lee has training. Must Lee have a badge?
+**Practice 3:** Every flagged expense requires manager approval. Every expense that has received manager approval may be reimbursed. Expense E is flagged. Must E be eligible for reimbursement?
 
-**Worked answer:** No. Lee could be a trained person outside the panel who has no badge. The two rules share a starting condition. Training alone does not establish that Lee meets it.
+**Worked answer:** No. E requires approval, but nothing establishes that it has received approval. It could still be waiting for the manager. The second rule's starting condition is not established, so the two phrases cannot serve as a matching middle condition.
 
-**Practice 4:** A document may be released only if it has been reviewed and authorized. Document M has not been reviewed. What follows? Must it also lack authorization?
+**Practice 4:** Every archive worker knows the catalog. Every archive worker has a key. Sam knows the catalog. Must Sam have a key? What changes if you also learn that Sam is an archive worker?
 
-**Worked answer:** Document M may not be released. One missing requirement is enough. Whether it has authorization remains open; it could have authorization but lack review.
+**Worked answer:** Catalog knowledge alone does not prove Sam has a key. Sam could know the catalog without working in the archive and have no key. If Sam is an archive worker, both rules apply to Sam: Sam knows the catalog and has a key. Shared starting conditions support both results for a matching case, without connecting the results to each other.
 
 ## 11 | Take this into your assigned work
 

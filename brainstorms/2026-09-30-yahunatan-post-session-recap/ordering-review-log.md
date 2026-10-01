@@ -18,3 +18,8 @@ Claude Code was launched with the requested V7 ordering brief, restricted Read/G
 ## 2026-09-30: completed Claude review via new skill
 
 Observed model `claude-opus-5-5`; CLI 2.1.280. Result status completed; verdict REVISE. Full response and host disposition saved in `claude-v7-review.md`. Runner evidence: `C:/Users/Joshu/AppData/Local/Temp/claudex-vh5uifj6/result.json`. The runner saved the valid result before console printing failed on Windows encoding. No additional round or V7 change. Coverage excludes live visuals and the voice skill/lecture sources.
+
+
+## 2026-09-30: V8 implemented and approved
+
+Implemented approved sequence, repaired prerequisites, synchronized source and rendered headings, added four fresh transfer questions, and preserved assignment wording. First Claude pass REVISE, second APPROVED using claude-opus-5-5. Full responses: claude-v8-review-round1.md and claude-v8-review.md. Final evidence C:/Users/Joshu/AppData/Local/Temp/claudex-tvtluvke/result.json. Source hash deed15e26aa5d5f622b882789a4fb74777002608fcaa9700984c1ee6e26a8007; HTML hash 4439e51e7033252556a33aa4c0927deb287288e47cb4c805ae67e38fbe8cbd98. Canonical V8 export source filed in student recap. Static source/package checks, JS syntax, publisher dry-run passed. Live visual verification blocked by browser policy. No publication. Two optional low-priority suggestions retained without post-review edits.

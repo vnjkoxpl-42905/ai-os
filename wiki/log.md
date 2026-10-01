@@ -1570,3 +1570,8 @@ Managed backend Activity revocation, atomic timed writes and attempts attributio
 ## [2026-09-30] Skills audit defects repaired
 
 Fixed validation of inverse runtime-name pairs, valid path relocation and remote IDs. Replaced symlink-only smoke with portable static copy checks. Catalog separates 15 support-only folders and corrects activation wording; README Mac path repaired. Audit v2 mirrors/resources restored; lint and doctor runtime/privacy instructions corrected; written-explanation transcription uses current browser tools and valid set-log location. Main validator, 3 regression tests and static smoke pass; Claudex offline dry run has zero changes/conflicts. No skill folders deleted or live model/browser workflow launched. Repair receipt: audits/skill-repairs-2026-09-30-b4daa3.md.
+
+
+## [2026-09-30] lesson revision | Conditional reasoning V8
+
+Revised Yahunatan 2026-09-16 recap into V8: definitions, applying, linking, adding facts, invalid moves, contraposition, qualifiers and mixed practice. Canonical current_student_version is v8; previous blocks retained. [Preview](../brainstorms/2026-09-30-yahunatan-post-session-recap/conditional-reasoning-v8.html) and [Claude approval](../brainstorms/2026-09-30-yahunatan-post-session-recap/claude-v8-review.md). Claude Opus 5.5 source review approved. Package/preflight passed; live visual verification unavailable. Draft only, not posted.
