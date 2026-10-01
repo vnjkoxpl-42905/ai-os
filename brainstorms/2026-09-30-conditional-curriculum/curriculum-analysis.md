@@ -125,6 +125,8 @@ Concrete remaining audit targets:
 
 ## Proposed teaching and practice for every skill
 
+Joshua's subsequent bootcamp direction is developed in the [Intro to LR inspection and conditional bootcamp adaptation](bootcamp-inspection.md). That report owns the delivery/component mapping; this page owns curriculum content and teaching order.
+
 Joshua confirmed two assignment choices for every specific skill: a complete teaching-and-practice sequence, and a separately assignable practice drill. Preserve existing covered Activities. Each sequence teaches before checking: explanation, worked example, guided attempt, independent practice, explanation of errors, then fresh transfer. These are draft units, not published resources. No advancement threshold is imposed.
 
 The table expands the earlier 16-step map where separate assignment requires smaller units. **Reuse** means the local inventory verifies relevant content, not that targeted assignment already exists. **Gap** means dedicated packaging or sufficient fresh coverage is unverified. B/M/A are proposed Beginner/Medium/Advanced demand variations. Optional timing belongs to Medium and Advanced.
