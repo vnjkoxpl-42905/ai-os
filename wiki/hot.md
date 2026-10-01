@@ -130,3 +130,8 @@ The sections below preserve earlier session snapshots. They are historical conte
 
 <!-- brain-automation-alerts:start -->
 <!-- brain-automation-alerts:end -->
+
+### Latest study-tools release checkpoint (2026-10-01)
+
+On Joshua's explicit publication instruction, study-tools commit 72df696 reached GitHub main, Lovable imported the exact SHA, and free deployment d46bba89-061f-4264-8b59-f4814ca1ed39 reached lsatprep.study. Fresh HTTP shell and new LR/RC assets verified on the custom domain. Production build SHA is unknown; new entry index-Dh0ahrE2.js and build time 2026-10-01T09:42:34.167Z prove refreshed delivery together with feature-code checks. Earlier unpublished-study status is superseded. Narrow-pane authenticated browser interaction remains blocked/unverified. AI remains disabled; #179 and broader audit remain open.
+
