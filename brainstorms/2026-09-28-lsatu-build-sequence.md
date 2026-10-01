@@ -262,3 +262,7 @@ Fourteen functional acceptance tickets remain open (#166 through #180, excluding
 
 Supersedes earlier unpublished status for the #179 study-tool slice only: explicit user publication instruction, guarded push 72df696, exact GitHub/Lovable import verification, free deploy d46bba89-061f-4264-8b59-f4814ca1ed39. lsatprep.study serves new entry index-Dh0ahrE2.js and new LR/RC study-tool chunks, HTTP 200 with actor-remount/bookmark/current-question-clear code verified. Runtime SHA is unknown; authenticated narrow-pane interaction remains unverified. Whole #179 and remaining audit acceptance stay open. No AI activation or paid Lovable agent turn occurred.
 
+
+### Parallel source checkpoint (2026-10-01)
+
+Two substantial isolated slices are locally committed, not published: Progress/History #173 at 923cab4 (after 7e12940), and prescribed-week/account settings #180 at aa4977d. Claude observed Opus 5.5 medium completed two bounded corrections; Codex made final actor-epoch and late-builder preservation fixes. Focused host tests, final typechecks and builds passed. Independent Codex agent reviewed final production source. Progress has approved Opus inspections; final mixed week/settings cross-provider inspection remains blocked by Claude session quota and unsupported configured Codex CLI model. Browser/live acceptance, integration and guarded release remain required. No database mutation, Lovable credits or ticket closure. All fourteen functional acceptance tickets and deferred #178 remain open. Source release count unchanged.

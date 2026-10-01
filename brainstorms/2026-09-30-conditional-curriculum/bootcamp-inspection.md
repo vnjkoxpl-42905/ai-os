@@ -82,7 +82,7 @@ The [28-row teaching/practice map](curriculum-analysis.md) specifies smaller ope
 
 ## Difficulty and scope remain independent
 
-Proposed full-path progression, awaiting Joshua's answer: learn foundations across the skills first, then revisit them through Medium and Advanced passes. An alternative is to complete all three levels within each skill before continuing. Neither is recorded as approved.
+Joshua approved the recommended progression on 2026-10-01 and explicitly requested execution: learn foundations across the skills first, then revisit them through Medium and Advanced passes. Complete the conditional passes before the following quantified phase. Targeted work remains independently accessible.
 
 At every level, teachers can assign a specific skill directly. Beginner Group 1 work does not become mixed conditional practice merely because it sits inside a bootcamp. Advanced Group 1 work names any compound or chaining prerequisites instead of surprising the student with untaught operations.
 
@@ -107,11 +107,11 @@ Verified local conditional assets include 62 General items, 40 hub items, the fo
 
 | Skill stage | Current status |
 |---|---|
-| Scope/interview | Independent study, scopes, three levels, two-part skill package and Intro-model direction recorded; full-path difficulty progression and feedback unanswered |
+| Scope/interview | Independent study, scopes, three levels, two-part skill package, Intro-model direction and foundation-first progression approved. Exact mastery/time thresholds remain unspecified. |
 | Content intake/audit | Existing inventory available; item-level coverage and complete per-module sufficiency remain open |
-| Inspection before code | This concrete adaptation report is drafted; course/module implementation approval not yet recorded |
-| Build and module checks | Not started; no app files written |
-| Polish | Not started |
+| Inspection before code | Joshua approved the concrete recommendation and execution on 2026-10-01. |
+| Build and module checks | Implementation in isolated checkout `C:/Users/Joshu/dev/ai-os-projects/lsatu-conditional-bootcamp`, baseline `72df696`. 30 lessons, 30 guided examples, 270 original questions. Content and integration reviews performed; final fixes/checks in progress. |
+| Polish | Browser fixture checks performed for lessons, exact teacher targeting, reload, assistance, timing, journal, failed-save retry, account isolation and 390/600/768/1440 widths. Uses local test actors and simulated cloud, not real student assignments. |
 | Final parity | Not performed; historical quality/product/design anchors are missing, so no final parity certification is claimed |
 
 The [bootcamp-builder skill](C:/Users/Joshu/.agents/skills/bootcamp-builder/SKILL.md) was found and its stale template/intake/checkpoint routes repaired. Its explicit quality rules remain: teach before calibration, real lesson introductions, explanations that teach, shared design, meaningful progress, no dead controls and no invented analytics. Missing historical references were reported rather than reconstructed or treated as read.
