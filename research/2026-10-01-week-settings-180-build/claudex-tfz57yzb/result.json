@@ -1,0 +1,22 @@
+{
+  "status": "running",
+  "mode": "build",
+  "provider": "claude",
+  "roles": {
+    "host": "codex",
+    "planner": "codex",
+    "reviewer": "claude",
+    "builder": "claude",
+    "inspector": "codex"
+  },
+  "repo": "C:\\Users\\Joshu\\dev\\lsatu-week-settings-180",
+  "plan": "C:\\Users\\Joshu\\dev\\ai-os\\research\\2026-10-01-week-settings-180-work-order.md",
+  "plan_sha256": "be8308292f11764d2a5ba6f921994155205ba3d8843cfc9142e4a583af9f005d",
+  "requested_model": "claude-opus-5-5",
+  "requested_effort": "medium",
+  "base": "72df6964df9177bc5971cac9fdb4512d0b545a17",
+  "snapshot": null,
+  "previous": "C:/Users/Joshu/dev/ai-os/research/2026-10-01-week-settings-180-build/claudex-945mk94f/result.json",
+  "started_at": 1790851701.1482043,
+  "artifacts": "C:\\Users\\Joshu\\dev\\ai-os\\research\\2026-10-01-week-settings-180-build\\claudex-tfz57yzb"
+}

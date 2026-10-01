@@ -1,5 +1,5 @@
 {
-  "status": "running",
+  "status": "completed",
   "mode": "build",
   "provider": "claude",
   "roles": {
@@ -15,8 +15,200 @@
   "requested_model": "claude-opus-5-5",
   "requested_effort": "medium",
   "base": "72df6964df9177bc5971cac9fdb4512d0b545a17",
-  "snapshot": null,
+  "snapshot": {
+    "base": "72df6964df9177bc5971cac9fdb4512d0b545a17",
+    "files": [
+      {
+        "path": "public/data/_bank.generated.json",
+        "kind": "file",
+        "sha256": "fb5b9fd3ce0201a0d485ed8c413d8853e42fdcf6de70bda0dab5cb7e41167c47"
+      },
+      {
+        "path": "public/data/finder-address-index.json",
+        "kind": "file",
+        "sha256": "3f8216dacc9a968b6e4e19da90472b8591b32204f912dcf97ed87459b5406007"
+      },
+      {
+        "path": "src/components/classroom/PrescribedWeek.test.tsx",
+        "kind": "file",
+        "sha256": "8ec340faf5acd2fc5894ed5c365dd0c20e4004438e4b0068673d7a9284a3837f"
+      },
+      {
+        "path": "src/components/classroom/PrescribedWeek.tsx",
+        "kind": "file",
+        "sha256": "eae784f7816973fa390a219506be5b514ce19650b7ea776d95ee3a9e4b8f05e6"
+      },
+      {
+        "path": "src/components/classroom/account/ProfileSection.tsx",
+        "kind": "file",
+        "sha256": "d07c041e1032e6a230c5ec603c99cc165a7eb6403a00158ab6a06ba55241fc46"
+      },
+      {
+        "path": "src/components/classroom/account/StudySettingsSection.test.tsx",
+        "kind": "file",
+        "sha256": "7b8d552a623a40d7144bf996ebfe3e70ba08be78d1b85605f3b6724b53ae06e5"
+      },
+      {
+        "path": "src/components/classroom/account/StudySettingsSection.tsx",
+        "kind": "file",
+        "sha256": "cd225c3774cbcd8f8f258c69c7fb5a94f6b9e42a87f933573aec40b96f82c4b3"
+      },
+      {
+        "path": "src/contexts/UserSettingsContext.test.tsx",
+        "kind": "file",
+        "sha256": "a219dc68df47a9e00371c18378d32e8ac99cd19953707aa8d31365aee5608170"
+      },
+      {
+        "path": "src/contexts/UserSettingsContext.tsx",
+        "kind": "file",
+        "sha256": "5a857a8fa0829c501439e171156acea55211af2ef5fe1d518c30d58398f5f93e"
+      },
+      {
+        "path": "src/hooks/useWeeklyPlan.ts",
+        "kind": "file",
+        "sha256": "d98205ae2bc881d168c0177f4d71283a07808824b26e879247770b44438b8431"
+      },
+      {
+        "path": "src/hooks/useWeeklyPlanPublisher.deps.test.ts",
+        "kind": "file",
+        "sha256": "0122b7301ea63f77afbe019139a705804b04219ef7a299996468f124719bd42b"
+      },
+      {
+        "path": "src/hooks/useWeeklyPlanPublisher.test.tsx",
+        "kind": "file",
+        "sha256": "cef278ed6babc45a02efaaa7d4c4ecc247df11028bf10fd3e0c5c3247e290b34"
+      },
+      {
+        "path": "src/hooks/useWeeklyPlanPublisher.ts",
+        "kind": "file",
+        "sha256": "ca85c8e0764eef72d10e5b75f5e67bbcd6986b446c8b4a3ced0f9950aa466ace"
+      },
+      {
+        "path": "src/lib/studySettings.test.ts",
+        "kind": "file",
+        "sha256": "dc751ba31f56902fa1d32b1d3bd9810dc434dfb09145f7f81e35eac1c4e1752c"
+      },
+      {
+        "path": "src/lib/studySettings.ts",
+        "kind": "file",
+        "sha256": "e1b5db1ef792e7ab269abd6efadcc785f09c6ba1d2fa94aabee1263a232c4e6b"
+      },
+      {
+        "path": "src/lib/weeklyPlanBuilder.test.ts",
+        "kind": "file",
+        "sha256": "c589e9b2fa6af252cdf67481d47c3c004a440c6152bf262b4db084dc62d7e8b0"
+      },
+      {
+        "path": "src/lib/weeklyPlanBuilder.ts",
+        "kind": "file",
+        "sha256": "e0234052355027b896192281a27e17442961c42271b228b9b86e2c8333ff8424"
+      },
+      {
+        "path": "src/lib/weeklyPlanPublish.test.ts",
+        "kind": "file",
+        "sha256": "f3e63acd3741696be0e28e185954082d0a2e8ef410bf92830781698614747c5e"
+      },
+      {
+        "path": "src/lib/weeklyPlanPublish.ts",
+        "kind": "file",
+        "sha256": "de9367283823f13b3f0b74e0d3006f05fbf6c43766ddad5b8d738bf9ad339a60"
+      },
+      {
+        "path": "src/lib/weeklyPlanRead.test.ts",
+        "kind": "file",
+        "sha256": "e7d5d265329a13b0acee549acc44603d674ad72e9432114c326537ce0054e3be"
+      },
+      {
+        "path": "src/lib/weeklyPlanRead.ts",
+        "kind": "file",
+        "sha256": "94f9d56d57244bd492c938bd5a8ee6039c05fec33bcdff887b61904105331048"
+      },
+      {
+        "path": "src/lib/weeklyPlanWeek.test.ts",
+        "kind": "file",
+        "sha256": "08df01fbfa040991c9bf69f67b00ab4ee8fac923d47473f13e1ee759d448fc6a"
+      },
+      {
+        "path": "src/lib/weeklyPlanWeek.ts",
+        "kind": "file",
+        "sha256": "972a3cb42e5bb5bbd12634f07f5de9896be695436d4871848d9058473dda6212"
+      },
+      {
+        "path": "src/pages/MyWorkPage.refetch.test.tsx",
+        "kind": "file",
+        "sha256": "876551e6016c90b4a13ae781817b9b0f63f3cbfadaacb5084c000326a568bb14"
+      },
+      {
+        "path": "src/pages/MyWorkPage.tsx",
+        "kind": "file",
+        "sha256": "27c3c7cada2414b3863f57dea963427d1e1777795357ea3d9b7c6b2d42375f25"
+      },
+      {
+        "path": "src/pages/teacher/TeacherWeeklyPlans.tsx",
+        "kind": "file",
+        "sha256": "fcbf8928441c24782fbf9ba4c50746e9bb7407db80043a0ab3a474986456b8e2"
+      },
+      {
+        "path": "src/test/fakePlanDb.ts",
+        "kind": "file",
+        "sha256": "fa04ac33734461a2b3c5e6c5dc6eec76f4dc1d1479a97d95935e0311d45dd3f6"
+      },
+      {
+        "path": "supabase/functions/mcp/index.ts",
+        "kind": "file",
+        "sha256": "f813126813751b31706c1347ecca4cc184a77e939d912e759f9a1cc5639d99d7"
+      }
+    ],
+    "diff_sha256": "75d5d069594f29d96a046ef5352238479fdbe82ea3bc78b942c288f285e42346",
+    "sha256": "a7b08289574bbe5555b9140ebfff13c5ab8387159a726e835de0401090baac42"
+  },
   "previous": "C:/Users/Joshu/dev/ai-os/research/2026-10-01-week-settings-180-build/claudex-7ta1kh5w/result.json",
   "started_at": 1790850678.1154954,
-  "artifacts": "C:\\Users\\Joshu\\dev\\ai-os\\research\\2026-10-01-week-settings-180-build\\claudex-945mk94f"
+  "artifacts": "C:\\Users\\Joshu\\dev\\ai-os\\research\\2026-10-01-week-settings-180-build\\claudex-945mk94f",
+  "cli_version": "2.1.280 (Claude Code)",
+  "executable": [
+    "C:\\Users\\Joshu\\AppData\\Roaming\\npm\\node_modules\\@anthropic-ai\\claude-code\\bin\\claude.exe"
+  ],
+  "exit_code": 0,
+  "session_id": "85ca60e7-f5f8-40f0-ba73-ea47bf9e1868",
+  "response": "Fix round one is done. All six findings are addressed, nothing is committed or pushed, and **`npm run typecheck` passes with no errors** after the last edit. The build and lint also pass, and 200 tests across 19 files pass. One thing still blocks a clean release: the build's churn in three files, which I left in place (see \"Not done\").\n\n## How each finding was fixed\n\n1. **Legacy settings now fail closed.** I removed the \"first account to sign in claims it\" logic and its marker key.\n   - **No automatic attribution:** every account starts from its own saved settings or the defaults. The old device-wide key is never applied automatically and never changed.\n   - **Explicit choice instead:** if the old key holds non-default values, the Account page shows them, says plainly that we can't tell whose they are, and offers \"Use these settings for my account\". Only that click copies them. Existing preferences are therefore **not** carried over automatically, so a student with extra time on a shared browser has to choose it again.\n   - **Refused reads:** if the browser refuses to read storage, defaults are used, the page says so, and no old settings are offered. A later edit won't overwrite saved settings it never read: it re-reads first and lays only the changed fields on top.\n2. **A failed refresh no longer hides the week.** The last loaded week stays on screen with a warning and a retry button. The full error screen appears only when the first load fails.\n3. **Far-future plans can no longer crowd out this week.** The read now takes plans that haven't ended, earliest first, page by page, until it passes today; only if none exist does it read the latest past plan. Every plan and item read names the student, and the item read refuses a plan belonging to anyone else. The query keys include the student. The read itself is in the new `src/lib/weeklyPlanRead.ts`.\n4. **Publish is now staged and resumable.** The order is:\n   1. Insert the plan as a draft.\n   2. Assign curriculum drills.\n   3. Insert the tasks.\n   4. Create hidden Classroom rows.\n   5. Backlink each task to its Classroom row.\n   6. Make the Classroom rows visible.\n   7. Mark the plan published, last.\n   - **Acknowledgments:** the backlink, visibility and publish steps each require their rows to match. A zero-row or failed update stops the publish.\n   - **No duplicates on retry:** the plan and tasks get their ids before anything is written, Classroom rows are looked up before being created, and a publish whose answer was lost counts as done if the plan already shows published.\n   - **Notifications:** sent only after the publish step is acknowledged.\n   - **Failure handling:** nothing is deleted. The teacher sees what stopped, what the student can see, and two buttons: \"Try publishing again\" or \"Leave it as a draft\".\n5. **A late publish can't clear another student's draft.** Each publish belongs to the student it started for. The builder is cleared only if the teacher is still on that same student and never switched away; A → B → A counts as a switch. A stopped publish stays filed under its own student.\n6. **Bad source values are shown honestly.**\n   - **Dates:** must be real, exact calendar dates. \"2026-02-31\" or a date with extra text fails, and the span is capped at 14 days.\n   - **Estimates:** a fractional estimate like 0.4 shows as 1 minute, never 0.\n   - **Status:** an unrecognised status shows as \"Status unknown\" and never counts as done.\n   - **Undated tasks:** a task with a bad date is listed under \"No date set\" instead of being dropped.\n\n## Tests\nNew regressions cover:\n- **Plan read:** 105 future plans plus the current week, and many future plans plus next week.\n- **Isolation:** other students' plans and items, and a late read from a previous account landing after a switch.\n- **Week display:** a cached week staying visible after a failed refresh.\n- **Publish:** failure at each step and the retry, a zero-row backlink, and a publish whose answer was lost.\n- **Student switching during publish:** a switch while writes are running, A → B → A, and a double click.\n- **Settings:** the refused-read case, explicit legacy adoption including a failed write and retry, and A → B → A.\n- **Model:** the new date, estimate and status rules.\n\n## Not done\n- **Build churn:** the build again modified `public/data/_bank.generated.json`, `public/data/finder-address-index.json` and `supabase/functions/mcp/index.ts`. My restore was denied in the first round, so I left them; exclude or restore them.\n- **Brief early visibility:** if the final publish step fails, Classroom rows are briefly visible while the plan is still a draft. The teacher is told, and a retry finishes it. This follows the instruction to mark the plan published last.\n- **Possible duplicate drill assignment:** if a curriculum drill assignment succeeds but its answer is lost, a retry could assign it again. Fixing that needs a change to `assignWork`, which I don't own. **Interface request:** let callers pass an idempotency key or ask for \"existing assignment for this drill and student\".\n- **Page reload:** a stopped publish is remembered only until the page reloads. After that the draft is still in the plan list, but there's no one-click resume.\n- **No browser, touch or live-database checks.** The Supabase write tests use an in-memory stand-in.\n- **Full test suite not re-run this round.** Last round, 15 failing files were all outside this slice.\n- Issue #180 stays open.\n\n## Files\n- **Changed this round:**\n  - Settings: `src/lib/studySettings.ts`, `src/contexts/UserSettingsContext.tsx`, `src/components/classroom/account/StudySettingsSection.tsx`\n  - Weekly plan: `src/lib/weeklyPlanWeek.ts`, `src/hooks/useWeeklyPlan.ts`, `src/components/classroom/PrescribedWeek.tsx`, `src/pages/teacher/TeacherWeeklyPlans.tsx`\n  - Their tests\n- **New this round:**\n  - Code: `src/lib/weeklyPlanRead.ts`, `src/lib/weeklyPlanPublish.ts`, `src/hooks/useWeeklyPlanPublisher.ts`\n  - Test helper: `src/test/fakePlanDb.ts`\n  - Tests: `src/lib/weeklyPlanRead.test.ts`, `src/lib/weeklyPlanPublish.test.ts`, `src/hooks/useWeeklyPlanPublisher.test.tsx`, `src/hooks/useWeeklyPlanPublisher.deps.test.ts`\n- **Unchanged from round one:** `ProfileSection.tsx`, `MyWorkPage.tsx` and its test, `weeklyPlanBuilder.ts` and its test.",
+  "usage": {
+    "input_tokens": 86,
+    "cache_creation_input_tokens": 120317,
+    "cache_read_input_tokens": 11677828,
+    "output_tokens": 82800,
+    "output_tokens_details": {
+      "thinking_tokens": 16486
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 120317,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 2407,
+        "cache_read_input_tokens": 324901,
+        "cache_creation_input_tokens": 885,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 885
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "observed_models": [
+    "claude-opus-5-5"
+  ],
+  "permission_denials": [],
+  "total_cost_usd": 9.741204600000001,
+  "elapsed_seconds": 936.56
 }
