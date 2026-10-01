@@ -2,11 +2,13 @@
 
 Started: 2026-09-28
 Last reconciled: 2026-10-01
-Status: Thirty functional slices published. Latest functional frontend b315ac5 is verified on main, imported in Lovable and visible in fresh production. All fourteen functional tickets and deferred #178 remain open. Expanded standalone catalog 236 is installed, selected and published. Fresh full PrepTest browser closeout passed. The approved one-item Activity grading and account completion passed; Lovable recorded 0.0008 AI credits. AI diligence fixes are prepared separately and require backend deployment.
+Status: Thirty functional frontend slices published. Latest functional frontend b315ac5 is verified on main, imported in Lovable and visible in fresh production. All fourteen functional tickets and deferred #178 remain open. Expanded standalone catalog 236 is installed, selected and published. Fresh full PrepTest browser closeout passed. The approved one-item Activity grading and account completion passed; Lovable recorded 0.0008 AI credits. The narrow malformed-grade/privacy fix was deployed through Lovable after explicit approval at a reported cost of 0.5 credits; wider AI diligence remains open.
 Specification: [#165](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/165)  
 Decision map: [#155](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/155)
 
 ## Current release and backend checkpoint (2026-09-30)
+
+2026-10-01 deployment follow-up: Lovable deployment tool confirms activity-coach success with response.ts; no deployment version returned. No new paid inference made. Agent-generated commit `4474d9f9bdc68036983873f119e044137ab359c1` changed only Supabase generated types, reflecting existing backend schema; no function source changed. Local fast-forward, 17 parser tests and typecheck passed afterward. Read-only live check retained the exact Activity completion and original timestamp. The earlier pending-deployment note below is historical.
 
 2026-10-01 update: Joshua approved the prepared single grading Submit. Exact assignment `333838aa-cc3b-4789-a707-b8f50f918c25` received a genuine correct coach verdict, acknowledged completion, score 100 with numerator/judged/total 1/1/1, and retained its result on reload. Database response `2d374247-f307-40d5-baf7-66eb5dd72213` records attempt 1 and judge source coach. Lovable's live AI request record confirms `google/gemini-3.1-flash-lite`, 514 input/51 output tokens, 910ms and 0.0008 credits. This closes that fixture's grading/completion check, not the whole source/permission ticket or a broad model-quality benchmark. Teacher My Work parity for this exact new completion remains to be walked. The AI audit at app `docs/specs/2026-10-01-ai-diligence-audit.md` covers 13 proxy chat callers and bypasses. Malformed-grade rejection and privacy-safe error logging are being verified for a narrow backend change; no new backend deployment or model switch has occurred.
 

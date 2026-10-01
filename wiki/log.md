@@ -7,6 +7,13 @@ aliases: []
 
 # Log
 
+## [2026-10-01] deploy | Activity coach rejects malformed model grades
+
+- Joshua approved one Lovable-agent deployment of `activity-coach` from tested `e8419dc`. Completed agent response reports deployment success including the `response.ts` helper, 0.5 credits, and no version number. No additional grading inference ran. Agent edit `edt-573e399d-4d56-4018-a584-b6b9e2f850ea` / commit `4474d9f9bdc68036983873f119e044137ab359c1`.
+- Independent GitHub comparison found only regenerated Supabase types (627 additions, one removed empty Relationships declaration), reflecting already installed timed/revocation schema. This contradicts the agent's claim that no code changed; surfaced to Joshua. No function source changed. Fast-forward retained unrelated unstaged MCP-function edits.
+- Read-only live database recheck retained the exact saved Activity completed status, score 100, numerator/judged/total 1/1/1 and original completion timestamp. Post-deploy model-failure behavior remains tested deterministically, without a new paid inference or returned deployment version. Wider cost/authority/model-quality work remains open.
+- After fast-forwarding generated types, 17 parser tests and app typecheck passed again.
+
 ## [2026-10-01] verify | Live AI model and genuine Activity completion
 
 - Joshua approved one prepared AI grading Submit. Exact owned Activity `333838aa-cc3b-4789-a707-b8f50f918c25` received a correct verdict, saved coach response `2d374247-f307-40d5-baf7-66eb5dd72213`, and acknowledged account completion at `2026-10-01T04:09:48.597Z`, 100%, numerator/judged/total 1/1/1. Reload retained completion and Library displayed 100%, one item. Teacher Work parity for this exact completed fixture was not walked.
