@@ -3,7 +3,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[4] / 'system' / 'scripts'))
 from project_paths import project_path
 DB='C:/Users/Joshu/dev/ai-os/system/scripts/lsatlab-pull/data/db/'
-BANK=str(project_path('lsatu-wt-glossary','public','data'))+'/'
+BANK=str(project_path('lsatu-wt-bankfix-b02','public','data'))+'/'
 if not glob.glob(BANK+'PT*-S*-LR.json'): sys.exit('No bank files at '+BANK)
 L=lambda t: json.load(open(DB+t+'.json',encoding='utf-8'))
 qs=L('lr_questions'); ex=L('lr_explanations'); st=L('lr_explanation_steps'); nt=L('lr_explanation_choice_notes')
