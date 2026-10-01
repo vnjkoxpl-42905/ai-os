@@ -1,7 +1,7 @@
 ---
 type: draft
 subject: LR Paradox batch 04, part A, 19 slots (the last Paradox gaps)
-status: draft
+status: loaded 2026-10-01
 created: 2026-10-01
 ---
 

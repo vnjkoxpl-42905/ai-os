@@ -55,6 +55,13 @@ The database is the source of truth for explanations, not the local `Explanation
 - [x] ~~**Where the LSAT U writer mark (Explanation Source) lives.**~~ 2026-09-27: Joshua dropped it; not needed.
 - [ ] **`targeted-questions/` layout is unreadable by the parser.** PT134-S1-Q16 and PT158-S4-Q24, in LSAT U's voice. Convert and load, or drop.
 
+### Student-visible question text (found in batch 04, 2026-10-01)
+- [ ] **Speaker turns run together in the database stimulus.** PT113-S4-Q23 reads "traffic.Sheila:" and PT114-S2-Q15 reads "anything.Joshua:" with no space or line break. Check every dialogue stimulus for the same join.
+- [ ] **PT113-S3-Q2 database stimulus says "silverfleaf".** The bank says "silverleaf". Fix the database text.
+- [ ] **PT110-S3-Q3 wording differs.** Database "endemic", bank "epidemic". Check the printed PT and make both match it.
+- [ ] **Bank-only issues.** PT114-S4-Q22 typed "Necessary Assumption EXCEPT" in the bank but is plain NA (the database type is correct). PT106-S1-Q12 bank stimulus starts with "The following passage is used for Section 1, questions 12 through 13."
+- [x] ~~**Generator defaulted unloaded questions to type Flaw and could not add steps alone.**~~ 2026-10-01: `generate_batch_sql.py` now uses the draft's type and handles steps-only slots.
+
 ### Repo housekeeping
 - [x] ~~**Codex's redundant repair branch and worktree.**~~ 2026-09-27: deleted on Joshua's OK. Its uncommitted changes kept at raw/sources/lsatu-lr-snapshots/2026-09-27-codex-repair-worktree-uncommitted.patch.
 - [ ] **Merge PR vnjkoxpl-42905/lsatu-684d89db#138** (PT154 parser fix), then remove the `projects/lsatu-wt-parser` worktree.

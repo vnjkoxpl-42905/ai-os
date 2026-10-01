@@ -1,7 +1,7 @@
 ---
 type: draft
 subject: LR Necessary Assumption batch 04, part B, 21 slots
-status: draft
+status: loaded 2026-10-01
 created: 2026-10-01
 ---
 
