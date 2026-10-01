@@ -7,6 +7,13 @@ aliases: []
 
 # Log
 
+## [2026-10-01] verify | Live AI model and genuine Activity completion
+
+- Joshua approved one prepared AI grading Submit. Exact owned Activity `333838aa-cc3b-4789-a707-b8f50f918c25` received a correct verdict, saved coach response `2d374247-f307-40d5-baf7-66eb5dd72213`, and acknowledged account completion at `2026-10-01T04:09:48.597Z`, 100%, numerator/judged/total 1/1/1. Reload retained completion and Library displayed 100%, one item. Teacher Work parity for this exact completed fixture was not walked.
+- Lovable's live AI request record confirms Gemini 3.1 Flash Lite, 514 input/51 output tokens, 910ms and 0.0008 credits. The 30-day dashboard showed 80 requests, 0.30 credits and 100% request success; this is not a grading-quality benchmark.
+- Read-only inventory covered 13 proxy chat callers, embedding routes and direct bypasses. Proxy forces Lite regardless of callers' requested models; source gaps include grading-authority/entitlement binding, per-account budgets, misleading model provenance and repeated force regrading. Current official Lovable/Google/OpenAI documentation informed the price comparison. No model switched or extra paid model probe made.
+- Narrow Activity malformed-result rejection and privacy-safe failure logging committed `e8419dc`: 17 meaningful tests, independent review, app typecheck and production build passed. Guarded push in progress; backend deployment pending immediate credit confirmation. Audit and machine-readable live evidence are in app docs. Existing MCP-function edits from another process were left unstaged and untouched. Accidental worker scratch output was moved into research, without deleting anything. No ticket status changed.
+
 ## [2026-09-30] ship | Guided progress agrees across views; RC recovery waits for account saves
 
 - Guided status now uses answered, owner-checked sitting evidence for the exact assignment across legacy sessions and distinct runs. A saved answer in an existing designated test-student assignment changed its live status to In progress; the separate same-title assignment stayed Assigned. The live selected-student teacher Work page showed the same states under Joshua's teacher account.
@@ -1615,3 +1622,13 @@ Actual production PT 102 browser completed all three legs, exact report 3/75 and
 New creation fix passed 72 focused tests, independent review, typecheck/build and exact five-width checks. Saved app verification JSON and screenshots under research/2026-09-30-lsatu-foundation-evidence. [Plan](../brainstorms/2026-09-28-lsatu-build-sequence.md) and hot updated. Task statuses unchanged; all 14 tickets and deferred #178 open. Prepared one-question authored Activity grader remains pending immediate approval, no grader invoked, no notification sent, no old data deleted. Broader source/permission/Review/later task walks remain unfinished.
 
 Isolated PostgreSQL at the verified owned temporary data directory/port55437 stopped gracefully after the checks; all diagnostic databases retained. Dev server127.0.0.1:8080 still listening. No data deletion.
+
+Documentation-only checkpoint `d8b5d7c1008df12311568cb92b291dfa32f23ca7` passed safe-push/typecheck and exact GitHub main verification; app checkout clean. Latest verified functional publication remains `b315ac5`.
+
+## [2026-10-01] system | Session wrapup: conditional curriculum research
+
+- Output: [curriculum synthesis](../brainstorms/2026-09-30-conditional-curriculum/curriculum-analysis.md), ordered 7Sage conditional/quantifier/flaw reports, LR transfer report, LSAT Lab evidence report, and updated interview capture. Existing local-material inventory retained.
+- Verified: signed-in 7Sage schedule mapped 54 conditional, 34 intersecting-set and 12 formal-flaw resources; written teaching and worksheet prompts reviewed, selected reveals checked. LR written lessons connect inference, rule application and sufficient bridges. LSAT Lab library metadata inspected; existing archived MBT teaching analyzed.
+- Correction: the four sets following Group 2 mix Groups 1 and 2. Translation practice contains 35 visible prompts across seven sets; chaining contains ten across two. Resource counts are not distinct skill counts; scheduled minutes are not video runtimes.
+- Open: audiovisual coverage and full LSAT Lab conditional/quantifier comparison; adaptive/workshop feedback; skill-level item tagging; placement/mastery/advancement and timing defaults. Proposed LSAT U sequence and scope-by-difficulty matrix are recommendations, not implemented policies.
+- Handoff saved in hot. Task statuses unchanged. No posting, assignment, publishing, deliberate answer submission or completion marking; user browser returned to Foundations. No commit/push performed.

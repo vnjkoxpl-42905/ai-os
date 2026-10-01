@@ -1,0 +1,74 @@
+src/features/activity-centre/hooks\useActivityCoach.ts:53:      const { data, error } = await supabase.functions.invoke("activity-coach", {
+src/hooks\useInspector.ts:39:      const { data, error } = await supabase.functions.invoke("inspect", {
+src/hooks\useHubStudents.ts:94:      const { data, error } = await supabase.functions.invoke(
+src/hooks\useMemoryAdmin.ts:89:  const { data, error } = await supabase.functions.invoke("memory-admin", { body });
+src/hooks\useSessionIngestions.ts:45:      const { data, error } = await supabase.functions.invoke<ScanResult>(
+src/hooks\useSessionIngestions.ts:61:      const { data, error } = await supabase.functions.invoke(
+src/hooks\useSessionIngestions.ts:77:      const { data, error } = await supabase.functions.invoke(
+supabase/functions\analyze-stem-response\index.ts:37:    const response = await fetch(`${LSATU_GEMINI_PROXY_URL}/chat/completions`, {
+supabase/functions\analyze-stem-response\index.ts:45:        model: "gemini-3.8-flash",
+src/hooks\useOperatorChat.ts:237:          const { data, error: invokeErr } = await supabase.functions.invoke('teacher-operator-chat', { body });
+src/hooks\useSessionBundles.ts:35:      const { data, error } = await supabase.functions.invoke<SynthesizeResult>(
+src/hooks\useStudentBooking.ts:59:  const { data, error } = await supabase.functions.invoke("student-booking", {
+src/hooks\useTAChat.ts:116:      const { data, error } = await supabase.functions.invoke(backend, {
+src/hooks\useTAChat.ts:124:        // "GEMINI_API_KEY not configured" or Gemini's actual error.
+supabase/functions\gemini-proxy\index.ts:8://   POST /chat/completions  — OpenAI chat completions (streaming + tools)
+supabase/functions\gemini-proxy\index.ts:10://   POST /                  — same as /chat/completions (back-compat)
+supabase/functions\gemini-proxy\index.ts:42:function mapChatModel(_model: string | undefined): string {
+supabase/functions\gemini-proxy\index.ts:47:function mapEmbedModel(_model: string | undefined): string {
+supabase/functions\gemini-proxy\index.ts:62:  const key = gatewayKey ?? Deno.env.get("GEMINI_API_KEY") ?? "";
+supabase/functions\gemini-proxy\index.ts:133:  return forward("/chat/completions", body, stream);
+supabase/functions\gemini-proxy\index.ts:158:  const key = Deno.env.get("LOVABLE_API_KEY") ?? Deno.env.get("GEMINI_API_KEY");
+supabase/functions\gemini-proxy\index.ts:162:      JSON.stringify({ error: { message: "No AI backend configured (LOVABLE_API_KEY or GEMINI_API_KEY)" } }),
+supabase/functions\activity-coach\index.ts:9:// AI gateway, gemini-3.8-flash on GEMINI_API_KEY, auth-guarded, 429/402 handling) but
+supabase/functions\activity-coach\index.ts:151:    const response = await fetch(`${LSATU_GEMINI_PROXY_URL}/chat/completions`, {
+supabase/functions\activity-coach\index.ts:159:        model: "gemini-3.8-flash",
+supabase/functions\activity-coach\index.ts:164:        max_tokens: 220,
+supabase/functions\gmail\index.ts:3:// Frontend talks to this function via supabase.functions.invoke("gmail", { action, ... }).
+supabase/functions\grade-rrc-section\index.ts:170:  const direct = Deno.env.get("GEMINI_API_KEY");
+supabase/functions\grade-rrc-section\index.ts:172:    const res = await fetch(`${Deno.env.get("SUPABASE_URL")}/functions/v1/gemini-proxy/chat/completions`, {
+supabase/functions\grade-rrc-section\index.ts:180:        model: "google/gemini-3.1-flash-lite",
+supabase/functions\grade-rrc-section\index.ts:191:  if (!direct) throw new Error("no judge backend: set LOVABLE_API_KEY or GEMINI_API_KEY");
+supabase/functions\grade-rrc-section\index.ts:193:    "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent",
+supabase/functions\grade-rrc-section\index.ts:889:        // Reciting is decided in code, not by the model: it is a measurement,
+supabase/functions\ingest-lsat-knowledge\index.ts:94:        body: JSON.stringify({ model: EMBED_MODEL, input: inputs }),
+supabase/functions\ingest-session-note\index.ts:17:// Frontend talks to this via supabase.functions.invoke("ingest-session-note",
+supabase/functions\inspect\index.ts:291:  const directKey = Deno.env.get("GEMINI_API_KEY");
+supabase/functions\inspect\index.ts:296:  const res = await fetch(`${base}/chat/completions`, {
+supabase/functions\inspect\index.ts:303:      model: useDirect ? "gemini-3.1-flash-lite" : "google/gemini-3.1-flash-lite",
+supabase/functions\mcp\index.ts:217:    const { data, error } = await client.functions.invoke("send-assignment-email", {
+supabase/functions\memory-admin\index.ts:7:// supabase.functions.invoke({ body }) uniformly (invoke does not forward query
+supabase/functions\motivation-engine\index.ts:94:    const response = await fetch(`${LSATU_GEMINI_PROXY_URL}/chat/completions`, {
+supabase/functions\motivation-engine\index.ts:102:        model: "gemini-3.8-flash",
+supabase/functions\parse-drill-request\index.ts:58:    const response = await fetch(`${LSATU_GEMINI_PROXY_URL}/chat/completions`, {
+supabase/functions\parse-drill-request\index.ts:66:        model: "gemini-3.8-flash",
+supabase/functions\parse-external-work\index.ts:231:    const response = await fetch(`${LSATU_GEMINI_PROXY_URL}/chat/completions`, {
+supabase/functions\parse-external-work\index.ts:239:        model: "gemini-3.8-flash",
+supabase/functions\polish-message\index.ts:132:    const response = await fetch(`${LSATU_GEMINI_PROXY_URL}/chat/completions`, {
+supabase/functions\polish-message\index.ts:140:        model: "gemini-3.8-flash",
+supabase/functions\retrieve-lsat-knowledge\index.ts:6:// Access model:
+supabase/functions\retrieve-lsat-knowledge\index.ts:92:    body: JSON.stringify({ model: EMBED_MODEL, input: text }),
+supabase/functions\study-chat\index.ts:88:    const response = await fetch(`${LSATU_GEMINI_PROXY_URL}/chat/completions`, {
+supabase/functions\study-chat\index.ts:96:        model: "gemini-3.8-flash",
+supabase/functions\ta-agent\index.ts:30:const GATEWAY_CHAT_URL = "https://ai.gateway.lovable.dev/v1/chat/completions";
+supabase/functions\ta-agent\index.ts:793:      model: TA_AGENT_MODEL,
+supabase/functions\synthesize-session-bundle\index.ts:41:const GATEWAY_URL = `${LSATU_GEMINI_PROXY_URL}/chat/completions`;
+supabase/functions\synthesize-session-bundle\index.ts:213:        model: SYNTHESIS_MODEL,
+supabase/functions\synthesize-session-bundle\index.ts:251:        model: SYNTHESIS_MODEL,
+supabase/functions\teacher-link-search\index.ts:204:      body: JSON.stringify({ model: "gemini-embedding-001", input: query }),
+supabase/functions\ta-chat\index.ts:437:      `${LSATU_GEMINI_PROXY_URL}/chat/completions`,
+supabase/functions\ta-chat\index.ts:450:          model: "gemini-3.8-flash",
+supabase/functions\teacher-operator-chat\index.ts:285:// Only real Gemini models — gemini-proxy calls Google directly with GEMINI_API_KEY.
+supabase/functions\teacher-operator-chat\index.ts:1126:      body: JSON.stringify({ model: "gemini-embedding-001", input: query }),
+supabase/functions\teacher-operator-chat\index.ts:1643:    // Resolve model: explicit allow-listed pick, "auto" heuristic, or default.
+supabase/functions\teacher-operator-chat\index.ts:1668:      const r = await fetch(`${LSATU_GEMINI_PROXY_URL}/chat/completions`, {
+supabase/functions\teacher-operator-chat\index.ts:1677:          model: chatModel,
+supabase/functions\tutor-chat\index.ts:142:  qtype?: string; content_json?: any; content_markdown?: string | null; model: string;
+supabase/functions\tutor-chat\index.ts:712:      const pResp = await fetch(`${LSATU_GEMINI_PROXY_URL}/chat/completions`, {
+supabase/functions\tutor-chat\index.ts:716:          model: GEN_MODEL,
+supabase/functions\tutor-chat\index.ts:742:        content_json: parsed, content_markdown: md, model: GEN_MODEL,
+supabase/functions\tutor-chat\index.ts:779:    const response = await fetch(`${LSATU_GEMINI_PROXY_URL}/chat/completions`, {
+supabase/functions\tutor-chat\index.ts:787:        model: GEN_MODEL,
+supabase/functions\tutor-chat\index.ts:848:          qtype: question.qtype, content_markdown: replyText, model: GEN_MODEL,
+supabase/functions\voice-coach-respond\index.ts:96:    const response = await fetch(`${LSATU_GEMINI_PROXY_URL}/chat/completions`, {
+supabase/functions\voice-coach-respond\index.ts:104:        model: 'gemini-3.8-flash',

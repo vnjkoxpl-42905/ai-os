@@ -137,6 +137,15 @@ Date: 2026-09-30 · Goal: Define a complete conditional-reasoning curriculum tha
 
 ## Open flags (pending input)
 
+### Competitor analysis scope, updated 2026-10-01
+
+- Joshua requested a clear account of the conditional curriculum, what each step teaches, how it trains students, dependencies, and relative coverage, so LSAT U can follow the broad progression with original content.
+- Earlier requests for verbatim or near-verbatim competitor lesson/drill archives were redirected to original summaries, references, and original examples. Latest messages confirm this explanatory research scope. Claimed tutor access does not establish inspected content or full audiovisual coverage.
+- Parent inspected the signed-in 7Sage Foundations schedule: 54 conditional, 34 intersecting-set, and 12 formal-flaw resources; written lessons and skill-builder tasks were reviewed, with selected reveals checked. LR schedule and seven written application resources were also inspected.
+- Correction: Four worksheets following Group 2 mix Groups 1 and 2. Do not describe them as four times as much Group 2-only practice.
+- LSAT Lab library structure and relevant lesson metadata were inspected. Existing archived MBT instruction supports analysis; full conditional/quantifier video and drill details remain unverified.
+- Main synthesis and proposed assignment matrix: [curriculum-analysis.md](2026-09-30-conditional-curriculum/curriculum-analysis.md). This is research and a proposal; mastery, placement, timing, and automatic advancement policies remain open. No platform changes were made.
+
 - Define observable expert outcome and conditional curriculum boundaries -> Joshua, with proposed criteria from Jay 2.
 - Define readiness for direct quantifier assignment and the treatment of universal conditional wording -> Joshua.
 - Define subsection contents, mastery checks, and advancement rules -> Joshua.

@@ -13,7 +13,22 @@ Freshest working state; the first page `/pickup` reads. Rebuilt fresh in the 202
 
 The current LLM Wiki operating rules are [[system/schema/llm-wiki]]. The first authorized ingest example is [[wiki/sources/llm-wiki-pattern]], linked to [[wiki/concepts/compiled-knowledge]]. The wiki index now contains a complete fenced catalog maintained by `system/scripts/wiki-maintenance.py`; structural lint is separate from source-grounded semantic review.
 
-## Most recent (2026-09-30): Yahunatan recap V7 ready for review
+## LSAT U AI audit checkpoint (2026-10-01)
+
+Joshua approved one prepared Activity grading Submit. Owned assignment `333838aa-cc3b-4789-a707-b8f50f918c25` genuinely graded correct, saved completion 100% with 1/1/1 score fields, and retained it on reload; Library displays 100%, one item. Live Lovable AI dashboard confirms `google/gemini-3.1-flash-lite`, 514 input/51 output tokens, 910ms, 0.0008 credits. No other grading call was made. Exact teacher Work mirror still needs a walk.
+
+All 13 proxy chat callers are forced to Lite; Inspect, TA agent and RRC direct fallback need separate controls. Source audit found missing per-account budgets/entitlement binding, client-controlled grading authority, ineffective model selectors/provenance and repeatable force regrading. Narrow malformed-grade rejection and privacy-safe logging fix is committed `e8419dc`; 17 tests, independent review, typecheck and build passed. Guarded push is in progress at this checkpoint. Backend deployment remains pending, with immediate Lovable credit confirmation required. No model policy changed. [Full AI audit](../../lsatu-connected-experience/docs/specs/2026-10-01-ai-diligence-audit.md). All fourteen functional audit tickets plus deferred #178 remain open; thirty functional frontend slices remain published.
+
+## Most recent (2026-10-01): Conditional curriculum research and assignment model
+
+- [Main synthesis](../brainstorms/2026-09-30-conditional-curriculum/curriculum-analysis.md) connects the observed teaching sequence, practice emphasis, original examples, and existing LSAT U assets. [Interview capture](../brainstorms/2026-09-30-conditional-curriculum.md) remains the decision record.
+- Confirmed scope: independent full pathway plus area/specific-skill/general assignments at Beginner, Medium, Advanced; all four language groups; optional Medium/Advanced timing; quantifiers follow conditionals and remain separately assignable.
+- 7Sage signed-in research mapped 54 conditional, 34 intersecting-set, 12 formal-flaw resources; written teaching and worksheets inspected, selected Answer reveals verified. LR written resources connect MBT, rule application, and sufficient bridges.
+- Four translation sets after Group 2 are cumulative Groups 1+2, not Group 2-only. Seven translation worksheets contain 35 visible tasks; two chaining sets contain ten. Scheduled minutes are study estimates.
+- LSAT Lab library metadata and an existing archived MBT class support a partial comparison. Full conditional/quantifier videos and drill feedback remain unverified; 7Sage videos/adaptive runs were not completed.
+- No curriculum published, work assigned, answers submitted, or task statuses changed. Next: resolve remaining source coverage and curriculum packaging/mastery/placement decisions before implementation.
+
+## Previous (2026-09-30): Yahunatan recap V7 ready for review
 
 - Current draft is [Facts, Rules, and What Follows V7](../brainstorms/2026-09-30-yahunatan-post-session-recap/conditional-reasoning-v7.html), open in Codex at the opening. The [canonical 2026-09-16 recap](../students/yahunatan-zetvy/recaps/2026-09-16-recap.md) contains its exact current V7 export block. Prior versions are preserved history.
 - Re-read the recap skill and teaching voice after Joshua's four browser comments. Replaced vague read/find/keep instructions with two numbered worked examples: Mira's trained fact plus the badge rule gives Mira a badge; training-to-badge plus badge-to-access gives a new conditional rule. Inputs, conclusions and reasons are separately visible, including the rules-only existence limit.
@@ -48,7 +63,7 @@ The current LLM Wiki operating rules are [[system/schema/llm-wiki]]. The first a
 - Standalone 236 catalog selected 714b, 156 LR/80 RC; 21 original tables preserved in schema transaction, all old definitions/sittings/receipts/bindings retained. Both isolated engines 618 checks, ordinary JWT 24 checks passed. Full PT config enabled/c27b/30000ms unchanged. New local LR/RC recovery/closeout and fresh production expanded LR launch/finish plus exact reports passed.
 - Fresh owned production PT 102 `4474e82e-6530-4792-a08b-9de7c30ef94c` completed all three legs in browser. Report/reload 3/75 with disclosed estimated 120. Break save failure blocked advancement; long interruption caused definite expired-lease rejection, explicit command preservation/reload/claim recovered paused 9:00, reload retained it. Full final browser closeout now verified; no physical second-device/lost TCP reply/revoked in-flight UI claim.
 - Prepared paid-grading fixture 333838aa-cc3b-4789-a707-b8f50f918c25 remains in_progress with one exact authored item and typed answer; no grader/credit/notification. Immediate one-Submit approval is pending. Original assignments retained. User-opened Codex tab 6 keeps the form; new live confirmation tab is a deliverable.
-- App `C:/Users/Joshu/dev/lsatu-connected-experience`, branch codex/connected-experience. Latest evidence is being pushed as documentation-only checkpoint d8b5d7c. Dev server 19097 / port 8080 retained and rechecked. Isolated PostgreSQL port55437 was stopped gracefully; diagnostic data retained. Preserve unrelated vault work. Wider sources/Review families and later functional acceptance remain open.
+- App `C:/Users/Joshu/dev/lsatu-connected-experience`, branch codex/connected-experience. Documentation-only checkpoint d8b5d7c1008df12311568cb92b291dfa32f23ca7 is verified on GitHub main; the app checkout is clean. Dev server 19097 / port 8080 retained and rechecked. Isolated PostgreSQL port 55437 was stopped gracefully; diagnostic data retained. Preserve unrelated vault work. Wider sources/Review families and later functional acceptance remain open.
 
 ## Previous LSAT U audit implementation snapshot (2026-09-30)
 

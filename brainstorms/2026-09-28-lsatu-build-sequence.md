@@ -1,12 +1,14 @@
 # LSAT U connected experience: build sequence
 
 Started: 2026-09-28
-Last reconciled: 2026-09-30
-Status: Thirty functional slices published. Latest functional frontend b315ac5 is verified on main, imported in Lovable and visible in fresh production. All fourteen functional tickets and deferred #178 remain open. Expanded standalone catalog 236 is installed, selected and published. Fresh full PrepTest browser closeout passed. No Lovable credits spent; one prepared AI-grading Submit awaits immediate approval.
+Last reconciled: 2026-10-01
+Status: Thirty functional slices published. Latest functional frontend b315ac5 is verified on main, imported in Lovable and visible in fresh production. All fourteen functional tickets and deferred #178 remain open. Expanded standalone catalog 236 is installed, selected and published. Fresh full PrepTest browser closeout passed. The approved one-item Activity grading and account completion passed; Lovable recorded 0.0008 AI credits. AI diligence fixes are prepared separately and require backend deployment.
 Specification: [#165](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/165)  
 Decision map: [#155](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/155)
 
 ## Current release and backend checkpoint (2026-09-30)
+
+2026-10-01 update: Joshua approved the prepared single grading Submit. Exact assignment `333838aa-cc3b-4789-a707-b8f50f918c25` received a genuine correct coach verdict, acknowledged completion, score 100 with numerator/judged/total 1/1/1, and retained its result on reload. Database response `2d374247-f307-40d5-baf7-66eb5dd72213` records attempt 1 and judge source coach. Lovable's live AI request record confirms `google/gemini-3.1-flash-lite`, 514 input/51 output tokens, 910ms and 0.0008 credits. This closes that fixture's grading/completion check, not the whole source/permission ticket or a broad model-quality benchmark. Teacher My Work parity for this exact new completion remains to be walked. The AI audit at app `docs/specs/2026-10-01-ai-diligence-audit.md` covers 13 proxy chat callers and bypasses. Malformed-grade rejection and privacy-safe error logging are being verified for a narrow backend change; no new backend deployment or model switch has occurred.
 
 Three further functional releases are verified: integrated `a7d416a`, all 236 standalone coverage `6b69bc7`, and truthful new-PrepTest confirmation `b315ac5ac60792ada4dd96e38305c967c547fe77`. Each passed guarded push, exact main/import, free deployment and fresh production checks. The latest free deployment is `b0c1359a-ac3b-47c7-97e2-11ddc780de32`; Lovable shows Published with Publish changes disabled. The initial fresh production check still showed old code; a subsequent full reload proved the corrected message, and confirmation saved exact owned run `757f339d-774a-4a7a-9bcc-82414c1650db`. Documentation checkpoint follows separately; it is not another functional slice.
 
