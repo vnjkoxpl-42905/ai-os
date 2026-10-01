@@ -217,3 +217,7 @@ Joshua explicitly authorized the Lovable Cloud backend/database deployment and c
 ## 2026-09-30: Recap references guide quality, not topic scope
 
 Joshua clarified that the Some, Most, and All note is a teaching/design quality benchmark, not permission to add quantity content to conditional reasoning. Future recap runs must use the accumulated [recap calibration](../skills/codex/post-session-recap/references/recap-calibration.md), stay within the selected concept and authorized enrichment, and record new feedback for skill refinement. Applied in both runtime skills and current V10.
+
+## 2026-10-01: Conditional bootcamp foundations before harder passes
+
+For the conditional curriculum, Joshua approved the recommended foundation-first progression and explicitly requested execution. Learn each conditional skill with guided work and Beginner practice, then revisit conditional skills through Medium and Advanced passes. The following quantity phase is separately assignable and does not replace or interrupt conditional foundations. Whole course, area, specific skill and general practice remain selectable; timing is optional at Medium and Advanced. Existing covered Activities stay intact. This curriculum decision is separate from the narrower recap topic rule above. Exact mastery and speed thresholds were not approved and are not invented. [Implementation checkpoint](../brainstorms/2026-09-30-conditional-curriculum/bootcamp-inspection.md).

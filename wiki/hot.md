@@ -9,6 +9,12 @@ aliases: []
 
 Freshest working state; the first page `/pickup` reads. Rebuilt fresh in the 2026-07-16 vault rebuild (the old cache is archived).
 
+## Conditional bootcamp implementation (2026-10-01)
+
+Joshua approved foundation-first progression and execution. App commit `796b943` is pushed to main and imported by Lovable: 30 original lessons, 30 guided examples and 270 practice questions, Beginner/Medium/Advanced for each skill, conditional passes before the separately accessible quantified phase. Teacher assignment supports full course, area, specific skill and general practice. Existing Activities remain linked unchanged. Authenticated per-account progress separates lesson review, checked accuracy and assistance; optional timing, recovery and CAS conflicts are covered.
+
+134 focused/regression tests, typecheck, targeted ESLint and build passed. Codex browser inspected actual components through a local-only actor/cloud fixture, including reload, failure/retry, scope and responsive widths. Live read-only DB inspection confirmed existing KV schema, own-account policies and revision trigger. No real student assignment or migration performed. Publication verified at [Conditional Logic Bootcamp](https://lsatprep.study/bootcamp/conditionals), deployment `156bd49f-e0e3-4d23-9d8b-ab3ba58ba09c`: live bundle contains `796b943` and the conditional route; browser displays the correct unassigned-account gate; Lovable Publish reports up to date. Production signed-in cross-device acceptance and historical quality-document parity are not certified. Source/report: [verification](../../ai-os-projects/lsatu-conditional-bootcamp/docs/implementation-plans/2026-10-01-conditional-bootcamp-verification.md), [curriculum checkpoint](../brainstorms/2026-09-30-conditional-curriculum/bootcamp-inspection.md). Preserve unrelated MCP edit and generated bank/index churn in the worktree. No task-ledger status changed.
+
 ## Current schema change (2026-09-30)
 
 The current LLM Wiki operating rules are [[system/schema/llm-wiki]]. The first authorized ingest example is [[wiki/sources/llm-wiki-pattern]], linked to [[wiki/concepts/compiled-knowledge]]. The wiki index now contains a complete fenced catalog maintained by `system/scripts/wiki-maintenance.py`; structural lint is separate from source-grounded semantic review.
