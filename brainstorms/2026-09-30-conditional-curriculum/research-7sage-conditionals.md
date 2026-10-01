@@ -1,6 +1,6 @@
 # Compare the teaching sequence before designing LSAT U's pathway
 
-Started: 2026-09-30. Updated: 2026-10-01. Analysis of the parent researcher's signed-in IAB observations. This worker could not access the in-app browser and did not independently inspect 7Sage pages. Detailed page findings below are attributed to the parent's inspection; proposed LSAT U coverage is original analysis, not 7Sage's structure.
+Started: 2026-09-30. Updated: 2026-10-01. Analysis of the parent researcher's signed-in IAB observations. This worker could not access the in-app browser and did not independently inspect 7Sage pages. Detailed page findings below are attributed to the parent's inspection. This worker additionally read the complete exported auto-caption transcript of the overview video linked by that inspected page. Proposed LSAT U coverage is original analysis, not 7Sage's structure.
 
 ## Evidence ledger for the Foundations topic
 
@@ -13,7 +13,7 @@ Titles below are clear editorial expansions of the parent's transmitted title ab
 | Order | Resource | Observed mechanism or evidence limit |
 |---|---|---|
 | 1 | [You Try: The Coffee Shoppe](https://7sage.com/lessons/foundations/conditional-and-set-logic/intro-youtry-1-pt123-s3-q22?sidebar=study_plan) | Attempt → explanation promised; feedback not inspected. |
-| 2 | [Conditional Logic in 30 Minutes](https://7sage.com/lessons/foundations/conditional-and-set-logic/conditional-logic-in-30-minutes?sidebar=study_plan) | Video-only overview; video not watched. |
+| 2 | [Conditional Logic in 30 Minutes](https://7sage.com/lessons/foundations/conditional-and-set-logic/conditional-logic-in-30-minutes?sidebar=study_plan) | Complete auto-caption transcript read; parent verified 34:16 player runtime versus 30-minute schedule estimate; audiovisual not fully watched. |
 | 3 | [The Logic of an Argument](https://7sage.com/lessons/foundations/conditional-and-set-logic/the-logic-of-an-argument?sidebar=study_plan) | Written content inspected: formal validity versus informal strength. |
 | 4 | [Sets, Supersets, Subsets and Membership](https://7sage.com/lessons/foundations/conditional-and-set-logic/sets-supersets-subsets-and-membership?sidebar=study_plan) | Written content inspected: circles/dots, nesting, relative roles and nonmembership. |
 | 5 | [Sufficiency and Necessity](https://7sage.com/lessons/foundations/conditional-and-set-logic/sufficiency-and-necessity?sidebar=study_plan) | Written teaching inspected by parent; video not watched; summary below. |
@@ -27,7 +27,7 @@ Titles below are clear editorial expansions of the parent's transmitted title ab
 | 13 | [Contrapositive](https://7sage.com/lessons/foundations/conditional-and-set-logic/contrapositive?sidebar=study_plan) | Written teaching inspected by parent; video not watched; summary below. |
 | 14 | [The Contrapositive Argument #2](https://7sage.com/lessons/foundations/conditional-and-set-logic/the-contrapositive-argument?sidebar=study_plan) | Written teaching inspected by parent; video not watched; summary below. |
 | 15 | [The Contrapositive Argument: Andersen v King County (2006)](https://7sage.com/lessons/foundations/conditional-and-set-logic/the-contrapositive-argument-andersen-v-king-county-2006?sidebar=study_plan) | Written teaching inspected by parent; video not watched; summary below. |
-| 16 | [Skill Builder: Sufficiency and Necessity Workshop](https://7sage.com/lessons/foundations/conditional-and-set-logic/skill-builder-sufficiency-and-necessity-workshop?sidebar=study_plan) | Embedded circles and Start observed; interaction not launched. |
+| 16 | [Skill Builder: Sufficiency and Necessity Workshop](https://7sage.com/lessons/foundations/conditional-and-set-logic/skill-builder-sufficiency-and-necessity-workshop?sidebar=study_plan) | Parent launched Start: four scenario choices; move/resize nested boxes; initial corrective feedback inspected; no boxes moved or task completed. |
 | 17 | [Too Many Expressions in English](https://7sage.com/lessons/foundations/conditional-and-set-logic/too-many-expressions-in-english-2?sidebar=study_plan) | Written teaching inspected by parent; video not watched; summary below. |
 | 18 | [Conditional Sufficiency and Necessity Indicators](https://7sage.com/lessons/foundations/conditional-and-set-logic/conditional-sufficiency-and-necessity-indicators?sidebar=study_plan) | Written teaching inspected by parent; video not watched; summary below. |
 | 19 | [Group 1: Sufficient Condition Indicators](https://7sage.com/lessons/foundations/conditional-and-set-logic/group-1-sufficient-condition-indicators?sidebar=study_plan) | Written teaching inspected by parent; video not watched; summary below. |
@@ -71,6 +71,12 @@ The parent verified **54 scheduled resources in Conditional and Set Logic**, **3
 
 Formal argument resources appear before and after indicator practice: conditional argument and symbolic translation first, contraposition next, and chaining later. The combined-arguments lesson and review follow the chaining sets. This order is observed; its pedagogical rationale is inferred unless the inspected teaching states it. A title describes topic scope; it does not by itself prove the full teaching content was reviewed.
 
+## The overview teaches the basic operations before technical extensions
+
+Source: [overview video](https://www.youtube.com/watch?v=Tjdkaq4A-xM), linked from resource 2. Caption provenance: `C:/Users/Joshu/AppData/Local/Temp/browser-use/exports/youtube-Tjdkaq4A-xM-188f1eb1-62cf-46bc-998b-ef083f983356.txt`. Auto-generated captions can omit on-screen material or misrecognize terms.
+
+The overview starts with guarantees versus requirements, granting the stated premises and resisting conversational assumptions that add exclusivity. Nested sets and arrows support four fact-to-rule applications: two valid moves and two invalid moves. It then introduces four indicator families, emphasizes only-if direction and two equivalent unless translations, and connects rules despite reordered premises or harder wording. Four pause-and-resume checks cover validity, choosing a missing premise, recognizing equivalent statements and a chained argument; spoken explanations compare the supported move with tempting alternatives. It ends by recommending deliberate diagramming practice to build interpretation and connection skills, while treating diagrams as optional tools rather than replacements for understanding. Conditional versus nonconditional indicator uses are deferred; compound scope and biconditionals are not developed. This is a caption-based teaching summary, not a full visual review or verification of the source's test-frequency and learning-outcome claims.
+
 ## Translation and chaining receive repeated practice
 
 The inspected Logic of an Argument article distinguishes a valid/invalid formal relationship from the continuum of strength in informal reasoning. The inspected sets lesson uses circles and dots, nested sets and relative subset/superset roles. It warns through membership reasoning that being outside one category does not determine the alternative category. These foundations precede notation and indicator drills, so the sequence introduces meaning before repeated translation. That final relationship is an interpretation of observed order.
@@ -111,7 +117,7 @@ These original summaries reflect the parent's inspected written pages. They do n
 | 49: domain | Separates scope conditions from the active rule and suggests revisiting this technique in later LR study. | LSAT U must verify membership in the restricted domain before suppressing a condition in notation. A scope simplification is not permission to discard premises. |
 | 51: biconditionals | Contrasts if and only if, combines two directions, and shows equal truth values and the equivalent negative pair. | Exclusive alternatives connect one claim to the negation of the other; they are not an ordinary same-truth-value biconditional. |
 
-The Sufficiency and Necessity Workshop exposed an embedded circles activity labelled mammals/dogs with a Start control. It was not launched, so its interactions and feedback remain unverified. You Try entrances promise an attempt followed by explanation, but their explanation/feedback screens were not inspected. Their actual transfer feedback remains a gap in this research.
+The parent launched the Sufficiency and Necessity Workshop's Start control inside its iframe. Four scenario choices lead into constructing nested boxes to represent universal inclusion. Instructions permit moving boxes and resizing them from a lower-right corner. Initial feedback diagnoses an oversized subset box and prompts shrinking it; a statement-building dialog also appears. No boxes were moved and no task was completed, so later corrective behavior, task count and completion feedback remain unverified. This mechanism rehearses set containment through manipulation rather than only writing an arrow. You Try entrances promise an attempt followed by explanation, but their explanation/feedback screens were not inspected. Their actual transfer feedback remains a gap in this research.
 
 ## Practice adds cumulative syntax and reasoning demands
 
@@ -139,7 +145,7 @@ The analysis separates these dimensions:
 - **Transition:** how the resource prepares for the next resource; label inference when the platform does not state it.
 - **Evidence:** text read, answer reveal inspected, video-only/unread audiovisual, or title/order metadata only.
 
-No source example sentences, full captions, transcripts or item banks are copied here. Opening a lesson is not completing it. A title and duration do not establish the depth of teaching.
+No source example sentences, full captions, transcripts or item banks are copied here. Opening a lesson is not completing it. A title and duration do not establish the depth of teaching. The overview is the only video with a complete caption read in this report; other video content remains unreviewed. Worksheet reveals, written articles and entrance screens have the separate limits recorded above. Source summaries are concise original paraphrases; repeated discussion of a resource remains below 200 attributed words per source, including the overview summary and ledger metadata.
 
 ## How to assess relative emphasis
 

@@ -7,6 +7,12 @@ aliases: []
 
 # Log
 
+## [2026-10-01] delegate | Opus 5.5 low builds independent question study aids
+
+- User invoked claude-build for a separate large ticket chunk and explicitly selected Opus 5.5 low. Scoped #179 to typed actor/question bookmarks, durable LR aids, and LR/RC controls; grading/writers/AI/backend changes excluded. Standalone unreviewed work order preserves original ticket's remaining attribution/mode acceptance.
+- Clean isolated worktree `C:/Users/Joshu/dev/lsatu-study-tools-179` created from `4474d9f`, dependency junction supplied, existing checkout MCP edit untouched. Claude CLI 2.1.280 verified. First runner launch failed before inference on npm wrapper; native entry point resolved from wrapper and retried successfully. Command records explicit claude-opus-5-5 / low, normal acceptEdits permissions, no bypass.
+- Running exec session 34475 / artifacts `research/2026-10-01-lsatu-179-claude-build/claudex-gp4s8t8l`; no completed result or returned-model identity yet. Independent host proof/UI and fresh Codex inspection remain mandatory before integration. No ticket closed or Lovable credit spent in this delegation.
+
 ## [2026-10-01] deploy | Activity coach rejects malformed model grades
 
 - Joshua approved one Lovable-agent deployment of `activity-coach` from tested `e8419dc`. Completed agent response reports deployment success including the `response.ts` helper, 0.5 credits, and no version number. No additional grading inference ran. Agent edit `edt-573e399d-4d56-4018-a584-b6b9e2f850ea` / commit `4474d9f9bdc68036983873f119e044137ab359c1`.
