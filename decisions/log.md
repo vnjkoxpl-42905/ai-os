@@ -212,3 +212,8 @@ Joshua specified a standalone teaching library, separate from student records. R
 ## 2026-09-30: Deploy the LSAT U audit backend while preserving current work
 
 Joshua explicitly authorized the Lovable Cloud backend/database deployment and continued implementation of the audit plan. Preserve current assignments, answers, results, and history; use additive installation and verify original row values before and after deployment. Free Lovable database and publication controls are authorized. Any action that may spend Lovable credits still requires immediate, specific confirmation. No account data cleanup or deletion is authorized by this deployment approval.
+
+
+## 2026-09-30: Recap references guide quality, not topic scope
+
+Joshua clarified that the Some, Most, and All note is a teaching/design quality benchmark, not permission to add quantity content to conditional reasoning. Future recap runs must use the accumulated [recap calibration](../skills/codex/post-session-recap/references/recap-calibration.md), stay within the selected concept and authorized enrichment, and record new feedback for skill refinement. Applied in both runtime skills and current V10.

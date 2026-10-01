@@ -241,3 +241,8 @@ blurring the difference between a count that is possible and one that is guarant
 concrete example to show what each statement proves, then introduce notation and
 the inferences. Do not write an abstract umbrella sentence merely to announce the
 topic.
+
+
+### Reference quality does not authorize reference topics (2026-09-30)
+
+Joshua requested the Some, Most, and All note as a teaching-flow and visual-quality reference. Quantity examples and exercises do not belong in the separate facts/rules note. Remove that off-topic material; retain the distinction between what a rule says and what a fact establishes. Before future recaps, read the accumulated corrections in the Post Session Recap skill's `references/recap-calibration.md`. Preserve source-driven scope while matching the reference's teaching quality.
