@@ -17,6 +17,7 @@ Date: 2026-09-30 · Goal: Define a complete conditional-reasoning curriculum tha
 - Assignment must work at broad and narrow scopes: the complete beginner-to-expert pathway, a particular area, or a specific skill gap.
 - Confirmed assignment scopes: whole curriculum, area, and specific skill. These belong to one shared curriculum rather than separate disconnected courses.
 - Accepted initial six-area skill map: understand rules; translate language; use rules with facts; connect rules; handle complex conditionals; solve LSAT questions. This is a coverage map, not yet a fixed learning order.
+- Quantifier reasoning (some, most, all) is a subsequent phase after the conditional phase in the full pathway, and must also be independently assignable.
 - Stage definitions, placement criteria, progression criteria, and the curriculum's home remain undecided.
 
 ## Q&A log
@@ -69,7 +70,14 @@ Date: 2026-09-30 · Goal: Define a complete conditional-reasoning curriculum tha
 - Decision: Use the proposed six-area map as the initial organizing structure.
 - Authorized next step: Broader read-only source inventory and coverage assessment. Distinguish missing source material from material that only needs organizing or adaptation.
 - Unanswered: Quantifier scope; do not infer approval of either a limited interaction unit or a full quantifier curriculum.
-- Inventory report: `brainstorms/2026-09-30-conditional-curriculum/material-inventory.md` (being prepared).
+- Inventory report: `brainstorms/2026-09-30-conditional-curriculum/material-inventory.md` (completed).
+
+### Quantifier scope resolved: A subsequent assignable phase
+- Asked earlier in Q9: Include only conditional/quantifier interactions here, or cover quantifiers fully?
+- Captured: "sum/most/in all quantity" interpreted as some/most/all quantifier reasoning; it "follows after the full conditionals are done" and can also be "specifically ... assigned" as the next phase within conditional/quantity.
+- Decision: A conditional phase followed by a quantifier phase within the broader pathway. Quantifier work is separately assignable.
+- Not decided: What conditional readiness is required for direct quantifier assignment; distinction between introductory universal conditional language and the later quantifier phase.
+- Q10 mastery policy remains unanswered: this message resolves quantifier sequencing, not automatic advancement criteria.
 
 ## Existing materials: Local inventory
 
@@ -79,6 +87,16 @@ Date: 2026-09-30 · Goal: Define a complete conditional-reasoning curriculum tha
 - The 2026-09-14 conditional input-design brainstorm has later entries reporting a four-world hub, 40 new questions, saved runs, and phased General practice, with publication verified in that record on 2026-09-17 at commit `486f33b`.
 - Those files were not found in the initially inspected sibling checkout. Current source location and deployment need reconciliation. This is documented historical publication, not fresh production evidence.
 - Jay 2 surfaced this scope error to Joshua immediately. Expanded inventory will supersede incomplete earlier coverage claims.
+- Reconciled: Routed primary checkout `190ff7b` was inadequate for current feature coverage. Preserved conditional release `486f33b` and newer connected-experience checkout `db55fd4` contain the hub. Newer registry also makes the whole Conditional Indicators Refresher assignable. Earlier limited-checkout absence claims are superseded by the completed material inventory.
+
+### Expanded inventory assessment
+
+- Verified local assets: 62 General items; 40 hub questions (22 Missing Link, 10 MBT, 8 Linking); Refresher with four groups, 16 diagram tasks, 12 flashcards, 22 sorting indicators and four Unless patterns; ten-chapter SA bootcamp with six official questions and twelve conditional exercises.
+- Teaching source: Filed MBT lecture package with teacher script, Socratic prompts, five worked questions and 22 mapped images. Substantial legacy notes exist, but several source extracts are incomplete.
+- Saved catalog snapshot: 13 named Conditional Logic drills plus three student-specific MBT drills. Pools overlap; these counts do not imply unique questions.
+- Sufficiency: Enough to begin assembling a curriculum using existing material. Not enough evidence to declare complete beginner-to-expert coverage ready. Need skill-by-skill review for fresh transfer checks, beginner fact/rule contrasts, no-link contrasts, advanced operations and applications beyond strongest MBT/SA content.
+- Packaging gaps: One learning path, assignable specific skills, linked teaching/practice, placement and mastery criteria, remediation, and teacher-visible progress across tools.
+- No source material was changed, no new content was requested from Joshua yet, and no platform action or fresh live verification occurred.
 
 - Conditional Rephrase: 62 authored items, paper diagram followed by multiple-choice route selection. Eight diagnostic indicator families. Sorting Yard and Trigger Gallery reuse this bank.
 - Adjacent Activity: Spot the Relationship distinguishes conditional, causal, and comparative relationships.
@@ -91,7 +109,7 @@ Date: 2026-09-30 · Goal: Define a complete conditional-reasoning curriculum tha
 ## Open flags (pending input)
 
 - Define observable expert outcome and conditional curriculum boundaries -> Joshua, with proposed criteria from Jay 2.
-- Decide quantifier boundary after existing-material coverage is reviewed -> Joshua.
+- Define readiness for direct quantifier assignment and the treatment of universal conditional wording -> Joshua.
 - Define subsection contents, mastery checks, and advancement rules -> Joshua.
 - Define intended curriculum home, placement, advancement, and remediation -> Joshua, after scope is settled.
 - Verify live availability of selected materials -> live systems when needed; local inventory completed.

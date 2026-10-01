@@ -6,6 +6,16 @@ Status: Twenty-seven slices published; all fourteen functional tickets and defer
 Specification: [#165](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/165)  
 Decision map: [#155](https://github.com/vnjkoxpl-42905/lsatu-684d89db/issues/155)
 
+## Current prepared batch and backend checkpoint (2026-09-30)
+
+The published frontend remains `db55fd4f795407382c2a5ba2df499cc85edbb3cf` (27 slices). Its previously pending teacher Work guided-source failure/retry now passed in production, with original guided statuses restored and all request blocks cleared.
+
+Three additive backend protections were deployed through managed Lovable Cloud SQL with original-value preservation: read-only student progress identity (44 student rows retained; 13 isolated and 5 ordinary JWT checks), standalone timed-section foundation/writer (14 existing tables retained; disabled with zero sittings), and module-progress completion/unlock retention (213 bootcamp rows retained; 19 isolated checks). Existing enabled full PrepTest configuration and catalog were preserved. No records were deleted or backfilled, and no credits were spent.
+
+Unpublished frontend work covers legacy redirects/locked tabs, acknowledged rail preferences, exact Hard Sentences and native-lab Review records, saved native responses/completions and teacher progress identity. Automated checks and independent reviews are underway/passing, but actual local UI verification is blocked by an explicit browser policy denial on the existing local tab. Joshua was asked to open `http://127.0.0.1:8080` in Codex's browser. Do not bypass that denial or publish changed components without the required UI evidence. Standalone client is prepared; new section runner/launch/report integration, assigned/custom source support and activation still remain.
+
+After browser access is restored: finish and verify the prepared batch, guarded push and free publication, then finish standalone interface integration and continue the existing Step 1 through Step 9 acceptance lists. Backend installation alone does not close #166/#167 or the broader plan.
+
 ## The end state we are building
 
 Students have seven dependable destinations: Home, My Work, Practice, Review, Progress, Library, and Schedule. Tabs keep related tasks on one page; the rail stays short. Every assignment, practice sitting, review episode, and session note opens its own saved record and returns to the right place. Home recommends a real next action. Scores and Progress use disclosed, account-owned evidence. Joshua keeps full teacher controls in a clearly identified selected-student mode while his practice answers remain separate from student results. The design adapts useful patterns from LSAT Lab, 7Sage, LSAT Demon, and AdeptLR without copying features that do not fit one-to-one teaching. No new video catalog is required.

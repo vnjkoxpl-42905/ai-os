@@ -19,3 +19,10 @@ _Avoid_: Level as a synonym for an area
 **Specific skill**:
 A narrowly defined ability that can be taught, practiced, and assigned on its own, such as translating Group 3 words.
 _Avoid_: Whole Activity as a synonym for a specific skill
+
+**Conditional phase**:
+The first phase of the full pathway, covering conditional understanding, translation, inference, linking, complex rules, and LSAT applications.
+
+**Quantifier phase**:
+The subsequent phase covering some, most, and all reasoning. It follows the conditional phase in the full pathway and can also be assigned independently.
+_Avoid_: Difficulty level as a synonym for a phase
