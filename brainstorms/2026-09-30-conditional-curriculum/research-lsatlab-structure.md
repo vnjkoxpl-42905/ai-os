@@ -4,6 +4,8 @@ Update 2026-10-01: the complete native en-US caption stream for Conditional Logi
 
 Also completed: [Quantifiers, video 33015](research-lsatlab-quantifiers.md), Matt Sherman, 2026-08-27. All 1,350 auto-caption cues reviewed; 83-minute class organized into quantified meaning, language, combination patterns, and three polled applications. The report records existence and threshold corrections required before adaptation. This supplements the earlier library metadata; it does not establish complete platform coverage.
 
+Current class evidence also includes [the core conditional class](research-lsatlab-core-class.md) and [advanced conditional reasoning](research-lsatlab-advanced-conditionals.md). Use these alongside the introductory lesson and quantifier analysis for content coverage; the initial browser limitations are superseded by these caption reviews.
+
 ## The personalized Study Plan supplies a fuller training pathway
 
 The parent research session subsequently inspected the signed-in personalized Study Plan. The table preserves its observed relevant card order. It is not a universal mandatory sequence. Time allocations are scheduled metadata; they do not establish actual time needed. Set IDs identify banks, not unique skills.
@@ -77,9 +79,15 @@ Archive: `corpus/lectures/logical-reasoning/must-be-true/core/2026-08-27-33013/`
 
 ## Teaching progression we can infer, with limits
 
-The library places conditional reasoning among reusable argument patterns, then organizes applications by question family. The archived MBT class demonstrates movement from explicit operations to worked LSAT applications. A useful LSAT U progression is therefore meaning and translation → valid transformations → rule linking versus fact-triggering → application. This is an LSAT U design inference, not a verified timestamp-by-timestamp outline of LSAT Lab's Conditional Logic lesson.
+The library places conditional reasoning among reusable argument patterns, then organizes applications by question family. Caption reviews now establish detailed teaching timelines in the linked introductory, core, advanced, and quantified sources. A useful LSAT U progression is meaning and translation → valid transformations → rule linking versus fact-triggering → application, followed by quantifier reasoning. This remains an LSAT U design recommendation; the four sources do not establish a single mandatory platform-wide order.
 
-Training evidence is strongest for instructor explanations, contrasting valid/invalid moves, repetition as a fluency goal, and worked LSAT questions. Number of repetitions, student answer interface, automated feedback, difficulty progression, mastery gates, and independent reassessment were not verified in this pass. A video library is not itself evidence of a complete independently guided pathway.
+Training evidence includes worked explanation, ten introductory translation items, class polls and student reasoning, flashcard reveal-and-review, AI-labeled activities, graduated LSAT sets, and one explicit 4-of-5 passing criterion. Automated feedback across all formats, fresh independent reassessment, locked-level contents, and universal unlocking rules remain unverified.
+
+## Flashcards show scope and difficulty as separate controls
+
+The parent inspected Diagram Logic 1. A front-side prompt asks what action a conditional indicator requires. Show Answer reveals an explanation using a semantic analogy or equivalent English formulation and contraposition. Next and Back allow navigation. No automatic grading was observed.
+
+Visible card-type filters: Diagramming Conditionals (48), What Can We Infer (10), Quantifiers (13), What's Missing Idea (52), Parallel Abstractions (24), Negations (9). Difficulty filters displayed Level 1 (36), Level 2 (12), Level 3 (5) under the current filter state. These counts must not be promoted to universal bank totals. Separate type and difficulty controls directly support Joshua's requested independent scope and difficulty selection.
 
 ## Original LSAT U practice proposals
 
@@ -93,8 +101,8 @@ Use one shared rule set to isolate different operations: every certified guide i
 
 These are original example proposals. Beginner work can isolate one operation; Medium can require choosing the operation; Advanced can vary language and compound structure. Timing remains optional for Medium and Advanced. Quantifiers belong in the following phase under Joshua's requirement, with their own assignable skills.
 
-## Unverified portion and browser limitation
+## Current verification limits
 
-The Conditional Logic detail page exposed a Vimeo player iframe, but player controls were unavailable through the inspected DOM. Subsequent navigation and state reads timed out. No full lesson playback, drill completion, transcript extraction, answer submission, or progress change was intentionally performed. Duration and actual fine-grained lesson content remain unverified. The temporary research tab was closed successfully after these failures.
+The initial browser-only pass encountered inaccessible Vimeo controls and navigation timeouts; its temporary tab was closed. Subsequent parent research verified runtime and obtained visible player caption tracks, enabling the complete source reviews linked above. Those reviews establish caption coverage and fine-grained teaching chronology, not full audio or board fidelity.
 
-Next useful inspection: the Conditional Logic lesson's visible chapters/captions if available; a current advanced conditional recording; a Quantifiers recording; and Study Plan practice links. Capture concise teaching summaries and exercise roles, without copying a complete lesson or question bank.
+Locked topic levels, full exercise banks, AI feedback behavior, and universal mastery/unlocking rules remain uninspected. No student answer submission or activity completion was performed. Clicking topic Level 1 Start did not verify a launch. Viewing video pages may affect view history or progress: the returned plan showed a video In Progress; the research must not claim zero progress side effects. Each caption report records its own coverage and accuracy limits.

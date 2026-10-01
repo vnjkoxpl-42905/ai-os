@@ -10,7 +10,23 @@ The conditional written lessons and worksheet tasks show a deliberate progressio
 
 The live LR schedule returns to these operations inside inference, rule application, and assumption lessons. This makes transfer a repeated part of the broader course, rather than something accomplished by finishing the foundational chapter once.
 
-LSAT Lab's inspected library organizes a broad conditional lesson among common reasoning patterns and applications by question family. Its archived MBT class demonstrates explicit contrasts among contraposition, connecting rules, and triggering a rule with a fact. That supports a useful complementary teaching approach. Its full conditional video, advanced recordings, quantifier instruction, and drill feedback have not been inspected sufficiently for a complete comparison.
+LSAT Lab now has substantially stronger evidence: the entire available caption streams for its conditional primer, core conditional class, advanced conditional class, and quantifier class were reviewed. Its personalized Study Plan exposes flashcards, rephrasing, inference and negation activities, graded question sets, and displayed topic levels. The chronological reports below hold the source summaries; this synthesis uses them to propose the LSAT U design. Caption coverage does not establish audiovisual fidelity, displayed-board completeness or full interactive feedback.
+
+## Compare introduction, rehearsal and transfer separately
+
+This comparison interprets evidence recorded in the linked reports. It does not equate a provider's resource count with skill mastery or assume its personalized schedule is a required universal sequence.
+
+| Design step | 7Sage evidence reference | LSAT Lab evidence reference | Original LSAT U implication |
+|---|---|---|---|
+| Establish meanings | [Foundations](research-7sage-conditionals.md) | [Primer](research-lsatlab-conditional-lesson.md) | Start with rules, facts and allowed/forbidden cases. Provide enough isolated practice for an independent beginner. |
+| Translate language | [Foundations](research-7sage-conditionals.md) | [Primer](research-lsatlab-conditional-lesson.md), [Study Plan](research-lsatlab-structure.md) | Give Groups 1–4 their own assignable paths, then mixed translation. Pair recognition with production and meaning checks. |
+| Transform and combine | [Foundations](research-7sage-conditionals.md) | [Primer](research-lsatlab-conditional-lesson.md) | Separate contraposition, compound negation, chaining, fact-triggering and residual conditions. Choose prerequisites by operation rather than video title. |
+| Rehearse before transfer | [Worksheets](research-7sage-conditionals.md) | [Study Plan activities](research-lsatlab-structure.md) | Make symbolic rehearsal, language rehearsal and authentic question practice distinct assignment choices. A general assignment mixes them at the chosen level. |
+| Apply by question demand | [LR written theory](research-7sage-lr.md) | [Core class](research-lsatlab-core-class.md), [Advanced class](research-lsatlab-advanced-conditionals.md) | Teach deriving, repairing, refuting and matching as distinct demands. An answer that follows from premises can still fail to repair an argument. |
+| Develop difficult transfer | [Parallel approach](research-7sage-lr.md) | [Core](research-lsatlab-core-class.md), [Advanced](research-lsatlab-advanced-conditionals.md) | Add unfamiliar language and combinations, then efficient method selection. Require proof before shortcuts and use fresh checks after correction. |
+| Add quantity | [Quantifier sequence](research-7sage-quantifiers.md) | [Quantifier class](research-lsatlab-quantifiers.md) | Keep Joshua's following phase. Move applications requiring quantified witnesses or whole-quantity negation to that phase or its later mixed review. |
+
+For the three difficulties, tag each item by demands: number of operations, language/scope complexity, need to choose a method, scaffolding and independence. Map Beginner to isolated supported operations, Medium to independent selection and modest combinations, and Advanced to dense scope and coordinated operations. These are proposed rubrics. LSAT Lab's five displayed topic levels and question difficulty bands cannot be converted mechanically into our three labels; the locked level content was not inspected. A given skill must still have practice at all three levels.
 
 ## How the conditional sequence builds
 
@@ -43,7 +59,7 @@ Seven translation worksheets contain 35 visible prompts: one Group 1 set, four c
 
 Two chaining worksheets contain ten visible prompts and 80 scheduled minutes. Their demands include contraposition, reordering, information that cannot join the chain, and semantic distinctions between similar phrases. This deserves a separate linking skill in our curriculum.
 
-The five-task Draw Valid Conclusions worksheet moves from translating a sentence to coordinating premises and producing an inference. The compound worksheet adds detailed explanations of implicit conjunctions, timing requirements, and negation. Short lessons are therefore followed by work that asks students to generate structure, not simply recognize a word.
+The five-task Draw Valid Conclusions worksheet moves from translating a sentence to coordinating premises and producing an inference. The compound worksheet contains six prompts and six inspected written explanations, adding implicit conjunctions, timing requirements, negation, compact notation and a contrast between possibility and guarantee. Short lessons are therefore followed by work that asks students to generate structure, not simply recognize a word.
 
 The foundational conditional section also includes repeated You Try entries and two five-question adaptive entrances. Their pages promise attempts and explanations or tailored mixed practice. The runs were not completed, so exact feedback, selection algorithms, scoring, and mastery rules are unverified. Schedule estimates are study allocations, not measured video runtimes or validated recommended timings.
 
@@ -89,6 +105,20 @@ Recommended learning-unit proposal: explain one operation, demonstrate an origin
 - [7Sage quantifiers and formal flaws](research-7sage-quantifiers.md)
 - [7Sage LR transfer](research-7sage-lr.md)
 - [LSAT Lab structure and archived teaching evidence](research-lsatlab-structure.md)
+- [LSAT Lab complete conditional-primer caption analysis](research-lsatlab-conditional-lesson.md)
+- [LSAT Lab core conditional-class caption analysis](research-lsatlab-core-class.md)
+- [LSAT Lab advanced conditional-class caption analysis](research-lsatlab-advanced-conditionals.md)
+- [LSAT Lab quantified-class caption analysis](research-lsatlab-quantifiers.md)
 - [Existing LSAT U materials](material-inventory.md)
 
-The written-page and catalogue research is substantially developed. This is not a complete audiovisual audit: videos were not watched end to end; adaptive runs, every answer reveal, interactive workshop feedback, and the full LSAT Lab conditional/quantifier sequence remain unverified. The reports distinguish those limits rather than fill them from titles. No platform curriculum was published and no answers or completion controls were intentionally submitted.
+The written-page, catalogue and four LSAT Lab caption-stream reviews are substantially developed. This remains an incomplete audiovisual and interactive audit. No platform curriculum was published and no answers or completion controls were intentionally submitted.
+
+Concrete remaining audit targets:
+
+- Verify caption-to-audio fidelity and displayed diagrams/slides for the four reviewed LSAT Lab resources, especially ambiguous scope, notation and disputed heuristics. Caption-stream completeness is already documented and need not be confused with this task.
+- Inspect LSAT Lab topic Levels 2–5 when accessible. Confirm their actual tasks, prerequisite relationships and unlock logic. The separate observed Level 3 passing rule must not be generalized.
+- Inspect actual feedback, attempts, hints, retries and item variation in both providers' drills. Most feedback was not submitted or observed; catalogue timers and allocations do not establish training effectiveness.
+- Review 7Sage's worked official-question videos and explanations beyond the inspected written theory and worksheet pages. The observed order does not establish complete question-level coverage.
+- Review each existing LSAT U question against skill, difficulty, format, fresh-assessment suitability and explanation quality. Identify duplicates before counting coverage.
+- Validate original teaching and exercises for existence assumptions, exact majority thresholds, scope and whole-claim negation. Review contextual biconditional and normative-direction heuristics before adapting them.
+- Define approved mastery, placement, remediation, review scheduling and advancement policies with Joshua. Those design choices remain open; no automated gate is implied by this report.

@@ -20,7 +20,7 @@ def seconds(stamp):
     parts = stamp.replace(',', '.').split(':')
     return sum(float(value) * 60 ** power for power, value in enumerate(reversed(parts)))
 
-def normalize(vtt, output):
+def normalize(vtt, output=None):
     cues = []
     for block in re.split(r'\r?\n\s*\r?\n', vtt.read_text(encoding='utf-8-sig')):
         lines = block.splitlines()
@@ -34,6 +34,8 @@ def normalize(vtt, output):
         cues.append({'start': seconds(match[1]), 'end': seconds(match[2]), 'text': text})
     if not cues:
         raise ValueError('No captions found')
+    if output is None:
+        return cues
     result = '\n'.join(f'[{c["start"]:.3f} - {c["end"]:.3f}] {c["text"]}' for c in cues) + '\n'
     output.parent.mkdir(parents=True, exist_ok=True)
     if output.exists() and output.read_text(encoding='utf-8') != result:
@@ -45,6 +47,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--video-id', required=True)
     parser.add_argument('--player-url', help='Observed Vimeo embed URL including its existing hash')
+    parser.add_argument('--subtitle-lang', default='en-x-autogen', help='Observed native caption language (default: en-x-autogen)')
     parser.add_argument('--video', action='store_true', help='Retrieve video for local exact-time frame captures')
     parser.add_argument('--normalize-to', type=Path)
     parser.add_argument('--frames', type=Path, help='JSON array: path (output filename), at_seconds')
@@ -52,20 +55,27 @@ def main():
     args = parser.parse_args()
     if not re.fullmatch(r'\d+', args.video_id):
         parser.error('video-id must be numeric')
+    if not re.fullmatch(r'[A-Za-z]{2,8}(?:-[A-Za-z0-9]{1,16})*', args.subtitle_lang):
+        parser.error('subtitle-lang must be a single language identifier, such as en-US or en-x-autogen')
     archive = ROOT / 'raw' / 'sources' / 'lsat-lab-lectures' / args.video_id
     archive.mkdir(parents=True, exist_ok=True)
-    captions = archive / 'source.en-x-autogen.vtt'
+    captions = archive / f'source.{args.subtitle_lang}.vtt'
     media = archive / 'source.mp4'
     common = ['yt-dlp', '--referer', 'https://app.lsatlab.com/', '--no-progress', '--retries', '3', '--fragment-retries', '3']
     if not captions.exists():
         if not args.player_url:
             parser.error('player-url needed for initial capture')
-        run(common + ['--skip-download', '--write-subs', '--sub-langs', 'en-x-autogen', '--sub-format', 'vtt', '--output', str(archive / 'source.%(ext)s'), args.player_url])
+        run(common + ['--skip-download', '--write-subs', '--sub-langs', args.subtitle_lang, '--sub-format', 'vtt', '--output', str(archive / 'source.%(ext)s'), args.player_url])
+    if not captions.is_file() or not captions.stat().st_size:
+        parser.error(f'No nonempty captions captured for {args.subtitle_lang}; inspect available native tracks and select --subtitle-lang explicitly')
+    try:
+        cues = normalize(captions, args.normalize_to)
+    except ValueError as error:
+        parser.error(str(error))
     if args.video and not media.exists():
         if not args.player_url:
             parser.error('player-url needed for initial video capture')
         run(common + ['--format', 'bestvideo[height<=1080]/best', '--concurrent-fragments', '16', '--output', str(archive / 'source.%(ext)s'), args.player_url])
-    cues = normalize(captions, args.normalize_to) if args.normalize_to else None
     if args.frames:
         if not args.screenshots or not media.exists():
             parser.error('frames requires screenshots output and downloaded source.mp4')
@@ -95,7 +105,7 @@ def main():
             time_map[name] = stamp
             time_map_path.write_text(json.dumps(time_map, indent=2) + '\n', encoding='utf-8')
     hashes = {p.name: hashlib.sha256(p.read_bytes()).hexdigest() for p in (captions, media) if p.exists()}
-    print(json.dumps({'archive': str(archive), 'sha256': hashes, 'caption_cues': len(cues) if cues else None, 'last_caption_end': cues[-1]['end'] if cues else None}, indent=2))
+    print(json.dumps({'archive': str(archive), 'subtitle_language': args.subtitle_lang, 'sha256': hashes, 'caption_cues': len(cues), 'last_caption_end': cues[-1]['end']}, indent=2))
 
 if __name__ == '__main__':
     main()
