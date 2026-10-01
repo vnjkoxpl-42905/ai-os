@@ -6,6 +6,7 @@ import argparse
 import hashlib
 import json
 import os
+import re
 from pathlib import Path
 import shutil
 import signal
@@ -142,10 +143,10 @@ def validate_review(value) -> dict:
     return value
 
 
-def codex_review_mcp_servers(prefix: list[str], repo: Path) -> list[str]:
+def codex_review_mcp_servers(prefix: list[str], repo: Path, overrides=None) -> list[str]:
     """Read effective configuration without recording credentials or transport settings."""
     try:
-        result = subprocess.run(prefix + ["mcp", "list", "--json"], cwd=repo,
+        result = subprocess.run(prefix + (overrides or []) + ["mcp", "list", "--json"], cwd=repo,
                                 capture_output=True, timeout=30)
         if result.returncode:
             raise RunError("Codex MCP discovery failed; review was not launched.")
@@ -155,16 +156,54 @@ def codex_review_mcp_servers(prefix: list[str], repo: Path) -> list[str]:
         names = []
         for server in servers:
             name = server.get("name") if isinstance(server, dict) else None
-            if not isinstance(name, str) or not name or any(ord(c) < 32 for c in name) or name in names:
+            if not isinstance(name, str) or not name or not re.fullmatch(r"[A-Za-z0-9_-]+", name) or name in names:
                 raise ValueError("invalid server name")
+            if overrides is not None and server.get("enabled") is not False:
+                raise ValueError("server not disabled")
             names.append(name)
         return sorted(names)
     except (OSError, ValueError, subprocess.SubprocessError):
         raise RunError("Codex MCP discovery could not be verified; review was not launched.") from None
 
 
+REVIEW_DISABLED_FEATURES = ("apps", "computer_use", "browser_use", "browser_use_external",
+                           "browser_use_full_cdp_access", "in_app_browser", "plugins",
+                           "remote_plugin", "code_mode_host")
+
+
+def codex_review_features(prefix: list[str], repo: Path, overrides: list[str]) -> None:
+    try:
+        result = subprocess.run(prefix + overrides + ["features", "list"], cwd=repo,
+                                capture_output=True, timeout=30)
+        if result.returncode:
+            raise ValueError("feature probe failed")
+        features = {}
+        for line in result.stdout.decode("utf-8").splitlines():
+            parts = line.split()
+            if len(parts) < 3 or parts[-1] not in ("true", "false") or parts[0] in features:
+                raise ValueError("invalid feature inventory")
+            features[parts[0]] = parts[-1]
+        if any(features.get(name) != "false" for name in REVIEW_DISABLED_FEATURES):
+            raise ValueError("feature not disabled")
+    except (OSError, ValueError, subprocess.SubprocessError):
+        raise RunError("Codex integration feature boundaries could not be verified; review was not launched.") from None
+
+
+def codex_review_mcp_overrides(prefix: list[str], repo: Path) -> tuple[list[str], list[str]]:
+    names = codex_review_mcp_servers(prefix, repo)
+    overrides = sum((["-c", f"features.{name}=false"] for name in REVIEW_DISABLED_FEATURES), [])
+    codex_review_features(prefix, repo, overrides)
+    for name in names:
+        # CLI 0.156.1 loses imported transport metadata for a nested enabled
+        # override. Replace it with an inert disabled transport for this run.
+        overrides += ["-c", f'mcp_servers.{name}={{enabled=false,command="review-disabled"}}']
+    if codex_review_mcp_servers(prefix, repo, overrides) != names:
+        raise RunError("Codex MCP inventory changed during verification; review was not launched.")
+    return names, overrides
+
+
 def command(provider: str, mode: str, run_dir: Path, model=None, effort=None,
-            session=None, mcp_servers=None) -> list[str]:
+            session=None, mcp_overrides=None) -> list[str]:
     review = mode != "build"
     if provider == "codex":
         args = ["exec"] + (["resume", session] if session else [])
@@ -173,10 +212,9 @@ def command(provider: str, mode: str, run_dir: Path, model=None, effort=None,
                  ["-s", "read-only" if review else "workspace-write"])
         args += ["-c", 'approval_policy="never"', "--json", "-o", str(run_dir / "reply.txt")]
         if review:
-            if mcp_servers is None:
+            if mcp_overrides is None:
                 raise RunError("Codex review requires verified MCP discovery before launch.")
-            for name in mcp_servers:
-                args += ["-c", f'mcp_servers.{json.dumps(name, ensure_ascii=False)}.enabled=false']
+            args += mcp_overrides
             args += ["--skip-git-repo-check", "--output-schema", str(run_dir / "schema.json")]
         if model:
             args += ["-m", model]
@@ -380,11 +418,11 @@ def run(args) -> int:
             raise RunError("CLI version probe failed. Check the resolved executable before retrying.")
         record["cli_version"] = version.stdout.decode("utf-8", errors="replace").strip()
         record["executable"] = prefix
-        disabled_mcp = codex_review_mcp_servers(prefix, repo) if provider == "codex" and args.mode != "build" else None
+        disabled_mcp, mcp_overrides = codex_review_mcp_overrides(prefix, repo) if provider == "codex" and args.mode != "build" else (None, None)
         if disabled_mcp is not None:
             record["disabled_mcp_servers"] = disabled_mcp
         argv = prefix + command(provider, args.mode, run_dir, args.model, args.effort,
-                                previous["session_id"] if previous else None, disabled_mcp)
+                                previous["session_id"] if previous else None, mcp_overrides)
         save(run_dir / "command.json", argv)
         print(json.dumps({"provider": provider, "model": args.model or "CLI default (unresolved)",
                           "mode": args.mode, "artifacts": str(run_dir)}), flush=True)
