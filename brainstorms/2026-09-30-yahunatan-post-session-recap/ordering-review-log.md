@@ -23,3 +23,8 @@ Observed model `claude-opus-5-5`; CLI 2.1.280. Result status completed; verdict 
 ## 2026-09-30: V8 implemented and approved
 
 Implemented approved sequence, repaired prerequisites, synchronized source and rendered headings, added four fresh transfer questions, and preserved assignment wording. First Claude pass REVISE, second APPROVED using claude-opus-5-5. Full responses: claude-v8-review-round1.md and claude-v8-review.md. Final evidence C:/Users/Joshu/AppData/Local/Temp/claudex-tvtluvke/result.json. Source hash deed15e26aa5d5f622b882789a4fb74777002608fcaa9700984c1ee6e26a8007; HTML hash 4439e51e7033252556a33aa4c0927deb287288e47cb4c805ae67e38fbe8cbd98. Canonical V8 export source filed in student recap. Static source/package checks, JS syntax, publisher dry-run passed. Live visual verification blocked by browser policy. No publication. Two optional low-priority suggestions retained without post-review edits.
+
+
+## 2026-09-30: V9 visual revision approved
+
+Replaced letter conditions with short phrases, clarified case language, added illustrated two-rule joining with click/replay, numbered invalid moves, shared-result diagram, and redesigned check/practice surfaces. Source definitions drive HTML. V8 preserved; current canonical recap is V9. Claude Opus 5.5 review REVISE then APPROVED after label, keyboard-focus, feedback and sequence fixes. Final result C:/Users/Joshu/AppData/Local/Temp/claudex-099e2z9p/result.json. Reports claude-v9-review-round1.md and claude-v9-review.md. Static structure, ids/anchors, JavaScript syntax and publisher dry-run passed. Live browser verification unavailable under policy. No publication.
