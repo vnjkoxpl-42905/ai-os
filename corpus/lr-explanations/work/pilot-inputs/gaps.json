@@ -26,18 +26,6 @@
 "reason": []
 },
 {
-"slot": "PT101-S3-Q2",
-"state": "Unexplained",
-"type": "Flaw",
-"diff": 1,
-"feat": [
-"Analogies"
-],
-"reason": [
-"Comparative Reasoning"
-]
-},
-{
 "slot": "PT101-S3-Q15",
 "state": "Unexplained",
 "type": "Must be True",
@@ -174,20 +162,6 @@
 ]
 },
 {
-"slot": "PT102-S2-Q18",
-"state": "Unexplained",
-"type": "Flaw",
-"diff": 3,
-"feat": [
-"Argue the Anti-Conclusion",
-"Plans / Recommendations",
-"Ruling Out Options"
-],
-"reason": [
-"Conditional Reasoning"
-]
-},
-{
 "slot": "PT102-S3-Q8",
 "state": "Unexplained",
 "type": "Method",
@@ -201,36 +175,12 @@
 ]
 },
 {
-"slot": "PT102-S3-Q14",
-"state": "Steps-only",
-"type": "Flaw",
-"diff": 1,
-"feat": [
-"Famous Flaws",
-"Rebuttals"
-],
-"reason": [
-"Causation"
-]
-},
-{
 "slot": "PT102-S3-Q16",
 "state": "Unexplained",
 "type": "Dispute",
 "diff": 3,
 "feat": [
 "2-Speaker"
-],
-"reason": []
-},
-{
-"slot": "PT102-S4-Q4",
-"state": "Unexplained",
-"type": "Flaw",
-"diff": 2,
-"feat": [
-"Famous Flaws",
-"Rebuttals"
 ],
 "reason": []
 },
@@ -302,29 +252,6 @@
 ]
 },
 {
-"slot": "PT103-S1-Q5",
-"state": "Unexplained",
-"type": "Flaw",
-"diff": 3,
-"feat": [
-"Focused on Evidence",
-"Rebuttals"
-],
-"reason": []
-},
-{
-"slot": "PT103-S2-Q1",
-"state": "Unexplained",
-"type": "Flaw",
-"diff": 1,
-"feat": [
-"Famous Flaws"
-],
-"reason": [
-"Conditional Reasoning"
-]
-},
-{
 "slot": "PT103-S2-Q2",
 "state": "Unexplained",
 "type": "Most Supported",
@@ -334,19 +261,6 @@
 "Proposition/Generalization"
 ],
 "reason": []
-},
-{
-"slot": "PT103-S2-Q4",
-"state": "Unexplained",
-"type": "Flaw",
-"diff": 2,
-"feat": [
-"Famous Flaws",
-"Rebuttals"
-],
-"reason": [
-"Conditional Reasoning"
-]
 },
 {
 "slot": "PT103-S2-Q6",
@@ -359,20 +273,6 @@
 "reason": [
 "Conditional Reasoning",
 "Comparative Reasoning"
-]
-},
-{
-"slot": "PT103-S3-Q5",
-"state": "Unexplained",
-"type": "Flaw",
-"diff": 1,
-"feat": [
-"Anti-Causal",
-"Focused on Evidence",
-"Rebuttals"
-],
-"reason": [
-"Causation"
 ]
 },
 {
@@ -413,21 +313,6 @@
 "Rebuttals"
 ],
 "reason": []
-},
-{
-"slot": "PT104-S1-Q2",
-"state": "Unexplained",
-"type": "Flaw",
-"diff": 2,
-"feat": [
-"Missing Link / Idea",
-"Math-y Stuff",
-"Medical",
-"New Concept in Conclusion"
-],
-"reason": [
-"Comparative Reasoning"
-]
 },
 {
 "slot": "PT104-S1-Q7",
@@ -479,20 +364,6 @@
 ],
 "reason": [
 "Conditional Reasoning"
-]
-},
-{
-"slot": "PT104-S4-Q10",
-"state": "Unexplained",
-"type": "Flaw",
-"diff": 1,
-"feat": [
-"Sufficient vs. Necessary Flaw",
-"Famous Flaws",
-"Abstract Answers"
-],
-"reason": [
-"Causation"
 ]
 },
 {
@@ -587,21 +458,6 @@
 ]
 },
 {
-"slot": "PT105-S1-Q26",
-"state": "Unexplained",
-"type": "Flaw",
-"diff": 2,
-"feat": [
-"Abstract Answers",
-"Argue the Anti-Conclusion",
-"Binaries",
-"Ruling Out Options"
-],
-"reason": [
-"Conditional Reasoning"
-]
-},
-{
 "slot": "PT105-S2-Q7",
 "state": "Unexplained",
 "type": "Must be True",
@@ -626,18 +482,6 @@
 ],
 "reason": [
 "Causation"
-]
-},
-{
-"slot": "PT105-S2-Q15",
-"state": "Unexplained",
-"type": "Flaw",
-"diff": 2,
-"feat": [
-"Focused on Evidence"
-],
-"reason": [
-"Comparative Reasoning"
 ]
 },
 {
@@ -696,19 +540,6 @@
 "reason": []
 },
 {
-"slot": "PT105-S4-Q8",
-"state": "Unexplained",
-"type": "Flaw",
-"diff": 3,
-"feat": [
-"Sufficient vs. Necessary Flaw",
-"Famous Flaws"
-],
-"reason": [
-"Conditional Reasoning"
-]
-},
-{
 "slot": "PT105-S4-Q9",
 "state": "Unexplained",
 "type": "Weaken",
@@ -724,13 +555,14 @@
 ]
 },
 {
-"slot": "PT105-S4-Q13",
-"state": "Unexplained",
-"type": "Flaw",
-"diff": 1,
+"slot": "PT105-S4-Q14",
+"state": "Partial-notes",
+"type": "Necessary Assumption",
+"diff": 4,
 "feat": [
-"Famous Flaws",
-"Explain Curious Fact"
+"Missing Link / Idea",
+"Plans / Recommendations",
+"Plausibility"
 ],
 "reason": [
 "Causation"
@@ -831,19 +663,6 @@
 ]
 },
 {
-"slot": "PT106-S2-Q2",
-"state": "Unexplained",
-"type": "Flaw",
-"diff": 1,
-"feat": [
-"Famous Flaws",
-"Part vs. Whole"
-],
-"reason": [
-"Comparative Reasoning"
-]
-},
-{
 "slot": "PT106-S2-Q7",
 "state": "Unexplained",
 "type": "Argument Evaluation",
@@ -861,20 +680,6 @@
 ]
 },
 {
-"slot": "PT106-S3-Q2",
-"state": "Unexplained",
-"type": "Flaw",
-"diff": 2,
-"feat": [
-"Abstract Answers",
-"Sampling",
-"Plans / Recommendations"
-],
-"reason": [
-"Comparative Reasoning"
-]
-},
-{
 "slot": "PT106-S3-Q3",
 "state": "Unexplained",
 "type": "Paradox",
@@ -883,20 +688,6 @@
 "reason": [
 "Causation",
 "Comparative Reasoning"
-]
-},
-{
-"slot": "PT106-S3-Q5",
-"state": "Unexplained",
-"type": "Flaw",
-"diff": 1,
-"feat": [
-"Abstract Answers",
-"2-Speaker",
-"Plans / Recommendations"
-],
-"reason": [
-"Causation"
 ]
 },
 {
@@ -1071,6 +862,17 @@
 ]
 },
 {
+"slot": "PT107-S3-Q7",
+"state": "Partial-notes",
+"type": "Flaw",
+"diff": 3,
+"feat": [],
+"reason": [
+"Causation",
+"Comparative Reasoning"
+]
+},
+{
 "slot": "PT107-S3-Q11",
 "state": "Unexplained",
 "type": "Method of Reasoning",
@@ -1171,19 +973,6 @@
 ]
 },
 {
-"slot": "PT107-S4-Q25",
-"state": "Unexplained",
-"type": "Flaw",
-"diff": 2,
-"feat": [
-"Assumes Similarity",
-"Plans / Recommendations"
-],
-"reason": [
-"Comparative Reasoning"
-]
-},
-{
 "slot": "PT108-S2-Q1",
 "state": "Unexplained",
 "type": "Agree/Disagree",
@@ -1191,27 +980,6 @@
 "feat": [
 "2-Speaker"
 ],
-"reason": []
-},
-{
-"slot": "PT108-S2-Q12",
-"state": "Unexplained",
-"type": "Flaw",
-"diff": 2,
-"feat": [
-"Famous Flaws",
-"Sampling"
-],
-"reason": [
-"Comparative Reasoning"
-]
-},
-{
-"slot": "PT108-S2-Q18",
-"state": "Unexplained",
-"type": "Flaw",
-"diff": 2,
-"feat": [],
 "reason": []
 },
 {
@@ -1251,6 +1019,16 @@
 "Plans / Recommendations",
 "Quantifiers",
 "Rebuttals"
+],
+"reason": []
+},
+{
+"slot": "PT108-S3-Q16",
+"state": "Partial-notes",
+"type": "Principle-Conform",
+"diff": 4,
+"feat": [
+"Principles in Stimulus"
 ],
 "reason": []
 },
@@ -1362,19 +1140,6 @@
 "Clarification/Misunderstanding"
 ],
 "reason": []
-},
-{
-"slot": "PT109-S3-Q5",
-"state": "Unexplained",
-"type": "Flaw",
-"diff": 3,
-"feat": [
-"Argue the Anti-Conclusion",
-"Assumes Similarity"
-],
-"reason": [
-"Comparative Reasoning"
-]
 },
 {
 "slot": "PT109-S3-Q6",
@@ -1546,22 +1311,6 @@
 ]
 },
 {
-"slot": "PT110-S3-Q4",
-"state": "Unexplained",
-"type": "Flaw",
-"diff": 1,
-"feat": [
-"Famous Flaws",
-"Sampling",
-"Anti-Causal",
-"Conditional Conclusion"
-],
-"reason": [
-"Causation",
-"Comparative Reasoning"
-]
-},
-{
 "slot": "PT110-S3-Q7",
 "state": "Unexplained",
 "type": "Point at Issue",
@@ -1717,6 +1466,20 @@
 ]
 },
 {
+"slot": "PT111-S1-Q22",
+"state": "Partial-notes",
+"type": "Sufficient Assumption",
+"diff": 4,
+"feat": [
+"Missing Link / Idea",
+"New Concept in Conclusion",
+"Quantifiers"
+],
+"reason": [
+"Conditional Reasoning"
+]
+},
+{
 "slot": "PT111-S3-Q5",
 "state": "Unexplained",
 "type": "Principle",
@@ -1754,20 +1517,6 @@
 "reason": []
 },
 {
-"slot": "PT111-S3-Q13",
-"state": "Unexplained",
-"type": "Flaw",
-"diff": 3,
-"feat": [
-"Argue the Anti-Conclusion",
-"Rebuttals",
-"Timeframes"
-],
-"reason": [
-"Comparative Reasoning"
-]
-},
-{
 "slot": "PT111-S3-Q15",
 "state": "Unexplained",
 "type": "Necessary Assumption",
@@ -1786,20 +1535,6 @@
 ]
 },
 {
-"slot": "PT111-S3-Q25",
-"state": "Unexplained",
-"type": "Flaw",
-"diff": 4,
-"feat": [
-"Explain Curious Fact",
-"Science"
-],
-"reason": [
-"Causation",
-"Comparative Reasoning"
-]
-},
-{
 "slot": "PT111-S4-Q6",
 "state": "Unexplained",
 "type": "Parallel Flaw",
@@ -1810,22 +1545,6 @@
 ],
 "reason": [
 "Causation"
-]
-},
-{
-"slot": "PT111-S4-Q8",
-"state": "Unexplained",
-"type": "Flaw",
-"diff": 1,
-"feat": [
-"Alternatives",
-"Anti-Causal",
-"Focused on Evidence",
-"Rebuttals",
-"Timeframes"
-],
-"reason": [
-"Comparative Reasoning"
 ]
 },
 {
@@ -2035,35 +1754,6 @@
 "feat": [
 "Explain Curious Fact",
 "Alternatives",
-"Rebuttals"
-],
-"reason": [
-"Causation"
-]
-},
-{
-"slot": "PT112-S3-Q25",
-"state": "Unexplained",
-"type": "Flaw",
-"diff": 2,
-"feat": [
-"Explain Curious Fact",
-"Alternatives",
-"Argue the Anti-Conclusion",
-"Contrapositive Logic"
-],
-"reason": [
-"Causation",
-"Conditional Reasoning"
-]
-},
-{
-"slot": "PT112-S4-Q8",
-"state": "Unexplained",
-"type": "Flaw",
-"diff": 1,
-"feat": [
-"Anti-Causal",
 "Rebuttals"
 ],
 "reason": [
@@ -2328,18 +2018,6 @@
 ]
 },
 {
-"slot": "PT113-S4-Q16",
-"state": "Unexplained",
-"type": "Flaw",
-"diff": 2,
-"feat": [
-"Argue the Anti-Conclusion",
-"Plans / Recommendations",
-"Rebuttals"
-],
-"reason": []
-},
-{
 "slot": "PT113-S4-Q23",
 "state": "Unexplained",
 "type": "Necessary Assumption",
@@ -2389,28 +2067,6 @@
 "reason": [
 "Conditional Reasoning"
 ]
-},
-{
-"slot": "PT114-S1-Q6",
-"state": "Unexplained",
-"type": "Flaw",
-"diff": 2,
-"feat": [
-"Argue the Anti-Conclusion",
-"Rebuttals"
-],
-"reason": []
-},
-{
-"slot": "PT114-S1-Q8",
-"state": "Unexplained",
-"type": "Flaw",
-"diff": 1,
-"feat": [
-"Famous Flaws",
-"Rebuttals"
-],
-"reason": []
 },
 {
 "slot": "PT114-S1-Q16",
@@ -2522,21 +2178,6 @@
 "reason": []
 },
 {
-"slot": "PT114-S2-Q25",
-"state": "Unexplained",
-"type": "Flaw",
-"diff": 2,
-"feat": [
-"Sampling",
-"Assumes Similarity",
-"Math-y Stuff",
-"Science"
-],
-"reason": [
-"Comparative Reasoning"
-]
-},
-{
 "slot": "PT114-S4-Q3",
 "state": "Unexplained",
 "type": "Main Conclusion",
@@ -2544,17 +2185,6 @@
 "feat": [
 "Important Pivot",
 "Science"
-],
-"reason": []
-},
-{
-"slot": "PT114-S4-Q8",
-"state": "Unexplained",
-"type": "Flaw",
-"diff": 1,
-"feat": [
-"Famous Flaws",
-"Rebuttals"
 ],
 "reason": []
 },
@@ -2603,19 +2233,6 @@
 "Analogies"
 ],
 "reason": []
-},
-{
-"slot": "PT115-S2-Q14",
-"state": "Unexplained",
-"type": "Flaw",
-"diff": 2,
-"feat": [
-"Net Effect",
-"Plans / Recommendations"
-],
-"reason": [
-"Comparative Reasoning"
-]
 },
 {
 "slot": "PT115-S2-Q16",
@@ -2726,18 +2343,6 @@
 ]
 },
 {
-"slot": "PT115-S4-Q21",
-"state": "Unexplained",
-"type": "Flaw",
-"diff": 3,
-"feat": [
-"Argue the Anti-Conclusion"
-],
-"reason": [
-"Conditional Reasoning"
-]
-},
-{
 "slot": "PT115-S4-Q24",
 "state": "Unexplained",
 "type": "Principle-Conform",
@@ -2798,17 +2403,6 @@
 "reason": [
 "Comparative Reasoning"
 ]
-},
-{
-"slot": "PT116-S2-Q5",
-"state": "Unexplained",
-"type": "Flaw",
-"diff": 1,
-"feat": [
-"2-Speaker",
-"Argue the Anti-Conclusion"
-],
-"reason": []
 },
 {
 "slot": "PT116-S2-Q11",
@@ -3014,24 +2608,6 @@
 ]
 },
 {
-"slot": "PT117-S3-Q4",
-"state": "Unexplained",
-"type": "Flaw",
-"diff": 1,
-"feat": [
-"Timeframes",
-"Missing Link / Idea",
-"2-Speaker",
-"Alternatives",
-"Refute a Conditional",
-"Rebuttals"
-],
-"reason": [
-"Conditional Reasoning",
-"Comparative Reasoning"
-]
-},
-{
 "slot": "PT117-S3-Q7",
 "state": "Unexplained",
 "type": "Must be True",
@@ -3093,18 +2669,6 @@
 "Sampling",
 "Focused on Evidence",
 "Timeframes"
-],
-"reason": [
-"Comparative Reasoning"
-]
-},
-{
-"slot": "PT117-S4-Q9",
-"state": "Unexplained",
-"type": "Flaw",
-"diff": 2,
-"feat": [
-"Assumes Similarity"
 ],
 "reason": [
 "Comparative Reasoning"
@@ -3208,18 +2772,6 @@
 "reason": [
 "Causation"
 ]
-},
-{
-"slot": "PT118-S3-Q6",
-"state": "Unexplained",
-"type": "Flaw",
-"diff": 1,
-"feat": [
-"Famous Flaws",
-"Abstract Answers",
-"Rebuttals"
-],
-"reason": []
 },
 {
 "slot": "PT118-S3-Q8",
@@ -3457,17 +3009,14 @@
 ]
 },
 {
-"slot": "PT119-S2-Q24",
-"state": "Steps-only",
-"type": "Flaw",
-"diff": 3,
+"slot": "PT119-S2-Q15",
+"state": "Partial-notes",
+"type": "Principle-Conform",
+"diff": 2,
 "feat": [
-"First Sentence Conclusion",
-"Timeframes"
+"Principles in Answers"
 ],
-"reason": [
-"Comparative Reasoning"
-]
+"reason": []
 },
 {
 "slot": "PT119-S3-Q1",
@@ -3476,16 +3025,6 @@
 "diff": 1,
 "feat": [],
 "reason": []
-},
-{
-"slot": "PT119-S3-Q2",
-"state": "Unexplained",
-"type": "Flaw",
-"diff": 2,
-"feat": [],
-"reason": [
-"Comparative Reasoning"
-]
 },
 {
 "slot": "PT119-S3-Q3",
@@ -4691,6 +4230,18 @@
 ]
 },
 {
+"slot": "PT133-S2-Q25",
+"state": "Partial-notes",
+"type": "Strengthen",
+"diff": 2,
+"feat": [
+"Missing Link / Idea"
+],
+"reason": [
+"Comparative Reasoning"
+]
+},
+{
 "slot": "PT133-S3-Q1",
 "state": "Unloaded",
 "type": "Role",
@@ -5693,6 +5244,20 @@
 "feat": [],
 "reason": [
 "Causation",
+"Comparative Reasoning"
+]
+},
+{
+"slot": "PT146-S3-Q11",
+"state": "Partial-notes",
+"type": "Must Be False",
+"diff": 3,
+"feat": [
+"Important Pivot",
+"Proposition/Generalization"
+],
+"reason": [
+"Conditional Reasoning",
 "Comparative Reasoning"
 ]
 },

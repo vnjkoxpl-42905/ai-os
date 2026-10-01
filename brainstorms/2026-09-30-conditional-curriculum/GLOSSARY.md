@@ -23,6 +23,14 @@ _Avoid_: Whole Activity as a synonym for a specific skill
 **Conditional phase**:
 The first phase of the full pathway, covering conditional understanding, translation, inference, linking, complex rules, and LSAT applications.
 
+**Learning sequence**:
+The teaching and practice that take a student through a specific skill from the beginning. Every specific skill also has a separately assignable practice drill.
+_Avoid_: Practice drill as a synonym for the complete learning sequence
+
+**Practice drill**:
+Work assigned directly to practice a skill, without requiring its full teaching sequence again. Specific-skill and general drills offer Beginner, Medium, and Advanced difficulty.
+_Avoid_: Full curriculum as a synonym for a practice drill
+
 **Quantifier phase**:
 The subsequent phase covering some, most, and all reasoning. It follows the conditional phase in the full pathway and can also be assigned independently.
 _Avoid_: Difficulty level as a synonym for a phase

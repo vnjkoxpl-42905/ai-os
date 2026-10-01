@@ -22,6 +22,7 @@ Date: 2026-09-30 · Goal: Define a complete conditional-reasoning curriculum tha
 - Translation coverage explicitly includes Groups 1, 2, 3, and 4, each with its own difficulty progression and targeted assignment. Group 3 examples never limit the scope to that group.
 - Confirmed difficulty labels: Beginner, Medium, Advanced. Three levels apply to general practice and each specific skill; Expert is not a fourth assignment level.
 - Timing is available for Medium and Advanced work. Joshua said "medium and expert" after selecting three levels; Jay 2 provisionally maps expert to Advanced, without adding a fourth level.
+- Each specific skill has a full teaching-and-practice sequence and a separately assignable practice drill. Reuse existing Activities that cover the skill well; create the missing pieces.
 - Stage definitions, placement criteria, progression criteria, and the curriculum's home remain undecided.
 
 ## Q&A log
@@ -108,6 +109,22 @@ Date: 2026-09-30 · Goal: Define a complete conditional-reasoning curriculum tha
 - Decision: Timing can be added to Medium and the highest level. Given Q13's explicit three-level decision, "expert" is provisionally read as Advanced; no fourth level added.
 - Not settled: Default timing, durations, time effects on progression, or whether Beginner timing is prohibited. Do not infer these policies from availability at higher levels.
 
+### Q15 resolved: Teach the skill and offer practice directly
+
+- Asked: Give each specific skill a complete teaching-and-practice sequence plus a separate practice drill, or combine both in one Activity with optional teaching?
+- Recommendation: Both a full learning sequence and a separately assignable drill. Beginners can learn the skill from the ground up; students who understand it can receive practice directly.
+- Captured on 2026-10-01: "that was as accident gowithe the one u intially reommended" after the turn was accidentally interrupted.
+- Decision: Use the recommended full learning sequence plus separate practice drill for every specific skill. Keep the already confirmed Beginner, Medium, and Advanced choices for targeted and general work.
+- Reuse instruction: Preserve existing Activities when their actual teaching and practice cover the intended skill. Fill gaps rather than rebuilding covered material.
+- Design direction: Draft original, purposeful student experiences with worked examples, guided practice, independent practice, error repair, and unfamiliar transfer. These formats are proposals until reviewed; the packaging choice is confirmed.
+- Still open: Student response formats, feedback and hint behavior, level criteria, placement, advancement, and progress visibility. No mastery threshold or automatic remediation was approved by this answer.
+
+### Q16 pending: Help after a mistake
+
+- Asked on 2026-10-01: During a learning sequence, give a specific hint and retry with the worked explanation available on demand, or show the worked explanation immediately?
+- Recommendation: A specific hint and retry, with an accessible worked explanation. For a reversed Group 1 rule, prompt the student to identify which complete condition guarantees which result. Timed drill feedback can be reserved for review.
+- Status: Awaiting Joshua's answer. This is a feedback proposal, not an approved withholding rule, grading system, retry limit, or advancement policy.
+
 ## Existing materials: Local inventory
 
 ### Scope correction during expanded inventory
@@ -141,14 +158,14 @@ Date: 2026-09-30 · Goal: Define a complete conditional-reasoning curriculum tha
 
 - Joshua requested a clear account of the conditional curriculum, what each step teaches, how it trains students, dependencies, and relative coverage, so LSAT U can follow the broad progression with original content.
 - Earlier requests for verbatim or near-verbatim competitor lesson/drill archives were redirected to original summaries, references, and original examples. Latest messages confirm this explanatory research scope. Claimed tutor access does not establish inspected content or full audiovisual coverage.
-- Parent inspected the signed-in 7Sage Foundations schedule: 54 conditional, 34 intersecting-set, and 12 formal-flaw resources; written lessons and skill-builder tasks were reviewed, with selected reveals checked. LR schedule and seven written application resources were also inspected.
+- Parent inspected the signed-in 7Sage Foundations schedule: 54 conditional, 34 intersecting-set, and 12 formal-flaw resources; written lessons and skill-builder tasks were reviewed. All six compound-logic worksheet reveals and the full introductory overview captions were inspected. Relevant LR application lessons were also reviewed. Several worked-question video explanations and submission-dependent feedback remain unverified.
 - Correction: Four worksheets following Group 2 mix Groups 1 and 2. Do not describe them as four times as much Group 2-only practice.
-- LSAT Lab library structure and relevant lesson metadata were inspected. Existing archived MBT instruction supports analysis; full conditional/quantifier video and drill details remain unverified.
+- LSAT Lab library structure, relevant personalized study-plan stages, and flashcard workflows were inspected. Complete available caption streams for the introductory conditional lesson, core conditional class, advanced conditional class, and quantifier class were read and preserved with provenance. Caption coverage does not establish complete audio or slide coverage. Locked diagramming levels and submission-dependent drill feedback remain unverified.
 - Main synthesis and proposed assignment matrix: [curriculum-analysis.md](2026-09-30-conditional-curriculum/curriculum-analysis.md). This is research and a proposal; mastery, placement, timing, and automatic advancement policies remain open. No platform changes were made.
 
 - Define observable expert outcome and conditional curriculum boundaries -> Joshua, with proposed criteria from Jay 2.
 - Define readiness for direct quantifier assignment and the treatment of universal conditional wording -> Joshua.
-- Define subsection contents, mastery checks, and advancement rules -> Joshua.
+- Define teaching and practice details within the confirmed two-part skill package, mastery checks, and advancement rules -> Joshua.
 - Define concrete Beginner/Medium/Advanced criteria per skill and the relation of timing to difficulty -> Joshua.
 - Define intended curriculum home, placement, advancement, and remediation -> Joshua, after scope is settled.
 - Verify live availability of selected materials -> live systems when needed; local inventory completed.

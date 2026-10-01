@@ -34,7 +34,7 @@ The examples in this table are original LSAT U examples. They are not competitor
 
 | Ordered step | Content the student should learn | How to train it in LSAT U | Original example and dependency |
 |---|---|---|---|
-| 1. Introduce the problem | Conditional reasoning solves practical inference problems. A first attempt makes the need for a method concrete. | Short attempt, then explain the operation and revisit later. Do not treat the first attempt as an approved placement test. | Every registered volunteer has an ID. Lina is registered. What follows? |
+| 1. Introduce the problem | Conditional reasoning solves practical inference problems. A concrete worked example shows the method's purpose. | Explain a worked inference, then guide a similar attempt and revisit later. This is teaching, not an approved placement test. | Every registered volunteer has an ID. Lina is registered. Therefore Lina has an ID. |
 | 2. Understand sets and rules | A subset sits within a larger set; membership and nonmembership differ. Sufficiency and necessity are relative to a particular relationship. | Move a member inside/outside nested sets; explain which conclusions are forced and which remain open. | Every violinist in this orchestra is a musician. Being a musician alone does not establish being a violinist. |
 | 3. Separate truth from validity | Evaluate whether the conclusion follows assuming the premises, rather than whether the premises match outside knowledge. | Compare arguments with the same form and different subject matter. Require a reason for validity. | All silver birds sing. K is a silver bird. Therefore K sings. The inference follows even if the first premise is fictional. |
 | 4. Represent rules and facts | Symbols preserve complete meanings; a rule is a relationship, while a fact says a condition is satisfied. | Translate a rule and a fact separately, then derive the result. Keep symbol definitions visible. | R→I; Lina satisfies R; therefore Lina satisfies I. Builds on meaning, not arrows alone. |
@@ -122,3 +122,62 @@ Concrete remaining audit targets:
 - Review each existing LSAT U question against skill, difficulty, format, fresh-assessment suitability and explanation quality. Identify duplicates before counting coverage.
 - Validate original teaching and exercises for existence assumptions, exact majority thresholds, scope and whole-claim negation. Review contextual biconditional and normative-direction heuristics before adapting them.
 - Define approved mastery, placement, remediation, review scheduling and advancement policies with Joshua. Those design choices remain open; no automated gate is implied by this report.
+
+## Proposed teaching and practice for every skill
+
+Joshua confirmed two assignment choices for every specific skill: a complete teaching-and-practice sequence, and a separately assignable practice drill. Preserve existing covered Activities. Each sequence teaches before checking: explanation, worked example, guided attempt, independent practice, explanation of errors, then fresh transfer. These are draft units, not published resources. No advancement threshold is imposed.
+
+The table expands the earlier 16-step map where separate assignment requires smaller units. **Reuse** means the local inventory verifies relevant content, not that targeted assignment already exists. **Gap** means dedicated packaging or sufficient fresh coverage is unverified. B/M/A are proposed Beginner/Medium/Advanced demand variations. Optional timing belongs to Medium and Advanced.
+
+| Skill | Student action and feedback | Reuse or gap | B / M / A variation |
+|---|---|---|---|
+| Practical inference orientation | Follow a concrete worked inference first; try a similar guided case; explain the evidence | Reuse MBT teaching; build brief orientation | One rule / choose relevant rule / distractors |
+| Sets, sufficiency, necessity | Mark allowed cases; explain why membership permits only certain conclusions | Reuse legacy notes/refresher; gap dedicated cases | Named categories / unfamiliar categories / restricted subgroups |
+| Truth versus validity | Assume premises; classify inference; give counterexample when invalid | Reuse notes; gap focused drill | Obvious form / unfamiliar content / subtle invalidity |
+| Rules versus facts | Label each statement; distinguish rule output from fact output | Reuse MBT lecture/hub; gap isolated drill | Explicit labels / mixed statements / derived rules and facts |
+| Negation | Produce exact complement, including middle cases; compare boundaries | Reuse General negatives/notes; gap complete focused bank | Single term / double negative / scoped expression |
+| Contraposition | Reverse direction and negate both terms; explain equivalence | Reuse General paired diagram/contrapositive items | Symbols / language / compound terms |
+| Group 1 | Identify complete sufficient clause, translate and restate; repair wrong direction | Reuse refresher and General; gap Group 1 assignment/filter | Explicit if / clause order and negatives / dense modifiers |
+| Group 2 | Identify necessary requirement; distinguish from a guarantee | Reuse refresher/General; gap Group 2 assignment/filter | Only if / varied requirements / embedded restrictions |
+| Group 3 | Negate the appropriate clause; check meaning and equivalent contraposition | Reuse Unless tab, refresher/General; gap complete targeted bank | Simple unless / existing negatives / compounds and scope |
+| Group 4 | Translate exclusion; identify which coexistence is forbidden | Reuse refresher/General; gap Group 4 assignment/filter | No A is B / negative terms / modified categories |
+| Mixed indicator translation | Choose method without group announced; explain conditional versus incidental wording | Reuse General; tag items and gaps | Familiar groups / varied phrasing / difficult contrasts |
+| Direct and hidden linking | Reorder rules, contrapose if needed, justify shared term | Reuse Linking/MBT/SA; targeted subdivision needed | Direct chain / one hidden bridge / multiple branches |
+| No-link contrasts | Explain why common result is insufficient; construct permitted countercase | Reuse lecture; gap fresh dedicated bank | Two rules / negatives / look-alike terms |
+| Triggering chains | Apply supplied fact; list forced and unknown claims | Reuse MBT hub; gap four-case coverage | Positive trigger / negative fact / partial compound trigger |
+| Meaning beyond indicators | Preserve meaning in active/passive or requirement rephrasing | Reuse General/notes; coverage tag needed | Plain requirement / unlisted wording / attribution and scope |
+| AND/OR placements | Test partial facts against joint or alternative conditions | Reuse General/hub/MBT; gap reps per placement | One compound / distinguish placements / mixed chains |
+| Compound negation | Parenthesize, negate whole, apply De Morgan; explain countercase | Reuse General/hub; gap focused breadth | Two terms / contraposition / nested scope |
+| Domain restrictions | Retain subgroup or temporal limits when simplifying | Reuse General/MBT; gap targeted drill | Explicit domain / modifiers / overlapping domains |
+| Biconditionals | Compare two-way rule with one-way rule and exclusive alternatives | Reuse General; gap varied targeted practice | Explicit iff / equivalent wording / context-sensitive scope |
+| Whole-rule refutation | Find trigger true/result false; distinguish from reversing or negating terms | Reuse notes/teaching references; gap authored focused bank | Concrete counterexample / symbolic negation / refuted nested rules |
+| MBT/MSS application | Distinguish demands: MBT proves a guarantee; MSS selects strongest warranted support, which need not be certain | Reuse hub/guided drills/lecture; question-level review | One operation / select operation / dense mixed evidence |
+| Sufficient bridge | Locate gap, insert assumption, rerun proof; distinguish restatement | Reuse Missing Link/SA bootcamp; target subskills | Single gap / hidden contraposition / compound conclusion |
+| Necessary requirement | Negate candidate and test argument; distinguish sufficient overreach | Legacy notes only; gap complete current sequence | Clear dependency / distractors / subtle scope |
+| Flaw and parallel | Identify invalid move; match structure as well as error | Guided pools/notes; gap inspected specific teaching | Basic reversal / changed wording / refutation and quantifiers |
+| Principle tasks | Match all rule conditions; separately teach illustrative generalization | Guided pools; gap verified complete sequence | Explicit rule / compound trigger / distinguish task types |
+| Quantified meaning and direction | Identify range, denominator and witness; explain reversibility limits | Legacy Some/Most notes; gap reviewed targeted bank | Some/all / most / vague language and scope |
+| Quantified negation and linking | Build countermodels; carry witnesses through valid rules | Legacy notes; gap full progression | One negation / valid pairs / mixed negative terms |
+| General mixed practice | Choose procedure across learned skills; feedback names operation missed | Reuse General/hub/guided drills; unified routing needed | Isolated operations mixed / combined operations / advanced transfer |
+
+For new formats, start with paper-first production and a deterministic reveal/self-comparison, matching the existing interaction model. Proposed additions include allowed-case cards, counterexample construction and error diagnosis. Automatic grading of those new interactions would require implementation and validation; no superiority or existing availability is claimed. A drill can be assigned without requiring the student to repeat the teaching sequence.
+
+Alternating worked examples with student attempts, asking students to retrieve taught operations before reveal, and returning to them after a delay have a research basis. The [IES practice guide](https://ies.ed.gov/ncee/wwc/PracticeGuide/1) recommends worked-example/problem alternation, spaced learning and retrieval through quizzes. The [Dunlosky learning-techniques review](https://www.psychologicalscience.org/publications/journals/pspi/learning-techniques.html) rates practice testing and distributed practice highly across varied learning contexts. These sources support those design choices; they do not establish that this LSAT curriculum is superior or determine our exact review intervals.
+
+Prerequisite safeguards: teach basic negation before Groups 3–4; teach AND/OR before compound tasks within any group; teach whole-claim negation before rule-refutation tasks; and teach quantified existence before quantified applications. The later quantifier phase supplies the witness where an overlap inference needs one. Universal rules alone do not establish members. A contrapositive preserves the rule, while negating the whole rule asserts a counterexample. Group labels identify our translation taxonomy, not distinct laws of logic: Group 3 exception wording and Group 4 exclusions can have equivalent negative representations.
+
+### Original Group 1 miniunit: learning what an if-clause guarantees
+
+**Teach.** A sufficient condition is enough to establish the result in this rule. It need not be the only route. In an ordinary conditional statement, the complete if-clause goes before the arrow. Clause order in the sentence does not determine arrow direction.
+
+**Worked example.** “If a parcel receives express service, it receives tracking.” Define E as express service and T as tracking. Write E→T. An express parcel must have tracking. A tracked parcel need not be express. Tracking could accompany another service. The forbidden case is E together with not T.
+
+**Guided practice.** “A visitor receives an entry code if the visitor registers online.” First identify the if-clause: registers online. Then identify the guaranteed result: entry code. Write R→C. Explain why C→R would add a guarantee the sentence never supplied. Reveal these steps after the student attempts them.
+
+**Independent practice.** Translate “If an exhibit is temporarily closed, its tickets remain valid.” Then answer separately what follows from a closed exhibit, and from valid tickets. Answer: closed→valid; closure establishes validity, while validity alone leaves closure unknown. Ask for a plain-language explanation before reveal.
+
+**Error repair.** If the student reverses the rule, return to the two complete clauses and ask which fact the sentence guarantees a result from. If they infer that an open exhibit has invalid tickets, construct the allowed case of an open exhibit with valid tickets. Repair direction and unsupported inference separately.
+
+**Fresh transfer.** “A refund is issued whenever a canceled reservation was prepaid.” Treat canceled-and-prepaid as the complete sufficient condition: (canceled AND prepaid)→refund. A prepaid reservation alone is insufficient. This is a Medium extension once AND prerequisites are taught, not a surprise Beginner requirement.
+
+Advanced Group 1 work would add embedded modifiers and distractor rules while preserving the same operation. The separately assignable drill draws fresh items from the appropriate level; the sequence includes explanation and repair. Exact item counts, timing defaults and advancement criteria remain for Joshua to decide.
