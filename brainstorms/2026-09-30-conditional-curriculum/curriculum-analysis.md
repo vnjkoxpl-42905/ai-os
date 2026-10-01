@@ -97,7 +97,7 @@ Use the refresher for indicator recall and translation; General for mixed transl
 
 The largest gap is the connection among teaching, practice, assignment, and progress. Existing whole-resource assignments and separate saved/browser-local progress do not yet establish one independently guided course. We also need to verify fresh no-link contrasts, four fact cases, whole-claim negation, advanced scope, quantified operations, and application beyond MBT/SA.
 
-Recommended learning-unit proposal: explain one operation, demonstrate an original example, guide one attempt, provide fresh independent practice, explain errors by operation, then check transfer. This packaging is proposed for review; no automatic placement or progression policy is approved.
+Recommended steps within each confirmed learning sequence: explain one operation, demonstrate an original example, guide one attempt, provide fresh independent practice, explain errors by operation, then check transfer. These teaching details are proposed for review; no automatic placement or progression policy is approved.
 
 ## Source reports and remaining evidence
 
@@ -167,6 +167,8 @@ Alternating worked examples with student attempts, asking students to retrieve t
 Prerequisite safeguards: teach basic negation before Groups 3–4; teach AND/OR before compound tasks within any group; teach whole-claim negation before rule-refutation tasks; and teach quantified existence before quantified applications. The later quantifier phase supplies the witness where an overlap inference needs one. Universal rules alone do not establish members. A contrapositive preserves the rule, while negating the whole rule asserts a counterexample. Group labels identify our translation taxonomy, not distinct laws of logic: Group 3 exception wording and Group 4 exclusions can have equivalent negative representations.
 
 ### Original Group 1 miniunit: learning what an if-clause guarantees
+
+The [Group 1 teaching and drill draft](group-1-learning-and-drills.md) develops this example into a learning sequence and eighteen original standalone drill items, six per level, with answers, explanations and proposed optional hints. It supplements existing Activities; complete per-expression coverage and targeted platform packaging remain to be finished.
 
 **Teach.** A sufficient condition is enough to establish the result in this rule. It need not be the only route. In an ordinary conditional statement, the complete if-clause goes before the arrow. Clause order in the sentence does not determine arrow direction.
 

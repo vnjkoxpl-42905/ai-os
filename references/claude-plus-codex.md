@@ -159,3 +159,9 @@ The updater renders separate entry points and hashes for each runtime, preservin
 ### Codex entry points renamed (2026-09-30)
 
 Supersedes retained-name descriptions above. Codex now exposes claude-review, claude-build, grill-me-claude, and grill-with-docs-claude. Claude retains the corresponding Codex names. claudex-loop and claudex-route remain unchanged in both runtimes. The sync maps source names to installed names, updates frontmatter, and moves previously managed old Codex copies into inactive backups after verifying their replacements. Edited old copies are preserved as conflicts. The grill-by-claude shortcut remains available.
+
+### Stateful UI work orders require transition evidence (2026-10-01)
+
+After the LSAT U study-tools review, Joshua requested durable prevention guidance for Claude. Future delegated stateful UI work orders must specify state ownership and lifetime, then require actor-switch isolation, multiple edits during failed persistence, selected-answer/cross-out consistency, reducer-committed persistence under rapid interactions, and touch/keyboard accessibility checks where applicable. Include these acceptance checks in the actual work order; do not rely on remembered guidance alone. Inspect the final mixed snapshot after fixes and distinguish tested behavior from blocked browser checks.
+
+The detailed failure cases and corrective instructions are indexed in Claude's native ai-os memory as `lsatu-study-tool-transition-checks.md`. Reviewers must trace existing behavior before calling it missing: the initial LR-find omission claim was false. Memory is guidance; regression tests and independent inspection provide enforcement. Keep Claude and Codex file ownership separate and preserve all existing student records.

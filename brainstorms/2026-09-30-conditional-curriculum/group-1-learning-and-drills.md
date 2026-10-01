@@ -7,7 +7,9 @@ Draft: 2026-10-01. Original LSAT U teaching and exercises for Joshua's review. T
 1. **Learn and practice Group 1:** the explanation, worked examples, guided attempts, selected existing practice and fresh independent practice below.
 2. **Practice Group 1:** the standalone drills below, with the teaching available as a reference. Beginner, Medium and Advanced are separate sets within the drill.
 
-Existing Activities remain reusable. These eighteen fresh items supplement them rather than replace their content. Difficulty describes interpretation and reasoning demand. Beginner is untimed. Timing may be offered for Medium and Advanced after accurate untimed work; no time limit is specified or approved here.
+Existing Activities remain reusable. These eighteen fresh items supplement them rather than replace their content. Difficulty describes interpretation and reasoning demand. The recommended starting format is untimed. Optional Medium and Advanced timing is confirmed, but timing defaults, exact limits and readiness requirements are not approved. Beginning with accurate untimed work is a teaching recommendation, not an advancement gate or a prohibition on Beginner timing.
+
+This is a reviewed starting set, not exhaustive coverage of every Group 1 expression. Positive conditional uses of when and where, further the-only contrasts, and sufficient fresh items per expression still need item-level tagging or expansion before the package can be declared complete.
 
 **Hint behavior is proposed, pending Joshua's reply:** each item has one optional, specific hint requested by the student. Keep it separate from the answer. Record whether it was used so a supported response is distinguishable from an independent one. This draft does not prescribe scoring penalties, advancement percentages or automatic mastery thresholds.
 
@@ -309,9 +311,9 @@ Local evidence comes from `C:/Users/Joshu/dev/lsatu-connected-experience`; this 
 
 | Existing asset | Reuse in this package | Boundary |
 |---|---|---|
-| `src/features/conditional-refresher/content.ts`, GROUPS g1 and DIAGRAM_ITEMS d1–d4 | Group 1 reference and simple diagram practice; reserve d4 until AND antecedents are taught | Four-group queues currently mix groups. No Group 1-only assignment is established. |
+| `src/features/conditional-refresher/content.ts`, GROUPS g1 and DIAGRAM_ITEMS d1 through d4 | Group 1 reference and simple diagram practice; reserve d4 until AND antecedents are taught | Four-group queues currently mix groups. No Group 1-only assignment is established. |
 | Same content, FLASHCARDS f1/f8 and contrast f9; `ConditionalIndicatorsRefresher.tsx` | Paper diagram, ordinary-English retranslation, answer comparison and optional review | Self-ratings and browser-local totals are not independent teacher-visible mastery evidence. |
-| `src/features/activity-centre/content/conditional-rephrase.json`, orders 1/3/5–9 | Existing sufficient-indicator practice after instruction | Select by actual predicate and demand; current General is a broad mixed assignment. |
+| `src/features/activity-centre/content/conditional-rephrase.json`, orders 1, 3 and 5 through 9 | Existing sufficient-indicator practice after instruction | Select by actual predicate and demand; current General is a broad mixed assignment. |
 | Same bank, orders 38/40/41/43/57 and part of 62 | Later look-alike, guarantee-language, compound and linking review after appropriate teaching | Review contextual wording before inclusion; a category label is not sufficient validation. |
 | `src/features/activity-centre/components/PaperDiagramPanel.tsx` | Existing paper-first diagram/contrapositive comparison | Do not force contraposition into the first Beginner attempts before it is taught. |
 | `src/features/activity-centre/worlds/switchyard/wings/SortingYard.tsx` and `rounds.ts` | Reuse the existing clause-placement interaction for guided direction practice | Component existence does not prove a currently assignable targeted exercise. |
@@ -321,4 +323,4 @@ Local evidence comes from `C:/Users/Joshu/dev/lsatu-connected-experience`; this 
 
 Check whether the student preserved the complete sufficient predicate, preserved its result, pointed the arrow correctly, matched a fact only when it satisfies the whole trigger, and distinguished a guaranteed conclusion from an allowed possibility. Note which step required a hint or an answer reveal. Repeating a revealed item is useful review; it is not the same evidence as solving a fresh item independently.
 
-Self-review: all eighteen answers checked against their stated one-way rules. Each unknown conclusion permits both truth values under the supplied information; a missing trigger is never treated as a denied outcome. AND/OR, contraposition, existence and chaining dependencies are marked before their Advanced items. No item needs a Group 2–4 translation procedure. A3's without phrase is an intact modifier, not an unintroduced negation operation. The hints, timing controls, assignment packaging and advancement policy remain proposals for Joshua's review.
+Self-review: all eighteen answers checked against their stated one-way rules. Each unknown conclusion permits both truth values under the supplied information; a missing trigger is never treated as a denied outcome. AND/OR, contraposition, existence and chaining dependencies are marked before their Advanced items. No item needs a Groups 2 through 4 translation procedure. A3's without phrase is an intact modifier, not an unintroduced negation operation. The two-part skill package is confirmed. Its feedback, timing defaults, platform packaging and advancement policy remain proposals for Joshua's review.

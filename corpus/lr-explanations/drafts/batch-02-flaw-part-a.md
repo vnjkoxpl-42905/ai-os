@@ -184,7 +184,7 @@ Bank glitch: "V olunteering" has a stray space. The database stimulus is already
 > (C) presumes that a viewpoint must be unreasonable to accept simply because some of the grounds advanced to support it do not adequately do so
 > (D) fails to recognize that evidence advanced in support of a conclusion actually undermines that conclusion
 > (E) generalizes about the behavior of all people on the basis of the behavior of a few
->
+
 ### Argument Breakdown
 
 **Conclusion:** The criticism of middle-class families' ecological damage should not be taken too seriously.
@@ -220,7 +220,7 @@ Bank glitch: "V olunteering" has a stray space. The database stimulus is already
 > (C) confuses the expression of unconscious thoughts with the suppression of them
 > (D) fails to demonstrate that the myth was not borrowed from one of the cultures by the others
 > (E) fails to explain why people use myth for the expression of unconscious thoughts
->
+
 ### Argument Breakdown
 
 **Conclusion:** The violent half-horse, half-human creatures reflect people's unconscious fear of the horse.
@@ -256,7 +256,7 @@ Bank glitch: "V olunteering" has a stray space. The database stimulus is already
 > (C) fails to justify its presumption that two events that are correlated must also be causally related
 > (D) treats the absence of evidence that the oil industry has the highest profits among all industries as proof that the oil industry does not have the highest profits among all industries
 > (E) illicitly draws a general conclusion from a specific example that there is reason to think is atypical
->
+
 ### Argument Breakdown
 
 **Conclusion:** The regulatory burden on oil companies is excessive.
