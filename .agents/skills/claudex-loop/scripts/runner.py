@@ -142,8 +142,29 @@ def validate_review(value) -> dict:
     return value
 
 
+def codex_review_mcp_servers(prefix: list[str], repo: Path) -> list[str]:
+    """Read effective configuration without recording credentials or transport settings."""
+    try:
+        result = subprocess.run(prefix + ["mcp", "list", "--json"], cwd=repo,
+                                capture_output=True, timeout=30)
+        if result.returncode:
+            raise RunError("Codex MCP discovery failed; review was not launched.")
+        servers = json.loads(result.stdout)
+        if not isinstance(servers, list):
+            raise ValueError("invalid inventory")
+        names = []
+        for server in servers:
+            name = server.get("name") if isinstance(server, dict) else None
+            if not isinstance(name, str) or not name or any(ord(c) < 32 for c in name) or name in names:
+                raise ValueError("invalid server name")
+            names.append(name)
+        return sorted(names)
+    except (OSError, ValueError, subprocess.SubprocessError):
+        raise RunError("Codex MCP discovery could not be verified; review was not launched.") from None
+
+
 def command(provider: str, mode: str, run_dir: Path, model=None, effort=None,
-            session=None) -> list[str]:
+            session=None, mcp_servers=None) -> list[str]:
     review = mode != "build"
     if provider == "codex":
         args = ["exec"] + (["resume", session] if session else [])
@@ -152,6 +173,10 @@ def command(provider: str, mode: str, run_dir: Path, model=None, effort=None,
                  ["-s", "read-only" if review else "workspace-write"])
         args += ["-c", 'approval_policy="never"', "--json", "-o", str(run_dir / "reply.txt")]
         if review:
+            if mcp_servers is None:
+                raise RunError("Codex review requires verified MCP discovery before launch.")
+            for name in mcp_servers:
+                args += ["-c", f'mcp_servers.{json.dumps(name, ensure_ascii=False)}.enabled=false']
             args += ["--skip-git-repo-check", "--output-schema", str(run_dir / "schema.json")]
         if model:
             args += ["-m", model]
@@ -355,8 +380,11 @@ def run(args) -> int:
             raise RunError("CLI version probe failed. Check the resolved executable before retrying.")
         record["cli_version"] = version.stdout.decode("utf-8", errors="replace").strip()
         record["executable"] = prefix
+        disabled_mcp = codex_review_mcp_servers(prefix, repo) if provider == "codex" and args.mode != "build" else None
+        if disabled_mcp is not None:
+            record["disabled_mcp_servers"] = disabled_mcp
         argv = prefix + command(provider, args.mode, run_dir, args.model, args.effort,
-                                previous["session_id"] if previous else None)
+                                previous["session_id"] if previous else None, disabled_mcp)
         save(run_dir / "command.json", argv)
         print(json.dumps({"provider": provider, "model": args.model or "CLI default (unresolved)",
                           "mode": args.mode, "artifacts": str(run_dir)}), flush=True)

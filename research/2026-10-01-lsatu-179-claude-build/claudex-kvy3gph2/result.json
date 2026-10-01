@@ -1,0 +1,22 @@
+{
+  "status": "running",
+  "mode": "build",
+  "provider": "claude",
+  "roles": {
+    "host": "codex",
+    "planner": "codex",
+    "reviewer": "claude",
+    "builder": "claude",
+    "inspector": "codex"
+  },
+  "repo": "C:\\Users\\Joshu\\dev\\lsatu-study-tools-179",
+  "plan": "C:\\Users\\Joshu\\dev\\ai-os\\brainstorms\\2026-10-01-lsatu-179-claude-work-order.md",
+  "plan_sha256": "85c7d1e94d8b1c6779512fc13179358cdf935292cdbd1d221ef210a7847a7c18",
+  "requested_model": "claude-opus-5-5",
+  "requested_effort": "low",
+  "base": "4474d9f9bdc68036983873f119e044137ab359c1",
+  "snapshot": null,
+  "previous": "C:/Users/Joshu/dev/ai-os/research/2026-10-01-lsatu-179-claude-build/claudex-gp4s8t8l/result.json",
+  "started_at": 1790831175.161424,
+  "artifacts": "C:\\Users\\Joshu\\dev\\ai-os\\research\\2026-10-01-lsatu-179-claude-build\\claudex-kvy3gph2"
+}

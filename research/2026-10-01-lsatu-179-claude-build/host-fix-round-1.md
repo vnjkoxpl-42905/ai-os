@@ -1,0 +1,6 @@
+Independent host review found four material issues. Fix these in your assigned worktree only. Preserve Opus5.5 low, no commits/push/deploy or unrelatedfiles. You are not alone.
+1. Accountswitch: DrillContent keeps eliminatedByQid and useQuestionHighlights maps/undo after actorchanges; new persistedhook resets only state. Existingqidseed refusesoverwrite. A marks display/write into B. Key DrillContent by actor or explicitly reset all ephemeralmaps and undo. Add mountedactor-switch regression.
+2. RC unansweredcrossout disappears onreload because existing reduceronly writes attempt on answer/closeout. Add separate scoped elimination persistence without creating/submitting attempts, protectedroutes excluded.
+3. Recovered/corrupt/unknown-version storage must explicitly disclose notverifiedsaved, preserve incompatible/rawdata rather than silently overwrite.
+4. Whole stale state write loses marks from another bookmark tab. Readlatestvalidstore and mutate only question key with storageevent refresh / conflict handling. Add two mounted hook/tab snapshot regression.
+Independent tests23andtypecheckpassed; these cases notcovered. Review source allchangedfiles and do focusedtests+typecheck. BrowserQA rootpending. Widerbaseline failures require honestreport. Maxfixrounds2.
