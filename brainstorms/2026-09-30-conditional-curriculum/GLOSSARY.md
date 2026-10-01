@@ -6,7 +6,11 @@ The learning pathway for conditional reasoning, from complete beginner through e
 
 **Curriculum**:
 The complete learning pathway covering the skills needed to understand and apply conditional reasoning, from beginner through expert.
-_Avoid_: Bootcamp as a synonym for the whole curriculum
+The curriculum describes what students learn; the bootcamp is the proposed organized experience through which they learn and practice it.
+
+**Bootcamp**:
+The proposed progressive delivery of this curriculum, modeled on Intro to LR, connecting lessons, Activities, guided drills and review. It supports the full path and separately assignable skill work.
+_Avoid_: A single intensive mixed drill as a synonym for this bootcamp
 
 **Subsection**:
 An independently assignable part of the curriculum. A subsection may cover an area or a specific skill.

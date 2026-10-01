@@ -125,6 +125,21 @@ Date: 2026-09-30 · Goal: Define a complete conditional-reasoning curriculum tha
 - Recommendation: A specific hint and retry, with an accessible worked explanation. For a reversed Group 1 rule, prompt the student to identify which complete condition guarantees which result. Timed drill feedback can be reserved for review.
 - Status: Awaiting Joshua's answer. This is a feedback proposal, not an approved withholding rule, grading system, retry limit, or advancement policy.
 
+### Q17: Use Intro to LR as the bootcamp model
+
+- Captured on 2026-10-01: Joshua asked to consider a bootcamp modeled on Intro to LR, with progressive learning, guided drills, Activities and practice, and to find his bootcamp-building skill.
+- Direction: Use the actual Intro to LR bootcamp as the delivery model for the conditional curriculum. Preserve the confirmed full learning sequence plus separately assignable drill, all assignment scopes, three difficulty levels, optional Medium/Advanced timing and subsequent quantifier phase.
+- Skill found: `C:/Users/Joshu/.agents/skills/bootcamp-builder/SKILL.md`. Its code-template principle applies; several saved paths and historical anchor documents are stale or missing.
+- Verified local template: current Intro to LR main path has eight authored notes, three interleaved native labs and two guided official-question pools. Its next-step recommendations use recorded completion; this is not a verified mastery gate.
+- Not inferred: Approval of every historical module, automatic advancement, publication, Lovable spending or any replacement of existing Activities. Bootcamp structure and implementation mapping are being made concrete for review.
+- Q16 is still unanswered. The bootcamp request changes delivery direction; it does not approve a mistake-feedback policy.
+
+### Q18 pending: Difficulty across the full path
+
+- Asked on 2026-10-01: Teach foundations across the skills and return through Medium/Advanced practice, or finish all three levels within each skill before moving on?
+- Recommendation: A foundation path followed by Medium and Advanced passes. Direct targeted assignment remains available at each level.
+- Status: Awaiting Joshua's answer. This is a proposed learning progression, not an approved prerequisite or mastery gate.
+
 ## Existing materials: Local inventory
 
 ### Scope correction during expanded inventory

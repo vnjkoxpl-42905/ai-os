@@ -1,5 +1,5 @@
 {
-  "status": "running",
+  "status": "completed",
   "mode": "build",
   "provider": "claude",
   "roles": {
@@ -15,8 +15,191 @@
   "requested_model": "claude-opus-5-5",
   "requested_effort": "medium",
   "base": "72df6964df9177bc5971cac9fdb4512d0b545a17",
-  "snapshot": null,
+  "snapshot": {
+    "base": "72df6964df9177bc5971cac9fdb4512d0b545a17",
+    "files": [
+      {
+        "path": "public/data/_bank.generated.json",
+        "kind": "file",
+        "sha256": "fb5b9fd3ce0201a0d485ed8c413d8853e42fdcf6de70bda0dab5cb7e41167c47"
+      },
+      {
+        "path": "public/data/finder-address-index.json",
+        "kind": "file",
+        "sha256": "3f8216dacc9a968b6e4e19da90472b8591b32204f912dcf97ed87459b5406007"
+      },
+      {
+        "path": "src/components/classroom/PrescribedWeek.test.tsx",
+        "kind": "file",
+        "sha256": "dc0059b3af799045eef5ac0898dc06c421992ab90c2f59c7af3ab320841cd2fb"
+      },
+      {
+        "path": "src/components/classroom/PrescribedWeek.tsx",
+        "kind": "file",
+        "sha256": "4f2d856a83271402a86f73a79b1af7b3115c1a19e625a10e51cee8886998c146"
+      },
+      {
+        "path": "src/components/classroom/account/ProfileSection.tsx",
+        "kind": "file",
+        "sha256": "d07c041e1032e6a230c5ec603c99cc165a7eb6403a00158ab6a06ba55241fc46"
+      },
+      {
+        "path": "src/components/classroom/account/StudySettingsSection.test.tsx",
+        "kind": "file",
+        "sha256": "269884f14f675978bba51ce8b5341a035da0603b21bc63f535cbeb57ab1bd762"
+      },
+      {
+        "path": "src/components/classroom/account/StudySettingsSection.tsx",
+        "kind": "file",
+        "sha256": "2ba8fe7fd0c6601a5cf14c7d416d4665cd382274d531c76092831417e976096b"
+      },
+      {
+        "path": "src/contexts/UserSettingsContext.test.tsx",
+        "kind": "file",
+        "sha256": "d7c2f114bdfe8c4a76f3b85409a0f2d8acdc38b5ff8a07cc00d83af30e0c26ea"
+      },
+      {
+        "path": "src/contexts/UserSettingsContext.tsx",
+        "kind": "file",
+        "sha256": "740afcbf354ef65fdeac1a60516e5f8ffd47df62e7d2abed4281450a2da2dea2"
+      },
+      {
+        "path": "src/hooks/useWeeklyPlan.ts",
+        "kind": "file",
+        "sha256": "99629cecef9c48bc8ed9910b2f35ddb40dcc0083a3764b41be70d0302d725d6f"
+      },
+      {
+        "path": "src/lib/studySettings.test.ts",
+        "kind": "file",
+        "sha256": "90d87b91446c4cbbbc1ba8d13524bd4206d8b27a01c46fdbecd7d398822ce138"
+      },
+      {
+        "path": "src/lib/studySettings.ts",
+        "kind": "file",
+        "sha256": "251b23e89fa59988524bf223a7ada2e0f9cbc236027ebefad9b26b72c5708fc1"
+      },
+      {
+        "path": "src/lib/weeklyPlanBuilder.test.ts",
+        "kind": "file",
+        "sha256": "c589e9b2fa6af252cdf67481d47c3c004a440c6152bf262b4db084dc62d7e8b0"
+      },
+      {
+        "path": "src/lib/weeklyPlanBuilder.ts",
+        "kind": "file",
+        "sha256": "e0234052355027b896192281a27e17442961c42271b228b9b86e2c8333ff8424"
+      },
+      {
+        "path": "src/lib/weeklyPlanWeek.test.ts",
+        "kind": "file",
+        "sha256": "2256346d14c055350e5d015609efc928fd222788e44757bf1e47a38ea546a45d"
+      },
+      {
+        "path": "src/lib/weeklyPlanWeek.ts",
+        "kind": "file",
+        "sha256": "0dad8a11aa3825dd7660afbd4bf9bf89660e89cfe702e7d111eb519667b735b3"
+      },
+      {
+        "path": "src/pages/MyWorkPage.refetch.test.tsx",
+        "kind": "file",
+        "sha256": "876551e6016c90b4a13ae781817b9b0f63f3cbfadaacb5084c000326a568bb14"
+      },
+      {
+        "path": "src/pages/MyWorkPage.tsx",
+        "kind": "file",
+        "sha256": "27c3c7cada2414b3863f57dea963427d1e1777795357ea3d9b7c6b2d42375f25"
+      },
+      {
+        "path": "src/pages/teacher/TeacherWeeklyPlans.tsx",
+        "kind": "file",
+        "sha256": "36afd6f9bd574603833075aea0d72b3c86ab3a0abb94514d407bf0e79aed012f"
+      },
+      {
+        "path": "supabase/functions/mcp/index.ts",
+        "kind": "file",
+        "sha256": "f813126813751b31706c1347ecca4cc184a77e939d912e759f9a1cc5639d99d7"
+      }
+    ],
+    "diff_sha256": "998f53338aeb292d10f75b07db8e87308a7c3aef486bdadc8133637535d45f44",
+    "sha256": "f09f13355afeaf77b95ee7235da08c500331c9a33cd167cc981b0f39c205824b"
+  },
   "previous": null,
   "started_at": 1790848897.143016,
-  "artifacts": "C:\\Users\\Joshu\\dev\\ai-os\\research\\2026-10-01-week-settings-180-build\\claudex-7ta1kh5w"
+  "artifacts": "C:\\Users\\Joshu\\dev\\ai-os\\research\\2026-10-01-week-settings-180-build\\claudex-7ta1kh5w",
+  "cli_version": "2.1.280 (Claude Code)",
+  "executable": [
+    "C:\\Users\\Joshu\\AppData\\Roaming\\npm\\node_modules\\@anthropic-ai\\claude-code\\bin\\claude.exe"
+  ],
+  "exit_code": 0,
+  "session_id": "85ca60e7-f5f8-40f0-ba73-ea47bf9e1868",
+  "response": "I implemented both halves of #180 in this checkout. Nothing is committed or pushed. **`npm run typecheck` passes with no errors**, and so do `npm run build` and the 136 focused tests. Nothing was checked in a browser. Two things need your attention first:\n\n- **Build churn is still in the tree.** The build changed `public/data/_bank.generated.json`, `public/data/finder-address-index.json` and `supabase/functions/mcp/index.ts`. My `git checkout --` to restore them was denied. They have nothing to do with this work; leave them out of the release or restore them.\n- **I edited `ProfileSection.tsx`, which wasn't on the ownership list.** The study settings actually live there, not in `AccountView.tsx` or `PrepSection.tsx`. I didn't need to touch those two. It's not on the forbidden list either, and the change is small: its timing, question-pool and AI cards now hand off to one new component.\n\n## Prescribed week\n- **Students:** My Work → To do now opens with one real week. Each day has its tasks numbered in Joshua's order, with the saved status and his time estimate. A missing estimate says \"No time estimate\". Totals say how many tasks have no estimate, and the page states what counts as finished (skipped tasks don't count).\n- **Opening a task changes nothing.** A linked drill opens its start page, linked homework opens its assignment page, and anything else opens the task's own page. A test confirms nothing is written.\n- **Which week shows:** the week containing today, else the next one, else the most recent. The student's private to-do list is stored as a weekly plan and could be picked up as a prescribed week before; it no longer can. The read is also limited to the student's own plans.\n- **Home changes too.** Home's week strip uses the same read, so it picks up the new week choice. I didn't edit Home itself.\n- **Teacher page:**\n  - Each existing plan expands to show the same week the student sees, built by the same code, with no student links.\n  - New tasks start with no estimate instead of a pre-filled 30 minutes.\n  - Loading a stored or pasted schedule asks before it replaces tasks already in the builder.\n  - Curriculum suggestions are labelled as suggestions.\n  - Tasks can be moved up or down within a day, and the published order matches what the builder shows.\n  - The publish notification now links to the week on My Work instead of Classroom.\n\n## Settings\n- **Settings are now per account.** They were shared by every account on a device, and still live only in the browser. Old shared settings go to the first account that signs in, so a student's extra time isn't lost; a second account starts from the defaults. Nothing is deleted.\n- **Each control says what it does.** Timing applies only to sections started later; a running section keeps its clock. The pool text matches how drills actually pick questions and says past answers and history don't change.\n- **Failed saves are shown honestly.** If the browser refuses to save, the page says so and offers \"Try saving again\". Later edits build on the unsaved ones.\n- **I removed the five AI and voice-coach switches.** Nothing in the app reads them, and the voice coach is switched off in code. Their saved values are kept.\n- The days-before-repeat box no longer resets to 30 while you type; a bad value shows an error and isn't saved. \"New questions first\" now works with repeats off, because drills use it then too.\n\n## Proof\n- **Tests:** 7 new test files plus 7 related existing ones: 136 tests pass. They cover account switching A→B→A and logout while mounted, two failed saves then a retry, an update from the previous account being ignored, bad and old stored settings, plan ordering, unknown estimates, and links.\n- **Full suite:** 15 test files fail, in activity-centre, timed content, booking, AcademyMainhub and standaloneDrillHistory. None of them import anything I changed, but I didn't run them on the unmodified code, so that's unproven.\n- **Lint:** two warnings, both from code that was already there.\n\n## Blocked or not done\n- Denied: the git restore above, a shell pipeline (I used Grep instead), and a Python edit script (I made the same edits by hand).\n- Not verified: browser checks (Codex owns those), touch and narrow screens, and two-tab sync, which isn't implemented.\n- The teacher page's confirm and reorder buttons are tested only through their helper functions, not the page itself.\n- No text-size or contrast setting exists on the Account page; those controls live in the question runners, so I added none.\n- Teachers still can't edit a plan after publishing; that ability didn't exist before.\n- Richer feedback or review settings would need runner changes, so they stay open, as does #180 as a whole.\n\n## Files\n- **Changed:** `src/hooks/useWeeklyPlan.ts`, `src/contexts/UserSettingsContext.tsx`, `src/pages/teacher/TeacherWeeklyPlans.tsx`, `src/pages/MyWorkPage.tsx`, `src/pages/MyWorkPage.refetch.test.tsx` (it now stubs out the new week component), `src/components/classroom/account/ProfileSection.tsx`\n- **New:** in `src/lib/`: `weeklyPlanWeek.ts`, `weeklyPlanBuilder.ts`, `studySettings.ts`. In `src/components/classroom/`: `PrescribedWeek.tsx`, `account/StudySettingsSection.tsx`. Each has a matching test, plus `src/contexts/UserSettingsContext.test.tsx`.",
+  "usage": {
+    "input_tokens": 122,
+    "cache_creation_input_tokens": 191858,
+    "cache_read_input_tokens": 8102835,
+    "output_tokens": 81542,
+    "output_tokens_details": {
+      "thinking_tokens": 21139
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 191858,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 2179,
+        "cache_read_input_tokens": 204574,
+        "cache_creation_input_tokens": 895,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 895
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "observed_models": [
+    "claude-opus-5-5"
+  ],
+  "permission_denials": [
+    {
+      "tool_name": "Bash",
+      "tool_use_id": "toolu_01Jd4t8UxEmetRVV4ycurZrv",
+      "tool_input": {
+        "command": "grep -ln \"get_or_create_personal_plan\" supabase/migrations/* | head -3; f=$(grep -ln \"get_or_create_personal_plan\" supabase/migrations/* | tail -1); grep -n \"get_or_create_personal_plan\" -A40 \"$f\" | head -60; grep -n \"Schedule\\b\\|path=\\\"/schedule\" src/App.tsx | head -3"
+      }
+    },
+    {
+      "tool_name": "Bash",
+      "tool_use_id": "toolu_01JUhPAdNY8eqnm32NvCSkDv",
+      "tool_input": {
+        "command": "python - <<'EOF'\nimport re,io\np='src/pages/teacher/TeacherWeeklyPlans.tsx'\ns=open(p,encoding='utf-8').read()\ndef rep(a,b):\n    global s\n    assert s.count(a)==1,(a[:60],s.count(a))\n    s=s.replace(a,b)\nrep(\"import { Loader2, CalendarDays, Plus, Send, Save, FolderOpen, X, Sparkles, Trash2, ClipboardList } from 'lucide-react';\",\n\"import { Loader2, CalendarDays, Plus, Send, Save, FolderOpen, X, Sparkles, Trash2, ClipboardList, ArrowUp, ArrowDown, ChevronDown, ChevronRight } from 'lucide-react';\")\nrep(\"import { useStudentWeeklyPlans } from '@/hooks/useWeeklyPlan';\",\n\"import { useStudentWeeklyPlans, useWeeklyPlanItems, type WeeklyPlan } from '@/hooks/useWeeklyPlan';\\nimport { PrescribedWeekView } from '@/components/classroom/PrescribedWeek';\\nimport { localDayISO } from '@/lib/localDate';\\nimport { buildPrescribedWeek, isPersonalPlan } from '@/lib/weeklyPlanWeek';\\nimport { moveWithinDay, prescribedSortOrder, replaceNeedsConfirm } from '@/lib/weeklyPlanBuilder';\")\n# default estimate blank\nrep(\"\"\"      { day: format(day, 'yyyy-MM-dd'), title: '', estimatedMinutes: 30 },\"\"\",\n\"\"\"      // No default estimate: a number here is shown to the student as the\n      // time this task takes, so it has to be one Joshua actually chose.\n      { day: format(day, 'yyyy-MM-dd'), title: '' },\"\"\")\nrep(\"\"\"  const removeItem = (idx: number) =>\n    setItems((prev) => prev.filter((_, i) => i !== idx));\n\"\"\",\"\"\"  const removeItem = (idx: number) =>\n    setItems((prev) => prev.filter((_, i) => i !== idx));\n\n  const moveItem = (idx: number, direction: -1 | 1) =>\n    setItems((prev) => moveWithinDay(prev, idx, direction));\n\n  /**\n   * Loading a stored or pasted schedule replaces the builder. When Joshua has\n   * already laid out tasks, that replacement must be his decision, not a\n   * side effect of a click in the library.\n   */\n  const confirmReplace = (incoming: number) =>\n    !replaceNeedsConfirm(items.length) ||\n    window.confirm(\n      `Replace the ${items.length} task${items.length === 1 ? '' : 's'} in the builder with ${incoming} from this schedule?`,\n    );\n\"\"\")\n# publish sort order\nrep(\"\"\"      const itemRows = items.map((it, idx) => {\"\"\",\"\"\"      // sort_order follows what the builder shows: day by day, and within a\n      // day the order Joshua arranged. The student's week reads the same order.\n      const sortOrder = prescribedSortOrder(items);\n      const itemRows = items.map((it, idx) => {\"\"\")\nrep(\"\"\"          sort_order: idx,\"\"\",\"\"\"          sort_order: sortOrder[idx],\"\"\")\nrep(\"\"\"        description: `${items.length} item${items.length === 1 ? '' : 's'} this week. Open Classroom to see them.`,\n        route: '/classroom',\"\"\",\"\"\"        description: `${items.length} item${items.length === 1 ? '' : 's'} this week. Open My Work to see the week.`,\n        route: '/my-work/to-do',\"\"\")\nrep(\"\"\"    qc.invalidateQueries({ queryKey: ['weekly-plans-admin', studentId] });\"\"\",\"\"\"    qc.invalidateQueries({ queryKey: ['weekly-plans-admin', studentId] });\n      qc.invalidateQueries({ queryKey: ['weekly-plan-items'] });\"\"\")\n# loaders confirm\nrep(\"\"\"    if (parsed.length === 0) {\n      toast.error('No schedule items found. Use day headings like Monday, Tuesday, or inline labels like Monday: task.');\n      return;\n    }\n    setItems(templateItemsToDrafts(parsed));\"\"\",\"\"\"    if (parsed.length === 0) {\n      toast.error('No schedule items found. Use day headings like Monday, Tuesday, or inline labels like Monday: task.');\n      return;\n    }\n    if (!confirmReplace(parsed.length)) return;\n    setItems(templateItemsToDrafts(parsed));\"\"\")\nrep(\"\"\"  const loadTemplate = (tpl: TemplateRow) => {\n    setItems(\"\"\",\"\"\"  const loadTemplate = (tpl: TemplateRow) => {\n    if (!confirmReplace(tpl.items_json?.length ?? 0)) return;\n    setItems(\"\"\")\nopen(p,'w',encoding='utf-8').write(s)\nEOF"
+      }
+    },
+    {
+      "tool_name": "Bash",
+      "tool_use_id": "toolu_015VeHNmNo3f4f51uoZHpvNv",
+      "tool_input": {
+        "command": "npx vitest run src/components/classroom/PrescribedWeek.test.tsx src/components/classroom/account/StudySettingsSection.test.tsx 2>&1 | grep -v \"^\\s*$\" | tail -60",
+        "timeout": 300000
+      }
+    },
+    {
+      "tool_name": "Bash",
+      "tool_use_id": "toolu_018A6i4igyqeNQg4nroX38Mf",
+      "tool_input": {
+        "command": "git diff --stat -- public/data/_bank.generated.json public/data/finder-address-index.json supabase/functions/mcp/index.ts && git checkout -- public/data/_bank.generated.json public/data/finder-address-index.json supabase/functions/mcp/index.ts && git status --short && npm run typecheck 2>&1 | tail -5",
+        "timeout": 300000
+      }
+    }
+  ],
+  "total_cost_usd": 4.786759,
+  "elapsed_seconds": 1634.33
 }
