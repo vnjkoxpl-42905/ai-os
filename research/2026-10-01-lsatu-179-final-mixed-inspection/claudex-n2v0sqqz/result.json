@@ -1,0 +1,192 @@
+{
+  "status": "completed",
+  "mode": "inspect",
+  "provider": "claude",
+  "roles": {
+    "host": "codex",
+    "planner": "codex",
+    "reviewer": "claude",
+    "builder": "codex",
+    "inspector": "claude"
+  },
+  "repo": "C:\\Users\\Joshu\\dev\\lsatu-study-tools-179",
+  "plan": "C:\\Users\\Joshu\\dev\\ai-os\\brainstorms\\2026-10-01-lsatu-179-claude-work-order.md",
+  "plan_sha256": "85c7d1e94d8b1c6779512fc13179358cdf935292cdbd1d221ef210a7847a7c18",
+  "requested_model": "claude-opus-5-5",
+  "requested_effort": "low",
+  "base": "4474d9f9bdc68036983873f119e044137ab359c1",
+  "snapshot": {
+    "base": "4474d9f9bdc68036983873f119e044137ab359c1",
+    "files": [
+      {
+        "path": "src/components/drill/DrillActorScope.tsx",
+        "kind": "file",
+        "sha256": "af47233e9dd6b8eb874d7422accad43012210454a05f152d7b5421baa17c85c0"
+      },
+      {
+        "path": "src/components/drill/official/OfficialDrillToolbar.tsx",
+        "kind": "file",
+        "sha256": "05d5db453a08d43a9985bbb1faf1d152993ff67fbb7ee86f7a0f2e25f1caf954"
+      },
+      {
+        "path": "src/components/drill/official/OfficialQuestionPane.tsx",
+        "kind": "file",
+        "sha256": "4483361ebb051a84a6f8bcbb7e7750b1dcfa76871ba91c8455a2230d7ccff59b"
+      },
+      {
+        "path": "src/components/drill/official/StudyAids.integration.test.tsx",
+        "kind": "file",
+        "sha256": "aaee917440433138b6ef523708035485f221fbb9b75ead93ad7545972752e3f9"
+      },
+      {
+        "path": "src/components/drill/official/StudyAidsControls.tsx",
+        "kind": "file",
+        "sha256": "9f3c3d918fe89a0d2397a124ed43dcf9d4462769c52e8a27325aaca08dda564d"
+      },
+      {
+        "path": "src/features/rc/pages/RcPlayer.studyAids.test.tsx",
+        "kind": "file",
+        "sha256": "cfd5082b397044ff742f9674d8de4193bb94eba7b4842f337c37b313ae5dd51b"
+      },
+      {
+        "path": "src/features/rc/pages/RcPlayer.tsx",
+        "kind": "file",
+        "sha256": "0f1a40394fc8085ee6d7942a2e01c17f1e68972b7f18000cec2a8c95b593acbc"
+      },
+      {
+        "path": "src/hooks/useQuestionHighlights.ts",
+        "kind": "file",
+        "sha256": "847b13bc8a8c753c0ebe3075f9e73aee36f2d3027871be190303d254c78c2015"
+      },
+      {
+        "path": "src/hooks/useQuestionStudyTools.ts",
+        "kind": "file",
+        "sha256": "6e93641862e8433f7ea27cbe60fa01624f447fd6ab3ed276e094fd4a4c0d91e5"
+      },
+      {
+        "path": "src/lib/questionStudyTools.test.ts",
+        "kind": "file",
+        "sha256": "713c618cdbcd0f21664e9cfd781dbe0111e2a429b5043bcf5ca7ba0f3737d983"
+      },
+      {
+        "path": "src/lib/questionStudyTools.ts",
+        "kind": "file",
+        "sha256": "93062df9cb308da84ac592e35336b4cf0eaff9a120871ece67cde48f61259bb1"
+      },
+      {
+        "path": "src/pages/Drill.tsx",
+        "kind": "file",
+        "sha256": "081235a48c941ee5c0d870eb2385425cf59e5944c5eee7c9e2fc84bfdc8306f9"
+      }
+    ],
+    "diff_sha256": "f361d0e91d11095428108890dea615df0aff6d72ce9cee60279f099b039ad0fa",
+    "sha256": "620b36222b5cb22628eda8ef217070cb9931e9e697c598493793b0ae10d3c780"
+  },
+  "previous": null,
+  "started_at": 1790834429.5446186,
+  "artifacts": "C:\\Users\\Joshu\\dev\\ai-os\\research\\2026-10-01-lsatu-179-final-mixed-inspection\\claudex-n2v0sqqz",
+  "cli_version": "2.1.280 (Claude Code)",
+  "executable": [
+    "C:\\Users\\Joshu\\AppData\\Roaming\\npm\\node_modules\\@anthropic-ai\\claude-code\\bin\\claude.exe"
+  ],
+  "exit_code": 0,
+  "session_id": "2146da27-9a1b-490a-a557-eeecf196f166",
+  "response": {
+    "verdict": "REVISE",
+    "summary": "I read every file in the manifest except the two new test files, plus the related RC reducer, RcChoiceRow, routes and launchDrill. The core library is careful. Records are filed per actor, malformed entries are dropped one at a time, an unreadable store is copied aside before anything is written, and the save-failure notices are honest. LR cross-outs no longer change the chosen answer. Bookmarks open through existing routes. Five gaps remain: RC cross-outs fall short of the spec's touch and chosen-answer rules, RC's per-session records are never cleaned up, remounting on actor change may create a duplicate session or run, and LR has no find control while the plan asked for a deliberate decision. I did not run any tests.",
+    "findings": [
+      {
+        "id": "F1",
+        "severity": "medium",
+        "path": "src/features/rc/components/RcChoiceRow.tsx",
+        "evidence": "Line 242: the RC cross-out button is 'opacity-0 ... focus-visible:opacity-100 group-hover:opacity-100' with no [@media(hover:none)] rule. On a touch device it stays invisible, and the work order requires labeled cross-out controls that work by touch. The LR pane got this fix (OfficialQuestionPane adds [@media(hover:none)]:opacity-100); RC, where this slice now saves cross-outs, did not.",
+        "fix": "Give the RC cross-out button the same hover:none/touch visibility as LR, and add a test for it."
+      },
+      {
+        "id": "F2",
+        "severity": "medium",
+        "path": "src/features/rc/lib/rcSession.ts",
+        "evidence": "The toggleElimination reducer (line 206) and RcChoiceRow (line 231) still let you cross out the chosen letter. The row then shows line-through and disables its pick button, and the new RcPlayer persistence saves that cross-out for the session. LR now blocks this: crossOutBlocked in OfficialQuestionPane, and the early return in Drill handleEliminate. Spec item 4 says a cross-out must not hide or obscure the chosen answer, so the two families now disagree.",
+        "fix": "In RcPlayer's onToggleElimination (or RcChoiceRow), block crossing out the selected letter. When display restores saved cross-outs, ignore any saved cross-out on the selected letter, as LR does."
+      },
+      {
+        "id": "F3",
+        "severity": "low",
+        "path": "src/features/rc/pages/RcPlayer.tsx",
+        "evidence": "rcCrossOutRef files cross-outs under 'rc:<sessionId>:<qid>'. The persist effect skips a question once it is recorded, and nothing ever removes these keys when a question is answered or the session finishes. Every RC session leaves entries in the actor's single localStorage record forever. In time saves will fail on the storage quota, and the failure will also hit LR highlights and bookmarks.",
+        "fix": "When a question becomes recorded or the session completes, remove its session-scoped cross-out keys with setEliminations(ref, []). Alternatively, prune entries for sessions that are no longer in progress."
+      },
+      {
+        "id": "F4",
+        "severity": "medium",
+        "path": "src/components/drill/DrillActorScope.tsx",
+        "evidence": "DrillActorScope keys its children on user?.id ?? 'signed-out'. If /drill or /rc/drill can render before auth resolves (the routes in App.tsx are wrapped only by DrillAssignmentGate/DrillLaunchGate in what I read), the first mount runs the RcPlayer boot effect. For ?passage=, that effect calls createSession; when user resolves, the remount runs it again. Result: an orphaned in_progress session. Drill's run-creation effects can be duplicated the same way. Before this change those effects ran once.",
+        "fix": "Render nothing (or a loader) inside DrillActorScope until auth has resolved, so the key changes only on a real switch between accounts. Otherwise, confirm and document that a parent gate guarantees resolved auth before these routes mount."
+      },
+      {
+        "id": "F5",
+        "severity": "low",
+        "path": "src/pages/Drill.tsx",
+        "evidence": "Spec item 5 asks for a bounded find feature on a relevant ordinary study canvas that lacks one, or an explicit decision not to add it. Drill.tsx has no find feature (grep for findQuery returned nothing), none was added, and nothing in the diff records the decision.",
+        "fix": "Add a bounded find to the LR stimulus, or record in the handoff why LR is out of scope as a deliberate deviation."
+      }
+    ],
+    "coverage": [
+      "src/lib/questionStudyTools.ts (full)",
+      "src/hooks/useQuestionStudyTools.ts (full)",
+      "src/components/drill/official/StudyAidsControls.tsx (full)",
+      "src/components/drill/DrillActorScope.tsx (full)",
+      "Tracked diff: Drill.tsx, RcPlayer.tsx, useQuestionHighlights.ts, OfficialQuestionPane.tsx, OfficialDrillToolbar.tsx",
+      "RcPlayer boot/hydration lines 200-420",
+      "rcSession reducer select/toggleElimination",
+      "RcChoiceRow cross-out control",
+      "App.tsx routes for /drill and /rc/drill",
+      "drillLaunch launchDrill questions encoding"
+    ],
+    "limitations": [
+      "I did not read the test files: StudyAids.integration.test.tsx, RcPlayer.studyAids.test.tsx and questionStudyTools.test.ts.",
+      "I could not run tests, typecheck or the browser walks; nothing here verifies them.",
+      "I did not confirm whether a parent layout gates auth before /drill mounts, so F4 depends on that.",
+      "I did not inspect the full body of Drill.tsx beyond the diff; for example, I did not check the attempt writers that read eliminatedRef."
+    ]
+  },
+  "usage": {
+    "input_tokens": 28,
+    "cache_creation_input_tokens": 41879,
+    "cache_read_input_tokens": 494125,
+    "output_tokens": 7051,
+    "output_tokens_details": {
+      "thinking_tokens": 2944
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 41879,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 2670,
+        "cache_read_input_tokens": 44793,
+        "cache_creation_input_tokens": 1377,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 1377
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "observed_models": [
+    "claude-opus-5-5"
+  ],
+  "permission_denials": [],
+  "total_cost_usd": 0.5749889999999999,
+  "elapsed_seconds": 94.18
+}
