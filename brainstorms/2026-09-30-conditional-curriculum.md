@@ -10,10 +10,13 @@ Date: 2026-09-30 · Goal: Define a complete conditional-reasoning curriculum tha
 - The curriculum is intended for students to work through independently. Teacher guidance is not the primary workflow.
 - Cover the full range from complete beginner through advanced/expert, with placement at the student's current proficiency.
 - Each placement should lead to appropriate teaching and practice. Possible formats include Activities, drills, bootcamps, and flashcards; no particular format has been mandated yet.
-- Cover every skill needed to understand and execute conditional reasoning. Concrete expert criteria and the skill map remain to be defined together.
+- Cover every skill needed to understand and execute conditional reasoning. Concrete expert criteria and detailed subskills remain to be defined together; the initial six-area map is accepted.
 - Joshua can identify a student's gaps and assign specific subsections, while students can also work through the general curriculum independently.
 - The curriculum must support uneven proficiency: target a deficient skill without requiring already-mastered material again.
 - Timing is selectable for suitable drills; universal timed completion has not been requested.
+- Assignment must work at broad and narrow scopes: the complete beginner-to-expert pathway, a particular area, or a specific skill gap.
+- Confirmed assignment scopes: whole curriculum, area, and specific skill. These belong to one shared curriculum rather than separate disconnected courses.
+- Accepted initial six-area skill map: understand rules; translate language; use rules with facts; connect rules; handle complex conditionals; solve LSAT questions. This is a coverage map, not yet a fixed learning order.
 - Stage definitions, placement criteria, progression criteria, and the curriculum's home remain undecided.
 
 ## Q&A log
@@ -46,7 +49,36 @@ Date: 2026-09-30 · Goal: Define a complete conditional-reasoning curriculum tha
 - Still unresolved: Contents of each assignable subsection; mastery evidence; student navigation and advancement rules; precise expert criteria.
 - Vocabulary: Curriculum and subsection definitions captured in `brainstorms/2026-09-30-conditional-curriculum/GLOSSARY.md`.
 
+### Q6 and Q7 clarification: Broad and narrow assignment
+- Asked: Should each subsection be a complete learning sequence or practice alone; what happens after a failed mastery check?
+- Captured: Joshua requested a clearer explanation grounded in his current setup. He needs "macro or micro" assignment and a beginning-to-end path for a student starting from scratch.
+- Decision: Support broad and narrow assignment within the same curriculum.
+- Not decided: A uniform package for every subsection; automatic remediation or teacher-reviewed advancement. Do not treat the clarification as agreement with those recommendations.
+- Interview correction: Explain scope through existing Activities and drills before asking about package structure. Joshua invoked wait-what, requiring a plain-language re-pitch using the topic glossary.
+
+### Clarification confirmed: Three assignment scopes
+- Explained: Whole curriculum for a beginner; one area such as complex linking; one specific skill such as Group 3 language.
+- Captured: "yes, I should be able to have that all. That's good."
+- Decision: All three scopes are required within the same curriculum. Beginners have an ordered full path; teachers can assign narrower work for students with specific gaps.
+- Authorization: Continue the grill-with-docs interview. Curriculum implementation and platform writes are not yet authorized by a shared-understanding confirmation.
+- Local capability evidence: Conditional Rephrase assigns all 62 items, without a Group 3-only selector. Guided drills are independent assignable units. Mixed assignments produce separate Classroom cards, not a prerequisite chain. These facts are local-code findings, not fresh live verification.
+
+### Q8 and Q9: Initial skill map and source sufficiency
+- Asked: Accept or revise the six-area skill map; define how much quantifier reasoning belongs here.
+- Captured: "Yes, you can use that." Joshua also asked to look at other existing conditional drills, conditional material, and lecture notes, and gather additional content if needed so he can understand the coverage better.
+- Decision: Use the proposed six-area map as the initial organizing structure.
+- Authorized next step: Broader read-only source inventory and coverage assessment. Distinguish missing source material from material that only needs organizing or adaptation.
+- Unanswered: Quantifier scope; do not infer approval of either a limited interaction unit or a full quantifier curriculum.
+- Inventory report: `brainstorms/2026-09-30-conditional-curriculum/material-inventory.md` (being prepared).
+
 ## Existing materials: Local inventory
+
+### Scope correction during expanded inventory
+
+- Earlier inspection covered the shared Activity assignment system, not the entire conditional experience. Its whole-resource assignment findings must not be generalized to all conditional paths.
+- The 2026-09-14 conditional input-design brainstorm has later entries reporting a four-world hub, 40 new questions, saved runs, and phased General practice, with publication verified in that record on 2026-09-17 at commit `486f33b`.
+- Those files were not found in the initially inspected sibling checkout. Current source location and deployment need reconciliation. This is documented historical publication, not fresh production evidence.
+- Jay 2 surfaced this scope error to Joshua immediately. Expanded inventory will supersede incomplete earlier coverage claims.
 
 - Conditional Rephrase: 62 authored items, paper diagram followed by multiple-choice route selection. Eight diagnostic indicator families. Sorting Yard and Trigger Gallery reuse this bank.
 - Adjacent Activity: Spot the Relationship distinguishes conditional, causal, and comparative relationships.
@@ -59,6 +91,7 @@ Date: 2026-09-30 · Goal: Define a complete conditional-reasoning curriculum tha
 ## Open flags (pending input)
 
 - Define observable expert outcome and conditional curriculum boundaries -> Joshua, with proposed criteria from Jay 2.
+- Decide quantifier boundary after existing-material coverage is reviewed -> Joshua.
 - Define subsection contents, mastery checks, and advancement rules -> Joshua.
 - Define intended curriculum home, placement, advancement, and remediation -> Joshua, after scope is settled.
 - Verify live availability of selected materials -> live systems when needed; local inventory completed.
