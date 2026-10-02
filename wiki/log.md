@@ -1779,3 +1779,39 @@ Forty merged tests, merged typecheck, final production build/postbuild770files a
 - Drafts: `corpus/lr-explanations/drafts/batch-04-paradox-na-part-{a,b}.md`. Verified by re-pull: 40/40 complete, rows byte-identical to the SQL (PT105 checked separately: new C/E exact, A/B/D unchanged). Gap 427 -> 387.
 - `generate_batch_sql.py`: unloaded questions now take the draft's type (it defaulted to Flaw), and steps-only slots are supported.
 - Found student-visible text defects in the database (run-together speaker turns, "silverfleaf"), logged in `corpus/lr-explanations/fixes/index.md`.
+
+## [2026-10-01] fix | LR question text in the database
+- Added the missing line break between speakers in 99 `lr_questions.stimulus` rows (PT111 to PT126) and fixed "silverfleaf" in PT113-S3-Q2. One guarded transaction; re-pull verified 100 rows changed, only as intended. Snapshot: `raw/sources/lsatu-lr-snapshots/2026-10-01-pre-stimulus-fix-lr_questions.json`.
+- Correction to the batch 04 entry: these were not student-visible. The app shows question text from the bank files; the database copy is only used by our tooling.
+- Left for a check against the printed test: PT110-S3-Q3 (endemic vs epidemic), PT111-S3-Q10, PT111-S1-Q26, PT112-S4-Q13/Q14, PT120-S1-Q25.
+
+## [2026-10-01] fix | LR question text checked against printed tests
+- Joshua's screenshots settled six disputed questions. Database fixed (guarded): PT110-S3-Q3 "epidemic", PT111-S1-Q26 "demands on", PT111-S3-Q10 "less than".
+- Bank (student-visible) fixed in PR vnjkoxpl-42905/lsatu-684d89db#185, merged 403d488: PT111-S3-Q10 speaker line break, PT112-S4-Q13/Q14 em dashes, PT120-S1-Q25 "upper-management".
+
+## [2026-10-01] system | LSAT U student tier defaults
+- Locked five-control presets: Tier 1 all; Tier 2 Classroom/Messages/Schedule; Tier 3 Messages/Schedule. Specific assigned drills/sections remain available through Classroom without general bank access. Review/history follows Drill OR Practice tests; Activities/Bootcamps assignment-only; retired TA/Export controls removed.
+- Database policy installed and checked without bulk student updates. Source release 411267d imported by Lovable and manually published; retry succeeded after initial hosting failure. Live Students page confirms five controls and updated descriptions.
+- 69 focused tests, production build/postbuild, typecheck and independent review passed. No production learner permission changes for QA. Existing saved access preserved until tier reapplication.
+- Live inspection caught obsolete Bootcamps-switch help text; copy fix 99aa43d prepared with independent review clear, final checks/publication in progress.
+- Separate admin account-reset Edge Function source prepared but not redeployed. Old reset endpoint can grant Classroom to a no-tier account; tier-selection policy works via installed database normalization. No Lovable AI credits spent.
+- Spec and evidence: brainstorms/2026-10-01-student-tier-defaults.md; app docs/verification/student-tier-defaults.md.
+
+
+## [2026-10-01] delegation | Claude navigation/access #168
+
+User requested another substantial independent Claude chunk. Isolated checkout C:/Users/Joshu/dev/lsatu-navigation-access-168, branch codex/navigation-access-168, baseline 411267d3f4e899ee1228410decaf2578bc2da9b7. Work order brainstorms/2026-10-01-claude-navigation-168-work-order.md defines file ownership, exclusions, acceptance, proof and two maximum fix rounds. Standalone unreviewed spec; final independent inspection required. npm ci --ignore-scripts completed. Initial runner launch claudex-oqx16aol failed npm-wrapper resolution before any build. Verified native Claude Code 2.1.280 executable and relaunched with requested claude-opus-5-5 medium. Active exec session 74568, artifacts research/2026-10-01-navigation-168-claude/claudex-1bt2aux_. Build completion/model observation not yet verified. No commit, push, backend, credits or publication authorized to builder. Helper exploration returned ownership before failing Codex usage limit. Next: read result.json, inspect full diff/untracked files, independently run proof and fresh Codex inspection; browser acceptance and integrated release remain host gates.
+
+
+### Student tier release completed
+- Final commit 99aa43d imported and manually published successfully. Live five-control screen and assignment-only wording verified; screenshot retained in the isolated worktree .impeccable/live/tier-controls-live.png.
+- Final build/postbuild and push typecheck passed. Independent review of final wording found no issues. Separate account-reset Edge Function remains undeployed as recorded above.
+
+
+## [2026-10-01] load | LR explanations batch 05 (Necessary Assumption + Method)
+- 40 slots loaded via guarded insert-only SQL: 21 Necessary Assumption (10 new questions with choices, PT147-S4-Q6's empty explanation row filled) and 19 Method. Every NA gap is now closed except PT119-S3-Q20 (needs cleanup, see fixes index). Snapshot: `raw/sources/lsatu-lr-snapshots/2026-10-01-pre-batch05-load.json`.
+- Quality pass per Joshua ("personable, particular, highest quality"): each Evaluate names the move (link vs defender for NA; analogy / counterexample / elimination / overlooked fact for Method) in the stimulus's own words; correct NA notes negate the answer; the most-picked wrong answer (from `student_percent`) gets the fullest note, each claim checked against the stored percentages.
+- Retyped: PT149-S4-Q16 loaded as "Must Be True (fill in the blank)" (bank said NA; stem is a completion). PT105-S1-Q12 explained as Parallel.
+- PT102-S3-Q8's database stimulus contains a soft hyphen, so its guard compared md5(stimulus) instead of retyped text.
+- Verified by re-pull: 40/40 complete, rows byte-identical. Gap 387 -> 347.
+- Typo fix: PT107-S3-Q11 "stars Many" -> "stars. Many" in the database and the bank (PR vnjkoxpl-42905/lsatu-684d89db#186, merged 320de0d).

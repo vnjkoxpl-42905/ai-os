@@ -233,3 +233,11 @@ Joshua explicitly requested Group 1 sufficient indicators, then Group 2, Group 3
 ## 2026-10-01 | Students see assigned notes and practice rather than a curriculum map
 
 Joshua rejected the conditional student catalogue and Teaching Sequence rail. The student entry shows current assigned work. Each lesson should explain a concept, demonstrate it with an interaction, lead into guided work and its attached drill, then continue within the assignment. Find the Guarantee explains what a conditional means before language-group nuance. Intro to LR's installed notes are the presentation model. Chapters and sublessons may organize the teacher curriculum; teacher assignment logistics and difficulty selection are not student-facing. Actual assignment rows determine available units, mode and level. This supersedes the same-day persistent student curriculum rail decision, while retaining the authored topic progression, four distinct group stages, and quantity after conditionals.
+
+## 2026-10-01 | Student tier defaults
+- Joshua confirmed five independent controls: Drill, Practice tests, Classroom, Messages, Schedule and booking.
+- Tier 1 enables all five. Tier 2 enables Classroom, Messages, Schedule and booking. Tier 3 enables Messages and Schedule and booking only.
+- Wrong answers, flagged questions and progress/history follow Drill OR Practice tests automatically. Activities and Bootcamps are assignment-only. Remove TA worksheets and Export controls.
+- Tier 2 opens explicitly assigned drills/sections through Classroom without access to general practice banks. Classroom is required for assignment bypass. Existing saved independent access is preserved until a tier is reapplied.
+- Evidence: brainstorms/2026-10-01-student-tier-defaults.md; implementation main release 411267d.
+

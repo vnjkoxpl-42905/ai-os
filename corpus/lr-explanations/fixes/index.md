@@ -56,11 +56,18 @@ The database is the source of truth for explanations, not the local `Explanation
 - [ ] **`targeted-questions/` layout is unreadable by the parser.** PT134-S1-Q16 and PT158-S4-Q24, in LSAT U's voice. Convert and load, or drop.
 
 ### Student-visible question text (found in batch 04, 2026-10-01)
-- [ ] **Speaker turns run together in the database stimulus.** PT113-S4-Q23 reads "traffic.Sheila:" and PT114-S2-Q15 reads "anything.Joshua:" with no space or line break. Check every dialogue stimulus for the same join.
-- [ ] **PT113-S3-Q2 database stimulus says "silverfleaf".** The bank says "silverleaf". Fix the database text.
-- [ ] **PT110-S3-Q3 wording differs.** Database "endemic", bank "epidemic". Check the printed PT and make both match it.
+- [x] ~~**Speaker turns run together in the database stimulus.**~~ 2026-10-01: line break added in 99 questions (PT111 to PT126), guarded update, verified against snapshot `raw/sources/lsatu-lr-snapshots/2026-10-01-pre-stimulus-fix-lr_questions.json`. Students never saw this: the app reads question text from the bank, not `lr_questions.stimulus`.
+- [x] ~~**PT113-S3-Q2 database stimulus says "silverfleaf".**~~ 2026-10-01: fixed to "silverleaf".
+- [x] ~~**PT110-S3-Q3 wording differs.**~~ Fixed: "epidemic". Database "endemic", bank "epidemic". Check the printed PT and make both match it.
+- [x] ~~**Word-level mismatches between bank and database.**~~ 2026-10-01: settled from screenshots of the printed tests. DB fixed: PT110-S3-Q3, PT111-S1-Q26, PT111-S3-Q10. Bank fixed in PR #185: PT111-S3-Q10 line break, PT112-S4-Q13/Q14 em dashes, PT120-S1-Q25 hyphen. (The earlier "duplicated passage" note was wrong; it was dash and hyphen loss.)
 - [ ] **Bank-only issues.** PT114-S4-Q22 typed "Necessary Assumption EXCEPT" in the bank but is plain NA (the database type is correct). PT106-S1-Q12 bank stimulus starts with "The following passage is used for Section 1, questions 12 through 13."
 - [x] ~~**Generator defaulted unloaded questions to type Flaw and could not add steps alone.**~~ 2026-10-01: `generate_batch_sql.py` now uses the draft's type and handles steps-only slots.
+
+### Found in batch 05 (2026-10-01)
+- [ ] **PT119-S3-Q20 has two overlapping step sets.** Its standard explanation carries ten steps (two Conclusion/Evidence/Evaluate/Goal runs plus "The Argument"), and its notes sit under other styles. Decide which set to keep before adding anything.
+- [ ] **PT149-S4-Q16 stimulus is missing its blank.** The bank (what students see) ends at "...increase their savings rates." with no "Therefore, ___" line. Needs the printed wording from a screenshot.
+- [ ] **Bank type labels that disagree with the stem.** PT149-S4-Q16 (bank: Necessary Assumption; stem is a fill-in completion) and PT105-S1-Q12 (bank: Method; it is Parallel, and the database already says Parallel).
+- [x] ~~**PT107-S3-Q11 "obscures the stars Many".**~~ 2026-10-01: period added in database and bank (PR #186).
 
 ### Repo housekeeping
 - [x] ~~**Codex's redundant repair branch and worktree.**~~ 2026-09-27: deleted on Joshua's OK. Its uncommitted changes kept at raw/sources/lsatu-lr-snapshots/2026-09-27-codex-repair-worktree-uncommitted.patch.

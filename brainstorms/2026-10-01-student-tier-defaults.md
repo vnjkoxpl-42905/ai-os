@@ -3,7 +3,26 @@ Date: 2026-10-01
 Goal: Define clear default feature presets for Tier 1, Tier 2 and Tier 3.
 Status: Interview in progress.
 
-## Summary / key decisions
+## Confirmed specification (2026-10-01)
+
+| Feature | Tier 1 | Tier 2 | Tier 3 |
+|---|---|---|---|
+| Drill | On | Off | Off |
+| Practice tests | On | Off | Off |
+| Classroom | On | On | Off |
+| Messages | On | On | On |
+| Schedule and booking | On | On | On |
+
+- These are the only five visible permission switches.
+- Drill OR Practice tests includes Wrong answers, Flagged questions, and Progress and history automatically. No independent switches.
+- Remove TA worksheets and Export switches; downloads remain part of accessible features.
+- Activities and Bootcamps are accessible only through explicit student assignments with Classroom access (Tier 1 and Tier 2 defaults). No general access switches. Tier 3 has communication only.
+- Tier 2 can open and complete explicitly assigned drills and sections through Classroom without independent practice access.
+- Selecting a tier applies its actual preset. Manual overrides remain saved. No payment grants or expiry.
+- Earlier Q&A is provenance; this confirmed specification supersedes earlier alternatives.
+- Implementation is in progress in sibling lsatu-tier-defaults worktree. No real student access has been changed during QA.
+
+## Initial request / discovery history
 - Joshua confirms Tier 1 must enable every feature.
 - Tier 2 should enable a defined subset; Tier 3 should enable fewer features.
 - Exact subsets are pending this interview.
@@ -124,3 +143,33 @@ Status: Interview in progress.
 - Final presets: Tier 1 all five switches; Tier 2 Classroom/Messages/Schedule and booking; Tier 3 Messages/Schedule and booking.
 - Implement assigned drill/section authorization separately from general practice permission.
 - Discovery of tier defaults is complete. Implementation requested (“Let’s fix it”) and pending.
+
+
+### Implementation interpretation — Tier 3 assignment links
+- Latest explicit Tier 3 “only Messages and Schedule and booking” supersedes the earlier inferred blanket “assignments across every tier” wording.
+- Tier 1 and Tier 2 have Classroom and can open explicitly assigned activities, bootcamps, drills and sections.
+- Tier 3 does not regain learning access through an old assignment URL while Classroom remains off.
+- Activities and Bootcamps remain assignment-only; there is no general switch in any tier.
+
+
+### Release checkpoint
+- Source commit 5b5d5b0 prepared locally; not pushed.
+- 54 focused tests, final build/postbuild, typecheck and targeted lint passed for that commit.
+- Database policy installed and readback verified; no bulk real-student profile changes.
+- Final Home inspection found assigned Activities still filtered by retired activity flag. Push stopped before any frontend release; correcting Home filter and locked mobile overlay.
+- Existing saved independent access is preserved. Selecting a tier reapplies its new preset.
+
+### Final release preparation
+- Latest clarification reconfirmed Tier 2: general Drill and Practice tests off; explicitly assigned drills and sections open only their assigned scope through Classroom.
+- Final source: 5b5d5b0 and e17c05f. All 69 focused tests passed, final production build/postbuild passed, and required push typecheck passed.
+- Safe push merged three upstream question-data corrections and pushed release 411267d to main. Lovable import/publication verification pending.
+- Database tier policy is installed; existing student independent flags were not bulk changed.
+
+
+### Completed release
+- Final copy commit 99aa43d10b69ee529c70e5564faeef9a75bfb09d pushed after required typecheck; final production build/postbuild passed.
+- Lovable imported exact final commit and manual Publish succeeded. Live Students page verifies all five controls and corrected assignment-only help text. Live database readback verifies derived review policy and Classroom default=false.
+- Screenshot: C:/Users/Joshu/dev/ai-os-projects/lsatu-tier-defaults/.impeccable/live/tier-controls-live.png.
+- 69 focused tests passed; no real learner permission edits made for verification. Tier 2 assigned-runner scope checked in component tests, not a production student session.
+- Separate account-reset Edge Function deployment remains skipped because its required Lovable agent route may spend credits and no immediate credit authorization was given. This does not block the released tier-selection policy.
+
