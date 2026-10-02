@@ -80,3 +80,19 @@ Status: Interview in progress.
 - Tier 1: all seven enabled.
 - Tier 3: Classroom, Messages, Schedule and booking enabled; four practice/content switches off.
 - Tier 2: pending exact selection.
+
+### Q6 — Correct Progress and history dependency
+- Captured: Joshua explicitly excludes Activities from enabling Progress and history.
+- Corrected rule: Drill OR Practice tests automatically enables Progress and history.
+- Supersedes Q5’s Activities OR Practice tests OR Drill rule.
+- Unified review dependency: Drill OR Practice tests includes Wrong answers, Flagged questions, and Progress and history, with no independent toggles for those three.
+- Tier 2 proposed preset remains unanswered.
+
+### Q7 — Activities are assignment-only
+- Captured: Activities should be accessible only when Joshua assigns them to the student from the admin side.
+- Remove Activities as a tier/access toggle.
+- The specific assignment authorizes access to that activity; no general Activities catalogue access through a tier.
+- Applies across all tiers, including Tier 1. Tier 1 “everything enabled” now means all remaining tier-controlled features, not unassigned Activities.
+- Remaining visible switches: Drill, Practice tests, Bootcamps, Classroom, Messages, Schedule and booking.
+- Activities do not enable Progress and history.
+- Tier 2 and Bootcamp access policy remain pending.
