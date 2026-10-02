@@ -96,3 +96,12 @@ Status: Interview in progress.
 - Remaining visible switches: Drill, Practice tests, Bootcamps, Classroom, Messages, Schedule and booking.
 - Activities do not enable Progress and history.
 - Tier 2 and Bootcamp access policy remain pending.
+
+### Q8 — Bootcamps are assignment-only
+- Asked: should Bootcamps follow Activities, assigned access with no toggle?
+- Captured: Joshua confirmed “yes it is the same for bootcamp.”
+- Remove Bootcamps from tier switches. An admin assignment grants access to that specific bootcamp across every tier.
+- Remaining tier-controlled switches: Drill, Practice tests, Classroom, Messages, Schedule and booking.
+- Drill OR Practice tests automatically includes Wrong answers, Flagged questions, Progress and history.
+- Activities and Bootcamps remain assignment-only, irrespective of tier.
+- Open decision: what separates Tier 2 from Tier 1 now that Activities and Bootcamps are no longer tier-controlled?
