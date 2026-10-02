@@ -105,3 +105,22 @@ Status: Interview in progress.
 - Drill OR Practice tests automatically includes Wrong answers, Flagged questions, Progress and history.
 - Activities and Bootcamps remain assignment-only, irrespective of tier.
 - Open decision: what separates Tier 2 from Tier 1 now that Activities and Bootcamps are no longer tier-controlled?
+
+### Q9 — Tier 2 clarification requested
+- Joshua’s message contained both “add the drill for Tier 2” and an explicit statement that Tier 2 should have only Classroom, messaging, schedule and booking, with no Drill or tests.
+- Working interpretation from the explicit feature list: Tier 2 has Classroom, Messages, Schedule and booking; Drill and Practice tests off. The contradictory opening was surfaced for clarification.
+
+### Q10 — Tier 3 reduced floor
+- Captured: “Tier 3 should only give access to schedule and booking and message.”
+- Confirmed Tier 3: Messages and Schedule and booking enabled; Classroom, Drill and Practice tests disabled.
+- Supersedes earlier Tier 3 Classroom floor.
+- Proposed final distinction: Tier 1 all five; Tier 2 Classroom/Messages/Schedule and booking; Tier 3 Messages/Schedule and booking.
+- Need confirmation of Tier 2 interpretation before implementation because Q9’s conflicting Drill statement remains unresolved explicitly.
+
+### Q11 — Tier 2 confirmed, assigned runners preserved
+- Captured: Tier 2 should not have independent Drill or Practice test access.
+- Joshua can explicitly assign specific drills or sections through Classroom, and Tier 2 students can open and complete those specific assignments.
+- Assignment access must not unlock the general Drill or Practice tests feature.
+- Final presets: Tier 1 all five switches; Tier 2 Classroom/Messages/Schedule and booking; Tier 3 Messages/Schedule and booking.
+- Implement assigned drill/section authorization separately from general practice permission.
+- Discovery of tier defaults is complete. Implementation requested (“Let’s fix it”) and pending.
