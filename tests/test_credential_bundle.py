@@ -3,11 +3,53 @@ import tempfile
 import unittest
 import subprocess
 from pathlib import Path
+from unittest.mock import patch
 
 spec = importlib.util.spec_from_file_location('credential_bundle', Path(__file__).parents[1] / 'setup/github-sync/credential_bundle.py')
 module = importlib.util.module_from_spec(spec); spec.loader.exec_module(module)
 
 class CredentialTests(unittest.TestCase):
+    def test_multipart_reassembles_original_and_detects_corrupt_chunk(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            original = b'Useful context and original credential 123456\n' * 20
+            with patch.object(module, 'MAX_CHUNK_BYTES', 32):
+                metadata = module.bundle([], root / 'state', root / 'snapshot', 'redacted-context', {'lesson.md': original})
+                self.assertGreater(len(metadata['ciphertext_parts']), 1)
+                for part in metadata['ciphertext_parts']:
+                    self.assertLessEqual((root / 'snapshot' / part['file']).stat().st_size, 32)
+                key = (root / 'state/secrets.key').read_bytes()
+                package = root / 'snapshot/redacted-context.enc'
+                module.decrypt(package, root / 'restored', key)
+                self.assertEqual((root / 'restored/lesson.md').read_bytes(), original)
+                first = root / 'snapshot' / metadata['ciphertext_parts'][0]['file']
+                first.write_bytes(b'corrupt')
+                with self.assertRaisesRegex(ValueError, 'integrity'):
+                    module.decrypt(package, root / 'corrupt', key)
+
+    def test_compressed_original_context_same_key_cache_isolation_and_tampering(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            source = root / '.env'; source.write_text('PRIVATE=original')
+            module.bundle([{'path': str(source), 'label': 'env'}], root / 'state', root / 'snapshot')
+            primary = (root / 'snapshot/credentials.enc').read_bytes()
+            original = b'Safe lesson\npassword=the-original-credential\nUseful lesson\n'
+            arguments = ([], root / 'context-cache', root / 'snapshot', 'redacted-context', {'project/lesson.md': original})
+            module.bundle(*arguments, key_state=root / 'state')
+            context = root / 'snapshot/redacted-context.enc'
+            encrypted = context.read_bytes()
+            module.bundle(*arguments, key_state=root / 'state')
+            self.assertEqual(encrypted, context.read_bytes())
+            self.assertEqual(primary, (root / 'snapshot/credentials.enc').read_bytes())
+            key = (root / 'state/secrets.key').read_bytes()
+            module.decrypt(context, root / 'recovered', key)
+            self.assertEqual((root / 'recovered/project/lesson.md').read_bytes(), original)
+            context.write_bytes(encrypted[:-1] + bytes([encrypted[-1] ^ 1]))
+            with self.assertRaisesRegex(ValueError, 'authentication'):
+                module.decrypt(context, root / 'tampered', key)
+            with self.assertRaisesRegex(ValueError, 'JSONL'):
+                module.bundle([], root / 'state', root / 'snapshot', 'redacted-context', {'session.jsonl': b'raw'})
+
     def test_linked_destination_and_source_ancestor_rejected(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)

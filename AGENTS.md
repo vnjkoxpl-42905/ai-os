@@ -81,6 +81,7 @@ Application repositories and dependencies stay outside this Obsidian vault, in s
 - **Government IDs stay outside this OS.** Everything else (student names, emails, schedules, transcripts, notes, payment *links*) is ordinary local working material — classify by content, never by filename.
 - **Git remote is enabled.** `origin` is GitHub (`vnjkoxpl-42905/ai-os`, decided 2026-09-29). The outer repo never tracks `.env`, `../ai-os-projects/lsatu/` (own repo), runtime logs, or locks. Do not create gitlinks.
 - **New laptop restore:** GitHub contains tracked ai-os files and skills. It deliberately excludes `.env`, `raw/`, app repos, credentials, and machine sessions. Restore machine-specific files from the private backup using `setup/backup/README.md` and its `README - START HERE.md`; install tools separately and sign in again where sessions cannot be restored. Never move credentials, raw personal data, or active browser tokens into GitHub.
+- **Authorized cloud transfer (2026-10-07):** private sync branches also carry portable skills, memory and conversation exports. Joshua explicitly authorized credential transfer; implementation uses the authenticated encrypted package described in `setup/github-sync/README.md`; plaintext secrets and its unlock key stay outside GitHub and Drive. Cloud authentication and native browser sessions still require separate verification.
 
 ## Skills
 

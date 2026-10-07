@@ -115,7 +115,8 @@ class ConversationExportTests(unittest.TestCase):
             path = root / "session.jsonl"
             good = json.dumps({"type": "user", "sessionId": "one", "cwd": str(root), "message": {"content": "Valid request"}})
             path.write_text(good + '\n{"type":')
-            parsed = module._parse(path, "claude", [root])
+            with patch.object(Path, "read_text", side_effect=AssertionError("parser must stream source")):
+                parsed = module._parse(path, "claude", [root])
             self.assertIn("Valid request", parsed[1])
             self.assertTrue(parsed[2]["warnings"])
             path.write_text(good + '\n{"broken":\n' + good)

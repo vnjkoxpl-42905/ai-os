@@ -30,11 +30,19 @@ The encrypted package uses AES-GCM with a random 256-bit key. Its key stays in t
 After privately provisioning `AI_OS_SYNC_KEY`, run these commands from the AI OS cloud checkout:
 
 ```bash
-python -m pip install cryptography
+python -m pip install -r setup/github-sync/requirements.txt
 python setup/github-sync/credential_bundle.py --decrypt .cloud-sync/private/credentials.enc --destination .cloud-private/credentials
 ```
 
 Do not print decrypted files, enable shell tracing, commit them, or overwrite native cloud authentication with local auth files. Use the central `.env` and relevant project credentials for the specific tool that needs them. GWS keyring data, expiring login tokens and Windows paths can require cloud authentication or path adaptation; encrypted transport does not prove the service will accept them. Decryption refuses existing destination files, so use a fresh protected directory for a refreshed package.
+
+Each repository also carries `.cloud-sync/private/redacted-context.enc` when readable files required redaction. This compressed encrypted package preserves those original visible text files with the same unlock key. Its manifest identifies their logical paths. Large encrypted packages use a small .enc descriptor plus .enc.partNNNN files, each below GitHub’s file-size limit. Keep all parts together; the decryption helper verifies and reassembles them automatically. Decrypt into a fresh ignored private directory and read the original when an explanation, skill or code line was redacted. Keep plaintext credentials out of work branches and PRs. Source session JSONL and hidden reasoning are never added to this package.
+
+```bash
+python setup/github-sync/credential_bundle.py --decrypt .cloud-sync/private/redacted-context.enc --destination .cloud-private/original-context
+```
+
+Use the AI OS copy of `credential_bundle.py` for packages belonging to an app checkout, resolving the package and destination paths explicitly. Git commit time is the snapshot freshness authority; generated metadata stays stable on unchanged files to avoid uploading identical archives every check.
 
 ## The web and local runtimes differ
 

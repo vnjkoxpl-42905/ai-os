@@ -9,6 +9,33 @@ sync = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(sync)
 
 class SnapshotTests(unittest.TestCase):
+    def test_multiline_assignment_redaction_preserves_other_lines(self):
+        original = b'Useful lesson\x0cwith formfeed\nAPI_SECRET =\n "a-real-credential-1234567890"\nMore useful context\n'
+        redacted = sync.redact_known_text(original)
+        self.assertIsNone(sync.secret_kind(redacted))
+        self.assertIn(b'Useful lesson', redacted)
+        self.assertIn(b'More useful context', redacted)
+
+    def test_scanner_redacts_line_preserves_remaining_prose(self):
+        with tempfile.TemporaryDirectory() as directory:
+            destination = Path(directory) / 'snapshot'; destination.mkdir()
+            scanner = Path(directory) / 'scanner.exe'; scanner.write_bytes(b'fake')
+            document = destination / 'conversation.md'
+            document.write_text('Safe introduction\nunknown credential material\nUseful teaching context\n')
+            def fake_scan(args, **kwargs):
+                from types import SimpleNamespace
+                if '--report-path' in args and Path(args[args.index('--report-path') + 1]).name == 'gitleaks.json':
+                    report = Path(args[args.index('--report-path') + 1])
+                    report.write_text(__import__('json').dumps([{'File': str(document), 'StartLine': 2, 'EndLine': 2, 'RuleID': 'test-rule'}]))
+                    return SimpleNamespace(returncode=1)
+                return SimpleNamespace(returncode=0)
+            with patch.object(sync.subprocess, 'run', side_effect=fake_scan):
+                report = sync.scan(destination, scanner)
+            self.assertIn('Safe introduction', document.read_text())
+            self.assertIn('Useful teaching context', document.read_text())
+            self.assertNotIn('unknown credential material', document.read_text())
+            self.assertIn('redacted', report[0]['reason'])
+
     def test_new_project_baseline_never_stages_or_pushes_source(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory) / 'product'; root.mkdir()

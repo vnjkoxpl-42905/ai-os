@@ -66,23 +66,32 @@ def _content(value) -> str:
     return _content(value.get("content", ""))
 
 
+def _records(path: Path, warnings: list):
+    """Stream records; only an unterminated final physical line may be partial."""
+    seen = False
+    with path.open(encoding="utf-8") as stream:
+        for line in stream:
+            if not line.strip():
+                continue
+            try:
+                row = json.loads(line)
+            except json.JSONDecodeError:
+                if seen and not line.endswith("\n") and not stream.read(1):
+                    warnings.append("Final incomplete JSONL record omitted; valid preceding records exported")
+                    return
+                raise
+            seen = True
+            yield row
+
+
 def _parse(path: Path, platform: str, roots: list[Path]):
-    raw = path.read_text(encoding="utf-8")
-    lines = [line for line in raw.splitlines() if line.strip()]
-    records, warnings = [], []
-    for position, line in enumerate(lines):
-        try:
-            records.append(json.loads(line))
-        except json.JSONDecodeError:
-            if position == len(lines) - 1 and records and not raw.endswith("\n"):
-                warnings.append("Final incomplete JSONL record omitted; valid preceding records exported")
-                break
-            raise
-    if not records:
-        return None
+    warnings = []
     cwds = []
     session_id = path.stem
-    for row in records:
+    has_response_messages = False
+    for row in _records(path, warnings):
+        if row.get("type") == "response_item" and row.get("payload", {}).get("type") == "message":
+            has_response_messages = True
         if row.get("cwd"):
             cwds.append(row["cwd"])
         if row.get("type") == "session_meta":
@@ -99,8 +108,7 @@ def _parse(path: Path, platform: str, roots: list[Path]):
     if not re.fullmatch(r"[A-Za-z0-9_-]+", session_id):
         raise ValueError("unsafe session identifier")
     sections = []
-    has_response_messages = any(row.get("type") == "response_item" and row.get("payload", {}).get("type") == "message" for row in records)
-    for row in records:
+    for row in _records(path, []):
         if platform == "claude":
             if row.get("type") in {"user", "assistant"}:
                 message = row.get("message", {})

@@ -1,9 +1,13 @@
 """Authenticated portable credential package; encryption key never enters Git."""
 from __future__ import annotations
-import argparse, base64, getpass, hashlib, json, os, secrets, stat
+import argparse, base64, getpass, hashlib, json, os, secrets, stat, zlib
 from pathlib import Path, PurePosixPath
 
 FORMAT = b'AIOS-CREDENTIALS-V1\n'
+COMPRESSED_FORMAT = b'AIOS-CREDENTIALS-V2-ZLIB\n'
+MULTIPART_FORMAT = b'AIOS-CREDENTIALS-MULTIPART-V1\n'
+MAX_CHUNK_BYTES = 50 * 1024 * 1024
+MAX_DECOMPRESSED_BYTES = 2 * 1024 * 1024 * 1024
 FORBIDDEN_NAMES = {'cookies', 'cookies.sqlite', 'login data', 'web data', 'local state', 'state.vscdb', 'keyring', 'keychain'}
 
 def _aes():
@@ -65,27 +69,49 @@ def local_key(state):
     if os.name != 'nt': path.chmod(stat.S_IRUSR | stat.S_IWUSR)
     return key
 
-def bundle(sources, state, destination):
+def bundle(sources, state, destination, package_name='credentials', visible_originals=None, key_state=None):
     """Return nonsecret metadata and reuse ciphertext if input contents are unchanged."""
-    if not sources: return {'enabled': False, 'file_count': 0}
-    files = collect(sources)
+    if not sources and not visible_originals: return {'enabled': False, 'file_count': 0}
+    if package_name not in {'credentials', 'redacted-context'}: raise ValueError('Unsupported credential package name')
+    files = collect(sources) if sources else {}
+    if visible_originals:
+        for name, content in visible_originals.items():
+            _safe_name(name)
+            if PurePosixPath(name).suffix.lower() == '.jsonl': raise ValueError('Raw session JSONL cannot enter context package')
+            content.decode('utf-8')
+            files[name] = base64.b64encode(content).decode('ascii')
     plaintext = json.dumps({'version': 1, 'files': files}, sort_keys=True, separators=(',', ':')).encode()
     state = Path(state); state.mkdir(parents=True, exist_ok=True)
-    cache = state / 'credentials.enc'
-    fingerprint_file = state / 'credentials.fingerprint'
-    key = local_key(state)
-    fingerprint = hashlib.sha256(key + plaintext).hexdigest()
+    cache = state / (package_name + '.enc')
+    fingerprint_file = state / (package_name + '.fingerprint')
+    key = local_key(key_state or state)
+    format_marker = COMPRESSED_FORMAT if visible_originals else FORMAT
+    fingerprint = hashlib.sha256(format_marker + key + plaintext).hexdigest()
     if not cache.exists() or not fingerprint_file.exists() or fingerprint_file.read_text() != fingerprint:
         nonce = secrets.token_bytes(12)
-        ciphertext = FORMAT + nonce + _aes()(key).encrypt(nonce, plaintext, FORMAT)
+        payload = zlib.compress(plaintext, level=6) if visible_originals else plaintext
+        ciphertext = format_marker + nonce + _aes()(key).encrypt(nonce, payload, format_marker)
         temporary = cache.with_suffix('.tmp')
         temporary.write_bytes(ciphertext); os.replace(temporary, cache)
         fingerprint_file.write_text(fingerprint)
     ciphertext = cache.read_bytes()
     destination = Path(destination); destination.mkdir(parents=True, exist_ok=True)
-    (destination / 'credentials.enc').write_bytes(ciphertext)
-    metadata = {'enabled': True, 'format': 1, 'file_count': len(files), 'paths': sorted(files), 'ciphertext_sha256': hashlib.sha256(ciphertext).hexdigest()}
-    (destination / 'manifest.json').write_text(json.dumps(metadata, indent=2) + '\n', encoding='utf-8')
+    package_path = destination / (package_name + '.enc')
+    parts = []
+    if len(ciphertext) > MAX_CHUNK_BYTES:
+        for position in range(0, len(ciphertext), MAX_CHUNK_BYTES):
+            block = ciphertext[position:position + MAX_CHUNK_BYTES]
+            name = package_path.name + '.part' + str(len(parts) + 1).zfill(4)
+            (destination / name).write_bytes(block)
+            parts.append({'file': name, 'bytes': len(block), 'sha256': hashlib.sha256(block).hexdigest()})
+        descriptor = {'version': 1, 'ciphertext_bytes': len(ciphertext), 'ciphertext_sha256': hashlib.sha256(ciphertext).hexdigest(), 'parts': parts}
+        package_path.write_bytes(MULTIPART_FORMAT + json.dumps(descriptor, sort_keys=True).encode('utf-8'))
+    else:
+        package_path.write_bytes(ciphertext)
+    metadata = {'enabled': True, 'format': 2 if visible_originals else 1, 'file_count': len(files), 'paths': sorted(files), 'ciphertext_sha256': hashlib.sha256(ciphertext).hexdigest()}
+    if parts: metadata['ciphertext_parts'] = parts
+    manifest = 'manifest.json' if package_name == 'credentials' else package_name + '.manifest.json'
+    (destination / manifest).write_text(json.dumps(metadata, indent=2) + '\n', encoding='utf-8')
     return metadata
 
 def export_bundle(destination, config):
@@ -122,13 +148,35 @@ def discover_env_sources(config):
     return results
 
 def decrypt(package, destination, key):
-    data = Path(package).read_bytes()
-    if len(key) != 32 or not data.startswith(FORMAT): raise ValueError('Invalid credential package or key')
-    nonce = data[len(FORMAT):len(FORMAT) + 12]
+    package = _reject_link_chain(package)
+    data = package.read_bytes()
+    if data.startswith(MULTIPART_FORMAT):
+        descriptor = json.loads(data[len(MULTIPART_FORMAT):])
+        if descriptor.get('version') != 1: raise ValueError('Unsupported multipart format')
+        blocks = []
+        for position, item in enumerate(descriptor['parts'], 1):
+            expected_name = package.name + '.part' + str(position).zfill(4)
+            if item['file'] != expected_name or not (0 < item['bytes'] <= MAX_CHUNK_BYTES):
+                raise ValueError('Invalid multipart chunk descriptor')
+            path = _reject_link_chain(package.parent / item['file'])
+            block = path.read_bytes()
+            if len(block) != item['bytes'] or hashlib.sha256(block).hexdigest() != item['sha256']:
+                raise ValueError('Encrypted chunk integrity check failed')
+            blocks.append(block)
+        data = b''.join(blocks)
+        if len(data) != descriptor['ciphertext_bytes'] or hashlib.sha256(data).hexdigest() != descriptor['ciphertext_sha256']:
+            raise ValueError('Multipart credential integrity check failed')
+    marker = COMPRESSED_FORMAT if data.startswith(COMPRESSED_FORMAT) else FORMAT
+    if len(key) != 32 or not data.startswith(marker): raise ValueError('Invalid credential package or key')
+    nonce = data[len(marker):len(marker) + 12]
     try:
-        plaintext = _aes()(key).decrypt(nonce, data[len(FORMAT) + 12:], FORMAT)
+        plaintext = _aes()(key).decrypt(nonce, data[len(marker) + 12:], marker)
     except Exception as exc:
         raise ValueError('Credential authentication failed') from exc
+    if marker == COMPRESSED_FORMAT:
+        decoder = zlib.decompressobj()
+        plaintext = decoder.decompress(plaintext, MAX_DECOMPRESSED_BYTES)
+        if not decoder.eof or decoder.unconsumed_tail: raise ValueError('Context decompression limit exceeded')
     payload = json.loads(plaintext)
     if payload.get('version') != 1: raise ValueError('Unsupported credential format')
     destination = _reject_link_chain(destination).resolve()

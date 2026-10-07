@@ -95,12 +95,40 @@ def secret_kind(data):
             return kind
     for match in ASSIGNMENT.finditer(data):
         value = match.group(1).lower()
-        if len(value) < 12 or any(x in value for x in (b'example', b'placeholder', b'changeme', b'your_', b'your-', b'${', b'process.env', b'os.environ', b'<', b'undefined', b'null')):
+        if len(value) < 12 or any(x in value for x in (b'example', b'placeholder', b'redacted', b'changeme', b'your_', b'your-', b'${', b'process.env', b'os.environ', b'<', b'undefined', b'null')):
             continue
         if re.fullmatch(rb'[a-z0-9_./\\-]+', value) and not any(c in value for c in b'0123456789'):
             continue
         return 'credential assignment'
     return None
+
+def _redact_text_pass(data):
+    parts = data.decode('utf-8').split('\n')
+    lines = [part + '\n' for part in parts[:-1]] + parts[-1:]
+    affected = set()
+    matches = [match for _, pattern in PATTERNS for match in pattern.finditer(data)]
+    matches.extend(match for match in ASSIGNMENT.finditer(data) if secret_kind(match.group(0)))
+    for match in matches:
+        end = match.end()
+        if b'PRIVATE KEY-----' in match.group(0):
+            closing = re.search(rb'-----END (?:RSA |EC |OPENSSH |DSA )?PRIVATE KEY-----', data[end:])
+            if closing: end += closing.end()
+        start_line = data[:match.start()].count(b'\n')
+        end_line = data[:max(match.start(), end - 1)].count(b'\n')
+        affected.update(range(start_line, min(end_line + 1, len(lines))))
+    for position in affected:
+        line = lines[position]
+        ending = '\r\n' if line.endswith('\r\n') else '\n' if line.endswith('\n') else ''
+        lines[position] = '[REDACTED CREDENTIAL]' + ending
+    return ''.join(lines).encode('utf-8')
+
+def redact_known_text(data):
+    for _ in range(64):
+        cleaned = _redact_text_pass(data)
+        if not secret_kind(cleaned): return cleaned
+        if cleaned == data: return cleaned
+        data = cleaned
+    return data
 
 def initialize_private_project(root, config):
     """Initialize only a new checkout; never stage source or publish its main branch."""
@@ -120,7 +148,7 @@ def initialize_private_project(root, config):
     verify_private(repository)
     config.setdefault('_created_repositories', []).append(repository)
 
-def copy_filtered(root, destination, max_size=MAX_SIZE):
+def copy_filtered(root, destination, max_size=MAX_SIZE, originals=None, prefix=''):
     root, destination = long_path(root), long_path(destination)
     report = []
     for directory, dirs, files in os.walk(root, followlinks=False):
@@ -149,14 +177,27 @@ def copy_filtered(root, destination, max_size=MAX_SIZE):
                 report.append({'path': relative.as_posix(), 'reason': reason})
                 continue
             data = path.read_bytes()
+            original_data = data
             if b'\0' not in data and TOKEN_PATTERN.search(data):
                 data = TOKEN_PATTERN.sub(b'REDACTED_CREDENTIAL', data)
                 report.append({'path': relative.as_posix(), 'reason': 'API token redacted in snapshot'})
             kind = secret_kind(data)
             if kind:
-                report.append({'path': relative.as_posix(), 'reason': kind})
-                continue
+                try:
+                    if b'\0' in data: raise UnicodeError()
+                    data = redact_known_text(data)
+                    if secret_kind(data): raise RuntimeError('Text credential redaction failed: ' + relative.as_posix())
+                    report.append({'path': relative.as_posix(), 'reason': kind + ' redacted in snapshot'})
+                except UnicodeError:
+                    report.append({'path': relative.as_posix(), 'reason': kind + ' binary file omitted'})
+                    continue
             target = destination / relative
+            if originals is not None and data != original_data and path.suffix.lower() != '.jsonl':
+                try:
+                    original_data.decode('utf-8')
+                    originals[prefix + relative.as_posix()] = original_data
+                except UnicodeError:
+                    pass
             target.parent.mkdir(parents=True, exist_ok=True)
             target.write_bytes(data)
     return report
@@ -202,29 +243,59 @@ def verify_private(repository):
     if metadata.get('private') is not True:
         raise RuntimeError(f'Repository must be private: {repository}')
 
-def scan(destination, executable):
+def scan(destination, executable, originals=None, prefix=''):
+    destination = long_path(destination)
     if not executable or not Path(executable).is_file():
         raise RuntimeError('Mandatory gitleaks scanner is unavailable')
     report_path = destination.parent / 'gitleaks.json'
     p = subprocess.run([str(executable), 'dir', str(destination), '--redact=100', '--no-banner', '--report-format', 'json', '--report-path', str(report_path)], stdout=subprocess.PIPE, stderr=subprocess.PIPE, timeout=180)
     removed = []
     if p.returncode == 1 and report_path.exists():
+        findings_by_file = {}
         for finding in json.loads(report_path.read_text(encoding='utf-8')):
             path = Path(finding['File'])
             if not path.is_absolute(): path = destination / path
             path = long_path(path).resolve()
             try: relative = path.relative_to(destination.resolve())
             except ValueError: raise RuntimeError('Unexpected scanner path; upload blocked')
+            findings_by_file.setdefault(path, []).append((relative, finding))
+        for path, findings in findings_by_file.items():
             data = path.read_bytes() if path.exists() else b''
-            cleaned = TOKEN_PATTERN.sub(b'REDACTED_CREDENTIAL', data) if b'\0' not in data else data
-            if cleaned != data:
-                path.write_bytes(cleaned)
-                removed.append({'path': relative.as_posix(), 'reason': 'gitleaks token redacted in snapshot'})
-            else:
+            try:
+                if b'\0' in data: raise UnicodeError()
+                text = data.decode('utf-8')
+                if originals is not None and path.suffix.lower() != '.jsonl':
+                    originals.setdefault(prefix + findings[0][0].as_posix(), data)
+                parts = text.split('\n')
+                lines = [part + '\n' for part in parts[:-1]] + parts[-1:]
+                affected = set()
+                for relative, finding in findings:
+                    start, end = finding.get('StartLine', 0), finding.get('EndLine', 0)
+                    if not isinstance(start, int) or not isinstance(end, int) or not (1 <= start <= end <= len(lines)):
+                        raise RuntimeError('Scanner returned invalid text coordinates; upload blocked')
+                    affected.update(range(start - 1, end))
+                for line in affected:
+                    ending = '\r\n' if lines[line].endswith('\r\n') else '\n' if lines[line].endswith('\n') else ''
+                    lines[line] = '[REDACTED CREDENTIAL]' + ending
+                path.write_bytes(''.join(lines).encode('utf-8'))
+                for relative, finding in findings:
+                    removed.append({'path': relative.as_posix(), 'reason': 'gitleaks credential redacted in snapshot: ' + finding.get('RuleID', 'secret')})
+            except UnicodeError:
                 if path.exists(): path.unlink()
-                removed.append({'path': relative.as_posix(), 'reason': 'gitleaks: ' + finding.get('RuleID', 'secret')})
-        retry = subprocess.run([str(executable), 'dir', str(destination), '--redact=100', '--no-banner'], stdout=subprocess.PIPE, stderr=subprocess.PIPE, timeout=180)
-        if retry.returncode: raise RuntimeError('Mandatory gitleaks rescan failed; upload blocked')
+                for relative, finding in findings:
+                    removed.append({'path': relative.as_posix(), 'reason': 'gitleaks binary file omitted: ' + finding.get('RuleID', 'secret')})
+        retry_report = destination.parent / 'gitleaks-rescan.json'
+        retry = subprocess.run([str(executable), 'dir', str(destination), '--redact=100', '--no-banner', '--report-format', 'json', '--report-path', str(retry_report)], stdout=subprocess.PIPE, stderr=subprocess.PIPE, timeout=180)
+        if retry.returncode:
+            details = []
+            if retry_report.exists():
+                for item in json.loads(retry_report.read_text(encoding='utf-8'))[:5]:
+                    candidate = Path(item['File'])
+                    if not candidate.is_absolute(): candidate = destination / candidate
+                    try: safe_path = long_path(candidate).resolve().relative_to(destination.resolve()).as_posix()
+                    except ValueError: safe_path = 'unexpected path'
+                    details.append(safe_path + ' (' + item.get('RuleID', 'secret') + ')')
+            raise RuntimeError('Mandatory gitleaks rescan failed; upload blocked' + (': ' + ', '.join(details) if details else ''))
     elif p.returncode:
         raise RuntimeError('Mandatory gitleaks scan failed; upload blocked')
     return removed
@@ -289,8 +360,9 @@ def publish(root, repository, config, state, dry_run=False):
     with temporary_directory as folder:
         staging = long_path(Path(folder) / 'files')
         staging.mkdir()
+        visible_originals = {}
         progress(config, repository, 'copy filtered source')
-        report = copy_filtered(root, staging, config.get('max_file_bytes', MAX_SIZE))
+        report = copy_filtered(root, staging, config.get('max_file_bytes', MAX_SIZE), visible_originals, root.name + '/')
         registry = {'repository': repository, 'source_head': git(root, 'rev-parse', 'HEAD'), 'source_branch': git(root, 'branch', '--show-current'), 'snapshot_branch': branch}
         generated = staging / '.cloud-sync'
         generated.mkdir(exist_ok=True)
@@ -319,12 +391,38 @@ def publish(root, repository, config, state, dry_run=False):
             allowed = [Path(candidate) for candidate in config['_allowed_roots']]
             conversation_state = Path(config['_state_dir']) / 'conversations'
             export_report = adapter.export_conversations(conversation_state, allowed)
-            report.extend(copy_filtered(conversation_state, generated / 'conversations'))
+            conversation_report = copy_filtered(conversation_state, generated / 'conversations', originals=visible_originals, prefix=root.name + '/.cloud-sync/conversations/')
+            report.extend({'path': '.cloud-sync/conversations/' + item['path'], 'reason': item['reason']} for item in conversation_report)
             registry['conversation_export'] = {'session_count': len(export_report.get('sessions', [])), 'errors': export_report.get('errors', [])}
             (generated / 'workspace.json').write_text(json.dumps(registry, indent=2) + '\n', encoding='utf-8')
         (staging / 'CLOUD-WORKSPACE.md').write_text('This branch is an automatically generated filtered local workspace snapshot.\n\nRead .cloud-sync/workspace.json for the original source branch and commit. Work on a separate branch and return a pull request. Never write to the snapshot branch. Conversation exports in the AI OS snapshot provide handoff history; they do not recreate native chat sessions.\n', encoding='utf-8')
         progress(config, repository, 'scan secrets')
-        report.extend(scan(staging, config.get('gitleaks') or os.environ.get('GITLEAKS') or str(Path(__file__).parent / 'tools/gitleaks.exe')))
+        report.extend(scan(staging, config.get('gitleaks') or os.environ.get('GITLEAKS') or str(Path(__file__).parent / 'tools/gitleaks.exe'), visible_originals, root.name + '/'))
+        if visible_originals:
+            credential_spec = importlib.util.spec_from_file_location('credential_bundle', Path(__file__).parent / 'credential_bundle.py')
+            credential_adapter = importlib.util.module_from_spec(credential_spec)
+            credential_spec.loader.exec_module(credential_adapter)
+            private_state = Path(config['_state_dir']) / 'private'
+            cache_id = __import__('hashlib').sha256(str(root).encode('utf-8')).hexdigest()[:20]
+            registry['encrypted_original_context'] = credential_adapter.bundle([], private_state / 'context-cache' / cache_id, generated / 'private', 'redacted-context', visible_originals, key_state=private_state)
+            (generated / 'workspace.json').write_text(json.dumps(registry, indent=2) + '\n', encoding='utf-8')
+            report.extend(scan(staging, config.get('gitleaks') or os.environ.get('GITLEAKS') or str(Path(__file__).parent / 'tools/gitleaks.exe')))
+            if not (generated / 'private/redacted-context.enc').exists():
+                raise RuntimeError('Encrypted context failed final scanner check; upload blocked')
+        report.sort(key=lambda item: (item['path'], item['reason']))
+        (generated / 'exclusions.json').write_text(json.dumps(report, indent=2) + '\n', encoding='utf-8')
+        conversation_index = generated / 'conversations/index.json'
+        if conversation_index.exists():
+            omitted = [item for item in report if item['path'].startswith('.cloud-sync/conversations/') and 'redacted' not in item['reason']]
+            index = json.loads(conversation_index.read_text(encoding='utf-8'))
+            removed = {item['path'].removeprefix('.cloud-sync/conversations/') for item in omitted}
+            index['sessions'] = [item for item in index.get('sessions', []) if item.get('file') not in removed]
+            index['snapshot_exclusions'] = omitted
+            conversation_index.write_text(json.dumps(index, indent=2) + '\n', encoding='utf-8')
+            if 'conversation_export' in registry:
+                registry['conversation_export']['session_count'] = len(index['sessions'])
+                registry['conversation_export']['snapshot_omitted_count'] = len(removed)
+                (generated / 'workspace.json').write_text(json.dumps(registry, indent=2) + '\n', encoding='utf-8')
         progress(config, repository, 'create Git snapshot tree')
         tree = create_tree(root, staging)
         if dry_run: return dict(registry, tree=tree, skipped=report, status='dry-run')

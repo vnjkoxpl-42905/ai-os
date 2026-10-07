@@ -10,6 +10,24 @@ module = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(module)
 
 class RuntimeTests(unittest.TestCase):
+    def test_plugin_bundle_preserves_references_without_binaries(self):
+        with tempfile.TemporaryDirectory() as temp:
+            cache = Path(temp) / 'cache'
+            skill = cache / 'vendor/plugin/1.0/skills/example'
+            (skill / 'references').mkdir(parents=True)
+            (skill / 'SKILL.md').write_text('read references/guide.md')
+            (skill / 'references/guide.md').write_text('guide')
+            (skill / 'helper.exe').write_bytes(b'binary')
+            nested = skill / 'references/nested'
+            nested.mkdir()
+            (nested / 'SKILL.md').write_text('nested reference')
+            target = Path(temp) / 'export'
+            bundles, count = module.plugin_skills(cache, target, [])
+            self.assertEqual(len(bundles), 1)
+            self.assertEqual(count, 3)
+            self.assertEqual((target / 'vendor/plugin/1.0/skills/example/references/guide.md').read_text(), 'guide')
+            self.assertFalse((target / 'vendor/plugin/1.0/skills/example/helper.exe').exists())
+
     def test_separate_catalogs_and_covered_memories_only(self):
         with tempfile.TemporaryDirectory() as temp:
             home = Path(temp) / 'home'

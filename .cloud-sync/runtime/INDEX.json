@@ -4,6 +4,10 @@
     "agents_skills": 1593,
     "claude_skills": 1632,
     "codex_skills": 425,
+    "claude_plugin_skills": 19,
+    "claude_plugin_files": 265,
+    "codex_plugin_skills": 252,
+    "codex_plugin_files": 1857,
     "claude_instruction": 1,
     "codex_instruction": 1,
     "claude_memory_files": 64,
@@ -16,9 +20,1373 @@
     "claude_instruction": "C:\\Users\\Joshu\\.claude\\CLAUDE.md",
     "codex_instruction": "C:\\Users\\Joshu\\.codex\\AGENTS.md",
     "claude_projects": "C:\\Users\\Joshu\\.claude\\projects",
-    "codex_memories": "C:\\Users\\Joshu\\.codex\\memories_1.sqlite"
+    "codex_memories": "C:\\Users\\Joshu\\.codex\\memories_1.sqlite",
+    "claude_plugin_cache": "C:\\Users\\Joshu\\.claude\\plugins\\cache",
+    "codex_plugin_cache": "C:\\Users\\Joshu\\.codex\\plugins\\cache"
+  },
+  "plugin_skills": {
+    "claude": [
+      {
+        "source_path": "C:\\Users\\Joshu\\.claude\\plugins\\cache\\claude-plugins-official\\chrome-devtools-mcp\\1.9.0\\skills\\a11y-debugging",
+        "relative_path": "claude-plugins-official/chrome-devtools-mcp/1.9.0/skills/a11y-debugging",
+        "files": 2
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.claude\\plugins\\cache\\claude-plugins-official\\chrome-devtools-mcp\\1.9.0\\skills\\chrome-devtools",
+        "relative_path": "claude-plugins-official/chrome-devtools-mcp/1.9.0/skills/chrome-devtools",
+        "files": 1
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.claude\\plugins\\cache\\claude-plugins-official\\chrome-devtools-mcp\\1.9.0\\skills\\chrome-devtools-cli",
+        "relative_path": "claude-plugins-official/chrome-devtools-mcp/1.9.0/skills/chrome-devtools-cli",
+        "files": 2
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.claude\\plugins\\cache\\claude-plugins-official\\chrome-devtools-mcp\\1.9.0\\skills\\cookie-debugging",
+        "relative_path": "claude-plugins-official/chrome-devtools-mcp/1.9.0/skills/cookie-debugging",
+        "files": 1
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.claude\\plugins\\cache\\claude-plugins-official\\chrome-devtools-mcp\\1.9.0\\skills\\debug-optimize-lcp",
+        "relative_path": "claude-plugins-official/chrome-devtools-mcp/1.9.0/skills/debug-optimize-lcp",
+        "files": 5
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.claude\\plugins\\cache\\claude-plugins-official\\chrome-devtools-mcp\\1.9.0\\skills\\memory-leak-debugging",
+        "relative_path": "claude-plugins-official/chrome-devtools-mcp/1.9.0/skills/memory-leak-debugging",
+        "files": 2
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.claude\\plugins\\cache\\claude-plugins-official\\chrome-devtools-mcp\\1.9.0\\skills\\troubleshooting",
+        "relative_path": "claude-plugins-official/chrome-devtools-mcp/1.9.0/skills/troubleshooting",
+        "files": 1
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.claude\\plugins\\cache\\remotion\\remotion\\4.0.523\\skills\\remotion-best-practices",
+        "relative_path": "remotion/remotion/4.0.523/skills/remotion-best-practices",
+        "files": 127
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.claude\\plugins\\cache\\remotion\\remotion\\4.0.523\\skills\\remotion-captions",
+        "relative_path": "remotion/remotion/4.0.523/skills/remotion-captions",
+        "files": 6
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.claude\\plugins\\cache\\remotion\\remotion\\4.0.523\\skills\\remotion-create",
+        "relative_path": "remotion/remotion/4.0.523/skills/remotion-create",
+        "files": 5
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.claude\\plugins\\cache\\remotion\\remotion\\4.0.523\\skills\\remotion-docs",
+        "relative_path": "remotion/remotion/4.0.523/skills/remotion-docs",
+        "files": 3
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.claude\\plugins\\cache\\remotion\\remotion\\4.0.523\\skills\\remotion-interactivity",
+        "relative_path": "remotion/remotion/4.0.523/skills/remotion-interactivity",
+        "files": 3
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.claude\\plugins\\cache\\remotion\\remotion\\4.0.523\\skills\\remotion-maps",
+        "relative_path": "remotion/remotion/4.0.523/skills/remotion-maps",
+        "files": 27
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.claude\\plugins\\cache\\remotion\\remotion\\4.0.523\\skills\\remotion-markup",
+        "relative_path": "remotion/remotion/4.0.523/skills/remotion-markup",
+        "files": 58
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.claude\\plugins\\cache\\remotion\\remotion\\4.0.523\\skills\\remotion-multimedia",
+        "relative_path": "remotion/remotion/4.0.523/skills/remotion-multimedia",
+        "files": 6
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.claude\\plugins\\cache\\remotion\\remotion\\4.0.523\\skills\\remotion-render",
+        "relative_path": "remotion/remotion/4.0.523/skills/remotion-render",
+        "files": 4
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.claude\\plugins\\cache\\remotion\\remotion\\4.0.523\\skills\\remotion-saas",
+        "relative_path": "remotion/remotion/4.0.523/skills/remotion-saas",
+        "files": 6
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.claude\\plugins\\cache\\remotion\\remotion\\4.0.523\\skills\\remotion-studio",
+        "relative_path": "remotion/remotion/4.0.523/skills/remotion-studio",
+        "files": 3
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.claude\\plugins\\cache\\remotion\\remotion\\4.0.523\\skills\\remotion-upgrade",
+        "relative_path": "remotion/remotion/4.0.523/skills/remotion-upgrade",
+        "files": 3
+      }
+    ],
+    "codex": [
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\claude-cowork\\anthropic-skills\\1.0.0\\skills\\browser",
+        "relative_path": "claude-cowork/anthropic-skills/1.0.0/skills/browser",
+        "files": 143
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\claude-cowork\\anthropic-skills\\1.0.0\\skills\\chat-export",
+        "relative_path": "claude-cowork/anthropic-skills/1.0.0/skills/chat-export",
+        "files": 1
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\claude-cowork\\anthropic-skills\\1.0.0\\skills\\consolidate-memory",
+        "relative_path": "claude-cowork/anthropic-skills/1.0.0/skills/consolidate-memory",
+        "files": 1
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\claude-cowork\\anthropic-skills\\1.0.0\\skills\\consultation-email-assistant",
+        "relative_path": "claude-cowork/anthropic-skills/1.0.0/skills/consultation-email-assistant",
+        "files": 4
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\claude-cowork\\anthropic-skills\\1.0.0\\skills\\doc-coauthoring",
+        "relative_path": "claude-cowork/anthropic-skills/1.0.0/skills/doc-coauthoring",
+        "files": 1
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\claude-cowork\\anthropic-skills\\1.0.0\\skills\\docx",
+        "relative_path": "claude-cowork/anthropic-skills/1.0.0/skills/docx",
+        "files": 61
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\claude-cowork\\anthropic-skills\\1.0.0\\skills\\explain-usage",
+        "relative_path": "claude-cowork/anthropic-skills/1.0.0/skills/explain-usage",
+        "files": 1
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\claude-cowork\\anthropic-skills\\1.0.0\\skills\\facebook-consultation-requests",
+        "relative_path": "claude-cowork/anthropic-skills/1.0.0/skills/facebook-consultation-requests",
+        "files": 2
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\claude-cowork\\anthropic-skills\\1.0.0\\skills\\find-skills",
+        "relative_path": "claude-cowork/anthropic-skills/1.0.0/skills/find-skills",
+        "files": 1
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\claude-cowork\\anthropic-skills\\1.0.0\\skills\\frontend-design",
+        "relative_path": "claude-cowork/anthropic-skills/1.0.0/skills/frontend-design",
+        "files": 2
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\claude-cowork\\anthropic-skills\\1.0.0\\skills\\graphify",
+        "relative_path": "claude-cowork/anthropic-skills/1.0.0/skills/graphify",
+        "files": 2
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\claude-cowork\\anthropic-skills\\1.0.0\\skills\\grill-me",
+        "relative_path": "claude-cowork/anthropic-skills/1.0.0/skills/grill-me",
+        "files": 1
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\claude-cowork\\anthropic-skills\\1.0.0\\skills\\gws-gmail-read",
+        "relative_path": "claude-cowork/anthropic-skills/1.0.0/skills/gws-gmail-read",
+        "files": 1
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\claude-cowork\\anthropic-skills\\1.0.0\\skills\\gws-gmail-triage",
+        "relative_path": "claude-cowork/anthropic-skills/1.0.0/skills/gws-gmail-triage",
+        "files": 1
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\claude-cowork\\anthropic-skills\\1.0.0\\skills\\import-memory",
+        "relative_path": "claude-cowork/anthropic-skills/1.0.0/skills/import-memory",
+        "files": 1
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\claude-cowork\\anthropic-skills\\1.0.0\\skills\\internal-comms",
+        "relative_path": "claude-cowork/anthropic-skills/1.0.0/skills/internal-comms",
+        "files": 6
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\claude-cowork\\anthropic-skills\\1.0.0\\skills\\lsat-drill-builder",
+        "relative_path": "claude-cowork/anthropic-skills/1.0.0/skills/lsat-drill-builder",
+        "files": 2
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\claude-cowork\\anthropic-skills\\1.0.0\\skills\\lsat-lab-question-features",
+        "relative_path": "claude-cowork/anthropic-skills/1.0.0/skills/lsat-lab-question-features",
+        "files": 4
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\claude-cowork\\anthropic-skills\\1.0.0\\skills\\lsat-lab-set-builder",
+        "relative_path": "claude-cowork/anthropic-skills/1.0.0/skills/lsat-lab-set-builder",
+        "files": 3
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\claude-cowork\\anthropic-skills\\1.0.0\\skills\\lsat-u-voice",
+        "relative_path": "claude-cowork/anthropic-skills/1.0.0/skills/lsat-u-voice",
+        "files": 3
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\claude-cowork\\anthropic-skills\\1.0.0\\skills\\mcp-builder",
+        "relative_path": "claude-cowork/anthropic-skills/1.0.0/skills/mcp-builder",
+        "files": 10
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\claude-cowork\\anthropic-skills\\1.0.0\\skills\\morning",
+        "relative_path": "claude-cowork/anthropic-skills/1.0.0/skills/morning",
+        "files": 3
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\claude-cowork\\anthropic-skills\\1.0.0\\skills\\notebooklm",
+        "relative_path": "claude-cowork/anthropic-skills/1.0.0/skills/notebooklm",
+        "files": 1
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\claude-cowork\\anthropic-skills\\1.0.0\\skills\\pdf",
+        "relative_path": "claude-cowork/anthropic-skills/1.0.0/skills/pdf",
+        "files": 12
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\claude-cowork\\anthropic-skills\\1.0.0\\skills\\pptx",
+        "relative_path": "claude-cowork/anthropic-skills/1.0.0/skills/pptx",
+        "files": 56
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\claude-cowork\\anthropic-skills\\1.0.0\\skills\\schedule",
+        "relative_path": "claude-cowork/anthropic-skills/1.0.0/skills/schedule",
+        "files": 1
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\claude-cowork\\anthropic-skills\\1.0.0\\skills\\setup-claude",
+        "relative_path": "claude-cowork/anthropic-skills/1.0.0/skills/setup-claude",
+        "files": 1
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\claude-cowork\\anthropic-skills\\1.0.0\\skills\\setup-cowork",
+        "relative_path": "claude-cowork/anthropic-skills/1.0.0/skills/setup-cowork",
+        "files": 1
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\claude-cowork\\anthropic-skills\\1.0.0\\skills\\site-teardown",
+        "relative_path": "claude-cowork/anthropic-skills/1.0.0/skills/site-teardown",
+        "files": 1
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\claude-cowork\\anthropic-skills\\1.0.0\\skills\\skill-creator",
+        "relative_path": "claude-cowork/anthropic-skills/1.0.0/skills/skill-creator",
+        "files": 18
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\claude-cowork\\anthropic-skills\\1.0.0\\skills\\web-artifacts-builder",
+        "relative_path": "claude-cowork/anthropic-skills/1.0.0/skills/web-artifacts-builder",
+        "files": 5
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\claude-cowork\\anthropic-skills\\1.0.0\\skills\\webapp-testing",
+        "relative_path": "claude-cowork/anthropic-skills/1.0.0/skills/webapp-testing",
+        "files": 6
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\claude-cowork\\anthropic-skills\\1.0.0\\skills\\xlsx",
+        "relative_path": "claude-cowork/anthropic-skills/1.0.0/skills/xlsx",
+        "files": 53
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\claude-cowork\\cowork-plugin-management\\0.2.2\\skills\\cowork-plugin-customizer",
+        "relative_path": "claude-cowork/cowork-plugin-management/0.2.2/skills/cowork-plugin-customizer",
+        "files": 5
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\claude-cowork\\cowork-plugin-management\\0.2.2\\skills\\create-cowork-plugin",
+        "relative_path": "claude-cowork/cowork-plugin-management/0.2.2/skills/create-cowork-plugin",
+        "files": 3
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\claude-cowork\\design\\1.2.0\\skills\\accessibility-review",
+        "relative_path": "claude-cowork/design/1.2.0/skills/accessibility-review",
+        "files": 1
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\claude-cowork\\design\\1.2.0\\skills\\design-critique",
+        "relative_path": "claude-cowork/design/1.2.0/skills/design-critique",
+        "files": 1
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\claude-cowork\\design\\1.2.0\\skills\\design-handoff",
+        "relative_path": "claude-cowork/design/1.2.0/skills/design-handoff",
+        "files": 1
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\claude-cowork\\design\\1.2.0\\skills\\design-system",
+        "relative_path": "claude-cowork/design/1.2.0/skills/design-system",
+        "files": 1
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\claude-cowork\\design\\1.2.0\\skills\\research-synthesis",
+        "relative_path": "claude-cowork/design/1.2.0/skills/research-synthesis",
+        "files": 1
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\claude-cowork\\design\\1.2.0\\skills\\user-research",
+        "relative_path": "claude-cowork/design/1.2.0/skills/user-research",
+        "files": 1
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\claude-cowork\\design\\1.2.0\\skills\\ux-copy",
+        "relative_path": "claude-cowork/design/1.2.0/skills/ux-copy",
+        "files": 1
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\claude-cowork\\desktop-commander\\0.2.0\\skills\\ai-tools-setup",
+        "relative_path": "claude-cowork/desktop-commander/0.2.0/skills/ai-tools-setup",
+        "files": 4
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\claude-cowork\\desktop-commander\\0.2.0\\skills\\computer-health-check",
+        "relative_path": "claude-cowork/desktop-commander/0.2.0/skills/computer-health-check",
+        "files": 4
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\claude-cowork\\desktop-commander\\0.2.0\\skills\\desktop-commander-overview",
+        "relative_path": "claude-cowork/desktop-commander/0.2.0/skills/desktop-commander-overview",
+        "files": 1
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\claude-cowork\\desktop-commander\\0.2.0\\skills\\knowledge-base",
+        "relative_path": "claude-cowork/desktop-commander/0.2.0/skills/knowledge-base",
+        "files": 1
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\claude-cowork\\desktop-commander\\0.2.0\\skills\\obsidian-vault",
+        "relative_path": "claude-cowork/desktop-commander/0.2.0/skills/obsidian-vault",
+        "files": 1
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\claude-cowork\\desktop-commander\\0.2.0\\skills\\terminal",
+        "relative_path": "claude-cowork/desktop-commander/0.2.0/skills/terminal",
+        "files": 1
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\claude-cowork\\pdf-viewer\\0.2.0\\skills\\view-pdf",
+        "relative_path": "claude-cowork/pdf-viewer/0.2.0/skills/view-pdf",
+        "files": 1
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\claude-cowork\\productivity\\1.3.1\\skills\\memory-management",
+        "relative_path": "claude-cowork/productivity/1.3.1/skills/memory-management",
+        "files": 1
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\claude-cowork\\productivity\\1.3.1\\skills\\start",
+        "relative_path": "claude-cowork/productivity/1.3.1/skills/start",
+        "files": 1
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\claude-cowork\\productivity\\1.3.1\\skills\\task-management",
+        "relative_path": "claude-cowork/productivity/1.3.1/skills/task-management",
+        "files": 1
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\claude-cowork\\productivity\\1.3.1\\skills\\update",
+        "relative_path": "claude-cowork/productivity/1.3.1/skills/update",
+        "files": 1
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\created-by-me-remote\\lsat-u-admin\\0.1.0\\skills\\lsat-u-operations",
+        "relative_path": "created-by-me-remote/lsat-u-admin/0.1.0/skills/lsat-u-operations",
+        "files": 1
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-bundled\\computer-use\\26.1002.52244\\skills\\computer-use",
+        "relative_path": "openai-bundled/computer-use/26.1002.52244/skills/computer-use",
+        "files": 1
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-bundled\\visualize\\1.0.47\\skills\\visualize",
+        "relative_path": "openai-bundled/visualize/1.0.47/skills/visualize",
+        "files": 11
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated\\build-web-apps\\1dc19589\\skills\\frontend-app-builder",
+        "relative_path": "openai-curated/build-web-apps/1dc19589/skills/frontend-app-builder",
+        "files": 3
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated\\build-web-apps\\1dc19589\\skills\\frontend-testing-debugging",
+        "relative_path": "openai-curated/build-web-apps/1dc19589/skills/frontend-testing-debugging",
+        "files": 2
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated\\build-web-apps\\1dc19589\\skills\\react-best-practices",
+        "relative_path": "openai-curated/build-web-apps/1dc19589/skills/react-best-practices",
+        "files": 71
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated\\build-web-apps\\1dc19589\\skills\\shadcn-best-practices",
+        "relative_path": "openai-curated/build-web-apps/1dc19589/skills/shadcn-best-practices",
+        "files": 13
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated\\build-web-apps\\1dc19589\\skills\\stripe-best-practices",
+        "relative_path": "openai-curated/build-web-apps/1dc19589/skills/stripe-best-practices",
+        "files": 6
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated\\build-web-apps\\1dc19589\\skills\\supabase-best-practices",
+        "relative_path": "openai-curated/build-web-apps/1dc19589/skills/supabase-best-practices",
+        "files": 38
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated\\codex-security\\1dc19589\\skills\\assess-patch-risk",
+        "relative_path": "openai-curated/codex-security/1dc19589/skills/assess-patch-risk",
+        "files": 4
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated\\codex-security\\1dc19589\\skills\\attack-path-analysis",
+        "relative_path": "openai-curated/codex-security/1dc19589/skills/attack-path-analysis",
+        "files": 4
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated\\codex-security\\1dc19589\\skills\\deep-security-scan",
+        "relative_path": "openai-curated/codex-security/1dc19589/skills/deep-security-scan",
+        "files": 2
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated\\codex-security\\1dc19589\\skills\\define-security-policy",
+        "relative_path": "openai-curated/codex-security/1dc19589/skills/define-security-policy",
+        "files": 2
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated\\codex-security\\1dc19589\\skills\\finding-discovery",
+        "relative_path": "openai-curated/codex-security/1dc19589/skills/finding-discovery",
+        "files": 2
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated\\codex-security\\1dc19589\\skills\\fix-finding",
+        "relative_path": "openai-curated/codex-security/1dc19589/skills/fix-finding",
+        "files": 2
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated\\codex-security\\1dc19589\\skills\\propose-security-hardening",
+        "relative_path": "openai-curated/codex-security/1dc19589/skills/propose-security-hardening",
+        "files": 3
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated\\codex-security\\1dc19589\\skills\\security-diff-scan",
+        "relative_path": "openai-curated/codex-security/1dc19589/skills/security-diff-scan",
+        "files": 2
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated\\codex-security\\1dc19589\\skills\\security-scan",
+        "relative_path": "openai-curated/codex-security/1dc19589/skills/security-scan",
+        "files": 4
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated\\codex-security\\1dc19589\\skills\\threat-model",
+        "relative_path": "openai-curated/codex-security/1dc19589/skills/threat-model",
+        "files": 2
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated\\codex-security\\1dc19589\\skills\\track-findings",
+        "relative_path": "openai-curated/codex-security/1dc19589/skills/track-findings",
+        "files": 4
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated\\codex-security\\1dc19589\\skills\\triage-finding",
+        "relative_path": "openai-curated/codex-security/1dc19589/skills/triage-finding",
+        "files": 5
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated\\codex-security\\1dc19589\\skills\\validation",
+        "relative_path": "openai-curated/codex-security/1dc19589/skills/validation",
+        "files": 3
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated\\codex-security\\1dc19589\\skills\\verify-fix",
+        "relative_path": "openai-curated/codex-security/1dc19589/skills/verify-fix",
+        "files": 2
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated\\codex-security\\1dc19589\\skills\\vulnerability-writeup",
+        "relative_path": "openai-curated/codex-security/1dc19589/skills/vulnerability-writeup",
+        "files": 3
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated\\hyperframes\\1dc19589\\skills\\gsap",
+        "relative_path": "openai-curated/hyperframes/1dc19589/skills/gsap",
+        "files": 4
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated\\hyperframes\\1dc19589\\skills\\hyperframes",
+        "relative_path": "openai-curated/hyperframes/1dc19589/skills/hyperframes",
+        "files": 40
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated\\hyperframes\\1dc19589\\skills\\hyperframes-cli",
+        "relative_path": "openai-curated/hyperframes/1dc19589/skills/hyperframes-cli",
+        "files": 2
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated\\hyperframes\\1dc19589\\skills\\hyperframes-registry",
+        "relative_path": "openai-curated/hyperframes/1dc19589/skills/hyperframes-registry",
+        "files": 9
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated\\hyperframes\\1dc19589\\skills\\website-to-hyperframes",
+        "relative_path": "openai-curated/hyperframes/1dc19589/skills/website-to-hyperframes",
+        "files": 10
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated\\openai-developers\\1dc19589\\skills\\agents-sdk",
+        "relative_path": "openai-curated/openai-developers/1dc19589/skills/agents-sdk",
+        "files": 2
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated\\openai-developers\\1dc19589\\skills\\build-chatgpt-app",
+        "relative_path": "openai-curated/openai-developers/1dc19589/skills/build-chatgpt-app",
+        "files": 11
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated\\openai-developers\\1dc19589\\skills\\chatgpt-app-submission",
+        "relative_path": "openai-curated/openai-developers/1dc19589/skills/chatgpt-app-submission",
+        "files": 2
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated\\openai-developers\\1dc19589\\skills\\openai-api-troubleshooting",
+        "relative_path": "openai-curated/openai-developers/1dc19589/skills/openai-api-troubleshooting",
+        "files": 3
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated\\openai-developers\\1dc19589\\skills\\openai-platform-api-key",
+        "relative_path": "openai-curated/openai-developers/1dc19589/skills/openai-platform-api-key",
+        "files": 3
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated\\plugin-eval\\1dc19589\\fixtures\\minimal-plugin\\skills\\minimal-plugin-skill",
+        "relative_path": "openai-curated/plugin-eval/1dc19589/fixtures/minimal-plugin/skills/minimal-plugin-skill",
+        "files": 1
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated\\plugin-eval\\1dc19589\\fixtures\\multi-skill-plugin\\skills\\alpha",
+        "relative_path": "openai-curated/plugin-eval/1dc19589/fixtures/multi-skill-plugin/skills/alpha",
+        "files": 1
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated\\plugin-eval\\1dc19589\\fixtures\\multi-skill-plugin\\skills\\beta",
+        "relative_path": "openai-curated/plugin-eval/1dc19589/fixtures/multi-skill-plugin/skills/beta",
+        "files": 1
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated\\plugin-eval\\1dc19589\\skills\\evaluate-plugin",
+        "relative_path": "openai-curated/plugin-eval/1dc19589/skills/evaluate-plugin",
+        "files": 2
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated\\plugin-eval\\1dc19589\\skills\\evaluate-skill",
+        "relative_path": "openai-curated/plugin-eval/1dc19589/skills/evaluate-skill",
+        "files": 2
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated\\plugin-eval\\1dc19589\\skills\\improve-skill",
+        "relative_path": "openai-curated/plugin-eval/1dc19589/skills/improve-skill",
+        "files": 2
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated\\plugin-eval\\1dc19589\\skills\\metric-pack-designer",
+        "relative_path": "openai-curated/plugin-eval/1dc19589/skills/metric-pack-designer",
+        "files": 2
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated\\plugin-eval\\1dc19589\\skills\\plugin-eval",
+        "relative_path": "openai-curated/plugin-eval/1dc19589/skills/plugin-eval",
+        "files": 2
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated\\stripe\\1dc19589\\skills\\connect-recommend",
+        "relative_path": "openai-curated/stripe/1dc19589/skills/connect-recommend",
+        "files": 9
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated\\stripe\\1dc19589\\skills\\stripe-apps",
+        "relative_path": "openai-curated/stripe/1dc19589/skills/stripe-apps",
+        "files": 11
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated\\stripe\\1dc19589\\skills\\stripe-best-practices",
+        "relative_path": "openai-curated/stripe/1dc19589/skills/stripe-best-practices",
+        "files": 7
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated\\stripe\\1dc19589\\skills\\stripe-directory",
+        "relative_path": "openai-curated/stripe/1dc19589/skills/stripe-directory",
+        "files": 1
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated\\stripe\\1dc19589\\skills\\stripe-docs",
+        "relative_path": "openai-curated/stripe/1dc19589/skills/stripe-docs",
+        "files": 1
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated\\stripe\\1dc19589\\skills\\stripe-projects",
+        "relative_path": "openai-curated/stripe/1dc19589/skills/stripe-projects",
+        "files": 1
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated\\stripe\\1dc19589\\skills\\upgrade-stripe",
+        "relative_path": "openai-curated/stripe/1dc19589/skills/upgrade-stripe",
+        "files": 1
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated\\superpowers\\1dc19589\\skills\\brainstorming",
+        "relative_path": "openai-curated/superpowers/1dc19589/skills/brainstorming",
+        "files": 9
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated\\superpowers\\1dc19589\\skills\\dispatching-parallel-agents",
+        "relative_path": "openai-curated/superpowers/1dc19589/skills/dispatching-parallel-agents",
+        "files": 2
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated\\superpowers\\1dc19589\\skills\\executing-plans",
+        "relative_path": "openai-curated/superpowers/1dc19589/skills/executing-plans",
+        "files": 2
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated\\superpowers\\1dc19589\\skills\\finishing-a-development-branch",
+        "relative_path": "openai-curated/superpowers/1dc19589/skills/finishing-a-development-branch",
+        "files": 2
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated\\superpowers\\1dc19589\\skills\\receiving-code-review",
+        "relative_path": "openai-curated/superpowers/1dc19589/skills/receiving-code-review",
+        "files": 2
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated\\superpowers\\1dc19589\\skills\\requesting-code-review",
+        "relative_path": "openai-curated/superpowers/1dc19589/skills/requesting-code-review",
+        "files": 3
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated\\superpowers\\1dc19589\\skills\\subagent-driven-development",
+        "relative_path": "openai-curated/superpowers/1dc19589/skills/subagent-driven-development",
+        "files": 8
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated\\superpowers\\1dc19589\\skills\\systematic-debugging",
+        "relative_path": "openai-curated/superpowers/1dc19589/skills/systematic-debugging",
+        "files": 12
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated\\superpowers\\1dc19589\\skills\\test-driven-development",
+        "relative_path": "openai-curated/superpowers/1dc19589/skills/test-driven-development",
+        "files": 3
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated\\superpowers\\1dc19589\\skills\\using-git-worktrees",
+        "relative_path": "openai-curated/superpowers/1dc19589/skills/using-git-worktrees",
+        "files": 2
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated\\superpowers\\1dc19589\\skills\\using-superpowers",
+        "relative_path": "openai-curated/superpowers/1dc19589/skills/using-superpowers",
+        "files": 7
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated\\superpowers\\1dc19589\\skills\\verification-before-completion",
+        "relative_path": "openai-curated/superpowers/1dc19589/skills/verification-before-completion",
+        "files": 2
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated\\superpowers\\1dc19589\\skills\\writing-plans",
+        "relative_path": "openai-curated/superpowers/1dc19589/skills/writing-plans",
+        "files": 3
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated\\superpowers\\1dc19589\\skills\\writing-skills",
+        "relative_path": "openai-curated/superpowers/1dc19589/skills/writing-skills",
+        "files": 8
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\build-macos-apps\\0.1.4\\skills\\appkit-interop",
+        "relative_path": "openai-curated-remote/build-macos-apps/0.1.4/skills/appkit-interop",
+        "files": 6
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\build-macos-apps\\0.1.4\\skills\\build-run-debug",
+        "relative_path": "openai-curated-remote/build-macos-apps/0.1.4/skills/build-run-debug",
+        "files": 3
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\build-macos-apps\\0.1.4\\skills\\liquid-glass",
+        "relative_path": "openai-curated-remote/build-macos-apps/0.1.4/skills/liquid-glass",
+        "files": 2
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\build-macos-apps\\0.1.4\\skills\\packaging-notarization",
+        "relative_path": "openai-curated-remote/build-macos-apps/0.1.4/skills/packaging-notarization",
+        "files": 2
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\build-macos-apps\\0.1.4\\skills\\signing-entitlements",
+        "relative_path": "openai-curated-remote/build-macos-apps/0.1.4/skills/signing-entitlements",
+        "files": 2
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\build-macos-apps\\0.1.4\\skills\\swiftpm-macos",
+        "relative_path": "openai-curated-remote/build-macos-apps/0.1.4/skills/swiftpm-macos",
+        "files": 2
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\build-macos-apps\\0.1.4\\skills\\swiftui-patterns",
+        "relative_path": "openai-curated-remote/build-macos-apps/0.1.4/skills/swiftui-patterns",
+        "files": 8
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\build-macos-apps\\0.1.4\\skills\\telemetry",
+        "relative_path": "openai-curated-remote/build-macos-apps/0.1.4/skills/telemetry",
+        "files": 2
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\build-macos-apps\\0.1.4\\skills\\test-triage",
+        "relative_path": "openai-curated-remote/build-macos-apps/0.1.4/skills/test-triage",
+        "files": 2
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\build-macos-apps\\0.1.4\\skills\\view-refactor",
+        "relative_path": "openai-curated-remote/build-macos-apps/0.1.4/skills/view-refactor",
+        "files": 2
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\build-macos-apps\\0.1.4\\skills\\window-management",
+        "relative_path": "openai-curated-remote/build-macos-apps/0.1.4/skills/window-management",
+        "files": 3
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\codex-security\\0.1.32\\skills\\assess-patch-risk",
+        "relative_path": "openai-curated-remote/codex-security/0.1.32/skills/assess-patch-risk",
+        "files": 3
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\codex-security\\0.1.32\\skills\\attack-path-analysis",
+        "relative_path": "openai-curated-remote/codex-security/0.1.32/skills/attack-path-analysis",
+        "files": 4
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\codex-security\\0.1.32\\skills\\deep-security-scan",
+        "relative_path": "openai-curated-remote/codex-security/0.1.32/skills/deep-security-scan",
+        "files": 2
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\codex-security\\0.1.32\\skills\\define-security-policy",
+        "relative_path": "openai-curated-remote/codex-security/0.1.32/skills/define-security-policy",
+        "files": 2
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\codex-security\\0.1.32\\skills\\finding-discovery",
+        "relative_path": "openai-curated-remote/codex-security/0.1.32/skills/finding-discovery",
+        "files": 2
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\codex-security\\0.1.32\\skills\\fix-finding",
+        "relative_path": "openai-curated-remote/codex-security/0.1.32/skills/fix-finding",
+        "files": 2
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\codex-security\\0.1.32\\skills\\propose-security-hardening",
+        "relative_path": "openai-curated-remote/codex-security/0.1.32/skills/propose-security-hardening",
+        "files": 3
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\codex-security\\0.1.32\\skills\\security-diff-scan",
+        "relative_path": "openai-curated-remote/codex-security/0.1.32/skills/security-diff-scan",
+        "files": 2
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\codex-security\\0.1.32\\skills\\security-scan",
+        "relative_path": "openai-curated-remote/codex-security/0.1.32/skills/security-scan",
+        "files": 4
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\codex-security\\0.1.32\\skills\\threat-model",
+        "relative_path": "openai-curated-remote/codex-security/0.1.32/skills/threat-model",
+        "files": 2
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\codex-security\\0.1.32\\skills\\track-findings",
+        "relative_path": "openai-curated-remote/codex-security/0.1.32/skills/track-findings",
+        "files": 4
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\codex-security\\0.1.32\\skills\\triage-finding",
+        "relative_path": "openai-curated-remote/codex-security/0.1.32/skills/triage-finding",
+        "files": 5
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\codex-security\\0.1.32\\skills\\validation",
+        "relative_path": "openai-curated-remote/codex-security/0.1.32/skills/validation",
+        "files": 3
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\codex-security\\0.1.32\\skills\\verify-fix",
+        "relative_path": "openai-curated-remote/codex-security/0.1.32/skills/verify-fix",
+        "files": 2
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\codex-security\\0.1.32\\skills\\vulnerability-writeup",
+        "relative_path": "openai-curated-remote/codex-security/0.1.32/skills/vulnerability-writeup",
+        "files": 3
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\google-drive\\0.1.16\\skills\\google-docs",
+        "relative_path": "openai-curated-remote/google-drive/0.1.16/skills/google-docs",
+        "files": 38
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\google-drive\\0.1.16\\skills\\google-drive",
+        "relative_path": "openai-curated-remote/google-drive/0.1.16/skills/google-drive",
+        "files": 10
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\google-drive\\0.1.16\\skills\\google-drive-comments",
+        "relative_path": "openai-curated-remote/google-drive/0.1.16/skills/google-drive-comments",
+        "files": 2
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\google-drive\\0.1.16\\skills\\google-sheets",
+        "relative_path": "openai-curated-remote/google-drive/0.1.16/skills/google-sheets",
+        "files": 13
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\google-drive\\0.1.16\\skills\\google-slides",
+        "relative_path": "openai-curated-remote/google-drive/0.1.16/skills/google-slides",
+        "files": 16
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\netlify\\1.0.0\\skills\\netlify-ai-gateway",
+        "relative_path": "openai-curated-remote/netlify/1.0.0/skills/netlify-ai-gateway",
+        "files": 5
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\netlify\\1.0.0\\skills\\netlify-blobs",
+        "relative_path": "openai-curated-remote/netlify/1.0.0/skills/netlify-blobs",
+        "files": 5
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\netlify\\1.0.0\\skills\\netlify-caching",
+        "relative_path": "openai-curated-remote/netlify/1.0.0/skills/netlify-caching",
+        "files": 5
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\netlify\\1.0.0\\skills\\netlify-cli-and-deploy",
+        "relative_path": "openai-curated-remote/netlify/1.0.0/skills/netlify-cli-and-deploy",
+        "files": 5
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\netlify\\1.0.0\\skills\\netlify-config",
+        "relative_path": "openai-curated-remote/netlify/1.0.0/skills/netlify-config",
+        "files": 5
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\netlify\\1.0.0\\skills\\netlify-deploy",
+        "relative_path": "openai-curated-remote/netlify/1.0.0/skills/netlify-deploy",
+        "files": 8
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\netlify\\1.0.0\\skills\\netlify-edge-functions",
+        "relative_path": "openai-curated-remote/netlify/1.0.0/skills/netlify-edge-functions",
+        "files": 5
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\netlify\\1.0.0\\skills\\netlify-forms",
+        "relative_path": "openai-curated-remote/netlify/1.0.0/skills/netlify-forms",
+        "files": 5
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\netlify\\1.0.0\\skills\\netlify-frameworks",
+        "relative_path": "openai-curated-remote/netlify/1.0.0/skills/netlify-frameworks",
+        "files": 9
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\netlify\\1.0.0\\skills\\netlify-functions",
+        "relative_path": "openai-curated-remote/netlify/1.0.0/skills/netlify-functions",
+        "files": 5
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\netlify\\1.0.0\\skills\\netlify-identity",
+        "relative_path": "openai-curated-remote/netlify/1.0.0/skills/netlify-identity",
+        "files": 6
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\netlify\\1.0.0\\skills\\netlify-image-cdn",
+        "relative_path": "openai-curated-remote/netlify/1.0.0/skills/netlify-image-cdn",
+        "files": 6
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\netlify\\1.6.0\\skills\\netlify-access-control",
+        "relative_path": "openai-curated-remote/netlify/1.6.0/skills/netlify-access-control",
+        "files": 2
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\netlify\\1.6.0\\skills\\netlify-agent-runner",
+        "relative_path": "openai-curated-remote/netlify/1.6.0/skills/netlify-agent-runner",
+        "files": 1
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\netlify\\1.6.0\\skills\\netlify-ai-gateway",
+        "relative_path": "openai-curated-remote/netlify/1.6.0/skills/netlify-ai-gateway",
+        "files": 1
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\netlify\\1.6.0\\skills\\netlify-blobs",
+        "relative_path": "openai-curated-remote/netlify/1.6.0/skills/netlify-blobs",
+        "files": 1
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\netlify\\1.6.0\\skills\\netlify-caching",
+        "relative_path": "openai-curated-remote/netlify/1.6.0/skills/netlify-caching",
+        "files": 1
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\netlify\\1.6.0\\skills\\netlify-config",
+        "relative_path": "openai-curated-remote/netlify/1.6.0/skills/netlify-config",
+        "files": 1
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\netlify\\1.6.0\\skills\\netlify-database",
+        "relative_path": "openai-curated-remote/netlify/1.6.0/skills/netlify-database",
+        "files": 7
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\netlify\\1.6.0\\skills\\netlify-deploy",
+        "relative_path": "openai-curated-remote/netlify/1.6.0/skills/netlify-deploy",
+        "files": 4
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\netlify\\1.6.0\\skills\\netlify-edge-functions",
+        "relative_path": "openai-curated-remote/netlify/1.6.0/skills/netlify-edge-functions",
+        "files": 1
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\netlify\\1.6.0\\skills\\netlify-forms",
+        "relative_path": "openai-curated-remote/netlify/1.6.0/skills/netlify-forms",
+        "files": 1
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\netlify\\1.6.0\\skills\\netlify-frameworks",
+        "relative_path": "openai-curated-remote/netlify/1.6.0/skills/netlify-frameworks",
+        "files": 7
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\netlify\\1.6.0\\skills\\netlify-functions",
+        "relative_path": "openai-curated-remote/netlify/1.6.0/skills/netlify-functions",
+        "files": 1
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\netlify\\1.6.0\\skills\\netlify-identity",
+        "relative_path": "openai-curated-remote/netlify/1.6.0/skills/netlify-identity",
+        "files": 3
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\netlify\\1.6.0\\skills\\netlify-image-cdn",
+        "relative_path": "openai-curated-remote/netlify/1.6.0/skills/netlify-image-cdn",
+        "files": 2
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\netlify\\1.6.0\\skills\\netlify-mcp-servers",
+        "relative_path": "openai-curated-remote/netlify/1.6.0/skills/netlify-mcp-servers",
+        "files": 4
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\openai-developers\\1.3.6\\skills\\agents",
+        "relative_path": "openai-curated-remote/openai-developers/1.3.6/skills/agents",
+        "files": 6
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\openai-developers\\1.3.6\\skills\\devday-guide",
+        "relative_path": "openai-curated-remote/openai-developers/1.3.6/skills/devday-guide",
+        "files": 3
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\openai-developers\\1.3.6\\skills\\openai-api-troubleshooting",
+        "relative_path": "openai-curated-remote/openai-developers/1.3.6/skills/openai-api-troubleshooting",
+        "files": 3
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\openai-developers\\1.3.6\\skills\\openai-platform-api-key",
+        "relative_path": "openai-curated-remote/openai-developers/1.3.6/skills/openai-platform-api-key",
+        "files": 3
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\openai-templates\\0.1.1\\skills\\artifact-template-analytics-dashboard",
+        "relative_path": "openai-curated-remote/openai-templates/0.1.1/skills/artifact-template-analytics-dashboard",
+        "files": 5
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\openai-templates\\0.1.1\\skills\\artifact-template-business-review",
+        "relative_path": "openai-curated-remote/openai-templates/0.1.1/skills/artifact-template-business-review",
+        "files": 5
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\openai-templates\\0.1.1\\skills\\artifact-template-design-report",
+        "relative_path": "openai-curated-remote/openai-templates/0.1.1/skills/artifact-template-design-report",
+        "files": 5
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\openai-templates\\0.1.1\\skills\\artifact-template-experiment-analysis",
+        "relative_path": "openai-curated-remote/openai-templates/0.1.1/skills/artifact-template-experiment-analysis",
+        "files": 5
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\openai-templates\\0.1.1\\skills\\artifact-template-financial-budget",
+        "relative_path": "openai-curated-remote/openai-templates/0.1.1/skills/artifact-template-financial-budget",
+        "files": 5
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\openai-templates\\0.1.1\\skills\\artifact-template-investment-committee-memo",
+        "relative_path": "openai-curated-remote/openai-templates/0.1.1/skills/artifact-template-investment-committee-memo",
+        "files": 5
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\openai-templates\\0.1.1\\skills\\artifact-template-legal-memorandum",
+        "relative_path": "openai-curated-remote/openai-templates/0.1.1/skills/artifact-template-legal-memorandum",
+        "files": 5
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\openai-templates\\0.1.1\\skills\\artifact-template-market-trends-report",
+        "relative_path": "openai-curated-remote/openai-templates/0.1.1/skills/artifact-template-market-trends-report",
+        "files": 5
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\openai-templates\\0.1.1\\skills\\artifact-template-minimal-letterhead",
+        "relative_path": "openai-curated-remote/openai-templates/0.1.1/skills/artifact-template-minimal-letterhead",
+        "files": 5
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\openai-templates\\0.1.1\\skills\\artifact-template-operating-calendar",
+        "relative_path": "openai-curated-remote/openai-templates/0.1.1/skills/artifact-template-operating-calendar",
+        "files": 5
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\openai-templates\\0.1.1\\skills\\artifact-template-operating-review",
+        "relative_path": "openai-curated-remote/openai-templates/0.1.1/skills/artifact-template-operating-review",
+        "files": 5
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\openai-templates\\0.1.1\\skills\\artifact-template-project-kickoff",
+        "relative_path": "openai-curated-remote/openai-templates/0.1.1/skills/artifact-template-project-kickoff",
+        "files": 5
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\openai-templates\\0.1.1\\skills\\artifact-template-project-tracker",
+        "relative_path": "openai-curated-remote/openai-templates/0.1.1/skills/artifact-template-project-tracker",
+        "files": 5
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\openai-templates\\0.1.1\\skills\\artifact-template-sales-pipeline",
+        "relative_path": "openai-curated-remote/openai-templates/0.1.1/skills/artifact-template-sales-pipeline",
+        "files": 5
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\openai-templates\\0.1.1\\skills\\artifact-template-simple-dark-mode",
+        "relative_path": "openai-curated-remote/openai-templates/0.1.1/skills/artifact-template-simple-dark-mode",
+        "files": 5
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\openai-templates\\0.1.1\\skills\\artifact-template-simple-light-mode",
+        "relative_path": "openai-curated-remote/openai-templates/0.1.1/skills/artifact-template-simple-light-mode",
+        "files": 5
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\openai-templates\\0.1.1\\skills\\artifact-template-strategy-memorandum",
+        "relative_path": "openai-curated-remote/openai-templates/0.1.1/skills/artifact-template-strategy-memorandum",
+        "files": 5
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\openai-templates\\0.1.1\\skills\\artifact-template-system-design",
+        "relative_path": "openai-curated-remote/openai-templates/0.1.1/skills/artifact-template-system-design",
+        "files": 5
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\openai-templates\\0.1.1\\skills\\artifact-template-team-alignment",
+        "relative_path": "openai-curated-remote/openai-templates/0.1.1/skills/artifact-template-team-alignment",
+        "files": 5
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\openai-templates\\0.1.1\\skills\\artifact-template-three-statement-forecast",
+        "relative_path": "openai-curated-remote/openai-templates/0.1.1/skills/artifact-template-three-statement-forecast",
+        "files": 5
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\pages\\0.1.19\\skills\\maintain-space",
+        "relative_path": "openai-curated-remote/pages/0.1.19/skills/maintain-space",
+        "files": 2
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\pages\\0.1.19\\skills\\manage-schedules",
+        "relative_path": "openai-curated-remote/pages/0.1.19/skills/manage-schedules",
+        "files": 2
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\pages\\0.1.19\\skills\\organize-space",
+        "relative_path": "openai-curated-remote/pages/0.1.19/skills/organize-space",
+        "files": 2
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\pages\\0.1.19\\skills\\write-page",
+        "relative_path": "openai-curated-remote/pages/0.1.19/skills/write-page",
+        "files": 4
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\pages\\0.1.20\\skills\\maintain-space",
+        "relative_path": "openai-curated-remote/pages/0.1.20/skills/maintain-space",
+        "files": 2
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\pages\\0.1.20\\skills\\manage-schedules",
+        "relative_path": "openai-curated-remote/pages/0.1.20/skills/manage-schedules",
+        "files": 2
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\pages\\0.1.20\\skills\\organize-space",
+        "relative_path": "openai-curated-remote/pages/0.1.20/skills/organize-space",
+        "files": 2
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\pages\\0.1.20\\skills\\write-page",
+        "relative_path": "openai-curated-remote/pages/0.1.20/skills/write-page",
+        "files": 4
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\plugin-creator\\0.1.22\\skills\\create-plugin",
+        "relative_path": "openai-curated-remote/plugin-creator/0.1.22/skills/create-plugin",
+        "files": 9
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\plugin-creator\\0.1.22\\skills\\prepare-plugin-submission",
+        "relative_path": "openai-curated-remote/plugin-creator/0.1.22/skills/prepare-plugin-submission",
+        "files": 4
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\plugin-creator\\0.1.22\\skills\\update-plugin",
+        "relative_path": "openai-curated-remote/plugin-creator/0.1.22/skills/update-plugin",
+        "files": 3
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\plugin-management\\0.1.0\\skills\\plugin-management",
+        "relative_path": "openai-curated-remote/plugin-management/0.1.0/skills/plugin-management",
+        "files": 1
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\sales\\1.1.0-alpha.2\\skills\\analyze-account-signals",
+        "relative_path": "openai-curated-remote/sales/1.1.0-alpha.2/skills/analyze-account-signals",
+        "files": 4
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\sales\\1.1.0-alpha.2\\skills\\build-business-case",
+        "relative_path": "openai-curated-remote/sales/1.1.0-alpha.2/skills/build-business-case",
+        "files": 6
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\sales\\1.1.0-alpha.2\\skills\\build-competitive-brief",
+        "relative_path": "openai-curated-remote/sales/1.1.0-alpha.2/skills/build-competitive-brief",
+        "files": 5
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\sales\\1.1.0-alpha.2\\skills\\demo-exec-and-seller-dash",
+        "relative_path": "openai-curated-remote/sales/1.1.0-alpha.2/skills/demo-exec-and-seller-dash",
+        "files": 34
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\sales\\1.1.0-alpha.2\\skills\\enrich-company-and-contact-data",
+        "relative_path": "openai-curated-remote/sales/1.1.0-alpha.2/skills/enrich-company-and-contact-data",
+        "files": 2
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\sales\\1.1.0-alpha.2\\skills\\find-customer-quotes",
+        "relative_path": "openai-curated-remote/sales/1.1.0-alpha.2/skills/find-customer-quotes",
+        "files": 3
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\sales\\1.1.0-alpha.2\\skills\\find-key-internal-sources",
+        "relative_path": "openai-curated-remote/sales/1.1.0-alpha.2/skills/find-key-internal-sources",
+        "files": 4
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\sales\\1.1.0-alpha.2\\skills\\follow-up-after-call",
+        "relative_path": "openai-curated-remote/sales/1.1.0-alpha.2/skills/follow-up-after-call",
+        "files": 4
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\sales\\1.1.0-alpha.2\\skills\\get-rep-call-feedback",
+        "relative_path": "openai-curated-remote/sales/1.1.0-alpha.2/skills/get-rep-call-feedback",
+        "files": 6
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\sales\\1.1.0-alpha.2\\skills\\index",
+        "relative_path": "openai-curated-remote/sales/1.1.0-alpha.2/skills/index",
+        "files": 3
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\sales\\1.1.0-alpha.2\\skills\\plan-deal-strategy",
+        "relative_path": "openai-curated-remote/sales/1.1.0-alpha.2/skills/plan-deal-strategy",
+        "files": 4
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\sales\\1.1.0-alpha.2\\skills\\prepare-for-meeting",
+        "relative_path": "openai-curated-remote/sales/1.1.0-alpha.2/skills/prepare-for-meeting",
+        "files": 2
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\sales\\1.1.0-alpha.2\\skills\\review-forecast",
+        "relative_path": "openai-curated-remote/sales/1.1.0-alpha.2/skills/review-forecast",
+        "files": 3
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\sales\\1.1.0-alpha.2\\skills\\review-rep-call-trends",
+        "relative_path": "openai-curated-remote/sales/1.1.0-alpha.2/skills/review-rep-call-trends",
+        "files": 4
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\sales\\1.1.0-alpha.2\\skills\\sales-company-research",
+        "relative_path": "openai-curated-remote/sales/1.1.0-alpha.2/skills/sales-company-research",
+        "files": 2
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\sales\\1.1.0-alpha.2\\skills\\sales-leadership-dashboard",
+        "relative_path": "openai-curated-remote/sales/1.1.0-alpha.2/skills/sales-leadership-dashboard",
+        "files": 2
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\sales\\1.1.0-alpha.2\\skills\\sales-presentations",
+        "relative_path": "openai-curated-remote/sales/1.1.0-alpha.2/skills/sales-presentations",
+        "files": 2
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\sales\\1.1.0-alpha.2\\skills\\seller-account-dashboard",
+        "relative_path": "openai-curated-remote/sales/1.1.0-alpha.2/skills/seller-account-dashboard",
+        "files": 5
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\sites\\0.1.75\\skills\\sites-building",
+        "relative_path": "openai-curated-remote/sites/0.1.75/skills/sites-building",
+        "files": 139
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\sites\\0.1.75\\skills\\sites-hosting",
+        "relative_path": "openai-curated-remote/sites/0.1.75/skills/sites-hosting",
+        "files": 3
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\sites\\0.1.75\\skills\\sites-mcp",
+        "relative_path": "openai-curated-remote/sites/0.1.75/skills/sites-mcp",
+        "files": 1
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\sites\\0.1.75\\skills\\sites-preview-troubleshooting",
+        "relative_path": "openai-curated-remote/sites/0.1.75/skills/sites-preview-troubleshooting",
+        "files": 1
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\sites\\1.0.0-d\\skills\\sites",
+        "relative_path": "openai-curated-remote/sites/1.0.0-d/skills/sites",
+        "files": 136
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\stripe\\8.0.0\\skills\\connect-recommend",
+        "relative_path": "openai-curated-remote/stripe/8.0.0/skills/connect-recommend",
+        "files": 9
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\stripe\\8.0.0\\skills\\connect-required-verification-information",
+        "relative_path": "openai-curated-remote/stripe/8.0.0/skills/connect-required-verification-information",
+        "files": 1
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\stripe\\8.0.0\\skills\\metronome",
+        "relative_path": "openai-curated-remote/stripe/8.0.0/skills/metronome",
+        "files": 1
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\stripe\\8.0.0\\skills\\stripe-apps",
+        "relative_path": "openai-curated-remote/stripe/8.0.0/skills/stripe-apps",
+        "files": 12
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\stripe\\8.0.0\\skills\\stripe-best-practices",
+        "relative_path": "openai-curated-remote/stripe/8.0.0/skills/stripe-best-practices",
+        "files": 7
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\stripe\\8.0.0\\skills\\stripe-directory",
+        "relative_path": "openai-curated-remote/stripe/8.0.0/skills/stripe-directory",
+        "files": 1
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\stripe\\8.0.0\\skills\\stripe-docs",
+        "relative_path": "openai-curated-remote/stripe/8.0.0/skills/stripe-docs",
+        "files": 1
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\stripe\\8.0.0\\skills\\stripe-pay",
+        "relative_path": "openai-curated-remote/stripe/8.0.0/skills/stripe-pay",
+        "files": 1
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\stripe\\8.0.0\\skills\\stripe-projects",
+        "relative_path": "openai-curated-remote/stripe/8.0.0/skills/stripe-projects",
+        "files": 1
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\stripe\\8.0.0\\skills\\upgrade-stripe",
+        "relative_path": "openai-curated-remote/stripe/8.0.0/skills/upgrade-stripe",
+        "files": 1
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\work-pets\\0.1.6\\skills\\create-pet",
+        "relative_path": "openai-curated-remote/work-pets/0.1.6/skills/create-pet",
+        "files": 21
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\work-pets\\0.1.6\\skills\\pets",
+        "relative_path": "openai-curated-remote/work-pets/0.1.6/skills/pets",
+        "files": 2
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\work-pets\\0.1.6\\skills\\update-pet",
+        "relative_path": "openai-curated-remote/work-pets/0.1.6/skills/update-pet",
+        "files": 2
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-primary-runtime\\documents\\26.1007.11041\\skills\\documents",
+        "relative_path": "openai-primary-runtime/documents/26.1007.11041/skills/documents",
+        "files": 80
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-primary-runtime\\pdf\\26.1007.11041\\skills\\pdf",
+        "relative_path": "openai-primary-runtime/pdf/26.1007.11041/skills/pdf",
+        "files": 4
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-primary-runtime\\presentations\\26.1007.11041\\skills\\presentations",
+        "relative_path": "openai-primary-runtime/presentations/26.1007.11041/skills/presentations",
+        "files": 60
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-primary-runtime\\spreadsheets\\26.1007.11041\\skills\\excel-live-control",
+        "relative_path": "openai-primary-runtime/spreadsheets/26.1007.11041/skills/excel-live-control",
+        "files": 13
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-primary-runtime\\spreadsheets\\26.1007.11041\\skills\\spreadsheets",
+        "relative_path": "openai-primary-runtime/spreadsheets/26.1007.11041/skills/spreadsheets",
+        "files": 19
+      },
+      {
+        "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-primary-runtime\\template-creator\\26.1007.11041\\skills\\template-creator",
+        "relative_path": "openai-primary-runtime/template-creator/26.1007.11041/skills/template-creator",
+        "files": 6
+      }
+    ]
   },
   "warnings": [
-    "Plugin caches and binaries are not installed by this export; skill references to plugins may require installation in cloud."
+    "Excluded credential source: C:\\Users\\Joshu\\.codex\\plugins\\cache\\claude-cowork\\anthropic-skills\\1.0.0\\skills\\browser\\.env.example",
+    "Plugin skill bundles are readable context. Plugin tools, connectors and binaries require separate cloud installation/authentication; native caches are excluded."
   ]
 }

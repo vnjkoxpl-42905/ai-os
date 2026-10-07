@@ -1,6 +1,6 @@
 """Mirror already published, filtered Git snapshots into private Drive archives."""
 from __future__ import annotations
-import argparse, hashlib, json, os, shutil, subprocess, tempfile
+import argparse, hashlib, json, os, shutil, subprocess, tempfile, time
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -20,9 +20,31 @@ def gws(method, params=None, body=None, upload=None):
     if params: command += ['--params', json.dumps(params)]
     if body: command += ['--json', json.dumps(body)]
     if upload: command += ['--upload', str(upload)]
-    result = subprocess.run(command, capture_output=True, text=True, timeout=900,
-                            cwd=str(Path(upload).resolve().parent) if upload else None,
-                            creationflags=subprocess.CREATE_NO_WINDOW if os.name == 'nt' else 0)
+    error = {}
+    for attempt in range(4):
+        try:
+            result = subprocess.run(command, capture_output=True, text=True, timeout=900,
+                                    cwd=str(Path(upload).resolve().parent) if upload else None,
+                                    creationflags=subprocess.CREATE_NO_WINDOW if os.name == 'nt' else 0)
+        except (subprocess.TimeoutExpired, ConnectionError):
+            if attempt == 3: raise RuntimeError('Drive operation timed out: ' + method) from None
+            time.sleep(2 ** attempt)
+            continue
+        if not result.returncode:
+            break
+        try:
+            error = json.loads(result.stdout).get('error', {})
+        except (ValueError, AttributeError):
+            error = {}
+        transient = error.get('code') in {429, 500, 502, 503, 504} or error.get('reason') in {'backendError', 'internalError', 'rateLimitExceeded', 'userRateLimitExceeded'}
+        if not error.get('code'):
+            transport = getattr(result, 'stderr', '').lower()
+            transient = transient or any(marker in transport for marker in ('connection reset', 'connection refused', 'timed out', 'dns error', 'error sending request', 'transport error'))
+        if not transient or attempt == 3:
+            break
+        # Create requests use pre-reserved IDs; retrying cannot create another
+        # object. A duplicate-ID response is recovered by ensure().
+        time.sleep(2 ** attempt)
     if result.returncode:
         detail = f'exit {result.returncode}'
         try:
@@ -44,6 +66,15 @@ class Mirror:
         self.state = json.loads(self.path.read_text()) if self.path.exists() else {'ids': {}, 'checkouts': {}}
 
     def save(self):
+        # Preserve receipts from earlier/manual invocations during recovery.
+        if self.path.exists():
+            disk = json.loads(self.path.read_text())
+            self.state['ids'] = dict(disk.get('ids', {}), **self.state['ids'])
+            current = disk.get('checkouts', {})
+            for checkout, record in self.state['checkouts'].items():
+                if record.get('updated_utc', '') >= current.get(checkout, {}).get('updated_utc', ''):
+                    current[checkout] = record
+            self.state['checkouts'] = current
         atomic_json(self.path, self.state)
 
     def find(self, parent, name, key):
@@ -107,7 +138,7 @@ class Mirror:
             raise RuntimeError('Drive checksum verification failed: ' + name)
         return verified['id'], digest
 
-def mirror_from_state(config_path):
+def _mirror_from_state(config_path):
     config_path = Path(config_path).resolve()
     state_dir = config_path.parent / 'state'
     snapshots = json.loads((state_dir / 'state.json').read_text())
@@ -149,7 +180,7 @@ def mirror_from_state(config_path):
             results.append({'checkout': checkout, 'status': 'uploaded', **record})
     with tempfile.TemporaryDirectory(prefix='drive-workspace-index-') as temp:
         readme = Path(temp) / 'README.md'
-        lines = ['# Local workspace snapshots', '', 'Each checkout contains latest.zip and manifest.json. These archives contain the same filtered snapshot published to GitHub. Source deletions disappear from current archive contents. This sync never deletes Drive files. Drive revision retention follows Drive policy; Git snapshot history preserves prior versions.', '', 'Secrets, native login sessions, raw personal exports and dependency caches are excluded. Exported conversations are readable files, not native Claude chat history.', '']
+        lines = ['# Local workspace snapshots', '', 'Each checkout contains latest.zip and manifest.json. These archives contain the same filtered snapshot published to GitHub. Source deletions disappear from current archive contents. This sync never deletes Drive files. Drive revision retention follows Drive policy; Git snapshot history preserves prior versions.', '', 'Plaintext secrets, browser sessions, raw personal exports and dependency caches are excluded from readable files. Authorized credential files and original redacted text are included in encrypted packages whose unlock key is provisioned separately. Exported conversations are readable files, not native Claude chat history.', '']
         for checkout, record in sorted(mirror.state['checkouts'].items()):
             lines += [f"- {Path(checkout).name}: https://github.com/{record['repository']}/tree/{record['branch']} | commit {record['commit']} | {record['updated_utc']} | https://drive.google.com/drive/folders/{record['folder_id']}"]
         readme.write_text('\n'.join(lines) + '\n', encoding='utf-8')
@@ -157,6 +188,19 @@ def mirror_from_state(config_path):
     mirror.state['last_success_utc'] = datetime.now(timezone.utc).isoformat()
     mirror.save()
     return {'root_id': root_id, 'results': results}
+
+def mirror_from_state(config_path):
+    # Shared OS lock protects scheduled and manual mirror invocations.
+    import importlib.util
+    spec = importlib.util.spec_from_file_location('workspace_sync_lock', Path(__file__).with_name('sync.py'))
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    state_dir = Path(config_path).resolve().parent / 'state'
+    state_dir.mkdir(parents=True, exist_ok=True)
+    with module.process_lock(state_dir / 'drive.lock') as acquired:
+        if not acquired:
+            return {'status': 'busy', 'results': []}
+        return _mirror_from_state(config_path)
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
