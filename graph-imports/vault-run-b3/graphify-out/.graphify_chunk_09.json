@@ -1,0 +1,1386 @@
+{
+  "nodes": [
+    {
+      "id": "adversarial_verification_before_shipping",
+      "label": "Adversarial verification before shipping",
+      "type": "technique",
+      "summary": "A dedicated critic attacks an artifact trying to break it, rather than grading it sympathetically. Used for proofs (math-olympiad verifier), for local MCP tool handlers tested with hostile inputs, and as the general 'do not confirm because it sounds confident' stance.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/math-olympiad/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/math-olympiad/references/adversarial_prompts.md",
+        "/Users/joshuaf/ai-os/skills/claude/math-olympiad/references/verifier_patterns.md",
+        "/Users/joshuaf/ai-os/skills/claude/build-mcpb/references/local-security.md"
+      ]
+    },
+    {
+      "id": "fresh_context_isolation",
+      "label": "Fresh-context isolation of the reviewer",
+      "type": "design-principle",
+      "summary": "The reviewer sees only the problem plus the cleaned artifact, never the author's thinking trace and never other reviewers' verdicts. Reasoning traces and social proof both bias a reviewer toward agreement.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/math-olympiad/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/math-olympiad/references/adversarial_prompts.md"
+      ]
+    },
+    {
+      "id": "strip_thinking_trace",
+      "label": "Strip the thinking trace before review",
+      "type": "workflow-stage",
+      "summary": "Before any verification, delete thinking blocks, false starts, and 'let me try' prose, leaving problem statement plus clean final argument. Called the number-one lever in the math-olympiad workflow.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/math-olympiad/SKILL.md"
+      ]
+    },
+    {
+      "id": "pattern_specific_attack_checklist",
+      "label": "Pattern-specific attack checklist",
+      "type": "technique",
+      "summary": "Instead of asking 'is this correct?', run named checks: proves-too-much (#4), hypothesis-not-satisfied (#5), tautological reduction (#18), one-line-proof-too-clean (#40), easiest-interpretation trap (#60). Specific beats generic.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/math-olympiad/references/verifier_patterns.md",
+        "/Users/joshuaf/ai-os/skills/claude/math-olympiad/references/adversarial_prompts.md",
+        "/Users/joshuaf/ai-os/skills/claude/math-olympiad/SKILL.md"
+      ]
+    },
+    {
+      "id": "specification_gaming_check",
+      "label": "Interpretation / specification-gaming check",
+      "type": "failure-mode",
+      "summary": "Solving the easiest grammatically-valid reading instead of the intended one. 50 of 63 'technically correct' solutions failed this way. Mitigated by listing 2-3 readings and flagging whichever makes the problem trivial, before solving.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/math-olympiad/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/math-olympiad/references/verifier_patterns.md",
+        "/Users/joshuaf/ai-os/skills/claude/math-olympiad/references/adversarial_prompts.md"
+      ]
+    },
+    {
+      "id": "asymmetric_vote_pigeonhole_exit",
+      "label": "Asymmetric vote with pigeonhole early exit",
+      "type": "technique",
+      "summary": "Confirm needs 4 of 5 HOLDS, refute needs only 2 HOLE FOUND. Stop launching verifiers once the outcome is decided, since remaining votes carry no information.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/math-olympiad/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/math-olympiad/references/model_tier_defaults.md"
+      ]
+    },
+    {
+      "id": "calibrated_abstention",
+      "label": "Calibrated abstention",
+      "type": "design-principle",
+      "summary": "Say 'no confident solution' with partial results rather than bluff. Optimizes conditional accuracy (when you claim solved, are you right?) over coverage.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/math-olympiad/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/math-olympiad/references/attempt_agent.md"
+      ]
+    },
+    {
+      "id": "parallel_variant_generation",
+      "label": "Parallel radically-different variant generation",
+      "type": "technique",
+      "summary": "Spawn 3+ sub-agents in parallel, each given a different constraint, to produce radically different candidates that are then compared. Used for solver angles, interface designs, and UI variants.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/math-olympiad/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/codebase-design/DESIGN-IT-TWICE.md",
+        "/Users/joshuaf/ai-os/skills/claude/design-an-interface/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/prototype/UI.md"
+      ]
+    },
+    {
+      "id": "self_refinement_loop",
+      "label": "Internal solve / self-verify / correct loop",
+      "type": "workflow-stage",
+      "summary": "Each attempt agent iterates internally: solve, self-improve, self-verify as a strict grader, correct, up to 5 rounds. Stops on two clean verifications, 5 rounds, or a fundamentally wrong approach.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/math-olympiad/references/attempt_agent.md",
+        "/Users/joshuaf/ai-os/skills/claude/math-olympiad/SKILL.md"
+      ]
+    },
+    {
+      "id": "self_verification_insufficient",
+      "label": "Self-verification is insufficient",
+      "type": "failure-mode",
+      "summary": "Self-verified 85.7% IMO success drops below 5% under human grading (arXiv:2503.21934). An author who convinced themselves writes confidently and well, which is exactly what a subtly wrong artifact looks like.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/math-olympiad/references/adversarial_prompts.md",
+        "/Users/joshuaf/ai-os/skills/claude/math-olympiad/SKILL.md"
+      ]
+    },
+    {
+      "id": "presentation_pass",
+      "label": "Presentation pass after correctness",
+      "type": "workflow-stage",
+      "summary": "Once an artifact is verified correct, a fresh agent without discovery context finds the cleanest way to present it: hindsight shortcuts, cut overkill, lemma granularity, named steps. Correctness and elegance are separate steps.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/math-olympiad/references/presentation_prompts.md",
+        "/Users/joshuaf/ai-os/skills/claude/math-olympiad/SKILL.md"
+      ]
+    },
+    {
+      "id": "no_tools_pure_reasoning_constraint",
+      "label": "No-tools / no-web constraint on reasoning agents",
+      "type": "constraint",
+      "summary": "Solvers and verifiers use thinking only; numerical spot-checks are not proof steps. Deep mode may use bounded local computation but never WebFetch/WebSearch, since looking up the answer misrepresents capability. The Agent tool cannot enforce this, so the prompt is the only mechanism.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/math-olympiad/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/math-olympiad/references/attempt_agent.md"
+      ]
+    },
+    {
+      "id": "model_tier_scaling",
+      "label": "Model-tier parameter scaling",
+      "type": "design-principle",
+      "summary": "Weaker models get width (more parallel solvers, more voters, higher refute threshold, more presentation drafts); stronger models get depth (fewer solvers, dedicated per-pattern verifiers, more revise cycles). Scaffolding matters most where the base model is weakest.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/math-olympiad/references/model_tier_defaults.md"
+      ]
+    },
+    {
+      "id": "solver_heuristic_bank",
+      "label": "Solver heuristic bank",
+      "type": "artifact-produced",
+      "summary": "Polya plus olympiad moves used to vary starting angles across parallel solvers: specialize, generalize, drop a condition, work backwards, invariant, extremal, double count, coordinate bash, inversion. Includes domain traps like doubly-exponential recurrences.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/math-olympiad/references/solver_heuristics.md",
+        "/Users/joshuaf/ai-os/skills/claude/math-olympiad/references/known_constructions.md"
+      ]
+    },
+    {
+      "id": "symmetry_is_not_optimal",
+      "label": "Symmetric choice is often the worst case",
+      "type": "failure-mode",
+      "summary": "For optimization over configurations, the identity/diagonal/regular-spacing choice frequently gives the worst structure, not the best. Answers involving sqrt(n) or log n signal an asymmetric optimal structure that pure reasoning tends to miss.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/math-olympiad/references/known_constructions.md",
+        "/Users/joshuaf/ai-os/skills/claude/math-olympiad/references/solver_heuristics.md"
+      ]
+    },
+    {
+      "id": "math_olympiad_capability",
+      "label": "math-olympiad: competition math solving",
+      "type": "capability",
+      "summary": "Solves IMO/Putnam/USAMO/AIME problems with parallel solvers, cleaned solutions, adversarial multi-pass verification, revision, deep mode, calibrated abstention, and a LaTeX/PDF presentation pass.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/math-olympiad/SKILL.md"
+      ]
+    },
+    {
+      "id": "hook_development_capability",
+      "label": "hook-development: Claude Code event hooks",
+      "type": "capability",
+      "summary": "Guidance for creating plugin hooks across PreToolUse, PostToolUse, Stop, SubagentStop, SessionStart/End, UserPromptSubmit, PreCompact, Notification, including config formats, matchers, exit codes, and utility scripts.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/hook-development/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/hook-development/references/patterns.md",
+        "/Users/joshuaf/ai-os/skills/claude/hook-development/references/advanced.md",
+        "/Users/joshuaf/ai-os/skills/claude/hook-development/scripts/README.md"
+      ]
+    },
+    {
+      "id": "prompt_vs_command_hook",
+      "label": "Prompt hooks vs command hooks",
+      "type": "design-principle",
+      "summary": "Prompt hooks give LLM-driven, context-aware, natural-language validation and are the recommended default; command hooks are reserved for fast deterministic checks, external tool integration, and performance-critical paths. A hybrid runs both in one matcher.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/hook-development/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/hook-development/references/migration.md",
+        "/Users/joshuaf/ai-os/skills/claude/hook-development/references/advanced.md"
+      ]
+    },
+    {
+      "id": "hooks_run_in_parallel",
+      "label": "Hooks run in parallel and load at session start",
+      "type": "constraint",
+      "summary": "All matching hooks execute simultaneously, do not see each other's output, and have non-deterministic ordering, so they must be designed independent. Configuration is read at session start, so changes need a Claude Code restart.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/hook-development/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/hook-development/references/advanced.md"
+      ]
+    },
+    {
+      "id": "untrusted_input_validation",
+      "label": "Treat tool input as untrusted",
+      "type": "constraint",
+      "summary": "Validate every input at the handler: path traversal containment, no shell interpolation, allowlisted spawns, quoted variables, size caps. Prompt-injected content can make a trusted AI call a destructive tool with a path nobody intended.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/build-mcpb/references/local-security.md",
+        "/Users/joshuaf/ai-os/skills/claude/hook-development/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/hook-development/references/advanced.md",
+        "/Users/joshuaf/ai-os/skills/claude/hook-development/scripts/README.md"
+      ]
+    },
+    {
+      "id": "read_write_separation",
+      "label": "Read-only by default, split destructive tools",
+      "type": "design-principle",
+      "summary": "Split read and write into separate tools with readOnlyHint / destructiveHint annotations so a read tool can never be weaponized into data loss, and destructive calls get separate scrutiny or explicit confirmation.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/build-mcpb/references/local-security.md",
+        "/Users/joshuaf/ai-os/skills/claude/hook-development/references/patterns.md"
+      ]
+    },
+    {
+      "id": "no_platform_sandbox",
+      "label": "MCPB has no platform sandbox",
+      "type": "failure-mode",
+      "summary": "The MCPB manifest has no permissions block and no filesystem/network scoping; the bundled server runs with the user's full privileges. All boundaries must be built by hand inside tool handlers.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/build-mcpb/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/build-mcpb/references/local-security.md",
+        "/Users/joshuaf/ai-os/skills/claude/build-mcpb/references/manifest-schema.md"
+      ]
+    },
+    {
+      "id": "build_mcpb_capability",
+      "label": "build-mcpb: bundle a local MCP server",
+      "type": "capability",
+      "summary": "Package a stdio MCP server together with its runtime into a single installable .mcpb file: manifest, user_config, compatibility gating, esbuild/vendoring pipeline, validate/pack/sign, install by drag onto Claude Desktop.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/build-mcpb/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/build-mcpb/references/manifest-schema.md"
+      ]
+    },
+    {
+      "id": "local_only_justification",
+      "label": "Local packaging only when local is required",
+      "type": "trigger-condition",
+      "summary": "MCPB is the secondary distribution path. Use it only when the server must touch the user's machine (files, desktop apps, localhost, OS APIs). A cloud-API-only server should be a remote HTTP server instead of paying the packaging and local-security tax.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/build-mcpb/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill_development_capability",
+      "label": "skill-development: authoring skills",
+      "type": "capability",
+      "summary": "Process for creating a skill: gather concrete usage examples, plan reusable resources, scaffold the directory, write a lean SKILL.md with a third-person trigger-rich description, validate, and iterate from real use.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/skill-development/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/skill-development/references/skill-creator-original.md",
+        "/Users/joshuaf/ai-os/skills/claude/example-skill/SKILL.md"
+      ]
+    },
+    {
+      "id": "progressive_disclosure",
+      "label": "Progressive disclosure of skill content",
+      "type": "design-principle",
+      "summary": "Three loading levels: metadata always in context, SKILL.md body on trigger (target 1500-2000 words), bundled references/scripts/assets only as needed. Information lives in one place, not duplicated between SKILL.md and references.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/skill-development/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/skill-development/references/skill-creator-original.md",
+        "/Users/joshuaf/ai-os/skills/claude/example-skill/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/obsidian-markdown/SKILL.md"
+      ]
+    },
+    {
+      "id": "trigger_phrase_description",
+      "label": "Third-person description with literal trigger phrases",
+      "type": "design-principle",
+      "summary": "The frontmatter description determines whether a skill ever fires. Write it in third person with the exact phrases a user would say. Vague descriptions ('provides hook guidance') are the top authoring mistake.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/skill-development/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/example-skill/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/skill-development/references/skill-creator-original.md"
+      ]
+    },
+    {
+      "id": "imperative_writing_style",
+      "label": "Imperative voice for agent-facing instructions",
+      "type": "constraint",
+      "summary": "Skill bodies are written verb-first and objective ('Validate the input'), never second person ('You should validate'). The skill is written for another instance of Claude, so include what is non-obvious to a model.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/skill-development/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/skill-development/references/skill-creator-original.md"
+      ]
+    },
+    {
+      "id": "find_skills_capability",
+      "label": "find-skills: discover and install ecosystem skills",
+      "type": "capability",
+      "summary": "Searches the open agent-skills ecosystem via the skills CLI and skills.sh leaderboard, verifies install count / source reputation / stars before recommending, and can install with npx skills add.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/find-skills/SKILL.md"
+      ]
+    },
+    {
+      "id": "deep_module",
+      "label": "Deep module (small interface, large implementation)",
+      "type": "design-principle",
+      "summary": "Depth is leverage at the interface: how much behaviour a caller exercises per unit of interface learned. Deep modules give callers leverage and maintainers locality; shallow pass-throughs fail the deletion test.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/codebase-design/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/codebase-design/DEEPENING.md",
+        "/Users/joshuaf/ai-os/skills/claude/design-an-interface/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/tdd/refactoring.md"
+      ]
+    },
+    {
+      "id": "seam_placement",
+      "label": "Seam placement and the two-adapter rule",
+      "type": "design-principle",
+      "summary": "A seam is where a module's interface lives; where to put it is a separate decision from what goes behind it. One adapter means a hypothetical seam, two means a real one, so do not introduce a port unless something actually varies across it.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/codebase-design/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/codebase-design/DEEPENING.md"
+      ]
+    },
+    {
+      "id": "interface_is_test_surface",
+      "label": "The interface is the test surface",
+      "type": "design-principle",
+      "summary": "Callers and tests cross the same seam. Tests assert observable outcomes through the public interface and survive internal refactors; a test that breaks on a rename was testing implementation. Old shallow-module unit tests get deleted, not layered on.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/codebase-design/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/codebase-design/DEEPENING.md",
+        "/Users/joshuaf/ai-os/skills/claude/tdd/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/tdd/tests.md"
+      ]
+    },
+    {
+      "id": "mock_only_at_boundaries",
+      "label": "Mock only at system boundaries",
+      "type": "constraint",
+      "summary": "Mock external APIs, time, randomness, and sometimes DB/filesystem. Never mock your own classes or internal collaborators. Design boundaries for mockability with dependency injection and SDK-style per-operation functions.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/tdd/mocking.md",
+        "/Users/joshuaf/ai-os/skills/claude/tdd/tests.md",
+        "/Users/joshuaf/ai-os/skills/claude/codebase-design/DEEPENING.md"
+      ]
+    },
+    {
+      "id": "vertical_slice_tdd",
+      "label": "Vertical-slice TDD (tracer bullets)",
+      "type": "workflow-stage",
+      "summary": "One test then one implementation, repeating. Writing all tests first (horizontal slicing) produces tests of imagined behaviour that test shape rather than user-facing behaviour. Never refactor while red.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/tdd/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/tdd/refactoring.md"
+      ]
+    },
+    {
+      "id": "tdd_capability",
+      "label": "tdd: test-driven implementation",
+      "type": "capability",
+      "summary": "Plan behaviours with the user, write one failing test, write minimal code, repeat, then refactor for duplication and module depth. Test names and vocabulary come from the project's CONTEXT.md domain language.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/tdd/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/tdd/tests.md",
+        "/Users/joshuaf/ai-os/skills/claude/tdd/mocking.md"
+      ]
+    },
+    {
+      "id": "throwaway_prototype",
+      "label": "Throwaway prototype that answers one question",
+      "type": "workflow-stage",
+      "summary": "Prototype code exists to answer one explicit question and then be deleted or absorbed. No tests, no persistence, no abstraction, no generalization; one run command; the captured answer is the only durable output.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/prototype/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/prototype/LOGIC.md",
+        "/Users/joshuaf/ai-os/skills/claude/prototype/UI.md"
+      ]
+    },
+    {
+      "id": "prototype_branch_selection",
+      "label": "Logic vs UI prototype branch selection",
+      "type": "trigger-condition",
+      "summary": "The question decides the artifact: 'does this state model feel right' gives a terminal TUI over a pure reducer/state machine; 'what should this look like' gives 3 structurally different UI variants behind a ?variant= param and a floating switcher. Getting the branch wrong wastes the whole prototype.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/prototype/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/prototype/LOGIC.md",
+        "/Users/joshuaf/ai-os/skills/claude/prototype/UI.md"
+      ]
+    },
+    {
+      "id": "portable_logic_shell_separation",
+      "label": "Portable logic behind a throwaway shell",
+      "type": "design-principle",
+      "summary": "In a logic prototype the reducer/state machine stays pure and liftable into the real codebase; the TUI is a thin shell that imports it and gets deleted. Nothing flows from the shell into the logic.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/prototype/LOGIC.md",
+        "/Users/joshuaf/ai-os/skills/claude/prototype/SKILL.md"
+      ]
+    },
+    {
+      "id": "variants_must_differ_structurally",
+      "label": "Variants must differ structurally, not cosmetically",
+      "type": "constraint",
+      "summary": "Design alternatives that differ only in colour, copy, or minor tweaks are wallpaper. Real variants disagree about layout, information hierarchy, and primary affordance; sub-agents must be forced apart.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/prototype/UI.md",
+        "/Users/joshuaf/ai-os/skills/claude/codebase-design/DESIGN-IT-TWICE.md",
+        "/Users/joshuaf/ai-os/skills/claude/design-an-interface/SKILL.md"
+      ]
+    },
+    {
+      "id": "opinionated_recommendation",
+      "label": "End comparison with an opinionated recommendation",
+      "type": "design-principle",
+      "summary": "After presenting alternatives sequentially and comparing in prose, give a strong read on which is best and why, proposing a hybrid if elements combine well. The user wants a recommendation, not a menu.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/codebase-design/DESIGN-IT-TWICE.md",
+        "/Users/joshuaf/ai-os/skills/claude/design-an-interface/SKILL.md"
+      ]
+    },
+    {
+      "id": "anti_ai_slop_design",
+      "label": "Anti-AI-slop design constraints",
+      "type": "constraint",
+      "summary": "Explicit bans correcting default LLM aesthetic bias: no Inter, no purple/neon glows, no pure black, no centered heroes, no 3-equal-card rows, no emojis, no generic names or round numbers, no Unsplash. Plus mandatory loading/empty/error states.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/design-taste-frontend/SKILL.md"
+      ]
+    },
+    {
+      "id": "design_taste_frontend_capability",
+      "label": "design-taste-frontend: premium UI construction",
+      "type": "capability",
+      "summary": "Senior UI/UX engineering rules for React/Next builds, driven by three dials (design variance, motion intensity, visual density) plus architecture conventions, motion/perf guardrails, and a bento motion-engine paradigm.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/design-taste-frontend/SKILL.md"
+      ]
+    },
+    {
+      "id": "frontend_performance_guardrails",
+      "label": "Frontend performance guardrails",
+      "type": "constraint",
+      "summary": "Animate only transform and opacity, never top/left/width/height. Keep perpetual animations memoized and isolated in tiny client components. Verify dependencies in package.json before importing. Use min-h-[100dvh], never h-screen.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/design-taste-frontend/SKILL.md"
+      ]
+    },
+    {
+      "id": "wiki_ingest_pipeline",
+      "label": "Raw source to interlinked wiki pages",
+      "type": "workflow-stage",
+      "summary": "Read the source fully, discuss takeaways and get confirmation, write a factual source-summary page, update or create entity and concept pages, add wikilinks, update the index, and append a dated ingest entry to the log.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/second-brain-ingest/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/obsidian-vault/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/obsidian-markdown/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/obsidian-markdown/references/PROPERTIES.md"
+      ]
+    },
+    {
+      "id": "one_authoritative_page",
+      "label": "One authoritative page per subject",
+      "type": "design-principle",
+      "summary": "Prefer updating an existing page over creating a parallel truth; when a new source contradicts existing content, update the page and record the contradiction citing both sources. Index notes and wikilinks carry organization instead of folders.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/second-brain-ingest/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/obsidian-vault/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/obsidian-markdown/SKILL.md"
+      ]
+    },
+    {
+      "id": "dedupe_against_ingest_log",
+      "label": "Dedupe against the ingest log",
+      "type": "technique",
+      "summary": "Unprocessed sources are found by diffing files in raw/ against source filenames already recorded in wiki/log.md ingest entries, so the same source is never ingested twice.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/second-brain-ingest/SKILL.md"
+      ]
+    },
+    {
+      "id": "draft_never_send",
+      "label": "Draft, never send",
+      "type": "constraint",
+      "summary": "Correspondence to prospects and students is prepared as a Gmail draft inside the existing thread and left for Joshua's review. AI-generated replies are never sent without separate explicit approval.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/consultation-inquiry-drafts/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/inbound-tutoring-replies/SKILL.md"
+      ]
+    },
+    {
+      "id": "mirror_a_real_detail",
+      "label": "Mirror at least one real detail from the inquiry",
+      "type": "technique",
+      "summary": "Every reply reacts to something concrete the person wrote (score, test date, platform, referral, plateau) rather than reusing canned lines, with a generic acknowledgment only when the message contains no usable detail.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/consultation-inquiry-drafts/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/inbound-tutoring-replies/SKILL.md"
+      ]
+    },
+    {
+      "id": "price_only_on_request",
+      "label": "Mention price only when asked",
+      "type": "constraint",
+      "summary": "The $40/h rate appears only when the person asks about price, rates, cost, or affordability. Otherwise the reply moves them toward the free consultation booking link.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/consultation-inquiry-drafts/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/inbound-tutoring-replies/SKILL.md"
+      ]
+    },
+    {
+      "id": "consultation_link_funnel",
+      "label": "Consultation booking link as the single funnel",
+      "type": "artifact-produced",
+      "summary": "Both inbound-lead skills route to the same cal.com consultation link, described in one short low-pressure sentence, with an alternate email contact path and an invitation to reply if the link fails.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/consultation-inquiry-drafts/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/inbound-tutoring-replies/SKILL.md"
+      ]
+    },
+    {
+      "id": "send_ledger_logging",
+      "label": "Log every draft to the send ledger",
+      "type": "artifact-produced",
+      "summary": "Each created draft is appended to wiki/send-ledger.md with status 'drafted'; Gmail remains the authority for whether anything was actually sent. Inbound message patterns are logged to the outreach log.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/consultation-inquiry-drafts/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/inbound-tutoring-replies/SKILL.md"
+      ]
+    },
+    {
+      "id": "gws_cli_dependency",
+      "label": "gws CLI as the Google access mechanism",
+      "type": "tool-dependency",
+      "summary": "All Gmail, Drive, Calendar, Docs and Model Armor access goes through the gws CLI with shared auth and global flags, never the Google connector MCPs. Sub-skills like gmail +watch and modelarmor +sanitize-prompt are generated CLI wrappers.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/gws-gmail-watch/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/gws-modelarmor-sanitize-prompt/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/consultation-inquiry-drafts/SKILL.md"
+      ]
+    },
+    {
+      "id": "gmail_watch_capability",
+      "label": "gws-gmail-watch: stream new mail as NDJSON",
+      "type": "capability",
+      "summary": "Watches Gmail via Pub/Sub and streams new messages as NDJSON, optionally filtered by label and written to a directory. Watch expires after 7 days and must be re-run.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/gws-gmail-watch/SKILL.md"
+      ]
+    },
+    {
+      "id": "prompt_sanitization_capability",
+      "label": "gws-modelarmor-sanitize-prompt: filter untrusted text",
+      "type": "capability",
+      "summary": "Runs a user prompt through a Google Model Armor template to filter unsafe user-generated content before it is acted on; a paired sanitize-response covers outbound safety.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/gws-modelarmor-sanitize-prompt/SKILL.md"
+      ]
+    },
+    {
+      "id": "defuddle_capability",
+      "label": "defuddle: clean web page extraction",
+      "type": "capability",
+      "summary": "Extracts clean markdown from a web page using the Defuddle CLI, stripping navigation and ads to cut token usage. Preferred over WebFetch for standard pages; not for URLs already ending in .md.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/defuddle/SKILL.md"
+      ]
+    },
+    {
+      "id": "chat_only_handoff",
+      "label": "Chat-only context handoff",
+      "type": "artifact-produced",
+      "summary": "A fixed-structure summary (start, decisions shipped, key absolute paths, running state including background shell IDs, verification commands, deferrals, single pick-up-here line) produced in chat and written to no file, for a fresh Claude or Codex agent.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/codex/session-handoff/SKILL.md"
+      ]
+    },
+    {
+      "id": "handoff_vs_wrapup",
+      "label": "Handoff (context problem) vs wrapup (day problem)",
+      "type": "trigger-condition",
+      "summary": "Run session-handoff when the context window is the problem, near ~250k tokens or when passing work between Claude and Codex; run wrapup when the work day is done and the wiki ledgers need persisting. They can run back to back.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/codex/session-handoff/SKILL.md"
+      ]
+    },
+    {
+      "id": "synthesis_not_filesystem_audit",
+      "label": "Synthesize the session, do not re-audit the filesystem",
+      "type": "constraint",
+      "summary": "A handoff is synthesis of what happened this session, sourced from plans, todos, background shells, files touched and unresolved questions. No git log, no broad glob sweeps, never invent state, write 'none' rather than omit a section.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/codex/session-handoff/SKILL.md"
+      ]
+    },
+    {
+      "id": "four_cs_audit",
+      "label": "Four Cs structural audit",
+      "type": "capability",
+      "summary": "Read-only scoring of the OS out of 100 across Context, Connections, Capabilities, Cadence, producing a scoreboard, strengths, and the top three gaps ranked by points-lost times a leverage multiplier.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/audit/SKILL.md"
+      ]
+    },
+    {
+      "id": "structural_vs_capability_gap",
+      "label": "Structural gaps vs capability gaps",
+      "type": "constraint",
+      "summary": "The audit answers 'is the OS built right?' and explicitly hands capability planning ('you could build X if you connected Y') to level-up. Keeping the two separate stops the audit from becoming a roadmap.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/audit/SKILL.md"
+      ]
+    },
+    {
+      "id": "read_only_by_default_skill",
+      "label": "Read-only skill with one opt-in write",
+      "type": "design-principle",
+      "summary": "The audit never modifies router, memory, skills, or vault files; its only writable side effect is saving the report to audits/ after asking. Secret values are counted, never printed.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/audit/SKILL.md"
+      ]
+    },
+    {
+      "id": "research_report_capability",
+      "label": "research-report: JSON results to markdown report",
+      "type": "capability",
+      "summary": "Generates a Python script that reads deep-research JSON outputs plus fields.yaml, covers all defined fields, skips anything marked uncertain, and emits a TOC-linked markdown report.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/research-report/SKILL.md"
+      ]
+    },
+    {
+      "id": "skip_uncertain_values",
+      "label": "Skip uncertain values rather than report them",
+      "type": "constraint",
+      "summary": "Fields whose value contains [uncertain], whose name appears in the uncertain array, or which are empty are omitted from the report entirely rather than presented as fact.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/research-report/SKILL.md"
+      ]
+    },
+    {
+      "id": "grill_then_document",
+      "label": "Grill-with-docs: interview that emits ADRs and glossary",
+      "type": "capability",
+      "summary": "A thin composite skill: run a grilling interview session while using domain-modeling, so the stress-test of a plan produces architectural decision records and a glossary as it goes.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/grill-with-docs/SKILL.md"
+      ]
+    },
+    {
+      "id": "implement_capability",
+      "label": "implement: build from a PRD or issues",
+      "type": "capability",
+      "summary": "Implements described work using TDD at pre-agreed seams, running typecheck and single test files regularly and the full suite at the end, then review, then commit to the current branch.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/implement/SKILL.md"
+      ]
+    },
+    {
+      "id": "disable_model_invocation",
+      "label": "User-invoked-only skills (disable-model-invocation)",
+      "type": "constraint",
+      "summary": "Some skills carry disable-model-invocation: true so they never auto-fire and only run when the user explicitly calls them. Used for prototype, implement, and grill-with-docs, which are all expensive multi-step commitments.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/prototype/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/implement/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/grill-with-docs/SKILL.md"
+      ]
+    },
+    {
+      "id": "obsidian_markdown_capability",
+      "label": "obsidian-markdown: author Obsidian Flavored Markdown",
+      "type": "capability",
+      "summary": "Create and edit notes using Obsidian's extensions over CommonMark/GFM: wikilinks, embeds, callouts, frontmatter properties, tags, comments, highlights, LaTeX, Mermaid, footnotes. Standard Markdown is assumed knowledge; only the Obsidian-specific layer is covered.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/obsidian-markdown/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/obsidian-markdown/references/CALLOUTS.md",
+        "/Users/joshuaf/ai-os/skills/claude/obsidian-markdown/references/EMBEDS.md",
+        "/Users/joshuaf/ai-os/skills/claude/obsidian-markdown/references/PROPERTIES.md"
+      ]
+    },
+    {
+      "id": "wikilink_over_markdown_link",
+      "label": "Wikilinks for internal, Markdown links for external",
+      "type": "constraint",
+      "summary": "Use [[wikilinks]] for notes inside the vault so Obsidian tracks renames automatically, and [text](url) only for external URLs. Wikilinks support display aliases, heading targets, and block targets.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/obsidian-markdown/SKILL.md"
+      ]
+    },
+    {
+      "id": "block_level_addressing",
+      "label": "Block-level addressing and transclusion",
+      "type": "technique",
+      "summary": "Any paragraph, list, or quote can be given a ^block-id and then linked or embedded by itself. Prefixing any wikilink with ! transcludes the target inline, so a note, a single heading, a list, an image at a given width, or a PDF page can be reused without copying it.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/obsidian-markdown/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/obsidian-markdown/references/EMBEDS.md"
+      ]
+    },
+    {
+      "id": "frontmatter_properties",
+      "label": "YAML frontmatter properties",
+      "type": "artifact-produced",
+      "summary": "Typed YAML at the top of a note: text, number, checkbox, date, datetime, list, and link values. The defaults tags (searchable, shown in graph view), aliases (alternative names feeding link suggestions), and cssclasses (styling) carry the machine-readable layer of a note.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/obsidian-markdown/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/obsidian-markdown/references/PROPERTIES.md"
+      ]
+    },
+    {
+      "id": "callout_semantics",
+      "label": "Typed, foldable callouts",
+      "type": "technique",
+      "summary": "> [!type] blocks mark information by kind (note, tip, warning, question, example, danger and their aliases), each with its own colour and icon. Callouts take custom titles, fold with - or +, nest inside each other, and can be extended with CSS.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/obsidian-markdown/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/obsidian-markdown/references/CALLOUTS.md"
+      ]
+    },
+    {
+      "id": "lint_test_validate_before_deploy",
+      "label": "Lint, test, and validate a hook before deploying it",
+      "type": "workflow-stage",
+      "summary": "Before a hook reaches a live session: hook-linter.sh checks shebang, set -euo pipefail, variable quoting and input validation; test-hook.sh runs it against generated sample event input and checks exit codes and JSON output; validate-hook-schema.sh checks hooks.json structure, event names, timeouts and hardcoded paths. Only then test in Claude Code with --debug.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/hook-development/scripts/README.md",
+        "/Users/joshuaf/ai-os/skills/claude/hook-development/SKILL.md"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "math_olympiad_capability",
+      "target": "adversarial_verification_before_shipping",
+      "type": "depends_on",
+      "confidence": 0.98,
+      "evidence": "'adversarial verification that catches the errors self-verification misses'"
+    },
+    {
+      "source": "adversarial_verification_before_shipping",
+      "target": "fresh_context_isolation",
+      "type": "depends_on",
+      "confidence": 0.95,
+      "evidence": "'Fresh context, cleaned proof only'"
+    },
+    {
+      "source": "strip_thinking_trace",
+      "target": "fresh_context_isolation",
+      "type": "prerequisite_of",
+      "confidence": 0.95,
+      "evidence": "'Clean the solution (context isolation - the #1 lever)'"
+    },
+    {
+      "source": "strip_thinking_trace",
+      "target": "adversarial_verification_before_shipping",
+      "type": "chains_into",
+      "confidence": 0.95,
+      "evidence": "step 3 cleaning precedes step 4 adversarial verify"
+    },
+    {
+      "source": "self_verification_insufficient",
+      "target": "adversarial_verification_before_shipping",
+      "type": "constrains",
+      "confidence": 0.92,
+      "evidence": "'self-verified 85.7% IMO success drops to <5% under human grading'"
+    },
+    {
+      "source": "self_refinement_loop",
+      "target": "self_verification_insufficient",
+      "type": "constrains",
+      "confidence": 0.8,
+      "evidence": "internal self-verify rounds are explicitly not sufficient; a separate verifier is required"
+    },
+    {
+      "source": "adversarial_verification_before_shipping",
+      "target": "pattern_specific_attack_checklist",
+      "type": "depends_on",
+      "confidence": 0.95,
+      "evidence": "'not is this correct? but does this make the #40 mistake?'"
+    },
+    {
+      "source": "pattern_specific_attack_checklist",
+      "target": "specification_gaming_check",
+      "type": "specializes",
+      "confidence": 0.9,
+      "evidence": "Pattern 60 easiest-interpretation trap is one of the listed checks"
+    },
+    {
+      "source": "specification_gaming_check",
+      "target": "math_olympiad_capability",
+      "type": "constrains",
+      "confidence": 0.9,
+      "evidence": "step 1 interpretation check runs before solving anything"
+    },
+    {
+      "source": "adversarial_verification_before_shipping",
+      "target": "asymmetric_vote_pigeonhole_exit",
+      "type": "chains_into",
+      "confidence": 0.92,
+      "evidence": "step 5 rank and vote-verify follows step 4 adversarial verify"
+    },
+    {
+      "source": "asymmetric_vote_pigeonhole_exit",
+      "target": "calibrated_abstention",
+      "type": "chains_into",
+      "confidence": 0.85,
+      "evidence": "'If 3 revise cycles all fail: stop and admit it'"
+    },
+    {
+      "source": "calibrated_abstention",
+      "target": "presentation_pass",
+      "type": "alternative_to",
+      "confidence": 0.75,
+      "evidence": "INFERRED: abstention and presentation are the two terminal outcomes of the workflow"
+    },
+    {
+      "source": "asymmetric_vote_pigeonhole_exit",
+      "target": "presentation_pass",
+      "type": "chains_into",
+      "confidence": 0.9,
+      "evidence": "'Presentation pass (after correctness is established)'"
+    },
+    {
+      "source": "presentation_pass",
+      "target": "fresh_context_isolation",
+      "type": "depends_on",
+      "confidence": 0.88,
+      "evidence": "'a fresh agent - one who didn't sweat through the discovery'"
+    },
+    {
+      "source": "math_olympiad_capability",
+      "target": "parallel_variant_generation",
+      "type": "depends_on",
+      "confidence": 0.9,
+      "evidence": "'Launch 8-12 attempt agents in parallel'"
+    },
+    {
+      "source": "parallel_variant_generation",
+      "target": "solver_heuristic_bank",
+      "type": "consumes",
+      "confidence": 0.9,
+      "evidence": "'Starting angles (vary across agents - see references/solver_heuristics.md)'"
+    },
+    {
+      "source": "solver_heuristic_bank",
+      "target": "symmetry_is_not_optimal",
+      "type": "produces",
+      "confidence": 0.85,
+      "evidence": "'the symmetric choice is often the worst case, not the best'"
+    },
+    {
+      "source": "no_tools_pure_reasoning_constraint",
+      "target": "math_olympiad_capability",
+      "type": "constrains",
+      "confidence": 0.95,
+      "evidence": "'Tool policy: Solvers and verifiers use THINKING ONLY'"
+    },
+    {
+      "source": "model_tier_scaling",
+      "target": "asymmetric_vote_pigeonhole_exit",
+      "type": "constrains",
+      "confidence": 0.9,
+      "evidence": "per-tier confirm/refute thresholds: Haiku 5/3, Sonnet 4/2"
+    },
+    {
+      "source": "model_tier_scaling",
+      "target": "parallel_variant_generation",
+      "type": "constrains",
+      "confidence": 0.9,
+      "evidence": "'Parallel solvers: 12 / 6 / 4' by tier"
+    },
+    {
+      "source": "hook_development_capability",
+      "target": "prompt_vs_command_hook",
+      "type": "depends_on",
+      "confidence": 0.95,
+      "evidence": "'Focus on prompt-based hooks for most use cases'"
+    },
+    {
+      "source": "hook_development_capability",
+      "target": "hooks_run_in_parallel",
+      "type": "constrains",
+      "confidence": 0.95,
+      "evidence": "'All matching hooks run in parallel'"
+    },
+    {
+      "source": "hooks_run_in_parallel",
+      "target": "prompt_vs_command_hook",
+      "type": "constrains",
+      "confidence": 0.8,
+      "evidence": "hybrid multi-stage validation must be designed for independence since ordering is non-deterministic"
+    },
+    {
+      "source": "hook_development_capability",
+      "target": "untrusted_input_validation",
+      "type": "depends_on",
+      "confidence": 0.9,
+      "evidence": "'Always validate inputs in command hooks' plus quote-all-variables"
+    },
+    {
+      "source": "untrusted_input_validation",
+      "target": "no_platform_sandbox",
+      "type": "depends_on",
+      "confidence": 0.9,
+      "evidence": "'Your tool handlers are the only defense'"
+    },
+    {
+      "source": "build_mcpb_capability",
+      "target": "no_platform_sandbox",
+      "type": "constrains",
+      "confidence": 0.95,
+      "evidence": "'MCPB has no sandbox - security is on you'"
+    },
+    {
+      "source": "build_mcpb_capability",
+      "target": "untrusted_input_validation",
+      "type": "depends_on",
+      "confidence": 0.95,
+      "evidence": "'references/local-security.md is mandatory reading, not optional'"
+    },
+    {
+      "source": "read_write_separation",
+      "target": "untrusted_input_validation",
+      "type": "specializes",
+      "confidence": 0.85,
+      "evidence": "'A tool that's read-only can't be weaponized into data loss'"
+    },
+    {
+      "source": "local_only_justification",
+      "target": "build_mcpb_capability",
+      "type": "constrains",
+      "confidence": 0.95,
+      "evidence": "'Don't pay the MCPB packaging tax for something that could be a URL'"
+    },
+    {
+      "source": "prompt_sanitization_capability",
+      "target": "untrusted_input_validation",
+      "type": "specializes",
+      "confidence": 0.8,
+      "evidence": "'filter user-generated content for safety' before acting on a prompt"
+    },
+    {
+      "source": "skill_development_capability",
+      "target": "progressive_disclosure",
+      "type": "depends_on",
+      "confidence": 0.95,
+      "evidence": "'Skills use a three-level loading system to manage context efficiently'"
+    },
+    {
+      "source": "skill_development_capability",
+      "target": "trigger_phrase_description",
+      "type": "depends_on",
+      "confidence": 0.95,
+      "evidence": "'The name and description determine when Claude will use the skill'"
+    },
+    {
+      "source": "skill_development_capability",
+      "target": "imperative_writing_style",
+      "type": "constrains",
+      "confidence": 0.95,
+      "evidence": "'Write the entire skill using imperative/infinitive form'"
+    },
+    {
+      "source": "progressive_disclosure",
+      "target": "trigger_phrase_description",
+      "type": "depends_on",
+      "confidence": 0.85,
+      "evidence": "metadata is the always-loaded level, so the description is what fires the skill"
+    },
+    {
+      "source": "skill_development_capability",
+      "target": "find_skills_capability",
+      "type": "alternative_to",
+      "confidence": 0.75,
+      "evidence": "find-skills suggests 'you could create your own skill with npx skills init' when nothing exists"
+    },
+    {
+      "source": "disable_model_invocation",
+      "target": "trigger_phrase_description",
+      "type": "alternative_to",
+      "confidence": 0.75,
+      "evidence": "INFERRED: one path fires a skill by description match, the other blocks model invocation entirely"
+    },
+    {
+      "source": "deep_module",
+      "target": "seam_placement",
+      "type": "depends_on",
+      "confidence": 0.9,
+      "evidence": "'A Seam is where a Module's Interface lives'"
+    },
+    {
+      "source": "deep_module",
+      "target": "interface_is_test_surface",
+      "type": "produces",
+      "confidence": 0.92,
+      "evidence": "'The interface is the test surface. Callers and tests cross the same seam.'"
+    },
+    {
+      "source": "interface_is_test_surface",
+      "target": "mock_only_at_boundaries",
+      "type": "constrains",
+      "confidence": 0.88,
+      "evidence": "'Don't mock your own classes/modules, internal collaborators'"
+    },
+    {
+      "source": "seam_placement",
+      "target": "mock_only_at_boundaries",
+      "type": "constrains",
+      "confidence": 0.85,
+      "evidence": "dependency categories decide whether a port plus mock adapter is justified at the seam"
+    },
+    {
+      "source": "tdd_capability",
+      "target": "vertical_slice_tdd",
+      "type": "depends_on",
+      "confidence": 0.95,
+      "evidence": "'Correct approach: Vertical slices via tracer bullets'"
+    },
+    {
+      "source": "tdd_capability",
+      "target": "interface_is_test_surface",
+      "type": "depends_on",
+      "confidence": 0.92,
+      "evidence": "'Tests should verify behavior through public interfaces, not implementation details'"
+    },
+    {
+      "source": "tdd_capability",
+      "target": "deep_module",
+      "type": "depends_on",
+      "confidence": 0.9,
+      "evidence": "'run the /codebase-design skill for the vocabulary and the testability checks'"
+    },
+    {
+      "source": "tdd_capability",
+      "target": "mock_only_at_boundaries",
+      "type": "depends_on",
+      "confidence": 0.9,
+      "evidence": "mocking.md is a bundled reference of the tdd skill"
+    },
+    {
+      "source": "implement_capability",
+      "target": "tdd_capability",
+      "type": "depends_on",
+      "confidence": 0.95,
+      "evidence": "'Use /tdd where possible, at pre-agreed seams'"
+    },
+    {
+      "source": "implement_capability",
+      "target": "disable_model_invocation",
+      "type": "constrains",
+      "confidence": 0.9,
+      "evidence": "frontmatter 'disable-model-invocation: true'"
+    },
+    {
+      "source": "throwaway_prototype",
+      "target": "disable_model_invocation",
+      "type": "constrains",
+      "confidence": 0.9,
+      "evidence": "prototype SKILL.md frontmatter 'disable-model-invocation: true'"
+    },
+    {
+      "source": "throwaway_prototype",
+      "target": "prototype_branch_selection",
+      "type": "depends_on",
+      "confidence": 0.95,
+      "evidence": "'Pick a branch ... getting this wrong wastes the whole prototype'"
+    },
+    {
+      "source": "prototype_branch_selection",
+      "target": "portable_logic_shell_separation",
+      "type": "chains_into",
+      "confidence": 0.9,
+      "evidence": "the logic branch requires isolating logic in a portable module behind a throwaway TUI"
+    },
+    {
+      "source": "prototype_branch_selection",
+      "target": "variants_must_differ_structurally",
+      "type": "chains_into",
+      "confidence": 0.9,
+      "evidence": "the UI branch requires variants that are structurally different"
+    },
+    {
+      "source": "portable_logic_shell_separation",
+      "target": "deep_module",
+      "type": "overlaps_with",
+      "confidence": 0.75,
+      "evidence": "INFERRED: both put a pure, liftable implementation behind a thin interface/shell"
+    },
+    {
+      "source": "parallel_variant_generation",
+      "target": "variants_must_differ_structurally",
+      "type": "constrains",
+      "confidence": 0.92,
+      "evidence": "'Don't let sub-agents produce similar designs - enforce radical difference'"
+    },
+    {
+      "source": "parallel_variant_generation",
+      "target": "opinionated_recommendation",
+      "type": "chains_into",
+      "confidence": 0.9,
+      "evidence": "'After comparing, give your own recommendation ... Be opinionated'"
+    },
+    {
+      "source": "throwaway_prototype",
+      "target": "parallel_variant_generation",
+      "type": "depends_on",
+      "confidence": 0.85,
+      "evidence": "UI branch generates several radically different variations on one route"
+    },
+    {
+      "source": "deep_module",
+      "target": "parallel_variant_generation",
+      "type": "depends_on",
+      "confidence": 0.85,
+      "evidence": "DESIGN-IT-TWICE spawns 3+ sub-agents each with a different interface constraint"
+    },
+    {
+      "source": "design_taste_frontend_capability",
+      "target": "anti_ai_slop_design",
+      "type": "depends_on",
+      "confidence": 0.95,
+      "evidence": "'AI TELLS (Forbidden Patterns)' section"
+    },
+    {
+      "source": "design_taste_frontend_capability",
+      "target": "frontend_performance_guardrails",
+      "type": "constrains",
+      "confidence": 0.95,
+      "evidence": "'Never animate top, left, width, or height'"
+    },
+    {
+      "source": "design_taste_frontend_capability",
+      "target": "variants_must_differ_structurally",
+      "type": "overlaps_with",
+      "confidence": 0.7,
+      "evidence": "INFERRED: anti-center-bias and layout diversification push the same away-from-default-shape goal as radical variants"
+    },
+    {
+      "source": "wiki_ingest_pipeline",
+      "target": "one_authoritative_page",
+      "type": "constrains",
+      "confidence": 0.92,
+      "evidence": "'Prefer updating existing pages over creating new ones'"
+    },
+    {
+      "source": "wiki_ingest_pipeline",
+      "target": "dedupe_against_ingest_log",
+      "type": "depends_on",
+      "confidence": 0.92,
+      "evidence": "'Any file in raw/ not listed in the log is unprocessed'"
+    },
+    {
+      "source": "defuddle_capability",
+      "target": "wiki_ingest_pipeline",
+      "type": "chains_into",
+      "confidence": 0.7,
+      "evidence": "INFERRED: clean markdown extraction produces the raw source material an ingest run consumes"
+    },
+    {
+      "source": "draft_never_send",
+      "target": "consultation_link_funnel",
+      "type": "produces",
+      "confidence": 0.9,
+      "evidence": "each drafted reply invites the prospect to the cal.com consultation"
+    },
+    {
+      "source": "draft_never_send",
+      "target": "send_ledger_logging",
+      "type": "chains_into",
+      "confidence": 0.92,
+      "evidence": "'Append each created draft to wiki/send-ledger.md with status drafted'"
+    },
+    {
+      "source": "mirror_a_real_detail",
+      "target": "draft_never_send",
+      "type": "constrains",
+      "confidence": 0.88,
+      "evidence": "'React to at least one real detail from the inquiry'"
+    },
+    {
+      "source": "price_only_on_request",
+      "target": "draft_never_send",
+      "type": "constrains",
+      "confidence": 0.9,
+      "evidence": "'Mention the current rate, $40/h, only when the person asks'"
+    },
+    {
+      "source": "draft_never_send",
+      "target": "gws_cli_dependency",
+      "type": "depends_on",
+      "confidence": 0.92,
+      "evidence": "'Create the draft through gws ... Do not use Google connector MCPs'"
+    },
+    {
+      "source": "gmail_watch_capability",
+      "target": "gws_cli_dependency",
+      "type": "depends_on",
+      "confidence": 0.95,
+      "evidence": "requires bins: gws"
+    },
+    {
+      "source": "prompt_sanitization_capability",
+      "target": "gws_cli_dependency",
+      "type": "depends_on",
+      "confidence": 0.95,
+      "evidence": "requires bins: gws"
+    },
+    {
+      "source": "gmail_watch_capability",
+      "target": "draft_never_send",
+      "type": "chains_into",
+      "confidence": 0.7,
+      "evidence": "INFERRED: streamed new inbox mail is the input the inquiry-draft sweep acts on"
+    },
+    {
+      "source": "chat_only_handoff",
+      "target": "handoff_vs_wrapup",
+      "type": "depends_on",
+      "confidence": 0.95,
+      "evidence": "'run session-handoff when the context window is the problem ... run wrapup when the work day is done'"
+    },
+    {
+      "source": "chat_only_handoff",
+      "target": "synthesis_not_filesystem_audit",
+      "type": "constrains",
+      "confidence": 0.95,
+      "evidence": "'Do NOT audit the filesystem. This is synthesis of what happened in THIS session.'"
+    },
+    {
+      "source": "four_cs_audit",
+      "target": "structural_vs_capability_gap",
+      "type": "constrains",
+      "confidence": 0.95,
+      "evidence": "'Scope is structural ... It is NOT a capability planner'"
+    },
+    {
+      "source": "four_cs_audit",
+      "target": "read_only_by_default_skill",
+      "type": "constrains",
+      "confidence": 0.95,
+      "evidence": "'Read-only by default ... Only optional write is the audit report'"
+    },
+    {
+      "source": "four_cs_audit",
+      "target": "skill_development_capability",
+      "type": "consumes",
+      "confidence": 0.75,
+      "evidence": "audit counts .claude/skills/*/SKILL.md and credits user-built skills toward Capabilities"
+    },
+    {
+      "source": "research_report_capability",
+      "target": "skip_uncertain_values",
+      "type": "constrains",
+      "confidence": 0.95,
+      "evidence": "'Skip fields with values containing [uncertain]'"
+    },
+    {
+      "source": "skip_uncertain_values",
+      "target": "calibrated_abstention",
+      "type": "overlaps_with",
+      "confidence": 0.8,
+      "evidence": "INFERRED: both prefer omitting an unsupported claim over asserting it confidently"
+    },
+    {
+      "source": "grill_then_document",
+      "target": "disable_model_invocation",
+      "type": "constrains",
+      "confidence": 0.9,
+      "evidence": "frontmatter 'disable-model-invocation: true'"
+    },
+    {
+      "source": "grill_then_document",
+      "target": "opinionated_recommendation",
+      "type": "overlaps_with",
+      "confidence": 0.7,
+      "evidence": "INFERRED: both are interview/compare workflows that end in a locked decision rather than a menu"
+    },
+    {
+      "source": "obsidian_markdown_capability",
+      "target": "wikilink_over_markdown_link",
+      "type": "depends_on",
+      "confidence": 0.95,
+      "evidence": "'use [[wikilinks]] for notes within the vault ... and [text](url) for external URLs only'"
+    },
+    {
+      "source": "obsidian_markdown_capability",
+      "target": "block_level_addressing",
+      "type": "depends_on",
+      "confidence": 0.92,
+      "evidence": "'Prefix any wikilink with ! to embed its content inline'"
+    },
+    {
+      "source": "obsidian_markdown_capability",
+      "target": "frontmatter_properties",
+      "type": "produces",
+      "confidence": 0.95,
+      "evidence": "workflow step 1: 'Add frontmatter with properties (title, tags, aliases) at the top of the file'"
+    },
+    {
+      "source": "obsidian_markdown_capability",
+      "target": "callout_semantics",
+      "type": "depends_on",
+      "confidence": 0.92,
+      "evidence": "workflow step 5: 'Add callouts for highlighted information using > [!type] syntax'"
+    },
+    {
+      "source": "block_level_addressing",
+      "target": "wikilink_over_markdown_link",
+      "type": "specializes",
+      "confidence": 0.9,
+      "evidence": "embeds and block refs are wikilink syntax extended with ! and ^block-id"
+    },
+    {
+      "source": "wikilink_over_markdown_link",
+      "target": "one_authoritative_page",
+      "type": "prerequisite_of",
+      "confidence": 0.88,
+      "evidence": "'Use [[wikilinks]] for all internal references. Never use raw file paths.'"
+    },
+    {
+      "source": "block_level_addressing",
+      "target": "one_authoritative_page",
+      "type": "depends_on",
+      "confidence": 0.82,
+      "evidence": "transclusion lets one canonical page be reused in place rather than copied into a parallel truth"
+    },
+    {
+      "source": "obsidian_markdown_capability",
+      "target": "wiki_ingest_pipeline",
+      "type": "prerequisite_of",
+      "confidence": 0.9,
+      "evidence": "ingest writes pages with YAML frontmatter and [[wikilink]] syntax, which is the markup this skill defines"
+    },
+    {
+      "source": "frontmatter_properties",
+      "target": "wiki_ingest_pipeline",
+      "type": "consumes",
+      "confidence": 0.88,
+      "evidence": "ingest sets tags, sources, created and updated frontmatter fields on every page it writes"
+    },
+    {
+      "source": "frontmatter_properties",
+      "target": "trigger_phrase_description",
+      "type": "overlaps_with",
+      "confidence": 0.68,
+      "evidence": "INFERRED: both are YAML frontmatter contracts where the metadata block drives downstream machine behaviour"
+    },
+    {
+      "source": "obsidian_markdown_capability",
+      "target": "progressive_disclosure",
+      "type": "depends_on",
+      "confidence": 0.8,
+      "evidence": "lean SKILL.md defers full callout, embed and property tables to references/CALLOUTS.md, EMBEDS.md, PROPERTIES.md"
+    },
+    {
+      "source": "hook_development_capability",
+      "target": "lint_test_validate_before_deploy",
+      "type": "chains_into",
+      "confidence": 0.93,
+      "evidence": "'Validate configuration with scripts/validate-hook-schema.sh ... Test hooks with scripts/test-hook.sh before deployment'"
+    },
+    {
+      "source": "lint_test_validate_before_deploy",
+      "target": "untrusted_input_validation",
+      "type": "depends_on",
+      "confidence": 0.88,
+      "evidence": "linter checks 'Variable quoting (injection prevention)' and 'Input validation'"
+    },
+    {
+      "source": "lint_test_validate_before_deploy",
+      "target": "hooks_run_in_parallel",
+      "type": "depends_on",
+      "confidence": 0.8,
+      "evidence": "'Always test hooks before deploying to avoid breaking user workflows'; config only reloads on restart"
+    },
+    {
+      "source": "lint_test_validate_before_deploy",
+      "target": "adversarial_verification_before_shipping",
+      "type": "overlaps_with",
+      "confidence": 0.7,
+      "evidence": "INFERRED: both gate an artifact behind a hostile pre-ship check rather than author confidence"
+    }
+  ]
+}

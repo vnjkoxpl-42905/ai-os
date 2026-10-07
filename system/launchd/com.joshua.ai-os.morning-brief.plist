@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>EnvironmentVariables</key>
+	<dict>
+		<key>BRAIN_ROOT</key>
+		<string>/Users/joshuaf/ai-os</string>
+		<key>PATH</key>
+		<string>/usr/local/bin:/opt/homebrew/bin:/usr/bin:/bin:/usr/sbin:/sbin</string>
+		<key>HOME</key>
+		<string>/Users/joshuaf</string>
+		<key>USER</key>
+		<string>joshuaf</string>
+		<key>LOGNAME</key>
+		<string>joshuaf</string>
+		<key>SHELL</key>
+		<string>/bin/zsh</string>
+		<key>BRAIN_JOB_MAX_SECONDS</key>
+		<string>1800</string>
+	</dict>
+	<key>Label</key>
+	<string>com.joshua.ai-os.morning-brief</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/Users/joshuaf/ai-os/system/scripts/run-job.sh</string>
+		<string>morning-brief</string>
+	</array>
+	<key>StandardErrorPath</key>
+	<string>/Users/joshuaf/ai-os/system/logs/launchd.err.log</string>
+	<key>StandardOutPath</key>
+	<string>/Users/joshuaf/ai-os/system/logs/launchd.out.log</string>
+	<key>StartCalendarInterval</key>
+	<dict>
+		<key>Hour</key>
+		<integer>10</integer>
+		<key>Minute</key>
+		<integer>0</integer>
+	</dict>
+</dict>
+</plist>

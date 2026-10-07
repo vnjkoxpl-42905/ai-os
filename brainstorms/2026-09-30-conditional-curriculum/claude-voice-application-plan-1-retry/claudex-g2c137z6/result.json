@@ -1,0 +1,136 @@
+{
+  "status": "failed",
+  "mode": "review",
+  "provider": "claude",
+  "roles": {
+    "host": "codex",
+    "planner": "codex",
+    "reviewer": "claude",
+    "builder": "codex",
+    "inspector": "claude"
+  },
+  "repo": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-conditional-bootcamp",
+  "plan": "C:\\Users\\Joshu\\dev\\ai-os\\brainstorms\\2026-09-30-conditional-curriculum\\OPENING-VISUAL-BUILD-REVIEW.md",
+  "plan_sha256": "d920dcb9381be83ae5579a4af553d90a0c5ceec94586f02aca75be4bea9e05a3",
+  "requested_model": null,
+  "requested_effort": null,
+  "base": null,
+  "snapshot": null,
+  "previous": null,
+  "started_at": 1790971758.2124562,
+  "artifacts": "C:\\Users\\Joshu\\dev\\ai-os\\brainstorms\\2026-09-30-conditional-curriculum\\claude-voice-application-plan-1-retry\\claudex-g2c137z6",
+  "cli_version": "2.1.280 (Claude Code)",
+  "executable": [
+    "C:\\Users\\Joshu\\AppData\\Roaming\\npm\\node_modules\\@anthropic-ai\\claude-code\\bin\\claude.exe"
+  ],
+  "exit_code": 0,
+  "session_id": "b147f576-e5ad-445a-8c3b-293fa6f6796c",
+  "response": {
+    "verdict": "REVISE",
+    "summary": "The plan is sound and matches the canonical voice reference. It already contains the required pre-edit proof: curriculum-before.json and protected-before.json are in visual-proof/voice-application. I did not find any logic errors in the current 62 drill items or in the ready/packed lesson visuals. The stale-run risk the plan asked me to investigate is real: an old saved Group 1/2 run with three questions makes students go in circles in the current code, and no test covers it. The fix also needs to reach more run keys than the plan implies. Many in-lesson checks still give no answer-specific feedback, which the plan says it requires. The reference teaching for Group 2 contains internal jargon and expressions outside the scope. The plan should name these items explicitly before the build.",
+    "findings": [
+      {
+        "id": "F1-stale-run-loop",
+        "severity": "medium",
+        "path": "src/bootcamps/conditionals/routes.tsx",
+        "evidence": "Confirmed. QuestionRunner (routes.tsx:216-234) reuses progress.runs[runKey] whenever it exists. It creates a run only `if (!run)` (line 219), and a finished run always shows 'You finished this set.' Meanwhile nextSelectedStep (routes.tsx:56) checks for attempts on every current unit.drills[difficulty] ID. Scenario: a student's saved run 'practice:beginner:group-1' has questionIds [b1,b2,b3] with finished=true. The new IDs group-1-b4..b7 have no attempts, so LearningPath shows 'Continue practice' and RecommendedForward shows 'Skill drill: Group 1'. Both link to /practice?unit=group-1, which renders the same finished screen. The only way out is the user-initiated 'Repeat this set'. An unfinished old run also ends after its three saved IDs. No test covers this: routes.test.tsx:28-33 builds finished runs from the current drill lists only.",
+        "fix": "Reconcile in one helper, used either when progress loads or before QuestionRunner renders, and make it idempotent. For each run whose key draws on the current question pool, append current IDs missing from run.questionIds, keeping the saved order and existing drafts. If IDs were appended and run.finished is true, set finished=false and leave index at the old length so the first new item is next. Never touch attempts, choices or draft semantics. Pool keys include practice:<level>:<unitId> and also area/phase keys (practice:<level>:translation, practice:<level>:conditional) and flashcards:<unit|area>:<level>, because getConditionalQuestions also returns Group 1/2 items for those. Add a routes.test case: a finished three-ID group-1 beginner run with attempts should show the fourth question, not 'You finished this set', and earlier attempts and drafts should stay unchanged."
+      },
+      {
+        "id": "F2-check-feedback-not-answer-specific",
+        "severity": "medium",
+        "path": "src/bootcamps/conditionals/components/ConditionalOpeningLesson.tsx",
+        "evidence": "Check (line 23) falls back to `feedback?.[choice] ?? explanation`. Several Group lesson checks pass no feedback array: 'Keep the whole condition' (both groups), 'The only vehicles permitted inside are electric', 'Only registered guests receive wristbands', and 'Check the meaning, not just the word'. A wrong pick, e.g. 'Electric → Permitted inside', shows 'Your choice: …' plus the same explanation as a correct pick. It never says the arrow was reversed. That fails the plan's 'Real answer-specific feedback' and the voice reference's 'If they miss it, explain the precise move that went wrong'.",
+        "fix": "Require per-option feedback for every Check in the four opening units, and make the wrong-option text name the specific error (reversed direction, dropped modifier, need treated as enough). Extend the ConditionalLessonNote behavior test to click a wrong option in each group's checks and assert the option-specific text appears."
+      },
+      {
+        "id": "F3-reference-teaching-jargon-scope",
+        "severity": "low",
+        "path": "src/bootcamps/conditionals/content/foundations.source.ts",
+        "evidence": "group-2 teaching[6] (line 275) says 'Activation implies a recorded event means activation → recorded event under an explicit catalogue convention'. It also lists then, will and signals as result wording, and 'Signals may describe evidence rather than certainty'. group-1 teaching[6] (line 227) adds provided that, guarantees, ensures, leads to, produces and results in. 'Catalogue convention' is internal wording, and the extra expressions go beyond the seven per group. The plan includes 'matching generated/reference teaching' in scope but never says what happens to these optional-extension paragraphs.",
+        "fix": "In the plan, decide to remove or rewrite the 'optional wording extension' paragraphs in learner language, limited to expressions that are actually taught. Extend the new copy guard to unit.teaching, e.g. reject /catalogue convention/ and other internal-process wording."
+      },
+      {
+        "id": "F4-lesson-read-flag-stale",
+        "severity": "low",
+        "path": "src/bootcamps/conditionals/routes.tsx",
+        "evidence": "nextSelectedStep (line 53) skips a lesson whenever progress.lessons[unit.id] exists. Students who marked the older, shorter Group 1/2 lesson as read will go straight to practice. They will never be pointed to the expanded explanations of all seven expressions.",
+        "fix": "No schema change is needed. Either list this as a known limitation in the proof report, or have the reconciled practice view show a 'Review the expanded lesson' link when new IDs were appended to a run."
+      },
+      {
+        "id": "F5-level-labels-in-assignment-titles",
+        "severity": "low",
+        "path": "src/lib/conditionalBootcampAssignment.ts",
+        "evidence": "resolveConditionalAssignment builds titles such as '<Skill>: Level 1 learning and practice' (lines 73-76). These titles are the fallback for row.title and appear to students in 'Your other work' (routes.tsx:175). The plan says to remove student-facing level labels around lessons.",
+        "fix": "Either remove the level wording from student-visible titles, or state that it stays out of scope because it comes from teacher-created assignment titles."
+      },
+      {
+        "id": "F6-proof-scope-practice-runner",
+        "severity": "low",
+        "path": "src/dev/ConditionalOpeningPreview.tsx",
+        "evidence": "The DEV preview mounts only ConditionalLessonNote. It never mounts QuestionRunner, the recorded guided activity, the skill drill or the stale-run fix. So browser pass 1's 'correct/wrong feedback' can only exercise the formative in-lesson checks.",
+        "fix": "In the proof report, limit the browser claims to the lesson surface. Prove recorded-practice feedback and run reconciliation with routes.test cases, and say plainly that they were not rendered in the browser."
+      }
+    ],
+    "coverage": [
+      "Read the complete canonical voice reference: references/lsat-teaching-voice-standard.md",
+      "Read the full plan text as supplied",
+      "foundations.source.ts: orientation, sufficient-necessary, group-1 and group-2 units in full, including all 62 drill items, checked for key correctness, must-as-obligation handling and full modifiers; rules-facts read for context",
+      "ConditionalOpeningLesson.tsx and ConditionalOpeningMedia.tsx read in full",
+      "progress.ts, useConditionalProgress.ts, curriculumPath.ts, content/index.ts, assignments.ts and conditionalBootcampAssignment.ts read",
+      "routes.tsx: selection, recommendation, Lesson, GuidedActivity, Practice, QuestionRunner, Reference and Flashcards inspected",
+      "opening-coverage.test.ts and the routes.test.tsx helpers inspected",
+      "Ordering of units in curriculum.generated.json checked",
+      "DEV preview entry and its DEV-only gating in App.tsx checked",
+      "Confirmed the voice-application proof folder contains curriculum-before.json and protected-before.json",
+      "Checked the corpus: 'Personalized If/Then' appears in Joshua's own notes, so its use is not a borrowing from the source"
+    ],
+    "limitations": [
+      "This is the plan review, before any edits. I inspected the current tree, not the final voice-revision diff",
+      "I could not run tests, typecheck, build or a browser, and I make no claims about rendering, motion or keyboard behavior beyond reading the source",
+      "I did not read opening.css, ConditionalLessonNote.tsx/test, ConditionalAssignmentFields.tsx/test or the source HTML transcription in full",
+      "I did not hash-check the protected files, and I did not inspect the bank, finder or MCP diffs beyond a grep",
+      "The three-question count for old Group 1/2 runs comes from the plan; I did not compare it against curriculum-before.json"
+    ]
+  },
+  "usage": {
+    "input_tokens": 52,
+    "cache_creation_input_tokens": 117190,
+    "cache_read_input_tokens": 1856463,
+    "output_tokens": 19687,
+    "output_tokens_details": {
+      "thinking_tokens": 11458
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 117190,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 4659,
+        "cache_read_input_tokens": 119660,
+        "cache_creation_input_tokens": 893,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 893
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "observed_models": [
+    "claude-opus-5-5"
+  ],
+  "permission_denials": [],
+  "total_cost_usd": 1.7027606,
+  "error": "Plan changed during the run; result cannot approve the current plan.",
+  "elapsed_seconds": 320.4
+}

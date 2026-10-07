@@ -1,0 +1,53 @@
+Implement the attached frozen work order within this checkout. Do not commit, push or publish. Resolve source paths relative to this checkout; never edit an original checkout named in the plan. Do not silently redesign an impossible requirement: report it and the proposed deviation. Run the agreed proof command: npm run test -- src/bootcamps/conditionals src/lib/conditionalBootcampAssignment.test.ts src/components/teacher/ConditionalAssignmentFields.test.tsx --maxWorkers=1
+Report files changed, proof output, denied/blocked actions, and deviations. Your report is advisory; another provider will independently review the final changes.
+
+PLAN PATH: C:\Users\Joshu\dev\ai-os\brainstorms\2026-09-30-conditional-curriculum\2026-10-04-claude-pacing-build-spec.md
+PLAN SHA256: 338ea1f4f735e043bd6877fa67ad537717b8a2c564df4ccafd24d25007ba7007
+<plan>
+# Conditional lesson pacing correction
+
+Explicit standalone claude-build request, following accepted five-point audit. No separate plan approval claimed. MAX_FIX_ROUNDS=2. Local only. No commit, push, deploy, backend writes, bank regeneration or paid actions.
+
+REPO: C:/Users/Joshu/dev/ai-os-projects/lsatu-conditional-pacing-20261004
+INPUT: C:/Users/Joshu/dev/ai-os/brainstorms/2026-09-30-conditional-curriculum/claude-pacing-20261004/input
+BASE: 67230dfae74a1466515d570fcb7b8a96ab5cb9c5
+LOG_FILE: C:/Users/Joshu/dev/ai-os/brainstorms/2026-09-30-conditional-curriculum/claude-pacing-20261004/build-log.md
+
+## Setup ownership
+The initial runner checkout is clean. Host will import the hash-verified current application snapshot immediately after launch, under build-reference host setup allowance, and write HOST-READY.md outside checkout in claude-pacing-20261004. First read the teaching standard and audit below; then read HOST-READY.md before editing. Do not manually reconstruct/copy snapshot. If marker missing, report setup blocker rather than spending build window importing. No permissions/trust changes or bypass. Host handles proof commands if denied. node_modules is a host-created ignored junction to existing dependencies. Only edit this isolated REPO, never original preview. Ignore automatic push instructions because explicit task local-only overrides.
+
+## Read
+C:/Users/Joshu/dev/ai-os/references/lsat-teaching-voice-standard.md
+C:/Users/Joshu/dev/ai-os/wiki/teaching-voice.md
+C:/Users/Joshu/dev/ai-os/brainstorms/2026-09-30-conditional-curriculum/2026-10-03-astra-learning-review.md (final 2026-10-04 pacing audit)
+Relevant current components in REPO after ready.
+
+## Implement all five
+1. Narrow must-arrow to sufficient-left/necessary-right, must meaning, raffle diagram, moved if clause, writer and check. Move only/only-if contrast into necessary-words; required/requires target-position into whole-meaning. Preserve nuance without duplicate blocks.
+2. Foundation lab: retain one anchor retrieval question; replace three immediately repeated questions with fresh original culturally accessible cases testing rule vs fact, enough vs required and open possibilities. No notation before taught. Specific reasoned feedback for every choice; retry.
+3. Mixed practice: alternate sufficient and necessary indicator family sentences without family cue. Require complete target identification and arrow construction, checked attempt and feedback. Retain envelope equivalence exercise. Do not merely wrap existing Group2 practice and call it mixed.
+4. Consolidate whole-meaning into one clear translation-check sequence: target, qualification, direction and imagined-case check. Combine two qualification blocks as a paired check, preserve useful cases and only/the-only distinction without repeated headings.
+5. Indicator notes: explicit concise invitation to work through all seven expressions; next-expression control and position/viewed cue; manual selection and state retained; deck offered after examples, no forced mastery lock or claimed completion from viewing.
+
+## Preserve
+Nine notes/four labs, approved raffle anchor, complete 14 core and supplementary expressions, obligation vs occurrence caveats, 25 cards, Demon-inspired activities, four cases, sign patterns and six paired final exercises. Original examples and Joshua voice. No new routes, difficulty selector, teacher-facing/accounting prose, header LESSON or top All lessons. Preserve existing title-first header. Back/Next and answers retained, keyboard-accessible labelled controls, reduced motion. No history/progress/assignment changes.
+
+## Scope
+Prefer OpeningCourseContent.tsx and a focused new practice component if needed; minimal exports from ConditionalReferenceSequence.tsx/ConditionalOpeningLesson.tsx; scoped styles only if required. Meaningful existing regression tests may change only to reflect correct final content. Add meaningful new behavior tests for mixed-family production, next-expression and fresh lab. Never weaken assignment/completion tests. All other imported files are baseline, not authored changes.
+
+## Proof
+PROOF_CMD: npm run test -- src/bootcamps/conditionals src/lib/conditionalBootcampAssignment.test.ts src/components/teacher/ConditionalAssignmentFields.test.tsx
+Host independently runs proof, npm run typecheck, direct node --max-old-space-size=4096 node_modules/vite/bin/vite.js build, canonical exclusion, and browser checks. If Bash denied stop that path and report; no bypass. Finish with exact changed file list and limitations. Codex independent inspect follows with same spec/base and imported snapshot accounted for.
+
+</plan>
+Check prior findings against this revision; do not relitigate resolved items without new evidence.
+
+HOST DISPOSITIONS / FIX REQUEST:
+# Codex inspection dispositions: REVISE
+Independent read-only Codex reviewer inspected all four authored files against frozen input. CLI inspection was BLOCKED by code-mode-host-disabled tool issue; no CLI approval claimed. Two required content defects accepted plus two tiny copy corrections.
+1. MixedFamilyPractice bus item drops depot in diagram left. Preserve depot in complete diagram label and related feedback/readback.
+2. Phone repaired same day -> has cracked screen conflates pre-repair defect with post-repair state. Replace with stable intake/queue classification (e.g. same-day repair queue -> cracked screen at intake) consistently across sentence, targets, labels and all feedback. Ensure original grammar and inference remain accurate and intuitive.
+3. Table item partialFeedback invents Every diner on terrace sits at a table. Remove that unsupported sentence; explain that dropping booked loses requirement.
+4. Foundation cafe feedback rule has nothing to tell us about today is overbroad. Say given that fact the rule doesn't settle whether it closed early. Retain both possible cases.
+5. Add meaningful interaction/semantic coverage for corrected mixed items3/5, preserving exact depot and consistent intake time; don't change existing test timeouts or weaken assertions.
+Only relevant files within current four-file scope. No other content changes. No host implementation edits have occurred; imported snapshot is unchanged baseline. Save and report final exact proof. Broad run timeout was reproduced by host under load; rerun proof with --maxWorkers=1 if needed. No commit/push/deploy. Host independent typecheck/build/browser follows finalfreeze. This is fixround1of2.

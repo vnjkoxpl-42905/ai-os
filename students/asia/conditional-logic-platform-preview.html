@@ -1,0 +1,895 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Asia’s conditional logic notes | LSAT U preview</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Roboto+Mono:wght@400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="file:///C:/Users/Joshu/dev/ai-os/projects/lsatu/src/components/classroom/classroom.css"><style>*,*::before,*::after{box-sizing:border-box}body{margin:0}.preview-rail{width:220px;flex:none;min-height:100vh;border-right:1px solid var(--classroom-line);padding:28px 18px;background:var(--classroom-page)}.preview-brand{font-size:23px;font-weight:700;letter-spacing:-.04em;margin-bottom:42px}.preview-nav{color:var(--classroom-meta-text);font-size:14px;display:grid;gap:12px}.preview-nav strong{color:var(--classroom-ink);background:var(--classroom-trigger);padding:10px 12px;border-radius:8px}.preview-main{min-width:0;flex:1}.preview-top{height:70px;border-bottom:1px solid var(--classroom-line);display:flex;align-items:center;justify-content:space-between;padding:0 34px;gap:12px}.preview-top span{font-size:13px;color:var(--classroom-meta-text)}.preview-body{max-width:790px;margin:0 auto;padding:42px 34px 90px}.preview-badge{display:inline-block;color:#7c4800;background:#fff3df;border:1px solid #e7c888;border-radius:100px;padding:6px 11px;font-size:12px;margin-bottom:18px}.preview-tabs{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 42px;border-bottom:1px solid var(--classroom-line);padding-bottom:12px}.preview-tabs button{border:0;background:transparent;color:var(--classroom-meta-text);font:inherit;font-size:14px;cursor:pointer;padding:10px 13px;border-radius:7px}.preview-tabs button[aria-selected=true]{background:var(--classroom-ink);color:var(--classroom-page)}.preview-heading{margin-bottom:30px}.preview-heading small{display:block;color:var(--classroom-meta-text);font-size:12px;margin-bottom:12px}.preview-heading h1{font-size:36px;line-height:1.15;letter-spacing:-.035em;margin:0}.preview-article[hidden]{display:none}.preview-footer{border-top:1px solid var(--classroom-line);padding-top:24px;margin-top:45px;color:var(--classroom-meta-text);font-size:13px}@media(max-width:760px){.preview-rail{display:none}.preview-top{padding:0 20px}.preview-body{padding:30px 20px 70px}.preview-heading h1{font-size:30px}}</style></head><body><div class="classroom-root"><aside class="preview-rail"><div class="preview-brand">LSAT U</div><nav class="preview-nav"><span>Home</span><strong>My classroom</strong><span>Practice</span><span>Messages</span></nav></aside><main class="preview-main"><header class="preview-top"><b>Classroom</b><span>Student view preview · Asia Tamaami</span></header><div class="preview-body"><div class="preview-badge">Local preview · not assigned</div><div class="preview-tabs" role="tablist"><button type="button" role="tab" id="tab-0" aria-controls="note-0" aria-selected="true" onclick="showNote(0)">Conditional Logic, The Breakdown</button><button type="button" role="tab" id="tab-1" aria-controls="note-1" aria-selected="false" onclick="showNote(1)">Conditional Logic, Cheat Sheet</button></div><section class="preview-article" id="note-0" role="tabpanel" aria-labelledby="tab-0"><div class="preview-heading"><small>NOTE · AUGUST 24, 2026</small><h1>Conditional Logic, The Breakdown</h1></div><article class="classroom-prose"><!-- LSAT U assigned note: Conditional Logic, The Breakdown.
+     Companion to conditionals-cheat-sheet.v2.lsatu.html. Self-contained: one <style> block,
+     every selector scoped under .classroom-root, classroom tokens only, Outfit + Roboto Mono,
+     disclosure on <details>/<summary>, no <script>, figures inline SVG. -->
+<style>
+.classroom-root .bd { --bd-shadow: 0 1px 2px rgba(0,0,0,.04), 0 12px 30px -26px rgba(0,0,0,.55);
+  --bd-shadow-lg: 0 1px 2px rgba(0,0,0,.03), 0 20px 44px -32px rgba(0,0,0,.7);
+  color: var(--classroom-ink-body); }
+.classroom-root .bd h1, .classroom-root .bd h2, .classroom-root .bd h3 { color: var(--classroom-ink); margin: 0; }
+.classroom-root .bd p { margin: 0; }
+.classroom-root .bd-mono { font-family: "Roboto Mono", ui-monospace, monospace; font-weight: 500; }
+.classroom-root .bd-title { font-size: clamp(34px, 6vw, 46px); font-weight: 600; letter-spacing: -.032em; line-height: 1.02; margin-bottom: 16px; }
+.classroom-root .bd-deck { font-size: 17.5px; line-height: 1.65; max-width: 44ch; margin-bottom: 12px; text-wrap: pretty; }
+.classroom-root .bd-deck-sub { font-size: 15.5px; line-height: 1.7; color: var(--classroom-meta-text); max-width: 52ch; margin-bottom: 48px; }
+
+/* contents */
+.classroom-root .bd-toc { display: flex; flex-direction: column; margin-bottom: 64px; }
+.classroom-root .bd-tocrow { display: grid; grid-template-columns: 30px minmax(0, 1fr) auto; gap: 16px; align-items: baseline; padding: 13px 6px; border-top: 1px solid var(--classroom-line); border-radius: 6px; text-decoration: none; transition: background var(--classroom-transition) ease, padding-left var(--classroom-transition) ease; }
+.classroom-root .bd-tocrow:hover { background: var(--classroom-hover); padding-left: 10px; }
+.classroom-root .bd-tocnum { font-family: "Roboto Mono", ui-monospace, monospace; font-size: 12px; color: var(--classroom-link-text); }
+.classroom-root .bd-toctitle { font-size: 16px; color: var(--classroom-ink); }
+.classroom-root .bd-tochint { font-size: 13.5px; color: var(--classroom-meta-text); }
+
+/* section */
+.classroom-root .bd-section { margin-bottom: 76px; scroll-margin-top: 24px; }
+.classroom-root .bd-sechead { display: flex; align-items: center; gap: 14px; margin-bottom: 18px; }
+.classroom-root .bd-secnum { font-family: "Roboto Mono", ui-monospace, monospace; font-size: 44px; font-weight: 400; color: var(--classroom-line); line-height: 1; letter-spacing: -.03em; }
+.classroom-root .bd-secline { height: 1px; background: var(--classroom-line); flex: 1; }
+.classroom-root .bd-h2 { font-size: clamp(24px, 4.6vw, 30px); font-weight: 600; letter-spacing: -.024em; line-height: 1.12; margin-bottom: 16px; max-width: 20ch; }
+.classroom-root .bd-why { font-size: 17px; line-height: 1.75; max-width: 58ch; margin-bottom: 14px; text-wrap: pretty; }
+.classroom-root .bd-extra { font-size: 16px; line-height: 1.72; color: var(--classroom-meta-text); max-width: 58ch; margin-bottom: 30px; text-wrap: pretty; }
+
+/* triad */
+.classroom-root .bd-triad { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-bottom: 26px; }
+.classroom-root .bd-panelcard { background: var(--classroom-panel); border-radius: 11px; padding: 19px; display: flex; flex-direction: column; gap: 11px; box-shadow: var(--bd-shadow); }
+.classroom-root .bd-panelcard.is-tinted { background: var(--classroom-trigger); }
+.classroom-root .bd-panellabel { font-size: 13px; color: var(--classroom-meta-text); }
+.classroom-root .bd-shapes { display: flex; flex-direction: column; gap: 7px; }
+.classroom-root .bd-shape { font-family: "Roboto Mono", ui-monospace, monospace; font-size: 12.5px; color: var(--classroom-ink); line-height: 1.4; }
+.classroom-root .bd-paneltext { font-size: 15px; line-height: 1.55; color: var(--classroom-ink); }
+.classroom-root .bd-gives { font-family: "Roboto Mono", ui-monospace, monospace; font-size: 13.5px; color: var(--classroom-ink); line-height: 1.5; white-space: pre-line; }
+
+/* worked */
+.classroom-root .bd-worked { display: flex; align-items: center; gap: 18px; padding: 24px 26px; border-radius: 12px; background: var(--classroom-panel); margin-bottom: 22px; box-shadow: var(--bd-shadow); flex-wrap: wrap; }
+.classroom-root .bd-worked-sentence { flex: 1; min-width: 200px; font-size: 16.5px; line-height: 1.5; color: var(--classroom-ink); }
+.classroom-root .bd-worked-arrow { font-family: "Roboto Mono", ui-monospace, monospace; font-weight: 500; font-size: 16px; color: var(--classroom-ink); }
+
+/* disclosure */
+.classroom-root .bd details > summary { list-style: none; cursor: pointer; }
+.classroom-root .bd details > summary::-webkit-details-marker { display: none; }
+.classroom-root .bd-disc { display: inline-flex; align-items: center; gap: 9px; padding: 9px 15px; border-radius: 999px; font-family: "Roboto Mono", ui-monospace, monospace; font-size: 11.5px; letter-spacing: .04em; color: var(--classroom-meta-text); background: var(--classroom-panel); box-shadow: var(--bd-shadow); transition: color var(--classroom-transition) ease, transform var(--classroom-transition) ease; }
+.classroom-root .bd-disc:hover { color: var(--classroom-ink); transform: translateY(-1px); }
+.classroom-root .bd details[open] .bd-chev { transform: rotate(90deg); }
+.classroom-root .bd-chev { transition: transform var(--classroom-transition) ease; }
+.classroom-root .bd-panel { animation: bd-slide 320ms cubic-bezier(.22,.8,.3,1) both; padding-top: 16px; }
+@keyframes bd-slide { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .classroom-root .bd-panel { animation: none; } .classroom-root .bd-disc:hover, .classroom-root .bd-tocrow:hover { transform: none; padding-left: 6px; } }
+
+/* word rows */
+.classroom-root .bd-row { display: grid; grid-template-columns: 140px minmax(0, 1fr); gap: 18px; padding: 13px 12px; border-radius: 8px; align-items: baseline; transition: background var(--classroom-transition) ease; }
+.classroom-root .bd-row:hover { background: var(--classroom-hover); }
+.classroom-root .bd-word { font-family: "Roboto Mono", ui-monospace, monospace; font-weight: 500; font-size: 14px; color: var(--classroom-link-text); }
+.classroom-root .bd-example { display: flex; flex-direction: column; gap: 6px; }
+.classroom-root .bd-example-sentence { font-size: 15px; line-height: 1.5; color: var(--classroom-ink); }
+.classroom-root .bd-example-arrow { font-family: "Roboto Mono", ui-monospace, monospace; font-size: 13.5px; color: var(--classroom-meta-text); }
+
+/* practice */
+.classroom-root .bd-practice { background: var(--classroom-trigger); border-radius: 12px; padding: 22px 24px; display: flex; flex-direction: column; gap: 14px; }
+.classroom-root .bd-practice-prompt { font-size: 16px; line-height: 1.55; color: var(--classroom-ink); }
+.classroom-root .bd-practice-cue { color: var(--classroom-link-text); }
+.classroom-root .bd-rule { height: 1px; background: var(--classroom-line); }
+.classroom-root .bd-answer { font-family: "Roboto Mono", ui-monospace, monospace; font-weight: 500; font-size: 17px; color: var(--classroom-ink); }
+.classroom-root .bd-answer-why { font-size: 15px; line-height: 1.6; color: var(--classroom-meta-text); max-width: 58ch; }
+
+/* figures */
+.classroom-root .bd-figure { background: var(--classroom-trigger); border-radius: 14px; padding: 32px 28px; display: flex; flex-direction: column; gap: 26px; box-shadow: var(--bd-shadow-lg); margin-bottom: 24px; }
+.classroom-root .bd-flip-row { display: flex; align-items: center; justify-content: center; gap: 22px; flex-wrap: wrap; }
+.classroom-root .bd-flip-term { font-family: "Roboto Mono", ui-monospace, monospace; font-weight: 500; font-size: clamp(17px, 3.4vw, 23px); color: var(--classroom-ink); }
+.classroom-root .bd-grid-3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.classroom-root .bd-grid-2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.classroom-root .bd-step { background: var(--classroom-panel); border-radius: 10px; padding: 16px 17px; display: flex; flex-direction: column; gap: 7px; }
+.classroom-root .bd-stepnum { font-family: "Roboto Mono", ui-monospace, monospace; font-size: 11px; color: var(--classroom-link-text); }
+.classroom-root .bd-steptitle { font-size: 15.5px; font-weight: 600; letter-spacing: -.01em; color: var(--classroom-ink); }
+.classroom-root .bd-stepbody { font-size: 14px; line-height: 1.5; color: var(--classroom-meta-text); }
+.classroom-root .bd-note { font-size: 16px; line-height: 1.72; color: var(--classroom-meta-text); max-width: 58ch; }
+.classroom-root .bd-ink { color: var(--classroom-ink); }
+.classroom-root .bd-dot { width: 7px; height: 7px; border-radius: 999px; flex: none; }
+.classroom-root .bd-equiv { display: grid; grid-template-columns: minmax(0, 1fr) 30px minmax(0, 1fr); gap: 16px; align-items: center; padding: 18px 4px; border-top: 1px solid var(--classroom-line); }
+.classroom-root .bd-trigrow { display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 18px; align-items: baseline; padding: 12px 0; border-top: 1px solid var(--classroom-line); }
+.classroom-root .bd-drawrow { display: grid; grid-template-columns: 74px minmax(0, 1fr); gap: 20px; align-items: baseline; padding: 18px 4px; border-top: 1px solid var(--classroom-line); }
+.classroom-root .bd-verdict { font-family: "Roboto Mono", ui-monospace, monospace; font-size: 12px; letter-spacing: .06em; }
+
+/* quiz */
+.classroom-root .bd-quiz { background: var(--classroom-trigger); border-radius: 16px; padding: 36px 30px 32px; }
+.classroom-root .bd-quizlist { display: flex; flex-direction: column; gap: 8px; }
+.classroom-root .bd-quizcard { background: var(--classroom-panel); border-radius: 10px; padding: 16px 18px; }
+.classroom-root .bd-quizq { display: flex; align-items: center; gap: 12px; font-size: 16px; color: var(--classroom-ink); }
+.classroom-root .bd-quiza { padding: 12px 0 2px 21px; font-size: 15px; line-height: 1.65; color: var(--classroom-meta-text); max-width: 58ch; }
+
+@media (max-width: 620px) {
+  .classroom-root .bd-triad, .classroom-root .bd-grid-3, .classroom-root .bd-grid-2 { grid-template-columns: minmax(0, 1fr); }
+  .classroom-root .bd-row { grid-template-columns: minmax(0, 1fr); gap: 6px; }
+  .classroom-root .bd-tocrow { grid-template-columns: 26px minmax(0, 1fr); }
+  .classroom-root .bd-tochint { display: none; }
+  .classroom-root .bd-equiv { grid-template-columns: minmax(0, 1fr); gap: 6px; }
+  .classroom-root .bd-figure { padding: 24px 18px; }
+}
+</style>
+
+<div class="bd">
+
+  <h1 class="bd-title">The Breakdown</h1>
+  <p class="bd-deck">Eleven parts, one at a time. The cheat sheet tells you what to write. This tells you why it is right.</p>
+  <p class="bd-deck-sub">The arrow is certainty. If the left side is true, the right side has to be true. Everything below is a consequence of that one sentence.</p>
+
+  <div class="bd-toc">
+    <a class="bd-tocrow" href="#bd-1"><span class="bd-tocnum">01</span><span class="bd-toctitle">Words that put it on the left</span><span class="bd-tochint">19 words</span></a>
+    <a class="bd-tocrow" href="#bd-2"><span class="bd-tocnum">02</span><span class="bd-toctitle">Words that put it on the right</span><span class="bd-tochint">16 words</span></a>
+    <a class="bd-tocrow" href="#bd-3"><span class="bd-tocnum">03</span><span class="bd-toctitle">Words that negate the left</span><span class="bd-tochint">4 words</span></a>
+    <a class="bd-tocrow" href="#bd-4"><span class="bd-tocnum">04</span><span class="bd-toctitle">Words that negate the right</span><span class="bd-tochint">5 words</span></a>
+    <a class="bd-tocrow" href="#bd-5"><span class="bd-tocnum">05</span><span class="bd-toctitle">Words that are on no list</span><span class="bd-tochint">the cold ones</span></a>
+    <a class="bd-tocrow" href="#bd-6"><span class="bd-tocnum">06</span><span class="bd-toctitle">And, or, and the flip</span><span class="bd-tochint">the three steps</span></a>
+    <a class="bd-tocrow" href="#bd-7"><span class="bd-tocnum">07</span><span class="bd-toctitle">Both directions at once</span><span class="bd-tochint">biconditionals</span></a>
+    <a class="bd-tocrow" href="#bd-8"><span class="bd-tocnum">08</span><span class="bd-toctitle">Not conditionals at all</span><span class="bd-tochint">few, not all</span></a>
+    <a class="bd-tocrow" href="#bd-9"><span class="bd-tocnum">09</span><span class="bd-toctitle">The two moves that are never allowed</span><span class="bd-tochint">the illegal ones</span></a>
+    <a class="bd-tocrow" href="#bd-10"><span class="bd-tocnum">10</span><span class="bd-toctitle">The two things you do with a rule</span><span class="bd-tochint">chain, trigger</span></a>
+    <a class="bd-tocrow" href="#bd-11"><span class="bd-tocnum">11</span><span class="bd-toctitle">When to draw at all</span><span class="bd-tochint">setup, not answer</span></a>
+  </div>
+
+  <!-- 1 -->
+  <div class="bd-section" id="bd-1">
+    <div class="bd-sechead"><span class="bd-secnum">01</span><span class="bd-secline"></span></div>
+    <h2 class="bd-h2">Words that put it on the left</h2>
+    <p class="bd-why">These are rules, universals and guarantees. All three say the same thing: when this, then that. Whatever the word attaches to is the trigger.</p>
+    <p class="bd-extra">It goes on the left, exactly as written, and nothing gets negated.</p>
+    <div class="bd-triad">
+      <div class="bd-panelcard"><div class="bd-panellabel">It shows up like this</div><div class="bd-shapes"><div class="bd-shape">If A, then B.</div><div class="bd-shape">B whenever A.</div><div class="bd-shape">Every A is B.</div><div class="bd-shape">All A are B.</div></div></div>
+      <div class="bd-panelcard"><div class="bd-panellabel">Ask yourself</div><div class="bd-paneltext">"If what?" or "every who or what?" Whatever answers it goes on the left.</div></div>
+      <div class="bd-panelcard is-tinted"><div class="bd-panellabel">Which gives you</div><div class="bd-gives">If left, right.
+right if left.</div></div>
+    </div>
+    <div class="bd-worked">
+      <div class="bd-worked-sentence">If it rains, practice is cancelled.</div>
+      <svg width="34" height="16" viewBox="0 0 34 16" fill="none" aria-hidden="true" style="flex:none;"><path d="M1 8h29M25 3l6 5-6 5" stroke="var(--classroom-link)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <div class="bd-worked-arrow">rain &rarr; practice cancelled</div>
+    </div>
+    <details style="margin-bottom:24px;">
+      <summary><span class="bd-disc"><svg class="bd-chev" width="9" height="11" viewBox="0 0 9 11" fill="none" aria-hidden="true"><path d="M1.5 1L7 5.5 1.5 10" stroke="var(--classroom-link-text)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>All 19 words, each in a sentence</span></span></summary>
+      <div class="bd-panel">
+        <div class="bd-row"><div class="bd-word">if</div><div class="bd-example"><div class="bd-example-sentence">If it rains, practice is cancelled.</div><div class="bd-example-arrow">rain &rarr; practice cancelled</div></div></div>
+        <div class="bd-row"><div class="bd-word">when</div><div class="bd-example"><div class="bd-example-sentence">When the alarm sounds, the doors lock.</div><div class="bd-example-arrow">alarm sounds &rarr; doors lock</div></div></div>
+        <div class="bd-row"><div class="bd-word">whenever</div><div class="bd-example"><div class="bd-example-sentence">Whenever she drills, she reviews it after.</div><div class="bd-example-arrow">drills &rarr; reviews after</div></div></div>
+        <div class="bd-row"><div class="bd-word">wherever</div><div class="bd-example"><div class="bd-example-sentence">Wherever the trail floods, it closes.</div><div class="bd-example-arrow">trail floods &rarr; trail closes</div></div></div>
+        <div class="bd-row"><div class="bd-word">anytime</div><div class="bd-example"><div class="bd-example-sentence">Anytime the server restarts, you sign in again.</div><div class="bd-example-arrow">server restarts &rarr; sign in again</div></div></div>
+        <div class="bd-row"><div class="bd-word">provided that</div><div class="bd-example"><div class="bd-example-sentence">You may retake it provided that you wait 30 days.</div><div class="bd-example-arrow">waited 30 days &rarr; may retake</div></div></div>
+        <div class="bd-row"><div class="bd-word">in the event that</div><div class="bd-example"><div class="bd-example-sentence">In the event that the flight is cancelled, you get a refund.</div><div class="bd-example-arrow">flight cancelled &rarr; refund</div></div></div>
+        <div class="bd-row"><div class="bd-word">all</div><div class="bd-example"><div class="bd-example-sentence">All members pay dues.</div><div class="bd-example-arrow">member &rarr; pays dues</div></div></div>
+        <div class="bd-row"><div class="bd-word">any</div><div class="bd-example"><div class="bd-example-sentence">Any late paper loses points.</div><div class="bd-example-arrow">late paper &rarr; loses points</div></div></div>
+        <div class="bd-row"><div class="bd-word">every</div><div class="bd-example"><div class="bd-example-sentence">Every witness was interviewed.</div><div class="bd-example-arrow">witness &rarr; interviewed</div></div></div>
+        <div class="bd-row"><div class="bd-word">each</div><div class="bd-example"><div class="bd-example-sentence">Each application needs a signature.</div><div class="bd-example-arrow">application &rarr; needs signature</div></div></div>
+        <div class="bd-row"><div class="bd-word">everyone</div><div class="bd-example"><div class="bd-example-sentence">Everyone who enters signs in.</div><div class="bd-example-arrow">enters &rarr; signs in</div></div></div>
+        <div class="bd-row"><div class="bd-word">everything</div><div class="bd-example"><div class="bd-example-sentence">Everything on the shelf is discounted.</div><div class="bd-example-arrow">on the shelf &rarr; discounted</div></div></div>
+        <div class="bd-row"><div class="bd-word">leads to</div><div class="bd-example"><div class="bd-example-sentence">A tie in the vote leads to a runoff.</div><div class="bd-example-arrow">tie &rarr; runoff</div></div></div>
+        <div class="bd-row"><div class="bd-word">produces</div><div class="bd-example"><div class="bd-example-sentence">Heating the rail produces expansion.</div><div class="bd-example-arrow">heat the rail &rarr; expansion</div></div></div>
+        <div class="bd-row"><div class="bd-word">results in</div><div class="bd-example"><div class="bd-example-sentence">Missing the deadline results in disqualification.</div><div class="bd-example-arrow">miss deadline &rarr; disqualified</div></div></div>
+        <div class="bd-row"><div class="bd-word">guarantees</div><div class="bd-example"><div class="bd-example-sentence">A winning ticket guarantees the prize.</div><div class="bd-example-arrow">winning ticket &rarr; prize</div></div></div>
+        <div class="bd-row"><div class="bd-word">ensures</div><div class="bd-example"><div class="bd-example-sentence">A signed receipt ensures the delivery was logged.</div><div class="bd-example-arrow">signed receipt &rarr; delivery logged</div></div></div>
+        <div class="bd-row"><div class="bd-word">always</div><div class="bd-example"><div class="bd-example-sentence">A missed payment always adds a late fee.</div><div class="bd-example-arrow">missed payment &rarr; late fee</div></div></div>
+      </div>
+    </details>
+    <div class="bd-practice">
+      <div class="bd-practice-prompt"><span class="bd-practice-cue">Diagram this.</span> If you score a 160, you get the scholarship.</div>
+      <div class="bd-rule"></div>
+      <details>
+        <summary><span class="bd-disc"><svg class="bd-chev" width="9" height="11" viewBox="0 0 9 11" fill="none" aria-hidden="true"><path d="M1.5 1L7 5.5 1.5 10" stroke="var(--classroom-link-text)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Check it</span></span></summary>
+        <div class="bd-panel" style="display:flex; flex-direction:column; gap:10px;">
+          <div class="bd-answer">160 &rarr; scholarship</div>
+          <div class="bd-answer-why">The idea the word attaches to goes left, word for word. No rearranging, no negating.</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <!-- 2 -->
+  <div class="bd-section" id="bd-2">
+    <div class="bd-sechead"><span class="bd-secnum">02</span><span class="bd-secline"></span></div>
+    <h2 class="bd-h2">Words that put it on the right</h2>
+    <p class="bd-why">These are requirements and implications. The word names what has to be there, so that idea goes on the right, exactly as written.</p>
+    <p class="bd-extra">Same sentence as the one above, one word different, and the arrow points the other way.</p>
+    <div class="bd-triad">
+      <div class="bd-panelcard"><div class="bd-panellabel">It shows up like this</div><div class="bd-shapes"><div class="bd-shape">A only if B.</div><div class="bd-shape">Only A are B.</div><div class="bd-shape">A requires B.</div><div class="bd-shape">B is necessary for A.</div></div></div>
+      <div class="bd-panelcard"><div class="bd-panellabel">Ask yourself</div><div class="bd-paneltext">"What is this word naming as required?" Whatever answers it goes on the right.</div></div>
+      <div class="bd-panelcard is-tinted"><div class="bd-panellabel">Which gives you</div><div class="bd-gives">left only if right.
+right is required for left.</div></div>
+    </div>
+    <div class="bd-worked">
+      <div class="bd-worked-sentence">You pass only if you attend.</div>
+      <svg width="34" height="16" viewBox="0 0 34 16" fill="none" aria-hidden="true" style="flex:none;"><path d="M1 8h29M25 3l6 5-6 5" stroke="var(--classroom-link)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <div class="bd-worked-arrow">pass &rarr; attend</div>
+    </div>
+    <details style="margin-bottom:24px;">
+      <summary><span class="bd-disc"><svg class="bd-chev" width="9" height="11" viewBox="0 0 9 11" fill="none" aria-hidden="true"><path d="M1.5 1L7 5.5 1.5 10" stroke="var(--classroom-link-text)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>All 16 words, each in a sentence</span></span></summary>
+      <div class="bd-panel">
+        <div class="bd-row"><div class="bd-word">only</div><div class="bd-example"><div class="bd-example-sentence">Only members may vote.</div><div class="bd-example-arrow">vote &rarr; member</div></div></div>
+        <div class="bd-row"><div class="bd-word">only if</div><div class="bd-example"><div class="bd-example-sentence">You pass only if you attend.</div><div class="bd-example-arrow">pass &rarr; attend</div></div></div>
+        <div class="bd-row"><div class="bd-word">only when</div><div class="bd-example"><div class="bd-example-sentence">The gate opens only when the light is green.</div><div class="bd-example-arrow">gate opens &rarr; light green</div></div></div>
+        <div class="bd-row"><div class="bd-word">requires</div><div class="bd-example"><div class="bd-example-sentence">Admission requires a transcript.</div><div class="bd-example-arrow">admission &rarr; transcript</div></div></div>
+        <div class="bd-row"><div class="bd-word">required</div><div class="bd-example"><div class="bd-example-sentence">A permit is required to build.</div><div class="bd-example-arrow">build &rarr; permit</div></div></div>
+        <div class="bd-row"><div class="bd-word">prerequisite</div><div class="bd-example"><div class="bd-example-sentence">Calculus is a prerequisite for physics.</div><div class="bd-example-arrow">physics &rarr; calculus</div></div></div>
+        <div class="bd-row"><div class="bd-word">must</div><div class="bd-example"><div class="bd-example-sentence">Applicants must submit two essays.</div><div class="bd-example-arrow">applicant &rarr; two essays</div></div></div>
+        <div class="bd-row"><div class="bd-word">needs</div><div class="bd-example"><div class="bd-example-sentence">The plant needs light to bloom.</div><div class="bd-example-arrow">blooms &rarr; light</div></div></div>
+        <div class="bd-row"><div class="bd-word">essential</div><div class="bd-example"><div class="bd-example-sentence">Oxygen is essential to combustion.</div><div class="bd-example-arrow">combustion &rarr; oxygen</div></div></div>
+        <div class="bd-row"><div class="bd-word">necessary</div><div class="bd-example"><div class="bd-example-sentence">A quorum is necessary for a vote.</div><div class="bd-example-arrow">vote &rarr; quorum</div></div></div>
+        <div class="bd-row"><div class="bd-word">depends on</div><div class="bd-example"><div class="bd-example-sentence">The picnic depends on good weather.</div><div class="bd-example-arrow">picnic &rarr; good weather</div></div></div>
+        <div class="bd-row"><div class="bd-word">then</div><div class="bd-example"><div class="bd-example-sentence">If the bill passes, then it becomes law.</div><div class="bd-example-arrow">bill passes &rarr; becomes law</div></div></div>
+        <div class="bd-row"><div class="bd-word">implies</div><div class="bd-example"><div class="bd-example-sentence">An even number implies a factor of 2.</div><div class="bd-example-arrow">even &rarr; factor of 2</div></div></div>
+        <div class="bd-row"><div class="bd-word">signals</div><div class="bd-example"><div class="bd-example-sentence">A siren signals an emergency.</div><div class="bd-example-arrow">siren &rarr; emergency</div></div></div>
+        <div class="bd-row"><div class="bd-word">means</div><div class="bd-example"><div class="bd-example-sentence">A red tag means it is sold.</div><div class="bd-example-arrow">red tag &rarr; sold</div></div></div>
+        <div class="bd-row"><div class="bd-word">will</div><div class="bd-example"><div class="bd-example-sentence">If the deadline passes, the form will lock.</div><div class="bd-example-arrow">deadline passes &rarr; form locks</div></div></div>
+      </div>
+    </details>
+    <div class="bd-practice">
+      <div class="bd-practice-prompt"><span class="bd-practice-cue">Diagram this.</span> You get the scholarship only if you score a 160.</div>
+      <div class="bd-rule"></div>
+      <details>
+        <summary><span class="bd-disc"><svg class="bd-chev" width="9" height="11" viewBox="0 0 9 11" fill="none" aria-hidden="true"><path d="M1.5 1L7 5.5 1.5 10" stroke="var(--classroom-link-text)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Check it</span></span></summary>
+        <div class="bd-panel" style="display:flex; flex-direction:column; gap:10px;">
+          <div class="bd-answer">scholarship &rarr; 160</div>
+          <div class="bd-answer-why">One word separates this from the sentence above, and the arrow reverses. Slow down every time you see only and ask what it is marking as required.</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <!-- 3 -->
+  <div class="bd-section" id="bd-3">
+    <div class="bd-sechead"><span class="bd-secnum">03</span><span class="bd-secline"></span></div>
+    <h2 class="bd-h2">Words that negate the left</h2>
+    <p class="bd-why">All four are "if not" in disguise. The attached idea is what is required, so it goes right, and the other side picks up a NOT.</p>
+    <p class="bd-extra">If you would rather not negate anything, swap the word for "if not" and put that on the left instead. Both routes give the same rule, one as the flip of the other.</p>
+    <div class="bd-triad">
+      <div class="bd-panelcard"><div class="bd-panellabel">It shows up like this</div><div class="bd-shapes"><div class="bd-shape">A unless B.</div><div class="bd-shape">No A without B.</div><div class="bd-shape">Not A until B.</div></div></div>
+      <div class="bd-panelcard"><div class="bd-panellabel">Ask yourself</div><div class="bd-paneltext">Read the word as "if not", then put that on the left and negate it.</div></div>
+      <div class="bd-panelcard is-tinted"><div class="bd-panellabel">Which gives you</div><div class="bd-gives">left unless right.
+Or: if not right, then not left.</div></div>
+    </div>
+    <div class="bd-worked">
+      <div class="bd-worked-sentence">You cannot enter unless you have a pass.</div>
+      <svg width="34" height="16" viewBox="0 0 34 16" fill="none" aria-hidden="true" style="flex:none;"><path d="M1 8h29M25 3l6 5-6 5" stroke="var(--classroom-link)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <div class="bd-worked-arrow">enter &rarr; pass</div>
+    </div>
+    <details style="margin-bottom:24px;">
+      <summary><span class="bd-disc"><svg class="bd-chev" width="9" height="11" viewBox="0 0 9 11" fill="none" aria-hidden="true"><path d="M1.5 1L7 5.5 1.5 10" stroke="var(--classroom-link-text)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>All four, each in a sentence</span></span></summary>
+      <div class="bd-panel">
+        <div class="bd-row"><div class="bd-word">unless</div><div class="bd-example"><div class="bd-example-sentence">You cannot enter unless you have a pass.</div><div class="bd-example-arrow">enter &rarr; pass</div></div></div>
+        <div class="bd-row"><div class="bd-word">until</div><div class="bd-example"><div class="bd-example-sentence">You cannot leave until the bell rings.</div><div class="bd-example-arrow">leave &rarr; bell rang</div></div></div>
+        <div class="bd-row"><div class="bd-word">without</div><div class="bd-example"><div class="bd-example-sentence">No one enters without a badge.</div><div class="bd-example-arrow">enter &rarr; badge</div></div></div>
+        <div class="bd-row"><div class="bd-word">except</div><div class="bd-example"><div class="bd-example-sentence">Everyone may enter except minors.</div><div class="bd-example-arrow">enter &rarr; NOT a minor</div></div></div>
+      </div>
+    </details>
+    <div class="bd-practice">
+      <div class="bd-practice-prompt"><span class="bd-practice-cue">Diagram this.</span> You cannot submit the form without a signature.</div>
+      <div class="bd-rule"></div>
+      <details>
+        <summary><span class="bd-disc"><svg class="bd-chev" width="9" height="11" viewBox="0 0 9 11" fill="none" aria-hidden="true"><path d="M1.5 1L7 5.5 1.5 10" stroke="var(--classroom-link-text)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Check it</span></span></summary>
+        <div class="bd-panel" style="display:flex; flex-direction:column; gap:10px;">
+          <div class="bd-answer">submit &rarr; signature</div>
+          <div class="bd-answer-why">Which is the same rule as NOT signature &rarr; NOT submit. The two routes always give you a rule and its flip, so if yours came out as the other one, you are still right.</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <!-- 4 -->
+  <div class="bd-section" id="bd-4">
+    <div class="bd-sechead"><span class="bd-secnum">04</span><span class="bd-secline"></span></div>
+    <h2 class="bd-h2">Words that negate the right</h2>
+    <p class="bd-why">The attached idea is the trigger and goes left, but the negative belongs to the second half of the sentence.</p>
+    <p class="bd-extra">Rewrite it as a positive before you draw and it stops being confusing: "no A are B" is "all A are not B."</p>
+    <div class="bd-triad">
+      <div class="bd-panelcard"><div class="bd-panellabel">It shows up like this</div><div class="bd-shapes"><div class="bd-shape">No A is B.</div><div class="bd-shape">None of the A are B.</div><div class="bd-shape">A is never B.</div><div class="bd-shape">A cannot be B.</div></div></div>
+      <div class="bd-panelcard"><div class="bd-panellabel">Ask yourself</div><div class="bd-paneltext">Rewrite it as a positive first, then draw what you rewrote.</div></div>
+      <div class="bd-panelcard is-tinted"><div class="bd-panellabel">Which gives you</div><div class="bd-gives">No left is right.
+Which is left &rarr; NOT right.</div></div>
+    </div>
+    <div class="bd-worked">
+      <div class="bd-worked-sentence">No freshman may apply.</div>
+      <svg width="34" height="16" viewBox="0 0 34 16" fill="none" aria-hidden="true" style="flex:none;"><path d="M1 8h29M25 3l6 5-6 5" stroke="var(--classroom-link)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <div class="bd-worked-arrow">freshman &rarr; NOT apply</div>
+    </div>
+    <details style="margin-bottom:24px;">
+      <summary><span class="bd-disc"><svg class="bd-chev" width="9" height="11" viewBox="0 0 9 11" fill="none" aria-hidden="true"><path d="M1.5 1L7 5.5 1.5 10" stroke="var(--classroom-link-text)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>All five, each in a sentence</span></span></summary>
+      <div class="bd-panel">
+        <div class="bd-row"><div class="bd-word">no</div><div class="bd-example"><div class="bd-example-sentence">No freshman may apply.</div><div class="bd-example-arrow">freshman &rarr; NOT apply</div></div></div>
+        <div class="bd-row"><div class="bd-word">none</div><div class="bd-example"><div class="bd-example-sentence">None of the drafts were saved.</div><div class="bd-example-arrow">draft &rarr; NOT saved</div></div></div>
+        <div class="bd-row"><div class="bd-word">never</div><div class="bd-example"><div class="bd-example-sentence">A draft is never final.</div><div class="bd-example-arrow">draft &rarr; NOT final</div></div></div>
+        <div class="bd-row"><div class="bd-word">cannot</div><div class="bd-example"><div class="bd-example-sentence">A member cannot vote twice.</div><div class="bd-example-arrow">member &rarr; NOT vote twice</div></div></div>
+        <div class="bd-row"><div class="bd-word">not</div><div class="bd-example"><div class="bd-example-sentence">Paper applications are not accepted.</div><div class="bd-example-arrow">paper application &rarr; NOT accepted</div></div></div>
+      </div>
+    </details>
+    <div class="bd-practice">
+      <div class="bd-practice-prompt"><span class="bd-practice-cue">Diagram this.</span> No expired badge opens the door.</div>
+      <div class="bd-rule"></div>
+      <details>
+        <summary><span class="bd-disc"><svg class="bd-chev" width="9" height="11" viewBox="0 0 9 11" fill="none" aria-hidden="true"><path d="M1.5 1L7 5.5 1.5 10" stroke="var(--classroom-link-text)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Check it</span></span></summary>
+        <div class="bd-panel" style="display:flex; flex-direction:column; gap:10px;">
+          <div class="bd-answer">expired badge &rarr; NOT opens door</div>
+          <div class="bd-answer-why">The NOT sits on the right. Putting it on the left is the most common way this group goes wrong.</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <!-- 5 -->
+  <div class="bd-section" id="bd-5">
+    <div class="bd-sechead"><span class="bd-secnum">05</span><span class="bd-secline"></span></div>
+    <h2 class="bd-h2">Words that are on no list</h2>
+    <p class="bd-why">Some words have a home in the lists above. Others you will meet cold. Either way the same question settles it: what is guaranteed, and what is required.</p>
+    <p class="bd-extra">Whatever sets the rule off goes left. Whatever has to be there goes right. That works whether the word made a list or not.</p>
+    <div class="bd-triad">
+      <div class="bd-panelcard"><div class="bd-panellabel">It shows up like this</div><div class="bd-shapes"><div class="bd-shape">prerequisite &rarr; right</div><div class="bd-shape">depends on &rarr; right</div><div class="bd-shape">will &rarr; right</div><div class="bd-shape">the moment that &rarr; left</div></div></div>
+      <div class="bd-panelcard"><div class="bd-panellabel">Ask yourself</div><div class="bd-paneltext">What is guaranteed here, and what is required?</div></div>
+      <div class="bd-panelcard is-tinted"><div class="bd-panellabel">Which gives you</div><div class="bd-gives">The requirement goes right,
+even when it happens first.</div></div>
+    </div>
+    <div class="bd-worked">
+      <div class="bd-worked-sentence">Spotting the gap is a prerequisite to picking the assumption.</div>
+      <svg width="34" height="16" viewBox="0 0 34 16" fill="none" aria-hidden="true" style="flex:none;"><path d="M1 8h29M25 3l6 5-6 5" stroke="var(--classroom-link)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <div class="bd-worked-arrow">pick assumption &rarr; spot gap</div>
+    </div>
+    <div class="bd-practice">
+      <div class="bd-practice-prompt"><span class="bd-practice-cue">Diagram this.</span> Learning to walk is a prerequisite to running.</div>
+      <div class="bd-rule"></div>
+      <details>
+        <summary><span class="bd-disc"><svg class="bd-chev" width="9" height="11" viewBox="0 0 9 11" fill="none" aria-hidden="true"><path d="M1.5 1L7 5.5 1.5 10" stroke="var(--classroom-link-text)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Check it</span></span></summary>
+        <div class="bd-panel" style="display:flex; flex-direction:column; gap:10px;">
+          <div class="bd-answer">running &rarr; learned to walk</div>
+          <div class="bd-answer-why">Learning to walk is the requirement, so it goes on the right, even though it happens first.</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <!-- 6 -->
+  <div class="bd-section" id="bd-6">
+    <div class="bd-sechead"><span class="bd-secnum">06</span><span class="bd-secline"></span></div>
+    <h2 class="bd-h2">And, or, and the flip</h2>
+    <p class="bd-why">A rule and its flip are two sides of the same coin. The flip says: when the right side is not true, the left side cannot be true either. Flipping a rule is what the test is really checking.</p>
+    <p class="bd-extra">Three steps, and the third is where the points are.</p>
+    <div class="bd-figure">
+      <div class="bd-flip-row">
+        <span class="bd-flip-term">A and B &rarr; C</span>
+        <svg width="52" height="20" viewBox="0 0 52 20" fill="none" aria-hidden="true" style="flex:none;"><path d="M2 10h42M38 4l7 6-7 6" stroke="var(--classroom-link)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span class="bd-flip-term">NOT C &rarr; NOT A or NOT B</span>
+      </div>
+      <div class="bd-grid-3">
+        <div class="bd-step"><div class="bd-stepnum">01</div><div class="bd-steptitle">Swap</div><div class="bd-stepbody">What was on the right goes on the left.</div></div>
+        <div class="bd-step"><div class="bd-stepnum">02</div><div class="bd-steptitle">Negate</div><div class="bd-stepbody">Positive becomes negative, negative becomes positive.</div></div>
+        <div class="bd-step"><div class="bd-stepnum">03</div><div class="bd-steptitle">Switch the connector</div><div class="bd-stepbody">Every and becomes an or, every or becomes an and.</div></div>
+      </div>
+    </div>
+    <p class="bd-note">If C did not happen, at least one of A or B is missing, and you cannot say which. Writing <span class="bd-mono bd-ink">and</span> there claims both are missing, which is more than the rule ever gave you. Going the other way, <span class="bd-mono bd-ink">A &rarr; B or C</span> becomes <span class="bd-mono bd-ink">NOT B and NOT C &rarr; NOT A</span>.</p>
+  </div>
+
+  <!-- 7 -->
+  <div class="bd-section" id="bd-7">
+    <div class="bd-sechead"><span class="bd-secnum">07</span><span class="bd-secline"></span></div>
+    <h2 class="bd-h2">Both directions at once</h2>
+    <p class="bd-why" style="margin-bottom:30px;">Some sentences hand you the rule going both ways. Two words do it, and they do not work the same way.</p>
+    <div class="bd-grid-2" style="margin-bottom:24px;">
+      <div class="bd-panelcard">
+        <div class="bd-mono" style="font-size:14px; color:var(--classroom-link-text);">if and only if</div>
+        <div class="bd-paneltext">The <span class="bd-mono">if</span> puts it left and the <span class="bd-mono">only if</span> puts it right, so it is telling you to do both.</div>
+        <div class="bd-panellabel">Also then and only then, when and only when.</div>
+      </div>
+      <div class="bd-panelcard">
+        <div class="bd-mono" style="font-size:14px; color:var(--classroom-link-text);">otherwise</div>
+        <div class="bd-paneltext">It hands you a second rule covering the other case. Write both down, flip both, and the arrow runs both ways.</div>
+        <div class="bd-panellabel">Either both happen or neither does.</div>
+      </div>
+    </div>
+    <details>
+      <summary><span class="bd-disc"><svg class="bd-chev" width="9" height="11" viewBox="0 0 9 11" fill="none" aria-hidden="true"><path d="M1.5 1L7 5.5 1.5 10" stroke="var(--classroom-link-text)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Why otherwise runs both ways</span></span></summary>
+      <div class="bd-panel" style="display:flex; flex-direction:column; gap:14px;">
+        <p class="bd-note"><span class="bd-ink">Jeff takes a vacation if he wins the lottery. Otherwise, he does not.</span> That is two rules, not one.</p>
+        <div style="background:var(--classroom-trigger); border-radius:10px; padding:16px 18px; display:flex; flex-direction:column; gap:8px;">
+          <div class="bd-mono bd-ink" style="font-size:15px;">lottery &rarr; vacation</div>
+          <div class="bd-mono bd-ink" style="font-size:15px;">NOT lottery &rarr; NOT vacation</div>
+        </div>
+        <p class="bd-note">Flip both and they collapse into a double arrow. The trap: one rule plus its own flip is not this. <span class="bd-ink">The deposit clears, otherwise the seat is released</span> gives you only <span class="bd-mono bd-ink">NOT deposit &rarr; released</span>. Flipping that is the same rule said backwards, not a second direction. The sentence has to state both cases.</p>
+      </div>
+    </details>
+  </div>
+
+  <!-- 8 -->
+  <div class="bd-section" id="bd-8">
+    <div class="bd-sechead"><span class="bd-secnum">08</span><span class="bd-secline"></span></div>
+    <h2 class="bd-h2">Not conditionals at all</h2>
+    <p class="bd-why" style="margin-bottom:26px;">These sit next to <span class="bd-mono">no</span> and behave nothing like it. They count. They do not guarantee, so do not draw an arrow.</p>
+    <div style="margin-bottom:24px;">
+      <div class="bd-equiv"><div class="bd-mono bd-ink" style="font-size:15px;">Few A are B</div><div style="font-size:14px; color:var(--classroom-meta-text); text-align:center;">is</div><div class="bd-mono" style="font-size:15px; color:var(--classroom-link-text);">most A are not B</div></div>
+      <div class="bd-equiv" style="border-bottom:1px solid var(--classroom-line);"><div class="bd-mono bd-ink" style="font-size:15px;">Not all A are B</div><div style="font-size:14px; color:var(--classroom-meta-text); text-align:center;">is</div><div class="bd-mono" style="font-size:15px; color:var(--classroom-link-text);">some A are not B</div></div>
+    </div>
+    <p class="bd-note"><span class="bd-ink">Not all the essays were graded</span> tells you at least one was not graded. An arrow would say every essay behaves the same way, which is more than the sentence gave you. Flip these to the positive and leave them as statements.</p>
+  </div>
+
+  <!-- 9 -->
+  <div class="bd-section" id="bd-9">
+    <div class="bd-sechead"><span class="bd-secnum">09</span><span class="bd-secline"></span></div>
+    <h2 class="bd-h2">The two moves that are never allowed</h2>
+    <p class="bd-why" style="margin-bottom:26px;">Given <span class="bd-mono">A &rarr; B</span>, four things can happen and only two of them prove anything. When the trigger is missing the rule simply disappears. It has no power over you, so it tells you nothing.</p>
+    <div class="bd-grid-2" style="margin-bottom:26px;">
+      <div class="bd-panelcard">
+        <div style="display:flex; align-items:center; gap:9px;"><span class="bd-dot" style="background:var(--classroom-correct);"></span><span class="bd-mono bd-ink" style="font-size:14.5px;">A is true</span></div>
+        <div class="bd-stepbody">B has to be true.</div>
+      </div>
+      <div class="bd-panelcard">
+        <div style="display:flex; align-items:center; gap:9px;"><span class="bd-dot" style="background:var(--classroom-correct);"></span><span class="bd-mono bd-ink" style="font-size:14.5px;">B is false</span></div>
+        <div class="bd-stepbody">A cannot be true.</div>
+      </div>
+      <div class="bd-panelcard">
+        <div style="display:flex; align-items:center; gap:9px;"><span class="bd-dot" style="background:var(--classroom-wrong);"></span><span class="bd-mono bd-ink" style="font-size:14.5px;">A is false</span></div>
+        <div class="bd-stepbody">Nothing follows. Saying B is false is the illegal move.</div>
+      </div>
+      <div class="bd-panelcard">
+        <div style="display:flex; align-items:center; gap:9px;"><span class="bd-dot" style="background:var(--classroom-wrong);"></span><span class="bd-mono bd-ink" style="font-size:14.5px;">B is true</span></div>
+        <div class="bd-stepbody">Nothing follows. Saying A is true is reading the arrow backwards.</div>
+      </div>
+    </div>
+    <div class="bd-practice">
+      <div class="bd-practice-prompt"><span class="bd-practice-cue">Try it.</span> The rule is if the alarm sounds, the doors lock. You are told the doors are locked. What follows?</div>
+      <div class="bd-rule"></div>
+      <details>
+        <summary><span class="bd-disc"><svg class="bd-chev" width="9" height="11" viewBox="0 0 9 11" fill="none" aria-hidden="true"><path d="M1.5 1L7 5.5 1.5 10" stroke="var(--classroom-link-text)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Check it</span></span></summary>
+        <div class="bd-panel" style="display:flex; flex-direction:column; gap:10px;">
+          <div style="font-size:16.5px; font-weight:600; color:var(--classroom-ink);">Nothing follows.</div>
+          <div class="bd-answer-why">The doors could be locked for any number of reasons. You were handed the right side and asked to claim the left. When a flaw answer says the author confuses a necessary condition with a sufficient one, this is what it is describing.</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <!-- 10 -->
+  <div class="bd-section" id="bd-10">
+    <div class="bd-sechead"><span class="bd-secnum">10</span><span class="bd-secline"></span></div>
+    <h2 class="bd-h2">The two things you do with a rule</h2>
+    <p class="bd-why" style="margin-bottom:30px;">Everything above gets the arrow onto the page. From there the test only ever asks for two things. Chain it to another rule and you get a new rule. Trigger it with a fact and you get a new fact.</p>
+
+    <h3 style="font-size:19px; font-weight:600; letter-spacing:-.015em; margin-bottom:12px;">Chaining</h3>
+    <p class="bd-note" style="margin-bottom:18px;">Whenever you have more than one conditional, ask one question: do these connect? If the right side of one rule is the left side of another, they link, and the link is the inference.</p>
+    <div class="bd-panelcard" style="padding:26px; gap:16px; margin-bottom:18px;">
+      <div class="bd-mono bd-ink" style="font-size:20px; text-align:center;">A &rarr; B &rarr; C &rarr; D</div>
+      <div style="display:flex; align-items:center; gap:12px;">
+        <div class="bd-rule" style="flex:1;"></div>
+        <div style="font-size:13px; color:var(--classroom-meta-text);">flips whole</div>
+        <div class="bd-rule" style="flex:1;"></div>
+      </div>
+      <div class="bd-mono" style="font-size:20px; text-align:center; color:var(--classroom-link-text);">NOT D &rarr; NOT C &rarr; NOT B &rarr; NOT A</div>
+    </div>
+    <p class="bd-note" style="margin-bottom:30px;">Start at the far end and walk it backwards. The test usually wants the front joined to the back, so <span class="bd-mono bd-ink">A &rarr; D</span> is the headline answer. But every shorter run is an inference too: <span class="bd-mono bd-ink">A &rarr; C</span>, <span class="bd-mono bd-ink">B &rarr; D</span>, <span class="bd-mono bd-ink">NOT C &rarr; NOT A</span>.</p>
+
+    <h3 style="font-size:19px; font-weight:600; letter-spacing:-.015em; margin-bottom:12px;">Triggering</h3>
+    <p class="bd-note" style="margin-bottom:18px;">A rule sits there doing nothing until a fact sets it off. Hand it the left side and the right side has to follow. Hand it a missing piece of the right side and the rest has to carry the load.</p>
+    <div class="bd-panelcard" style="padding:24px 26px; gap:0; margin-bottom:26px;">
+      <div class="bd-trigrow" style="border-top:none;"><div class="bd-panellabel">rule</div><div class="bd-mono bd-ink" style="font-size:16px;">A &rarr; B or C</div></div>
+      <div class="bd-trigrow"><div class="bd-panellabel">fact</div><div class="bd-mono bd-ink" style="font-size:16px;">A</div></div>
+      <div class="bd-trigrow"><div class="bd-panellabel">fact</div><div class="bd-mono bd-ink" style="font-size:16px;">NOT C</div></div>
+      <div class="bd-trigrow"><div class="bd-panellabel">so</div><div class="bd-mono" style="font-size:16px; color:var(--classroom-link-text);">B</div></div>
+    </div>
+    <p class="bd-note">Which one is being asked for? Look at the shape of the answers. If they read <span class="bd-ink">if this, then that</span>, you are chaining and the answer is a rule. If they read as a flat statement, you are triggering and the answer is a fact.</p>
+  </div>
+
+  <!-- 11 -->
+  <div class="bd-section" id="bd-11">
+    <div class="bd-sechead"><span class="bd-secnum">11</span><span class="bd-secline"></span></div>
+    <h2 class="bd-h2">When to draw at all</h2>
+    <p class="bd-why" style="margin-bottom:26px;">Diagramming is setup, not the answer. Draw only when there is a reason to.</p>
+    <div style="margin-bottom:24px;">
+      <div class="bd-drawrow"><div class="bd-verdict" style="color:var(--classroom-correct);">DRAW</div><div class="bd-paneltext" style="font-size:16px; line-height:1.65;">Two or more conditionals that could link. Chain them and look for what connects the two ends.</div></div>
+      <div class="bd-drawrow"><div class="bd-verdict" style="color:var(--classroom-correct);">DRAW</div><div class="bd-paneltext" style="font-size:16px; line-height:1.65;">The conclusion is itself a conditional. The author is claiming one thing guarantees another.</div></div>
+      <div class="bd-drawrow" style="border-bottom:1px solid var(--classroom-line);"><div class="bd-verdict" style="color:var(--classroom-wrong);">DO NOT</div><div class="bd-paneltext" style="font-size:16px; line-height:1.65;">One conditional in an ordinary argument. Hear it as a requirement and keep reading.</div></div>
+    </div>
+    <p class="bd-note">The missing link: an argument gives you <span class="bd-mono bd-ink">A &rarr; B</span> and concludes <span class="bd-mono bd-ink">A &rarr; C</span>. There is a hole in the chain, and the piece that fills it is <span class="bd-mono bd-ink">B &rarr; C</span>, or its flip, and that piece is the answer.</p>
+  </div>
+
+  <!-- TEST YOURSELF -->
+  <div class="bd-quiz">
+    <h2 style="font-size:24px; font-weight:600; letter-spacing:-.02em; margin-bottom:10px;">Test yourself</h2>
+    <p style="font-size:15.5px; line-height:1.65; color:var(--classroom-meta-text); max-width:52ch; margin-bottom:22px;">Say the answer out loud before you open each one, and you will know which part still needs work.</p>
+    <div class="bd-quizlist">
+      <details class="bd-quizcard">
+        <summary><div class="bd-quizq"><svg class="bd-chev" width="9" height="11" viewBox="0 0 9 11" fill="none" aria-hidden="true" style="flex:none;"><path d="M1.5 1L7 5.5 1.5 10" stroke="var(--classroom-link-text)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>unless</span></div></summary>
+        <div class="bd-panel bd-quiza">Negate left. The attached idea goes right, the other side takes a NOT. Or read it as if not and put that on the left.</div>
+      </details>
+      <details class="bd-quizcard">
+        <summary><div class="bd-quizq"><svg class="bd-chev" width="9" height="11" viewBox="0 0 9 11" fill="none" aria-hidden="true" style="flex:none;"><path d="M1.5 1L7 5.5 1.5 10" stroke="var(--classroom-link-text)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>only if</span></div></summary>
+        <div class="bd-panel bd-quiza">Right. Whatever follows it goes on the right, exactly as written.</div>
+      </details>
+      <details class="bd-quizcard">
+        <summary><div class="bd-quizq"><svg class="bd-chev" width="9" height="11" viewBox="0 0 9 11" fill="none" aria-hidden="true" style="flex:none;"><path d="M1.5 1L7 5.5 1.5 10" stroke="var(--classroom-link-text)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>The three steps of the flip</span></div></summary>
+        <div class="bd-panel bd-quiza">Swap the sides, negate both, and switch every and to an or.</div>
+      </details>
+      <details class="bd-quizcard">
+        <summary><div class="bd-quizq"><svg class="bd-chev" width="9" height="11" viewBox="0 0 9 11" fill="none" aria-hidden="true" style="flex:none;"><path d="M1.5 1L7 5.5 1.5 10" stroke="var(--classroom-link-text)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>You are given the right side of a rule. What follows?</span></div></summary>
+        <div class="bd-panel bd-quiza">Nothing. Claiming the left from the right is reading the arrow backwards, and it is the most commonly tested flaw on the test.</div>
+      </details>
+      <details class="bd-quizcard">
+        <summary><div class="bd-quizq"><svg class="bd-chev" width="9" height="11" viewBox="0 0 9 11" fill="none" aria-hidden="true" style="flex:none;"><path d="M1.5 1L7 5.5 1.5 10" stroke="var(--classroom-link-text)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>few A are B</span></div></summary>
+        <div class="bd-panel bd-quiza">Not a conditional. It means most A are not B. It counts, it does not guarantee, so no arrow.</div>
+      </details>
+      <details class="bd-quizcard">
+        <summary><div class="bd-quizq"><svg class="bd-chev" width="9" height="11" viewBox="0 0 9 11" fill="none" aria-hidden="true" style="flex:none;"><path d="M1.5 1L7 5.5 1.5 10" stroke="var(--classroom-link-text)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>A &rarr; B, B &rarr; C, C &rarr; D. What is the flip of the whole chain?</span></div></summary>
+        <div class="bd-panel bd-quiza">NOT D &rarr; NOT C &rarr; NOT B &rarr; NOT A. Start at the far end and walk it backwards. The headline inference is A &rarr; D, but every shorter run counts too.</div>
+      </details>
+      <details class="bd-quizcard">
+        <summary><div class="bd-quizq"><svg class="bd-chev" width="9" height="11" viewBox="0 0 9 11" fill="none" aria-hidden="true" style="flex:none;"><path d="M1.5 1L7 5.5 1.5 10" stroke="var(--classroom-link-text)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Rule plus rule, and rule plus fact. What does each give you?</span></div></summary>
+        <div class="bd-panel bd-quiza">Rule plus rule chains into a new rule. Rule plus fact triggers a new fact. The shape of the answer choices tells you which one is being asked for.</div>
+      </details>
+      <details class="bd-quizcard">
+        <summary><div class="bd-quizq"><svg class="bd-chev" width="9" height="11" viewBox="0 0 9 11" fill="none" aria-hidden="true" style="flex:none;"><path d="M1.5 1L7 5.5 1.5 10" stroke="var(--classroom-link-text)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>When is it worth drawing?</span></div></summary>
+        <div class="bd-panel bd-quiza">When two or more rules could link, or when the conclusion is itself a conditional. A single conditional in an ordinary argument is something you hear, not something you write down.</div>
+      </details>
+    </div>
+  </div>
+
+</div>
+</article><div class="preview-footer">End of note · This is a local rendering preview.</div></section><section class="preview-article" id="note-1" role="tabpanel" aria-labelledby="tab-1" hidden><div class="preview-heading"><small>NOTE · AUGUST 24, 2026</small><h1>Conditional Logic, Cheat Sheet</h1></div><article class="classroom-prose"><!-- LSAT U assigned note: Conditional Logic, Cheat Sheet (v2, designed).
+     Self-contained: one <style> block, every selector scoped under .classroom-root.
+     Palette is the classroom's own tokens only, so dark mode inverts for free.
+     Type is Outfit (interface) + Roboto Mono 500 (notation only). No other face is loaded.
+     Disclosure is <details>/<summary>. No <script> anywhere. Figures are inline SVG. -->
+<style>
+.classroom-root .cs { --cs-shadow: 0 1px 2px rgba(0,0,0,.04), 0 12px 30px -26px rgba(0,0,0,.55);
+  --cs-shadow-lg: 0 1px 2px rgba(0,0,0,.03), 0 20px 44px -32px rgba(0,0,0,.7);
+  color: var(--classroom-ink-body); }
+.classroom-root .cs h1, .classroom-root .cs h2, .classroom-root .cs h3 { color: var(--classroom-ink); margin: 0; }
+.classroom-root .cs p { margin: 0; }
+.classroom-root .cs-title { font-size: clamp(34px, 6vw, 46px); font-weight: 600; letter-spacing: -.032em; line-height: 1.02; margin-bottom: 16px; }
+.classroom-root .cs-deck { font-size: 17.5px; line-height: 1.65; max-width: 40ch; margin-bottom: 40px; text-wrap: pretty; }
+.classroom-root .cs-mono { font-family: "Roboto Mono", ui-monospace, monospace; font-weight: 500; }
+
+/* the specimen */
+.classroom-root .cs-specimen { background: var(--classroom-trigger); border-radius: 14px; padding: 38px 30px 28px; margin-bottom: 44px; box-shadow: var(--cs-shadow-lg); }
+.classroom-root .cs-specimen-row { display: flex; align-items: center; gap: 18px; }
+.classroom-root .cs-half { flex: 1; display: flex; flex-direction: column; gap: 8px; align-items: center; text-align: center; }
+.classroom-root .cs-half-word { font-size: clamp(20px, 4.4vw, 32px); letter-spacing: -.01em; color: var(--classroom-ink); }
+.classroom-root .cs-half-gloss { font-size: 13px; color: var(--classroom-meta-text); }
+.classroom-root .cs-rule { height: 1px; background: var(--classroom-line); }
+.classroom-root .cs-specimen-note { font-size: 15px; line-height: 1.6; color: var(--classroom-meta-text); text-align: center; margin-top: 18px; }
+
+/* section head */
+.classroom-root .cs-eyebrowless { font-size: 15px; font-weight: 600; letter-spacing: .02em; margin-bottom: 6px; }
+.classroom-root .cs-lede { font-size: 15.5px; line-height: 1.65; color: var(--classroom-meta-text); max-width: 52ch; margin-bottom: 22px; }
+
+/* four moves */
+.classroom-root .cs-grid-2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.classroom-root .cs-card { background: var(--classroom-panel); border-radius: 12px; padding: 20px; display: flex; flex-direction: column; gap: 12px; box-shadow: var(--cs-shadow); }
+.classroom-root .cs-card-head { display: flex; align-items: baseline; gap: 9px; }
+.classroom-root .cs-num { font-family: "Roboto Mono", ui-monospace, monospace; font-size: 11px; color: var(--classroom-link-text); }
+.classroom-root .cs-card-title { font-size: 16px; font-weight: 600; letter-spacing: -.01em; color: var(--classroom-ink); }
+.classroom-root .cs-notation { font-family: "Roboto Mono", ui-monospace, monospace; font-weight: 500; font-size: 14.5px; color: var(--classroom-ink); background: var(--classroom-trigger); border-radius: 7px; padding: 11px 13px; text-align: center; }
+.classroom-root .cs-card-gloss { font-size: 14px; line-height: 1.55; color: var(--classroom-meta-text); }
+
+/* jump */
+.classroom-root .cs-chips { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 52px; }
+.classroom-root .cs-chip { display: inline-block; padding: 8px 14px; border-radius: 999px; font-size: 13.5px; color: var(--classroom-meta-text); background: var(--classroom-panel); box-shadow: var(--cs-shadow); text-decoration: none; transition: color var(--classroom-transition) ease, transform var(--classroom-transition) ease; }
+.classroom-root .cs-chip:hover { color: var(--classroom-link-text); transform: translateY(-1px); }
+
+/* family */
+.classroom-root .cs-family { padding-bottom: 44px; margin-bottom: 44px; border-bottom: 1px solid var(--classroom-line); scroll-margin-top: 24px; }
+.classroom-root .cs-tagline { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+.classroom-root .cs-tag { font-family: "Roboto Mono", ui-monospace, monospace; font-size: 11.5px; letter-spacing: .06em; color: var(--classroom-link-text); background: color-mix(in srgb, var(--classroom-link) 12%, transparent); border-radius: 5px; padding: 4px 9px; }
+.classroom-root .cs-count { font-size: 13px; color: var(--classroom-meta-text); }
+.classroom-root .cs-h2 { font-size: clamp(22px, 4vw, 27px); font-weight: 600; letter-spacing: -.022em; line-height: 1.15; margin-bottom: 12px; }
+.classroom-root .cs-why { font-size: 16.5px; line-height: 1.72; max-width: 56ch; margin-bottom: 8px; text-wrap: pretty; }
+.classroom-root .cs-ask { font-size: 15.5px; line-height: 1.65; color: var(--classroom-meta-text); max-width: 56ch; margin-bottom: 22px; }
+.classroom-root .cs-worked { background: var(--classroom-panel); border-radius: 12px; padding: 22px 24px; display: flex; flex-direction: column; gap: 14px; margin-bottom: 18px; box-shadow: var(--cs-shadow); }
+.classroom-root .cs-worked-sentence { font-size: 16px; line-height: 1.5; color: var(--classroom-ink); }
+.classroom-root .cs-worked-arrow { display: flex; align-items: center; gap: 12px; font-family: "Roboto Mono", ui-monospace, monospace; font-weight: 500; font-size: 18px; color: var(--classroom-ink); }
+
+/* disclosure */
+.classroom-root .cs details > summary { list-style: none; cursor: pointer; }
+.classroom-root .cs details > summary::-webkit-details-marker { display: none; }
+.classroom-root .cs-disc { display: inline-flex; align-items: center; gap: 9px; padding: 9px 15px; border-radius: 999px; font-family: "Roboto Mono", ui-monospace, monospace; font-size: 11.5px; letter-spacing: .04em; color: var(--classroom-meta-text); background: var(--classroom-panel); box-shadow: var(--cs-shadow); transition: color var(--classroom-transition) ease, transform var(--classroom-transition) ease; }
+.classroom-root .cs-disc:hover { color: var(--classroom-ink); transform: translateY(-1px); }
+.classroom-root .cs details[open] .cs-chev { transform: rotate(90deg); }
+.classroom-root .cs-chev { transition: transform var(--classroom-transition) ease; }
+.classroom-root .cs-panel { animation: cs-slide 320ms cubic-bezier(.22,.8,.3,1) both; padding-top: 14px; }
+@keyframes cs-slide { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .classroom-root .cs-panel { animation: none; } .classroom-root .cs-chip:hover, .classroom-root .cs-disc:hover { transform: none; } }
+
+/* word rows */
+.classroom-root .cs-row { display: grid; grid-template-columns: 140px minmax(0, 1fr); gap: 18px; padding: 13px 12px; border-radius: 8px; align-items: baseline; transition: background var(--classroom-transition) ease; }
+.classroom-root .cs-row:hover { background: var(--classroom-hover); }
+.classroom-root .cs-word { font-family: "Roboto Mono", ui-monospace, monospace; font-weight: 500; font-size: 14px; color: var(--classroom-link-text); }
+.classroom-root .cs-example { display: flex; flex-direction: column; gap: 6px; }
+.classroom-root .cs-example-sentence { font-size: 15px; line-height: 1.5; color: var(--classroom-ink); }
+.classroom-root .cs-example-arrow { font-family: "Roboto Mono", ui-monospace, monospace; font-size: 13.5px; color: var(--classroom-meta-text); }
+
+/* flip + use */
+.classroom-root .cs-figure { background: var(--classroom-trigger); border-radius: 14px; padding: 32px 28px; display: flex; flex-direction: column; gap: 26px; box-shadow: var(--cs-shadow-lg); }
+.classroom-root .cs-flip-row { display: flex; align-items: center; justify-content: center; gap: 22px; flex-wrap: wrap; }
+.classroom-root .cs-flip-term { font-family: "Roboto Mono", ui-monospace, monospace; font-weight: 500; font-size: clamp(17px, 3.4vw, 24px); color: var(--classroom-ink); }
+.classroom-root .cs-grid-3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.classroom-root .cs-step { background: var(--classroom-panel); border-radius: 10px; padding: 15px 16px; display: flex; flex-direction: column; gap: 6px; }
+.classroom-root .cs-step-title { font-size: 15px; font-weight: 600; color: var(--classroom-ink); }
+.classroom-root .cs-step-body { font-size: 14px; line-height: 1.5; color: var(--classroom-meta-text); }
+.classroom-root .cs-caption { font-size: 15px; line-height: 1.65; color: var(--classroom-meta-text); text-align: center; max-width: 60ch; margin: 0 auto; }
+
+/* five steps */
+.classroom-root .cs-step-row { display: grid; grid-template-columns: 34px minmax(0, 1fr); gap: 14px; padding: 16px 0; border-top: 1px solid var(--classroom-line); align-items: baseline; }
+.classroom-root .cs-step-text { font-size: 16px; line-height: 1.6; color: var(--classroom-ink); }
+
+/* next */
+.classroom-root .cs-next { display: flex; align-items: center; gap: 14px; margin-top: 44px; padding: 20px 24px; border-radius: 12px; background: var(--classroom-trigger); box-shadow: var(--cs-shadow); text-decoration: none; }
+.classroom-root .cs-next-title { font-size: 17px; font-weight: 600; color: var(--classroom-ink); letter-spacing: -.01em; }
+.classroom-root .cs-next-sub { font-size: 14.5px; color: var(--classroom-meta-text); margin-top: 4px; }
+
+@media (max-width: 620px) {
+  .classroom-root .cs-grid-2, .classroom-root .cs-grid-3 { grid-template-columns: minmax(0, 1fr); }
+  .classroom-root .cs-row { grid-template-columns: minmax(0, 1fr); gap: 6px; }
+  .classroom-root .cs-specimen { padding: 28px 20px 22px; }
+  .classroom-root .cs-specimen-row { flex-direction: column; gap: 14px; }
+  .classroom-root .cs-specimen-row svg { transform: rotate(90deg); }
+}
+</style>
+
+<div class="cs">
+
+  <h1 class="cs-title">Conditional Logic</h1>
+  <p class="cs-deck">Every conditional is one sentence with a trigger and a requirement. One word tells you which is which.</p>
+
+  <div class="cs-specimen">
+    <div class="cs-specimen-row">
+      <div class="cs-half">
+        <div class="cs-mono cs-half-word">trigger</div>
+        <div class="cs-half-gloss">what sets the rule off</div>
+      </div>
+      <svg width="86" height="26" viewBox="0 0 86 26" fill="none" aria-hidden="true" style="flex:none;">
+        <path d="M2 13h74" stroke="var(--classroom-link)" stroke-width="2.4" stroke-linecap="round"/>
+        <path d="M68 5l9 8-9 8" stroke="var(--classroom-link)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <div class="cs-half">
+        <div class="cs-mono cs-half-word">requirement</div>
+        <div class="cs-half-gloss">what has to be there</div>
+      </div>
+    </div>
+    <div class="cs-rule" style="margin-top:26px;"></div>
+    <p class="cs-specimen-note">Read every rule as the left requires the right, and the ones that link get easy to spot.</p>
+  </div>
+
+  <h2 class="cs-eyebrowless">There are only four moves</h2>
+  <p class="cs-lede">Every word on this page does one of them. Find the word, do what it says.</p>
+
+  <div class="cs-grid-2" style="margin-bottom:44px;">
+    <div class="cs-card">
+      <div class="cs-card-head"><span class="cs-num">01</span><span class="cs-card-title">Left</span></div>
+      <div class="cs-notation">A &rarr; B</div>
+      <div class="cs-card-gloss">The word's idea is the trigger. It goes on the left, exactly as written.</div>
+    </div>
+    <div class="cs-card">
+      <div class="cs-card-head"><span class="cs-num">02</span><span class="cs-card-title">Right</span></div>
+      <div class="cs-notation">B &rarr; A</div>
+      <div class="cs-card-gloss">The word's idea is what is required. It goes on the right, exactly as written.</div>
+    </div>
+    <div class="cs-card">
+      <div class="cs-card-head"><span class="cs-num">03</span><span class="cs-card-title">Negate left</span></div>
+      <div class="cs-notation">B &rarr; A, and a NOT</div>
+      <div class="cs-card-gloss">The word's idea goes right, and the other side picks up a NOT.</div>
+    </div>
+    <div class="cs-card">
+      <div class="cs-card-head"><span class="cs-num">04</span><span class="cs-card-title">Negate right</span></div>
+      <div class="cs-notation">A &rarr; NOT B</div>
+      <div class="cs-card-gloss">The word's idea goes left, and the second half flips.</div>
+    </div>
+  </div>
+
+  <h2 class="cs-eyebrowless">Jump to what you need</h2>
+  <p class="cs-lede">Eleven parts. Go straight to the one you are stuck on.</p>
+  <div class="cs-chips">
+    <a class="cs-chip" href="#cs-left">Left</a>
+    <a class="cs-chip" href="#cs-right">Right</a>
+    <a class="cs-chip" href="#cs-negleft">Negate left</a>
+    <a class="cs-chip" href="#cs-negright">Negate right</a>
+    <a class="cs-chip" href="#cs-nolist">No list</a>
+    <a class="cs-chip" href="#cs-flip">The flip</a>
+    <a class="cs-chip" href="#cs-use">Chain and trigger</a>
+  </div>
+
+  <!-- LEFT -->
+  <div class="cs-family" id="cs-left">
+    <div class="cs-tagline"><span class="cs-tag">LEFT</span><span class="cs-count">19 words</span></div>
+    <h2 class="cs-h2">Words that put it on the left</h2>
+    <p class="cs-why">These are rules, universals and guarantees. All three say the same thing: when this, then that.</p>
+    <p class="cs-ask">Ask "if what?" or "every who or what?" Whatever answers it goes on the left, exactly as written, and nothing gets negated.</p>
+    <div class="cs-worked">
+      <div class="cs-worked-sentence">If it rains, practice is cancelled.</div>
+      <div class="cs-worked-arrow">
+        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true" style="flex:none;"><path d="M7.5 1.5v12M3 9l4.5 4.5L12 9" stroke="var(--classroom-link)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span>rain &rarr; practice cancelled</span>
+      </div>
+    </div>
+    <details>
+      <summary><span class="cs-disc"><svg class="cs-chev" width="9" height="11" viewBox="0 0 9 11" fill="none" aria-hidden="true"><path d="M1.5 1L7 5.5 1.5 10" stroke="var(--classroom-link-text)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>The 19 words, each in a sentence</span></span></summary>
+      <div class="cs-panel">
+        <div class="cs-row"><div class="cs-word">if</div><div class="cs-example"><div class="cs-example-sentence">If it rains, practice is cancelled.</div><div class="cs-example-arrow">rain &rarr; practice cancelled</div></div></div>
+        <div class="cs-row"><div class="cs-word">when</div><div class="cs-example"><div class="cs-example-sentence">When the alarm sounds, the doors lock.</div><div class="cs-example-arrow">alarm sounds &rarr; doors lock</div></div></div>
+        <div class="cs-row"><div class="cs-word">whenever</div><div class="cs-example"><div class="cs-example-sentence">Whenever she drills, she reviews it after.</div><div class="cs-example-arrow">drills &rarr; reviews after</div></div></div>
+        <div class="cs-row"><div class="cs-word">wherever</div><div class="cs-example"><div class="cs-example-sentence">Wherever the trail floods, it closes.</div><div class="cs-example-arrow">trail floods &rarr; trail closes</div></div></div>
+        <div class="cs-row"><div class="cs-word">anytime</div><div class="cs-example"><div class="cs-example-sentence">Anytime the server restarts, you sign in again.</div><div class="cs-example-arrow">server restarts &rarr; sign in again</div></div></div>
+        <div class="cs-row"><div class="cs-word">provided that</div><div class="cs-example"><div class="cs-example-sentence">You may retake it provided that you wait 30 days.</div><div class="cs-example-arrow">waited 30 days &rarr; may retake</div></div></div>
+        <div class="cs-row"><div class="cs-word">in the event that</div><div class="cs-example"><div class="cs-example-sentence">In the event that the flight is cancelled, you get a refund.</div><div class="cs-example-arrow">flight cancelled &rarr; refund</div></div></div>
+        <div class="cs-row"><div class="cs-word">all</div><div class="cs-example"><div class="cs-example-sentence">All members pay dues.</div><div class="cs-example-arrow">member &rarr; pays dues</div></div></div>
+        <div class="cs-row"><div class="cs-word">any</div><div class="cs-example"><div class="cs-example-sentence">Any late paper loses points.</div><div class="cs-example-arrow">late paper &rarr; loses points</div></div></div>
+        <div class="cs-row"><div class="cs-word">every</div><div class="cs-example"><div class="cs-example-sentence">Every witness was interviewed.</div><div class="cs-example-arrow">witness &rarr; interviewed</div></div></div>
+        <div class="cs-row"><div class="cs-word">each</div><div class="cs-example"><div class="cs-example-sentence">Each application needs a signature.</div><div class="cs-example-arrow">application &rarr; needs signature</div></div></div>
+        <div class="cs-row"><div class="cs-word">everyone</div><div class="cs-example"><div class="cs-example-sentence">Everyone who enters signs in.</div><div class="cs-example-arrow">enters &rarr; signs in</div></div></div>
+        <div class="cs-row"><div class="cs-word">everything</div><div class="cs-example"><div class="cs-example-sentence">Everything on the shelf is discounted.</div><div class="cs-example-arrow">on the shelf &rarr; discounted</div></div></div>
+        <div class="cs-row"><div class="cs-word">leads to</div><div class="cs-example"><div class="cs-example-sentence">A tie in the vote leads to a runoff.</div><div class="cs-example-arrow">tie &rarr; runoff</div></div></div>
+        <div class="cs-row"><div class="cs-word">produces</div><div class="cs-example"><div class="cs-example-sentence">Heating the rail produces expansion.</div><div class="cs-example-arrow">heat the rail &rarr; expansion</div></div></div>
+        <div class="cs-row"><div class="cs-word">results in</div><div class="cs-example"><div class="cs-example-sentence">Missing the deadline results in disqualification.</div><div class="cs-example-arrow">miss deadline &rarr; disqualified</div></div></div>
+        <div class="cs-row"><div class="cs-word">guarantees</div><div class="cs-example"><div class="cs-example-sentence">A winning ticket guarantees the prize.</div><div class="cs-example-arrow">winning ticket &rarr; prize</div></div></div>
+        <div class="cs-row"><div class="cs-word">ensures</div><div class="cs-example"><div class="cs-example-sentence">A signed receipt ensures the delivery was logged.</div><div class="cs-example-arrow">signed receipt &rarr; delivery logged</div></div></div>
+        <div class="cs-row"><div class="cs-word">always</div><div class="cs-example"><div class="cs-example-sentence">A missed payment always adds a late fee.</div><div class="cs-example-arrow">missed payment &rarr; late fee</div></div></div>
+      </div>
+    </details>
+  </div>
+
+  <!-- RIGHT -->
+  <div class="cs-family" id="cs-right">
+    <div class="cs-tagline"><span class="cs-tag">RIGHT</span><span class="cs-count">16 words</span></div>
+    <h2 class="cs-h2">Words that put it on the right</h2>
+    <p class="cs-why">These are requirements and implications. The word names what has to be there, so that idea goes on the right, exactly as written.</p>
+    <p class="cs-ask">Ask "what is this word naming as required?" Same sentence as the one above, one word different, and the arrow points the other way.</p>
+    <div class="cs-worked">
+      <div class="cs-worked-sentence">You pass only if you attend.</div>
+      <div class="cs-worked-arrow">
+        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true" style="flex:none;"><path d="M7.5 1.5v12M3 9l4.5 4.5L12 9" stroke="var(--classroom-link)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span>pass &rarr; attend</span>
+      </div>
+    </div>
+    <details>
+      <summary><span class="cs-disc"><svg class="cs-chev" width="9" height="11" viewBox="0 0 9 11" fill="none" aria-hidden="true"><path d="M1.5 1L7 5.5 1.5 10" stroke="var(--classroom-link-text)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>The 16 words, each in a sentence</span></span></summary>
+      <div class="cs-panel">
+        <div class="cs-row"><div class="cs-word">only</div><div class="cs-example"><div class="cs-example-sentence">Only members may vote.</div><div class="cs-example-arrow">vote &rarr; member</div></div></div>
+        <div class="cs-row"><div class="cs-word">only if</div><div class="cs-example"><div class="cs-example-sentence">You pass only if you attend.</div><div class="cs-example-arrow">pass &rarr; attend</div></div></div>
+        <div class="cs-row"><div class="cs-word">only when</div><div class="cs-example"><div class="cs-example-sentence">The gate opens only when the light is green.</div><div class="cs-example-arrow">gate opens &rarr; light green</div></div></div>
+        <div class="cs-row"><div class="cs-word">requires</div><div class="cs-example"><div class="cs-example-sentence">Admission requires a transcript.</div><div class="cs-example-arrow">admission &rarr; transcript</div></div></div>
+        <div class="cs-row"><div class="cs-word">required</div><div class="cs-example"><div class="cs-example-sentence">A permit is required to build.</div><div class="cs-example-arrow">build &rarr; permit</div></div></div>
+        <div class="cs-row"><div class="cs-word">prerequisite</div><div class="cs-example"><div class="cs-example-sentence">Calculus is a prerequisite for physics.</div><div class="cs-example-arrow">physics &rarr; calculus</div></div></div>
+        <div class="cs-row"><div class="cs-word">must</div><div class="cs-example"><div class="cs-example-sentence">Applicants must submit two essays.</div><div class="cs-example-arrow">applicant &rarr; two essays</div></div></div>
+        <div class="cs-row"><div class="cs-word">needs</div><div class="cs-example"><div class="cs-example-sentence">The plant needs light to bloom.</div><div class="cs-example-arrow">blooms &rarr; light</div></div></div>
+        <div class="cs-row"><div class="cs-word">essential</div><div class="cs-example"><div class="cs-example-sentence">Oxygen is essential to combustion.</div><div class="cs-example-arrow">combustion &rarr; oxygen</div></div></div>
+        <div class="cs-row"><div class="cs-word">necessary</div><div class="cs-example"><div class="cs-example-sentence">A quorum is necessary for a vote.</div><div class="cs-example-arrow">vote &rarr; quorum</div></div></div>
+        <div class="cs-row"><div class="cs-word">depends on</div><div class="cs-example"><div class="cs-example-sentence">The picnic depends on good weather.</div><div class="cs-example-arrow">picnic &rarr; good weather</div></div></div>
+        <div class="cs-row"><div class="cs-word">then</div><div class="cs-example"><div class="cs-example-sentence">If the bill passes, then it becomes law.</div><div class="cs-example-arrow">bill passes &rarr; becomes law</div></div></div>
+        <div class="cs-row"><div class="cs-word">implies</div><div class="cs-example"><div class="cs-example-sentence">An even number implies a factor of 2.</div><div class="cs-example-arrow">even &rarr; factor of 2</div></div></div>
+        <div class="cs-row"><div class="cs-word">signals</div><div class="cs-example"><div class="cs-example-sentence">A siren signals an emergency.</div><div class="cs-example-arrow">siren &rarr; emergency</div></div></div>
+        <div class="cs-row"><div class="cs-word">means</div><div class="cs-example"><div class="cs-example-sentence">A red tag means it is sold.</div><div class="cs-example-arrow">red tag &rarr; sold</div></div></div>
+        <div class="cs-row"><div class="cs-word">will</div><div class="cs-example"><div class="cs-example-sentence">If the deadline passes, the form will lock.</div><div class="cs-example-arrow">deadline passes &rarr; form locks</div></div></div>
+      </div>
+    </details>
+  </div>
+
+  <!-- NEGATE LEFT -->
+  <div class="cs-family" id="cs-negleft">
+    <div class="cs-tagline"><span class="cs-tag">NEGATE LEFT</span><span class="cs-count">4 words</span></div>
+    <h2 class="cs-h2">Words that negate the left</h2>
+    <p class="cs-why">All four are "if not" in disguise. The attached idea is what is required, so it goes right, and the other side picks up a NOT.</p>
+    <p class="cs-ask">If you would rather not negate anything, swap the word for "if not" and put that on the left instead. Both routes give the same rule, one as the flip of the other.</p>
+    <div class="cs-worked">
+      <div class="cs-worked-sentence">You cannot enter unless you have a pass.</div>
+      <div class="cs-worked-arrow">
+        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true" style="flex:none;"><path d="M7.5 1.5v12M3 9l4.5 4.5L12 9" stroke="var(--classroom-link)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span>enter &rarr; pass</span>
+      </div>
+    </div>
+    <details>
+      <summary><span class="cs-disc"><svg class="cs-chev" width="9" height="11" viewBox="0 0 9 11" fill="none" aria-hidden="true"><path d="M1.5 1L7 5.5 1.5 10" stroke="var(--classroom-link-text)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>All four, each in a sentence</span></span></summary>
+      <div class="cs-panel">
+        <div class="cs-row"><div class="cs-word">unless</div><div class="cs-example"><div class="cs-example-sentence">You cannot enter unless you have a pass.</div><div class="cs-example-arrow">enter &rarr; pass</div></div></div>
+        <div class="cs-row"><div class="cs-word">until</div><div class="cs-example"><div class="cs-example-sentence">You cannot leave until the bell rings.</div><div class="cs-example-arrow">leave &rarr; bell rang</div></div></div>
+        <div class="cs-row"><div class="cs-word">without</div><div class="cs-example"><div class="cs-example-sentence">No one enters without a badge.</div><div class="cs-example-arrow">enter &rarr; badge</div></div></div>
+        <div class="cs-row"><div class="cs-word">except</div><div class="cs-example"><div class="cs-example-sentence">Everyone may enter except minors.</div><div class="cs-example-arrow">enter &rarr; NOT a minor</div></div></div>
+      </div>
+    </details>
+  </div>
+
+  <!-- NEGATE RIGHT -->
+  <div class="cs-family" id="cs-negright">
+    <div class="cs-tagline"><span class="cs-tag">NEGATE RIGHT</span><span class="cs-count">5 words</span></div>
+    <h2 class="cs-h2">Words that negate the right</h2>
+    <p class="cs-why">The attached idea is the trigger and goes left, but the negative belongs to the second half of the sentence.</p>
+    <p class="cs-ask">Rewrite it as a positive before you draw and it stops being confusing: "no A are B" is "all A are not B."</p>
+    <div class="cs-worked">
+      <div class="cs-worked-sentence">No freshman may apply.</div>
+      <div class="cs-worked-arrow">
+        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true" style="flex:none;"><path d="M7.5 1.5v12M3 9l4.5 4.5L12 9" stroke="var(--classroom-link)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span>freshman &rarr; NOT apply</span>
+      </div>
+    </div>
+    <details>
+      <summary><span class="cs-disc"><svg class="cs-chev" width="9" height="11" viewBox="0 0 9 11" fill="none" aria-hidden="true"><path d="M1.5 1L7 5.5 1.5 10" stroke="var(--classroom-link-text)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>All five, each in a sentence</span></span></summary>
+      <div class="cs-panel">
+        <div class="cs-row"><div class="cs-word">no</div><div class="cs-example"><div class="cs-example-sentence">No freshman may apply.</div><div class="cs-example-arrow">freshman &rarr; NOT apply</div></div></div>
+        <div class="cs-row"><div class="cs-word">none</div><div class="cs-example"><div class="cs-example-sentence">None of the drafts were saved.</div><div class="cs-example-arrow">draft &rarr; NOT saved</div></div></div>
+        <div class="cs-row"><div class="cs-word">never</div><div class="cs-example"><div class="cs-example-sentence">A draft is never final.</div><div class="cs-example-arrow">draft &rarr; NOT final</div></div></div>
+        <div class="cs-row"><div class="cs-word">cannot</div><div class="cs-example"><div class="cs-example-sentence">A member cannot vote twice.</div><div class="cs-example-arrow">member &rarr; NOT vote twice</div></div></div>
+        <div class="cs-row"><div class="cs-word">not</div><div class="cs-example"><div class="cs-example-sentence">Paper applications are not accepted.</div><div class="cs-example-arrow">paper application &rarr; NOT accepted</div></div></div>
+      </div>
+    </details>
+  </div>
+
+  <!-- NO LIST -->
+  <div class="cs-family" id="cs-nolist">
+    <div class="cs-tagline"><span class="cs-tag">NO LIST</span><span class="cs-count">the ones you meet cold</span></div>
+    <h2 class="cs-h2">Words that are on no list</h2>
+    <p class="cs-why">Some words have a home in the lists above. Others you will meet cold. Either way the same question settles it: what is guaranteed, and what is required.</p>
+    <p class="cs-ask">Whatever sets the rule off goes left. Whatever has to be there goes right. That works whether the word made a list or not.</p>
+    <div class="cs-worked">
+      <div class="cs-worked-sentence">Spotting the gap is a prerequisite to picking the assumption.</div>
+      <div class="cs-worked-arrow">
+        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true" style="flex:none;"><path d="M7.5 1.5v12M3 9l4.5 4.5L12 9" stroke="var(--classroom-link)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span>pick assumption &rarr; spot gap</span>
+      </div>
+    </div>
+    <details>
+      <summary><span class="cs-disc"><svg class="cs-chev" width="9" height="11" viewBox="0 0 9 11" fill="none" aria-hidden="true"><path d="M1.5 1L7 5.5 1.5 10" stroke="var(--classroom-link-text)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Four that come up</span></span></summary>
+      <div class="cs-panel">
+        <div class="cs-row"><div class="cs-word">prerequisite</div><div class="cs-example"><div class="cs-example-sentence">A requirement, so it goes right.</div><div class="cs-example-arrow">physics &rarr; calculus</div></div></div>
+        <div class="cs-row"><div class="cs-word">depends on</div><div class="cs-example"><div class="cs-example-sentence">A requirement, so it goes right.</div><div class="cs-example-arrow">picnic &rarr; good weather</div></div></div>
+        <div class="cs-row"><div class="cs-word">will</div><div class="cs-example"><div class="cs-example-sentence">An outcome, so it goes right too.</div><div class="cs-example-arrow">deadline passes &rarr; form locks</div></div></div>
+        <div class="cs-row"><div class="cs-word">the moment that</div><div class="cs-example"><div class="cs-example-sentence">A trigger, so it goes left.</div><div class="cs-example-arrow">the moment it ships &rarr; billing starts</div></div></div>
+      </div>
+    </details>
+  </div>
+
+  <!-- FLIP -->
+  <div class="cs-family" id="cs-flip">
+    <h2 class="cs-h2">Flipping a rule</h2>
+    <p class="cs-why" style="margin-bottom:24px;">A rule and its flip are two sides of the same coin. Flipping is what the test is really checking, and the third step is where the points are.</p>
+    <div class="cs-figure">
+      <div class="cs-flip-row">
+        <span class="cs-flip-term">A and B &rarr; C</span>
+        <svg width="52" height="20" viewBox="0 0 52 20" fill="none" aria-hidden="true" style="flex:none;"><path d="M2 10h42M38 4l7 6-7 6" stroke="var(--classroom-link)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span class="cs-flip-term">NOT C &rarr; NOT A or NOT B</span>
+      </div>
+      <div class="cs-grid-3">
+        <div class="cs-step"><div class="cs-step-title">Swap</div><div class="cs-step-body">What was on the right goes on the left.</div></div>
+        <div class="cs-step"><div class="cs-step-title">Negate</div><div class="cs-step-body">Positive becomes negative, negative becomes positive.</div></div>
+        <div class="cs-step"><div class="cs-step-title">Switch the connector</div><div class="cs-step-body">Every and becomes an or, every or becomes an and.</div></div>
+      </div>
+      <p class="cs-caption">If C did not happen, at least one of A or B is missing, and you cannot say which. Writing <span class="cs-mono">and</span> there claims both are missing, which is more than the rule ever gave you.</p>
+    </div>
+  </div>
+
+  <!-- USE -->
+  <div class="cs-family" id="cs-use">
+    <h2 class="cs-h2">The two things you do with a rule</h2>
+    <p class="cs-why" style="margin-bottom:24px;">Everything above gets the arrow onto the page. From there the test only ever asks for two things.</p>
+    <div class="cs-grid-2">
+      <div class="cs-card">
+        <div class="cs-card-title" style="font-size:18px;">Chain it</div>
+        <div class="cs-notation">rule + rule = a new rule</div>
+        <div class="cs-card-gloss">If the right side of one rule is the left side of another, they link, and the link is the inference.</div>
+        <div class="cs-mono" style="font-size:14.5px; color:var(--classroom-link-text); text-align:center;">A &rarr; B &rarr; C &rarr; D</div>
+      </div>
+      <div class="cs-card">
+        <div class="cs-card-title" style="font-size:18px;">Trigger it</div>
+        <div class="cs-notation">rule + fact = a new fact</div>
+        <div class="cs-card-gloss">A rule sits there doing nothing until a fact sets it off. Hand it the left side and the right side has to follow.</div>
+        <div class="cs-mono" style="font-size:14.5px; color:var(--classroom-link-text); text-align:center;">A &rarr; B or C, plus A, plus NOT C</div>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="cs-eyebrowless" style="margin-bottom:18px;">The whole thing, in five steps</h2>
+  <div>
+    <div class="cs-step-row"><div class="cs-num">01</div><div class="cs-step-text">Find the word. One word tells you which side is the trigger and which side is required.</div></div>
+    <div class="cs-step-row"><div class="cs-num">02</div><div class="cs-step-text">Do what it says. Left, right, negate left, or negate right.</div></div>
+    <div class="cs-step-row"><div class="cs-num">03</div><div class="cs-step-text">Flip it when the question wants the other direction. Swap, negate, and switch every and to an or.</div></div>
+    <div class="cs-step-row"><div class="cs-num">04</div><div class="cs-step-text">Chain it or trigger it. Rule plus rule gives a new rule. Rule plus fact gives a new fact.</div></div>
+    <div class="cs-step-row"><div class="cs-num">05</div><div class="cs-step-text">Only draw when the rules could link. A single conditional inside an ordinary argument is something you hear, not something you write down.</div></div>
+  </div>
+
+  <div class="cs-next">
+    <div style="flex:1;">
+      <div class="cs-next-title">The Breakdown</div>
+      <div class="cs-next-sub">Where each of these gets taught properly, one part at a time.</div>
+    </div>
+    <svg width="20" height="14" viewBox="0 0 20 14" fill="none" aria-hidden="true" style="flex:none;"><path d="M1 7h16M13 2l5 5-5 5" stroke="var(--classroom-link-text)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </div>
+
+</div>
+</article><div class="preview-footer">End of note · This is a local rendering preview.</div></section></div></main></div><script>function showNote(n){document.querySelectorAll('.preview-article').forEach((p,i)=>p.hidden=i!==n);document.querySelectorAll('[role=tab]').forEach((t,i)=>t.setAttribute('aria-selected',String(i===n)));window.scrollTo(0,0)}</script></body></html>

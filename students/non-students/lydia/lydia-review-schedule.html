@@ -1,0 +1,977 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Interactive LSAT Review Schedule</title>
+  <meta name="description" content="Reusable interactive weekly LSAT review schedule template." />
+  <link rel="icon" href="data:," />
+  <style>
+    :root {
+      --bg: #f6f0e6;
+      --paper: rgba(255,255,255,.78);
+      --paper-solid: #fff;
+      --ink: #13100d;
+      --muted: #756e64;
+      --faint: #9b9286;
+      --line: rgba(19,16,13,.13);
+      --line-strong: rgba(19,16,13,.25);
+      --soft: #eee5d8;
+      --soft-2: #e3d8c8;
+      --shadow: 0 28px 90px rgba(25, 20, 14, .13);
+      --shadow-soft: 0 14px 36px rgba(25, 20, 14, .08);
+      --radius: 26px;
+      --radius-lg: 38px;
+      --font-body: "Avenir Next", "Segoe UI", "Helvetica Neue", sans-serif;
+      --font-display: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--ink);
+      font-family: var(--font-body);
+      background:
+        radial-gradient(circle at 4% 4%, rgba(255,255,255,.94), transparent 26%),
+        radial-gradient(circle at 105% 8%, rgba(212,199,180,.78), transparent 30%),
+        radial-gradient(circle at 40% 112%, rgba(222,210,191,.85), transparent 38%),
+        linear-gradient(135deg, #f8f2e8 0%, #eee2d1 100%);
+    }
+
+    button, textarea {
+      font: inherit;
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    .wrap {
+      width: min(1260px, calc(100% - 34px));
+      margin: 0 auto;
+      padding: 34px 0 54px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 22px;
+      align-items: end;
+      margin-bottom: 22px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      width: fit-content;
+      padding: 8px 12px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255,255,255,.72);
+      color: #5e554b;
+      font-size: 12px;
+      font-weight: 800;
+      box-shadow: var(--shadow-soft);
+      backdrop-filter: blur(18px);
+    }
+
+    h1 {
+      margin: 18px 0 0;
+      max-width: 850px;
+      font-family: var(--font-display);
+      font-size: clamp(42px, 6vw, 76px);
+      line-height: .92;
+      letter-spacing: -.065em;
+    }
+
+    .sub {
+      margin: 18px 0 0;
+      max-width: 720px;
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.5;
+    }
+
+    .overview {
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      background: var(--paper);
+      box-shadow: var(--shadow-soft);
+      backdrop-filter: blur(20px);
+      padding: 22px;
+    }
+
+    .overview-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .label {
+      margin: 0;
+      color: var(--faint);
+      font-size: 12px;
+      font-weight: 850;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .score {
+      display: flex;
+      align-items: flex-end;
+      gap: 8px;
+      margin-top: 8px;
+    }
+
+    .score strong {
+      font-size: 54px;
+      line-height: .85;
+      letter-spacing: -.07em;
+    }
+
+    .score span {
+      color: var(--faint);
+      font-size: 13px;
+      font-weight: 750;
+      padding-bottom: 3px;
+    }
+
+    .pill {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255,255,255,.75);
+      color: #4b4239;
+      padding: 8px 11px;
+      font-size: 12px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .bar {
+      margin-top: 20px;
+      height: 9px;
+      border-radius: 999px;
+      background: var(--soft-2);
+      overflow: hidden;
+    }
+
+    .fill {
+      height: 100%;
+      width: 0%;
+      border-radius: inherit;
+      background: var(--ink);
+      transition: width .25s ease;
+    }
+
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 0 0 18px;
+    }
+
+    .btn {
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.75);
+      border-radius: 999px;
+      padding: 10px 14px;
+      color: #332c25;
+      font-size: 13px;
+      font-weight: 850;
+      box-shadow: 0 8px 18px rgba(25,20,14,.05);
+    }
+
+    .btn.primary {
+      background: var(--ink);
+      color: #fff;
+      border-color: var(--ink);
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+    }
+
+    .main {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      gap: 22px;
+      align-items: start;
+    }
+
+    .panel {
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      background: var(--paper);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(22px);
+      overflow: hidden;
+    }
+
+    .week {
+      padding: 12px;
+      display: grid;
+      gap: 10px;
+    }
+
+    .day {
+      border: 1px solid transparent;
+      border-radius: 24px;
+      background: rgba(255,255,255,.62);
+      padding: 16px;
+      text-align: left;
+      transition: .15s ease;
+      width: 100%;
+    }
+
+    .day:hover {
+      border-color: var(--line);
+      background: rgba(255,255,255,.82);
+      transform: translateY(-1px);
+    }
+
+    .day.active {
+      background: #fff;
+      border-color: var(--line-strong);
+      box-shadow: 0 15px 38px rgba(25,20,14,.1);
+    }
+
+    .day.done {
+      background: #eee6da;
+    }
+
+    .day-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .day-name {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      font-size: 17px;
+      font-weight: 900;
+      letter-spacing: -.025em;
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      background: #cabca9;
+      flex: 0 0 auto;
+    }
+
+    .done .dot {
+      background: var(--ink);
+    }
+
+    .tag {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 5px 8px;
+      background: #faf7f1;
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 850;
+      white-space: nowrap;
+    }
+
+    .day p {
+      margin: 9px 0 0;
+      color: var(--muted);
+      line-height: 1.35;
+      font-size: 13.5px;
+    }
+
+    .detail-head {
+      padding: 26px;
+      border-bottom: 1px solid var(--line);
+      background:
+        radial-gradient(circle at 100% -10%, rgba(225,215,198,.95), transparent 32%),
+        rgba(255,255,255,.52);
+    }
+
+    h2 {
+      margin: 8px 0 0;
+      font-family: var(--font-display);
+      font-size: clamp(34px, 4vw, 58px);
+      line-height: .95;
+      letter-spacing: -.055em;
+    }
+
+    .summary {
+      margin: 14px 0 0;
+      color: var(--muted);
+      font-size: 16.5px;
+      line-height: 1.52;
+      max-width: 780px;
+    }
+
+    .mini-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .mini {
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: rgba(255,255,255,.68);
+      padding: 12px;
+    }
+
+    .mini b {
+      display: block;
+      font-size: 12px;
+      color: var(--faint);
+      text-transform: uppercase;
+      letter-spacing: .07em;
+      margin-bottom: 4px;
+    }
+
+    .mini span {
+      font-size: 13px;
+      font-weight: 850;
+    }
+
+    .tasks {
+      padding: 22px 26px 26px;
+      display: grid;
+      gap: 12px;
+    }
+
+    .task {
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: rgba(255,255,255,.72);
+      padding: 15px;
+      display: grid;
+      grid-template-columns: 38px 1fr;
+      gap: 13px;
+      text-align: left;
+      width: 100%;
+      transition: .15s ease;
+    }
+
+    .task:hover {
+      border-color: var(--line-strong);
+      background: #fff;
+      transform: translateY(-1px);
+    }
+
+    .task.done {
+      background: #eee7dc;
+      color: #574f46;
+    }
+
+    .num {
+      width: 38px;
+      height: 38px;
+      border-radius: 15px;
+      display: grid;
+      place-items: center;
+      background: var(--ink);
+      color: #fff;
+      font-size: 13px;
+      font-weight: 950;
+    }
+
+    .task.done .num {
+      background: #fff;
+      color: var(--ink);
+      border: 1px solid var(--line);
+    }
+
+    .task h3 {
+      margin: 0;
+      font-size: 16px;
+      letter-spacing: -.025em;
+    }
+
+    .task p {
+      margin: 5px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.45;
+    }
+
+    .review-box {
+      margin: 0 26px 26px;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      background: #fbf8f2;
+      padding: 18px;
+    }
+
+    .review-box h3 {
+      margin: 0 0 10px;
+      font-size: 18px;
+      letter-spacing: -.03em;
+    }
+
+    .review-list {
+      margin: 0;
+      padding-left: 18px;
+      color: var(--muted);
+      line-height: 1.55;
+      font-size: 14px;
+    }
+
+    .notes {
+      margin: 0 26px 26px;
+    }
+
+    .notes label {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--faint);
+      font-size: 12px;
+      font-weight: 850;
+      text-transform: uppercase;
+      letter-spacing: .07em;
+    }
+
+    textarea {
+      width: 100%;
+      min-height: 120px;
+      resize: vertical;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: rgba(255,255,255,.7);
+      padding: 14px;
+      color: var(--ink);
+      outline: none;
+      line-height: 1.45;
+    }
+
+    textarea:focus {
+      border-color: var(--line-strong);
+      background: #fff;
+    }
+
+    .legend {
+      margin-top: 22px;
+      padding: 24px;
+    }
+
+    .legend h2 {
+      font-size: 30px;
+      margin: 0 0 14px;
+    }
+
+    .legend-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 11px;
+    }
+
+    .legend-item {
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 13px;
+      background: rgba(255,255,255,.65);
+    }
+
+    .legend-item strong {
+      display: block;
+      font-size: 13px;
+      margin-bottom: 5px;
+    }
+
+    .legend-item span {
+      display: block;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.35;
+    }
+
+    .focus-overlay {
+      position: fixed;
+      inset: 0;
+      display: none;
+      place-items: center;
+      background: rgba(19,16,13,.62);
+      backdrop-filter: blur(18px);
+      z-index: 50;
+      padding: 20px;
+    }
+
+    .focus-overlay.open {
+      display: grid;
+    }
+
+    .focus-card {
+      width: min(760px, 100%);
+      background: #fff;
+      border-radius: 34px;
+      padding: 28px;
+      box-shadow: 0 30px 90px rgba(0,0,0,.25);
+    }
+
+    .focus-card h2 {
+      margin-top: 0;
+    }
+
+    .focus-task {
+      margin: 18px 0 0;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 18px;
+      background: #fbf8f2;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .focus-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    @media (max-width: 960px) {
+      .hero, .main { grid-template-columns: 1fr; }
+      .legend-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 640px) {
+      .wrap { width: min(100% - 22px, 1260px); padding-top: 22px; }
+      h1 { font-size: 44px; }
+      .overview, .detail-head, .tasks, .legend { padding: 20px; }
+      .mini-grid, .legend-grid { grid-template-columns: 1fr; }
+      .review-box, .notes { margin-left: 20px; margin-right: 20px; }
+    }
+
+    @media print {
+      body { background: #fff; }
+      .toolbar, .overview, .notes, .focus-overlay { display: none !important; }
+      .wrap { width: 100%; padding: 0; }
+      .hero, .main { display: block; }
+      .panel { box-shadow: none; border: 1px solid #ddd; margin-bottom: 16px; }
+      .day, .task, .legend-item, .review-box { break-inside: avoid; background: #fff; }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="hero">
+      <div>
+        <div class="badge" id="badgeLabel">Interactive Review Plan</div>
+        <h1 id="pageTitle">Weekly LSAT Review Schedule</h1>
+        <p class="sub" id="pageSubtitle">A reusable weekly LSAT review template built around targeted review, timed practice, LR/RC balance, rest, and full-length practice testing.</p>
+      </div>
+
+      <aside class="overview">
+        <div class="overview-top">
+          <div>
+            <p class="label">Completion</p>
+            <div class="score">
+              <strong id="percent">0%</strong>
+              <span id="count">0 / 18 tasks</span>
+            </div>
+          </div>
+          <span class="pill" id="selectedPill">Monday</span>
+        </div>
+        <div class="bar"><div class="fill" id="overallFill"></div></div>
+      </aside>
+    </section>
+
+    <div class="toolbar">
+      <button class="btn primary" id="focusBtn" type="button">Focus mode</button>
+      <button class="btn" id="markDayBtn" type="button">Mark day complete</button>
+      <button class="btn" id="resetDayBtn" type="button">Reset day</button>
+      <button class="btn" id="resetAllBtn" type="button">Reset all</button>
+      <button class="btn" onclick="window.print()" type="button">Print / save PDF</button>
+    </div>
+
+    <section class="main">
+      <nav class="panel week" id="week"></nav>
+
+      <article class="panel">
+        <div class="detail-head">
+          <p class="label" id="kicker">Monday</p>
+          <h2 id="title">LR Review Day</h2>
+          <p class="summary" id="summary"></p>
+          <div class="mini-grid">
+            <div class="mini"><b>Primary focus</b><span id="focus"></span></div>
+            <div class="mini"><b>Review rule</b><span id="rule"></span></div>
+            <div class="mini"><b>Output</b><span id="output"></span></div>
+          </div>
+          <div class="bar"><div class="fill" id="dayFill"></div></div>
+        </div>
+
+        <div class="tasks" id="tasks"></div>
+
+        <div class="review-box">
+          <h3>Review checkpoint</h3>
+          <ul class="review-list" id="review"></ul>
+        </div>
+
+        <div class="notes">
+          <label for="notes">Daily notes</label>
+          <textarea id="notes" placeholder="Write quick notes, missed question numbers, or what needs to be reviewed next."></textarea>
+        </div>
+      </article>
+    </section>
+
+    <section class="panel legend">
+      <h2>Activity legend</h2>
+      <div class="legend-grid">
+        <div class="legend-item"><strong>Passage re-read</strong><span>Re-read a passage slowly and track paragraph roles, author viewpoint, and structure.</span></div>
+        <div class="legend-item"><strong>Question review</strong><span>Redo passage questions and write short support-based explanations for the right answers.</span></div>
+        <div class="legend-item"><strong>P3/P4 comparison</strong><span>Compare PT151.S1 Passage 3 and 4 mistakes to find repeated RC patterns.</span></div>
+        <div class="legend-item"><strong>Mini LR set</strong><span>Use a short LR set to maintain LR skill without a heavy full-section load.</span></div>
+        <div class="legend-item"><strong>Error log</strong><span>Write simple reasons for misses, guesses, and close calls.</span></div>
+        <div class="legend-item"><strong>Tutoring or rest</strong><span>Either use the day for tutoring or take a real break with no guilt work.</span></div>
+        <div class="legend-item"><strong>Untimed RC section</strong><span>Complete one RC section slowly enough to understand passage structure and support.</span></div>
+        <div class="legend-item"><strong>Section review</strong><span>Review misses and guesses without trying to do everything at once.</span></div>
+        <div class="legend-item"><strong>Day off</strong><span>Complete rest and recovery so the next practice day stays useful.</span></div>
+        <div class="legend-item"><strong>Section-based simulation</strong><span>Do one timed RC section and one timed LR section instead of a full PT.</span></div>
+      </div>
+    </section>
+  </main>
+
+  <div class="focus-overlay" id="focusOverlay">
+    <div class="focus-card">
+      <p class="label" id="focusDay">Monday</p>
+      <h2 id="focusTitle">Focus mode</h2>
+      <div class="focus-task" id="focusTask"></div>
+      <div class="focus-actions">
+        <button class="btn primary" id="completeFocusBtn" type="button">Mark next task complete</button>
+        <button class="btn" id="closeFocusBtn" type="button">Close</button>
+      </div>
+    </div>
+  </div>
+
+<script>
+const pageConfig = {
+  badge: "Lydia Lee · Interactive Review Plan",
+  pageTitle: "Lydia's Weekly LSAT Review Schedule",
+  pageSubtitle: "A focused weekly plan built around RC review, PT151.S1 Passage 3 and 4, section-based work, and burnout management.",
+  pageDescription: "Interactive weekly LSAT review schedule for Lydia Lee.",
+  storagePrefix: "lydia-review-schedule-v1"
+};
+
+const STORE = `${pageConfig.storagePrefix}:progress`;
+const NOTES = `${pageConfig.storagePrefix}:notes`;
+
+const schedule = [
+  {
+    day: "Monday",
+    tag: "RC Reset",
+    title: "PT151.S1 Passage 3 Review + RC Reset",
+    summary: "Start the week by reviewing PT151.S1 Passage 3 slowly and rebuilding confidence without timing pressure.",
+    focus: "RC structure",
+    rule: "Clarity before pace",
+    output: "Passage 3 notes",
+    tasks: [
+      ["Re-read Passage 3", "Re-read PT151.S1 Passage 3 slowly and note the role of each paragraph."],
+      ["Question review", "Redo the Passage 3 questions and write why each correct answer is supported by the passage."],
+      ["Short takeaway note", "Write 3 short notes: what felt easier, what still felt confusing, and what to ask about later."]
+    ],
+    review: [
+      "Write the main point of the passage in one sentence.",
+      "Mark any question where two answers still felt close.",
+      "Do not rush this day. The goal is to reset and understand."
+    ]
+  },
+  {
+    day: "Tuesday",
+    tag: "RC Review",
+    title: "PT151.S1 Passage 4 Review + Passage Comparison",
+    summary: "Review Passage 4 and compare it to Passage 3 so the recurring RC issues are easier to spot.",
+    focus: "RC comparison",
+    rule: "Name the pattern",
+    output: "P3/P4 comparison",
+    tasks: [
+      ["Re-read Passage 4", "Re-read PT151.S1 Passage 4 and identify the author's viewpoint, structure, and pivot points."],
+      ["Question review", "Redo the Passage 4 questions and write one line on why each wrong answer is wrong."],
+      ["Compare Passage 3 and 4", "List the similarities between the mistakes made on Passage 3 and Passage 4."]
+    ],
+    review: [
+      "Circle any question that turned into an elimination problem instead of a reading problem.",
+      "Identify whether the harder issue was passage structure, inference, or answer choice precision.",
+      "Save the biggest pattern for tutoring or follow-up review."
+    ]
+  },
+  {
+    day: "Wednesday",
+    tag: "Light LR",
+    title: "Light LR Maintenance",
+    summary: "Keep LR active without turning the middle of the week into a heavy workload.",
+    focus: "LR maintenance",
+    rule: "Keep it light",
+    output: "Short LR log",
+    tasks: [
+      ["Mini LR set", "Complete a short set of 8-10 LR questions instead of a full section."],
+      ["Error log", "Write the reason for each miss or guess in simple language."]
+    ],
+    review: [
+      "Separate true reasoning misses from fatigue or rushing.",
+      "If energy is low, stop after the mini set and notes.",
+      "The goal is maintenance, not overload."
+    ]
+  },
+  {
+    day: "Thursday",
+    tag: "Tutor / Rest",
+    title: "Tutoring Or Full Recovery",
+    summary: "Use this day for a tutoring session if scheduled. Otherwise take a real break and do not pile on extra work.",
+    focus: "Recovery",
+    rule: "Do not overload",
+    output: "Tutor notes or reset",
+    tasks: [
+      ["Progress check", "Either attend tutoring and capture key corrections, or take a true day off."]
+    ],
+    review: [
+      "If tutoring happened, write the 2-3 most important takeaways.",
+      "If resting, do not sneak in extra work out of guilt.",
+      "Make sure Friday feels manageable before starting it."
+    ]
+  },
+  {
+    day: "Friday",
+    tag: "RC Build",
+    title: "Untimed RC Section + Review",
+    summary: "Do one untimed RC section with full review so the week ends with controlled practice rather than burnout.",
+    focus: "RC accuracy",
+    rule: "Slow is fine",
+    output: "RC error notes",
+    tasks: [
+      ["Untimed RC section", "Complete one untimed RC section and annotate why each passage is organized the way it is."],
+      ["Section review", "Review every miss, every guess, and every question where the passage support was not fully clear."]
+    ],
+    review: [
+      "Write the structure of each passage in 1-2 lines.",
+      "Record whether each miss came from reading, inference, or elimination.",
+      "Keep the notes short enough that they will actually be reused."
+    ]
+  },
+  {
+    day: "Saturday",
+    tag: "Rest",
+    title: "Day Off / Break Day",
+    summary: "Complete rest and recovery.",
+    focus: "Recovery",
+    rule: "No guilt work",
+    output: "Energy restored",
+    tasks: [
+      ["Rest and recovery", "Complete rest and recovery."]
+    ],
+    review: [
+      "Do not force new LSAT work.",
+      "Reset for Sunday's section-based practice.",
+      "Only prepare materials if needed."
+    ]
+  },
+  {
+    day: "Sunday",
+    tag: "Section Sim",
+    title: "Section-Based Simulation",
+    summary: "Use a lighter simulation day: one timed RC section and one timed LR section, followed by only brief flagging notes.",
+    focus: "Controlled stamina",
+    rule: "Do not spiral after the section",
+    output: "Flagged section notes",
+    tasks: [
+      ["Timed RC section", "Complete one timed RC section under realistic conditions."],
+      ["Timed LR section", "Complete one timed LR section under realistic conditions and flag anything uncertain."]
+    ],
+    review: [
+      "Save the results and circle the questions or passages that need review later.",
+      "Do not deep-review everything immediately after finishing.",
+      "The goal is stamina practice without burnout."
+    ]
+  }
+];
+
+let selected = 0;
+let state = load(STORE, {});
+let notes = load(NOTES, {});
+
+applyPageConfig();
+
+function load(key, fallback) {
+  try { return JSON.parse(localStorage.getItem(key)) || fallback; }
+  catch { return fallback; }
+}
+
+function save() {
+  localStorage.setItem(STORE, JSON.stringify(state));
+  localStorage.setItem(NOTES, JSON.stringify(notes));
+}
+
+function applyPageConfig() {
+  document.title = pageConfig.pageTitle;
+  document.querySelector('meta[name="description"]').setAttribute("content", pageConfig.pageDescription);
+  document.getElementById("badgeLabel").textContent = pageConfig.badge;
+  document.getElementById("pageTitle").textContent = pageConfig.pageTitle;
+  document.getElementById("pageSubtitle").textContent = pageConfig.pageSubtitle;
+}
+
+function key(day, i) { return day + ":" + i; }
+function done(day, i) { return !!state[key(day, i)]; }
+
+function dayProgress(dayObj) {
+  const total = dayObj.tasks.length;
+  const complete = dayObj.tasks.filter((_, i) => done(dayObj.day, i)).length;
+  return { complete, total, pct: Math.round((complete / total) * 100) };
+}
+
+function totalProgress() {
+  let total = 0, complete = 0;
+  schedule.forEach(day => {
+    total += day.tasks.length;
+    complete += day.tasks.filter((_, i) => done(day.day, i)).length;
+  });
+  return { complete, total, pct: Math.round((complete / total) * 100) };
+}
+
+function icon() {
+  return `<svg width="17" height="17" viewBox="0 0 20 20" fill="none"><path d="M4.5 10.4l3.2 3.2 7.8-8.2" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+}
+
+function setSelected(i) {
+  selected = i;
+  render();
+}
+
+function toggleTask(i) {
+  const day = schedule[selected].day;
+  const k = key(day, i);
+  if (state[k]) delete state[k]; else state[k] = true;
+  save();
+  render();
+}
+
+function markDayComplete() {
+  const day = schedule[selected];
+  day.tasks.forEach((_, i) => state[key(day.day, i)] = true);
+  save();
+  render();
+}
+
+function resetDay() {
+  const day = schedule[selected];
+  day.tasks.forEach((_, i) => delete state[key(day.day, i)]);
+  save();
+  render();
+}
+
+function resetAll() {
+  state = {};
+  notes = {};
+  save();
+  render();
+}
+
+function nextIncompleteIndex(day) {
+  return day.tasks.findIndex((_, i) => !done(day.day, i));
+}
+
+function openFocus() {
+  renderFocus();
+  document.getElementById("focusOverlay").classList.add("open");
+}
+
+function closeFocus() {
+  document.getElementById("focusOverlay").classList.remove("open");
+}
+
+function completeNextFocusTask() {
+  const day = schedule[selected];
+  let i = nextIncompleteIndex(day);
+  if (i === -1) i = 0;
+  state[key(day.day, i)] = true;
+  save();
+  render();
+  renderFocus();
+}
+
+function renderFocus() {
+  const day = schedule[selected];
+  let i = nextIncompleteIndex(day);
+  const task = i === -1 ? ["All tasks complete", "This day is complete."] : day.tasks[i];
+  document.getElementById("focusDay").textContent = day.day;
+  document.getElementById("focusTitle").textContent = day.title;
+  document.getElementById("focusTask").innerHTML = `<strong>${task[0]}</strong><br>${task[1]}`;
+}
+
+function render() {
+  const total = totalProgress();
+  document.getElementById("percent").textContent = total.pct + "%";
+  document.getElementById("count").textContent = `${total.complete} / ${total.total} tasks`;
+  document.getElementById("overallFill").style.width = total.pct + "%";
+
+  document.getElementById("week").innerHTML = schedule.map((day, i) => {
+    const p = dayProgress(day);
+    const active = i === selected ? "active" : "";
+    const isDone = p.complete === p.total ? "done" : "";
+    return `<button class="day ${active} ${isDone}" onclick="setSelected(${i})" type="button">
+      <div class="day-row">
+        <div class="day-name"><span class="dot"></span>${day.day}</div>
+        <span class="tag">${day.tag}</span>
+      </div>
+      <p>${day.title} · ${p.complete}/${p.total} complete</p>
+    </button>`;
+  }).join("");
+
+  const day = schedule[selected];
+  const p = dayProgress(day);
+  document.getElementById("selectedPill").textContent = day.day;
+  document.getElementById("kicker").textContent = day.day;
+  document.getElementById("title").textContent = day.title;
+  document.getElementById("summary").textContent = day.summary;
+  document.getElementById("focus").textContent = day.focus;
+  document.getElementById("rule").textContent = day.rule;
+  document.getElementById("output").textContent = day.output;
+  document.getElementById("dayFill").style.width = p.pct + "%";
+
+  document.getElementById("tasks").innerHTML = day.tasks.map((task, i) => {
+    const isDone = done(day.day, i);
+    return `<button class="task ${isDone ? "done" : ""}" onclick="toggleTask(${i})" type="button">
+      <div class="num">${isDone ? icon() : i + 1}</div>
+      <div>
+        <h3>${task[0]}</h3>
+        <p>${task[1]}</p>
+      </div>
+    </button>`;
+  }).join("");
+
+  document.getElementById("review").innerHTML = day.review.map(item => `<li>${item}</li>`).join("");
+
+  const noteBox = document.getElementById("notes");
+  noteBox.value = notes[day.day] || "";
+}
+
+document.getElementById("notes").addEventListener("input", e => {
+  notes[schedule[selected].day] = e.target.value;
+  save();
+});
+
+document.getElementById("markDayBtn").addEventListener("click", markDayComplete);
+document.getElementById("resetDayBtn").addEventListener("click", resetDay);
+document.getElementById("resetAllBtn").addEventListener("click", resetAll);
+document.getElementById("focusBtn").addEventListener("click", openFocus);
+document.getElementById("closeFocusBtn").addEventListener("click", closeFocus);
+document.getElementById("completeFocusBtn").addEventListener("click", completeNextFocusTask);
+
+document.addEventListener("keydown", e => {
+  if (e.key === "Escape") closeFocus();
+  if (e.key === "ArrowRight") setSelected((selected + 1) % schedule.length);
+  if (e.key === "ArrowLeft") setSelected((selected + schedule.length - 1) % schedule.length);
+});
+
+window.setSelected = setSelected;
+window.toggleTask = toggleTask;
+
+render();
+</script>
+</body>
+</html>

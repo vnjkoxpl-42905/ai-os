@@ -1,0 +1,49 @@
+{
+  "base": "67230dfae74a1466515d570fcb7b8a96ab5cb9c5",
+  "date": "2026-10-02",
+  "independent_verdict": "CI3 corrections await fresh final inspection4",
+  "scoped_diff_sha256": "58f6a34922c0fd001a95310a2060950a11f7560c2b6a20d094c04674033aa386",
+  "files": {
+    "src/App.tsx": "eef49221a7a4b4f3496c4979abb11355dfd437fd57df109c261c202de3965260",
+    "src/bootcamps/conditionals/assignments.test.ts": "ec97ae7e4b36cb39855d048d83a2431d93a7f4e7b2eb2f91a9a5001e5bc1ec2f",
+    "src/bootcamps/conditionals/assignments.ts": "5e1963c6cf4c1a9438164cf3c27215133ed17f0db460570be0882704c88489dd",
+    "src/bootcamps/conditionals/components/ConditionalLessonNote.test.tsx": "3b412b4af622b6f43364c62fa01ca04011e7759cebba734db38fb4e1e5dc6335",
+    "src/bootcamps/conditionals/components/ConditionalLessonNote.tsx": "55c7be469bfef6d60c1e0c90b15d83464967a3604e16d50da058bf2d50a170b2",
+    "src/bootcamps/conditionals/content/foundations.source.ts": "2ba00995035277645cdc6a78aa695185826a5e092a8b6547c9e19596191d65a8",
+    "src/bootcamps/conditionals/data/curriculum.generated.json": "9bf3801d9b9e5145bebb8d235abf94852dad28cbb1f85da22bcb783910d0e365",
+    "src/bootcamps/conditionals/progress.test.ts": "69392eb3af188362ce8ec5f13228656bf77adb20fd3d075e1748bd001e7fb2a4",
+    "src/bootcamps/conditionals/progress.ts": "e438914de88dd3166e0758809b5112856ffe32d67813263ef54285a199c0ad7b",
+    "src/bootcamps/conditionals/routes.test.tsx": "8bcaedb1ba70be1f3729658d499a214eca606de5fc2966a417ff0b48e32da199",
+    "src/bootcamps/conditionals/routes.tsx": "a460009cd7b7026d472bc98526626dea4508529c74794fcaf586a9f1a3b59337",
+    "src/bootcamps/conditionals/useConditionalAssignments.ts": "a8988f5701f5f524e3c6373798c3a0bc0c6511ecec5a95183c652f61e308bd74",
+    "src/bootcamps/conditionals/useConditionalProgress.test.tsx": "e88c4b5021940330559d103990e3336e8f4ce2c2b2d72d135e89a03900331346",
+    "src/components/teacher/ConditionalAssignmentFields.tsx": "9975d3cd7bbf3def762ac0acceee66e58579f9923f804829a2ba9a440d6c8e18",
+    "src/lib/conditionalBootcampAssignment.test.ts": "d5e5b20e1c2765a1a32c41edb4458fd971789bcb3bd4d8674c87a1bc4c322ee6",
+    "src/lib/conditionalBootcampAssignment.ts": "9b9d909aa12cdbeded57577f499ba0bada38ab82b29c96b27c99c55d4e7d8dc8",
+    "src/bootcamps/conditionals/components/ConditionalOpeningLesson.review.test.tsx": "370a9e202b54781265226d03258467e79892dbcf3ae202c832aa2e08e4c95320",
+    "src/bootcamps/conditionals/components/ConditionalOpeningLesson.tsx": "caff3e301ad0d43a7335b7b6f1dcc374074b8f5e0b0abb811a416b1f69c02add",
+    "src/bootcamps/conditionals/components/ConditionalOpeningMedia.tsx": "2f3fed2ff2f594eb5826e0c3a83aefedf786d80e941e6c3e28dfe6d107769cdb",
+    "src/bootcamps/conditionals/components/opening.css": "ba71af2ef9a2f2b0dcfaa923ff938453a2e7a0533aa4027a052d7a6676a8ff0f",
+    "src/bootcamps/conditionals/content/legacyQuestions.ts": "ad91b8a4a6fd59acd5c5d9b72ab3c9bc00e54d64475a2bcb18891b3ad54b04b9",
+    "src/bootcamps/conditionals/content/opening-coverage.test.ts": "a7a86c90a22c1ae55d6a4f7a3de4f87f36490729b3cf3059f531da94a5283181",
+    "src/bootcamps/conditionals/openingRevision.ts": "8fe3aad67af99f13ff543b6aeddeb2d8cc85c0253e894d09754384bb7ef4777f",
+    "src/components/teacher/ConditionalAssignmentFields.test.tsx": "10c903b7a3533499971e332f577dbd62e0c015bb7300ad51303ad9dcae4a9928",
+    "src/dev/ConditionalOpeningPreview.tsx": "bdc5b3507ee3e1d99635b2d926312a139578481966ddabc21451a7781779dc4c"
+  },
+  "protected_unchanged": {
+    "public/data/_bank.generated.json": "69f34f6dc7c1c2772d0fc212851873ca92a6c0a40e15af83e97b56575e004f75",
+    "public/data/finder-address-index.json": "3f8216dacc9a968b6e4e19da90472b8591b32204f912dcf97ed87459b5406007",
+    "supabase/functions/mcp/index.ts": "f731b29c4fcd1517dc99276a998944494a86720e0cd103061e1799d149c7d32c"
+  },
+  "source_html_sha256": "13afbb1ecd2d4b0f80ca918d1956690e16493b1addbf273314c9c1124ad380cb",
+  "production_bundle_guard": "DEV preview excluded; fixed edition and named methods present",
+  "scope": [
+    "src/App.tsx",
+    "src/bootcamps/conditionals",
+    "src/components/teacher/ConditionalAssignmentFields.tsx",
+    "src/components/teacher/ConditionalAssignmentFields.test.tsx",
+    "src/lib/conditionalBootcampAssignment.ts",
+    "src/lib/conditionalBootcampAssignment.test.ts",
+    "src/dev/ConditionalOpeningPreview.tsx"
+  ]
+}

@@ -1,0 +1,20 @@
+---
+source_file: "_other-sessions/2025-11-23-mosess-notes-by-gemini.md"
+type: "document"
+community: "Assumptions and the New-Concept Rule"
+tags:
+  - graphify/document
+  - graphify/EXTRACTED
+  - community/Assumptions_and_the_New-Concept_Rule
+---
+
+# Rationale: the objection habit filters answers, previews the credited answer, teaches LSAT phrasing, and guards comprehension
+
+## Connections
+- [[Attack Your Own Argument (find the gap first)]] - `rationale_for` [EXTRACTED]
+
+
+## Source
+- [[graph-imports/distillates/_other-sessions/2025-11-23-mosess-notes-by-gemini]] — raw: [[students/_other-sessions/2025-11-23-mosess-notes-by-gemini]]
+
+#graphify/document #graphify/EXTRACTED #community/Assumptions_and_the_New-Concept_Rule

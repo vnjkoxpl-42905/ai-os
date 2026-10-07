@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 245" role="img" aria-labelledby="title desc">
+  <title id="title">All implies most, and most implies some</title>
+  <desc id="desc">For a nonempty group, all guarantees most, and most guarantees some. The reverse directions do not follow.</desc>
+  <rect width="900" height="245" rx="24" fill="#f8f5ee"/>
+  <text x="42" y="50" fill="#152d36" font-family="Arial,sans-serif" font-size="25" font-weight="700">What follows for sure?</text>
+  <g font-family="Arial,sans-serif" font-size="27" font-weight="700" text-anchor="middle">
+    <rect x="44" y="86" width="204" height="72" rx="16" fill="#6d53a5"/><text x="146" y="132" fill="#ffffff">ALL</text>
+    <rect x="348" y="86" width="204" height="72" rx="16" fill="#c57916"/><text x="450" y="132" fill="#ffffff">MOST</text>
+    <rect x="652" y="86" width="204" height="72" rx="16" fill="#168d82"/><text x="754" y="132" fill="#ffffff">SOME</text>
+  </g>
+  <g stroke="#152d36" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path d="M263 122 H322 M308 109 L322 122 L308 135"/>
+    <path d="M567 122 H626 M612 109 L626 122 L612 135"/>
+  </g>
+  <text x="44" y="201" fill="#49606a" font-family="Arial,sans-serif" font-size="17">The arrows show guarantees. A weaker claim can allow a stronger case without proving it.</text>
+</svg>

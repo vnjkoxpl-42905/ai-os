@@ -1,0 +1,1 @@
+/Users/joshuaf/.claude/plugins/marketplaces/claude-plugins-official/plugins/hookify/agents/conversation-analyzer.md

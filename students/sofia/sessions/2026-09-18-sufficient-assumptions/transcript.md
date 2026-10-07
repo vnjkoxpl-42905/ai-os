@@ -1,0 +1,677 @@
+﻿# Transcript
+
+Source tab: Gemini Meet transcript.
+
+00:00:13
+
+Joshua Fisseha: Yeah, I'll give you uh like two and a half minutes to do this question. We need to start off here.
+Sofia Minassian: Okay. Okay, I think it's C.
+Joshua Fisseha: All right. So, let's see.
+Sofia Minassian: And I didn't graph.
+Joshua Fisseha: Um,
+Sofia Minassian: I didn't I uh I didn't feel the need to
+Joshua Fisseha: okay, that's good. That's good. So, we uh Yeah,
+Sofia Minassian: I understood this argument.
+Joshua Fisseha: what we'll do, yeah, walk me through this money.
+Sofia Minassian: Okay. So, it's giving you a claim of all. So, I I noticed that and said all political systems that aim at preventing conflict are legitimate. So, if you're a political system and you prevent conflicts, you are therefore legitimate. Then it brings up a totalitarian political system and it says they're good at they're usually good at preventing conflict but because those are who are subject of to power are not like they're basically illegitimate just to be simply but because totalian political systems are illegitimate professor Gandalf's principle must be false.
+
+
+00:02:49
+
+Sofia Minassian: So it's kind of like negating the necessary condition of legitimacy or and also putting it to the perspective that you have regime have this type of political system that does prevent conflict but they're no longer they're not legitimate. know how how could this conditional what must be true for this thing to be false and what is an assumption required I think it was C like at least one total political system at pre aims at preventing conflict I feel like without that the argument
+Joshua Fisseha: Yeah.
+Sofia Minassian: wouldn't make sense like I did like a natural negation of that and I feel like it crumbled the argument
+Joshua Fisseha: Okay. So, um yeah. So, the uh the first thing that before I say anything, the Yeah. The you did it very well. Exactly. So, like C is the perfect answer. Um the
+Sofia Minassian: and it's not super strong, but at least one it raised like my like my like um it made me
+Joshua Fisseha: Yes. Yes.
+Sofia Minassian: more uh attracted to it because I'm trying to tap into like the things that you taught me like necessary doesn't have to be super strong, can will maybe Like whereas a sufficient assumption is rigid like it's more like must should always
+
+
+00:04:14
+
+Joshua Fisseha: You got it. Bang on. Right on. Um, that's exactly what I was going to ask you. Beat me to She's starting to read my mind. That's exactly what I was going to say. What did you notice about this answer choice that was very attractive which is the at least one very low burden uh to carry with that answer choice? If there's at least one right then political systems aim at preventing conflict. Yeah, of course. Right. Um which is to be honest the are actually one second.
+Sofia Minassian: Is it not?
+Joshua Fisseha: Um, yeah. Yeah. Yeah, that's right. That's right. I have to I'm out of brain fart for a second. Yeah. No, that's exactly it.
+Sofia Minassian: I was like I was like, "Oh s***.
+Joshua Fisseha: That's exactly it.
+Sofia Minassian: Oh s***. I was going to be happy.
+Joshua Fisseha: Yeah.
+Sofia Minassian: Is it Is it wrong?
+Joshua Fisseha: No, no, no, no. You're right.
+
+
+00:05:01
+
+Joshua Fisseha: You're right. Because Yeah. It's uh it's exact. It's a missing overlap, right? Like when we see if you wanted to diagram it the simplest way would be I don't have to go through all of it but actually I won't even do it because you're going to it's going to be easy to not like take it as I want to do a question that's more that gives you more of a challenge because you made that look a little easier than you're making me look crazy here. That's uh I think it's level four or five question too. Very good. You did you did it and you kind of did it without even having diagram which is a good sign. That means you're picking up on conditionals very very much at a higher level.
+Sofia Minassian: Naturally,
+Joshua Fisseha: Yeah, it's good. This is very good. That's usually the part where students get like stuck. Conditionals is where the the land of like the it's just where a lot of
+Sofia Minassian: the land of Oh my god,
+
+
+00:05:46
+
+Joshua Fisseha: students
+Sofia Minassian: there's a lot of discourse like um Tik Tok discourse like you know people who take the LSATlike they bond over and like the number one like trauma was like division that's third condition.
+Joshua Fisseha: always conditions.
+Sofia Minassian: Is it in my nightmares?
+Joshua Fisseha: Yeah. Yep. Yep. Yep. And you're making it look easy. So that's why I'm like, "Oh god, this is we're gonna have to we're going to put up the and we're going to push it up here." So let's do this. Let's do this question here. Yeah, let's go.
+Sofia Minassian: Uh, hey.
+Joshua Fisseha: Okay.
+Sofia Minassian: Okay.
+Joshua Fisseha: Um, I actually didn't even read the expression. I wanted to do it in real time with you. Um, I want I want you to teach me how you do this. I want you to show me the like we'll go line by line. So, I'll ask you questions because I I'll read it as we speak. Um, how the read read the first line out loud.
+
+
+00:09:27
+
+Sofia Minassian: A tax preparation company automatically adds the following disclaimer to every email sent to its clients. Any So my rank my my bell rings that this is going to be the sufficient condition. any tax advice in this email should not be constructed as advocating any violation of the provisions of the tax code. So I put tax advice and then it said um should not tax code something like just something to know what that means just just just derive some meaning from it and then um
+Joshua Fisseha: Yeah. So what about um the first
+Sofia Minassian: so the
+Joshua Fisseha: part which well like the prior to the any part what do they say prior to that?
+Sofia Minassian: attack automatically adds the following disclaimer. So, we know that we have to keep in mind that this is a disclaimer that's being uh sent by the tax preparation company.
+Joshua Fisseha: Yeah. So, okay. And so, yeah. Yes. Yes. So, we we know the first line is giving us Yeah. They're telling us that in sentence one, we see the word every, right?
+
+
+00:10:38
+
+Joshua Fisseha: Every is a universal quantity word, which is telling us if it's a conditional indicator word, right? They're telling us that uh in this case uh in the first sentence they're saying every which is just simply put I was going to I was going to ask you but I'll tell you what's the what's the first sentence telling us
+Sofia Minassian: that if you every company has um every um email sent to its clients state that if you have tax advice uh it should not be constructed as advocating a violation to the tax code.
+Joshua Fisseha: Yeah. Yeah. So, yeah, we know that they're saying that uh every single email gets the same disclaimer automatically. Okay. Um let's go to the next part. What do we have there? And and I guess what do we know so far about whether the whether So, the disclaimer appears in illegal suggestions and non-ilgal suggestion emails. Okay. What do we know so far about whether the disclaimer works or serves as a purpose? Do we know anything about it?
+
+
+00:11:46
+
+Sofia Minassian: Wait,
+Joshua Fisseha: Does the disclaimer work?
+Sofia Minassian: the disclaimer.
+Joshua Fisseha: Do we know so far?
+Sofia Minassian: No, we don't. We just know the only purpose this is cons this disclaimer could serve.
+Joshua Fisseha: Yes.
+Sofia Minassian: is hope. We put the next sentence says the only purpose a claim could serve is to provide legal protection for the company. So I put like legal protection for company arrow purpose.
+Joshua Fisseha: Yeah, the only creates a so the only so the indicator here is only if you pointed out so the only purpose right um okay so that only introduces necessary as you understand right and they're saying if legal uh if legal protection is disclaimer's only possible purpose What would happen if we establish that it provides no legal protection?
+Sofia Minassian: then there's no purpose.
+Joshua Fisseha: Yeah, exactly. So, that sentence is extremely important, right? Let's go to the next line.
+Sofia Minassian: And that's what answer A says. If the if the email suggests that the client do something illegal, the disclaimer offers no legal protection.
+
+
+00:12:57
+
+Sofia Minassian: So the disclaimer serves no purpose. So you have to bridge that if there's no legal protection,
+Joshua Fisseha: Mhm.
+Sofia Minassian: there's no purpose.
+Joshua Fisseha: Exactly. So if the actual email tells us the client to do something legal, this little disclaimer can't really save the company, right?
+Sofia Minassian: Mhm.
+Joshua Fisseha: So we have a explicit obviously if then, right? So we know illegal suggestion, no legal protection. What kind of emails have we now proven the disclaimer does not protect?
+Sofia Minassian: illegal. Oh, so if the client does something illegal.
+Joshua Fisseha: Right.
+Sofia Minassian: So I kind of did your method. So I saw that time was going down. So I was like, "Okay, let me just go hunt for um an answer that uh has the last conditional premise in it, which is I was looking for um illegal or no legal protection cuz that was the last um things that was mentioned in the premise.
+Joshua Fisseha: Come on.
+Sofia Minassian: So then I I saw that answer choice A and B has illegal in it.
+
+
+00:13:55
+
+Sofia Minassian: So I had I had like there has to be something illegal involved. And then um I um
+Joshua Fisseha: Well, the conclusion. So, listen, the last part says, so the disclaimer serves no purpose, right? Okay. So,
+Sofia Minassian: so if there's no purpose,
+Joshua Fisseha: we know the word.
+Sofia Minassian: there's no legal protection because that's the contraositive of what we have.
+Joshua Fisseha: Yeah. So, let's compare the evidence with the conclusion. We know that illegal suggestion right means no legal protection
+Sofia Minassian: Yeah.
+Joshua Fisseha: right and because legal protection is the only possible purpose right the conclusion what is the conclusion saying like uh my question better yet sorry to
+Sofia Minassian: that the displace serves no purpose.
+Joshua Fisseha: ask ask you this what is conclusion what should the conclusion be if it was properly done what what should the conclusion actually
+Sofia Minassian: So the so the the the Oh,
+Joshua Fisseha: If it was valid. Yeah. Go ahead. Go ahead. You got it.
+Sofia Minassian: so But if the email out suggests that the client do something illegal, then the disclaimer offers no legal protection.
+
+
+00:15:03
+
+Sofia Minassian: So the disclaimer has no legal protection.
+Joshua Fisseha: Yeah, the disclaimer serves no purpose when the email suggests something illegal. That would be okay.
+Sofia Minassian: Yeah.
+Joshua Fisseha: But what's the conclusion actually saying?
+Sofia Minassian: So the disclaimer serves no purpose.
+Joshua Fisseha: Okay. What category of email does the author still need to deal with before that conclusion is guaranteed?
+Sofia Minassian: Legal
+Joshua Fisseha: Yeah. So emails that don't suggest anything legal. How about those ones he's talking about? The ones that illegal, right? So what are we trying to find? We're trying something that something that the argument merely needs to we don't need something that's obviously argument needs to have to make it stronger. We have to make sure it follows completely. It can't have any gaps, any scenarios that could potentially go wrong. So we need to look for what could I add that would close that that potential like gap if we identified. Right? We've already identified illegal suggestion means no legal protection. So no illegal suggestion.
+
+
+00:15:57
+
+Joshua Fisseha: What should be the case? We'd want an uh we'd want what we want in a blank is the disclaimer is useless in that situation too.
+Sofia Minassian: Oh,
+Joshua Fisseha: So like we have two scenarios legal and legal. We need to have both of those scenarios because if we have every scenario is going to fall into one of those, right? Because either something's illegal or it's legal. There's no in between, right? So we have the illegal covered up. How about the legal situations? Okay. Um, this is something that we want to pay attention to here.
+Sofia Minassian: Mhm.
+Joshua Fisseha: When a stimulus says something that applies to every case, the last time we kind of touched on this, it talks about universally every case,
+Sofia Minassian: Okay.
+Joshua Fisseha: but the evidence only addresses one branch.
+Sofia Minassian: Okay.
+Joshua Fisseha: Ask what happens in the opposite branch. So in this case,
+Sofia Minassian: Okay.
+Joshua Fisseha: illegal. Ask yourself if they're talking about if they're making a claim about every or all and they only refer to illegal, we have to automatically know what happens on the inverse, which is legal.
+
+
+00:16:58
+
+Joshua Fisseha: So we need to close the unressed possibilities to make the evidence be actually exhaustive, right? So in this case like um we are looking for an answer choice that would essentially address the second branch here, right?
+Sofia Minassian: It's legal.
+Joshua Fisseha: So like yeah, we need we need the we need we need something that would point towards um we would want something that would point towards legal protection is the disclaimer's only possible purpose or illegal protection isn't the only right.
+Sofia Minassian: Yeah.
+Joshua Fisseha: What I mean is that like we know something's either legal or illegal, right? And we know that's the only two possibilities. And the stimulus already handles the illegal. So we need to figure out one that handles legal. I don't know if I kind of just like were speaking in circles there,
+Sofia Minassian: Okay.
+Joshua Fisseha: but um in this case, which when we see this right like um What are we missing in this argument? I'll ask you that to start off here.
+Sofia Minassian: if they're not illegal.
+Joshua Fisseha: Yes.
+
+
+00:18:12
+
+Joshua Fisseha: Um the idea is Yeah.
+Sofia Minassian: So, is is is a setting us up for that?
+Joshua Fisseha: Let's see. Right. So remember, they're saying the disclaimer serves zero purpose. That's the claim they're making. Right? What they've only proved is that if an email suggests something illegal, right? Disclaimer gives no legal protection. Right? So legal protection is the disclaimer's only possible purpose. Right? The gap is what kind of email have they not dealt with? They've only dealt with one kind of email, which is an email that does not suggest anything illegal. And I'm saying legal legal here. I'm saying them like sounding like I'm twisting my own head as I say this, but they've only dealt with emails that that that do not suggest anything illegal. So, what do we want the answer to tell us? We want the answer to say that this disclaimer is still pointless when the email does not suggest anything illegal. That's the difference. Um, I'm I'm going to just let you ask me any questions before I go further and rant further.
+
+
+00:19:16
+
+Joshua Fisseha: Like, we want an answer that talks about no illegal suggestion.
+Sofia Minassian: So does a answer that?
+Joshua Fisseha: Yeah.
+Sofia Minassian: Okay. I didn't I didn't come to that consensus with A, but I still got it correct.
+Joshua Fisseha: And we can understand it. So like the um the thing here is how did you understand it?
+Sofia Minassian: I thought about it differently.
+Joshua Fisseha: Explain to me.
+Sofia Minassian: That's how I understand it. If the email does not suggest that the client do anything illegal because that's the last premise that you mentioned. I know that that that's something that's going to be mentioned.
+Joshua Fisseha: Mhm.
+Sofia Minassian: So, I was looking for illegal.
+Joshua Fisseha: Mhm.
+Sofia Minassian: Actually, I wasn't looking for legal. I was actually looking for illegal. And then A and B are the only ones who have that. So, I B was B was saying could be substantial penalties like
+Joshua Fisseha: Looks good. Yeah.
+Sofia Minassian: nowhere do we have any penalties. So, no, this is bringing up something unnecessary.
+
+
+00:20:13
+
+Sofia Minassian: Then I looked at the legal protection aerial purpose and if there's no purpose then there's no legal protection and then I saw that that the company does not need legal protection. So I picked it
+Joshua Fisseha: which is good. You actually very I'm very happy that in a way I'm like uh you you were able to to get around all of the because you remember that the the the the powerful tip that you remembered um which makes your life a billion times easier um which is right on the premise right before. The idea is like the author proved that if the company tells you to break the law, the disclaimer won't save them. We know that. So in that scenario,
+Sofia Minassian: Mhm.
+Joshua Fisseha: we know it's useless according to the argument, right? But what if the company gives gives you totally fine legal advice. Is it possible the disclaimer actually does give them some legal protection in that normal scenario?
+Sofia Minassian: We don't know.
+Joshua Fisseha: Exactly. It's possible. Right. So since we don't know the end our conclusion is not guaranteed because we need to prove one thing.
+
+
+00:21:17
+
+Joshua Fisseha: Our goal is to always establish this idea. Right? If there's a place where we don't know that means we have an opening for potential attack danger, right? So like maybe someone tries to sue them for a mistake and the disclaimer protects them because the advice wasn't illegal. So in this case the author's conclusion that the disclaimer serves no purpose is currently that would fail in that scenario. So we have a gu we have an issue right we need choice that says even if the advice is legal and even in that scenario it's still useless right even if it doesn't even even in the opposing scenario right that's that's the real thing why a is right so email does not uh elsewhere suggest the client do any the idea is if they if they give legal advice right they don't even need legal protection from answer which is what answer a says so even if they give legal advice they don't need the legal protection right because they the other scenario where It's if it's a legal advice, the disclaimer gives no benefit.
+
+
+00:22:11
+
+Joshua Fisseha: If it gives legal advice, the disclaimer still gives no benefit. Then we know either or in every scenario, the disclaimer gives no purpose because both situations are covered. I hope that kind of makes sense.
+Sofia Minassian: Yeah, it's kind of filling the gap of something that wasn't accounted for.
+Joshua Fisseha: Yes, you're basically crossing their eyes and dotting slashing their tees essentially or dotting their eyes and slashing their
+Sofia Minassian: But I did I didn't I didn't realize that I kind of did like I kind of got it based
+Joshua Fisseha: tees.
+Sofia Minassian: off of like um like pattern recognition, too.
+Joshua Fisseha: Yeah, which is part of actually sufficient assumption gets into you get to a when you get really good what you did kind of is like the more like it's kind of a high level like way of thinking about it because you know that the last portion of it has to be linked to what's being stated in the conclusion, right? And we know um yeah, we we know that like uh ultimately we need to link what was said before to what was said in the conclusion.
+
+
+00:23:06
+
+Joshua Fisseha: Um, and it it it does that like the missing you you essentially are able to look past the call like the actual like content and you can see where's the pieces that need to be mixed and that's kind of how it seems like you got to the answer like okay I know this part needs to be linked to this part the content in between can kind of be like you know and which is actually a good sign.
+Sofia Minassian: Yes.
+Joshua Fisseha: It means that you're understanding like you're developing a pattern recognition um which is actually really good because that's
+Sofia Minassian: Yeah.
+Joshua Fisseha: a lot of the the the game here. Um yeah I don't need to go on any longer here because this is good. We're just going to go to another question here. Um,
+Sofia Minassian: Thanks.
+Joshua Fisseha: let's do
+Sofia Minassian: Perfect. Okay. Yeah. E
+Joshua Fisseha: Okay. All right. So, E, let's check out the
+Sofia Minassian: graphing. This was really confusing for me because I didn't know what to do with this never.
+
+
+00:27:41
+
+Sofia Minassian: So I began to graph it but then I said I'll just understand it intuitively. So I said one can never tell whether another person is acting from an ulterior motive. Um therefore it is impossible to tell whether someone's action is moral. So you can never know you can never know if you have an at someone has an motive. So um you don't know if their actions are moral.
+Joshua Fisseha: What's wrong with never?
+Sofia Minassian: So then I don't know.
+Joshua Fisseha: What gave you problems with never.
+Sofia Minassian: I didn't know what to do with it. Like one can never tell whether another person is acting from an ulterior motive. Do I just graph that or do I link it up with the is impossible to tell whether someone's actions is moral?
+Joshua Fisseha: Okay. Yeah. So
+Sofia Minassian: Like I didn't know I didn't know what to do with that and I feel like I was going to over compliment myself with the arrows. So I just like just understood it. And then so one should evaluate the consequence of an action.
+
+
+00:28:34
+
+Joshua Fisseha: I'm going to hold you there. I'm going to hold you there. So because um you don't have to don't think as arrows. You can do that. But the idea is you want to think as what is the the if then here, right? Um the idea is when we see never, right? How do we treat never? What does never tell us?
+Sofia Minassian: negate. I knew it was a negate necessary.
+Joshua Fisseha: Right. So, what do we know we cannot reliably know about someone else? What sentence one?
+Sofia Minassian: a moral if their actions are moral.
+Joshua Fisseha: Well, we it says one can never tell.
+Sofia Minassian: Oh, if we never know if someone has an ulterior motive.
+Joshua Fisseha: Yeah. We don't know their motive or their intentions,
+Sofia Minassian: So, what would be on the right side?
+Joshua Fisseha: right?
+Sofia Minassian: What would be on the left side?
+Joshua Fisseha: So in this case it would be motive right um and you can think of uh arrow unknown
+
+
+00:29:26
+
+Sofia Minassian: Oh, see like that would have just that would just
+Joshua Fisseha: right and you don't have to you're right though you don't like in this case it might be easier just to not think about conditionals too much right all you have to know is uh someone's motives and we can't if we can't like you don't have to think about it as if then this is probably as you thought of it and you naturally came to just thinking about intuitively. It's probably better to do that way. By the way, I just want to put it out there. Um, but yeah, motives we don't know. Their motives or intentions we don't know, right?
+Sofia Minassian: So because of that it's impossible to know whether someone is That's is moral. So we have our conclusion. So one should evaluate the consequence of action rather than its morality. We have a new word in our conclusion which is consequences.
+Joshua Fisseha: Mhm.
+Sofia Minassian: So the only other answer that has consequences is E. So I instantly liked E. And um one cannot know whether someone acted morally.
+
+
+00:30:19
+
+Sofia Minassian: That's the last conditional that we have moral. Uh I mean that's the last premise we have. So, it had the last premise and it linked up our um the the like the word that they didn't account for in the conclusion and that.
+Joshua Fisseha: Wait, wait, wait, wait, wait. I'm going to ask you a question. Wait. You said the you said that the new word is consequences. Um, what's the conclusion of this argument?
+Sofia Minassian: So, one should evaluate the consequence of action rather than it morality.
+Joshua Fisseha: Yes. Oh, wait. Sorry, sorry. Repeat that. You said the last is the last last sentence. Is that you're talking about the consequences of actions?
+Sofia Minassian: Yeah, one should evaluate the consequence of action rather than its morality.
+Joshua Fisseha: Okay. Uh why do you say that conclusion? What makes you believe that's inclusion?
+Sofia Minassian: The so yeah the so is a
+Joshua Fisseha: So, is that what you said?
+Sofia Minassian: conditional indicator.
+Joshua Fisseha: Okay.
+
+
+00:31:20
+
+Joshua Fisseha: Right. So the the the the thing that we want to um which is which is fine like the idea that I wanted to point out was um you're right that the idea is and we should just evaluate the consequences instead of the morality right because we want to and what does that mean what's another way of saying that like what does that mean versus all this conditional stuff what is it ultimately what are they telling us
+Sofia Minassian: You should look at people's actions. You should look at it.
+Joshua Fisseha: Mhm. Yeah. Right. Exactly. We should look at the the outcome like do the do the mean do the ends are they like we want to just measure by the ends like how do their actions the results of their actions how do they impact? We don't want to think about it from the morality sense. Okay. And the evidence is that you can never know someone's secret ulterior motive. And by the way we want to pay attention to is there only one conclusion here?
+
+
+00:32:18
+
+Sofia Minassian: Oh, there's two.
+Joshua Fisseha: Yeah. What's second conclusion?
+Sofia Minassian: One can ever tell whether another person is active from an alter.
+Joshua Fisseha: No. That would be the evidence, right? Because we see therefore.
+Sofia Minassian: Oh, it is impossible to tell whether someone's action is moral.
+Joshua Fisseha: Yes. So, we know the first line because that therefore introducing a conclusion that means this first line is going to be the premise. Premise, intermediate conclusion, then conclusion. Okay. Now the thing is with sufficient assumption questions right the the big thing that like uh makes them tricky is that we always anticipate especially the hardware questions that the gap will be between the the conclusion and the intermediate conclusion or or the evidence. But that's not necessarily have to be the case. The gap can come at any point. It could come because remember the orange part of the intermediate conclusion, the subconclusion is also a point where you might you have to address too. There has to be a covering of each point each jump.
+
+
+00:33:17
+
+Joshua Fisseha: So we want to assess it and we can know that the sufficient assumption come from the the pink to orange instead of orange to yellow.
+Sofia Minassian: Okay. You can go from pink to orange.
+Joshua Fisseha: Yeah. So, premise to intermediate, it might be the gap you might have to you want to address might just come from the premise to the intermediate conclusion. It could come, it's not just the end of the chain necessarily. That's what makes a harder sufficient assump. So, anyways, um let's understand it. And so, that's why we want to assess them at each jump. So, the first claim they're saying it is impossible to tell whether someone's actions is moral. What's their support for that claim? Why do they believe that?
+Sofia Minassian: Because one should evaluate the consequences of an action rather than its morality.
+Joshua Fisseha: No, no, no, no, no.
+Sofia Minassian: Oh. Oh.
+Joshua Fisseha: What's supporting the orange?
+Sofia Minassian: Oh. Why do they think that? Oh,
+Joshua Fisseha: Yeah.
+
+
+00:34:01
+
+Sofia Minassian: it's because you can't know people's ulterior motive.
+Joshua Fisseha: Yeah. You can never tell whether another person is acting from ulterior motive.
+Sofia Minassian: Uhhuh.
+Joshua Fisseha: Correct. Um, okay. So, is that justified?
+Sofia Minassian: Uh, no.
+Joshua Fisseha: No. Because remember does that. So by saying that one could never know whether a person is acting from ulterior motive that doesn't necessarily entail that it's impossible to tell whether someone's actions are moral right I don't need to if I like your action being moral or immoral let's say your actions let's say theoretically you want to you use an example you want to be a lawyer right um do I know if you have an ulterior motive are you looking to like go into law for I don't know like you want to uh do some like uh shady legal businesses. That's the reason why you do I don't know why you want to be a lawyer theoretically. I don't know your ultimate goals, right? Ultimate dreams. Maybe you have a secret motive, right? Um but can I based off of what that being said, you have an ulterior motive because I can't know if you have ulterior motive.
+
+
+00:35:10
+
+Joshua Fisseha: Does that mean I can't know whether your action is moral when you act?
+Sofia Minassian: No,
+Joshua Fisseha: Like can I know whether your actions are moral or not based off the way you act? Yeah.
+Sofia Minassian: no.
+Joshua Fisseha: Well, you can. You can like think about it if I said to you,
+Sofia Minassian: Okay.
+Joshua Fisseha: you might have an ulterior motive. Let's say your motive is you want to be rich and famous and you want to just like uh I don't know, you want to you want to be the superstar of the Armenian community. You want to be Kim Kardashian's lawyer. Okay. Um that's a real reason why you want to be a lawyer. But let's say in the process of that, I don't know your alter that might be your ulterior motive, right? Um but let's say in the process of that, you are helping let's say Armenian refugees to get like uh I don't know get a better life. That's a moral action by definition, right? You're you're helping people have a better life.
+
+
+00:35:52
+
+Sofia Minassian: Thank you.
+Joshua Fisseha: I can't know. I can know what I can know that action is moral. I can know that that action specifically is moral without even knowing if you have ulterior motives. Maybe you're doing it just because you want to get a pat on the back versus wanting to help people for example. Okay, theoretically. So your actions can be determined whether they're moral or not. Me not knowing your ulterior motives doesn't mean anything. It can still be determining. I can still know whether your actions are moral. They're two different issues. Completely different issues, right? Like you doing something moral has nothing to do with whether I know you have an ulterior motives. You can have bad motives. That doesn't necessarily mean you can't deem whether somebody is doing something good or bad. Um, that being said, that means there's a gap here that has to be addressed, right? Ultior motives, because I can't ever know if you alter your motives, doesn't mean it's impossible for me to know whether you did something good or bad.
+
+
+00:36:43
+
+Joshua Fisseha: That needs to be addressed. Does that make sense?
+Sofia Minassian: Yeah.
+Joshua Fisseha: Are you sure? Because I I hope I was just not like I made it kind of I
+Sofia Minassian: Basically saying Yeah. Yeah. Basically saying just because it's impossible to tell if someone's actions are moral doesn't mean we can't identify their alter motive.
+Joshua Fisseha: other way around. Other way around so we know that.
+Sofia Minassian: Oh,
+Joshua Fisseha: So we wanted to accept it to be true. So let's say you could have an ulterior motive. Okay. But okay, let's say let's Okay, I'm going to use an example of somebody you I'll use somebody else to use you example as an example. You can you want to be a lawyer, right?
+Sofia Minassian: yes.
+Joshua Fisseha: Okay, let's say you're a lawyer that helps a lot of people, right? You do a lot of you help a lot of innocent people.
+Sofia Minassian: I actually want to I actually want to be a criminal defense attorney if that helps you with your example.
+
+
+00:37:35
+
+Joshua Fisseha: Amazing. Amazing. So, you help a lot of innocent people avoid jail, right?
+Sofia Minassian: Yes.
+Joshua Fisseha: You free up the you free up the homies. Let's say that, right? Okay. The idea is they hire you. You're the person that everybody calls because you um you're able to help people like um avoid prison when they don't deserve it. Okay, that is a good action, right? That's a good action. Can you can you tell me whether that's good or bad? Like you helping people that are innocent not go to prison, that's good, right?
+Sofia Minassian: That's a good option. Yes.
+Joshua Fisseha: Okay. But what if you have an ulterior motive? What if your motivation is to be rich? That's your real motivation, right? Does that mean that the action that you took by helping people be like be not locked up for things they didn't do is that does that can we still recognize if that's good or bad we can't
+Sofia Minassian: No. Oh,
+
+
+00:38:27
+
+Joshua Fisseha: like you can't
+Sofia Minassian: you can you can you can't like that that that is good. But you can't you can't automatically assume that my ulterior motive is to make money.
+Joshua Fisseha: yes we don't know where your turning goes exactly but we can we can definitely agree that you helping people is
+Sofia Minassian: Yeah. Okay. It's moral.
+Joshua Fisseha: good yes exactly I don't have to know if even if you have an ulterior motive.
+Sofia Minassian: Okay.
+Joshua Fisseha: Just say you're doing it for your own vain like I just want to win, right? Let's say that's the motivation. That could be your motivation. But we can still say even if that part's not good, we can say the action you took is still good. These are separate actions. likes the action and your motives. You can recognize somebody's actions as good or bad without having to know their ulterior motives if they have ulterior motives. So they're assuming that if somebody can't recognize if somebody can't see your ulterior motives, that means you can't tell me if their action are good or bad.
+
+
+00:39:10
+
+Joshua Fisseha: That's pretty ridiculous, right? Like people will say like uh Elon Musk is evil, right? His motives is to get rich. But if he helps a a kid in Africa to be able to get internet for example, that is action itself is a good thing. That specific action is good. what he wants to do behind the scenes is separate from that action. Simply put,
+Sofia Minassian: The thing is I took everything in the in the premises to kind of be like true.
+Joshua Fisseha: okay,
+Sofia Minassian: Like I didn't really see that. Like I took it to be like,
+Joshua Fisseha: the premises are true. The premise we accept the premise to the premise is saying that we don't know somebody's ulterior motives. We can't know whether somebody has ulterior motives. That part we accept to be true. The problem is the conclusion is that impossible.
+Sofia Minassian: "Yeah,
+Joshua Fisseha: It's impossible to tell someone's action or that's important.
+Sofia Minassian: I didn't see that as a conclusion. I saw that as a premise.
+
+
+00:39:55
+
+Joshua Fisseha: That's very good that we that you realize that you understood that what it is. So that is the part we have to question ulterior motive doesn't mean that we can't say someone's actions are good or not. We we can't we can't go that far.
+Sofia Minassian: So what about the main conclusion?
+Joshua Fisseha: We can't say and then let's look at let's look at the main conclusion.
+Sofia Minassian: We don't we
+Joshua Fisseha: So one should evaluate the consequences of an action rather than its morality. Right? that is relying on the second premise or the second intermediate conclusion being true. If this is true, then the second the last part can be you can argue is true.
+Sofia Minassian: Okay. So what I got from this is that that was the conclusion to me. So I was attracted to answer choice E because it
+Joshua Fisseha: Okay,
+Sofia Minassian: h
+Joshua Fisseha: let's look at E. E tells us uh okay so look at E when we see E is telling us that um it says the intention or the for E it would be uh let's let's understand so one cannot know whether someone acted morally unless one knows that what consequence the person's actions had.
+
+
+00:41:07
+
+Joshua Fisseha: So let's let's translate that to an if then. What's the if then there? How do we translate that?
+Sofia Minassian: If one know if one if one unless his negate sufficient. So one one can know whether someone acted morally in a particular situation. Um if someone could uh know whether someone acted uh morally in a situation then uh they know the consequences that person's action had.
+Joshua Fisseha: So, let's look at the make conclusion in the paragraph. Does the author want us to see use consequences to figure out if an action was moral?
+Sofia Minassian: No,
+Joshua Fisseha: No.
+Sofia Minassian: they want us to that we should use the evaluative consequences instead of morality.
+Joshua Fisseha: Yes.
+Sofia Minassian: Oh,
+Joshua Fisseha: E is trying to link consequences and morality together,
+Sofia Minassian: so yes,
+Joshua Fisseha: but our author wants to keep them separated.
+Sofia Minassian: but that's not what our author said. So I So I think it's answer choice A.
+Joshua Fisseha: Yes, you got it. Let's look at A. Let's understand A. So, A tells us I'm going to ask you a couple question here.
+
+
+00:42:18
+
+Joshua Fisseha: Okay. So, the idea,
+Sofia Minassian: This is a harder question.
+Joshua Fisseha: it's tricky. It's tricky. Um it says intention of an action is indiv indispensable for an evaluation of its morality. So let's look at the word indispensable. What does that mean?
+Sofia Minassian: like you can't separate it,
+Joshua Fisseha: Yeah.
+Sofia Minassian: can't live without it.
+Joshua Fisseha: Absolutely necessary. Required.
+Sofia Minassian: The intention of an action. So the alter your motive basically for an
+Joshua Fisseha: Yeah. Is required.
+Sofia Minassian: act is
+Joshua Fisseha: Action is required. You can think of this as just saying required or necessary.
+Sofia Minassian: required for
+Joshua Fisseha: Mhm. Right. And it says if we So the answer translate to intention which is motive is required to evaluate morality. Right.
+Sofia Minassian: so that's bridging the pink and the orange together.
+Joshua Fisseha: Yes. Very good.
+Sofia Minassian: Because
+Joshua Fisseha: This is why this one's tricky. Right. It says you must have intention to evaluate morality.
+
+
+00:43:18
+
+Joshua Fisseha: That's what it's saying. So intention but morality and intention which is motive right we can't know the so if we know the because I don't know your intentions doesn't mean I can't tell you whether whether what you did was good or bad thing right you might have helped the poor do I know your intentions Oh.
+Sofia Minassian: So this is trying to this is trying to seal that gap. This is trying to say that your intentions are related to the morality.
+Joshua Fisseha: Mhm. You can't separate them. So that makes it linked perfectly linked.
+Sofia Minassian: It's trying to trying to close the gap.
+Joshua Fisseha: Mhm. The takeaway for this question is do not only look for the gap between the conclusion and the evidence. Right?
+Sofia Minassian: Okay.
+Joshua Fisseha: The gap could come from before that point. This is why this question is tricky. Usually it's just a conclusion but it can be the secondary or subconclusion. So that's why we have to follow them as they go. As every logical leap they make we have to catch them.
+
+
+00:44:24
+
+Joshua Fisseha: We have to question it at every point. Once you master that all questions become a lot easier because even in flaw questions they might make a problem the problem might come from the unnecessary assumption too might come from the premise to the intermediate conclusion. That might be the real problem. not necessarily intermediate conclusion to the main conclusion just somewhere that on that track we notice that that's what A is telling us um so we want to assess and catch the intermediate conclusion as well make sense okay let's do one more
+Sofia Minassian: Okay. Mhm.
+Joshua Fisseha: question here or we don't have time anymore we'll just we let's jump into this Next question here. This is a tricky question I threw at you. Let's do a little girl. You're a big girl now.
+Sofia Minassian: Let me get I want to get better for the the tricky questions.
+Joshua Fisseha: Yeah, I'm doing another really challeng you're you're hanging though, which is which is good. This is good. Um, let's go to All right.
+
+
+00:46:11
+
+Joshua Fisseha: You're hang You're hanging in there. So, let's go. Okay. Let's let's get this question here. Okay.
+Sofia Minassian: It's added to the premises. I've never seen a question like this.
+Joshua Fisseha: What is it? What's the con? What's the student? What's the questions I'm asking from us?
+Sofia Minassian: It's a sufficient s***.
+Joshua Fisseha: Okay. Yeah, it's weirdly worded.
+Sofia Minassian: Yeah. Like if which one of the following is added to the premises? Let's see.
+Joshua Fisseha: I added 30 seconds.
+Sofia Minassian: F C.
+Joshua Fisseha: Okay. So, uh let's go through this one. So, we have the first sentence. What does the first sentence tell us?
+Sofia Minassian: We ought to pay attention only to the instinctive property. We ought to pay attention only to the instricted properties of a work of art. So I had pay attention arrow instinctive properties
+Joshua Fisseha: Sorry. You said what properties.
+Sofia Minassian: in in interesticr
+Joshua Fisseha: Okay. No, sorry.
+
+
+00:49:52
+
+Joshua Fisseha: I thought I thought you said something completely different. Yeah. Intrinsic properties. You got it. You're good. Yeah. Sorry.
+Sofia Minassian: we ought to pay attention only to the interesting properties of a work art.
+Joshua Fisseha: You got it. Mhm.
+Sofia Minassian: So I said pay attention arrow IP and then in other words extreme extrinsic properties are irrelevant to our aesthetic interactions with them. So I said EP arrow irrelevant and then for example when we look at a painting we should consider only what is directly presented in our experience of it. So I said look at painting arrow what is directly presented.
+Joshua Fisseha: Okay.
+Sofia Minassian: So I kind of found the similarity of pay attention and look at painting.
+Joshua Fisseha: Okay.
+Sofia Minassian: Um I was trying to like see if there's going to be a bridge for that. Just trying to like see that. And what is really aesthetically relevant therefore is not what a painting symbolizes but what it directly presents to experience.
+Joshua Fisseha: Mhm. What's up?
+
+
+00:51:03
+
+Joshua Fisseha: Okay. So, uh,
+Sofia Minassian: Oh,
+Joshua Fisseha: okay. Let's go to the first line. The first line here. Okay. The first thing I think that we want to point out is the first line is going to be really integral for us to be able to see what's going on here. So, they told us we ought to pay attention only to the intrinsic intrinsic properties of a work of art.
+Sofia Minassian: heat.
+Joshua Fisseha: So, what's the if then there?
+Sofia Minassian: If we pay attent if we pay attention then it should be to the inive property.
+Joshua Fisseha: If something deserves our aesthetic attention, right, it has to be intrinsic to the artwork. Okay, you can say something like that. So aesthetically worth worth considering in some sort, right? It has to be intrinsic. It has to be intrinsic.
+Sofia Minassian: Okay.
+Joshua Fisseha: Okay, good. Keep the intrinsic and remember that we might need that later, right? Um, question two, right? It's other extrins exttrinsic properties irrelevant to our aesthetic interactions with it.
+
+
+00:52:08
+
+Joshua Fisseha: Okay. So, what's the conditional there?
+Sofia Minassian: Extra the properties arrow irrelevant.
+Joshua Fisseha: So, can this link to anything from the first line?
+Sofia Minassian: No.
+Joshua Fisseha: Are you sure?
+Sofia Minassian: that if it's interesting, it's relevant.
+Joshua Fisseha: So if it's so we know intrinsic what's the difference between intrinsic and exttrinsic?
+Sofia Minassian: They're the opposites of each other.
+Joshua Fisseha: Yeah.
+Sofia Minassian: So,
+Joshua Fisseha: So if that's the case
+Sofia Minassian: so if that's the case, then intrinsic would be relevant to the work of art.
+Joshua Fisseha: Yeah. So exactly. So if we link the two, right, um they don't exactly chain. You could you could argue that it's it's dangerous to force it, right? But they tell us line one relevant intrinsic line two uh extrinsic irrelevant. Right? So we could we could try to do it,
+Sofia Minassian: Yeah.
+Joshua Fisseha: but we could also just hold on to that. Now let's go to the next line. Before I say I'm just going to let you walk me through what you think before I say and I go on my own thing here.
+
+
+00:53:18
+
+Joshua Fisseha: I'll let you tell me what you think, what you noticed.
+Sofia Minassian: So when we look at a painting We consider only what is directly presented. Directly presented. So I would chain like pay attention means the same as when we look at a painting.
+Joshua Fisseha: See?
+Sofia Minassian: So I I do pay attention arrow intrinsic properties and then intristic properties arrow to directly presented in our experience.
+Joshua Fisseha: Okay. Yeah. Um,
+Sofia Minassian: Yeah.
+Joshua Fisseha: so I I kind of missed the last part of this, but um, explain to me what you were said. The first I heard the first part, I didn't I didn't hear the last part.
+Sofia Minassian: Well, we look at a painting arrow directly um presented in our experience. So, I thought it was like pay attention arrow IP interest in interested properties and then we could change when we look at a painting that's kind of like paying attention. Uh we could arrow we could we could connect IP to directly presented in our experience.
+Joshua Fisseha: Yes. Yes.
+
+
+00:54:37
+
+Joshua Fisseha: Yes. So what they're saying is what is the conclusion is saying what is really aesthetically relevant is not what a painting symbolizes but what it directly presents to experience as you pointed out right. So that's what they're saying is the conclusion. The evidence is saying what is really aesthetically like what is really aesthetically relevant is not its extrinsic properties but its intrinsic properties. What it directly presents to experience i.e. that's what it means right in properties what it directly presents to experience.
+Sofia Minassian: So are we trying to cuz we haven't really changed like what's not say symbol or in restrictive properties is the answer choice what an artwork symbolizes involves only in restrictive properties that work because they're both irrelevant.
+Joshua Fisseha: Sorry, you muffled it. I can't read the first part. I hear it kind of and then you go again. So, you're saying that the My apologies.
+Sofia Minassian: Um like I'm trying to I was attracted to answer choice C only
+Joshua Fisseha: Sorry about that.
+Sofia Minassian: in property are relevant to our aesthetic interactions with them.
+
+
+00:55:39
+
+Sofia Minassian: But um now looking at like answer choice now looking at the conclusion what is really aesthetically relevant therefore is not what a painting symbolizes what it directly presents to experience is it making assumption that what a painting symbol what a painting symbolizes is like its extrinsive properties they're both irrelevant
+Joshua Fisseha: Yeah, I think so. I think I Yeah, I think I understand what you're saying. Yes, I think so. If I understand what you're saying, right? Um in this case like simply put the this is a this is this is important for multiple things. I I'll ask you first just like I'm going to highlight the conclusion. Which line's the conclusion and you'll see something very clear here.
+Sofia Minassian: Um, therefore is What? The last sentence.
+Joshua Fisseha: So therefore is is not what a painting symboliz but uh so what is what is right here?
+Sofia Minassian: This
+Joshua Fisseha: Yeah. Therefore is not what a painting symbolizes but what it directly presents to our experience. Okay. So first question we see sufficient assumption.
+
+
+00:56:51
+
+Joshua Fisseha: Do we see anything new in the ant conclusion that's not mentioned in the evidence?
+Sofia Minassian: Yeah. Uh symbolize.
+Joshua Fisseha: Okay. Okay. So, we do see the symbolizes is not there which is important, right? What else do we see? Well, to be honest, it just symbolizes symboliz is the only thing. You're right. So, um so symbolizes is new, right? So, that has to be an correct answer, right? What a painting symbolizes.
+Sofia Minassian: Yeah, that's why I think A is the answer.
+Joshua Fisseha: Mhm. So it can't be C. Can it be D? P possibly. Can it be E? No. Can it be B? Symbolic properties. But we want uh we want uh artistic like the arts what the art symbolizes. So what is aesthetic level is what? Not what a painting symbolizes. So painting symbolizing not symbolic properties has nothing to do with what we're talking.
+Sofia Minassian: I think the argument is making an assumption that just because not symbolizing is irrelevant is not relevant and restricted properties are told us as being irrelevant that that would latch on to each other.
+
+
+00:57:59
+
+Joshua Fisseha: Mhm. Yes.
+Sofia Minassian: I kind of see that now.
+Joshua Fisseha: Yes. Yes. And that's why A is correct.
+Sofia Minassian: Yeah.
+Joshua Fisseha: So the big thing to pay attention to is symbolizing art. The art has the idea of symbolizing and the painting symbolizing right the art symbolizing um is a new idea here.
+Sofia Minassian: Yeah.
+Joshua Fisseha: We need to have the answer choices.
+Sofia Minassian: I didn't this one. My method that I used for the last one would have helped more
+Joshua Fisseha: Yes. Yes. Yes.
+Sofia Minassian: because there's no there's no intermediate conclusion.
+Joshua Fisseha: Actually probably would have correct.
+Sofia Minassian: Okay. I I first
+Joshua Fisseha: Um um actually there isn't a conclusion.
+Sofia Minassian: sentence
+Joshua Fisseha: So um yeah. So we exactly uh no we ought to pay attention to only its other extrinsic properties. So the first sentence would be the intermediate conclusion. You're correct. Right. So this is where why it's very useful to pay attention because there's something here you could have you could have done that was like what you understood from the last question that could have helped you.
+
+
+00:59:05
+
+Joshua Fisseha: This is our intermediate conclusion. Right? So we ought to pay attention only to intrinsic properties of work of art. its other extrinsic properties are irrelevant to our aesthetic interactions with it. Okay, so that's our intermediate conclusion. You're following so far, right?
+Sofia Minassian: Mhm.
+Joshua Fisseha: This is our premise. Okay.
+Sofia Minassian: And we have to add a premise.
+Joshua Fisseha: Yes. And we want to see where does the evidence leave off and where does the conclusion start? What's a new ide? So if we see a new idea in a conclusion, we want to say what's the the new what's the last concept mentioned in the last point of the chain and what's a new concept in a conclusion. Like if I told you prior before and I said to you this sentence, the second sentence here was right before the last sentence, you would have probably connected this idea of intrinsic properties to the new concept and the conclusion here. remember. We are looking doesn't have to be like we are looking for the last point in the evidence and looking for the
+
+
+01:00:01
+
+Sofia Minassian: like
+Joshua Fisseha: conclusion and trying to change that change that usually.
+Sofia Minassian: Mhm.
+Joshua Fisseha: So in this case because they're not beside each other. So like I I'm not making this very clear here. The idea I'm trying to present to you is we look at the last point of the chain in the evidence and we look at the new in the conclusion and we try to match we try to link the two.
+Sofia Minassian: Mhm.
+Joshua Fisseha: So remember we look at the sentence right before or the concept that's meant that's in the chain that's right before it. So the concept is the extrinsic property. This is the last part of the evidence prior to going into the conclusion. So we want to link that last part of the evidence to the conclusion's new concept. Uh and that's kind of complicated way of saying is look at the idea right before the conclusion and then think about what is the
+Sofia Minassian: Yeah,
+Joshua Fisseha: new concept in the conclusion and link the two.
+Sofia Minassian: but here the four example is right before the conclusion.
+
+
+01:00:48
+
+Sofia Minassian: But that's not what you're talking about.
+Joshua Fisseha: No, even see that's exact now I know you understand what I'm saying. That's why it's so much tricky because it doesn't matter the actual spatial location of the sentence. That's actually not the number one. Usually it'll be that the spatial location is right before the sentence,
+Sofia Minassian: Yeah.
+Joshua Fisseha: but because it's intermediate technically this is like those like logically.
+Sofia Minassian: This trumps this trumps the premise.
+Joshua Fisseha: Yes. And this is where the the evidence leaves off because like intermediate conclusion is where the evidence stops and the conclusion starts, right?
+Sofia Minassian: What I how I got to A without you telling me A and I kind of was leaning towards A even before you mentioned that C was wrong. I remember I didn't say I think it's a now because you said some
+Joshua Fisseha: Yeah.
+Sofia Minassian: things are not accounted for like the other one like legal wasn't accounted for where legal is founded for here symbol something that is not symbolizing hasn't really been accounted for and they're only telling us properties are irrelevant and they're saying that aesthetic uh that symbolizing are not relevant.
+
+
+01:01:52
+
+Sofia Minassian: So like you kind of have to bridge the gap that like okay then artwork that symbolizes our extriced properties because they're both irrelevant. It's kind of like
+Joshua Fisseha: Yeah. Yeah. Exactly. Exactly. And which is the right way to think about it in a way too like that works. The thing that I'll give you is that like I want to make sure you really understand is remember the sentence before it is not the like we want to think about the logical like structure in the logical order of the statements. Like they could have they in a normal situation they would have put the pink sentence first and the second sentence would have been
+Sofia Minassian: first.
+Joshua Fisseha: orange.
+Sofia Minassian: Yeah.
+Joshua Fisseha: But they switched up the order. They they did a very weird order. Intermediate, then premise,
+Sofia Minassian: So,
+Joshua Fisseha: then main conclusion.
+Sofia Minassian: I'm noticing the harder sufficient condition questions have intermediate conclusions in them.
+Joshua Fisseha: Yes. Yes. That's a huge trait that they makes it extremely makes it way harder because they know you're just going to look for the link between the evidence conclusion.
+
+
+01:02:48
+
+Joshua Fisseha: So the hardest ones will put a barrier between them.
+Sofia Minassian: I see that. I see that. I'll work on I'll work on um tougher sufficient.
+Joshua Fisseha: The hardest ones. These are This is a level five, by the way. These are all level five questions I gave you. The hardest ones they have.
+Sofia Minassian: Okay. I'll do tougher.
+Joshua Fisseha: These are the hardest ones ever.
+Sofia Minassian: I'll do tougher sufficient conditions. tougher necessary assumptions. Um, and then yeah,
+Joshua Fisseha: Yeah.
+Sofia Minassian: I'll do like I I'll practice my conditionals and then jump into a section
+Joshua Fisseha: Yeah.
+Sofia Minassian: today.
+Joshua Fisseha: I'll I'll yeah I uh I'll say yeah you could do that I can assign you can either do a section or I can assign you know what you might uh you might just be better off you could doesn't doesn't matter actually do stick with the section you had planned initially you can do that there's no real problem either or you're not going to there's no downside to either side you could do just like the hardest efficient assumption questions then do your practice test tomorrow or you can just do the practice section today and then tomorrow practice test whatever is like um there's no real there's no wrong Okay.
+
+
+01:03:49
+
+Sofia Minassian: Okay, I do PT tomorrow. I want to see my score increase.
+Joshua Fisseha: Yeah, tomorrow you have to do the PT.
+Sofia Minassian: I'm going to into it confidently because I'm like doing better on my section.
+Joshua Fisseha: Okay.
+Sofia Minassian: So hopefully that translates to a better PT.
+Joshua Fisseha: You might be better off doing like honestly, I'll be honest with you, you're probably a bit better off doing sticking on just doing sufficient assumption tonight and then tomorrow just do a
+Sofia Minassian: Okay.
+Joshua Fisseha: instead of doing a section today then a practice test tomorrow. Like it might be not necessary because you're going to do a full practice test tomorrow. So you might just be better off focusing on one thing and then going into your test and seeing if it reflects whether you get all of the sufficient assumption questions right. That's what you have to make at least your goal.
+Sofia Minassian: I'll do I'll do drills with level five questions.
+Joshua Fisseha: So yes,
+Sofia Minassian: I think that's perfect.
+Joshua Fisseha: I'll assign you questions. Okay, I'll do that for you now.
+Sofia Minassian: Thank you.
+Joshua Fisseha: I have some I'll do that right now.
+Sofia Minassian: And then I'll do I'll do read I'll do like two read recalls today too.
+Joshua Fisseha: No, you need to do that. You seem you're good. You're good.
+Sofia Minassian: Okay.
+Joshua Fisseha: You're good with that for now. For now, I would just focus strictly on getting the DR. I'm going to give you hard questions. It's probably going to be 10 questions I'll give you. That'll be sufficient assumption.
+Sofia Minassian: Yes.
+Joshua Fisseha: And I'll give you a breakdown.
+Sofia Minassian: Okay.
+Joshua Fisseha: Um, you'll get a breakdown of like uh those questions. It'll be like a little mini boot camp. I'm going to make it right now because I've been work meaning to do that.
+Sofia Minassian: Oh, okay. Perfect. Perfect.
+Joshua Fisseha: Okay.
+Sofia Minassian: Thank you.
+Joshua Fisseha: All right. Talk soon.
+
+
+Transcription ended after 01:05:19
+
+This editable transcript was computer generated and might contain errors. People can also change the text after it was created.

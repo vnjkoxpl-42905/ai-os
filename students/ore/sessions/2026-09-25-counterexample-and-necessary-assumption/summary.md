@@ -1,0 +1,15 @@
+# 2026-09-25 session summary
+
+**Source:** [[../../transcript-downloads/2026-09-25-ore-notes-by-gemini|Full Gemini export]] · [native Google Doc](https://docs.google.com/document/d/1e73D4UHfFOAUqWbpcrrAyEzpGOT0KJXIfTv22mNkvns/edit)
+
+**Reconciliation:** The native Doc is titled “Meeting started 2026/09/25 18:38 EDT.” It identifies Oreoluwa James and Joshua Fisseha in the transcript. No matching Calendar event or attachment was found. This recording must not be treated as the 2026-09-22 Ore booking, which remains without a transcript. The recording ends at 01:14:41.
+
+Joshua taught Ore to separate accepted premises from the conclusion they supposedly guarantee. For an argument, she should identify the author's exact conclusion, ask whether the stated evidence can be true while the conclusion is false, and articulate one possible exception. A plausible conclusion is not enough when the argument claims more certainty than its premises deliver. Joshua used “Johnny killed Michael, so Johnny is a murderer” to show why a new term in the conclusion needs a connecting rule or definition. Ore supplied counterexamples and began using “define murder” and “define better” to question the standard behind a conclusion (00:34:21–00:45:15).
+
+The worked question concluded that an assignment **must** go to Parker because Larson has a scheduling conflict, Frank lacks required assertiveness, and Parker is the only other supervisor in the shipping department. Ore identified a gap herself: the premises do not establish that the assignee has to be a shipping-department supervisor. She then distinguished a second possibility, a supervisor in another department, from a non-supervisor. Joshua confirmed both are valid objections to the asserted necessity (00:52:55–00:57:53).
+
+On the necessary-assumption choices, they rejected an answer about Larson's assertiveness because Larson's scheduling conflict already rules Larson out; that property is not needed to infer Parker must get the assignment. Ore selected the answer requiring the task to be confined to shipping-department supervisors and recognized that negating it opens an alternative to Parker (00:58:47–01:02:38). The method of finding the gap comes first; the question type determines what to do with it.
+
+Ore said she had been using short drills that ask her to identify conclusion, evidence, and gap without answering a full question. She finds the gap quickly on some days and overthinks after seeing a necessary-assumption label on others. Joshua encouraged repeated argument breakdowns before more question-type technique (01:05:32–01:07:10; 01:12:17–01:13:21).
+
+**Practice and follow-up:** Ore asked whether to continue breaking down arguments over the next few days, and Joshua agreed. He said he would send or assign additional work. The recording does not identify a particular drill, count, deadline, or completed send (01:04:44–01:05:32; 01:12:17–01:14:41). A separate personal conversation included Ore's offer to research her surname with her father before they next meet (00:10:09–00:11:45); that was not LSAT homework.

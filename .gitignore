@@ -1,0 +1,25 @@
+# Secrets
+.env
+.env.local
+*.key
+credentials.json
+token.json
+
+# Backed up to Google Drive, not GitHub (large, or their own repos, or immutable evidence)
+projects/
+raw/
+tmp/
+node_modules/
+.obsidian/workspace*.json
+.obsidian/cache
+__pycache__/
+*.sqlite*
+*.mp4
+*.mov
+*.MP4
+.firecrawl/
+
+# Machine-only GitHub sync runtime (source/config/docs are tracked)
+setup/github-sync/state/
+setup/github-sync/tools/
+system/logs/github-sync/

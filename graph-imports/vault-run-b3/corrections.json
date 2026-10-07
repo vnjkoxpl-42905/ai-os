@@ -1,0 +1,23 @@
+{
+  "_comment": "Post-hoc edge corrections for batch 3, applied by apply_corrections.py. Each entry records why an extracted edge was judged wrong. Kept as data rather than a hand edit so a rebuild reproduces the same graph. Rule: never drop an edge that is a node's only link — replace it, or the node orphans and the one-component ship gate breaks. `replace` handles that case; `drop` is only for edges whose endpoints both survive.",
+
+  "replace": [
+    {
+      "source": "higgsfield_soul_capability",
+      "target": "frozen_spec_artifact",
+      "reason": "Category error at 0.40 confidence. 'Train an identity model' is not an alternative to 'a frozen plan spec'. The extraction agent's own evidence conceded 'weak, label-level only' — the two share nothing but the abstraction 'emits a reusable identifier', which is coincidence, not relation. This was also the node's ONLY edge, so dropping it would have orphaned a real capability and broken connectivity.",
+      "new_target": "generative_media_creation",
+      "new_type": "specializes",
+      "new_confidence": 0.9,
+      "new_evidence": "INFERRED: higgsfield-soul-id trains a reusable identity model within the Higgsfield generative-media surface, so it is a specialization of that capability."
+    }
+  ],
+
+  "drop": [
+    {
+      "source": "guided_drill_assignment_workflow",
+      "target": "tdd_cycle",
+      "reason": "Mis-typed edge at 0.55. The extraction agent's own evidence says it is 'a use of the project's test suite rather than the TDD skill itself' — i.e. the agent flagged that the target was wrong as it wrote it. Assigning an LSAT drill does not depend on the red-green-refactor cycle. Source node has degree 5, so removal cannot orphan it."
+    }
+  ]
+}

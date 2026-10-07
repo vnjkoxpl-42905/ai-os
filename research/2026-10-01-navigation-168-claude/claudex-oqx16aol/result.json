@@ -1,0 +1,24 @@
+{
+  "status": "failed",
+  "mode": "build",
+  "provider": "claude",
+  "roles": {
+    "host": "codex",
+    "planner": "codex",
+    "reviewer": "claude",
+    "builder": "claude",
+    "inspector": "codex"
+  },
+  "repo": "C:\\Users\\Joshu\\dev\\lsatu-navigation-access-168",
+  "plan": "C:\\Users\\Joshu\\dev\\ai-os\\brainstorms\\2026-10-01-claude-navigation-168-work-order.md",
+  "plan_sha256": "a89cdf86126c073d5c90800d417d0c8533177c1958bc0d42316b6204de1033b6",
+  "requested_model": "claude-opus-5-5",
+  "requested_effort": "medium",
+  "base": "411267d3f4e899ee1228410decaf2578bc2da9b7",
+  "snapshot": null,
+  "previous": null,
+  "started_at": 1790912207.8344707,
+  "artifacts": "C:\\Users\\Joshu\\dev\\ai-os\\research\\2026-10-01-navigation-168-claude\\claudex-oqx16aol",
+  "error": "Cannot safely launch C:\\Users\\Joshu\\AppData\\Roaming\\npm\\claude.CMD. Put the native CLI executable on PATH.",
+  "elapsed_seconds": 0.04
+}

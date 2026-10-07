@@ -1,0 +1,173 @@
+{
+  "status": "failed",
+  "mode": "inspect",
+  "provider": "codex",
+  "roles": {
+    "host": "codex",
+    "planner": "codex",
+    "reviewer": "claude",
+    "builder": "claude",
+    "inspector": "codex"
+  },
+  "repo": "C:\\Users\\Joshu\\dev\\lsatu-week-settings-180",
+  "plan": "C:\\Users\\Joshu\\dev\\ai-os\\research\\2026-10-01-week-settings-180-work-order.md",
+  "plan_sha256": "be8308292f11764d2a5ba6f921994155205ba3d8843cfc9142e4a583af9f005d",
+  "requested_model": null,
+  "requested_effort": null,
+  "base": "72df6964df9177bc5971cac9fdb4512d0b545a17",
+  "snapshot": {
+    "base": "72df6964df9177bc5971cac9fdb4512d0b545a17",
+    "files": [
+      {
+        "path": "src/components/classroom/PrescribedWeek.test.tsx",
+        "kind": "file",
+        "sha256": "8ec340faf5acd2fc5894ed5c365dd0c20e4004438e4b0068673d7a9284a3837f"
+      },
+      {
+        "path": "src/components/classroom/PrescribedWeek.tsx",
+        "kind": "file",
+        "sha256": "eae784f7816973fa390a219506be5b514ce19650b7ea776d95ee3a9e4b8f05e6"
+      },
+      {
+        "path": "src/components/classroom/account/ProfileSection.tsx",
+        "kind": "file",
+        "sha256": "d07c041e1032e6a230c5ec603c99cc165a7eb6403a00158ab6a06ba55241fc46"
+      },
+      {
+        "path": "src/components/classroom/account/StudySettingsSection.test.tsx",
+        "kind": "file",
+        "sha256": "7b8d552a623a40d7144bf996ebfe3e70ba08be78d1b85605f3b6724b53ae06e5"
+      },
+      {
+        "path": "src/components/classroom/account/StudySettingsSection.tsx",
+        "kind": "file",
+        "sha256": "cd225c3774cbcd8f8f258c69c7fb5a94f6b9e42a87f933573aec40b96f82c4b3"
+      },
+      {
+        "path": "src/contexts/UserSettingsContext.test.tsx",
+        "kind": "file",
+        "sha256": "a219dc68df47a9e00371c18378d32e8ac99cd19953707aa8d31365aee5608170"
+      },
+      {
+        "path": "src/contexts/UserSettingsContext.tsx",
+        "kind": "file",
+        "sha256": "5a857a8fa0829c501439e171156acea55211af2ef5fe1d518c30d58398f5f93e"
+      },
+      {
+        "path": "src/hooks/useWeeklyPlan.ts",
+        "kind": "file",
+        "sha256": "d98205ae2bc881d168c0177f4d71283a07808824b26e879247770b44438b8431"
+      },
+      {
+        "path": "src/hooks/useWeeklyPlanPublisher.deps.test.ts",
+        "kind": "file",
+        "sha256": "0e49351da87c0ad5b95bf9e63ff293f49d057eae7fbc397b2aa9e844ca2baf96"
+      },
+      {
+        "path": "src/hooks/useWeeklyPlanPublisher.test.tsx",
+        "kind": "file",
+        "sha256": "c8192c04629256a61a1e6a386d212c151fbb024c4e59c39700709c936e83118f"
+      },
+      {
+        "path": "src/hooks/useWeeklyPlanPublisher.ts",
+        "kind": "file",
+        "sha256": "b7d9bff70f48516942bb949e1c2a67959263b9451f624ba7d81f42b3bcaa34b0"
+      },
+      {
+        "path": "src/lib/studySettings.test.ts",
+        "kind": "file",
+        "sha256": "dc751ba31f56902fa1d32b1d3bd9810dc434dfb09145f7f81e35eac1c4e1752c"
+      },
+      {
+        "path": "src/lib/studySettings.ts",
+        "kind": "file",
+        "sha256": "e1b5db1ef792e7ab269abd6efadcc785f09c6ba1d2fa94aabee1263a232c4e6b"
+      },
+      {
+        "path": "src/lib/weeklyPlanBuilder.test.ts",
+        "kind": "file",
+        "sha256": "c589e9b2fa6af252cdf67481d47c3c004a440c6152bf262b4db084dc62d7e8b0"
+      },
+      {
+        "path": "src/lib/weeklyPlanBuilder.ts",
+        "kind": "file",
+        "sha256": "e0234052355027b896192281a27e17442961c42271b228b9b86e2c8333ff8424"
+      },
+      {
+        "path": "src/lib/weeklyPlanDraftAcknowledgment.test.ts",
+        "kind": "file",
+        "sha256": "1a841800029aaf639bb5bfb1ef0e4fae61157c6c998dece7e6c0b5f75c2bfa6c"
+      },
+      {
+        "path": "src/lib/weeklyPlanPublish.test.ts",
+        "kind": "file",
+        "sha256": "8cea5f3d533c200e0ba91d7a90e7d7a8278ffa4470f2c366a9edaeb7d0432e9e"
+      },
+      {
+        "path": "src/lib/weeklyPlanPublish.ts",
+        "kind": "file",
+        "sha256": "8874ec5c1c15705d36d9d6292543f0acf2a77910b67bdf1236afd51e5285b68e"
+      },
+      {
+        "path": "src/lib/weeklyPlanRead.test.ts",
+        "kind": "file",
+        "sha256": "e7d5d265329a13b0acee549acc44603d674ad72e9432114c326537ce0054e3be"
+      },
+      {
+        "path": "src/lib/weeklyPlanRead.ts",
+        "kind": "file",
+        "sha256": "94f9d56d57244bd492c938bd5a8ee6039c05fec33bcdff887b61904105331048"
+      },
+      {
+        "path": "src/lib/weeklyPlanWeek.test.ts",
+        "kind": "file",
+        "sha256": "08df01fbfa040991c9bf69f67b00ab4ee8fac923d47473f13e1ee759d448fc6a"
+      },
+      {
+        "path": "src/lib/weeklyPlanWeek.ts",
+        "kind": "file",
+        "sha256": "972a3cb42e5bb5bbd12634f07f5de9896be695436d4871848d9058473dda6212"
+      },
+      {
+        "path": "src/pages/MyWorkPage.refetch.test.tsx",
+        "kind": "file",
+        "sha256": "876551e6016c90b4a13ae781817b9b0f63f3cbfadaacb5084c000326a568bb14"
+      },
+      {
+        "path": "src/pages/MyWorkPage.tsx",
+        "kind": "file",
+        "sha256": "27c3c7cada2414b3863f57dea963427d1e1777795357ea3d9b7c6b2d42375f25"
+      },
+      {
+        "path": "src/pages/teacher/TeacherWeeklyPlans.tsx",
+        "kind": "file",
+        "sha256": "c8614127756d596d278f21002bb1c43757d8b1394a9448a25b3b55ca3aaac42a"
+      },
+      {
+        "path": "src/test/fakePlanDb.ts",
+        "kind": "file",
+        "sha256": "fa04ac33734461a2b3c5e6c5dc6eec76f4dc1d1479a97d95935e0311d45dd3f6"
+      }
+    ],
+    "diff_sha256": "e3cd85c2976dcb78088a97e189131ab9b80791fd9c46e8d552991bc4f7a044d6",
+    "sha256": "92bf39e1a333a6f92ebb19b836176a085bed345c17e3b24f2a9e857cfd4a9304"
+  },
+  "previous": null,
+  "started_at": 1790852480.4997146,
+  "artifacts": "C:\\Users\\Joshu\\dev\\ai-os\\research\\2026-10-01-week-settings-180-inspection\\claudex-eovg6b9t",
+  "cli_version": "codex-cli 0.156.1",
+  "executable": [
+    "C:\\Program Files\\nodejs\\node.EXE",
+    "C:\\Users\\Joshu\\dev\\tools\\node\\node_modules\\@openai\\codex\\bin\\codex.js"
+  ],
+  "disabled_mcp_servers": [
+    "code-review",
+    "codex_app",
+    "cua_repl",
+    "lsat-u-lessons",
+    "node_repl"
+  ],
+  "exit_code": 1,
+  "error": "codex exited 1; inspect stdout.txt and stderr.txt.",
+  "elapsed_seconds": 17.0
+}

@@ -1,0 +1,11 @@
+# Claude conversation 6bf8aeea-2d39-4a6c-aae3-8d213ed8c968-agent-a3ffeb1060a6e0407
+
+## user
+
+Context: an instructional video for an LSAT drill is built in Remotion (C:/Users/Joshu/dev/ai-os/projects/video). Read the capture file at C:/Users/Joshu/dev/ai-os/brainstorms/2026-09-10-rrc-instructional-video-round7.md first, especially the "Build plan" section; it is the design under review. Key source files: C:/Users/Joshu/dev/ai-os/projects/video/src/pov/Room.tsx, quad.ts, POVInstructional.tsx, Float.tsx, Instruction.tsx, RecallStack.tsx, beats.ts, and C:/Users/Joshu/dev/ai-os/projects/video/README.md. The plate is C:/Users/Joshu/dev/ai-os/projects/video/public/plates/room-v3.png (5504x3072). Machine: Windows 11, i5-1334U, Intel UHD integrated graphics, no CUDA, 16 GB RAM. Python venv with torch-cpu, transformers 5.2, numpy, scipy, PIL at C:/Users/Joshu/dev/ai-os/projects/hyperframes-student-kit/.venv/Scripts/python.exe. Do not modify any project file. Do not spend any Kling or other credits. Be concrete: numbers, formulas, exact API names, exact flags. Say what you verified versus what you believe.
+
+You are the client's proxy. Read the WHOLE capture file (Q1-Q4 and the build plan), and also the Round 6 capture at C:/Users/Joshu/dev/ai-os/brainstorms/2026-09-10-rrc-instructional-video-round6.md summary section and the drill's briefing at C:/Users/Joshu/dev/ai-os/projects/lsatu/src/features/activity-centre/content/read-recall-colour-section.instructions.json. Try to REFUTE the build plan against what he actually asked for and the rules already locked: nothing hides except by the head turning; "Look Away" verbatim; screen centred; no face; not too dramatic; the room not remade; bubbles never on the stimulus; step vocabulary verbatim from the app; one turn reused across seven retells; the Recall held turned; peripheral blur allowed only as an optical effect. Find every place the plan drifts from or under-delivers on those, and anything he said that the plan silently drops (e.g. "the highlight should be more in touch", "text bubbly and clear, not too long", "4K", "seamless"). For each, the concrete fix.
+
+## assistant
+
+You've hit your session limit · resets 7:50am (America/Toronto)

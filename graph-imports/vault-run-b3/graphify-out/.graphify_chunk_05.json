@@ -1,0 +1,826 @@
+{
+  "nodes": [
+    {
+      "id": "cap_plugin_structure_authoring",
+      "label": "Claude Code plugin scaffolding",
+      "type": "capability",
+      "summary": "Guides creating and organizing a Claude Code plugin: directory layout, manifest, component placement, and troubleshooting why a component fails to load.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/plugin-structure/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/plugin-structure/README.md",
+        "/Users/joshuaf/ai-os/skills/claude/plugin-structure/examples/minimal-plugin.md",
+        "/Users/joshuaf/ai-os/skills/claude/plugin-structure/examples/standard-plugin.md",
+        "/Users/joshuaf/ai-os/skills/claude/plugin-structure/examples/advanced-plugin.md"
+      ]
+    },
+    {
+      "id": "convention_over_configuration_discovery",
+      "label": "Convention-based auto-discovery",
+      "type": "design-principle",
+      "summary": "Components are found by living in conventional directories with conventional filenames rather than being enumerated in config. Custom manifest paths supplement, never replace, the defaults.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/plugin-structure/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/plugin-structure/references/manifest-reference.md",
+        "/Users/joshuaf/ai-os/skills/claude/plugin-structure/references/component-patterns.md"
+      ]
+    },
+    {
+      "id": "manifest_declaration",
+      "label": "Manifest as declared identity",
+      "type": "artifact-produced",
+      "summary": "plugin.json at .claude-plugin/ carries the kebab-case name, semver version, metadata, and optional component paths. Name and path-shape errors are the common validation failures.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/plugin-structure/references/manifest-reference.md",
+        "/Users/joshuaf/ai-os/skills/claude/plugin-structure/SKILL.md"
+      ]
+    },
+    {
+      "id": "portable_root_variable",
+      "label": "Install-location-independent paths",
+      "type": "constraint",
+      "summary": "Intra-package references must go through an environment root variable (${CLAUDE_PLUGIN_ROOT}, ${CLAUDE_SKILL_DIR}) because the install location varies by method and OS. Hardcoded absolute or cwd-relative paths break.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/plugin-structure/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/plugin-structure/references/manifest-reference.md",
+        "/Users/joshuaf/ai-os/skills/claude/watch/SKILL.md"
+      ]
+    },
+    {
+      "id": "progressive_disclosure_layering",
+      "label": "Progressive disclosure of skill content",
+      "type": "design-principle",
+      "summary": "A lean SKILL.md carries core concepts; references/ and examples/ hold detail that loads only when the task needs it. Keeps context cost proportional to the task.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/plugin-structure/README.md",
+        "/Users/joshuaf/ai-os/skills/claude/plugin-structure/references/component-patterns.md",
+        "/Users/joshuaf/ai-os/skills/claude/build-mcp-app/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/teach/SKILL.md"
+      ]
+    },
+    {
+      "id": "reusable_component_library",
+      "label": "Shared component library over duplication",
+      "type": "design-principle",
+      "summary": "Cross-cutting assets live in one shared place (lib/, assets/, a shared stylesheet, a reused ext-apps bundle) and every consumer links to it rather than inlining a copy.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/plugin-structure/references/component-patterns.md",
+        "/Users/joshuaf/ai-os/skills/claude/teach/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/build-mcp-app/references/widget-templates.md"
+      ]
+    },
+    {
+      "id": "start_flat_reorganize_later",
+      "label": "Start flat, restructure on growth",
+      "type": "design-principle",
+      "summary": "Begin with the simplest flat layout and only move to categorized or hierarchical organization when component count justifies it. Deep nesting costs discovery time.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/plugin-structure/references/component-patterns.md"
+      ]
+    },
+    {
+      "id": "cap_build_mcp_app",
+      "label": "Build an MCP app with UI widgets",
+      "type": "capability",
+      "summary": "Adds interactive UI resources on top of a plain MCP server so tools render forms, pickers, dashboards, and confirmations inline in chat, in Claude and other apps-surface hosts.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/build-mcp-app/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/build-mcp-app/references/widget-templates.md",
+        "/Users/joshuaf/ai-os/skills/claude/build-mcp-app/references/apps-sdk-messages.md"
+      ]
+    },
+    {
+      "id": "widget_tool_resource_split",
+      "label": "Tool returns data, resource serves UI",
+      "type": "technique",
+      "summary": "A widget-enabled tool registers twice: the tool declares _meta.ui.resourceUri and returns plain text/JSON, while a separately registered ui:// resource serves the HTML the host renders in an iframe.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/build-mcp-app/SKILL.md"
+      ]
+    },
+    {
+      "id": "graceful_degradation_to_text",
+      "label": "Graceful degradation to plain text",
+      "type": "design-principle",
+      "summary": "Because the tool handler already returns meaningful data, hosts without the apps surface simply ignore _meta.ui and Claude reads the data directly. UI is additive, never load-bearing.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/build-mcp-app/SKILL.md"
+      ]
+    },
+    {
+      "id": "iframe_sandbox_csp",
+      "label": "Iframe sandbox and CSP restrictions",
+      "type": "constraint",
+      "summary": "Widgets run in a locked-down iframe: no CDN script fetches, no window.open, no arbitrary network origins, no reliable remote images. Violations fail silently as a blank rectangle.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/build-mcp-app/references/iframe-sandbox.md",
+        "/Users/joshuaf/ai-os/skills/claude/build-mcp-app/SKILL.md"
+      ]
+    },
+    {
+      "id": "bundle_inlining",
+      "label": "Build-time bundle inlining",
+      "type": "technique",
+      "summary": "The ext-apps browser build is read at startup, its ESM export statement rewritten to a globalThis assignment, and substituted into a placeholder in the widget HTML so no CDN fetch is needed.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/build-mcp-app/references/iframe-sandbox.md",
+        "/Users/joshuaf/ai-os/skills/claude/build-mcp-app/references/widget-templates.md",
+        "/Users/joshuaf/ai-os/skills/claude/build-mcp-app/SKILL.md"
+      ]
+    },
+    {
+      "id": "silent_blank_widget",
+      "label": "Silent blank widget",
+      "type": "failure-mode",
+      "summary": "The dominant MCP-app failure: the widget renders as an empty rectangle with no error in the host console, because a CSP violation surfaced only in the iframe's own devtools.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/build-mcp-app/references/iframe-sandbox.md",
+        "/Users/joshuaf/ai-os/skills/claude/build-mcp-app/SKILL.md"
+      ]
+    },
+    {
+      "id": "bidirectional_host_messaging",
+      "label": "Persistent widget-host-server messaging",
+      "type": "technique",
+      "summary": "The App class keeps a live bidirectional channel: ontoolresult/ontoolinput inbound, sendMessage and updateModelContext outbound to the conversation, callServerTool straight to the server, openLink for navigation.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/build-mcp-app/references/apps-sdk-messages.md",
+        "/Users/joshuaf/ai-os/skills/claude/build-mcp-app/SKILL.md"
+      ]
+    },
+    {
+      "id": "prefer_cheapest_mechanism",
+      "label": "Prefer the cheapest mechanism that works",
+      "type": "design-principle",
+      "summary": "Route to the simplest sufficient tool: elicitation before a custom widget, plain text before UI, built-in tool before CLI fallback, non-AI script before an AI step.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/build-mcp-app/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/codex/imagegen/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/level-up/SKILL.md"
+      ]
+    },
+    {
+      "id": "one_widget_one_purpose",
+      "label": "One tool, one focused widget",
+      "type": "constraint",
+      "summary": "Keep each widget small and single-purpose rather than building a sub-app in the iframe. Fork layout by item count inside one tool instead of multiplying tools.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/build-mcp-app/SKILL.md"
+      ]
+    },
+    {
+      "id": "cap_watch_video",
+      "label": "Watch a video",
+      "type": "capability",
+      "summary": "Gives the agent video input: yt-dlp downloads the source, ffmpeg extracts auto-scaled frames, captions or Whisper supply a timestamped transcript, and the agent Reads each frame to answer grounded in both streams.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/watch/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/watch/README.md",
+        "/Users/joshuaf/ai-os/skills/claude/watch/commands/watch.md",
+        "/Users/joshuaf/ai-os/skills/claude/watch/CHANGELOG.md"
+      ]
+    },
+    {
+      "id": "setup_preflight_gate",
+      "label": "Silent setup preflight",
+      "type": "workflow-stage",
+      "summary": "A fast --check runs before every invocation, emitting nothing on success and returning typed exit codes that map to an idempotent installer or a key prompt. Never announce success to the user.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/watch/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/watch/CHANGELOG.md"
+      ]
+    },
+    {
+      "id": "external_binary_dependency",
+      "label": "External binary dependency",
+      "type": "tool-dependency",
+      "summary": "Capability gated on locally installed executables and API keys (yt-dlp, ffmpeg/ffprobe, the gws CLI, the codex CLI, OPENAI_API_KEY). Absence is a preflight failure, not a runtime surprise.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/watch/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/gws-events/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/gws-gmail-send/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/codex-review/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/codex/imagegen/SKILL.md"
+      ]
+    },
+    {
+      "id": "token_budget_scaling",
+      "label": "Duration-scaled token budgeting",
+      "type": "technique",
+      "summary": "Frame count and fps scale inversely with video duration under hard caps (2 fps, 100 frames), with a denser focused mode for a named range, so image tokens stay bounded.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/watch/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/watch/README.md"
+      ]
+    },
+    {
+      "id": "graded_fallback_chain",
+      "label": "Graded fallback chain",
+      "type": "technique",
+      "summary": "Try the free/preferred path first and fall back only on failure: native captions before Whisper, Groq before OpenAI, built-in image_gen before the CLI model path.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/watch/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/codex/imagegen/SKILL.md"
+      ]
+    },
+    {
+      "id": "no_silent_downgrade",
+      "label": "Never downgrade silently",
+      "type": "constraint",
+      "summary": "Switching to a weaker model or path requires explicit user confirmation, and a failed run must be surfaced rather than blindly retried.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/codex/imagegen/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/codex-review/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/watch/SKILL.md"
+      ]
+    },
+    {
+      "id": "cap_imagegen",
+      "label": "Generate or edit raster images",
+      "type": "capability",
+      "summary": "Codex-side skill producing bitmap assets (photos, illustrations, mockups, cutouts) via the built-in image_gen tool by default, with a CLI/API fallback for true native transparency.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/codex/imagegen/SKILL.md"
+      ]
+    },
+    {
+      "id": "cap_teach",
+      "label": "Teach a topic over multiple sessions",
+      "type": "capability",
+      "summary": "Turns the working directory into a stateful teaching workspace producing self-contained HTML lessons, reference sheets, and a growing record of what the learner knows.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/teach/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/teach/MISSION-FORMAT.md",
+        "/Users/joshuaf/ai-os/skills/claude/teach/LEARNING-RECORD-FORMAT.md",
+        "/Users/joshuaf/ai-os/skills/claude/teach/GLOSSARY-FORMAT.md",
+        "/Users/joshuaf/ai-os/skills/claude/teach/RESOURCES-FORMAT.md"
+      ]
+    },
+    {
+      "id": "mission_grounding",
+      "label": "Mission grounds every decision",
+      "type": "constraint",
+      "summary": "A short concrete statement of why the user wants this, with success criteria and out-of-scope bounds. Every teaching choice traces back to it; vagueness gets interviewed out before anything is written.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/teach/MISSION-FORMAT.md",
+        "/Users/joshuaf/ai-os/skills/claude/teach/SKILL.md"
+      ]
+    },
+    {
+      "id": "decision_record_ledger",
+      "label": "Numbered decision-record ledger",
+      "type": "artifact-produced",
+      "summary": "Append-only sequentially numbered records that capture non-obvious insight and get superseded rather than deleted, so a later session inherits what was settled. Used for learning records and ADRs alike.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/teach/LEARNING-RECORD-FORMAT.md",
+        "/Users/joshuaf/ai-os/skills/claude/teach/SKILL.md"
+      ]
+    },
+    {
+      "id": "controlled_vocabulary",
+      "label": "Opinionated controlled vocabulary",
+      "type": "artifact-produced",
+      "summary": "A glossary that picks one preferred term per concept, lists aliases to avoid, uses its own terms inside definitions, and is adhered to everywhere downstream.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/teach/GLOSSARY-FORMAT.md"
+      ]
+    },
+    {
+      "id": "trusted_source_grounding",
+      "label": "Ground in trusted sources, not parametric memory",
+      "type": "constraint",
+      "summary": "Knowledge must come from a curated, annotated set of high-trust resources with citations; never trust the model's own recall. Gaps are surfaced explicitly to drive further search.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/teach/RESOURCES-FORMAT.md",
+        "/Users/joshuaf/ai-os/skills/claude/teach/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/codex/research-deep/SKILL.md"
+      ]
+    },
+    {
+      "id": "desirable_difficulty",
+      "label": "Desirable difficulty for storage strength",
+      "type": "technique",
+      "summary": "Design for long-term retention over in-the-moment fluency using retrieval practice, spacing, and interleaving, and keep each lesson inside the learner's zone of proximal development.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/teach/SKILL.md"
+      ]
+    },
+    {
+      "id": "cap_json_canvas",
+      "label": "Author JSON Canvas files",
+      "type": "capability",
+      "summary": "Creates and edits .canvas files (nodes, edges, groups) per the JSON Canvas 1.0 spec for mind maps and flowcharts in Obsidian.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/json-canvas/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/json-canvas/references/EXAMPLES.md"
+      ]
+    },
+    {
+      "id": "referential_integrity_validation",
+      "label": "Post-write referential integrity check",
+      "type": "workflow-stage",
+      "summary": "Every canvas mutation ends with re-parsing the JSON and confirming ID uniqueness plus that every fromNode/toNode resolves to an existing node.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/json-canvas/SKILL.md"
+      ]
+    },
+    {
+      "id": "cap_codex_review",
+      "label": "Adversarial cross-model plan review",
+      "type": "capability",
+      "summary": "Claude drafts a plan into PLAN.md and a read-only Codex session critiques it round after round, returning APPROVED or REVISE, until convergence or a round cap. No code is written during the loop.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/codex-review/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/PARITY.md"
+      ]
+    },
+    {
+      "id": "adversarial_verification_before_shipping",
+      "label": "Adversarial verification before shipping",
+      "type": "design-principle",
+      "summary": "A skeptical second reviewer, ideally a different model or a fresh subagent, must try to break the artifact before it is built or merged. Agreeableness is the failure mode being designed against.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/codex-review/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/writing-plans/plan-document-reviewer-prompt.md",
+        "/Users/joshuaf/ai-os/skills/PARITY.md"
+      ]
+    },
+    {
+      "id": "read_only_critic_sandbox",
+      "label": "Read-only critic sandbox",
+      "type": "constraint",
+      "summary": "The critic can read the repo but must never write. The resume subcommand rejects -s, so read-only has to be forced via -c sandbox_mode, or config defaults could grant full write access mid-loop.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/codex-review/SKILL.md"
+      ]
+    },
+    {
+      "id": "bounded_loop_with_cap",
+      "label": "Bounded loop with an explicit cap",
+      "type": "design-principle",
+      "summary": "Iteration always terminates at MAX_ROUNDS. Hitting the cap without approval is a legitimate flagged-disagreement outcome, never dressed up as convergence.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/codex-review/SKILL.md"
+      ]
+    },
+    {
+      "id": "session_resume_preserves_context",
+      "label": "Resume the same session across rounds",
+      "type": "technique",
+      "summary": "Capture the thread_id on round one and resume it thereafter so the critic remembers earlier critiques. Falling back to a fresh exec re-reads the repo and loses everything settled.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/codex-review/SKILL.md"
+      ]
+    },
+    {
+      "id": "reassertion_guard",
+      "label": "Re-assertion guard and finding triage",
+      "type": "technique",
+      "summary": "Sort each finding into technical, product-decision, or already-rejected. A repeat finding without new evidence is logged as held; a product question goes straight to the human instead of burning a round.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/codex-review/SKILL.md"
+      ]
+    },
+    {
+      "id": "human_gate",
+      "label": "Explicit human approval gate",
+      "type": "trigger-condition",
+      "summary": "Named checkpoints where the human, not the model, decides: kickoff and final sign-off before code, gate approvals in a staged build, choosing merge versus PR, authorizing a fallback path.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/codex-review/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/bootcamp-builder/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/finishing-a-development-branch/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/codex/imagegen/SKILL.md"
+      ]
+    },
+    {
+      "id": "argument_transcript_log",
+      "label": "Append-only argument transcript",
+      "type": "artifact-produced",
+      "summary": "PLAN-REVIEW-LOG.md records every round's critique plus what was changed, what was rejected, and why. Described as the most valuable artifact of the run.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/codex-review/SKILL.md"
+      ]
+    },
+    {
+      "id": "frozen_plan_file",
+      "label": "PLAN.md as the interchange artifact",
+      "type": "artifact-produced",
+      "summary": "A structured plan document (goal, approach, contestable decisions, risks, out of scope) that models communicate through and that later becomes the frozen spec handed to an implementer.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/codex-review/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/writing-plans/SKILL.md"
+      ]
+    },
+    {
+      "id": "cap_writing_plans",
+      "label": "Write an implementation plan",
+      "type": "capability",
+      "summary": "Turns a spec into a dated plan document of bite-sized, independently testable tasks written for an engineer with zero codebase context, preceded by an explicit file-structure decomposition.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/writing-plans/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/writing-plans/plan-document-reviewer-prompt.md"
+      ]
+    },
+    {
+      "id": "task_right_sizing",
+      "label": "Task right-sizing around a review gate",
+      "type": "technique",
+      "summary": "A task is the smallest unit carrying its own test cycle and worth a fresh reviewer's gate. Split only where a reviewer could reject one task while approving its neighbor; fold setup into the task that needs it.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/writing-plans/SKILL.md"
+      ]
+    },
+    {
+      "id": "reviewer_calibration",
+      "label": "Reviewer calibration against nitpicking",
+      "type": "constraint",
+      "summary": "A dispatched reviewer flags only issues that would cause real implementation problems (missing requirements, contradictions, placeholders, unactionable tasks) and approves past stylistic preferences.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/writing-plans/plan-document-reviewer-prompt.md"
+      ]
+    },
+    {
+      "id": "cap_finish_dev_branch",
+      "label": "Finish a development branch",
+      "type": "capability",
+      "summary": "Verifies the test suite, detects whether the workspace is a normal repo or a worktree, determines the base branch, then presents merge/PR/cleanup options and executes the choice.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/finishing-a-development-branch/SKILL.md"
+      ]
+    },
+    {
+      "id": "green_tests_precondition",
+      "label": "Green tests as a hard precondition",
+      "type": "constraint",
+      "summary": "Integration options are not even presented until the project's test suite passes. Failing tests stop the workflow rather than being noted and worked around.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/finishing-a-development-branch/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/bootcamp-builder/SKILL.md"
+      ]
+    },
+    {
+      "id": "cap_level_up",
+      "label": "Weekly automation level-up",
+      "type": "capability",
+      "summary": "A weekly 3Ms interview (Mindset to find a candidate, Method to scope it, Machine to build it) that ends in exactly one shipped automation artifact for the EA workspace.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/level-up/SKILL.md"
+      ]
+    },
+    {
+      "id": "eliminate_before_automate",
+      "label": "Eliminate before automating",
+      "type": "design-principle",
+      "summary": "First ask what breaks if the task simply stops. If nothing breaks, log the win and exit; automating waste is worse than leaving it manual. Delegate to a person when the process is too variable.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/level-up/SKILL.md"
+      ]
+    },
+    {
+      "id": "lowest_autonomy_that_works",
+      "label": "Lowest autonomy level that works",
+      "type": "constraint",
+      "summary": "Default to the least autonomous option and require explicit choice to go higher. Anything a student or prospect reads is drafts-with-human-review minimum, never auto-sent.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/level-up/SKILL.md"
+      ]
+    },
+    {
+      "id": "save_to_both_activation",
+      "label": "Save-to-both catalog and activation",
+      "type": "constraint",
+      "summary": "Every new skill is written to both the activated project .claude/skills/ path and the DB catalog, project-scoped, with a Codex twin mirrored to .agents/skills/ when applicable.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/level-up/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/PARITY.md"
+      ]
+    },
+    {
+      "id": "cap_skill_router",
+      "label": "Skill router / which-flow-fits",
+      "type": "capability",
+      "summary": "ask-matt is a router over the user-invoked skills, laying out the main idea-to-ship flow, its on-ramps, codebase-health upkeep, and how to cross session boundaries.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/ask-matt/SKILL.md"
+      ]
+    },
+    {
+      "id": "context_window_hygiene",
+      "label": "Context-window hygiene and handoff",
+      "type": "design-principle",
+      "summary": "Keep one phase inside one unbroken window while the model is still in its smart zone; when it fills, hand off to a fresh session via a written file rather than pushing on degraded.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/ask-matt/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/bootcamp-builder/SKILL.md"
+      ]
+    },
+    {
+      "id": "cap_parity_baseline",
+      "label": "Cross-runtime skill parity baseline",
+      "type": "artifact-produced",
+      "summary": "PARITY.md declares every deliberately single-runtime skill with a justification, so check-skills.py fails only on undeclared drift. Catalog parity is explicitly distinct from activation.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/PARITY.md"
+      ]
+    },
+    {
+      "id": "declared_asymmetry_not_drift",
+      "label": "Declared asymmetry, not silent drift",
+      "type": "design-principle",
+      "summary": "A one-runtime skill is legitimate only when written down with a reason in the same commit. An undeclared gap is drift and must be either ported or declared; a list without reasons is a snapshot, not a decision.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/PARITY.md"
+      ]
+    },
+    {
+      "id": "cross_model_orchestration",
+      "label": "Cross-model orchestration from the other runtime",
+      "type": "design-principle",
+      "summary": "Skills that drive Codex must live only on the Claude side; giving them to Codex would mean Codex driving Codex, defeating the cross-model check that is their whole purpose.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/PARITY.md",
+        "/Users/joshuaf/ai-os/skills/claude/codex-review/SKILL.md"
+      ]
+    },
+    {
+      "id": "cap_bootcamp_builder",
+      "label": "Build an LSAT U bootcamp",
+      "type": "capability",
+      "summary": "Clones the Intro to LR build end to end for a new topic: interview, content intake and tiering, inspection report, then a gated repo-native multi-session build until a parity audit passes.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/bootcamp-builder/SKILL.md"
+      ]
+    },
+    {
+      "id": "gated_multi_session_build",
+      "label": "Gated multi-session build with a checkpoint ledger",
+      "type": "workflow-stage",
+      "summary": "Work advances through numbered gates, each requiring human approval; state persists in a vault build page with a gate ledger so a fresh session resumes at the current gate and never redoes an approved one.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/bootcamp-builder/SKILL.md"
+      ]
+    },
+    {
+      "id": "clone_the_reference_implementation",
+      "label": "Clone the reference implementation exactly",
+      "type": "constraint",
+      "summary": "The existing shipped build is the template, not a doc. Reuse its components, tokens, and chrome unchanged; deviations must be argued and approved at a gate.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/bootcamp-builder/SKILL.md"
+      ]
+    },
+    {
+      "id": "no_invented_content",
+      "label": "No silently invented domain content",
+      "type": "constraint",
+      "summary": "Content comes from the author's own files; gaps are flagged for his decision rather than filled in. Missing reviewed content counts as a build failure, not something to paper over.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/bootcamp-builder/SKILL.md"
+      ]
+    },
+    {
+      "id": "cap_research_deep",
+      "label": "Fan-out deep research",
+      "type": "capability",
+      "summary": "Reads an outline.yaml, skips already-completed items for resumability, and launches parallel background agents that each emit a schema-validated JSON record per research item.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/codex/research-deep/SKILL.md"
+      ]
+    },
+    {
+      "id": "resumable_batch_fanout",
+      "label": "Resumable batched agent fan-out",
+      "type": "technique",
+      "summary": "Check the output directory for completed artifacts and skip them, then dispatch remaining work in approved batches of parallel agents with output suppressed.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/codex/research-deep/SKILL.md"
+      ]
+    },
+    {
+      "id": "schema_validated_output",
+      "label": "Schema-validated structured output",
+      "type": "constraint",
+      "summary": "Each agent writes JSON against a field-definition file, marks uncertain values explicitly, and is not done until a validation script confirms complete field coverage.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/codex/research-deep/SKILL.md"
+      ]
+    },
+    {
+      "id": "cap_gws_cli_surface",
+      "label": "Google Workspace access via the gws CLI",
+      "type": "capability",
+      "summary": "A generated family of thin skills wrapping the gws CLI across Gmail, Sheets, Meet, Keep, and Workspace events, each documenting one command's flags and examples.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/gws-events/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/gws-gmail-send/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/gws-gmail-reply-all/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/gws-gmail-triage/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/gws-sheets/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/gws-sheets-read/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/gws-meet/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/gws-keep/SKILL.md"
+      ]
+    },
+    {
+      "id": "shared_prerequisite_doc",
+      "label": "Shared prerequisite doc for auth and security",
+      "type": "design-principle",
+      "summary": "Every gws skill defers auth, global flags, and security rules to one gws-shared page rather than repeating them, and points at gws generate-skills if it is missing.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/gws-events/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/gws-gmail-send/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/gws-keep/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/gws-sheets/SKILL.md"
+      ]
+    },
+    {
+      "id": "dry_run_and_draft_modes",
+      "label": "Dry-run and draft modes on outbound actions",
+      "type": "technique",
+      "summary": "Send-shaped commands expose --dry-run to show the request without executing and --draft to save instead of send, giving a rehearsal path before any irreversible outbound action.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/gws-gmail-send/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/gws-gmail-reply-all/SKILL.md"
+      ]
+    },
+    {
+      "id": "cap_gmail_triage",
+      "label": "Unread inbox triage listing",
+      "type": "capability",
+      "summary": "Summarizes unread mail as sender/subject/date with a configurable max, arbitrary Gmail search query, and JSON output for downstream processing.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/gws-gmail-triage/SKILL.md"
+      ]
+    },
+    {
+      "id": "cap_gmail_outbound",
+      "label": "Send or reply to mail",
+      "type": "capability",
+      "summary": "Sends new mail or reply-alls to an existing thread with automatic threading, sharing the same flag surface for recipients, attachments, HTML, alias sender, dry-run, and draft.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/gws-gmail-send/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/gws-gmail-reply-all/SKILL.md"
+      ]
+    },
+    {
+      "id": "cap_edit_article",
+      "label": "Edit and restructure an article",
+      "type": "capability",
+      "summary": "Divides a draft into sections, confirms the section plan with the user, then rewrites each for clarity and flow under a tight paragraph-length constraint.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/edit-article/SKILL.md"
+      ]
+    },
+    {
+      "id": "dependency_ordered_exposition",
+      "label": "Dependency-ordered exposition",
+      "type": "technique",
+      "summary": "Treat information as a directed acyclic graph: order sections so each piece is introduced only after everything it depends on. Mirrors teaching the knowledge a skill needs before practicing it.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/edit-article/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/teach/SKILL.md"
+      ]
+    },
+    {
+      "id": "user_invocation_only",
+      "label": "User-invocation-only skills",
+      "type": "trigger-condition",
+      "summary": "Some skills set disable-model-invocation so they never auto-trigger from context and run only when the user explicitly asks, protecting stateful or opinionated workflows from accidental starts.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/teach/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/ask-matt/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/edit-article/SKILL.md"
+      ]
+    },
+    {
+      "id": "announce_skill_at_start",
+      "label": "Announce the skill at start",
+      "type": "technique",
+      "summary": "Several build-side skills open by stating which skill is running, making the workflow legible to the user. Contrasts with the silent-on-success preflight convention.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/writing-plans/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/finishing-a-development-branch/SKILL.md"
+      ]
+    }
+  ],
+  "edges": [
+    {"source": "cap_plugin_structure_authoring", "target": "convention_over_configuration_discovery", "type": "depends_on", "confidence": 0.95, "evidence": "'Claude Code automatically discovers and loads components' by scanning conventional directories"},
+    {"source": "cap_plugin_structure_authoring", "target": "manifest_declaration", "type": "produces", "confidence": 0.95, "evidence": "'The manifest defines plugin metadata and configuration'"},
+    {"source": "manifest_declaration", "target": "convention_over_configuration_discovery", "type": "constrains", "confidence": 0.85, "evidence": "'Custom paths supplement defaults—they don't replace them'"},
+    {"source": "cap_plugin_structure_authoring", "target": "portable_root_variable", "type": "constrains", "confidence": 0.9, "evidence": "'Always use ${CLAUDE_PLUGIN_ROOT}: Never hardcode paths'"},
+    {"source": "cap_plugin_structure_authoring", "target": "progressive_disclosure_layering", "type": "depends_on", "confidence": 0.85, "evidence": "'The skill uses progressive disclosure to manage context' — SKILL.md, references, examples"},
+    {"source": "cap_plugin_structure_authoring", "target": "start_flat_reorganize_later", "type": "depends_on", "confidence": 0.8, "evidence": "'Start simple: Use flat structure, reorganize when needed'"},
+    {"source": "cap_plugin_structure_authoring", "target": "reusable_component_library", "type": "depends_on", "confidence": 0.8, "evidence": "'Shared Resources' pattern with lib/ sourced by commands, agents, and hooks"},
+    {"source": "start_flat_reorganize_later", "target": "convention_over_configuration_discovery", "type": "depends_on", "confidence": 0.7, "evidence": "'Minimize custom paths: Use defaults when possible'"},
+    {"source": "cap_build_mcp_app", "target": "widget_tool_resource_split", "type": "depends_on", "confidence": 0.95, "evidence": "'A widget-enabled tool has two separate registrations'"},
+    {"source": "cap_build_mcp_app", "target": "iframe_sandbox_csp", "type": "constrains", "confidence": 0.95, "evidence": "'The sandbox and CSP attributes lock down what the widget can do'"},
+    {"source": "iframe_sandbox_csp", "target": "silent_blank_widget", "type": "produces", "confidence": 0.95, "evidence": "'CSP violations are the #1 reason widgets silently fail (blank rectangle)'"},
+    {"source": "bundle_inlining", "target": "silent_blank_widget", "type": "prerequisite_of", "confidence": 0.9, "evidence": "'the iframe's CSP blocks the transitive dependency fetches and the widget renders blank'"},
+    {"source": "cap_build_mcp_app", "target": "bundle_inlining", "type": "depends_on", "confidence": 0.9, "evidence": "'The iframe CSP blocks CDN script fetches — bundling is mandatory'"},
+    {"source": "bundle_inlining", "target": "iframe_sandbox_csp", "type": "depends_on", "confidence": 0.9, "evidence": "bundle inlining exists purely to satisfy the sandbox CSP"},
+    {"source": "cap_build_mcp_app", "target": "bidirectional_host_messaging", "type": "depends_on", "confidence": 0.9, "evidence": "'this is a persistent bidirectional connection'"},
+    {"source": "bidirectional_host_messaging", "target": "iframe_sandbox_csp", "type": "depends_on", "confidence": 0.8, "evidence": "'openLink is required for any outbound navigation — the sandbox blocks window.open'"},
+    {"source": "cap_build_mcp_app", "target": "graceful_degradation_to_text", "type": "depends_on", "confidence": 0.9, "evidence": "'Hosts that don't support the apps surface simply ignore _meta.ui'"},
+    {"source": "widget_tool_resource_split", "target": "graceful_degradation_to_text", "type": "prerequisite_of", "confidence": 0.85, "evidence": "'your tool handler already returns meaningful text/JSON... degradation is automatic'"},
+    {"source": "cap_build_mcp_app", "target": "prefer_cheapest_mechanism", "type": "depends_on", "confidence": 0.9, "evidence": "'If elicitation covers it, use it' / 'Don't add UI for its own sake'"},
+    {"source": "cap_build_mcp_app", "target": "one_widget_one_purpose", "type": "constrains", "confidence": 0.9, "evidence": "'One widget per tool. Resist the urge to build one mega-widget'"},
+    {"source": "cap_build_mcp_app", "target": "reusable_component_library", "type": "depends_on", "confidence": 0.75, "evidence": "'Bundle once per server startup; reuse the bundle string across all widget templates'"},
+    {"source": "cap_build_mcp_app", "target": "progressive_disclosure_layering", "type": "depends_on", "confidence": 0.75, "evidence": "SKILL.md defers detail to references/iframe-sandbox.md, widget-templates.md, apps-sdk-messages.md"},
+    {"source": "cap_build_mcp_app", "target": "cap_plugin_structure_authoring", "type": "overlaps_with", "confidence": 0.6, "evidence": "INFERRED — both document authoring Claude's own extension surfaces (MCP servers appear as a plugin component type)"},
+    {"source": "cap_watch_video", "target": "setup_preflight_gate", "type": "depends_on", "confidence": 0.95, "evidence": "'Step 0 — Setup preflight (runs every /watch invocation, silent on success)'"},
+    {"source": "setup_preflight_gate", "target": "external_binary_dependency", "type": "consumes", "confidence": 0.9, "evidence": "exit codes map to 'Missing binaries (ffmpeg / ffprobe / yt-dlp)' and 'No Whisper API key'"},
+    {"source": "cap_watch_video", "target": "external_binary_dependency", "type": "depends_on", "confidence": 0.95, "evidence": "'Runs yt-dlp locally... Runs ffmpeg / ffprobe locally'"},
+    {"source": "cap_watch_video", "target": "token_budget_scaling", "type": "depends_on", "confidence": 0.9, "evidence": "'Hard caps: 100 frames total and 2 fps... the script targets a frame budget by duration'"},
+    {"source": "cap_watch_video", "target": "graded_fallback_chain", "type": "depends_on", "confidence": 0.9, "evidence": "'Native captions (free, preferred)... Whisper API fallback... prefers Groq when both are set'"},
+    {"source": "cap_watch_video", "target": "portable_root_variable", "type": "depends_on", "confidence": 0.8, "evidence": "every script invoked as \"${CLAUDE_SKILL_DIR}/scripts/watch.py\""},
+    {"source": "cap_watch_video", "target": "no_silent_downgrade", "type": "constrains", "confidence": 0.7, "evidence": "'If it's a login-required or region-locked video, tell the user plainly; do not keep retrying'"},
+    {"source": "cap_imagegen", "target": "graded_fallback_chain", "type": "depends_on", "confidence": 0.9, "evidence": "'Default built-in tool mode (preferred)... Fallback CLI mode'"},
+    {"source": "cap_imagegen", "target": "no_silent_downgrade", "type": "constrains", "confidence": 0.95, "evidence": "'Never silently switch from built-in image_gen or CLI gpt-image-2 to CLI gpt-image-1.5'"},
+    {"source": "cap_imagegen", "target": "prefer_cheapest_mechanism", "type": "depends_on", "confidence": 0.85, "evidence": "'Do not switch to CLI fallback for ordinary quality, size, or file-path control'"},
+    {"source": "cap_imagegen", "target": "external_binary_dependency", "type": "depends_on", "confidence": 0.85, "evidence": "'Requires OPENAI_API_KEY' for the CLI fallback path"},
+    {"source": "cap_imagegen", "target": "human_gate", "type": "depends_on", "confidence": 0.85, "evidence": "'Run the CLI fallback only after the user confirms'"},
+    {"source": "cap_teach", "target": "mission_grounding", "type": "depends_on", "confidence": 0.95, "evidence": "'Every lesson should be tied into the mission'"},
+    {"source": "cap_teach", "target": "decision_record_ledger", "type": "produces", "confidence": 0.95, "evidence": "'learning records... loosely equivalent to architectural decision records'"},
+    {"source": "cap_teach", "target": "controlled_vocabulary", "type": "produces", "confidence": 0.9, "evidence": "'Glossaries, in particular, are an essential reference. Once one is created, it should be adhered to in every lesson'"},
+    {"source": "cap_teach", "target": "trusted_source_grounding", "type": "constrains", "confidence": 0.95, "evidence": "'Never trust your parametric knowledge'"},
+    {"source": "cap_teach", "target": "desirable_difficulty", "type": "depends_on", "confidence": 0.9, "evidence": "'design lessons which build long-term retention by desirable difficulty'"},
+    {"source": "decision_record_ledger", "target": "desirable_difficulty", "type": "prerequisite_of", "confidence": 0.85, "evidence": "'They should be used to calculate the zone of proximal development'"},
+    {"source": "mission_grounding", "target": "desirable_difficulty", "type": "constrains", "confidence": 0.8, "evidence": "'Teach the most relevant thing that fits in their zone of proximal development' based on the mission"},
+    {"source": "cap_teach", "target": "reusable_component_library", "type": "depends_on", "confidence": 0.9, "evidence": "'Reuse is the default, not the exception... never inline code a future lesson would duplicate'"},
+    {"source": "cap_teach", "target": "dependency_ordered_exposition", "type": "depends_on", "confidence": 0.75, "evidence": "'You teach the knowledge first, then get the user to practice the skills'"},
+    {"source": "cap_teach", "target": "user_invocation_only", "type": "depends_on", "confidence": 0.9, "evidence": "frontmatter 'disable-model-invocation: true'"},
+    {"source": "cap_teach", "target": "progressive_disclosure_layering", "type": "depends_on", "confidence": 0.7, "evidence": "SKILL.md defers to MISSION-FORMAT.md, LEARNING-RECORD-FORMAT.md, GLOSSARY-FORMAT.md, RESOURCES-FORMAT.md"},
+    {"source": "controlled_vocabulary", "target": "decision_record_ledger", "type": "alternative_to", "confidence": 0.7, "evidence": "'Anything already captured tersely in GLOSSARY.md as a term definition. Don't duplicate.'"},
+    {"source": "cap_json_canvas", "target": "referential_integrity_validation", "type": "depends_on", "confidence": 0.95, "evidence": "every workflow ends with 'Validate: ... all edge references resolve to existing nodes'"},
+    {"source": "cap_codex_review", "target": "adversarial_verification_before_shipping", "type": "specializes", "confidence": 0.95, "evidence": "'Be skeptical and specific — your job is to find what breaks, not to be agreeable'"},
+    {"source": "cap_codex_review", "target": "read_only_critic_sandbox", "type": "constrains", "confidence": 0.95, "evidence": "'Codex is read-only EVERY round... It never writes'"},
+    {"source": "cap_codex_review", "target": "bounded_loop_with_cap", "type": "depends_on", "confidence": 0.95, "evidence": "'The loop ALWAYS terminates at MAX_ROUNDS. No unbounded recursion'"},
+    {"source": "cap_codex_review", "target": "session_resume_preserves_context", "type": "depends_on", "confidence": 0.95, "evidence": "'Rounds resume the SAME thread... do not fall back to a fresh codex exec'"},
+    {"source": "cap_codex_review", "target": "reassertion_guard", "type": "depends_on", "confidence": 0.9, "evidence": "'Re-assertion guard. When a round returns a finding Claude rejected in an earlier round, do not re-argue it'"},
+    {"source": "reassertion_guard", "target": "session_resume_preserves_context", "type": "depends_on", "confidence": 0.8, "evidence": "'Codex remembers its earlier critiques, won't re-litigate settled points'"},
+    {"source": "cap_codex_review", "target": "human_gate", "type": "depends_on", "confidence": 0.95, "evidence": "'The human enters at exactly two points: kickoff and final sign-off'"},
+    {"source": "reassertion_guard", "target": "human_gate", "type": "chains_into", "confidence": 0.85, "evidence": "'Product / scope / pedagogy — Stop the loop, put it to Joshua with AskUserQuestion'"},
+    {"source": "cap_codex_review", "target": "argument_transcript_log", "type": "produces", "confidence": 0.95, "evidence": "'LOG_FILE is the deliverable — it tells the whole story of the argument'"},
+    {"source": "cap_codex_review", "target": "frozen_plan_file", "type": "consumes", "confidence": 0.95, "evidence": "'They communicate strictly through PLAN.md'"},
+    {"source": "cap_codex_review", "target": "external_binary_dependency", "type": "depends_on", "confidence": 0.9, "evidence": "'Codex CLI installed and recent: codex --version (need >= 0.130)'"},
+    {"source": "cap_codex_review", "target": "no_silent_downgrade", "type": "constrains", "confidence": 0.8, "evidence": "'If a run returns an auth/model error, surface it to the user — do not silently retry'"},
+    {"source": "cap_codex_review", "target": "cross_model_orchestration", "type": "specializes", "confidence": 0.9, "evidence": "PARITY.md: 'codex-review — Codex adversarially reviews a Claude-authored plan'"},
+    {"source": "cap_writing_plans", "target": "frozen_plan_file", "type": "produces", "confidence": 0.9, "evidence": "'Write comprehensive implementation plans' saved to docs/superpowers/plans/"},
+    {"source": "cap_writing_plans", "target": "task_right_sizing", "type": "depends_on", "confidence": 0.95, "evidence": "'A task is the smallest unit that carries its own test cycle and is worth a fresh reviewer's gate'"},
+    {"source": "cap_writing_plans", "target": "adversarial_verification_before_shipping", "type": "chains_into", "confidence": 0.85, "evidence": "'Dispatch after: The complete plan is written' — a plan document reviewer subagent"},
+    {"source": "cap_writing_plans", "target": "reviewer_calibration", "type": "constrains", "confidence": 0.9, "evidence": "'Only flag issues that would cause real problems during implementation'"},
+    {"source": "reviewer_calibration", "target": "adversarial_verification_before_shipping", "type": "constrains", "confidence": 0.85, "evidence": "calibration bounds how aggressive the adversarial reviewer should be"},
+    {"source": "cap_writing_plans", "target": "cap_codex_review", "type": "overlaps_with", "confidence": 0.8, "evidence": "both produce/harden a plan document reviewed before code; one uses a subagent, the other a second model"},
+    {"source": "cap_writing_plans", "target": "announce_skill_at_start", "type": "depends_on", "confidence": 0.85, "evidence": "'Announce at start: I'm using the writing-plans skill'"},
+    {"source": "task_right_sizing", "target": "green_tests_precondition", "type": "prerequisite_of", "confidence": 0.7, "evidence": "INFERRED — each task ends with an independently testable deliverable, feeding the branch-finish test gate"},
+    {"source": "cap_writing_plans", "target": "cap_finish_dev_branch", "type": "chains_into", "confidence": 0.8, "evidence": "INFERRED — plan tasks are implemented and committed, then the branch is integrated"},
+    {"source": "cap_finish_dev_branch", "target": "green_tests_precondition", "type": "depends_on", "confidence": 0.95, "evidence": "'Cannot proceed with merge/PR until tests pass'"},
+    {"source": "cap_finish_dev_branch", "target": "human_gate", "type": "depends_on", "confidence": 0.85, "evidence": "'Present options → Execute choice'"},
+    {"source": "cap_finish_dev_branch", "target": "announce_skill_at_start", "type": "depends_on", "confidence": 0.85, "evidence": "'Announce at start: I'm using the finishing-a-development-branch skill'"},
+    {"source": "cap_level_up", "target": "eliminate_before_automate", "type": "depends_on", "confidence": 0.95, "evidence": "'Eliminate first: What if we just stop doing this?... Don't automate waste'"},
+    {"source": "cap_level_up", "target": "lowest_autonomy_that_works", "type": "constrains", "confidence": 0.95, "evidence": "'Pick autonomy (L0–L4). Default = lowest that works'"},
+    {"source": "cap_level_up", "target": "prefer_cheapest_mechanism", "type": "depends_on", "confidence": 0.9, "evidence": "'Default = highest non-AI option that solves it'"},
+    {"source": "cap_level_up", "target": "save_to_both_activation", "type": "produces", "confidence": 0.9, "evidence": "'Save-to-both... write every new skill/agent to BOTH .claude/skills/ AND the DB'"},
+    {"source": "cap_level_up", "target": "decision_record_ledger", "type": "produces", "confidence": 0.8, "evidence": "'scoped spec appended to decisions/log.md as a dated entry'"},
+    {"source": "eliminate_before_automate", "target": "prefer_cheapest_mechanism", "type": "specializes", "confidence": 0.8, "evidence": "INFERRED — doing nothing is the cheapest mechanism of all"},
+    {"source": "cap_skill_router", "target": "context_window_hygiene", "type": "depends_on", "confidence": 0.9, "evidence": "'Keep steps 1–3 in one unbroken context window' and the smart-zone limit"},
+    {"source": "cap_skill_router", "target": "user_invocation_only", "type": "depends_on", "confidence": 0.9, "evidence": "frontmatter 'disable-model-invocation: true'; 'A router over the user-invoked skills'"},
+    {"source": "cap_skill_router", "target": "cap_writing_plans", "type": "overlaps_with", "confidence": 0.6, "evidence": "INFERRED — both describe the idea-to-shipped-code pipeline; ask-matt routes, writing-plans executes the plan step"},
+    {"source": "cap_parity_baseline", "target": "declared_asymmetry_not_drift", "type": "depends_on", "confidence": 0.95, "evidence": "'check-skills.py fails on undeclared asymmetry only'"},
+    {"source": "cap_parity_baseline", "target": "save_to_both_activation", "type": "constrains", "confidence": 0.9, "evidence": "'DB parity is not activation. The DB is the complete catalog'"},
+    {"source": "cap_parity_baseline", "target": "cross_model_orchestration", "type": "depends_on", "confidence": 0.9, "evidence": "'Giving them to Codex would mean Codex driving Codex, which defeats the cross-model check'"},
+    {"source": "cap_parity_baseline", "target": "cap_plugin_structure_authoring", "type": "constrains", "confidence": 0.8, "evidence": "plugin-structure listed under 'Vendor / plugin snapshots (24)... Correct as Claude-only, permanently'"},
+    {"source": "cap_parity_baseline", "target": "cap_build_mcp_app", "type": "constrains", "confidence": 0.8, "evidence": "build-mcp-app listed among vendor/plugin snapshots that are Claude-only permanently"},
+    {"source": "cap_parity_baseline", "target": "cap_bootcamp_builder", "type": "constrains", "confidence": 0.85, "evidence": "'bootcamp-builder — built around AskUserQuestion gating and subagent fan-out... a Codex copy would need a rewrite'"},
+    {"source": "cap_parity_baseline", "target": "external_binary_dependency", "type": "depends_on", "confidence": 0.75, "evidence": "'youtube-full — requires a YouTube MCP server... this is a capability gap'"},
+    {"source": "cap_bootcamp_builder", "target": "gated_multi_session_build", "type": "depends_on", "confidence": 0.95, "evidence": "'The gated process... Gate 0..5, each pending / in progress / APPROVED'"},
+    {"source": "gated_multi_session_build", "target": "human_gate", "type": "depends_on", "confidence": 0.95, "evidence": "'Joshua approves scope' at each gate"},
+    {"source": "gated_multi_session_build", "target": "context_window_hygiene", "type": "depends_on", "confidence": 0.85, "evidence": "'A fresh session resumes by reading the build page first... Never redo an APPROVED gate'"},
+    {"source": "cap_bootcamp_builder", "target": "clone_the_reference_implementation", "type": "constrains", "confidence": 0.95, "evidence": "'Design: reuse Intro to LR exactly... The template is the code, not a doc'"},
+    {"source": "cap_bootcamp_builder", "target": "no_invented_content", "type": "constrains", "confidence": 0.95, "evidence": "'No invented LSAT content silently... Missing reviewed content counts as a build failure'"},
+    {"source": "cap_bootcamp_builder", "target": "green_tests_precondition", "type": "depends_on", "confidence": 0.8, "evidence": "'After clean diff + green build, commit and push without asking'"},
+    {"source": "clone_the_reference_implementation", "target": "reusable_component_library", "type": "specializes", "confidence": 0.8, "evidence": "'Same components, tokens, chrome, look' reused across bootcamps"},
+    {"source": "no_invented_content", "target": "trusted_source_grounding", "type": "specializes", "confidence": 0.85, "evidence": "INFERRED — both forbid filling gaps from the model's own invention rather than a sourced authority"},
+    {"source": "cap_bootcamp_builder", "target": "gated_multi_session_build", "type": "produces", "confidence": 0.8, "evidence": "'create {slug}-bootcamp-build.md with a Gate ledger'"},
+    {"source": "cap_research_deep", "target": "resumable_batch_fanout", "type": "depends_on", "confidence": 0.95, "evidence": "'Check completed JSON files in output_dir - Skip completed items'; 'Batch by batch_size'"},
+    {"source": "cap_research_deep", "target": "schema_validated_output", "type": "produces", "confidence": 0.95, "evidence": "'Task is complete only after validation passes'"},
+    {"source": "cap_research_deep", "target": "trusted_source_grounding", "type": "depends_on", "confidence": 0.7, "evidence": "'Mark uncertain field values with [uncertain]' plus an uncertain array — INFERRED as source-confidence discipline"},
+    {"source": "resumable_batch_fanout", "target": "human_gate", "type": "depends_on", "confidence": 0.85, "evidence": "'need user approval before next batch'"},
+    {"source": "cap_research_deep", "target": "context_window_hygiene", "type": "depends_on", "confidence": 0.7, "evidence": "'Launch web-search-agent (background parallel, disable task output)' keeps sub-results out of the driver context"},
+    {"source": "cap_gws_cli_surface", "target": "shared_prerequisite_doc", "type": "depends_on", "confidence": 0.95, "evidence": "'PREREQUISITE: Read ../gws-shared/SKILL.md for auth, global flags, and security rules'"},
+    {"source": "cap_gws_cli_surface", "target": "external_binary_dependency", "type": "depends_on", "confidence": 0.95, "evidence": "frontmatter 'requires: bins: - gws'"},
+    {"source": "cap_gmail_outbound", "target": "cap_gws_cli_surface", "type": "specializes", "confidence": 0.95, "evidence": "'gws gmail +send' / 'gws gmail +reply-all' are commands of the gws CLI family"},
+    {"source": "cap_gmail_triage", "target": "cap_gws_cli_surface", "type": "specializes", "confidence": 0.95, "evidence": "'gws gmail +triage' is a gws helper command"},
+    {"source": "cap_gmail_outbound", "target": "dry_run_and_draft_modes", "type": "depends_on", "confidence": 0.95, "evidence": "'--dry-run — Show the request that would be sent without executing it'; '--draft — Save as draft instead of sending'"},
+    {"source": "dry_run_and_draft_modes", "target": "lowest_autonomy_that_works", "type": "specializes", "confidence": 0.8, "evidence": "INFERRED — draft mode is the mechanism implementing the drafts-with-human-review autonomy default"},
+    {"source": "cap_gmail_triage", "target": "cap_gmail_outbound", "type": "chains_into", "confidence": 0.8, "evidence": "INFERRED — triage lists unread mail, reply-all acts on a message-id from it"},
+    {"source": "cap_edit_article", "target": "dependency_ordered_exposition", "type": "depends_on", "confidence": 0.95, "evidence": "'information is a directed acyclic graph... the order of the sections respects these dependencies'"},
+    {"source": "cap_edit_article", "target": "user_invocation_only", "type": "depends_on", "confidence": 0.9, "evidence": "frontmatter 'disable-model-invocation: true'"},
+    {"source": "cap_edit_article", "target": "human_gate", "type": "depends_on", "confidence": 0.85, "evidence": "'Confirm the sections with the user' before rewriting"},
+    {"source": "cap_watch_video", "target": "cap_teach", "type": "overlaps_with", "confidence": 0.5, "evidence": "INFERRED — both consume external sources to explain something to the user, but watch is one-shot and teach is stateful"},
+    {"source": "setup_preflight_gate", "target": "announce_skill_at_start", "type": "alternative_to", "confidence": 0.7, "evidence": "'Do NOT announce setup is complete' contrasts with the plan/branch skills' announce-at-start rule"},
+    {"source": "cap_json_canvas", "target": "schema_validated_output", "type": "specializes", "confidence": 0.75, "evidence": "canvas files are validated against the JSON Canvas 1.0 spec after every write"},
+    {"source": "cap_level_up", "target": "cap_writing_plans", "type": "overlaps_with", "confidence": 0.55, "evidence": "INFERRED — both scope work into a spec before building, one for automations and one for code"},
+    {"source": "cap_skill_router", "target": "cap_parity_baseline", "type": "overlaps_with", "confidence": 0.5, "evidence": "INFERRED — both are meta-inventories over the skill catalog: one routes users, one audits runtime coverage"}
+  ]
+}

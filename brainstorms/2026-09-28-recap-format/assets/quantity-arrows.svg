@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 540" role="img" aria-labelledby="title desc">
+  <title id="title">How the quantity relationships turn around</title>
+  <desc id="desc">Some A are B can be reversed as some B are A. Most A are B gives only some B are A in reverse. All A are B is the conditional A implies B, with the contrapositive not B implies not A.</desc>
+  <rect width="900" height="540" rx="24" fill="#f8f5ee"/>
+  <text x="42" y="53" fill="#152d36" font-family="Arial,sans-serif" font-size="27" font-weight="700">How the arrows work</text>
+  <g font-family="Arial,sans-serif" font-size="17" font-weight="700">
+    <rect x="42" y="85" width="816" height="122" rx="18" fill="#e3f2ef"/>
+    <text x="67" y="120" fill="#146a63">SOME</text>
+    <text x="68" y="163" fill="#152d36" font-size="24">Some A are B</text>
+    <text x="430" y="163" fill="#168d82" font-size="30">↔</text>
+    <text x="520" y="163" fill="#152d36" font-size="24">Some B are A</text>
+    <rect x="42" y="222" width="816" height="122" rx="18" fill="#f8ecd4"/>
+    <text x="67" y="257" fill="#9b5b0c">MOST</text>
+    <text x="68" y="300" fill="#152d36" font-size="24">Most A are B</text>
+    <text x="430" y="300" fill="#c57916" font-size="30">→</text>
+    <text x="520" y="300" fill="#152d36" font-size="24">Some B are A</text>
+    <rect x="42" y="359" width="816" height="146" rx="18" fill="#eee8f6"/>
+    <text x="67" y="394" fill="#6d53a5">ALL</text>
+    <text x="68" y="438" fill="#152d36" font-size="24">All A are B</text>
+    <text x="430" y="438" fill="#6d53a5" font-size="30">→</text>
+    <text x="520" y="438" fill="#152d36" font-size="24">A → B</text>
+    <text x="520" y="477" fill="#49606a" font-size="18">also: not B → not A</text>
+  </g>
+</svg>

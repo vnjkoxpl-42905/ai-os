@@ -1,0 +1,1 @@
+Copied exactly four reviewed files from isolated checkout after compare-before-write and SHA256 verification. All 43 other input files remain byte-identical. No commit, push, deploy or backend write. Authored hashes: final-authored-hashes.json.

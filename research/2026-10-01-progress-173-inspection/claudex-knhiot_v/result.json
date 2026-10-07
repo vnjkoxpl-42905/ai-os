@@ -1,0 +1,168 @@
+{
+  "status": "failed",
+  "mode": "inspect",
+  "provider": "claude",
+  "roles": {
+    "host": "codex",
+    "planner": "codex",
+    "reviewer": "claude",
+    "builder": "codex",
+    "inspector": "claude"
+  },
+  "repo": "C:\\Users\\Joshu\\dev\\lsatu-progress-173",
+  "plan": "C:\\Users\\Joshu\\dev\\ai-os\\research\\2026-10-01-progress-173-work-order.md",
+  "plan_sha256": "ccfe763753b124406b0145da1e03fa40ad5521b3e54d7445809f78944a2f36f8",
+  "requested_model": "claude-opus-5-5",
+  "requested_effort": "medium",
+  "base": "72df6964df9177bc5971cac9fdb4512d0b545a17",
+  "snapshot": {
+    "base": "72df6964df9177bc5971cac9fdb4512d0b545a17",
+    "files": [
+      {
+        "path": "src/components/analytics/FirstAnswerHistoryPanel.test.tsx",
+        "kind": "file",
+        "sha256": "5b4c5f7e533d43ad32931ef9c83ba003a05a20e8dca1bd44749d6e7702f43a66"
+      },
+      {
+        "path": "src/components/analytics/FirstAnswerHistoryPanel.tsx",
+        "kind": "file",
+        "sha256": "70e7f5433ed94ae1fb87bffdd990a5a9ea8bf2aea4c30d2ded9753221059a21f"
+      },
+      {
+        "path": "src/components/analytics/FirstAnswerProgressPanel.test.tsx",
+        "kind": "file",
+        "sha256": "edb68dc09e99f008cd73ad74b6800a1fc54450461ce916dc29a81a264bb3aaad"
+      },
+      {
+        "path": "src/components/analytics/FirstAnswerProgressPanel.tsx",
+        "kind": "file",
+        "sha256": "59b05ee384a7e0119ec7edf29f36741be3210b8aaec52b06f41c0fb91c6af26b"
+      },
+      {
+        "path": "src/lib/progressHistory.test.ts",
+        "kind": "file",
+        "sha256": "9f5682abb15d20c3d55931a718b594920b7a0fd1ed9717eccfdc2c4045dc9d81"
+      },
+      {
+        "path": "src/lib/progressHistory.ts",
+        "kind": "file",
+        "sha256": "6981c0eb09e027e8b1670c00498a1deeee9e68e4af00729b7f4288554d4e4090"
+      },
+      {
+        "path": "src/pages/ProgressTopics.tsx",
+        "kind": "file",
+        "sha256": "40fb8c958db9a82c4f279f5e1b034e1621f6a134bf63ababbe2924c76284ccc9"
+      },
+      {
+        "path": "src/pages/teacher/students/DossierProgress.tsx",
+        "kind": "file",
+        "sha256": "49e88e2a2d410e8af93a12c5b93630da956c740a72a0bb0c56d42a12326bae0f"
+      }
+    ],
+    "diff_sha256": "87f2c12853c20263c57b9768d9e42ab50e5025b44a56ed40746934ccf13606e4",
+    "sha256": "dc8c173d0a54937ff879a24aa436073dea1fb5dd64286567ff3cd990012b45f9"
+  },
+  "previous": null,
+  "started_at": 1790849242.8709056,
+  "artifacts": "C:\\Users\\Joshu\\dev\\ai-os\\research\\2026-10-01-progress-173-inspection\\claudex-knhiot_v",
+  "cli_version": "2.1.280 (Claude Code)",
+  "executable": [
+    "C:\\Users\\Joshu\\AppData\\Roaming\\npm\\node_modules\\@anthropic-ai\\claude-code\\bin\\claude.exe"
+  ],
+  "exit_code": 0,
+  "session_id": "69a2662e-e7ec-4127-a65e-19af09edfc9f",
+  "response": {
+    "verdict": "REVISE",
+    "summary": "The core logic is sound. History filters run after first/repeat identity has been assigned across all time, so filtering can't turn a repeat into a first. LR and RC accuracy are withheld separately when a source fails, using the existing source-to-area mapping. Selected-student scope is passed through to the History and Topics panels, and own-practice links are hidden there. The dossier's `../review` link resolves to `students/:id/review`. One material defect remains. The source, mode and type filters read from the URL are never checked against the available options. When the window changes, or a shared URL carries a stale value, the dropdown shows \"All\" while the list is filtered down to nothing. There are also smaller gaps: topic accuracy has no inspectable evidence IDs, some partial-data wording is out of date, and Topics and the dossier have no tests.",
+    "findings": [
+      {
+        "id": "F1",
+        "severity": "medium",
+        "path": "src/components/analytics/FirstAnswerHistoryPanel.tsx",
+        "evidence": "Lines 20-22 accept any `historySource`/`historyMode`/`historyTopic` string. Lines 31 and 76 build the dropdown options only from rows in the current window. Example: a student picks type=Flaw in the 30-day window, then switches the window control to 7 days, where there are no Flaw rows. `historyTopic=Flaw` stays in the URL, but no option matches it, so the browser shows the first option, \"All\". `filterProgressHistory` still applies topic === 'Flaw', so the panel says '0 saved answers match these filters' while every control reads All or default. A hand-edited or shared URL like `?historySource=foo` does the same. The student can't tell why their history disappeared. Picking \"All\" again doesn't fire a change event, because it already appears selected.",
+        "fix": "Check source, mode and topic against the option sets (or the known value sets: ProgressSource, the mode strings, persisted topics) before using them. Treat values that aren't present as 'all', or keep the stale value as a visible selected option (e.g. 'Flaw (no rows in window)') so the user can see it and clear it. Add a test where a URL topic or mode has no rows in the window."
+      },
+      {
+        "id": "F2",
+        "severity": "low",
+        "path": "src/pages/ProgressTopics.tsx",
+        "evidence": "The plan requires 'exact evidence IDs inspectable for calculation denominator'. FirstAnswerProgressPanel now shows evidenceAttemptIds for each area. Topic cards (lines 43-49) show a percentage and denominator, but no record IDs. `TopicAccuracy` in firstAnswerDetails.ts has no evidence field, so the IDs behind a topic's denominator can't be inspected.",
+        "fix": "Add `evidenceAttemptIds` to TopicAccuracy in firstAnswerDetails, filled from the first-answer rows counted for that topic. Render it in a <details> like the AreaCard does, or link to History with `historyTopic=<topic>&historyAnswer=first` and the current window."
+      },
+      {
+        "id": "F3",
+        "severity": "low",
+        "path": "src/pages/ProgressTopics.tsx",
+        "evidence": "When partialLr is true, the banner on line 37 still says 'Topic counts use available sources only' and doesn't mention withheld percentages. Line 39 still says '{denominator} first LR answers' rather than candidate first answers. Line 47 still appends ' · early signal' after a withheld '—' percentage. The wording is inconsistent with the new withholding in the same view.",
+        "fix": "When partialLr is true, say percentages are withheld because an unavailable LR source may hold earlier answers, call the line-39 counts 'candidate first answers', and drop the sample-size suffix."
+      },
+      {
+        "id": "F4",
+        "severity": "low",
+        "path": "src/components/analytics/FirstAnswerHistoryPanel.test.tsx",
+        "evidence": "The selected-student test (lines 35-40) renders in a bare MemoryRouter and expects href '/review'. That only shows `../review` resolves against '/'. It doesn't show the link goes to the dossier's Review (`/teacher/students/:id/review`). No test covers ProgressTopics with `studentId` (scope passed to the hook, own-practice links hidden). There are also no tests for partialLr withholding or for the DossierProgress composition. The plan asks for selected-student scope and partial LR vs RC behavior to be tested.",
+        "fix": "Render the panel inside `<Routes><Route path=\"/teacher/students/:studentId/progress\" ...>` and assert href `/teacher/students/s2/review`. Add ProgressTopics tests: called with (window, 'student-2'); no Practice/Review own links; '—' and withheld wording when lr_section_history or practice_test_runs is missing, and percentages shown when only RC sources are missing."
+      },
+      {
+        "id": "F5",
+        "severity": "low",
+        "path": "src/pages/teacher/students/DossierProgress.tsx",
+        "evidence": "The dossier now renders FirstAnswerProgressPanel and ProgressTopics, and each has its own ProgressWindowControl (FirstAnswerProgressPanel.tsx:47, ProgressTopics.tsx:27). That puts two window selectors on one page, while the History panel between them has none. Both write the same `window` URL param and the teacher's own localStorage key `lsatu:progress-window`. A window chosen while viewing a student therefore becomes the default on the teacher's own pages.",
+        "fix": "Render one window control in DossierProgress and add an option (e.g. `hideWindowControl`) to the embedded panels. Consider keeping selected-student window choices out of the teacher's own localStorage default."
+      }
+    ],
+    "coverage": [
+      "Read the plan and the full diff for all 8 manifest files, including the untracked progressHistory.ts, progressHistory.test.ts and FirstAnswerProgressPanel.test.tsx",
+      "Traced firstAnswerDetails.ts (first identity chosen across all time before windowing), firstAnswerProgress.ts (sources, modes, areaProgress evidence IDs) and firstAnswerSources.ts (missingSources and when RC is marked unavailable)",
+      "Traced useFirstAnswerProgress (scope via useStudentSubjectScope, query key per actor/student) and useProgressWindow (URL plus shared localStorage)",
+      "Checked callers: the App.tsx dossier routes (resolving ../review from students/:studentId/progress), the ProgressTopics route, and DrillHistory's two FirstAnswerHistoryPanel mounts (no competing search-param writers)",
+      "Checked the new tests' assertions by hand against the mocked data (rc-drill option present; case-sensitive 'repeat' ID cell vs 'Repeat' label)"
+    ],
+    "limitations": [
+      "I couldn't run typecheck, build or tests, so nothing here confirms that tests pass",
+      "I couldn't observe any browser UI; the table and sticky header layout, select behavior and dossier visuals weren't checked",
+      "useStudentSubjectScope and assertActiveStudentScope weren't read in depth; I assumed their selected-student authorization is correct from earlier work",
+      "Live data and the sample reconciliation in the plan were out of scope"
+    ]
+  },
+  "usage": {
+    "input_tokens": 16,
+    "cache_creation_input_tokens": 41121,
+    "cache_read_input_tokens": 213306,
+    "output_tokens": 7926,
+    "output_tokens_details": {
+      "thinking_tokens": 3633
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 41121,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 3588,
+        "cache_read_input_tokens": 44235,
+        "cache_creation_input_tokens": 249,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 249
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "observed_models": [
+    "claude-opus-5-5"
+  ],
+  "permission_denials": [],
+  "total_cost_usd": 0.5302131999999999,
+  "error": "Code changed during inspection; inspect the final code again.",
+  "elapsed_seconds": 83.37
+}

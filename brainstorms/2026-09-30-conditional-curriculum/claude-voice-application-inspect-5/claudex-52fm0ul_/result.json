@@ -1,0 +1,262 @@
+{
+  "status": "completed",
+  "mode": "inspect",
+  "provider": "claude",
+  "roles": {
+    "host": "codex",
+    "planner": "codex",
+    "reviewer": "claude",
+    "builder": "codex",
+    "inspector": "claude"
+  },
+  "repo": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-conditional-bootcamp",
+  "plan": "C:\\Users\\Joshu\\dev\\ai-os\\brainstorms\\2026-09-30-conditional-curriculum\\OPENING-VISUAL-BUILD-REVIEW.md",
+  "plan_sha256": "a3b8d53ebf7543e6d4983d6473dd1bf4f5798fbcea83081a55cd9185e2a72683",
+  "requested_model": null,
+  "requested_effort": null,
+  "base": "67230dfae74a1466515d570fcb7b8a96ab5cb9c5",
+  "snapshot": {
+    "base": "67230dfae74a1466515d570fcb7b8a96ab5cb9c5",
+    "files": [
+      {
+        "path": "public/data/_bank.generated.json",
+        "kind": "file",
+        "sha256": "69f34f6dc7c1c2772d0fc212851873ca92a6c0a40e15af83e97b56575e004f75"
+      },
+      {
+        "path": "public/data/finder-address-index.json",
+        "kind": "file",
+        "sha256": "3f8216dacc9a968b6e4e19da90472b8591b32204f912dcf97ed87459b5406007"
+      },
+      {
+        "path": "src/App.tsx",
+        "kind": "file",
+        "sha256": "eef49221a7a4b4f3496c4979abb11355dfd437fd57df109c261c202de3965260"
+      },
+      {
+        "path": "src/bootcamps/conditionals/assignments.test.ts",
+        "kind": "file",
+        "sha256": "ec97ae7e4b36cb39855d048d83a2431d93a7f4e7b2eb2f91a9a5001e5bc1ec2f"
+      },
+      {
+        "path": "src/bootcamps/conditionals/assignments.ts",
+        "kind": "file",
+        "sha256": "5e1963c6cf4c1a9438164cf3c27215133ed17f0db460570be0882704c88489dd"
+      },
+      {
+        "path": "src/bootcamps/conditionals/components/ConditionalLessonNote.test.tsx",
+        "kind": "file",
+        "sha256": "72ff13a490102b6058cf9754daf344e4e89a3a79bc674d9062ba3c23a5d43e8c"
+      },
+      {
+        "path": "src/bootcamps/conditionals/components/ConditionalLessonNote.tsx",
+        "kind": "file",
+        "sha256": "55c7be469bfef6d60c1e0c90b15d83464967a3604e16d50da058bf2d50a170b2"
+      },
+      {
+        "path": "src/bootcamps/conditionals/components/ConditionalOpeningLesson.review.test.tsx",
+        "kind": "file",
+        "sha256": "786f4addc33c71ed5fe17fbf9b9968c0b672ffa1b71ddc0a7f713ae2a4059852"
+      },
+      {
+        "path": "src/bootcamps/conditionals/components/ConditionalOpeningLesson.tsx",
+        "kind": "file",
+        "sha256": "13448884d55723ceaece95afe06516e8bb05cc14cb961aa94e4cf20b5cea6dd9"
+      },
+      {
+        "path": "src/bootcamps/conditionals/components/ConditionalOpeningMedia.tsx",
+        "kind": "file",
+        "sha256": "2f3fed2ff2f594eb5826e0c3a83aefedf786d80e941e6c3e28dfe6d107769cdb"
+      },
+      {
+        "path": "src/bootcamps/conditionals/components/opening.css",
+        "kind": "file",
+        "sha256": "9dc26b9eb7ea35e631b3536edbcf2fd23231026487eeec2f49432262b35a3ac5"
+      },
+      {
+        "path": "src/bootcamps/conditionals/content/foundations.source.ts",
+        "kind": "file",
+        "sha256": "2ba00995035277645cdc6a78aa695185826a5e092a8b6547c9e19596191d65a8"
+      },
+      {
+        "path": "src/bootcamps/conditionals/content/legacyQuestions.ts",
+        "kind": "file",
+        "sha256": "ad91b8a4a6fd59acd5c5d9b72ab3c9bc00e54d64475a2bcb18891b3ad54b04b9"
+      },
+      {
+        "path": "src/bootcamps/conditionals/content/opening-coverage.test.ts",
+        "kind": "file",
+        "sha256": "a7a86c90a22c1ae55d6a4f7a3de4f87f36490729b3cf3059f531da94a5283181"
+      },
+      {
+        "path": "src/bootcamps/conditionals/data/curriculum.generated.json",
+        "kind": "file",
+        "sha256": "9bf3801d9b9e5145bebb8d235abf94852dad28cbb1f85da22bcb783910d0e365"
+      },
+      {
+        "path": "src/bootcamps/conditionals/openingRevision.ts",
+        "kind": "file",
+        "sha256": "8fe3aad67af99f13ff543b6aeddeb2d8cc85c0253e894d09754384bb7ef4777f"
+      },
+      {
+        "path": "src/bootcamps/conditionals/progress.test.ts",
+        "kind": "file",
+        "sha256": "69392eb3af188362ce8ec5f13228656bf77adb20fd3d075e1748bd001e7fb2a4"
+      },
+      {
+        "path": "src/bootcamps/conditionals/progress.ts",
+        "kind": "file",
+        "sha256": "e438914de88dd3166e0758809b5112856ffe32d67813263ef54285a199c0ad7b"
+      },
+      {
+        "path": "src/bootcamps/conditionals/routes.test.tsx",
+        "kind": "file",
+        "sha256": "995a60f8d2067e428e92d0256b15f165c71cbfc0bee2dd2730e57c9e23147813"
+      },
+      {
+        "path": "src/bootcamps/conditionals/routes.tsx",
+        "kind": "file",
+        "sha256": "434a55cfe8dfc785cfd4cea5b7dd459467102c05aa7380f17976eeb70a45ee2e"
+      },
+      {
+        "path": "src/bootcamps/conditionals/useConditionalAssignments.ts",
+        "kind": "file",
+        "sha256": "a8988f5701f5f524e3c6373798c3a0bc0c6511ecec5a95183c652f61e308bd74"
+      },
+      {
+        "path": "src/bootcamps/conditionals/useConditionalProgress.test.tsx",
+        "kind": "file",
+        "sha256": "e88c4b5021940330559d103990e3336e8f4ce2c2b2d72d135e89a03900331346"
+      },
+      {
+        "path": "src/components/teacher/ConditionalAssignmentFields.test.tsx",
+        "kind": "file",
+        "sha256": "10c903b7a3533499971e332f577dbd62e0c015bb7300ad51303ad9dcae4a9928"
+      },
+      {
+        "path": "src/components/teacher/ConditionalAssignmentFields.tsx",
+        "kind": "file",
+        "sha256": "9975d3cd7bbf3def762ac0acceee66e58579f9923f804829a2ba9a440d6c8e18"
+      },
+      {
+        "path": "src/dev/ConditionalOpeningPreview.tsx",
+        "kind": "file",
+        "sha256": "bdc5b3507ee3e1d99635b2d926312a139578481966ddabc21451a7781779dc4c"
+      },
+      {
+        "path": "src/lib/conditionalBootcampAssignment.test.ts",
+        "kind": "file",
+        "sha256": "d5e5b20e1c2765a1a32c41edb4458fd971789bcb3bd4d8674c87a1bc4c322ee6"
+      },
+      {
+        "path": "src/lib/conditionalBootcampAssignment.ts",
+        "kind": "file",
+        "sha256": "9b9d909aa12cdbeded57577f499ba0bada38ab82b29c96b27c99c55d4e7d8dc8"
+      },
+      {
+        "path": "supabase/functions/mcp/index.ts",
+        "kind": "file",
+        "sha256": "f731b29c4fcd1517dc99276a998944494a86720e0cd103061e1799d149c7d32c"
+      }
+    ],
+    "diff_sha256": "48e4e0f095a6e2ab21ff8e22e90f62407a2b70aaffc8cadb5ad7d5389082aad1",
+    "sha256": "7b2a813ae3dc1db5f1cd3fb1af37d06f7602b483122bd0ee3402f2ddf809b526"
+  },
+  "previous": null,
+  "started_at": 1790996826.5575366,
+  "artifacts": "C:\\Users\\Joshu\\dev\\ai-os\\brainstorms\\2026-09-30-conditional-curriculum\\claude-voice-application-inspect-5\\claudex-52fm0ul_",
+  "cli_version": "2.1.280 (Claude Code)",
+  "executable": [
+    "C:\\Users\\Joshu\\AppData\\Roaming\\npm\\node_modules\\@anthropic-ai\\claude-code\\bin\\claude.exe"
+  ],
+  "exit_code": 0,
+  "session_id": "655e4053-270d-479b-8479-6d30368496f6",
+  "response": {
+    "verdict": "REVISE",
+    "summary": "Fresh inspection 5 by Claude Opus 5.5 (claude-opus-5-5), CLI default. Before judging the voice I read all 621 lines of lsat-teaching-voice-standard.md. I also read the following:\n- The current ConditionalOpeningLesson.tsx (all 1,010 lines), ConditionalOpeningMedia.tsx and opening.css\n- The orientation unit in foundations.source.ts, the Lesson/UnitActions/Shell sections of routes.tsx and the repair-scroll route tests\n- The full review test file, VERIFICATION.md, final-host-snapshot.json and the FI4 result\n- The four Intro to LR files\n- All 17 FI4 PNGs\n\nThe authored per-file hashes in final-host-snapshot.json match the change manifest for this inspection.\n\nAll seven FI4 corrections are present and behave as described:\n- **FI4-1:** Check now reads \"Your choice: {option}\", so a correct \"No\" is no longer headed \"Yes.\" I saw this in desktop-negative-feedback.png and mobile-negative-feedback.png, and a test covers it.\n- **FI4-2:** Orientation now teaches permission and instructions before the advanced drills, using the cloakroom pause and the tray Check. orientation-a1/a3 are unchanged, and a test binds them to the taught beat.\n- **FI4-3:** The limits are now stated firmly: \"Membership by itself leaves admission unknown\" and \"...leaves the left condition unknown unless something else settles it\". The Every-finalist reasoning was rewritten.\n- **FI4-4:** A Lesson effect scrolls to #repair after the progress-gated mount. Tests cover the real \"Review the move\" link, a delayed load and a blocked deep link.\n- **FI4-5:** The orbit and keyframe CSS are gone. \"Reduce animation in this lesson\" now sits in the footer, keeps a truthful aria-pressed state and drives data-motion-paused.\n- **FI4-6:** The orientation hero is abstract and the in-body comparison is now tendency vs rule, so the duplicate is gone. Sufficient-necessary uses a distinct split role composition.\n- **FI4-7:** The local TOC wrapper hides while an interaction is in view and returns afterwards. The shared TOC component is untouched. The feedback in mobile-group-2-feedback.png is unobscured.\n\nThe logic is sound. I found no reversed key, and nothing leaks into contraposition, Groups 3/4 or quantity.\n\nOne medium defect in progression remains. FI4-2's new permission/instruction beat sits before the anchor rule is first applied to a case. So the learner's first rule-to-fact application, and a formative Check that requires it, is an advanced modality nuance taught before the basic Order A reasoning. That reverses the ground-up order Joshua asked for.\n\nRemaining items are low-severity:\n- inconsistent correctness signalling in the target lab and Check\n- motion control placement\n- a repeated solved example in one Check\n\nThe voice is closely and consistently applied. The visual design is calm, readable and specific to each lesson, but restrained rather than fully memorable.",
+    "findings": [
+      {
+        "id": "FI5-1",
+        "severity": "medium",
+        "path": "src/bootcamps/conditionals/components/ConditionalOpeningLesson.tsx",
+        "evidence": "In Fundamentals (lines 755-773), the permission and instruction beat sits inside 'A guarantee is stronger than a tendency'. That section comes before 'Read one rule in ordinary English' (line 774), where the learner first applies the anchor rule to a case fact ('Order A is marked ready. What do we now know about it?'). As a result, the learner's first applications of a rule to a fact are:\n- 'Lena has a ticket. Do we know that she used the cloakroom?'\n- the formative Check 'The notice says: If a tray is empty, return it to the counter. This tray is empty. What does the instruction establish?'\n\nBoth are advanced modality distinctions that exist to prepare the advanced drills orientation-a1/a3. They come before the basic operation they depend on, rule plus matching fact gives the result, has been taught. The guide asks to 'Teach a simple expression first... include one placement trap only after the usual case is understood'. Joshua asks that each assessed operation be taught first, and that the anchor stay the stable relationship whose view changes.\n\nA beginner-assigned student now meets cloakroom, coat-rack and tray rules before seeing Order A. The section title and its TOC label ('Guarantees and wording') also no longer describe the second half of the section (desktop-permission-pause.png, desktop-instruction-feedback.png).\n\nSeparately, the tray Check's options mirror orientation-a3's options exactly ('has been returned / instruction calls for returning / cannot be returned' vs 'has shut down / instruction calls for shutdown / cannot shut down'). That invites template matching rather than transfer.",
+        "fix": "Move the permission/instruction paragraphs, the Lena ThinkPause, the tray Check and the closing 'Allowed to use isn't used' paragraph into their own section. Title it, for example, 'Keep the rule's own strength'. Place it after 'Change the fact, keep the rule' / SetExplorer, or after 'Try the same reasoning with a new rule'. Either position is still before the footer and the guided and practice links, so the existing test ordering against the Continue link still holds.\n\nOptionally, vary the Check's distractor shape so it does not template the a3 options, for example 'Someone is required to return the tray' vs 'Someone returned the tray' vs 'Only empty trays may be returned'. Update the test to assert that the Order A pause precedes the permission section."
+      },
+      {
+        "id": "FI5-2",
+        "severity": "low",
+        "path": "src/bootcamps/conditionals/components/ConditionalOpeningLesson.tsx",
+        "evidence": "There are three inconsistencies in how correctness is signalled:\n1. TranslationLab (line 467) renders the correct-target feedback with plain `co-feedback`, without `co-correct`. A correct target therefore shows the same tan card as a wrong choice (mobile-marked-sentence.png, mid-group-2-marked-sentence.png, mobile-obligation-arrow.png). Check and DiagramBuilder, by contrast, turn green.\n2. In Check (line 37), the heading is now 'Your choice: …' for both right and wrong answers. The only signal of correctness is the background colour plus whatever the feedback prose implies. Some correct feedback never confirms correctness, for example 'A badge alone leaves volunteer status unknown…'. A colour-blind or screen-reader learner gets no explicit right/wrong state.\n3. Reduced-motion users are unaffected by this item, but the inconsistency remains a visible-state defect.",
+        "fix": "Add `co-correct` to TranslationLab's correct feedback. In Check, keep the neutral 'Your choice: …' heading and add a short non-colour, meaning-neutral status line before it. For example 'This follows from the sentence.' for correct choices and 'Check this move.' for wrong ones, or an icon plus visually hidden text. A renderer test can assert that the status text differs between correct and incorrect choices."
+      },
+      {
+        "id": "FI5-3",
+        "severity": "low",
+        "path": "src/bootcamps/conditionals/components/ConditionalOpeningLesson.tsx",
+        "evidence": "The only control that disables the remaining transitions (the SetExplorer order movement and the flashcard rotate) is rendered at line 1003, in the footer after the repair section (mobile-motion-footer.png). A learner who wants less motion only finds it after passing every animated component. On the group pages the flashcards come long before the footer. The OS prefers-reduced-motion path is correct, and the remaining motion is short (0.8s and 0.25s), so the impact is small. However, the plan asks for useful placement, and the toggle now sits where it cannot help on a first read.",
+        "fix": "Keep the footer control, and also render the same toggle (sharing state) beside the first animated component, inside SetExplorer's controls and in the Flashcards control row. Alternatively, place one small toggle under the hero's 'Begin reading' link. Retain the existing test for aria-pressed and data-motion-paused."
+      },
+      {
+        "id": "FI5-4",
+        "severity": "low",
+        "path": "src/bootcamps/conditionals/components/ConditionalOpeningLesson.tsx",
+        "evidence": "In Group 1's 'Read the only as a complete expression' section, the Check at line 906 asks 'The only vehicles permitted inside are electric. Which diagram preserves the rule?' That is the same sentence already solved in TranslationLab's 'the only' tab (line 73: 'The only vehicles permitted inside are electric vehicles.' with readback 'If a vehicle is permitted inside, then it is electric.'). It also matches the indicator section's own pause (lines 579-588). The guide says repetition should change the reader's view and new checks should not be answerable only because the lesson already solved that sentence. This is formative only, so it is not a correctness issue.",
+        "fix": "Replace it with a fresh 'the only' sentence that keeps a limiting modifier. For example: 'The only bikes allowed on the ferry are folding bikes. Which diagram preserves the rule?' Use the options 'Folding bike → Allowed on ferry' and 'Bike allowed on ferry → Folding bike', each with option-specific feedback."
+      }
+    ],
+    "coverage": [
+      "(a) VOICE. I read all 621 lines of lsat-teaching-voice-standard.md before judging the copy. Principles applied against the actual copy:\n- 'Confidence lives in the reasoning' / 'We don't know': the FI4 hedges are now firm. 'Ask what the restriction allows you to conclude. Admission tells you membership is present. Membership by itself leaves admission unknown.' Also: 'Having the requirement, though, leaves the left condition unknown unless something else settles it.'\n- 'Short sentences settle; longer sentences explain' and contractions: 'Before drawing a conclusion, ask what the rule gives you: a fact, permission, or an instruction. Keep that meaning in your answer. Allowed to use isn't used, and told to return isn't returned.' This is a good landing after a longer explanation.\n- 'Make feedback identify the missed connection': the tray Check's wrong feedback reads 'You turned an instruction into a completed action. The notice tells us what to do with an empty tray; it hasn't reported that anyone did it.' The reversed-arrow promises name concrete counterexamples, for example 'A jacket hanging in the back closet doesn't break this rule.'\n- Accuracy boundary 'Preserve modality': 'Maya is a finalist. Which follows: she is required to attend, or she actually attended?' The answer keeps 'Required to attend interview'.\n- I-hypothetical pronoun role: 'If I graduate, what must be true of my project?' and 'I've completed it.'\n- Transitions that explain why: 'You've used the rule in its stated direction and checked what happens when you start from its result. Try that distinction with a different sentence.'\n- The neutral correct heading ('Your choice: No, Ari could have a badge for another reason.') fixes the earlier Yes/No contradiction.\n\nRemaining voice polish, none of it material:\n- The Always section still reads stiffly: 'receiving an invitation holds in every case of someone being a finalist'; 'Always modifies receives an invitation'.\n- The 14 expression subsections share one cadence template.\n\nI saw no em dashes, hype or vague praise in the copy I read.",
+      "(b) LEARNING PROGRESSION AND DEPTH. Orientation runs in this order:\n1. Condition/conditional definition\n2. Why it matters, with direction stated firmly ('this rule alone doesn't')\n3. Tendency vs guarantee\n4. [new permission/instruction beat]\n5. Anchor read in English\n6. Order A pause\n7. Arrow, explicitly not time or cause\n8. Changed fact, Order B unknown\n9. Containment explorer\n10. Transfer Check\n\nThe new beat at step 4 is misplaced, which is FI5-1. Sufficient-necessary gives sufficient and necessary separate beats on the same rule. It covers 'Enough does not mean the only way', 'Having a requirement does not guarantee the result', and paired Personalized If/Then pauses in both directions.\n\nEach group has:\n- seven expression subsections, with clause-order variants\n- inquiry 'asked if', a one-occasion 'when' and 'whenever'\n- only vs the only on the ready/packed anchor, and must as obligation\n- the What Test taught before the target lab\n- fresh transfer diagrams, sentence-to-rule recall, a meaning check, a transition to guided work and drill, and a real repair section\n\norientation-a1/a3 are now preceded by a taught beat, and their IDs, options and keys are unchanged in foundations.source.ts (hash unchanged since FI4). Scope ends at Group 2.\n\nStructural comparison with Intro to LR, from the four files read:\n- IntroNotesShell uses a launch hero, a notes drawer of LessonSections with data-toc, DynamicIslandTOC, a 'Mark Complete & Continue' next-action card and scroll-to-top on pathname change.\n- IntroLessonPage composes kicker, serif section headings, callout and quote cards and interactive labs.\n- NewGuidedIntro is a path list of note and drill actions.\n- IntroPathLearningLayout pairs a path rail with a scrolling content area.\n\nThe conditional opening follows the same flow: hero, TOC'd sections, labs, then a footer with read/continue. Its pages are longer than Intro's and have no scroll-to-top on non-hash navigation. That behaviour predates this revision.",
+      "(c) VISUAL DESIGN. I viewed all 17 FI4 PNGs:\n- desktop-orientation and mobile-orientation: an abstract if/then two-panel figure with the caption 'doesn't say either one has occurred'. It is no longer duplicated in the body.\n- desktop-sufficient-necessary and mobile-sufficient-necessary: a distinct rule-over-split 'Enough | Required' composition, with the coral 'Packed'. This is a genuine improvement over the earlier stacked cards.\n- desktop-group-1 and mobile-group-1: the sentence with the 'if' and its full target highlighted, and a 'What is enough for review?' callout.\n- desktop-group-2 and mobile-group-2: a 'current pass' requirement card with 'An expired pass won't meet this requirement.'\n- desktop-negative-feedback and mobile-negative-feedback: green correct card headed 'Your choice: No…'.\n- desktop-permission-pause and desktop-instruction-feedback: clean pause and Check cards with generous measure.\n- mobile-marked-sentence, mid-group-2-marked-sentence and mobile-obligation-arrow: salmon and green marks with a bracket rail below the sentence. The rail stays clear of the text but floats about 20px under the marks, so the link is abstract (optional polish: ticks up to each mark). The correct-target feedback is tan, which is FI5-2.\n- mobile-group-2-feedback: the feedback and the 'Place as the required side' button are not covered by the TOC pill.\n- mobile-motion-footer: the pressed toggle is in the footer, which is FI5-3. The TOC pill reappears outside interactions.\n\nOverall the typography is serif on sage and cream, with strong hierarchy, readable 64-68ch measure and paced whitespace. The body is still mostly cards plus prose, so it reads as clear and calm more than memorable. Optional upgrades, not defects:\n- side-by-side if vs only-if diagrams that change shape\n- an animated containment shift in GateExplorer\n- a connector that physically touches its marks\n\nNo Kling or NotebookLM media is shown, and that is not treated as a prerequisite.",
+      "(d) INTERACTION AND PLATFORM INTEGRITY, assessed from source and tests rather than a live session:\n- The #repair effect in Lesson depends on unit, location.hash and location.key. It runs after Shell renders the Outlet once progress exists, and its tests cover all four opening units plus rules-facts, the delayed load and the blocked unassigned link.\n- The TOC wrapper uses the hidden attribute with a display:none!important rule. An IntersectionObserver restores it when the active interaction leaves view, and focusing a non-interaction button or link restores it as well. The shared TOC component is unchanged.\n- Check enforces non-empty per-option feedback at runtime.\n- TranslationLab and DiagramBuilder reset choice, diagram and marks on tab or next. Flashcards reset back on next.\n- ThinkPause uses aria-expanded and aria-controls.\n- Mark-as-read is the only progress write in the lesson. The tests assert onComplete is not called by interactions or by repair navigation, and the route test asserts updateCalls is unchanged.\n- Recorded host claims, which I did not reproduce: 157 tests, build 2m22s, 30/296 freshness, 771-file canonical exclusion and the protected-hash identity. The manifest hashes for the authored files match final-host-snapshot.json."
+    ],
+    "limitations": [
+      "I did not run tests, typecheck, build, lint or a browser. All pass counts and browser observations are host claims.",
+      "The screenshots are static and show partial scroll positions. They do not show motion, reduced-motion behaviour, focus order or screen-reader output, and they do not prove authenticated assignment gates or cloud persistence. Those I judged from source and tests only.",
+      "No current Intro to LR screenshot was supplied, so I make no claim of rendered visual parity. The comparison is structural only, from IntroNotesShell, IntroLessonPage (first 120 lines), NewGuidedIntro and IntroPathLearningLayout.",
+      "I did not open the roughly 3 MB whole-tree tracked-diff.txt or the protected bank, finder and MCP hunks. Instead I compared the change-manifest hashes with final-host-snapshot.json, and the authored files match. Files unchanged since FI4 (progress.ts, assignments, legacyQuestions, openingRevision, the generated JSON, conditionalBootcampAssignment and the teacher fields) were not re-read in full. I relied on their identical hashes and on FI4's inspection of them.",
+      "This round I read only the orientation unit's drills in foundations.source.ts. Its hash is unchanged since FI4, which re-read all 62 drills.",
+      "The sticky workspace-bar height versus the 36px scroll-margin on #repair was not verifiable without rendering, so I cannot confirm that the repair heading lands fully visible on the real route.",
+      "This is source-level and screenshot review, not an accessibility certification. Kling and NotebookLM media were not assessed because they are optional and not shipped."
+    ]
+  },
+  "usage": {
+    "input_tokens": 46,
+    "cache_creation_input_tokens": 172860,
+    "cache_read_input_tokens": 2580417,
+    "output_tokens": 22519,
+    "output_tokens_details": {
+      "thinking_tokens": 10493
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 172860,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 9926,
+        "cache_read_input_tokens": 173641,
+        "cache_creation_input_tokens": 3510,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 3510
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "observed_models": [
+    "claude-opus-5-5"
+  ],
+  "permission_denials": [],
+  "total_cost_usd": 2.3495274000000004,
+  "elapsed_seconds": 266.99
+}

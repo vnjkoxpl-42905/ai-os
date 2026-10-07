@@ -1,0 +1,216 @@
+---
+type: community
+cohesion: 0.02
+members: 174
+---
+
+# Dakota Session Arc
+
+**Cohesion:** 0.02 - loosely connected
+**Members:** 174 nodes
+
+## Members
+- [['Although' as a Concession Indicator]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-04-25-dakota-notes-by-gemini.md
+- [['By' and 'On the Basis Of' Introduce Evidence]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-04-25-dakota-notes-by-gemini.md
+- [['Follows From' Marks a Conclusion]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-04-25-dakota-notes-by-gemini.md
+- [['Illustrate' Strictly Means Example]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-04-24-dakota-notes-by-gemini.md
+- [['Takes for granted' marks a necessary assumption answer choice]] - document - /Users/joshuaf/ai-os/corpus/Curriculum/Necessary Assumption/Notes/_scan_Sabrina - 2026_02_21 16_46 EST - Notes by Gemini.md
+- [[10-hour tutoring package]] - document - /Users/joshuaf/ai-os/students/dakota/payment-links.md
+- [[2026-04-25 Dakota Notes by Gemini]] - document - /Users/joshuaf/ai-os/students/dakota/transcripts.md
+- [[2026-05-15 Dakota Notes by Gemini]] - document - /Users/joshuaf/ai-os/students/dakota/transcripts.md
+- [[2026-05-16 Dakota Notes by Gemini]] - document - /Users/joshuaf/ai-os/students/dakota/transcripts.md
+- [[2026-06-05 Dakota Notes by Gemini]] - document - /Users/joshuaf/ai-os/students/dakota/transcripts.md
+- [[2026-06-12 Dakota Notes by Gemini]] - document - /Users/joshuaf/ai-os/students/dakota/transcripts.md
+- [[2026-06-19 Dakota Notes by Gemini]] - document - /Users/joshuaf/ai-os/students/dakota/transcripts.md
+- [[5-hour tutoring package]] - document - /Users/joshuaf/ai-os/students/dakota/payment-links.md
+- [[7Sage]] - document - /Users/joshuaf/ai-os/students/bella-lorenzo/transcript-downloads/2026-07-02-bella-notes-by-gemini.md
+- [[7Sage Lessons (Self-Study Track)]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-05-16-dakota-notes-by-gemini.md
+- [[Active vs Static Language Signals Causation vs Correlation]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-05-15-dakota-notes-by-gemini.md
+- [[AlexArson Example (Rule vs Fact)]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-05-29-dakota-notes-by-gemini.md
+- [[Alternative Explanations]] - document - /Users/joshuaf/ai-os/students/dakota/transcripts.md
+- [[An Assumption Is the Negative Space of an Argument]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-06-05-dakota-notes-by-gemini.md
+- [[Analogy and Disanalogy]] - document - /Users/joshuaf/ai-os/students/dakota/transcripts.md
+- [[Anchovy  Domoic Acid  Plankton Question]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-05-16-dakota-notes-by-gemini.md
+- [[Area L Living Conditions Survey Paradox]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-05-16-dakota-notes-by-gemini.md
+- [[Argument Mapping]] - document - /Users/joshuaf/ai-os/students/dakota/dakota.md
+- [[Ask 'Why Should I Believe That' of Every Claim]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-04-24-dakota-notes-by-gemini.md
+- [[Assigned 7Sage Question Type Drill]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-04-24-dakota-notes-by-gemini.md
+- [[Assigned Causation Boot Camp]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-05-15-dakota-notes-by-gemini.md
+- [[Assigned Negation Homework]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-06-12-dakota-notes-by-gemini.md
+- [[Attack the Argument Like a Prosecutor]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-05-29-dakota-notes-by-gemini.md
+- [[August LSAT Test Date]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-04-25-dakota-notes-by-gemini.md
+- [[Beautiful Art  Natural World Flaw Question]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-05-02-dakota-notes-by-gemini.md
+- [[Bella Lorenzo]] - document - /Users/joshuaf/ai-os/students/bella-lorenzo/transcript-downloads/2026-07-02-bella-notes-by-gemini.md
+- [[Cash Register Analogy for an Assumption]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-06-05-dakota-notes-by-gemini.md
+- [[Causal Reasoning]] - document - /Users/joshuaf/ai-os/students/dakota/dakota.md
+- [[Chimpanzee Threat-Gesture Paradox]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-05-15-dakota-notes-by-gemini.md
+- [[Cholesterol  Dramatic Dietary Changes Argument]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-04-25-dakota-notes-by-gemini.md
+- [[Cloning Argument (Ethicists' Fears)]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-04-24-dakota-notes-by-gemini.md
+- [[Coincidence Test Effect Without Cause, Cause Without Effect]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-05-15-dakota-notes-by-gemini.md
+- [[Concession]] - document - /Users/joshuaf/ai-os/students/bella-lorenzo/transcript-downloads/2026-07-02-bella-notes-by-gemini.md
+- [[Concession (Neutral Common Ground, Never a Premise)]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-04-25-dakota-notes-by-gemini.md
+- [[Conclusion Must Be a One-for-One Restatement of the Evidence]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-05-29-dakota-notes-by-gemini.md
+- [[Conditional Diagramming (The Must Arrow)]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-05-02-dakota-notes-by-gemini.md
+- [[Conditional Logic (The Art of the IfThen)]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-05-02-dakota-notes-by-gemini.md
+- [[Correlation Versus Causation]] - document - /Users/joshuaf/ai-os/students/dakota/transcripts.md
+- [[Correlation vs Causation]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-05-15-dakota-notes-by-gemini.md
+- [[Counterargument (Signalled by 'Some People')]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-04-24-dakota-notes-by-gemini.md
+- [[Daily plan one to two RC passages and five to ten LR questions per day, targeting 21-22 correct]] - document - /Users/joshuaf/ai-os/corpus/Curriculum/Necessary Assumption/Notes/_scan_Sabrina between Joshua  and Sabrina  - 2026_01_27 19_18 EST - Notes by Gemini.md
+- [[Dakota Assignment Log]] - document - /Users/joshuaf/ai-os/students/dakota/assignment-log.md
+- [[Dakota Balancing College, Military Service, and LSAT Study]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-06-19-dakota-notes-by-gemini.md
+- [[Dakota Brown]] - document - /Users/joshuaf/ai-os/students/dakota/dakota.md
+- [[Dakota Payment Links]] - document - /Users/joshuaf/ai-os/students/dakota/payment-links.md
+- [[Dakota Session 2026-04-24 Argument Part Questions]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-04-24-dakota-notes-by-gemini.md
+- [[Dakota Session 2026-04-25 Argument Structure and Sufficiency]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-04-25-dakota-notes-by-gemini.md
+- [[Dakota Session 2026-05-02 Conditional Logic]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-05-02-dakota-notes-by-gemini.md
+- [[Dakota Session 2026-05-15 Causation and Paradox]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-05-15-dakota-notes-by-gemini.md
+- [[Dakota Session 2026-05-16 Applied Paradox Practice]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-05-16-dakota-notes-by-gemini.md
+- [[Dakota Session 2026-05-29 Sufficient Assumption]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-05-29-dakota-notes-by-gemini.md
+- [[Dakota Session 2026-06-05 Necessary Assumption]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-06-05-dakota-notes-by-gemini.md
+- [[Dakota Session 2026-06-12 Method of Reasoning]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-06-12-dakota-notes-by-gemini.md
+- [[Dakota Session 2026-06-19 Check-in]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-06-19-dakota-notes-by-gemini.md
+- [[Dakota Teaching Notes]] - document - /Users/joshuaf/ai-os/students/dakota/teaching-notes.md
+- [[Dakota Transcripts]] - document - /Users/joshuaf/ai-os/students/dakota/transcripts.md
+- [[Defender Assumption]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-06-05-dakota-notes-by-gemini.md
+- [[Descriptive Versus Prescriptive Claims]] - document - /Users/joshuaf/ai-os/students/c-alexander/transcript-downloads/2026-06-19-c-alexander-notes-by-gemini.md
+- [[Disproving vs Weakening an Argument]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-04-25-dakota-notes-by-gemini.md
+- [[Drilling Plan Role (Argument Part) and Main Conclusion Questions]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-04-25-dakota-notes-by-gemini.md
+- [[Establish the Mission From the Stimulus, Not the Question Stem]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-05-16-dakota-notes-by-gemini.md
+- [[Extremist Parties and Democracy Question]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-05-29-dakota-notes-by-gemini.md
+- [[Find the Assumption by Attacking the Conclusion]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-06-05-dakota-notes-by-gemini.md
+- [[Flip and Negate]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-05-02-dakota-notes-by-gemini.md
+- [[Forgery Painting Brush Stroke Question]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-06-05-dakota-notes-by-gemini.md
+- [[Form a Hypothesis Before Reviewing Answer Choices]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-05-16-dakota-notes-by-gemini.md
+- [[Friction Test Anxiety and Possible Need for Formal Accommodations]] - document - /Users/joshuaf/ai-os/students/ethan/ethan.md
+- [[Genuine Creative Geniuses Question]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-05-29-dakota-notes-by-gemini.md
+- [[Heavy Lifting Stimulus Rescues Answer vs Answer Rescues Stimulus]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-05-16-dakota-notes-by-gemini.md
+- [[Herbal Remedy vs Prescription Drug Question]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-05-29-dakota-notes-by-gemini.md
+- [[Homo Sapiens  Neanderthal Interbreeding Question]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-06-05-dakota-notes-by-gemini.md
+- [[Hypothetical as a Sufficiency Stress Test]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-04-25-dakota-notes-by-gemini.md
+- [[Indonesian Coral Reef Shrimp Genetic Diversity Question]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-05-16-dakota-notes-by-gemini.md
+- [[Inventors vs Engineers Credit Argument]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-04-25-dakota-notes-by-gemini.md
+- [[Jenga Analogy]] - document - /Users/joshuaf/ai-os/students/c-alexander/transcript-downloads/2026-06-19-c-alexander-notes-by-gemini.md
+- [[Joshua Fisseha]] - document - /Users/joshuaf/ai-os/students/bella-lorenzo/transcript-downloads/2026-07-02-bella-notes-by-gemini.md
+- [[Joshua's Hard Reset and File Reorganization]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-06-19-dakota-notes-by-gemini.md
+- [[Joshua's Own LSAT Journey (130s to 169 then 173)]] - document - /Users/joshuaf/ai-os/students/bella-lorenzo/transcript-downloads/2026-06-17-isabella-lorenzo-consultation-notes-by-gemini.md
+- [[LSAT Accommodation Form and Healthcare Provider Note]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-05-02-dakota-notes-by-gemini.md
+- [[LSAT Accommodations Application Process]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-04-25-dakota-notes-by-gemini.md
+- [[LSAT Accommodations Process]] - document - /Users/joshuaf/ai-os/students/dakota/transcripts.md
+- [[LSAT Demon]] - document - /Users/joshuaf/ai-os/students/bella-lorenzo/transcript-downloads/2026-07-02-bella-notes-by-gemini.md
+- [[Laboratory Mice Research Reliability Question]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-05-02-dakota-notes-by-gemini.md
+- [[Landfill Argument (Counterargument Cast Doubt)]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-04-24-dakota-notes-by-gemini.md
+- [[Language Intensity in Answer Choices]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-05-16-dakota-notes-by-gemini.md
+- [[LawHub]] - document - /Users/joshuaf/ai-os/students/bella-lorenzo/transcript-downloads/2026-07-02-bella-notes-by-gemini.md
+- [[Linking Assumption]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-06-05-dakota-notes-by-gemini.md
+- [[Mailsuite click alert]] - document - /Users/joshuaf/ai-os/students/dakota/payment-links.md
+- [[Map Each Part of an Answer Choice to Evidence and Conclusion]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-06-12-dakota-notes-by-gemini.md
+- [[Medical Professionals Fraud Susceptibility Question]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-06-12-dakota-notes-by-gemini.md
+- [[Method of Reasoning Questions]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-06-12-dakota-notes-by-gemini.md
+- [[Method, Role and Flaw Questions Are a Matching Game]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-06-12-dakota-notes-by-gemini.md
+- [[Michael Jackson Guessing Game Illustration]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-06-05-dakota-notes-by-gemini.md
+- [[Missing Element Situational Fact vs Rule]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-05-29-dakota-notes-by-gemini.md
+- [[Mosquito Population  Fruit Tree Paradox]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-05-15-dakota-notes-by-gemini.md
+- [[Most Common LSAT Flaw Reversing or Affirming the Necessary Condition]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-05-02-dakota-notes-by-gemini.md
+- [[Necessary Assumption]] - document - /Users/joshuaf/ai-os/students/c-alexander/transcript-downloads/2026-06-19-c-alexander-notes-by-gemini.md
+- [[Necessary Assumption Questions]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-06-05-dakota-notes-by-gemini.md
+- [[Necessary Condition (The Requirement)]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-05-02-dakota-notes-by-gemini.md
+- [[Necessary Indicator Words Must, Require, Only, Only If, Only When]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-05-02-dakota-notes-by-gemini.md
+- [[Necessary assumption answers use weak language; 'any' is too strong]] - document - /Users/joshuaf/ai-os/corpus/Curriculum/Necessary Assumption/Notes/_scan_Sabrina - 2026_02_21 16_46 EST - Notes by Gemini.md
+- [[Negation Test]] - document - /Users/joshuaf/ai-os/students/c-alexander/transcript-downloads/2026-06-19-c-alexander-notes-by-gemini.md
+- [[Negation Uses Minimal Force, Not the Extreme Opposite]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-05-02-dakota-notes-by-gemini.md
+- [[New Concept in the Conclusion Creates the Gap]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-05-29-dakota-notes-by-gemini.md
+- [[Newly Formed Neurons and Striatum Healing Question]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-05-02-dakota-notes-by-gemini.md
+- [[Newspaper Industry Newsprint Costs Question]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-06-12-dakota-notes-by-gemini.md
+- [[No buy.stripe.com payment-link messages found for C. Alexander]] - document - /Users/joshuaf/ai-os/students/c-alexander/payment-links.md
+- [[Non-linear progress is standard; review is re-waking the machines, not relearning]] - document - /Users/joshuaf/ai-os/corpus/Curriculum/Necessary Assumption/Notes/_scan_Sabrina - 2026_02_21 16_46 EST - Notes by Gemini.md
+- [[One Landmine Disqualifies an Answer Choice]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-04-25-dakota-notes-by-gemini.md
+- [[Overlooked Consideration]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-06-12-dakota-notes-by-gemini.md
+- [[Paradox (ResolveReconcile) Questions]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-05-15-dakota-notes-by-gemini.md
+- [[Paradox Resolution]] - document - /Users/joshuaf/ai-os/students/dakota/transcripts.md
+- [[Paradox and StrengthenWeaken Answers Must Add New Information]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-05-15-dakota-notes-by-gemini.md
+- [[Pivot Words But, However, Yet Mark the Point of Tension]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-05-15-dakota-notes-by-gemini.md
+- [[Plugback Test]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-05-29-dakota-notes-by-gemini.md
+- [[Pointing Out an Assumption]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-06-12-dakota-notes-by-gemini.md
+- [[Political Science Degree (Graduating in Two Weeks)]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-06-19-dakota-notes-by-gemini.md
+- [[Prioritize Answer Choices Containing 'Not']] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-06-05-dakota-notes-by-gemini.md
+- [[Prosecutor Approach Find the Weakness Before Strengthening or Weakening]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-05-15-dakota-notes-by-gemini.md
+- [[Quantifier Logic]] - document - /Users/joshuaf/ai-os/students/dakota/transcripts.md
+- [[Quantifier Negation Rules (None, Most, Some Are Not)]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-06-05-dakota-notes-by-gemini.md
+- [[Rationale A Necessary Assumption Is the Bare Minimum; Anything Beyond It Breaks the Test]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-06-05-dakota-notes-by-gemini.md
+- [[Rationale A Sentence Contains At Least One Complete Thought, Not Exactly One]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-04-25-dakota-notes-by-gemini.md
+- [[Rationale Bad Evidence for a Claim Does Not Make the Claim Wrong]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-04-24-dakota-notes-by-gemini.md
+- [[Rationale Conditionals Are Rule-Based Like Contracts, Not Intuition-Based]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-05-02-dakota-notes-by-gemini.md
+- [[Rationale Default to Weaker Language Because Stronger Claims Carry a Higher Burden of Evidence]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-05-16-dakota-notes-by-gemini.md
+- [[Rationale Diagramming Removes the Need To Reason Through the Language]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-05-02-dakota-notes-by-gemini.md
+- [[Rationale Every Causal Claim Is Correlative, But Not Every Correlation Is Causal]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-05-15-dakota-notes-by-gemini.md
+- [[Rationale Every Word of an Answer Must Map Descriptively Back to the Argument]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-04-24-dakota-notes-by-gemini.md
+- [[Rationale Ruling Out Alternatives Is Flawed Because It Assumes the Listed Options Are Exhaustive]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-06-12-dakota-notes-by-gemini.md
+- [[Rationale The Dakota-Studying  Iran War Analogy for Spurious Causation]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-05-15-dakota-notes-by-gemini.md
+- [[Rationale The Goal Is To Disqualify, Not To Find the Right Answer]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-04-25-dakota-notes-by-gemini.md
+- [[Rationale Universal Language Is Needed Because a Sufficient Assumption Must Guarantee the Conclusion]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-05-29-dakota-notes-by-gemini.md
+- [[Rationale a necessary assumption only has to be required, not sufficient, so grandiose answers like 'the most' or 'no secondary school' fail while 'sometimes useful' survives]] - document - /Users/joshuaf/ai-os/students/c-alexander/transcript-downloads/2026-06-19-c-alexander-notes-by-gemini.md
+- [[Rationale a should claim states how things ought to be and says nothing about whether they currently are, which is why answer D was wrong]] - document - /Users/joshuaf/ai-os/students/c-alexander/transcript-downloads/2026-06-19-c-alexander-notes-by-gemini.md
+- [[Read, Rephrase, Recall Method]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-04-24-dakota-notes-by-gemini.md
+- [[Reading Comprehension homework part 1]] - paper - /Users/joshuaf/ai-os/corpus/Curriculum/Reading Comprehension/homework/Rc homework pt 1  copy.pdf
+- [[Relative vs Absolute Conditions]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-05-16-dakota-notes-by-gemini.md
+- [[Request for Dakota's 7Sage Link]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-06-19-dakota-notes-by-gemini.md
+- [[Reversal Trap in Answer Choices]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-05-16-dakota-notes-by-gemini.md
+- [[Reverse Causation]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-05-15-dakota-notes-by-gemini.md
+- [[Reverse Engineering the Conclusion Back to the Stimulus]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-04-25-dakota-notes-by-gemini.md
+- [[Rule The Rebuttal Is Always the Conclusion]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-04-24-dakota-notes-by-gemini.md
+- [[Ruling Out Alternatives]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-06-12-dakota-notes-by-gemini.md
+- [[Sabrina Egal]] - document - /Users/joshuaf/ai-os/corpus/Curriculum/Necessary Assumption/Notes/_scan_Sabrina - 2026_02_21 16_46 EST - Notes by Gemini.md
+- [[Sabrina session 2026-01-27 must be true, conditionals, group and trait]] - document - /Users/joshuaf/ai-os/corpus/Curriculum/Necessary Assumption/Notes/_scan_Sabrina between Joshua  and Sabrina  - 2026_01_27 19_18 EST - Notes by Gemini.md
+- [[Sabrina session 2026-02-21 flaw and necessary assumption review]] - document - /Users/joshuaf/ai-os/corpus/Curriculum/Necessary Assumption/Notes/_scan_Sabrina - 2026_02_21 16_46 EST - Notes by Gemini.md
+- [[Secondary School Science Courses Question]] - document - /Users/joshuaf/ai-os/students/c-alexander/transcript-downloads/2026-06-19-c-alexander-notes-by-gemini.md
+- [[Societal Laws and Manners Question]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-06-12-dakota-notes-by-gemini.md
+- [[Stimulus Comprehension Beats Formal Strategy]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-06-05-dakota-notes-by-gemini.md
+- [[Stripe]] - document - /Users/joshuaf/ai-os/students/dakota/payment-links.md
+- [[Sufficient Assumption Questions]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-05-29-dakota-notes-by-gemini.md
+- [[Sufficient Condition (The Door Opener)]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-05-02-dakota-notes-by-gemini.md
+- [[Sufficient Indicator Words If, When, Whenever, Every, All, Any]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-05-02-dakota-notes-by-gemini.md
+- [[The 'But' Trap (Refinement, Not Opposition)]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-04-25-dakota-notes-by-gemini.md
+- [[The Contrapositive (The Only Valid Inference)]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-05-02-dakota-notes-by-gemini.md
+- [[The Money Trap]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-05-16-dakota-notes-by-gemini.md
+- [[The Negation Test (Jenga Tower)]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-06-05-dakota-notes-by-gemini.md
+- [[Third-Factor (C Factor) Explanation]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-05-15-dakota-notes-by-gemini.md
+- [[Three-Step Conditional Translation Process]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-05-02-dakota-notes-by-gemini.md
+- [[Transportation Infrastructure Maintenance Paradox]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-05-16-dakota-notes-by-gemini.md
+- [[Two-Part Check on Answer Choices]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-04-24-dakota-notes-by-gemini.md
+- [[Unintended Consequences (Predators Eaten Too)]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-05-15-dakota-notes-by-gemini.md
+- [[Universal Default Unquantified Statements Mean 'All']] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-05-29-dakota-notes-by-gemini.md
+- [[Valid Argument (100% Impossible for the Conclusion To Be False)]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-05-29-dakota-notes-by-gemini.md
+- [[Vanity Argument (Cloning Ban Not Justified)]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-04-24-dakota-notes-by-gemini.md
+- [[Vegetarian Argument (Two Individually Sufficient Reasons)]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-04-25-dakota-notes-by-gemini.md
+- [[Weak wording signals necessary assumption answers]] - document - /Users/joshuaf/ai-os/students/c-alexander/transcript-downloads/2026-06-19-c-alexander-notes-by-gemini.md
+- [[When Adding Information Is Allowed, by Question Type]] - document - /Users/joshuaf/ai-os/students/dakota/transcript-downloads/2026-05-16-dakota-notes-by-gemini.md
+
+## Live Query (requires Dataview plugin)
+
+```dataview
+TABLE source_file, type FROM #community/Dakota_Session_Arc
+SORT file.name ASC
+```
+
+## Connections to other communities
+- 14 edges to [[_COMMUNITY_C. Alexander and Booking Passes]]
+- 6 edges to [[_COMMUNITY_Argument Structure Core]]
+- 4 edges to [[_COMMUNITY_Main Conclusion Bootcamp Build]]
+- 4 edges to [[_COMMUNITY_Bella and Adriana Records]]
+- 4 edges to [[_COMMUNITY_LR Taxonomy and Curriculum Meta]]
+- 3 edges to [[_COMMUNITY_Causation and Conditional Logic]]
+- 3 edges to [[_COMMUNITY_Sofia and Nicole Records]]
+- 3 edges to [[_COMMUNITY_David and Ethan Records]]
+- 2 edges to [[_COMMUNITY_Question-Feature Index and Graph Bridge]]
+- 2 edges to [[_COMMUNITY_Role, Parallel and Flaw Drills]]
+- 2 edges to [[_COMMUNITY_Assumption and Principle Homework]]
+- 1 edge to [[_COMMUNITY_Business Model and Onboarding]]
+- 1 edge to [[_COMMUNITY_Calendly Teardown and Booking UI]]
+- 1 edge to [[_COMMUNITY_Flaw Module and Bootcamp Design]]
+
+## Top bridge nodes
+- [[Joshua Fisseha]] - degree 30, connects to 7 communities
+- [[Dakota Transcripts]] - degree 14, connects to 5 communities
+- [[Dakota Brown]] - degree 33, connects to 4 communities
+- [[Necessary Assumption]] - degree 17, connects to 4 communities
+- [[Bella Lorenzo]] - degree 6, connects to 2 communities

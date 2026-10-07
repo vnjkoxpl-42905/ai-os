@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0"><dict>
+<key>Label</key><string>com.joshua.brain.backup</string>
+<key>ProgramArguments</key><array><string>/Users/joshuaf/ai-os/system/scripts/run-job.sh</string><string>backup</string></array>
+<key>StartCalendarInterval</key><dict><key>Hour</key><integer>3</integer><key>Minute</key><integer>0</integer></dict>
+<key>EnvironmentVariables</key><dict><key>PATH</key><string>/usr/local/bin:/opt/homebrew/bin:/usr/bin:/bin:/usr/sbin:/sbin</string><key>BRAIN_ROOT</key><string>/Users/joshuaf/ai-os</string></dict>
+<key>SoftResourceLimits</key><dict><key>NumberOfFiles</key><integer>4096</integer></dict>
+<key>StandardOutPath</key><string>/Users/joshuaf/ai-os/system/logs/launchd.out.log</string><key>StandardErrorPath</key><string>/Users/joshuaf/ai-os/system/logs/launchd.err.log</string>
+</dict></plist>

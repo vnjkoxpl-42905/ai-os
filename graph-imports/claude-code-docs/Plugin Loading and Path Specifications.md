@@ -1,0 +1,22 @@
+---
+source_file: "raw/sources/claude-code-docs/en__agent-sdk__plugins.md"
+type: "document"
+community: "Agent Loop and Context"
+tags:
+  - graphify/document
+  - graphify/EXTRACTED
+  - community/Agent_Loop_and_Context
+---
+
+# Plugin Loading and Path Specifications
+
+## Connections
+- [[SDK Plugins]] - `references` [EXTRACTED]
+- [[settingSources]] - `conceptually_related_to` [INFERRED]
+
+
+## Source
+- Full document: [[en__agent-sdk__plugins]]
+- Live docs: https://code.claude.com/docs/en/agent-sdk/plugins
+
+#graphify/document #graphify/EXTRACTED #community/Agent_Loop_and_Context

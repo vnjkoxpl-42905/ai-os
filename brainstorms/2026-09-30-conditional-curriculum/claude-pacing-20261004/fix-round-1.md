@@ -1,0 +1,8 @@
+# Codex inspection dispositions: REVISE
+Independent read-only Codex reviewer inspected all four authored files against frozen input. CLI inspection was BLOCKED by code-mode-host-disabled tool issue; no CLI approval claimed. Two required content defects accepted plus two tiny copy corrections.
+1. MixedFamilyPractice bus item drops depot in diagram left. Preserve depot in complete diagram label and related feedback/readback.
+2. Phone repaired same day -> has cracked screen conflates pre-repair defect with post-repair state. Replace with stable intake/queue classification (e.g. same-day repair queue -> cracked screen at intake) consistently across sentence, targets, labels and all feedback. Ensure original grammar and inference remain accurate and intuitive.
+3. Table item partialFeedback invents Every diner on terrace sits at a table. Remove that unsupported sentence; explain that dropping booked loses requirement.
+4. Foundation cafe feedback rule has nothing to tell us about today is overbroad. Say given that fact the rule doesn't settle whether it closed early. Retain both possible cases.
+5. Add meaningful interaction/semantic coverage for corrected mixed items3/5, preserving exact depot and consistent intake time; don't change existing test timeouts or weaken assertions.
+Only relevant files within current four-file scope. No other content changes. No host implementation edits have occurred; imported snapshot is unchanged baseline. Save and report final exact proof. Broad run timeout was reproduced by host under load; rerun proof with --maxWorkers=1 if needed. No commit/push/deploy. Host independent typecheck/build/browser follows finalfreeze. This is fixround1of2.

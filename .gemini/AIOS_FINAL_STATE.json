@@ -1,0 +1,135 @@
+{
+  "validation_date": "2026-09-20",
+  "verdict": "FINAL PASS",
+  "migration_status": "COMPLETE",
+  "runtimes": {
+    "codex": {
+      "role": "primary coding runtime",
+      "status": "untouched_and_verified",
+      "protected_files_count": 3241,
+      "manifest_match_pct": 100.0,
+      "filesystem_permissions": "normal_full_control"
+    },
+    "claude_code": {
+      "role": "co-primary and deep reasoning runtime",
+      "status": "untouched_and_verified",
+      "filesystem_permissions": "normal_full_control"
+    },
+    "antigravity": {
+      "role": "secondary runtime",
+      "version": "2.15.0",
+      "control_plane": "C:/Users/Joshu/dev/ai-os/GEMINI.md",
+      "guard_mechanism": "native_pre_tool_use_lifecycle_hook",
+      "guard_config": "C:/Users/Joshu/.gemini/config/hooks.json",
+      "guard_script": "C:/Users/Joshu/.gemini/config/scripts/guard_protected_runtime_paths.py",
+      "guard_test_pass_rate": "29/29 (100%)"
+    }
+  },
+  "project_topology": {
+    "project_1": {
+      "name": "AIOS Command Center",
+      "path": "C:/Users/Joshu/dev/ai-os",
+      "branch": "main",
+      "head": "3b86f2cf0ef5ce3276b0c3c66f35b1bc8e5529a2"
+    },
+    "project_2": {
+      "name": "LSAT U Engineering",
+      "path": "C:/Users/Joshu/dev/ai-os/projects/lsatu",
+      "branch": "feat/calendar-strip-deeplink",
+      "head": "a071951e3ecca0bf81c477fa54e67663afcfc308",
+      "duplicate_clones": 0
+    }
+  },
+  "skill_metrics": {
+    "aios_exposed": 93,
+    "aios_suppressed": 0,
+    "aios_duplicate_collisions": 0,
+    "aios_estimated_tokens": 3397,
+    "aios_token_reduction_pct": 80.0,
+    "lsatu_exposed": 160,
+    "lsatu_suppressed": 4,
+    "lsatu_duplicate_collisions": 8,
+    "lsatu_estimated_tokens": 7391,
+    "lsatu_token_reduction_pct": 57.0,
+    "physical_library_intact": true,
+    "dormant_datacloud_archived": true
+  },
+  "instruction_metrics": {
+    "user_gemini_md_tokens": 450,
+    "aios_gemini_md_tokens": 850,
+    "lsatu_gemini_md_tokens": 600,
+    "instruction_overhead_tokens": 1900,
+    "instruction_reduction_pct": 63.0,
+    "obsolete_95_percent_rule_removed": true,
+    "auto_git_push_removed": true
+  },
+  "mcp_status": {
+    "chrome_devtools_version": "1.9.0",
+    "cdp_port": 9223,
+    "cdp_status": "listening_http_200",
+    "tools_exposed": 29,
+    "notebooks_server_intact": true,
+    "visualization_server_intact": true,
+    "data_agent_kit_intact": true
+  },
+  "browser_environment": {
+    "launcher": "C:/Users/Joshu/Tools/LSATU-Agent/launch_browser.py",
+    "persistent_profile": "C:/Users/Joshu/AppData/Local/LSATU-Agent-Chrome",
+    "chrome_version": "153.0.8010.53",
+    "live_authenticated_url": "https://lsatprep.study/classroom",
+    "authenticated_user": "Joshua Fisseha (Teacher)"
+  },
+  "reddit_browser_environment": {
+    "launcher": "C:/Users/Joshu/Tools/Reddit-Agent/launch_browser.py",
+    "persistent_profile": "C:/Users/Joshu/AppData/Local/Reddit-Agent-Chrome",
+    "port": 9224,
+    "target_url": "https://www.reddit.com",
+    "status": "operational"
+  },
+  "sevensage_browser_environment": {
+    "launcher": "C:/Users/Joshu/Tools/7Sage-Agent/launch_browser.py",
+    "persistent_profile": "C:/Users/Joshu/AppData/Local/7Sage-Agent-Chrome",
+    "port": 9225,
+    "target_url": "https://7sage.com",
+    "status": "operational"
+  },
+  "facebook_browser_environment": {
+    "launcher": "C:/Users/Joshu/Tools/Facebook-Agent/launch_browser.py",
+    "persistent_profile": "C:/Users/Joshu/AppData/Local/Facebook-Agent-Chrome",
+    "port": 9226,
+    "target_url": "https://www.facebook.com/messages",
+    "status": "operational"
+  },
+  "inbound_ledger": {
+    "path": "C:/Users/Joshu/dev/ai-os/wiki/inbound-handled-ledger.md",
+    "engine": "C:/Users/Joshu/dev/ai-os/system/scripts/inbound_ledger.py",
+    "status": "active"
+  },
+  "dynamic_specialists": {
+    "browser_verifier": {
+      "definition_mode": "session_scoped_dynamic",
+      "write_tools_present": false,
+      "shell_present": false,
+      "nested_subagents_present": false,
+      "mcp_available": true,
+      "status": "verified"
+    },
+    "code_reviewer": {
+      "definition_mode": "session_scoped_dynamic",
+      "write_tools_present": false,
+      "shell_present": false,
+      "nested_subagents_present": false,
+      "mcp_available": false,
+      "default_model": "pro",
+      "status": "verified"
+    }
+  },
+  "rollback_resources": {
+    "backup_root": "C:/Users/Joshu/dev/ai-os-backup-pre-migration-config",
+    "protected_snapshots": "C:/Users/Joshu/dev/ai-os-backup-pre-migration-config/protected_snapshots",
+    "manifests": "C:/Users/Joshu/dev/ai-os-backup-pre-migration-config/manifests",
+    "wave0_baseline_json": "C:/Users/Joshu/dev/ai-os-backup-pre-migration-config/WAVE0_BASELINE.json",
+    "mcp_pre_wave5_backup": "C:/Users/Joshu/dev/ai-os-backup-pre-migration-config/mcp_config_pre_wave5.json",
+    "dormant_skills_archive": "C:/Users/Joshu/.gemini/dormant-skills/datacloud-pre-wave3b"
+  }
+}

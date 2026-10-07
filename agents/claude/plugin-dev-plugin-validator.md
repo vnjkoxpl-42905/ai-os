@@ -1,0 +1,1 @@
+/Users/joshuaf/.claude/plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/agents/plugin-validator.md

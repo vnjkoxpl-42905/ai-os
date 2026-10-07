@@ -1,0 +1,14 @@
+{
+  "verdict": "BLOCKED",
+  "summary": "Required repository evidence could not be inspected: the read-only command attempt failed with “code-mode host is disabled.” The supplied plan and manifest alone cannot establish implementation correctness.",
+  "findings": [],
+  "coverage": [
+    "Read the plan and change manifest supplied in the request."
+  ],
+  "limitations": [
+    "Could not read the on-disk plan, tracked diff, changed files, or related callers and shared-state writers.",
+    "Could not verify the supplied hashes or distinguish imported baseline changes from authored changes.",
+    "No tests were run, no files were edited, and no work was delegated.",
+    "An independent implementation review remains required before approval."
+  ]
+}

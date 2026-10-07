@@ -1,0 +1,837 @@
+﻿✍️ Quick notes
+Please rate the new Quick notes tab by taking a short survey.
+Sofia session
+
+
+Sep 23, 2026
+sofiaminassian@gmail.com
+
+
+LSAT prep review with strategy adjustments and conditional logic focus
+
+
+PrepTest strategy and section practice
+* Joshua advised prioritizing individual sections over full-length PTs to receive immediate feedback and efficient study time.
+* Sofia agreed to focus primarily on individual sections while integrating PTs selectively later in the week.
+
+
+Conditional logic analysis in Logical Reasoning
+* Joshua identified conditional reasoning errors as the primary barrier causing score inconsistencies and timing delays.
+* Joshua demonstrated how to isolate conditional conclusions to bridge logical gaps in sufficient assumption questions.
+* Sofia examined structural diagramming techniques to avoid attractive trap answers during LR sections.
+
+
+Hebrew text interpretation and community resources
+* Religious text misinterpretations stem from widespread unfamiliarity with the Hebrew language.
+* Textual study resources rely on oral community traditions rather than external publications.
+
+
+Next steps
+* [Sofia] Review Wrong Answers: Complete a comprehensive review of all previously missed questions to identify patterns and areas for improvement.
+* [Joshua] Create Study Strategy: Develop a personalized study strategy to address consistency issues and strengthen conditional logic skills.
+* [Sofia] Finish Conditional Drill: Complete the remaining half of the conditional logic boot camp drill.
+* [Joshua] Provide New Drill: Provide the identified conditional logic drill for follow up practice.
+* [Joshua Fisseha] Assign Boot Camp: Send the sufficient assumption boot camp to the student.
+* [Sofia Minassian] Finish Conditional BootCamp: Complete the remainder of the conditional training modules.
+* [Sofia Minassian] Finish Assumption BootCamp: Complete the sufficient assumption study materials once they are assigned.
+* [Sofia Minassian] Perform Reasoning Section: Complete a Logical Reasoning section to evaluate progress.
+* [Sofia Minassian] Schedule Meetings: Check the tutor schedule to book additional sessions.
+
+
+
+
+
+
+Want to see more? View the full notes
+Tip: You can always access your full notes from the left sidebar.
+
+
+
+
+
+
+You should review Gemini's notes to make sure they're accurate. Get tips and learn how Gemini takes notes
+📝 Full notes
+Sep 23, 2026
+Sofia session
+Invited sofiaminassian@gmail.com
+Attachments Sofia session
+Meeting records Transcript 
+
+
+
+
+Summary
+LSAT prep review with strategy adjustments and conditional logic focus
+
+LSAT practice strategy adjustment
+Postponed full-length practice tests to prioritize targeted section practice and analyze wrong answers.
+
+Conditional logic and assumptions
+Identified conditional reasoning bottlenecks and agreed to complete assigned boot camps for sufficient assumptions.
+
+
+
+
+Decisions
+Aligned
+* Prioritization of sections over full practice tests The student and tutor agreed to prioritize individual test sections over full practice tests as the primary study strategy.
+
+
+
+
+Next steps
+* [Sofia] Review Wrong Answers: Complete a comprehensive review of all previously missed questions to identify patterns and areas for improvement.
+* [Joshua] Create Study Strategy: Develop a personalized study strategy to address consistency issues and strengthen conditional logic skills.
+* [Sofia] Finish Conditional Drill: Complete the remaining half of the conditional logic boot camp drill.
+* [Joshua] Provide New Drill: Provide the identified conditional logic drill for follow up practice.
+* [Joshua Fisseha] Assign Boot Camp: Send the sufficient assumption boot camp to the student.
+* [Sofia Minassian] Finish Conditional BootCamp: Complete the remainder of the conditional training modules.
+* [Sofia Minassian] Finish Assumption BootCamp: Complete the sufficient assumption study materials once they are assigned.
+* [Sofia Minassian] Perform Reasoning Section: Complete a Logical Reasoning section to evaluate progress.
+* [Sofia Minassian] Schedule Meetings: Check the tutor schedule to book additional sessions.
+
+
+
+
+Details
+* Review of Recent LSAT Prep Inconsistencies: Sofia Minassian discussed their recent score inconsistencies and pattern of making mistakes on harder LSAT questions (00:00:00). Sofia noted that they scored minus 5 and minus 6 on PT 126, which they felt were easier, but struggled significantly with PT 148, experiencing a plateau around minus 10 before scoring a minus 7 (00:02:52). Joshua Fisseha offered to review Sofia's screen and previous sections to quickly identify the fundamental issues affecting their performance. Ultimately, they agreed to analyze the wrong answers to diagnose the core problems (00:00:00).
+* Practice Test Strategy Versus Section Practice: Sofia Minassian expressed their intention to clear their schedule and take a full practice test on Friday. Joshua Fisseha strongly advised against taking full-length practice tests, arguing that they waste time on material they already know and delay targeted feedback (00:02:52). Joshua stated that doing individual sections allows them to assess problems immediately and use the remaining time to fix specific weaknesses rather than chasing a score number (00:03:59). Following this discussion, Sofia decided to shift their focus primarily to section practice and postponed taking a full practice test until later in the week, such as Sunday (00:06:25).
+* Identification of Conditional Logic Bottlenecks: Joshua Fisseha diagnosed that conditional reasoning questions were the primary factor hindering Sofia Minassian's score and slowing down their pacing. Sofia acknowledged this struggle and noted that they had completed the first half of a conditional logic boot camp containing over 60 questions and had approximately 30 questions remaining in the latter half (00:07:13). Sofia agreed to complete the remaining half of the conditional boot camp to address their conditional reasoning deficiencies (00:08:20).
+* Analysis of Diagramming for Question Six: Sofia Minassian and Joshua Fisseha reviewed Question 6 from a previous section, which involved a conditional statement about a literature professor and specialized training. Sofia explained that they diagrammed the statements using logical arrows but chained them incorrectly, resulting in a false A-to-C connection and leading them to select answer choice B (00:09:21). Joshua Fisseha advised that logical arrows should serve to represent what they understand on paper rather than turning them into a mechanical process without thought (00:12:18). They concluded the review by transitioning to test Sofia's spontaneous application on a fresh question (00:18:51).
+  
+
+* Methodology for Conditional Conclusions and Sufficient Assumptions: Joshua Fisseha and Sofia Minassian walked through a democracy and news media question where Sofia had selected answer choice E under time pressure (00:23:43). Joshua Fisseha broke down the proper methodology for conditional conclusions, instructing Sofia to split the conclusion into sufficient and necessary halves, determine which half lacks support in the evidence, and bridge the gap (00:27:36). Joshua explained that a sufficient assumption acts like a closed circuit, connecting the unsupported premise to the necessary condition, and noted that test-makers frequently use the contrapositive of the missing bridge as a trap or correct answer (00:40:42) (00:42:18). Sofia recognized how the contrapositive structure applied to answer choice E (00:43:18).
+  
+
+* Comparison of Sufficient Assumption and Must Be True Questions: Sofia Minassian and Joshua Fisseha discussed the relationship between sufficient assumption and must be true questions, which Sofia noted struggling with due to overlapping skill sets (00:45:19). Joshua Fisseha explained the structural distinction between the two types: sufficient assumption questions require supplying and embedding a missing logical connection back into the argument, whereas must be true questions involve identifying an inference that is already present and extracting it (00:46:25). Through this explanation, Sofia gained clarity on how both question formats utilize similar conditional manipulation skills differently (00:45:19) (00:47:46).
+  
+
+* Assignment of Targeted LSAT Boot Camps: Joshua Fisseha announced plans to assign a sufficient assumption boot camp focused on question application and linking drills (00:48:32). Sofia Minassian updated their to-do list to include finishing the remaining half of the conditional logic boot camp and completing the newly assigned sufficient assumption boot camp (00:49:15). Finally, Sofia stated their plan to immediately test these strategies by completing a logical reasoning section to evaluate how the skills translate into practice (00:50:16).
+* Discussion of an Individual's Bizarre Statements: Joshua Fisseha shares their observations regarding an unidentified individual who makes absurd and manipulative claims, such as telling people they can become their slave in heaven if they follow God. Joshua Fisseha remarks that while people look at this individual strangely, they continue to make these statements shamelessly (00:57:14).
+* Hebrew Language Misinterpretations and Community Resources: Joshua Fisseha discusses how a speaker manipulates texts by taking advantage of audiences who only know English rather than the actual Hebrew language (00:58:45). Joshua Fisseha states that knowledgeable individuals like a participant on the call and Rich would pose a significant challenge to this speaker by correcting translation errors and trapping them in their arguments. Additionally, Joshua Fisseha inquires about the community's resources, asking if materials extend beyond the Bible and Torah to include oral traditions, jokingly comparing the group to a secret society or the Illuminati before concluding their introductory remarks (01:01:20).
+
+
+
+
+You should review Gemini's notes to make sure they're accurate. Get tips and learn how Gemini takes notes
+How is the quality of these specific notes? Take a short survey to let us know your feedback, including how helpful the notes were for your needs.
+📖 Transcript
+Sep 23, 2026
+Sofia session - Transcript
+00:00:00
+
+
+Joshua Fisseha: Yeah.
+Sofia Minassian: feel like it's just like all of the times that I'm like like the pattern is like like it is like towards the it is the five it is the harder questions like like here and there I'll get some of the easier ones like silly mistakes wrong but like I'm going over my
+Joshua Fisseha: Yeah.
+Sofia Minassian: wrong answers. I'm going to do like a big big review of like all my wrong answers. But I feel like what's coming up from like what I've reviewed so far are like difficult must be true questions.
+Joshua Fisseha: Okay.
+Sofia Minassian: Um
+Joshua Fisseha: Um, so let me just quickly if if you share your screen, I can I'm also going to have it open on my side. Um, I'm going to just run through that with you because I can tell you right away what the the fundamental thing you have to address that's going to help you to become I'll be able to see and know pretty quickly. Um, that being said, I'll let you open and share your screen so we can
+Sofia Minassian: yeah, let me share the screen.
+
+
+
+
+00:00:52
+
+
+Sofia Minassian: There's two different um there's two different um sections that I have opened up here, which is perfect. You'll kind of see like Okay, do that right now. Let me share right now. I have a lot of tabs open. I think that's why it's being slow. Okay. Okay. Like this for example. Let me see what six and seven are. Yeah. Okay. For example, this is like a early on must be true question and it's still stunning like
+Joshua Fisseha: I'm I'm going to because Um, okay. Okay. The Yeah,
+Sofia Minassian: Can you see my screen?
+Joshua Fisseha: I'm seeing Yeah, I'm going to I'm going to I'm going to because Yeah,
+Sofia Minassian: Where's the thing?
+Joshua Fisseha: cuz that's weird because I see I can see your your last couple sections. Um, I'm going to really sit down tonight and lock in and make a strategy for you like just to get you to be cuz you have the skills. you're actually not like it's not it's just there's a inconsistency I noticed just by reading seeing the because you know a lot of the stuff the head knowledge um like I'm looking at
+
+
+
+
+00:02:52
+
+
+Sofia Minassian: Yeah.
+Joshua Fisseha: the
+Sofia Minassian: And then like I listen I feel like okay cuz I did P like I did uh sections with PT 126 and I got minus 5 and minus 6 on those sections and I feel like they're easier than PT 150 and like 148. PT 148 was brutal for me not going to lie.
+Joshua Fisseha: Yeah, those are they are objectively harder. Um
+Sofia Minassian: So that's why like I kind of like I feel like I got like a false like hope from like my minus5 and minus 6. But then I did a I did one to I did one yesterday when I kept like plateauing in minus 10 and I got minus 7. So like I am like like I am like working on it like every single day. I'm I'm genuinely like I want to take another I'm doing an entire PT this Friday and like I've cleared my schedule to do it, but I want to do like sections and understand why I'm getting it wrong before I jump into another PT.
+Joshua Fisseha: I would say honestly, and I'll be honest with you, I don't think that's actually a good idea.
+
+
+
+
+00:03:59
+
+
+Joshua Fisseha: The thing that you should avoid, not that you shouldn't, it's not a bad idea, the best case use of your time, um, by far is sections because you want to be able to assess the problem, right? Like if you do a full test, you're going to be tired. Um, and you're not getting you're going to waste your time on questions that you already know,
+Sofia Minassian: I want to do a full test on I want to do a full test on Friday.
+Joshua Fisseha: right?
+Sofia Minassian: That's not a good idea.
+Joshua Fisseha: What what I mean is like the reason why I say that it's some maybe not the best use of your time is that if you do you want to be able to assess the problem as as like as as as immediately right you don't want to wait if you have you do three sections you're not going to first of all not going to spend the same time reviewing are not going to be as in depth with your understanding of your like where am I going wrong right because like if you versus doing one section you'll see right away where do I struggle and I can address it there but if you spend your hours doing a practice test all you're doing is multiple section sections.
+
+
+
+
+00:04:52
+
+
+Joshua Fisseha: So like if you can get the feedback from one section first and then address the problem right there and see what is my problem versus waiting for me to do three sections. Um it's all a section three sections are just like you're just you can just figure out the problem with one section and then use the rest of the time that you've used for a practice test to fix that problem versus trying to just like you don't want to do things that you're already good at. If you're really good at it, you don't have to waste your time doing them.
+Sofia Minassian: So,
+Joshua Fisseha: It's the things that you're not good at.
+Sofia Minassian: so what when do you think I should take another PT?
+Joshua Fisseha: I wouldn't even PT is not your what you should be worried about should be sections.
+Sofia Minassian: Okay.
+Joshua Fisseha: PT you can do your you can do the math for your you can literally take your last three sections and add them up and see your score. That will tell you the same thing as doing like there's no difference between doing like all a PT is just is doing a section again and again and again.
+
+
+
+
+00:05:38
+
+
+Joshua Fisseha: It's not like the sections change in different ways like it's the same section in some sense different types of like like what I'm trying to say ultimately is like don't focus on PTS. Your best use of time is by far sections. BTS are the most overrated. Biggest waste of your time. Biggest waste of your time. Like you're not going to do the review as long. you're gonna just want to get the score and see the number and they'd be happy or maybe be sad and then it's like doesn't do anything for you. But to get better sections, deal with the problem right away. Why did I get that question wrong and then do another section to see if you fix your problem and then you not fixed and we need to fix again versus doing three sections and then not doing any of the review or a little bit of review and getting like 70 questions. So, um you can do a practice test here and there. Nothing wrong with that inherently, but you're like if you want to know about how to get your score better, that's going to be way more um like spend an hour do the section.
+
+
+
+
+00:06:25
+
+
+Sofia Minassian: So by the end of this week I I'll do a PT but leading
+Joshua Fisseha: Yeah, you can do that.
+Sofia Minassian: up leading up to that like I'll do the instead of doing the PT Friday I should do it Sunday for example
+Joshua Fisseha: Sure. There's nothing wrong with this. And it's not like I'm saying don't ever do PTS, but they just don't do they're not they're not any different than doing sections. They just get more value.
+Sofia Minassian: I I am I am committed to doing sections right now that's what I've been kind of uh re rearing my focus
+Joshua Fisseha: Yeah. Yeah. So then, by the way, I'm not saying not to do ever do practice tests. It's just in general, but you've been doing that very well recently. I'm looking at your sections right now. I've seen that you did that. Um the thing though, uh is after a section,
+Sofia Minassian: Mhm.
+Joshua Fisseha: um then you want to take that data and you want to say what do I and I'll show you what I mean with this recent section.
+
+
+
+
+00:07:13
+
+
+Joshua Fisseha: We can just we'll go through it and I'll show you what I mean. Um, so the biggest thing that like obviously that I noticed right off the bat is um obviously the difficulty of the question is going to be a pro.
+Sofia Minassian: Yeah.
+Joshua Fisseha: It's going to influence your grading question right um which is somewhat
+Sofia Minassian: Mhm.
+Joshua Fisseha: a like you're not in a bad spot with uh give me one second. I'm just going to look at a little bit further. Um,
+Sofia Minassian: I feel like today we should come up with like a kind of like a game plan of like why I'm getting like minuses or like why I'm being inconsistent.
+Joshua Fisseha: it's conditionals. Conditionals are killing you.
+Sofia Minassian: Mhm. I know.
+Joshua Fisseha: Yeah, conditionals are killing you. Um,
+Sofia Minassian: I saved the other half of your conditional drill to do today. No, maybe that will help cuz I did I did halfway through and I have another half
+Joshua Fisseha: Mhm.
+Sofia Minassian: left of that. It was like 60 something.
+
+
+
+
+00:08:20
+
+
+Joshua Fisseha: Okay.
+Sofia Minassian: I have like 30 left.
+Joshua Fisseha: Mhm.
+Sofia Minassian: So, I have another half of that. I feel like I would have been worse at conditionals if I didn't do half of that. So, I have the other half. I have the latter half of the kind of like the boot camp you have for me. I'm going to do
+Joshua Fisseha: Mhm. Okay. Um, yeah, it's literally just what's what's hurting you is the conditionals even with the questions you're getting right is taking way uh longer than Yeah. So literally conditionals are are are are hindering like if you can get that Um, not that like you're not getting easy conditionals wrong. It's really just the uh uh Okay, let's go let's go to like we can start off easy. Let's just go through the section here. Let's go to question um let's start off with first question six. Let's go.
+Sofia Minassian: Mhm.
+Joshua Fisseha: Let's check it out.
+Sofia Minassian: I wanted to go over this one with you.
+
+
+
+
+00:09:21
+
+
+Sofia Minassian: Okay. John's literature professor believes that the ability to judge the greatness of literary works accurately can be acquired only after years of specialized training. Such training is in fact what is required to become a literature professor. She is also well aware that the vast majority of the reading public does not have access to the specialized training. Okay. Like looking back, I feel like like I'm like not under time conditions. I I could get this without graphing or like thing, but I feel like what I did was I I feel like I I graphed it wrong,
+Joshua Fisseha: Okay.
+Sofia Minassian: which made me get to beat
+Joshua Fisseha: Okay. Why do you think you graph the wrong?
+Sofia Minassian: I think I like chained it up wrong and then I did like a A to C like a false A to C vibe and then like the contra positive of it like how would you grab like John's literature that the ability to judge the greatness of literary works accurately can be acquired only after years of specialized training right so greatness arrow specialized training and then such training is in fact what is required to become literate.
+
+
+
+
+00:10:58
+
+
+Sofia Minassian: that training I put an arrow to LT
+Joshua Fisseha: Mhm.
+Sofia Minassian: greatness arrow um specialized training and then specialized training I put L like LP literature professor then she's also aware that the vast majority of the reading
+Joshua Fisseha: All right.
+Sofia Minassian: public does not have access to specialized training so I ex the specialized training so then it I did the contraositive of the chain and it was greatness of literary works like not greatness, not specialized training then not literature professors.
+Joshua Fisseha: Mhm. Okay.
+Sofia Minassian: Oh my god. So I don't know like that's why I said anyone who is not a literatur professor cannot judge the work. Yeah. Yeah. That was exactly my mindset.
+Joshua Fisseha: Okay.
+Sofia Minassian: That's exactly my I thought like okay if you're not a literatur professor then you can't does the greatness of the works accurately. But if it's saying the vast majority does not have specialized training like more like understanding this like casually other than understanding it like with like arrows,
+Joshua Fisseha: Okay.
+Sofia Minassian: I understand why the answer choice is E. But with arrows, I would always I would lead back to B because like if
+
+
+
+
+00:12:18
+
+
+Joshua Fisseha: Okay. Um
+Sofia Minassian: you're if you're well aware that the vast majority of the reading public does not have access to specialized training and you know that specialized training is what required to become a literature professor. Then the vast majority of the reading public can't can't do that one thing that only literature professors can do, which makes it easy.
+Joshua Fisseha: the the I think you're you're I think when you're when you say the arrows and stuff, the arrows are just representing what you understand in on paper. You don't want to think of the it's not like the problem is you don't want to become a machine and like not think about what you're writing on paper, but the arrows should make sense to you. They're just representing what you understand in your head on paper. So, you're like, "Oh, this idea leads to this idea and you're using an arrow to lead to that idea." Um, not that like it's problematic in any way, more that I want to just like see because when you have the to force yourself to write on paper, you can see exactly where things may have went wrong.
+
+
+
+
+00:13:38
+
+
+Joshua Fisseha: Um, when you don't and you just kind of have the feel of it, you can get caught in these questions. Does that mean you have to diagram every statement? Not necessarily. Um, but let's let's let's I actually want to see how you go about this question here. So you said to me in the first so tell me how you approached this question. Explain to me how you approach it like just in your most intuitive like uh in the most intuitive approach like how it can comes natural to you.
+Sofia Minassian: I approached I approached it that um they gave me a
+Joshua Fisseha: What?
+Sofia Minassian: conditional for um the ability to judge greatness. So that that ability is um acquired only after specialized training. So I unash did like AB ability to greatness arrow to specialized training. Then the next claim it said such training doing referential phrasing to specialized training is in fact what is required to become a literature professor. So I naturally thought I had like a chain area there. So I did specialized training the literature professor.
+
+
+
+
+00:14:50
+
+
+Sofia Minassian: So I came up with like a thing that if you have the ability to for greatness ability to analyze the greatness to judge the greatness of literature then you're a literature professor because that's the A to C. And then the last sentence is what threw me up. She is also well aware that the vast majority of the reading public does not have access to the specialized training. So then I put vast majority if they don't have access to the specialized training I contrasted then they're not a literature professor and if they're not a literature professor then they don't have the ability to analyze greatness.
+Joshua Fisseha: Okay.
+Sofia Minassian: I actually did.
+Joshua Fisseha: Um,
+Sofia Minassian: Yeah, that's what I did. So, if you're not a literature professor, that's how I did like I did that chain the ability to greatness specialized training and then literature professor.
+Joshua Fisseha: yeah.
+Sofia Minassian: I did the contraositive like if you're not a lit professor, you don't have specialized training, then you don't have the ability for greatness.
+Joshua Fisseha: Mhm.
+Sofia Minassian: And that kind of makes sense that if the vast majority doesn't have specialized training, then that means that they don't have the ability to analyze greatness.
+
+
+
+
+00:16:14
+
+
+Sofia Minassian: But I was clinging on to the fact that then they're not a literature professor. I feel like my training was good. It's just what I got from the train the training was like the ladder instead like like instead of like like I got like not literature to professor to not specialize but it's should be not specialized to not greatness.
+Joshua Fisseha: Okay. Um,
+Sofia Minassian: That's that was that's my intu.
+Joshua Fisseha: okay. So, you're saying that you got the chain, but you said you weren't able to understand it or Yeah.
+Sofia Minassian: Yeah. Was it was the chain correct?
+Joshua Fisseha: The the thing is though the like if I'm listening just what you're saying more than the chain is um is good more though I want to know um what is preventing you from not being able to understand? What was the the thing that was the barrier in your opinion? What do you think was preventing you?
+Sofia Minassian: attractive um trap answers.
+Joshua Fisseha: Okay. Um, so why did you, so the initial question that you chose, uh, answer choice you chose was answer choice, I believe B. Um,
+
+
+
+
+00:17:34
+
+
+Sofia Minassian: Yes.
+Joshua Fisseha: but tell me why you thought B was correct.
+Sofia Minassian: Because if you don't if u vast majority of people don't have specialized training that means In my head, that means I thought they weren't a literature professor, but that's kind of that's kind of what I
+Joshua Fisseha: Okay.
+Sofia Minassian: got from it. I thought I had to link the lit professor like I thought that would was what must be true that if specialized your training is required to be a lit professor and you don't have specialized training,
+Joshua Fisseha: Okay.
+Sofia Minassian: then you're not a lit professor.
+Joshua Fisseha: Okay. Okay. Um Okay, let's do this. So, what what I what I wanted to point out was um okay, you've seen this question already. So, I'm realizing there's a bit of like when you when you see the question and you have an idea that you went wrong. Um there is a potential bias there that I wanted I I kind of want to attack to see. Um and obviously you can't control it.
+
+
+
+
+00:18:51
+
+
+Joshua Fisseha: I don't want to even want to do this. Like I I'm seeing what you're saying, but I want to be able to understand how that applies in the wild when you just see a question and brand new. Um I'm going to open up the question here.
+Sofia Minassian: I I agree. I agree.
+Joshua Fisseha: I want to see if I can do it.
+Sofia Minassian: Okay.
+Joshua Fisseha: Okay. I'm just going to open this.
+Sofia Minassian: Should I unshare my screen?
+Joshua Fisseha: Uh yeah. Yeah, that's good. We can just start here. Okay.
+Sofia Minassian: Perfect.
+Joshua Fisseha: Okay. Okay, I'm going to share my screen. You should see it in a second. It's going to pop up. Not me too crazy.
+Sofia Minassian: Perfect.
+Joshua Fisseha: Yeah,
+Sofia Minassian: I see
+Joshua Fisseha: I'm going to give you about a minute and 45. I'll give you two minutes. I don't think
+Sofia Minassian: Hey.
+Joshua Fisseha: Okay. Um, okay. Let's do this question. So, let's go and uh let's walk through this one here.
+
+
+
+
+00:23:43
+
+
+Joshua Fisseha: Um,
+Sofia Minassian: Okay.
+Joshua Fisseha: first thing uh yeah, just talk me through it to be honest. Don't want to hear you explain it.
+Sofia Minassian: Okay. So I saw it the first says clearly a democracy cannot thrive without effective news media. So it does thrive with effective news media like I did like negate sufficient because that's what I think without his. So I put thrive arrow effective news media. Then the second sentence says after all a democracy cannot thrive without an electorate that is knowledgeable. So I had a I had another arrow pointing out from thrive. Thrive still being the sufficient condition and saying electorate knowledge and then I saw it says that electoral can be knowledgeable only if it has access to unbiased information about the government. So I chained thrive electoral knowledge to aerial access to to unbiased info. Then I realized like I have this other thrive um I have this other thing like it was two different conditionals. One was just thrive and effective news and one was a different different link thrive electoral knowledge and then access to unbiased info.
+
+
+
+
+00:25:10
+
+
+Sofia Minassian: And then I went into the answer choices thinking that like maybe we'll chain access to unbiased info to thrive. And then um I saw democracy cannot thrive if the electorate is exposed to biased information about the government and that is kind of the opposite of unbiased information. So this kind of like did like to me this was like the contraositive version of like what I've been anticipating
+Joshua Fisseha: Yeah. So,
+Sofia Minassian: and and then I just picked it because the time right now is I was like okay f*** it I just picked it.
+Joshua Fisseha: okay. Yeah. Good. Very good. The thing that uh uh
+Sofia Minassian: Was it was it correct?
+Joshua Fisseha: so before I even answer that, so you're saying uh before I because I want I want to ask you a couple things here. Um I'll tell a second. So the the thing is that when we uh break this question down, right? Um the conclusion is what what's the conclusion for this argument?
+Sofia Minassian: Um, is it a conditional is it conclusion
+
+
+
+
+00:26:30
+
+
+Joshua Fisseha: the Yeah. Well, it's a conditional,
+Sofia Minassian: argument?
+Joshua Fisseha: but what's the conclusion?
+Sofia Minassian: Oh. Oh,
+Joshua Fisseha: Yeah.
+Sofia Minassian: the first sentence.
+Joshua Fisseha: Okay. So, the first sentence is the conclusion.
+Sofia Minassian: Mhm.
+Joshua Fisseha: Um, good. Yeah, we have that as they're telling us in the first sentence. Say, tell me what it is as if then.
+Sofia Minassian: If democracy thrives then has effective news media.
+Joshua Fisseha: If a democracy can thrive, these are very small. These are because we don't want to make the mistake of thinking if it does um all it can okay cool the they're telling us that if democracy can thrive right then uh the then there's a effective me news media okay okay we know there's a conditional in the in the conclusion how do we approach that when we say conditional in the conclusion what is our game plan how do we treat
+Sofia Minassian: Now we know we have to have a a conditional answer choice.
+Joshua Fisseha: Yeah, like likely. Yes, exactly. And the conditional should do the conditional should be doing what?
+
+
+
+
+00:27:36
+
+
+Joshua Fisseha: Like what should the answer choice? Obviously has connect the gap, but what specifically do we want to think of? Like how will it not how will it like what parts are we trying to connect?
+Sofia Minassian: the sufficient and necessary condition. Oh,
+Joshua Fisseha: Let's just Yeah.
+Sofia Minassian: the the prem the prem the premises to the conclusion.
+Joshua Fisseha: the premises to the conclusion. Yes. Um we should look at what the necessary condition is of the conclusion, right? And we should look so we want to break the con the conclusion in two halves. Okay.
+Sofia Minassian: Okay.
+Joshua Fisseha: So we want this is really going to be useful for you to remember this. This is why I wanted to do this question here. Um we need to break the conclusion in two halves. The sufficient and the necessary condition.
+Sofia Minassian: Okay.
+Joshua Fisseha: And then we want to ask ourselves which part is lacking support in the evidence, right?
+Sofia Minassian: Yeah.
+Joshua Fisseha: One of the two halves are going to have a problem.
+
+
+
+
+00:28:31
+
+
+Joshua Fisseha: So in this case, let's just I'll show you what I mean. We can just uh if uh democracy and thrive
+Sofia Minassian: Where are you writing now?
+Joshua Fisseha: see a second drive uh then Okay, just give me a second. Okay, you can you see it now?
+Sofia Minassian: Yes.
+Joshua Fisseha: Oh yeah, if can thrive then is effective news media. So we want to break those two conditions in half like in a sense we want to separate them. We want to say which half of the conclusion is not supported where there's no link to it in the evidence. So we want to check whether democracy can thrive is being settled like is there a problem with the link between the evidence with regards to thriving or effective news media.
+Sofia Minassian: Okay.
+Joshua Fisseha: Um and we'll come back to that question.
+Sofia Minassian: Okay.
+Joshua Fisseha: Let's go to the next statement.
+Sofia Minassian: So is there a lack in thriving or news media?
+Joshua Fisseha: the democracy thriving being able to thrive or effective news media. Yeah.
+
+
+
+
+00:30:01
+
+
+Sofia Minassian: Okay. Okay.
+Joshua Fisseha: Now let's go to the next statement.
+Sofia Minassian: After all, a democracy cannot thrive without an electorate that is knowledgeable about important political issues.
+Joshua Fisseha: Yeah. So the the telling us in that next line we see the word after all. What does after all tell us?
+Sofia Minassian: That's a premise.
+Joshua Fisseha: Yeah. So after all a democracy cannot thrive without elector electorate
+Sofia Minassian: with that electorate that is knowledgeable about important political issues.
+Joshua Fisseha: and
+Sofia Minassian: So that also is thrive in the necessary in the sufficient
+Joshua Fisseha: yes it can thrive.
+Sofia Minassian: thrive and it says it could thrive if
+Joshua Fisseha: Yep.
+Sofia Minassian: it has an electorate that's knowledgeable.
+Joshua Fisseha: Right. So if a democracy can thrive then an electorate that is knowledgeable about pre important political issues. Okay.
+Sofia Minassian: Yeah.
+Joshua Fisseha: So that tells us based off of
+Sofia Minassian: More information about Thrive.
+Joshua Fisseha: that. Yes. So and I'll I'll actually just use drive. So in the first claim remember we said earlier the thrive effective news media and then we are trying to see because we ultimately remember we're trying to connect these two parts to be like we're trying to bring the gap between these two things.
+
+
+
+
+00:31:34
+
+
+Joshua Fisseha: We're trying to bridge the gap. We want to make sure this is a link between these two sides.
+Sofia Minassian: Huh?
+Joshua Fisseha: So we have a first sentence or second sentence tells us democracy can thrive without elector or vote. So we have a a a basically the de thrive part extending its hand right because we know a democracy can thrive right um then so
+Sofia Minassian: with effective news media and and an electorate
+Joshua Fisseha: effective the conclusion we don't
+Sofia Minassian: that is knowledgeable about important political views.
+Joshua Fisseha: know that's the thing that's trying to be proven we're trying to build the link we're trying to find a link for DT thrive to get to
+Sofia Minassian: Oh yeah,
+Joshua Fisseha: effective media No,
+Sofia Minassian: we're just focused on the conclusion right now. Okay. Yeah. Yeah, that makes sense.
+Joshua Fisseha: no, sorry. What I meant is the conclusion is telling us we don't know that. The point is the conclusion is we have no idea. It has to be proven.
+Sofia Minassian: Yeah.
+
+
+
+
+00:32:19
+
+
+Joshua Fisseha: The evidence in the second line is telling us that D thrive, right? If we know that's true, we know that there is a lectorate. We'll say like uh knowledge um uh we'll say
+Sofia Minassian: Yeah.
+Joshua Fisseha: okay so we know that the in argument they give us a for the first half the sufficient condition right we know that this is the case
+Sofia Minassian: Mhm.
+Joshua Fisseha: right so if we know something that can thrive we know that the electric so we know that if We wanted to bridge this to effective media. All we'd want to do is nec we can just do it like this, right? Because it's a closing the circuit,
+Sofia Minassian: Oh,
+Joshua Fisseha: closing the box. That's one way. It's not the only way, by the way. This is one way.
+Sofia Minassian: like what you would make effective media the sufficient condition for electoral knowledge.
+Joshua Fisseha: Electoral knowledge sufficient condition for effective media
+Sofia Minassian: Oh,
+Joshua Fisseha: because Yeah,
+Sofia Minassian: I didn't even I didn't even bother training those two because I feel like I would have gotten it wrong.
+
+
+
+
+00:33:29
+
+
+Joshua Fisseha: I'm saying that.
+Sofia Minassian: Like I I I made that I made them two separate
+Joshua Fisseha: Yeah, you're right. You're right.
+Sofia Minassian: conditionals.
+Joshua Fisseha: So, we uh two separate conditionals. What do you which ones are you talking about?
+Sofia Minassian: Drive affect the media and Drive and Electorator knowledge.
+Joshua Fisseha: By the way, I want to make sure you understand what I'm saying. This is not the case right now.
+Sofia Minassian: Yeah. I'll take that.
+Joshua Fisseha: I'm saying that if we wanted to close a circuit, if we wanted to find a sufficient assumption, that would be the way to because right now these this is not supported. Oh, okay.
+Sofia Minassian: I see.
+Joshua Fisseha: So, we we see there's one path to get there. So, uh I didn't mean to do that. No. Okay. So, I'm just going to do it again. So, the idea is D thrive. Uh the conclusion is saying D thrive.
+Sofia Minassian: an effective news media.
+Joshua Fisseha: Yeah. So we need to find a way to get this path here.
+
+
+
+
+00:34:22
+
+
+Sofia Minassian: So, so far nothing about my graphing was wrong.
+Joshua Fisseha: Good. Right. Um Oh no, it's effective. Sorry. So effective. Okay. So let's keep going. Uh we need to find a way to link these two sides together,
+Sofia Minassian: Mhm.
+Joshua Fisseha: these two halves, dethrive and effective media. Right now we know if we were to link the elected news uh this idea here the second idea we could get there right this will take us to the right outcome but that's not given to us yet.
+Sofia Minassian: Yeah,
+Joshua Fisseha: Let's go to the next line.
+Sofia Minassian: an elector can be knowledgeable in this way only if so now it's providing a chain from electron knowledgeable. It's making it a uh suffic sufficient condition for a
+Joshua Fisseha: Yep.
+Sofia Minassian: necessary condition of unbiased information.
+Joshua Fisseha: So they're telling us it can only uh uh or it's saying that if this is true, we know that and we can add the chain there or we can just
+Sofia Minassian: Yeah. So
+
+
+
+
+00:35:22
+
+
+Joshua Fisseha: uh I'm just going to put an ugly looking arrow here, but should be fine. Okay,
+Sofia Minassian: Yeah.
+Joshua Fisseha: so we know that this is chain is true and we know that the it has access to unbiased.
+Sofia Minassian: Mhm.
+Joshua Fisseha: uh info. Okay.
+Sofia Minassian: Yes,
+Joshua Fisseha: So remembering amazing amazing.
+Sofia Minassian: I did exact I did exactly this
+Joshua Fisseha: So what are we trying to now? What is the missing link here?
+Sofia Minassian: affect the media.
+Joshua Fisseha: Yeah. And what is a listing? What's the link? Yeah, that's the part that's missing. But what's the link that we're looking to find then? What should the answer look like?
+Sofia Minassian: Um to to thrive to thrive we we need
+Joshua Fisseha: Mhm.
+Sofia Minassian: bias information of All right.
+Joshua Fisseha: No, no, no. So, okay, this is good because you're basically there. That means you you you don't the the issue is not actually understanding how to diagram or conditionals. It's about applying them specifically.
+
+
+
+
+00:36:55
+
+
+Sofia Minassian: Huh.
+Joshua Fisseha: Um which is good.
+Sofia Minassian: Mhm.
+Joshua Fisseha: Okay. So this is I have I actually have a perfect drill for you in mind that will work for like later. But I want to make sure you understand this here because this will make your life a lot easier. You got the basic you got the the the the hardest part out of the way really. Um it's really now just getting the the the last like the your time you know like worth your making conditions worth your time.
+Sofia Minassian: Huh?
+Joshua Fisseha: The point of them is we have to remember in this example here when we went to this uh when we went to this example remember the conclusion is this first idea as you pointed out very well
+Sofia Minassian: Huh?
+Joshua Fisseha: and we need to be able to bridge there's two ideas that we need to bring together. What are the two ideas we need to bring together here in the conclusion? What are the two ideas that we need to bridge together?
+Sofia Minassian: Uh, thriving and affected media.
+
+
+
+
+00:37:44
+
+
+Joshua Fisseha: Yeah. Democracy can thrive and effective media. Okay? They're not connected right now. We need to find a way to bridge these two ideas. Right now, we need to find basically a train to get him home. This is his starting point.
+Sofia Minassian: So why are they not bridged together?
+Joshua Fisseha: This is the home.
+Sofia Minassian: The the the conclusion says they are, but is it like based off an assumption?
+Joshua Fisseha: The conclusion, we never accept it to be true unless they tell us.
+Sofia Minassian: Okay.
+Joshua Fisseha: The conclusion is their job to prove their conclusion. So like when I'm going to court,
+Sofia Minassian: Okay.
+Joshua Fisseha: I'm trying to fight for someone's innocence. That's my case. Now I have to show you why. So the conclusion we never accept. The evidence we accept. The conclusion we don't accept. Right? We have to see does the evidence actually take us to the conclusion that they're saying. So there's this is what they're trying to essentially get.
+
+
+
+
+00:38:37
+
+
+Joshua Fisseha: So if we look at the conclusion having to be uh let's say the the in our equation we need to get this outcome democracy can thrive to effect our news media they give us in the
+Sofia Minassian: H.
+Joshua Fisseha: first line because remember we need to find a train that gets us to this outcome the final end destination has to be this thing getting to here.
+Sofia Minassian: Oh. Oh, so so you just put all of them. You do your democracy thrive. You do elect ele electro no important and then you do unbiased government and then that that then that connects to effective news media.
+Joshua Fisseha: Yes, we need to build a that's the missing bridge because we can have all of the information like we need to as you you got it right. So when we go to back to this questions back to this right we know that democracy can thrive if it can thrive then it's knowledgeable import and political
+Sofia Minassian: Mhm.
+Joshua Fisseha: issues so we want to add that we want to say we have this takes us here knowledgeable let's say
+
+
+
+
+00:39:40
+
+
+Sofia Minassian: Yes.
+Joshua Fisseha: issues okay then what do we know the next line when we go into the back to the to the conditional we have an electric can be knowledgeable in this way so If it's knowledgeable this way, unbiased information.
+Sofia Minassian: Yes.
+Joshua Fisseha: So yes,
+Sofia Minassian: And if the unbiased information then it's affect the media.
+Joshua Fisseha: then we've built a bridge to connect the two. We have brought them together. Exactly. Right. So essentially the trains they were trying to get a train or we're trying to find a way to bridge these two sides together. Uh unbiased I think it was unbiased uh information about the government something like that. Yeah. or something like that. Biased info I can even put this unbiased but info
+Sofia Minassian: Mhm.
+Joshua Fisseha: government.
+Sofia Minassian: So if if you have unbiased info then you have effective media.
+Joshua Fisseha: Yes, we need now the missing link here is exactly it because if we can connect these two then we're good to go. They we found we've have made a we close the circuit because right now there's nothing that it's still loose.
+
+
+
+
+00:40:42
+
+
+Joshua Fisseha: Think of it like a circuit. The circuit is the cord is not connected to anything. So it's still a loose end right? But we have our goal has not been accomplished by the way the author presented it. He's his argument is that the he's trying to prove this part in the conclusion. We don't take that to be true. The evidence is true. So now as you pointed out very well the answer choice should be look saying something to do with this idea.
+Sofia Minassian: It's either if you have a biased info then you have effective media and if Or if you don't have effective media, you don't have uh biased unbiased.
+Joshua Fisseha: Yes. Yes. And theoretically they could do this too because remember our goal is just to get this idea
+Sofia Minassian: Yeah.
+Joshua Fisseha: basically an offspring of this idea has to offspring of this idea here which is leader of the offspring in some sense has to connect us to effective media. There needs to be a bridge.
+Sofia Minassian: Or they could say they could say knowledgeable important issues.
+
+
+
+
+00:41:33
+
+
+Sofia Minassian: If you have knowledgeable important issues then you have affected media.
+Joshua Fisseha: Yes.
+Sofia Minassian: Yeah.
+Joshua Fisseha: And then we've done our job. So the missing link will be one of those two. With highest degree of certainty, it's obviously the second one. They could do the first one,
+Sofia Minassian: Yeah.
+Joshua Fisseha: but like they wouldn't be wrong, but they're not going to give it to us that easy. They want to see if you meet. They want because you did the hard part. The hard part was most people might not connect this two. They might miss this. So they don't see how this is connected. You got the hard part of the way. They saw the hard the the easy part is just saying oh we we figured out the last the where it leaves off the train station and where the end point has to be we need to build a bridge between these two things. So now when we go back to the question all we're doing is literally is literally like closing the gap in a sense like we're linking linking we're really linking the two uh yeah and that's literally it.
+
+
+
+
+00:42:18
+
+
+Joshua Fisseha: So that's what the game plan is for all sufficient assumption questions that are conditional conclusions.
+Sofia Minassian: Can I Can I see the Can I see the answer choices again?
+Joshua Fisseha: Yeah for sure.
+Sofia Minassian: Yeah.
+Joshua Fisseha: Let me just go back.
+Sofia Minassian: Okay. Uh
+Joshua Fisseha: I think you chose E, right? From I don't E. I don't know which you chose. I just clicked E, but
+Sofia Minassian: Yeah, it is uh it is E because it's saying if you have effective news media then you
+Joshua Fisseha: yeah. Right.
+Sofia Minassian: will um if you have effective news media then you will not have access to which is the contraositive of what I
+Joshua Fisseha: Yes. Yes. That's the that's that that's what they do is like a a a plot twist. They might throw the contraositive because it's like you got all the way there, but then if you don't the contraositive, you got cooked, right?
+Sofia Minassian: So wait wait wait.
+Joshua Fisseha: That's how they
+Sofia Minassian: So what's the the conditional is if you have unbiased info then you have effective media and then it's saying this stat is saying it's
+
+
+
+
+00:43:18
+
+
+Joshua Fisseha: Yeah.
+Sofia Minassian: saying if you have effective media
+Joshua Fisseha: Nope.
+Sofia Minassian: without effectiveness is so if you don't have effective news media because negate
+Joshua Fisseha: Yeah.
+Sofia Minassian: sufficient okay yeah that's why if you don't have a ne
+Joshua Fisseha: So, go ahead.
+Sofia Minassian: Yeah it's negate sufficient exactly Okay. If you don't have effective news media, then you will not have access to unbiased. That's the no. No effective news media. No one buys it though. Okay, I see. Yeah, I saw it.
+Joshua Fisseha: And you can just you could have because remember with the negation you could choose either idea. You could have instead of saying negating the first idea you could have negated the second idea right. So if you negate this idea, second idea here, it would be if an electorate will or does have access to unbiased information, then what? First idea.
+Sofia Minassian: Then it's then it's effective
+Joshua Fisseha: Go ahead.
+Sofia Minassian: news media.
+Joshua Fisseha: Yep. Which is literally that, right?
+Sofia Minassian: Okay.
+
+
+
+
+00:44:23
+
+
+Sofia Minassian: Yeah. Though with that kind of threw me off in the other choice.
+Joshua Fisseha: Yeah. So the take away from this Um the conclusion when there's conditionals break it in half. One of the two sides is going to be extending their hand. The other one we need to uh extend their hand. So like think of it as like he's reaching. So in this case this first half the sufficient condition is reaching out with these two ideas. He has to basically reach out his hand. So the way he reaches his hand out is by connecting to this idea. It's off. drink one of the two ideas either knowledgeable or unbiased information about the government. Right? That is the the name of the game for sufficient assumption question. That's all sufficient assumption questions are. The answer is think of it it's almost like a similar to a math equation like much simpler and you understand it. You're looking for where is there a route for me to get to the first half to the second half.
+
+
+
+
+00:45:19
+
+
+Joshua Fisseha: Do I have a path? Do I have this contraositive? Okay, good to go.
+Sofia Minassian: So if you have a conditional and this is for sufficient assumption and must be true questions Oh,
+Joshua Fisseha: Yeah, must be true questions. It's basically the same thing. They're they're pretty much the same type of questions. They're like a little bit like of a like this very much the same idea. It's the same thing you're doing, right? Instead of this time around the only this is a sufficient assump or it must be true question, right? The only thing that they would uh do in this differently was they would take away the conclusion.
+Sofia Minassian: Mhm.
+Joshua Fisseha: or yeah they'll take away the conclusion and they would have had this statement the E would have been so if I were to just simplify for you they the conclusion here right would have been the answer choice and then and the answer choice would have been part of the
+Sofia Minassian: Okay, I see. Yeah, that's there's a reason why I struggle with both because they both intertwine on the same like skill.
+
+
+
+
+00:46:25
+
+
+Joshua Fisseha: Yes.
+Sofia Minassian: Let's see.
+Joshua Fisseha: So I'll give you like a just like so you'll see when you once you understand this it becomes a lot easier to understand like all the only thing that like a must be true question is different right because in this case if I were to show you what they would have done differently is this they would taken democracy can thrive would have been statement one then they would have taken knowledgeable issues statement two and then unbiased government would have been statement three. Or actually, they would have went and they would have went and just done this. They would give you the conclusion. So then they're going to ask you to know if you can see these two things. in the answer choice. So the answer would have been democracy can thrive an unbiased info government. So instead of taking the in this in the sufficient assumption they take away the they take away the actual conclusion they're just adding it to the argument. Your goal is to say do I see the connection that was already given to us and the sufficient assumption you're actually supplying the connection.
+
+
+
+
+00:47:46
+
+
+Joshua Fisseha: You're saying oh look this would have now it works beforehand. uh for sufficient assumption, you have to find the answer and you have to almost find a missing puzzle piece to put it back in here. And this must be true question. You're just taking what's been given to you and you're identifying what's already there and it's going to reflect this democracy can thrive idea with the unbiased government. They would have already done it for you. They basically would have solved it for you. You just have to recognize that it's already there. Kind of that it's a similar idea. You're not changing much except for one is supplying, one is kind of identifying.
+Sofia Minassian: Okay. Yeah.
+Joshua Fisseha: Yeah. Um
+Sofia Minassian: suffic sufficient is a is literally like embedding it back into your argument whereas uh must be true is like taking it out of your argument.
+Joshua Fisseha: yes. Yes. Exactly.
+Sofia Minassian: Yeah, I think
+Joshua Fisseha: And it's because all a sufficient assumption is is combine the rules and see which rule you know to be true.
+
+
+
+
+00:48:32
+
+
+Joshua Fisseha: So they would have given you the they would have given you the connection that they didn't they were missing in this argument in the conclusion and then they would have said tell us what is the inference or what's the conclusion we can make or what's the must be true statement. Um but all to make it like not to think about that too hard. The uh focal point for you is going to be um because you actually seem like you're good enough with the conditionals. Um but manipulating them to we understand how they work when you need to connect them which is actually the second half of the drill. Uh if you look at the drill there's going to be a linking part. It should be good. You're going to be one of the few I think I had one two students prior to you do it or maybe two or three. I have to see. So I have to see how good it is. But um I actually created a boot camp for you the other day and I don't think I assigned it to you.
+
+
+
+
+00:49:15
+
+
+Joshua Fisseha: It was a sufficient assumption because Friday I was going to assign it to you.
+Sofia Minassian: Okay, perfect.
+Joshua Fisseha: Um I don't think I actually signed it to you.
+Sofia Minassian: I would I'll do that. I'll have I did start I'm halfway done of the boot camp of like the conditionals.
+Joshua Fisseha: Okay,
+Sofia Minassian: So, I'm going to I'm going to finish that one.
+Joshua Fisseha: I'll sign to Yeah.
+Sofia Minassian: I'm making like a to-do list right now. Um finish finish the conditional boot camp and then finish the sufficient assumption boot camp. Okay. Right. Yeah. There. Was it a sufficient assumption boot camp that you I Okay.
+Joshua Fisseha: Yes. Yes.
+Sofia Minassian: Okay. And then was there something else you were going to assign for me.
+Joshua Fisseha: So that was it. The conditional boot camp and sufficient assumption boot camp.
+Sofia Minassian: Okay. Okay. Perfect. Perfect. Yeah. I I'm going to see like I'm going to check your schedule to see if I could like book more meetings with you, but I have some more coming up, but I just want to like maximize the amount of uh of help I'm getting.
+
+
+
+
+00:50:16
+
+
+Sofia Minassian: But then after this, I'm going to do a LR section just to see just to see how it
+Joshua Fisseha: Okay.
+Sofia Minassian: translate.
+Joshua Fisseha: Okay. So, I'll send you that and then we'll we'll we'll recap it and then you'll you'll be able to go from there.
+Sofia Minassian: Yeah,
+Joshua Fisseha: Okay.
+Sofia Minassian: I'm definitely going to finish the the second half of the conditional boot camp is applying it. It's not just graphing.
+Joshua Fisseha: Yeah.
+Sofia Minassian: Okay, perfect. because I I think like I got the graphing down and that was because of like the help that I got from the boot camp actually too.
+Joshua Fisseha: Yeah. Yeah. Yeah. So this is going to be questions focused for the the boot camp submission assumption that
+Sofia Minassian: Okay, perfect.
+Joshua Fisseha: part. Okay.
+Sofia Minassian: Thank you.
+Joshua Fisseha: All right. Talk soon. Oh my god. All right, let's go. Going. Can you hear me? Yes, I can hear you. Can you hear me?
+
+
+
+
+00:52:42
+
+
+Joshua Fisseha: You still Do you still see it? Let me double check. That's weird. Yeah. Okay. How are you doing? Did you Did you get a haircut or something? You look different, bro. Sharp. No, you're aging backwards, I think, or something. You're looking sharp today, my boy. Looking sharp. Looking sharp. Sure. my man. How are things with you though? How was life? Like how was everything with like the family and like all that? Yeah. Yeah. Yeah. Yeah, it is kind of weird. Yeah. Yeah. Wow, that's exciting. Are you going to visit Richard and see him out there? Oh man, how was he? Have you talked to him? I'm assuming you talked to him recently, right? How's he finding it? He's a He's a soldier. It's a Yeah. Yeah. He's no built for it.
+
+
+
+
+00:56:33
+
+
+Joshua Fisseha: I don't want to get on go on a tangent. All right. Yeah. Yeah. Yeah. I know. He Yeah. He always told me about the stories, crazy stories and stuff. Um but uh great for great to hear that, man. like I'm I know like anything anything he does he's the type of guy like he'll kill it. He has no like there's no uh he's like the hardest working one of the hardest working people I've ever met actually. He's just like a very he can lock in like like nobody else. But I I don't want to go on side tab here, but I was gonna say I saw like the other day maybe two days ago. I I was going to send it to you, but I was like uh I'll just when I see you I'll bring it up. I saw Leo Kazarak. He's on a terite. Is he everywhere right now or something? Like where's he where did he come from?
+
+
+
+
+00:57:14
+
+
+Joshua Fisseha: He might be a plant. He actually might be a plant. You said it and I kind of noticed You think so? But I I was going to say I was going to say that Yeah. To be honest, it's I think there's a reason though. It's crazy. It's absurd. It's absurd. You're going to hell. He He says stuff like he'll be like, "Yeah, your blood life is going to go." Like he says stuff. What I saw I was like he's telling people like, "Yeah, you can be my slave in heaven." Yeah. Like if you're if you're good in this world, you can you can be my slave. And then like the way that he and everyone looks at him crazy and like he's just like he's uh it's hilarious though because it's like it's almost uh shamelessly. He'll be like, "Yeah, if you do everything God commands you and you you follow the way." Um at best you can be my slave in the next life.
+
+
+
+
+00:58:45
+
+
+Joshua Fisseha: You know, you can Yeah. Yeah. Yes. When they say Gentiles means Yeah. Yeah. Yes. That's what he was saying. That's what they're saying. Yeah. Yeah. Yeah. Yeah. Yeah. Okay. Yo, they need to get you on there, man. Yes. Okay. I didn't know that actually. I didn't know that. How about Ruth? They find a way. I feel like they're forcing it. They force it. Like I noticed it because you said it and I was thinking about it when I was listening to them. They find a way to like The problem is though is that if they had people like you on the other because the people that they're talking to, none of us know what they're saying. Yeah. It's a foreign language. Yeah. Yeah. Yeah. This is exactly it. Yeah. That's it.
+
+
+
+
+01:01:20
+
+
+Joshua Fisseha: That's it. Yeah. This is wild. Yeah. He literally says wild. Yeah. right? Oh, true, true, true. Yeah, that's the thing, man. Nobody. Nobody because you know the Hebrew. So you know it on like a because they what he does is he plays games with um cuz nobody knows the Hebrew. People know what it says in English. So like it says it like this. He like no the actual language mean and people don't know how to combat it. People like you would have the you someone like you and Rich would be a nightmare for him. I don't think you'd ever like you guys. They'll say one word, but the thing is someone like you or rich would be able to give them they couldn't run around with you guys because you guys will be able to say no no no that's not what it means and then they'll be trapped. Yeah. Is there like a source you guys have like do you guys have like a a website or something like that you have that gives you obviously the Bible's like the Bible but the thing is theation sorry do you guys like for a resource if somebody wanted to be like hey I want to read I want obviously the Tora you would read the Bible and stuff, but do you guys have like like have like do you have the your thoughts or just oral? Okay. So, it's like it's within the community oral oral or there's like a because the way you guys Okay. Okay. Interesting. Dang. You guys are Illuminati. The secret society. Mhm. Oh. Yeah. Oh yeah. I Yeah. Yeah. Interesting. No, no, it makes sense. That's that's uh Yeah. I just wanted to start off on that note. Um Okay. is the guy.
+
+
+
+
+Transcription ended after 01:06:01
+
+
+This editable transcript was computer generated and might contain errors. People can also change the text after it was created.

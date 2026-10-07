@@ -1,0 +1,689 @@
+{
+  "nodes": [
+    {
+      "id": "skill_authoring_capability",
+      "label": "Authoring agent skills",
+      "type": "capability",
+      "summary": "Creating, editing, and verifying skill definitions (SKILL.md) before deployment. Owned by writing-skills, with Anthropic's official authoring guidance as its reference layer.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/writing-skills/SKILL.md", "/Users/joshuaf/ai-os/skills/claude/writing-skills/anthropic-best-practices.md"]
+    },
+    {
+      "id": "tdd_for_documentation",
+      "label": "TDD applied to process documentation",
+      "type": "design-principle",
+      "summary": "Skill creation follows RED-GREEN-REFACTOR: run a baseline scenario without the skill, write the minimal skill addressing the observed failures, then close loopholes. The Iron Law is no skill without a failing test first.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/writing-skills/SKILL.md", "/Users/joshuaf/ai-os/skills/claude/writing-skills/testing-skills-with-subagents.md"]
+    },
+    {
+      "id": "baseline_before_authoring",
+      "label": "Establish a no-guidance baseline first",
+      "type": "constraint",
+      "summary": "Never write guidance without first observing the failure it is meant to prevent. Anthropic's evaluation-driven development and writing-skills' RED phase both mandate measuring the agent without the skill before writing it.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/writing-skills/SKILL.md", "/Users/joshuaf/ai-os/skills/claude/writing-skills/anthropic-best-practices.md", "/Users/joshuaf/ai-os/skills/claude/writing-skills/testing-skills-with-subagents.md"]
+    },
+    {
+      "id": "pressure_scenario_testing",
+      "label": "Pressure-scenario subagent testing",
+      "type": "technique",
+      "summary": "Test a discipline skill by giving a fresh subagent a realistic task combining 3+ pressures (time, sunk cost, authority, exhaustion) and forcing an explicit A/B/C choice, then capturing rationalizations verbatim.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/writing-skills/testing-skills-with-subagents.md", "/Users/joshuaf/ai-os/skills/claude/writing-skills/examples/CLAUDE_MD_TESTING.md"]
+    },
+    {
+      "id": "micro_test_wording",
+      "label": "Micro-test wording against a control",
+      "type": "technique",
+      "summary": "Before full pressure scenarios, verify guidance wording with 5+ fresh-context samples per variant plus a no-guidance control, reading every flagged match manually. Variance across reps is itself a metric of non-binding wording.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/writing-skills/SKILL.md"]
+    },
+    {
+      "id": "rationalization_bulletproofing",
+      "label": "Bulletproofing against rationalization",
+      "type": "technique",
+      "summary": "Close loopholes explicitly, add a foundational 'violating the letter is violating the spirit' principle, build a rationalization table from baseline testing, and publish a red-flags self-check list.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/writing-skills/SKILL.md", "/Users/joshuaf/ai-os/skills/claude/writing-skills/testing-skills-with-subagents.md"]
+    },
+    {
+      "id": "match_form_to_failure",
+      "label": "Match guidance form to failure type",
+      "type": "design-principle",
+      "summary": "Prohibitions bulletproof discipline failures but measurably backfire on output-shaping failures, where a positive recipe or contract wins. Omissions want a structural REQUIRED slot; conditional behavior wants an observable predicate.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/writing-skills/SKILL.md"]
+    },
+    {
+      "id": "prohibition_backfire",
+      "label": "Prohibition backfires on shaping problems",
+      "type": "failure-mode",
+      "summary": "Under a competing incentive, agents negotiate with 'don't X'. Head-to-head tests showed the prohibition arm produced more unwanted content than the recipe arm and trended worse than the no-guidance control. Nuance and exemption clauses reopen the negotiation.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/writing-skills/SKILL.md"]
+    },
+    {
+      "id": "persuasion_principles",
+      "label": "Persuasion principles for compliance",
+      "type": "technique",
+      "summary": "Authority, commitment, scarcity, social proof, and unity raise agent compliance (Cialdini 2021; Meincke et al. 2025, 33% to 72%). Liking and reciprocity are avoided because they create sycophancy.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/writing-skills/persuasion-principles.md"]
+    },
+    {
+      "id": "skill_discovery_optimization",
+      "label": "Skill discovery optimization",
+      "type": "design-principle",
+      "summary": "Descriptions are the only metadata preloaded, so they must be third-person, start with 'Use when', carry searchable symptoms and keywords, and be discoverable among 100+ skills.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/writing-skills/SKILL.md", "/Users/joshuaf/ai-os/skills/claude/writing-skills/anthropic-best-practices.md"]
+    },
+    {
+      "id": "description_workflow_shortcut",
+      "label": "Description that summarizes workflow becomes a shortcut",
+      "type": "failure-mode",
+      "summary": "When a description summarizes the skill's process, agents follow the description and skip the body. A description mentioning 'code review between tasks' caused one review where the flowchart mandated two.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/writing-skills/SKILL.md"]
+    },
+    {
+      "id": "progressive_disclosure",
+      "label": "Progressive disclosure / token economy",
+      "type": "design-principle",
+      "summary": "SKILL.md is a table of contents: keep it under ~500 lines, push heavy reference into one-level-deep files, and let scripts execute without loading into context. Deeply nested references get partially read.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/writing-skills/anthropic-best-practices.md", "/Users/joshuaf/ai-os/skills/claude/writing-skills/SKILL.md"]
+    },
+    {
+      "id": "degrees_of_freedom",
+      "label": "Set degrees of freedom to task fragility",
+      "type": "design-principle",
+      "summary": "High freedom (prose) when many approaches are valid; low freedom (an exact script, no flags) when operations are fragile and a specific sequence must hold. The narrow-bridge vs open-field heuristic.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/writing-skills/anthropic-best-practices.md"]
+    },
+    {
+      "id": "validation_feedback_loop",
+      "label": "Validate-then-proceed feedback loop",
+      "type": "workflow-stage",
+      "summary": "Run a validator, fix errors, repeat, and only proceed when it passes. Works with a script validator or a style-guide checklist; the plan-validate-execute variant adds a machine-checkable intermediate plan file.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/writing-skills/anthropic-best-practices.md"]
+    },
+    {
+      "id": "subagent_delegated_execution",
+      "label": "Subagent-driven plan execution",
+      "type": "capability",
+      "summary": "Execute an implementation plan by dispatching a fresh implementer subagent per task, a task review after each, and a broad whole-branch review at the end, continuously and without human check-ins between tasks.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/subagent-driven-development/SKILL.md"]
+    },
+    {
+      "id": "fresh_context_per_task",
+      "label": "Fresh isolated context per delegated task",
+      "type": "design-principle",
+      "summary": "A subagent never inherits the session's history; the controller constructs exactly the task, the interfaces it touches, and the global constraints. One real dispatch hit 42k chars of which 99% was pasted history.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/subagent-driven-development/SKILL.md", "/Users/joshuaf/ai-os/skills/claude/subagent-driven-development/implementer-prompt.md"]
+    },
+    {
+      "id": "file_handoff_over_paste",
+      "label": "Hand artifacts over as files, not pasted text",
+      "type": "technique",
+      "summary": "Task briefs, implementer reports, and review packages move as uniquely named files whose paths appear in the prompt, so bulk content never enters the controller's context and is not re-read every turn.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/subagent-driven-development/SKILL.md", "/Users/joshuaf/ai-os/skills/claude/subagent-driven-development/task-reviewer-prompt.md"]
+    },
+    {
+      "id": "durable_progress_ledger",
+      "label": "Durable progress ledger",
+      "type": "artifact-produced",
+      "summary": "A git-ignored progress.md recording 'Task N: complete (commits base..head, review clean)'. Conversation memory does not survive compaction; controllers that lost their place re-dispatched whole completed sequences.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/subagent-driven-development/SKILL.md"]
+    },
+    {
+      "id": "context_loss_redispatch",
+      "label": "Post-compaction re-dispatch of completed work",
+      "type": "failure-mode",
+      "summary": "After autocompaction a controller forgets which tasks it finished and re-runs them. Named the single most expensive failure observed; the ledger plus git log is the recovery map.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/subagent-driven-development/SKILL.md"]
+    },
+    {
+      "id": "model_tiering_by_task",
+      "label": "Model selection by task complexity",
+      "type": "technique",
+      "summary": "Use the least powerful model that can do each role, always specified explicitly since an omitted model inherits the session's most expensive one. Turn count beats token price, so mid-tier is the floor for reviewers.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/subagent-driven-development/SKILL.md", "/Users/joshuaf/ai-os/skills/claude/subagent-driven-development/implementer-prompt.md", "/Users/joshuaf/ai-os/skills/claude/subagent-driven-development/task-reviewer-prompt.md"]
+    },
+    {
+      "id": "implementer_status_contract",
+      "label": "Implementer status contract",
+      "type": "constraint",
+      "summary": "Implementers report exactly DONE, DONE_WITH_CONCERNS, BLOCKED, or NEEDS_CONTEXT, under 15 lines, with detail in a report file. Escalation is always allowed; never force the same model to retry unchanged.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/subagent-driven-development/implementer-prompt.md", "/Users/joshuaf/ai-os/skills/claude/subagent-driven-development/SKILL.md"]
+    },
+    {
+      "id": "adversarial_verification_before_shipping",
+      "label": "Adversarial verification before shipping",
+      "type": "design-principle",
+      "summary": "Nothing ships on the producer's own say-so. A separate reviewer (subagent, a different model, or Claude reading Codex's diff) attacks the artifact, and the producer's stated rationale never downgrades a finding.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/subagent-driven-development/task-reviewer-prompt.md", "/Users/joshuaf/ai-os/skills/claude/grill-me-codex/SKILL.md", "/Users/joshuaf/ai-os/skills/claude/codex-build/SKILL.md", "/Users/joshuaf/ai-os/skills/claude/subagent-driven-development/SKILL.md"]
+    },
+    {
+      "id": "dual_verdict_review",
+      "label": "Dual-verdict task review (spec + quality)",
+      "type": "workflow-stage",
+      "summary": "One reviewer reads the task's diff once and returns two required verdicts: spec compliance (missing / extra / misunderstood, with a warn tier for what the diff cannot show) and code quality graded Critical / Important / Minor.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/subagent-driven-development/task-reviewer-prompt.md", "/Users/joshuaf/ai-os/skills/claude/subagent-driven-development/SKILL.md"]
+    },
+    {
+      "id": "do_not_prejudge_reviewer",
+      "label": "Never pre-judge findings for a reviewer",
+      "type": "constraint",
+      "summary": "A dispatch must not tell a reviewer what to ignore or pre-rate a finding's severity. Phrases like 'do not flag' or 'at most Minor' mean the controller is sparing itself a review loop; plan-mandated defects are the human's call.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/subagent-driven-development/SKILL.md", "/Users/joshuaf/ai-os/skills/claude/subagent-driven-development/task-reviewer-prompt.md"]
+    },
+    {
+      "id": "distrust_the_report",
+      "label": "Treat the producer's report as unverified claims",
+      "type": "constraint",
+      "summary": "The reviewer verifies the implementer's report against the diff rather than accepting it; Claude reads Codex's full diff and runs the proof command itself rather than accepting pasted output.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/subagent-driven-development/task-reviewer-prompt.md", "/Users/joshuaf/ai-os/skills/claude/codex-build/SKILL.md"]
+    },
+    {
+      "id": "requirements_interview",
+      "label": "Relentless one-question-at-a-time interview",
+      "type": "technique",
+      "summary": "Walk every branch of the decision tree resolving dependencies in order, one question at a time, always offering a recommended answer, and exploring the codebase instead of asking whenever the answer is discoverable.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/grill-me/SKILL.md", "/Users/joshuaf/ai-os/skills/claude/grill-me-codex/SKILL.md"]
+    },
+    {
+      "id": "grill_me_capability",
+      "label": "grill-me: interview to a durable capture file",
+      "type": "capability",
+      "summary": "Extract what is in the user's head into brainstorms/{date}-{slug}.md, checkpointing after every single answer so the file, not the agent's context, is the source of truth.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/grill-me/SKILL.md"]
+    },
+    {
+      "id": "checkpoint_to_disk",
+      "label": "Checkpoint state to disk, not context",
+      "type": "design-principle",
+      "summary": "Long sessions fill context and the agent will eventually misremember, conflate, or drop something, so durable state is written to a file after each increment rather than held in the conversation.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/grill-me/SKILL.md", "/Users/joshuaf/ai-os/skills/claude/subagent-driven-development/SKILL.md"]
+    },
+    {
+      "id": "grill_me_codex_capability",
+      "label": "grill-me-codex: two-act plan hardening",
+      "type": "capability",
+      "summary": "Act 1 grills the user until intent is locked into PLAN.md; Act 2 hands that plan to OpenAI Codex for adversarial read-only review until APPROVED or MAX_ROUNDS. Act 1 is Matt Pocock's grill-me under MIT.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/grill-me-codex/SKILL.md", "/Users/joshuaf/ai-os/skills/claude/grill-me-codex/THIRD-PARTY-NOTICES.md"]
+    },
+    {
+      "id": "cross_model_review",
+      "label": "Cross-model adversarial review",
+      "type": "technique",
+      "summary": "A different model attacks the artifact so there is no echo chamber. Codex returns exactly one VERDICT line (APPROVED or REVISE); Claude stays final arbiter, incorporating good critiques and logging rejected ones.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/grill-me-codex/SKILL.md"]
+    },
+    {
+      "id": "bounded_iteration_cap",
+      "label": "Bounded iteration with an explicit cap",
+      "type": "constraint",
+      "summary": "Review and fix loops always terminate at MAX_ROUNDS / MAX_FIX_ROUNDS. On deadlock, do not fake convergence: list unresolved points for the human. On spent fix rounds, Claude takes over rather than ping-ponging.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/grill-me-codex/SKILL.md", "/Users/joshuaf/ai-os/skills/claude/codex-build/SKILL.md"]
+    },
+    {
+      "id": "same_session_resume",
+      "label": "Resume the same Codex thread across rounds",
+      "type": "technique",
+      "summary": "Capture thread_id from the thread.started JSON line and resume it every later round so the reviewer keeps its prior critiques. A fresh exec re-reads the whole repo and discards everything settled; --last can grab the wrong thread.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/grill-me-codex/SKILL.md", "/Users/joshuaf/ai-os/skills/claude/codex-build/SKILL.md"]
+    },
+    {
+      "id": "codex_cli_dependency",
+      "label": "Codex CLI as a tool dependency",
+      "type": "tool-dependency",
+      "summary": "codex >= 0.130, authenticated via codex login, with the model left unpinned because gpt-5.x-codex variants 400 on ChatGPT-account auth. The active model is echoed to the user before spending a round.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/grill-me-codex/SKILL.md", "/Users/joshuaf/ai-os/skills/claude/codex-build/SKILL.md"]
+    },
+    {
+      "id": "codex_stdin_hang",
+      "label": "codex exec hangs without stdin EOF",
+      "type": "failure-mode",
+      "summary": "codex exec reads stdin in addition to the prompt argument, so under a non-TTY driver it blocks forever at ~0% CPU. The fix is < /dev/null (or feeding the prompt file on stdin) plus a 10-minute timeout ceiling.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/grill-me-codex/SKILL.md", "/Users/joshuaf/ai-os/skills/claude/codex-build/SKILL.md"]
+    },
+    {
+      "id": "resume_loses_sandbox",
+      "label": "Resume silently inherits the wrong sandbox",
+      "type": "failure-mode",
+      "summary": "codex exec resume rejects -s, so without an explicit sandbox_mode override it inherits config.toml and a read-only reviewer could write files; symmetrically a builder resume without the long bypass flag cannot write.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/grill-me-codex/SKILL.md", "/Users/joshuaf/ai-os/skills/claude/codex-build/SKILL.md"]
+    },
+    {
+      "id": "codex_build_capability",
+      "label": "codex-build: Codex types, Claude verifies",
+      "type": "capability",
+      "summary": "The role-flip of the review loop: Codex implements a frozen spec with full write access in a --yolo sandbox while Claude writes the spec, reads the whole diff like a contributor PR, and runs the proof.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/codex-build/SKILL.md"]
+    },
+    {
+      "id": "frozen_spec_artifact",
+      "label": "PLAN.md frozen spec",
+      "type": "artifact-produced",
+      "summary": "A locked plan with goal, numbered approach, key decisions and tradeoffs, risks, and out-of-scope bounds. It is the output of the grill and the required input to delegated implementation.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/grill-me-codex/SKILL.md", "/Users/joshuaf/ai-os/skills/claude/codex-build/SKILL.md"]
+    },
+    {
+      "id": "review_log_artifact",
+      "label": "PLAN-REVIEW-LOG.md append-only transcript",
+      "type": "artifact-produced",
+      "summary": "The deliverable that keeps the whole argument: each round's critique, Claude's response with what was rejected and why, and the Act 3 build record, so one file tells the grilled-reviewed-built-verified story.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/grill-me-codex/SKILL.md", "/Users/joshuaf/ai-os/skills/claude/codex-build/SKILL.md"]
+    },
+    {
+      "id": "no_design_by_delegation",
+      "label": "Never delegate a build without a spec",
+      "type": "constraint",
+      "summary": "Building from a rough idea is designing by delegation and fails. If writing the spec forces decisions, that is a grill, and design stays with Claude. Also excluded: ~<20-line edits where delegation overhead loses.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/codex-build/SKILL.md"]
+    },
+    {
+      "id": "clean_tree_gate",
+      "label": "Clean working tree before delegated writes",
+      "type": "trigger-condition",
+      "summary": "git status must be clean before launching a write-access agent, non-negotiable, because a dirty tree means its diff cannot be isolated or cleanly reverted.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/codex-build/SKILL.md"]
+    },
+    {
+      "id": "human_signoff_gate",
+      "label": "Human sign-off before code or commit",
+      "type": "constraint",
+      "summary": "The user enters at exactly two points and holds the final gate: no code is written during either grill act, and commits, pushes, and mutations are Claude-side only after an explicit yes.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/grill-me-codex/SKILL.md", "/Users/joshuaf/ai-os/skills/claude/codex-build/SKILL.md", "/Users/joshuaf/ai-os/skills/claude/prompt-architect-refiner/SKILL.md"]
+    },
+    {
+      "id": "approval_checkpoint_pattern",
+      "label": "Inspect, recommend, wait for approval, then execute",
+      "type": "workflow-stage",
+      "summary": "The recurring shape for anything destructive: inspect reality, summarize it, recommend options, wait for approval, execute only what was approved, report exact changes.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/prompt-architect-refiner/SKILL.md", "/Users/joshuaf/ai-os/skills/claude/setup-matt-pocock-skills/SKILL.md", "/Users/joshuaf/ai-os/skills/claude/gws-sheets-append/SKILL.md"]
+    },
+    {
+      "id": "prompt_refiner_capability",
+      "label": "prompt-architect-refiner: prompt engineering",
+      "type": "capability",
+      "summary": "Turn rough instructions into execution-ready prompts using a silent 10-part framework (role, goal, context, inputs, constraints, workflow, output, quality bar, verification, stopping rule), with per-tool modes.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/prompt-architect-refiner/SKILL.md"]
+    },
+    {
+      "id": "stopping_rule_requirement",
+      "label": "Add a stopping rule to any mutating prompt",
+      "type": "constraint",
+      "summary": "Prompts that could modify files, code, databases, or external accounts get an explicit stopping rule and approval checkpoint; destructive permissions without a checkpoint are an anti-pattern to strip out.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/prompt-architect-refiner/SKILL.md"]
+    },
+    {
+      "id": "source_of_truth_before_claims",
+      "label": "Inspect before claiming",
+      "type": "constraint",
+      "summary": "Never let an agent assert it inspected something it did not. Code prompts require repo inspection before claims; the wiki query cites pages; the QA skill explores the codebase before filing.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/prompt-architect-refiner/SKILL.md", "/Users/joshuaf/ai-os/skills/claude/second-brain-query/SKILL.md", "/Users/joshuaf/ai-os/skills/claude/qa/SKILL.md"]
+    },
+    {
+      "id": "repo_skill_configuration",
+      "label": "setup-matt-pocock-skills: per-repo skill config",
+      "type": "capability",
+      "summary": "One-time scaffold of the config the engineering skills assume: which issue tracker to use, the triage label vocabulary, and the domain doc layout, written to docs/agents/ and summarized in CLAUDE.md or AGENTS.md.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/setup-matt-pocock-skills/SKILL.md"]
+    },
+    {
+      "id": "issue_tracker_abstraction",
+      "label": "Pluggable issue-tracker backend",
+      "type": "design-principle",
+      "summary": "Skills say 'publish to the issue tracker' and a per-repo config file resolves that to gh issue create, glab issue create, or a markdown file under .scratch/<feature>/, so the skills stay backend-agnostic.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/setup-matt-pocock-skills/issue-tracker-github.md", "/Users/joshuaf/ai-os/skills/claude/setup-matt-pocock-skills/issue-tracker-gitlab.md", "/Users/joshuaf/ai-os/skills/claude/setup-matt-pocock-skills/issue-tracker-local.md", "/Users/joshuaf/ai-os/skills/claude/setup-matt-pocock-skills/SKILL.md"]
+    },
+    {
+      "id": "triage_label_vocabulary",
+      "label": "Five canonical triage roles",
+      "type": "artifact-produced",
+      "summary": "needs-triage, needs-info, ready-for-agent, ready-for-human, wontfix, mapped in a per-repo table to whatever label strings the tracker actually uses so skills apply real labels instead of creating duplicates.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/setup-matt-pocock-skills/triage-labels.md", "/Users/joshuaf/ai-os/skills/claude/setup-matt-pocock-skills/SKILL.md"]
+    },
+    {
+      "id": "domain_doc_layer",
+      "label": "CONTEXT.md + ADR domain layer",
+      "type": "artifact-produced",
+      "summary": "A glossary of the project's ubiquitous language plus dated architectural decision records, single-context at the root or multi-context via CONTEXT-MAP.md. Read before exploring; created lazily, never flagged as missing.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/setup-matt-pocock-skills/domain.md", "/Users/joshuaf/ai-os/skills/claude/setup-matt-pocock-skills/SKILL.md"]
+    },
+    {
+      "id": "use_domain_vocabulary",
+      "label": "Speak the project's domain vocabulary",
+      "type": "constraint",
+      "summary": "Issue titles, refactor proposals, hypotheses, and test names use the glossary's terms and do not drift to synonyms it avoids. A missing term is a signal: either invented language or a real gap to record.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/setup-matt-pocock-skills/domain.md", "/Users/joshuaf/ai-os/skills/claude/qa/SKILL.md"]
+    },
+    {
+      "id": "surface_contradictions_explicitly",
+      "label": "Surface conflicts instead of silently overriding",
+      "type": "design-principle",
+      "summary": "Output that contradicts an ADR says so; a plan that contradicts the review rubric goes to the human batched up front; a finding the plan mandates is reported rather than dismissed.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/setup-matt-pocock-skills/domain.md", "/Users/joshuaf/ai-os/skills/claude/subagent-driven-development/SKILL.md", "/Users/joshuaf/ai-os/skills/claude/subagent-driven-development/task-reviewer-prompt.md"]
+    },
+    {
+      "id": "qa_issue_filing_capability",
+      "label": "qa: conversational bug reporting into issues",
+      "type": "capability",
+      "summary": "An interactive session where the user describes problems, the agent lightly clarifies, explores the codebase in a background subagent for context, decides single-issue vs breakdown, and files GitHub issues.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/qa/SKILL.md"]
+    },
+    {
+      "id": "durable_issue_writing",
+      "label": "Write issues that survive refactors",
+      "type": "technique",
+      "summary": "Issue bodies describe user-facing behavior with mandatory reproduction steps and no file paths or line numbers, because those go stale. Prefer many thin, independently fixable issues over few thick ones.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/qa/SKILL.md"]
+    },
+    {
+      "id": "background_exploration_subagent",
+      "label": "Background exploration subagent",
+      "type": "technique",
+      "summary": "Kick off a read-only Explore subagent while the conversation continues, to gather domain context without spending the main session's context or blocking the user.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/qa/SKILL.md"]
+    },
+    {
+      "id": "gws_cli_dependency",
+      "label": "gws CLI as the Google Workspace surface",
+      "type": "tool-dependency",
+      "summary": "Every gws-* skill is a thin generated wrapper over `gws <service> <resource> <method>`, requires the gws binary, and defers auth, global flags, and security rules to gws-shared.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/gws-calendar/SKILL.md", "/Users/joshuaf/ai-os/skills/claude/gws-classroom/SKILL.md", "/Users/joshuaf/ai-os/skills/claude/gws-chat/SKILL.md", "/Users/joshuaf/ai-os/skills/claude/gws-docs/SKILL.md", "/Users/joshuaf/ai-os/skills/claude/gws-sheets-append/SKILL.md", "/Users/joshuaf/ai-os/skills/claude/gws-workflow-weekly-digest/SKILL.md"]
+    },
+    {
+      "id": "schema_inspection_before_call",
+      "label": "Inspect the schema before calling an API method",
+      "type": "technique",
+      "summary": "Browse with `gws <service> --help`, then run `gws schema <service>.<resource>.<method>` to learn required params, types, and defaults, and build --params and --json from that output rather than guessing.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/gws-calendar/SKILL.md", "/Users/joshuaf/ai-os/skills/claude/gws-classroom/SKILL.md", "/Users/joshuaf/ai-os/skills/claude/gws-chat/SKILL.md", "/Users/joshuaf/ai-os/skills/claude/gws-docs/SKILL.md"]
+    },
+    {
+      "id": "gws_calendar_capability",
+      "label": "gws-calendar: calendars and events",
+      "type": "capability",
+      "summary": "Manage Google Calendar v3 — calendars, calendarList, events (insert, list, move, quickAdd, watch), ACLs, freebusy, and settings — plus +insert and +agenda helper commands.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/gws-calendar/SKILL.md"]
+    },
+    {
+      "id": "gws_classroom_capability",
+      "label": "gws-classroom: classes, rosters, coursework",
+      "type": "capability",
+      "summary": "Manage Google Classroom v1 — courses and their coursework, announcements, topics, students and teachers, plus invitations, registrations, and user profiles with guardians.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/gws-classroom/SKILL.md"]
+    },
+    {
+      "id": "gws_chat_capability",
+      "label": "gws-chat: spaces and messages",
+      "type": "capability",
+      "summary": "Manage Google Chat v1 — spaces (create, setup, search, find direct messages), members, messages, space events, media upload/download, and custom emojis, with a +send helper.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/gws-chat/SKILL.md"]
+    },
+    {
+      "id": "gws_docs_capability",
+      "label": "gws-docs: read and write Google Docs",
+      "type": "capability",
+      "summary": "Google Docs v1 — create a blank document, get its latest version, and apply batchUpdate request sets that validate atomically, with a +write helper for appending text.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/gws-docs/SKILL.md"]
+    },
+    {
+      "id": "gws_sheets_append_capability",
+      "label": "gws-sheets +append: append rows",
+      "type": "capability",
+      "summary": "Append one row via --values or bulk rows via --json-values to a spreadsheet by ID. Flagged as a write command requiring user confirmation before execution.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/gws-sheets-append/SKILL.md"]
+    },
+    {
+      "id": "gws_weekly_digest_capability",
+      "label": "gws-workflow +weekly-digest",
+      "type": "capability",
+      "summary": "A read-only cross-service rollup combining this week's calendar agenda with the Gmail unread/triage count, output as json, table, yaml, or csv.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/gws-workflow-weekly-digest/SKILL.md"]
+    },
+    {
+      "id": "write_command_confirmation",
+      "label": "Confirm before executing a write command",
+      "type": "constraint",
+      "summary": "Mutating CLI commands carry an explicit caution to confirm with the user before running, distinguishing them from read-only commands that never modify data.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/gws-sheets-append/SKILL.md", "/Users/joshuaf/ai-os/skills/claude/gws-workflow-weekly-digest/SKILL.md"]
+    },
+    {
+      "id": "session_continuity_capability",
+      "label": "Session continuity across context resets",
+      "type": "capability",
+      "summary": "Carrying work across a /clear or a model switch: one side writes a handoff document, the other finds and reads the newest one and briefs from it without re-explaining.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/resume/SKILL.md", "/Users/joshuaf/ai-os/skills/codex/handoff/SKILL.md"]
+    },
+    {
+      "id": "handoff_writer",
+      "label": "codex handoff: compact a conversation",
+      "type": "capability",
+      "summary": "Summarize the current conversation into a handoff doc in the OS temp directory, including a suggested-skills section, referencing existing artifacts by path instead of duplicating them, with secrets redacted.",
+      "sources": ["/Users/joshuaf/ai-os/skills/codex/handoff/SKILL.md"]
+    },
+    {
+      "id": "resume_reader",
+      "label": "resume: pick up the newest handoff",
+      "type": "capability",
+      "summary": "Find the newest file by mtime across handoffs/ and, inside the LSATU repo, docs/agent/handoffs/ and docs/implementation-plans/, read it, cross-check the vault ledgers, then emit a four-line briefing and stop.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/resume/SKILL.md"]
+    },
+    {
+      "id": "brief_then_stop",
+      "label": "Brief and stop, do not start work",
+      "type": "constraint",
+      "summary": "Orientation skills emit a fixed short briefing (resuming from / where it left off / open thread / suggested next) and then wait for the user, rather than acting on what they read.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/resume/SKILL.md"]
+    },
+    {
+      "id": "redact_before_export",
+      "label": "Redact secrets before writing an export",
+      "type": "constraint",
+      "summary": "Handoff and export documents strip API keys, passwords, and personally identifiable information before being written out.",
+      "sources": ["/Users/joshuaf/ai-os/skills/codex/handoff/SKILL.md"]
+    },
+    {
+      "id": "wiki_query_capability",
+      "label": "second-brain-query: answer from the wiki",
+      "type": "capability",
+      "summary": "Answer questions against the knowledge base by starting at wiki/index.md, optionally searching with qmd on large wikis, following wikilinks, and citing every claim, with raw sources only as a last resort.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/second-brain-query/SKILL.md"]
+    },
+    {
+      "id": "answers_compound_back",
+      "label": "File valuable answers back as pages",
+      "type": "design-principle",
+      "summary": "When a query produces a comparison, analysis, or new connection worth keeping, offer to save it into wiki/synthesis/, index it, and log it, so explorations compound instead of evaporating.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/second-brain-query/SKILL.md"]
+    },
+    {
+      "id": "index_first_retrieval",
+      "label": "Index-first retrieval",
+      "type": "technique",
+      "summary": "Read the index to identify candidate pages before reading pages, read enough to answer thoroughly but never the whole corpus, and escalate to search tooling only past roughly 100 pages.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/second-brain-query/SKILL.md"]
+    },
+    {
+      "id": "design_extraction_capability",
+      "label": "extract-design: pull a site's design language",
+      "type": "capability",
+      "summary": "Run designlang against a URL to extract colors, typography, spacing, shadows, components, breakpoints, and animations, with WCAG scoring, optional dark mode, multi-page crawl, and site-to-site diffing.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/extract-design/SKILL.md"]
+    },
+    {
+      "id": "design_token_bundle",
+      "label": "Multi-format design token bundle",
+      "type": "artifact-produced",
+      "summary": "Eight files from one extraction: AI-optimized markdown, an HTML preview, W3C design tokens, a Tailwind config, CSS variables, Figma variables, a React theme object, and a shadcn/ui theme.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/extract-design/SKILL.md"]
+    },
+    {
+      "id": "lovable_prompt_capability",
+      "label": "lovable-prompt: paste-ready Lovable instruction",
+      "type": "capability",
+      "summary": "Produce a short fenced prompt for Lovable's chat, with a plain-text line on why it must go through Lovable and what to verify afterward. Restates any product constraint the change could violate.",
+      "sources": ["/Users/joshuaf/ai-os/skills/codex/lovable-prompt/SKILL.md"]
+    },
+    {
+      "id": "route_to_the_direct_path",
+      "label": "Exhaust the direct path before delegating",
+      "type": "design-principle",
+      "summary": "Check whether the task is reachable directly first: schema changes go through Supabase MCP, code changes through the repo, and only genuinely UI-gated platform config falls back to a Lovable prompt.",
+      "sources": ["/Users/joshuaf/ai-os/skills/codex/lovable-prompt/SKILL.md", "/Users/joshuaf/ai-os/skills/claude/codex-build/SKILL.md"]
+    },
+    {
+      "id": "terse_no_em_dash_voice",
+      "label": "Terse, no-em-dash house voice",
+      "type": "constraint",
+      "summary": "Joshua's standing style rules recur across skills: no em dashes, no padding with context the target does not need, short prompts in fenced code blocks, one task per prompt.",
+      "sources": ["/Users/joshuaf/ai-os/skills/codex/lovable-prompt/SKILL.md", "/Users/joshuaf/ai-os/skills/claude/resume/SKILL.md", "/Users/joshuaf/ai-os/skills/claude/prompt-architect-refiner/SKILL.md"]
+    },
+    {
+      "id": "notebooklm_capability",
+      "label": "notebooklm: programmatic NotebookLM",
+      "type": "capability",
+      "summary": "Full API access to Google NotebookLM including features absent from the web UI: create notebooks, add URL/YouTube/PDF/audio/video/image sources, chat with content, generate every artifact type, and download in multiple formats.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/notebooklm/SKILL.md"]
+    },
+    {
+      "id": "openai_docs_capability",
+      "label": "openai-docs: authoritative OpenAI guidance",
+      "type": "capability",
+      "summary": "Answer OpenAI product, API, and Codex questions from the developers.openai.com MCP server with citations, owning model selection, API model migration, and prompt-upgrade guidance, with browsing restricted to official domains.",
+      "sources": ["/Users/joshuaf/ai-os/skills/codex/openai-docs/SKILL.md"]
+    },
+    {
+      "id": "higgsfield_soul_capability",
+      "label": "higgsfield-soul-id: train an identity model",
+      "type": "capability",
+      "summary": "Train a Soul Character on a person's face, returning a reusable reference_id that later Higgsfield generations consume via --soul-id. One-time, paid-plan gated, with silent polling.",
+      "sources": ["/Users/joshuaf/ai-os/skills/codex/higgsfield-soul-id/SKILL.md"]
+    },
+    {
+      "id": "authoritative_source_restriction",
+      "label": "Restrict answers to authoritative sources",
+      "type": "constraint",
+      "summary": "Prefer the vendor's own docs tooling, verify the API shape against the spec, and confine any fallback browsing to official domains rather than answering from memory or open web content.",
+      "sources": ["/Users/joshuaf/ai-os/skills/codex/openai-docs/SKILL.md", "/Users/joshuaf/ai-os/skills/claude/second-brain-query/SKILL.md"]
+    },
+    {
+      "id": "preserve_explicit_user_target",
+      "label": "Preserve the user's explicitly named target",
+      "type": "constraint",
+      "summary": "When the user names a specific target (a model version to migrate to, a scoped change), keep it even if newer guidance exists; mention the alternative only as optional. Mirrors 'preserve the user's actual intent' in prompt refinement.",
+      "sources": ["/Users/joshuaf/ai-os/skills/codex/openai-docs/SKILL.md", "/Users/joshuaf/ai-os/skills/claude/prompt-architect-refiner/SKILL.md"]
+    }
+  ],
+  "edges": [
+    {"source": "skill_authoring_capability", "target": "tdd_for_documentation", "type": "depends_on", "confidence": 1.0, "evidence": "\"Writing skills IS Test-Driven Development applied to process documentation.\""},
+    {"source": "tdd_for_documentation", "target": "baseline_before_authoring", "type": "prerequisite_of", "confidence": 1.0, "evidence": "\"NO SKILL WITHOUT A FAILING TEST FIRST\" — RED phase precedes GREEN"},
+    {"source": "baseline_before_authoring", "target": "pressure_scenario_testing", "type": "chains_into", "confidence": 0.95, "evidence": "RED phase: \"Run pressure scenario with subagent WITHOUT the skill\""},
+    {"source": "pressure_scenario_testing", "target": "rationalization_bulletproofing", "type": "chains_into", "confidence": 0.95, "evidence": "\"Capture rationalizations from baseline testing... Every excuse agents make goes in the table\""},
+    {"source": "micro_test_wording", "target": "pressure_scenario_testing", "type": "prerequisite_of", "confidence": 0.9, "evidence": "\"Micro-tests verify wording; they do not replace pressure scenarios for discipline skills.\""},
+    {"source": "micro_test_wording", "target": "baseline_before_authoring", "type": "depends_on", "confidence": 0.95, "evidence": "\"Always include a no-guidance control. If the control doesn't exhibit the failure... stop\""},
+    {"source": "match_form_to_failure", "target": "prohibition_backfire", "type": "constrains", "confidence": 0.95, "evidence": "\"Why prohibitions backfire on shaping problems\" — the table exists to route around this"},
+    {"source": "match_form_to_failure", "target": "rationalization_bulletproofing", "type": "constrains", "confidence": 0.9, "evidence": "\"Scope: this toolkit is for discipline failures... for wrong-shaped output, prohibition-based bulletproofing backfires\""},
+    {"source": "rationalization_bulletproofing", "target": "persuasion_principles", "type": "depends_on", "confidence": 0.9, "evidence": "\"See persuasion-principles.md for research foundation (Cialdini, 2021; Meincke et al., 2025)\""},
+    {"source": "persuasion_principles", "target": "prohibition_backfire", "type": "alternative_to", "confidence": 0.6, "evidence": "INFERRED: authority/commitment framing is the discipline-side lever where prohibition wording fails on shaping"},
+    {"source": "skill_authoring_capability", "target": "skill_discovery_optimization", "type": "produces", "confidence": 0.95, "evidence": "\"Critical for discovery: Future agents need to FIND your skill\""},
+    {"source": "skill_discovery_optimization", "target": "description_workflow_shortcut", "type": "constrains", "confidence": 1.0, "evidence": "\"NEVER summarize the skill's process or workflow\" — the trap it exists to prevent"},
+    {"source": "skill_discovery_optimization", "target": "progressive_disclosure", "type": "overlaps_with", "confidence": 0.8, "evidence": "Both budget context: metadata preloaded for all skills, body loaded only on trigger"},
+    {"source": "progressive_disclosure", "target": "file_handoff_over_paste", "type": "overlaps_with", "confidence": 0.75, "evidence": "\"No context penalty for large files\" mirrors SDD's rule that artifacts move as files"},
+    {"source": "degrees_of_freedom", "target": "match_form_to_failure", "type": "overlaps_with", "confidence": 0.75, "evidence": "Both pick the guidance form from the task's failure profile; freedom-by-fragility vs form-by-failure"},
+    {"source": "validation_feedback_loop", "target": "adversarial_verification_before_shipping", "type": "specializes", "confidence": 0.7, "evidence": "INFERRED: run validator, fix, repeat is the mechanical case of verify-before-ship"},
+    {"source": "skill_authoring_capability", "target": "degrees_of_freedom", "type": "depends_on", "confidence": 0.85, "evidence": "anthropic-best-practices is named as the official guidance complementing writing-skills"},
+    {"source": "subagent_delegated_execution", "target": "fresh_context_per_task", "type": "depends_on", "confidence": 1.0, "evidence": "\"They should never inherit your session's context or history\""},
+    {"source": "subagent_delegated_execution", "target": "dual_verdict_review", "type": "chains_into", "confidence": 1.0, "evidence": "\"a task review (spec compliance + code quality) after each\""},
+    {"source": "dual_verdict_review", "target": "adversarial_verification_before_shipping", "type": "specializes", "confidence": 0.95, "evidence": "\"Let implementer self-review replace actual review\" is listed as a red flag"},
+    {"source": "dual_verdict_review", "target": "distrust_the_report", "type": "depends_on", "confidence": 1.0, "evidence": "\"Treat the implementer's report as unverified claims about the code.\""},
+    {"source": "dual_verdict_review", "target": "do_not_prejudge_reviewer", "type": "constrains", "confidence": 0.95, "evidence": "\"never instruct a reviewer to ignore or not flag a specific issue\""},
+    {"source": "subagent_delegated_execution", "target": "file_handoff_over_paste", "type": "depends_on", "confidence": 1.0, "evidence": "\"Hand artifacts over as files\" — brief, report, and review package all move by path"},
+    {"source": "subagent_delegated_execution", "target": "model_tiering_by_task", "type": "depends_on", "confidence": 0.9, "evidence": "\"Always specify the model explicitly when dispatching a subagent.\""},
+    {"source": "subagent_delegated_execution", "target": "durable_progress_ledger", "type": "produces", "confidence": 1.0, "evidence": "\"Track progress in a ledger file, not only in todos.\""},
+    {"source": "durable_progress_ledger", "target": "context_loss_redispatch", "type": "constrains", "confidence": 1.0, "evidence": "\"controllers that lost their place have re-dispatched entire completed task sequences\""},
+    {"source": "durable_progress_ledger", "target": "checkpoint_to_disk", "type": "specializes", "confidence": 0.9, "evidence": "\"Conversation memory does not survive compaction\" — same principle as grill-me's capture file"},
+    {"source": "grill_me_capability", "target": "checkpoint_to_disk", "type": "depends_on", "confidence": 1.0, "evidence": "\"The file, not your context, is the source of truth.\""},
+    {"source": "implementer_status_contract", "target": "subagent_delegated_execution", "type": "constrains", "confidence": 0.95, "evidence": "\"Implementer subagents report one of four statuses. Handle each appropriately\""},
+    {"source": "implementer_status_contract", "target": "model_tiering_by_task", "type": "chains_into", "confidence": 0.85, "evidence": "BLOCKED handling: \"If the task requires more reasoning, re-dispatch with a more capable model\""},
+    {"source": "grill_me_capability", "target": "requirements_interview", "type": "depends_on", "confidence": 1.0, "evidence": "\"Ask one question at a time... provide your recommended answer\""},
+    {"source": "grill_me_codex_capability", "target": "requirements_interview", "type": "depends_on", "confidence": 1.0, "evidence": "Act 1 is Matt Pocock's grill-me, used under MIT"},
+    {"source": "grill_me_codex_capability", "target": "grill_me_capability", "type": "specializes", "confidence": 0.95, "evidence": "\"Builds on Matt Pocock's grill-me (MIT)\" — same Act 1, plus a Codex review act"},
+    {"source": "grill_me_capability", "target": "grill_me_codex_capability", "type": "overlaps_with", "confidence": 0.9, "evidence": "Both run the identical relentless-interview act; grill-me stops at the capture file"},
+    {"source": "grill_me_codex_capability", "target": "frozen_spec_artifact", "type": "produces", "confidence": 1.0, "evidence": "\"write the agreed plan to PLAN.md\" at the end of Act 1"},
+    {"source": "grill_me_codex_capability", "target": "cross_model_review", "type": "chains_into", "confidence": 1.0, "evidence": "ACT 2 — REVIEW (Claude - Codex), \"Cross-model = no echo chamber\""},
+    {"source": "cross_model_review", "target": "adversarial_verification_before_shipping", "type": "specializes", "confidence": 0.95, "evidence": "\"You are an adversarial reviewer for an implementation plan. Be skeptical and specific\""},
+    {"source": "cross_model_review", "target": "bounded_iteration_cap", "type": "constrains", "confidence": 1.0, "evidence": "\"The loop ALWAYS terminates at MAX_ROUNDS.\""},
+    {"source": "cross_model_review", "target": "same_session_resume", "type": "depends_on", "confidence": 1.0, "evidence": "\"Rounds resume the SAME thread\" so Codex remembers its prior critiques"},
+    {"source": "same_session_resume", "target": "resume_loses_sandbox", "type": "constrains", "confidence": 1.0, "evidence": "\"resume REJECTS -s. Force read-only via -c sandbox_mode\" — the single most important safety line"},
+    {"source": "cross_model_review", "target": "codex_cli_dependency", "type": "depends_on", "confidence": 1.0, "evidence": "\"codex --version >= 0.130\"; do not pin -m"},
+    {"source": "codex_cli_dependency", "target": "codex_stdin_hang", "type": "constrains", "confidence": 1.0, "evidence": "\"< /dev/null is mandatory: codex exec reads stdin in addition to the prompt arg\""},
+    {"source": "grill_me_codex_capability", "target": "codex_build_capability", "type": "chains_into", "confidence": 1.0, "evidence": "\"ACT 3 (optional) — BUILD... invoke the codex-build skill with SPEC_FILE=PLAN.md\""},
+    {"source": "codex_build_capability", "target": "frozen_spec_artifact", "type": "consumes", "confidence": 1.0, "evidence": "\"SPEC: Read <SPEC_FILE> at the repo root. It is a frozen, already-reviewed spec.\""},
+    {"source": "codex_build_capability", "target": "cross_model_review", "type": "alternative_to", "confidence": 0.95, "evidence": "\"the exact role-flip of /codex-review\" — Codex writes, Claude critiques"},
+    {"source": "codex_build_capability", "target": "no_design_by_delegation", "type": "constrains", "confidence": 1.0, "evidence": "\"Don't build without a spec — that's designing by delegation, and it fails.\""},
+    {"source": "codex_build_capability", "target": "clean_tree_gate", "type": "depends_on", "confidence": 1.0, "evidence": "\"Dirty working tree - STOP... its diff can't be isolated or cleanly reverted\""},
+    {"source": "codex_build_capability", "target": "distrust_the_report", "type": "depends_on", "confidence": 1.0, "evidence": "\"Codex's report is advisory. Verify yourself\"; run PROOF_CMD yourself"},
+    {"source": "codex_build_capability", "target": "bounded_iteration_cap", "type": "constrains", "confidence": 1.0, "evidence": "\"After MAX_FIX_ROUNDS failed rounds: STOP delegating — Claude takes over\""},
+    {"source": "codex_build_capability", "target": "same_session_resume", "type": "depends_on", "confidence": 1.0, "evidence": "\"resume the SAME session (Codex keeps its context; cheaper and better than a fresh run)\""},
+    {"source": "codex_build_capability", "target": "codex_cli_dependency", "type": "depends_on", "confidence": 1.0, "evidence": "Same prerequisites block: codex >= 0.130, unpinned model, ChatGPT-account auth"},
+    {"source": "codex_build_capability", "target": "human_signoff_gate", "type": "constrains", "confidence": 1.0, "evidence": "\"Commit ONLY on yes — and Claude writes the commit, never Codex.\""},
+    {"source": "grill_me_codex_capability", "target": "human_signoff_gate", "type": "constrains", "confidence": 1.0, "evidence": "\"Code only after the user's final sign-off.\""},
+    {"source": "codex_build_capability", "target": "review_log_artifact", "type": "produces", "confidence": 1.0, "evidence": "\"If it exists (Act 1/2 ran), append ## Act 3 — Build; else create it.\""},
+    {"source": "grill_me_codex_capability", "target": "review_log_artifact", "type": "produces", "confidence": 1.0, "evidence": "\"LOG_FILE is the deliverable — keep the whole argument.\""},
+    {"source": "codex_build_capability", "target": "subagent_delegated_execution", "type": "alternative_to", "confidence": 0.8, "evidence": "INFERRED: both execute a locked plan by delegation — one to Codex, one to in-session subagents"},
+    {"source": "subagent_delegated_execution", "target": "frozen_spec_artifact", "type": "consumes", "confidence": 0.85, "evidence": "\"Read plan, note context and global constraints, create todos\"; writing-plans creates the plan it executes"},
+    {"source": "human_signoff_gate", "target": "approval_checkpoint_pattern", "type": "specializes", "confidence": 0.85, "evidence": "\"Wait for approval / Execute only approved changes / Report exact changes\""},
+    {"source": "prompt_refiner_capability", "target": "approval_checkpoint_pattern", "type": "produces", "confidence": 0.9, "evidence": "Cowork pattern: \"Inspect, Summarize reality, Recommend options, Wait for approval\""},
+    {"source": "prompt_refiner_capability", "target": "stopping_rule_requirement", "type": "produces", "confidence": 1.0, "evidence": "\"Add stopping rules when the task could modify files, code, databases, or external accounts.\""},
+    {"source": "stopping_rule_requirement", "target": "human_signoff_gate", "type": "overlaps_with", "confidence": 0.85, "evidence": "Both make a human the gate before any mutation"},
+    {"source": "prompt_refiner_capability", "target": "source_of_truth_before_claims", "type": "produces", "confidence": 0.95, "evidence": "\"Instructions that ask the AI to claim it inspected something it has not actually inspected\" is an anti-pattern"},
+    {"source": "prompt_refiner_capability", "target": "terse_no_em_dash_voice", "type": "constrains", "confidence": 0.9, "evidence": "\"Avoid em dashes. Avoid generic SaaS language.\" in Joshua-specific preferences"},
+    {"source": "lovable_prompt_capability", "target": "terse_no_em_dash_voice", "type": "constrains", "confidence": 1.0, "evidence": "\"cosie short promts\" — short, fenced, no padding, no em dashes"},
+    {"source": "lovable_prompt_capability", "target": "prompt_refiner_capability", "type": "specializes", "confidence": 0.75, "evidence": "INFERRED: a target-specific prompt producer where the refiner is the general one; refiner has a Lovable mode"},
+    {"source": "lovable_prompt_capability", "target": "route_to_the_direct_path", "type": "depends_on", "confidence": 1.0, "evidence": "\"Before reaching for this, check whether the task is actually reachable another way\""},
+    {"source": "route_to_the_direct_path", "target": "no_design_by_delegation", "type": "overlaps_with", "confidence": 0.7, "evidence": "INFERRED: both refuse delegation when a cheaper direct path or a missing spec makes it the wrong tool"},
+    {"source": "repo_skill_configuration", "target": "issue_tracker_abstraction", "type": "produces", "confidence": 1.0, "evidence": "Section A writes docs/agents/issue-tracker.md from the GitHub, GitLab, or local seed template"},
+    {"source": "repo_skill_configuration", "target": "triage_label_vocabulary", "type": "produces", "confidence": 1.0, "evidence": "Section B maps the five canonical roles to this repo's actual label strings"},
+    {"source": "repo_skill_configuration", "target": "domain_doc_layer", "type": "produces", "confidence": 1.0, "evidence": "Section C confirms single-context vs multi-context layout and writes docs/agents/domain.md"},
+    {"source": "repo_skill_configuration", "target": "approval_checkpoint_pattern", "type": "depends_on", "confidence": 0.9, "evidence": "\"Explore, present what you found, confirm with the user, then write.\""},
+    {"source": "domain_doc_layer", "target": "use_domain_vocabulary", "type": "constrains", "confidence": 1.0, "evidence": "\"use the term as defined in CONTEXT.md. Don't drift to synonyms the glossary explicitly avoids.\""},
+    {"source": "domain_doc_layer", "target": "surface_contradictions_explicitly", "type": "constrains", "confidence": 1.0, "evidence": "\"If your output contradicts an existing ADR, surface it explicitly rather than silently overriding\""},
+    {"source": "surface_contradictions_explicitly", "target": "do_not_prejudge_reviewer", "type": "overlaps_with", "confidence": 0.8, "evidence": "\"present the finding and the plan text, ask which governs\" — conflicts go to the human, not silently resolved"},
+    {"source": "qa_issue_filing_capability", "target": "issue_tracker_abstraction", "type": "depends_on", "confidence": 0.85, "evidence": "\"Create issues with gh issue create\" — the tracker config resolves where issues land"},
+    {"source": "qa_issue_filing_capability", "target": "durable_issue_writing", "type": "produces", "confidence": 1.0, "evidence": "\"Issues must be durable — they should still make sense after major refactors.\""},
+    {"source": "durable_issue_writing", "target": "use_domain_vocabulary", "type": "depends_on", "confidence": 1.0, "evidence": "\"Use the project's domain language (check UBIQUITOUS_LANGUAGE.md if it exists)\""},
+    {"source": "qa_issue_filing_capability", "target": "background_exploration_subagent", "type": "depends_on", "confidence": 1.0, "evidence": "\"kick off an Agent (subagent_type=Explore) in the background to understand the relevant area\""},
+    {"source": "background_exploration_subagent", "target": "fresh_context_per_task", "type": "overlaps_with", "confidence": 0.75, "evidence": "INFERRED: both delegate to an isolated subagent to protect the main session's context"},
+    {"source": "qa_issue_filing_capability", "target": "requirements_interview", "type": "alternative_to", "confidence": 0.8, "evidence": "\"Ask at most 2-3 short clarifying questions... Do NOT over-interview\" — the deliberate inverse of the grill"},
+    {"source": "qa_issue_filing_capability", "target": "triage_label_vocabulary", "type": "chains_into", "confidence": 0.6, "evidence": "INFERRED: filed issues enter the triage queue whose label roles this repo config defines"},
+    {"source": "gws_calendar_capability", "target": "gws_cli_dependency", "type": "depends_on", "confidence": 1.0, "evidence": "requires bins: gws; \"gws calendar <resource> <method>\""},
+    {"source": "gws_classroom_capability", "target": "gws_cli_dependency", "type": "depends_on", "confidence": 1.0, "evidence": "requires bins: gws; \"gws classroom <resource> <method>\""},
+    {"source": "gws_chat_capability", "target": "gws_cli_dependency", "type": "depends_on", "confidence": 1.0, "evidence": "requires bins: gws; \"gws chat <resource> <method>\""},
+    {"source": "gws_docs_capability", "target": "gws_cli_dependency", "type": "depends_on", "confidence": 1.0, "evidence": "requires bins: gws; \"gws docs <resource> <method>\""},
+    {"source": "gws_sheets_append_capability", "target": "gws_cli_dependency", "type": "depends_on", "confidence": 1.0, "evidence": "requires bins: gws; cliHelp \"gws sheets +append --help\""},
+    {"source": "gws_weekly_digest_capability", "target": "gws_cli_dependency", "type": "depends_on", "confidence": 1.0, "evidence": "requires bins: gws; cliHelp \"gws workflow +weekly-digest --help\""},
+    {"source": "gws_cli_dependency", "target": "schema_inspection_before_call", "type": "constrains", "confidence": 1.0, "evidence": "\"Before calling any API method, inspect it\" — gws schema <service>.<resource>.<method>"},
+    {"source": "schema_inspection_before_call", "target": "source_of_truth_before_claims", "type": "specializes", "confidence": 0.8, "evidence": "INFERRED: read the actual schema rather than assuming the API shape"},
+    {"source": "gws_weekly_digest_capability", "target": "gws_calendar_capability", "type": "consumes", "confidence": 0.95, "evidence": "\"Combines calendar agenda (week) with gmail triage summary.\""},
+    {"source": "gws_sheets_append_capability", "target": "write_command_confirmation", "type": "constrains", "confidence": 1.0, "evidence": "\"This is a write command — confirm with the user before executing.\""},
+    {"source": "gws_weekly_digest_capability", "target": "write_command_confirmation", "type": "alternative_to", "confidence": 0.8, "evidence": "\"Read-only — never modifies data\" — the explicit counterpart of the write-command caution"},
+    {"source": "write_command_confirmation", "target": "approval_checkpoint_pattern", "type": "specializes", "confidence": 0.85, "evidence": "Confirm-before-mutate is the CLI-level instance of the approval checkpoint"},
+    {"source": "session_continuity_capability", "target": "handoff_writer", "type": "depends_on", "confidence": 1.0, "evidence": "handoff writes the doc that resume later reads"},
+    {"source": "session_continuity_capability", "target": "resume_reader", "type": "depends_on", "confidence": 1.0, "evidence": "\"Continue from the most recent chat export or handoff doc\""},
+    {"source": "handoff_writer", "target": "resume_reader", "type": "chains_into", "confidence": 0.9, "evidence": "Writer produces the newest handoff file; resume finds the newest by mtime and reads it"},
+    {"source": "handoff_writer", "target": "redact_before_export", "type": "constrains", "confidence": 1.0, "evidence": "\"Redact any sensitive information, such as API keys, passwords, or personally identifiable information.\""},
+    {"source": "handoff_writer", "target": "file_handoff_over_paste", "type": "overlaps_with", "confidence": 0.8, "evidence": "\"Do not duplicate content already captured in other artifacts... Reference them by path or URL instead.\""},
+    {"source": "resume_reader", "target": "brief_then_stop", "type": "constrains", "confidence": 1.0, "evidence": "\"Emit this, then wait for Joshua. Do not start work.\""},
+    {"source": "resume_reader", "target": "terse_no_em_dash_voice", "type": "constrains", "confidence": 1.0, "evidence": "\"No em dashes. Terse.\""},
+    {"source": "session_continuity_capability", "target": "checkpoint_to_disk", "type": "specializes", "confidence": 0.85, "evidence": "INFERRED: a handoff doc is the session-boundary case of writing state to disk before context is lost"},
+    {"source": "session_continuity_capability", "target": "context_loss_redispatch", "type": "constrains", "confidence": 0.75, "evidence": "INFERRED: a read handoff prevents the fresh agent from redoing settled work"},
+    {"source": "wiki_query_capability", "target": "index_first_retrieval", "type": "depends_on", "confidence": 1.0, "evidence": "\"Start with the index... Read wiki/index.md to identify relevant pages\""},
+    {"source": "wiki_query_capability", "target": "answers_compound_back", "type": "produces", "confidence": 0.95, "evidence": "\"Valuable answers compound. Encourage saving good analyses back into the wiki.\""},
+    {"source": "wiki_query_capability", "target": "source_of_truth_before_claims", "type": "depends_on", "confidence": 0.9, "evidence": "\"Cite your sources. Every factual claim should link to the wiki page it came from.\""},
+    {"source": "index_first_retrieval", "target": "progressive_disclosure", "type": "overlaps_with", "confidence": 0.8, "evidence": "Both read a navigation layer first and load only the leaves the task needs"},
+    {"source": "wiki_query_capability", "target": "authoritative_source_restriction", "type": "depends_on", "confidence": 0.8, "evidence": "\"Search the wiki first. Only go to raw sources if the wiki doesn't have the answer.\""},
+    {"source": "openai_docs_capability", "target": "authoritative_source_restriction", "type": "depends_on", "confidence": 1.0, "evidence": "\"restrict fallback browsing to official OpenAI domains\""},
+    {"source": "openai_docs_capability", "target": "preserve_explicit_user_target", "type": "constrains", "confidence": 1.0, "evidence": "\"if the user names a target model like 'migrate to GPT-5.4', keep that requested target\""},
+    {"source": "preserve_explicit_user_target", "target": "prompt_refiner_capability", "type": "constrains", "confidence": 0.85, "evidence": "\"Preserve the user's actual intent\" in the enhancement rules"},
+    {"source": "design_extraction_capability", "target": "design_token_bundle", "type": "produces", "confidence": 1.0, "evidence": "\"Generates 8 output files\" — tokens, Tailwind, CSS vars, Figma, React theme, shadcn"},
+    {"source": "notebooklm_capability", "target": "wiki_query_capability", "type": "alternative_to", "confidence": 0.6, "evidence": "INFERRED: both answer questions grounded in a curated source corpus, one external and one local"},
+    {"source": "higgsfield_soul_capability", "target": "frozen_spec_artifact", "type": "alternative_to", "confidence": 0.4, "evidence": "INFERRED: both emit a reusable identifier consumed by a later stage (reference_id vs PLAN.md); weak, label-level only"},
+    {"source": "skill_authoring_capability", "target": "repo_skill_configuration", "type": "chains_into", "confidence": 0.7, "evidence": "INFERRED: authoring produces skills; the setup skill scaffolds the per-repo config they assume before first use"},
+    {"source": "tdd_for_documentation", "target": "adversarial_verification_before_shipping", "type": "overlaps_with", "confidence": 0.8, "evidence": "\"Deploying untested skills = deploying untested code\" — both refuse the author's own confidence as proof"},
+    {"source": "pressure_scenario_testing", "target": "fresh_context_per_task", "type": "depends_on", "confidence": 0.85, "evidence": "\"One fresh-context sample per call\" — the test subagent must not carry the author's context"}
+  ]
+}

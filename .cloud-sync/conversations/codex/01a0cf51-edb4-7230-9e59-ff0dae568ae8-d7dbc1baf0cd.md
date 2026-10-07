@@ -1,0 +1,607 @@
+# Codex conversation 01a0cf51-edb4-7230-9e59-ff0dae568ae8
+
+## developer
+
+<skills_instructions>
+## Skills
+A skill is a set of local instructions to follow that is stored in a `SKILL.md` file. Below is the list of skills that can be used. Each entry includes a name, description, and a short path that can be expanded into an absolute path using the skill roots table.
+### Skill roots
+- `r0` = `C:/Users/Joshu/.codex/skills`
+- `r1` = `C:/Users/Joshu/.agents/skills`
+- `r2` = `C:/Users/Joshu/.codex/skills/.system`
+- `r3` = `C:/Users/Joshu/.codex/plugins/cache/claude-cowork/anthropic-skills/1.0.0/skills`
+- `r4` = `C:/Users/Joshu/.codex/plugins/cache/claude-cowork/cowork-plugin-management/0.2.2/skills`
+- `r5` = `C:/Users/Joshu/.codex/plugins/cache/claude-cowork/design/1.2.0/skills`
+- `r6` = `C:/Users/Joshu/.codex/plugins/cache/claude-cowork/desktop-commander/0.2.0/skills`
+- `r7` = `C:/Users/Joshu/.codex/plugins/cache/claude-cowork`
+- `r8` = `C:/Users/Joshu/.codex/plugins/cache/claude-cowork/productivity/1.3.1/skills`
+- `r9` = `C:/Users/Joshu/.codex/plugins/cache/openai-bundled`
+- `r10` = `C:/Users/Joshu/.codex/plugins/cache/openai-curated-remote/build-macos-apps/0.1.4/skills`
+- `r11` = `C:/Users/Joshu/.codex/plugins/cache/openai-curated-remote/codex-security/0.1.24/skills`
+- `r12` = `C:/Users/Joshu/.codex/plugins/cache/openai-curated-remote/google-drive/0.1.16/skills`
+- `r13` = `C:/Users/Joshu/.codex/plugins/cache/openai-curated-remote/netlify/1.0.0/skills`
+- `r14` = `C:/Users/Joshu/.codex/plugins/cache/openai-curated-remote/openai-developers/1.3.0/skills`
+- `r15` = `C:/Users/Joshu/.codex/plugins/cache/openai-curated-remote`
+- `r16` = `C:/Users/Joshu/.codex/plugins/cache/openai-curated-remote/stripe/7.0.0/skills`
+- `r17` = `C:/Users/Joshu/.codex/plugins/cache/openai-primary-runtime`
+- `r18` = `C:/Users/Joshu/.codex/plugins/cache/openai-primary-runtime/spreadsheets/26.921.11914/skills`
+- `r19` = `C:/Users/Joshu/dev/ai-os/.agents/skills`
+### Available skills
+- imagegen: (file: r2/imagegen/SKILL.md)
+- openai-docs: (file: r2/openai-docs/SKILL.md)
+- plugin-creator: (file: r2/plugin-creator/SKILL.md)
+- skill-creator: (file: r2/skill-creator/SKILL.md)
+- skill-installer: (file: r2/skill-installer/SKILL.md)
+- accommodations-email: (file: r19/accommodations-email/SKILL.md)
+- domain-modeling: (file: r19/domain-modeling/SKILL.md)
+- grilling: (file: r19/grilling/SKILL.md)
+- gws-gmail: (file: r19/gws-gmail/SKILL.md)
+- gws-gmail-read: (file: r19/gws-gmail-read/SKILL.md)
+- gws-gmail-triage: (file: r19/gws-gmail-triage/SKILL.md)
+- gws-shared: (file: r19/gws-shared/SKILL.md)
+- kling-cli: (file: r19/kling-cli/SKILL.md)
+- pre-consultation-check-in: (file: r19/pre-consultation-check-in/SKILL.md)
+- session-recap: (file: r19/session-recap/SKILL.md)
+- superwhisper: (file: r19/superwhisper/SKILL.md)
+- Codex-api: (file: r1/claude-api/SKILL.md)
+- academy-guide: (file: r1/academy-guide/SKILL.md)
+- accommodations-email: (file: r1/accommodations-email/SKILL.md)
+- algorithmic-art: (file: r1/algorithmic-art/SKILL.md)
+- anthropic-skills:browser: (file: r3/browser/SKILL.md)
+- anthropic-skills:chat-export: (file: r3/chat-export/SKILL.md)
+- anthropic-skills:consolidate-memory: (file: r3/consolidate-memory/SKILL.md)
+- anthropic-skills:consultation-email-assistant: (file: r3/consultation-email-assistant/SKILL.md)
+- anthropic-skills:doc-coauthoring: (file: r3/doc-coauthoring/SKILL.md)
+- anthropic-skills:docx: (file: r3/docx/SKILL.md)
+- anthropic-skills:explain-usage: (file: r3/explain-usage/SKILL.md)
+- anthropic-skills:facebook-consultation-requests: (file: r3/facebook-consultation-requests/SKILL.md)
+- anthropic-skills:find-skills: (file: r3/find-skills/SKILL.md)
+- anthropic-skills:frontend-design: (file: r3/frontend-design/SKILL.md)
+- anthropic-skills:graphify: (file: r3/graphify/SKILL.md)
+- anthropic-skills:grill-me: (file: r3/grill-me/SKILL.md)
+- anthropic-skills:gws-gmail-read: (file: r3/gws-gmail-read/SKILL.md)
+- anthropic-skills:gws-gmail-triage: (file: r3/gws-gmail-triage/SKILL.md)
+- anthropic-skills:import-memory: (file: r3/import-memory/SKILL.md)
+- anthropic-skills:internal-comms: (file: r3/internal-comms/SKILL.md)
+- anthropic-skills:lsat-drill-builder: (file: r3/lsat-drill-builder/SKILL.md)
+- anthropic-skills:lsat-lab-question-features: (file: r3/lsat-lab-question-features/SKILL.md)
+- anthropic-skills:lsat-lab-set-builder: (file: r3/lsat-lab-set-builder/SKILL.md)
+- anthropic-skills:lsat-u-voice: (file: r3/lsat-u-voice/SKILL.md)
+- anthropic-skills:mcp-builder: (file: r3/mcp-builder/SKILL.md)
+- anthropic-skills:morning: (file: r3/morning/SKILL.md)
+- anthropic-skills:notebooklm: (file: r3/notebooklm/SKILL.md)
+- anthropic-skills:pdf: (file: r3/pdf/SKILL.md)
+- anthropic-skills:pptx: (file: r3/pptx/SKILL.md)
+- anthropic-skills:schedule: (file: r3/schedule/SKILL.md)
+- anthropic-skills:setup-claude: (file: r3/setup-claude/SKILL.md)
+- anthropic-skills:setup-cowork: (file: r3/setup-cowork/SKILL.md)
+- anthropic-skills:site-teardown: (file: r3/site-teardown/SKILL.md)
+- anthropic-skills:skill-creator: (file: r3/skill-creator/SKILL.md)
+- anthropic-skills:web-artifacts-builder: (file: r3/web-artifacts-builder/SKILL.md)
+- anthropic-skills:webapp-testing: (file: r3/webapp-testing/SKILL.md)
+- anthropic-skills:xlsx: (file: r3/xlsx/SKILL.md)
+- assign-lsatu-work: (file: r1/assign-lsatu-work/SKILL.md)
+- audit: (file: r1/audit/SKILL.md)
+- audit: (file: r0/audit/SKILL.md)
+- booking-link: (file: r1/booking-link/SKILL.md)
+- bootcamp-builder: (file: r1/bootcamp-builder/SKILL.md)
+- bootcamp-parity-audit: (file: r1/bootcamp-parity-audit/SKILL.md)
+- brainstorming: (file: r1/brainstorming/SKILL.md)
+- brainstorming: (file: r0/brainstorming/SKILL.md)
+- brand-guidelines: (file: r1/brand-guidelines/SKILL.md)
+- browser-harness: (file: r1/browser-harness/SKILL.md)
+- build-macos-apps:appkit-interop: (file: r10/appkit-interop/SKILL.md)
+- build-macos-apps:build-run-debug: (file: r10/build-run-debug/SKILL.md)
+- build-macos-apps:liquid-glass: (file: r10/liquid-glass/SKILL.md)
+- build-macos-apps:packaging-notarization: (file: r10/packaging-notarization/SKILL.md)
+- build-macos-apps:signing-entitlements: (file: r10/signing-entitlements/SKILL.md)
+- build-macos-apps:swiftpm-macos: (file: r10/swiftpm-macos/SKILL.md)
+- build-macos-apps:swiftui-patterns: (file: r10/swiftui-patterns/SKILL.md)
+- build-macos-apps:telemetry: (file: r10/telemetry/SKILL.md)
+- build-macos-apps:test-triage: (file: r10/test-triage/SKILL.md)
+- build-macos-apps:view-refactor: (file: r10/view-refactor/SKILL.md)
+- build-macos-apps:window-management: (file: r10/window-management/SKILL.md)
+- canvas-design: (file: r1/canvas-design/SKILL.md)
+- chat-export: (file: r1/chat-export/SKILL.md)
+- chat-export: (file: r0/chat-export/SKILL.md)
+- code-review: (file: r1/code-review/SKILL.md)
+- codebase-design: (file: r1/codebase-design/SKILL.md)
+- codex-build: (file: r1/codex-build/SKILL.md)
+- codex-review: (file: r1/codex-review/SKILL.md)
+- codex-security:assess-patch-risk: (file: r11/assess-patch-risk/SKILL.md)
+- codex-security:attack-path-analysis: (file: r11/attack-path-analysis/SKILL.md)
+- codex-security:deep-security-scan: (file: r11/deep-security-scan/SKILL.md)
+- codex-security:define-security-policy: (file: r11/define-security-policy/SKILL.md)
+- codex-security:finding-discovery: (file: r11/finding-discovery/SKILL.md)
+- codex-security:fix-finding: (file: r11/fix-finding/SKILL.md)
+- codex-security:propose-security-hardening: (file: r11/propose-security-hardening/SKILL.md)
+- codex-security:security-diff-scan: (file: r11/security-diff-scan/SKILL.md)
+- codex-security:security-scan: (file: r11/security-scan/SKILL.md)
+- codex-security:threat-model: (file: r11/threat-model/SKILL.md)
+- codex-security:track-findings: (file: r11/track-findings/SKILL.md)
+- codex-security:triage-finding: (file: r11/triage-finding/SKILL.md)
+- codex-security:validation: (file: r11/validation/SKILL.md)
+- codex-security:verify-fix: (file: r11/verify-fix/SKILL.md)
+- codex-security:vulnerability-writeup: (file: r11/vulnerability-writeup/SKILL.md)
+- computer-use:computer-use: (file: r9/computer-use/26.917.51856/skills/computer-use/SKILL.md)
+- consultation-followup-drafts: (file: r1/consultation-followup-drafts/SKILL.md)
+- consultation-followup-drafts: (file: r0/consultation-followup-drafts/SKILL.md)
+- consultation-inquiry-drafts: (file: r1/consultation-inquiry-drafts/SKILL.md)
+- consultation-inquiry-drafts: (file: r0/consultation-inquiry-drafts/SKILL.md)
+- cowork-plugin-management:cowork-plugin-customizer: (file: r4/cowork-plugin-customizer/SKILL.md)
+- cowork-plugin-management:create-cowork-plugin: (file: r4/create-cowork-plugin/SKILL.md)
+- decision-mapping: (file: r1/decision-mapping/SKILL.md)
+- decision-mapping: (file: r0/decision-mapping/SKILL.md)
+- defuddle: (file: r1/defuddle/SKILL.md)
+- defuddle: (file: r0/defuddle/SKILL.md)
+- design-an-interface: (file: r1/design-an-interface/SKILL.md)
+- design-an-interface: (file: r0/design-an-interface/SKILL.md)
+- design-taste-frontend: (file: r1/design-taste-frontend/SKILL.md)
+- design-taste-frontend: (file: r0/design-taste-frontend/SKILL.md)
+- design:accessibility-review: (file: r5/accessibility-review/SKILL.md)
+- design:design-critique: (file: r5/design-critique/SKILL.md)
+- design:design-handoff: (file: r5/design-handoff/SKILL.md)
+- design:design-system: (file: r5/design-system/SKILL.md)
+- design:research-synthesis: (file: r5/research-synthesis/SKILL.md)
+- design:user-research: (file: r5/user-research/SKILL.md)
+- design:ux-copy: (file: r5/ux-copy/SKILL.md)
+- desktop-commander:ai-tools-setup: (file: r6/ai-tools-setup/SKILL.md)
+- desktop-commander:computer-health-check: (file: r6/computer-health-check/SKILL.md)
+- desktop-commander:desktop-commander-overview: (file: r6/desktop-commander-overview/SKILL.md)
+- desktop-commander:knowledge-base: (file: r6/knowledge-base/SKILL.md)
+- desktop-commander:obsidian-vault: (file: r6/obsidian-vault/SKILL.md)
+- desktop-commander:terminal: (file: r6/terminal/SKILL.md)
+- diagnosing-bugs: (file: r1/diagnosing-bugs/SKILL.md)
+- discernment-nudge: (file: r1/discernment-nudge/SKILL.md)
+- dispatching-parallel-agents: (file: r1/dispatching-parallel-agents/SKILL.md)
+- dispatching-parallel-agents: (file: r0/dispatching-parallel-agents/SKILL.md)
+- doc-coauthoring: (file: r1/doc-coauthoring/SKILL.md)
+- documents:documents: (file: r17/documents/26.921.11914/skills/documents/SKILL.md)
+- docx: (file: r1/docx/SKILL.md)
+- domain-modeling: (file: r1/domain-modeling/SKILL.md)
+- edit-article: (file: r1/edit-article/SKILL.md)
+- edit-article: (file: r0/edit-article/SKILL.md)
+- emil-design-eng: (file: r1/emil-design-eng/SKILL.md)
+- emil-design-eng: (file: r0/emil-design-eng/SKILL.md)
+- executing-plans: (file: r1/executing-plans/SKILL.md)
+- executing-plans: (file: r0/executing-plans/SKILL.md)
+- extract-design: (file: r1/extract-design/SKILL.md)
+- extract-design: (file: r0/extract-design/SKILL.md)
+- find-skills: (file: r1/find-skills/SKILL.md)
+- find-skills: (file: r0/find-skills/SKILL.md)
+- finishing-a-development-branch: (file: r1/finishing-a-development-branch/SKILL.md)
+- finishing-a-development-branch: (file: r0/finishing-a-development-branch/SKILL.md)
+- firecrawl: (file: r1/firecrawl/SKILL.md)
+- firecrawl: (file: r0/firecrawl/SKILL.md)
+- firecrawl-agent: (file: r1/firecrawl-agent/SKILL.md)
+- firecrawl-agent: (file: r0/firecrawl-agent/SKILL.md)
+- firecrawl-company-directories: (file: r1/firecrawl-company-directories/SKILL.md)
+- firecrawl-company-directories: (file: r0/firecrawl-company-directories/SKILL.md)
+- firecrawl-competitive-intel: (file: r1/firecrawl-competitive-intel/SKILL.md)
+- firecrawl-competitive-intel: (file: r0/firecrawl-competitive-intel/SKILL.md)
+- firecrawl-crawl: (file: r1/firecrawl-crawl/SKILL.md)
+- firecrawl-crawl: (file: r0/firecrawl-crawl/SKILL.md)
+- firecrawl-dashboard-reporting: (file: r1/firecrawl-dashboard-reporting/SKILL.md)
+- firecrawl-dashboard-reporting: (file: r0/firecrawl-dashboard-reporting/SKILL.md)
+- firecrawl-deep-research: (file: r1/firecrawl-deep-research/SKILL.md)
+- firecrawl-deep-research: (file: r0/firecrawl-deep-research/SKILL.md)
+- firecrawl-demo-walkthrough: (file: r1/firecrawl-demo-walkthrough/SKILL.md)
+- firecrawl-demo-walkthrough: (file: r0/firecrawl-demo-walkthrough/SKILL.md)
+- firecrawl-developer-index: (file: r1/firecrawl-developer-index/SKILL.md)
+- firecrawl-developer-index: (file: r0/firecrawl-developer-index/SKILL.md)
+- firecrawl-download: (file: r1/firecrawl-download/SKILL.md)
+- firecrawl-download: (file: r0/firecrawl-download/SKILL.md)
+- firecrawl-interact: (file: r1/firecrawl-interact/SKILL.md)
+- firecrawl-interact: (file: r0/firecrawl-interact/SKILL.md)
+- firecrawl-knowledge-base: (file: r1/firecrawl-knowledge-base/SKILL.md)
+- firecrawl-knowledge-base: (file: r0/firecrawl-knowledge-base/SKILL.md)
+- firecrawl-knowledge-ingest: (file: r1/firecrawl-knowledge-ingest/SKILL.md)
+- firecrawl-knowledge-ingest: (file: r0/firecrawl-knowledge-ingest/SKILL.md)
+- firecrawl-lead-gen: (file: r1/firecrawl-lead-gen/SKILL.md)
+- firecrawl-lead-gen: (file: r0/firecrawl-lead-gen/SKILL.md)
+- firecrawl-lead-research: (file: r1/firecrawl-lead-research/SKILL.md)
+- firecrawl-lead-research: (file: r0/firecrawl-lead-research/SKILL.md)
+- firecrawl-map: (file: r1/firecrawl-map/SKILL.md)
+- firecrawl-map: (file: r0/firecrawl-map/SKILL.md)
+- firecrawl-market-research: (file: r1/firecrawl-market-research/SKILL.md)
+- firecrawl-market-research: (file: r0/firecrawl-market-research/SKILL.md)
+- firecrawl-monitor: (file: r1/firecrawl-monitor/SKILL.md)
+- firecrawl-monitor: (file: r0/firecrawl-monitor/SKILL.md)
+- firecrawl-parse: (file: r1/firecrawl-parse/SKILL.md)
+- firecrawl-parse: (file: r0/firecrawl-parse/SKILL.md)
+- firecrawl-qa: (file: r1/firecrawl-qa/SKILL.md)
+- firecrawl-qa: (file: r0/firecrawl-qa/SKILL.md)
+- firecrawl-research-index: (file: r1/firecrawl-research-index/SKILL.md)
+- firecrawl-research-index: (file: r0/firecrawl-research-index/SKILL.md)
+- firecrawl-research-papers: (file: r1/firecrawl-research-papers/SKILL.md)
+- firecrawl-research-papers: (file: r0/firecrawl-research-papers/SKILL.md)
+- firecrawl-scrape: (file: r1/firecrawl-scrape/SKILL.md)
+- firecrawl-scrape: (file: r0/firecrawl-scrape/SKILL.md)
+- firecrawl-search: (file: r1/firecrawl-search/SKILL.md)
+- firecrawl-search: (file: r0/firecrawl-search/SKILL.md)
+- firecrawl-seo-audit: (file: r1/firecrawl-seo-audit/SKILL.md)
+- firecrawl-seo-audit: (file: r0/firecrawl-seo-audit/SKILL.md)
+- firecrawl-shop: (file: r1/firecrawl-shop/SKILL.md)
+- firecrawl-shop: (file: r0/firecrawl-shop/SKILL.md)
+- firecrawl-website-design-clone: (file: r1/firecrawl-website-design-clone/SKILL.md)
+- firecrawl-website-design-clone: (file: r0/firecrawl-website-design-clone/SKILL.md)
+- firecrawl-workflows: (file: r1/firecrawl-workflows/SKILL.md)
+- firecrawl-workflows: (file: r0/firecrawl-workflows/SKILL.md)
+- frontend-design: (file: r1/frontend-design/SKILL.md)
+- frontend-design: (file: r0/frontend-design/SKILL.md)
+- git-guardrails-claude-code: (file: r1/git-guardrails-claude-code/SKILL.md)
+- google-drive:google-docs: (file: r12/google-docs/SKILL.md)
+- google-drive:google-drive: (file: r12/google-drive/SKILL.md)
+- google-drive:google-drive-comments: (file: r12/google-drive-comments/SKILL.md)
+- google-drive:google-sheets: (file: r12/google-sheets/SKILL.md)
+- google-drive:google-slides: (file: r12/google-slides/SKILL.md)
+- graphify: (file: r1/graphify/SKILL.md)
+- graphify: (file: r0/graphify/SKILL.md)
+- grilling: (file: r1/grilling/SKILL.md)
+- guided-drill-assignment: (file: r1/guided-drill-assignment/SKILL.md)
+- guided-drill-assignment: (file: r0/guided-drill-assignment/SKILL.md)
+- gws-admin-reports: (file: r1/gws-admin-reports/SKILL.md)
+- gws-admin-reports: (file: r0/gws-admin-reports/SKILL.md)
+- gws-calendar: (file: r1/gws-calendar/SKILL.md)
+- gws-calendar: (file: r0/gws-calendar/SKILL.md)
+- gws-calendar-agenda: (file: r1/gws-calendar-agenda/SKILL.md)
+- gws-calendar-agenda: (file: r0/gws-calendar-agenda/SKILL.md)
+- gws-calendar-insert: (file: r1/gws-calendar-insert/SKILL.md)
+- gws-calendar-insert: (file: r0/gws-calendar-insert/SKILL.md)
+- gws-chat: (file: r1/gws-chat/SKILL.md)
+- gws-chat: (file: r0/gws-chat/SKILL.md)
+- gws-chat-send: (file: r1/gws-chat-send/SKILL.md)
+- gws-chat-send: (file: r0/gws-chat-send/SKILL.md)
+- gws-classroom: (file: r1/gws-classroom/SKILL.md)
+- gws-classroom: (file: r0/gws-classroom/SKILL.md)
+- gws-docs: (file: r1/gws-docs/SKILL.md)
+- gws-docs: (file: r0/gws-docs/SKILL.md)
+- gws-docs-write: (file: r1/gws-docs-write/SKILL.md)
+- gws-docs-write: (file: r0/gws-docs-write/SKILL.md)
+- gws-drive: (file: r1/gws-drive/SKILL.md)
+- gws-drive: (file: r0/gws-drive/SKILL.md)
+- gws-drive-upload: (file: r1/gws-drive-upload/SKILL.md)
+- gws-drive-upload: (file: r0/gws-drive-upload/SKILL.md)
+- gws-events: (file: r1/gws-events/SKILL.md)
+- gws-events: (file: r0/gws-events/SKILL.md)
+- gws-events-renew: (file: r1/gws-events-renew/SKILL.md)
+- gws-events-renew: (file: r0/gws-events-renew/SKILL.md)
+- gws-events-subscribe: (file: r1/gws-events-subscribe/SKILL.md)
+- gws-events-subscribe: (file: r0/gws-events-subscribe/SKILL.md)
+- gws-forms: (file: r1/gws-forms/SKILL.md)
+- gws-forms: (file: r0/gws-forms/SKILL.md)
+- gws-gmail: (file: r1/gws-gmail/SKILL.md)
+- gws-gmail: (file: r0/gws-gmail/SKILL.md)
+- gws-gmail-forward: (file: r1/gws-gmail-forward/SKILL.md)
+- gws-gmail-forward: (file: r0/gws-gmail-forward/SKILL.md)
+- gws-gmail-read: (file: r1/gws-gmail-read/SKILL.md)
+- gws-gmail-read: (file: r0/gws-gmail-read/SKILL.md)
+- gws-gmail-reply: (file: r1/gws-gmail-reply/SKILL.md)
+- gws-gmail-reply: (file: r0/gws-gmail-reply/SKILL.md)
+- gws-gmail-reply-all: (file: r1/gws-gmail-reply-all/SKILL.md)
+- gws-gmail-reply-all: (file: r0/gws-gmail-reply-all/SKILL.md)
+- gws-gmail-send: (file: r1/gws-gmail-send/SKILL.md)
+- gws-gmail-send: (file: r0/gws-gmail-send/SKILL.md)
+- gws-gmail-triage: (file: r1/gws-gmail-triage/SKILL.md)
+- gws-gmail-triage: (file: r0/gws-gmail-triage/SKILL.md)
+- gws-gmail-watch: (file: r1/gws-gmail-watch/SKILL.md)
+- gws-gmail-watch: (file: r0/gws-gmail-watch/SKILL.md)
+- gws-keep: (file: r1/gws-keep/SKILL.md)
+- gws-keep: (file: r0/gws-keep/SKILL.md)
+- gws-meet: (file: r1/gws-meet/SKILL.md)
+- gws-meet: (file: r0/gws-meet/SKILL.md)
+- gws-modelarmor: (file: r1/gws-modelarmor/SKILL.md)
+- gws-modelarmor: (file: r0/gws-modelarmor/SKILL.md)
+- gws-modelarmor-create-template: (file: r1/gws-modelarmor-create-template/SKILL.md)
+- gws-modelarmor-create-template: (file: r0/gws-modelarmor-create-template/SKILL.md)
+- gws-modelarmor-sanitize-prompt: (file: r1/gws-modelarmor-sanitize-prompt/SKILL.md)
+- gws-modelarmor-sanitize-prompt: (file: r0/gws-modelarmor-sanitize-prompt/SKILL.md)
+- gws-modelarmor-sanitize-response: (file: r1/gws-modelarmor-sanitize-response/SKILL.md)
+- gws-modelarmor-sanitize-response: (file: r0/gws-modelarmor-sanitize-response/SKILL.md)
+- gws-people: (file: r1/gws-people/SKILL.md)
+- gws-people: (file: r0/gws-people/SKILL.md)
+- gws-script: (file: r1/gws-script/SKILL.md)
+- gws-script-push: (file: r1/gws-script-push/SKILL.md)
+- gws-shared: (file: r1/gws-shared/SKILL.md)
+- gws-shared: (file: r0/gws-shared/SKILL.md)
+- gws-sheets: (file: r1/gws-sheets/SKILL.md)
+- gws-sheets: (file: r0/gws-sheets/SKILL.md)
+- gws-sheets-append: (file: r1/gws-sheets-append/SKILL.md)
+- gws-sheets-append: (file: r0/gws-sheets-append/SKILL.md)
+- gws-sheets-read: (file: r1/gws-sheets-read/SKILL.md)
+- gws-sheets-read: (file: r0/gws-sheets-read/SKILL.md)
+- gws-slides: (file: r1/gws-slides/SKILL.md)
+- gws-slides: (file: r0/gws-slides/SKILL.md)
+- gws-tasks: (file: r1/gws-tasks/SKILL.md)
+- gws-tasks: (file: r0/gws-tasks/SKILL.md)
+- gws-workflow: (file: r1/gws-workflow/SKILL.md)
+- gws-workflow: (file: r0/gws-workflow/SKILL.md)
+- gws-workflow-email-to-task: (file: r1/gws-workflow-email-to-task/SKILL.md)
+- gws-workflow-email-to-task: (file: r0/gws-workflow-email-to-task/SKILL.md)
+- gws-workflow-file-announce: (file: r1/gws-workflow-file-announce/SKILL.md)
+- gws-workflow-file-announce: (file: r0/gws-workflow-file-announce/SKILL.md)
+- gws-workflow-meeting-prep: (file: r1/gws-workflow-meeting-prep/SKILL.md)
+- gws-workflow-meeting-prep: (file: r0/gws-workflow-meeting-prep/SKILL.md)
+- gws-workflow-standup-report: (file: r1/gws-workflow-standup-report/SKILL.md)
+- gws-workflow-standup-report: (file: r0/gws-workflow-standup-report/SKILL.md)
+- gws-workflow-weekly-digest: (file: r1/gws-workflow-weekly-digest/SKILL.md)
+- gws-workflow-weekly-digest: (file: r0/gws-workflow-weekly-digest/SKILL.md)
+- hatch-pet: (file: r0/hatch-pet/SKILL.md)
+- herdr: (file: r1/herdr/SKILL.md)
+- higgsfield-generate: (file: r0/higgsfield-generate/SKILL.md)
+- higgsfield-marketplace-cards: (file: r0/higgsfield-marketplace-cards/SKILL.md)
+- higgsfield-product-photoshoot: (file: r0/higgsfield-product-photoshoot/SKILL.md)
+- higgsfield-soul-id: (file: r0/higgsfield-soul-id/SKILL.md)
+- higgsfield-websites: (file: r0/higgsfield-websites/SKILL.md)
+- high-end-visual-design: (file: r1/high-end-visual-design/SKILL.md)
+- high-end-visual-design: (file: r0/high-end-visual-design/SKILL.md)
+- image-to-code: (file: r1/image-to-code/SKILL.md)
+- image-to-code: (file: r0/image-to-code/SKILL.md)
+- impeccable: (file: r1/impeccable/SKILL.md)
+- impeccable: (file: r0/impeccable/SKILL.md)
+- inbound-tutoring-replies: (file: r1/inbound-tutoring-replies/SKILL.md)
+- inbound-tutoring-replies: (file: r0/inbound-tutoring-replies/SKILL.md)
+- ingest: (file: r1/ingest/SKILL.md)
+- internal-comms: (file: r1/internal-comms/SKILL.md)
+- json-canvas: (file: r1/json-canvas/SKILL.md)
+- json-canvas: (file: r0/json-canvas/SKILL.md)
+- level-up: (file: r1/level-up/SKILL.md)
+- level-up: (file: r0/level-up/SKILL.md)
+- mcp-builder: (file: r1/mcp-builder/SKILL.md)
+</skills_instructions>
+
+<permissions instructions>
+Filesystem sandboxing defines which files can be read or written. `sandbox_mode` is `read-only`: The sandbox only permits reading files. Network access is restricted.
+Approval policy is currently never. Do not provide the `sandbox_permissions` for any reason, commands will be rejected.
+</permissions instructions>
+
+## user
+
+<recommended_plugins>
+Here is a list of plugins that are available but not installed.
+
+- Dropbox (app-69b31dc2110c8191b8b47dc98fe5a052@openai-curated-remote)
+- Box (box@openai-curated-remote)
+- Figma (figma@openai-curated-remote)
+- Linear (linear@openai-curated-remote)
+- Notion (notion@openai-curated-remote)
+- Outlook Calendar (outlook-calendar@openai-curated-remote)
+- SharePoint (sharepoint@openai-curated-remote)
+- Slack (slack@openai-curated-remote)
+- Teams (teams@openai-curated-remote)
+</recommended_plugins>
+
+# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os
+
+<INSTRUCTIONS>
+# Global rules — Joshua
+
+These apply on **every** project on this machine, in every session. Project-level
+`AGENTS.md` files add to this; they do not replace it.
+
+Keep this file short. It reloads on every message.
+
+---
+
+## Who
+
+Joshua Fisseha — `contact@aspiringattorneys.com`. Builds **LSAT U** (lsatprep.study) and
+the Aspiring Attorneys brand. Teaches the LSAT: ~25 one-to-one sessions a week plus
+consultations. Windows 11; a MacBook Pro runs some sessions too, so paths differ between
+them — never assume `/Users/joshuaf/...` resolves here.
+
+## Where things live
+
+- **AI OS / second brain:** `C:\Users\Joshu\dev\ai-os` — the Obsidian vault. `context/`,
+  `wiki/`, `students/`, `corpus/`, `decisions/`, `brainstorms/`, `skills/`, `projects/`.
+  Open this folder rather than starting with no folder, or memory cannot accumulate.
+- **Skill catalog:** `dev/ai-os/skills/Codex` (179) and `skills/codex` (154), with
+  `PARITY.md` declaring deliberate single-runtime skills and `INDEX.md` cataloging them.
+- **LSAT U app:** repo `vnjkoxpl-42905/lsatu-684d89db` — React + Vite + TS + Tailwind +
+  shadcn, Supabase backend, hosted on Lovable.
+- **GitHub:** account `vnjkoxpl-42905` (auto-generated name, correct account).
+
+## How to work with him
+
+- **Do the whole task.** Deliver the finished thing, then say plainly what you skipped
+  and why. Don't hand back a plan when the work was asked for.
+- **Look before asking.** If the answer is on disk or reachable through a connected tool,
+  go get it. He has Firecrawl, Google Workspace (`gws`), and `gh` — use them.
+- **Say what's actually true.** Distinguish verified from assumed, every time. If a step
+  failed or was skipped, lead with that. A confident wrong answer costs more than "I
+  don't know yet."
+- **Surface your own mistakes immediately**, including scope errors you notice mid-task.
+- Absolute dates (`YYYY-MM-DD`), never "yesterday" or "last week".
+- Don't re-ask what he already answered. Don't pad with options he didn't request.
+
+- **Dictation fixes.** A message shaped like `word --> word` (any arrow, any spacing), or
+  "save X in my vocabulary", is a Superwhisper correction. Invoke the `superwhisper` skill
+  and apply it in that turn, whatever else is in progress.
+
+## Writing as Joshua
+
+Anything published under his name — course copy, lessons, emails, posts.
+
+Plain, direct, confident. Short sentences. Teach the reasoning rather than asserting the
+conclusion; this is a teaching brand and the reasoning *is* the product. Concrete beats
+abstract. Never condescend to the reader.
+
+**Never use:** "delve into", "dive deep", "unlock", "unleash", "harness the power of",
+"in today's fast-paced world", "ever-evolving landscape", "it's not just X, it's Y",
+"navigate the complexities", "at the end of the day", "elevate", "supercharge",
+"game-changer", "seamless", "robust", "I hope this helps!", "Great question!",
+"Certainly!". No em-dash pile-ups. No paragraph opening with "Moreover," /
+"Furthermore," / "Additionally,". No emoji in professional writing unless asked.
+
+Headers should say something, not label a category — "Why students miss this", not
+"Analysis".
+
+## Safety
+
+- **Draft by default; send only when he says "send".** Email, messages, posts are drafted
+  and shown to him. When he says "send it" (or equivalent) in chat, send it, then log it in
+  `wiki/send-ledger.md`. Never send on your own initiative, and never treat a request to
+  draft as a request to send.
+- **Never delete** files, emails, or records without explicit confirmation.
+- The Google Workspace grant is broad (it includes deleting all Drive files), so the
+  restraint has to live in tool permissions, not in wording. A prompt is not a permission
+  layer.
+- Secrets stay in `.env` and the OS keyring. Never paste a key into a note, a commit, or
+  a chat.
+
+## Tools already connected
+
+- **Firecrawl** — CLI + 28 skills. Prefer it over MCP; the hosted MCP server was removed
+  on purpose (the key would sit in plaintext in `~/.Codex.json`).
+- **Google Workspace** — `gws` CLI, GCP project `ai-os-joshua`. Gmail, Calendar, Drive,
+  Docs, Sheets, Slides, Tasks, People.
+- **GitHub** — `gh` CLI, authenticated.
+
+## Cost discipline
+
+`AGENTS.md` reloads on every message, so keep this file lean. Prefer CLIs to MCP servers
+(an MCP server can cost ~18k tokens per message in tool definitions). `/clear` between
+unrelated tasks. Run the `handoff` skill past ~25% context rather than waiting for
+auto-compact.
+
+---
+
+*Written 2026-09-07 from observed behavior. Correct it whenever it's wrong — that is the
+point of the file.*
+
+--- project-doc ---
+
+<!-- HAND-OWNED since 2026-07-17. This file is the authority for Codex — edit it directly. On any major change, mirror it into CLAUDE.md so Claude and Codex stay in sync. -->
+# Jay 2 — operating instructions for Codex (ai-os)
+
+The canonical root is the repository directory containing this file (`C:\Users\Joshu\dev\ai-os` on this Windows machine). Resolve paths from the repository root instead of assuming a saved Mac or Windows absolute path. This is the router: it holds pointers, not knowledge. Read it, then follow the routing map to the right file instead of searching blind. Twin for Claude Code: `CLAUDE.md`.
+
+## Identity and mission
+
+You are **Jay 2**, Joshua's executive assistant. This root is his EA workspace and command center. Joshua is the founder of Aspiring Attorneys and builder of LSAT U (lsatprep.study), a premium LSAT prep platform; he is the product, voice, and content authority. Your job: take operations, admin, drafting, and research off his plate so his time goes to teaching and building. Frame work as decisions and tradeoffs, not basics.
+
+Standing duties, run from here without re-briefing: student operations (transcripts, assignments, follow-ups via `students/`), prospect and consultation correspondence (drafted in his voice, **never auto-sent unless a pre-approved template**), platform actions on lsatprep.study, session-note ingestion from Gmail/Drive, and keeping the wiki ledgers (`tasks`/`hot`/`log`) current so the next session starts oriented.
+
+## Routing map
+
+Paths are relative to the repository root.
+
+| Need | Path |
+|---|---|
+| **Who Joshua is** (identity, preferences, contact) | `context/about-me.md` |
+| **The business** (offers, money, channels, gaps) | `context/work.md` |
+| **Current priorities** (the 90-day slate) | `context/priorities.md` |
+| **What we decided and why** (locked decisions) | `decisions/log.md` |
+| Freshest session state (hot cache) | `wiki/hot.md` |
+| Master index · work ledger · dated history | `wiki/index.md` · `wiki/tasks.md` · `wiki/log.md` |
+| Product ground truth (pointers to live backends) | `wiki/dashboard.md` |
+| LSAT teaching knowledge | `corpus/index.md` |
+| A student — profile, transcripts, work, correspondence | `students/<name>/` — start at `students/README.md` |
+| Voice for anything a student or prospect reads | `wiki/teaching-voice.md` |
+| Was it sent? (every outbound draft/send) | `wiki/send-ledger.md` — append-only; Gmail is authority |
+| Who the students are (name, email, sessions, links) | `students/roster.generated.md` — regenerate, never hand-edit |
+| Learned facts and preferences (automemory) | native store `~/.claude/projects/C--Users-Joshu-dev-ai-os/memory/` + `MEMORY.md` index |
+| Skill / agent catalog | `skills/INDEX.md`, `agents/` |
+| Systems Jay 2 can reach (registry) | `connections.md` — 7 data domains, mechanism/auth/freshness; read by `/audit` |
+| Operator brain (how to think about automation) | `references/3ms-framework.md` — the Three Ms; walked weekly by `/level-up` |
+| Automation build backlog (what to build next, ranked) | `references/automation-backlog.md` — corpus-derived gaps + tiers; feeds `/level-up` |
+| How-it-works reference notes (methods, not state) | `references/` — also `references/claude-plus-codex.md`, `references/obsidian-command-center.md`, `references/second-brain-levels.md` |
+| Web research and Firecrawl agents | `references/firecrawl.md` (guidelines in `references/firecrawl/`) |
+| Immutable source evidence · intake queue | `raw/sources/` · `raw/inbox/` — one inbox, one archive |
+| Archived web clips, with provenance + hashes | `raw/sources/clips/<slug>/` — clip + `PROVENANCE.md` + `SHA256SUMS` |
+| Raw personal-data exports (Google Takeout, Gemini session transcripts) | `raw/data-about-me/` — unprocessed PII, git-ignored; never read wholesale |
+| Design/plan thinking, dated (grill-me + interview outputs) | `brainstorms/` — supersedes the retired `aios/` reform folder |
+| Session handoffs · chat exports | `handoffs/` — operational records, deliberately OUTSIDE `raw/`; `session-handoff` writes here |
+| External teardowns and research, dated | `research/` |
+| Web-clipped articles (Obsidian Web Clipper) | `raw/inbox/` — unprocessed only; `ingest` moves them to `raw/sources/clips/` when done |
+| Application code | `projects/lsatu/` — own repo, own instructions, own remote |
+| Other projects (life-path, …) | `projects/<name>/` — each with its own `CLAUDE.md` + `.claude/` |
+
+## Retrieval order
+
+1. `wiki/hot.md` — current-session narrative and open threads.
+2. `wiki/index.md` → the page (teaching knowledge: `corpus/index.md`; a student: their folder). Follow links; there is no semantic search and none is needed at this size.
+3. The live system — the final freshness escalation.
+
+**Live systems are authority for operational state; the brain mirrors them:** Cal.com + Google Calendar own sessions scheduled/used, LSAT U Supabase owns homework status/dossier/publish state, Stripe owns payment events, Gmail owns correspondence. On any disagreement, the backend wins. The brain is primary — nothing upstream holds them — for transcripts, teaching notes, judgments, prep briefs, curriculum, product specs, and decisions.
+
+**Do not read the wiki unless the task needs it.** Retrieval costs context every turn. Skip it for: code edits in `projects/lsatu/`; shell/Git/file ops; questions the injected memories already answer; a skill run that names its own inputs; anything mechanical and self-contained. Route to it for: what is X · what did we decide and why · who a student is and where they stand · anything drafted in Joshua's voice for someone else · any decision touching roadmap, pedagogy, or UX.
+
+**Wiki operations (LLM-wiki pattern):** the LLM writes/maintains `wiki/` and `corpus/`; Joshua sources, explores, asks. Raw sources are immutable — read, never modify. *Ingest:* read the source from `raw/`, discuss takeaways, write/update the pages it touches, update `wiki/index.md`, append to `wiki/log.md` (`## [YYYY-MM-DD] ingest | Title`); one source at a time, supervised, unless Joshua says batch. *Query:* index first, then pages; file valuable answers back as pages so explorations compound. *Lint:* `second-brain-lint` for contradictions, stale claims, orphans, missing pages.
+
+## Voice
+
+- **No em-dashes, ever.** Joshua never types them; a stray em-dash reads as AI and costs trust.
+- **No AI-slop vocabulary** — never "delve," "tapestry," "testament," "demystify," "boasts," "in the realm of," and their kin.
+- **Anything a student or prospect will read** routes through `wiki/teaching-voice.md` and is drafted, never sent, unless it is a pre-approved template.
+- **Lead with your recommendation, not a menu.** Be decisive; don't over-hedge.
+- **Any prompt Joshua will paste elsewhere** goes inside a fenced code block, never inline prose.
+
+## Tools, keys, and secrets
+
+- **The entire secret model is `.env` + `.gitignore`.** The root `.env` (git-ignored — verify with `git check-ignore .env`) is Joshua's single central store for **everything**: API keys, passwords, and bank/account info (decided 2026-07-17). OAuth client secrets live in `~/.config/gws/`, outside the repo. There is no vault, no Keychain, no encrypted store (`records.sparsebundle` is dead) and none is wanted. Never paste a credential into chat — add it to `.env` directly in the editor.
+- **Safety is the tool layer, not prompts:** allow/deny tool lists + scoped API keys. Jay 2 acts under its own credentials and never impersonates Joshua.
+- **Connected live systems:** Cal.com, Google Calendar, LSAT U Supabase, Stripe, Gmail. Full registry in `connections.md`.
+- **Google access is `gws` CLI only** (`gws gmail|drive|calendar|docs …`, keyring-auth; see `skills/codex/gws-shared/`). Never the Google connector MCPs — the CLI is faster, batchable, and exports Docs to markdown.
+- **Government IDs stay outside this OS.** Everything else (student names, emails, schedules, transcripts, notes, payment *links*) is ordinary local working material — classify by content, never by filename.
+- **No Git remote**, ever, without first completing the scrub checklist in `wiki/HANDLING.md`. The outer repo never tracks `.env`, `projects/lsatu/` (own repo), runtime logs, or locks. Do not create gitlinks.
+
+## Skills
+
+Everything is a skill — **there are no slash commands** (decided 2026-07-17: one kind, one home, one activation path). The catalog at `skills/` and `agents/` is inert storage; nothing auto-loads. An item runs only once **activated by copy** (not symlink) into `.agents/skills/` (Claude: `.claude/skills/`). Creating one writes to **both** the project and the catalog (`skills/{claude,codex}/`), project-scoped — never auto-global. `claude/` and `codex/` subtrees are never merged; a vendor item is a live symlink + a frozen `_snapshots/` copy. `system/scripts/check-skills.sh` validates the model; `skills/INDEX.md` indexes it.
+
+Active in this root. Run `pickup` only when Joshua explicitly asks for it. Do not run it automatically at session start. Use `wrapup` at the end of substantive sessions:
+
+| Skill | Use it when |
+|---|---|
+| `pickup` / `wrapup` | `pickup` only on Joshua's explicit request / `wrapup` at session end (wrapup persists to the wiki ledgers) |
+| `session-handoff` | mid-work context reset near ~250k, or passing work Codex↔Claude — chat-only, writes nothing |
+| `audit` | scoring the OS against the Four Cs (structural health, /100) |
+| `level-up` | weekly 3Ms interview to find + ship one automation |
+| `consultation-inquiry-drafts`, `-followup-drafts`, `inbound-tutoring-replies` | drafting to prospects/students — always via the teaching voice |
+| `guided-drill-assignment` | assigning a student a drill |
+| `lsat-u-platform-actions` | doing anything ON lsatprep.study from here (assign, post, message, ingest) |
+| `tutorocean-profile-fill` | TutorOcean profile work |
+| `prompt-architect-refiner` | refining a prompt before it ships |
+| `accommodations-email` | "accommodations email to X" (dictation: "accommodations scale"); pre-approved send, QP form attached, self-logging |
+
+When a skill run exposes a gap, improve the skill before moving on. Runtime-specific catalog differences must be justified in `skills/PARITY.md`; undeclared differences are defects.
+
+## Guardrails
+
+- **95% rule.** Make no changes until you are 95% confident what Joshua wants. Ask until you are.
+- **Lovable credits require confirmation.** Never take an action that spends or may spend Lovable credits without Joshua's explicit confirmation immediately before the action. Do not infer approval from a broader request to fix, build, deploy, or continue. Free Lovable controls and direct deployment paths may be used without this credit-spend confirmation.
+- **Lovable Cloud deploys through Lovable.** LSAT U currently uses a Lovable Cloud-managed backend. Deploy its Edge Functions through the Lovable agent, not the Supabase CLI, unless the backend has first been migrated to a separately managed Supabase project. Confirm this route with Joshua before starting a Lovable deployment.
+- **Root stays thin.** Don't accumulate files at the root; work products go to their homes (wiki, students, corpus, projects). Anything left at root gets filed before the session ends.
+- **Delegate bulk work.** Exploration or analysis spanning 3+ files goes to a sub-agent that returns summaries, not file dumps.
+- **Shell ergonomics.** Run one command per call — chained `cmd; cmd` and `rm -rf X && clone Y` forms trip permission denials that the split commands would not. Never poll with `sleep`. Use backgrounded execution for anything slow, and raise the timeout explicitly for known-slow ops (large moves, typecheck-gated pushes, full verify runs) rather than eating the default.
+- **Search before creating.** One authoritative page per subject — update it, don't grow a parallel truth. `wiki/index.md` catalogs every page and updates on every ingest.
+- **Preserve provenance and source hashes.** Never move, delete, or modify a migration source root — copy and hash-verify. Never follow a source symlink outside its registered root.
+- **Conflicts stay explicit until adjudicated** — never silently overwrite one source generation with another.
+- **Automation writes only generated files or fenced generated sections,** through compare-and-swap.
+- **Obey nested instruction files** — they win over broader ones for their subtree. LSATU's recovered `CLAUDE.md`/`AGENTS.md` are inviolate: never regenerate them without Joshua's explicit approval.
+- **Memory = native automemory.** "Remember that…" writes one fact per file to the native store; `MEMORY.md` indexes it. This file is the rules; memory is learned facts — never mix them. Transcripts and raw captures never auto-promote.
+- **Append meaningful system changes** to `wiki/log.md`; log locked decisions to `decisions/log.md`.
+
+## Dual-runtime (Codex + Claude)
+
+- Begin at the Git-root `AGENTS.md` and follow directory-scoped instruction files toward the working path; the nearest file wins for its subtree.
+- Keep root instructions inside the runtime byte budget. Move narrow rules to the narrowest owning directory rather than growing this file.
+- Activated skills are **copies** in `.agents/skills/` (from `skills/codex/`); agent definitions convert to `.codex/agents/*.toml` with the instructions in `developer_instructions`.
+- Claude reads `CLAUDE.md` and never this file. Anything that must hold for both runtimes goes in BOTH files — when you change it here, mirror it there; keep the routing map and guardrails byte-identical between them.
+- Activation is unequal by design: Codex reads copies in `.agents/skills/`, Claude reads copies in `.claude/skills/`. Codex runs the catalog minus the wiki/Obsidian and `graphify` skills, so the two skill tables legitimately differ.
+- Never have Claude and Codex editing the same file at once; pass work between them by session handoff (summarize → clear → paste). At ~250k tokens, hand off rather than riding autocompact.
+
+</INSTRUCTIONS>
+
+<environment_context>
+  <cwd>C:\Users\Joshu\dev\ai-os</cwd>
+  <shell>powershell</shell>
+  <current_date>2026-09-23</current_date>
+  <timezone>America/Toronto</timezone>
+  <filesystem><workspace_roots><root>C:\Users\Joshu\dev\ai-os</root></workspace_roots><permission_profile type="managed"><file_system type="restricted"><entry access="read"><special>:root</special></entry></file_system></permission_profile></filesystem>
+</environment_context>
+
+## user
+
+Reply OK

@@ -1,0 +1,605 @@
+{
+  "nodes": [
+    {
+      "id": "knowledge_graph_extraction",
+      "label": "Knowledge Graph Extraction",
+      "type": "capability",
+      "summary": "Turn an arbitrary corpus (code, docs, papers, images, video) into a clustered knowledge graph with community detection, plus HTML/JSON/report outputs. Implemented by the graphify skill.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/graphify/SKILL.md"]
+    },
+    {
+      "id": "confidence_tagged_edges",
+      "label": "Confidence-Tagged Edges (EXTRACTED/INFERRED/AMBIGUOUS)",
+      "type": "design-principle",
+      "summary": "Every asserted relationship carries a provenance tag and numeric confidence so invented links are distinguishable from evidenced ones. Never invent an edge; use AMBIGUOUS when unsure.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/graphify/SKILL.md"]
+    },
+    {
+      "id": "parallel_subagent_fanout",
+      "label": "Parallel Subagent Fan-Out",
+      "type": "technique",
+      "summary": "Split a large file corpus into chunks and dispatch all extraction subagents in a single message so they run concurrently; sequential dispatch defeats the purpose. Requires write-capable general-purpose agents.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/graphify/SKILL.md"]
+    },
+    {
+      "id": "readonly_subagent_dropped_writes",
+      "label": "Read-Only Subagent Silently Drops Results",
+      "type": "failure-mode",
+      "summary": "Dispatching extraction subagents as the read-only Explore type means they cannot write chunk files, so results vanish with no error. Detected by checking chunk files exist on disk.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/graphify/SKILL.md"]
+    },
+    {
+      "id": "incremental_cache_reextraction",
+      "label": "Incremental Re-Extraction with Cache",
+      "type": "technique",
+      "summary": "Hash-based manifest plus a semantic cache means only new or changed files are re-extracted; code-only changes skip the LLM path entirely and run AST extraction alone.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/graphify/SKILL.md"]
+    },
+    {
+      "id": "graph_artifacts",
+      "label": "Graph Artifacts (HTML, JSON, report, vault, Neo4j)",
+      "type": "artifact-produced",
+      "summary": "graphify emits graph.html, graph.json, GRAPH_REPORT.md, and optionally an Obsidian vault, wiki, SVG, GraphML, and Cypher/Neo4j push.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/graphify/SKILL.md"]
+    },
+    {
+      "id": "mcp_server_integration",
+      "label": "MCP Server Integration",
+      "type": "capability",
+      "summary": "Configure and connect external services to Claude Code via Model Context Protocol servers declared in .mcp.json or plugin.json, exposing their tools to commands and agents.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/mcp-integration/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/mcp-integration/references/server-types.md"
+      ]
+    },
+    {
+      "id": "mcp_transport_choice",
+      "label": "MCP Transport Selection (stdio/SSE/HTTP/ws)",
+      "type": "design-principle",
+      "summary": "Four transports with different tradeoffs: stdio for local/custom servers, SSE for hosted OAuth services, HTTP for stateless token APIs, WebSocket for real-time bidirectional streams.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/mcp-integration/references/server-types.md",
+        "/Users/joshuaf/ai-os/skills/claude/mcp-integration/SKILL.md"
+      ]
+    },
+    {
+      "id": "credential_via_env_not_hardcoded",
+      "label": "Credentials via Environment Variables, Never Hardcoded",
+      "type": "constraint",
+      "summary": "Tokens and keys are injected through ${VAR} expansion and documented in the README; hardcoding or committing credentials is forbidden, and OAuth is preferred where the service supports it.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/mcp-integration/references/authentication.md",
+        "/Users/joshuaf/ai-os/skills/claude/mcp-integration/SKILL.md"
+      ]
+    },
+    {
+      "id": "least_privilege_tool_allowlist",
+      "label": "Least-Privilege Tool Allowlisting",
+      "type": "constraint",
+      "summary": "Pre-allow only the specific MCP tools a command needs rather than wildcarding a whole server; skills declare narrow allowed-tools lists for the same reason.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/mcp-integration/references/tool-usage.md",
+        "/Users/joshuaf/ai-os/skills/claude/mcp-integration/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/imessage-access/SKILL.md"
+      ]
+    },
+    {
+      "id": "batch_over_loop_tool_calls",
+      "label": "Batch and Parallelize Tool Calls",
+      "type": "technique",
+      "summary": "Prefer one filtered query over N individual lookups, cache expensive results, and issue independent calls in parallel rather than serially.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/mcp-integration/references/tool-usage.md"]
+    },
+    {
+      "id": "root_cause_before_fix",
+      "label": "Root Cause Before Any Fix",
+      "type": "design-principle",
+      "summary": "The Iron Law of systematic debugging: no fixes without root cause investigation first. Symptom fixes count as failure, and the four-phase process is mandatory even under time pressure.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/systematic-debugging/SKILL.md"]
+    },
+    {
+      "id": "four_phase_debugging",
+      "label": "Four-Phase Debugging Workflow",
+      "type": "workflow-stage",
+      "summary": "Investigation, then pattern analysis, then single-hypothesis testing, then implementation with a failing test. Each phase must complete before the next.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/systematic-debugging/SKILL.md"]
+    },
+    {
+      "id": "backward_call_stack_tracing",
+      "label": "Backward Call-Stack Tracing",
+      "type": "technique",
+      "summary": "Trace a bug backward from where it surfaces through each caller until the original trigger is found, adding stack-trace instrumentation when manual tracing stalls, then fix at the source.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/systematic-debugging/root-cause-tracing.md"]
+    },
+    {
+      "id": "boundary_instrumentation",
+      "label": "Component-Boundary Instrumentation",
+      "type": "technique",
+      "summary": "In multi-component systems, log what enters and exits each boundary once to gather evidence of WHERE the failure is before proposing any fix.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/systematic-debugging/SKILL.md"]
+    },
+    {
+      "id": "defense_in_depth_validation",
+      "label": "Defense-in-Depth Validation",
+      "type": "technique",
+      "summary": "After finding a root cause, validate at every layer the data passes through (entry, business logic, environment guard, debug logging) so the bug becomes structurally impossible.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/systematic-debugging/defense-in-depth.md"]
+    },
+    {
+      "id": "condition_based_waiting",
+      "label": "Condition-Based Waiting",
+      "type": "technique",
+      "summary": "Replace arbitrary sleeps and timeouts in tests with polling on the actual condition, with a bounded timeout and a clear error, eliminating load-dependent flakiness.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/systematic-debugging/condition-based-waiting.md"]
+    },
+    {
+      "id": "arbitrary_timeout_flakiness",
+      "label": "Arbitrary Timeouts Cause Flaky Tests",
+      "type": "failure-mode",
+      "summary": "Guessing at timing with setTimeout/sleep creates race conditions that pass locally and fail under CI load; escalating the sleep value is the classic thrashing pattern.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/systematic-debugging/condition-based-waiting.md",
+        "/Users/joshuaf/ai-os/skills/claude/systematic-debugging/test-pressure-2.md"
+      ]
+    },
+    {
+      "id": "three_failed_fixes_means_architecture",
+      "label": "Three Failed Fixes Means Wrong Architecture",
+      "type": "failure-mode",
+      "summary": "When three fixes fail and each reveals a new problem elsewhere, the pattern itself is wrong; stop fixing and escalate to an architectural discussion with the human.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/systematic-debugging/SKILL.md"]
+    },
+    {
+      "id": "pressure_resistant_rule_language",
+      "label": "Pressure-Resistant Rule Language",
+      "type": "design-principle",
+      "summary": "Skills are bulletproofed with ALWAYS/NEVER phrasing, an explicit Iron Law, redundant restatement, and a rationalizations table naming the exact shortcut that feels justified in the moment.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/systematic-debugging/CREATION-LOG.md",
+        "/Users/joshuaf/ai-os/skills/claude/systematic-debugging/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/codex/test-driven-development/SKILL.md"
+      ]
+    },
+    {
+      "id": "subagent_pressure_testing",
+      "label": "Subagent Pressure Testing of Skills",
+      "type": "technique",
+      "summary": "Validate a process skill by running scripted scenarios at a subagent: an academic no-pressure comprehension test plus emergency, sunk-cost/exhaustion, and authority/social-pressure scenarios that tempt the shortcut.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/systematic-debugging/CREATION-LOG.md",
+        "/Users/joshuaf/ai-os/skills/claude/systematic-debugging/test-academic.md",
+        "/Users/joshuaf/ai-os/skills/claude/systematic-debugging/test-pressure-1.md",
+        "/Users/joshuaf/ai-os/skills/claude/systematic-debugging/test-pressure-2.md",
+        "/Users/joshuaf/ai-os/skills/claude/systematic-debugging/test-pressure-3.md"
+      ]
+    },
+    {
+      "id": "failing_test_first",
+      "label": "Failing Test First (TDD)",
+      "type": "design-principle",
+      "summary": "No production code without a failing test first; the test must be watched failing for the right reason, then minimal code written to pass. Code written before its test is deleted.",
+      "sources": ["/Users/joshuaf/ai-os/skills/codex/test-driven-development/SKILL.md"]
+    },
+    {
+      "id": "vertical_slice_iteration",
+      "label": "Vertical Slice Iteration",
+      "type": "technique",
+      "summary": "One test then one implementation, repeated, rather than writing all tests then all code. Horizontal slicing produces tests of imagined shape rather than actual behavior.",
+      "sources": ["/Users/joshuaf/ai-os/skills/codex/test-driven-development/SKILL.md"]
+    },
+    {
+      "id": "adversarial_review_before_ship",
+      "label": "Adversarial Review Before Shipping",
+      "type": "design-principle",
+      "summary": "Work is checked by a fresh, differently-scoped reviewer before it cascades: a code-reviewer subagent given curated context rather than session history, returning severity-ranked findings and a verdict.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/requesting-code-review/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/requesting-code-review/code-reviewer.md"
+      ]
+    },
+    {
+      "id": "curated_context_for_subagent",
+      "label": "Curated Context, Not Session History",
+      "type": "design-principle",
+      "summary": "Delegated agents receive a precisely built prompt (description, requirements, git SHA range) instead of the parent's conversation, keeping the reviewer on the work product and preserving the parent's context.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/requesting-code-review/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/requesting-code-review/code-reviewer.md",
+        "/Users/joshuaf/ai-os/skills/claude/graphify/SKILL.md"
+      ]
+    },
+    {
+      "id": "severity_calibrated_findings",
+      "label": "Severity-Calibrated Findings",
+      "type": "artifact-produced",
+      "summary": "Review output is structured as Strengths, then Critical / Important / Minor issues with file:line and why-it-matters, then a clear ready-to-merge verdict. Not everything is Critical.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/requesting-code-review/code-reviewer.md"]
+    },
+    {
+      "id": "readonly_review_isolation",
+      "label": "Read-Only Review Isolation",
+      "type": "constraint",
+      "summary": "A reviewing agent must not mutate the working tree, index, HEAD, or branches; inspect via git show/diff/log and use a separate worktree if another revision is needed.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/requesting-code-review/code-reviewer.md"]
+    },
+    {
+      "id": "minimal_solution_ladder",
+      "label": "Minimal Solution Ladder (YAGNI)",
+      "type": "design-principle",
+      "summary": "Climb rungs and stop at the first that holds: does it need to exist, does the codebase already have it, stdlib, native platform, installed dependency, one line, then minimum code. Deletion over addition.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/ponytail/SKILL.md"]
+    },
+    {
+      "id": "comprehension_before_simplification",
+      "label": "Comprehension Before Simplification",
+      "type": "constraint",
+      "summary": "Laziness shortens the solution, never the reading: trace the full flow and every caller first. A small diff in the wrong place is a confident wrong fix, and the lazy fix IS the root-cause fix.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/ponytail/SKILL.md"]
+    },
+    {
+      "id": "context_handoff",
+      "label": "Context Handoff Before Reset",
+      "type": "capability",
+      "summary": "Produce a structured summary so a fresh agent resumes seamlessly: decisions, shipped changes, key absolute paths, running state, verified-vs-assumed claims, deferrals, and one pick-up-here line.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/session-handoff/SKILL.md"]
+    },
+    {
+      "id": "chat_only_no_persistence",
+      "label": "Chat-Only Output, Writes Nothing",
+      "type": "constraint",
+      "summary": "session-handoff deliberately writes no file and touches no memory; persistence to the ledgers is a separate skill's job. This is the boundary that distinguishes it from wrapup.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/session-handoff/SKILL.md"]
+    },
+    {
+      "id": "verified_vs_assumed_state",
+      "label": "Separate Verified State from Assumed State",
+      "type": "design-principle",
+      "summary": "Every claim about live systems is either checked this session (say how, stamp the real time) or explicitly marked NOT re-verified. Stale belief presented as current forces the next session to re-derive everything.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/session-handoff/SKILL.md"]
+    },
+    {
+      "id": "open_questions_are_obligations",
+      "label": "Open Questions Are Obligations",
+      "type": "constraint",
+      "summary": "Anything left OPEN in a handoff must be resolved or re-asked before the next session starts new work, because requirements have been silently re-typed and promised artifacts lost across resets.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/session-handoff/SKILL.md"]
+    },
+    {
+      "id": "transcript_export_with_handoff_prompt",
+      "label": "Transcript Export with Paste-Ready Handoff Prompt",
+      "type": "capability",
+      "summary": "Save the whole conversation verbatim to a dated markdown file under handoffs/, with summary, decisions, open threads, and a fenced paste-ready prompt to resume in a new chat.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/chat-export/SKILL.md"]
+    },
+    {
+      "id": "ledger_persistence_at_session_end",
+      "label": "Ledger Persistence at Session End",
+      "type": "capability",
+      "summary": "wrapup closes a session by striking finished tasks with a date in the task ledger, rewriting the hot cache, and appending a dated newest-first log entry so work is never re-run.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/wrapup/SKILL.md"]
+    },
+    {
+      "id": "confirm_before_marking_done",
+      "label": "Propose and Confirm Before Writing Done",
+      "type": "constraint",
+      "summary": "wrapup shows a proposed Done/Now/Next split and waits for a one-line approval before touching files; a wrong Done is the exact failure the gate exists to prevent.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/wrapup/SKILL.md"]
+    },
+    {
+      "id": "paste_box_deliverable",
+      "label": "Paste-Box Prompt as the Deliverable",
+      "type": "artifact-produced",
+      "summary": "The actual handoff to another executor is a single fenced code block with no surrounding prose inside it, short and imperative, so it copies in one click.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/lsatu-cc-handoff/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/lovable-prompt/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/chat-export/SKILL.md"
+      ]
+    },
+    {
+      "id": "read_current_code_before_briefing",
+      "label": "Read Current Code and Docs Before Briefing",
+      "type": "constraint",
+      "summary": "Never write recommendations from memory: read the actual repo files and existing vault docs, archive superseded briefs, and cross-reference screenshots against the rendering component before proposing fixes.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/lsatu-cc-handoff/SKILL.md"]
+    },
+    {
+      "id": "no_fabricated_domain_content",
+      "label": "No Fabricated Domain Content",
+      "type": "constraint",
+      "summary": "Joshua authors the LSAT curriculum; the agent never invents content. Suspected fabrications from prior runs are flagged to a content-audit file rather than silently rewritten, and sources are verified verbatim or from git history.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/lsatu-cc-handoff/SKILL.md"]
+    },
+    {
+      "id": "joshua_voice_constraints",
+      "label": "Joshua's Voice Constraints",
+      "type": "constraint",
+      "summary": "No em dashes anywhere, terse and opinionated rather than hedged, no AI-slop vocabulary, 'modules'/'steps' never 'phases', and push back when a direction adds complexity.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/lsatu-cc-handoff/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/lovable-prompt/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/wrapup/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/redesign-existing-projects/SKILL.md"
+      ]
+    },
+    {
+      "id": "route_to_direct_path_before_delegating",
+      "label": "Route to the Direct Path Before Delegating",
+      "type": "design-principle",
+      "summary": "Only hand a task to the Lovable UI when it is genuinely gated there; schema changes go through Supabase migration tools and code changes are made and pushed directly.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/lovable-prompt/SKILL.md"]
+    },
+    {
+      "id": "browser_driven_platform_automation",
+      "label": "Browser-Driven Platform Automation",
+      "type": "capability",
+      "summary": "Drive a logged-in Chrome session against a third-party SPA to perform a multi-step workflow end to end (LSAT Lab set creation), capturing IDs and URLs as it goes.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/lsat-lab-mega-set/SKILL.md"]
+    },
+    {
+      "id": "verification_gates",
+      "label": "Verification Gates Between Steps",
+      "type": "technique",
+      "summary": "Each risky step ends in a named GATE with an expected numeric check and a listed recovery; never proceed past a failed gate. Autonomy continues only while gates pass.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/lsat-lab-mega-set/SKILL.md"]
+    },
+    {
+      "id": "verify_by_reading_data_not_pixels",
+      "label": "Verify by Reading Data, Not by Eyeballing",
+      "type": "technique",
+      "summary": "For anything beyond a handful of rows, run a JS snippet that returns compact structured counts and ordering assertions rather than trusting a screenshot, and identify records by stable ID not row position.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/lsat-lab-mega-set/SKILL.md"]
+    },
+    {
+      "id": "stale_coordinate_click_race",
+      "label": "Stale Coordinates and Re-Render Races",
+      "type": "failure-mode",
+      "summary": "A re-rendering SPA shifts layout between actions, so reused click coordinates silently select nothing or open the wrong record; screenshot before every click and open by ID.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/lsat-lab-mega-set/SKILL.md"]
+    },
+    {
+      "id": "shared_run_ledger",
+      "label": "Shared Append-Only Run Ledger",
+      "type": "artifact-produced",
+      "summary": "Each run appends a structured per-item entry (counts, IDs, URLs, date) to a log file that sibling skills read to locate prior work and append their own status lines. Fields are never removed or reformatted.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/lsat-lab-mega-set/SKILL.md"]
+    },
+    {
+      "id": "sibling_skill_scope_boundary",
+      "label": "Explicit Sibling-Skill Scope Boundary",
+      "type": "design-principle",
+      "summary": "Skills that could be confused with each other state the disambiguation table up front and hand off rather than overreach, e.g. mega-set vs set-builder vs transcribe, or the Higgsfield family's NOT-for lists.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/lsat-lab-mega-set/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/codex/higgsfield-generate/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/codex/higgsfield-marketplace-cards/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/session-handoff/SKILL.md"
+      ]
+    },
+    {
+      "id": "premium_design_upgrade_audit",
+      "label": "Premium Design Upgrade Audit",
+      "type": "capability",
+      "summary": "Scan an existing project, diagnose generic AI design fingerprints (Inter everywhere, purple gradients, three equal cards, Lucide icons), and apply targeted fixes in a risk-ordered sequence without changing the stack.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/redesign-existing-projects/SKILL.md"]
+    },
+    {
+      "id": "work_within_existing_stack",
+      "label": "Work Within the Existing Stack",
+      "type": "constraint",
+      "summary": "Improve what is there rather than rewriting: no framework or styling-library migration, no breaking functionality, check dependencies before importing, keep changes small and reviewable.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/redesign-existing-projects/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/ponytail/SKILL.md"
+      ]
+    },
+    {
+      "id": "generative_media_creation",
+      "label": "Generative Media Creation",
+      "type": "capability",
+      "summary": "Submit image, video, 3D, and audio generation jobs through the Higgsfield CLI, including marketplace listing card sets whose compliance templates live server-side.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/codex/higgsfield-generate/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/codex/higgsfield-marketplace-cards/SKILL.md"
+      ]
+    },
+    {
+      "id": "cli_bootstrap_and_auth_check",
+      "label": "CLI Bootstrap and Auth Precheck",
+      "type": "workflow-stage",
+      "summary": "Before any command, install the CLI if it is missing from PATH and stop to ask the user to re-authenticate interactively if the session is expired.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/codex/higgsfield-generate/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/codex/higgsfield-marketplace-cards/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/gws-slides/SKILL.md"
+      ]
+    },
+    {
+      "id": "channel_access_control",
+      "label": "Messaging Channel Access Control",
+      "type": "capability",
+      "summary": "Manage who can reach the agent over a messaging channel by editing a JSON allowlist/policy/pending-pairing file that the channel server re-reads; covers iMessage and Discord.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/imessage-access/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/discord-configure/SKILL.md"
+      ]
+    },
+    {
+      "id": "untrusted_channel_input",
+      "label": "Untrusted Channel Input / Prompt Injection",
+      "type": "failure-mode",
+      "summary": "Messages arriving over a channel can carry prompt injection, so access mutations must never be downstream of them. Auto-approving 'the one pending pairing' is exactly what an injected request looks like.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/imessage-access/SKILL.md"]
+    },
+    {
+      "id": "read_before_write_state_file",
+      "label": "Read-Before-Write on Shared State Files",
+      "type": "technique",
+      "summary": "Always re-read a JSON state file immediately before writing it, because a concurrent server process may have added entries; pretty-print so it stays hand-editable.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/imessage-access/SKILL.md"]
+    },
+    {
+      "id": "skill_catalog_installation",
+      "label": "Skill Catalog Installation",
+      "type": "capability",
+      "summary": "List and install skills from a curated GitHub catalog or an arbitrary repo path into the runtime's skills directory, with download-then-git-sparse-checkout fallback and abort-if-exists.",
+      "sources": ["/Users/joshuaf/ai-os/skills/codex/skill-installer/SKILL.md"]
+    },
+    {
+      "id": "hook_based_command_blocking",
+      "label": "Hook-Based Dangerous Command Blocking",
+      "type": "capability",
+      "summary": "A PreToolUse hook intercepts Bash calls and blocks destructive git commands (push, reset --hard, clean -f, branch -D, checkout .) before execution, exiting non-zero with a BLOCKED message.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/git-guardrails-claude-code/SKILL.md"]
+    },
+    {
+      "id": "safety_at_tool_layer",
+      "label": "Safety Enforced at the Tool Layer",
+      "type": "design-principle",
+      "summary": "Dangerous capability is constrained by harness configuration (hooks, allowed-tools, permission lists) rather than by asking the model to behave, so the guardrail holds regardless of prompt content.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/git-guardrails-claude-code/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/imessage-access/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/mcp-integration/references/tool-usage.md"
+      ]
+    },
+    {
+      "id": "gws_cli_workspace_access",
+      "label": "Google Workspace Access via gws CLI",
+      "type": "tool-dependency",
+      "summary": "Workspace surfaces (Slides, Chat, Events subscriptions) are reached through the gws binary; every generated skill points at a shared gws-shared skill for auth, global flags, and security rules.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/gws-slides/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/gws-chat-send/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/gws-events-renew/SKILL.md"
+      ]
+    },
+    {
+      "id": "inspect_schema_before_calling",
+      "label": "Inspect Schema Before Calling an API Method",
+      "type": "technique",
+      "summary": "Run the CLI's schema/help subcommand to learn a method's required params, types, and defaults before constructing the call, rather than guessing flags.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/gws-slides/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/mcp-integration/references/tool-usage.md"
+      ]
+    },
+    {
+      "id": "confirm_before_write_action",
+      "label": "Confirm Before Any Outbound Write Action",
+      "type": "constraint",
+      "summary": "Commands that send or mutate on an external system are flagged as write operations requiring explicit user confirmation before execution.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/claude/gws-chat-send/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/wrapup/SKILL.md"
+      ]
+    },
+    {
+      "id": "subscription_expiry_renewal",
+      "label": "Subscription Expiry and Renewal",
+      "type": "failure-mode",
+      "summary": "Workspace Events subscriptions silently expire unless renewed within a window; the remedy is a scheduled bulk renew across everything expiring soon.",
+      "sources": ["/Users/joshuaf/ai-os/skills/claude/gws-events-renew/SKILL.md"]
+    },
+    {
+      "id": "interactive_field_supplementation",
+      "label": "Interactive Field Supplementation",
+      "type": "workflow-stage",
+      "summary": "Locate an existing research outline file, source candidate new fields from the user or a web-search agent, display them for confirmation, then append in place.",
+      "sources": ["/Users/joshuaf/ai-os/skills/codex/research-add-fields/SKILL.md"]
+    },
+    {
+      "id": "user_confirmation_gate",
+      "label": "User Confirmation Gate Before Mutation",
+      "type": "trigger-condition",
+      "summary": "A shared pattern where the agent proposes a concrete change set and blocks on an explicit human yes before writing, used for ledgers, research fields, generation runs, and access changes.",
+      "sources": [
+        "/Users/joshuaf/ai-os/skills/codex/research-add-fields/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/wrapup/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/codex/higgsfield-marketplace-cards/SKILL.md",
+        "/Users/joshuaf/ai-os/skills/claude/git-guardrails-claude-code/SKILL.md"
+      ]
+    }
+  ],
+  "edges": [
+    {"source": "knowledge_graph_extraction", "target": "parallel_subagent_fanout", "type": "depends_on", "confidence": 1.0, "evidence": "'MANDATORY: You MUST use the Agent tool here' for semantic extraction chunks"},
+    {"source": "knowledge_graph_extraction", "target": "confidence_tagged_edges", "type": "constrains", "confidence": 1.0, "evidence": "Honesty Rules: 'Never invent an edge. If unsure, use AMBIGUOUS.'"},
+    {"source": "knowledge_graph_extraction", "target": "graph_artifacts", "type": "produces", "confidence": 1.0, "evidence": "graph.html, GRAPH_REPORT.md, graph.json outputs listed in Step 9"},
+    {"source": "parallel_subagent_fanout", "target": "readonly_subagent_dropped_writes", "type": "constrains", "confidence": 0.95, "evidence": "'Do NOT use Explore - it is read-only and cannot write chunk files, which silently drops extraction results'"},
+    {"source": "incremental_cache_reextraction", "target": "knowledge_graph_extraction", "type": "specializes", "confidence": 0.9, "evidence": "--update re-extracts only new/changed files, skipping the LLM path for code-only changes"},
+    {"source": "parallel_subagent_fanout", "target": "curated_context_for_subagent", "type": "depends_on", "confidence": 0.85, "evidence": "'Each subagent receives this exact prompt (substitute FILE_LIST, CHUNK_NUM...)' rather than session history"},
+    {"source": "graph_artifacts", "target": "mcp_server_integration", "type": "chains_into", "confidence": 0.8, "evidence": "--mcp starts a stdio MCP server exposing query_graph over graph.json"},
+    {"source": "mcp_server_integration", "target": "mcp_transport_choice", "type": "depends_on", "confidence": 1.0, "evidence": "'Choose MCP server type (stdio, SSE, HTTP, ws)' is step 1 of the implementation workflow"},
+    {"source": "mcp_server_integration", "target": "credential_via_env_not_hardcoded", "type": "constrains", "confidence": 1.0, "evidence": "'Use environment variables for tokens... Never hardcode tokens in configuration'"},
+    {"source": "mcp_server_integration", "target": "least_privilege_tool_allowlist", "type": "constrains", "confidence": 1.0, "evidence": "'Pre-allow specific tools, not wildcards, for security'"},
+    {"source": "mcp_transport_choice", "target": "credential_via_env_not_hardcoded", "type": "depends_on", "confidence": 0.85, "evidence": "Auth column of the comparison matrix: env vars for stdio, OAuth for SSE, headers for HTTP/ws"},
+    {"source": "batch_over_loop_tool_calls", "target": "mcp_server_integration", "type": "specializes", "confidence": 0.9, "evidence": "'Good: Single query with filters / Avoid: Many individual queries' under MCP performance"},
+    {"source": "least_privilege_tool_allowlist", "target": "safety_at_tool_layer", "type": "specializes", "confidence": 0.85, "evidence": "allowed-tools frontmatter is a harness-level restriction, not a prompt instruction"},
+    {"source": "root_cause_before_fix", "target": "four_phase_debugging", "type": "produces", "confidence": 1.0, "evidence": "'You MUST complete each phase before proceeding to the next'"},
+    {"source": "four_phase_debugging", "target": "backward_call_stack_tracing", "type": "depends_on", "confidence": 1.0, "evidence": "Phase 1 step 5 Trace Data Flow points to root-cause-tracing.md"},
+    {"source": "four_phase_debugging", "target": "boundary_instrumentation", "type": "depends_on", "confidence": 1.0, "evidence": "Phase 1 step 4: 'BEFORE proposing fixes, add diagnostic instrumentation' at each component boundary"},
+    {"source": "backward_call_stack_tracing", "target": "defense_in_depth_validation", "type": "chains_into", "confidence": 1.0, "evidence": "'Trace to original trigger -> BETTER: Also add defense-in-depth'"},
+    {"source": "four_phase_debugging", "target": "failing_test_first", "type": "depends_on", "confidence": 1.0, "evidence": "Phase 4 step 1: 'Create Failing Test Case... Use the test-driven-development skill'"},
+    {"source": "condition_based_waiting", "target": "arbitrary_timeout_flakiness", "type": "constrains", "confidence": 1.0, "evidence": "'Wait for the actual condition you care about, not a guess about how long it takes'"},
+    {"source": "arbitrary_timeout_flakiness", "target": "root_cause_before_fix", "type": "prerequisite_of", "confidence": 0.8, "evidence": "Pressure test 2 escalates sleep 100/500/1000/2000 as the symptom-fix pattern the Iron Law forbids"},
+    {"source": "four_phase_debugging", "target": "three_failed_fixes_means_architecture", "type": "produces", "confidence": 1.0, "evidence": "Phase 4 step 5: 'If 3+ Fixes Failed: Question Architecture'"},
+    {"source": "root_cause_before_fix", "target": "pressure_resistant_rule_language", "type": "depends_on", "confidence": 0.95, "evidence": "CREATION-LOG bulletproofing: ALWAYS/NEVER, 'even if I seem in a hurry', anti-patterns section"},
+    {"source": "failing_test_first", "target": "pressure_resistant_rule_language", "type": "depends_on", "confidence": 0.9, "evidence": "TDD has its own Iron Law plus a Common Rationalizations table in the same format"},
+    {"source": "pressure_resistant_rule_language", "target": "subagent_pressure_testing", "type": "chains_into", "confidence": 0.95, "evidence": "'Created 4 validation tests following testing-skills-with-subagents' to verify no rationalizations"},
+    {"source": "failing_test_first", "target": "vertical_slice_iteration", "type": "depends_on", "confidence": 1.0, "evidence": "'Correct approach: Vertical slices via tracer bullets. One test -> one implementation -> repeat.'"},
+    {"source": "failing_test_first", "target": "root_cause_before_fix", "type": "overlaps_with", "confidence": 0.85, "evidence": "'Bug found? Write failing test reproducing it... Never fix bugs without a test.'"},
+    {"source": "adversarial_review_before_ship", "target": "curated_context_for_subagent", "type": "depends_on", "confidence": 1.0, "evidence": "'The reviewer gets precisely crafted context for evaluation - never your session's history'"},
+    {"source": "adversarial_review_before_ship", "target": "severity_calibrated_findings", "type": "produces", "confidence": 1.0, "evidence": "Output Format: Strengths, Critical/Important/Minor, Recommendations, Assessment"},
+    {"source": "adversarial_review_before_ship", "target": "readonly_review_isolation", "type": "constrains", "confidence": 1.0, "evidence": "'Your review is read-only on this checkout. Do not mutate the working tree, the index, HEAD'"},
+    {"source": "readonly_review_isolation", "target": "readonly_subagent_dropped_writes", "type": "alternative_to", "confidence": 0.6, "evidence": "INFERRED: read-only is the correct posture for review but the exact failure mode for extraction subagents"},
+    {"source": "adversarial_review_before_ship", "target": "subagent_pressure_testing", "type": "overlaps_with", "confidence": 0.65, "evidence": "INFERRED: both dispatch a fresh subagent to adversarially check work the parent produced"},
+    {"source": "minimal_solution_ladder", "target": "comprehension_before_simplification", "type": "constrains", "confidence": 1.0, "evidence": "'The ladder shortens the solution, never the reading. Trace the whole thing first'"},
+    {"source": "comprehension_before_simplification", "target": "root_cause_before_fix", "type": "overlaps_with", "confidence": 0.95, "evidence": "'Bug fix = root cause, not symptom... The lazy fix IS the root-cause fix'"},
+    {"source": "minimal_solution_ladder", "target": "work_within_existing_stack", "type": "overlaps_with", "confidence": 0.85, "evidence": "Ponytail rung 2 'Already in this codebase? reuse it' vs redesign's 'Work with the existing tech stack'"},
+    {"source": "minimal_solution_ladder", "target": "failing_test_first", "type": "constrains", "confidence": 0.7, "evidence": "'Lazy code without its check is unfinished... leaves ONE runnable check behind' but 'YAGNI applies to tests too'"},
+    {"source": "context_handoff", "target": "chat_only_no_persistence", "type": "constrains", "confidence": 1.0, "evidence": "'Chat output only. Never write the handoff to a file.'"},
+    {"source": "context_handoff", "target": "verified_vs_assumed_state", "type": "depends_on", "confidence": 1.0, "evidence": "'Stamp verified state, and separate it from assumed state'"},
+    {"source": "context_handoff", "target": "open_questions_are_obligations", "type": "produces", "confidence": 1.0, "evidence": "'Open questions are obligations, not notes'"},
+    {"source": "context_handoff", "target": "ledger_persistence_at_session_end", "type": "alternative_to", "confidence": 1.0, "evidence": "'Handoff vs. wrapup: run session-handoff when the context window is the problem... wrapup when the work day is done'"},
+    {"source": "transcript_export_with_handoff_prompt", "target": "context_handoff", "type": "overlaps_with", "confidence": 0.9, "evidence": "Both produce a resume-from-here summary with open threads; chat-export writes a file, session-handoff does not"},
+    {"source": "transcript_export_with_handoff_prompt", "target": "chat_only_no_persistence", "type": "alternative_to", "confidence": 0.85, "evidence": "chat-export saves to handoffs/ while session-handoff is chat-only by design"},
+    {"source": "transcript_export_with_handoff_prompt", "target": "paste_box_deliverable", "type": "produces", "confidence": 1.0, "evidence": "'always show the handoff prompt in a fenced code block so the user can copy it in one click'"},
+    {"source": "ledger_persistence_at_session_end", "target": "confirm_before_marking_done", "type": "constrains", "confidence": 1.0, "evidence": "'propose task changes, then CONFIRM (do not write yet)'"},
+    {"source": "confirm_before_marking_done", "target": "user_confirmation_gate", "type": "specializes", "confidence": 0.9, "evidence": "Wait for approval in one line before touching files"},
+    {"source": "read_current_code_before_briefing", "target": "paste_box_deliverable", "type": "chains_into", "confidence": 1.0, "evidence": "Loop: analyze -> write brief to vault -> hand paste box back to Joshua"},
+    {"source": "read_current_code_before_briefing", "target": "no_fabricated_domain_content", "type": "depends_on", "confidence": 1.0, "evidence": "'Verify content authenticity... check whether items are verbatim from _source/ files or from git history'"},
+    {"source": "read_current_code_before_briefing", "target": "comprehension_before_simplification", "type": "overlaps_with", "confidence": 0.8, "evidence": "'Do not write recommendations from memory' mirrors 'never lazy about understanding the problem'"},
+    {"source": "paste_box_deliverable", "target": "joshua_voice_constraints", "type": "constrains", "confidence": 1.0, "evidence": "'No em dashes anywhere' and terse imperative prompts in both handoff and lovable-prompt"},
+    {"source": "no_fabricated_domain_content", "target": "joshua_voice_constraints", "type": "overlaps_with", "confidence": 0.7, "evidence": "INFERRED: both protect Joshua's authorship of anything readers see"},
+    {"source": "route_to_direct_path_before_delegating", "target": "paste_box_deliverable", "type": "prerequisite_of", "confidence": 1.0, "evidence": "'Before reaching for this, check whether the task is actually reachable another way'"},
+    {"source": "browser_driven_platform_automation", "target": "verification_gates", "type": "depends_on", "confidence": 1.0, "evidence": "'Never proceed past a failed GATE. Each gate below has a recovery.'"},
+    {"source": "browser_driven_platform_automation", "target": "verify_by_reading_data_not_pixels", "type": "depends_on", "confidence": 1.0, "evidence": "'Verify by reading data, not by eyeballing... use the JS snippets in the Appendix'"},
+    {"source": "browser_driven_platform_automation", "target": "stale_coordinate_click_race", "type": "constrains", "confidence": 1.0, "evidence": "'Screenshot before every click. Never reuse coordinates from an earlier screenshot'"},
+    {"source": "verify_by_reading_data_not_pixels", "target": "stale_coordinate_click_race", "type": "constrains", "confidence": 0.9, "evidence": "'Identify sets by qsid, never by row position' because row clicks race with re-render"},
+    {"source": "browser_driven_platform_automation", "target": "shared_run_ledger", "type": "produces", "confidence": 1.0, "evidence": "Step 11 appends a per-PT entry with qsid, counts, and URL to lsat-lab-set-log.md"},
+    {"source": "shared_run_ledger", "target": "sibling_skill_scope_boundary", "type": "depends_on", "confidence": 0.9, "evidence": "'The log is a shared ledger: lsat-lab-transcribe reads each PT's entry... other skills key off them'"},
+    {"source": "shared_run_ledger", "target": "ledger_persistence_at_session_end", "type": "overlaps_with", "confidence": 0.7, "evidence": "INFERRED: both are append-only dated ledgers that let a later run skip re-doing work"},
+    {"source": "verification_gates", "target": "four_phase_debugging", "type": "overlaps_with", "confidence": 0.6, "evidence": "INFERRED: both refuse to advance past an unverified state and name a recovery per failure"},
+    {"source": "premium_design_upgrade_audit", "target": "work_within_existing_stack", "type": "constrains", "confidence": 1.0, "evidence": "'Do not migrate frameworks or styling libraries... Do not break existing functionality'"},
+    {"source": "premium_design_upgrade_audit", "target": "joshua_voice_constraints", "type": "overlaps_with", "confidence": 0.85, "evidence": "Content section bans 'Elevate', 'Seamless', 'Delve', 'Tapestry' - the same AI-slop list"},
+    {"source": "generative_media_creation", "target": "cli_bootstrap_and_auth_check", "type": "depends_on", "confidence": 1.0, "evidence": "'Step 0 - Bootstrap' installs the CLI and stops on Session expired"},
+    {"source": "generative_media_creation", "target": "sibling_skill_scope_boundary", "type": "depends_on", "confidence": 1.0, "evidence": "'NOT for: Soul Character training (use higgsfield-soul-id), product photoshoots, marketplace listing cards'"},
+    {"source": "generative_media_creation", "target": "user_confirmation_gate", "type": "depends_on", "confidence": 0.8, "evidence": "'Ask at most one concise confirmation question before running'"},
+    {"source": "channel_access_control", "target": "untrusted_channel_input", "type": "constrains", "confidence": 1.0, "evidence": "'Channel messages can carry prompt injection; access mutations must never be downstream of untrusted input'"},
+    {"source": "channel_access_control", "target": "read_before_write_state_file", "type": "depends_on", "confidence": 1.0, "evidence": "'Always Read the file before Write - the channel server may have added pending entries'"},
+    {"source": "channel_access_control", "target": "least_privilege_tool_allowlist", "type": "depends_on", "confidence": 0.85, "evidence": "allowed-tools limited to Read, Write, Bash(ls *), Bash(mkdir *)"},
+    {"source": "untrusted_channel_input", "target": "user_confirmation_gate", "type": "prerequisite_of", "confidence": 0.9, "evidence": "'Don't auto-pick even when there's only one' - require the user to name the code"},
+    {"source": "hook_based_command_blocking", "target": "safety_at_tool_layer", "type": "specializes", "confidence": 1.0, "evidence": "PreToolUse hook intercepts and blocks before Claude executes, exiting code 2"},
+    {"source": "hook_based_command_blocking", "target": "readonly_review_isolation", "type": "overlaps_with", "confidence": 0.7, "evidence": "INFERRED: both prevent an agent from mutating git state it should not touch"},
+    {"source": "safety_at_tool_layer", "target": "untrusted_channel_input", "type": "constrains", "confidence": 0.75, "evidence": "INFERRED: harness-level gating is the defense when prompt content itself cannot be trusted"},
+    {"source": "gws_cli_workspace_access", "target": "inspect_schema_before_calling", "type": "depends_on", "confidence": 1.0, "evidence": "'Before calling any API method, inspect it: gws schema slides.<resource>.<method>'"},
+    {"source": "gws_cli_workspace_access", "target": "confirm_before_write_action", "type": "constrains", "confidence": 1.0, "evidence": "'This is a write command - confirm with the user before executing.'"},
+    {"source": "gws_cli_workspace_access", "target": "subscription_expiry_renewal", "type": "produces", "confidence": 0.9, "evidence": "gws events +renew --all --within keeps subscriptions from expiring"},
+    {"source": "gws_cli_workspace_access", "target": "cli_bootstrap_and_auth_check", "type": "depends_on", "confidence": 0.85, "evidence": "'Read ../gws-shared/SKILL.md for auth... If missing, run gws generate-skills'"},
+    {"source": "confirm_before_write_action", "target": "user_confirmation_gate", "type": "specializes", "confidence": 0.95, "evidence": "Write commands block on explicit user confirmation"},
+    {"source": "interactive_field_supplementation", "target": "user_confirmation_gate", "type": "depends_on", "confidence": 1.0, "evidence": "'Display suggested new fields list / User confirms which fields to add'"},
+    {"source": "skill_catalog_installation", "target": "sibling_skill_scope_boundary", "type": "overlaps_with", "confidence": 0.55, "evidence": "INFERRED: installing many similarly-named skills is what makes explicit scope boundaries necessary"},
+    {"source": "defense_in_depth_validation", "target": "safety_at_tool_layer", "type": "overlaps_with", "confidence": 0.6, "evidence": "INFERRED: both make a failure structurally impossible rather than relying on correct behavior at one point"},
+    {"source": "inspect_schema_before_calling", "target": "read_current_code_before_briefing", "type": "overlaps_with", "confidence": 0.7, "evidence": "INFERRED: both forbid acting from memory before reading the authoritative definition"}
+  ]
+}

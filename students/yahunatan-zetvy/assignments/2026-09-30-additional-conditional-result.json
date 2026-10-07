@@ -1,0 +1,85 @@
+{
+  "verified_on": "2026-09-30",
+  "method": "Local lsat-u-lessons MCP assign_guided_drill_batch; app assignWork; deployed merged question bank",
+  "student": "Yahunathan",
+  "plan": "2026-09-30-additional-conditional-plan.json",
+  "results": [
+    {
+      "day": "2026-09-30",
+      "slug": "w5-02-conditional-logic-easier-set-4",
+      "title": "Conditional Logic (Easier) Set 4",
+      "count": 9,
+      "effective_difficulty": [
+        1,
+        2
+      ],
+      "assignment_id": "e3cb25a5-3219-483d-974c-37a49a646a08",
+      "classroom_item_id": "5b9477d4-21ee-4b46-86bb-52298d2e6031",
+      "verified": true,
+      "notify": {
+        "inbox_ok": true,
+        "bell_ok": true,
+        "email_ok": true
+      },
+      "bell_count": 1
+    },
+    {
+      "day": "2026-10-01",
+      "slug": "w3-12-conditional-logic-easier-set-2",
+      "title": "Conditional Logic (Easier) Set 2",
+      "count": 7,
+      "effective_difficulty": [
+        2,
+        3
+      ],
+      "assignment_id": "d77656f9-7cc9-478c-8a50-b6e46bb40c1e",
+      "classroom_item_id": "27e6cc56-5593-427a-9b3f-5c9fbf6976df",
+      "verified": true,
+      "notify": {
+        "inbox_ok": true,
+        "bell_ok": true,
+        "email_ok": true
+      },
+      "bell_count": 1
+    },
+    {
+      "day": "2026-10-03",
+      "slug": "w7-08-conditional-logic-medium-set-4",
+      "title": "Conditional Logic (Medium) Set 4",
+      "count": 9,
+      "effective_difficulty": [
+        3,
+        3
+      ],
+      "assignment_id": "b48d4b72-7c7a-47b8-99b8-60f9377e45d9",
+      "classroom_item_id": "deb28ab2-cd4c-4d49-8ac9-4a0c41ce4ff3",
+      "verified": true,
+      "notify": {
+        "inbox_ok": true,
+        "bell_ok": true,
+        "email_ok": true
+      },
+      "bell_count": 1
+    }
+  ],
+  "metrics": {
+    "sign_ins": 1,
+    "student_lookups": 1,
+    "planned": 3,
+    "assigned": 3,
+    "runner_elapsed_ms": 15296
+  },
+  "checks": {
+    "mcp_search": "passed",
+    "batch_preview": "passed",
+    "read_after_write": "passed all3",
+    "repeat_call": "same3 IDs, zero assignments and no notifications resent",
+    "difficulty_ceiling_rejection": "preview rejects difficulty3 under ceiling2 before writes"
+  },
+  "limits": [
+    "Email send acceptance, not independently verified receipt",
+    "No student browser runner launch test",
+    "Pool draws can overlap other drills; selected level is stored on each assignment",
+    "One writer per operational checkout; MCP process serializes its own calls"
+  ]
+}

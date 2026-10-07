@@ -1,0 +1,177 @@
+{
+  "status": "completed",
+  "mode": "inspect",
+  "provider": "claude",
+  "roles": {
+    "host": "codex",
+    "planner": "codex",
+    "reviewer": "claude",
+    "builder": "codex",
+    "inspector": "claude"
+  },
+  "repo": "C:\\Users\\Joshu\\dev\\lsatu-progress-173",
+  "plan": "C:\\Users\\Joshu\\dev\\ai-os\\research\\2026-10-01-progress-173-work-order.md",
+  "plan_sha256": "ccfe763753b124406b0145da1e03fa40ad5521b3e54d7445809f78944a2f36f8",
+  "requested_model": "claude-opus-5-5",
+  "requested_effort": "medium",
+  "base": "72df6964df9177bc5971cac9fdb4512d0b545a17",
+  "snapshot": {
+    "base": "72df6964df9177bc5971cac9fdb4512d0b545a17",
+    "files": [
+      {
+        "path": "src/components/analytics/FirstAnswerHistoryPanel.test.tsx",
+        "kind": "file",
+        "sha256": "8d9e249386beb6177c13a4443ac68ba4d3522ced647791dec62d69efc73a4e63"
+      },
+      {
+        "path": "src/components/analytics/FirstAnswerHistoryPanel.tsx",
+        "kind": "file",
+        "sha256": "6f000832198def90b832d4e2d72c79484502d1284d0691229c0942421b69d0db"
+      },
+      {
+        "path": "src/components/analytics/FirstAnswerProgressPanel.test.tsx",
+        "kind": "file",
+        "sha256": "edb68dc09e99f008cd73ad74b6800a1fc54450461ce916dc29a81a264bb3aaad"
+      },
+      {
+        "path": "src/components/analytics/FirstAnswerProgressPanel.tsx",
+        "kind": "file",
+        "sha256": "68a729a7f3e3cbe771fde9221c9de5a2820685c3f66355ad20b0de2de919f50e"
+      },
+      {
+        "path": "src/hooks/useProgressWindow.scope.test.tsx",
+        "kind": "file",
+        "sha256": "b796887dbc5970d4e205c5abf217086cdf4b103fca05691dc82773dec9166ecb"
+      },
+      {
+        "path": "src/hooks/useProgressWindow.ts",
+        "kind": "file",
+        "sha256": "3b42a9d963ac4eea082639a3d9bf9b8af8fc940076ad6733e5cba789986defa3"
+      },
+      {
+        "path": "src/lib/firstAnswerDetails.test.ts",
+        "kind": "file",
+        "sha256": "585a8a247b5f28ed572a23d579847bcc8cc69871403e3e01cffe3365f7572a7f"
+      },
+      {
+        "path": "src/lib/firstAnswerDetails.ts",
+        "kind": "file",
+        "sha256": "4ddfeae41a93ee24356af87a148732fc6e94d6b5014e3c2b9116363ba7cd462f"
+      },
+      {
+        "path": "src/lib/progressHistory.test.ts",
+        "kind": "file",
+        "sha256": "9f5682abb15d20c3d55931a718b594920b7a0fd1ed9717eccfdc2c4045dc9d81"
+      },
+      {
+        "path": "src/lib/progressHistory.ts",
+        "kind": "file",
+        "sha256": "6981c0eb09e027e8b1670c00498a1deeee9e68e4af00729b7f4288554d4e4090"
+      },
+      {
+        "path": "src/pages/ProgressTopics.test.tsx",
+        "kind": "file",
+        "sha256": "1d7cc980d66405df8d169795ce04196463af3145347e2355c59137e10cbe0e24"
+      },
+      {
+        "path": "src/pages/ProgressTopics.tsx",
+        "kind": "file",
+        "sha256": "166cae95c185a352a18db5af4f936f8982393f4a28a7ab258baeb1894b646ba1"
+      },
+      {
+        "path": "src/pages/teacher/students/DossierProgress.test.tsx",
+        "kind": "file",
+        "sha256": "1ada15a91d0017392e60eff91673b92ede72dc161d724b81ab8cf37779d6b137"
+      },
+      {
+        "path": "src/pages/teacher/students/DossierProgress.tsx",
+        "kind": "file",
+        "sha256": "1687fd92262e7c17481c9cd2b6b582715d8b18f0155eb649dfb5ad8bbf7b0215"
+      }
+    ],
+    "diff_sha256": "8913c3c8daaefbf279466b9369aa5e881a6866eda01a86695e022bded9f76d65",
+    "sha256": "ec34544ee7b1e0951d0b1f3e7fe594f9c748d304d5ed12f3ec1f0a0fad70ddb8"
+  },
+  "previous": null,
+  "started_at": 1790849640.5020041,
+  "artifacts": "C:\\Users\\Joshu\\dev\\ai-os\\research\\2026-10-01-progress-173-inspection\\claudex-h0wntsd9",
+  "cli_version": "2.1.280 (Claude Code)",
+  "executable": [
+    "C:\\Users\\Joshu\\AppData\\Roaming\\npm\\node_modules\\@anthropic-ai\\claude-code\\bin\\claude.exe"
+  ],
+  "exit_code": 0,
+  "session_id": "be94b13a-e26a-487d-b860-c4a51ce51eb3",
+  "response": {
+    "verdict": "APPROVED",
+    "summary": "I found no material correctness, scope or security defects. History filtering runs on `firstAnswerDetails().history`, where first answers are chosen across all time before the window and before any filter, so filtering cannot turn a repeat into a first. All History filters and the sort order (area, result, first/repeat, source, mode, type, search, order) are stored in the URL with replace and keep other query params. LR and RC percentages are withheld separately: LR when lr_attempts, lr_section_history or practice_test_runs fails, RC when rc_attempts, rc_sessions or practice_test_runs fails. These match the loader's real source names and the completed-run gating in `firstAnswerProgress.ts`. The teacher dossier passes the same studentId and URL window to all three views. It uses `useProgressWindow(false)`, so the teacher's own saved window is neither read nor overwritten. Its \"Open Review\" link goes to `../review`, which resolves correctly under the `students/:studentId/progress` route in App.tsx, and the own-practice links are hidden. Saved-attempt loading and the completed-only grading code are unchanged. I found two low-severity wording problems: a partial area card can show both \"withheld\" and sample-size messages, and History rows still say \"First answer\" with no qualifier while sources are missing.",
+    "findings": [
+      {
+        "id": "R1",
+        "severity": "low",
+        "path": "src/components/analytics/FirstAnswerProgressPanel.tsx",
+        "evidence": "In AreaCard, the 'Early signal: fewer than 10 answers.' message (line 24-26) and the 'At least 3 answers are needed for a percentage.' message (line 21-23) still show when `partial` is true. They appear next to the new 'Accuracy is withheld' line (line 27), so the card both withholds the number and comments on its sample size. ProgressTopics already hides these messages when partialLr is true (ProgressTopics.tsx topic row), so the two views now handle the same partial state differently.",
+        "fix": "Show the sample messages only when the area is complete, e.g. `!unavailable && !partial && result.sample === ...`. Add a test that the partial card does not show 'Early signal'."
+      },
+      {
+        "id": "R2",
+        "severity": "low",
+        "path": "src/components/analytics/FirstAnswerHistoryPanel.tsx",
+        "evidence": "When a source for an area is missing (e.g. lr_section_history), the table still says 'First answer' with no qualifier. The grouped list shows the same label, and the 'First only' filter keeps returning those rows. The only warning is the general partial-history note at the top, which does not say which area is affected. The same panel's accuracy is withheld because those answers are only candidates, so a teacher reading the table could treat a candidate as a confirmed first answer.",
+        "fix": "Work out which areas are partial using the same rule as FirstAnswerProgressPanel. For rows in a partial area, label them 'First available answer' or add a qualifier to the cell, and name the affected area in the partial note."
+      }
+    ],
+    "coverage": [
+      "Read the plan and the full tracked diff for all 14 manifest files",
+      "Read in full: src/lib/progressHistory.ts, src/lib/firstAnswerDetails.ts, src/components/analytics/FirstAnswerProgressPanel.tsx, src/pages/teacher/students/DossierProgress.tsx",
+      "Read all new or changed tests: FirstAnswerHistoryPanel.test.tsx, FirstAnswerProgressPanel.test.tsx, ProgressTopics.test.tsx, DossierProgress.test.tsx, useProgressWindow.scope.test.tsx, progressHistory.test.ts",
+      "Followed the shared data path through src/lib/firstAnswerProgress.ts (adapters, first-answer selection, AreaProgress), src/lib/firstAnswerSources.ts (source names, coverage, completed-run gating) and src/hooks/useFirstAnswerProgress.ts (scope and shared query key)",
+      "Found every caller of FirstAnswerHistoryPanel, FirstAnswerProgressPanel, ProgressTopics and useProgressWindow (App.tsx, Analytics.tsx, DrillHistory.tsx, DossierProgress.tsx) and checked the dossier route nesting in App.tsx so the relative `../review` link resolves",
+      "Checked that test assertions match the components, e.g. that the jsdom select value 'rc-drill' exists in the mocked options and that text matches are case-sensitive"
+    ],
+    "limitations": [
+      "I could not run typecheck, build or tests, so nothing here confirms that tests pass or the build succeeds",
+      "I did not see the UI in a browser, so layout, focus behavior and how the table looks in the dossier are unverified",
+      "I did not read src/hooks/useProgressWindow.ts beyond the diff, or ProgressWindowControl, useStudentSubjectScope, StudentDossier or the DossierReview target. Scope enforcement is assumed to come from the existing useStudentSubjectScope and assertActiveStudentScope",
+      "I did not check Claude's separate weekly/settings work beyond confirming that no files outside the manifest were changed in the diff"
+    ]
+  },
+  "usage": {
+    "input_tokens": 20,
+    "cache_creation_input_tokens": 48898,
+    "cache_read_input_tokens": 343348,
+    "output_tokens": 9654,
+    "output_tokens_details": {
+      "thinking_tokens": 5919
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 48898,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 2406,
+        "cache_read_input_tokens": 52233,
+        "cache_creation_input_tokens": 956,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 956
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "observed_models": [
+    "claude-opus-5-5"
+  ],
+  "permission_denials": [],
+  "total_cost_usd": 0.6530136000000001,
+  "elapsed_seconds": 118.92
+}
