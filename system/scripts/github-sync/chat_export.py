@@ -10,7 +10,7 @@ import re
 from pathlib import Path
 
 
-def redact(text: str) -> str:
+def _redact_once(text: str) -> str:
     text = re.sub(r"(?i)\bBearer\s+[A-Za-z0-9._~+/=-]+", "Bearer [REDACTED]", text)
     text = re.sub(r"-----BEGIN [A-Z ]*PRIVATE KEY-----.*?-----END [A-Z ]*PRIVATE KEY-----", "[REDACTED PRIVATE KEY]", text, flags=re.S)
     text = re.sub(r"\b(?:sk-[A-Za-z0-9_-]{12,}|gh[pousr]_[A-Za-z0-9]{16,}|github_pat_[A-Za-z0-9_]{16,}|AIza[A-Za-z0-9_-]{20,}|sk_(?:live|test)_[A-Za-z0-9]{12,})\b", "[REDACTED KEY]", text)
@@ -19,6 +19,17 @@ def redact(text: str) -> str:
     text = re.sub(r"(?i)([?&](?:token|key|secret|password|signature|access_token)=)[^&#\s]+", r"\1[REDACTED]", text)
     text = re.sub(r"(https?://)[^/\s:@]+:[^/\s@]+@", r"\1[REDACTED]@", text)
     return text
+
+
+def redact(text: str) -> str:
+    # Nested serialized tool arguments can expose an adjacent credential token
+    # after the first replacement. Converge before declaring output sanitized.
+    for _ in range(12):
+        clean = _redact_once(text)
+        if clean == text:
+            return clean
+        text = clean
+    raise ValueError("redaction did not converge")
 
 
 def secret_checks(text: str) -> bool:
@@ -56,9 +67,19 @@ def _content(value) -> str:
 
 
 def _parse(path: Path, platform: str, roots: list[Path]):
-    records = [json.loads(line) for line in path.read_text(encoding="utf-8").splitlines() if line.strip()]
+    raw = path.read_text(encoding="utf-8")
+    lines = [line for line in raw.splitlines() if line.strip()]
+    records, warnings = [], []
+    for position, line in enumerate(lines):
+        try:
+            records.append(json.loads(line))
+        except json.JSONDecodeError:
+            if position == len(lines) - 1 and records and not raw.endswith("\n"):
+                warnings.append("Final incomplete JSONL record omitted; valid preceding records exported")
+                break
+            raise
     if not records:
-        raise ValueError("empty session")
+        return None
     cwds = []
     session_id = path.stem
     for row in records:
@@ -108,9 +129,9 @@ def _parse(path: Path, platform: str, roots: list[Path]):
             sections.append("## " + str(role) + "\n\n" + redact(body))
     if not sections:
         raise ValueError("no supported conversation content")
-    text = "# " + platform.title() + " conversation " + session_id + "\n\n" + "\n\n".join(sections) + "\n"
+    text = redact("# " + platform.title() + " conversation " + session_id + "\n\n" + "\n\n".join(sections) + "\n")
     title = next((section.split("\n\n", 1)[1].splitlines()[0][:100] for section in sections if section.startswith("## user")), session_id)
-    return session_id, text, {"cwd": cwds[0], "title": title}
+    return session_id, text, {"cwd": cwds[0], "title": title, "warnings": warnings}
 
 
 def _write_if_changed(path: Path, text: str):
@@ -128,7 +149,7 @@ def export_conversations(destination: Path, allowed_roots: list[Path]) -> dict:
     index_path = destination / "index.json"
     previous = json.loads(index_path.read_text(encoding="utf-8")) if index_path.exists() else {"sessions": []}
     old = {entry["source"]: entry for entry in previous.get("sessions", [])}
-    entries, errors = [], []
+    entries, errors, warnings = [], [], []
     home = Path.home()
     sources = [("claude", home / ".claude" / "projects"), ("codex", home / ".codex" / "sessions"), ("codex", home / ".codex" / "archived_sessions")]
     discovery_failed = False
@@ -153,11 +174,15 @@ def export_conversations(destination: Path, allowed_roots: list[Path]) -> dict:
             try:
                 stat = path.stat()
                 cached = old.get(source)
-                if cached and cached.get("export_version") == 3 and cached.get("source_mtime_ns") == stat.st_mtime_ns and cached.get("source_size") == stat.st_size and cached.get("allowed_roots") == [str(root.resolve()) for root in allowed_roots] and (destination / cached["file"]).exists():
+                if cached and cached.get("export_version") == 4 and cached.get("source_mtime_ns") == stat.st_mtime_ns and cached.get("source_size") == stat.st_size and cached.get("allowed_roots") == [str(root.resolve()) for root in allowed_roots] and (destination / cached["file"]).exists():
                     entries.append(cached)
                     continue
                 parsed = _parse(path, platform, allowed_roots)
                 if parsed is None:
+                    if stat.st_size == 0:
+                        warnings.append({"source": source, "warning": "Empty JSONL source has no conversation records"})
+                        if source in old:
+                            entries.append(old[source])
                     continue
                 session_id, body, metadata = parsed
                 # Multiple Codex rollout files may share a thread id. Preserve every
@@ -169,7 +194,7 @@ def export_conversations(destination: Path, allowed_roots: list[Path]) -> dict:
                 if secret_checks(body):
                     raise ValueError("output failed secret check")
                 _write_if_changed(target, body)
-                entries.append({"platform": platform, "session_id": session_id, "file": relative, "source": source, "sha256": hashlib.sha256(body.encode()).hexdigest(), "source_mtime_ns": stat.st_mtime_ns, "source_size": stat.st_size, "allowed_roots": [str(root.resolve()) for root in allowed_roots], "export_version": 3, **metadata})
+                entries.append({"platform": platform, "session_id": session_id, "file": relative, "source": source, "sha256": hashlib.sha256(body.encode()).hexdigest(), "source_mtime_ns": stat.st_mtime_ns, "source_size": stat.st_size, "allowed_roots": [str(root.resolve()) for root in allowed_roots], "export_version": 4, **metadata})
             except (ValueError, OSError, TypeError, KeyError) as exc:
                 errors.append({"source": source, "error": str(exc)})
                 if source in old:
@@ -186,7 +211,8 @@ def export_conversations(destination: Path, allowed_roots: list[Path]) -> dict:
                 continue
             if target.exists():
                 target.unlink()
-    result = {"sessions": sorted(entries, key=lambda entry: entry["file"]), "errors": errors, "deletion_semantics": "Source JSONL removal only. UI archive/deletion may leave source files intact."}
+    warnings.extend({"source": entry["source"], "warning": warning} for entry in entries for warning in entry.get("warnings", []))
+    result = {"sessions": sorted(entries, key=lambda entry: entry["file"]), "errors": errors, "warnings": warnings, "deletion_semantics": "Source JSONL removal only. UI archive/deletion may leave source files intact."}
     _write_if_changed(index_path, json.dumps(result, indent=2, ensure_ascii=False) + "\n")
     lines = ["# Local conversation archive", "", "Generated project-scoped Claude and Codex transcripts. Tool content is included with credential redaction; internal reasoning and attachment binary data are omitted.", "", "Native UI archive does not delete a conversation. Source-file deletion removes its generated export. These files provide context; importing them does not restore a native chat session.", "", "| Platform | Conversation | Project roots | Source updated (UTC) |", "| --- | --- | --- | --- |"]
     from datetime import datetime, timezone

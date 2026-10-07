@@ -1,0 +1,24 @@
+{
+  "format": "portable-runtime-export-v1",
+  "counts": {
+    "agents_skills": 1593,
+    "claude_skills": 1632,
+    "codex_skills": 425,
+    "claude_instruction": 1,
+    "codex_instruction": 1,
+    "claude_memory_files": 64,
+    "codex_memory_records": 0
+  },
+  "source_paths": {
+    "agents_skills": "C:\\Users\\Joshu\\.agents\\skills",
+    "claude_skills": "C:\\Users\\Joshu\\.claude\\skills",
+    "codex_skills": "C:\\Users\\Joshu\\.codex\\skills",
+    "claude_instruction": "C:\\Users\\Joshu\\.claude\\CLAUDE.md",
+    "codex_instruction": "C:\\Users\\Joshu\\.codex\\AGENTS.md",
+    "claude_projects": "C:\\Users\\Joshu\\.claude\\projects",
+    "codex_memories": "C:\\Users\\Joshu\\.codex\\memories_1.sqlite"
+  },
+  "warnings": [
+    "Plugin caches and binaries are not installed by this export; skill references to plugins may require installation in cloud."
+  ]
+}

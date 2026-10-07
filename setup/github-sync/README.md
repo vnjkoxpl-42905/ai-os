@@ -16,14 +16,35 @@ The Windows task `AI OS - Private GitHub Sync` checks every two minutes while si
 - Each LSAT U worktree on its own branch of the app repository.
 - Readable Claude Code and Codex conversation exports for the covered roots, under `.cloud-sync/conversations/` in the AI OS snapshot.
 - Generated workspace metadata and a freshness/status record.
+- Separate global Claude, Codex and shared skill catalogs, global instructions, covered Claude native memories and a consistent readable Codex memory export under `.cloud-sync/runtime/`.
+- Joshua-authorized credentials and runtime configuration in an authenticated encrypted package under `.cloud-sync/private/`. Plaintext credentials remain excluded from ordinary files and conversation exports.
 
 Conversation exports preserve user and assistant prose, compaction context, and useful tool calls/results, with credential redaction. They exclude hidden reasoning and binary attachments. They are files Claude/Codex can read, not native chat sessions in either product's sidebar. Source JSONL disappearance removes the generated current-view export. UI archive/delete can leave the source file behind, so UI deletion is not guaranteed to remove an export. Previous Git commits retain history; permanent history erasure is not performed automatically.
 
-Credentials, `.env`, raw archives, native browser/auth sessions, private keys, dependency/build/cache/runtime directories, nested Git metadata, and reparse links are excluded. Files above the configured GitHub size limit are reported. Gitleaks screens the actual upload snapshot and excluded files are recorded without printing secret values. It does not upload the entire laptop or bypass existing private backup rules. Private Drive backups continue independently.
+Plaintext credentials, `.env`, raw archives, native browser sessions, OS keyrings, dependency/build/cache/runtime directories, nested Git metadata, and reparse links are excluded from the readable snapshot. Configured credential files and discovered project `.env` files are included only inside the encrypted package. Files above the configured GitHub size limit are reported. Gitleaks screens the upload snapshot and records exclusions without printing secret values. Private Drive laptop backups continue independently.
+
+## Credential access in cloud
+
+The encrypted package uses AES-GCM with a random 256-bit key. Its key stays in the ignored, access-restricted `setup/github-sync/state/private/` directory, outside GitHub and Drive. `cloud-key.env` provides the one-time cloud key configuration; never paste its contents into a chat, commit or handoff. Any cloud environment given this key can decrypt all included credentials. Environment variables in Claude's settings are visible to users of that environment; account-level access and environment selection matter.
+
+After privately provisioning `AI_OS_SYNC_KEY`, run these commands from the AI OS cloud checkout:
+
+```bash
+python -m pip install cryptography
+python setup/github-sync/credential_bundle.py --decrypt .cloud-sync/private/credentials.enc --destination .cloud-private/credentials
+```
+
+Do not print decrypted files, enable shell tracing, commit them, or overwrite native cloud authentication with local auth files. Use the central `.env` and relevant project credentials for the specific tool that needs them. GWS keyring data, expiring login tokens and Windows paths can require cloud authentication or path adaptation; encrypted transport does not prove the service will accept them. Decryption refuses existing destination files, so use a fresh protected directory for a refreshed package.
+
+## The web and local runtimes differ
+
+Cloud sessions run on separate machines and cannot become identical to the local Windows process. Exported context is readable; native chat state, plugin installations, machine-bound credentials and connected browser sessions are separate. Cloud work returns through a reviewed task branch/PR and normal local integration; this uploader does not silently pull cloud edits over local unfinished work. Native cloud-only conversations are not automatically downloaded by this local exporter.
+
+For the actual same local session from a browser, [Claude Remote Control](https://code.claude.com/docs/en/remote-control) keeps local tools, files and the conversation available remotely. The local computer and Claude process must keep running.
 
 ## Google Drive mirror
 
-The private folder `AI OS - Live Workspace Sync` contains machine and checkout folders. Each checkout has `latest.zip` and `manifest.json`; the archive contains the same filtered project and conversation snapshot as GitHub. Uploads replace the same Drive file and verify its checksum and size. Source deletions disappear from the latest archive. Prior Drive revisions and Git history can retain older content. Existing laptop backups stay separate. No Drive files are deleted or shared by this sync.
+The private folder [AI OS - Live Workspace Sync](https://drive.google.com/drive/folders/1z3oXAoKOWNqKjAPO-Txtkm0uEgz88sgY) contains machine and checkout folders. Each checkout has `latest.zip` and `manifest.json`; the archive contains the same filtered project and conversation snapshot as GitHub. Uploads replace the same Drive file and verify its checksum and size. Source deletions disappear from the latest archive. Prior Drive revisions and Git history can retain older content. Existing laptop backups stay separate. No Drive files are deleted or shared by this sync.
 
 ## Start cloud work from the latest snapshot
 

@@ -7,5 +7,50 @@
   "branch_prefix": "codex/local-sync",
   "max_file_bytes": 99614720,
   "export_conversations": true,
-  "auto_create_private_repositories": true
+  "auto_create_private_repositories": true,
+  "credential_sources": [
+    {
+      "path": "C:\\Users\\Joshu\\dev\\ai-os\\.env",
+      "label": "ai-os/.env"
+    },
+    {
+      "path": "~/.claude/.credentials.json",
+      "label": "home/.claude/.credentials.json"
+    },
+    {
+      "path": "~/.codex/auth.json",
+      "label": "home/.codex/auth.json"
+    },
+    {
+      "path": "~/.claude.json",
+      "label": "home/.claude.json"
+    },
+    {
+      "path": "~/.claude/.claude.json",
+      "label": "home/.claude/.claude.json"
+    },
+    {
+      "path": "~/.claude/settings.json",
+      "label": "home/.claude/settings.json"
+    },
+    {
+      "path": "~/.codex/config.toml",
+      "label": "home/.codex/config.toml"
+    },
+    {
+      "path": "~/.config/gws/client_secret.json",
+      "label": "home/.config/gws/client_secret.json"
+    },
+    {
+      "path": "~/.config/gws/token_cache.json",
+      "label": "home/.config/gws/token_cache.json"
+    },
+    {
+      "path": "~/.config/gws/credentials.enc",
+      "label": "home/.config/gws/credentials.enc"
+    }
+  ],
+  "export_runtime": true,
+  "push_timeout_seconds": 900,
+  "auto_credential_sources": true
 }

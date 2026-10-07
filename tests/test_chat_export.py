@@ -18,6 +18,13 @@ class ConversationExportTests(unittest.TestCase):
             self.assertNotIn(secret, clean)
         self.assertFalse(module.secret_checks(clean))
 
+    def test_nested_serialized_credentials_converge(self):
+        samples = [r'{"password": "api_key=hidden"}', 'authorization=Bearer hidden', 'password="token=hidden"', 'key=https://example.com/?token=password=hidden']
+        for sample in samples:
+            clean = module.redact(sample)
+            self.assertEqual(clean, module.redact(clean))
+            self.assertNotIn("hidden", clean)
+
     def test_export_filter_preserve_corrupt_and_remove_deleted(self):
         with tempfile.TemporaryDirectory() as tmp:
             home = Path(tmp)
@@ -101,6 +108,19 @@ class ConversationExportTests(unittest.TestCase):
                 second = module.export_conversations(dest, [home / "project"])
                 self.assertEqual(len(second["sessions"]), 1)
                 self.assertTrue(second["errors"])
+
+    def test_truncated_last_record_and_corrupt_middle(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            path = root / "session.jsonl"
+            good = json.dumps({"type": "user", "sessionId": "one", "cwd": str(root), "message": {"content": "Valid request"}})
+            path.write_text(good + '\n{"type":')
+            parsed = module._parse(path, "claude", [root])
+            self.assertIn("Valid request", parsed[1])
+            self.assertTrue(parsed[2]["warnings"])
+            path.write_text(good + '\n{"broken":\n' + good)
+            with self.assertRaises(json.JSONDecodeError):
+                module._parse(path, "claude", [root])
 
 
 if __name__ == "__main__":

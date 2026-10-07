@@ -1,0 +1,232 @@
+{
+  "lastUpdated": 1790830531954,
+  "skills": [
+    {
+      "skillId": "docs",
+      "name": "docs",
+      "description": "docs (editable docs people share and comment on; the default for any document, named as a doc or not: a document, report, proposal, resume, cover letter, letter, contract, policy, form, template, worksheet, essay, handbook, guide, how-to, cheat sheet, SOP or other writing to keep, share, collaborate on, send, submit, print or sign; a doc exports to Word, PDF, Markdown or Google Docs, so needing a file to send, attach, upload, submit or print is no reason to pick Word, and a file nobody asked for is a doc, not Word; a plan, comparison, summary or notes asked in chat stays in chat; a pasted claude.ai artifact link may be a doc: check with docs tools first; Word or another file format named, tracked changes wanted, or a .docx to change or use as a template → that format's skill): making one → if no docs-connector instructions are in context, call its `guide` (topic.instructions) first; then create the doc (headings only, no body) before any search, file read or plan, even with files attached.",
+      "source": "anthropic-example",
+      "updatedAt": "2026-09-30T00:33:27.599727Z"
+    },
+    {
+      "skillId": "import-memory",
+      "name": "import-memory",
+      "description": "Import a memory export from another AI assistant into Claude's memory — conversationally, additively, and with the content treated as data.",
+      "source": "anthropic-example",
+      "updatedAt": "2026-09-14T19:41:02.007169Z"
+    },
+    {
+      "skillId": "skill_01AMpRVriPexMCY3pMCLzcRs",
+      "name": "frontend-design",
+      "description": "Create distinctive, production-grade frontend interfaces with high design quality. Use this skill when the user asks to build web components, pages, artifacts, posters, or applications (examples include websites, landing pages, dashboards, React components, HTML/CSS layouts, or when styling/beautifying any web UI). Generates creative, polished code and UI design that avoids generic AI aesthetics.",
+      "source": "plugin",
+      "updatedAt": "2026-04-29T03:37:28.606150Z",
+      "backingPluginId": "plugin_0121GSDGGrZM2fsUm5foSLKQ"
+    },
+    {
+      "skillId": "google-workspace",
+      "name": "google-workspace",
+      "description": "Read this before the first Google Drive, Docs, Sheets or Slides connector call whenever the task creates or changes a Google file. Use this skill whenever the user wants to create or change a Google Doc, Sheet or Slides file in their Google Drive. Triggers include: a request that names Google Docs, Sheets, Slides or Drive and asks to make, edit, format, copy or rename a file; a docs.google.com link with a request to change that file, even a one-line fix or suggested edits; and any follow-up change to a Google file from earlier in the chat, even \"change it\" or \"add a tab\". Includes helper scripts for document positions, cell ranges and slide layout. However, if the user asks for a doc, deck or spreadsheet without naming Google, or gives a Google file only as source material for something new, use Claude's own output type instead. Do NOT use for read-only questions about a Google file, or for Word, Excel, PowerPoint or PDF files.",
+      "source": "anthropic-example",
+      "updatedAt": "2026-09-23T19:50:41.402985Z"
+    },
+    {
+      "skillId": "skill_01DhfgunMQA17474v4k6NM3x",
+      "name": "webapp-testing",
+      "description": "Toolkit for interacting with and testing local web applications using Playwright. Supports verifying frontend functionality, debugging UI behavior, capturing browser screenshots, and viewing browser logs.",
+      "source": "plugin",
+      "updatedAt": "2026-04-29T03:38:00.186904Z",
+      "backingPluginId": "plugin_012Ww1C8Fj7TKAc7NoSvSyWx"
+    },
+    {
+      "skillId": "doc-coauthoring",
+      "name": "doc-coauthoring",
+      "description": "Guide users through a structured workflow for co-authoring documentation. Use when user wants to write documentation, proposals, technical specs, decision docs, or similar structured content. This workflow helps users efficiently transfer context, refine content through iteration, and verify the doc works for readers. Trigger when user mentions writing docs, creating proposals, drafting specs, or similar documentation tasks.",
+      "source": "anthropic-example",
+      "updatedAt": "2026-09-14T19:41:01.438795Z"
+    },
+    {
+      "skillId": "morning",
+      "name": "morning",
+      "description": "Render the user's morning brief as a styled HTML artifact, or set it up as a recurring weekday task. Use only when the user explicitly asks to run, see, or set up their morning brief, or if they invoke /morning by name. A question about their day, schedule, or calendar is not by itself a request for the brief; answer it directly instead.",
+      "source": "anthropic-example",
+      "updatedAt": "2026-09-14T19:41:01.990356Z"
+    },
+    {
+      "skillId": "internal-comms",
+      "name": "internal-comms",
+      "description": "A set of resources to help me write all kinds of internal communications, using the formats that my company likes to use. Claude should use this skill whenever asked to write some sort of internal communications (status reports, leadership updates, 3P updates, company newsletters, FAQs, incident reports, project updates, etc.).",
+      "source": "anthropic-example",
+      "updatedAt": "2026-09-14T19:41:01.586209Z"
+    },
+    {
+      "skillId": "web-artifacts-builder",
+      "name": "web-artifacts-builder",
+      "description": "Suite of tools for creating elaborate, multi-component claude.ai HTML artifacts using modern frontend web technologies (React, Tailwind CSS, shadcn/ui). Use for complex artifacts requiring state management, routing, or shadcn/ui components - not for simple single-file HTML/JSX artifacts.",
+      "source": "anthropic-example",
+      "updatedAt": "2026-09-14T19:41:01.557439Z"
+    },
+    {
+      "skillId": "mcp-builder",
+      "name": "mcp-builder",
+      "description": "Guide for creating high-quality MCP (Model Context Protocol) servers that enable LLMs to interact with external services through well-designed tools. Use when building MCP servers to integrate external APIs or services, whether in Python (FastMCP) or Node/TypeScript (MCP SDK).",
+      "source": "anthropic-example",
+      "updatedAt": "2026-09-14T19:41:01.618801Z"
+    },
+    {
+      "skillId": "pdf",
+      "name": "pdf",
+      "description": "Use this skill whenever the user wants to do anything with PDF files. This includes reading or extracting text/tables from PDFs, combining or merging multiple PDFs into one, splitting PDFs apart, rotating pages, adding watermarks, creating new PDFs, filling PDF forms, encrypting/decrypting PDFs, extracting images, and OCR on scanned PDFs to make them searchable. If the user mentions a .pdf file or asks to produce one, use this skill.",
+      "source": "anthropic",
+      "updatedAt": "2026-07-10T19:23:15.432550Z"
+    },
+    {
+      "skillId": "skill-creator",
+      "name": "skill-creator",
+      "description": "Create new skills, modify and improve existing skills, and measure skill performance. Use when users want to create a skill from scratch, edit, or optimize an existing skill, run evals to test a skill, benchmark skill performance with variance analysis, or optimize a skill's description for better triggering accuracy.",
+      "source": "anthropic-example",
+      "updatedAt": "2026-09-14T19:41:01.499089Z"
+    },
+    {
+      "skillId": "xlsx",
+      "name": "xlsx",
+      "description": "Use this skill any time a spreadsheet file is the primary input or output. This means any task where the user wants to: open, read, edit, or fix an existing .xlsx, .xlsm, .xltx, .csv, or .tsv file (e.g., adding columns, computing formulas, formatting, charting, cleaning messy data); create a new spreadsheet from scratch or from other data sources; or convert between tabular file formats. Trigger especially when the user references a spreadsheet file by name or path — even casually (like \"the xlsx in my downloads\") — and wants something done to it or produced from it. Also trigger for cleaning or restructuring messy tabular data files (malformed rows, misplaced headers, junk data) into proper spreadsheets. The deliverable must be a spreadsheet file. Do NOT trigger when the primary deliverable is a Word document, HTML report, standalone Python script, database pipeline, or Google Sheets API integration, even if tabular data is involved.",
+      "source": "anthropic",
+      "updatedAt": "2026-09-14T21:00:33.324012Z"
+    },
+    {
+      "skillId": "pptx",
+      "name": "pptx",
+      "description": "Use this skill any time a .pptx or .potx file is involved in any way — as input, output, or both. This includes: creating slide decks, pitch decks, or presentations as PowerPoint (.pptx) files; reading, parsing, or extracting text from any .pptx or .potx file (even if the extracted content will be used elsewhere, like in an email, summary, or creating a different type of slide deck); editing, modifying, or updating existing presentations; combining or splitting slide files; working with templates (.potx), layouts, speaker notes, or comments. Trigger whenever the user asks for a PowerPoint or .pptx file, or references a .pptx or .potx filename, regardless of what they plan to do with the content afterward. However, when the user asks for a deck, slides, a slide deck, or a presentation without naming a file format, default to using a dedicated slide-deck artifact type or a separate slides skill if this session offers one; otherwise, use this skill.",
+      "source": "anthropic",
+      "updatedAt": "2026-09-22T18:00:37.886566Z"
+    },
+    {
+      "skillId": "docx",
+      "name": "docx",
+      "description": "Use this skill whenever the user wants to create, read, edit, or manipulate Word documents (.docx) or Word templates (.dotx). Triggers include: any mention of Microsoft Word Documents, such as 'Word doc', 'word document', '.docx', '.dotx', 'microsoft doc'. Also use when extracting or reorganizing content from .docx or .dotx files, inserting or replacing images in documents, find-and-replace in Word files, working with tracked changes or comments, or converting content into a polished Word document. If the user asks for a deliverable as a Word or .docx file (to download, email or print), use this skill. However, if they ask for a document, page, report, memo, or notes WITHOUT naming a file format and the session offers Claude's own dedicated document or page skill or connector, use that instead, even if they will email or print it. Do NOT use for PDFs, spreadsheets, Google Docs, or coding unrelated to document generation.",
+      "source": "anthropic",
+      "updatedAt": "2026-09-30T02:00:31.677168Z"
+    },
+    {
+      "skillId": "skill_01XoVofoGDeLqqEk1ERfJmFg",
+      "name": "facebook-consultation-requests",
+      "description": "Joshua's Facebook Messenger assistant for LSAT tutoring service requests. Use this whenever Joshua says \"run facebook requests\", \"run messenger requests\", \"check my facebook messages\", or asks to find people messaging him about tutoring on Facebook/Messenger and reply to them, even if he doesn't name the skill. Trigger on any request to pull unread Messenger conversations, find requests for his LSAT services on Facebook, or draft replies to prospects who messaged him there. Reads Messenger through the Claude in Chrome browser tools, finds genuine service inquiries, and drafts the consultation reply in Joshua's voice. It types the reply into the chat but never sends without Joshua's explicit approval.",
+      "source": "plugin",
+      "updatedAt": "2026-07-01T02:13:39.818952Z",
+      "backingPluginId": "plugin_01Fy75HvbRrz5LBNqro8kHFn"
+    },
+    {
+      "skillId": "skill_01APiUq8NrnKpHWWqG1Y8X5o",
+      "name": "consultation-email-assistant",
+      "description": "Joshua's LSAT tutoring email assistant for consultation inquiries and post-consultation follow-ups. Use this whenever Joshua says \"run consultation request\", \"run consultation follow-up\", or asks to reply to a tutoring inquiry, draft a consultation reply, send someone the consultation/booking link, or follow up after a consultation call, even if he doesn't name the skill. Trigger on any request to draft, personalize, or send email to an LSAT prospect or student from contact@aspiringattorneys.com about booking a consultation, services, rates, or next steps after a call. Drafts in Joshua's voice using the bundled golden templates, puts the draft in Gmail, and only sends after Joshua approves.",
+      "source": "plugin",
+      "updatedAt": "2026-07-01T01:57:57.518365Z",
+      "backingPluginId": "plugin_01AjWJF1vp5rUtQnk2fFqtU2"
+    },
+    {
+      "skillId": "skill_01C2Vf4n5cCHz4nkt8T5YdVB",
+      "name": "gws-gmail-read",
+      "description": "Gmail: Read a message and extract its body or headers.",
+      "source": "plugin",
+      "updatedAt": "2026-04-29T03:48:38.821504Z",
+      "backingPluginId": "plugin_0142aPWKorfyX8BeHWB1HeSA"
+    },
+    {
+      "skillId": "skill_01NMEeXitsBMMyDejAVr8E2b",
+      "name": "grill-me",
+      "description": "Interview the user relentlessly about a plan, design, or topic, checkpointing every answer to a brainstorm file so nothing is lost. Use when the user wants to stress-test a plan, get grilled on a design, run a brainstorm or discovery session, extract what's in their head into a doc, or says \"grill me\".",
+      "source": "plugin",
+      "updatedAt": "2026-06-08T18:49:16.305038Z",
+      "backingPluginId": "plugin_01Gg5rGciRxDH3U4vcowGvud"
+    },
+    {
+      "skillId": "skill_01H8coxuE4AnFujsfZkqwJF3",
+      "name": "notebooklm",
+      "description": "Complete API for Google NotebookLM - full programmatic access including features not in the web UI. Create notebooks, add sources, generate all artifact types, download in multiple formats. Activates on explicit /notebooklm or intent like \"create a podcast about X\"",
+      "source": "plugin",
+      "updatedAt": "2026-04-29T03:39:31.346542Z",
+      "backingPluginId": "plugin_01VqgFQAXJngbw3rBrgUr3st"
+    },
+    {
+      "skillId": "skill_01W7UGCbqu5ZAJWapuhwXspq",
+      "name": "chat-export",
+      "description": "Save the current conversation as a structured markdown file and generate a handoff prompt for continuing in a new chat. Use this skill whenever the user says \"export this chat\", \"save this conversation\", \"create a handoff\", \"save this for later\", \"export to my chat exports folder\", or anything indicating they want to preserve a conversation and carry context into a new session. Always trigger this skill proactively when a conversation has been long, complex, or has produced decisions, files, or code — even if the user hasn't explicitly asked yet.",
+      "source": "plugin",
+      "updatedAt": "2026-04-29T03:48:10.499992Z",
+      "backingPluginId": "plugin_016Qbnsez5vX5x88MbhnXnsC"
+    },
+    {
+      "skillId": "skill_01Tu6SRpS13t9NwQaREwXLHw",
+      "name": "lsat-lab-set-builder",
+      "description": "Build LSAT Lab practice sets from a CSV of questions by splitting the list into evenly sized sets and selecting the exact questions in the LSAT Lab web app via Claude in Chrome. Use when Joshua wants to turn a CSV/list of LSAT questions (columns like practiceTest, section, question) into one or more saved practice sets on app.lsatlab.com, \"make a set\", \"build set 2\", \"split my missing questions into sets\", or \"add these questions to LSAT Lab\". Handles the full browser flow: Create Practice Set, LR/RC, test-range filter, per-question checkbox matching, verification, naming, and Submit.",
+      "source": "plugin",
+      "updatedAt": "2026-06-19T19:23:51.633639Z",
+      "backingPluginId": "plugin_01XWWpJWFaHiii72HNWzdJoG"
+    },
+    {
+      "skillId": "skill_01URNq9z3E16JZSK2jagTDwA",
+      "name": "site-teardown",
+      "description": "Reverse engineer any website into a complete build blueprint. Analyzes the HTML structure, fetches and extracts all animation/interaction code from the site's JavaScript, and pulls the complete design system from the CSS. Outputs a structured teardown document with tech stack, every visual effect and how it's implemented, design tokens, assets needed, and a section-by-section build plan. Use this skill whenever the user wants to analyze how a website was built, reverse engineer a site, clone or recreate a website, understand what tech stack or animations a site uses, do a site teardown, deconstruct a page, figure out how an effect works on a website, or says things like 'steal this website', 'break down this site', 'how did they build this', 'website blueprint', 'analyze this site for me', or gives you a URL and asks you to figure out how it works. Also trigger when the user pastes raw HTML source code and asks what's going on or how to recreate it.",
+      "source": "plugin",
+      "updatedAt": "2026-06-26T09:24:02.454071Z",
+      "backingPluginId": "plugin_01724BukqEXehCTjAgrKxZYz"
+    },
+    {
+      "skillId": "skill_01EhmighcpngAVp2fqTsam9Y",
+      "name": "lsat-drill-builder",
+      "description": "Generate a new LSAT \"argument dissection\" drill in the same interactive style as the First Sentence vs Rebuttal drill, for any LR topic. Use when Joshua asks to build, create, or generate a drill, a dissection lab, an argument-parts practice set, or a \"drill like the rebuttal one\" for a new topic (assumptions, flaws, strengthen/weaken, parallel reasoning, conclusion ID, etc.). Produces a standalone single-file HTML drill with all the same features.",
+      "source": "plugin",
+      "updatedAt": "2026-06-06T10:35:14.021473Z",
+      "backingPluginId": "plugin_016pr284xfqUyTVubmy3RZdy"
+    },
+    {
+      "skillId": "skill_01Mjd6LHmPhv4HYyYJjdw6Wc",
+      "name": "lsat-lab-question-features",
+      "description": "Extract LSAT Lab question-feature tags from a practice set in the browser and save them as an organized markdown file. The user can name one of their saved LSAT Lab sets and the skill will open it by name from their Created Sets list, then gather every question's features automatically. Use this whenever the user wants to pull, extract, transcribe, catalog, or \"grab the question features\" for an LSAT Lab practice set, PrepTest, or LR/RC section — for example \"go to my 'Pt 159' set and pull the question features\", \"extract the features for this set\", \"add PrepTest 161 to my features folder\", or \"go through each question and list its tags\". Also use it to (re)build the full Question Features Glossary from LSAT Lab's Logical Reasoning Glossary. Trigger even when the user doesn't say the word \"skill\" and just describes the task, as long as it involves LSAT Lab question features. Requires the Claude-in-Chrome browser tools and a logged-in LSAT Lab session.",
+      "source": "plugin",
+      "updatedAt": "2026-06-19T23:35:24.042400Z",
+      "backingPluginId": "plugin_017LYf4tCpZKCTDYVJonsCDm"
+    },
+    {
+      "skillId": "skill_01Ne5z1u75zg9z1pj18VYfWP",
+      "name": "find-skills",
+      "description": "Helps users discover and install agent skills when they ask questions like \"how do I do X\", \"find a skill for X\", \"is there a skill that can...\", or express interest in extending capabilities. This skill should be used when the user is looking for functionality that might exist as an installable skill.",
+      "source": "plugin",
+      "updatedAt": "2026-04-29T03:47:47.905774Z",
+      "backingPluginId": "plugin_015xaQMdunJEZWx1BTTbmkTi"
+    },
+    {
+      "skillId": "skill_01DaQJVsX4haZDcRwdP32Zsk",
+      "name": "lsat-u-voice",
+      "description": "Write LSAT U curriculum content in Joshua's signature voice, a unified blend of Feynman's earned clarity, Sagan's stakes-naming, Bret Victor's grounded abstraction, Ciechanowski's tour-guide demonstration, and Tim Urban's casual punch. Use whenever creating student-facing LSAT teaching material, including chapter content, conceptual explanations, drill walkthroughs, question-type reference cards, motivational openers and closers, FAQ entries, lesson notes, or any text where an LSAT student is the reader. Trigger this skill on requests like \"write the chapter on X,\" \"explain Y for students,\" \"draft this lesson,\" \"reference card for Z,\" \"what should this lesson sound like,\" or any rewrite of curriculum text. Trigger this skill whenever Joshua mentions curriculum content, lesson writing, student-facing LSAT material, or asks for content in his voice, even when he doesn't explicitly say \"use the voice skill.\"",
+      "source": "plugin",
+      "updatedAt": "2026-05-07T04:32:48.487694Z",
+      "backingPluginId": "plugin_01BaNhCJLuzooLiRkLihyyJv"
+    },
+    {
+      "skillId": "skill_013Lp7yxUUG8tmiepFZRnZQk",
+      "name": "gws-gmail-triage",
+      "description": "Gmail: Show unread inbox summary (sender, subject, date).",
+      "source": "plugin",
+      "updatedAt": "2026-04-29T03:48:54.200513Z",
+      "backingPluginId": "plugin_01T68KD7qA6hGFwovkWqFiL3"
+    },
+    {
+      "skillId": "skill_0111oVYDVGr1PznA3XwjsREc",
+      "name": "graphify",
+      "description": "any input (code, docs, papers, images) - knowledge graph - clustered communities - HTML + JSON + audit report",
+      "source": "plugin",
+      "updatedAt": "2026-04-29T03:48:20.369770Z",
+      "backingPluginId": "plugin_012SV4AgV8A7H39tDm7uVd1e"
+    },
+    {
+      "skillId": "skill_01QCGTSJWezNo6dW2KxugaaS",
+      "name": "browser",
+      "description": "Direct browser control via CDP. Use when the user wants to automate, scrape, test, or interact with web pages. Connects to the user's already-running Chrome.",
+      "source": "plugin",
+      "updatedAt": "2026-05-03T00:14:41.982753Z",
+      "backingPluginId": "plugin_01NHNgG3iqpHBchbR3es5H28"
+    }
+  ]
+}

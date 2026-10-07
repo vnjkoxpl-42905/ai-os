@@ -21,9 +21,18 @@ def gws(method, params=None, body=None, upload=None):
     if body: command += ['--json', json.dumps(body)]
     if upload: command += ['--upload', str(upload)]
     result = subprocess.run(command, capture_output=True, text=True, timeout=900,
+                            cwd=str(Path(upload).resolve().parent) if upload else None,
                             creationflags=subprocess.CREATE_NO_WINDOW if os.name == 'nt' else 0)
     if result.returncode:
-        raise RuntimeError('Drive operation failed: ' + method)
+        detail = f'exit {result.returncode}'
+        try:
+            error = json.loads(result.stdout).get('error', {})
+            code, reason = error.get('code'), error.get('reason')
+            if code is not None: detail += f', API code {code}'
+            if isinstance(reason, str) and reason.replace('_', '').isalnum(): detail += ', reason ' + reason
+        except (ValueError, AttributeError):
+            pass
+        raise RuntimeError('Drive operation failed: ' + method + ' (' + detail + ')')
     return json.loads(result.stdout)
 
 def quote(value):
@@ -71,9 +80,12 @@ class Mirror:
         body = {'id': reserved, 'name': name, 'parents': [parent], 'mimeType': mime, 'appProperties': {'syncKey': key}}
         try:
             self.api('create', {'fields': FIELDS, 'ignoreDefaultVisibility': True}, body, upload)
-        except RuntimeError:
+        except RuntimeError as create_error:
             # An uncertain upload can have succeeded. Reuse the durable ID.
-            recovered = self.api('get', {'fileId': reserved, 'fields': FIELDS})
+            try:
+                recovered = self.api('get', {'fileId': reserved, 'fields': FIELDS})
+            except RuntimeError as recovery_error:
+                raise RuntimeError(str(create_error) + '; recovery: ' + str(recovery_error)) from None
             if recovered.get('appProperties', {}).get('syncKey') != key or parent not in recovered.get('parents', []):
                 raise RuntimeError('Drive recovery ID does not match destination')
         result = self.api('get', {'fileId': reserved, 'fields': FIELDS})

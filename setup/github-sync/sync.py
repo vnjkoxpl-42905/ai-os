@@ -13,16 +13,25 @@ TOKEN_PATTERN = re.compile(rb'(?:gh[pousr]_[A-Za-z0-9]{30,}|github_pat_[A-Za-z0-
 PATTERNS = [('private key', re.compile(rb'-----BEGIN (?:RSA |EC |OPENSSH |DSA )?PRIVATE KEY-----')), ('API token', TOKEN_PATTERN)]
 ASSIGNMENT = re.compile(rb'''(?im)^\s*["']?[\w.-]*(?:api[_-]?key|secret|password|access[_-]?token|refresh[_-]?token)[\w.-]*["']?\s*[:=]\s*["']?([^\s"',;#}{]+)''')
 
-def run(*args, cwd=None, env=None):
-    p = subprocess.run(args, cwd=cwd, env=env, stdout=subprocess.PIPE, stderr=subprocess.PIPE, timeout=180)
+def run(*args, cwd=None, env=None, timeout=180):
+    p = subprocess.run(args, cwd=cwd, env=env, stdout=subprocess.PIPE, stderr=subprocess.PIPE, timeout=timeout)
     if p.returncode:
-        raise RuntimeError(f'{args[0]} failed ({p.returncode})')
+        diagnostic = p.stderr.decode('utf-8', errors='replace').lower()
+        categories = [label for markers, label in [
+            (('gh013', 'push protection', 'secret scanning', 'repository rule violations'), 'GitHub repository policy rejected upload'),
+            (('non-fast-forward', 'fetch first'), 'remote advanced; fast-forward rejected'),
+            (('rpc failed', 'http 50', 'http 40', 'remote end hung up', 'unexpected disconnect', 'connection reset'), 'network or HTTP transfer failed'),
+            (('authentication failed', 'could not read username', 'permission denied'), 'authentication failed'),
+            (('exceeds github', 'large files detected', 'gh001'), 'GitHub file-size limit'),
+        ] if any(marker in diagnostic for marker in markers)]
+        detail = '; '.join(categories) or 'command failed; diagnostic output suppressed to protect credentials'
+        raise RuntimeError(f'{args[0]} failed ({p.returncode}): {detail}')
     return p.stdout.decode('utf-8', errors='replace').strip()
 
-def git(root, *args, env=None):
+def git(root, *args, env=None, timeout=180):
     environment = os.environ.copy() if env is None else env.copy()
     environment.update(GIT_TERMINAL_PROMPT='0', GCM_INTERACTIVE='never')
-    return run('git', '-c', 'core.longpaths=true', '-C', str(root), *args, env=environment)
+    return run('git', '-c', 'core.longpaths=true', '-C', str(root), *args, env=environment, timeout=timeout)
 
 def long_path(path):
     path = Path(path).absolute()
@@ -286,6 +295,20 @@ def publish(root, repository, config, state, dry_run=False):
         generated = staging / '.cloud-sync'
         generated.mkdir(exist_ok=True)
         (generated / 'workspace.json').write_text(json.dumps(registry, indent=2) + '\n', encoding='utf-8')
+        if root == Path(config['ai_os']) and (config.get('credential_sources') or config.get('auto_credential_sources')):
+            progress(config, repository, 'encrypt portable credentials')
+            credential_spec = importlib.util.spec_from_file_location('credential_bundle', Path(__file__).parent / 'credential_bundle.py')
+            credential_adapter = importlib.util.module_from_spec(credential_spec)
+            credential_spec.loader.exec_module(credential_adapter)
+            registry['credential_bundle'] = credential_adapter.export_bundle(generated / 'private', config)
+            (generated / 'workspace.json').write_text(json.dumps(registry, indent=2) + '\n', encoding='utf-8')
+        if root == Path(config['ai_os']) and config.get('export_runtime'):
+            progress(config, repository, 'export runtime skills and memories')
+            runtime_spec = importlib.util.spec_from_file_location('runtime_export', Path(__file__).parent / 'runtime_export.py')
+            runtime_adapter = importlib.util.module_from_spec(runtime_spec)
+            runtime_spec.loader.exec_module(runtime_adapter)
+            registry['runtime_export'] = runtime_adapter.export_runtime(generated / 'runtime', config)
+            (generated / 'workspace.json').write_text(json.dumps(registry, indent=2) + '\n', encoding='utf-8')
         if config.get('export_conversations') and root == Path(config['ai_os']):
             progress(config, repository, 'export conversations')
             adapter_path = root / 'system/scripts/github-sync/chat_export.py'
@@ -317,7 +340,7 @@ def publish(root, repository, config, state, dry_run=False):
         state[key] = {'commit': prior, 'pending_commit': commit, 'prior_remote': prior, 'branch': branch, 'repository': repository}
         persist_state(config, state)
         progress(config, repository, 'push snapshot')
-        git(root, 'push', 'origin', f'{commit}:refs/heads/{branch}')
+        git(root, 'push', 'origin', f'{commit}:refs/heads/{branch}', timeout=config.get('push_timeout_seconds', 900))
         state[key] = {'commit': commit, 'branch': branch, 'repository': repository}
         persist_state(config, state)
         return dict(registry, commit=commit, skipped=report, status='published')

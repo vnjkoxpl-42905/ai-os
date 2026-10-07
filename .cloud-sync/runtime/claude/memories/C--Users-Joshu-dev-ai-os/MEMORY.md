@@ -1,0 +1,64 @@
+- [Conditional curriculum stage review](conditional-curriculum-stage-review.md): develop stages 1–4 together; published content is not final approval.
+- [Conditional NotebookLM reference](conditional-notebook-reference.md): verified notebook identity; browser access and MCP connectivity are separate.
+- [Conditional screenshot roles](conditional-reference-screenshot-roles.md): box activity is a potential quiz; synopsis and skill list are references.
+- [Firecrawl via CLI, not MCP](firecrawl-via-cli-not-mcp.md) — use the firecrawl-* skills; the MCP server was removed on purpose.
+- [Stripe Codex connection](stripe-codex-connection.md) — verified 2026-09-14: Aspiring Attorneys account is connected through the Stripe app in live mode; CLI/API key is separate and unverified.
+- [AI OS vault location](ai-os-vault-location.md) — the real vault is dev/ai-os (7,869 files) — build on it, never scaffold a new one.
+- [AI OS safety rules](ai-os-safety-rules.md) — delete blocked at the tool layer; send only when he says "send" in chat (changed 2026-09-11).
+- [Session memory needs a real folder](session-memory-needs-a-real-folder.md) — open dev/ai-os, never "No folder".
+- [PowerShell MSIX breaks npm CLIs](powershell-msix-breaks-npm-clis.md) — Store build can't see AppData\Roaming\npm; install the MSI.
+- [Assigning Activities is pre-authorized](assigning-activities-is-pre-authorized.md) — "assign X to Y" means do it now; runbook in wiki/ASSIGN-AN-ACTIVITY.md.
+- [LSAT U content lives in Postgres](lsatu-content-lives-in-postgres.md) — a git push never changes student copy; use npm run content:push.
+- [LSAT U copy corrections log](lsatu-copy-corrections-log.md) — read wiki/COPY-CORRECTIONS.md before writing student copy.
+- [Lovable edge functions do not deploy from push](lovable-edge-functions-do-not-deploy-from-push.md) — prove a function deploy with the build marker before trusting a fix.
+- [RRC band floor belongs to the judge](rrc-band-floor-belongs-to-the-judge.md) — re-run scripts/rrc-census.ts and move BAND_FLOOR whenever the judge model changes.
+- [Assigned work is invisible without the flag](assigned-work-is-invisible-without-the-flag.md) — a missing feature flag reads as an empty portal, not a locked door; verify reachability at assign time.
+- [Cal.com rolling window hides Saturdays](calcom-rolling-window-hides-saturdays.md) — only 6 business days show, so students see at most one Saturday.
+- [Cal.com "pending" = unpaid and stuck](calcom-pending-bookings-are-unpaid.md) — the payment link expires in 30 min, cannot be re-sent, and the dead booking keeps blocking the slot.
+- [Lovable frontend publish is a separate step](lovable-frontend-publish-is-separate.md) — a push builds a preview; only deploy_project reaches lsatprep.study. Free deploy_project is pre-authorized (2026-09-26).
+- [No em dashes, no filler](no-em-dashes-no-filler-in-joshuas-writing.md) — zero em dashes in his voice, and cut stock encouragement like "that's the point".
+- [Ore and Yahunatan identities](ore-and-yahunatan-identities.md) — emails, vault folders, and the three spellings of Yahunatan/Yahunathan.
+- [Booking emails omit pass settings](booking-emails-omit-pass-settings.md) — credit count and the link, nothing about session length or expiry.
+- [7Sage analytics are student-supplied URLs](7sage-analytics-are-student-supplied-urls.md) — /u/usr_.../review, needs his logged-in Chrome; index in wiki/SEVENSAGE-ANALYTICS-INDEX.md.
+- [No "door" as a unit of content](no-door-metaphor-in-student-copy.md) — say sections/parts/steps, not "five doors"; the word itself is not banned.
+- [Current vs former students](current-vs-former-students.md) — a folder in students/ does not mean an active student; 12 marked former on 2026-09-09.
+- [No fake URLs on his servers](no-fake-urls-on-his-servers.md) — close or redirect temporary localhost tabs before removing their routes; never leave him looking at a 404 created by verification cleanup.
+- [Push only your own commits](push-only-your-own-commits.md) — never carry another session's unpushed work along with yours.
+- [In-app browser scales CSS widths](in-app-browser-scales-css-widths.md) — 2px outlines read back as 1.6px; never threshold on a width from that browser.
+- [Student work must be preserved](student-work-must-be-preserved.md) — completed student work is never lost or modified by a change; optional fields + fallbacks, never a destructive migration.
+- [Branch per session in LSAT U](branch-per-session-in-lsatu.md) — concurrent sessions each get a branch off main and a PR; never commit to main.
+- [Classroom dark = html.dark from ClassroomLayout](classroom-dark-theme-is-html-dark-from-layout.md) — ThemeContext only sets .light; the layout toggles .dark, so the dark rules are live. Test with localStorage lsatu-theme=dark.
+- [Tailwind prose was inert, now registered](tailwind-prose-classes-are-inert.md) — plugin wired 2026-09-09 with the app tokens in BOTH keys; never restore Tailwind grays.
+- [Classroom prose loses list markers](classroom-prose-loses-list-markers.md) — preflight strips list-style app-wide; re-declare disc/decimal in any hand-rolled prose CSS.
+- [Shebang + CRLF breaks vitest](shebang-plus-crlf-breaks-vitest.md) — a scripts/*.mjs with both cannot be imported, and the error names the wrong file.
+- [Remotion rspack emits no JS](remotion-rspack-emits-no-js.md) — the ENOENT bundle.js error is a decoy; turn rspack off.
+- [RRC step names live in the app](rrc-step-names-live-in-the-app.md) — Read it. / Tell it back. / Colour it. / The Recall.; nothing on screen ever hides.
+- [Booking slot checks share one arithmetic](booking-slot-checks-must-share-one-arithmetic.md) — "just taken" with nothing taken = list vs DB drift; buffer/notice/window live in booking_availability_config, one booking_slot_is_clear().
+- [Google mirror needs tombstoning](gcal-mirror-needs-tombstoning.md) — a day full on LSAT U but open on Cal.com is a stale schedule_events row; the pull sync now tombstones after a clean full pass.
+- [Superwhisper settings location](superwhisper-settings-location.md) — source of truth dev/ai-os/superwhisper/ + sync.py; app drops modes with promptExamples written externally; verify modeKeys after restart.
+- [Email apology shape](email-apology-shape.md) — apology opens, "Once again, my apologies" closes, never narrate what the system will send; full shape in wiki/teaching-voice.md.
+- [Web research uses Firecrawl credits](web-research-uses-firecrawl-credits.md) — always Firecrawl for web search/reads, never WebSearch/WebFetch; spend Firecrawl credits, not Claude credits.
+- [No Logic Games on the LSAT](no-logic-games-on-the-lsat.md) — only LR and RC exist; never mention or ask about LG.
+- [Section resume rows](section-resume-row-is-per-section-not-per-assignment.md) — homework keyed drill::assignment::<id> since PR #124; a spent clock opens on the buzzer, never on 00:00.
+- [Timer context is new every tick](timer-context-is-new-every-tick.md) — never depend on the `timer` object; read it through a ref or it fires 4x/sec.
+- [Pre-consult check-in is auto-send](pre-consult-check-in-is-auto-send.md) — the T-30 "Consultation check-in" is pre-authorized; consultations are identified by title only, and the skill never creates calendar events.
+- [Claude Code backup to Drive](claude-code-backup-to-drive.md) — 10-min mirror to G:\My Drive\CLAUDE-CODE-BACKUP - START HERE + private GitHub ai-os repo; vault is now a git repo with auto-commits.
+- [Bash heredoc collapses backslashes](bash-heredoc-collapses-backslashes.md) — inline Python patches with `\` silently fail to match; write the script to the scratchpad and run it by path.
+- [Smart Drill is the drill hub's smart tool](smart-drill-is-the-drill-hubs-smart-tool.md) — label it Smart Drill in LR and RC; keep assigned work out of the Welcome back hero and in the lower Today area.
+- [Accommodations email is auto-send](accommodations-email-is-auto-send.md) — "accommodations email/scale to X" = run the skill and send now; fixed wording; script logs itself.
+- [Codex model roles](codex-model-roles.md) — gpt-6-astra designs, specs and reviews; gpt-6-luna high builds; a 400 on sol or luna means a stale CLI, use dev/tools/node/codex. State the model before launch.
+- [Never clear storage on dev tabs](never-clear-browser-storage-on-dev-tabs.md) — it signs Joshua out of LSAT U; each localhost port is its own sign-in.
+- [Minimize Lovable credits](minimize-lovable-credits.md) — free paths first (SQL, deploy_project, git); only Edge Function deploys go to the agent, batched in one short message.
+- [Download requests are pre-authorized](download-requests-are-preauthorized.md) — when Joshua asks to download a specific item, do it without a separate permission question; still honor action-time confirmation for installs that grant sensitive access.
+- [LR bank grades, DB explains](lr-bank-grades-db-explains.md) — questions live twice; bank shows and grades, DB explains; compare stimulus + key per slot after any load.
+- [No intermediate guides](no-intermediate-guides.md) — write from the reference set directly; no cheat sheets or scaffolding docs first.
+- [Teacher Home spec location](teacher-home-spec-location.md) — admin Home / "Needs your attention" queue spec is brainstorms/2026-09-27-teacher-command-center.md; unbuilt 2026-09-29.
+- [No internal labels in student lessons](no-internal-labels-in-student-lessons.md) — never show "concept lesson" or production metadata; title the actual reasoning being taught.
+
+- [Recap references transfer quality, not topics](recap-references-transfer-quality-not-topics.md) - preserve the selected topic; read the recap calibration before each new note.
+- [LSAT U state transition checks](lsatu-study-tool-transition-checks.md) - required actor-switch, failed-save, answer-invariant, reducer persistence, touch, and review-accuracy checks after the 2026-10-01 study-tools review.
+- [Original conditional examples](conditional-examples-are-original.md) - use fresh intuitive scenarios throughout lessons, drills and media.
+- [Kling for conditional videos](conditional-videos-use-kling.md) - NotebookLM supports notes, quizzes and recall; its earlier videos stay internal.
+- [Selected LSAT teaching voice](lsat-teaching-voice-standard.md): source-grounded wording, cadence, questions, reasoning, and progression; read the detailed standard before LSAT authoring.
+- [Use root env for existing logins](use-root-env-for-existing-logins.md): Joshua authorizes normal sign-in for requested work; retrieve credentials locally before asking him, never store their values in memory.
+- [Bank edits need timed catalog rotation](bank-edits-need-timed-catalog-rotation.md) - LR bank text changes break timed PTs and sections until both frozen catalogs are regenerated, seeded and activated; since #201 type/level relabels no longer break sealed sittings.

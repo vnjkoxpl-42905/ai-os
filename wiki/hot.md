@@ -9,7 +9,15 @@ aliases: []
 
 Freshest working state; the first page `/pickup` reads. Rebuilt fresh in the 2026-07-16 vault rebuild (the old cache is archived).
 
-## Most recent (2026-10-07): Conditional drill fixes, polish and final audit
+## Most recent (2026-10-07): Conditional audit implementation reaches 18/20
+
+- Implemented remaining metadata finding plus scalable text/wrapping, app preference theme support, retained-question memoization and persistent atomic choice feedback. [Audit](../../ai-os-projects/lsatu-conditional-bootcamp/docs/agent/conditional-recovery-20261007/impeccable-audit-implementation-20261007.md): 18/20 Excellent, no confirmed P0-P3 findings in scoped pass. Two points withheld for screen-reader and representative device-performance evidence, not invented defects.
+- Codex-only browser verified light/dark, actual 320/460/768/1280/1920 widths, root-font 200% stress at 320px and state retention. Root-font stress exposed and fixed mobile header overflow; guided controls now scale too. Drawer closure returns focus after exit transition. All test overrides reset; temporary tab closed.
+- 28 affected tests, full app typecheck and final build passed (7,160 modules, 1m7s). Changed TSX lint clean; three CSS files parsed. Two read-only reviews found no high-confidence regressions. Small local interaction sample: 8ms script work across two choices plus Check, not a device benchmark.
+- [Frozen readiness delta](../brainstorms/2026-09-30-conditional-curriculum/2026-10-07-impeccable-readiness-overlay/manifest.json): four changed files, 65-file inventory. Prior snapshots unchanged.
+- Local/unpublished. No commit, push, merge, backend changes, Lovable spend or task-status changes. Integrate reviewed delta with current main before release; never push recovered baseline. Screen-reader, physical-device profile and authenticated production theme-toggle remain unverified.
+
+## Previous (2026-10-07): Conditional drill fixes, polish and final audit
 
 - Implemented all six findings from the original drill audit, then ran Impeccable polish and a fresh audit in that order. [Report](../../ai-os-projects/lsatu-conditional-bootcamp/docs/agent/conditional-recovery-20261007/impeccable-polish-audit-20261007.md): 16/20 Good, no P0/P1/P2; one P3 for small secondary mobile metadata.
 - Saving notice appears before starting and on direct run entry. Account status now identifies assigned work on opening routes; existing recorded routes retain their status. No new persistence or account writes.
