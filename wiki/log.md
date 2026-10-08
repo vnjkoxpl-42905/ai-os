@@ -2531,3 +2531,16 @@ Joshua explicitly requested undoing all changes from the preceding ingestion tur
 - All verified step 2 defect fixes are now in the LSAT U database: 849 guarded edits (595 choice notes, 238 step bodies, 16 step labels). An earlier session had applied part of the set without logging it; this session wrote the remaining 639 rows in 17 atomic, md5-checked batches with zero mismatches.
 - Fresh mirror pull confirms 846 rows match the plan exactly; 3 rows already held a better hand-applied version and were left alone. Both timed catalog configs were already on the new hashes.
 - Record: [fixes/index.md](../corpus/lr-explanations/fixes/index.md). Next: step 3, rewriting the 192 "Revamp" explanations.
+
+## [2026-10-08] system | Verify Karpathy source-collection handoff
+
+- [Corrected handoff](../research/karpathy-brain-2026-10-08/HANDOFF-VERIFICATION.md) reconciles local files with Antigravity's claims. Registered 79 blog Markdown and 1,209 GitHub files match recorded hashes. Physical collection count is 1,540 files / 80,301,723 bytes, including companion representations, metadata and additional interviews; 3,278 was a mixed logical-item count.
+- [X/YouTube audit](../research/karpathy-brain-2026-10-08/youtube-x-audit.md): 1,975 X rows, 1,946 unique IDs, 1,835 Karpathy-authored IDs, 111 foreign authors, 29 cross-ledger duplicate IDs, nine explicitly truncated Karpathy records and one text-version conflict. Four months have no saved Karpathy items. Media are URLs/flags, not physical attachments. All 15 channel Markdown transcripts match saved caption cues; two channel videos have no captions; two 2026 interview mirrors are separately labeled.
+- [Blog/GitHub audit](../research/karpathy-brain-2026-10-08/blog-github-audit.md): Medium remains best effort, three course links failed, course authorship is shared, and Markdown punctuation was transformed. Government HTML alone accounts for 3,068,239 GitHub words; datasets, vendor and generated content must not become Karpathy persona evidence.
+- Collection integrity checks do not establish exhaustive public-source coverage or full semantic ingestion. The original reports and source files remain unchanged. No final seven-rule set, persona agent, teaching skill or hook was installed. Task status was not changed.
+
+## [2026-10-08] ingest | Karpathy five-source compilation starter
+
+- Created [Karpathy compilation index](karpathy/index.md), [hot page](karpathy/hot.md), candidate principles, methods and a scoped compilation log. Five quoted source pages cover the complete LLM Wiki gist, autoresearch/micrograd/jobs READMEs and Animals vs Ghosts Markdown. Repository code, media and the remainder of the collection are not semantically ingested by this starter.
+- Linked the collection from the [AI workspace hub](../references/ai-workspace/index.md) and refreshed the master wiki catalog with its owning generator. Raw sources, Joshua's identity, teaching voice and runtime configurations were preserved.
+- Prompt 2 remains incomplete. Independent evidence review, outstanding collection gaps and the rest of the source compilation remain open. Candidate observations are not the final seven rules; no persona, skill or hook was installed.

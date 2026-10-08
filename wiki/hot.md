@@ -9,7 +9,15 @@ aliases: []
 
 Freshest working state; the first page `/pickup` reads. Rebuilt fresh in the 2026-07-16 vault rebuild (the old cache is archived).
 
-## Most recent (2026-10-08): AI OS audit repairs
+## Most recent (2026-10-08): Karpathy handoff verification
+
+- [Corrected collection handoff](../research/karpathy-brain-2026-10-08/HANDOFF-VERIFICATION.md) is the current coverage authority. The original Antigravity report's 100% completeness claim is unsupported; sources were preserved.
+- Blog/GitHub registered text payload hashes pass. Physical root contains 1,540 files / 80,301,723 bytes. The handoff's 3,278 mixes logical sources and ledger records with files; the GitHub word count largely includes imported data.
+- X has 1,835 unique Karpathy-authored IDs plus 111 other authors, 29 duplicate observations, nine explicitly truncated Karpathy records and four months with no saved Karpathy items. Attachments remain external links. These gaps need collection repair before exhaustive coverage can be claimed.
+- Fifteen channel transcripts match raw captions; two uploads have no captions. Two 2026 external interview mirrors have explicit provenance and limitations. Full semantic compilation remains incomplete; final rules, persona, teaching skill and hooks have not been installed.
+- [Karpathy wiki starter](karpathy/index.md) compiles five fully reviewed text documents, with raw quotes and source hashes. Three are README-only repository slices. The AI workspace hub links it; the rest of the corpus remains outside semantic coverage.
+
+## Previous (2026-10-08): AI OS audit repairs
 
 - Joshua authorized fixing the full-vault audit. [Repair outcome](../research/audit-repairs-2026-10-08/outcome.md) carries every finding, corrected rules/routes and explicit remaining checks; [baseline audit](../audits/audit-2026-10-08-052114-f4a92b.md) remains unchanged.
 - Shared Superwhisper safeguards, handling/storage policies, current app routes and stale sampled status claims are reconciled. Old missing personal/reform routes remain explicitly unavailable, not fabricated. No app task was marked complete or reopened.

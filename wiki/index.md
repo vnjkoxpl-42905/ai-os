@@ -127,9 +127,22 @@ Regenerate this section after page changes with `py system/scripts/wiki-maintena
 
 - [[wiki/entities/aspiring-attorneys|Aspiring Attorneys : moved]]: The authoritative business page now lives at **`context/work.md`** (Level 1 authored context, per the workspace reform). This stub exists only so old links resolve; do not add cont
 
+### Karpathy
+
+- [[wiki/karpathy/hot|Read this as a five-source starter]]: Prompt 2 is partial. These observations come from five fully read text documents, including three repository READMEs. They do not represent a complete account of Karpathy or his co
+- [[wiki/karpathy/index|Five reviewed sources begin the Karpathy compilation]]: The corrected handoff verification records the source audit and its limits. The raw collection report is the collector's report, not proof that every claim or source has been inges
+- [[wiki/karpathy/log|Record compilation separately from collection]]: See the page for its record and context.
+- [[wiki/karpathy/methods|Project methods are evidence, not installed workflows]]: This partial Prompt 2 page compares four fully read documents. Code, notebooks, data payloads and runtime behavior have not been reviewed or executed. Methods remain attributed exa
+- [[wiki/karpathy/principles|Candidate observations need wider evidence]]: This is partial Prompt 2 synthesis from five text sources. It does not establish the final seven rules. Each observation is scoped to its source; wider applicability and recurrence
+
 ### Sources
 
 - [[wiki/sources/conditional-reasoning-voice|Conditional Reasoning supplies the selected LSAT teaching voice]]: Joshua supplied this HTML on 2026-10-02 and explicitly selected its tone, wording, cadence, point of view, explanatory flow, and depth as the standard for LSAT teaching material. T
+- [[wiki/sources/karpathy/animals-vs-ghosts|Animals and LLMs may occupy different paths to intelligence]]: Original: Animals vs Ghosts, Andrej Karpathy, published 2025-10-01 according to the preserved article. Collection and compilation date 2026-10-08. The complete preserved Markdown t
+- [[wiki/sources/karpathy/autoresearch-readme|Autoresearch bounds an experiment loop]]: Original: autoresearch README, repository owner Andrej Karpathy; individual passage authorship not independently verified. Publication date unknown; collection and compilation date
+- [[wiki/sources/karpathy/jobs-readme|Keep job-market estimates separate from predictions]]: Original: US Job Market Visualizer README, repository owner Andrej Karpathy; individual passage authorship not independently verified. Publication date unknown; collection and comp
+- [[wiki/sources/karpathy/llm-wiki|Compile knowledge into maintained pages]]: Original: LLM Wiki gist, Andrej Karpathy. Publication date unknown; collection and compilation date 2026-10-08. The complete preserved Markdown text was read. The gist revision was
+- [[wiki/sources/karpathy/micrograd-readme|Micrograd exposes a small learning implementation]]: Original: micrograd README, repository owner Andrej Karpathy; individual passage authorship not independently verified. Publication date unknown; collection and compilation date 20
 - [[wiki/sources/llm-wiki-pattern|Compile knowledge once, then keep it current]]: The supplied idea file describes an LLM-maintained wiki between curated source documents and the questions a person asks.
 - [[wiki/sources/lsat-demon-abstract-conditionals|Move from a familiar rule to an abstract relationship]]: Joshua supplied this LSAT Demon clip and requested its integration into the Conditional Bootcamp on 2026-10-03. The entire supplied transcript, 0:00 to 9:10, was read. The closing
 - [[wiki/sources/lsat-demon-mastering-conditional-statements|One sufficient route need not be the only route]]: Joshua requested all clipped LSAT Demon conditional material for intuitive original examples. This generic-title article was found after the two explicitly named Demon clips. Unlik
