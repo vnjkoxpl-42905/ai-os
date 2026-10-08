@@ -26,6 +26,8 @@ These labels are hypotheses tested through the student's reasoning. An answer ma
 
 ## Inspect the whole timing sequence
 
+For a diagnosed reading-retention problem, the [RC cumulative-translation protocol](<Curriculum/Reading Comprehension/Notes/cumulative-translation-review.md>) supplies a concrete observation exercise. For a conditional meaning/diagram mismatch, the [existing conditional reference](<Curriculum/Conditional Logic/Notes/_megadoc_reference_conditionals.md>) routes to Joshua's approved checks. [Student-record conventions](../students/README.md) keep the individual evidence and resulting judgment in the person's folder.
+
 A final-passage miss may begin with earlier questions consuming the available time. Review correct answers too: a correct but costly question can explain why the student never reached another question. Compare what the student did in the moment with what they can explain afterward before calling the final passage the problem.
 
 Flagging and second-pass review are different from later untimed blind review. On a timed return, inspect whether the student actually reconsidered the conclusion, scope or relevant relationship, or simply repeated the first reading. Rebuilding every flagged question from scratch is the speakers' suggestion; its opportunity cost still needs judgment.

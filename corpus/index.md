@@ -23,6 +23,7 @@ Fills through supervised ingests, one source at a time, logged in [[../wiki/log|
 
 - [Loophole teacher reference](loophole-online/index.md): translation, quipping, CLIR, question strategies and review routines, with attributed source navigation and defective-capture warnings.
 - [Diagnose the cause of a miss](tutoring-diagnosis.md): the recovered 7Sage four-category coaching framework and whole-section timing review, retained as a private teacher reference.
+- [RC cumulative translation](<Curriculum/Reading Comprehension/Notes/cumulative-translation-review.md>): a concrete recall-check protocol for an observed reading-retention problem, filed in its topic home.
 - [Source and comparison](../wiki/sources/old-obsidian-vault-2026-10-07.md): preservation hashes, full local-file coverage, missing images and historical-policy conflicts.
 
 ### `lectures/` · read-aloud scripts and teaching visuals
@@ -50,6 +51,8 @@ Fills through supervised ingests, one source at a time, logged in [[../wiki/log|
 - `Curriculum/LR/` — 2 homework pages exported live from Google Drive (pilot, 2026-07-17).
 
 **Known gaps:** topics scaffolded but still unfilled — Agree Disagree, Bootcamp, Match Family, Must Be False, Paradox, Quantifiers, Weaken, Reading Comprehension. Their source material is split between `raw/sources/lsat-curriculum/LSAT DUMP/` (many entries are stale `.gdoc` Drive pointers whose IDs no longer resolve) and Google Drive itself, where a past migration converted docs to PDFs/scans under new IDs. Recovering those needs a Drive-side pass, not a local copy.
+
+2026-10-07 recovery note: the [RC cumulative-translation protocol](<Curriculum/Reading Comprehension/Notes/cumulative-translation-review.md>) now provides one attributed method in the RC topic home. It does not establish recovery of the complete RC curriculum. Conditional and objection topic pages now link the relevant recovered evidence without replacing their current teaching standards.
 
 ### `lr-explanations/` — models for writing LR explanations (2026-09-26)
 

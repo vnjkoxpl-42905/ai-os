@@ -29,6 +29,10 @@ The missing 7Sage coaching distinctions are compiled into [tutoring diagnosis](.
 
 Old runtime routers, connection registry and plans are preserved in the [root review](../../research/obsidian-vault-comparison/2026-10-07/root-review.md). A pricing discrepancy between old and current `CONTEXT.md` remains unresolved; no operational policy was overwritten. The conditional cheat-sheet review also preserves its author's triage rejecting an unsupported transcript attribution, which illustrates why a critique is not itself proof of a source claim.
 
+## Domain integration audit on 2026-10-07
+
+The first recovery made the source library and diagnostic framework reachable from the corpus index. The follow-up audit connected them to actual topic and student workflows: [RC cumulative translation](<../../corpus/Curriculum/Reading Comprehension/Notes/cumulative-translation-review.md>) now lives in the RC notes home; the existing [conditional reference](<../../corpus/Curriculum/Conditional Logic/Notes/_megadoc_reference_conditionals.md>) points to the already-established meaning check; and the existing [Assumption versus Objection quiz](<../../corpus/Curriculum/Flaw and Famous Flaws/Homework/Pop Quiz - Assumption vs Objection.md>) links the additional recovered examples and capture limitations. [Student-record conventions](../../students/README.md) and [tutoring diagnosis](../../corpus/tutoring-diagnosis.md) now link back to these shared methods without inventing a student diagnosis. The project-owned `lsat-u-voice` skill and selected standard govern adaptations. The [one-vault recommendation](../../references/second-brain-levels.md#keep-one-connected-brain-with-separate-domain-homes) is advice, not a newly locked decision.
+
 ## Verification limits
 
 All source/archive hashes matched after preservation. Local text and configuration inspection does not recover the 22 missing local image embeds, validate external linked media, establish remote-vault completeness, or verify phone Sync. No sources were deleted or moved, no app settings were changed, and no outbound messages or publishing actions were performed.

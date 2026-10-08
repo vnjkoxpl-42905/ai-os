@@ -52,6 +52,10 @@ This is the target layout, not a checklist to satisfy with empty files. Create a
 
 ## Conventions
 
+### Connect a student observation to shared teaching knowledge
+
+Use [tutoring diagnosis](../corpus/tutoring-diagnosis.md) as a hypothesis framework when reviewing an actual session or score report. Keep what the person said or did, Joshua's judgment and the resulting follow-up in their own teaching notes and open loops. Link the appropriate shared [corpus method](../corpus/index.md), including the recovered [RC recall check](<../corpus/Curriculum/Reading Comprehension/Notes/cumulative-translation-review.md>) when evidence supports it. Apply [Joshua's teaching voice standard](../references/lsat-teaching-voice-standard.md) to student-facing adaptations. A general source never establishes a diagnosis, assignment or commitment by itself.
+
 - New student → new folder `students/<slug>/` with a `<slug>.md` profile page.
 - A consultation followed by a subsequent student session establishes onboarding. Check the Calendar sequence and identity before creating the folder; record any uncertainty about attendance or contact aliases. Consultation-only records stay in `_other-sessions/`.
 - When Joshua explicitly says a student relationship is over or to close a folder, move the preserved record to `students/non-students/<slug>/`, remove it from the current student index, and refresh the generated roster. Do not delete the record or silently infer closure from inactivity.

@@ -15,6 +15,8 @@ Private teacher research from Ellen Cassidy's Loophole Online clips captured 202
 
 ## Make the student's understanding observable
 
+For topic-first retrieval, use the existing [conditional reference](<../Curriculum/Conditional Logic/Notes/_megadoc_reference_conditionals.md>), [Assumption versus Objection quiz](<../Curriculum/Flaw and Famous Flaws/Homework/Pop Quiz - Assumption vs Objection.md>), and the recovered [RC cumulative-translation method](<../Curriculum/Reading Comprehension/Notes/cumulative-translation-review.md>). This page keeps the vendor-source comparison and cross-topic method overview in one place; the topic pages remain the teaching entry points. [Student records](../../students/README.md) link observed needs to those shared methods rather than copying vendor lessons.
+
 Cassidy's core unit is **read, translate, quip (RTQ)** on a manageable chunk of text. Translation retells all conceptual information in the student's own words while looking away. A quip is a content-specific reaction, example, connection or question followed by an answer. It exposes whether the paraphrase represents understanding or merely recycled words. Preserve qualifiers, dates, lists and scope. The final analytical output is CLIR: controversy, loophole, inference or resolution according to stimulus structure. A final quip can already serve that role. [RTQ source](<../../raw/sources/old-obsidian-vault-2026-10-07/Clippings/loophole-online/training-camp/translation/Whats Rtq • LO.md>), [translation source](<../../raw/sources/old-obsidian-vault-2026-10-07/Clippings/loophole-online/training-camp/translation/Translate Prove You Were Listening • LO.md>)
 
 Teacher use: ask the student to retell a chunk and react to its exact content before accepting “I understood it.” Distinguish lost text from a bad inference. An educated vocabulary guess is provisional; ordinary context can help comprehension, but unsupported external facts do not become evidence for an answer.
@@ -65,4 +67,3 @@ The [per-file review](../../research/obsidian-vault-comparison/2026-10-07/teachi
 | Defective | 1 | Empty PT111.S3.Q14 file. |
 
 Additional defects: PT111.S3.Q1/Q2 capture navigation without their demo transcripts; basic conditional diagramming and both NA lessons capture notes without video transcripts; PT111.S3.Q12 mixes a brakes demo with an unrelated pregnancy example. Root conditional practice embeds eight unavailable images. The misnamed “Just a Detail” clip contains a SQL migration, not a teaching lesson. No image or video contents were reconstructed from filenames, thumbnail links or expired media URLs.
-

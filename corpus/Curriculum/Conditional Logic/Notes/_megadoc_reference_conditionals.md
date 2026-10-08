@@ -27,4 +27,10 @@ Answer Key Example Statement Original Statement: You can't master the LSAT witho
 
 Conditional Intro answer key.gdoc
 
+## Teacher references connected on 2026-10-07
+
+The recovered Loophole clip recommends checking an ordinary if-then paraphrase before accepting a diagram. This idea is already developed in [Joshua's selected teaching standard](../../../../references/lsat-teaching-voice-standard.md#8-a-translation-is-checked-by-trying-both-interpretations), so it does not need a competing conditional lesson. The [recovered method reference](../../../loophole-online/index.md) supplies the attributed clip and its limitations. Preserve Joshua's five-step method and the existing indicator groups when using that check.
+
+Use the [tutoring diagnosis framework](../../../tutoring-diagnosis.md) to distinguish inaccurate reading from incorrect diagram placement or an unsupported inference, based on what the student actually explains. Source recovery does not itself diagnose a student.
+
 ---
