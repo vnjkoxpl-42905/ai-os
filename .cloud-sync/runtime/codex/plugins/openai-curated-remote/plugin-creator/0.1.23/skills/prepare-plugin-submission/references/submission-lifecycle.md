@@ -42,6 +42,18 @@ tool. Inspect the current draft first. Existing MCP connection, authentication,
 and scan state are preserved; changing the ZIP does not migrate a connection
 or perform a new scan.
 
+When updating a published app from the older app submission flow, keep one remote
+MCP declaration with its existing endpoint and omit authentication overrides.
+The ZIP update can reuse the published app through a package binding; it does
+not replace the app or its credentials. Changed endpoints and additional remote
+servers require a new plugin. This reuse depends on backend rollout: verify the
+saved draft shows the existing configured app once. If it still shows a separate
+"Connection unknown" entry, report the blocked update instead of creating a
+duplicate app or claiming the update succeeded. This does not migrate publication
+ownership: a later app-only publication can restore the generated package over
+ZIP additions. Call out this limitation when the developer needs durable skill
+updates across future app publications.
+
 ZIP-managed cases replace saved lists and become read-only in the dashboard;
 edit them in source and reupload. A plugin-level `test_cases: {}` clears both
 lists; omitted/null cases preserve them. A per-server `review: {}` also clears
@@ -53,3 +65,15 @@ Reupload resets attestations. Read back the updated draft and preserved
 connection state before submission; reconcile concurrent changes rather than
 blindly retrying. Changes after review starts may require cancelling review;
 explain that effect and obtain authorization before doing so.
+
+For a package metadata review, use **Cancel review** on the selected submitted
+version when the dashboard offers it. Successful cancellation ends that
+submission and clears its review lock while preserving its review record;
+the original submission does not become editable. Published plugin and app
+versions stay published. App review cancellation returns its app version to draft.
+
+Package cancellation depends on the backend and dashboard rollout. Verify the
+live action and saved outcome; a merged change or a cancellation error does not
+establish that cleanup completed. If the action remains unavailable or a retry
+still shows an active review, report the blocked state. Do not overwrite the
+review lock, change app bindings, or resubmit the ended submission.

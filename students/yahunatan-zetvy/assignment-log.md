@@ -33,3 +33,7 @@ Authored content: [2026-09-30](assignments/2026-09-30-mbt-conditionals.json), [2
 Source discrepancy: the primary app checkout labels PT139-S1-Q10 and PT117-S3-Q7 differently from the pinned operational checkout. The deployed section JSON agrees with the pinned operational bank: both are Must Be True with Conditional Reasoning. All 12 selected questions were checked against deployed files on 2026-09-30. Local disagreement remains explicit.
 
 Additional conditionals were assigned through the local MCP in one batch: [plan](assignments/2026-09-30-additional-conditional-plan.json) and [verified result](assignments/2026-09-30-additional-conditional-result.json). Preflight checked all entries before writes; one sign-in and student lookup served all three. Runner duration 15,296 ms, excluding checkout synchronization. Repeat call assigned zero and resent no notifications. Live preview rejected a difficulty-3 pool when the requested ceiling was 2. No browser login or custom catalog content was needed for the additions.
+
+## 2026-10-08 — Some, Most, and All quantity lesson
+
+Assigned the same interactive lesson previously posted to Charles Moore to Yahunatan Zetvy (`ynproemail@gmail.com`), item `1ca6378e-56e7-4174-b451-078e2174440b`. The LSAT U publisher verified exact HTML, student visibility, and one active copy (SHA-256 `a623b9445ccb10d7e7fb53188bf94a706da41eb5e7293fa209fb630e787c1538`). A fresh item read showed the note as assigned. The platform returned `notified: true`; delivery beyond the platform notification request was not independently verified.

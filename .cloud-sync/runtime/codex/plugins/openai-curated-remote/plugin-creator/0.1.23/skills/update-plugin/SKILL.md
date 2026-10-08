@@ -1,6 +1,6 @@
 ---
 name: update-plugin
-description: Inspect, edit, or extend custom plugins the user owns or has permission to edit. Use when the user asks to change a plugin's instructions, skills, tools, app UI, Extensions, metadata, assets, or configuration, or asks about a previous version.
+description: Inspect, edit, or extend custom plugins the user owns or has permission to edit. Use when the user asks to change a plugin's instructions, skills, tools, app UI, Extensions, metadata, assets, or configuration, delete packaged files, or inspect a previous version.
 ---
 
 # Update a plugin
@@ -28,7 +28,7 @@ For an account plugin, use its verified backend ID and existing scope, not a
 similarly named result or the active account's scope. Prefer the source tools
 for text edits. Download an archive only for history or content those tools
 cannot return. The account reference covers ownership, partial-file updates,
-and release-conflict handling.
+explicit file deletion, and release-conflict handling.
 
 ## Apply and verify
 

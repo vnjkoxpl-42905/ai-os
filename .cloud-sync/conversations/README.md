@@ -550,3 +550,4 @@ Native UI archive does not delete a conversation. Source-file deletion removes i
 | codex | [Use the project karpathy-teach skill to build me a tiny byte-pair tokenizer from scratch and teach m](codex/01a11d14-eab7-75b3-ac80-668df47b67ca-b803fad7fda4.md) | C:\Users\Joshu\dev\ai-os | 2026-10-08T19:54:32+00:00 |
 | codex | [<command-name>/clear</command-name>](codex/01a11d14-eabb-7ad2-b3cc-8132b7df902b-0a9698c9a89c.md) | C:\Users\Joshu\dev\ai-os | 2026-10-08T19:54:32+00:00 |
 | codex | [<command-name>/clear</command-name>](codex/01a11d14-ead2-7f91-9872-c3f6942cd7d4-cd76c7f704b9.md) | C:\Users\Joshu\dev\ai-os | 2026-10-08T19:54:32+00:00 |
+| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a11d57-8bc3-71c0-a126-0993e757be00-42c9af18dd9c.md) | C:\Users\Joshu\dev\ai-os | 2026-10-08T21:07:48+00:00 |
