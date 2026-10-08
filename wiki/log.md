@@ -2345,3 +2345,13 @@ Expanded AI OS commit `64cd08555896e1e03c1c8823f57079a414d47a71` is published an
 ## [2026-10-07] system | Conditional keyboard audit fixes
 
 Fixed three missed focus paths and persistent diagram feedback; 19 affected tests, full typecheck and build passed. Codex-only full session, AX tree and 6x CPU simulation verified. Audit remains18/20 pending actual assistive-technology and physical-device evidence. Seven-file delta hash-preserved; current tasks unchanged and work remains local. See final keyboard audit in conditional recovery docs.
+
+## [2026-10-07] system | Kling MCP connected
+
+Added the global Codex MCP server named kling at Joshua's requested https://kling.ai/mcp endpoint. Completed Kling browser OAuth authorization; Codex returned 'Successfully logged in' and lists the server as enabled with OAuth. No generation was submitted and no credits were spent. Tool availability in the already-running chat has not been verified.
+
+
+## [2026-10-07] system | Kling skill and CLI verified
+
+Ran Joshua's requested npx skills add klingai-tech/skills command successfully; activated kling-cli skill is version 0.2.0. Installed @klingai/cli-global from npm for the confirmed global Kling account. who_am_i returned HTTP 200 with OAuth authentication using the existing saved CLI login. account returned Standard membership and 466 available credits. No new login was necessary and no generation was submitted. Kling advises reconnecting MCP or restarting the host to load newly available tools.
+
