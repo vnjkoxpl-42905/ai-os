@@ -30,6 +30,14 @@ To activate the completed configuration, open the Codex CLI at `C:/Users/Joshu/d
 
 ## Practical scope limits
 
+## Fresh native discovery probe, 2026-10-08
+
+The normal signed-in `codex exec` probe at `2026-10-08T22:42:03Z` exited successfully but did **not** establish hook acceptance. It read the actual activated skill, created `examples/codex-stop-probe/native_probe.py`, and stopped without running the file. No hook state directory was created. This is evidence that this CLI invocation did not invoke the configured project handlers, rather than evidence that the guard passed. Trust/discovery must be resolved before claiming protection.
+
+The untouched native capture, invocation and stderr are stored under [the external probe folder](C:/Users/Joshu/dev/ai-os-projects/karpathy-method-tools/examples/codex-stop-probe). No trust bypass, fabricated trusted hash or alternate API credentials were used. The test was deliberately isolated from teaching acceptance.
+
+The source review also identified a compound-command ordering defect: a single shell call that wrote code and then ran it was incorrectly left pending. The adapter now recognizes provable explicit shell-write-before-runtime ordering; run-before-write and a final subsequent edit remain blocked. Thirty adapter tests pass, including five ordering regressions. Opaque editor/program side effects remain conservatively pending because a single before/after snapshot cannot prove their internal order.
+
 Official tool coverage maps shell commands and unified `exec_command` to the canonical hook name `Bash`; a later `write_stdin` can supply that original command's terminal PostToolUse event. `apply_patch` remains canonical `apply_patch`, with Write/Edit matcher aliases. Nested tools called through code mode receive their own hook decisions. This configuration therefore matches those documented canonical shell/edit events, not the outer `functions.exec` wrapper. Actual installed-runtime payload normalization still requires the trusted native probe. Arbitrary MCP or other file-edit wrappers whose canonical name is not in this matcher are not claimed as covered; use the configured shell/edit paths.
 
 Shell writes outside the project and registered examples cannot be observed unless the shell is editing an explicitly tracked path. Use explicit Write/Edit/apply_patch for those paths. Simultaneous edits by other processes under a scanned root can be attributed to the enclosing tool interval; this is a workflow guard, not a security or authorship boundary. A real execution of an unrelated program satisfies the video's literal “nothing was run afterward” condition but cannot pass the relevant-behavior rule by itself.
