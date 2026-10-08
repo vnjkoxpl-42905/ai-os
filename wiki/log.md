@@ -2490,3 +2490,15 @@ Joshua explicitly requested undoing all changes from the preceding ingestion tur
 - Added `references/ai-workspace/windows-cli-toolchain.md` as the machine guide for installed uv, yt-dlp, FFmpeg tools, and Deno, including paths, commands, Python environment scope, and stale-PATH recovery.
 - Added routing pointers to Codex `AGENTS.md`, Claude Code `CLAUDE.md`, and Antigravity `GEMINI.md`; also added global user rules at `.codex/AGENTS.md`, `.claude/CLAUDE.md`, and `.gemini/GEMINI.md` so other workspaces can find the same guide.
 - Root cause documented: package installs and saved user PATH are present; an already-running application may retain an older environment. Restart or refresh the shell before considering reinstall.
+
+## [2026-10-08] system | Save full Karpathy Deep Dive caption mirror
+
+- Saved [timestamped transcript](../research/karpathy-video-7xTGNNLPyMI-2026-10-08/transcript.md) of Deep Dive into LLMs like ChatGPT, source video 7xTGNNLPyMI (03:31:23), without summary or text correction.
+- Direct youtube-transcript-api was IP-blocked, yt-dlp captions returned HTTP 429 and browser export returned unavailable. Retrieved an openly accessible third-party caption mirror, preserving HTML, 5,761 extracted segments, JSON timing records and SHA-256 hashes. Mirror attribution is explicit in the Markdown.
+- 41,116 words; first start 0.72 seconds, last start 12,679.48 seconds. No caption-start interval above 10 seconds. Segment durations unavailable; missing speech cannot be independently ruled out. This is extraction only, not teaching/AI workspace ingestion or proof of source accuracy.
+
+## [2026-10-08] system | Create reusable YouTube transcript tools
+
+- Created free local tool project outside the vault at C:\Users\Joshu\dev\ai-os-projects\youtube-transcripts: Chrome extension for current-page caption retrieval, plus Python CLI with caption API/yt-dlp fallback, raw cache, local subtitle import, hashes and coverage reports.
+- Chrome extension is intentionally caption-track only: rejects empty/wrong-video data and stops on blocked requests. Removed transcript-panel fallback after review because SPA navigation and virtualized rows could yield stale/incomplete text. Permissions activeTab, scripting, downloads; no credentials exported, paid calls or proxies.
+- Worker reports 2 Python tests and 3 Chrome fixture cases passed, plus JavaScript syntax check. Independent static review corrections incorporated. Extension not installed; actual live Chrome caption fetch/download remains unverified. Packaged extension ZIP and setup README supplied.
