@@ -918,6 +918,8 @@ Native UI archive does not delete a conversation. Source-file deletion removes i
 | codex | [ you can delete anything that's not of use. If they're not of use, you'd want to keep them. Like emp](codex/01a11919-6d64-7c42-b320-f23458477014-6227e3102d78.md) | C:\Users\Joshu\dev\ai-os | 2026-10-08T04:28:19+00:00 |
 | codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a11919-6d64-7c42-b320-f23458477014-68110a334ea3.md) | C:\Users\Joshu\dev\ai-os | 2026-10-08T04:00:33+00:00 |
 | codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a11919-6d64-7c42-b320-f23458477014-704792c0c55a.md) | C:\Users\Joshu\dev\ai-os | 2026-10-08T01:22:34+00:00 |
+| codex | [ you can delete anything that's not of use. If they're not of use, you'd want to keep them. Like emp](codex/01a11919-6d64-7c42-b320-f23458477014-7c73cf87465d.md) | C:\Users\Joshu\dev\ai-os | 2026-10-08T04:46:19+00:00 |
+| codex | [ you can delete anything that's not of use. If they're not of use, you'd want to keep them. Like emp](codex/01a11919-6d64-7c42-b320-f23458477014-a8a99b6f8b28.md) | C:\Users\Joshu\dev\ai-os | 2026-10-08T04:47:02+00:00 |
 | codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a11919-6d64-7c42-b320-f23458477014-b0c2ee89dc62.md) | C:\Users\Joshu\dev\ai-os | 2026-10-08T01:46:31+00:00 |
 | codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a11919-6d64-7c42-b320-f23458477014-d187f71f0448.md) | C:\Users\Joshu\dev\ai-os | 2026-10-08T01:22:48+00:00 |
 | codex | [ you can delete anything that's not of use. If they're not of use, you'd want to keep them. Like emp](codex/01a11919-6d64-7c42-b320-f23458477014-f3a325b4ea83.md) | C:\Users\Joshu\dev\ai-os | 2026-10-08T04:28:28+00:00 |

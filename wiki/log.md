@@ -2404,3 +2404,7 @@ Verified all 82 retained source hashes and 18 authorized removals; corrected his
 ## [2026-10-08] system | Clarify clipping workflow
 Corrected raw/inbox/README.md to match active ingest/schema: copy and hash-verify, preserve originals, use hash/source-summary/log for processed status, no ingestion implied by clipping. Actual selected browser template destination remains unverified; raw/inbox is intended and three clips also exist in legacy Clippings. Explained intake/domain/query/lint capabilities without claiming automatic activation.
 
+
+## [2026-10-08] system | AI workspace knowledge domain
+Joshua selected substantial Claude/Codex and AI workspace intake as a first-class domain separate from LSAT teaching. Created references/ai-workspace/index.md with populated existing-subject routes for updates, skills/prompts, repos/tools, tips/insights, workflows, improvements and sync/graphs. Added schema/wiki-index/contextpriority routes and matched AI-routing guidance to active and catalog ingest references for both runtimes. Existing reference homes and corpus remain in place. Verified24 hub links, four mirrored additions, unchanged48-pagewiki lint13 preexistingfindings. No browser settings, tools or skills were installed; cloudpublication unverified for these local edits.
+

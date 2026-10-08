@@ -51,3 +51,7 @@ skill and are not repeated here.
 Generated sections require compare-and-swap. Read expected target bytes, prepare
 the replacement, and confirm the target still has that hash before writing.
 Human-owned content and unrelated concurrent edits must be preserved.
+
+## Route AI workspace knowledge separately from teaching
+
+Joshua clips substantial Claude/Codex updates, skill ideas, repos, prompts, tips and workflows. Follow system/schema/llm-wiki.md and references/ai-workspace/index.md for this domain. Preserve the source through the same raw pipeline and wiki/sources summary, then update the existing AI subject reference or create a useful page under references/ai-workspace when no authoritative subject home exists. Do not file generic AI setup material as LSAT curriculum. For mixed material, link both domain homes. Record dated source claims, verification evidence and proposed versus tested/implemented status; clipping or ingestion alone does not install a tool, activate a skill, or prove a provider feature current.

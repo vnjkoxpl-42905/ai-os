@@ -49,6 +49,8 @@ The brain runs three knowledge systems: **this wiki** (Joshua, the business, dec
 
 ## References (OS method / meta)
 
+- [AI workspace knowledge hub](../references/ai-workspace/index.md): Claude/Codex updates, skill ideas, repository evaluations, prompts, tips and workflows, kept separate from LSAT teaching.
+
 - [[../references/second-brain-levels]]: retrieval architecture, dated comparison, current domain routes and sync limitations.
 - [[../references/obsidian-command-center]]: attributed command-center methods, historical plugin research and device-verification limits.
 - [[../references/claude-plus-codex]] — running Claude Code + Codex on one project; shared-file architecture, plan/critique workflow, and the installed Herdr session layer for visible, persistent dual-agent execution

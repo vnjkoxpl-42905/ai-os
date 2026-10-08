@@ -26,4 +26,6 @@ _Last updated: 2026-07-17 (from the 2026-07-16 onboarding intake, Q3)._
 
 ## Standing workspace priority
 
+- **AI workspace knowledge, selected 2026-10-08:** a substantial share of Joshua's clips will concern Claude, Codex, new skills, repositories, prompts, tips and workflow improvements rather than LSAT. Treat this as a first-class intake domain through [the AI workspace hub](../references/ai-workspace/index.md), separate from the teaching corpus. Ingest and evaluate the material before recommending or implementing setup changes.
+
 - Finish the workspace reform per `aios/WORKSPACE-REFORM-PLAN.md`: Level 1 foundation (this folder + `decisions/`), simplify `system/` to a hand-edited router, Codex parity, then the EA skill build-out.
