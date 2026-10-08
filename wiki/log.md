@@ -2449,3 +2449,9 @@ All100originalfiles mapped exactly once (59teaching plus41research/root/config).
 ## [2026-10-08] system | Reverse the rejected Karpathy ingestion
 
 Joshua explicitly requested undoing all changes from the preceding ingestion turn before inspecting the actual video and its displayed prompts. Removed the newly created raw routing README, source summary, expert-teaching reference and clip archive; restored prior inbox/source README content; removed the added AI hub paragraph and curated index entries; regenerated the catalog to 48 pages. The original inbox clip remains unchanged, SHA-256 3c453f7be66ee3cf67cc63c4439c8bf477726c213a1aaa763f35e271e39a2d8c. The preceding ingest entry is historical and reversed, not active completed ingestion; its removed-output links are retained only because this ledger is append-only. Earlier vault migration, audit repairs and duplicate cleanup were preserved. No new ingestion or runtime implementation was performed in this rollback.
+
+## [2026-10-08] system | Verified free-use tool catalog
+
+- Created [organized tool catalog](../research/toolchain-2026-10-08/catalog.md) covering the preceding broad tool list, separating verified existing tools and Codex-bundled libraries from candidates.
+- Preserved alternatives with distinct capabilities; excluded paid Beyond Compare from free candidates and separated conditional cloud/licensing cases. Superwhisper already exists; batch transcription and alignment alternatives remain candidates for distinct needs.
+- Inventory checked executable discovery, installed application registrations and two Python environments. Project-local dependency trees were not exhaustively inspected. No tools were installed or downloaded, and no paid service was invoked for this inventory.
