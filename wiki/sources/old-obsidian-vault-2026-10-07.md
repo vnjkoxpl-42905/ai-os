@@ -25,6 +25,8 @@ Some captures are defective, duplicated or mislabeled. Navigation-only PT111.S3.
 
 AI workflow, website-design, tutoring and plugin clips are evaluated in the [research review](../../research/obsidian-vault-comparison/2026-10-07/research-review.md). Existing [Claude/Codex methods](../../references/claude-plus-codex.md), [Obsidian command-center ideas](../../references/obsidian-command-center.md), and [second-brain levels](../../references/second-brain-levels.md) remain their subject homes. Recovered tool/version/billing claims are dated source assertions, not verified current capabilities.
 
+The missing 7Sage coaching distinctions are compiled into [tutoring diagnosis](../../corpus/tutoring-diagnosis.md): reading, fundamentals, question process and timed strategy are separate hypotheses, and correct but costly questions can explain later misses. The Obsidian reference now records incremental plugin evaluation and conflicting reports; the second-brain reference now records the recovered context-failure taxonomy and route-tracing method. Both additions cite this batch rather than promoting historical product claims.
+
 Old runtime routers, connection registry and plans are preserved in the [root review](../../research/obsidian-vault-comparison/2026-10-07/root-review.md). A pricing discrepancy between old and current `CONTEXT.md` remains unresolved; no operational policy was overwritten. The conditional cheat-sheet review also preserves its author's triage rejecting an unsupported transcript attribution, which illustrates why a critique is not itself proof of a source claim.
 
 ## Verification limits

@@ -2355,3 +2355,12 @@ Added the global Codex MCP server named kling at Joshua's requested https://klin
 
 Ran Joshua's requested npx skills add klingai-tech/skills command successfully; activated kling-cli skill is version 0.2.0. Installed @klingai/cli-global from npm for the confirmed global Kling account. who_am_i returned HTTP 200 with OAuth authentication using the existing saved CLI login. account returned Standard membership and 466 available credits. No new login was necessary and no generation was submitted. Kling advises reconnecting MCP or restarting the host to load newly available tools.
 
+## [2026-10-07] ingest | Older local Obsidian vault comparison and recovery
+
+- Source: [older vault source summary](sources/old-obsidian-vault-2026-10-07.md); [provenance and hashes](../raw/sources/old-obsidian-vault-2026-10-07/PROVENANCE.md). Inspected 93 visible files and five hidden Obsidian configuration files from `C:\Users\Joshu\Documents\Ai-os`.
+- Changed: [Loophole teacher reference](../corpus/loophole-online/index.md), [tutoring diagnosis](../corpus/tutoring-diagnosis.md), [corpus index](../corpus/index.md), [Obsidian command-center reference](../references/obsidian-command-center.md), [second-brain levels](../references/second-brain-levels.md), source summary and wiki catalog.
+- Finding: recovered useful missing teaching and research methods while retaining current operating rules. [Complete comparison](../research/obsidian-vault-comparison/2026-10-07/report.md) records per-file overlap, differences, dispositions and defects.
+- Verification: 93 original and 93 preserved-copy SHA-256 hashes matched; 204 new-output local links checked with zero errors. Old sources unchanged; no deletion, Sync change, publishing or send.
+- Open: 22 missing local image embeds, defective captures, a historical pricing disagreement and conflicting source claims. External media and old remote-vault completeness remain unverified.
+- Final checks: wiki catalog regenerated for 48 pages. Broader structural lint reported 25 link findings in older pages or older log entries; none in the new source summary. Unrelated findings were left outside this intake's scope.
+

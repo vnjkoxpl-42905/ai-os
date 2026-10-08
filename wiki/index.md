@@ -123,5 +123,6 @@ Regenerate this section after page changes with `py system/scripts/wiki-maintena
 - [[wiki/sources/lsat-demon-mastering-conditional-statements|One sufficient route need not be the only route]]: Joshua requested all clipped LSAT Demon conditional material for intuitive original examples. This generic-title article was found after the two explicitly named Demon clips. Unlik
 - [[wiki/sources/lsat-demon-sufficient-necessary|A conditional rule does not say its trigger occurred]]: Joshua supplied this LSAT Demon clip and requested its integration into the Conditional Bootcamp on 2026-10-03. The complete supplied transcript, 0:04 to 5:17, was read. The speake
 - [[wiki/sources/lsat-lab-conditional-logic-clip|LSAT Lab's opening boards explain roles before keyword fluency]]: Joshua clipped Patrick's **Conditional Logic / LSAT Logical Reasoning** on 2026-10-03, with a transcript and twelve embedded screenshots. This bounded review covers the transcript
+- [[wiki/sources/old-obsidian-vault-2026-10-07|Useful material recovered from the older local Obsidian vault]]: Joshua authorized a complete local-file comparison and integration of useful missing content on 2026-10-07. The source is the older local vault at `C:\Users\Joshu\Documents\Ai-os`,
 
 <!-- END GENERATED WIKI CATALOG -->

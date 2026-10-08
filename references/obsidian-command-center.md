@@ -42,4 +42,10 @@ Per the video, headless/programmatic `claude -p` use no longer draws from the Ma
 
 ## What's actually worth borrowing
 
+### Recovered plugin research requires local testing
+
+The old vault contained three additional plugin-atlas reports, reviewed on 2026-10-07. Their recommendations disagree about Tasks, Omnisearch, Excalidraw and Tag Wrangler, and their catalog counts and performance numbers are not verified. Preserve them as [historical research](../research/obsidian-vault-comparison/2026-10-07/research-review.md), with [source provenance](../wiki/sources/old-obsidian-vault-2026-10-07.md).
+
+The useful method is to baseline the actual device, trial one capability at a time, compare startup, navigation and typing, and retain it only when a repeated workflow improves. A shortlist is not evidence that a plugin is installed or appropriate for this laptop or phone. No plugin or Sync setting was changed by this recovery.
+
 The structure and CLAUDE.md philosophy we already match or beat. The genuinely new capability is the **visual command-center surface**: a custom dashboard plugin + one-click headless skill launchers, so morning brief / plan-today / research-pulse outputs render at eye level instead of scrolling past in the terminal. If Joshua wants that, it's a discrete build (Claude Code writes an Obsidian plugin; wire buttons to `claude -p` skill invocations). Everything else in the video, ai-os has. Do not adopt the dashboard unless the terminal-only view becomes an actual pain — same "don't build past the pain" doctrine as [[second-brain-levels]].

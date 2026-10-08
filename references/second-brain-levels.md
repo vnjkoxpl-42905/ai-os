@@ -41,6 +41,12 @@ The source's own author parks his primary EA brain ("Herk 2") at **Level 2**. He
 
 ## Recommendation
 
+### Diagnose a context failure before adding another retrieval layer
+
+The recovered “Steal My Exact AI OS Setup” clip offers four useful failure labels: a wrong fact entering context, too much irrelevant context, missing or misrouted context, and contradictory source generations. These categories overlap; use them to locate evidence, not as a new score or replacement for the current audit rubric. [Recovered-source review](../research/obsidian-vault-comparison/2026-10-07/research-review.md); [provenance](../wiki/sources/old-obsidian-vault-2026-10-07.md).
+
+For a failed lookup, record the requested fact, the route actually taken, the correct source, and the narrow routing change that would have prevented it. This makes “look before asking” actionable without assuming semantic search or a new plugin is the answer. The clip's architecture overlaps the existing router and live-system authority; no old runtime rule was activated.
+
 Do not build Level 3, 4, or 5 now — no pain justifies it, and the doctrine warns against climbing levels for their own sake. Watch for future Level-3 value in one high-volume folder (`corpus/` ~118 pages, or student transcripts) *only if* retrieval starts "whiffing on notes you know exist." Higher-leverage work is hygiene (empty `wiki/concepts/` + `wiki/knowledge/`; the confusing second `INDEX.generated.md`) and ingest discipline, not a new level.
 
 Related: [[3ms-framework]], the LLM-wiki schema in CLAUDE.md.
