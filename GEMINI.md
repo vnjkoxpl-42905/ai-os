@@ -106,6 +106,11 @@ A single, dedicated persistent Chrome instance operates on port 9223 with four m
 
 The browser spawns via WMI to detach from IDE Job Object management. It runs in a single unified window with four tabs, keeping all logins permanently saved in one persistent profile without opening separate browser windows.
 
+### Primary Browser Rule & Standing Login Authorization
+
+- **Dedicated Primary Surface**: Always use your assigned dedicated agent browser (`AGENT BROWSER` on Port 9223, profile `C:\Users\Joshu\AppData\Local\LSATU-Agent-Chrome`) as the primary surface for all web tasks, scraping, clicking, scrolling, and platform actions. Launch or attach to this browser first.
+- **Standing Login Authorization**: You have full, unlimited authorization to access credentials in `.env` and log in autonomously whenever a session is not active or has expired. Never wait or pause to ask permission for login.
+
 ### Operational Trigger & Routing Table
 
 | User Trigger / Prompt | Surface | Execution Command | Owning Skill |
