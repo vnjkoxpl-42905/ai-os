@@ -2435,3 +2435,12 @@ All100originalfiles mapped exactly once (59teaching plus41research/root/config).
 - The automatic sync runner ended at 2026-10-08T05:57:50.779875Z with overall failure, GitHub child exit 1: the restored third-party `claudex-loop` sibling was blocked as `Unapproved remote`. AI OS's partial Drive upload completed at 05:57:43.933498Z for commit `c51f74f4efb1447074fac028ac04b2105e6c313b`, according to its completed local receipt. This is not a claim of a fully successful run or complete final repair publication.
 - Discovery now explicitly skips that upstream tooling directory before repository initialization or publishing. The upstream remote remains unapproved; other unapproved remotes remain blocked and owned project discovery is preserved. Two isolated discovery regression fixtures pass.
 - Updated [repair outcome](../research/audit-repairs-2026-10-08/outcome.md): 37 total regression fixtures, including 21 sync/runtime/discovery tests. Earlier 35-fixture entry records the earlier verification stage. No cloud job was triggered or awaited; the next successful automatic execution and actual notification delivery remain unverified.
+
+
+## [2026-10-08] ingest | I Built Another Andrej Karpathy Using Claude
+
+- Source: [complete source summary](sources/i-built-another-andrej-karpathy-using-claude.md); supplied description and transcript 0:00 to 10:43 read, original retained and archived byte-for-byte with provenance/SHA-256.
+- Changed: [raw routing guide](../raw/README.md), inbox/source guides, [expert teaching workflow](../references/ai-workspace/expert-teaching-workflow.md), AI workspace hub and wiki index.
+- Finding: expert evidence can support a tested teaching method through acquisition, compilation, supported rules, specialist packaging, execution evidence and representative trials. Existing wiki infrastructure already covers the evidence/compilation layers.
+- Verification: raw-guide links checked; source and archive hashes matched; generated catalog and structural lint refreshed. Primary Karpathy gist independently checked for wiki architecture. No runtime configuration, agents, skills or hooks installed.
+- Open: exact six on-screen prompts, actual agent/skill/hook code, primary rule quotations and demonstration reproduction remain unavailable or unverified. Local watch dependencies are missing; video and template pages could not be retrieved by the web tool.

@@ -16,6 +16,8 @@ This hub organizes existing authoritative pages rather than copying their knowle
 
 [Recovered practical methods](migrated-source-methods.md) add the old vault's detailed artifact-review, skill-evaluation and evidence-checking recipes, plus its unimplemented annotation idea. [Migration coverage](../../research/obsidian-vault-comparison/2026-10-07/active-migration-coverage.md) maps the original research and root files to current homes and explains exclusions.
 
+[Expert teaching workflows](expert-teaching-workflow.md) compile the Karpathy-agent video's six described prompts, seven reported rules, realistic verification examples and maintenance loop. The [source summary](../../wiki/sources/i-built-another-andrej-karpathy-using-claude.md) separates supplied transcript coverage from missing on-screen prompts, unverified attribution and unimplemented agents/hooks.
+
 ## Find the right kind of AI knowledge
 
 | Category | What belongs here | Existing home to consult or update |
