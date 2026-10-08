@@ -15,8 +15,15 @@ Freshest working state; the first page `/pickup` reads. Rebuilt fresh in the 202
 - Exported 907 Claude/Codex conversations with no parsing errors, separate runtime skill catalogs and native memory context. Conversation exports are readable evidence, not synchronized native cloud sidebar sessions. UI deletion and historical erasure are not guaranteed.
 - Joshua authorized credential transfer. Credential files and original redacted text travel encrypted; the key stays outside GitHub/Drive. Actual AI OS context authentication and 12 byte-for-byte source samples passed. Cloud key provisioning remains pending; copied credentials do not prove cloud tool access.
 - [LR cloud prompt](../handoffs/2026-10-07-lr-cloud-prompt.md) and [context](../handoffs/2026-10-07-lr-cloud-context.md) preserve the approved scope and paused proposals. No LR execution, production revalidation, DB writes or Lovable spend performed here. Check original job ownership before resuming.
-- Existing four published snapshots were verified in Drive. Expanded AI OS publication is being finalized after conversation-redaction and large-package fixes. Scheduled task checks every two minutes when enabled and signed in; inspect actual task and status before assuming freshness.
+- All four published snapshots matched verified Drive archives at 2026-10-07 20:04 Toronto (2026-10-08T00:04:11Z). Expanded AI OS commit `64cd08555896e1e03c1c8823f57079a414d47a71` includes 907 exported sessions with zero omissions/errors, plugin skills and the multipart helper. All 13 credential files match local originals after actual Git-package decryption. Scheduled task is enabled, uses windowless Python, and checks every two minutes while signed in; inspect current machine status for later freshness.
 - Independent cloud work returns through its own branch/PR. No automatic pull over dirty local work. Remote Control offers the same local session through the browser and requires the local process to remain running.
+
+## Previous (2026-10-07): Conditional keyboard gaps fixed
+
+- Deeper review found and fixed three focus losses: Compare to authored heading, choice retry to first answer, diagram check to Try again and retry to left-side selector. Diagram status remains mounted and atomic. No teaching/scoring changes this pass.
+- 19 affected tests, full app typecheck and direct final Vite build passed (1m9s). Independent review found no high-confidence regressions. Codex browser verified 24 main questions, correction, fresh case, honest summary and retained review under 6x simulated CPU throttling. Overrides restored; temporary tabs closed.
+- [Final audit](../../ai-os-projects/lsatu-conditional-bootcamp/docs/agent/conditional-recovery-20261007/impeccable-final-keyboard-audit-20261007.md) remains 18/20: actual screen-reader and physical-device performance evidence unavailable. Local AX tree and cumulative timing samples are explicitly limited.
+- Seven-file hash-verified delta with 66-file inventory: [snapshot](../brainstorms/2026-09-30-conditional-curriculum/2026-10-07-impeccable-keyboard-overlay/manifest.json). Prior records preserved. Local/unpublished, no backend writes or task-status changes. Integrate reviewed delta onto current main before release.
 
 ## Previous (2026-10-07): Conditional audit implementation reaches 18/20
 
