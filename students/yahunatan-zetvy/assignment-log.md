@@ -37,3 +37,7 @@ Additional conditionals were assigned through the local MCP in one batch: [plan]
 ## 2026-10-08 — Some, Most, and All quantity lesson
 
 Assigned the same interactive lesson previously posted to Charles Moore to Yahunatan Zetvy (`ynproemail@gmail.com`), item `1ca6378e-56e7-4174-b451-078e2174440b`. The LSAT U publisher verified exact HTML, student visibility, and one active copy (SHA-256 `a623b9445ccb10d7e7fb53188bf94a706da41eb5e7293fa209fb630e787c1538`). A fresh item read showed the note as assigned. The platform returned `notified: true`; delivery beyond the platform notification request was not independently verified.
+
+## 2026-10-08 — Negation Station
+
+Assigned the Negation Station Activity to Yahunatan Zetvy (`ynproemail@gmail.com`) through the app's `assignWork()` flow. Assignment ID: `927f4325-d7d9-43fb-a90d-3638ff46c036`; verified Classroom item: `549112d0-b322-4786-9278-197f3f3b2de7`, visible as assigned. Inbox, bell, and email each returned OK.
