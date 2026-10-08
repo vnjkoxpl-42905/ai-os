@@ -135,6 +135,12 @@ The database is the source of truth for explanations, not the local `Explanation
 - [ ] ~~**Design question for Joshua:**~~ any future bank type or text fix breaks every sealed sitting that contains that question. That is harmless now, but once students have timed history it will not be. Options: (a) let verification accept the frozen classification and treat content hashes as the integrity check, or (b) freeze bank edits after go-live.
 - [ ] **2047 mid-sentence hard wraps in bank stimuli.** `normalizeProseHardWraps` joins them at render, so students see clean text. Cosmetic only.
 
+### Step 2: defect fixes applied (2026-10-08)
+- [x] **All verified step 2 edits are in the database.** Slices A, B, C, D1 to D3, the cross-slice reconciliations and the B2 rerun were proposed, independently verified, merged, and written as 849 guarded edits: 595 choice notes, 238 step bodies and 16 step labels. An earlier session applied part of the set; on 2026-10-08 the remaining 639 rows were written in 17 atomic batches. Each update matched the row's md5 against the old text and confirmed the result's md5 against the planned new text, and a batch would roll back on any mismatch. None did.
+- [x] **Verified after a fresh mirror pull:** 846 of 849 rows equal the planned text exactly. The other three (c2b6fc9c step, a3328c66 and bc96b75f notes) already held a hand-improved version that is better than the plan (the c2b6fc9c step also drops a gendered pronoun), so they were left alone.
+- [x] **Timed catalogs active:** both configs read `99a84478…` (PT) and `45ef6f55…` (sections), checked 2026-10-08.
+- Working files (old text kept as the snapshot): session scratchpad `step2/payload.json`, `verdicts-*.jsonl`, `sql*-final.json`.
+
 ### Repo housekeeping
 - [x] ~~**Codex's redundant repair branch and worktree.**~~ 2026-09-27: deleted on Joshua's OK. Its uncommitted changes kept at raw/sources/lsatu-lr-snapshots/2026-09-27-codex-repair-worktree-uncommitted.patch.
 - [ ] **Merge PR vnjkoxpl-42905/lsatu-684d89db#138** (PT154 parser fix), then remove the `projects/lsatu-wt-parser` worktree.

@@ -2525,3 +2525,9 @@ Joshua explicitly requested undoing all changes from the preceding ingestion tur
 - Mirror timestamps are source-provided paragraph/group start times, not certified original YouTube caption timings. Segment end times unavailable; editorial changes, ad offsets, recognition errors and missing speech remain unverified. No timestamps fabricated, audio downloaded, paid service, proxy or browser credentials used. This acquisition covers the two identified originals, not proof that every 2026 appearance anywhere has been found.
 - Found Karpathy's author-published AI-cleaned Sequoia transcript already saved at raw/sources/karpathy-brain/raw/blog/md/bearblog/karpathy.bearblog.dev_sequoia-ascent-2026.md. Verified edited conversation through closing thanks; linked it separately without duplicating or editing the original. Its fillers are removed and mistakes corrected by an LLM, so it is not a verbatim caption substitute.
 - [Acquisition report](../raw/sources/karpathy-brain/raw/youtube/interviews-2026/REPORT.md) records physical transcript links, exact providers and limits. Existing source files remain unchanged.
+
+## [2026-10-08] lsatu | LR explanations step 2 applied
+
+- All verified step 2 defect fixes are now in the LSAT U database: 849 guarded edits (595 choice notes, 238 step bodies, 16 step labels). An earlier session had applied part of the set without logging it; this session wrote the remaining 639 rows in 17 atomic, md5-checked batches with zero mismatches.
+- Fresh mirror pull confirms 846 rows match the plan exactly; 3 rows already held a better hand-applied version and were left alone. Both timed catalog configs were already on the new hashes.
+- Record: [fixes/index.md](../corpus/lr-explanations/fixes/index.md). Next: step 3, rewriting the 192 "Revamp" explanations.
