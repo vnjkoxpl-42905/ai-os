@@ -2,6 +2,8 @@
 
 Verified on 2026-10-08 against the local collection at `raw/sources/karpathy-brain/raw/`. Original sources and collection reports were preserved. This report supersedes the handoff's completeness claims, not its source files.
 
+**Later update on 2026-10-08:** the [X repair result](X-REPAIR-RESULT.md) adds 237 previously missing post IDs and longer text for all nine previously flagged Karpathy posts in a separate frozen supplement. Its collection stopped on a persistent X site error after 20 of 157 weekly windows. The baseline counts below describe the original collection; they are not the updated combined total.
+
 ## What physically exists
 
 A recursive local file count found **1,540 files, totaling 80,301,723 bytes**, including companion representations, metadata, scripts and the two subsequently acquired interview bundles. The handoff's 3,278 figure mixes logical articles, GitHub files, videos and X ledger rows; it is not a physical file count. Thousands of X records are stored inside a few ledgers and monthly Markdown files. These different units must not be added together as files.

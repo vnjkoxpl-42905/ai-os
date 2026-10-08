@@ -11,6 +11,9 @@ Freshest working state; the first page `/pickup` reads. Rebuilt fresh in the 202
 
 ## Most recent (2026-10-08): Karpathy handoff verification
 
+- Later X repair: [result](../research/karpathy-brain-2026-10-08/X-REPAIR-RESULT.md) records 237 newly saved post IDs, longer text for all nine known truncated posts and recovered evidence in all four empty 2024 month ranges. A new hash-verified supplement preserves the original archive. Combined own-author ID count is 2,072 across saved dates.
+- Three-year collection is stopped after 20 of 157 weekly windows because X returned a persistent site error and one visible Retry attempt failed. It is not running in the background. [Resume instructions](../references/ai-workspace/x-archive-collector.md) point to the external project and active working evidence; never resume into the frozen bundle. New sources are not semantically ingested yet.
+
 - [Corrected collection handoff](../research/karpathy-brain-2026-10-08/HANDOFF-VERIFICATION.md) is the current coverage authority. The original Antigravity report's 100% completeness claim is unsupported; sources were preserved.
 - Blog/GitHub registered text payload hashes pass. Physical root contains 1,540 files / 80,301,723 bytes. The handoff's 3,278 mixes logical sources and ledger records with files; the GitHub word count largely includes imported data.
 - X has 1,835 unique Karpathy-authored IDs plus 111 other authors, 29 duplicate observations, nine explicitly truncated Karpathy records and four months with no saved Karpathy items. Attachments remain external links. These gaps need collection repair before exhaustive coverage can be claimed.

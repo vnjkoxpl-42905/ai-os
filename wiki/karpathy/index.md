@@ -14,6 +14,8 @@ sources: [../sources/karpathy/llm-wiki.md, ../sources/karpathy/autoresearch-read
 
 The [corrected handoff verification](../../research/karpathy-brain-2026-10-08/HANDOFF-VERIFICATION.md) records the source audit and its limits. The [raw collection report](../../raw/sources/karpathy-brain/raw/COLLECTION-REPORT.md) is the collector's report, not proof that every claim or source has been ingested. Raw evidence remains immutable. This subwiki follows the existing [LLM Wiki schema](../../system/schema/llm-wiki.md), [master wiki index](../index.md) and [AI workspace hub](../../references/ai-workspace/index.md).
 
+**Source repair on 2026-10-08:** the [X collection result](../../research/karpathy-brain-2026-10-08/X-REPAIR-RESULT.md) adds a frozen physical supplement with 237 previously missing post IDs and longer text for nine known truncated posts. X returned a persistent site error after 20 of 157 weekly windows; the three-year collection is incomplete and stopped. This new evidence has not been semantically compiled into the five-source starter below.
+
 ## Start with compiled knowledge
 
 - [Hot page](hot.md): fewer than 500 words, restricted to this reviewed evidence.

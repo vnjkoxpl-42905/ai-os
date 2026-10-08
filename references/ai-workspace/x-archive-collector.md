@@ -36,6 +36,8 @@ Keep active runs in the external project. After stopping or finishing, freeze a 
 
 On 2026-10-08, the persistent Chrome had a signed-in Karpathy profile tab. A live priority-window test saved 27 distinct posts/replies and stopped with an explicit stalled status. Eight offline tests passed, including complete date-plan coverage, quote-only attribution, foreign-author rejection, variant preservation, resume splitting, fair scheduling and corrupt-ledger rejection. The full collection was launched afterwards; inspect its current attempt ledger for progress.
 
+That expanded run stopped after 20 of 157 weekly windows on a persistent X site error. One visible Retry failed to clear it. The [frozen result](../../research/karpathy-brain-2026-10-08/X-REPAIR-RESULT.md) contains 237 previously missing IDs and longer text for all nine known partial posts. Eleven tests passed after follow-up corrections; the script is ready to resume, but is not currently running.
+
 X search does not establish an exhaustive account export. Missing results, deleted/private/withheld posts, unavailable media and stalled windows remain limitations. Login challenges, human verification and rate-limit errors stop collection. No stealth, proxies or attempts to bypass restrictions are included.
 
 Related: [Karpathy compilation](../../wiki/karpathy/index.md), [verified handoff](../../research/karpathy-brain-2026-10-08/HANDOFF-VERIFICATION.md), [browser playbook](../browser-agent-playbook.md), [AI workspace hub](index.md).
