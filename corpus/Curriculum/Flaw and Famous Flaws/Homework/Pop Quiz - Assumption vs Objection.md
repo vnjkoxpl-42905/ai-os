@@ -7,7 +7,7 @@ aliases: []
 
 # Pop Quiz: Assumption vs. Objection
 
-> **Private teacher reference, added 2026-10-07:** The older vault contains an additional objection quiz with different examples. Its full transcribed evidence and answer explanations are linked in the [recovered teaching review](../../../../research/obsidian-vault-comparison/2026-10-07/teaching-review.md#the-five-related-notes). These sources supplement this existing quiz; they do not replace its questions or answer key. The recovered examples distinguish accepting the premises while attacking their support from simply denying a premise or asserting the opposite conclusion. Original screenshot images are missing, and the chapter transcription lacks questions 1, 2 and 6. Check source coverage before adapting it for a student.
+> **Private teacher reference, added 2026-10-07:** The older vault contains an additional objection quiz with different examples. Its full transcribed evidence and answer explanations are linked in the [recovered teaching review](../../../../research/obsidian-vault-comparison/2026-10-07/teaching-review.md#five-related-notes). These sources supplement this existing quiz; they do not replace its questions or answer key. The recovered examples distinguish accepting the premises while attacking their support from simply denying a premise or asserting the opposite conclusion. Original screenshot images are missing, and the chapter transcription lacks questions 1, 2 and 6. Check source coverage before adapting it for a student.
 
 ## Part 1 — Trigger Phrases
 

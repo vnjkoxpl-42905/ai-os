@@ -41,6 +41,16 @@ The source's own author parks his primary EA brain ("Herk 2") at **Level 2**. He
 
 ## Recommendation
 
+### Keep one connected brain with separate domain homes
+
+Recommendation recorded 2026-10-07 after the old-vault intake review. Keep `ai-os` as one working Obsidian vault, with the [wiki](../wiki/index.md), [teaching corpus](../corpus/index.md) and [student records](../students/README.md) as distinct knowledge domains. This preserves the existing architecture; it does not authorize a folder move, vault split or Sync change.
+
+The useful unit is a connected reasoning chain. A student's session evidence supports a dated teaching judgment in their record. That judgment links to a reusable concept or method in the corpus. Its student-facing explanation uses [Joshua's selected teaching voice](lsat-teaching-voice-standard.md). Product or pedagogy choices link to the [decision log](../decisions/log.md), while sources remain evidence with provenance. [Business context](../context/work.md) and [Joshua's identity](../context/about-me.md) explain the purpose and preferences behind the work. Keeping those links in one vault makes the whole chain available without copying each shared lesson into every student folder.
+
+Separate vaults would require additional cross-vault retrieval and synchronization conventions. They would be justified by a real access, collaboration or workflow boundary, not merely by teaching and student notes being different subjects. No such new boundary was established in this task.
+
+This can preserve Joshua's expressed judgments, demonstrated wording, source evidence and decision reasons. It is not a complete replica of his mind or permission to turn a vendor method into his personal preference. Keep observed, inferred, recommended and decided distinct. The [old-vault source summary](../wiki/sources/old-obsidian-vault-2026-10-07.md) illustrates those boundaries.
+
 ### Diagnose a context failure before adding another retrieval layer
 
 The recovered “Steal My Exact AI OS Setup” clip offers four useful failure labels: a wrong fact entering context, too much irrelevant context, missing or misrouted context, and contradictory source generations. These categories overlap; use them to locate evidence, not as a new score or replacement for the current audit rubric. [Recovered-source review](../research/obsidian-vault-comparison/2026-10-07/research-review.md); [provenance](../wiki/sources/old-obsidian-vault-2026-10-07.md).

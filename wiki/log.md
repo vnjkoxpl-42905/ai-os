@@ -2364,3 +2364,17 @@ Ran Joshua's requested npx skills add klingai-tech/skills command successfully; 
 - Open: 22 missing local image embeds, defective captures, a historical pricing disagreement and conflicting source claims. External media and old remote-vault completeness remain unverified.
 - Final checks: wiki catalog regenerated for 48 pages. Broader structural lint reported 25 link findings in older pages or older log entries; none in the new source summary. Unrelated findings were left outside this intake's scope.
 
+## [2026-10-07] ingest | Route recovered methods into current teaching and student workflows
+
+- Follow-up: Joshua requested proper ingestion matching the existing layout and advice on one versus multiple vaults. [Source summary](sources/old-obsidian-vault-2026-10-07.md) and [comparison report](../research/obsidian-vault-comparison/2026-10-07/report.md) now record the integration audit.
+- Changed: added [RC cumulative translation](../corpus/Curriculum/Reading%20Comprehension/Notes/cumulative-translation-review.md) to its topic home; connected existing conditional and objection references, corpus indexes, [tutoring diagnosis](../corpus/tutoring-diagnosis.md) and [student conventions](../students/README.md) through reciprocal retrieval links.
+- Recommendation: retain one connected vault with separate knowledge domains; [second-brain levels](../references/second-brain-levels.md) records the reasoning. This is advice, not a newly locked decision or authorization for Sync changes.
+- Verification: 179 modified-page local links and 186 original/archive hashes checked with zero errors. No sources, student judgments, active operating policies or Sync settings were overwritten. Vendor methods remain attributed; prior missing-media and historical-claim gaps remain explicit.
+
+## [2026-10-07] query | Compare old and current vault structure and document approaches
+
+- Expanded the existing [comparison report](../research/obsidian-vault-comparison/2026-10-07/report.md) with 20 document-family comparisons, every top-level folder count, strengths, shortcomings and local-link limitations. Full old coverage remains 93 visible files and five configs; current semantic comparison covers corresponding domain pages, not all current files.
+- Finding: old local vault has 29 root files and 64 clips; its routers reference domain collections absent from that local folder. Current vault has real domain records but tooling, imports and exported sessions contribute substantial browsing clutter. Old source protocols and review history add value; current evidence/judgment/voice/decision boundaries support connected reasoning.
+- Verification: 125 report links and 186 original/archive hashes checked with zero errors. No canonical policy, source bytes, app configuration or Sync setting changed.
+- Open: missing media and conflicting historical claims remain. Pricing-unit drift appears within current business context too; neither wording was promoted as live verified pricing.
+

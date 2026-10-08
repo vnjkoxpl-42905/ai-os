@@ -4,6 +4,88 @@ Comparison date: 2026-10-07, America/Toronto.
 
 The old local vault is `C:\Users\Joshu\Documents\Ai-os`; the current authoritative workspace is `C:\Users\Joshu\dev\ai-os`. This comparison establishes what was present locally. It does not prove that the old remote vault or phone contains no additional files.
 
+## Subject-by-subject comparison of both layouts
+
+This comparison combines full inspection of the old local vault's 93 visible files and five configurations with targeted reading of current routers, context, connections, corpus/student conventions, matching teaching pages and research references. It does **not** claim full semantic inspection of all 17,087 current visible files. Byte identity, subject overlap and quality are different tests. The earlier 93-row table records byte identity; the following table records content relationships.
+
+| Old document or group | Current counterpart or destination | Similarity, difference and what matters |
+|---|---|---|
+| `AGENTS.md` and `CLAUDE.md` | Current root runtime routers | Same identity/business/routing purpose. Old routers contain substantially more Mac-era routes, named tooling and workflow detail, but most referenced collections are absent from the old local vault itself. Current routers point to the Windows workspace, external app repositories, current schema and backup/sync boundaries. Longer routing text is not proof the old vault contained those records. |
+| `GEMINI.md` | Current root instructions and student append-only conventions | Old is a runtime-specific restriction file; current student conventions preserve the important primary-record boundary. Old runtime identity/permissions were not activated. |
+| `CONTEXT.md` | Current `CONTEXT.md`, [business context](../../../context/work.md), [student conventions](../../../students/README.md) | Most glossary definitions overlap. Old adds 7Sage baseline/update/profile distinctions not present in current glossary; these remain historical until their owning workflow is verified. The single-session price/unit discrepancy is retained. Current business context itself contains both advertised hourly wording and a dated $45/70-minute booking check, so this is not a discrepancy unique to the old vault. |
+| `connections.md` | Current root `connections.md` | Same seven-domain registry pattern and backend-ref warning. Old has detailed Mac-era Cal.com/Superwhisper/Lovable-MCP claims; current has dated Windows verification and a later interactive-lesson path. Both contain historical assertions needing live verification. Old says Lovable MCP can perform DDL; current legacy paragraph says DDL is UI-only. No live capability verdict was inferred from either note. |
+| `PLAN.md` and `PLAN-REVIEW-LOG.md` | [Current conditional source map](../../../brainstorms/2026-09-30-conditional-curriculum/2026-10-02-opening-lessons-source-map.md), [selected teaching standard](../../../references/lsat-teaching-voice-standard.md), current copy-correction ledger | Same conditional-reference problem, different generation. Old records accordion/44-indicator design tradeoffs and review/triage; current uses a source-backed teaching progression, original examples, meaningful pauses, full conditions and current method constraints. Old review is valuable history, not current completion status. It also preserves a reviewer's unsupported source attribution and its rejection. |
+| Loophole RTQ/translation/foundation clips | [Method collection](../../../corpus/loophole-online/index.md) and current teaching corpus | Underlying reading and reasoning concepts overlap current lessons; the specific source transcripts and structured training routines were missing. Old is stronger in detailed source protocols and source URLs. Current now supplies a concise attributed entry point and links the original detail instead of copying all vendor content. |
+| Loophole conditional clips | [Existing conditional reference](<../../../corpus/Curriculum/Conditional Logic/Notes/_megadoc_reference_conditionals.md>) and selected teaching standard | Personalized if-then/readback already has a developed current treatment. Source collection adds provenance and a teacher diagnostic perspective. No competing indicator inventory or new five-step method was introduced. |
+| Loophole necessary-assumption and principle shortcuts | Current Necessary Assumption notes plus recovered caveats | Topic concepts overlap, but some vendor generalizations overstate conclusion truth or unconditional answer rejection. These are attributed source claims and flagged differences, not replacement doctrine. |
+| Loophole review/Camo/journal/Island workouts | [Method collection](../../../corpus/loophole-online/index.md), [tutoring diagnosis](../../../corpus/tutoring-diagnosis.md) | Old adds concrete review routines, sequence and exceptions. Current holds reusable methods separately from an individual's evidence/assignments. Vendor timing and efficacy claims remain qualified. |
+| Loophole Decaf RC and retention workouts | [RC topic method](<../../../corpus/Curriculum/Reading Comprehension/Notes/cumulative-translation-review.md>) | Old has a complete detailed protocol that was absent from this current topic home. Current now connects it to diagnosis and student conventions. One recovered method does not establish recovery of the entire RC curriculum. |
+| `Assumptions & The Objection.md` and `Objection Mini-Quiz.md` | [Existing Assumption-versus-Objection quiz](<../../../corpus/Curriculum/Flaw and Famous Flaws/Homework/Pop Quiz - Assumption vs Objection.md>) | Same reasoning family but different exercises, not exact duplicates of the current quiz. Old's two versions mostly overlap one another and depend on incomplete screenshot capture. Current quiz and answer key remain intact, with teacher navigation to supplemental evidence. |
+| `conditional pracitice.md` and `Conditional Practice • LO.md` | Current conditional practice/source map | Old root practice mostly embeds eight missing images and repeats a partial question, so it cannot supply a complete recovered drill. Current authoring notes contain explicit practice/feedback and source constraints. This comparison does not certify the live app implementation. |
+| `7Sage LSAT Tutoring Webinar.md` | [Tutoring diagnosis](../../../corpus/tutoring-diagnosis.md) and student conventions | Old adds a complete source transcript and explicit reading/fundamentals/question-process/timed-strategy distinction. Current now makes those hypotheses reusable without assigning them to a student. Old logic-games and historical timing advice were not made current policy. |
+| Herdr and Claudex clips | [Claude/Codex reference](../../../references/claude-plus-codex.md) and activated workflows | Their core methods were already represented, and the Herdr reference cites the exact clip. Current reference includes later runtime adaptations and dated installation records; old has the complete original explanation. Preserve source provenance without a parallel workflow page. |
+| AI OS setup, prompting and use-case clips | [Second-brain levels](../../../references/second-brain-levels.md), existing operator references, [research review](research-review.md) | Architecture and independent review largely overlap. Old adds an explicit context-failure taxonomy, route tracing, effort evaluation and session-signal classification. Useful differences were retained, but secondhand vendor quotes, subsidy deadlines and billing claims remain historical/unverified. |
+| Website-design/Scrollcraft clip | Existing related raw design clips and [research review](research-review.md) | Related source material existed, but this exact source and its visitor-belief/ordered-journey/asset/keyframe distinctions were missing. Retained as design research for an actual future task; no design system or paid asset workflow was installed. |
+| Three Obsidian Plugin Atlas documents | [Obsidian command-center reference](../../../references/obsidian-command-center.md) and research review | Old is stronger in breadth of candidate plugins and explicit trial methods. Reports conflict on catalog counts and specific performance recommendations. Current benefits from keeping those claims separate from installed-device evidence; the useful evaluation method was integrated. Neither vault's configuration establishes the recommended plugins are installed. |
+| Misnamed “Just a Detail” clip | Preserved source/review | SQL migration content, not the promised lesson. It is a capture mismatch, not missing LSAT teaching content. No SQL was executed. |
+| Untitled Markdown, `.canvas`, `.base`, dated blank note | Current scratch/research areas and source archive | Old has reusable draft prompts and missing-image notes, but seven canvases contain no nodes/edges, two Bases files are default table views, and blank notes add no knowledge. A canvas filename or visible graph is not evidence of a richer reasoning system. |
+| Five `.obsidian` configuration files | Current four `.obsidian` JSON files | Core-plugin values match, including Sync on and Web Viewer off; appearance differs. Old has a saved graph configuration; current has no `graph.json`, which can mean default graph settings. Current app settings specify an attachment home, automatic link updates and visibility filters; old app settings are empty. Workspace tabs are UI state, not knowledge. Sync-on does not identify a remote vault or prove upload completeness. |
+
+## What the old vault does better
+
+It is easier to browse as a small reading collection: 29 root files and 64 clips, with a subject-grouped 54-file Loophole tree. Full vendor transcripts, worked examples and drill protocols preserve detail that a short synthesis intentionally omits. The old conditional plan also makes rejected ideas and reviewer triage easy to inspect together.
+
+Those are source-detail and browsing strengths. The old local vault contains no actual `students/`, `wiki/`, `context/`, `corpus/` or `decisions/` collections despite its routers referring to them. Its plugin reports propose capabilities; they do not establish a working configuration. Its missing images and incomplete captures limit teaching usability.
+
+## What the current vault does better, and where it still falls short
+
+Current has real domain records: 593 visible student files, 927 corpus files, 48 wiki pages, explicit context and decisions, source provenance, and a schema distinguishing evidence from compiled knowledge. Its student conventions connect individual observations to shared teaching methods, selected voice and primary records. These are inspectable files and contracts, not proof that every old promise or current automated workflow is operating.
+
+The cost is workspace clutter. Of 8,472 visible Markdown files, 3,761 are under `graph-imports`, 1,855 under `skills`, and 924 under `setup`; the main wiki/student/corpus homes contain 823. A raw total therefore overstates authored knowledge and the amount useful on a phone. Current root contains 60 visible files, and some standing references retain dated paths or capabilities. More files do not make the brain intrinsically better. The useful improvement is reliable domain retrieval and explicit provenance, while old source detail remains available behind the syntheses.
+
+## Exact structural snapshot and link limits
+
+The current snapshot includes the newly preserved old files and this comparison work, and can change while other work continues. It uses the same visible-file traversal exclusions as the size comparison: dot directories, symlinks, dependencies, build and cache directories are omitted. [Complete counts](structure.generated.json) list every top folder and file type; the table below gives exact file and Markdown counts.
+
+<!-- BEGIN GENERATED VAULT STRUCTURE -->
+
+| Top-level home | Old files | Old Markdown | Current files | Current Markdown |
+|---|---:|---:|---:|---:|
+| `(root files)` | 29 | 20 | 60 | 30 |
+| `Clippings` | 64 | 64 | 3 | 3 |
+| `Loophole Lecture` | 0 | 0 | 9 | 4 |
+| `agents` | 0 | 0 | 56 | 39 |
+| `aios` | 0 | 0 | 3 | 3 |
+| `archive` | 0 | 0 | 61 | 56 |
+| `audits` | 0 | 0 | 2 | 2 |
+| `brainstorms` | 0 | 0 | 746 | 153 |
+| `context` | 0 | 0 | 3 | 3 |
+| `corpus` | 0 | 0 | 927 | 193 |
+| `decisions` | 0 | 0 | 1 | 1 |
+| `email system` | 0 | 0 | 8 | 6 |
+| `graph-imports` | 0 | 0 | 3,791 | 3,761 |
+| `handoffs` | 0 | 0 | 36 | 13 |
+| `peek` | 0 | 0 | 7 | 0 |
+| `raw` | 0 | 0 | 1,375 | 674 |
+| `references` | 0 | 0 | 16 | 14 |
+| `research` | 0 | 0 | 432 | 32 |
+| `scratch` | 0 | 0 | 126 | 11 |
+| `scripts` | 0 | 0 | 1 | 0 |
+| `setup` | 0 | 0 | 1,000 | 924 |
+| `skill-audit` | 0 | 0 | 18 | 9 |
+| `skills` | 0 | 0 | 3,595 | 1,855 |
+| `students` | 0 | 0 | 593 | 582 |
+| `superwhisper` | 0 | 0 | 52 | 43 |
+| `system` | 0 | 0 | 4,101 | 12 |
+| `tests` | 0 | 0 | 3 | 0 |
+| `tmp` | 0 | 0 | 14 | 1 |
+| `wiki` | 0 | 0 | 48 | 48 |
+| **Total** | **93** | **84** | **17,087** | **8,472** |
+
+<!-- END GENERATED VAULT STRUCTURE -->
+
+Automated old-local wikilink scan: 84 Markdown files contain 16 non-embed wikilink occurrences, of which five resolve locally and 11 do not. Its 22 image embeds all fail local resolution. These counts exclude ordinary Markdown links, external course navigation, implied conceptual relationships and code examples; they are not an Obsidian graph-quality score. [Scan evidence](old-links.generated.json). The earlier 204-link check covered new recovery outputs, not every current-vault link. No comparable whole-current-vault link audit or full semantic read is claimed here.
+
 ## Coverage and preservation
 
 - 93 visible regular files, 769,734 bytes, were preserved without modifying their original bytes or paths.
@@ -13,6 +95,8 @@ The old local vault is `C:\Users\Joshu\Documents\Ai-os`; the current authoritati
 - Every archived file matched its original SHA-256 after copying. See [archive provenance](../../../raw/sources/old-obsidian-vault-2026-10-07/PROVENANCE.md) and [manifest](../../../raw/sources/old-obsidian-vault-2026-10-07/SHA256SUMS).
 
 ## Content identity differs from knowledge overlap
+
+Follow-up domain-integration audit on 2026-10-07: the recovered RC method is filed under `corpus/Curriculum/Reading Comprehension/Notes/`; existing conditional and objection topic pages link relevant recovered evidence; student conventions connect observed needs to shared teaching methods and Joshua's selected voice. The existing second-brain reference now records a one-vault recommendation grounded in these cross-domain links. No vault reorganization or new broad curriculum was performed. See [the source summary's integration audit](../../../wiki/sources/old-obsidian-vault-2026-10-07.md#domain-integration-audit-on-2026-10-07).
 
 Five old files share a relative path with the current vault, and all five differ: `AGENTS.md`, `CLAUDE.md`, `GEMINI.md`, `CONTEXT.md`, and `connections.md`. Current versions were not replaced.
 
