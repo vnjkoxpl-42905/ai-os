@@ -13,7 +13,7 @@ semantic-status: bounded-semantic-review
 
 Original: [PaCmpygFfXo](https://www.youtube.com/watch?v=PaCmpygFfXo); channel Andrej Karpathy. Upload date 2022-09-07. Captured2026-10-08, compilation2026-10-08. Automatic English captions, not verified against audio.
 
-[Physical raw Markdown](../../../../raw/sources/karpathy-brain/raw/youtube/transcripts/PaCmpygFfXo.md). SHA-256: `f5b8901d3c6e399ac9beee841472f9f573aee26e4d15d14a9318fc62748f66a9`. Hash matches collection manifest: **False**.
+[Physical raw Markdown](../../../../raw/sources/karpathy-brain/raw/youtube/transcripts/PaCmpygFfXo.md). SHA-256: `f5b8901d3c6e399ac9beee841472f9f573aee26e4d15d14a9318fc62748f66a9`. Physical byte hash differs from the older manifest. CRLF-to-LF normalized SHA-256 matches its hash `a95698b6c2f06a5308e58b44d0bd82036b3ed1d3cb6f18b585952df3a745c708` exactly. Raw bytes were preserved; normalized matching does not make the physical byte hashes identical.
 
 ## Reviewed evidence
 

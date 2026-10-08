@@ -13,7 +13,7 @@ semantic-status: complete-preserved-text-no-media-review
 
 Original: [2oKjtvYslMY](https://www.youtube.com/watch?v=2oKjtvYslMY); channel Andrej Karpathy. Upload date 2022-08-17. Captured2026-10-08, compilation2026-10-08. Automatic English captions, not verified against audio.
 
-[Physical raw Markdown](../../../../raw/sources/karpathy-brain/raw/youtube/transcripts/2oKjtvYslMY.md). SHA-256: `f3195746d27e5ac07db765adc5392a3c71f18ac87acee82f24c1765b81c1be73`. Hash matches collection manifest: **False**.
+[Physical raw Markdown](../../../../raw/sources/karpathy-brain/raw/youtube/transcripts/2oKjtvYslMY.md). SHA-256: `f3195746d27e5ac07db765adc5392a3c71f18ac87acee82f24c1765b81c1be73`. Physical byte hash differs from the older manifest. CRLF-to-LF normalized SHA-256 matches its hash `5ab38618e15789861461b5ae5228bd354b6ab13a3315ce25d8a4a79bc21ee874` exactly. Raw bytes were preserved; normalized matching does not make the physical byte hashes identical.
 
 ## Reviewed evidence
 

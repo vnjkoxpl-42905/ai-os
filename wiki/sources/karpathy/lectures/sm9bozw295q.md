@@ -15,6 +15,8 @@ Original: https://www.youtube.com/watch?v=sM9bozW295Q. Author/channel Andrej Kar
 
 [Physical raw Markdown](../../../../raw/sources/karpathy-brain/raw/youtube/transcripts/sM9bozW295Q.md). SHA-256: `72310750220bc5b4dc330fc6c250396efc32146ad9a075c201951da1cdcd12e8`.
 
+Physical byte hash differs from the older manifest. CRLF-to-LF normalized SHA-256 matches `b870657d93efd887ac5b9b3f194a51ce67ad1ca8c0603a9116c1c14e3fe25de2` exactly. Raw bytes preserved.
+
 ## Reviewed evidence
 
 Preserved text describes an animation; captions mainly contain music/applause. No substantial lecture rule can be derived; media was not inspected.

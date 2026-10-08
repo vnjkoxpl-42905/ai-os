@@ -15,6 +15,8 @@ Original: https://www.youtube.com/watch?v=zjkBMFhNj_g. Author/channel Andrej Kar
 
 [Physical raw Markdown](../../../../raw/sources/karpathy-brain/raw/youtube/transcripts/zjkBMFhNj_g.md). SHA-256: `e8de8c98d0f4b71f5dbd255eca06adee5c9d1f594535129b947d0ca6820feeaa`.
 
+Physical byte hash differs from the older manifest. CRLF-to-LF normalized SHA-256 matches `56b2e5607421613552e0b2e08a4378ad60fcb925d8c3de3f29275137a2c6bca0` exactly. Raw bytes preserved.
+
 ## Reviewed evidence
 
 The opening illustrates LLM inference with parameters and executable code using Llama2. Product capability claims are dated, not verified current advice.

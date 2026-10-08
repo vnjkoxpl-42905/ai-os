@@ -13,7 +13,7 @@ semantic-status: bounded-semantic-review
 
 Original: [P6sfmUTpUmc](https://www.youtube.com/watch?v=P6sfmUTpUmc); channel Andrej Karpathy. Upload date 2022-10-04. Captured2026-10-08, compilation2026-10-08. Automatic English captions, not verified against audio.
 
-[Physical raw Markdown](../../../../raw/sources/karpathy-brain/raw/youtube/transcripts/P6sfmUTpUmc.md). SHA-256: `2e2eff587c196512efd3abe51827628c9fbe7a9e6e72912b5b63939d30b7954c`. Hash matches collection manifest: **False**.
+[Physical raw Markdown](../../../../raw/sources/karpathy-brain/raw/youtube/transcripts/P6sfmUTpUmc.md). SHA-256: `2e2eff587c196512efd3abe51827628c9fbe7a9e6e72912b5b63939d30b7954c`. Physical byte hash differs from the older manifest. CRLF-to-LF normalized SHA-256 matches its hash `b1eb0438a0d9ef27f6ba98e2c1b57bdfe93aa080505f126bbb5b761120738302` exactly. Raw bytes were preserved; normalized matching does not make the physical byte hashes identical.
 
 ## Reviewed evidence
 

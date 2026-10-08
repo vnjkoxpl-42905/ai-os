@@ -10,7 +10,7 @@ sources: [../sources/karpathy/llm-wiki.md, ../sources/karpathy/autoresearch-read
 
 # Candidate observations need wider evidence
 
-This is partial Prompt 2 synthesis from five text sources. It does not establish the final seven rules. Each observation is scoped to its source; wider applicability and recurrence remain to be tested against independent sources.
+The observations below preserve the initial five-source compilation. The current operational synthesis is [seven reviewed rules](rules.md), with two distinct source locations per rule. Additional domain coverage is linked from [the index](index.md). Full-corpus reading remains incomplete; these initial observations are not a second competing rule set.
 
 ## Maintain knowledge instead of reconstructing it
 

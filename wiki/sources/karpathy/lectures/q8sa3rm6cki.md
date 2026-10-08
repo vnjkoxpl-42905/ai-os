@@ -15,6 +15,8 @@ Original: https://www.youtube.com/watch?v=q8SA3rM6ckI. Author/channel Andrej Kar
 
 [Physical raw Markdown](../../../../raw/sources/karpathy-brain/raw/youtube/transcripts/q8SA3rM6ckI.md). SHA-256: `254e1c28cb39d1f2ac5b25a676015db119687a8070fb1b0ca67f6b9d9901f625`.
 
+Physical byte hash differs from the older manifest. CRLF-to-LF normalized SHA-256 matches `178a8864b2efbf02576d99d3849a4254d75263b8985a20101bbe4c8b3f8f29f3` exactly. Raw bytes preserved.
+
 ## Reviewed evidence
 
 Manual tensor backpropagation is an exercise to expose a leaky abstraction and diagnose hidden errors, not a recommendation to reject autograd in production.

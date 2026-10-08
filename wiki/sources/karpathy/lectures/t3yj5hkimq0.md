@@ -15,6 +15,8 @@ Original: https://www.youtube.com/watch?v=t3YJ5hKiMQ0. Author/channel Andrej Kar
 
 [Physical raw Markdown](../../../../raw/sources/karpathy-brain/raw/youtube/transcripts/t3YJ5hKiMQ0.md). SHA-256: `5d6450c1b3279add0d84a77034f521fab185582b641ee165ddadf86914edc38e`.
 
+Physical byte hash differs from the older manifest. CRLF-to-LF normalized SHA-256 matches `fa9e915139f3cd0bdd131efdefabec0f8662d2a1026081d37cd28a521de78b39` exactly. Raw bytes preserved.
+
 ## Reviewed evidence
 
 The opening expands prior MLP context and uses deeper hierarchical fusion to motivate a WaveNet-like model; starter code reuses prior work.

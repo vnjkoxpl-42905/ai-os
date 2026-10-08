@@ -13,7 +13,7 @@ semantic-status: bounded-semantic-review
 
 Original: [l8pRSuU81PU](https://www.youtube.com/watch?v=l8pRSuU81PU); channel Andrej Karpathy. Upload date 2024-06-09. Captured2026-10-08, compilation2026-10-08. Automatic English captions, not verified against audio.
 
-[Physical raw Markdown](../../../../raw/sources/karpathy-brain/raw/youtube/transcripts/l8pRSuU81PU.md). SHA-256: `47f139585778df18bfa379799038062320cbad808e38fb55d56609c07d15d94b`. Hash matches collection manifest: **False**.
+[Physical raw Markdown](../../../../raw/sources/karpathy-brain/raw/youtube/transcripts/l8pRSuU81PU.md). SHA-256: `47f139585778df18bfa379799038062320cbad808e38fb55d56609c07d15d94b`. Physical byte hash differs from the older manifest. CRLF-to-LF normalized SHA-256 matches its hash `432a3702b8dce00bbc073e70c30ee5fc2519bc8426ed267846b9656926d9d499` exactly. Raw bytes were preserved; normalized matching does not make the physical byte hashes identical.
 
 ## Reviewed evidence
 

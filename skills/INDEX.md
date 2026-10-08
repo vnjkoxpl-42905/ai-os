@@ -4,7 +4,7 @@ One line per skill in the master DB, grouped by source-type within the `claude/`
 
 ## claude/
 
-178 authored/project · 42 google-workspace · 0 vendor-plugin · 9 project-fork
+179 authored/project · 42 google-workspace · 0 vendor-plugin · 9 project-fork
 
 ### Google Workspace (gws) skills
 
@@ -133,6 +133,7 @@ _Full `gws` CLI skill set. Inert in the DB. Copy selected skills into the projec
 - **internal-comms** — A set of resources to help me write all kinds of internal communications, using the formats that my company likes to use. Claude should use this skill whenever asked to write some sort of internal communications (status reports, leadership updates, 3P updates, company newsletters, FAQs, incident reports, project updates, etc.).
 - **jev-audit** — Find evidence-backed TypeSafe Jev opportunities in the user's recent Claude Code or Codex work. Use when asked to audit recent workflows, task history, or the last 30 or 60 days for decisions Jev could help with, then recommend one practical pilot or guide its setup. Do not trigger for general AI questions, ordinary coding tasks, or every mention of Jev.
 - **json-canvas** — Create and edit JSON Canvas files (.canvas) with nodes, edges, groups, and connections. Use when working with .canvas files, creating visual canvases, mind maps, flowcharts, or when the user mentions Canvas files in Obsidian.
+- **karpathy-teach** — Teach an AI or programming topic using the evidence-supported Karpathy method. Use when Joshua asks for Karpathy-style teaching, a runnable explanation, or the saved Karpathy tokenizer demonstration.
 - **kling-cli** — 可灵 AI（Kling）官方 CLI 的使用技能：图片/视频生成、可复用 Element 主体、动作控制。CLI 通过 MCP 服务与可灵交互： 调用 text_to_image / image_to_image / text_to_video / image_to_video / motion_control（模型与参数规格由 who_am_i 动态声明）， 返回 generationId 后用 query_tasks 轮询，完成后提取 works[].url 展示给用户。命令无别名。 触发词：可灵、Kling、文生图、参考图生图、文生视频、图生视频、Omni、omni、MCP、generationId、generation_id、轮询、灵感值、 text_to_image、image_to_image、text_to_video、image_to_video、motion_control、motion_library_list、Element、element_create、element_list、element_get、element_update、element_delete、feedback、query_tasks、who_am_i、file_upload、 image generation、video generation、kling 命令、.credentials、 国内站、海外站、global、海外版、区域、region、安装、install。
 - **level-up** — Use weekly (or when Joshua says "let's level up", "what should I automate next", "find me leverage this week") to surface and ship ONE new automation. Walks the 3Ms interview — Mindset (find the candidate) → Method (scope it) → Machine (build it). One run = one shipped artifact. Adapted for the ai-os EA workspace.
 - **loop-me** — Grill me about specs for the workflows I want to build, within this workspace.
@@ -260,7 +261,7 @@ _Full `gws` CLI skill set. Inert in the DB. Copy selected skills into the projec
 
 ## codex/
 
-163 authored/project · 42 google-workspace · 0 vendor-plugin · 11 project-fork
+164 authored/project · 42 google-workspace · 0 vendor-plugin · 11 project-fork
 
 ### Google Workspace (gws) skills
 
@@ -378,6 +379,7 @@ _Full `gws` CLI skill set. Inert in the DB. Copy selected skills into the projec
 - **internal-comms** — A set of resources to help me write all kinds of internal communications, using the formats that my company likes to use. Claude should use this skill whenever asked to write some sort of internal communications (status reports, leadership updates, 3P updates, company newsletters, FAQs, incident reports, project updates, etc.).
 - **jev-audit** — Find evidence-backed TypeSafe Jev opportunities in the user's recent Claude Code or Codex work. Use when asked to audit recent workflows, task history, or the last 30 or 60 days for decisions Jev could help with, then recommend one practical pilot or guide its setup. Do not trigger for general AI questions, ordinary coding tasks, or every mention of Jev.
 - **json-canvas** — Create and edit JSON Canvas files (.canvas) with nodes, edges, groups, and connections. Use when working with .canvas files, creating visual canvases, mind maps, flowcharts, or when the user mentions Canvas files in Obsidian.
+- **karpathy-teach** — Teach an AI or programming topic using the evidence-supported Karpathy method. Use when Joshua asks for Karpathy-style teaching, a runnable explanation, or the saved Karpathy tokenizer demonstration.
 - **kling-cli** — 可灵 AI（Kling）官方 CLI 的使用技能：图片/视频生成、可复用 Element 主体、动作控制。CLI 通过 MCP 服务与可灵交互： 调用 text_to_image / image_to_image / text_to_video / image_to_video / motion_control（模型与参数规格由 who_am_i 动态声明）， 返回 generationId 后用 query_tasks 轮询，完成后提取 works[].url 展示给用户。命令无别名。 触发词：可灵、Kling、文生图、参考图生图、文生视频、图生视频、Omni、omni、MCP、generationId、generation_id、轮询、灵感值、 text_to_image、image_to_image、text_to_video、image_to_video、motion_control、motion_library_list、Element、element_create、element_list、element_get、element_update、element_delete、feedback、query_tasks、who_am_i、file_upload、 image generation、video generation、kling 命令、.credentials、 国内站、海外站、global、海外版、区域、region、安装、install。
 - **level-up** — Use weekly (or when Joshua says "let's level up", "what should I automate next", "find me leverage this week") to surface and ship ONE new automation. Walks the 3Ms interview — Mindset (find the candidate) → Method (scope it) → Machine (build it). One run = one shipped artifact. Adapted for the ai-os EA workspace.
 - **loop-me** — Grill me about specs for the workflows I want to build, within this workspace.

@@ -10,7 +10,7 @@ sources: [../sources/karpathy/llm-wiki.md, ../sources/karpathy/autoresearch-read
 
 # Project methods are evidence, not installed workflows
 
-This partial Prompt 2 page compares four fully read documents. Code, notebooks, data payloads and runtime behavior have not been reviewed or executed. Methods remain attributed examples and local interpretations.
+The comparisons below preserve the initial four-document compilation. Later source pages review named code files and additional writings, X posts and transcript passages with explicit coverage. [Seven reviewed rules](rules.md) own the current teaching workflow; [execution status](../../research/karpathy-brain-2026-10-08/VIDEO-PROMPT-EXECUTION.md) records the agent, skill, gate and tokenizer test. Unread files and media remain outside semantic coverage.
 
 ## Compile a source and preserve its evidence
 

@@ -13,7 +13,7 @@ semantic-status: bounded-semantic-review
 
 Original: [7xTGNNLPyMI](https://www.youtube.com/watch?v=7xTGNNLPyMI); channel Andrej Karpathy. Upload date 2025-02-05. Captured2026-10-08, compilation2026-10-08. Automatic English captions, not verified against audio.
 
-[Physical raw Markdown](../../../../raw/sources/karpathy-brain/raw/youtube/transcripts/7xTGNNLPyMI.md). SHA-256: `b127900e83876f0ebb13cc6af552bcde0c629dd206a93812a7116406e80c9f34`. Hash matches collection manifest: **False**.
+[Physical raw Markdown](../../../../raw/sources/karpathy-brain/raw/youtube/transcripts/7xTGNNLPyMI.md). SHA-256: `b127900e83876f0ebb13cc6af552bcde0c629dd206a93812a7116406e80c9f34`. Physical byte hash differs from the older manifest. CRLF-to-LF normalized SHA-256 matches its hash `61f6be536e32cce457d96e755bcf4e8baf94054bffa793eac29883e9a27d2817` exactly. Raw bytes were preserved; normalized matching does not make the physical byte hashes identical.
 
 ## Reviewed evidence
 

@@ -8,9 +8,9 @@ tags: [karpathy, llm-wiki]
 sources: [../sources/karpathy/llm-wiki.md, ../sources/karpathy/autoresearch-readme.md, ../sources/karpathy/micrograd-readme.md, ../sources/karpathy/jobs-readme.md, ../sources/karpathy/animals-vs-ghosts.md]
 ---
 
-# Read this as a five-source starter
+# Use the reviewed method and preserve its limits
 
-Prompt 2 is partial. These observations come from five fully read text documents, including three repository READMEs. They do not represent a complete account of Karpathy or his corpus. Joshua's own instructions and teaching voice remain authoritative here.
+Prompt 2 remains partial: source pages and explicit coverage now span writings, repositories, lectures and X. A first working method uses [seven corroborated rules](rules.md); it does not represent a complete account of Karpathy. Joshua's own instructions and teaching voice remain authoritative. [Execution status](../../research/karpathy-brain-2026-10-08/VIDEO-PROMPT-EXECUTION.md) distinguishes local validation from native runtime acceptance.
 
 **Compile and maintain knowledge.** The LLM Wiki gist says: “The knowledge is compiled once and then *kept current*, not re-derived on every query.” [Raw gist](../../raw/sources/karpathy-brain/raw/github/gists/442a6bf555914893e9891c11519de94f/llm-wiki.md), The core idea section.
 
@@ -22,4 +22,8 @@ Prompt 2 is partial. These observations come from five fully read text documents
 
 **Keep uncertainty explicit.** Animals vs Ghosts says: “And I say both of these with double digit percent uncertainty and cheer the work of those who disagree, especially those a lot more ambitious bitter lesson wise.” [Raw article](../../raw/sources/karpathy-brain/raw/blog/md/bearblog/karpathy.bearblog.dev_animals-vs-ghosts.md), author's own discussion.
 
-[Index and coverage](index.md), [principles](principles.md), [methods](methods.md). No final seven rules, persona or runtime hooks yet.
+For teaching, reconstruct a mechanism, begin with a correct small baseline, predict/run/compare, expose a useful counterexample, prove relevant behavior, state assumptions and retain justified simplicity. Exact quotes and two-source support for each rule live in [rules](rules.md). These are operational interpretations, not his endorsement.
+
+The project `karpathy-teach` skill delegates to the Karpathy-method agent in Claude and provides the same reviewed workflow in Codex. Claude has an agent-scoped execution gate; Codex uses workflow receipts rather than a claimed Claude hook. The current execution tracer covers Python. New teaching code belongs outside the vault in `ai-os-projects/karpathy-method-tools/examples/`. Existing `ingest` remains the single front door for new sources.
+
+[Index and coverage](index.md), [principles](principles.md), [methods](methods.md). Sources and new captured evidence remain immutable; corpus-wide reading, media review and exhaustive X coverage remain open.
