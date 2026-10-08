@@ -38,6 +38,8 @@ On 2026-10-08, the persistent Chrome had a signed-in Karpathy profile tab. A liv
 
 That expanded run stopped after 20 of 157 weekly windows on a persistent X site error. One visible Retry failed to clear it. The [frozen result](../../research/karpathy-brain-2026-10-08/X-REPAIR-RESULT.md) contains 237 previously missing IDs and longer text for all nine known partial posts. Eleven tests passed after follow-up corrections; the script is ready to resume, but is not currently running.
 
+Joshua authorized another reliability pass and rerun on 2026-10-08. Seventeen tests and independent review passed after adding loaded-row preservation before errors, adaptive readiness, one bounded generic-error Retry, X-host HTTP 429 detection, a single-writer lock and in-memory ledger/export optimizations. That rerun is active. Consult the dated [progress snapshot](../../research/karpathy-brain-2026-10-08/x-rerun-progress.generated.json); neither an old stopped-run note nor a snapshot proves current process state.
+
 X search does not establish an exhaustive account export. Missing results, deleted/private/withheld posts, unavailable media and stalled windows remain limitations. Login challenges, human verification and rate-limit errors stop collection. No stealth, proxies or attempts to bypass restrictions are included.
 
 Related: [Karpathy compilation](../../wiki/karpathy/index.md), [verified handoff](../../research/karpathy-brain-2026-10-08/HANDOFF-VERIFICATION.md), [browser playbook](../browser-agent-playbook.md), [AI workspace hub](index.md).
