@@ -5,25 +5,29 @@ created: 2026-10-08
 updated: 2026-10-08
 aliases: []
 tags: [karpathy, llm-wiki]
-sources: [../sources/karpathy/llm-wiki.md, ../sources/karpathy/autoresearch-readme.md, ../sources/karpathy/micrograd-readme.md, ../sources/karpathy/jobs-readme.md, ../sources/karpathy/animals-vs-ghosts.md]
+sources: [../sources/karpathy/blog/undergraduate-study-advice.md, ../sources/karpathy/blog/recipe.md, ../sources/karpathy/blog/understand-backprop.md, ../sources/karpathy/blog/microgpt.md, ../sources/karpathy/x/claude-coding-notes.md, ../sources/karpathy/animals-vs-ghosts.md]
 ---
 
-# Use the reviewed method and preserve its limits
+# Teach with small mechanisms and inspectable checks
 
-The preserved collection is compiled into source pages with [explicit coverage](../../research/karpathy-brain-2026-10-08/COMPILATION-AUDIT.md). The [seven rules](rules.md) are being finalized through the original prompt. Joshua's instructions and teaching voice remain authoritative. [Execution status](../../research/karpathy-video-2026-10-08/VERBATIM-COMPLIANCE.md) separates compilation, runtime tests and literal prompt runs.
+The [collected sources are compiled](../../research/karpathy-brain-2026-10-08/COMPILATION-AUDIT.md). [Seven rules](rules.md) have exact quotes from two distinct original artifacts each. They are practical synthesis, with historical exceptions retained. Joshua's instructions and teaching voice remain authoritative.
 
-**Compile and maintain knowledge.** The LLM Wiki gist says: “The knowledge is compiled once and then *kept current*, not re-derived on every query.” [Raw gist](../../raw/sources/karpathy-brain/raw/github/gists/442a6bf555914893e9891c11519de94f/llm-wiki.md), The core idea section.
+**Reconstruct the mechanism.** “Reading and understanding IS NOT the same as replicating”. [Study advice](../sources/karpathy/blog/undergraduate-study-advice.md).
 
-**Make experiments inspectable.** autoresearch says: “The agent only touches `train.py`. This keeps the scope manageable and diffs reviewable.” [Raw README](../../raw/sources/karpathy-brain/raw/github/repos/karpathy/autoresearch/README.md), Design choices section. This is one project's design, not an established universal rule.
+**Begin with a small baseline.** “get that to work, and then generalize it later making sure that I get the same result.” [Recipe](../sources/karpathy/blog/recipe.md).
 
-**Use small educational mechanisms.** micrograd describes its implementation: “Both are tiny, with about 100 and 50 lines of code respectively.” It adds: “Potentially useful for educational purposes.” [Raw README](../../raw/sources/karpathy-brain/raw/github/repos/karpathy/micrograd/README.md), opening. Static reading does not certify execution.
+**Predict, run and compare.** “make concrete hypotheses about what will happen and then either validate them with an experiment or investigate until we find some issue.” [Recipe](../sources/karpathy/blog/recipe.md).
 
-**Preserve limits around model judgments.** jobs says: “The scores are rough LLM estimates (Gemini Flash via OpenRouter), not rigorous predictions.” [Raw README](../../raw/sources/karpathy-brain/raw/github/repos/karpathy/jobs/README.md), What AI Exposure is NOT section. BLS data is third-party evidence, not his personal beliefs.
+**Repair a cause through a counterexample.** “The problem is on line 291.” [Backprop article](../sources/karpathy/blog/understand-backprop.md), the clipped-error gradient example.
 
-**Keep uncertainty explicit.** Animals vs Ghosts says: “And I say both of these with double digit percent uncertainty and cheer the work of those who disagree, especially those a lot more ambitious bitter lesson wise.” [Raw article](../../raw/sources/karpathy-brain/raw/blog/md/bearblog/karpathy.bearblog.dev_animals-vs-ghosts.md), author's own discussion.
+**Verify relevant behavior.** “Get it to write tests first and then pass them.” [Coding notes](../sources/karpathy/x/claude-coding-notes.md). Running code alone does not establish correctness; [rules](rules.md) preserves a contrasting historical beam-search admission.
 
-For teaching, reconstruct a mechanism, begin with a correct small baseline, predict/run/compare, expose a useful counterexample, prove relevant behavior, state assumptions and retain justified simplicity. Exact quotes and two-source support for each rule live in [rules](rules.md). These are operational interpretations, not his endorsement.
+**Expose assumptions and uncertainty.** “the models make wrong assumptions on your behalf and just run along with them without checking.” [Coding notes](../sources/karpathy/x/claude-coding-notes.md). “with double digit percent uncertainty” [Animals vs Ghosts](../sources/karpathy/animals-vs-ghosts.md).
 
-The project `karpathy-teach` skill delegates to the Karpathy-method agent in Claude and provides the same reviewed workflow in Codex. Claude's revised project Stop gate has 19 passing tests and a native blocking/recovery probe. The literal video lesson remains pending. Codex uses workflow receipts rather than a claimed Claude hook. New teaching code belongs outside the vault in `ai-os-projects/karpathy-method-tools/examples/`. Existing `ingest` remains the single front door for new sources.
+**Earn complexity.** “I cannot simplify this any further.” [Microgpt](../sources/karpathy/blog/microgpt.md). Necessary production safeguards still belong in production.
 
-[Index and coverage](index.md), [principles](principles.md), [methods](methods.md). Raw sources remain immutable; media fidelity and exhaustive public-history collection remain unverified.
+The configured teaching agent reads this page first, uses at most five wiki pages, cites source pages and applies all seven rules. The skill grades its answer before presentation. End with **What I ran**, **What came out**, **What I changed**. Teaching code belongs outside the vault in `ai-os-projects/karpathy-method-tools/examples/`.
+
+Claude's project hook has behavioral tests and a [native blocking/recovery probe](../../research/karpathy-brain-2026-10-08/NATIVE-STOP-ACCEPTANCE.md). Its original ordered replay hit the Pro session limit; the literal tokenizer invocation remains pending. Codex's workflow is not a native Claude hook.
+
+Use existing `ingest` for new sources. Preserve raw evidence. Foreign authors, payloads, caption errors and linked media retain their limits. [Index](index.md), [principles](principles.md), [methods](methods.md), [current status](../../research/karpathy-video-2026-10-08/VERBATIM-COMPLIANCE.md).
