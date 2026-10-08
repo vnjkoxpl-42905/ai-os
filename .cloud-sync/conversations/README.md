@@ -545,3 +545,8 @@ Native UI archive does not delete a conversation. Source-file deletion removes i
 | codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a11a2c-9789-7810-a74b-2ff3688a726f-69a7e77ef4fb.md) | C:\Users\Joshu\dev\ai-os | 2026-10-08T06:21:35+00:00 |
 | codex | [<environment_context>](codex/01a11ace-6fed-79a1-9980-1db7eddcb584-82732c558c40.md) | C:\Users\Joshu\dev\ai-os | 2026-10-08T09:18:19+00:00 |
 | codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a11b2a-c443-7123-a3a9-19e434e7fc7c-a4f86299967c.md) | C:\Users\Joshu\dev\ai-os | 2026-10-08T10:59:11+00:00 |
+| codex | [Read the wiki and write his rules for how he builds and how he teaches. Only keep a rule if it shows](codex/01a11d14-eaaf-7601-8f06-15b9b5577125-e03a66173303.md) | C:\Users\Joshu\dev\ai-os | 2026-10-08T19:54:32+00:00 |
+| codex | [Test the installed project Stop hook, not the teaching lesson. Delegate this acceptance test to the ](codex/01a11d14-eab5-7ba0-a3ca-b3b55d1d339c-091015b592a2.md) | C:\Users\Joshu\dev\ai-os | 2026-10-08T19:54:32+00:00 |
+| codex | [Use the project karpathy-teach skill to build me a tiny byte-pair tokenizer from scratch and teach m](codex/01a11d14-eab7-75b3-ac80-668df47b67ca-b803fad7fda4.md) | C:\Users\Joshu\dev\ai-os | 2026-10-08T19:54:32+00:00 |
+| codex | [<command-name>/clear</command-name>](codex/01a11d14-eabb-7ad2-b3cc-8132b7df902b-0a9698c9a89c.md) | C:\Users\Joshu\dev\ai-os | 2026-10-08T19:54:32+00:00 |
+| codex | [<command-name>/clear</command-name>](codex/01a11d14-ead2-7f91-9872-c3f6942cd7d4-cd76c7f704b9.md) | C:\Users\Joshu\dev\ai-os | 2026-10-08T19:54:32+00:00 |
