@@ -1,0 +1,1 @@
+Add a Stop hook to this project. When a turn used the karpathy agent or the karpathy-teach skill, and a code file was written or edited but nothing was run afterward, block the stop and send it back with the message: Karpathy rule, run it before you say it works. Leave every other session alone.

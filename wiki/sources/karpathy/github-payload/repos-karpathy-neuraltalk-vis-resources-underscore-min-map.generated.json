@@ -1,0 +1,47 @@
+{
+  "bytes": 25382,
+  "characters": 25378,
+  "lines": 3,
+  "wordlike_tokens": 3,
+  "distinct_characters": 83,
+  "structured": {
+    "root_type": "dict",
+    "node_types": {
+      "dict": 1,
+      "str": 298,
+      "list": 2,
+      "int": 1
+    },
+    "key_counts": {
+      "version": 1,
+      "file": 1,
+      "sources": 1,
+      "names": 1,
+      "mappings": 1
+    },
+    "array_count": 2,
+    "arrays": [
+      {
+        "path": "$.names",
+        "length": 295
+      },
+      {
+        "path": "$.sources",
+        "length": 1
+      }
+    ],
+    "numeric_values": 1,
+    "numeric_min": 3,
+    "numeric_max": 3,
+    "string_count": 298,
+    "string_characters": 24427
+  },
+  "attribution_markers": [
+    "{\"version\":3,\"file\":\"underscore-min.js\",\"sources\":[\"underscore.js\"],\"names\":[\"root\",\"this\",\"previousUnderscore\",\"_\",\"ArrayProto\",",
+    "ped\",\"exports\",\"module\",\"VERSION\",\"createCallback\",\"func\",\"context\",\"argCount\",\"value\",\"call\",\"other\",\"index\",\"collection\",\"accumulator\",\"apply\",\"argume"
+  ],
+  "source_path": "repos/karpathy/neuraltalk/vis_resources/underscore-min.map",
+  "source_sha256": "bf79a17a974d3cf057a1e7ca92facd3cf784170a7c48151c3262bf2ecfdc3be5",
+  "method": "json_parse_all_nodes",
+  "parse_error": null
+}

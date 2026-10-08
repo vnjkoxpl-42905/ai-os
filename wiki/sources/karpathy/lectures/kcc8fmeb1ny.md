@@ -6,7 +6,7 @@ updated: 2026-10-08
 aliases: []
 tags: [karpathy, youtube]
 sources: ["../../../../raw/sources/karpathy-brain/raw/youtube/transcripts/kCc8FmEb1nY.md"]
-semantic-status: bounded-semantic-review
+semantic-status: complete-preserved-text-no-media-review
 ---
 
 # Let's build GPT: from scratch, in code, spelled out.
@@ -17,15 +17,61 @@ Original: [kCc8FmEb1nY](https://www.youtube.com/watch?v=kCc8FmEb1nY); channel An
 
 ## Reviewed evidence
 
-The reviewed introduction shows probabilistic ChatGPT outputs and motivates understanding the underlying language model and Transformer. The source-provided chapter list describes a bigram baseline followed by incremental attention implementations and Transformer blocks; those later chapters have not been semantically read in this pass.
+He bounds the project to a small character-level Transformer, distinguishing it from reproducing the complete production ChatGPT system. The small Shakespeare text and simple character tokenizer make the training mechanism inspectable.
 
-> [00:02:02] language model in that sense now I would
+> [00:02:52] the context of machine translation in
 
-> [00:02:05] like to focus on the under the hood of
+He withholds a validation split to distinguish generalization from memorizing training text. Short chunks contain multiple next-character examples, and batches process independent sequences for efficiency.
+
+> [00:13:24] here so I believe for example that zero
+
+He predicts a uniform-vocabulary baseline loss, diagnoses why randomly initialized predictions differ, then tests generation and optimization in a bigram model before adding context communication.
+
+> [00:28:12] loss is
+
+The prototype becomes a script with averaged train/validation measurements, explicit train/evaluation modes, and no-grad evaluation. He explains why these practices matter even before this particular model contains mode-dependent layers.
+
+> [00:40:26] loss we're we're going to report the uh
+
+He first implements causal prefix averaging with explicit loops. A triangular matrix implementation is then checked for equality against that reference before using softmax masks and learned attention.
+
+> [00:45:15] like um a term that people use when you
+
+Queries, keys and values are introduced as data-dependent information requests, matching content and communicated values. Causal masking prevents future information from leaking into next-token predictions.
+
+> [01:03:18] single row has these um uniform numbers
+
+He distinguishes positional information, independent batch examples, self-attention and cross-attention. Encoder connectivity can be bidirectional, whereas this autoregressive decoder requires causal masking.
+
+> [01:12:38] of scenario like language modeling but
+
+Scaled dot-product attention controls score variance so initialization does not prematurely sharpen softmax into near one-hot selections. He connects the scaling to a concrete numerical experiment.
+
+> [01:17:03] query key and value we've U multiplied
+
+He iteratively adds multiple heads, per-token feed-forward computation and repeated blocks, reporting validation results along the way. Deeper blocks introduce optimization difficulties that motivate residual paths and normalization.
+
+> [01:23:40] self
+
+Layer normalization acts within each example rather than across the batch and therefore needs no running batch statistics. The implemented pre-normalization arrangement is explicitly identified as a departure from the original paper.
+
+> [01:34:00] every single column of this uh input now
+
+He scales context, depth and embedding size and adds dropout, then reports better validation loss and more structurally recognizable but still nonsensical Shakespeare output. These are this demonstrated run's results and hardware assumptions.
+
+> [01:39:54] uh I brought down the learning rate a
+
+He compares the teaching implementation with nanoGPT: batching heads, checkpoint/loading infrastructure and compatibility details add efficiency and usability while preserving the explained mathematical structure.
+
+> [01:47:41] inside a single causal self attention
+
+He separates pretraining as document completion from later assistant alignment. Supervised examples, preference ranking, a reward model and reinforcement learning describe the dated ChatGPT explanation; the lesson implements the pretraining stage only.
+
+> [01:51:27] other to train models of this size so
 
 ## Coverage and interpretation
 
-Status: **bounded-semantic-review**. Reviewed line ranges: 1-184. Full file remains local and linked; hashing and indexing do not mean full semantic reading. Sections outside these ranges remain unreviewed. This page summarizes only the indicated passages.
+Status: **complete-preserved-text-no-media-review**. Reviewed line ranges: 1-3064 sequentially in bounded chunks. All preserved caption text was read. Original audio/video, code and missing speech were not independently reviewed.
 
 The quoted passages support local teaching/building methods only within their stated scope. Captions contain recognition errors; quotations preserve those errors rather than silently correcting them. No linked code, papers, diagrams or media was independently executed or inspected. Source upload dates do not establish current tool capabilities.
 

@@ -25,9 +25,9 @@ He reports difficulty getting models to simplify MicroGPT and describes generate
 
 His closing education discussion connects LLM wikis, questions and different information projections to understanding and directing agents. The memorable sentence about outsourcing thinking versus understanding is attributed to an unspecified tweet, not claimed as his original quotation.
 
-> [00:16:16] Um, you are, um, you're still responsible for your software just as before,
+> [00:16:16] Um, you are, um, you're still responsible for your software just as before, but can you go faster? And spoiler is you can, but how do you, how do you do that properly?
 
-> [00:22:57] trying to simplify, uh, LLM training to be
+> [00:22:57] Um, a good example also is this, uh, you know, uh, MicroGPT project, uh, which where I was trying to simplify, uh, LLM training to be as simple as possible. The models hate this. They can't do it.
 
 ## Coverage and interpretation
 

@@ -9,7 +9,13 @@ aliases: []
 
 Freshest working state; the first page `/pickup` reads. Rebuilt fresh in the 2026-07-16 vault rebuild (the old cache is archived).
 
-## Most recent (2026-10-08): Karpathy collector reliability rerun
+## Most recent (2026-10-08): Working Karpathy method
+
+[Current hub](karpathy/index.md) has seven provisional rules, activated Claude/Codex agents and teaching skills. Claude actually invoked the skill and agent for a tokenizer lesson: corrected decoder 8/8 passes, deliberate broken decoder 5/8 failures. Scoped Python execution gate: twenty tests plus native successful acceptance. Windows encoding helper failure repaired. [Acceptance](../research/karpathy-brain-2026-10-08/TOKENIZER-ACCEPTANCE.md).
+
+All 79 writing Markdown items accounted for and all 2,072 captured own-author X primary texts reviewed. Sixteen GitHub files reviewed, 1,199 physical files unread; eight of seventeen lecture/interview/animation files fully reviewed, nine bounded. Full corpus compilation remains incomplete; use domain ledgers for exact coverage. Collection is also partial (X 38/157 windows, HTTP 429). Twelve spoken channel lectures, three animation/music caption files, two external mirrors. Transcript LF-normalized manifest hashes match; physical hashes differ through line endings. Codex workflow is configured, not a native Claude-style Stop hook. Joshua identity and canonical routing remain unchanged.
+
+## Previous (2026-10-08): Karpathy collector reliability rerun
 
 - Joshua requested another run and efficiency fixes. The external collector now saves loaded posts before errors, waits for real readiness, permits one bounded ordinary Retry, stops immediately on X HTTP 429/authentication challenges, enforces one writer and avoids repeated ledger reads. Seventeen tests and independent review passed. The rerun stopped on confirmed HTTP 429 after 38 of 157 weekly windows. It captured 432 IDs cumulatively, including 167 additional recaptures already in the original archive and zero additional missing IDs beyond the earlier 237. [Rerun result](../research/karpathy-brain-2026-10-08/X-RERUN-RESULT.md). No three-year completeness claim.
 

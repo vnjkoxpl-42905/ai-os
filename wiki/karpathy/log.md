@@ -18,3 +18,8 @@ sources: [../sources/karpathy/llm-wiki.md, ../sources/karpathy/autoresearch-read
 - Coverage: three repository READMEs do not imply full repository ingestion. Images, notebooks, implementation code, third-party datasets, linked sources and the rest of the collected corpus remain outside this starter's semantic coverage.
 - Verification: source SHA-256 values recorded; quoted passages matched against preserved text; local links checked; hot page checked below 500 words. Master-index and global-log integration are owned by the coordinating agent and checked separately.
 - Open: whole-corpus semantic compilation, independent corroboration of candidate principles and source-collection gaps. Prompt 2 remains incomplete. No persona, skill, subagent or hook was installed.
+
+
+## [2026-10-08] ingest | Karpathy method and executed tokenizer
+
+Compiled reviewed domain sources with explicit coverage ledgers; full corpus remains incomplete. Seven provisional quoted rules; activated Claude/Codex skill and agent copies; scoped Claude Python gate passes twenty tests and native successful acceptance. Actual tokenizer lesson: 8/8 correct, 5/8 expected broken failures; helper encoding repaired. See [execution record](../../research/karpathy-brain-2026-10-08/VIDEO-PROMPT-EXECUTION.md). Raw sources unchanged.

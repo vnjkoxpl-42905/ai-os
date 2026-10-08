@@ -1,6 +1,6 @@
 # Karpathy writings: mechanism, measurement and operating burden
 
-Compiled 2026-10-08. This is agent synthesis of explicitly read texts, not a claim to reproduce Karpathy's private thinking. The [coverage ledger](blog-semantic-coverage.jsonl) inventories all 79 preserved Markdown files with current SHA-256 checks. Sequential passes have fully read and compiled 72 texts; one additional article has a prior source page. The remaining 6 have not yet been semantically read in these passes. HTML counterparts are not counted as independent sources. CS231n pages need course/team attribution, not automatic sole-author attribution.
+Compiled 2026-10-08. This is agent synthesis of explicitly read texts, not a claim to reproduce Karpathy's private thinking. The [coverage ledger](blog-semantic-coverage.jsonl) inventories all 79 preserved Markdown files with current SHA-256 checks. Sequential passes have fully read and compiled 78 texts; Animals vs. Ghosts has its prior source page and was not reread in these passes. No uncompiled Markdown inventory remains. HTML counterparts are not counted as independent sources. CS231n pages need course/team attribution, not automatic sole-author attribution.
 
 ## Rules supported by distinct writings
 
@@ -19,6 +19,10 @@ The [course-project guest tutorial](../../wiki/sources/karpathy/blog/course-proj
 | Verify the real operating path, not only the attractive demo | Check identity mapping, configuration, persistence and failure behavior as separate acceptance stages. | [MenuGen](../../wiki/sources/karpathy/blog/vibe-coding-menugen.md) and [Recipe](../../wiki/sources/karpathy/blog/recipe.md) | The neural-training recipe is supporting analogy; MenuGen directly reports web-app integration failures. |
 
 These are distinct articles, but some explicitly cite earlier work. They are separate evidence artifacts, not independent experimental replications. No claimed rule depends on two syndicated copies of the same post.
+
+[Pong from pixels](../../wiki/sources/karpathy/blog/pong-policy-gradients.md) provides especially direct additional evidence for simple baselines before elaborate methods, explicit credit-assignment mechanisms and applicability limits when feedback is sparse or exploration expensive. It explicitly qualifies the earlier [RNN article](../../wiki/sources/karpathy/blog/rnn-effectiveness.md)'s enthusiastic impression of automatic capability. The RNN examples distinguish syntactic/style plausibility from true statements, compilable code or correct mathematics. [Bitcoin from scratch](../../wiki/sources/karpathy/blog/bitcoin-from-scratch.md) independently supports rebuilding to learn while expressly rejecting educational cryptography in production. Its from-scratch exercise therefore complements rather than contradicts the preference for proven production dependencies.
+
+Course [linear classification](../../wiki/sources/karpathy/blog/cs231n-linear-classify.md) warns against comparing raw losses across different objectives or assuming normalized outputs are calibrated confidence. [Learning diagnostics](../../wiki/sources/karpathy/blog/cs231n-neural-networks-3.md) warns that one passing gradient point or tiny-set overfit can still mask bugs. [Convolutional networks](../../wiki/sources/karpathy/blog/cs231n-convolutional-networks.md) exposes architectural assumptions and distinguishes activation, parameter, gradient and optimizer memory. These strengthen community technical guidance without claiming sole Karpathy authorship.
 
 ## Useful additional patterns with narrower evidence
 
@@ -40,6 +44,10 @@ These are distinct articles, but some explicitly cite earlier work. They are sep
 
 [Digital hygiene](../../wiki/sources/karpathy/blog/digital-hygiene.md) expresses password-manager and hardware-key preferences that differ from Joshua's chosen secret-storage model; nothing was overwritten. [Chemical hygiene](../../wiki/sources/karpathy/blog/chemical-hygiene.md) expressly disclaims toxicology/food-science expertise. It is retained as attributed personal views, with disputed and unverified medical claims excluded from operational recommendations. Source acquisition does not mean endorsement, purchases, monitoring installation or account changes.
 
+[Biohacking Lite](../../wiki/sources/karpathy/blog/biohacking-lite.md) offers a useful epistemic pattern: make a prediction, record disagreement, consider multiple explanations and keep uncertainty unresolved when measurements conflict. Its diet, fasting and device claims are not medical recommendations. [Selfie classification](../../wiki/sources/karpathy/blog/selfie-proxy-study.md) uses engagement as a noisy proxy rather than establishing objective visual quality. [A Cognitive Discontinuity](../../wiki/sources/karpathy/blog/cognitive-discontinuity-fiction.md) remains speculative fiction; imagined checkpoint failures, symbolic binding and consciousness cannot validate empirical engineering or safety rules.
+
+The [Python/NumPy tutorial](../../wiki/sources/karpathy/blog/cs231n-python-numpy.md) explicitly credits Justin Johnson. The [Sequoia conversation](../../wiki/sources/karpathy/blog/sequoia-ascent-2026.md) is an edited interview artifact rather than a verbatim independent research replication. These attribution boundaries remain explicit on their source pages.
+
 ## Course revisions qualify universal claims
 
 All 13 preserved assignment pages from 2016, 2018, 2019, 2021 and 2026 were fully read and separately summarized. The versions overlap heavily and are related editions, not 13 independent endorsements of one method. They add framework use, Transformers, self-supervised learning and later curriculum changes. [Assignment 3 in 2021](../../wiki/sources/karpathy/blog/cs231n-2021-assignment-3.md) expressly teaches self-supervised image classification; this qualifies the [2019 recipe](../../wiki/sources/karpathy/blog/recipe.md)'s dated caution about unsupervised vision pretraining. Do not turn that older caution into an eternal ban.
@@ -50,4 +58,4 @@ The captured 2021 assignment pages link to 2026 starter zips, so page dates and 
 
 No raw source was modified. No source instruction became an agent command. No provider/version claim was reclassified as current capability. No student teaching policy, personal memory, canonical route, active skill, persona or hook was changed by this compilation. Source images, remote links and companion HTML were not visually reviewed. The interview announcement, Medium announcement and About page are fully read routing stubs; the absent linked interview was not represented as collected content.
 
-The remaining unread inventory is explicit in the ledger. Do not treat an inventory/hash pass as a semantic full read or claim the entire 79-article corpus has been distilled yet.
+Text-scope compilation is complete across the 79-file inventory through 78 newly read source pages and the retained prior Animals vs. Ghosts page. The ledger distinguishes those statuses. This does not establish complete visual evidence, linked-source acquisition, live factual verification or independent execution of the educational code.

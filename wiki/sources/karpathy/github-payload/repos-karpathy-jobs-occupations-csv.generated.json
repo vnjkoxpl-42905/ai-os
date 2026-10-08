@@ -1,0 +1,34 @@
+{
+  "bytes": 92091,
+  "characters": 92091,
+  "lines": 343,
+  "wordlike_tokens": 3246,
+  "distinct_characters": 71,
+  "csv": {
+    "rows_including_header": 343,
+    "header": [
+      "title",
+      "category",
+      "slug",
+      "soc_code",
+      "median_pay_annual",
+      "median_pay_hourly",
+      "entry_education",
+      "work_experience",
+      "training",
+      "num_jobs_2024",
+      "projected_employment_2034",
+      "outlook_pct",
+      "outlook_desc",
+      "employment_change",
+      "url"
+    ],
+    "column_count_histogram": {
+      "15": 343
+    }
+  },
+  "source_path": "repos/karpathy/jobs/occupations.csv",
+  "source_sha256": "190e92212c18ddeb96f8e848c279874a262509136e65656d3e27c09e8a36fd59",
+  "method": "csv_parse_all_rows",
+  "parse_error": null
+}

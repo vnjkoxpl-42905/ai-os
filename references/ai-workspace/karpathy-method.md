@@ -24,11 +24,11 @@ The agent starts at the hot page, reads at most five wiki pages per task, cites 
 
 ## Execution is checked within a defined scope
 
-Claude's project agent has frontmatter `PreToolUse` and `Stop` hooks. The pre-tool snapshot detects changed code in the registered example workspace, including shell writes. Successful Write/Edit changes elsewhere are tracked through the agent transcript. Shell edits outside the registered workspace are not covered and are forbidden by the agent workflow. The Stop hook requires current-file, successful execution receipts. An unrelated command, failed run or stale file hash does not pass.
+Claude has a project Stop hook in `.claude/settings.json`, with a Karpathy SubagentStop matcher for delegated tasks. It identifies actual skill/agent use in the current turn, successful code writes/edits and subsequent runtime commands. It returns exactly `Karpathy rule, run it before you say it works.` when execution is missing. Pre/PostToolUse snapshots also track shell-created code in the registered example workspace. Shell writes elsewhere remain outside snapshot coverage; ordinary Write/Edit calls are tracked. A failed execution still counts as execution and must be reported as failure, never success.
 
-The external helper lives at `../ai-os-projects/karpathy-method-tools/run_gate.py` relative to the vault. It traces actual Python file execution, records hashes and exit status, and stores runtime evidence outside the vault. It is a correctness aid for a trusted assistant, not a security boundary against a malicious process. The current adapter covers Python; unsupported languages require another adapter or an explicit unverified blocker report. After one gate retry, a final report beginning `Execution blocked:` can exit honestly without claiming success.
+The earlier agent-only hook was an adaptation and has been replaced. Its optional Python helper `../ai-os-projects/karpathy-method-tools/run_gate.py` still produces stronger current-file execution receipts. The project hook also accepts ordinary runtime commands; command recognition is an audit aid, not proof of branch coverage or a malicious-process security boundary. There is no report-prefix escape from the literal run requirement.
 
-Codex uses the same execution-receipt workflow. This setup does not install or claim a native Codex equivalent of Claude's Stop hook. [Official Claude hook documentation](https://code.claude.com/docs/en/hooks#hooks-in-skills-and-agents), checked 2026-10-08, describes the agent-specific lifecycle and conversion of an agent Stop hook to SubagentStop.
+Codex uses the same teaching workflow but has no native Claude Stop hook. [Official Claude hook documentation](https://code.claude.com/docs/en/hooks), checked 2026-10-08, distinguishes project Stop and SubagentStop events.
 
 ## Check the actual stage, not the source count
 

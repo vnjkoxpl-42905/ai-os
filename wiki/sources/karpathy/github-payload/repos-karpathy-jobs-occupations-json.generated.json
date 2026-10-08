@@ -1,0 +1,37 @@
+{
+  "bytes": 79424,
+  "characters": 79424,
+  "lines": 2054,
+  "wordlike_tokens": 4231,
+  "distinct_characters": 62,
+  "structured": {
+    "root_type": "list",
+    "node_types": {
+      "list": 1,
+      "dict": 342,
+      "str": 1368
+    },
+    "key_counts": {
+      "title": 342,
+      "url": 342,
+      "category": 342,
+      "slug": 342
+    },
+    "array_count": 1,
+    "arrays": [
+      {
+        "path": "$",
+        "length": 342
+      }
+    ],
+    "numeric_values": 0,
+    "numeric_min": null,
+    "numeric_max": null,
+    "string_count": 1368,
+    "string_characters": 53430
+  },
+  "source_path": "repos/karpathy/jobs/occupations.json",
+  "source_sha256": "660af6134d6ffe040078a405c8f70986220a832fdee074078d16bdb07976549e",
+  "method": "json_parse_all_nodes",
+  "parse_error": null
+}

@@ -15,5 +15,54 @@
       "Bash(git checkout:*)",
       "Bash(git merge:*)"
     ]
+  },
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"C:/Users/Joshu/AppData/Local/Programs/Python/Python312/python.exe\" \"C:/Users/Joshu/dev/ai-os-projects/karpathy-method-tools/project_stop.py\"",
+            "timeout": 15
+          }
+        ]
+      }
+    ],
+    "SubagentStop": [
+      {
+        "matcher": "karpathy",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"C:/Users/Joshu/AppData/Local/Programs/Python/Python312/python.exe\" \"C:/Users/Joshu/dev/ai-os-projects/karpathy-method-tools/project_stop.py\"",
+            "timeout": 15
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Write|Edit|MultiEdit|Bash|PowerShell",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"C:/Users/Joshu/AppData/Local/Programs/Python/Python312/python.exe\" \"C:/Users/Joshu/dev/ai-os-projects/karpathy-method-tools/project_stop.py\"",
+            "timeout": 15
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit|MultiEdit|Bash|PowerShell",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"C:/Users/Joshu/AppData/Local/Programs/Python/Python312/python.exe\" \"C:/Users/Joshu/dev/ai-os-projects/karpathy-method-tools/project_stop.py\"",
+            "timeout": 15
+          }
+        ]
+      }
+    ]
   }
 }

@@ -1,0 +1,38 @@
+{
+  "bytes": 188420,
+  "characters": 188420,
+  "lines": 2054,
+  "wordlike_tokens": 22928,
+  "distinct_characters": 80,
+  "structured": {
+    "root_type": "list",
+    "node_types": {
+      "list": 1,
+      "dict": 342,
+      "str": 1026,
+      "int": 342
+    },
+    "key_counts": {
+      "slug": 342,
+      "title": 342,
+      "exposure": 342,
+      "rationale": 342
+    },
+    "array_count": 1,
+    "arrays": [
+      {
+        "path": "$",
+        "length": 342
+      }
+    ],
+    "numeric_values": 342,
+    "numeric_min": 1,
+    "numeric_max": 10,
+    "string_count": 1026,
+    "string_characters": 160025
+  },
+  "source_path": "repos/karpathy/jobs/scores.json",
+  "source_sha256": "373cc053025454fee3f5e1ce5ba1fb4d46539ddbda12928a1739317182073163",
+  "method": "json_parse_all_nodes",
+  "parse_error": null
+}

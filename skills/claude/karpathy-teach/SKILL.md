@@ -9,6 +9,9 @@ Hand the user's topic and success criterion to the project `karpathy` subagent. 
 
 Before showing the answer, grade it against all seven rules. Require concrete evidence for each pass: mechanism reconstruction, small baseline, prediction versus observed output, meaningful counterexample/fix where applicable, relevant execution, explicit assumptions, and justified simplicity. Reject invented outputs and rerun after edits. A non-code question can mark execution and broken-code demonstration not applicable. Preserve Joshua's instructions and voice.
 
-End with the learner-facing explanation, sources for claims about Karpathy, what ran, what came out, what changed and the seven-rule grades. The agent's scoped Stop gate requires successful current-file Python execution receipts from the external helper. Other languages need an evidence adapter and must not be described as runtime-verified by this Python gate.
+Show the learner-facing explanation and source citations after grading. Put assumptions and the seven-rule grades before the final three sections: What I ran, What came out, What I changed. The project Stop hook returns the exact video message when changed code has no subsequent execution. A failed run must be reported as failure. The Python receipt helper is additional evidence, not a requirement that every task use Python.
 
 Use the existing `ingest` workflow for new sources; this skill does not create another intake system or collect sources automatically. Canonical topic and evidence paths remain under wiki/karpathy/ and raw/sources/karpathy-brain/.
+
+
+Video Prompt 4 exact ending: grade the answer before presenting it, then end with What I ran, What came out, What I changed, in that order. Claude delegates every task to the karpathy agent. The project Stop hook applies when this skill or agent was used, returns exactly `Karpathy rule, run it before you say it works.` if code was changed without subsequent execution, and leaves unrelated turns alone. A failed execution is still execution and must be reported as failure.

@@ -2564,3 +2564,8 @@ Joshua explicitly requested undoing all changes from the preceding ingestion tur
 
 Added loaded-post preservation before errors, adaptive readiness, bounded generic Retry, immediate X HTTP 429 stop, single-writer locking and reduced ledger/export work. Seventeen tests and independent review passed. Live rerun stopped on confirmed HTTP 429 after 38/157 base windows; four loaded observations survived the final error. Cumulative capture is 432 IDs, with 167 additional recaptures already present in the original archive and zero new missing IDs beyond the earlier 237. Frozen cumulative supplement x-browser-20261008T124542Z has nine hash-verified payload files; original sources remain unchanged. Another 119 base windows are untouched and stalled/adaptive windows remain unresolved. No semantic ingestion or persona changes. See [rerun result](../research/karpathy-brain-2026-10-08/X-RERUN-RESULT.md).
 
+
+
+## [2026-10-08] ingest | Karpathy method and executed tokenizer
+
+Compiled reviewed domain sources with explicit coverage ledgers; full corpus remains incomplete. Seven provisional quoted rules; activated Claude/Codex skill and agent copies; scoped Claude Python gate passes twenty tests and native successful acceptance. Actual tokenizer lesson: 8/8 correct, 5/8 expected broken failures; helper encoding repaired. See [execution record](../research/karpathy-brain-2026-10-08/VIDEO-PROMPT-EXECUTION.md). Raw sources unchanged.
