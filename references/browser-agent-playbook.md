@@ -40,7 +40,7 @@ This document is the mandatory pre-flight checklist and operational manual for a
 * **What went wrong:** Scrolling down a long profile page (like `x.com/username`) to collect hundreds of posts causes modern web frameworks (React/Virtual DOM) to unmount off-screen items. Memory bloats, items vanish from the DOM, and scrolling stops or skips data.
 * **The Shortcut:** Use date-bounded search queries instead of infinite scroll.
   * Query format for X: `from:username since:YYYY-MM-DD until:YYYY-MM-DD` in 7-day or 14-day slices.
-  * This guarantees 100% complete coverage and avoids virtual DOM drops.
+  * This reduces virtual DOM loss and makes gaps easier to identify. It does not guarantee complete coverage: X search can omit results, stall, or impose limits. Capture every viewport before scrolling and record window outcomes explicitly; a scroll limit is not proof of exhaustion.
 
 ### Mistake 3: Windows Console Encoding Failures (cp1252)
 * **What went wrong:** When scraping tweets, titles, or transcripts containing emojis, foreign characters, or music notes, printing directly to PowerShell/cmd crashed Python scripts with: `UnicodeEncodeError: 'charmap' codec can't encode characters...`.

@@ -18,6 +18,8 @@ This hub organizes existing authoritative pages rather than copying their knowle
 
 [Karpathy source compilation](../../wiki/karpathy/index.md) begins with five reviewed sources and quoted candidate methods. It is explicitly partial. The [verified collection handoff](../../research/karpathy-brain-2026-10-08/HANDOFF-VERIFICATION.md) records missing coverage, attribution limits and corrections to the original completeness claims. No Karpathy persona or runtime hook is installed.
 
+[Resumable X collector](x-archive-collector.md) documents the free local script, signed-in persistent Chrome route, evidence ledgers, source-preserving repairs and retrieval limits.
+
 ## Find the right kind of AI knowledge
 
 | Category | What belongs here | Existing home to consult or update |

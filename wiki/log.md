@@ -2544,3 +2544,9 @@ Joshua explicitly requested undoing all changes from the preceding ingestion tur
 - Created [Karpathy compilation index](karpathy/index.md), [hot page](karpathy/hot.md), candidate principles, methods and a scoped compilation log. Five quoted source pages cover the complete LLM Wiki gist, autoresearch/micrograd/jobs READMEs and Animals vs Ghosts Markdown. Repository code, media and the remainder of the collection are not semantically ingested by this starter.
 - Linked the collection from the [AI workspace hub](../references/ai-workspace/index.md) and refreshed the master wiki catalog with its owning generator. Raw sources, Joshua's identity, teaching voice and runtime configurations were preserved.
 - Prompt 2 remains incomplete. Independent evidence review, outstanding collection gaps and the rest of the source compilation remain open. Candidate observations are not the final seven rules; no persona, skill or hook was installed.
+
+## [2026-10-08] lint | Karpathy compilation starter
+
+- The compiling agent verified all five recorded source hashes and 33 quoted passages against preserved text; its hot page is 261 words. The five-row coverage ledger identifies full text reads and repository/media limits.
+- Master catalog regenerated: 58 wiki pages. Structural lint found no broken links in the new Karpathy pages. Three unresolved links remain in historical wiki/log.md entries: the earlier video source page, raw/README.md and expert-teaching-workflow.md. Historical entries were preserved; this pass did not repair or certify them.
+- Semantic review covers the five starter text documents and the source-collection audit only. No claim of full corpus review, original-audio completeness or exhaustive X coverage is made.
