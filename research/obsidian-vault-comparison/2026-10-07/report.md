@@ -1,5 +1,7 @@
 # The old local vault is preserved and its useful knowledge is integrated
 
+> Current archive status (2026-10-08): this document records the original intake before authorized cleanup. Eighteen empty or duplicate files were removed from the imported copy; **82 source files remain**. References to those removed files below are historical audit entries, not working source links. See [the current organization audit](organization-audit-2026-10-08.md) and [the deletion receipt](authorized-cleanup-2026-10-08.json). The original old vault and prior Drive evidence ZIP were not changed.
+
 Comparison date: 2026-10-07, America/Toronto.
 
 The old local vault is `C:\Users\Joshu\Documents\Ai-os`; the current authoritative workspace is `C:\Users\Joshu\dev\ai-os`. This comparison establishes what was present locally. It does not prove that the old remote vault or phone contains no additional files.

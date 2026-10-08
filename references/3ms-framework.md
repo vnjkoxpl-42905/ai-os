@@ -11,6 +11,8 @@
 
 ## Why this is in your kit
 
+Scope clarified 2026-10-08: this is an adapted planning framework. Current root and directory instructions govern permissions, credentials, sending and deletion. Source recommendations below do not grant authorization. Outbound correspondence requires Joshua's explicit send instruction or an applicable pre-approved template; confidence alone never authorizes sending. File or record deletion likewise needs explicit authorization.
+
 This framework is the operator brain you'll use every time you run `/level-up`. Three layers, each one builds on the last. Read it once, refer back as needed.
 
 Here's the thing most people get wrong: they think AI automation is about tools. It's not. Tools change every six months. The platform you're using today might not exist next year. What doesn't change is how you THINK about automation, how you DECIDE what to automate, and how you BUILD and OPERATE the thing once it's running. That's what The Three Ms of AI™ gives you. A way to think that works regardless of platform, model, or hype cycle.
@@ -183,7 +185,7 @@ Roll out in phases, like teaching a kid to ride.
 
 Even at 90% confidence, roll out 10% of volume first. Watch a week. Add 20% more. Like drug trials — not full dose to everyone day one.
 
-Use confidence thresholds: high → auto-send, medium → draft queue, low → escalate to human. Tighten or loosen as data accumulates.
+Use confidence thresholds to prioritize review: high confidence can enter an explicitly authorized sending workflow, medium confidence enters the draft queue, and low confidence escalates for clarification. Sending still requires Joshua's explicit instruction or an applicable pre-approved template. Adjust review thresholds as evidence accumulates; they do not change permissions.
 
 #### 6. The Intern Rule
 
@@ -192,7 +194,7 @@ Treat AI like a brand-new hire on day one.
 - **Own identity.** Its own email, accounts, credentials. Never yours.
 - **Read-only by default.** View-only until you've proven write access is needed.
 - **Never impersonates you.** Signs off as "[your name]'s AI assistant."
-- **No personal credentials.** No passwords, bank info, personal logins.
+- **Credentials follow current policy.** The source recommends avoiding personal credentials. Joshua's current root instructions define approved storage and authorized access; this framework does not revoke or expand that authorization.
 - **Full audit trail.** Visibility into everything it did, spent, created, deleted.
 - **Scoped permissions.** API keys with minimal scope. Exactly what's needed, nothing more.
 
@@ -200,7 +202,7 @@ Treat AI like a brand-new hire on day one.
 
 #### 7. The Kill Switch
 
-Monitor what's running. If an automation consistently needs patches, produces low-quality output, or costs more to maintain than it saves — **tear it down.** Dismantle. Delete.
+Monitor what's running. If an automation consistently needs patches, produces low-quality output, or costs more to maintain than it saves, recommend retiring it. Disable or remove it only within the authorized scope; deleting files or records requires explicit authorization. Preserve needed evidence and recovery paths.
 
 Don't fall into the sunk cost trap. *"But I spent three weeks building this"* is not a reason to keep something running that doesn't work. **Good operators know when to build AND when to destroy.** The kill switch is just as important as the launch button.
 

@@ -34,7 +34,11 @@ North star: **automate everything around the sessions so Joshua only shows up an
 - Automatic consultation follow-ups fail closed unless the recipient, current prospect state, prices, and price-to-link mapping all verify. Reject placeholders, malformed URLs, form editor links, login-token URLs, self-addressed tests, and one payment link reused across distinct paid tiers without an explicit arrangement. Run validation before scheduling and again before sending.
 - Verified standard links, all three re-checked live against Stripe/Cal.com on 2026-09-08: single session, `https://cal.com/joshua-jtx5ud/session-link` at $45 for 70 minutes; five-hour package, `https://buy.stripe.com/4gMaEY05F3dc9x13NqdZ61x`, renders "5 hours — $200.00"; ten-hour package, `https://buy.stripe.com/3cI6oI2dN5lk4cHcjWdZ61O`, renders "10 hour reduced — $350.00". The ten-hour link is correct; the earlier note that no verified $350 link existed was stale. Historical ten-hour links that charge $500 must still not be used.
 - Students in the **United States and Canada**.
-- Also building **LSAT U** (lsatprep.study) — the online prep platform; code and product docs live in `projects/lsatu/`.
+- Also building **LSAT U** (lsatprep.study), the online prep platform; application code and product docs live in the sibling `../ai-os-projects/lsatu/` repository. Vault project notes remain separate from application code.
+
+### Single-session pricing discrepancy requires verification
+
+The offer above says $45/hour, while the dated 2026-09-08 booking-link check records $45 for 70 minutes. These are different descriptions; this audit on 2026-10-08 did not recheck the live booking configuration or establish a new rate. Do not resolve the difference by importing the old vault's pricing. Follow the existing live price-to-link validation before using an offer, and preserve the distinction until the current terms are verified.
 
 ## Money and booking
 

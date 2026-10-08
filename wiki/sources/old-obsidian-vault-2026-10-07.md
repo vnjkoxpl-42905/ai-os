@@ -2,7 +2,7 @@
 type: source
 subject: Old local Obsidian vault recovery
 created: 2026-10-07
-updated: 2026-10-07
+updated: 2026-10-08
 aliases: []
 tags: [llm-wiki, obsidian, recovery]
 sources:
@@ -13,7 +13,7 @@ sources:
 
 Joshua authorized a complete local-file comparison and integration of useful missing content on 2026-10-07. The source is the older local vault at `C:\Users\Joshu\Documents\Ai-os`, not a verified export of the remote Obsidian vault. Authorship and publication dates vary by individual note and are unknown unless recorded in the source itself.
 
-All 93 visible files were preserved byte-for-byte under [the source archive](../../raw/sources/old-obsidian-vault-2026-10-07/PROVENANCE.md); [SHA256SUMS](../../raw/sources/old-obsidian-vault-2026-10-07/SHA256SUMS) identifies each file. Five hidden app configurations were inspected and inventoried without being activated. The [comparison report](../../research/obsidian-vault-comparison/2026-10-07/report.md) links the complete file-by-file review and metadata evidence.
+The initial capture preserved 93 visible files; the followup captured 100 files including five safe app configurations. After Joshua authorized cleanup on 2026-10-08, the local [source archive](../../raw/sources/old-obsidian-vault-2026-10-07/PROVENANCE.md) retains 82 files. [SHA256SUMS](../../raw/sources/old-obsidian-vault-2026-10-07/SHA256SUMS) identifies the retained files. No app configurations were activated. The [comparison report](../../research/obsidian-vault-comparison/2026-10-07/report.md) and historical file-by-file reviews describe the pre-cleanup capture; the [cleanup receipt](../../research/obsidian-vault-comparison/2026-10-07/authorized-cleanup-2026-10-08.json) records the 18 removals.
 
 ## The recovered teaching sources add a missing method library
 
@@ -35,7 +35,7 @@ The first recovery made the source library and diagnostic framework reachable fr
 
 ## Verification limits
 
-All source/archive hashes matched after preservation. Local text and configuration inspection does not recover the 22 missing local image embeds, validate external linked media, establish remote-vault completeness, or verify phone Sync. No sources were deleted or moved, no app settings were changed, and no outbound messages or publishing actions were performed.
+All source/archive hashes matched after preservation. Local text and configuration inspection does not recover the 22 missing local image embeds, validate external linked media, establish remote-vault completeness, or verify phone Sync. The initial intake did not delete or move sources; the later authorized cleanup removed 18 empty or redundant imported copies. The original old vault remains unchanged. No app settings were changed, and no outbound messages or publishing actions were performed.
 
 ## Followup intake completed on 2026-10-08
 
@@ -46,3 +46,7 @@ The current local old vault contains 100 files. All are now byte-preserved and h
 The private GitHub/live Drive workspace snapshot excludes `raw/`. Compiled knowledge and comparison reports are in that snapshot; original evidence is in the separately verified [private Drive source package](https://drive.google.com/file/d/1D0MD2Uza83Zi07VIQQ4NYX5dcoKFZrpU/view). The [checksum receipt](../../research/obsidian-vault-comparison/2026-10-07/drive-source-evidence.generated.json) records the file ID, size, MD5 and SHA-256. This package has all 100 preserved source files plus provenance and the hash manifest.
 
 When an original link is absent in a cloud checkout, retrieve this package through authenticated Drive access, verify its checksum, and extract it into a fresh private staging directory. Its paths are relative to `raw/sources/old-obsidian-vault-2026-10-07/`; verify each source with `SHA256SUMS` before reading it. Do not overwrite existing evidence or apply the archived `.obsidian` settings. A cloud runtime must independently verify its Drive authentication. The separate package does not imply every other raw archive is mirrored.
+
+### Authorized cleanup, 2026-10-08
+After Joshua explicitly authorized excluding empty files and duplicates, 18 redundant/empty local archive files were removed. The local archive now retains 82 source files; original old vault and prior Drive source ZIP still contain the preserved capture. See [cleanup receipt](../../research/obsidian-vault-comparison/2026-10-07/authorized-cleanup-2026-10-08.json). The 100-file disposition ledger is historical, before cleanup.
+

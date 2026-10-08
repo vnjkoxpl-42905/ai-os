@@ -1,7 +1,7 @@
 ---
 type: reference
 subject: The Claude Code Obsidian command center the idea, and where ai-os stands
-updated: 2026-07-18
+updated: 2026-10-08
 aliases: []
 ---
 
@@ -29,15 +29,17 @@ At scale (thousands of docs) you need a legible structure or Claude burns tokens
 
 Per the video, headless/programmatic `claude -p` use no longer draws from the Max subscription — Anthropic grants ~$200/month of separate credit that headless runs bill against at API rates (~10x Max-subsidized cost). Chase judges it a non-issue at real button-click volume (you still live in the terminal). Escape hatch: swap the headless layer to Codex headless — "5 minutes to refactor," no output dip. **This is a 2026-05 claim about Anthropic billing; confirm current terms before relying on it.**
 
-## Where ai-os already stands
+## The 2026-07-18 comparison is historical
 
-| Video's idea | ai-os today |
+Rechecked on 2026-10-08: the current vault's `.obsidian/` contains four JSON configuration files and no plugin directory. The earlier plugin list below is not verified on this laptop or phone. Current architecture routes are documented in the root instructions; device installations and rendered dashboard behavior require separate inspection.
+
+| Video's idea | Historical comparison, qualified on 2026-10-08 |
 |---|---|
 | Karpathy raw/wiki/output structure | Built and exceeded — `raw/` (immutable sources), `wiki/` + `corpus/` (two LLM-wikis), index-at-each-level, plus `students/` `decisions/` `context/`. See [[second-brain-levels]] (we sit at a complete Level 2). |
 | Thin CLAUDE.md = structure + navigation + Obsidian conventions | `CLAUDE.md` is a router with a routing-map table + retrieval order + a Voice section covering Obsidian-native writing. Richer than the video's minimum, same philosophy. |
 | Skills as the backbone, one-click launchers | Skill DB (`skills/INDEX.md`) with copy-to-activate model; **no dashboard buttons yet** — skills fire by `/name` in the terminal. |
 | Custom observability dashboard plugin | **Not built.** ai-os has `wiki/dashboard.md` (pointers, text) and `wiki/hot.md` (session cache), but no rendered visual plugin. |
-| Integrated terminal + web viewer + iconize + hot reload | Terminal plugin installed; `.obsidian/` shows `open-term`, `terminal-agent-tabs`, `obsidian-icon-folder`, `claude-sidebar`, `calendar`. Closest we are to the command-center surface. |
+| Integrated terminal + web viewer + iconize + hot reload | The earlier note listed `open-term`, `terminal-agent-tabs`, `obsidian-icon-folder`, `claude-sidebar`, and `calendar`. Current local configuration inspection does not verify those installations. |
 | Headless `claude -p` button runs | Not wired. Skills run in-session. |
 
 ## What's actually worth borrowing
@@ -48,4 +50,4 @@ The old vault contained three additional plugin-atlas reports, reviewed on 2026-
 
 The useful method is to baseline the actual device, trial one capability at a time, compare startup, navigation and typing, and retain it only when a repeated workflow improves. A shortlist is not evidence that a plugin is installed or appropriate for this laptop or phone. No plugin or Sync setting was changed by this recovery.
 
-The structure and CLAUDE.md philosophy we already match or beat. The genuinely new capability is the **visual command-center surface**: a custom dashboard plugin + one-click headless skill launchers, so morning brief / plan-today / research-pulse outputs render at eye level instead of scrolling past in the terminal. If Joshua wants that, it's a discrete build (Claude Code writes an Obsidian plugin; wire buttons to `claude -p` skill invocations). Everything else in the video, ai-os has. Do not adopt the dashboard unless the terminal-only view becomes an actual pain — same "don't build past the pain" doctrine as [[second-brain-levels]].
+The existing router, domain homes and source boundaries already provide the useful structural pattern. A **visual command-center surface** would be a separate capability: a custom dashboard and deliberately authorized skill launchers that surface results in Obsidian. The presence of Markdown routes does not establish installed plugins, working launchers, or a rendered dashboard. Build that surface only when an observed workflow needs it; apply current execution and approval rules to each launcher. Follow the "don't build past the pain" principle in [[second-brain-levels]].

@@ -11,6 +11,8 @@ sources:
 
 # Old-vault teaching files: preserve evidence and use the actual lesson content
 
+> Current archive status (2026-10-08): this document records the original intake before authorized cleanup. Eighteen empty or duplicate files were removed from the imported copy; **82 source files remain**. References to those removed files below are historical audit entries, not working source links. See [the current organization audit](organization-audit-2026-10-08.md) and [the deletion receipt](authorized-cleanup-2026-10-08.json). The original old vault and prior Drive evidence ZIP were not changed.
+
 Reviewed the textual content of the 54-file Loophole tree and five assigned related notes. Large reads initially truncated; smaller follow-up reads recovered the meaningful content. Thumbnail URLs were omitted from a follow-up navigation-only read; no thumbnail/video pixels or missing local image attachments were interpreted. This is private teacher research. Originals were not edited.
 
 ## What is actually new

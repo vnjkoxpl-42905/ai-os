@@ -28,7 +28,7 @@ Live in [[non-students/CLAUDE|non-students/]] as of 2026-09-10. Records preserve
 Every file in a student folder is one of two kinds, and the distinction decides what a rebuild may overwrite:
 
 - **Primary — the brain is the only home.** Transcripts, teaching notes, judgments, prep briefs, study plans, anything Joshua or an agent authored about the student. **Never regenerate, never overwrite; retain forever.**
-- **Mirror — a projection of a live backend.** Session/booking state (Cal.com + Google Calendar), homework/dossier/publish state (LSAT U Supabase), payment events (Stripe), correspondence indexes (Gmail). On any disagreement the backend wins, silently.
+- **Mirror — a projection of a live backend.** Session/booking state (Cal.com + Google Calendar), homework/dossier/publish state (LSAT U Supabase), payment events (Stripe), correspondence indexes (Gmail). On disagreement, the verified backend governs operational state. Preserve and report the discrepancy with its evidence rather than silently erasing a conflicting primary record.
 
 **Convention:** mirror files MUST be named `*.generated.md` (or carry `generated: true` frontmatter). A file without that marker is primary by definition and must be treated as precious. Pre-2026-07-16 files (`email-context.md`, `payment-links.md`, `transcripts.md`) predate the marker — treat as primary until individually re-derived and renamed. No Markdown file here is ever the source of operational truth — no package balances, no running totals (all services are paid upfront; Cal.com answers sessions-used).
 

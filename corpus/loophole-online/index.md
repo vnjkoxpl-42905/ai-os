@@ -2,7 +2,7 @@
 type: synthesis
 subject: Loophole Online teaching methods recovered from old Obsidian vault
 created: 2026-10-07
-updated: 2026-10-07
+updated: 2026-10-08
 aliases: []
 tags: [llm-wiki, lsat, teacher-research]
 sources:
@@ -11,7 +11,7 @@ sources:
 
 # Loophole Online: teach retention, then diagnose the student's actions
 
-Private teacher research from Ellen Cassidy's Loophole Online clips captured 2026-08-24 through 2026-08-30. Publication dates are mostly absent. These are attributed source methods, not a newly approved LSAT U curriculum. The [source summary](../../wiki/sources/old-obsidian-vault-2026-10-07.md) owns archive provenance and hashes. The [complete per-file review](../../research/obsidian-vault-comparison/2026-10-07/teaching-review.md) links every recovered teaching file, including duplicate and defective captures.
+Private teacher research from Ellen Cassidy's Loophole Online clips captured 2026-08-24 through 2026-08-30. Publication dates are mostly absent. These are attributed source methods, not a newly approved LSAT U curriculum. The [source summary](../../wiki/sources/old-obsidian-vault-2026-10-07.md) owns archive provenance and hashes. The [complete per-file review](../../research/obsidian-vault-comparison/2026-10-07/teaching-review.md) records every originally recovered teaching file, including historical entries for duplicate and empty captures removed under Joshua's 2026-10-08 authorization. The [current archive audit](../../research/obsidian-vault-comparison/2026-10-07/organization-audit-2026-10-08.md) separates retained files from that historical inventory.
 
 ## Make the student's understanding observable
 
@@ -34,7 +34,7 @@ Cassidy trains this process aloud with continuous recordings before silent use. 
 | Unless indicators remain slow or error-prone | Rotate three of four unless statements and diagram fresh, rather than memorizing diagrams. |
 | Student judges answers by familiarity or a single keyword | Read and translate the whole choice, then evaluate it against the actual stimulus and question task. |
 
-These methods add concrete practice protocols to the existing [curriculum index](../index.md). Existing [conditional reference](<../Curriculum/Conditional Logic/Notes/_megadoc_reference_conditionals.md>) and [necessary-assumption notes](<../Curriculum/Necessary Assumption/Notes/_megadoc_notes_necessary_assumption.md>) remain their current authorities; no existing lessons were overwritten.
+These methods add concrete practice protocols to the existing [curriculum index](../index.md). The existing [conditional reference](<../Curriculum/Conditional Logic/Notes/_megadoc_reference_conditionals.md>) remains the conditional topic route. The [necessary-assumption source collection](<../Curriculum/Necessary Assumption/Notes/_megadoc_notes_necessary_assumption.md>) is a generated historical collection of duplicate and truncated excerpts, not an authoritative synthesis. Use the argument-support survival/negation distinction below instead of its conclusion-must-fail shorthand. No historical extracts or existing lessons were overwritten.
 
 ## Review the process without revealing the key first
 
@@ -44,7 +44,7 @@ The Wrong Answer Journal asks what the student did and what they will change, wi
 
 ## Keep teaching caveats visible
 
-- Some necessary-assumption notes say that if the conclusion is true, the assumption must be true. That conflates a conclusion's truth with the support supplied by this argument. Use the existing argument-survival/negation treatment; retain these source formulations as unresolved, not adopted doctrine.
+- Some necessary-assumption notes say that if the conclusion is true, the assumption must be true. That conflates a conclusion's truth with the support supplied by this argument. Negating a required assumption defeats this argument's claimed support; it need not make the conclusion itself false, since a true conclusion can have other support. Retain the conflicting source formulations as unresolved, not adopted doctrine.
 - The necessary-condition trick generalizes a conditional principle-matching shortcut. Its unconditional rejection language needs adjudication before reuse, including equivalent contraposed formulations.
 - The Weaken clip asserts that exactly one answer can weaken at all. Preserve this as Cassidy's claim; do not turn it into a universal selection rule.
 - Cognitive mechanisms, speed stories, workload efficacy and historical tool/privacy claims are source assertions, not verified experiments or current product facts.
@@ -52,7 +52,7 @@ The Wrong Answer Journal asks what the student did and what they will change, wi
 
 ## Navigate the complete recovered set
 
-The [per-file review](../../research/obsidian-vault-comparison/2026-10-07/teaching-review.md) provides a link and disposition for all **54 Loophole-tree files plus five related root/Clippings notes**.
+The [per-file review](../../research/obsidian-vault-comparison/2026-10-07/teaching-review.md) records dispositions for the original **54 Loophole-tree files plus five related root/Clippings notes**. After authorized cleanup, **48 Loophole-tree files plus all five related notes remain**. The five duplicate captures and one empty defective capture are historical entries only; their substantive counterparts remain available.
 
 | Archived group | Files | Coverage |
 |---|---:|---|
@@ -63,7 +63,7 @@ The [per-file review](../../research/obsidian-vault-comparison/2026-10-07/teachi
 | Learn | 10 | Conditional, assumption, Method and Weaken clips. |
 | Translation | 25 | RTQ foundations, retention, reactions and worked examples. |
 | Workouts | 8 | Drill protocols. |
-| Duplicates | 5 | Three byte-identical pairs, two playback-time variants. |
-| Defective | 1 | Empty PT111.S3.Q14 file. |
+| Duplicates | 0 retained | Five redundant captures removed; substantive counterparts retained. |
+| Defective | 0 retained | Empty PT111.S3.Q14 file removed. |
 
 Additional defects: PT111.S3.Q1/Q2 capture navigation without their demo transcripts; basic conditional diagramming and both NA lessons capture notes without video transcripts; PT111.S3.Q12 mixes a brakes demo with an unrelated pregnancy example. Root conditional practice embeds eight unavailable images. The misnamed “Just a Detail” clip contains a SQL migration, not a teaching lesson. No image or video contents were reconstructed from filenames, thumbnail links or expired media URLs.

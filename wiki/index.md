@@ -49,13 +49,13 @@ The brain runs three knowledge systems: **this wiki** (Joshua, the business, dec
 
 ## References (OS method / meta)
 
-- [[../references/second-brain-levels]] — the 5 levels of a Claude second brain; ai-os is a complete Level 2
-- [[../references/obsidian-command-center]] — Chase AI's Claude Code + Obsidian command-center setup vs ai-os; only new idea is a visual dashboard plugin + one-click headless skill launchers
+- [[../references/second-brain-levels]]: retrieval architecture, dated comparison, current domain routes and sync limitations.
+- [[../references/obsidian-command-center]]: attributed command-center methods, historical plugin research and device-verification limits.
 - [[../references/claude-plus-codex]] — running Claude Code + Codex on one project; shared-file architecture, plan/critique workflow, and the installed Herdr session layer for visible, persistent dual-agent execution
 - [[../references/graphify-obsidian-bridge]] — turning any corpus into a linked concept map in the vault (`--obsidian`); the source-wiring step and the fragmentation trap that silently guts the result
 - [[../references/3ms-framework]] — the Three Ms operator brain (walked weekly by `/level-up`)
 - [Website planning](../references/website-design-planning.md): recovered visitor-journey, asset-planning and rendered-review methods.
-- [Older vault comparison](../research/obsidian-vault-comparison/2026-10-07/report.md) and [every-file dispositions](../research/obsidian-vault-comparison/2026-10-07/excluded-from-active-knowledge.md): recovered knowledge, overlap, historical claims and explicit omission reasons.
+- [Older vault comparison](../research/obsidian-vault-comparison/2026-10-07/report.md), [historical every-file dispositions](../research/obsidian-vault-comparison/2026-10-07/excluded-from-active-knowledge.md), and [current organization audit](../research/obsidian-vault-comparison/2026-10-07/organization-audit-2026-10-08.md): recovered knowledge, authorized cleanup, overlap, conflicts and verification limits.
 - [Cal.com stuck bookings](CALCOM-STUCK-BOOKINGS.md) — unpaid bookings hold slots invisibly; run scripts/calcom-pending-sweep.mjs
 - [LSAT U booking policy](LSATU-BOOKING-POLICY.md) — one generator, one predicate, one config row; mirrors Cal.com session-link (buffer 10, pitch 80, 45 days)
 

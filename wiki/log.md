@@ -2393,3 +2393,14 @@ Ran Joshua's requested npx skills add klingai-tech/skills command successfully; 
 - Remaining findings include historical log paths, inline-code examples misparsed as links, native-memory references and an unresolved windows-machine-profile reference. No missing factual evidence was invented to silence lint.
 - Final result: 12 verified link repairs; structural findings reduced from 25 to 13. Followup verification checked 100 archive hashes, 100 disposition rows and 253 local links with zero intake errors. Historical log links remain unchanged under the append-only rule.
 
+
+## [2026-10-08] ingest | Authorized old-vault cleanup
+Removed 18 explicitly authorized empty or redundant files from the local imported old-vault archive; retained 82 source files. Original old vault and existing Drive evidence backup unchanged. Cleanup receipt: research/obsidian-vault-comparison/2026-10-07/authorized-cleanup-2026-10-08.json. Historical inventories/dispositions describe the original 100-file capture.
+
+
+## [2026-10-08] lint | Retained old-vault import and current knowledge routes
+Verified all 82 retained source hashes and 18 authorized removals; corrected historical report counts and labels, Necessary Assumption source authority, obsolete plugin/sync claims, and 3Ms sending/credential/deletion scope. Corrected application repository route in context/work and student mirror disagreement handling. Pricing discrepancy (45/hour versus dated45/70-minute booking) remains explicitly unresolved pending live verification. Root structural lint covers48wiki pages with13 preexisting findings, chiefly append-only history and native memory links. Semantic review covered imported active syntheses and related teaching, identity, voice, and operating references; no claim of every existing vault document reviewed. See research/obsidian-vault-comparison/2026-10-07/organization-audit-2026-10-08.md.
+
+## [2026-10-08] system | Clarify clipping workflow
+Corrected raw/inbox/README.md to match active ingest/schema: copy and hash-verify, preserve originals, use hash/source-summary/log for processed status, no ingestion implied by clipping. Actual selected browser template destination remains unverified; raw/inbox is intended and three clips also exist in legacy Clippings. Explained intake/domain/query/lint capabilities without claiming automatic activation.
+

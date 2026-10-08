@@ -6,6 +6,8 @@ updated: 2026-10-07
 
 # Preserve the research sources, then promote only the useful differences
 
+> Current archive status (2026-10-08): this document records the original intake before authorized cleanup. Eighteen empty or duplicate files were removed from the imported copy; **82 source files remain**. References to those removed files below are historical audit entries, not working source links. See [the current organization audit](organization-audit-2026-10-08.md) and [the deletion receipt](authorized-cleanup-2026-10-08.json). The original old vault and prior Drive evidence ZIP were not changed.
+
 Read-only content comparison of eleven assigned files from `C:/Users/Joshu/Documents/Ai-os`. All eleven were read completely, including transcript closing sections and the complete plugin-report tables. The excluded Loophole clip belongs to the teaching review. No external sources were fetched, plugins installed, settings changed, or existing knowledge pages edited by this reviewer. This report is the only file created by this reviewer.
 
 The preserved source copies are under [the old-vault archive](../../../raw/sources/old-obsidian-vault-2026-10-07/). Source text is evidence of what its author said, not current product documentation or Joshua's policy. References were retrieved through `wiki/index.md`; `corpus/index.md` was consulted for teaching destinations. Search coverage included `references`, `research`, `raw/sources`, and targeted broader `raw` matches. Current reference pages were read completely. Comparison does not imply exhaustive semantic review of every current source or student file.

@@ -1,5 +1,7 @@
 # Historical instructions and scratch files remain evidence
 
+> Current archive status (2026-10-08): this document records the original intake before authorized cleanup. Eighteen empty or duplicate files were removed from the imported copy; **82 source files remain**. References to those removed files below are historical audit entries, not working source links. See [the current organization audit](organization-audit-2026-10-08.md) and [the deletion receipt](authorized-cleanup-2026-10-08.json). The original old vault and prior Drive evidence ZIP were not changed.
+
 Reviewed 2026-10-07. Every listed file was read in full. Sources remain byte-preserved in [the archive](../../../raw/sources/old-obsidian-vault-2026-10-07/PROVENANCE.md). The current vault's instructions and verified live systems remain authoritative.
 
 | Old file | Comparison and disposition |

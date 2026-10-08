@@ -1,5 +1,7 @@
 # What was kept, and what was excluded from active knowledge
 
+> Current archive status (2026-10-08): this document records the original intake before authorized cleanup. Eighteen empty or duplicate files were removed from the imported copy; **82 source files remain**. References to those removed files below are historical audit entries, not working source links. See [the current organization audit](organization-audit-2026-10-08.md) and [the deletion receipt](authorized-cleanup-2026-10-08.json). The original old vault and prior Drive evidence ZIP were not changed.
+
 Followup capture: 2026-10-08. All 100 current local source files are byte-preserved. Excluded means excluded from active instructions or synthesized knowledge, never deleted. The original intake covered 93 visible files; two subsequently created empty files and five safe configurations are now archived too. The original inventory remains historical evidence; this capture uses actual Unicode filenames.
 
 ## Active synthesis and partial omissions
