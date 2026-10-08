@@ -9,11 +9,15 @@ aliases: []
 
 Freshest working state; the first page `/pickup` reads. Rebuilt fresh in the 2026-07-16 vault rebuild (the old cache is archived).
 
-## Most recent (2026-10-08): Working Karpathy method
+## Most recent (2026-10-08): Follow the Karpathy video prompts verbatim
 
-[Current hub](karpathy/index.md) has seven provisional rules, activated Claude/Codex agents and teaching skills. Claude actually invoked the skill and agent for a tokenizer lesson: corrected decoder 8/8 passes, deliberate broken decoder 5/8 failures. Scoped Python execution gate: twenty tests plus native successful acceptance. Windows encoding helper failure repaired. [Acceptance](../research/karpathy-brain-2026-10-08/TOKENIZER-ACCEPTANCE.md).
+- Joshua requires the identical saved prompts in order. [Video compliance review](../research/karpathy-video-2026-10-08/VERBATIM-COMPLIANCE.md) records direct browser checks of all five numbered cards and the exact slash-skill command. Original prompt bodies are saved unchanged.
+- Joshua explicitly confirmed existing collected X posts are sufficient; skip TwitterAPI.io. Do not ask again for that key or paid collection. Physical sources remain immutable; exhaustive public-history coverage is not claimed.
+- All 79 writing Markdown items, all 17 preserved transcript texts and 2,072 captured own-author X primary texts are accounted for. Every selected X post now has an individual source page. Repository full-text compilation and variant reconciliation continue; exact coverage lives in domain ledgers.
+- Previous seven rules, agents and tokenizer lesson were a preliminary adaptation. Final Prompt 3 and literal Prompts 4–6 execution await compilation. The old expanded tokenizer run passed 8/8, but is not proof of the exact invocation.
+- Replaced agent-only gate with project Stop/SubagentStop configuration, exact video message and no report-prefix escape. Eighteen behavioral tests pass; revised native gate acceptance is pending. Existing permission settings preserved.
+- Exact later ingest source found: [2026-07-21 voice ramble](sources/karpathy/x/posts/2079610838143623371.md). No unseen sixth card, unnamed promoted rule or absent client review script is invented.
 
-All 79 writing Markdown items accounted for and all 2,072 captured own-author X primary texts reviewed. Sixteen GitHub files reviewed, 1,199 physical files unread; eight of seventeen lecture/interview/animation files fully reviewed, nine bounded. Full corpus compilation remains incomplete; use domain ledgers for exact coverage. Collection is also partial (X 38/157 windows, HTTP 429). Twelve spoken channel lectures, three animation/music caption files, two external mirrors. Transcript LF-normalized manifest hashes match; physical hashes differ through line endings. Codex workflow is configured, not a native Claude-style Stop hook. Joshua identity and canonical routing remain unchanged.
 
 ## Previous (2026-10-08): Karpathy collector reliability rerun
 

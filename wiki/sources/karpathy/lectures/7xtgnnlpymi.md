@@ -99,6 +99,44 @@ He closes by requiring verification and ownership of the final work even while u
 
 > [03:30:56] that so use them as tools in the toolbox
 
+## Exact excerpts for cross-source rule checks
+
+> [03:09:17] over them so don't um treat these models
+
+> [03:09:21] as infallible models check their work
+
+> [03:09:23] use them as tools use them for
+
+> [03:09:25] inspiration use them for the first draft
+
+> [03:09:28] but uh work with them as tools and be
+
+> [03:09:30] ultimately respons responsible for the
+
+> [03:09:32] you know product of your
+
+> [03:30:56] that so use them as tools in the toolbox
+
+> [03:30:58] check their work and own the product of
+
+> [03:31:00] your work but use them for inspiration
+
+> [03:31:03] for first draft uh ask them questions
+
+> [03:31:06] but always check and verify and you will
+
+> [01:56:01] something like this I would come here
+
+> [01:56:02] and I would say use code and uh that's
+
+> [01:56:06] because code is one of the possible
+
+> [03:04:12] long enough will always find a way to
+
+> [03:04:14] gain the model it will discover
+
+> [03:04:15] adversarial examples it will get get
+
 ## Coverage and interpretation
 
 Status: **complete-preserved-text-no-media-review**. Sequentially reviewed every preserved transcript line, 1-5858. Audio and video were not reviewed, so omitted or miscaptioned speech remains unknown.

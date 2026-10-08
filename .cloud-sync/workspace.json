@@ -22,7 +22,7 @@
       "projects/lsatu-wt-frozen/.env",
       "projects/lsatu/.env"
     ],
-    "ciphertext_sha256": "88980ab68c5129485186039261ff9e9a0114b0e51f153763dda0f0b841e2193b",
+    "ciphertext_sha256": "a1bd1d13a44054e51fc9a93a2829a3987943144e595ca812c5603ef9a1671202",
     "cloud_key_required": "Provision AI_OS_SYNC_KEY privately in the cloud environment; the key is never uploaded."
   },
   "runtime_export": {
@@ -1410,7 +1410,7 @@
   "encrypted_original_context": {
     "enabled": true,
     "format": 2,
-    "file_count": 184,
+    "file_count": 185,
     "paths": [
       "ai-os/.cloud-sync/conversations/claude/0850cc70-b315-4080-b799-206dbc270f0b.md",
       "ai-os/.cloud-sync/conversations/claude/184bd7f4-1801-435a-a464-e37067478e55.md",
@@ -1595,19 +1595,20 @@
       "ai-os/skills/gemini/skill-doctor/scripts/collect_sessions.py",
       "ai-os/skills/gemini/watch/scripts/setup.py",
       "ai-os/system/scripts/verify_all_tabs.mjs",
-      "ai-os/wiki/sources/karpathy/repos/files/repos--karpathy--cryptos--README.md.md"
+      "ai-os/wiki/sources/karpathy/repos/files/repos--karpathy--cryptos--README.md.md",
+      "ai-os/wiki/sources/karpathy/repos/files/repos--karpathy--cryptos--getnewaddress.py.md"
     ],
-    "ciphertext_sha256": "df02150583afe5187ca1cfa2205f80f934d836f24fb07bc63752e302973b775d",
+    "ciphertext_sha256": "54535ffc9f1995b6e8fbc5b5248f129005c50831a55047a6c4bfaa9b29808f14",
     "ciphertext_parts": [
       {
         "file": "redacted-context.enc.part0001",
         "bytes": 52428800,
-        "sha256": "938a626e14735ff3a510d585553e19aebc378372eb0bea752d8335d568469b68"
+        "sha256": "6a798f57c26b16cce13df0422a6a52ec7924a2cb5fe07e3a457987423de04f07"
       },
       {
         "file": "redacted-context.enc.part0002",
-        "bytes": 37326440,
-        "sha256": "424232cb273660c7c93fecaf245e8a0db5cbb72b0b6b9001f2272fbeb7fa30b6"
+        "bytes": 37342817,
+        "sha256": "cccd0a434061e34831c55d9d2a1c5df087a95bb38025ef8e80611671f0de139a"
       }
     ]
   }

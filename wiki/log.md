@@ -2569,3 +2569,8 @@ Added loaded-post preservation before errors, adaptive readiness, bounded generi
 ## [2026-10-08] ingest | Karpathy method and executed tokenizer
 
 Compiled reviewed domain sources with explicit coverage ledgers; full corpus remains incomplete. Seven provisional quoted rules; activated Claude/Codex skill and agent copies; scoped Claude Python gate passes twenty tests and native successful acceptance. Actual tokenizer lesson: 8/8 correct, 5/8 expected broken failures; helper encoding repaired. See [execution record](../research/karpathy-brain-2026-10-08/VIDEO-PROMPT-EXECUTION.md). Raw sources unchanged.
+
+
+## [2026-10-08] system | Correct Karpathy execution to the verbatim video sequence
+
+Directly reviewed full saved transcript and original prompt cards in the open Codex browser. Saved unchanged prompt bodies; [compliance review](../research/karpathy-video-2026-10-08/VERBATIM-COMPLIANCE.md) distinguishes previous adaptations from exact execution. Joshua accepts existing collected X posts and explicitly skips TwitterAPI.io. Compiled all preserved transcript texts and individual selected X source pages; repository compilation continues. Corrected project Stop configuration and exact message; eighteen behavioral tests pass. No raw source changes, task-status promotion or complete-sequence claim.

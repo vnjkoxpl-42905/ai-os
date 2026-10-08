@@ -233,6 +233,24 @@ He closes with explicit remaining issues: data periodicity, compiler failures in
 > [03:59:57] these training runs uh and all the
 > [03:59:59] considerations involved we wrote
 
+## Exact excerpts for cross-source rule checks
+
+> [02:43:28] equivalent so when I run this you see
+
+> [02:43:32] that the U gradients are now identical
+
+> [00:40:56] and if I do this and I run that then I
+
+> [00:40:59] am getting the same results so basically
+
+> [00:41:03] the model internals are not wrong it's
+
+> [03:46:12] the validation curve so long story short
+
+> [03:46:15] this is not a perfect eval and there's
+
+> [03:46:16] some caveats here uh but at least we
+
 ## Coverage and interpretation
 
 Status: **complete-preserved-text-no-media-review**. Sequentially reviewed every preserved transcript line, 1-6149. Audio and video were not reviewed, so missing or miscaptioned speech remains unknown.

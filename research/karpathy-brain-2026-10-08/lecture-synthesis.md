@@ -1,8 +1,8 @@
-# Lecture compilation has useful evidence and explicit unread sections
+# All 17 preserved lecture and interview texts are compiled
 
-Compiled 2026-10-08. Seventeen physical source pages exist under [lecture sources](../../wiki/sources/karpathy/lectures/): 15 original channel caption files and two external 2026 interview mirrors. The 15 originals are **12 spoken lectures plus three music/animation caption files**, not 15 spoken lectures. **Fifteen files have complete preserved-text review**: the three music-caption files and twelve spoken-source texts, including both interview mirrors. **Two remain bounded**. Media and linked code were not inspected or executed. The [coverage ledger](lecture-semantic-coverage.jsonl) records actual reviewed ranges and SHA-256 values. All 15 physical byte hashes differ from the old manifest, but every CRLF-to-LF normalized hash matches it exactly. Physical hashes and normalization are recorded separately; raw bytes remain untouched.
+Compiled 2026-10-08. Seventeen physical source pages exist under [lecture sources](../../wiki/sources/karpathy/lectures/): 15 original channel caption files and two external 2026 interview mirrors. The 15 originals are **12 spoken lectures plus three music/animation caption files**, not 15 spoken lectures. **All 17 files have complete sequential preserved-text review**: three music-caption files and fourteen spoken-source texts, including both interview mirrors. Media and linked code were not inspected or executed. The [coverage ledger](lecture-semantic-coverage.jsonl) records actual reviewed ranges and SHA-256 values. All 15 physical byte hashes differ from the old manifest, but every CRLF-to-LF normalized hash matches it exactly. Physical hashes and normalization are recorded separately; raw bytes remain untouched.
 
-Prompt 2's requirement to compile everything has **not** been satisfied by indexing these files. The original transcript corpus contains 325,686 words. Source pages explicitly identify unread sections; raw evidence was never edited. This distinction must remain visible in the central coverage and execution report.
+This lecture scope of Prompt 2 now has one physical source page per preserved transcript and a complete sequential text-review ledger. The original transcript corpus contains 325,686 words. This establishes complete review of the preserved text, not complete audiovisual coverage or completion of the blog, X, and repository scopes handled separately. Raw evidence was never edited.
 
 ## Direct lecture evidence for rule derivation
 
@@ -18,9 +18,9 @@ Prompt 2's requirement to compile everything has **not** been satisfied by index
 
 The table contains candidate synthesis, not seven automatically adopted rules. The parent should combine these direct passages with separately reviewed blog/repository evidence and enforce the prompt's two-independent-source threshold.
 
-## What remains to read
+## Preserved text is complete; media coverage is not
 
-Two sources still need sequential completion from the ledger: Deep Dive into LLMs (7xTGNNLPyMI) and GPT-2 Reproduction (l8pRSuU81PU). Twelve spoken-source texts and three music-caption files now have complete preserved-text reviews. Original audiovisual material and linked code were not reviewed by this compilation.
+No preserved transcript ranges remain unread across these 17 sources. Original audiovisual material, images/diagrams, and linked code were not reviewed or executed by this compilation; unavailable or omitted speech cannot be reconstructed from the existing text. The original collection also deferred external Stanford captions. These limitations remain explicit.
 
 Three music-caption files offer no substantial rule evidence. Their physical Markdown and metadata remain retained and linked instead of being counted as spoken lectures. The collection's two silent-upload exclusions remain outside these 15 files.
 
@@ -28,6 +28,8 @@ The complete Sequoia interview mirror was subsequently read sequentially through
 
 Continuation2026-10-08: GPT Tokenizer is now a complete preserved-text semantic review (3506 lines). Its page covers regex boundaries, special tokens, inference-versus-training, SentencePiece byte fallback and normalization, vocabulary tradeoffs, speculative research directions and dated failure demonstrations. Original media and linked implementation remain unreviewed.
 
+
+## Review progression history (earlier counts are superseded)
 
 ## Continuation: micrograd fully read
 
@@ -51,3 +53,6 @@ Continuation 2026-10-08: Backprop Ninja is fully read (3152 lines). Its quoted c
 
 
 Continuation 2026-10-08: Build GPT (3064 lines) and How I Use LLMs (3557) are fully read and compiled. The former verifies efficient aggregation against a simple reference before extending the architecture; the latter checks cited sources, generated code, missing-data assumptions, actual numeric outputs and transcribed image values. Exact quote-supported source pages distinguish dated product observations and personal health examples from current operational or medical advice. Two texts remain incomplete.
+
+
+Final continuation 2026-10-08: Deep Dive into LLMs (5858 lines) and GPT-2 Reproduction (6149 lines) are fully read sequentially and compiled. All 17 preserved texts now have complete coverage. Deep Dive contributes explicit evidence for checking tool results, recognizing hallucination and capability holes, preferring exact code execution for counting/arithmetic, and guarding against reward-model gaming. GPT-2 contributes equivalent-interface checks, small-batch overfit debugging, device and weight-sharing bugs, actual hardware throughput measurement, gradient-accumulation equality tests, distributed-data boundary checks, validation/evaluation caveats, and unresolved compiler/data-order problems. The detailed source pages place exact preserved quotations beside these interpretations. Raw bytes remain unchanged.
