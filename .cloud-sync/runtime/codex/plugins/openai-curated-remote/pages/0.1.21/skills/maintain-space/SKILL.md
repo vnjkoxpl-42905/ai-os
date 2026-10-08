@@ -7,6 +7,8 @@ description: Reconcile new evidence into existing ChatGPT Pages or a Space when 
 
 Use this workflow only for a request about actual Page or Space content. For self-contained writing or advice that does not refer to that content, answer in chat. When asked to draft, suggest, or review a change, return a proposal; apply it only when requested.
 
+Before any `edit_page` or `patch_page` call, read [Edit requests](../write-page/references/edit-requests.md) in full and the tool's active schema, including for small fixes and recovery edits.
+
 Before any write, resolve both the kind of change and its target. A role mentioned in Page text (for example, an owner) is not the Page's account owner. If multiple content targets or meanings fit the request, ask one focused question and make no write attempt. Explicit scope such as a named section or all sections needs no clarification.
 
 Keep the current account useful as new work arrives. Each update should improve the reader's view without creating another layer of duplicates or status narration.
