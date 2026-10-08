@@ -12,6 +12,8 @@ Open items are the spine of the session briefing. Finished items move to `## Don
 struck through with a date, so a future session never re-runs them.
 [[hot]] holds the narrative handoff; [[log]] holds the full immutable history; [[dashboard]] holds product ground-truth.
 
+**Freshness boundary, checked 2026-10-08:** entries below preserve the status recorded on their own dates. This maintenance pass did not re-adjudicate app releases, PRs, assignments or business task completion. Verify a dated item's live system and linked work record before treating it as present status. The latest session work is in `wiki/hot.md`; no task was moved, marked complete or reopened by this clarification.
+
 ## Now (in progress)
 
 

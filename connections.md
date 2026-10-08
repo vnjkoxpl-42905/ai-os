@@ -6,13 +6,14 @@ Registry of every live system Jay 2 can reach, mapped to the 7 Tier-1 data domai
 
 > **Windows verification, 2026-10-08.** The current root is `C:/Users/Joshu/dev/ai-os`.
 > Narrow live reads succeeded for Gmail, Google Calendar, native Drive/Docs session records,
-> Cal.com, LSAT U admin access and the private GitHub repository. Stripe's connected app requires
+> Cal.com, LSAT U admin access and the private GitHub repository. The existing Stripe API credential
+> also read the live Aspiring Attorneys account; its separate connected app still requires
 > reauthentication. Credential presence is not access proof, and this registry does not inventory
 > secret values. Recheck person-specific operational state before acting.
 
 | # | Domain | Tool | Mechanism | Auth | Last checked |
 |---|---|---|---|---|---|
-| 1 | Revenue / Financials | Stripe | Codex Stripe app (OAuth); CLI/API key (`.env`) | **blocked**: connected-app account read requires reauthentication; CLI/API access not verified | 2026-10-08 |
+| 1 | Revenue / Financials | Stripe | `py system/scripts/stripe-account-read.py`; [API guide](references/stripe-api.md); separate Codex app | **API read verified**: live Aspiring Attorneys account. Connected app still requires reauthentication; no write attempted | 2026-10-08 |
 | 2 | Customer interactions | Gmail-as-CRM · TutorOcean | `gws` CLI · manual | **Gmail read verified**; TutorOcean not checked | 2026-10-08 |
 | 3 | Calendar | Cal.com · Google Calendar | Cal.com `/v2/me` · `gws calendar events list` | **read verified**: Cal.com user record and two confirmed events in bounded 2026-10-08 Calendar window | 2026-10-08 |
 | 4 | Communication | Gmail | `gws gmail users getProfile`; OAuth in configured keyring | **read verified**: `contact@aspiringattorneys.com`; profile only, not delivery verification | 2026-10-08 |
@@ -26,6 +27,8 @@ Registry of every live system Jay 2 can reach, mapped to the 7 Tier-1 data domai
 **Tier-2 (bonus):** NotebookLM (`nlm` CLI) and YouTube Data API were not reverified in the 2026-10-08 audit. Browser availability is session-specific; use the actual exposed browser tools rather than assuming a retired VS Code integration.
 
 **Obsidian Sync is a separate connection.** The installed Obsidian 1.14.4 CLI read confirms `C:/Users/Joshu/dev/ai-os` is **disconnected** on 2026-10-08, despite the core Sync plugin being enabled. GitHub/Drive success does not connect this vault to the phone. `ai-os` and old `Ai-os` differ only by case; the installed CLI's name targeting returned the current root for both, so verify the reported absolute vault path before any operation. Do not infer the old vault's remote status from that ambiguous name lookup.
+
+The signed-in Sync chooser lists the existing remote `Ai-os` at 968 KB, with the account's remote-vault count already at its limit. Its files/phone state were not inspected. [Selective-sync plan and measured candidates](research/audit-repairs-2026-10-08/obsidian-sync-plan.md) separates that remaining connection from the working Drive/GitHub paths.
 
 **Mechanism legend:** `mcp` (MCP server) · `script` (Python/Bash hitting an API) · `export` (dump pipeline) · `key+ref` (`.env` key + `references/{tool}-api.md`) · `local` (file in this vault) · `not yet connected`.
 

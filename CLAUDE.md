@@ -42,7 +42,7 @@ Paths are relative to the repository root.
 | Session handoffs · chat exports | `handoffs/` — operational records, deliberately OUTSIDE `raw/`; `session-handoff` writes here |
 | Current local work in Claude/Codex cloud | `setup/github-sync/README.md`; private `codex/local-sync/<machine>/<checkout>` branches and generated `.cloud-sync/` metadata/conversation exports. Cloud edits use separate task branches. |
 | External teardowns and research, dated | `research/` |
-| Web-clipped articles (Obsidian Web Clipper) | `raw/inbox/` — unprocessed only; `ingest` copies and hash-verifies them into `raw/sources/clips/`; processed originals stay until removal is authorized |
+| Web-clipped articles (Obsidian Web Clipper) | `raw/inbox/` — intake queue; `ingest` copies and hash-verifies clips into `raw/sources/clips/`; processed originals stay until removal is authorized, so inbox presence alone does not mean unprocessed |
 | Application code | `../ai-os-projects/lsatu/` — own repo, own instructions, own remote |
 | Other projects (life-path, …) | `../ai-os-projects/<name>/` — each with its own `CLAUDE.md` + `.claude/` |
 

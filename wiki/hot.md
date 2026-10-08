@@ -1,7 +1,7 @@
 ---
 type: operating-layer
 subject: Hot last-session cache
-updated: 2026-10-07
+updated: 2026-10-08
 aliases: []
 ---
 
@@ -9,7 +9,18 @@ aliases: []
 
 Freshest working state; the first page `/pickup` reads. Rebuilt fresh in the 2026-07-16 vault rebuild (the old cache is archived).
 
-## Most recent (2026-10-07): Local and cloud workspace transfer
+## Most recent (2026-10-08): AI OS audit repairs
+
+- Joshua authorized fixing the full-vault audit. [Repair outcome](../research/audit-repairs-2026-10-08/outcome.md) carries every finding, corrected rules/routes and explicit remaining checks; [baseline audit](../audits/audit-2026-10-08-052114-f4a92b.md) remains unchanged.
+- Shared Superwhisper safeguards, handling/storage policies, current app routes and stale sampled status claims are reconciled. Old missing personal/reform routes remain explicitly unavailable, not fabricated. No app task was marked complete or reopened.
+- Skill validator and static smoke pass. Four legacy reviewer/build aliases route correctly; useful newer Kling/GWS content is preserved. Claudex updater now has a verified upstream and explicit local overlays; successful update and zero-change dry-run passed. Future scheduled execution still needs observation.
+- 35 isolated regression fixtures passed across wiki resolution, Cal.com, sync and Claudex boundaries; 82 retained source hashes passed. [Historical recovery index](../research/audit-repairs-2026-10-08/lint-cal-repair.md) makes surviving documents reachable without rewriting old log entries or claiming deleted-worktree byte identity.
+- Stripe API access is verified through [the safe account-read route](../references/stripe-api.md). The connected app separately requires reauthentication. Sync has durable bounded execution history and correctly distinguishes busy/deferred from success; live final-file publication and notification delivery remain verification tasks.
+- Current Obsidian vault is disconnected. The existing remote Ai-os shows 968 KB; it is not the current 3 GB laptop root. [Prepared selective-sync plan](../research/audit-repairs-2026-10-08/obsidian-sync-plan.md) estimates 83 MB of candidate working content. Remote preservation/comparison and phone verification precede connection; no remote vault was changed.
+- Pending Joshua's choices: resume the deliberately paused read-only operations monitor or keep it paused; proceed with phone Sync or retain the earlier deferral. Web Clipper selected-template verification was blocked by browser security policy and requires Joshua's settings check. No response was inferred from elapsed time.
+- Sources, old vault, folder layout and historical records were preserved. No paid model generation, cancellation, outbound message or production deployment occurred.
+
+## Previous (2026-10-07): Local and cloud workspace transfer
 
 - Built automatic private GitHub snapshot branches and a [Drive mirror](https://drive.google.com/drive/folders/1z3oXAoKOWNqKjAPO-Txtkm0uEgz88sgY) for AI OS and all three app worktrees. [Operating reference](../setup/github-sync/README.md) owns configuration, exclusions and recovery; machine-only status files are the current verification authority.
 - Exported 907 Claude/Codex conversations with no parsing errors, separate runtime skill catalogs and native memory context. Conversation exports are readable evidence, not synchronized native cloud sidebar sessions. UI deletion and historical erasure are not guaranteed.

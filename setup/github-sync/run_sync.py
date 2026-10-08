@@ -32,21 +32,35 @@ def run_once(config, state):
     run_id = uuid4().hex
     record_event(state, run_id, 'started')
     receipt = {'last_attempt': datetime.now(timezone.utc).isoformat(), 'run_id': run_id}
+    github_busy = False
     try:
         result = subprocess.run([sys.executable, str(config.parent / 'sync.py'), '--once', '--config', str(config)],
                                 capture_output=True, text=True,
                                 creationflags=subprocess.CREATE_NO_WINDOW if os.name == 'nt' else 0)
         receipt['github_exit_code'] = result.returncode
+        output = getattr(result, 'stdout', '') or ''
+        if result.returncode == 0 and len(output) <= 4096:
+            try:
+                child_status = json.loads(output)
+            except ValueError:
+                child_status = None
+            github_busy = isinstance(child_status, dict) and child_status.get('status') == 'busy'
     except Exception as error:
         # Exception messages and child output may contain credentials.
         receipt['github_exit_code'] = 1
         receipt['github_error'] = type(error).__name__
-    try:
-        receipt['drive'] = mirror_from_state(config)
-    except Exception as error:
-        receipt['drive_error'] = type(error).__name__
+    if github_busy:
+        # A child lock collision did not publish anything for this attempt.
+        # Do not mirror an older state and label this run successful.
+        receipt['github_status'] = 'busy'
+        receipt['drive'] = {'status': 'deferred', 'results': []}
+    else:
+        try:
+            receipt['drive'] = mirror_from_state(config)
+        except Exception as error:
+            receipt['drive_error'] = type(error).__name__
     failed = bool(receipt['github_exit_code'] or 'drive_error' in receipt)
-    busy = receipt.get('drive', {}).get('status') == 'busy'
+    busy = github_busy or receipt.get('drive', {}).get('status') == 'busy'
     outcome = 'failed' if failed else 'deferred' if busy else 'succeeded'
     receipt['outcome'] = outcome
     receipt['completed_utc'] = datetime.now(timezone.utc).isoformat()

@@ -56,6 +56,20 @@ class RunnerTests(unittest.TestCase):
             self.assertFalse(failed)
             self.assertEqual(receipt['outcome'], 'deferred')
 
+    def test_child_lock_collision_defers_without_mirroring_stale_state(self):
+        with tempfile.TemporaryDirectory() as temp:
+            state = Path(temp)
+            response = type('Response', (), {'returncode': 0, 'stdout': '{"status": "busy"}'})()
+            with patch.object(module.subprocess, 'run', return_value=response), patch.object(
+                    module, 'mirror_from_state') as mirror:
+                receipt, failed = module.run_once(state.parent / 'config.json', state)
+            mirror.assert_not_called()
+            self.assertFalse(failed)
+            self.assertEqual(receipt['outcome'], 'deferred')
+            self.assertEqual(receipt['github_status'], 'busy')
+            events = json.loads((state / 'runner-history.json').read_text())['events']
+            self.assertEqual(events[-1]['event'], 'deferred')
+
     def test_history_has_a_bounded_window(self):
         with tempfile.TemporaryDirectory() as temp:
             state = Path(temp)

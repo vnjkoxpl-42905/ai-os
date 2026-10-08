@@ -37,8 +37,8 @@ The brain runs three knowledge systems: **this wiki** (Joshua, the business, dec
 - [LSAT teaching voice standard](../references/lsat-teaching-voice-standard.md): detailed wording, cadence, questions, lesson progression, original calibration examples, and review rubric; [source summary](sources/conditional-reasoning-voice.md). The [conditional content-order skeleton](../brainstorms/2026-09-30-conditional-curriculum/2026-10-02-opening-lessons-source-map.md) records Joshua's 2026-10-03 selection of the full supplied sequence.
 - [[ACCOMMODATIONS-REQUEST-TEMPLATE]] — approved LSAT accommodations email (sent by the accommodations-email skill, QP form attached) + LSAC deadlines and category notes
 - [[reddit-chat-voice]] — ground truth reference of 10 real Reddit chat conversations, tone patterns, and DM dispatch standards
-- [[HANDLING]] — Tier-A handling rules and the pre-remote scrub checklist (authority cited by core.md)
-- [[protected-records]] — where sensitive records live and how they are referenced
+- [[HANDLING]]: current credential/data policy and advisory remote checks, aligned with the root manuals.
+- [[protected-records]]: current storage routes and the explicitly retired encrypted-bundle design.
 
 ## Operations
 
@@ -48,6 +48,11 @@ The brain runs three knowledge systems: **this wiki** (Joshua, the business, dec
 - [[automation-backlog]] — how Joshua's email/ops time actually breaks down (from 944 authored emails) + the leverage-ranked build backlog; the 19% "apology tax" is the north-star target. Walked by `/level-up`
 
 ## References (OS method / meta)
+
+- [Stripe API access](../references/stripe-api.md): verified account-read route while the connected app requires reauthentication.
+- [Audit repair outcome](../research/audit-repairs-2026-10-08/outcome.md): corrected rules, routes, skills, diagnostics and remaining decisions.
+- [Recovered historical evidence](../research/audit-repairs-2026-10-08/lint-cal-repair.md): surviving dated app documents for retired worktree citations; old wiki history remains unchanged.
+- [Prepared Obsidian sync plan](../research/audit-repairs-2026-10-08/obsidian-sync-plan.md): current vault is disconnected, existing remote is separate, and candidate working content is small enough for selective sync.
 
 - [AI workspace knowledge hub](../references/ai-workspace/index.md): Claude/Codex updates, skill ideas, repository evaluations, prompts, tips and workflows, kept separate from LSAT teaching.
 - [Recovered AI methods](../references/ai-workspace/migrated-source-methods.md): detailed review, skill-evaluation and source-checking recipes from the old vault.
@@ -89,7 +94,7 @@ Regenerate this section after page changes with `py system/scripts/wiki-maintena
 - [[wiki/DRILL-HUB-IMPECCABLE-AUDIT-2026-09-08|Drill hub: impeccable audit and critique (2026-09-08)]]: Target: `/classroom/drill` on production (lsatprep.study), signed in as Joshua. LR section, default stage, the Build a Set launcher stage, desktop (~740px pane) and phone (375px).
 - [[wiki/DRILL-HUB-PERFECT-SCORE-PLAN-2026-09-08|Drill hub: plan to reach 20/20 audit and 40/40 critique]]: Written 2026-09-08 by Claude (Fable 5.1) for hand-off to another executor. Starting point: run 2 of DRILL-HUB-IMPECCABLE-AUDIT-2026-09-08-RUN2, published as commit f791016. Audit 1
 - [[wiki/guided-drill-verification-log|Guided Drill Verification Log]]: Running log of guided drills that have already been verified in the live platform. Once a drill is listed here as `verified-working`, do not repeat full browser launch QA before as
-- [[wiki/HANDLING|Personal-data handling]]: As of 2026-07-17 this OS stores no secret material beyond API keys in the root `.env`. The earlier design's private stores (`private/records.sparsebundle`, migration manifests, `pr
+- [[wiki/HANDLING|Personal-data handling]]: The 2026-07-17 design initially described API keys only. The current root policy explicitly includes credentials and bank/account information in the git-ignored `.env`. This is a d
 - [[wiki/hot|Hot : last-session cache]]: Freshest working state; the first page `/pickup` reads. Rebuilt fresh in the 2026-07-16 vault rebuild (the old cache is archived).
 - [[wiki/inbound-handled-ledger|Inbound handled ledger]]: Append-only and stateful record of inbound messages, questions, and inquiries across platforms (LSAT U, Reddit, 7Sage, Facebook).
 - [[wiki/IVORY-REPLY-DRAFT-2026-09-08|IVORY-REPLY-DRAFT-2026-09-08]]: Hi Ivory,
@@ -101,7 +106,7 @@ Regenerate this section after page changes with `py system/scripts/wiki-maintena
 - [[wiki/LSATU-BOOKING-POLICY|LSAT U booking policy]]: Every LSAT U booking page (pass link `/book/<slug>`, in-app `/schedule`, single session
 - [[wiki/magic-mouse-log|Apple Magic Mouse 2 Execution Log]]: Date: 2026-09-18
 - [[wiki/PRE-CONSULT-LOG|Pre-consultation check-in log]]: One row per Cal.com consultation the `pre-consultation-check-in` skill has
-- [[wiki/protected-records|Protected records]]: Sensitive records are intentionally not linked file-by-file from Git-tracked pages.
+- [[wiki/protected-records|Protected records: current policy and retired design]]: Current policy is HANDLING and the root operating manuals. Credentials and bank/account information belong only in the git-ignored root `.env`; government IDs stay outside this OS.
 - [[wiki/reddit-chat-voice|Reddit Chat Voice Reference]]: Ground truth reference for Joshua's actual communication style in Reddit DMs (`attornkas`), derived directly from the real conversation history across 10 different prospects and st
 - [[wiki/RRC-BRIEFING-CRITIQUE-2026-09-08|Read, Recall, Colour section briefing page: design critique]]: Date: 2026-09-08. Method: `$impeccable critique` on
 - [[wiki/RRC-DRILL-AUDIT-CRITIQUE-2026-09-09|Read, Recall, Colour: full audit, critique and fix plan]]: Date: 2026-09-09. Method: `$impeccable audit` then `$impeccable critique` over the whole drill: the door (library and section pages), the briefing page, the runner, the handover an
