@@ -9,7 +9,16 @@ aliases: []
 
 Freshest working state; the first page `/pickup` reads. Rebuilt fresh in the 2026-07-16 vault rebuild (the old cache is archived).
 
-## Most recent (2026-10-07): Conditional audit implementation reaches 18/20
+## Most recent (2026-10-07): Local and cloud workspace transfer
+
+- Built automatic private GitHub snapshot branches and a [Drive mirror](https://drive.google.com/drive/folders/1z3oXAoKOWNqKjAPO-Txtkm0uEgz88sgY) for AI OS and all three app worktrees. [Operating reference](../setup/github-sync/README.md) owns configuration, exclusions and recovery; machine-only status files are the current verification authority.
+- Exported 907 Claude/Codex conversations with no parsing errors, separate runtime skill catalogs and native memory context. Conversation exports are readable evidence, not synchronized native cloud sidebar sessions. UI deletion and historical erasure are not guaranteed.
+- Joshua authorized credential transfer. Credential files and original redacted text travel encrypted; the key stays outside GitHub/Drive. Actual AI OS context authentication and 12 byte-for-byte source samples passed. Cloud key provisioning remains pending; copied credentials do not prove cloud tool access.
+- [LR cloud prompt](../handoffs/2026-10-07-lr-cloud-prompt.md) and [context](../handoffs/2026-10-07-lr-cloud-context.md) preserve the approved scope and paused proposals. No LR execution, production revalidation, DB writes or Lovable spend performed here. Check original job ownership before resuming.
+- Existing four published snapshots were verified in Drive. Expanded AI OS publication is being finalized after conversation-redaction and large-package fixes. Scheduled task checks every two minutes when enabled and signed in; inspect actual task and status before assuming freshness.
+- Independent cloud work returns through its own branch/PR. No automatic pull over dirty local work. Remote Control offers the same local session through the browser and requires the local process to remain running.
+
+## Previous (2026-10-07): Conditional audit implementation reaches 18/20
 
 - Implemented remaining metadata finding plus scalable text/wrapping, app preference theme support, retained-question memoization and persistent atomic choice feedback. [Audit](../../ai-os-projects/lsatu-conditional-bootcamp/docs/agent/conditional-recovery-20261007/impeccable-audit-implementation-20261007.md): 18/20 Excellent, no confirmed P0-P3 findings in scoped pass. Two points withheld for screen-reader and representative device-performance evidence, not invented defects.
 - Codex-only browser verified light/dark, actual 320/460/768/1280/1920 widths, root-font 200% stress at 320px and state retention. Root-font stress exposed and fixed mobile header overflow; guided controls now scale too. Drawer closure returns focus after exit transition. All test overrides reset; temporary tab closed.

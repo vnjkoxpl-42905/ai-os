@@ -168,7 +168,7 @@ def _mirror_from_state(config_path):
             archive = Path(temp) / 'latest.zip'
             environment = os.environ.copy()
             environment.update(GIT_TERMINAL_PROMPT='0', GCM_INTERACTIVE='never')
-            result = subprocess.run(['git', '-C', checkout, 'archive', '--format=zip', '-o', str(archive), commit], capture_output=True, env=environment, timeout=300)
+            result = subprocess.run(['git', '-C', checkout, 'archive', '--format=zip', '-o', str(archive), commit], capture_output=True, env=environment, timeout=300, creationflags=subprocess.CREATE_NO_WINDOW if os.name == 'nt' else 0)
             if result.returncode: raise RuntimeError('Unable to archive published snapshot')
             archive_id, digest = mirror.upload(folder_id, 'latest.zip', 'archive:' + key, archive, 'application/zip')
             record = {'commit': commit, 'branch': branch, 'repository': repo, 'updated_utc': datetime.now(timezone.utc).isoformat(), 'archive_id': archive_id, 'md5': digest, 'size': archive.stat().st_size, 'folder_id': folder_id}

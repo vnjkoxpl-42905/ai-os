@@ -4,6 +4,8 @@ $taskName = 'AI OS - Private GitHub Sync'
 $syncScript = Join-Path $PSScriptRoot 'run_sync.py'
 $syncConfig = Join-Path $PSScriptRoot 'config.json'
 $pythonPath = (Get-Command python.exe -ErrorAction Stop).Source
+$windowlessPython = Join-Path (Split-Path -Parent $pythonPath) 'pythonw.exe'
+if (Test-Path -LiteralPath $windowlessPython) { $pythonPath = $windowlessPython }
 if (!(Test-Path -LiteralPath $syncScript)) { throw 'Sync script is missing.' }
 if ($VerifyOnly) {
     Get-ScheduledTask -TaskName $taskName -ErrorAction Stop | Get-ScheduledTaskInfo

@@ -153,12 +153,15 @@ def decrypt(package, destination, key):
     if data.startswith(MULTIPART_FORMAT):
         descriptor = json.loads(data[len(MULTIPART_FORMAT):])
         if descriptor.get('version') != 1: raise ValueError('Unsupported multipart format')
+        if not isinstance(descriptor.get('ciphertext_bytes'), int) or not (0 < descriptor['ciphertext_bytes'] <= MAX_DECOMPRESSED_BYTES):
+            raise ValueError('Multipart package exceeds supported size')
         blocks = []
         for position, item in enumerate(descriptor['parts'], 1):
             expected_name = package.name + '.part' + str(position).zfill(4)
             if item['file'] != expected_name or not (0 < item['bytes'] <= MAX_CHUNK_BYTES):
                 raise ValueError('Invalid multipart chunk descriptor')
             path = _reject_link_chain(package.parent / item['file'])
+            if path.stat().st_size != item['bytes']: raise ValueError('Encrypted chunk integrity check failed')
             block = path.read_bytes()
             if len(block) != item['bytes'] or hashlib.sha256(block).hexdigest() != item['sha256']:
                 raise ValueError('Encrypted chunk integrity check failed')

@@ -14,7 +14,7 @@ PATTERNS = [('private key', re.compile(rb'-----BEGIN (?:RSA |EC |OPENSSH |DSA )?
 ASSIGNMENT = re.compile(rb'''(?im)^\s*["']?[\w.-]*(?:api[_-]?key|secret|password|access[_-]?token|refresh[_-]?token)[\w.-]*["']?\s*[:=]\s*["']?([^\s"',;#}{]+)''')
 
 def run(*args, cwd=None, env=None, timeout=180):
-    p = subprocess.run(args, cwd=cwd, env=env, stdout=subprocess.PIPE, stderr=subprocess.PIPE, timeout=timeout)
+    p = subprocess.run(args, cwd=cwd, env=env, stdout=subprocess.PIPE, stderr=subprocess.PIPE, timeout=timeout, creationflags=subprocess.CREATE_NO_WINDOW if os.name == 'nt' else 0)
     if p.returncode:
         diagnostic = p.stderr.decode('utf-8', errors='replace').lower()
         categories = [label for markers, label in [
@@ -248,7 +248,7 @@ def scan(destination, executable, originals=None, prefix=''):
     if not executable or not Path(executable).is_file():
         raise RuntimeError('Mandatory gitleaks scanner is unavailable')
     report_path = destination.parent / 'gitleaks.json'
-    p = subprocess.run([str(executable), 'dir', str(destination), '--redact=100', '--no-banner', '--report-format', 'json', '--report-path', str(report_path)], stdout=subprocess.PIPE, stderr=subprocess.PIPE, timeout=180)
+    p = subprocess.run([str(executable), 'dir', str(destination), '--redact=100', '--no-banner', '--report-format', 'json', '--report-path', str(report_path)], stdout=subprocess.PIPE, stderr=subprocess.PIPE, timeout=180, creationflags=subprocess.CREATE_NO_WINDOW if os.name == 'nt' else 0)
     removed = []
     if p.returncode == 1 and report_path.exists():
         findings_by_file = {}
@@ -285,7 +285,7 @@ def scan(destination, executable, originals=None, prefix=''):
                 for relative, finding in findings:
                     removed.append({'path': relative.as_posix(), 'reason': 'gitleaks binary file omitted: ' + finding.get('RuleID', 'secret')})
         retry_report = destination.parent / 'gitleaks-rescan.json'
-        retry = subprocess.run([str(executable), 'dir', str(destination), '--redact=100', '--no-banner', '--report-format', 'json', '--report-path', str(retry_report)], stdout=subprocess.PIPE, stderr=subprocess.PIPE, timeout=180)
+        retry = subprocess.run([str(executable), 'dir', str(destination), '--redact=100', '--no-banner', '--report-format', 'json', '--report-path', str(retry_report)], stdout=subprocess.PIPE, stderr=subprocess.PIPE, timeout=180, creationflags=subprocess.CREATE_NO_WINDOW if os.name == 'nt' else 0)
         if retry.returncode:
             details = []
             if retry_report.exists():
