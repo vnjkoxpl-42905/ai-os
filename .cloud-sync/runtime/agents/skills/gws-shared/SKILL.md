@@ -61,6 +61,16 @@ gws <service> <resource> [sub-resource] <method> [flags]
 
 ## Shell Tips
 
+- **Windows upload working directory (observed 2026-10-04):** The installed `gws` CLI rejected an absolute `--upload` path outside the process's current directory. Change into the file's directory and pass its filename. Preserve the previous location with `try`/`finally`:
+  ```powershell
+  Push-Location -LiteralPath 'C:\Users\YOURNAME\Downloads\recovery'
+  try {
+    gws drive files create --json '{"name":"backup.7z.001"}' --upload 'backup.7z.001'
+  } finally {
+    Pop-Location
+  }
+  ```
+  This records behavior verified on this Windows installation; do not assume every CLI version or platform has the same restriction.
 - **zsh `!` expansion:** Sheet ranges like `Sheet1!A1` contain `!` which zsh interprets as history expansion. Use double quotes with escaped inner quotes instead of single quotes:
   ```bash
   # WRONG (zsh will mangle the !)

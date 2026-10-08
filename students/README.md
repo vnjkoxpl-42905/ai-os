@@ -65,7 +65,7 @@ Use [tutoring diagnosis](../corpus/tutoring-diagnosis.md) as a hypothesis framew
 - Session summaries are append-only. Later corrections go in a dated correction section and never erase the original summary.
 - Generated operational state is clearly marked with `generated: true` and never overrides primary teaching records.
 - Wikilink student pages into corpus concepts and LSAT U material as they become relevant.
-- Tier A note: transcripts and correspondence are trackable (Tier-A amendment, 2026-07-16). True secrets (credentials, IDs, payment instruments) still never enter Git — `private/` only.
+- Tier A note: transcripts and correspondence are trackable (Tier-A amendment, 2026-07-16). True secrets never enter Git: credentials and bank/account information belong in the git-ignored root `.env`; government IDs stay outside this OS. There is no `private/` storage tier. See [current handling policy](../wiki/HANDLING.md).
 
 ## Internal routing contract after each session
 

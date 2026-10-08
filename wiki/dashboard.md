@@ -1,7 +1,7 @@
 ---
 type: operating-layer
 subject: Dashboard ground-truth pointers
-updated: 2026-07-16
+updated: 2026-10-08
 aliases: []
 ---
 
@@ -15,7 +15,7 @@ Rebuilt fresh 2026-07-16. This page points at authorities; it never accumulates 
 | Homework, dossier, publish state | LSAT U Supabase |
 | Payment events | Stripe |
 | Correspondence | Gmail (contact@aspiringattorneys.com) |
-| Application code | `projects/lsatu/` (own repo, own instructions) |
+| Application code | `../ai-os-projects/lsatu/` (own repo, own instructions) |
 | Transcripts, teaching notes, judgments, prep briefs | **the brain** — `students/` and `corpus/` |
 
-Product status detail lives in the app and `projects/lsatu/docs/`; the old dashboard snapshot is archived at `archive/wiki-pre-rebuild-2026-07-16/dashboard.md`.
+Product status detail lives in the app and `../ai-os-projects/lsatu/docs/`; the former `archive/wiki-pre-rebuild-2026-07-16/dashboard.md` snapshot path is unavailable in this checkout. It is a historical reference, not a verified recovery destination.

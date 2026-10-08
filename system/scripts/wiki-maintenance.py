@@ -1,6 +1,7 @@
 """Maintain the wiki catalog and report structural issues without changing sources."""
 import argparse
 import hashlib
+import json
 import re
 from pathlib import Path
 from urllib.parse import unquote
@@ -9,6 +10,20 @@ ROOT = Path(__file__).resolve().parents[2]
 WIKI = ROOT / "wiki"
 START = "<!-- BEGIN GENERATED WIKI CATALOG -->"
 END = "<!-- END GENERATED WIKI CATALOG -->"
+RECOVERED = ROOT / "research/audit-repairs-2026-10-08/historical-links.json"
+
+
+def recovery_target(source, target):
+    """Resolve only explicitly recorded historical evidence with a matching hash."""
+    if not RECOVERED.exists():
+        return None
+    entries = json.loads(RECOVERED.read_text(encoding="utf-8"))
+    for entry in entries:
+        if entry["page"] == source.relative_to(ROOT).as_posix() and entry["target"] == target:
+            recovered = ROOT / entry["recovered"]
+            if recovered.is_file() and hashlib.sha256(recovered.read_bytes()).hexdigest() == entry["sha256"]:
+                return recovered.resolve()
+    return None
 
 
 def replace_checked(path, text, expected):
@@ -87,6 +102,18 @@ def resolve(source, target, by_name):
     matches = by_name.get(target, []) if "/" not in target and "\\" not in target else []
     if len(matches) == 1:
         return True, matches[0].resolve()
+    if matches:
+        return False, None
+    recovered = recovery_target(source, target)
+    if recovered:
+        return True, recovered
+    # Native automemory lives outside the Obsidian vault. Resolve actual files,
+    # never invent a wiki page or accept a name solely because it says 'memory'.
+    if "/" not in target and "\\" not in target:
+        project_key = str(ROOT.resolve()).replace(":", "-").replace("\\", "-").replace("/", "-")
+        memory = Path.home() / ".claude/projects" / project_key / "memory" / (target + ".md")
+        if memory.is_file():
+            return True, memory.resolve()
     return False, None
 
 
@@ -95,6 +122,10 @@ def lint(pages):
     for area in ("wiki", "corpus", "context", "references", "decisions", "students", "brainstorms", "research", "system/schema"):
         for path in (ROOT / area).rglob("*.md"):
             by_name.setdefault(path.stem, []).append(path)
+    # System records such as the machine profile live directly under system/.
+    # Avoid indexing dependency/runtime trees merely to recover those records.
+    for path in (ROOT / "system").glob("*.md"):
+        by_name.setdefault(path.stem, []).append(path)
     inbound = set()
     issues = []
     for page in pages:
@@ -103,6 +134,7 @@ def lint(pages):
             continue
         # The index is a directory, so its links don't prove conceptual connectivity.
         content = re.sub(r"```.*?```", "", text, flags=re.S)
+        content = re.sub(r"`+[^`\n]*`+", "", content)
         targets = re.findall(r"\[\[([^\]|]+)(?:\|[^\]]*)?\]\]", content)
         targets += re.findall(r"(?<!!)\[[^\]\n]+\]\(([^\n)]+)\)", content)
         for target in targets:

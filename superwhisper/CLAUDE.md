@@ -8,7 +8,7 @@ This folder is the source of truth for Superwhisper on the Windows laptop. Edit 
 |---|---|
 | `vocabulary.md` | The short hand-listed hint list (~40). Exactly what is sent; nothing is added automatically. One stub note per term in `vocabulary/`. |
 | `replacements.md` | Heard → wanted table. Deterministic, case-insensitive. This is where mis-hearings go. |
-| `shared.md` | The glossary and house rules every AI mode gets. `sync.py` appends it to each mode's prompt, before its examples. Edit once, every mode updates (2026-09-26). Voice-only modes have no AI step and are untouched. |
+| `shared.md` | The glossary and house rules every AI mode gets. `sync.py` prepends its step-zero block and appends its house rules/glossary before examples. Edit once, every mode updates (2026-09-26). Voice-only modes have no AI step and are untouched. |
 | `modes/<key>.md` | One mode each: frontmatter is the config, body is the prompt, `## Examples` are appended to the prompt text (see rule 7). |
 | `sw.py` | The terminal CLI (`sw search / last / stats / add / vocab / rules / export / scan / sync / mode`). Superwhisper's own CLI is macOS-only, so this does the same jobs against the same local files. Launcher: `dev/tools/bin/sw.cmd`, on PATH. |
 | `sync.py` | Pushes all of the above into the app. `--check` shows the diff without writing. Backs up first. |
@@ -27,7 +27,7 @@ Raw evidence (docs crawl, community pages, searches) is in `raw/sources/superwhi
 ## Rules that cost a session to learn
 
 1. **The Claude Desktop shell is sandboxed.** Writes to `%LOCALAPPDATA%` are redirected into `AppData\Local\Packages\Claude_...\LocalCache\`. Superwhisper never sees them, and reads look "verified" because you read your own shadow copy. `sync.py` writes through `\\localhost\C$\...`, which bypasses this. Use that path for any manual read too.
-2. **Never launch Superwhisper from this shell.** It spawns a sandboxed second instance whose tray icon and settings window do not work. Ask Joshua to quit from the tray and reopen. If it must be done headlessly, use a Task Scheduler task (`Register-ScheduledTask` + `Start-ScheduledTask`), which runs outside the sandbox.
+2. **Never launch Superwhisper directly from an agent shell.** It can spawn a second instance whose tray icon and settings window do not work. Ask Joshua to quit from the tray and reopen. If it must be done headlessly, use a Task Scheduler task (`Register-ScheduledTask` + `Start-ScheduledTask`), which runs outside the agent process.
 3. **The app reads config only at launch.** A sync is not live until the app restarts. Tell him every time.
 4. **Settings window.** Closing it hides it; relaunching the exe does not bring it back. Open it with `superwhisper://settings` (the "Superwhisper Settings" shortcut on his Desktop does this) or the tray icon.
 5. **Model IDs.** The picker in the app is the only truthful list; the website and docs lag it. Proven by recordings: `sv-1` S1-Voice, `sl-1` S1-Language, `sw-claude-4p5-sonnet` Sonnet 4.5, `claude-sonnet-5` Sonnet 5 (newer models use plain IDs without the `sw-` prefix). To learn a new ID: Joshua picks it in the app, then read `modes/<key>.json` `languageModelID` and the latest `recording.language_model_key` in the sqlite. Never assert what is or is not offered without one of those two.
@@ -51,7 +51,9 @@ Raw evidence (docs crawl, community pages, searches) is in `raw/sources/superwhi
 
 Exe: `C:\Users\Joshu\AppData\Local\superwhisper\Superwhisper.exe` (reinstalled there 2026-09-11; the old copy under the Claude package folder is dead weight).
 
-## Mode set (2026-09-11)
+## Configured mode set (verified from local mode files 2026-10-08)
+
+This table describes the source configuration. App-loaded state still requires rule 7 verification.
 
 | Mode | Model | Use |
 |---|---|---|

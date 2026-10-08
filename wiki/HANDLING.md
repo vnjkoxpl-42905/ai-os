@@ -1,7 +1,7 @@
 ---
 type: operating-layer
 subject: Personal-data handling
-updated: 2026-07-17
+updated: 2026-10-08
 aliases: []
 ---
 
@@ -9,12 +9,12 @@ aliases: []
 
 ## The model
 
-- **Secrets = `.env` + `.gitignore`, and nothing else.** API keys live in the root `.env`; `.gitignore` keeps it out of Git. There is no `private/` tier, no macOS Keychain, no encrypted vault — the old `records.sparsebundle` design is dead, not deferred (decided 2026-07-17).
-- **Passwords, bank/card data, and government IDs are out of scope for this OS entirely.** Joshua keeps them outside it. Never ask him to paste one, never store one, never write one to `.env`.
-- **Everything else is ordinary local-only working material** and may live in this repository: names, emails, schedules, application essays, score reports, profiles, session transcripts and teaching notes, correspondence, and shareable `buy.stripe.com` payment links. Classify by what the content *is*, never by a filename.
+- **Secrets = `.env` + `.gitignore`, and nothing else.** API keys, passwords and bank/account information live in the root `.env`; `.gitignore` keeps it out of Git. There is no `private/` tier, no macOS Keychain, no encrypted vault — the old `records.sparsebundle` design is dead, not deferred (decided 2026-07-17).
+- **Government IDs stay outside this OS.** Credentials and bank/account information belong only in the git-ignored root `.env`, never in notes, commits or chat. Follow the current root instructions when a transfer is authorized; the encrypted cloud package has a separate documented scope and does not revive the retired records bundle.
+- **Everything else is ordinary working material** and may live in this repository: names, emails, schedules, application essays, score reports, profiles, session transcripts and teaching notes, correspondence, and shareable `buy.stripe.com` payment links. Classify by what the content *is*, never by a filename.
 - **Safety comes from `.claude/settings.json`** (allow/deny tool lists) and scoped API keys, not from prompt instructions. Jay 2 acts under its own credentials and never impersonates Joshua.
 
-As of 2026-07-17 this OS stores no secret material beyond API keys in the root `.env`. The earlier design's private stores (`private/records.sparsebundle`, migration manifests, `private/records/`, `private/config/`) were all verified empty and removed. Do not recreate them.
+The 2026-07-17 design initially described API keys only. The current root policy explicitly includes credentials and bank/account information in the git-ignored `.env`. This is a documentation reconciliation, not a change to storage or a claim that particular secrets are present. The earlier design's private stores (`private/records.sparsebundle`, migration manifests, `private/records/`, `private/config/`) were all verified empty and removed. Do not recreate them.
 
 ## Student data
 
@@ -26,6 +26,6 @@ The tradeoff is accepted deliberately: **outer Git history retains student data 
 
 1. A remote exists and is enabled for this repository.
 2. Scan the complete outer worktree and Git history, every retained nested repository and its history, and ignored runtime paths.
-3. Confirm `.env`, logs, locks, and `projects/lsatu/` are untracked, and that no credential exists in reachable or dangling Git objects.
+3. Confirm `.env`, logs, locks, and the sibling `../ai-os-projects/lsatu/` repository are untracked, and that no credential exists in reachable or dangling Git objects.
 4. **Scrub student data.** Student material — names, transcripts, correspondence, payment-link pages — is tracked by design and is therefore in history permanently. It is not publishable as-is. Decide per destination whether it is redacted, filtered out of history, or whether the remote is private enough to carry it. Skipping this step publishes every student's working record.
 5. This checklist is advisory. Joshua has enabled the GitHub remote and pushes.

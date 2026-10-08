@@ -8,7 +8,9 @@ This folder is the source of truth for Superwhisper on the Windows laptop. Edit 
 |---|---|
 | `vocabulary.md` | The short hand-listed hint list (~40). Exactly what is sent; nothing is added automatically. One stub note per term in `vocabulary/`. |
 | `replacements.md` | Heard → wanted table. Deterministic, case-insensitive. This is where mis-hearings go. |
+| `shared.md` | The glossary and house rules every AI mode gets. `sync.py` prepends its step-zero block and appends its house rules/glossary before examples. Edit once, every mode updates (2026-09-26). Voice-only modes have no AI step and are untouched. |
 | `modes/<key>.md` | One mode each: frontmatter is the config, body is the prompt, `## Examples` are appended to the prompt text (see rule 7). |
+| `sw.py` | The terminal CLI (`sw search / last / stats / add / vocab / rules / export / scan / sync / mode`). Superwhisper's own CLI is macOS-only, so this does the same jobs against the same local files. Launcher: `dev/tools/bin/sw.cmd`, on PATH. |
 | `sync.py` | Pushes all of the above into the app. `--check` shows the diff without writing. Backs up first. |
 | `scan.py` | Scans every transcript for mis-heard known terms, rules that stopped firing, and new candidates. Writes `research/SCAN-<date>.md`. |
 | `research/` | The 2026-09-11 customization report, the source list, and dated scans. Read the report before changing a prompt. |
@@ -24,7 +26,7 @@ Raw evidence (docs crawl, community pages, searches) is in `raw/sources/superwhi
 
 ## Rules that cost a session to learn
 
-1. **Check the active shell boundary before writing app data.** Claude Desktop redirects writes to `%LOCALAPPDATA%` into `AppData\Local\Packages\Claude_...\LocalCache\`; Codex may not. `sync.py` already uses `\\localhost\C$\...` so both runtimes reach the real app data. Use that path for any manual read or write too.
+1. **Check the active shell boundary before writing app data.** Claude Desktop redirects writes to `%LOCALAPPDATA%` into `AppData\Local\Packages\Claude_...\LocalCache\`; Codex may not. `sync.py` uses `\\localhost\C$\...` so both runtimes reach real app data. Use that path for manual reads too.
 2. **Never launch Superwhisper directly from an agent shell.** It can spawn a second instance whose tray icon and settings window do not work. Ask Joshua to quit from the tray and reopen. If it must be done headlessly, use a Task Scheduler task (`Register-ScheduledTask` + `Start-ScheduledTask`), which runs outside the agent process.
 3. **The app reads config only at launch.** A sync is not live until the app restarts. Tell him every time.
 4. **Settings window.** Closing it hides it; relaunching the exe does not bring it back. Open it with `superwhisper://settings` (the "Superwhisper Settings" shortcut on his Desktop does this) or the tray icon.
@@ -35,6 +37,13 @@ Raw evidence (docs crawl, community pages, searches) is in `raw/sources/superwhi
 
 9. **No sync to the iPhone yet (checked 2026-09-12).** FileSync is Mac-only; the Windows docs page (`/docs/get-started/windows`) lists it as "still in development for Windows", the iOS page says modes and vocabulary "don't sync from your Mac or PC yet", and the Windows app resets `filesyncEnabled` to false at launch. The phone is kept in step by paste: the Super mode instructions and the vocabulary live on the artifact "Superwhisper on iPhone" (https://claude.ai/code/artifact/63400afd-4f6c-4139-ba82-461de066d544); republish it whenever `modes/super.md` or `vocabulary.md` changes. Re-check the Windows page after each app update.
 
+10. **Official CLI + MCP exist, Mac-only (checked 2026-09-12).** `superwhisper` CLI (search/export/stats/vocab/snippets/mcp), announced 2026-07-16, released at github.com/superultrainc/superwhisper-cli-release; v0.1.0 ships only a macOS universal binary and the install script refuses non-Darwin. The Claude Code plugin (superultrainc/superwhisper-claude-code) is also Mac 2.13+. On this PC, `sync.py` is the equivalent of `superwhisper vocab`. Re-check the release assets after each Windows app update; when a Windows binary lands, add `superwhisper mcp` to Claude Code.
+
+11. **Replacements are substring matches, not word matches (proved 2026-09-23).** A rule whose heard side can sit inside a longer word will corrupt that word: `cli` turned "click" into "CLIck" 48 times, `u i` turned "you install" into "yoUInstall", `firecraw` matched inside "firecrawl" and produced "Firecrawll". Never add a bare acronym or a fragment of a longer word. Casing belongs in the mode glossary, which Sonnet 5 applies with judgment. `scan.py` section 2b lists any rule that is currently doing this; it must stay empty.
+12. **`scan.py` section 2 reads the post-replacement `result`.** Testing the raw transcript makes every rule look broken, because the raw is by definition what the voice model heard before any rule ran (that false positive stood from 2026-09-11 to 2026-09-23).
+
+13. **One glossary, every mode.** Vocabulary and replacements were always global (they live in `settings.json` and run before any mode sees the text). The mode *prompt* was not: until 2026-09-26 only Super had the glossary and the house rules. `shared.md` now holds them and `sync.py` appends it to every mode with a language model. Add a term there, not in one mode.
+
 ## Where the app keeps things
 
 `C:\Users\Joshu\AppData\Local\com.superwhisper.app\`
@@ -42,27 +51,29 @@ Raw evidence (docs crawl, community pages, searches) is in `raw/sources/superwhi
 
 Exe: `C:\Users\Joshu\AppData\Local\superwhisper\Superwhisper.exe` (reinstalled there 2026-09-11; the old copy under the Claude package folder is dead weight).
 
-## Mode set (2026-09-11)
+## Configured mode set (verified from local mode files 2026-10-08)
+
+This table describes the source configuration. App-loaded state still requires rule 7 verification.
 
 | Mode | Model | Use |
 |---|---|---|
-| Claude Code | S1-Language | Instructions to an agent. Keeps every detail, never answers. |
-| Student Email | S1-Language | Finished email in his voice, per `wiki/teaching-voice.md`. |
+| Claude Code | Sonnet 5 | Instructions to an agent. Keeps every detail, never answers. |
+| Student Email | Sonnet 5 | Finished email in his voice, per `wiki/teaching-voice.md`. |
 | Student Message | S1-Language | Short in-platform message or drill feedback. Coaching register. |
 | Lesson Notes | S1-Language | Spoken teaching → notes with the reasoning intact. |
 | Vault Note | S1-Language | Thinking out loud → Obsidian note, wiki-links, absolute dates. |
 | Consult Notes | S1-Language | Post-consultation debrief → structured record + follow-ups. |
-| Rewrite | S1-Language | Select text, say what to do to it. |
+| Rewrite | Sonnet 5 | Select text, say what to do to it. |
 | Message | S1-Language | Texts and DMs, light cleanup. |
 | Verbatim | none | Raw transcript. |
 | Session | none | Record a live session, nothing pasted. |
-| Super | S1-Language | His original generic mode, kept as fallback. |
+| Super | Sonnet 5 | His original generic mode, kept as fallback. |
 
 Switch with Ctrl+Shift+M, or `superwhisper://mode?key=<key>`. Per-mode hotkeys are set in the app (Modes → mode → Keyboard shortcut) and are not managed here yet.
 
 ## Skill
 
-The `superwhisper` skill is the runbook: word/correction → variants → `sync.py --restart`; modes; `scan.py`. Claude uses `skills/claude/superwhisper/SKILL.md`; Codex uses its activated Codex counterpart. Invoke it for any Superwhisper request.
+The `superwhisper` skill is the runbook for both runtimes: `skills/claude/superwhisper/SKILL.md` for Claude and `skills/codex/superwhisper/SKILL.md` for Codex, activated in their project skill folders. It covers word/correction → variants → `sync.py --restart`; modes; `scan.py`. Invoke it for any Superwhisper request.
 
 ## Related
 

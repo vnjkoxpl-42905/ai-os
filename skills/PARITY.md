@@ -119,3 +119,17 @@ Supersedes the 2026-09-16 note above. The sibling-file workaround existed only b
 ## 2026-09-30: validated runtime name pairs
 
 Machine-readable equivalents live in `skills/runtime-pairs.toml`. The validator requires both sides of each pair to exist before treating their distinct names as intentional. Activation relocation is compared by resolved existing link destinations, rather than raw Markdown path spelling. Archived project support folders without SKILL.md stay preserved and appear separately from invokable skills in the generated index.
+
+
+## 2026-10-08: repaired activation drift and public review triggers
+
+- `pre-consultation-check-in` is Codex-only: its installed Windows Task Scheduler automation and observed standing authorization are maintained in the Codex package. Claude can query the shared ledger but does not own a second scheduling implementation. The complete reusable package is catalogued; runtime logs are not part of the catalog.
+- Kling 0.2.0 is retained and mirrored into both catalogs; older 0.1.3 content is superseded. Codex GWS activation includes the catalogued Windows upload-directory workaround.
+- From Codex use `grill-me-claude` for an interview followed by independent review, `grill-with-docs-claude` for persistent context/glossary/ADRs, `claude-review` for an existing work product, and `claude-build` for delegated implementation. From Claude use the corresponding `*-codex` triggers. Generic `grilling` is the interview without cross-provider review; `grill-with-docs` combines that interview with domain modeling. Codex legacy `grill-me-codex` and `grill-with-docs-codex` remain explicit compatibility wrappers to their Claude-review counterparts.
+
+
+### Claudex updater overlays and bounded global reconciliation
+
+2026-10-08: restored the separate `ai-os-projects/claudex-loop` clone from the declared chaseai-yt upstream, verified commit `8cf5e2c1771c5151d90c12642391d0ba8fa71b0e`. Codex Windows runner/runtime fixes and runner fixtures are explicit support overlays in `system/skill-overrides/claudex/support/codex/claudex-loop`; updated Claude-build troubleshooting remains an entrypoint overlay. The updater preserves verified Codex compatibility wrappers instead of retiring them. It completed without conflicts, then a second dry-run was a no-op. This repairs source maintenance but does not prove a future scheduled due execution.
+
+Global query/lint copies contained obsolete generic wiki instructions and were reconciled to current root-resolving schema rules. GWS newer metadata 0.22.5 and the verified Windows upload workaround are preserved together across existing copies. Global ingest uses the global `lsat-session-lesson` route while this project uses `post-session-recap`: that contextual route difference is retained rather than blindly replacing one. Claudex runtime direction differences remain intentional. Duplicate-name precedence still requires live runtime discovery evidence; static presence is not that evidence. No whole-global-library equivalence claim is made.

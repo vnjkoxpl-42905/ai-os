@@ -7,6 +7,7 @@ import pathlib
 import shutil
 import subprocess
 import uuid
+import tempfile
 
 VAULT = pathlib.Path(__file__).resolve().parents[2]
 HOME = pathlib.Path.home()
@@ -109,6 +110,7 @@ def main():
     sources = [(name, REPO / group / name, REPO / group)
                for name, group in SKILLS.items()]
     sources.extend((name, OVERRIDES / name, OVERRIDES) for name in ALIASES)
+    overlays = tempfile.TemporaryDirectory(prefix="claudex-overlays-")
     for name, source, source_root in sources:
         if source.is_symlink() or getattr(source, 'is_junction', lambda: False)():
             raise RuntimeError(f'Linked upstream skill requires manual review: {source}')
@@ -117,8 +119,15 @@ def main():
             raise RuntimeError(f'Missing upstream skill: {name}')
         for root in ROOTS:
             runtime = 'claude' if root in CLAUDE_ROOTS else 'codex'
+            support = OVERRIDES / 'support' / runtime / name
+            adapted_source = source
+            if support.is_dir():
+                adapted_source = pathlib.Path(overlays.name) / runtime / name
+                if not adapted_source.exists():
+                    shutil.copytree(source, adapted_source)
+                    shutil.copytree(support, adapted_source, dirs_exist_ok=True)
             skill_text = entrypoint(source, name, runtime)
-            new = digest(source, skill_text)
+            new = digest(adapted_source, skill_text)
             installed_name = CODEX_NAMES.get(name, name) if runtime == 'codex' else name
             target = root / installed_name
             key = str(target)
@@ -135,7 +144,7 @@ def main():
                 if not args.dry_run:
                     root.mkdir(parents=True, exist_ok=True)
                     stage = root / ('.claudex-stage-' + name + '-' + stamp)
-                    shutil.copytree(source, stage, ignore=shutil.ignore_patterns('__pycache__', '*.pyc'))
+                    shutil.copytree(adapted_source, stage, ignore=shutil.ignore_patterns('__pycache__', '*.pyc'))
                     (stage / 'SKILL.md').write_text(skill_text, encoding='utf-8')
                     if digest(stage) != new or (digest(target) if target.exists() else None) != old:
                         raise RuntimeError(f'Concurrent modification or staging mismatch: {target}')
@@ -153,6 +162,11 @@ def main():
             if installed_name != name:
                 obsolete = root / name
                 obsolete_key = str(obsolete)
+                if obsolete.exists() and name in ('grill-me-codex', 'grill-with-docs-codex', 'codex-review', 'codex-build'):
+                    wrapper = (obsolete / 'SKILL.md').read_text(encoding='utf-8')
+                    if f'../{installed_name}/SKILL.md' in wrapper and 'Claude independently reviews' in wrapper:
+                        state['copies'][obsolete_key] = digest(obsolete)
+                        continue
                 if obsolete.exists():
                     obsolete_hash = digest(obsolete)
                     if obsolete_hash != state['copies'].get(obsolete_key):
