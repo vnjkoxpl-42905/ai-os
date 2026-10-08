@@ -2455,3 +2455,9 @@ Joshua explicitly requested undoing all changes from the preceding ingestion tur
 - Created [organized tool catalog](../research/toolchain-2026-10-08/catalog.md) covering the preceding broad tool list, separating verified existing tools and Codex-bundled libraries from candidates.
 - Preserved alternatives with distinct capabilities; excluded paid Beyond Compare from free candidates and separated conditional cloud/licensing cases. Superwhisper already exists; batch transcription and alignment alternatives remain candidates for distinct needs.
 - Inventory checked executable discovery, installed application registrations and two Python environments. Project-local dependency trees were not exhaustively inspected. No tools were installed or downloaded, and no paid service was invoked for this inventory.
+
+## [2026-10-08] system | Download-only priority list
+
+- Created [189 ranked download candidates](../research/toolchain-2026-10-08/download-priority.md), excluding verified installed/bundled tools, R, paid default products and gaming per Joshua's corrections.
+- Expanded non-work coverage to media, personal collections, reading, creativity, accessibility, hardware inspection and Windows convenience. Rechecked installed application registrations, PATH, common locations and current-user Store packages for broad new desktop candidates; none detected. Portable/custom folders and all project environments remain outside the exhaustive check.
+- Official free/local links included; no installation, purchase or configuration change performed.

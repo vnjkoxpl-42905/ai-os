@@ -38,7 +38,7 @@
       "claude_instruction": 1,
       "codex_instruction": 1,
       "claude_memory_files": 64,
-      "codex_memory_records": 14
+      "codex_memory_records": 16
     },
     "source_paths": {
       "agents_skills": "C:\\Users\\Joshu\\.agents\\skills",
@@ -1403,8 +1403,13 @@
     ]
   },
   "conversation_export": {
-    "session_count": 508,
-    "errors": [],
+    "session_count": 509,
+    "errors": [
+      {
+        "source": "C:\\Users\\Joshu\\.codex\\sessions\\2026\\10\\08\\rollout-2026-10-08T05-18-19-01a11ace-6fed-79a1-9980-1db7eddcb584.jsonl",
+        "error": "no supported conversation content"
+      }
+    ],
     "snapshot_omitted_count": 0
   },
   "encrypted_original_context": {
