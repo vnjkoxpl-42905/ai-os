@@ -1,7 +1,7 @@
 {
   "kind": "reviewed transformation receipt",
   "date": "2026-10-08",
-  "source_count": 46,
+  "source_count": 47,
   "sources": [
     {
       "path": "raw/sources/old-obsidian-vault-2026-10-07/Clippings/loophole-online/training-camp/learn/How to Use Law Hub in a Way That Doesnt Hurt Your Prep • LO.md",
@@ -232,6 +232,11 @@
       "path": "raw/sources/old-obsidian-vault-2026-10-07/Objection Mini-Quiz.md",
       "sha256": "e3a49c41e5a30387f6e1c71b9a32139787bb09b8b889a77d0b2c1f6597deca0e",
       "edition": "corpus/loophole-online/worked-examples.generated.md"
+    },
+    {
+      "path": "raw/sources/old-obsidian-vault-2026-10-07/Conditional Practice • LO.md",
+      "sha256": "fd1c16e2b84aaa9578ba382f62d29435c0e9edb1365b1a996a8d84530a49ebce",
+      "edition": "corpus/loophole-online/worked-examples.generated.md"
     }
   ],
   "outputs": [
@@ -249,7 +254,7 @@
     },
     {
       "path": "corpus/loophole-online/worked-examples.generated.md",
-      "sha256": "6da158201cf20ae7f6b110c3e95b3181c8f432d5930caffe931e7fd48abad1a0"
+      "sha256": "faa3d492ad700c9940f5be89fade4caaea1d792136ecb77583a28f7a0dca44c5"
     }
   ],
   "transformations": [
@@ -259,11 +264,12 @@
     "Unavailable local image wikilinks become explicit missing-attachment labels; no diagrams or media are reconstructed.",
     "Mini quiz repeated question bodies consolidate into the chapter examples; preserve derivative numbering and answer key separately.",
     "Q12 nutrition paragraph is a separate unidentified example, not a continuation of the antilock-brake question.",
-    "Per-source use boundaries mark unsupported claims, currentness limits and conflicts with approved doctrine."
+    "Per-source use boundaries mark unsupported claims, currentness limits and conflicts with approved doctrine.",
+    "Conditional Practice identical repeated Question 2 consolidated into one explicitly incomplete fragment; choices, key and explanation remain missing. Basic diagramming page-113 pointer retained in method library without reconstructed demonstration."
   ],
   "verification": {
     "source_hashes_match": true,
-    "local_links_checked": 170,
+    "local_links_checked": 176,
     "errors": []
   },
   "update_rule": "Source archive is immutable. Changes to an edition require verifying every listed source SHA-256, checking the current output SHA-256 against this receipt before write (compare-and-swap), rerunning full content and link review, and replacing the output hash in a reviewed receipt. This receipt describes the reviewed final transformations; it is not a promise that a generic text extractor can safely reproduce editorial annotations."

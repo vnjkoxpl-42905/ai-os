@@ -136,3 +136,9 @@ Sources: [historical plan](../../raw/sources/old-obsidian-vault-2026-10-07/PLAN.
 - [Workouts and routines](review-workouts.generated.md): captured ordered protocols, prerequisites, source targets and review advice.
 - [Worked examples](worked-examples.generated.md): freeway sampling, peat analogy, antilock-brake resolution, conditional forecast and kitten objection examples.
 - [Every teaching-file coverage record](../../research/obsidian-vault-comparison/2026-10-07/teaching-active-coverage.md): active destination and exclusions for each original teaching file.
+
+## Keep missing demonstration pointers explicit
+
+The Basic Conditionals capture points to *The Loophole*, page 113, and asks the learner to attempt the left-side problems before watching the explanation. The actual problems and explanation were not captured. Retain this retrieval pointer without reconstructing the missing diagrams; approved conditional teaching remains the authority.
+
+Source: [Basic Conditionals capture](<../../raw/sources/old-obsidian-vault-2026-10-07/Clippings/loophole-online/training-camp/learn/How to Diagram Basic Conditionals • LO.md>). The [incomplete Conditional Practice question](worked-examples.generated.md#conditional-practice-incomplete-captured-question) preserves readable question text separately without inventing choices or a key.

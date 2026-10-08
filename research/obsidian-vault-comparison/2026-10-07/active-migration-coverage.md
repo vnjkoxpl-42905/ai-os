@@ -26,12 +26,12 @@ Paths in the first column are relative to the old vault. “Active” means usef
 
 | Source | Disposition and reason |
 |---|---|
-| `AGENTS.md` | Historical router only. Alex persona, Mac paths, no-remote assumptions and retired restrictions conflict with current instructions. No missing verified biography found. |
-| `CLAUDE.md` | Historical router only. Old graph/tool/access assumptions cannot establish present Windows configuration. |
-| `GEMINI.md` | Historical runtime instructions only. Its useful student-record preservation lesson is already covered by current scoped rules. |
-| `connections.md` | Historical operational snapshot only. Obsolete browser/MCP routes and dated access claims are not current credentials or live-system state. |
-| `CONTEXT.md` | Existing glossary mostly overlaps. Historical 7Sage baseline/update/profile vocabulary remains in root review; pipeline and profile schema unverified. Conflicting $45/hour versus $45/70-minute statements remain unresolved, not overwritten. |
-| `PLAN.md` | Historical conditional cheat-sheet product reasoning; later curriculum and decisions govern current content. No old status promoted. |
+| `AGENTS.md` | Useful routing, task, evidence and maintenance patterns are adapted in migrated methods and compared with current skills below. The original router is not activated: Alex persona, Mac paths, no-remote assumptions and retired restrictions conflict with current instructions. No missing verified biography found. |
+| `CLAUDE.md` | Useful workflow descriptions and source-retrieval lessons are adapted in migrated methods. The original router is not activated: old graph/tool/access assumptions cannot establish present Windows configuration, and many referenced implementations are absent from the source vault. |
+| `GEMINI.md` | Useful record-preservation and evidence lessons are retained, largely already covered by current scoped rules. Historical runtime restrictions and incident-specific claims do not become present instructions or student state. |
+| `connections.md` | Current registry already represents its general mechanism/auth/freshness model. Useful retrieval lessons are retained; obsolete browser/MCP routes and dated access claims are not current credentials or live-system state. |
+| `CONTEXT.md` | Existing glossary mostly overlaps; the useful baseline/delta/current-profile distinction is retained in migrated methods as a historical schema idea. Pipeline and profile implementation remain unverified. Conflicting $45/hour versus $45/70-minute statements remain unresolved, not overwritten. |
+| `PLAN.md` | Useful reference-versus-lesson and lookup-design reasoning is retained in migrated methods as a design candidate. Later curriculum and decisions govern current content; no old artifact, completion or publication state is promoted. |
 | `PLAN-REVIEW-LOG.md` | Concrete quality lessons now active in [migrated methods](../../../references/ai-workspace/migrated-source-methods.md): logical equivalence, invented example terms, source attribution and table/prose consistency. Rejected findings and deferred redesign choices remain historical. |
 | `No file.md` | Teaching-side annotation idea is now explicitly retained in [migrated methods](../../../references/ai-workspace/migrated-source-methods.md) as an unimplemented product idea. Its absent image and unspecified interactions are gaps; no feature design invented. |
 | `Untitled.md` | Generic audit-to-plan prompt retained as scratch. No audit supplied, so no embedded instruction executed or plan fabricated. |
@@ -42,7 +42,7 @@ Paths in the first column are relative to the old vault. “Active” means usef
 | `.obsidian/app.json` | Old empty settings object, no substantive configuration to adopt. |
 | `.obsidian/appearance.json` | Old native-menu preference, no demonstrated practical improvement to current setup. Not applied. |
 | `.obsidian/core-plugins.json` | Old plugin toggles including Sync. Does not prove remote content completeness or authorize reconnecting current vault. Not applied. |
-| `.obsidian/graph.json` | Old display settings; not teaching information. Current graph work remains deferred. |
+| `.obsidian/graph.json` | Old graph display and force-layout preferences, with no demonstrated improvement for the current vault. Applying them would change the current visual setup; graph work remains deferred. |
 | `.obsidian/workspace.json` | Old tabs/recent-file layout, not knowledge. Applying it would replace current working layout. |
 
 ## Empty or duplicate root originals already excluded from working intake
