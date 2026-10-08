@@ -1,4 +1,6 @@
-# Resume the original Claude sequence after the subscription reset
+# Historical Claude continuation, superseded by Codex
+
+**Superseded on 2026-10-08:** Joshua selected Codex for this method. Do not resume these Claude commands for the current task. See [the authorized Codex prompt variant](CODEX-PROMPTS.md). The quota event below is historical evidence, not a blocker to the Codex workflow.
 
 The original Prompt 3 was passed unchanged to the authenticated Claude Code Pro session on 2026-10-08. Claude returned an API 429 subscription session-limit error, with reset time **2026-10-08 12:40 America/Toronto**. It produced no seven-rule answer. No alternative paid API or credential was used.
 

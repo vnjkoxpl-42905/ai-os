@@ -2582,3 +2582,11 @@ Completed the preserved-source compilation: 79 writings, 17 saved transcript tex
 The project hook has 26 passing tests; the optional receipt helper has 20. An isolated native probe directly recorded the exact stop block, execution and recovery. Raw sources remain unchanged against the 1,560-file baseline. Original native Prompt 3 failed with Claude Pro HTTP 429, reporting reset at 2026-10-08 12:40 America/Toronto; original native Prompts 4 through 6 remain pending. No task status, source bytes, credentials or paid collection were changed. Existing X collection is the authorized acquisition exception.
 
 Evidence: [compilation audit](../research/karpathy-brain-2026-10-08/COMPILATION-AUDIT.md), [seven rules](karpathy/rules.md), [sequence compliance](../research/karpathy-video-2026-10-08/VERBATIM-COMPLIANCE.md), [native resume](../research/karpathy-video-2026-10-08/NATIVE-RESUME.md). Earlier adapted tokenizer acceptance remains separate from literal Prompt 6.
+
+## [2026-10-08] system | Session wrapup: run the Karpathy method in Codex
+
+Joshua selected Codex instead of Claude, superseding the historical quota-blocked replay requirement. Preserved original prompts and recorded the [authorized variant](../research/karpathy-video-2026-10-08/CODEX-PROMPTS.md). Codex agent/skill copies retain hot-first retrieval, five-page cap, citations, grading and report ending.
+
+A fresh external tokenizer lesson ran with initial failures preserved, actual decoder repair and seven passing test methods; current-file receipts and demo outputs are recorded in [Codex acceptance](../research/karpathy-brain-2026-10-08/CODEX-TOKENIZER-ACCEPTANCE.md). The current chat exercised generic-worker fallback rather than native custom-role discovery. A separate Codex project hook adapter passed 25 tests and independent review. Its six definitions require mandatory user `/hooks` review/trust before activation; [hook acceptance](../research/karpathy-brain-2026-10-08/CODEX-STOP-ACCEPTANCE.md) records that missing native verification. No trust bypass occurred.
+
+All 1,560 source files are unchanged. Task statuses and global hooks remain unchanged. [Current execution](../research/karpathy-brain-2026-10-08/VIDEO-PROMPT-EXECUTION.md) owns remaining activation, not the superseded Claude resume instructions.

@@ -270,3 +270,7 @@ Joshua explicitly requested the live IntroLR Lessons index and course sidebar as
 ## 2026-10-07 | Automatic portable workspace context in private GitHub and Drive
 
 Joshua requested automatic synchronization of AI OS and every project under the sibling ai-os-projects directory, including Claude Code and Codex conversation context, skills and memory. He explicitly authorized credential transfer. Implementation uses separate private snapshot branches and verified Drive archives, with credentials inside an authenticated encrypted package and the unlock key provisioned separately. Existing working branches and production deployment remain separate. Native cloud conversations, installed tools, browser sessions and machine-bound authentication are not filesystem replicas; do not promise identical environments or conflict-free concurrent edits. [Authoritative operating reference](../setup/github-sync/README.md).
+
+## 2026-10-08 | Run the Karpathy video method in Codex
+
+Joshua explicitly selected Codex instead of Claude for the Karpathy brain method. Preserve the original video prompts and saved source evidence, and adapt the runtime-specific agent, teaching skill and execution gate to Codex. Existing X captures remain the accepted acquisition input; no TwitterAPI.io key or recollection is required. This supersedes the requirement to resume the quota-blocked Claude replay. [Authorized prompt variant](../research/karpathy-video-2026-10-08/CODEX-PROMPTS.md). Native hook activation remains subject to Codex's actual hook trust controls and verification.

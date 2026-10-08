@@ -10,6 +10,8 @@ sources: [../../wiki/karpathy/rules.md, ../../wiki/sources/i-built-another-andre
 
 # Ask for a small explanation you can check
 
+Joshua selected **Codex** for this method on 2026-10-08. The original video prompts remain preserved; [the Codex variant](../../research/karpathy-video-2026-10-08/CODEX-PROMPTS.md) records the runtime substitution.
+
 The project `karpathy-teach` skill uses [seven reviewed rules](../../wiki/karpathy/rules.md) and the [Karpathy wiki](../../wiki/karpathy/index.md). It teaches a mechanism with a small example, states a prediction, runs the code, explains an isolated failure and fix, and grades the result. It is a method derived from public evidence, not a person or an endorsed replica.
 
 Example request:
@@ -28,8 +30,10 @@ Claude has a project Stop hook in `.claude/settings.json`, with a Karpathy Subag
 
 The earlier agent-only hook was an adaptation and has been replaced. Its optional Python helper `../ai-os-projects/karpathy-method-tools/run_gate.py` still produces stronger current-file execution receipts. The project hook also accepts ordinary runtime commands; command recognition is an audit aid, not proof of branch coverage or a malicious-process security boundary. There is no report-prefix escape from the literal run requirement.
 
-Codex uses the same teaching workflow but has no native Claude Stop hook. [Official Claude hook documentation](https://code.claude.com/docs/en/hooks), checked 2026-10-08, distinguishes project Stop and SubagentStop events.
+Codex uses its own event-based adapter, `../ai-os-projects/karpathy-method-tools/codex_stop.py`, configured in `.codex/hooks.json`. It is separate from the Claude transcript parser. [Codex hook acceptance](../../research/karpathy-brain-2026-10-08/CODEX-STOP-ACCEPTANCE.md) owns test scope and activation state. New hook definitions must be reviewed and trusted in the Codex CLI using `/hooks` before they run; project-directory trust alone is insufficient. [Official Codex hooks documentation](https://learn.chatgpt.com/docs/hooks), checked 2026-10-08. No trust bypass or fabricated trust is used. Until activated, the skill requires relevant execution and reviewed receipts.
+
+Start Codex in this AI OS directory, open `/hooks`, inspect the definitions from `.codex/hooks.json` and trust those project entries. A fresh session also discovers the new project agent. The current delegated teaching test applied its instructions through a generic worker because the active chat did not expose a newly registered `karpathy` role; that fallback is explicitly recorded.
 
 ## Check the actual stage, not the source count
 
-[Verbatim compliance](../../research/karpathy-video-2026-10-08/VERBATIM-COMPLIANCE.md) owns current sequence status. The [saved collection is compiled](../../research/karpathy-brain-2026-10-08/COMPILATION-AUDIT.md), with payload processing distinguished from semantic reading. Media fidelity and exhaustive X history remain unverified. The [native hook probe](../../research/karpathy-brain-2026-10-08/NATIVE-STOP-ACCEPTANCE.md) observed blocking and recovery. The original ordered Claude replay was blocked at Prompt 3 by the Pro subscription limit, reporting reset at 2026-10-08 12:40 America/Toronto; the literal tokenizer invocation is pending. Existing adapted tokenizer tests remain separate evidence. No change to Joshua's identity, teaching policy or vault structure is implied.
+[Verbatim compliance](../../research/karpathy-video-2026-10-08/VERBATIM-COMPLIANCE.md) preserves the original video sequence and historical Claude runs. [Current execution record](../../research/karpathy-brain-2026-10-08/VIDEO-PROMPT-EXECUTION.md) owns the authorized Codex stage status. The [saved collection is compiled](../../research/karpathy-brain-2026-10-08/COMPILATION-AUDIT.md), with payload processing distinguished from semantic reading. Media fidelity and exhaustive X history remain unverified. The historical Claude quota no longer blocks this Codex task. [Fresh Codex tokenizer acceptance](../../research/karpathy-brain-2026-10-08/CODEX-TOKENIZER-ACCEPTANCE.md) records actual execution and the chronological failure/fix. Hook tests are distinct from trusted native-hook acceptance. No change to Joshua's identity, teaching policy or vault structure is implied.

@@ -28,6 +28,6 @@ The [collected sources are compiled](../../research/karpathy-brain-2026-10-08/CO
 
 The configured teaching agent reads this page first, uses at most five wiki pages, cites source pages and applies all seven rules. The skill grades its answer before presentation. End with **What I ran**, **What came out**, **What I changed**. Teaching code belongs outside the vault in `ai-os-projects/karpathy-method-tools/examples/`.
 
-Claude's project hook has behavioral tests and a [native blocking/recovery probe](../../research/karpathy-brain-2026-10-08/NATIVE-STOP-ACCEPTANCE.md). Its original ordered replay hit the Pro session limit; the literal tokenizer invocation remains pending. Codex's workflow is not a native Claude hook.
+Joshua selected Codex for this method. The fresh [tokenizer lesson](../../research/karpathy-brain-2026-10-08/CODEX-TOKENIZER-ACCEPTANCE.md) passed seven tests with current-file receipts. The [Codex hook](../../research/karpathy-brain-2026-10-08/CODEX-STOP-ACCEPTANCE.md) passed 25 tests, but needs user review/trust through `/hooks` before native blocking is active. Generic-worker fallback was exercised; native custom-role discovery was not. Claude quota is historical.
 
 Use existing `ingest` for new sources. Preserve raw evidence. Foreign authors, payloads, caption errors and linked media retain their limits. [Index](index.md), [principles](principles.md), [methods](methods.md), [current status](../../research/karpathy-video-2026-10-08/VERBATIM-COMPLIANCE.md).
