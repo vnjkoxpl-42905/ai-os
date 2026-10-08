@@ -2444,3 +2444,8 @@ All100originalfiles mapped exactly once (59teaching plus41research/root/config).
 - Finding: expert evidence can support a tested teaching method through acquisition, compilation, supported rules, specialist packaging, execution evidence and representative trials. Existing wiki infrastructure already covers the evidence/compilation layers.
 - Verification: raw-guide links checked; source and archive hashes matched; generated catalog and structural lint refreshed. Primary Karpathy gist independently checked for wiki architecture. No runtime configuration, agents, skills or hooks installed.
 - Open: exact six on-screen prompts, actual agent/skill/hook code, primary rule quotations and demonstration reproduction remain unavailable or unverified. Local watch dependencies are missing; video and template pages could not be retrieved by the web tool.
+
+
+## [2026-10-08] system | Reverse the rejected Karpathy ingestion
+
+Joshua explicitly requested undoing all changes from the preceding ingestion turn before inspecting the actual video and its displayed prompts. Removed the newly created raw routing README, source summary, expert-teaching reference and clip archive; restored prior inbox/source README content; removed the added AI hub paragraph and curated index entries; regenerated the catalog to 48 pages. The original inbox clip remains unchanged, SHA-256 3c453f7be66ee3cf67cc63c4439c8bf477726c213a1aaa763f35e271e39a2d8c. The preceding ingest entry is historical and reversed, not active completed ingestion; its removed-output links are retained only because this ledger is append-only. Earlier vault migration, audit repairs and duplicate cleanup were preserved. No new ingestion or runtime implementation was performed in this rollback.

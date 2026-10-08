@@ -49,9 +49,6 @@ The brain runs three knowledge systems: **this wiki** (Joshua, the business, dec
 
 ## References (OS method / meta)
 
-- [Raw intake routing guide](../raw/README.md): content-based categories, evidence preservation and completion checks across AI, teaching and student intake.
-- [Expert teaching workflow](../references/ai-workspace/expert-teaching-workflow.md): six build steps, seven evidence-backed behavior checks, realistic trials and unimplemented run-gate requirements from the Karpathy-agent clip.
-
 - [Stripe API access](../references/stripe-api.md): verified account-read route while the connected app requires reauthentication.
 - [Audit repair outcome](../research/audit-repairs-2026-10-08/outcome.md): corrected rules, routes, skills, diagnostics and remaining decisions.
 - [Recovered historical evidence](../research/audit-repairs-2026-10-08/lint-cal-repair.md): surviving dated app documents for retired worktree citations; old wiki history remains unchanged.
@@ -133,7 +130,6 @@ Regenerate this section after page changes with `py system/scripts/wiki-maintena
 ### Sources
 
 - [[wiki/sources/conditional-reasoning-voice|Conditional Reasoning supplies the selected LSAT teaching voice]]: Joshua supplied this HTML on 2026-10-02 and explicitly selected its tone, wording, cadence, point of view, explanatory flow, and depth as the standard for LSAT teaching material. T
-- [[wiki/sources/i-built-another-andrej-karpathy-using-claude|Turn an expert's sources into a tested teaching method]]: Joshua requested complete ingestion of **I Built Another Andrej Karpathy Using Claude** on 2026-10-08. The entire supplied description and timestamped transcript, 0:00 to 10:43, wa
 - [[wiki/sources/llm-wiki-pattern|Compile knowledge once, then keep it current]]: The supplied idea file describes an LLM-maintained wiki between curated source documents and the questions a person asks.
 - [[wiki/sources/lsat-demon-abstract-conditionals|Move from a familiar rule to an abstract relationship]]: Joshua supplied this LSAT Demon clip and requested its integration into the Conditional Bootcamp on 2026-10-03. The entire supplied transcript, 0:00 to 9:10, was read. The closing
 - [[wiki/sources/lsat-demon-mastering-conditional-statements|One sufficient route need not be the only route]]: Joshua requested all clipped LSAT Demon conditional material for intuitive original examples. This generic-title article was found after the two explicitly named Demon clips. Unlik
