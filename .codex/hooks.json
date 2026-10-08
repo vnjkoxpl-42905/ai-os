@@ -1,11 +1,75 @@
 {
   "description": "Karpathy method: require a later real execution after a scoped code edit.",
   "hooks": {
-    "UserPromptSubmit": [{"hooks": [{"type": "command", "command": "\"C:\\Users\\Joshu\\AppData\\Local\\Programs\\Python\\Python312\\python.exe\" \"C:\\Users\\Joshu\\dev\\ai-os-projects\\karpathy-method-tools\\codex_stop.py\"", "timeout": 20}]}],
-    "SubagentStart": [{"matcher": "^karpathy$", "hooks": [{"type": "command", "command": "\"C:\\Users\\Joshu\\AppData\\Local\\Programs\\Python\\Python312\\python.exe\" \"C:\\Users\\Joshu\\dev\\ai-os-projects\\karpathy-method-tools\\codex_stop.py\"", "timeout": 20}]}],
-    "PreToolUse": [{"matcher": "^(Bash|apply_patch|Write|Edit|Read|read_file)$", "hooks": [{"type": "command", "command": "\"C:\\Users\\Joshu\\AppData\\Local\\Programs\\Python\\Python312\\python.exe\" \"C:\\Users\\Joshu\\dev\\ai-os-projects\\karpathy-method-tools\\codex_stop.py\"", "timeout": 20}]}],
-    "PostToolUse": [{"matcher": "^(Bash|apply_patch|Write|Edit|Read|read_file)$", "hooks": [{"type": "command", "command": "\"C:\\Users\\Joshu\\AppData\\Local\\Programs\\Python\\Python312\\python.exe\" \"C:\\Users\\Joshu\\dev\\ai-os-projects\\karpathy-method-tools\\codex_stop.py\"", "timeout": 20}]}],
-    "Stop": [{"hooks": [{"type": "command", "command": "\"C:\\Users\\Joshu\\AppData\\Local\\Programs\\Python\\Python312\\python.exe\" \"C:\\Users\\Joshu\\dev\\ai-os-projects\\karpathy-method-tools\\codex_stop.py\"", "timeout": 20}]}],
-    "SubagentStop": [{"matcher": "^karpathy$", "hooks": [{"type": "command", "command": "\"C:\\Users\\Joshu\\AppData\\Local\\Programs\\Python\\Python312\\python.exe\" \"C:\\Users\\Joshu\\dev\\ai-os-projects\\karpathy-method-tools\\codex_stop.py\"", "timeout": 20}]}]
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "powershell.exe -NoProfile -NonInteractive -Command \"& 'C:/Users/Joshu/AppData/Local/Programs/Python/Python312/python.exe' 'C:/Users/Joshu/dev/ai-os-projects/karpathy-method-tools/codex_stop.py'\"",
+            "timeout": 20
+          }
+        ]
+      }
+    ],
+    "SubagentStart": [
+      {
+        "matcher": "^karpathy$",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "powershell.exe -NoProfile -NonInteractive -Command \"& 'C:/Users/Joshu/AppData/Local/Programs/Python/Python312/python.exe' 'C:/Users/Joshu/dev/ai-os-projects/karpathy-method-tools/codex_stop.py'\"",
+            "timeout": 20
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "^(Bash|apply_patch|Write|Edit|Read|read_file)$",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "powershell.exe -NoProfile -NonInteractive -Command \"& 'C:/Users/Joshu/AppData/Local/Programs/Python/Python312/python.exe' 'C:/Users/Joshu/dev/ai-os-projects/karpathy-method-tools/codex_stop.py'\"",
+            "timeout": 20
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "^(Bash|apply_patch|Write|Edit|Read|read_file)$",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "powershell.exe -NoProfile -NonInteractive -Command \"& 'C:/Users/Joshu/AppData/Local/Programs/Python/Python312/python.exe' 'C:/Users/Joshu/dev/ai-os-projects/karpathy-method-tools/codex_stop.py'\"",
+            "timeout": 20
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "powershell.exe -NoProfile -NonInteractive -Command \"& 'C:/Users/Joshu/AppData/Local/Programs/Python/Python312/python.exe' 'C:/Users/Joshu/dev/ai-os-projects/karpathy-method-tools/codex_stop.py'\"",
+            "timeout": 20
+          }
+        ]
+      }
+    ],
+    "SubagentStop": [
+      {
+        "matcher": "^karpathy$",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "powershell.exe -NoProfile -NonInteractive -Command \"& 'C:/Users/Joshu/AppData/Local/Programs/Python/Python312/python.exe' 'C:/Users/Joshu/dev/ai-os-projects/karpathy-method-tools/codex_stop.py'\"",
+            "timeout": 20
+          }
+        ]
+      }
+    ]
   }
 }

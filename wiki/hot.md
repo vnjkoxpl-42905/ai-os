@@ -9,13 +9,13 @@ aliases: []
 
 Freshest working state; the first page `/pickup` reads. Rebuilt fresh in the 2026-07-16 vault rebuild (the old cache is archived).
 
-## Most recent (2026-10-08): Karpathy method switched to Codex
+## Most recent (2026-10-08): Codex Karpathy hooks enabled and verified
 
 - Joshua explicitly selected Codex in place of Claude. [Authorized prompt variant](../research/karpathy-video-2026-10-08/CODEX-PROMPTS.md) preserves original prompt files; existing X capture remains the acquisition exception. The historical Claude quota no longer blocks this workflow.
 - Saved-source compilation and the [seven final rules](karpathy/rules.md) remain complete with explicit attribution, payload and acquisition limits. All 1,560 source files remain unchanged.
 - Codex agent/skill catalog and activation copies match. Hot-first, five-page cap, citations, grading and required ending remain configured. This chat used the documented generic-worker fallback; native custom-role discovery was not exercised.
 - [Fresh tokenizer acceptance](../research/karpathy-brain-2026-10-08/CODEX-TOKENIZER-ACCEPTANCE.md): expected broken Unicode decoding and a real wrong tie prediction were recorded, fixed and rerun. Seven tests pass; traced current-file receipts match. Demo: eleven bytes become five tokens with exact ASCII/Unicode round trips. All seven rules graded.
-- [Codex Stop adapter](../research/karpathy-brain-2026-10-08/CODEX-STOP-ACCEPTANCE.md) and six project hook events are prepared; 25 tests and independent review passed. Mandatory `/hooks` review/trust remains before native activation, followed by a real block/recovery probe. No trust bypass or live Codex hook claim.
+- [Codex Stop adapter](../research/karpathy-brain-2026-10-08/CODEX-STOP-ACCEPTANCE.md) and six project hook events are enabled and Trusted through native `/hooks`. Fixed project discovery and Windows PowerShell invocation, plus compound execution ordering. 36 adapter tests and 82 combined tests pass. Native main Stop directly blocked with the exact source message, then accepted the real run; a new unrelated edit was left alone. Child SubagentStop remains unit-tested, not separately live-tested. No trust bypass.
 - [Current execution record](../research/karpathy-brain-2026-10-08/VIDEO-PROMPT-EXECUTION.md) and [operating reference](../references/ai-workspace/karpathy-method.md) supersede the historical Claude continuation. No task status, secret, raw source, global hook or account permission changed.
 
 ## Previous (2026-10-08): Karpathy collector reliability rerun

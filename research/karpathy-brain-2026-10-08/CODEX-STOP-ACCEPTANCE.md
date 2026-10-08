@@ -1,45 +1,36 @@
-# Codex Stop hook is prepared; native trust review remains
+# Codex Stop hooks are enabled and natively verified
 
-Verified 2026-10-08. Joshua selected Codex in place of the video's Claude runtime.
+Verified 2026-10-08. Joshua authorized enabling the hooks and selected Codex in place of the video's Claude runtime. The original [Prompt 5](../karpathy-video-2026-10-08/verbatim/prompt-05.txt) remains unchanged.
 
-The project has `.codex/hooks.json` with `UserPromptSubmit`, `SubagentStart`, `PreToolUse`, `PostToolUse`, `Stop`, and `SubagentStop` handlers. All call the standard-library [Codex adapter](C:/Users/Joshu/dev/ai-os-projects/karpathy-method-tools/codex_stop.py). Existing user hooks and global configuration were not changed.
+## The native stop actually blocked and recovered
 
-## What the adapter enforces
+Interactive Codex thread `01a11db5-0a7d-7dc0-8fd1-56d0de500279`, scoped turn `01a11db7-b1f8-7312-b3e8-96f68230681d`, read the real activated skill and wrote a new Python probe. Its first final answer deliberately attempted to stop without execution.
 
-- An explicit `$karpathy-teach` or `/karpathy-teach` prompt, an actual project skill-file read, or a native `karpathy` subagent marks the turn as scoped. Subagent startup marks both the child and the launching parent's turn.
-- A real code-file change sets a pending execution. Snapshots observe project code and the external examples; explicit file edits and patch paths also observe code outside those roots. Files under raw, credentials/runtime directories, dependencies, and symlink directories are excluded from recursive scans.
-- A later completed real runtime command clears the pending execution. Help/version/install/read-only commands do not. An asynchronous command does not count until its terminal result arrives. A later code change invalidates the earlier run.
-- A failed real command counts as executed, with its exit/output evidence retained. It does not establish that the code works. Relevance, correctness and failure disclosure remain part of the seven-rule answer grade.
-- A scoped pending edit blocks Stop using exactly `Karpathy rule, run it before you say it works.` The continuation preserves unresolved edits. A new ordinary human turn resets scope. Unrelated sessions continue normally.
+- At **2026-10-08T22:52:52.555Z**, a native **HookPrompt** event, not agent prose, recorded `hookRunId=stop:6:C:\Users\Joshu\dev\ai-os\.codex\hooks.json` and exactly `Karpathy rule, run it before you say it works.`
+- At **2026-10-08T22:52:59.840Z**, the subsequent Python execution produced `CODEX_NATIVE_STOP_PROBE_OK`, exit **0**.
+- At **2026-10-08T22:53:08.774Z**, the native task completed. The scoped hook state retained the code edit and real execution with `pending_run=false`.
+- A new unrelated turn `01a11db8-b116-72b3-8540-d2fd5a9f2417` wrote ordinary code without execution. It completed at **2026-10-08T22:53:45.702Z** with **no HookPrompt**. Its state correctly had `scope=false` and `pending_run=true`, so the unrelated edit did not trigger the guard.
 
-The adapter uses documented Codex hook payload fields and event state. It does not parse Claude transcripts or depend on an unstable Codex rollout format. State is stored outside the vault in `C:/Users/Joshu/dev/ai-os-projects/karpathy-method-tools/runtime/codex-hooks/`. Per-session OS locks and atomic replacements protect concurrent hook invocations.
+[Preserved native event evidence](C:/Users/Joshu/dev/ai-os-projects/karpathy-method-tools/examples/codex-stop-probe/native-acceptance-events.jsonl) contains the real command outputs, blocking event and completion records. The original rollout remains in the native Codex session store. These isolated tests establish main Stop enforcement and unrelated-turn acceptance, not teaching quality or native custom-agent discovery. Karpathy child SubagentStop is configured and unit-tested but was not separately exercised live.
 
-## Local verification
+## Activation uses reviewed definitions
 
-[25 tests](C:/Users/Joshu/dev/ai-os-projects/karpathy-method-tools/test_codex_stop.py) passed. They cover scope, ordinary sessions, actual/relative skill reads, native child and parent scope, unchanged failed patches, code writes, actual outside-root snapshots, later edits, failed executions, informational commands, structured and text asynchronous starts/completion, retry continuation and new-turn reset.
+The project now has `.codex/config.toml` enabling hooks and adjacent `.codex/hooks.json` with six events: UserPromptSubmit, SubagentStart, PreToolUse, PostToolUse, Stop and SubagentStop. All six current definitions were inspected and enabled as **Trusted** through the native Codex `/hooks` interface. No trusted hashes were fabricated and no trust bypass was used.
 
-These are event simulations and local adapter tests. They do not certify a live Codex Stop interception. The final combined run passed all 71 tests: 25 Codex adapter, 26 Claude-project and 20 receipt-helper tests. The historical native Claude probe is separate evidence.
+The original bare quoted Windows executable pair failed when launched through the runtime's PowerShell shell. The handlers now explicitly invoke `powershell.exe -NoProfile -NonInteractive -Command` with PowerShell's `&` call operator for the installed Python executable and [Codex adapter](C:/Users/Joshu/dev/ai-os-projects/karpathy-method-tools/codex_stop.py). A supported fresh `--no-daemon` interactive session exercised the current trusted definitions. Two earlier `codex exec` captures and an earlier interactive failure remain preserved; their absence of interception was not presented as success. Their failure alone does not certify that current noninteractive execution is protected.
 
-## Why native acceptance is pending
+## The contract matches the source
 
-The installed Codex CLI advertises hook support, and the existing user config enables `features.hooks = true`. The project is trusted. However, the user configuration currently trusts only the pre-existing user SessionStart hook. None of these six new project definitions has a trusted hash.
+- Actual project skill invocation/read or native karpathy subagent use scopes the turn. Parent and child state are tracked separately.
+- Real code changes set pending execution. A later completed runtime clears it; help, version, install and read-only commands do not. Later edits invalidate the prior run. Asynchronous starts require terminal completion.
+- A failed real execution counts as ran and must be reported honestly. Execution relevance and correctness remain part of the seven-rule grade.
+- Scoped pending code blocks with the video's exact message. Continuation preserves the edit. A new ordinary turn resets scope and is left alone, as natively verified.
+- Explicit compound shell **write then run** is allowed; **run then write** and a final subsequent code write remain pending. Runtime output redirection to a log is allowed; code-file redirection remains conservative. Quote-aware attached redirection is recognized inside Bash/sh wrappers while PowerShell argument syntax and quoted greater-than characters are preserved. Opaque program side effects cannot be ordered from a single snapshot and require a separate run.
 
-[Official Codex hooks documentation](https://learn.chatgpt.com/docs/hooks) requires review and trust of each exact new or changed non-managed hook definition. Project trust alone does not grant hook trust. No global trust hash was written and no hook-trust bypass was used. A session already running before this configuration was created is not claimed to be protected by it.
+## Tests and limits remain explicit
 
-To activate the completed configuration, open the Codex CLI at `C:/Users/Joshu/dev/ai-os`, enter `/hooks`, inspect the six entries from `.codex/hooks.json`, and trust them. Then run a fresh native probe: invoke the teaching skill or native karpathy agent, create a tiny code file and attempt to stop before running it. Acceptance requires an actual blocking hook event, then a real execution and a permitted stop. No such native Codex probe is recorded yet.
+**82 combined tests pass:** 36 Codex adapter tests, 26 historical Claude-project tests and 20 receipt-helper tests. Eleven new Codex regressions cover compound ordering, opaque mutations and output redirection. The native isolated test preceded the final output-redirection refinements; those additional branches have local regression evidence.
 
-## Practical scope limits
+Snapshots observe project code and registered external examples. Explicit edit/patch paths also cover code outside those roots. Raw material, credentials/runtime folders, dependencies and symlink directories are excluded. Arbitrary MCP file-edit wrappers whose canonical tool name is absent from the matcher are not certified. Shell edits outside watched roots require explicit tracked edit paths. Concurrent external writers can affect snapshots; this is a workflow guard, not a security or authorship boundary. Running an unrelated program meets the video's literal run condition but cannot satisfy the relevant-behavior teaching grade.
 
-## Fresh native discovery probe, 2026-10-08
-
-The normal signed-in `codex exec` probe at `2026-10-08T22:42:03Z` exited successfully but did **not** establish hook acceptance. It read the actual activated skill, created `examples/codex-stop-probe/native_probe.py`, and stopped without running the file. No hook state directory was created. This is evidence that this CLI invocation did not invoke the configured project handlers, rather than evidence that the guard passed. Trust/discovery must be resolved before claiming protection.
-
-The untouched native capture, invocation and stderr are stored under [the external probe folder](C:/Users/Joshu/dev/ai-os-projects/karpathy-method-tools/examples/codex-stop-probe). No trust bypass, fabricated trusted hash or alternate API credentials were used. The test was deliberately isolated from teaching acceptance.
-
-The source review also identified a compound-command ordering defect: a single shell call that wrote code and then ran it was incorrectly left pending. The adapter now recognizes provable explicit shell-write-before-runtime ordering; run-before-write and a final subsequent edit remain blocked. Thirty adapter tests pass, including five ordering regressions. Opaque editor/program side effects remain conservatively pending because a single before/after snapshot cannot prove their internal order.
-
-Official tool coverage maps shell commands and unified `exec_command` to the canonical hook name `Bash`; a later `write_stdin` can supply that original command's terminal PostToolUse event. `apply_patch` remains canonical `apply_patch`, with Write/Edit matcher aliases. Nested tools called through code mode receive their own hook decisions. This configuration therefore matches those documented canonical shell/edit events, not the outer `functions.exec` wrapper. Actual installed-runtime payload normalization still requires the trusted native probe. Arbitrary MCP or other file-edit wrappers whose canonical name is not in this matcher are not claimed as covered; use the configured shell/edit paths.
-
-Shell writes outside the project and registered examples cannot be observed unless the shell is editing an explicitly tracked path. Use explicit Write/Edit/apply_patch for those paths. Simultaneous edits by other processes under a scanned root can be attributed to the enclosing tool interval; this is a workflow guard, not a security or authorship boundary. A real execution of an unrelated program satisfies the video's literal “nothing was run afterward” condition but cannot pass the relevant-behavior rule by itself.
-
-The captured raw sources were not changed. This adapter does not send messages, install packages, alter account permissions, approve hook trust, or spend API credits.
+The source's Claude interface was translated to Codex with Joshua's authorization. The exact original message and scoped behavior are retained. All 1,560 preserved source files remain unchanged. No new API credential or account permission was used. [Official Codex hooks documentation](https://learn.chatgpt.com/docs/hooks) describes definition review/trust and native events.

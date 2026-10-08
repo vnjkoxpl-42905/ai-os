@@ -33,3 +33,9 @@ The original native Prompt 3 returned a Claude Pro subscription-limit error, rep
 ## [2026-10-08] system | Codex runtime selected and teaching test executed
 
 Joshua substituted Codex for Claude. Original prompts and raw sources remain unchanged. [Current execution](../../research/karpathy-brain-2026-10-08/VIDEO-PROMPT-EXECUTION.md) records the authorized adaptation, fresh seven-test lesson, current-file receipts and explicit generic-worker fallback. The separate Codex hook passed 25 tests and review; mandatory trust and native blocking/recovery acceptance remain. The historical Claude quota is no longer a workflow blocker. No task status changed.
+
+## [2026-10-08] system | Codex main Stop passes native acceptance
+
+The six project definitions were enabled and Trusted through supported native /hooks review after fixing adjacent config discovery and explicit Windows PowerShell invocation. Actual HookPrompt at 2026-10-08T22:52:52.555Z returned the exact original source message; a real Python run exited 0 and the turn completed. A following unrelated code-edit turn completed without blocking. Thirty-three adapter tests and 79 combined tests pass, including compound write-before-run and output-redirection regressions. Main Stop is live-verified; child SubagentStop and native custom-role discovery are not separately live-tested. Historical failures remain preserved and raw sources remain unchanged. [Acceptance record](../../research/karpathy-brain-2026-10-08/CODEX-STOP-ACCEPTANCE.md).
+
+Final classifier follow-up, 2026-10-08: Bash/sh attached code-output redirection now stays pending, ordinary log output remains accepted and quoted greater-than characters are ignored. PowerShell bare argument syntax is preserved. Three additional regressions pass; current totals are 36 Codex adapter and 82 combined tests. The live main Stop evidence is unchanged; these final classifier branches have local regression coverage.

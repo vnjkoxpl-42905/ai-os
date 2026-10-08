@@ -15,7 +15,7 @@ All five numbered cards match the original fenced prompt wording in prompts.md. 
 
 ## Current runtime choice
 
-Joshua selected Codex instead of Claude on 2026-10-08. [Codex prompt variant](CODEX-PROMPTS.md) preserves the original wording except the authorized runtime name in Prompt 4. The Claude quota and replay state below are historical; Codex implementation and acceptance supersede that continuation requirement. Original video prompt files remain unchanged. [Current Codex execution](../karpathy-brain-2026-10-08/VIDEO-PROMPT-EXECUTION.md) records the fresh seven-test lesson and 25-test project hook. Hook activation awaits mandatory review/trust; historical native Claude pending statements below do not describe the current runtime.
+Joshua selected Codex instead of Claude on 2026-10-08. [Codex prompt variant](CODEX-PROMPTS.md) preserves the original wording except the authorized runtime name in Prompt 4. The Claude quota and replay state below are historical; Codex implementation and acceptance supersede that continuation requirement. Original video prompt files remain unchanged. [Current Codex execution](../karpathy-brain-2026-10-08/VIDEO-PROMPT-EXECUTION.md) records the fresh seven-test lesson and 36-test project hook. The six current Codex hook definitions are now reviewed, Trusted and enabled; a native main Stop block, subsequent execution and unrelated-turn acceptance are directly recorded. Child SubagentStop is configured/unit-tested but not separately live-tested. Historical native Claude pending statements below do not describe the current runtime.
 
 ## Corrections to the previous implementation
 
