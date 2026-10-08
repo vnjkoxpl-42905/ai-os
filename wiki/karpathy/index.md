@@ -18,6 +18,8 @@ The [corrected handoff verification](../../research/karpathy-brain-2026-10-08/HA
 
 ## Start with compiled knowledge
 
+The subsequent [collector rerun](../../research/karpathy-brain-2026-10-08/X-RERUN-RESULT.md) passed seventeen tests and independent review, then stopped on confirmed X HTTP 429 after 38 of 157 base windows. Its cumulative physical supplement contains 432 captured IDs, including the same 237 previously missing IDs. The three-year collection remains incomplete.
+
 - [Hot page](hot.md): fewer than 500 words, restricted to this reviewed evidence.
 - [Candidate principles](principles.md): supported observations, not the final seven rules.
 - [Methods](methods.md): project-specific patterns and their limits.

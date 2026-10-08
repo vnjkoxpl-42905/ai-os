@@ -479,7 +479,7 @@ Native UI archive does not delete a conversation. Source-file deletion removes i
 | codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a11865-52e6-74c2-bb95-d6a32f4dd261-3cc3221ec347.md) | C:\Users\Joshu\dev\ai-os | 2026-10-08T10:03:30+00:00 |
 | codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a11865-52e6-74c2-bb95-d6a32f4dd261-469b9c6a56bc.md) | C:\Users\Joshu\dev\ai-os | 2026-10-07T23:18:32+00:00 |
 | codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a11865-52e6-74c2-bb95-d6a32f4dd261-5981b67000bd.md) | C:\Users\Joshu\dev\ai-os | 2026-10-07T22:45:25+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a11865-52e6-74c2-bb95-d6a32f4dd261-8245528ac630.md) | C:\Users\Joshu\dev\ai-os | 2026-10-08T11:01:30+00:00 |
+| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a11865-52e6-74c2-bb95-d6a32f4dd261-8245528ac630.md) | C:\Users\Joshu\dev\ai-os | 2026-10-08T13:05:21+00:00 |
 | codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a11865-52e6-74c2-bb95-d6a32f4dd261-97b48bf8632b.md) | C:\Users\Joshu\dev\ai-os | 2026-10-07T23:35:18+00:00 |
 | codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a11865-52e6-74c2-bb95-d6a32f4dd261-f6a067ed73ad.md) | C:\Users\Joshu\dev\ai-os | 2026-10-08T07:43:52+00:00 |
 | codex | [](codex/01a11919-6d64-7c42-b320-f23458477014-110490f12eb7.md) | C:\Users\Joshu\dev\ai-os | 2026-10-08T12:13:00+00:00 |
@@ -491,14 +491,16 @@ Native UI archive does not delete a conversation. Source-file deletion removes i
 | codex | [ you can delete anything that's not of use. If they're not of use, you'd want to keep them. Like emp](codex/01a11919-6d64-7c42-b320-f23458477014-52a320e205d0.md) | C:\Users\Joshu\dev\ai-os | 2026-10-08T04:35:04+00:00 |
 | codex | [Did you get all 17 video uploads transcript? I wanted all 17. Did you get all 17?](codex/01a11919-6d64-7c42-b320-f23458477014-55724bdf7a2b.md) | C:\Users\Joshu\dev\ai-os | 2026-10-08T11:58:09+00:00 |
 | codex | [ why did you send me things I already have? Send me a file with all the things to download in order ](codex/01a11919-6d64-7c42-b320-f23458477014-55bc240f6d85.md) | C:\Users\Joshu\dev\ai-os | 2026-10-08T10:42:19+00:00 |
+| codex | [ okay, now I want you to look at the source that we had and run the prompts accordingly. So make sur](codex/01a11919-6d64-7c42-b320-f23458477014-5d556b332dad.md) | C:\Users\Joshu\dev\ai-os | 2026-10-08T12:53:56+00:00 |
 | codex | [01a11919-6d64-7c42-b320-f23458477014](codex/01a11919-6d64-7c42-b320-f23458477014-60e57c57418c.md) | C:\Users\Joshu\dev\ai-os | 2026-10-08T05:17:50+00:00 |
 | codex | [ you can delete anything that's not of use. If they're not of use, you'd want to keep them. Like emp](codex/01a11919-6d64-7c42-b320-f23458477014-6227e3102d78.md) | C:\Users\Joshu\dev\ai-os | 2026-10-08T04:28:19+00:00 |
 | codex | [lets fix it all ](codex/01a11919-6d64-7c42-b320-f23458477014-636ac950d7b8.md) | C:\Users\Joshu\dev\ai-os | 2026-10-08T05:42:53+00:00 |
 | codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a11919-6d64-7c42-b320-f23458477014-68110a334ea3.md) | C:\Users\Joshu\dev\ai-os | 2026-10-08T04:00:33+00:00 |
 | codex | [So, I fixed the Web Clipper settings so that it should be able to be working perfectly. Let me know ](codex/01a11919-6d64-7c42-b320-f23458477014-6f5e73d4bc64.md) | C:\Users\Joshu\dev\ai-os | 2026-10-08T08:54:12+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a11919-6d64-7c42-b320-f23458477014-704792c0c55a.md) | C:\Users\Joshu\dev\ai-os | 2026-10-08T12:46:56+00:00 |
+| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a11919-6d64-7c42-b320-f23458477014-704792c0c55a.md) | C:\Users\Joshu\dev\ai-os | 2026-10-08T13:05:38+00:00 |
 | codex | [ why did you send me things I already have? Send me a file with all the things to download in order ](codex/01a11919-6d64-7c42-b320-f23458477014-78cb008f4df9.md) | C:\Users\Joshu\dev\ai-os | 2026-10-08T09:05:44+00:00 |
 | codex | [ you can delete anything that's not of use. If they're not of use, you'd want to keep them. Like emp](codex/01a11919-6d64-7c42-b320-f23458477014-7c73cf87465d.md) | C:\Users\Joshu\dev\ai-os | 2026-10-08T04:46:19+00:00 |
+| codex | [ okay, now I want you to look at the source that we had and run the prompts accordingly. So make sur](codex/01a11919-6d64-7c42-b320-f23458477014-7d2243571581.md) | C:\Users\Joshu\dev\ai-os | 2026-10-08T13:03:36+00:00 |
 | codex | [](codex/01a11919-6d64-7c42-b320-f23458477014-82cd10616165.md) | C:\Users\Joshu\dev\ai-os | 2026-10-08T12:09:36+00:00 |
 | codex | [ you can delete anything that's not of use. If they're not of use, you'd want to keep them. Like emp](codex/01a11919-6d64-7c42-b320-f23458477014-8596b93ac6c4.md) | C:\Users\Joshu\dev\ai-os | 2026-10-08T04:51:12+00:00 |
 | codex | [lets fix it all ](codex/01a11919-6d64-7c42-b320-f23458477014-87c6f86622d0.md) | C:\Users\Joshu\dev\ai-os | 2026-10-08T05:42:42+00:00 |
@@ -506,6 +508,7 @@ Native UI archive does not delete a conversation. Source-file deletion removes i
 | codex | [So, I fixed the Web Clipper settings so that it should be able to be working perfectly. Let me know ](codex/01a11919-6d64-7c42-b320-f23458477014-a73a2fb2226c.md) | C:\Users\Joshu\dev\ai-os | 2026-10-08T08:13:19+00:00 |
 | codex | [ you can delete anything that's not of use. If they're not of use, you'd want to keep them. Like emp](codex/01a11919-6d64-7c42-b320-f23458477014-a8a99b6f8b28.md) | C:\Users\Joshu\dev\ai-os | 2026-10-08T04:47:02+00:00 |
 | codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a11919-6d64-7c42-b320-f23458477014-b0c2ee89dc62.md) | C:\Users\Joshu\dev\ai-os | 2026-10-08T01:46:31+00:00 |
+| codex | [ okay, now I want you to look at the source that we had and run the prompts accordingly. So make sur](codex/01a11919-6d64-7c42-b320-f23458477014-b5765bbcf7f4.md) | C:\Users\Joshu\dev\ai-os | 2026-10-08T12:54:05+00:00 |
 | codex | [ you can delete anything that's not of use. If they're not of use, you'd want to keep them. Like emp](codex/01a11919-6d64-7c42-b320-f23458477014-cad9f5990020.md) | C:\Users\Joshu\dev\ai-os | 2026-10-08T04:50:58+00:00 |
 | codex | [lets fix it all ](codex/01a11919-6d64-7c42-b320-f23458477014-cfc8d6d47089.md) | C:\Users\Joshu\dev\ai-os | 2026-10-08T05:45:04+00:00 |
 | codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a11919-6d64-7c42-b320-f23458477014-d187f71f0448.md) | C:\Users\Joshu\dev\ai-os | 2026-10-08T01:22:48+00:00 |
@@ -513,6 +516,7 @@ Native UI archive does not delete a conversation. Source-file deletion removes i
 | codex | [So, I fixed the Web Clipper settings so that it should be able to be working perfectly. Let me know ](codex/01a11919-6d64-7c42-b320-f23458477014-d7629905cb77.md) | C:\Users\Joshu\dev\ai-os | 2026-10-08T06:31:50+00:00 |
 | codex | [lets fix it all ](codex/01a11919-6d64-7c42-b320-f23458477014-df40d49fcfd5.md) | C:\Users\Joshu\dev\ai-os | 2026-10-08T05:43:09+00:00 |
 | codex | [01a11919-6d64-7c42-b320-f23458477014](codex/01a11919-6d64-7c42-b320-f23458477014-e97fd7052f92.md) | C:\Users\Joshu\dev\ai-os | 2026-10-08T05:18:02+00:00 |
+| codex | [ okay, now I want you to look at the source that we had and run the prompts accordingly. So make sur](codex/01a11919-6d64-7c42-b320-f23458477014-eb48b2726e97.md) | C:\Users\Joshu\dev\ai-os | 2026-10-08T12:54:17+00:00 |
 | codex | [ you can delete anything that's not of use. If they're not of use, you'd want to keep them. Like emp](codex/01a11919-6d64-7c42-b320-f23458477014-ec3e556a2dab.md) | C:\Users\Joshu\dev\ai-os | 2026-10-08T04:49:26+00:00 |
 | codex | [Did you get all 17 video uploads transcript? I wanted all 17. Did you get all 17?](codex/01a11919-6d64-7c42-b320-f23458477014-ee037a083093.md) | C:\Users\Joshu\dev\ai-os | 2026-10-08T11:57:14+00:00 |
 | codex | [ you can delete anything that's not of use. If they're not of use, you'd want to keep them. Like emp](codex/01a11919-6d64-7c42-b320-f23458477014-f3a325b4ea83.md) | C:\Users\Joshu\dev\ai-os | 2026-10-08T04:28:28+00:00 |
