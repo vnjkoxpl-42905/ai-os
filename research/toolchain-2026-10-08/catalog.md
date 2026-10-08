@@ -29,6 +29,10 @@ Status: **Available** means a concrete executable/package was detected. **Bundle
 | npm | 11.19.0 on PATH | JavaScript packages |
 | pnpm | Codex bundled executable | JavaScript package management |
 | Windows Terminal | Installed 1.24.12741 | Terminal sessions |
+| yt-dlp | WinGet package 2026.08.19; resolves by command name after refreshing this shell from the saved user PATH | Media/subtitle/metadata retrieval |
+| FFmpeg suite | WinGet package N-126374-g089a48eb36-20260831; ffmpeg, ffprobe and ffplay all report the installed build by package path | Media conversion, metadata and playback |
+| Deno | WinGet package 2.9.7; version command succeeds by package path | JavaScript runtime used by yt-dlp's YouTube challenge support |
+| uv | WinGet package 0.12.23; resolves by command name after refreshing this shell from the saved user PATH; uv --version and uv --help verified | Fast isolated Python environments, dependency management, and tool execution |
 | youtube-transcript-api | User Python package 1.2.4; this video's 393 caption segments retrieved successfully | Available YouTube captions without a paid transcript API |
 | Requests | User Python package 2.34.2 | HTTP requests from scripts |
 | SQLite library | User Python sqlite3 uses SQLite 3.49.1 | Local SQL databases; standalone shell is a separate candidate |
@@ -93,11 +97,9 @@ An IDE can use the user interpreter or an isolated project environment. If a bun
 
 | Tool | Distinct use | Free-use scope / note |
 |---|---|---|
-| uv | Fast Python environment/dependency management | Local tool; complements existing pip |
 | pipx | Isolated Python CLI apps | Avoids polluting normal Python environments |
 | Yarn | Projects requiring Yarn conventions/lockfiles | Retain as compatibility option; npm/pnpm already available |
 | Bun | Alternate JavaScript runtime/build/test workflow | Local runtime, not just another package installer |
-| Deno | Alternate JS/TS runtime and permissions model | Also relevant to some yt-dlp workflows |
 | Conda / Miniforge | Scientific/binary Python environments | Prefer Miniforge + conda-forge; do not assume Anaconda repository access is free for every business |
 | Chocolatey Community | Windows packages unavailable or awkward elsewhere | Free community client; paid business features excluded |
 | Scoop | User-level portable CLI management | Different install model from winget |
@@ -108,9 +110,6 @@ An IDE can use the user interpreter or an isolated project environment. If a bun
 
 | Tool | Distinct use | Why retained despite existing tools |
 |---|---|---|
-| yt-dlp | Media, subtitle and metadata retrieval | Caption library alone does not retrieve media |
-| FFmpeg | Audio/video conversion, trimming and frames | No equivalent processing executable detected |
-| ffprobe | Structured media metadata | Usually delivered with FFmpeg |
 | faster-whisper | Scripted local batch transcription | Retain for bulk files/model control or measured quality benefit, not a second dictation app |
 | whisper.cpp | Native local transcription/CLI deployment | Different runtime and hardware integration from Python transcription |
 | WhisperX | Alignment and speaker-related workflows | Retain for capabilities not established in Superwhisper; some model assets require separate access/terms |
@@ -340,17 +339,16 @@ Related tools are deliberately retained where interfaces, outputs, compatibility
 
 ## Useful first additions, when you choose to install
 
-1. yt-dlp + FFmpeg/ffprobe: media, captions, metadata and on-screen prompt extraction.
-2. uv + pipx: isolated, maintainable Python tooling.
-3. Pandoc + Tesseract + OCRmyPDF: document conversion and scanned-text intake.
-4. jq + missing Poppler text utilities + SQLite CLI: convenient extraction/data inspection.
-5. DuckDB + ExifTool + ImageMagick: analytical files, metadata and batch images.
+1. uv + pipx: isolated, maintainable Python tooling.
+2. Pandoc + Tesseract + OCRmyPDF: document conversion and scanned-text intake.
+3. jq + missing Poppler text utilities + SQLite CLI: convenient extraction/data inspection.
+4. DuckDB + ExifTool + ImageMagick: analytical files, metadata and batch images.
 
 These are preferences for future selection, not installs completed in this task.
 
 ## Verification and authoritative cost references
 
-Inventory used executable discovery, winget registration, Python package metadata in user and Codex interpreters, and the actual bundled dependency paths. Project-local virtual environments and npm dependency trees were not exhaustively searched. An installed executable is not proof that an account, model or backend is configured. The caption package was live-tested on the build video; other candidates were not execution-tested.
+Inventory used executable discovery, winget registration, Python package metadata in user and Codex interpreters, and the actual bundled dependency paths. On 2026-10-08, WinGet reported yt-dlp 2026.08.19, FFmpeg N-126374-g089a48eb36-20260831 and Deno 2.9.7. The user PATH already contained all three package directories. Codex's inherited process PATH was stale; refreshing this shell from saved user and machine PATH made yt-dlp, ffmpeg, ffprobe, ffplay and deno resolve by command name and return their expected versions. A yt-dlp diagnostic recognizes ffmpeg, ffprobe and Deno. Restart Codex to refresh the environment for future app processes if command lookup remains stale. Project-local virtual environments and npm dependency trees were not exhaustively searched. An installed executable is not proof that an account, model or backend is configured. The caption package was live-tested on the build video; other candidates were not execution-tested.
 
 - [yt-dlp installation](https://github.com/yt-dlp/yt-dlp/wiki/Installation)
 - [FFmpeg official download links](https://ffmpeg.org/download.html)

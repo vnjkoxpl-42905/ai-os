@@ -2461,3 +2461,21 @@ Joshua explicitly requested undoing all changes from the preceding ingestion tur
 - Created [189 ranked download candidates](../research/toolchain-2026-10-08/download-priority.md), excluding verified installed/bundled tools, R, paid default products and gaming per Joshua's corrections.
 - Expanded non-work coverage to media, personal collections, reading, creativity, accessibility, hardware inspection and Windows convenience. Rechecked installed application registrations, PATH, common locations and current-user Store packages for broad new desktop candidates; none detected. Portable/custom folders and all project environments remain outside the exhaustive check.
 - Official free/local links included; no installation, purchase or configuration change performed.
+
+## [2026-10-08] query | Verify newly reported media tools
+
+- Joshua supplied WinGet package locations and versions for yt-dlp, FFmpeg and Deno. WinGet confirms yt-dlp 2026.08.19, FFmpeg N-126374-g089a48eb36-20260831 and Deno 2.9.7 are installed.
+- All five executable binaries are present and return the expected version from their package directories. A yt-dlp diagnostic detects FFmpeg/ffprobe and Deno. The claimed WindowsApps command aliases do not resolve in the current Codex shell; their exact paths are not present as ordinary files there.
+- Removed yt-dlp, FFmpeg and Deno from the download queue and updated the verified inventory. Shell alias/PATH behavior can differ between Codex and a normal Windows terminal.
+
+## [2026-10-08] system | Refresh Codex PATH for media tools
+
+- Diagnosed command lookup failure: yt-dlp, FFmpeg and Deno package directories were already present in the saved Windows user PATH, but this Codex shell had inherited an older process PATH.
+- Refreshed the shell's PATH from saved user/machine values. yt-dlp, ffmpeg, ffprobe, ffplay and deno all resolved by name and returned expected versions. No persistent PATH edit or reinstall was needed.
+- Recorded the corrected status in the tool inventory. If a newly opened Codex terminal still has the old environment, restart Codex so its process inherits the current user PATH.
+
+## [2026-10-08] system | Extract Karpathy build transcript and collection brief
+
+- Saved [full automatic caption transcript](../research/karpathy-video-2026-10-08/transcript.md), 393 segments through 10:43.8, JSON timings, yt-dlp metadata and hashes. Installed yt-dlp and Deno were invoked by absolute paths; yt-dlp caption download returned HTTP 429, existing youtube-transcript-api succeeded.
+- [Prompt record](../research/karpathy-video-2026-10-08/prompts.md) preserves five numbered cards visually read from video and the actual tokenizer teaching command shown at 8:15. A separate numbered 06 card is not verified; no invented wording claimed exact.
+- [Antigravity collection brief](../research/karpathy-video-2026-10-08/antigravity-collection-prompt.md) adapts acquisition to the logged-in X browser and free tools, with physical sources, provenance, manifests, hashes and explicit coverage gaps. Antigravity has not been messaged by this chat. Source collection and stages 2 onward await its delivered files; no runtime agent, skill or hook installed.
