@@ -220,6 +220,10 @@
     "reason": "gitleaks credential redacted in snapshot: aws-access-token"
   },
   {
+    "path": ".cloud-sync/conversations/codex/01a11919-6d64-7c42-b320-f23458477014-eb48b2726e97.md",
+    "reason": "API token redacted in snapshot"
+  },
+  {
     "path": ".cloud-sync/runtime/agents/skills/notebooklm/tests/cassettes/artifacts_delete.yaml",
     "reason": "gitleaks credential redacted in snapshot: generic-api-key"
   },
@@ -1088,7 +1092,15 @@
     "reason": "gitleaks credential redacted in snapshot: generic-api-key"
   },
   {
+    "path": "wiki/sources/karpathy/repos/files/repos--karpathy--cryptos--blog.ipynb.md",
+    "reason": "credential assignment redacted in snapshot"
+  },
+  {
     "path": "wiki/sources/karpathy/repos/files/repos--karpathy--cryptos--getnewaddress.py.md",
+    "reason": "credential assignment redacted in snapshot"
+  },
+  {
+    "path": "wiki/sources/karpathy/repos/files/repos--karpathy--karpathy.github.io--_posts--2021-06-21-blockchain.markdown.md",
     "reason": "credential assignment redacted in snapshot"
   }
 ]

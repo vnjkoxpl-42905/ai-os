@@ -2,7 +2,7 @@
 
 Updated 2026-10-08. This separate ledger owns 94 files excluded from the repo agent's remaining selector; eight previously full-read files stay in its ledger.
 
-Complete model reads and physical source pages: 92. Unread: 2. All source hashes were verified against the capture manifest before compilation. No source code was executed.
+Complete model reads and physical source pages: 94. Unread: 0. All source hashes were verified against the capture manifest before compilation. No source code was executed.
 
 ## Observations supported by fully read sources
 
@@ -17,6 +17,10 @@ The [layer-normalization tutorial](../../wiki/sources/karpathy/repos/llmc/doc--l
 The [encoder](../../wiki/sources/karpathy/repos/llmc/llmc--encoder-cuh.md) explicitly preprocesses inputs into CPU "buckets" to control reduction order; [CUDA utilities](../../wiki/sources/karpathy/repos/llmc/llmc--cuda-utils-cuh.md) limit deterministic global reduction to a "single block". These mechanisms show implementation choices around determinism, not an independently tested guarantee.
 
 Source-level limitations remain visible: the [loss checker](../../wiki/sources/karpathy/repos/llmc/dev--loss-checker-ci-py.md) does not require ten extracted rows, the [C layernorm checker](../../wiki/sources/karpathy/repos/llmc/doc--layernorm--layernorm-c.md) ignores comparison return flags, and the [CPU matmul comparator](../../wiki/sources/karpathy/repos/llmc/dev--cpu--matmul-forward-c.md) uses the captured threshold `tolerance + fabs(cpu_reference[i])`. These prevent equating configured tests with production acceptance. No raw code was changed.
+
+The [FP32 trainer](../../wiki/sources/karpathy/repos/llmc/train-gpt2-fp32-cu.md) states "all parameters use a += in the backward pass" and explains reusing dead forward activations to reduce backward storage. The [main distributed trainer](../../wiki/sources/karpathy/repos/llmc/train-gpt2-cu.md) offers "recompute: less memory but less speed.", FP32 optimizer/master weights, gradient accumulation, layer-wise reduction, sharded updates and checkpoint state. Its "DONE file" is a completion marker after rank synchronization. These are inspectable mechanisms; resume fidelity and distributed correctness were not executed or accepted.
+
+The [attention-forward comparison](../../wiki/sources/karpathy/repos/llmc/dev--cuda--attention-forward-cu.md) explicitly calls skipped layout transforms an "unrealistic but useful comparison point" and attributes the adapted minimal FlashAttention implementation to other repositories. The [layernorm-backward comparison](../../wiki/sources/karpathy/repos/llmc/dev--cuda--layernorm-backward-cu.md) warns of "register spills" and retains a documented problematic channel count. Both preserve why performance comparisons depend on representation, precision, shape, launch settings and omitted work, rather than promoting historical comments into verified performance rules.
 
 ## Source pages
 
@@ -110,5 +114,7 @@ Source-level limitations remain visible: the [loss checker](../../wiki/sources/k
 - [test_gpt2.cu](../../wiki/sources/karpathy/repos/llmc/test-gpt2-cu.md)
 - [test_gpt2_fp32.cu](../../wiki/sources/karpathy/repos/llmc/test-gpt2-fp32-cu.md)
 - [train_gpt2.c](../../wiki/sources/karpathy/repos/llmc/train-gpt2-c.md)
+- [train_gpt2.cu](../../wiki/sources/karpathy/repos/llmc/train-gpt2-cu.md)
 - [train_gpt2.py](../../wiki/sources/karpathy/repos/llmc/train-gpt2-py.md)
+- [train_gpt2_fp32.cu](../../wiki/sources/karpathy/repos/llmc/train-gpt2-fp32-cu.md)
 - [train_llama3.py](../../wiki/sources/karpathy/repos/llmc/train-llama3-py.md)

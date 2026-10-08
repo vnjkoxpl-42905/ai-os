@@ -11,7 +11,7 @@ semantic-status: complete-preserved-text-read
 
 Captured repository text; ownership does not establish individual authorship. Original date: collection-stage tool, not a Karpathy source. Captured: 2026-10-08.
 
-[Immutable raw file](../../../../../raw/sources/karpathy-brain/raw/github/scripts/collect_github.py). SHA-256 `4b8d45825a6c398f488fa0b5b97e612fe0c2b6e982e70bac3fcb6bb7c6f065bf`. Manifest hash match: False.
+[Immutable raw file](../../../../../raw/sources/karpathy-brain/raw/github/scripts/collect_github.py). SHA-256 `4b8d45825a6c398f488fa0b5b97e612fe0c2b6e982e70bac3fcb6bb7c6f065bf`. Manifest hash match: not applicable, collector-authored script has no source-manifest entry.
 
 ## Reviewed content
 

@@ -57,6 +57,15 @@ micrograd describes its correctness check:
 
 [Raw README](../../raw/sources/karpathy-brain/raw/github/repos/karpathy/micrograd/README.md), “Running tests”; [source summary](../sources/karpathy/micrograd-readme.md). This supports a reference-comparison method in this project, not a claim that its current tests passed here.
 
+
+
+Historical counterevidence matters. The preserved neuraltalk2 beam-search comment explicitly acknowledges incomplete certainty and accepts plausible output plus apparent performance:
+
+> it seems to work, doesn't crash, gives expected looking outputs, and seems to
+> improve performance, so I am declaring this correct.
+
+[Raw LanguageModel.lua](../../raw/sources/karpathy-brain/raw/github/repos/karpathy/neuraltalk2/misc/LanguageModel.lua), `sample_beam` introduction; [source page](../sources/karpathy/repos/supplemental/repos--karpathy--neuraltalk2--misc--LanguageModel-lua.md). The preceding line says, “Not 100% sure it's correct, and hard to fully unit test to satisfaction, but”. This is historical repository evidence, not a universal biographical claim. The seven rules are an evidence-supported operational synthesis of recurring advice and demonstrations; they do not assert that every past implementation followed rigorous verification. REINFORCEjs separately labels unfinished policy-gradient implementations “buggy implementation, doesnt work...” and excludes their exports. [Source page](../sources/karpathy/repos/supplemental/repos--karpathy--reinforcejs--lib--rl-js.md).
+
 ## Distinguish preserved input from derived judgments
 
 jobs labels its HTML evidence:
@@ -180,6 +189,7 @@ This synthesis uses conclusions from the reviewed source pages, not all collecte
 - [Writings](../../research/karpathy-brain-2026-10-08/blog-synthesis.md): preserved blog text, historical course revisions, personal guides and fiction, with authorship qualifications.
 - [Lectures and interviews](../../research/karpathy-brain-2026-10-08/lecture-synthesis.md): all 17 preserved texts fully read; 14 spoken-source texts and three music/animation caption files. Audio, diagrams and missing speech are unverified.
 - [Repository and X evidence](../../research/karpathy-brain-2026-10-08/repo-x-synthesis.md): reviewed named files and all selected captured own-author X bodies; remaining repository files and upstream X completeness are separate limits.
+- [Supplemental repositories](../../research/karpathy-brain-2026-10-08/repo-supplemental-synthesis.md): all 175 selected paths reviewed, including 24 decoded notebooks (three exact duplicates) and two empty files; embedded images and local execution remain outside coverage.
 - [llm.c](../../research/karpathy-brain-2026-10-08/llmc-synthesis.md): reviewed reference implementations, memory/compute choices and checker limitations. Repository ownership does not establish individual contributor authorship.
 - [Payloads](../../research/karpathy-brain-2026-10-08/github-payload-synthesis.md): generated dependencies, training text, parameters and government HTML have integrity/structure records; mechanical processing does not turn them into Karpathy beliefs or full model semantic reads.
 

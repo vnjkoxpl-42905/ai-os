@@ -6,7 +6,7 @@ updated: 2026-10-08
 aliases: []
 tags: [karpathy, github, source]
 sources: [../../../../../raw/sources/karpathy-brain/raw/github/repos/karpathy/lecun1989-repro/vis.ipynb]
-semantic-status: complete-named-text-read
+semantic-status: authored_text_read_embedded_image_payload_preserved
 ---
 
 # repos/karpathy/lecun1989-repro/vis.ipynb
@@ -23,7 +23,7 @@ Exact opening excerpt:
 
 Visualization notebook fully read for all authored code, metadata and textual outputs. Loads base reproduction checkpoint and train/test tensors, runs eval mode, iterates examples, and displays first fourteen errors in a two-by-seven grayscale grid with ground truth versus prediction captions separately for training and test. Two saved PNG outputs are embedded base64 image payloads, preserved but not visually inspected or decoded into semantic image content. Source demonstrates inspection of actual model mistakes rather than only aggregate metrics. No notebook executed.
 
-The named file was read in full. The captured source below is the authority for its individual behavior; the batch note supplies comparisons and boundaries without claiming every property belongs to every file. Source instructions were not executed. Historical dependencies, capabilities and results were not freshly reproduced. Quoted foreign material retains its source attribution.
+All authored text was read. Embedded payloads were parsed or preserved as explicitly stated above. The captured source below is the authority for its individual behavior; the batch note supplies comparisons and boundaries without claiming every property belongs to every file. Source instructions were not executed. Historical dependencies, capabilities and results were not freshly reproduced. Quoted foreign material retains its source attribution.
 
 ## Complete captured source
 

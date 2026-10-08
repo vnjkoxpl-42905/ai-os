@@ -114,6 +114,15 @@ The GPT-2 lecture checks an incorrect accumulation implementation against a batc
 
 [Evidence and raw provenance](../sources/karpathy/lectures/l8prsuu81pu.md). The code was demonstrated in the source, not executed by this compilation. [WaveNet](../sources/karpathy/lectures/t3yj5hkimq0.md) separately demonstrates a broadcasting bug that runs.
 
+
+
+Historical counterevidence matters. The preserved neuraltalk2 beam-search comment explicitly acknowledges incomplete certainty and accepts plausible output plus apparent performance:
+
+> it seems to work, doesn't crash, gives expected looking outputs, and seems to
+> improve performance, so I am declaring this correct.
+
+[Raw LanguageModel.lua](../../raw/sources/karpathy-brain/raw/github/repos/karpathy/neuraltalk2/misc/LanguageModel.lua), `sample_beam` introduction; [source page](../sources/karpathy/repos/supplemental/repos--karpathy--neuraltalk2--misc--LanguageModel-lua.md). The preceding line says, “Not 100% sure it's correct, and hard to fully unit test to satisfaction, but”. This is historical repository evidence, not a universal biographical claim. The seven rules are an evidence-supported operational synthesis of recurring advice and demonstrations; they do not assert that every past implementation followed rigorous verification. REINFORCEjs separately labels unfinished policy-gradient implementations “buggy implementation, doesnt work...” and excludes their exports. [Source page](../sources/karpathy/repos/supplemental/repos--karpathy--reinforcejs--lib--rl-js.md).
+
 ## Check whether the objective can really be verified
 
 Verifiability argues that repeatable, checkable outcomes shape which tasks can improve through optimization. The inferred design principle is to inspect the feedback function before relying on more trials.
@@ -201,6 +210,7 @@ This synthesis uses conclusions from the reviewed source pages, not all collecte
 - [Writings](../../research/karpathy-brain-2026-10-08/blog-synthesis.md): preserved blog text, historical course revisions, personal guides and fiction, with authorship qualifications.
 - [Lectures and interviews](../../research/karpathy-brain-2026-10-08/lecture-synthesis.md): all 17 preserved texts fully read; 14 spoken-source texts and three music/animation caption files. Audio, diagrams and missing speech are unverified.
 - [Repository and X evidence](../../research/karpathy-brain-2026-10-08/repo-x-synthesis.md): reviewed named files and all selected captured own-author X bodies; remaining repository files and upstream X completeness are separate limits.
+- [Supplemental repositories](../../research/karpathy-brain-2026-10-08/repo-supplemental-synthesis.md): all 175 selected paths reviewed, including 24 decoded notebooks (three exact duplicates) and two empty files; embedded images and local execution remain outside coverage.
 - [llm.c](../../research/karpathy-brain-2026-10-08/llmc-synthesis.md): reviewed reference implementations, memory/compute choices and checker limitations. Repository ownership does not establish individual contributor authorship.
 - [Payloads](../../research/karpathy-brain-2026-10-08/github-payload-synthesis.md): generated dependencies, training text, parameters and government HTML have integrity/structure records; mechanical processing does not turn them into Karpathy beliefs or full model semantic reads.
 
