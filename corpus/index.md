@@ -22,6 +22,7 @@ Fills through supervised ingests, one source at a time, logged in [[../wiki/log|
 ### Teaching methods recovered from the old local vault (2026-10-07)
 
 - [Loophole teacher reference](loophole-online/index.md): translation, quipping, CLIR, question strategies and review routines, with attributed source navigation and defective-capture warnings.
+- [Loophole operational method library](loophole-online/method-library.md): detailed instructor protocols, source-specific targets and doctrine checks, connected to four annotated editions retaining captured lecture explanations and worked examples.
 - [Diagnose the cause of a miss](tutoring-diagnosis.md): the recovered 7Sage four-category coaching framework and whole-section timing review, retained as a private teacher reference.
 - [RC cumulative translation](<Curriculum/Reading Comprehension/Notes/cumulative-translation-review.md>): a concrete recall-check protocol for an observed reading-retention problem, filed in its topic home.
 - [Source and comparison](../wiki/sources/old-obsidian-vault-2026-10-07.md): preservation hashes, full local-file coverage, missing images and historical-policy conflicts.

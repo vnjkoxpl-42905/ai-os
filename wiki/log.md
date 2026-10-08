@@ -2408,3 +2408,7 @@ Corrected raw/inbox/README.md to match active ingest/schema: copy and hash-verif
 ## [2026-10-08] system | AI workspace knowledge domain
 Joshua selected substantial Claude/Codex and AI workspace intake as a first-class domain separate from LSAT teaching. Created references/ai-workspace/index.md with populated existing-subject routes for updates, skills/prompts, repos/tools, tips/insights, workflows, improvements and sync/graphs. Added schema/wiki-index/contextpriority routes and matched AI-routing guidance to active and catalog ingest references for both runtimes. Existing reference homes and corpus remain in place. Verified24 hub links, four mirrored additions, unchanged48-pagewiki lint13 preexistingfindings. No browser settings, tools or skills were installed; cloudpublication unverified for these local edits.
 
+
+## [2026-10-08] system | Full local old-vault backup before removal
+Fresh full ZIP preserves all100currentlocalfiles and13directories from C:/Users/Joshu/Documents/Ai-os, including hiddenconfiguration and authorized-empty/duplicate sourcecopies. Verified each archivedSHA256 and recheckedsource unchanged. Receipt research/obsidian-vault-comparison/2026-10-07/full-predelete-backup-2026-10-08.json. Backup setup/github-sync/state/source-evidence/old-vault-full-before-removal-20261008T044949Z.zip. No vault deleted. FreshZIPcloudpublication notverified; local completeness does not establish phone/remotecompleteness or recover22missingimageembeds.
+

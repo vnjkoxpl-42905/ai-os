@@ -50,6 +50,8 @@ The brain runs three knowledge systems: **this wiki** (Joshua, the business, dec
 ## References (OS method / meta)
 
 - [AI workspace knowledge hub](../references/ai-workspace/index.md): Claude/Codex updates, skill ideas, repository evaluations, prompts, tips and workflows, kept separate from LSAT teaching.
+- [Recovered AI methods](../references/ai-workspace/migrated-source-methods.md): detailed review, skill-evaluation and source-checking recipes from the old vault.
+- [Recovered Loophole method library](../corpus/loophole-online/method-library.md): actionable practice protocols; captured instructor editions for [reading](../corpus/loophole-online/reading-lectures.generated.md), [question strategies](../corpus/loophole-online/question-strategies.generated.md), [review/workouts](../corpus/loophole-online/review-workouts.generated.md), and [worked examples](../corpus/loophole-online/worked-examples.generated.md) remain attributed teacher research, separate from approved curriculum.
 
 - [[../references/second-brain-levels]]: retrieval architecture, dated comparison, current domain routes and sync limitations.
 - [[../references/obsidian-command-center]]: attributed command-center methods, historical plugin research and device-verification limits.

@@ -14,6 +14,8 @@ Joshua expects a substantial share of incoming clips to cover Claude, Codex, AI 
 
 This hub organizes existing authoritative pages rather than copying their knowledge into another set of pages. The intake rules remain in the [LLM Wiki schema](../../system/schema/llm-wiki.md), and the overall catalog remains [the wiki index](../../wiki/index.md).
 
+[Recovered practical methods](migrated-source-methods.md) add the old vault's detailed artifact-review, skill-evaluation and evidence-checking recipes, plus its unimplemented annotation idea. [Migration coverage](../../research/obsidian-vault-comparison/2026-10-07/active-migration-coverage.md) maps the original research and root files to current homes and explains exclusions.
+
 ## Find the right kind of AI knowledge
 
 | Category | What belongs here | Existing home to consult or update |
