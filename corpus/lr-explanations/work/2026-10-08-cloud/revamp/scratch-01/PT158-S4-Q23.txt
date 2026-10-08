@@ -1,0 +1,65 @@
+===== PT158-S4-Q23 | type: Flaw | DB key: E | bank key: E
+BANK STIMULUS: Official: Six months ago, the fines for parking violations
+ on the city’s streets were raised to help pay for
+ the parking garage that had just opened. Since
+ then, parking violations on our streets have
+ dropped by 50 percent. Hence, if we want there
+ to be even fewer parking violations, the fines
+ should be raised again.
+BANK STEM: The reasoning in the official’s argument is flawed in that
+ the argument
+  BANK A  takes a possible effect of a reduction to be a possible cause of that reduction
+  BANK B  takes for granted that raising fines a second time will reduce parking violations at least as much as it did the first time
+  BANK C  fails to take into account the financial benefits the city is now deriving from fines for parking violations
+  BANK D  takes for granted that people who park their cars illegally would prefer to park legally
+  BANK E* fails to establish that the initial decrease in parking violations was not due to the availability of additional parking spaces
+!! DB STIMULUS DIFFERS: Official: Six months ago, the fines for parking violations on the city's streets were raised to help pay for the parking garage that had just opened. Since then, parking violations on our streets have dropped by 50 percent. Hence, if we want there to be even fewer parking violations, the fines should be raised again.
+!! DB STEM DIFFERS: The reasoning in the official's argument is flawed in that the argument
+--- style=standard explanation_id=b0432b66-9b91-446d-92aa-f0a637db98af
+  [step 0 id=37d7861e-65da-41ee-8bd9-e5fb66e8a762] Conclusion (Hence)
+If we want there to be even fewer parking violations, the fines should be raised again.
+  [step 1 id=d90cc213-c178-450e-8472-21d25661714a] Evidence
+Six months ago we raised the fines for parking violations, and since then parking violations on our streets have dropped by 50%.
+  [step 2 id=a080ae89-c3a2-4236-8112-a1b0217ea8b3] Evaluate
+A common trope in Logical Reasoning is to say, "Policy change X went into effect. Then thing Y happened. So, apparently policy change X caused thing Y."
+It seems here that our author is definitely making that same causal assumption, that the increase in fines is the cause of the 50% drop in parking violations.
+The conclusion has implicit causality. When you say, "If you want X, you should do Y", you're implying that Y can bring about X.
+This is the classic Explain Curious Fact argument structure, and when it shows up on Flaw, it means that they are usually just testing our awareness that the author has overconfidently arrived at one possible explanation for a curious fact, even though others could exist.
+  [step 3 id=6a3f4f2e-bc5b-472f-b3f3-a54cd6a1c8e4] Goal
+So we might see answers saying, "The author takes for granted that because X was followed by Y, X caused Y" or "the author fails to consider other things could have caused there to be 50% fewer parking violations (a pandemic or storm that led to there being fewer people out and about, or maybe an increase in visibility of meter maids making people worry about whether they still had value left on their meter).
+But there's also a prediction aspect to the conclusion, so even if we thought the fines were the causal reason that violations dropped by 50%, we won't necessarily get a further reduction by increasing fines even more. At a certain point, you've already maxed out the disincentive to get a parking violation. Whether it's a $500 or $600 fine, I'm equally determined to not get that ticket.
+  [note A id=f9f704d2-75c0-441d-b3df-1f5701a4ea93] Confusing cause and effect means reversing the causal direction — claiming X caused Y when actually Y caused X. The argument's timeline is straightforward and correct: fines were raised, then violations decreased. There is no reversal of the causal arrow. The actual flaw is different: the argument ignores a confounding variable (the parking garage) that could explain the same outcome. This is an alternative-cause error, not a reversed-causation error. The argument gets the temporal sequence right but fails to consider that another simultaneous change might be the real explanation. These are distinct logical errors, and this answer identifies the wrong one.
+  [note B id=71454257-6260-48fe-bcae-03452f3d21b4] This answer identifies a real but secondary issue: diminishing returns. Perhaps the first fine increase captured the "easy wins" — the most price-sensitive violators — and a second increase would affect fewer people. But this critique is premature. The primary flaw is more fundamental: the argument has not established that fines caused the initial decrease at all. The parking garage is an unexamined alternative explanation. Before questioning whether a second dose of medicine will work as well as the first, we should first confirm the first dose was actually medicine and not a placebo. This answer skips ahead to a secondary objection while missing the foundational problem.
+  [note C id=e63d7d36-7191-4c25-ba4e-24c505ce84b5] This answer introduces a cost-benefit analysis: do the revenues from fines justify the costs of enforcement? But the argument's conclusion is about effectiveness ("raise fines to reduce violations further"), not about profitability ("raise fines to make money"). The logical flaw lies in the causal reasoning — attributing the decrease in violations to fines while ignoring the garage. Whether fines are financially worthwhile is a completely separate question from whether they actually caused the behavioral change. This answer operates in the wrong analytical framework for a flaw question about causal reasoning.
+  [note D id=97d5639c-5b3b-40a3-ba4a-769bb338a3f6] This answer claims the flaw is assuming illegal parkers would prefer to park legally. But the argument's logic relies on deterrence through financial punishment, not on changing people's parking preferences. Deterrence works even when people prefer the illegal option — they choose the legal option to avoid the fine, not because they like it better. The argument does not need to assume anything about preferences; it only needs to assume fines change behavior through the threat of cost. The actual flaw is much simpler and more fundamental: the argument ignores that the new parking garage, not the fines, might explain the reduced violations.
+  [note E id=2e26a5ce-8279-402a-83d3-32a74fc07b18] This is the classic alternative-cause or confounding-variable flaw. Two events occurred simultaneously: the fine increase and the garage opening. Violations decreased by 50%. The argument attributes the decrease entirely to the fine increase and recommends a second increase. But it fails to consider that the parking garage — which provided new legal parking spaces — could be the actual explanation. People may have stopped parking illegally because they finally had a convenient legal option, not because they feared costlier tickets. Without controlling for this alternative cause, the argument's causal attribution is unjustified, and its recommendation (raise fines again) rests on an unproven foundation.
+--- style=brief explanation_id=924ac5d1-1f78-487a-8da3-66cbffb4cee5
+  [step 0 id=c1d182e9-053e-4f92-9ce2-7d21dde06fd7] Conclusion
+Parking fines should be raised again to further reduce violations.
+  [step 1 id=3856f52a-6317-4e7e-996c-a103799f1869] Evidence
+When fines for parking violations were raised to help pay for a newly opened parking garage, violations dropped by 50%.
+  [step 2 id=34f644bd-8814-4f9f-b355-317cdd28a874] Evaluate
+Two changes happened simultaneously: fines increased AND a new garage opened. The argument credits only the fines for the improvement, ignoring that the garage gave people a legal place to park.
+  [step 3 id=5e6bd24a-7fb2-4ca4-98d6-0d099dc0286e] Goal
+Find the answer that identifies this alternative-cause flaw — the failure to consider that the parking garage, not the fine increase, may explain the drop in violations.
+  [note A id=720bf33c-20a2-4d92-b048-aabb2f3b7532] The argument does not reverse cause and effect. The timeline is correct: fines increased, then violations dropped. The flaw is ignoring an alternative cause (the garage), not confusing the causal direction.
+  [note B id=d7afdfad-bd23-4634-9719-4f5589f9025e] Whether a second fine increase would be equally effective is a secondary concern. The primary flaw is more basic: the argument has not proven the first increase caused the improvement at all.
+  [note C id=b2ae508b-22c5-4df7-bd51-3a5e3d71dbf7] Whether fines generate enough revenue to justify enforcement costs is an economic question, not a logical flaw in the causal reasoning about what reduced violations.
+  [note D id=ad4efbb4-6323-4cdc-81b2-ead9e0f3cf08] The argument does not assume illegal parkers prefer legal parking. It argues that higher fines deter through punishment, not through changing preferences. This misidentifies the argument's reasoning.
+  [note E id=6821832e-bd47-44c6-bf68-0a94d3e63326] The garage opened when fines increased. The drop in violations could be due to the garage providing legal parking, not the fines. The argument ignores this alternative explanation and wrongly credits fines alone.
+--- style=another_way explanation_id=d787a5b0-ad83-4f3c-95ef-709b1f32fa75
+  [step 0 id=c604904f-9f87-4659-85cc-1eaa0e3790f7] Conclusion
+The fines are working! Let us raise them MORE!
+  [step 1 id=f102d4df-4173-497d-b3ac-534d691b78c0] Evidence
+The city raises parking fines AND opens a shiny new parking garage on the same day. Violations drop by half.
+  [step 2 id=ff76d07b-df20-435f-b284-d782e897c450] Evaluate
+That is like starting a diet and a gym membership on the same Monday, losing 20 pounds, and telling everyone "my diet is incredible — I should eat even LESS!" Meanwhile, the gym membership is standing in the corner going "HELLO?! I HELPED TOO!" The argument completely ignores the giant concrete alternative explanation sitting right there with 500 empty parking spaces. Maybe people stopped parking illegally because they finally had somewhere legal to park, not because they were terrified of bigger fines.
+  [step 3 id=2678c940-7fbd-47c4-97a6-8715ba0dda37] Goal
+We need the answer that calls out this blind spot — the failure to consider the garage as the real explanation.
+  [note A id=dca3ea91-56a3-4576-b84c-0c9c9d325e5f] "Confusing cause and effect" would be like saying "fewer violations caused the fines to go up." That is backwards, and nobody is arguing that. The timeline is clear: fines up, violations down. The problem is not WHICH came first — it is that there is a giant parking garage that ALSO happened at the same time and could be the real reason. This is like accusing a detective of getting the time of death wrong when actually they arrested the wrong person.
+  [note B id=21210961-5ec7-47c7-86d7-1f808c66be98] This answer says "maybe the second fine increase will not work as well as the first!" Fair point — but we have not even established that the FIRST one worked. It is like a film critic debating whether a sequel will match the original's box office when the original's success might have been entirely due to the holiday release window. Worry about the sequel later; first, figure out if the original actually did what it claimed to do.
+  [note C id=27e04ae1-8495-4722-9f1d-0017c6dfd0f2] This answer wants to do a cost-benefit analysis when we are looking for a logical flaw. It is like critiquing a rain dance by asking "is it worth the cost of the costumes?" when the real question is "DID THE DANCE CAUSE THE RAIN?" The argument's problem is not that fines are an inefficient revenue source. The problem is that fines might not have done anything at all — the garage might deserve all the credit. Wrong lens, wrong answer.
+  [note D id=8aa9f34f-8e7e-415c-a380-e4e574d8295b] Do illegal parkers dream of legal spots? Probably not — that is kind of why they park illegally. But that is not the argument's assumption. Deterrence does not require preference change; it just requires "this ticket costs enough that I will walk an extra block." The real flaw is not some deep psychological assumption about parking preferences — it is the massive, obvious, impossible-to-miss parking garage that opened at the exact same time.
+  [note E id=b791dcee-0e2a-4c89-b25d-9b54bea147e3] Imagine starting to wear a lucky hat AND studying harder on the same day. Your test scores improve. You conclude: "The hat is magic! I need an even LUCKIER hat!" Meanwhile, the studying is obviously responsible.
+
+That is this argument in a nutshell. Fines go up and a garage opens simultaneously. Violations drop. The argument says "fines did it — raise them more!" completely ignoring the 500-space concrete rectangle that just gave everyone a legal place to park. The argument does not even mention the garage as a possible explanation, which is the logical equivalent of ignoring the elephant in the parking lot.

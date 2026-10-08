@@ -1,0 +1,306 @@
+PT117-S4-Q3 {
+ "inventory": "no-notes; very-short | Strong breakdown (worked numbers) but all five choice notes missing.",
+ "step2": [
+  {
+   "item": "Side 4: breakdown only, no choice notes",
+   "flag": "Missing rows: the brief explanation (86a8cd3e-a9bc-4419-aca6-02d43845e732) has steps but no lr_explanation_choice_notes rows for A-E. The standard and another_way styles now have all five notes, so students see notes by default; brief needs five new rows (cannot be proposed as edits). The another_way style in this question also contains em dashes in authored text."
+  }
+ ]
+}
+PT119-S2-Q12 {
+ "inventory": "no-notes; very-short; no-bank-match | Breakdown only, no choice notes, and no bank entry, so the choices are not on file anywhere we checked.",
+ "step2": [
+  {
+   "item": "Side 4: breakdown only, no choice notes",
+   "flag": "Missing rows: the brief explanation (806ab59b-3173-4f9e-a7ce-15aaa8b9365b) has steps but no lr_explanation_choice_notes rows for A-E. The standard and another_way styles now have all five notes, so students see notes by default; brief needs five new rows (cannot be proposed as edits). The another_way style in this question also contains em dashes in authored text."
+  }
+ ]
+}
+PT119-S2-Q7 {
+ "inventory": "no-notes; very-short | Chain diagram in the breakdown; all five choice notes missing.",
+ "step2": [
+  {
+   "item": "Side 4: breakdown only, no choice notes",
+   "flag": "Missing rows: the brief explanation (51ac5326-39b1-441d-ae31-f789f3a34a07) has steps but no lr_explanation_choice_notes rows for A-E. The standard and another_way styles now have all five notes, so students see notes by default; brief needs five new rows (cannot be proposed as edits). The another_way style in this question also contains em dashes in authored text."
+  }
+ ]
+}
+PT122-S1-Q9 {
+ "inventory": "no-breakdown; no-notes; very-short | Explanation row exists but has no steps and no choice notes.",
+ "step2": [
+  {
+   "item": "Side 4: explanation row with no steps and no notes",
+   "skip": "Already filled: the single explanation now has a full breakdown and notes A-E in the mirror."
+  }
+ ]
+}
+PT124-S3-Q19 {
+ "inventory": "short-breakdown; verdict-only; thin-notes; no-prediction; damage; very-short | Stray \"- paragraph\" markup in C note; B and C notes identical; no statement of the \"not all three\" rule as a diagram.",
+ "step2": [
+  {
+   "style": "single",
+   "letter": "C",
+   "kind": "transcription",
+   "why": "Removes literal '- paragraph' transcription leftovers; no other wording changed.",
+   "item": "Side 5: literal '- paragraph' lines"
+  },
+  {
+   "style": "single",
+   "letter": "C",
+   "kind": "transcription",
+   "why": "Removes the stray '- paragraph' markup line (and adds the missing period).",
+   "item": "PT124-S3-Q19 C note carries a literal \"- paragraph\" line"
+  },
+  {
+   "style": "single",
+   "letter": "A",
+   "kind": "transcription",
+   "why": "The chain was run into the sentence with a horizontal-rule character ('\u23e4\u23e4\u23e4'); the sentence is restored and each step of the chain put on its own line.",
+   "item": "PT124-S3-Q19 (found while fixing C) A note: diagram flattened onto one line with a stray rule"
+  }
+ ]
+}
+PT125-S4-Q12 {
+ "inventory": "short-breakdown; verdict-only; thin-correct-note; thin-notes; no-prediction; very-short | DB type says Parallel Flaw; it is Most Supported. Correct note is \"supported by the second statement\".",
+ "step2": []
+}
+PT126-S3-Q16 {
+ "inventory": "no-breakdown; verdict-only; thin-notes; very-short | No breakdown; four wrong notes are all \"X is not discussed in the statements\".",
+ "step2": [
+  {
+   "style": "single",
+   "letter": "A",
+   "kind": "verdict-only",
+   "why": "Verdict expanded to tie to what the statements do cover.",
+   "item": "PT126-S3-Q16 verdict-only EABD"
+  },
+  {
+   "style": "single",
+   "letter": "B",
+   "kind": "verdict-only",
+   "why": "Verdict expanded with the passage's actual mechanism.",
+   "item": "PT126-S3-Q16 verdict-only EABD"
+  },
+  {
+   "style": "single",
+   "letter": "D",
+   "kind": "verdict-only",
+   "why": "Verdict expanded to name the passage's actual contrast.",
+   "item": "PT126-S3-Q16 verdict-only EABD"
+  },
+  {
+   "style": "single",
+   "letter": "E",
+   "kind": "verdict-only",
+   "why": "Verdict expanded.",
+   "item": "PT126-S3-Q16 verdict-only EABD"
+  }
+ ]
+}
+PT130-S3-Q10 {
+ "inventory": "no-breakdown; verdict-only; thin-correct-note; thin-notes; very-short | No breakdown or diagram on a conditional Must Be True; E note is \"This follows from the first and third statements.\"",
+ "step2": []
+}
+PT132-S2-Q1 {
+ "inventory": "short-breakdown; verdict-only; thin-correct-note; thin-notes; no-prediction; very-short | Principle-illustration question filed as Most Supported; notes are one line; no statement of the principle to match.",
+ "step2": [
+  {
+   "style": "single",
+   "letter": "A",
+   "kind": "verdict-only",
+   "why": "Verdict expanded to contrast A with the study.",
+   "item": "PT132-S2-Q1 verdict-only EAB"
+  },
+  {
+   "style": "single",
+   "letter": "B",
+   "kind": "verdict-only",
+   "why": "Note misdescribed B as about 'the best time'; B is about the best method.",
+   "item": "PT132-S2-Q1 verdict-only EAB"
+  },
+  {
+   "style": "single",
+   "letter": "E",
+   "kind": "verdict-only",
+   "why": "Pasted note (same as B) replaced with E's own reason.",
+   "item": "PT132-S2-Q1 verdict-only EAB"
+  }
+ ]
+}
+PT132-S2-Q6 {
+ "inventory": "short-breakdown; verdict-only; thin-correct-note; thin-notes; no-prediction; very-short | Diagram margin text is spliced into the stimulus copy; D note says people who wish to \"limit\" are out of scope, but D is about people who wish to eliminate.",
+ "step2": [
+  {
+   "style": "single",
+   "kind": "transcription",
+   "why": "Margin diagrams were spliced into the sentences; text restored and the two conditionals set on their own lines with a key.",
+   "item": "PT132-S2-Q6 verdict-only DEBC; margin diagrams spliced"
+  },
+  {
+   "style": "single",
+   "letter": "A",
+   "kind": "transcription",
+   "why": "Note was broken into a diagram column; chain and sentence restored.",
+   "item": "PT132-S2-Q6 verdict-only DEBC; diagram column"
+  },
+  {
+   "style": "single",
+   "letter": "B",
+   "kind": "verdict-only",
+   "why": "Verdict with flattened diagram replaced with a note that says why the negation fails.",
+   "item": "PT132-S2-Q6 verdict-only DEBC"
+  },
+  {
+   "style": "single",
+   "letter": "C",
+   "kind": "verdict-only",
+   "why": "Pasted note (same as B) replaced with C's own reason.",
+   "item": "PT132-S2-Q6 verdict-only DEBC"
+  },
+  {
+   "style": "single",
+   "letter": "D",
+   "kind": "slip",
+   "why": "Note said people who wish to 'limit' are out of scope; D is about people who wish to eliminate.",
+   "item": "PT132-S2-Q6 verdict-only DEBC"
+  },
+  {
+   "style": "single",
+   "letter": "E",
+   "kind": "transcription",
+   "why": "Note was a broken diagram column; restored as a sentence and chain without overstating E as a strict contradiction.",
+   "item": "PT132-S2-Q6 verdict-only DEBC"
+  },
+  {
+   "style": "single",
+   "letter": "D",
+   "kind": "slip",
+   "why": "The note named the wrong group (people who wish to limit caffeine, who are exactly the stimulus's subject); D is about people who wish to eliminate it, which the stimulus explicitly sets aside.",
+   "item": "PT132-S2-Q6 D \"People who wish to limit their caffeine intake are out of scope\"; D is about eliminating"
+  },
+  {
+   "style": "single",
+   "kind": "transcription",
+   "why": "The chains sat inside the sentences ('Listing exact caffeine LCC \u2192 ELC content'); each sentence is restored with its chain on its own line.",
+   "item": "PT132-S2-Q6 (found while fixing D) Given step: diagrams spliced into the sentences"
+  },
+  {
+   "style": "single",
+   "letter": "A",
+   "kind": "transcription",
+   "why": "Layout garble; restored.",
+   "item": "PT132-S2-Q6 (found while fixing D) A note: diagram spliced, one-word-per-line"
+  },
+  {
+   "style": "single",
+   "letter": "B",
+   "kind": "transcription",
+   "why": "Layout garble; restored.",
+   "item": "PT132-S2-Q6 (found while fixing D) B note: diagram spliced"
+  },
+  {
+   "style": "single",
+   "letter": "C",
+   "kind": "transcription",
+   "why": "Layout garble; restored.",
+   "item": "PT132-S2-Q6 (found while fixing D) C note: diagram spliced"
+  },
+  {
+   "style": "single",
+   "letter": "E",
+   "kind": "transcription",
+   "why": "Layout garble; restored.",
+   "item": "PT132-S2-Q6 (found while fixing D) E note: diagram spliced, one-word-per-line"
+  }
+ ]
+}
+PT133-S1-Q20 {
+ "inventory": "short-breakdown; verdict-only; thin-correct-note; thin-notes; no-prediction; damage; very-short | d4 conditional chain; C and D notes are garbled diagrams, and D's diagram concludes ~CL -> up TC, which is not what the chain yields.",
+ "step2": [
+  {
+   "style": "single",
+   "letter": "D",
+   "kind": "transcription",
+   "why": "The chain gives \u2193CL \u2192 \u2193TC, but the note's conclusion read '\u2193CL \u2192 \u2191TC'; D (\u2193TC \u2192 \u2193CL) reverses \u2193CL \u2192 \u2193TC. The note's sentence was also broken across the diagram lines.",
+   "item": "PT133-S1-Q20 D diagram concludes \"down CL -> up TC\""
+  },
+  {
+   "style": "single",
+   "letter": "C",
+   "kind": "transcription",
+   "why": "The note was a garbled diagram about congestion increasing (including a reversed \u2191C \u2192 \u2193CL) and never explained C; the new note says \u2193TC is a necessary condition only, so it triggers no conclusion about the cost of living (tag: Wrong Trigger).",
+   "item": "PT133-S1-Q20 C garbled: restates \"If traffic congestion increases...\" and never says why C fails"
+  },
+  {
+   "style": "single",
+   "letter": "A",
+   "kind": "transcription",
+   "why": "Sentence and chain were interleaved line by line and '\u2234' came through as '\u10fb'; restored.",
+   "item": "PT133-S1-Q20 (found while fixing C, D) A note: diagram interleaved with sentence"
+  },
+  {
+   "style": "single",
+   "letter": "B",
+   "kind": "transcription",
+   "why": "Sentence and chain were interleaved and 'the' was clipped to 'he'; restored.",
+   "item": "PT133-S1-Q20 (found while fixing C, D) B note: diagram interleaved, 'he first'"
+  },
+  {
+   "style": "single",
+   "letter": "E",
+   "kind": "transcription",
+   "why": "Chain sat inside the sentence; restored.",
+   "item": "PT133-S1-Q20 (found while fixing C, D) E note: diagram spliced into the sentence"
+  },
+  {
+   "style": "single",
+   "kind": "transcription",
+   "why": "Chains sat inside the sentences; each sentence restored with its chain on its own line.",
+   "item": "PT133-S1-Q20 (found while fixing C, D) Given step: diagrams spliced into the sentences"
+  }
+ ]
+}
+PT133-S1-Q9 {
+ "inventory": "short-breakdown; verdict-only; thin-correct-note; thin-notes; no-prediction; very-short | A note says the statements do not link transistor count to speed, but the stimulus says speed doubled \"hence\" from transistors; A is wrong for \"only effective way\".",
+ "step2": [
+  {
+   "style": "single",
+   "letter": "A",
+   "kind": "slip",
+   "why": "Note wrongly said the statements do not link transistor count to speed; the stimulus says 'and hence'. A's real problem is 'only'.",
+   "item": "PT133-S1-Q9 verdict-only EBC"
+  },
+  {
+   "style": "single",
+   "letter": "B",
+   "kind": "verdict-only",
+   "why": "Verdict expanded.",
+   "item": "PT133-S1-Q9 verdict-only EBC"
+  },
+  {
+   "style": "single",
+   "letter": "C",
+   "kind": "verdict-only",
+   "why": "Verdict expanded.",
+   "item": "PT133-S1-Q9 verdict-only EBC"
+  },
+  {
+   "style": "single",
+   "letter": "E",
+   "kind": "verdict-only",
+   "why": "Verdict expanded.",
+   "item": "PT133-S1-Q9 verdict-only EBC"
+  },
+  {
+   "style": "single",
+   "letter": "A",
+   "kind": "slip",
+   "why": "The note denied a link the stimulus states ('and hence the microchips' computing speed'); A fails on 'only'.",
+   "item": "PT133-S1-Q9 A \"The statements do not suggest that increasing the number of transistors... led to doubling the computing speed\""
+  }
+ ]
+}
+PT133-S2-Q12 {
+ "inventory": "short-breakdown; verdict-only; thin-correct-note; thin-notes; no-prediction; very-short | d5 Most Supported answered with \"supported by the second and third statements\"; never explains the Winslow split.",
+ "step2": []
+}

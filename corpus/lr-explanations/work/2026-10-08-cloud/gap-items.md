@@ -1,0 +1,43 @@
+# Uncovered step-2 items (cloud gap fill)
+## From model-library-defects.md (slice B, never reached)
+- [Strengthen-SA] **PT142-S1-Q2:** the C note calls the Parthenon "a government building, I believe". That is wrong (it is a temple) and it is outside knowledge. It is not used to justify the key.
+- [Strengthen-SA] **PT108-S2-Q14:** the B-note diagram is flattened ("IF British govt THEN the UFOs withholds info → ...") and reads wrong as printed. The prose around it is fine.
+- [Strengthen-SA] **PT141-S2-Q22:** uses "genetic drift" for natural selection. The A note leans on an outside definition of species (they cannot interbreed).
+- [Strengthen-SA] **PT148-S1-Q11:** B note has "of 'Effect w/o Cause'" (should read "or"). C and E are duplicates.
+- [Strengthen-SA] **PT146-S3-Q21:** the A note is one flattened paragraph (transcription).
+- [Strengthen-SA] **PT113-S2-Q6:** typo "world $500" for "worth $500".
+- [Strengthen-SA] **PT143-S3-Q21:** typo "he heard" for "we heard".
+- [Strengthen-SA] **Type check:** all 40 Strengthen candidates are Strengthen. PT154-S2-Q16 is a "strengthen the grounds" variant and PT150-S2-Q7 is "justify the contention"; both still behave as Strengthen.
+- [Strengthen-SA] **PT144-S2-Q22 (excluded).** The Evaluate diagrams lost their negations. The text reads "serves purpose → provides legal protection / provides legal protection → serves purpose" and "email suggests something illegal → provides legal protection", which state the opposite of the argument. The either-way A note is strong, but the diagrams now teach the wrong logic.
+- [Strengthen-SA] **PT152-S4-Q3:** the D note says "We were never told that 'these regular smokers rarely look at the packaging'" when it means "We were told". That slip reverses the trigger check on the correct answer.
+- [Strengthen-SA] **PT115-S2-Q21:** the A note ends mid-sentence ("Most skilled artists are") and is truncated.
+- [Strengthen-SA] **PT146-S2-Q9:** "journey will reveal" for "journalist" (twice).
+- [Strengthen-SA] **PT118-S1-Q23:** "never no" for "never know".
+- [Strengthen-SA] **Inline diagrams:** many d4-d5 picks (PT118-S1-Q21, PT118-S4-Q22, PT113-S4-Q20, PT139-S4-Q21, PT112-S1-Q26) have flattened diagrams. The prose still carries the logic, but new explanations should use code-block diagrams like PT153-S3-Q3 and PT154-S4-Q20.
+- [Strengthen-SA] PT102-S4-Q7 and PT104-S1-Q16 ("do most to justify"). The explanations themselves call these Strengthen, and the PT102 key is argued as a necessary assumption.
+- [Strengthen-SA] PT143-S3-Q12 ("justifies the application of the policy") is Principle, applying a stated policy.
+- [Weaken-Evaluate] PT139-S4-Q7 (D note): "The author is promising that we can find an audio version" should read "is not promising".
+- [Weaken-Evaluate] PT142-S2-Q20: the Goal says the computer may have generated "tons of false negatives", and the C note says "the doctor won when it came to false negatives". Both should be false positives (the cardiologist was better on cases with no heart attack). Not picked.
+- [Weaken-Evaluate] PT106-S2-Q25 (Evaluate step): "Given that ... her blinking was voluntary" should be her humming, and involuntary. Missing spaces too ("it'snotinvoluntary", "Marianneshouldbe"). Not picked.
+- [Weaken-Evaluate] PT119-S4-Q17: the causal-chain diagram is garbled. The C note relies on outside chemistry. The B note admits it uses outside knowledge.
+- [Weaken-Evaluate] PT109-S4-Q19: "FOOTNOTE:" pasted mid-sentence in the B note.
+- [Weaken-Evaluate] PT106-S3-Q11 (C note): the worked-number table is flattened and unreadable. PT140-S1-Q13 (E note): the rule-of-thumb chart is flattened.
+- [Weaken-Evaluate] PT141-S2-Q9 (E note): "Probably now" should be "not". PT154-S4-Q22 (C note): "spots" should be "sports". PT103-S3-Q24 (D note): "cars told" should be "cars sold".
+- [Weaken-Evaluate] PT105-S4-Q5 (D note): "as this correct answer shows" refers to B, not D.
+- [Weaken-Evaluate] Tone flags: PT146-S2-Q22, PT120-S1-Q22, PT144-S4-Q23 (disqualifying). PT154-S4-Q22 D ("legendarily horrid correct answer") and PT140-S2-Q12 C ("His name is Greg and he sucks") are milder.
+- [Weaken-Evaluate] PT139-S1-Q5 (E note): describes a different choice. It repeats B's reasoning ("The study controlled for how much coffee was consumed"), but printed E asks whether people with arthritis are less likely to drink coffee of any kind. The C note also points to a missing link ("try this one"). Excluded for this. The rest is model-quality, so fixing E would make it pickable.
+- [Weaken-Evaluate] PT146-S3-Q8 (C note): "the exact same evidence X the courtroom" is missing "outside".
+- [Weaken-Evaluate] PT142-S1-Q21 (Goal): the sentence is cut off after "undermining the plausibility".
+- [Weaken-Evaluate] PT150-S3-Q21: printed choice E is truncated in the source ("Was the finance minister in office when the last").
+- [Weaken-Evaluate] PT104-S4-Q6: missing spaces ("wouldstrengthen", "wouldnotbe", "destroyingmost").
+- [Weaken-Evaluate] PT108-S2-Q9 (E note): "proceeding" should be "following".
+- [Weaken-Evaluate] PT146-S2-Q16 (A note): outside-knowledge p.s. about roast caffeine. Not used for the key, but it should not be copied.
+- [Weaken-Evaluate] PT148-S4-Q22 (A note): applies a Necessary Assumption rule on an Evaluate question. The reasoning still holds, but the label is wrong.
+- [Weaken-Evaluate] Tone: PT146-S3-Q23 C, PT138-S2-Q14 opening.
+
+## From side-issues.md section 6 and 5 (slice D, these qids only)
+- "try this one" with no link: PT102-S2-Q20, PT139-S1-Q5, PT140-S3-Q18, PT158-S4-Q25.
+- "click on the bold if you'd like to see other examples": PT140-S3-Q7.
+- "watch the class recording, via the play button on the highlighter toolbar": PT132-S4-Q18.
+- "Welcome to Test 89, everyone": PT155-S4-Q15 (LSAT Lab's numbering).
+- "the sentence ends here with no continuation on the LSAT Lab page": PT143-S4-Q9 (a transcription note left in student text).
