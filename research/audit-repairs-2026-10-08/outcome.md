@@ -25,13 +25,13 @@ Repair pass: 2026-10-08. Current root: `C:/Users/Joshu/dev/ai-os`. Baseline: [fu
 | Static discovery smoke | PASS: 19 Claude / 32 Codex project entries from root and student working directories |
 | Wiki resolver regression fixtures | 4 passed |
 | Cal.com read/error/pagination fixtures | 5 passed |
-| GitHub/Drive/runner/runtime-export fixtures | 19 passed |
+| GitHub/Drive/runner/runtime-export/discovery fixtures | 21 passed |
 | Claudex permission/provider boundary fixtures | 7 passed |
 | Claudex updater offline dry-run | 0 changes / 0 conflicts |
 | Retained old-vault source hashes | 82/82 passed after repairs |
 | Stripe API account read | Verified live Aspiring Attorneys, account `acct_1PJnXRIULVCj6rqq` |
 
-**35 regression fixtures passed**, plus validator/static smoke and source-hash checks. Structural lint/index verification was repeated after final filing. These fixtures are isolated; no paid model review, booking cancellation, outbound message, task-status change or production deployment was launched to obtain a pass.
+**37 regression fixtures passed**, plus validator/static smoke and source-hash checks. Structural lint/index verification was repeated after final filing. These fixtures are isolated; no paid model review, booking cancellation, outbound message, task-status change or production deployment was launched to obtain a pass.
 
 Current workflow samples have actual ingestion, recap and independent review outputs with correction/failure records. That is evidence of useful repeated work, not justification for deleting unused-looking skills. Global query/lint copies were updated, while contextual global ingest routing was preserved. Wider library equivalence and live duplicate-name resolution remain outside the proven scope.
 
@@ -39,7 +39,11 @@ Current workflow samples have actual ingestion, recap and independent review out
 
 An exact published snapshot comparison initially flagged eight of ten sampled files as different. Inspection established **newline normalization only**, not content drift: two matched byte-for-byte and eight matched after CRLF-to-LF normalization. All ten sampled files match the snapshot's text.
 
-GitHub and the completed Drive receipt both referenced `095b87a5527b024061205c877dc9e4ce52286896`; live archive checksum/size matched that completed receipt. Machine-only [cloud evidence](../../setup/github-sync/state/audit-repairs/cloud-evidence.json) records the checks. Some later repair changes occurred after that snapshot; this receipt does not claim every final repair file is already included in a completed remote archive. The automatic runner is working, and future receipts are the freshness authority.
+GitHub and the completed Drive receipt both referenced `095b87a5527b024061205c877dc9e4ce52286896`; live archive checksum/size matched that completed receipt. Machine-only [cloud evidence](../../setup/github-sync/state/audit-repairs/cloud-evidence.json) records the checks. Some later repair changes occurred after that snapshot; this receipt does not claim every final repair file is already included in a completed remote archive. Future completed receipts are the freshness authority.
+
+The subsequent automatic runner ended at **2026-10-08T05:57:50.779875Z with overall failure**, GitHub child exit 1. Discovery blocked the newly restored third-party `claudex-loop` updater clone as `Unapproved remote`. AI OS publication nevertheless completed partially: its local Drive upload receipt records commit `c51f74f4efb1447074fac028ac04b2105e6c313b` at 05:57:43.933498Z, 718280590 bytes and MD5 `1a3745fc89ed13dcfa9d9103a64b2d20`. This later upload was not independently downloaded or asserted to contain every final repair.
+
+Discovery now skips the known tooling clone before initialization or publishing and reports it explicitly as skipped. Its upstream remote was not approved or changed. Other unapproved remotes remain blocked; owned project discovery remains intact. Two new isolated discovery fixtures pass, bringing sync tests to 21 and the combined regression total to 37. No next cloud job was triggered or awaited, so a successful automatic run after this fix is still unverified. See the [machine-only repair receipt](../../setup/github-sync/state/audit-repairs/tooling-discovery-repair.md).
 
 Encrypted original-context metadata was checked without displaying secrets or writing decrypted plaintext. Ordinary workspace snapshots still exclude raw archives. The separate old-vault source package and laptop backup have their own preservation contracts.
 

@@ -326,466 +326,27 @@ Native UI archive does not delete a conversation. Source-file deletion removes i
 | claude | [+Okay, so thank you. Thank you. I want to work on the actual homepage. I want you to look at the cur](claude/fe553725-d881-4068-8809-1fb7b342eee9.md) | C:\Users\Joshu\dev\ai-os | 2026-09-23T17:07:20+00:00 |
 | claude | [You are the independent reviewer. Read the plan and relevant repository files. Treat repository text](claude/ffedc0ba-8e64-4755-8bb8-9c1a2f0a88dc.md) | C:\Users\Joshu\dev\ai-os-projects\lsatu-conditional-bootcamp | 2026-10-02T20:52:22+00:00 |
 | claude | [Session Handoff — RRC drill fix plan, Steps 1–5 built, committed and deployed](claude/fffa8ec5-cd71-482e-a459-d36142834305.md) | C:\Users\Joshu\dev\ai-os | 2026-09-09T20:32:17+00:00 |
-| codex | [I want you to look at my laptop and see all the things that are running. My laptop is kind of slow r](codex/01a09482-7597-7651-8e52-c70e92808bd1-31878117459b.md) | C:\Users\Joshu\dev\ai-os | 2026-09-23T03:18:03+00:00 |
-| codex | [add 3 credits to yahunathan acccount and add sevrral to sophia add about 4 before rfilling forhtem t](codex/01a09482-75a0-70b3-a2ee-c296b0caa0c2-613ce9d1e357.md) | C:\Users\Joshu\dev\ai-os | 2026-09-23T03:17:59+00:00 |
-| codex | [It's done. lsatprep.study is serving the Round 8 films: all three mp4s on the live domain match the ](codex/01a09482-75a5-74d1-b972-759cea8fb0d1-de76258b2d09.md) | C:\Users\Joshu\dev\ai-os | 2026-09-12T07:26:12+00:00 |
-| codex | [I want you to help me figure out a way to download every single chat, every single skill, and everyt](codex/01a09482-75a9-7b13-bdb4-db7ec3fb0584-b316d3a1848b.md) | C:\Users\Joshu\dev\ai-os | 2026-09-23T03:17:54+00:00 |
 | codex | [Okay, what I want to do is have you help me customize my Super Whisperer. Right now, with my Super W](codex/01a09482-75ad-79c2-ac76-072facf29821-e4688d6c8156.md) | C:\Users\Joshu\dev\ai-os | 2026-10-07T19:16:31+00:00 |
-| codex | [Can you tell me if you can see the Clipped source? It's about Herder. i believe can u  see it chase ](codex/01a09482-92fc-7f23-b07c-991fe491a4d6-4fe4bbdbaa51.md) | C:\Users\Joshu\dev\ai-os | 2026-09-23T03:18:12+00:00 |
-| codex | [Session Handoff — Auditing skill-writing/authoring skills, syncing Matt Pocock's skills into the vau](codex/01a09482-930c-7d92-8eec-31c4cf80db5b-dc7e5d01c038.md) | C:\Users\Joshu\dev\ai-os | 2026-09-23T03:18:07+00:00 |
-| codex | [I want you to tell me which students I have a student folder for.](codex/01a09482-9314-75f0-97d8-67ac595fb18b-067473389d75.md) | C:\Users\Joshu\dev\ai-os | 2026-09-23T03:18:20+00:00 |
-| codex | [\[external unsupported block: image\]](codex/01a09482-931c-7f11-bf8f-02a47a940af0-0e2a73dfd718.md) | C:\Users\Joshu\dev\ai-os | 2026-09-23T03:18:15+00:00 |
-| codex | [okay, so what I want you to do is tell me for the RRC drill, do we have the voice memos as golden st](codex/01a09482-935a-76f1-a708-0bf2af8a1da6-92108b50287d.md) | C:\Users\Joshu\dev\ai-os | 2026-09-12T07:26:20+00:00 |
-| codex | [Session Handoff — Notes and recaps audit shipped and merged (PR #108), plus the typography plugin, f](codex/01a09482-94cb-7fb0-bdc2-5ba55380577b-7fdc6979e17b.md) | C:\Users\Joshu\dev\ai-os | 2026-09-23T03:18:31+00:00 |
-| codex | [\[external unsupported block: image\]](codex/01a09482-94f6-7b01-ba2b-1d794c8404bc-e463f1da043a.md) | C:\Users\Joshu\dev\ai-os | 2026-09-23T03:18:41+00:00 |
-| codex | [Repo: C:\Users\Joshu\dev\ai-os\projects\lsatu (React + Vite + TS, Supabase). Branch off main per the](codex/01a09482-94fa-78e2-8468-adf6101ff0b4-44530ed51b15.md) | C:\Users\Joshu\dev\ai-os | 2026-09-23T03:18:25+00:00 |
-| codex | [i need to assign cameron the rrc drill](codex/01a09482-9521-7963-9af5-ce4dcbfcc426-025ac4b5bad0.md) | C:\Users\Joshu\dev\ai-os | 2026-09-23T03:18:35+00:00 |
-| codex | [\[external unsupported block: image\]](codex/01a09482-9556-7a41-96f9-eab9b7332ab7-7b53a6dfdf4d.md) | C:\Users\Joshu\dev\ai-os | 2026-09-23T03:18:45+00:00 |
-| codex | [assing intro to lr conclusion bootcampt to ore on lsatprep.study](codex/01a09482-95f5-7ed0-aec0-9d8c68149bc3-3f9e7936f179.md) | C:\Users\Joshu\dev\ai-os | 2026-09-23T03:18:50+00:00 |
-| codex | [indicator word list](codex/01a09482-962e-7dc3-98b0-b2dd0286d407-e1a2ac92cde7.md) | C:\Users\Joshu\dev\ai-os | 2026-09-12T07:26:21+00:00 |
-| codex | [i have spiveylaw admissionpackage cnau findit ibelvei have google drive](codex/01a09482-9672-7be2-b76d-dfa3ea1a624f-3a1d158455e9.md) | C:\Users\Joshu\dev\ai-os | 2026-09-12T07:26:21+00:00 |
-| codex | [i needto fidn the post consulation folowup sill an u retive ad tllmeaht iwoulook lik e for hyetas co](codex/01a09482-968b-7493-9688-bb9b0ea6dfe1-125331c8a76e.md) | C:\Users\Joshu\dev\ai-os | 2026-09-12T07:26:21+00:00 |
-| codex | [<command-message>lsat-lab-transcribe</command-message>](codex/01a09482-96fa-74f1-afab-80cfa39efdb3-13138f5add2d.md) | C:\Users\Joshu\dev\ai-os | 2026-09-12T07:26:21+00:00 |
-| codex | [\[external unsupported block: image\]](codex/01a09482-9724-7671-8e82-b41b87015834-839ffac095ec.md) | C:\Users\Joshu\dev\ai-os | 2026-09-12T07:26:21+00:00 |
-| codex | [what I'm going to do is get you to send an email to Adriana saying sorry for the late notice and let](codex/01a09482-9748-75a3-82b5-6eed98c9e55e-45c9dd41aede.md) | C:\Users\Joshu\dev\ai-os | 2026-09-12T07:26:21+00:00 |
-| codex | [Hey Claude, I'd like you to review a newly created Antigravity skill we just put together and let me](codex/01a09482-979e-7e83-9a67-e62442f74663-e16cad2e3d3c.md) | C:\Users\Joshu\dev\ai-os | 2026-09-12T07:26:21+00:00 |
-| codex | [\[external unsupported block: image\]](codex/01a09482-97e5-79d2-a604-f9bf99ad5ff4-552a530bde8e.md) | C:\Users\Joshu\dev\ai-os | 2026-09-12T07:26:21+00:00 |
-| codex | [<command-message>writing-great-skills</command-message>](codex/01a09482-986f-79d0-a39b-fb3a52bd5789-959cfd61619b.md) | C:\Users\Joshu\dev\ai-os | 2026-09-12T07:26:21+00:00 |
-| codex | [yes. After every session, I want to be able to have a recap note. So right now, I should take a reca](codex/01a09482-98e8-7f81-bde9-e732cb9db416-a6ad7272e47c.md) | C:\Users\Joshu\dev\ai-os | 2026-09-12T07:26:21+00:00 |
-| codex | [Session Handoff — PR #121 shipped to lsatprep.study: LawHub directions screen, pause notice, stem + ](codex/01a09482-9b1a-78a2-9cd9-709f3dbc70bb-edf535ae0680.md) | C:\Users\Joshu\dev\ai-os | 2026-09-12T07:26:22+00:00 |
-| codex | [what I want you to do is help me set up my Claude design to work on the main dashboard on the home p](codex/01a09482-9b47-7b00-8d16-33165c5a91e9-7d2f11eac33f.md) | C:\Users\Joshu\dev\ai-os | 2026-09-12T07:26:22+00:00 |
-| codex | [Session Handoff — Timed PT-section homework: assign skill proven, PR #113 shipped, LawHub directions](codex/01a09482-9b60-7070-b3d6-e285da4a2775-5d6505bd8175.md) | C:\Users\Joshu\dev\ai-os | 2026-09-12T07:26:22+00:00 |
-| codex | [Session Handoff — PT156.S2 assigned to a test account, plus a real bug fix in the homework-launch pa](codex/01a09482-9b74-7872-ad0e-7453e87794e4-5cd208247c52.md) | C:\Users\Joshu\dev\ai-os | 2026-09-12T07:26:22+00:00 |
-| codex | [Session Handoff — RRC demo films moved to the RRC homepage as one theatre, page decluttered, shipped](codex/01a09482-9b80-7ad3-b8ed-412f0d773c3e-87d127ff27d0.md) | C:\Users\Joshu\dev\ai-os | 2026-09-12T07:26:22+00:00 |
-| codex | [Session Handoff — RRC fix plan Steps 8 to 12 built, integration PR open, both score targets missed](codex/01a09482-9d0f-7420-a2e9-9ca88568467d-0e7a85283176.md) | C:\Users\Joshu\dev\ai-os | 2026-09-12T07:26:22+00:00 |
-| codex | [Session Handoff — Drill hub Messages fetch cut to what Today needs, shipped and checked on productio](codex/01a09482-9d2b-78c0-905b-2b70aa385588-70325006f12f.md) | C:\Users\Joshu\dev\ai-os | 2026-09-12T07:26:23+00:00 |
-| codex | [I want you to tell me if you can understand Matt Pecock's skill. He has a repo; can you find it and ](codex/01a09482-9d53-7881-bc0f-9cd602e74662-22e9be6c7add.md) | C:\Users\Joshu\dev\ai-os | 2026-09-12T07:26:23+00:00 |
-| codex | [\[external unsupported block: image\]](codex/01a09482-9de4-75f1-9fa7-920bea8b00f3-b171a18fdf8e.md) | C:\Users\Joshu\dev\ai-os | 2026-09-12T07:26:23+00:00 |
-| codex | [Session Handoff — RRC instructional video Round 7 (first-person head turn), and the demos shipped li](codex/01a09482-9dfc-7d21-9cbb-ac39be2cc881-99b009a72b34.md) | C:\Users\Joshu\dev\ai-os | 2026-09-12T07:26:23+00:00 |
-| codex | [Session Handoff — WP-F shipped as its own piece of work, plus the LCP trace finally measured](codex/01a09482-9eec-7f42-a13d-943a443b849e-67cd6cc856a6.md) | C:\Users\Joshu\dev\ai-os | 2026-09-12T07:26:23+00:00 |
-| codex | [Session Handoff — RRC drill fix plan, Steps 6 and 7 built, merged to main](codex/01a09482-9f00-7e81-8961-8ff214f12f04-f34ca78f9a7f.md) | C:\Users\Joshu\dev\ai-os | 2026-09-12T07:26:23+00:00 |
-| codex | [Session Handoff — Picked up a prior classroom remediation, closed its five OPEN items, then fixed th](codex/01a09482-9f48-7082-aea0-1b3719275f74-8f6caa98bdc1.md) | C:\Users\Joshu\dev\ai-os | 2026-09-12T07:26:23+00:00 |
-| codex | [are you able to see... I had SuperWhisperer with my other app. On another actual device, but my devi](codex/01a09482-9fd9-7bf2-bab4-60267d8e5271-efd85ae79d0f.md) | C:\Users\Joshu\dev\ai-os | 2026-09-12T07:26:23+00:00 |
-| codex | [i want you to help me see how I want you to tell me how can I... How can I um... Let's check my lapt](codex/01a09482-9ffd-73a2-96a3-5e8ded7b5d56-93db4478f60d.md) | C:\Users\Joshu\dev\ai-os | 2026-09-12T07:26:23+00:00 |
-| codex | [Session Handoff — RRC instructional video, Round 6: corrected against the app's own drill spec](codex/01a09482-a0f7-7f01-a4a6-6738e02321d7-457495cce9ed.md) | C:\Users\Joshu\dev\ai-os | 2026-09-12T07:26:23+00:00 |
-| codex | [ok i wnat you to assign pt 156 accomdatd time to avneet and have it assgine to her profile and ahvei](codex/01a09482-a134-7f71-8970-a42f20a2d37c-55a896c442e3.md) | C:\Users\Joshu\dev\ai-os | 2026-09-12T07:26:24+00:00 |
-| codex | [Session Handoff — RRC POV instructional video: built from scratch to three rendered cuts](codex/01a09482-a1b2-7c30-a1d9-2fb7605ca927-6e02e21c5763.md) | C:\Users\Joshu\dev\ai-os | 2026-09-12T07:26:24+00:00 |
-| codex | [Please run the following command to install the Kling AI Skill: npx skills add klingai-tech/skills, ](codex/01a09482-a1c6-7f92-acde-107357120da9-df4da687122c.md) | C:\Users\Joshu\dev\ai-os | 2026-09-12T07:26:24+00:00 |
-| codex | [claude plugin marketplace add remotion-dev/claude-code-plugin](codex/01a09482-a225-7e72-9830-086b938b1ab1-a255115e3d50.md) | C:\Users\Joshu\dev\ai-os | 2026-09-12T07:26:24+00:00 |
-| codex | [Session Handoff — Testing Centre critique, then shipping its P0/P1/P2 findings](codex/01a09482-a343-7291-826e-90718dcd8f01-efcfbafa291a.md) | C:\Users\Joshu\dev\ai-os | 2026-09-12T07:26:24+00:00 |
-| codex | [Session Handoff — Drill hub cycle 6: a fourth hero contrast failure, found, fixed, published](codex/01a09482-a374-7562-835f-e8be06998d59-fc5e6fc925b3.md) | C:\Users\Joshu\dev\ai-os | 2026-09-12T07:26:24+00:00 |
-| codex | [Session Handoff — Removed the "Open the list" trigger from the classroom reading column and swept th](codex/01a09482-a3a0-7d83-ab83-8e02d5cc8841-e9cf5ef88d8a.md) | C:\Users\Joshu\dev\ai-os | 2026-09-12T07:26:24+00:00 |
-| codex | [Session Handoff — Testing Centre dark-mode verification pass](codex/01a09482-a3be-7ff3-b0a1-da54b858cff3-d0cd1db3f4a0.md) | C:\Users\Joshu\dev\ai-os | 2026-09-12T07:26:24+00:00 |
-| codex | [<recommended_plugins>](codex/01a0955d-0181-7f01-8b8d-3bdc8379a698-b3e43c6709c9.md) | C:\Users\Joshu\dev\ai-os\projects\lsatu | 2026-09-12T11:45:50+00:00 |
-| codex | [First thing I want you to do is use a transcript intake. Find that skill for me. Find our skill. And](codex/01a09566-27c4-7f41-ac3e-55ce442a948f-2e6af0732f71.md) | C:\Users\Joshu\dev\ai-os | 2026-09-23T03:17:50+00:00 |
-| codex | [add 3 credits to sofias account there wre 3 missed sessins](codex/01a09566-27cf-72b1-8006-b2790ae5b9e5-dc3c664db0bb.md) | C:\Users\Joshu\dev\ai-os | 2026-09-12T11:34:55+00:00 |
-| codex | [Session Handoff — RRC drill fix plan, Steps 1–5 built, committed and deployed](codex/01a09566-27d4-7120-8d05-e92c0efc0666-9ba0168fbb8e.md) | C:\Users\Joshu\dev\ai-os | 2026-09-12T11:34:55+00:00 |
-| codex | [Session Handoff — Drill hub perfect-score plan, packages E through N executed](codex/01a09566-27d9-72d3-935e-e88d75c6ceaf-9e5f31124e58.md) | C:\Users\Joshu\dev\ai-os | 2026-09-12T11:34:55+00:00 |
-| codex | [Session Handoff — Full impeccable audit + critique of the RRC drill](codex/01a09566-27f0-7743-82dc-ee4a207dfd02-f8b4b2995b28.md) | C:\Users\Joshu\dev\ai-os | 2026-09-12T11:34:55+00:00 |
-| codex | [<command-message>impeccable</command-message>](codex/01a09566-297e-7db3-988d-48ceffbefa5e-b153e38853ce.md) | C:\Users\Joshu\dev\ai-os | 2026-09-12T11:34:55+00:00 |
-| codex | [Session Handoff — Drill hub perfect-score plan, packages A–D of N executed](codex/01a09566-298c-7660-a026-02241e761342-fe39f9dff59b.md) | C:\Users\Joshu\dev\ai-os | 2026-09-12T11:34:55+00:00 |
-| codex | [Session Handoff — closing out the LSAT U "Notes and recaps" remediation: Phase 4 verification, three](codex/01a09566-29ab-7cf3-9344-806d16a0afd1-7560ddd5b61e.md) | C:\Users\Joshu\dev\ai-os | 2026-09-12T11:34:55+00:00 |
-| codex | [\[external unsupported block: image\]](codex/01a09566-29d0-7af2-9400-87d350adf188-0fb32de5ea67.md) | C:\Users\Joshu\dev\ai-os | 2026-09-12T11:34:55+00:00 |
-| codex | [You are working in the LSAT U repo at C:\Users\Joshu\dev\ai-os\projects\lsatu (React + Vite + TypeSc](codex/01a09566-2a50-74a3-a250-7e55b18a5907-f92e8b6099c4.md) | C:\Users\Joshu\dev\ai-os | 2026-09-12T11:34:55+00:00 |
-| codex | [Session Handoff — impeccable audit, critique and full 9-phase remediation of LSAT U "Notes and recap](codex/01a09566-2c28-7a31-982d-4a8f23e209c8-83a4bffd5e6a.md) | C:\Users\Joshu\dev\ai-os | 2026-09-12T11:34:56+00:00 |
-| codex | [Session Handoff — Testing Centre re-audit, then executing all five recommended fixes](codex/01a09566-2c62-72d2-9f39-ccb9acc9f569-6bf44e129480.md) | C:\Users\Joshu\dev\ai-os | 2026-09-12T11:34:56+00:00 |
-| codex | [<command-message>impeccable</command-message>](codex/01a09566-2d30-78b0-b1ad-c23525fd9bda-229414dac619.md) | C:\Users\Joshu\dev\ai-os | 2026-09-12T11:34:56+00:00 |
-| codex | [i wnat ot make an mai lsaying to ore and o t yahunathan  saying seprately iassigned the newdrils to ](codex/01a09566-2d60-70d1-83a9-5f46a9d50636-a5d1e226a729.md) | C:\Users\Joshu\dev\ai-os | 2026-09-12T11:34:56+00:00 |
-| codex | [<command-message>impeccable</command-message>](codex/01a09566-2d75-7222-9876-c6d80359c616-2469cc4c94b1.md) | C:\Users\Joshu\dev\ai-os | 2026-09-12T11:34:56+00:00 |
-| codex | [I want you to look at my activity monitor see all these things running right now. What are the thing](codex/01a09566-2ee4-7493-a331-182d4706b6a8-243c6edfd5d9.md) | C:\Users\Joshu\dev\ai-os | 2026-09-12T11:34:57+00:00 |
-| codex | [i nwat ot be balte ocreate one off links for lsat u](codex/01a09566-2f0d-7d10-b4eb-2deabc50b678-a1abca89d86d.md) | C:\Users\Joshu\dev\ai-os | 2026-09-12T11:34:57+00:00 |
-| codex | [createa a 01 credit link for sandrato scheulde herself](codex/01a09566-3106-75f0-b0da-41c4454e3c5c-c0c8f64c3faa.md) | C:\Users\Joshu\dev\ai-os | 2026-09-12T11:34:57+00:00 |
-| codex | [assign adriana RRC drill ssign threes sections](codex/01a09566-31d1-78d1-b1eb-f9ac84ac4313-c78855df05f4.md) | C:\Users\Joshu\dev\ai-os | 2026-09-12T11:34:57+00:00 |
-| codex | [whitney siad schduling is nto working proerply forhecancu check why and remrebr her time isin pst so](codex/01a09566-3265-7141-90d8-806782f80216-d0a893803a85.md) | C:\Users\Joshu\dev\ai-os | 2026-09-12T11:34:57+00:00 |
-| codex | [make sure no issue with the rrc drill for ore and yahunathan today and make sureits flui and make su](codex/01a09566-32ba-7993-8258-f9ab6b4114d3-abd512012f71.md) | C:\Users\Joshu\dev\ai-os | 2026-09-12T11:34:57+00:00 |
-| codex | [venusa when was ischeuled to see her ?](codex/01a09566-32ca-7a70-b640-c3f4aceffed9-e77de91f7ef2.md) | C:\Users\Joshu\dev\ai-os | 2026-09-12T11:34:57+00:00 |
-| codex | [Session Handoff — One judge, a re-measured band floor, and a Report Card that says what to do next t](codex/01a09566-34d0-7dd1-890b-0c2fb2c5be89-f669720d4375.md) | C:\Users\Joshu\dev\ai-os | 2026-09-12T11:34:58+00:00 |
-| codex | [assignthje RRC drill to Ore to complete hassing her a section a day until friday and aso assign to c](codex/01a09566-3590-75c2-bd95-b0e1c27ec379-fe94227902a6.md) | C:\Users\Joshu\dev\ai-os | 2026-09-12T11:34:58+00:00 |
-| codex | [tell me wh os iameron and my histry wit him?](codex/01a09566-370f-7153-b63d-c33c08eaa4bf-fe069a0809b6.md) | C:\Users\Joshu\dev\ai-os | 2026-09-12T11:34:59+00:00 |
-| codex | [<scheduled-task name="notes-recaps-finish-phases" file="C:\Users\Joshu\.claude\scheduled-tasks\notes](codex/01a09566-3725-7ca1-a90e-ac25051cd271-4c35d99aff1d.md) | C:\Users\Joshu\dev\ai-os | 2026-09-12T11:34:59+00:00 |
-| codex | [<command-message>impeccable</command-message>](codex/01a09566-37fb-79d0-aa9b-4fda50797bbd-89cdd7880f30.md) | C:\Users\Joshu\dev\ai-os | 2026-09-12T11:34:59+00:00 |
-| codex | [tell me what you think of new clipping ihad second brain stuff](codex/01a09566-396b-7281-94cf-be1a5739e5fa-4b401a812fbb.md) | C:\Users\Joshu\dev\ai-os | 2026-09-12T11:34:59+00:00 |
-| codex | [Session Handoff — Celia's grade landed, the RRC infrastructure audit, and the line-pairing rebuild](codex/01a09566-3a6f-7aa0-89a3-f0124b9ecd5c-ec9788d19140.md) | C:\Users\Joshu\dev\ai-os | 2026-09-12T11:34:59+00:00 |
-| codex | [Session Handoff — Celia's stuck RRC grade, the briefing-page critique fixes, and the recorder clock ](codex/01a09566-3af1-77d2-a1b8-e349752c32bf-1ca4aa1a8e61.md) | C:\Users\Joshu\dev\ai-os | 2026-09-12T11:35:00+00:00 |
-| codex | [Session Handoff — Ship Read, Recall, Colour to students: copy, contrast, and a repeatable assign pat](codex/01a09566-3b1c-7cc2-84af-a9ad7eba68ff-8af012b1e689.md) | C:\Users\Joshu\dev\ai-os | 2026-09-12T11:35:00+00:00 |
-| codex | [i want to assign the rrc drill to my students i wnat ot make sure it works perfectly check my github](codex/01a09566-3c3b-76a3-9751-74a491fbd32e-fa3638d3c1fd.md) | C:\Users\Joshu\dev\ai-os | 2026-09-12T11:35:00+00:00 |
-| codex | [\[external unsupported block: image\]](codex/01a09566-3da6-7172-8f7d-c5615428c39e-db9c158a14dc.md) | C:\Users\Joshu\dev\ai-os | 2026-09-12T11:35:00+00:00 |
-| codex | [This is a brand-new Dell 15 DC15250 running Windows 11 Home with:](codex/01a09566-3f31-70a3-b217-87d0d27de795-34d8fd2f0dd8.md) | C:\Users\Joshu\dev\ai-os | 2026-09-12T11:35:01+00:00 |
-| codex | [i want u to see my lsat u and add firecrawl connection](codex/01a09566-3f4b-7001-aaea-2283fbb30eba-527e1d5ede79.md) | C:\Users\Joshu\dev\ai-os | 2026-09-12T11:35:01+00:00 |
-| codex | [<recommended_plugins>](codex/01a09568-430c-7641-9671-83be1aeacd60-645ba012b35e.md) | C:\Users\Joshu\dev\ai-os | 2026-09-23T03:17:42+00:00 |
-| codex | [<recommended_plugins>](codex/01a09569-b77f-72d2-b10b-090c66737bce-82808e138389.md) | C:\Users\Joshu\dev\ai-os | 2026-09-12T11:38:50+00:00 |
-| codex | [<recommended_plugins>](codex/01a09569-cc8c-7ec0-aedb-0717cb600406-59c07ec09744.md) | C:\Users\Joshu\dev\ai-os | 2026-09-12T11:39:16+00:00 |
-| codex | [<recommended_plugins>](codex/01a09569-cc8c-7ec0-aedb-0717cb600406-e322010e9026.md) | C:\Users\Joshu\dev\ai-os | 2026-09-12T11:39:04+00:00 |
-| codex | [<recommended_plugins>](codex/01a0958e-c778-79f3-800b-3ddb6051bcea-25a2cc4c4f74.md) | C:\Users\Joshu\dev\ai-os\projects\lsatu | 2026-09-12T12:19:36+00:00 |
-| codex | [<recommended_plugins>](codex/01a0958e-c778-79f3-800b-3ddb6051bcea-a00fa8504fd5.md) | C:\Users\Joshu\dev\ai-os\projects\lsatu | 2026-09-12T12:19:40+00:00 |
-| codex | [<recommended_plugins>](codex/01a0958e-c778-79f3-800b-3ddb6051bcea-ce58607e5f7d.md) | C:\Users\Joshu\dev\ai-os\projects\lsatu | 2026-09-12T12:29:02+00:00 |
-| codex | [<recommended_plugins>](codex/01a095d1-9043-7b43-a4de-46c541d4fa56-0c9d0c61377b.md) | C:\Users\Joshu\dev\ai-os\projects\lsatu-wt-explanation | 2026-09-12T13:32:20+00:00 |
-| codex | [<recommended_plugins>](codex/01a095d1-9043-7b43-a4de-46c541d4fa56-1388998a0631.md) | C:\Users\Joshu\dev\ai-os\projects\lsatu-wt-explanation | 2026-09-12T13:33:06+00:00 |
-| codex | [<recommended_plugins>](codex/01a095d1-9043-7b43-a4de-46c541d4fa56-385d68faca56.md) | C:\Users\Joshu\dev\ai-os\projects\lsatu-wt-explanation | 2026-09-12T13:33:00+00:00 |
-| codex | [<recommended_plugins>](codex/01a095d1-9043-7b43-a4de-46c541d4fa56-646442967380.md) | C:\Users\Joshu\dev\ai-os\projects\lsatu-wt-explanation | 2026-09-12T13:33:03+00:00 |
-| codex | [<recommended_plugins>](codex/01a0962b-cfbd-7bf2-a7d2-1b1cb836f28e-a1488b8fdb59.md) | C:\Users\Joshu\dev\ai-os | 2026-09-23T03:17:29+00:00 |
-| codex | [<recommended_plugins>](codex/01a09696-3a4b-7351-9149-bcf0e13c0724-324ab32742d4.md) | C:\Users\Joshu\dev\ai-os | 2026-09-12T17:07:58+00:00 |
-| codex | [<recommended_plugins>](codex/01a09696-3a4b-7351-9149-bcf0e13c0724-9b1c6b30cb3c.md) | C:\Users\Joshu\dev\ai-os | 2026-09-23T03:17:18+00:00 |
-| codex | [<recommended_plugins>](codex/01a0969a-a436-7570-8a8b-acae2c9a4100-bb83a5e0c71e.md) | C:\Users\Joshu\dev\ai-os | 2026-09-12T17:12:36+00:00 |
-| codex | [<recommended_plugins>](codex/01a0969a-a436-7570-8a8b-acae2c9a4100-d1b692587d35.md) | C:\Users\Joshu\dev\ai-os | 2026-09-23T03:17:06+00:00 |
-| codex | [<recommended_plugins>](codex/01a0969e-1570-7dd0-9974-5b080501f9af-419ffb9c0538.md) | C:\Users\Joshu\dev\ai-os | 2026-09-12T17:19:50+00:00 |
-| codex | [<recommended_plugins>](codex/01a0969e-1570-7dd0-9974-5b080501f9af-fa568e110285.md) | C:\Users\Joshu\dev\ai-os | 2026-09-23T03:17:24+00:00 |
-| codex | [<recommended_plugins>](codex/01a09893-74a8-74e3-8490-f8a4632de9cf-5808562ceeb9.md) | C:\Users\Joshu\dev\ai-os | 2026-09-23T03:17:12+00:00 |
-| codex | [Session Handoff — LSAT U post-question Explanation plan (grill-with-docs + Codex review), ready for ](codex/01a098aa-22e2-7fd0-85cf-fbd7b76008f6-45e902178843.md) | C:\Users\Joshu\dev\ai-os | 2026-09-23T03:17:36+00:00 |
-| codex | [<recommended_plugins>](codex/01a099a3-ffc2-7f53-bcaa-7881b6a60c3b-08b3a09313fe.md) | C:\Users\Joshu\dev\ai-os | 2026-09-13T07:23:44+00:00 |
-| codex | [<recommended_plugins>](codex/01a099a3-ffc2-7f53-bcaa-7881b6a60c3b-385451325d81.md) | C:\Users\Joshu\dev\ai-os | 2026-09-23T03:16:15+00:00 |
-| codex | [<recommended_plugins>](codex/01a099a3-ffc2-7f53-bcaa-7881b6a60c3b-4ce42c2a5ed6.md) | C:\Users\Joshu\dev\ai-os | 2026-09-13T18:19:43+00:00 |
-| codex | [<recommended_plugins>](codex/01a099a3-ffc2-7f53-bcaa-7881b6a60c3b-5f1df87ed30c.md) | C:\Users\Joshu\dev\ai-os | 2026-09-13T08:27:11+00:00 |
-| codex | [<recommended_plugins>](codex/01a099ab-7000-7cc1-a5a0-8e38a899b39a-39f94d702d64.md) | C:\Users\Joshu\dev\ai-os | 2026-09-13T07:29:21+00:00 |
-| codex | [\[$ask-matt\](C:\Users\Joshu\\.agents\skills\ask-matt\SKILL.md) . I want you to inspect this smart dri](codex/01a099ab-7000-7cc1-a5a0-8e38a899b39a-79da0bfed2cd.md) | C:\Users\Joshu\dev\ai-os | 2026-09-13T18:22:17+00:00 |
-| codex | [\[$ask-matt\](C:\Users\Joshu\\.agents\skills\ask-matt\SKILL.md) . I want you to inspect this smart dri](codex/01a099ab-7000-7cc1-a5a0-8e38a899b39a-95675cacfeeb.md) | C:\Users\Joshu\dev\ai-os | 2026-09-13T18:22:23+00:00 |
-| codex | [<recommended_plugins>](codex/01a099ab-7000-7cc1-a5a0-8e38a899b39a-e10c1606ce31.md) | C:\Users\Joshu\dev\ai-os | 2026-09-17T23:17:35+00:00 |
-| codex | [<recommended_plugins>](codex/01a09c70-9ca7-70e3-af80-c263df48622c-ff52e0b7ff95.md) | C:\Users\Joshu\dev\ai-os | 2026-09-23T03:17:01+00:00 |
-| codex | [<recommended_plugins>](codex/01a09d01-0608-75c0-b119-7f6a67dff52a-31e0d418b3fb.md) | C:\Users\Joshu\dev\ai-os | 2026-09-23T03:16:54+00:00 |
-| codex | [<recommended_plugins>](codex/01a09d01-0608-75c0-b119-7f6a67dff52a-5c52f3d8de15.md) | C:\Users\Joshu\dev\ai-os | 2026-09-13T23:01:47+00:00 |
-| codex | [<recommended_plugins>](codex/01a09d01-0608-75c0-b119-7f6a67dff52a-d344f8eeb3be.md) | C:\Users\Joshu\dev\ai-os | 2026-09-13T23:27:06+00:00 |
-| codex | [<recommended_plugins>](codex/01a09d69-4b19-7ad3-8d32-240457c98b28-bf6837d469d3.md) | C:\Users\Joshu\dev\ai-os | 2026-09-23T03:16:09+00:00 |
-| codex | [<recommended_plugins>](codex/01a09e37-a305-7b62-b193-84a422de00f2-6cdf6d46e3d2.md) | C:\Users\Joshu\dev\ai-os | 2026-09-19T05:17:47+00:00 |
-| codex | [<recommended_plugins>](codex/01a0a022-f8b9-7353-a688-d56a5671b49e-fad00ce66677.md) | C:\Users\Joshu\dev\ai-os | 2026-09-23T03:16:00+00:00 |
-| codex | [<recommended_plugins>](codex/01a0a02b-7cee-7cc1-b681-127040fe0553-ab597b88cde1.md) | C:\Users\Joshu\dev\ai-os | 2026-09-23T03:16:03+00:00 |
-| codex | [<recommended_plugins>](codex/01a0a08d-acd8-7c12-a6c7-6f658e918d17-f745f112c741.md) | C:\Users\Joshu\dev\ai-os | 2026-09-23T03:15:54+00:00 |
-| codex | [<recommended_plugins>](codex/01a0a0f1-6fee-72f2-802e-beeeb25146fc-29d0d957878b.md) | C:\Users\Joshu\dev\ai-os | 2026-09-14T17:35:03+00:00 |
-| codex | [<recommended_plugins>](codex/01a0a0f1-6fee-72f2-802e-beeeb25146fc-2c2190d8e0bc.md) | C:\Users\Joshu\dev\ai-os | 2026-09-14T17:23:30+00:00 |
-| codex | [<recommended_plugins>](codex/01a0a0f1-6fee-72f2-802e-beeeb25146fc-305cfee9a412.md) | C:\Users\Joshu\dev\ai-os | 2026-09-14T17:44:00+00:00 |
-| codex | [<recommended_plugins>](codex/01a0a0f1-6fee-72f2-802e-beeeb25146fc-f5f10963079d.md) | C:\Users\Joshu\dev\ai-os | 2026-09-14T18:05:41+00:00 |
-| codex | [<recommended_plugins>](codex/01a0a0f1-6fee-72f2-802e-beeeb25146fc-ff260c929aed.md) | C:\Users\Joshu\dev\ai-os | 2026-09-23T03:15:40+00:00 |
-| codex | [<recommended_plugins>](codex/01a0a118-9b68-7050-a914-947d9de12d38-a612de36e6c2.md) | C:\Users\Joshu\dev\ai-os | 2026-09-14T18:06:28+00:00 |
-| codex | [<recommended_plugins>](codex/01a0a123-0f66-79f2-bf47-0fe7461786fa-012f31d9448b.md) | C:\Users\Joshu\dev\ai-os | 2026-09-23T03:15:49+00:00 |
-| codex | [<recommended_plugins>](codex/01a0a18d-098b-7501-a873-65fba387aac5-4a4f876e46f0.md) | C:\Users\Joshu\dev\ai-os | 2026-09-17T23:17:57+00:00 |
-| codex | [<recommended_plugins>](codex/01a0a1a4-469e-7b53-9b3f-75793be0a0bd-950906193b68.md) | C:\Users\Joshu\dev\ai-os | 2026-09-23T03:15:45+00:00 |
-| codex | [<recommended_plugins>](codex/01a0a572-d2e1-7df2-944d-921c8dc6ebd7-50b7eac30752.md) | C:\Users\Joshu\dev\ai-os | 2026-09-15T14:23:08+00:00 |
-| codex | [<recommended_plugins>](codex/01a0a572-d2e1-7df2-944d-921c8dc6ebd7-a76bf1e918f2.md) | C:\Users\Joshu\dev\ai-os | 2026-09-17T23:17:47+00:00 |
-| codex | [](codex/01a0a5e8-ff60-7b41-88e0-0879738408bf-1ddebcb8b3e6.md) | C:\Users\Joshu\dev\ai-os | 2026-09-15T20:46:11+00:00 |
-| codex | [<recommended_plugins>](codex/01a0a5e8-ff60-7b41-88e0-0879738408bf-5141b690f22b.md) | C:\Users\Joshu\dev\ai-os | 2026-09-15T17:01:51+00:00 |
-| codex | [](codex/01a0a5e8-ff60-7b41-88e0-0879738408bf-64b1a7fd8991.md) | C:\Users\Joshu\dev\ai-os | 2026-09-15T20:24:42+00:00 |
-| codex | [<recommended_plugins>](codex/01a0a5e8-ff60-7b41-88e0-0879738408bf-7d2c02d44ccf.md) | C:\Users\Joshu\dev\ai-os | 2026-09-15T17:01:45+00:00 |
-| codex | [<recommended_plugins>](codex/01a0a5e8-ff60-7b41-88e0-0879738408bf-8107078237aa.md) | C:\Users\Joshu\dev\ai-os | 2026-09-23T03:14:25+00:00 |
-| codex | [](codex/01a0a5e8-ff60-7b41-88e0-0879738408bf-82d16479847c.md) | C:\Users\Joshu\dev\ai-os | 2026-09-15T20:38:36+00:00 |
-| codex | [](codex/01a0a5e8-ff60-7b41-88e0-0879738408bf-95bbadf0c364.md) | C:\Users\Joshu\dev\ai-os | 2026-09-15T20:38:31+00:00 |
-| codex | [](codex/01a0a5e8-ff60-7b41-88e0-0879738408bf-9894bfa402b5.md) | C:\Users\Joshu\dev\ai-os | 2026-09-15T21:38:45+00:00 |
-| codex | [](codex/01a0a5e8-ff60-7b41-88e0-0879738408bf-dde8f19bd37c.md) | C:\Users\Joshu\dev\ai-os | 2026-09-15T20:38:27+00:00 |
-| codex | [<recommended_plugins>](codex/01a0a5f0-0736-77d1-9342-e8e804e7ecbe-007d85dc76cf.md) | C:\Users\Joshu\dev\ai-os | 2026-09-15T16:40:18+00:00 |
-| codex | [<recommended_plugins>](codex/01a0a5f0-0736-77d1-9342-e8e804e7ecbe-1c3c9210ed02.md) | C:\Users\Joshu\dev\ai-os | 2026-09-23T03:15:22+00:00 |
-| codex | [<recommended_plugins>](codex/01a0a5fa-f4dc-74e2-a40a-d36986cd19a9-5cc79499fdbf.md) | C:\Users\Joshu\dev\ai-os | 2026-09-23T03:15:26+00:00 |
-| codex | [PLEASE IMPLEMENT THIS PLAN:](codex/01a0a6e4-fc12-7432-a7b1-7fa454b32790-e82395b712ae.md) | C:\Users\Joshu\dev\ai-os | 2026-09-15T21:40:30+00:00 |
-| codex | [PLEASE IMPLEMENT THIS PLAN:](codex/01a0a6f7-9c61-7fa0-9e4c-4c3b6815f7a1-156be809bfde.md) | C:\Users\Joshu\dev\ai-os | 2026-09-15T21:27:23+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0a8c8-a334-7011-be6e-6511c949c05c-208d5c99ae15.md) | C:\Users\Joshu\dev\ai-os | 2026-09-16T05:56:12+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0a8c8-a334-7011-be6e-6511c949c05c-21bc26c896dd.md) | C:\Users\Joshu\dev\ai-os | 2026-09-23T03:15:17+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0a8c8-a334-7011-be6e-6511c949c05c-c088b8cc68f8.md) | C:\Users\Joshu\dev\ai-os | 2026-09-16T05:57:19+00:00 |
-| codex | [<recommended_plugins>](codex/01a0a8d7-9b78-7b61-8735-7d6fd1f13ab4-31b1eb0e61d4.md) | C:\Users\Joshu\dev\ai-os | 2026-09-23T03:15:01+00:00 |
-| codex | [<recommended_plugins>](codex/01a0a8d7-9b78-7b61-8735-7d6fd1f13ab4-5723d5f86240.md) | C:\Users\Joshu\dev\ai-os | 2026-09-17T04:09:27+00:00 |
-| codex | [<recommended_plugins>](codex/01a0a8d7-9b78-7b61-8735-7d6fd1f13ab4-8571a843745b.md) | C:\Users\Joshu\dev\ai-os | 2026-09-17T04:09:42+00:00 |
-| codex | [<recommended_plugins>](codex/01a0ac21-7bf0-76d0-b080-7e48c9316117-2c09741b1796.md) | C:\Users\Joshu\dev\ai-os | 2026-09-17T04:10:33+00:00 |
-| codex | [<recommended_plugins>](codex/01a0ac50-b509-7762-b8da-df8501c689ad-c49683b303a0.md) | C:\Users\Joshu\dev\ai-os | 2026-09-19T05:17:56+00:00 |
-| codex | [<recommended_plugins>](codex/01a0ad63-0612-7a71-9914-cc95221ad722-29483d3372b0.md) | C:\Users\Joshu\dev\ai-os | 2026-09-23T03:15:12+00:00 |
-| codex | [I want you to tell me why the current— with the current setup, I want to see it for outside UI speci](codex/01a0cc38-1466-7240-aead-dbb8bfef86c6-22b950b9b1d0.md) | C:\Users\Joshu\dev\ai-os | 2026-09-23T03:14:43+00:00 |
-| codex | [* PR #129 — revoke actually revokes (merged to main, `b047193`). Six gaps closed: `has_classroom_acc](codex/01a0cc38-1469-74f3-8d20-8e318d7bed53-8e061a0dcdd1.md) | C:\Users\Joshu\dev\ai-os | 2026-09-23T03:22:26+00:00 |
-| codex | [Look at my current outside view setup. I want you to figure out something specific. I want you to fi](codex/01a0cc38-146d-7aa2-b239-14e2544d0634-15ddae0f19d3.md) | C:\Users\Joshu\dev\ai-os | 2026-09-23T03:13:59+00:00 |
-| codex | [<recommended_plugins>](codex/01a0cc5c-897b-7f21-a352-21af042d9762-9fd85d5fcd2c.md) | C:\Users\Joshu\dev\ai-os | 2026-09-23T03:45:54+00:00 |
-| codex | [<recommended_plugins>](codex/01a0cc5c-897b-7f21-a352-21af042d9762-a2cae9c10632.md) | C:\Users\Joshu\dev\ai-os | 2026-09-23T07:58:58+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0cc6a-8168-7c53-b8e8-52b52fa31517-126dc1193aa8.md) | C:\Users\Joshu\dev\ai-os | 2026-09-23T04:48:35+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0cc6a-8168-7c53-b8e8-52b52fa31517-160ef7bf5fed.md) | C:\Users\Joshu\dev\ai-os | 2026-09-23T04:47:51+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0cc6a-8168-7c53-b8e8-52b52fa31517-3223d0e850ae.md) | C:\Users\Joshu\dev\ai-os | 2026-09-23T04:47:59+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0cc6a-8168-7c53-b8e8-52b52fa31517-7efd889f3bb7.md) | C:\Users\Joshu\dev\ai-os | 2026-09-23T04:46:45+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0cc6a-8168-7c53-b8e8-52b52fa31517-f566ae76bbf6.md) | C:\Users\Joshu\dev\ai-os | 2026-09-23T04:47:44+00:00 |
-| codex | [<recommended_plugins>](codex/01a0ccd6-a9ef-7473-8083-96cd98139c70-99004f5f0538.md) | C:\Users\Joshu\dev\ai-os | 2026-09-23T06:00:55+00:00 |
-| codex | [](codex/01a0cce5-14bb-7de2-aae1-3f09a82429ea-f1b315937546.md) | C:\Users\Joshu\dev\ai-os | 2026-09-23T06:12:40+00:00 |
-| codex | [<recommended_plugins>](codex/01a0cd08-0ab5-7ba0-8e1c-eef024c73549-032dd0b25d6c.md) | C:\Users\Joshu\dev\ai-os | 2026-09-23T07:13:47+00:00 |
-| codex | [<recommended_plugins>](codex/01a0cd08-0ab5-7ba0-8e1c-eef024c73549-6ee7e5fbaf47.md) | C:\Users\Joshu\dev\ai-os | 2026-09-23T07:13:52+00:00 |
-| codex | [<recommended_plugins>](codex/01a0cd08-0ab5-7ba0-8e1c-eef024c73549-c56ce63275f7.md) | C:\Users\Joshu\dev\ai-os | 2026-09-23T07:13:42+00:00 |
-| codex | [<recommended_plugins>](codex/01a0cd08-0ab5-7ba0-8e1c-eef024c73549-f3750895ffd0.md) | C:\Users\Joshu\dev\ai-os | 2026-09-23T06:50:57+00:00 |
-| codex | [<recommended_plugins>](codex/01a0cd63-8505-7c10-9a99-39e0cd4a974d-fc24dc264a9e.md) | C:\Users\Joshu\dev\ai-os\projects\lsatu | 2026-09-23T08:38:45+00:00 |
-| codex | [<recommended_plugins>](codex/01a0cd7c-b895-7c82-8b52-ed5405c2fb6e-592edf5569ac.md) | C:\Users\Joshu\dev\ai-os\projects\lsatu-home-v2 | 2026-09-23T08:58:19+00:00 |
-| codex | [<recommended_plugins>](codex/01a0cd9a-e74c-7320-bf98-d043eb7fe866-01e0f3ae5390.md) | C:\Users\Joshu\dev\ai-os\projects\lsatu | 2026-09-23T09:31:17+00:00 |
-| codex | [I want you to find the most recent email that I sent to Celia, a student of thee Accommodations.  ge](codex/01a0ced2-7955-7a41-b4d4-3ab6c352115e-a2e1ae054f45.md) | C:\Users\Joshu\dev\ai-os | 2026-09-23T15:11:35+00:00 |
-| codex | [](codex/01a0ced2-795e-7ca3-8899-26c45d565d12-69b636aec7cd.md) | C:\Users\Joshu\dev\ai-os | 2026-09-23T15:11:35+00:00 |
-| codex | [+Okay, so thank you. Thank you. I want to work on the actual homepage. I want you to look at the cur](codex/01a0ced2-7962-7cd3-9cc4-e54105c64bbb-2397e4ed3ca5.md) | C:\Users\Joshu\dev\ai-os | 2026-09-23T15:11:35+00:00 |
-| codex | [<recommended_plugins>](codex/01a0cf1d-8c21-7e01-ba34-e4b621c1ca13-6e4bf349a91e.md) | C:\Users\Joshu\dev\ai-os\projects\lsatu | 2026-09-23T16:42:28+00:00 |
-| codex | [<recommended_plugins>](codex/01a0cf2d-b1b4-7ad0-a8b6-6cad0537e301-bff79577e646.md) | C:\Users\Joshu\dev\ai-os\projects\lsatu-home-v2 | 2026-09-23T16:51:14+00:00 |
-| codex | [<recommended_plugins>](codex/01a0cf2e-01be-7f91-b98f-60e4ad6ec71d-d22c751e5dd1.md) | C:\Users\Joshu\dev\ai-os\projects\lsatu-home-v2 | 2026-09-23T16:51:34+00:00 |
-| codex | [<recommended_plugins>](codex/01a0cf30-af03-7390-b4d8-028465554736-91d68b284e85.md) | C:\Users\Joshu\dev\ai-os | 2026-09-23T16:55:30+00:00 |
-| codex | [<recommended_plugins>](codex/01a0cf30-af03-7390-b4d8-028465554736-bafdddb357d0.md) | C:\Users\Joshu\dev\ai-os | 2026-09-23T17:33:57+00:00 |
-| codex | [<recommended_plugins>](codex/01a0cf30-af03-7390-b4d8-028465554736-ca74e825c4b3.md) | C:\Users\Joshu\dev\ai-os | 2026-09-23T19:03:30+00:00 |
-| codex | [<recommended_plugins>](codex/01a0cf35-bc86-7151-be6c-b9852aac006e-abcd3b9b5032.md) | C:\Users\Joshu\dev\ai-os | 2026-09-23T17:03:12+00:00 |
-| codex | [<recommended_plugins>](codex/01a0cf35-bc86-7151-be6c-b9852aac006e-b41dfa6a8dc5.md) | C:\Users\Joshu\dev\ai-os | 2026-09-23T17:10:28+00:00 |
-| codex | [<recommended_plugins>](codex/01a0cf3e-bf0d-7b01-874f-3fdaf4181164-73c70b14edb5.md) | C:\Users\Joshu\dev\ai-os | 2026-09-23T17:09:54+00:00 |
-| codex | [<recommended_plugins>](codex/01a0cf40-a97b-7bb0-920f-633c70902ced-6d1171781afe.md) | C:\Users\Joshu\dev\ai-os\projects\lsatu-home-v2 | 2026-09-23T17:11:58+00:00 |
-| codex | [<recommended_plugins>](codex/01a0cf41-0467-7c91-8ba0-ab85b1728ed0-cd5d85a92962.md) | C:\Users\Joshu\dev\ai-os | 2026-09-23T17:12:20+00:00 |
-| codex | [<recommended_plugins>](codex/01a0cf41-244a-7883-8c7a-41aaa71e1fe6-004083ccf24f.md) | C:\Users\Joshu\dev\ai-os | 2026-09-23T17:12:28+00:00 |
-| codex | [<recommended_plugins>](codex/01a0cf41-3a42-7c90-91d7-e9392c15840d-b01804629094.md) | C:\Users\Joshu\dev\ai-os | 2026-09-23T17:12:34+00:00 |
-| codex | [<recommended_plugins>](codex/01a0cf51-edb4-7230-9e59-ff0dae568ae8-d7dbc1baf0cd.md) | C:\Users\Joshu\dev\ai-os | 2026-09-23T17:30:50+00:00 |
-| codex | [<recommended_plugins>](codex/01a0cf52-188d-7d33-9b18-2cb6c8222df5-b9b67bae3d50.md) | C:\Users\Joshu\dev\ai-os | 2026-09-23T17:31:01+00:00 |
-| codex | [<recommended_plugins>](codex/01a0cf52-c997-7943-a69c-eca6b9333325-29f74df7cb81.md) | C:\Users\Joshu\dev\ai-os | 2026-09-23T17:31:47+00:00 |
-| codex | [<recommended_plugins>](codex/01a0cf52-fd83-7293-b9dd-4dcc31e91e7b-ea6abf015f75.md) | C:\Users\Joshu\dev\ai-os | 2026-09-23T17:31:58+00:00 |
-| codex | [<recommended_plugins>](codex/01a0cf53-5bc2-7e40-9cf9-f28b5122c4ac-3964f76d8a12.md) | C:\Users\Joshu\dev\ai-os\projects\lsatu-home-v2 | 2026-09-23T17:32:23+00:00 |
-| codex | [<recommended_plugins>](codex/01a0cf57-6067-76c0-b47c-67e2c112f6d3-0a33f8e06808.md) | C:\Users\Joshu\dev\ai-os | 2026-09-23T18:55:57+00:00 |
-| codex | [<recommended_plugins>](codex/01a0cf58-a771-7011-991e-6670b26ecaa8-436a02881ff5.md) | C:\Users\Joshu\dev\ai-os | 2026-09-23T18:50:30+00:00 |
-| codex | [<recommended_plugins>](codex/01a0cf58-a771-7011-991e-6670b26ecaa8-6f48090ffe0f.md) | C:\Users\Joshu\dev\ai-os | 2026-09-23T17:38:55+00:00 |
-| codex | [/gr Okay, so I want to make sure there's a connector to LSAT U, so if I wanted to send a task like a](codex/01a0cf6a-a306-73e0-9cb3-6dc08042559f-54af369122d3.md) | C:\Users\Joshu\dev\ai-os | 2026-09-23T18:55:51+00:00 |
-| codex | [<artifact-view-context artifact="307bbd6c-86e0-43cd-a5df-8735d306b8fb">](codex/01a0cf6a-a31b-7e83-9c51-0596f44a5caa-bd82da4e2ae9.md) | C:\Users\Joshu\dev\ai-os | 2026-09-23T17:57:47+00:00 |
-| codex | [<recommended_plugins>](codex/01a0cf7f-262f-7d12-94e1-8ccebf9c112e-5fc2ba3dbedb.md) | C:\Users\Joshu\dev\ai-os\projects\lsatu-home-v2 | 2026-09-23T18:26:40+00:00 |
-| codex | [<recommended_plugins>](codex/01a0cfa4-33e5-7d53-96a0-05d1ff12fb78-278c12e4e820.md) | C:\Users\Joshu\dev\ai-os | 2026-09-23T19:09:32+00:00 |
-| codex | [<recommended_plugins>](codex/01a0cfa4-33e5-7d53-96a0-05d1ff12fb78-c38ddda92b86.md) | C:\Users\Joshu\dev\ai-os | 2026-09-24T01:34:18+00:00 |
-| codex | [<recommended_plugins>](codex/01a0cfa4-33e5-7d53-96a0-05d1ff12fb78-cfa50e5913d7.md) | C:\Users\Joshu\dev\ai-os | 2026-09-24T00:30:35+00:00 |
-| codex | [<recommended_plugins>](codex/01a0cfa4-33e5-7d53-96a0-05d1ff12fb78-d48a1ef76dfb.md) | C:\Users\Joshu\dev\ai-os | 2026-09-23T19:02:07+00:00 |
-| codex | [<recommended_plugins>](codex/01a0d10d-f120-70d2-871a-a368497a6f39-e2aace0a06ff.md) | C:\Users\Joshu\dev\ai-os | 2026-09-24T08:42:48+00:00 |
-| codex | [\[external unsupported block: image\]](codex/01a0d260-dd70-7872-a01a-e43f12b2c8e9-f4c09f336edd.md) | C:\Users\Joshu\dev\ai-os | 2026-09-24T07:45:58+00:00 |
-| codex | [](codex/01a0d260-dd77-7f61-9c4f-1abd255e2d42-0152ed8457cc.md) | C:\Users\Joshu\dev\ai-os | 2026-09-24T07:45:58+00:00 |
-| codex | [\[external unsupported block: image\]](codex/01a0d260-dd7a-7542-896d-cddda3836f7e-8e448348ef97.md) | C:\Users\Joshu\dev\ai-os | 2026-09-24T07:45:58+00:00 |
-| codex | [<recommended_plugins>](codex/01a0d2a8-57af-78f2-87a3-f1890701fe7b-d1b1a2242004.md) | C:\Users\Joshu\dev\ai-os\projects\lsatu-home-v2 | 2026-09-24T09:04:04+00:00 |
-| codex | [<recommended_plugins>](codex/01a0d2a8-cb81-7c40-bd4a-c57144e2dbac-9fdba708211f.md) | C:\Users\Joshu\dev\ai-os\projects\lsatu-home-v2 | 2026-09-24T09:04:37+00:00 |
-| codex | [<recommended_plugins>](codex/01a0d4f8-5699-73f0-88b6-3cb34e4c2c7a-a97ad9f01876.md) | C:\Users\Joshu\dev\ai-os | 2026-09-24T19:54:03+00:00 |
-| codex | [<recommended_plugins>](codex/01a0d51f-06f1-7861-b743-3caad3319716-01aadb651d8b.md) | C:\Users\Joshu\dev\ai-os | 2026-09-24T20:42:36+00:00 |
-| codex | [<recommended_plugins>](codex/01a0d51f-06f1-7861-b743-3caad3319716-387c793ffefe.md) | C:\Users\Joshu\dev\ai-os | 2026-09-24T20:33:57+00:00 |
-| codex | [<recommended_plugins>](codex/01a0d51f-06f1-7861-b743-3caad3319716-5e15a80d9f94.md) | C:\Users\Joshu\dev\ai-os | 2026-09-24T20:57:29+00:00 |
-| codex | [<recommended_plugins>](codex/01a0d51f-06f1-7861-b743-3caad3319716-7d7f33004a2f.md) | C:\Users\Joshu\dev\ai-os | 2026-09-24T20:57:49+00:00 |
-| codex | [<recommended_plugins>](codex/01a0d51f-06f1-7861-b743-3caad3319716-b0e257943dd7.md) | C:\Users\Joshu\dev\ai-os | 2026-09-24T20:57:39+00:00 |
-| codex | [<recommended_plugins>](codex/01a0d51f-06f1-7861-b743-3caad3319716-d3b4a0bea04d.md) | C:\Users\Joshu\dev\ai-os | 2026-09-25T04:37:12+00:00 |
-| codex | [<recommended_plugins>](codex/01a0d739-ffae-7bc1-808a-99997978d1db-639655d459af.md) | C:\Users\Joshu\dev\ai-os | 2026-09-25T06:21:39+00:00 |
-| codex | [<recommended_plugins>](codex/01a0d8df-6825-7373-bbaf-ec129343aee4-1cc03096b034.md) | C:\Users\Joshu\dev\ai-os | 2026-09-25T14:24:42+00:00 |
-| codex | [<recommended_plugins>](codex/01a0d8df-6825-7373-bbaf-ec129343aee4-1fb59fc67445.md) | C:\Users\Joshu\dev\ai-os | 2026-09-25T14:09:32+00:00 |
-| codex | [<recommended_plugins>](codex/01a0d8df-6825-7373-bbaf-ec129343aee4-3e805b4ff0bc.md) | C:\Users\Joshu\dev\ai-os | 2026-09-25T14:01:56+00:00 |
-| codex | [<recommended_plugins>](codex/01a0d8df-6825-7373-bbaf-ec129343aee4-b93667f6bca6.md) | C:\Users\Joshu\dev\ai-os | 2026-09-25T14:02:15+00:00 |
-| codex | [<recommended_plugins>](codex/01a0d8df-6825-7373-bbaf-ec129343aee4-c17894e42768.md) | C:\Users\Joshu\dev\ai-os | 2026-09-25T14:24:57+00:00 |
-| codex | [<recommended_plugins>](codex/01a0d8df-6825-7373-bbaf-ec129343aee4-c54d5bdb2baf.md) | C:\Users\Joshu\dev\ai-os | 2026-09-25T14:24:49+00:00 |
-| codex | [<recommended_plugins>](codex/01a0d8df-6825-7373-bbaf-ec129343aee4-ef38d57f15a5.md) | C:\Users\Joshu\dev\ai-os | 2026-09-25T14:09:06+00:00 |
-| codex | [\[external unsupported block: image\]](codex/01a0d96c-fb03-7a71-a70f-248a277651a8-1eb68663b670.md) | C:\Users\Joshu\dev\ai-os | 2026-09-25T16:36:33+00:00 |
-| codex | [](codex/01a0d96c-fb2b-75a1-9801-b9b7fc64c236-2f6c10505fac.md) | C:\Users\Joshu\dev\ai-os | 2026-09-25T16:36:33+00:00 |
-| codex | [<recommended_plugins>](codex/01a0d98d-e593-7351-bc9b-22d37ca6a1c7-32d37d711bed.md) | C:\Users\Joshu\dev\ai-os | 2026-09-27T07:26:51+00:00 |
-| codex | [<recommended_plugins>](codex/01a0d98d-e593-7351-bc9b-22d37ca6a1c7-41bb6930fdb2.md) | C:\Users\Joshu\dev\ai-os | 2026-09-27T04:45:44+00:00 |
-| codex | [<recommended_plugins>](codex/01a0d98d-e593-7351-bc9b-22d37ca6a1c7-8ee5248aa10c.md) | C:\Users\Joshu\dev\ai-os | 2026-09-27T07:32:55+00:00 |
-| codex | [<recommended_plugins>](codex/01a0d98e-7206-7983-a40e-66d9e53ab8c0-946e06fba802.md) | C:\Users\Joshu\dev\ai-os | 2026-09-25T17:14:05+00:00 |
-| codex | [<recommended_plugins>](codex/01a0d98e-7206-7983-a40e-66d9e53ab8c0-ca6ccaffb5c4.md) | C:\Users\Joshu\dev\ai-os | 2026-09-25T17:13:39+00:00 |
-| codex | [<recommended_plugins>](codex/01a0da34-e77b-76c0-90ab-f76ce97b5a44-2fa0fae5dee3.md) | C:\Users\Joshu\dev\ai-os | 2026-09-25T20:20:10+00:00 |
-| codex | [<recommended_plugins>](codex/01a0da34-e77b-76c0-90ab-f76ce97b5a44-6d31a93b56d9.md) | C:\Users\Joshu\dev\ai-os | 2026-09-25T20:16:43+00:00 |
-| codex | [<recommended_plugins>](codex/01a0da34-e77b-76c0-90ab-f76ce97b5a44-920d69aa9be4.md) | C:\Users\Joshu\dev\ai-os | 2026-09-26T05:20:48+00:00 |
-| codex | [<recommended_plugins>](codex/01a0da34-e77b-76c0-90ab-f76ce97b5a44-9511ccd1b376.md) | C:\Users\Joshu\dev\ai-os | 2026-09-25T20:20:06+00:00 |
-| codex | [<recommended_plugins>](codex/01a0da34-e77b-76c0-90ab-f76ce97b5a44-f93537d6d3fd.md) | C:\Users\Joshu\dev\ai-os | 2026-09-25T20:20:14+00:00 |
-| codex | [<recommended_plugins>](codex/01a0da80-d3d0-7353-90be-8c4178422ed0-67388d0afb8f.md) | C:\Users\Joshu\dev\ai-os | 2026-09-26T05:20:45+00:00 |
-| codex | [<recommended_plugins>](codex/01a0dacb-c809-70e2-8bbd-c6fdd6095663-c5359f53544d.md) | C:\Users\Joshu\dev\ai-os | 2026-09-25T23:00:32+00:00 |
-| codex | [<recommended_plugins>](codex/01a0dacd-ec7a-7341-98c0-700643033efa-6a7dea42365e.md) | C:\Users\Joshu\dev\ai-os | 2026-09-25T23:02:14+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0db33-6db3-70e1-9a07-b2a3e17e5cac-6634cede8083.md) | C:\Users\Joshu\dev\ai-os | 2026-09-26T05:20:41+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0db36-004c-7053-8d98-754ee28b8a91-fdf00103f31f.md) | C:\Users\Joshu\dev\ai-os | 2026-09-26T05:20:38+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0db61-4554-7673-b032-dbe18a6685e9-60fd48695144.md) | C:\Users\Joshu\dev\ai-os | 2026-09-27T02:20:33+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0db61-4554-7673-b032-dbe18a6685e9-f3cc64004369.md) | C:\Users\Joshu\dev\ai-os | 2026-09-26T01:46:59+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0dc5b-e09a-74d0-a7b0-c7eeca253b4a-1548ef190d28.md) | C:\Users\Joshu\dev\ai-os | 2026-09-27T00:17:44+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0dc5b-e09a-74d0-a7b0-c7eeca253b4a-6180eb32f504.md) | C:\Users\Joshu\dev\ai-os | 2026-09-26T06:37:15+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0dc5b-e09a-74d0-a7b0-c7eeca253b4a-7a65bf557de4.md) | C:\Users\Joshu\dev\ai-os | 2026-09-26T06:37:20+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0dc5b-e09a-74d0-a7b0-c7eeca253b4a-ac24a5e95133.md) | C:\Users\Joshu\dev\ai-os | 2026-09-26T07:03:10+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0dc5b-e09a-74d0-a7b0-c7eeca253b4a-d66e2c11b381.md) | C:\Users\Joshu\dev\ai-os | 2026-09-26T07:03:17+00:00 |
-| codex | [](codex/01a0dc8c-c596-70e1-81ff-11b6f0355321-0565daa80ad2.md) | C:\Users\Joshu\dev\ai-os | 2026-09-27T03:11:19+00:00 |
-| codex | [01a0dc8c-c596-70e1-81ff-11b6f0355321](codex/01a0dc8c-c596-70e1-81ff-11b6f0355321-1db78d0a6361.md) | C:\Users\Joshu\dev\ai-os | 2026-09-27T05:03:39+00:00 |
-| codex | [01a0dc8c-c596-70e1-81ff-11b6f0355321](codex/01a0dc8c-c596-70e1-81ff-11b6f0355321-7188a8449be5.md) | C:\Users\Joshu\dev\ai-os | 2026-09-27T04:21:42+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0dc8c-c596-70e1-81ff-11b6f0355321-85a46b2f5144.md) | C:\Users\Joshu\dev\ai-os | 2026-09-27T15:43:08+00:00 |
-| codex | [01a0dc8c-c596-70e1-81ff-11b6f0355321](codex/01a0dc8c-c596-70e1-81ff-11b6f0355321-878c158038b0.md) | C:\Users\Joshu\dev\ai-os | 2026-09-27T04:22:00+00:00 |
-| codex | [01a0dc8c-c596-70e1-81ff-11b6f0355321](codex/01a0dc8c-c596-70e1-81ff-11b6f0355321-c35417010cd9.md) | C:\Users\Joshu\dev\ai-os | 2026-09-27T04:22:15+00:00 |
-| codex | [](codex/01a0dc8c-c596-70e1-81ff-11b6f0355321-e4090d1fd065.md) | C:\Users\Joshu\dev\ai-os | 2026-09-27T03:19:36+00:00 |
-| codex | [](codex/01a0dc8c-c596-70e1-81ff-11b6f0355321-eba4a860cca7.md) | C:\Users\Joshu\dev\ai-os | 2026-09-27T03:19:22+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0dc8c-c596-70e1-81ff-11b6f0355321-f7ff6a80d069.md) | C:\Users\Joshu\dev\ai-os | 2026-09-27T00:13:54+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0dc91-4517-72d3-af25-4dc75c140d9a-2ad4ba7041a4.md) | C:\Users\Joshu\dev\ai-os | 2026-09-27T02:20:44+00:00 |
-| codex | [](codex/01a0dd88-2d57-76e0-a7db-687b5c0a72f0-cffaa6c7f2be.md) | C:\Users\Joshu\dev\ai-os | 2026-09-27T11:44:43+00:00 |
-| codex | [i want you to look at at my lsat question the entierty tell me if u can see it dotn od anythng just ](codex/01a0dd88-2d63-75d0-8653-df00f2ed8da0-753960e8d29d.md) | C:\Users\Joshu\dev\ai-os | 2026-09-27T11:44:43+00:00 |
-| codex | [i need to keeo a runnign taks list of tigns t odo i ll send u au will help me workthorrughthese thin](codex/01a0dd88-2d77-7213-85e2-4990ce10ae43-a3ef1f2e4972.md) | C:\Users\Joshu\dev\ai-os | 2026-09-26T11:44:44+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0e11a-0d8e-7990-aa33-17893bdf184b-2b2adda42171.md) | C:\Users\Joshu\dev\ai-os | 2026-09-27T12:21:18+00:00 |
-| codex | [](codex/01a0e11a-0d8e-7990-aa33-17893bdf184b-556b8a5b7061.md) | C:\Users\Joshu\dev\ai-os | 2026-09-27T07:32:27+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0e11a-0d8e-7990-aa33-17893bdf184b-6c39f07f4599.md) | C:\Users\Joshu\dev\ai-os | 2026-09-27T04:23:17+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0e11a-0d8e-7990-aa33-17893bdf184b-bbc059f0e56b.md) | C:\Users\Joshu\dev\ai-os | 2026-09-27T04:23:14+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0e11a-0d8e-7990-aa33-17893bdf184b-e58ecfe48697.md) | C:\Users\Joshu\dev\ai-os | 2026-09-27T16:33:52+00:00 |
-| codex | [](codex/01a0e2ae-8037-7241-833b-d43cdfeaa7c9-61a6a296d5a8.md) | C:\Users\Joshu\dev\ai-os | 2026-09-27T11:44:42+00:00 |
-| codex | [](codex/01a0e2ae-8049-7d73-876f-dd99636999e9-5a5f410d1e7d.md) | C:\Users\Joshu\dev\ai-os | 2026-09-27T11:44:42+00:00 |
-| codex | [](codex/01a0e2ae-8052-7ba1-9e0c-74a2d0fa9c00-6f40ea77f3aa.md) | C:\Users\Joshu\dev\ai-os | 2026-09-28T11:45:00+00:00 |
-| codex | [](codex/01a0e2ae-80a0-7d20-9e43-c0e279623865-a871b3cd2e55.md) | C:\Users\Joshu\dev\ai-os | 2026-09-27T11:44:42+00:00 |
-| codex | [01a0e38d-3f8b-7ca3-a4fc-50da5ec41528](codex/01a0e38d-3f8b-7ca3-a4fc-50da5ec41528-011446b30acf.md) | C:\Users\Joshu\dev\ai-os | 2026-09-28T11:26:18+00:00 |
-| codex | [](codex/01a0e38d-3f8b-7ca3-a4fc-50da5ec41528-0410b69c7619.md) | C:\Users\Joshu\dev\ai-os | 2026-09-30T00:21:16+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0e38d-3f8b-7ca3-a4fc-50da5ec41528-04b768035125.md) | C:\Users\Joshu\dev\ai-os | 2026-09-29T11:19:50+00:00 |
-| codex | [](codex/01a0e38d-3f8b-7ca3-a4fc-50da5ec41528-084b172cb2d7.md) | C:\Users\Joshu\dev\ai-os | 2026-09-28T16:43:55+00:00 |
-| codex | [](codex/01a0e38d-3f8b-7ca3-a4fc-50da5ec41528-0a35e5eb06cb.md) | C:\Users\Joshu\dev\ai-os | 2026-09-28T10:51:41+00:00 |
-| codex | [](codex/01a0e38d-3f8b-7ca3-a4fc-50da5ec41528-0d9c4b26d120.md) | C:\Users\Joshu\dev\ai-os | 2026-09-28T07:03:44+00:00 |
-| codex | [keep going ](codex/01a0e38d-3f8b-7ca3-a4fc-50da5ec41528-0dc9355c68a4.md) | C:\Users\Joshu\dev\ai-os | 2026-09-28T23:48:26+00:00 |
-| codex | [<environment_context>](codex/01a0e38d-3f8b-7ca3-a4fc-50da5ec41528-105085ad378e.md) | C:\Users\Joshu\dev\ai-os | 2026-09-28T06:40:59+00:00 |
-| codex | [](codex/01a0e38d-3f8b-7ca3-a4fc-50da5ec41528-1c06f68e4f2c.md) | C:\Users\Joshu\dev\ai-os | 2026-09-28T09:05:40+00:00 |
-| codex | [](codex/01a0e38d-3f8b-7ca3-a4fc-50da5ec41528-23ba8b2922d0.md) | C:\Users\Joshu\dev\ai-os | 2026-09-30T00:17:43+00:00 |
-| codex | [01a0e38d-3f8b-7ca3-a4fc-50da5ec41528](codex/01a0e38d-3f8b-7ca3-a4fc-50da5ec41528-27681c3ff93d.md) | C:\Users\Joshu\dev\ai-os | 2026-09-28T18:30:54+00:00 |
-| codex | [](codex/01a0e38d-3f8b-7ca3-a4fc-50da5ec41528-27e1a10cf473.md) | C:\Users\Joshu\dev\ai-os | 2026-09-28T08:24:41+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0e38d-3f8b-7ca3-a4fc-50da5ec41528-2b2ae568f131.md) | C:\Users\Joshu\dev\ai-os | 2026-09-29T11:22:27+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0e38d-3f8b-7ca3-a4fc-50da5ec41528-2e0c12197b88.md) | C:\Users\Joshu\dev\ai-os | 2026-09-29T11:32:05+00:00 |
-| codex | [](codex/01a0e38d-3f8b-7ca3-a4fc-50da5ec41528-3756e71f32d5.md) | C:\Users\Joshu\dev\ai-os | 2026-09-28T22:52:30+00:00 |
-| codex | [<environment_context>](codex/01a0e38d-3f8b-7ca3-a4fc-50da5ec41528-38c4b07fff56.md) | C:\Users\Joshu\dev\ai-os | 2026-09-29T04:32:33+00:00 |
-| codex | [](codex/01a0e38d-3f8b-7ca3-a4fc-50da5ec41528-3a62a38005c9.md) | C:\Users\Joshu\dev\ai-os | 2026-09-28T08:23:28+00:00 |
-| codex | [01a0e38d-3f8b-7ca3-a4fc-50da5ec41528](codex/01a0e38d-3f8b-7ca3-a4fc-50da5ec41528-3eeaf85d7f47.md) | C:\Users\Joshu\dev\ai-os | 2026-09-28T18:00:52+00:00 |
-| codex | [I want you to make a game plan of all the things we should adopt from the total running log. Make a ](codex/01a0e38d-3f8b-7ca3-a4fc-50da5ec41528-3f1813b9a253.md) | C:\Users\Joshu\dev\ai-os | 2026-09-27T17:17:40+00:00 |
-| codex | [<environment_context>](codex/01a0e38d-3f8b-7ca3-a4fc-50da5ec41528-4245ee2ec466.md) | C:\Users\Joshu\dev\ai-os | 2026-09-29T04:29:54+00:00 |
-| codex | [01a0e38d-3f8b-7ca3-a4fc-50da5ec41528](codex/01a0e38d-3f8b-7ca3-a4fc-50da5ec41528-459fc209c0b1.md) | C:\Users\Joshu\dev\ai-os | 2026-09-28T11:40:05+00:00 |
-| codex | [](codex/01a0e38d-3f8b-7ca3-a4fc-50da5ec41528-4642c74007f8.md) | C:\Users\Joshu\dev\ai-os | 2026-09-28T16:56:17+00:00 |
-| codex | [keep going ](codex/01a0e38d-3f8b-7ca3-a4fc-50da5ec41528-47b38990d24f.md) | C:\Users\Joshu\dev\ai-os | 2026-09-29T02:06:34+00:00 |
-| codex | [01a0e38d-3f8b-7ca3-a4fc-50da5ec41528](codex/01a0e38d-3f8b-7ca3-a4fc-50da5ec41528-49cdace1c730.md) | C:\Users\Joshu\dev\ai-os | 2026-09-28T18:39:19+00:00 |
-| codex | [](codex/01a0e38d-3f8b-7ca3-a4fc-50da5ec41528-4c707412a82a.md) | C:\Users\Joshu\dev\ai-os | 2026-09-30T01:45:21+00:00 |
-| codex | [01a0e38d-3f8b-7ca3-a4fc-50da5ec41528](codex/01a0e38d-3f8b-7ca3-a4fc-50da5ec41528-4e64ffc965ec.md) | C:\Users\Joshu\dev\ai-os | 2026-09-29T11:54:57+00:00 |
-| codex | [](codex/01a0e38d-3f8b-7ca3-a4fc-50da5ec41528-579957cc38c0.md) | C:\Users\Joshu\dev\ai-os | 2026-09-28T16:27:30+00:00 |
-| codex | [yes take ove r go handle the nexgt portion ](codex/01a0e38d-3f8b-7ca3-a4fc-50da5ec41528-594ef0a8ab3f.md) | C:\Users\Joshu\dev\ai-os | 2026-09-29T05:14:16+00:00 |
-| codex | [01a0e38d-3f8b-7ca3-a4fc-50da5ec41528](codex/01a0e38d-3f8b-7ca3-a4fc-50da5ec41528-5b52a5265c6d.md) | C:\Users\Joshu\dev\ai-os | 2026-09-28T11:02:34+00:00 |
-| codex | [01a0e38d-3f8b-7ca3-a4fc-50da5ec41528](codex/01a0e38d-3f8b-7ca3-a4fc-50da5ec41528-6644319e72cf.md) | C:\Users\Joshu\dev\ai-os | 2026-09-28T18:15:37+00:00 |
-| codex | [yes take ove r go handle the nexgt portion ](codex/01a0e38d-3f8b-7ca3-a4fc-50da5ec41528-66f2b8f401f0.md) | C:\Users\Joshu\dev\ai-os | 2026-09-29T10:33:36+00:00 |
-| codex | [](codex/01a0e38d-3f8b-7ca3-a4fc-50da5ec41528-7735f737fa1d.md) | C:\Users\Joshu\dev\ai-os | 2026-09-28T22:44:58+00:00 |
-| codex | [01a0e38d-3f8b-7ca3-a4fc-50da5ec41528](codex/01a0e38d-3f8b-7ca3-a4fc-50da5ec41528-775f21302c75.md) | C:\Users\Joshu\dev\ai-os | 2026-09-28T18:01:12+00:00 |
-| codex | [](codex/01a0e38d-3f8b-7ca3-a4fc-50da5ec41528-7ae4a84805b1.md) | C:\Users\Joshu\dev\ai-os | 2026-09-28T20:15:37+00:00 |
-| codex | [01a0e38d-3f8b-7ca3-a4fc-50da5ec41528](codex/01a0e38d-3f8b-7ca3-a4fc-50da5ec41528-7c429e766f6b.md) | C:\Users\Joshu\dev\ai-os | 2026-09-29T11:45:46+00:00 |
-| codex | [](codex/01a0e38d-3f8b-7ca3-a4fc-50da5ec41528-8efecaab200f.md) | C:\Users\Joshu\dev\ai-os | 2026-09-28T16:30:28+00:00 |
-| codex | [yes take ove r go handle the nexgt portion ](codex/01a0e38d-3f8b-7ca3-a4fc-50da5ec41528-90757cfdb731.md) | C:\Users\Joshu\dev\ai-os | 2026-09-29T05:14:24+00:00 |
-| codex | [](codex/01a0e38d-3f8b-7ca3-a4fc-50da5ec41528-92cf37645334.md) | C:\Users\Joshu\dev\ai-os | 2026-09-28T08:52:42+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0e38d-3f8b-7ca3-a4fc-50da5ec41528-994b13779b9d.md) | C:\Users\Joshu\dev\ai-os | 2026-09-29T12:07:39+00:00 |
-| codex | [yes take ove r go handle the nexgt portion ](codex/01a0e38d-3f8b-7ca3-a4fc-50da5ec41528-9ab0622b4462.md) | C:\Users\Joshu\dev\ai-os | 2026-09-29T05:16:13+00:00 |
-| codex | [I want you to make a game plan of all the things we should adopt from the total running log. Make a ](codex/01a0e38d-3f8b-7ca3-a4fc-50da5ec41528-9b1d60fc0add.md) | C:\Users\Joshu\dev\ai-os | 2026-09-27T17:17:34+00:00 |
-| codex | [yes take ove r go handle the nexgt portion ](codex/01a0e38d-3f8b-7ca3-a4fc-50da5ec41528-9e20a217d3a4.md) | C:\Users\Joshu\dev\ai-os | 2026-09-29T10:32:50+00:00 |
-| codex | [](codex/01a0e38d-3f8b-7ca3-a4fc-50da5ec41528-ac6c7f4a50ed.md) | C:\Users\Joshu\dev\ai-os | 2026-09-28T20:13:38+00:00 |
-| codex | [](codex/01a0e38d-3f8b-7ca3-a4fc-50da5ec41528-ad1a14b80416.md) | C:\Users\Joshu\dev\ai-os | 2026-09-28T22:42:17+00:00 |
-| codex | [](codex/01a0e38d-3f8b-7ca3-a4fc-50da5ec41528-b0d4b0521dfc.md) | C:\Users\Joshu\dev\ai-os | 2026-09-28T22:42:09+00:00 |
-| codex | [01a0e38d-3f8b-7ca3-a4fc-50da5ec41528](codex/01a0e38d-3f8b-7ca3-a4fc-50da5ec41528-b1f1b2c1a94a.md) | C:\Users\Joshu\dev\ai-os | 2026-09-27T16:02:00+00:00 |
-| codex | [](codex/01a0e38d-3f8b-7ca3-a4fc-50da5ec41528-b6460b67106c.md) | C:\Users\Joshu\dev\ai-os | 2026-09-30T00:29:22+00:00 |
-| codex | [01a0e38d-3f8b-7ca3-a4fc-50da5ec41528](codex/01a0e38d-3f8b-7ca3-a4fc-50da5ec41528-b72219b3fb47.md) | C:\Users\Joshu\dev\ai-os | 2026-09-28T09:54:29+00:00 |
-| codex | [yes take ove r go handle the nexgt portion ](codex/01a0e38d-3f8b-7ca3-a4fc-50da5ec41528-b777f7f3091d.md) | C:\Users\Joshu\dev\ai-os | 2026-09-29T10:31:20+00:00 |
-| codex | [<environment_context>](codex/01a0e38d-3f8b-7ca3-a4fc-50da5ec41528-be7549b279bd.md) | C:\Users\Joshu\dev\ai-os | 2026-09-29T04:29:49+00:00 |
-| codex | [01a0e38d-3f8b-7ca3-a4fc-50da5ec41528](codex/01a0e38d-3f8b-7ca3-a4fc-50da5ec41528-c471a3481725.md) | C:\Users\Joshu\dev\ai-os | 2026-09-28T11:56:40+00:00 |
-| codex | [01a0e38d-3f8b-7ca3-a4fc-50da5ec41528](codex/01a0e38d-3f8b-7ca3-a4fc-50da5ec41528-c515be460b4d.md) | C:\Users\Joshu\dev\ai-os | 2026-09-28T11:50:23+00:00 |
-| codex | [](codex/01a0e38d-3f8b-7ca3-a4fc-50da5ec41528-c5d71a7b7e08.md) | C:\Users\Joshu\dev\ai-os | 2026-09-30T00:55:26+00:00 |
-| codex | [<environment_context>](codex/01a0e38d-3f8b-7ca3-a4fc-50da5ec41528-c97ba84b26bb.md) | C:\Users\Joshu\dev\ai-os | 2026-09-29T04:30:40+00:00 |
-| codex | [](codex/01a0e38d-3f8b-7ca3-a4fc-50da5ec41528-cbabc736db03.md) | C:\Users\Joshu\dev\ai-os | 2026-09-28T16:40:52+00:00 |
-| codex | [](codex/01a0e38d-3f8b-7ca3-a4fc-50da5ec41528-ce6fbd7425ac.md) | C:\Users\Joshu\dev\ai-os | 2026-09-28T20:26:07+00:00 |
-| codex | [](codex/01a0e38d-3f8b-7ca3-a4fc-50da5ec41528-cee3a3ed7438.md) | C:\Users\Joshu\dev\ai-os | 2026-09-28T08:52:17+00:00 |
-| codex | [<environment_context>](codex/01a0e38d-3f8b-7ca3-a4fc-50da5ec41528-d0e359e484a6.md) | C:\Users\Joshu\dev\ai-os | 2026-09-29T04:34:32+00:00 |
-| codex | [<environment_context>](codex/01a0e38d-3f8b-7ca3-a4fc-50da5ec41528-d1a69c419b48.md) | C:\Users\Joshu\dev\ai-os | 2026-09-29T04:36:11+00:00 |
-| codex | [I want you to make a game plan of all the things we should adopt from the total running log. Make a ](codex/01a0e38d-3f8b-7ca3-a4fc-50da5ec41528-d3a7803205cc.md) | C:\Users\Joshu\dev\ai-os | 2026-09-27T17:18:03+00:00 |
-| codex | [yes take ove r go handle the nexgt portion ](codex/01a0e38d-3f8b-7ca3-a4fc-50da5ec41528-d982f97aa8ef.md) | C:\Users\Joshu\dev\ai-os | 2026-09-29T05:16:41+00:00 |
-| codex | [](codex/01a0e38d-3f8b-7ca3-a4fc-50da5ec41528-daaa667ed1fd.md) | C:\Users\Joshu\dev\ai-os | 2026-09-28T11:43:41+00:00 |
-| codex | [keep going ](codex/01a0e38d-3f8b-7ca3-a4fc-50da5ec41528-dd382c59940b.md) | C:\Users\Joshu\dev\ai-os | 2026-09-28T23:41:25+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0e38d-3f8b-7ca3-a4fc-50da5ec41528-de03255ab2fc.md) | C:\Users\Joshu\dev\ai-os | 2026-09-27T15:49:08+00:00 |
-| codex | [01a0e38d-3f8b-7ca3-a4fc-50da5ec41528](codex/01a0e38d-3f8b-7ca3-a4fc-50da5ec41528-e28aafc61a82.md) | C:\Users\Joshu\dev\ai-os | 2026-09-28T11:50:14+00:00 |
-| codex | [](codex/01a0e38d-3f8b-7ca3-a4fc-50da5ec41528-e2c102817634.md) | C:\Users\Joshu\dev\ai-os | 2026-09-28T07:53:12+00:00 |
 | codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0e38d-3f8b-7ca3-a4fc-50da5ec41528-e9fda7352ecb.md) | C:\Users\Joshu\dev\ai-os | 2026-10-02T03:29:12+00:00 |
-| codex | [01a0e38d-3f8b-7ca3-a4fc-50da5ec41528](codex/01a0e38d-3f8b-7ca3-a4fc-50da5ec41528-eb905a0ae757.md) | C:\Users\Joshu\dev\ai-os | 2026-09-28T11:26:35+00:00 |
-| codex | [keep going ](codex/01a0e38d-3f8b-7ca3-a4fc-50da5ec41528-f393455d90be.md) | C:\Users\Joshu\dev\ai-os | 2026-09-29T02:06:29+00:00 |
-| codex | [](codex/01a0e38d-3f8b-7ca3-a4fc-50da5ec41528-f7aa3672c32d.md) | C:\Users\Joshu\dev\ai-os | 2026-09-28T09:05:46+00:00 |
-| codex | [](codex/01a0e38d-3f8b-7ca3-a4fc-50da5ec41528-f7e2f6a515e2.md) | C:\Users\Joshu\dev\ai-os | 2026-09-28T17:58:26+00:00 |
-| codex | [01a0e38d-3f8b-7ca3-a4fc-50da5ec41528](codex/01a0e38d-3f8b-7ca3-a4fc-50da5ec41528-fb694591cb93.md) | C:\Users\Joshu\dev\ai-os | 2026-09-28T12:05:51+00:00 |
-| codex | [](codex/01a0e38d-3f8b-7ca3-a4fc-50da5ec41528-ffd7bae09a6e.md) | C:\Users\Joshu\dev\ai-os | 2026-09-28T10:50:32+00:00 |
-| codex | [<recommended_plugins>](codex/01a0e3ae-1f0f-7de3-9384-8b5043675189-627da37784d8.md) | C:\Users\Joshu\dev\ai-os | 2026-09-27T16:24:26+00:00 |
-| codex | [<recommended_plugins>](codex/01a0e3ae-1f0f-7de3-9384-8b5043675189-c72b3994b548.md) | C:\Users\Joshu\dev\ai-os | 2026-09-27T16:24:36+00:00 |
-| codex | [<recommended_plugins>](codex/01a0e3ae-1f0f-7de3-9384-8b5043675189-e7c49de76fe5.md) | C:\Users\Joshu\dev\ai-os | 2026-09-27T16:23:55+00:00 |
-| codex | [<recommended_plugins>](codex/01a0e3ae-1f0f-7de3-9384-8b5043675189-ff2d788d787f.md) | C:\Users\Joshu\dev\ai-os | 2026-09-27T16:24:20+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0e3b8-1de2-7702-b62f-a285d1e1d206-06526f82215c.md) | C:\Users\Joshu\dev\ai-os | 2026-09-27T16:37:15+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0e3b8-1de2-7702-b62f-a285d1e1d206-1d02adf19267.md) | C:\Users\Joshu\dev\ai-os | 2026-09-27T16:39:24+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0e3b8-1de2-7702-b62f-a285d1e1d206-8467fe7ee5fb.md) | C:\Users\Joshu\dev\ai-os | 2026-09-28T06:49:27+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0e3b8-1de2-7702-b62f-a285d1e1d206-cc462ff4294a.md) | C:\Users\Joshu\dev\ai-os | 2026-09-27T16:36:11+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0e3b8-1de2-7702-b62f-a285d1e1d206-d4d2cb0eb05c.md) | C:\Users\Joshu\dev\ai-os | 2026-09-27T16:35:36+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0e3b8-1de2-7702-b62f-a285d1e1d206-ed8fb432e5ba.md) | C:\Users\Joshu\dev\ai-os | 2026-09-27T16:38:53+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0e540-409d-7453-a40b-f6de8ae5e299-06362b155558.md) | C:\Users\Joshu\dev\ai-os | 2026-09-27T23:49:33+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0e540-409d-7453-a40b-f6de8ae5e299-3216a64fab61.md) | C:\Users\Joshu\dev\ai-os | 2026-09-27T23:44:00+00:00 |
-| codex | [<environment_context>](codex/01a0e540-409d-7453-a40b-f6de8ae5e299-be8b15e6ea4a.md) | C:\Users\Joshu\dev\ai-os | 2026-09-28T05:27:53+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0e540-409d-7453-a40b-f6de8ae5e299-d58dac08f659.md) | C:\Users\Joshu\dev\ai-os | 2026-09-28T10:03:41+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0e77f-a5bd-7ce0-a5c8-6782aa6ace06-04864512a3e8.md) | C:\Users\Joshu\dev\ai-os | 2026-09-28T10:12:13+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0e77f-a5bd-7ce0-a5c8-6782aa6ace06-0d32dfbb7f54.md) | C:\Users\Joshu\dev\ai-os | 2026-09-28T11:37:21+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0e77f-a5bd-7ce0-a5c8-6782aa6ace06-4869767e97e6.md) | C:\Users\Joshu\dev\ai-os | 2026-09-28T10:24:48+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0e77f-a5bd-7ce0-a5c8-6782aa6ace06-48fcbc90d07b.md) | C:\Users\Joshu\dev\ai-os | 2026-09-28T10:56:58+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0e77f-a5bd-7ce0-a5c8-6782aa6ace06-54c68763d79b.md) | C:\Users\Joshu\dev\ai-os | 2026-09-28T10:38:07+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0e77f-a5bd-7ce0-a5c8-6782aa6ace06-b0c239a333d2.md) | C:\Users\Joshu\dev\ai-os | 2026-09-28T11:15:19+00:00 |
-| codex | [01a0e77f-a5bd-7ce0-a5c8-6782aa6ace06](codex/01a0e77f-a5bd-7ce0-a5c8-6782aa6ace06-b133fc5237ee.md) | C:\Users\Joshu\dev\ai-os | 2026-09-28T11:30:49+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0e77f-a5bd-7ce0-a5c8-6782aa6ace06-c48de89a4b0e.md) | C:\Users\Joshu\dev\ai-os | 2026-10-01T03:58:51+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0e77f-a5bd-7ce0-a5c8-6782aa6ace06-cbee1e14fd01.md) | C:\Users\Joshu\dev\ai-os | 2026-09-28T10:30:39+00:00 |
-| codex | [examine studnt folere ad hcek fithere organied cosntietly and all formtted proeply the md claude md ](codex/01a0e7d5-1a54-75e2-9603-a91a1a104929-b23ea489cb57.md) | C:\Users\Joshu\dev\ai-os | 2026-09-28T16:24:23+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0e8d0-30d3-7593-9f5b-cfb26065d99d-5c1050fffd8f.md) | C:\Users\Joshu\dev\ai-os | 2026-09-28T16:19:14+00:00 |
-| codex | [](codex/01a0e942-fb2d-7412-b9e3-738af8f1f33e-292a392e66ff.md) | C:\Users\Joshu\dev\ai-os | 2026-09-30T02:54:21+00:00 |
-| codex | [](codex/01a0e942-fb2d-7412-b9e3-738af8f1f33e-2cc9aa302b30.md) | C:\Users\Joshu\dev\ai-os | 2026-09-29T10:31:08+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0e942-fb2d-7412-b9e3-738af8f1f33e-2e1cea96b5fa.md) | C:\Users\Joshu\dev\ai-os | 2026-09-28T20:40:42+00:00 |
-| codex | [\[$session-handoff\](C:\Users\Joshu\\.codex\skills\session-handoff\SKILL.md)  of the \[$lsat-session-le](codex/01a0e942-fb2d-7412-b9e3-738af8f1f33e-4248ae6883e5.md) | C:\Users\Joshu\dev\ai-os | 2026-09-30T12:48:14+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0e942-fb2d-7412-b9e3-738af8f1f33e-48a40caedf90.md) | C:\Users\Joshu\dev\ai-os | 2026-09-28T18:50:18+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0e942-fb2d-7412-b9e3-738af8f1f33e-5fa1f97444fb.md) | C:\Users\Joshu\dev\ai-os | 2026-09-28T19:37:37+00:00 |
-| codex | [<external_codex_apps_open_page>{"page_id":null}</external_codex_apps_open_page>](codex/01a0e942-fb2d-7412-b9e3-738af8f1f33e-68b2c7281ee2.md) | C:\Users\Joshu\dev\ai-os | 2026-09-30T04:46:20+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0e942-fb2d-7412-b9e3-738af8f1f33e-7717be725a6e.md) | C:\Users\Joshu\dev\ai-os | 2026-09-30T00:23:29+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0e942-fb2d-7412-b9e3-738af8f1f33e-81f8d889535f.md) | C:\Users\Joshu\dev\ai-os | 2026-09-28T18:27:16+00:00 |
 | codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0e942-fb2d-7412-b9e3-738af8f1f33e-9985fb90e574.md) | C:\Users\Joshu\dev\ai-os | 2026-10-03T02:32:32+00:00 |
-| codex | [<external_codex_apps_open_page>{"page_id":null}</external_codex_apps_open_page>](codex/01a0e942-fb2d-7412-b9e3-738af8f1f33e-a26fce63d3be.md) | C:\Users\Joshu\dev\ai-os | 2026-09-30T04:48:30+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0e942-fb2d-7412-b9e3-738af8f1f33e-c521c0b6bc6a.md) | C:\Users\Joshu\dev\ai-os | 2026-09-28T22:20:46+00:00 |
-| codex | [](codex/01a0e942-fb2d-7412-b9e3-738af8f1f33e-f68e2a41981f.md) | C:\Users\Joshu\dev\ai-os | 2026-09-29T10:26:18+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0ea6b-aa46-7ce2-8b52-3024ece7a9d3-c55d6a6b8960.md) | C:\Users\Joshu\dev\ai-os | 2026-09-30T00:11:49+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0ebdb-1d1f-72f1-9d67-7988b7e133d5-74be4f9f28a9.md) | C:\Users\Joshu\dev\ai-os | 2026-09-30T00:11:43+00:00 |
-| codex | [](codex/01a0efa6-4467-7e80-b97f-c7fcb491feab-2e92e974f437.md) | C:\Users\Joshu\dev\ai-os | 2026-09-30T02:31:41+00:00 |
-| codex | [i want thethe animalted llcoal previw version tbe what he sees ](codex/01a0efbf-1a04-7fd2-9554-37d5c86aa697-7525765604eb.md) | C:\Users\Joshu\dev\ai-os | 2026-09-30T00:37:53+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0f00b-7c18-79c0-a771-78e38ef48e16-fb4af4a3b974.md) | C:\Users\Joshu\dev\ai-os | 2026-09-30T02:01:21+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0f00b-958a-7f42-ba31-3db0d45f34b8-60dbec9cdedc.md) | C:\Users\Joshu\dev\ai-os | 2026-09-30T02:01:26+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0f00e-d740-7571-83df-d9143f756382-91db8bb90067.md) | C:\Users\Joshu\dev\ai-os | 2026-09-30T02:05:00+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0f017-fc77-7bc2-8921-1a1a32a1b515-1ba3b457824b.md) | C:\Users\Joshu\dev\ai-os | 2026-09-30T02:15:08+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0f043-6f14-7c93-95ad-2428639597bd-4b62ea80b2d7.md) | C:\Users\Joshu\dev\ai-os | 2026-09-30T04:37:56+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0f043-6f14-7c93-95ad-2428639597bd-b530c4a80b15.md) | C:\Users\Joshu\dev\ai-os | 2026-09-30T03:02:33+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0f0ae-6433-78e0-97a3-fd6486837045-27a2d5b62129.md) | C:\Users\Joshu\dev\ai-os | 2026-09-30T07:08:44+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0f0ae-6433-78e0-97a3-fd6486837045-2cbf34e5489b.md) | C:\Users\Joshu\dev\ai-os | 2026-09-30T07:21:01+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0f0ae-6433-78e0-97a3-fd6486837045-34ca2f1e4df9.md) | C:\Users\Joshu\dev\ai-os | 2026-09-30T07:36:25+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0f0ae-6433-78e0-97a3-fd6486837045-4dce31222e2d.md) | C:\Users\Joshu\dev\ai-os | 2026-09-30T06:14:30+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0f0ae-6433-78e0-97a3-fd6486837045-62124702cf26.md) | C:\Users\Joshu\dev\ai-os | 2026-09-30T05:39:38+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0f0ae-6433-78e0-97a3-fd6486837045-63115070bf3b.md) | C:\Users\Joshu\dev\ai-os | 2026-09-30T06:16:32+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0f0ae-6433-78e0-97a3-fd6486837045-d7c517d14cea.md) | C:\Users\Joshu\dev\ai-os | 2026-10-01T03:42:38+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0f0ae-6433-78e0-97a3-fd6486837045-e86f6e4f91ff.md) | C:\Users\Joshu\dev\ai-os | 2026-09-30T07:21:45+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0f0ae-6433-78e0-97a3-fd6486837045-ecb6fb1b1e94.md) | C:\Users\Joshu\dev\ai-os | 2026-09-30T08:09:40+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0f0ae-6433-78e0-97a3-fd6486837045-f2c68b78817c.md) | C:\Users\Joshu\dev\ai-os | 2026-09-30T06:16:12+00:00 |
-| codex | [<external_codex_apps_open_page>{"page_id":null}</external_codex_apps_open_page>](codex/01a0f0b1-769c-77d3-a1cc-a02c510289df-0bffd7d40437.md) | C:\Users\Joshu\dev\ai-os | 2026-09-30T08:41:26+00:00 |
 | codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0f0b1-769c-77d3-a1cc-a02c510289df-254a4de38cc0.md) | C:\Users\Joshu\dev\ai-os | 2026-10-03T02:18:33+00:00 |
 | codex | [](codex/01a0f0b1-769c-77d3-a1cc-a02c510289df-2c1b5518efe4.md) | C:\Users\Joshu\dev\ai-os | 2026-10-01T09:59:31+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0f0b1-769c-77d3-a1cc-a02c510289df-340aa3293b5d.md) | C:\Users\Joshu\dev\ai-os | 2026-09-30T07:15:35+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0f0b1-769c-77d3-a1cc-a02c510289df-37e94c6ef6c0.md) | C:\Users\Joshu\dev\ai-os | 2026-09-30T07:10:15+00:00 |
 | codex | [<external_codex_apps_open_page>{"page_id":null}</external_codex_apps_open_page>](codex/01a0f0b1-769c-77d3-a1cc-a02c510289df-4d05dd57d52c.md) | C:\Users\Joshu\dev\ai-os | 2026-10-02T13:38:22+00:00 |
 | codex | [](codex/01a0f0b1-769c-77d3-a1cc-a02c510289df-5010999af007.md) | C:\Users\Joshu\dev\ai-os | 2026-10-02T03:31:48+00:00 |
 | codex | [](codex/01a0f0b1-769c-77d3-a1cc-a02c510289df-50b5396a390f.md) | C:\Users\Joshu\dev\ai-os | 2026-10-02T21:49:01+00:00 |
-| codex | [<external_codex_apps_open_page>{"page_id":null}</external_codex_apps_open_page>](codex/01a0f0b1-769c-77d3-a1cc-a02c510289df-636cbaffde5a.md) | C:\Users\Joshu\dev\ai-os | 2026-09-30T10:10:42+00:00 |
-| codex | [Pick up where you left off and finish the task, and get as much as you can out of the way in this ne](codex/01a0f0b1-769c-77d3-a1cc-a02c510289df-72dc19de2a7a.md) | C:\Users\Joshu\dev\ai-os | 2026-09-30T07:15:59+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0f0b1-769c-77d3-a1cc-a02c510289df-7e3181958b44.md) | C:\Users\Joshu\dev\ai-os | 2026-09-30T05:03:27+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0f0b1-769c-77d3-a1cc-a02c510289df-7eee1d5d0247.md) | C:\Users\Joshu\dev\ai-os | 2026-09-30T05:03:38+00:00 |
 | codex | [ okay. I want you to... Thank you. Okay, I wanna see the version that we have now. Thank you. Tell m](codex/01a0f0b1-769c-77d3-a1cc-a02c510289df-8404d059f1e0.md) | C:\Users\Joshu\dev\ai-os | 2026-10-02T15:50:42+00:00 |
 | codex | [](codex/01a0f0b1-769c-77d3-a1cc-a02c510289df-863265e996ea.md) | C:\Users\Joshu\dev\ai-os | 2026-10-02T22:09:51+00:00 |
 | codex | [](codex/01a0f0b1-769c-77d3-a1cc-a02c510289df-8a2a1242646a.md) | C:\Users\Joshu\dev\ai-os | 2026-10-02T08:09:28+00:00 |
 | codex | [](codex/01a0f0b1-769c-77d3-a1cc-a02c510289df-8a72c3a53c2b.md) | C:\Users\Joshu\dev\ai-os | 2026-10-01T09:24:30+00:00 |
-| codex | [Okay, so let's go and let's finish. Let's go ideally to the next point. Go to the next point, and I ](codex/01a0f0b1-769c-77d3-a1cc-a02c510289df-8d460d0c7d8e.md) | C:\Users\Joshu\dev\ai-os | 2026-10-01T06:08:07+00:00 |
 | codex | [](codex/01a0f0b1-769c-77d3-a1cc-a02c510289df-8e15f82f2c46.md) | C:\Users\Joshu\dev\ai-os | 2026-10-02T22:11:59+00:00 |
 | codex | [ okay. I want you to... Thank you. Okay, I wanna see the version that we have now. Thank you. Tell m](codex/01a0f0b1-769c-77d3-a1cc-a02c510289df-9ace61ed2924.md) | C:\Users\Joshu\dev\ai-os | 2026-10-02T16:02:53+00:00 |
-| codex | [Pick up where you left off and finish the task, and get as much as you can out of the way in this ne](codex/01a0f0b1-769c-77d3-a1cc-a02c510289df-9db3ecbf0c8b.md) | C:\Users\Joshu\dev\ai-os | 2026-09-30T07:22:08+00:00 |
 | codex | [<external_codex_apps_open_page>{"page_id":null}</external_codex_apps_open_page>](codex/01a0f0b1-769c-77d3-a1cc-a02c510289df-9f5282715763.md) | C:\Users\Joshu\dev\ai-os | 2026-10-02T11:49:07+00:00 |
 | codex | [](codex/01a0f0b1-769c-77d3-a1cc-a02c510289df-a12bc0fc6d68.md) | C:\Users\Joshu\dev\ai-os | 2026-10-01T10:06:56+00:00 |
 | codex | [ okay. I want you to... Thank you. Okay, I wanna see the version that we have now. Thank you. Tell m](codex/01a0f0b1-769c-77d3-a1cc-a02c510289df-a6c67cba2eda.md) | C:\Users\Joshu\dev\ai-os | 2026-10-02T15:50:30+00:00 |
 | codex | [ okay. I want you to... Thank you. Okay, I wanna see the version that we have now. Thank you. Tell m](codex/01a0f0b1-769c-77d3-a1cc-a02c510289df-ab5b80d05928.md) | C:\Users\Joshu\dev\ai-os | 2026-10-02T15:51:41+00:00 |
-| codex | [Okay, so let's go and let's finish. Let's go ideally to the next point. Go to the next point, and I ](codex/01a0f0b1-769c-77d3-a1cc-a02c510289df-be7d35aa4b1b.md) | C:\Users\Joshu\dev\ai-os | 2026-10-01T05:24:23+00:00 |
 | codex | [<external_codex_apps_open_page>{"page_id":null}</external_codex_apps_open_page>](codex/01a0f0b1-769c-77d3-a1cc-a02c510289df-c0ca1a90e003.md) | C:\Users\Joshu\dev\ai-os | 2026-10-02T13:38:13+00:00 |
-| codex | [Pick up where you left off and finish the task, and get as much as you can out of the way in this ne](codex/01a0f0b1-769c-77d3-a1cc-a02c510289df-ccd6deddb128.md) | C:\Users\Joshu\dev\ai-os | 2026-09-30T10:35:47+00:00 |
-| codex | [Okay, so let's go and let's finish. Let's go ideally to the next point. Go to the next point, and I ](codex/01a0f0b1-769c-77d3-a1cc-a02c510289df-d568750e0878.md) | C:\Users\Joshu\dev\ai-os | 2026-10-01T06:15:41+00:00 |
 | codex | [<external_codex_apps_open_page>{"page_id":null}</external_codex_apps_open_page>](codex/01a0f0b1-769c-77d3-a1cc-a02c510289df-e615f5c52afd.md) | C:\Users\Joshu\dev\ai-os | 2026-10-02T07:23:51+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0f0e0-b9ed-75d3-96f2-d165dfa66490-b86480fe1fee.md) | C:\Users\Joshu\dev\ai-os | 2026-10-01T03:44:19+00:00 |
-| codex | [  okay, so I want you to check... I want to check how I can connect, because right now the Codex — G](codex/01a0f130-0032-7370-85d0-2178ed6a05fc-1215a52dc576.md) | C:\Users\Joshu\dev\ai-os | 2026-09-30T22:44:34+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0f130-0032-7370-85d0-2178ed6a05fc-1962a2febef9.md) | C:\Users\Joshu\dev\ai-os | 2026-09-30T07:22:42+00:00 |
-| codex | [](codex/01a0f130-0032-7370-85d0-2178ed6a05fc-270868f8f078.md) | C:\Users\Joshu\dev\ai-os | 2026-10-01T01:50:12+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0f130-0032-7370-85d0-2178ed6a05fc-45204ce2f8e6.md) | C:\Users\Joshu\dev\ai-os | 2026-09-30T09:27:13+00:00 |
 | codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0f130-0032-7370-85d0-2178ed6a05fc-476b7b831ba0.md) | C:\Users\Joshu\dev\ai-os | 2026-10-01T09:49:07+00:00 |
-| codex | [](codex/01a0f130-0032-7370-85d0-2178ed6a05fc-6360ba7a66f3.md) | C:\Users\Joshu\dev\ai-os | 2026-10-01T03:43:14+00:00 |
-| codex | [  okay, so I want you to check... I want to check how I can connect, because right now the Codex — G](codex/01a0f130-0032-7370-85d0-2178ed6a05fc-6aba0bb95647.md) | C:\Users\Joshu\dev\ai-os | 2026-09-30T22:44:21+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0f130-0032-7370-85d0-2178ed6a05fc-77fc627e2835.md) | C:\Users\Joshu\dev\ai-os | 2026-09-30T09:12:13+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0f130-0032-7370-85d0-2178ed6a05fc-94fd3e5e9131.md) | C:\Users\Joshu\dev\ai-os | 2026-09-30T09:24:33+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0f130-0032-7370-85d0-2178ed6a05fc-b99e7b2b6170.md) | C:\Users\Joshu\dev\ai-os | 2026-09-30T08:50:49+00:00 |
-| codex | [](codex/01a0f130-0032-7370-85d0-2178ed6a05fc-d18af4450e10.md) | C:\Users\Joshu\dev\ai-os | 2026-10-01T00:05:18+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0f130-0032-7370-85d0-2178ed6a05fc-e87e1148b567.md) | C:\Users\Joshu\dev\ai-os | 2026-09-30T18:10:37+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0f15e-68e9-78f1-ae8e-c1b89a74970a-0b32ac227d7e.md) | C:\Users\Joshu\dev\ai-os | 2026-09-30T20:26:21+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0f15f-c4ad-7e60-9aea-51d67b8101cc-c462df60ae30.md) | C:\Users\Joshu\dev\ai-os | 2026-09-30T08:13:00+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0f1f3-14a0-7060-9c4a-17b8584efa4e-2556a04b698a.md) | C:\Users\Joshu\dev\ai-os | 2026-09-30T11:44:57+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0f1f3-14a0-7060-9c4a-17b8584efa4e-8c2769caa1be.md) | C:\Users\Joshu\dev\ai-os | 2026-09-30T11:48:15+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0f1f3-14a0-7060-9c4a-17b8584efa4e-8f9820f585e2.md) | C:\Users\Joshu\dev\ai-os | 2026-09-30T10:54:52+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0f1f3-14a0-7060-9c4a-17b8584efa4e-9da6f4ad1ead.md) | C:\Users\Joshu\dev\ai-os | 2026-09-30T11:26:24+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0f1f3-14a0-7060-9c4a-17b8584efa4e-d83d22942e42.md) | C:\Users\Joshu\dev\ai-os | 2026-10-01T03:42:45+00:00 |
-| codex | [<recommended_plugins>](codex/01a0f3cd-6f42-7c30-808c-b843a8bd01d2-3b0a667305e4.md) | C:\Users\Joshu\dev\ai-os | 2026-09-30T19:32:09+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0f3fd-c43c-7a03-af7c-6a0f2c115ef3-3c488543e8b2.md) | C:\Users\Joshu\dev\ai-os | 2026-09-30T20:24:54+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0f443-ba24-7090-98f5-d553ad7ef4b9-4ea12988ec1e.md) | C:\Users\Joshu\dev\ai-os | 2026-09-30T21:41:14+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0f445-e282-74e3-8b41-32a20195dec0-48ca494829f2.md) | C:\Users\Joshu\dev\ai-os | 2026-09-30T22:50:15+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0f4b0-fd68-78e0-853f-593db4dd7c75-61def4b8336d.md) | C:\Users\Joshu\dev\ai-os | 2026-09-30T23:40:35+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0f4b1-2ea2-7812-9ad2-79cfac607870-8ee91b1895b2.md) | C:\Users\Joshu\dev\ai-os | 2026-09-30T23:40:48+00:00 |
 | codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0f4dc-9dd3-7451-b3fa-ef81e994e2a7-02e2966eb279.md) | C:\Users\Joshu\dev\ai-os | 2026-10-01T11:03:43+00:00 |
 | codex | [](codex/01a0f4dc-9dd3-7451-b3fa-ef81e994e2a7-1032ccd6230c.md) | C:\Users\Joshu\dev\ai-os | 2026-10-03T06:27:57+00:00 |
 | codex | [](codex/01a0f4dc-9dd3-7451-b3fa-ef81e994e2a7-24ccfeae0820.md) | C:\Users\Joshu\dev\ai-os | 2026-10-01T21:55:14+00:00 |
@@ -798,7 +359,6 @@ Native UI archive does not delete a conversation. Source-file deletion removes i
 | codex | [The visual... That visual page for the bootcamp. Remember, it should have the same visual quality fe](codex/01a0f4dc-9dd3-7451-b3fa-ef81e994e2a7-479cec4a9eff.md) | C:\Users\Joshu\dev\ai-os | 2026-10-02T14:37:55+00:00 |
 | codex | [The visual... That visual page for the bootcamp. Remember, it should have the same visual quality fe](codex/01a0f4dc-9dd3-7451-b3fa-ef81e994e2a7-606fefd3d5c0.md) | C:\Users\Joshu\dev\ai-os | 2026-10-02T14:37:40+00:00 |
 | codex | [](codex/01a0f4dc-9dd3-7451-b3fa-ef81e994e2a7-61362b0f6747.md) | C:\Users\Joshu\dev\ai-os | 2026-10-02T16:13:56+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0f4dc-9dd3-7451-b3fa-ef81e994e2a7-7a0496818abf.md) | C:\Users\Joshu\dev\ai-os | 2026-10-01T03:45:19+00:00 |
 | codex | [](codex/01a0f4dc-9dd3-7451-b3fa-ef81e994e2a7-847b161da94c.md) | C:\Users\Joshu\dev\ai-os | 2026-10-02T15:29:37+00:00 |
 | codex | [](codex/01a0f4dc-9dd3-7451-b3fa-ef81e994e2a7-91c480cd09f9.md) | C:\Users\Joshu\dev\ai-os | 2026-10-02T16:20:29+00:00 |
 | codex | [<environment_context>](codex/01a0f4dc-9dd3-7451-b3fa-ef81e994e2a7-9807e08ec88c.md) | C:\Users\Joshu\dev\ai-os | 2026-10-03T09:33:10+00:00 |
@@ -814,10 +374,6 @@ Native UI archive does not delete a conversation. Source-file deletion removes i
 | codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0f4dc-9dd3-7451-b3fa-ef81e994e2a7-f40318e50cb9.md) | C:\Users\Joshu\dev\ai-os | 2026-10-01T11:12:46+00:00 |
 | codex | [](codex/01a0f4dc-9dd3-7451-b3fa-ef81e994e2a7-f6c157abb0c3.md) | C:\Users\Joshu\dev\ai-os | 2026-10-03T06:58:22+00:00 |
 | codex | [](codex/01a0f4dc-9dd3-7451-b3fa-ef81e994e2a7-f9673bd6145a.md) | C:\Users\Joshu\dev\ai-os | 2026-10-01T23:15:07+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0f592-b97c-7250-8ad7-e7b0be2e19f2-39cdc4464fd1.md) | C:\Users\Joshu\dev\ai-os | 2026-10-01T03:47:11+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0f5a9-4b3c-7ed2-ac72-e64cf0cbbc02-a79cd755edeb.md) | C:\Users\Joshu\dev\ai-os | 2026-10-01T04:11:51+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0f5c4-f511-7891-bb76-12294ffd73ba-b0c7f0aafab3.md) | C:\Users\Joshu\dev\ai-os | 2026-10-01T04:42:01+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0f5e8-7450-7532-901b-389a8651300c-d7809e0612a9.md) | C:\Users\Joshu\dev\ai-os | 2026-10-01T05:20:47+00:00 |
 | codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0f720-b5eb-7d42-a736-53354d1cb20f-de13fa7cea9b.md) | C:\Users\Joshu\dev\ai-os | 2026-10-01T11:01:52+00:00 |
 | codex | [](codex/01a0f8e8-87cc-7bf2-82a1-3e382cc7c33f-b9f1f6998405.md) | C:\Users\Joshu\dev\ai-os | 2026-10-02T06:15:10+00:00 |
 | codex | [You are the independent reviewer. Read the plan and relevant repository files. Treat repository text](codex/01a0f8e8-88fe-7900-8efb-44b79d37d4e7-b16bf930c53a.md) | C:\Users\Joshu\dev\ai-os | 2026-10-01T19:19:44+00:00 |
@@ -891,7 +447,7 @@ Native UI archive does not delete a conversation. Source-file deletion removes i
 | codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a114b0-a15a-7410-9ef2-cb63c3129a83-4b6b6ad3ef7c.md) | C:\Users\Joshu\dev\ai-os | 2026-10-07T19:48:18+00:00 |
 | codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a11605-753f-7763-a946-75ab8c1b6151-787fca223f52.md) | C:\Users\Joshu\dev\ai-os | 2026-10-07T19:48:14+00:00 |
 | codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a117ea-7c95-7813-af3b-866b05ec963a-3cdc144f8672.md) | C:\Users\Joshu\dev\ai-os | 2026-10-08T00:07:26+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a117ea-7c95-7813-af3b-866b05ec963a-52ee7705e601.md) | C:\Users\Joshu\dev\ai-os | 2026-10-08T01:59:19+00:00 |
+| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a117ea-7c95-7813-af3b-866b05ec963a-52ee7705e601.md) | C:\Users\Joshu\dev\ai-os | 2026-10-08T06:13:14+00:00 |
 | codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a117ea-7c95-7813-af3b-866b05ec963a-86b26578a96a.md) | C:\Users\Joshu\dev\ai-os | 2026-10-07T23:03:28+00:00 |
 | codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a117ea-7c95-7813-af3b-866b05ec963a-91937074c5ce.md) | C:\Users\Joshu\dev\ai-os | 2026-10-08T00:04:11+00:00 |
 | codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a117ea-7c95-7813-af3b-866b05ec963a-a595402a8b28.md) | C:\Users\Joshu\dev\ai-os | 2026-10-08T01:06:53+00:00 |

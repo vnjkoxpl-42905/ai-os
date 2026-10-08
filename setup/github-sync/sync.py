@@ -205,8 +205,18 @@ def copy_filtered(root, destination, max_size=MAX_SIZE, originals=None, prefix='
 def discover(config):
     candidates = [Path(config['ai_os'])]
     projects = Path(config['projects_root'])
+    # This sibling is an upstream tooling clone used by skill maintenance, not
+    # Joshua's application workspace. Skip it before repository initialization
+    # or publishing; its upstream remote must never be approved implicitly.
+    excluded_projects = {name.casefold() for name in config.get('exclude_project_directories', ['claudex-loop'])}
     if projects.exists():
-        candidates += sorted(p for p in projects.iterdir() if p.is_dir() and not is_link(p))
+        for project in sorted(projects.iterdir()):
+            if not project.is_dir() or is_link(project):
+                continue
+            if project.name.casefold() in excluded_projects:
+                config.setdefault('_discovery_skipped', []).append({'folder': project.name, 'status': 'skipped', 'reason': 'Excluded tooling directory'})
+                continue
+            candidates.append(project)
     result = []
     for root in candidates:
         is_project = root != Path(config['ai_os'])
@@ -466,7 +476,7 @@ def main():
         repositories = discover(config)
         config['_allowed_roots'] = [str(root) for root, _ in repositories]
         config['_state_dir'] = str(state_dir)
-        results = list(config.get('_discovery_errors', []))
+        results = list(config.get('_discovery_errors', [])) + list(config.get('_discovery_skipped', []))
         for root, repository in repositories:
             try:
                 results.append(publish(root, repository, config, state, args.dry_run))
