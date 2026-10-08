@@ -23,3 +23,9 @@ sources: [../sources/karpathy/llm-wiki.md, ../sources/karpathy/autoresearch-read
 ## [2026-10-08] ingest | Karpathy method and executed tokenizer
 
 Compiled reviewed domain sources with explicit coverage ledgers; full corpus remains incomplete. Seven provisional quoted rules; activated Claude/Codex skill and agent copies; scoped Claude Python gate passes twenty tests and native successful acceptance. Actual tokenizer lesson: 8/8 correct, 5/8 expected broken failures; helper encoding repaired. See [execution record](../../research/karpathy-brain-2026-10-08/VIDEO-PROMPT-EXECUTION.md). Raw sources unchanged.
+
+## [2026-10-08] ingest | Complete saved-source compilation and finalize seven rules
+
+All preserved writing, transcript, GitHub and selected X material is mapped with explicit review limits in the [compilation audit](../../research/karpathy-brain-2026-10-08/COMPILATION-AUDIT.md). The [seven rules](rules.md) have fourteen raw-matching quotes and two original artifacts per rule. Runtime agent and skill copies match the final rules; hot context is 303 words. Project hook and optional receipt checks pass 26 and 20 tests respectively; isolated native stop blocking and recovery were observed.
+
+The original native Prompt 3 returned a Claude Pro subscription-limit error, reporting reset at 2026-10-08 12:40 America/Toronto. Original native Prompts 4 through 6 remain pending, including the literal teaching invocation. [Sequence status](../../research/karpathy-video-2026-10-08/VERBATIM-COMPLIANCE.md) and [resume commands](../../research/karpathy-video-2026-10-08/NATIVE-RESUME.md) own this distinction. Sources remain immutable; no public-history completeness or execution of compiled repository code is claimed.

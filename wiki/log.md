@@ -2574,3 +2574,11 @@ Compiled reviewed domain sources with explicit coverage ledgers; full corpus rem
 ## [2026-10-08] system | Correct Karpathy execution to the verbatim video sequence
 
 Directly reviewed full saved transcript and original prompt cards in the open Codex browser. Saved unchanged prompt bodies; [compliance review](../research/karpathy-video-2026-10-08/VERBATIM-COMPLIANCE.md) distinguishes previous adaptations from exact execution. Joshua accepts existing collected X posts and explicitly skips TwitterAPI.io. Compiled all preserved transcript texts and individual selected X source pages; repository compilation continues. Corrected project Stop configuration and exact message; eighteen behavioral tests pass. No raw source changes, task-status promotion or complete-sequence claim.
+
+## [2026-10-08] system | Session wrapup: Karpathy compilation and quota-blocked replay
+
+Completed the preserved-source compilation: 79 writings, 17 saved transcript texts, 1,215 GitHub files and 2,072 selected own-author X bodies, with foreign and quoted material attributed separately. GitHub coverage records 774 full text reads, 31 mixed files and 410 machine payload files, with no unaccounted file. The seven final rules have fourteen verified raw quotes and distinct original-source support. Both runtime agent/skill copies and the under-500-word hot page are updated.
+
+The project hook has 26 passing tests; the optional receipt helper has 20. An isolated native probe directly recorded the exact stop block, execution and recovery. Raw sources remain unchanged against the 1,560-file baseline. Original native Prompt 3 failed with Claude Pro HTTP 429, reporting reset at 2026-10-08 12:40 America/Toronto; original native Prompts 4 through 6 remain pending. No task status, source bytes, credentials or paid collection were changed. Existing X collection is the authorized acquisition exception.
+
+Evidence: [compilation audit](../research/karpathy-brain-2026-10-08/COMPILATION-AUDIT.md), [seven rules](karpathy/rules.md), [sequence compliance](../research/karpathy-video-2026-10-08/VERBATIM-COMPLIANCE.md), [native resume](../research/karpathy-video-2026-10-08/NATIVE-RESUME.md). Earlier adapted tokenizer acceptance remains separate from literal Prompt 6.

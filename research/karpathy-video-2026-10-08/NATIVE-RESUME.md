@@ -4,7 +4,7 @@ The original Prompt 3 was passed unchanged to the authenticated Claude Code Pro 
 
 Evidence: `C:/Users/Joshu/dev/ai-os-projects/karpathy-method-tools/verbatim-prompt-03-20261008T143317Z.jsonl` and its `.invocation.json` sidecar. The sidecar records the exact original prompt body and hash. This run is failed, not complete.
 
-The saved source compilation is complete and the project agent, skill and hook exist. Codex is finishing the seven-rule evidence review. A separate native hook probe already recorded the exact blocking notice followed by real execution and acceptance. These facts do not substitute for the remaining ordered original Claude runs.
+The saved source compilation is complete and the project agent, skill and hook exist. Codex finalized the seven-rule evidence review with fourteen raw-matching quotes. A separate native hook probe already recorded the exact blocking notice followed by real execution and acceptance. These facts do not substitute for the remaining ordered original Claude runs.
 
 ## One prompt at a time
 

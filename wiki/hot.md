@@ -9,15 +9,14 @@ aliases: []
 
 Freshest working state; the first page `/pickup` reads. Rebuilt fresh in the 2026-07-16 vault rebuild (the old cache is archived).
 
-## Most recent (2026-10-08): Follow the Karpathy video prompts verbatim
+## Most recent (2026-10-08): Karpathy compilation complete; native replay quota-blocked
 
-- Joshua requires the identical saved prompts in order. [Video compliance review](../research/karpathy-video-2026-10-08/VERBATIM-COMPLIANCE.md) records direct browser checks of all five numbered cards and the exact slash-skill command. Original prompt bodies are saved unchanged.
-- Joshua explicitly confirmed existing collected X posts are sufficient; skip TwitterAPI.io. Do not ask again for that key or paid collection. Physical sources remain immutable; exhaustive public-history coverage is not claimed.
-- All 79 writing Markdown items, all 17 preserved transcript texts and 2,072 captured own-author X primary texts are accounted for. Every selected X post now has an individual source page. Repository full-text compilation and variant reconciliation continue; exact coverage lives in domain ledgers.
-- Previous seven rules, agents and tokenizer lesson were a preliminary adaptation. Final Prompt 3 and literal Prompts 4–6 execution await compilation. The old expanded tokenizer run passed 8/8, but is not proof of the exact invocation.
-- Replaced agent-only gate with project Stop/SubagentStop configuration, exact video message and no report-prefix escape. Eighteen behavioral tests pass; revised native gate acceptance is pending. Existing permission settings preserved.
-- Exact later ingest source found: [2026-07-21 voice ramble](sources/karpathy/x/posts/2079610838143623371.md). No unseen sixth card, unnamed promoted rule or absent client review script is invented.
-
+- The [verbatim compliance record](../research/karpathy-video-2026-10-08/VERBATIM-COMPLIANCE.md) records direct checks of five numbered video cards and the exact sixth slash-skill invocation. Original prompt bodies remain unchanged. Joshua accepted the existing X collection instead of TwitterAPI.io; do not ask again for a key or budget.
+- [Compilation audit](../research/karpathy-brain-2026-10-08/COMPILATION-AUDIT.md): 79 writing items, 17 saved transcript texts, 1,215 GitHub files and 2,072 selected own-author X bodies compiled. GitHub review distinguishes 774 complete text reads, 31 mixed text/payload files and 410 machine payload files; no saved GitHub file is unaccounted for. Foreign, alternate and quoted X text retains attribution and capture limits.
+- [Seven final rules](karpathy/rules.md) have fourteen raw-matching quotes, with two distinct original artifacts per rule. Historical counterexamples and uncertainty remain explicit. Agents and skills are updated in both runtime catalog and activation copies; the hot page is 303 words.
+- Project Stop/SubagentStop uses the video's exact blocking message. Twenty-six project-hook tests and twenty optional receipt-helper tests pass. An [isolated native probe](../research/karpathy-brain-2026-10-08/NATIVE-STOP-ACCEPTANCE.md) directly recorded blocking, actual execution and recovery; later classifier extensions have local tests.
+- Original native Prompt 3 failed with Claude Pro HTTP 429, reporting reset at 2026-10-08 12:40 America/Toronto. Original native Prompts 4 through 6 were not replayed. The literal teaching invocation remains pending; [resume instructions](../research/karpathy-video-2026-10-08/NATIVE-RESUME.md) preserve the exact sequence. Codex finalized the evidence review, which does not certify native completion.
+- The 1,560-file source baseline remains unchanged. Public-history completeness is not claimed, and source-code review does not mean those projects were executed. Earlier adapted tokenizer tests passed 8/8 but do not certify literal Prompt 6. Task statuses were left unchanged.
 
 ## Previous (2026-10-08): Karpathy collector reliability rerun
 
