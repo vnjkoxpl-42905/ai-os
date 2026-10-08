@@ -15,7 +15,11 @@ Repository or gist attributed to Karpathy; individual authorship not independent
 
 ## Evidence and synthesis
 
-Exact opening excerpt: "\"\"\" stable diffusion dreaming creates hypnotic moving videos by smoothly walking randomly through the sample".
+Exact opening excerpt:
+
+```text
+""" stable diffusion dreaming creates hypnotic moving videos by smoothly walking randomly through the sample
+```
 
 The diffusion-walk gist interpolates latent noise and performs classifier-free guided diffusion, with scheduler-signature adaptation and explicit GPU/checkpoint assumptions. It credits a third-party spherical interpolation helper; inspection reveals inputs_are_torch is not initialized on the NumPy path, and frame limits are checked outside the inner interpolation loop, so these are not executed reliability claims. The Git commit helper sends only staged diffs through an LLM and asks the human to accept, edit, regenerate or cancel; it is an optional shell workflow, not an instruction to commit here. The LLM Wiki gist describes immutable curated raw sources, a compiled evolving wiki and a co-developed schema; ingest updates summaries, related pages, index and log, query files useful answers, and lint finds contradictions and gaps. It explicitly leaves tools, formatting and supervision modular, and retains human curation, reading and thinking.
 

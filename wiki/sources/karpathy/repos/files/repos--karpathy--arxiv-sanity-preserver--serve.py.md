@@ -15,7 +15,11 @@ Repository or gist attributed to Karpathy; individual authorship not independent
 
 ## Evidence and synthesis
 
-Exact opening excerpt: "import os import json import time import pickle import argparse import dateutil.parser from random import".
+Exact opening excerpt:
+
+```text
+import os import json import time import pickle import argparse import dateutil.parser from random import
+```
 
 The preserver server offers lexical search, nearest-neighbor paper lookup with stale-version fallback, personalized SVM recommendations excluding saved papers, popularity, social libraries and discussion tags. Recommendation freshness is explicitly described as refreshed every day or so. Unlike the lite rewrite, this generation uses password hashing, SQLite accounts and MongoDB discussions; it still falls back to a development signing secret and does not show CSRF protection. A follow approval flag is stored but friends aggregation does not filter that flag, so intended privacy is not established. Production mode chooses Tornado rather than raw Flask. These are historical implementation details read in full, not deployable guarantees or universal persona rules.
 

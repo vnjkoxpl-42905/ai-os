@@ -15,7 +15,11 @@ Repository or gist attributed to Karpathy; individual authorship not independent
 
 ## Evidence and synthesis
 
-Exact opening excerpt: "\"\"\" Downloads and evaluates HellaSwag in Python. https://github.com/rowanz/hellaswag Example HellaSwag json item: {\"ind\": 24, \"activity_label\":".
+Exact opening excerpt:
+
+```text
+""" Downloads and evaluates HellaSwag in Python. https://github.com/rowanz/hellaswag Example HellaSwag json item: {"ind": 24, "activity_label":
+```
 
 Build-nanogpt FineWeb preprocessing tokenizes documents with end-of-text boundaries, validates uint16 vocabulary capacity and reserves the first shard for validation. HellaSwag evaluation masks context and padding, compares summed versus length-normalized completion loss, prints predicted versus actual examples and documents discrepancies from another harness rather than equating protocols. The play notebook inspects pretrained weight shapes, tied storage, embeddings and manual top-k generation; it explicitly restores the loss normalizer in gradient accumulation and plots training, validation and HellaSwag against named baselines. Captured notebook outputs are empty, so comparisons are proposed analysis and historical constants, not independently verified results.
 

@@ -15,7 +15,11 @@ Repository or gist attributed to Karpathy; individual authorship not independent
 
 ## Evidence and synthesis
 
-Exact opening excerpt: "/* Author: Andrej Karpathy (http://cs.stanford.edu/~karpathy/) 1 May 2012 BSD licence */ #include <eigenlibsvm/svm_utils.h> #include <eigenlibsvm/eigen_extensions.h>".
+Exact opening excerpt:
+
+```text
+/* Author: Andrej Karpathy (http://cs.stanford.edu/~karpathy/) 1 May 2012 BSD licence */ #include <eigenlibsvm/svm_utils.h> #include <eigenlibsvm/eigen_extensions.h>
+```
 
 EigenLibSVM Karpathy-authored 2012 wrappers translate dense Eigen rows into LibSVM nodes, validate data/label dimensions and parameters, expose linear weights, C and model persistence, and explicitly warn about imbalance and missing cross-validation. Test prints expected MATLAB margins and approximately 0.945 training accuracy before and after save/load, rather than claiming held-out evaluation. Prediction allocates D nodes without the required terminating sentinel; source is historical and not correctness-certified. Matrix serialization helper credits Alex Teichman and notes newline-dependent ASCII parsing, so it is third-party evidence. Find-birds separates bounded depth-one acquisition with disk pickle caching and manual Tweepy error waits from offline recommendation: mutual-follow counts discounted by logarithmic popularity, expensive formatting only after top-list selection, then a plain HTML report. Incomplete cached users are explicitly skipped; remote descriptions inserted without escaping are a rendering limitation. These scripts were read without executing credentials, network collection or pickle payloads.
 

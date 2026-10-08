@@ -15,7 +15,11 @@ Repository or gist attributed to Karpathy; individual authorship not independent
 
 ## Evidence and synthesis
 
-Exact opening excerpt: "# HN Time Capsule !\[hero\](hnhero.png) A Hacker News time capsule project that pulls the HN".
+Exact opening excerpt:
+
+```text
+# HN Time Capsule !\[hero\](hnhero.png) A Hacker News time capsule project that pulls the HN
+```
 
 Cryptos presents a zero-dependency educational Bitcoin implementation and compares SHA-256 with a reference tool; it explicitly restricts use to education and distinguishes partial transaction/header verification from a complete full node. Demonstration keys are source examples, not private workspace credentials. Deep-vector-quantization separates attempted VQVAE reproduction, data-driven initialization needed to avoid index collapse, finicky Gumbel tuning and unfinished DALL-E work; reconstruction loss alone is qualified evidence. EigenLibSVM documents a dense linear-kernel wrapper with a tiny installation demo. Find-birds separates resumable rate-limited social-graph acquisition from reports that can use partial results, while historical Twitter credentials/API instructions are not current recommendations. ForestJS makes weak learners pluggable and advises cross-validation of depth/tries; its universal tree-count and dimensionality statements remain historical source opinions. Gitstats is a small generated-repository-activity visualization. HN Time Capsule stages historical retrieval, prompts, paid analysis, parsing and HTML rendering; it is explicitly 99-percent vibe-coded and unsupported, so hindsight grades are model judgments rather than verified prediction accuracy.
 

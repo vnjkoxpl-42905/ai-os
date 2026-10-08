@@ -15,7 +15,11 @@ Repository or gist attributed to Karpathy; individual authorship not independent
 
 ## Evidence and synthesis
 
-Exact opening excerpt: "{ \"cells\": \\[ { \"cell_type\": \"markdown\", \"id\": \"ohuujbmsz7\", \"metadata\": {}, \"source\": \\[ \"# Autoresearch Experiment".
+Exact opening excerpt:
+
+```text
+{ "cells": \[ { "cell_type": "markdown", "id": "ohuujbmsz7", "metadata": {}, "source": \[ "# Autoresearch Experiment
+```
 
 Preserver utils centralizes cache paths and implements temporary-file atomic pickle writes with optional fsync, explicitly crediting Stack Overflow; rename portability is not established. Autoresearch analysis reads experiment commit, validation BPB, memory, status and descriptions, separates keep/discard/crash, plots a running minimum and attributes incremental improvement against the previous kept state. It deliberately crops displayed results near baseline; all notebook outputs and execution counts are empty, so no measured improvement is available from this file. Code assumes valid baseline and kept rows. These files support provenance and measured experiment tracking without certifying actual run results.
 

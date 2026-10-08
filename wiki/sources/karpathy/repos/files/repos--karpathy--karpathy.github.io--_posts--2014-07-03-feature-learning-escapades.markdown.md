@@ -15,7 +15,11 @@ Repository or gist attributed to Karpathy; individual authorship not independent
 
 ## Evidence and synthesis
 
-Exact opening excerpt: "--- layout: post comments: true title: \"Feature Learning Escapades\" excerpt: \"Some reflections on the last".
+Exact opening excerpt:
+
+```text
+--- layout: post comments: true title: "Feature Learning Escapades" excerpt: "Some reflections on the last
+```
 
 Feature Learning Escapades is a dated 2014 personal research retrospective from unsupervised video/image learning through 3D object discovery to supervised CNN video work. It identifies practical bottlenecks separately from philosophical ones: 3D representation, occlusion, scale and static scenes; credits collaborators and earlier papers. AlexNet and transfer learning surprise trigger revision of his earlier assumptions toward shared supervised multitask/multimodal representations. Sports video dataset can permit static-appearance shortcuts instead of intended motion learning, evidence to inspect whether task data forces the mechanism one wants. Human-learning analogies are qualified because temporally coherent RGBD, active learning, curricula and reinforcement differ from shuffled internet images. Historical skepticism about unsupervised visual learning is a dated hypothesis, not a timeless rule and must reconcile with later self-supervised/LLM sources. Full physical article read; credited imagery and papers are not silently treated as original evidence.
 

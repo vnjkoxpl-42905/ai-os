@@ -15,7 +15,11 @@ Repository or gist attributed to Karpathy; individual authorship not independent
 
 ## Evidence and synthesis
 
-Exact opening excerpt: "var data, labels; var layer_defs, net, trainer; // create neural net var t = \"layer_defs".
+Exact opening excerpt:
+
+```text
+var data, labels; var layer_defs, net, trainer; // create neural net var t = "layer_defs
+```
 
 Image regression samples normalized coordinates and RGB targets, trains a seven-layer ReLU network, smooths loss and periodically reconstructs every pixel for side-by-side comparison. A logarithmic slider changes learning rate, uploaded images wait for decoding, and selecting a new image restarts network state. It is an intentionally visual overfitting task with no held-out generalization claim. Architecture editing uses eval and performance was not reproduced.
 

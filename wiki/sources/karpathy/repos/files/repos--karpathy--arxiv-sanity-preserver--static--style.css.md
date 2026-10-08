@@ -15,7 +15,11 @@ Repository or gist attributed to Karpathy; individual authorship not independent
 
 ## Evidence and synthesis
 
-Exact opening excerpt: "body { margin: 0; padding: 0; font-family: arial; background-color: #F6F3E5; } .as { font-size: 14px;".
+Exact opening excerpt:
+
+```text
+body { margin: 0; padding: 0; font-family: arial; background-color: #F6F3E5; } .as { font-size: 14px;
+```
 
 The preserver frontend progressively renders captured paper results, distinguishes a complete result from the server display cap, embeds bibliographic COinS metadata for Zotero and Mendeley, and exposes save, similarity and discussion actions. Save icons follow server ON/OFF responses, but no failure handler is shown. Tweet hover text uses text rendering whereas paper metadata uses HTML rendering. Author comments acknowledge unwanted global state. The stylesheet establishes a fixed-width desktop layout, not the responsive lite rewrite. These are source-observed presentation and interoperability mechanisms, not evidence of current service availability or accessibility.
 

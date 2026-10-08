@@ -15,7 +15,11 @@ Repository or gist attributed to Karpathy; individual authorship not independent
 
 ## Evidence and synthesis
 
-Exact opening excerpt: "--- layout: post comments: true #title: \"Reproducing and Improving LeCun et al. 1989 ConvNet\" title:".
+Exact opening excerpt:
+
+```text
+--- layout: post comments: true #title: "Reproducing and Improving LeCun et al. 1989 ConvNet" title:
+```
 
 LeCun1989 reproduction retrospective 2022 full read. Explicit approximate reproduction: original data missing, downscaled sampled MNIST substituted, unclear initialization and connectivity guessed, SGD substitutes Hessian scheme. Tiny CPU workload faster than naive A100 due to utilization. Sequential cross entropy, AdamW, shift augmentation, dropout and ReLU experiments report train and test errors, control longer training or ReLU alone, and expose coupled weight decay and increased training-time costs. More data improves without inference latency; micro-ViT attempt failed. Historical results and 2055 extrapolations clearly separated, latter speculation. Foundation-model adaptation trend qualifies older supervised-from-scratch defaults. Some printed test losses suspiciously repeat train losses and larger-data miss denominators are inconsistent; preserve source numbers as reported rather than independently validated metrics.
 

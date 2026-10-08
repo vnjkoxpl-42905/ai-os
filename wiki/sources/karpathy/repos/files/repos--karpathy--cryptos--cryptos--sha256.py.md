@@ -15,7 +15,11 @@ Repository or gist attributed to Karpathy; individual authorship not independent
 
 ## Evidence and synthesis
 
-Exact opening excerpt: "\"\"\" Follows the FIPS PUB 180-4 description for calculating SHA-256 hash function https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf Noone in".
+Exact opening excerpt:
+
+```text
+""" Follows the FIPS PUB 180-4 description for calculating SHA-256 hash function https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf Noone in
+```
 
 SHA256 follows named FIPS sections from bit operations through prime-root constants, message padding, sixty-four-word schedule, compression rounds and digest accumulation; it explicitly says this is purely educational and should not serve serious use. Constants are regenerated via floating-point roots each call, a performance and precision boundary rather than production optimization. RIPEMD160 explicitly reuses and cleans up an existing implementation credited to Bjorn Edstrom and Markus Friedl; its bytes-to-bytes wrapper, buffered block processing, parallel eighty-round branches and final state combination are fully read, with a little-endian-only assertion. Reuse is credited rather than falsely treating all cryptographic mechanisms as Karpathy original thinking. No cryptographic correctness tests executed.
 

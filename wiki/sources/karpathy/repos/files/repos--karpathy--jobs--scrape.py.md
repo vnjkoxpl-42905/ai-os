@@ -15,7 +15,11 @@ Repository or gist attributed to Karpathy; individual authorship not independent
 
 ## Evidence and synthesis
 
-Exact opening excerpt: "\"\"\" Scrape BLS Occupational Outlook Handbook detail pages (raw HTML). Saves raw HTML to html/<slug>.html".
+Exact opening excerpt:
+
+```text
+""" Scrape BLS Occupational Outlook Handbook detail pages (raw HTML). Saves raw HTML to html/<slug>.html
+```
 
 Jobs scraping treats cached raw HTML as source of truth and derived Markdown as a separate processing stage, with bounded start/end ranges, cache skips, polite delay and visible HTTP/error reporting. Occupation index parser resolves see-aliases to canonical URLs and deduplicates; its initial output lacks later-required slug/category fields, an explicit pipeline-generation boundary. Detail parser preserves canonical URL, quick facts, chart data and selected descriptive/projection tabs but intentionally excludes summary, regional links, similar occupations and contacts, so derived Markdown is not a lossless full-page transcript. Process reports cached/missing inputs. Scorer uses a stated calibration rubric and low-temperature model JSON, saves after each occupation for resumability, reports errors and exposes missing Markdown. It does not validate exposure range/type or cache model identity, and force can rebuild only selected subset. No paid model call, browser scrape or secret loading performed; authored scripts read fully.
 

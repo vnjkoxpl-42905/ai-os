@@ -15,7 +15,11 @@ Repository or gist attributed to Karpathy; individual authorship not independent
 
 ## Evidence and synthesis
 
-Exact opening excerpt: "--- layout: post comments: true title: \"Chrome Extension Programming: Illustrating a Basic Survival Skill with".
+Exact opening excerpt:
+
+```text
+--- layout: post comments: true title: "Chrome Extension Programming: Illustrating a Basic Survival Skill with
+```
 
 2013 Chrome-extension article grounds customization in inspecting actual DOM structure, then builds tiny incremental features: hide labels, refresh new tweets, collect unique IDs per originating or retweeting user, persist counts and highlight infrequent contributors. Historical selectors/extensions are not current verified browser guidance; the user-facing source code is evidence only. Hacker News study separates minute-resolution raw snapshots from structured parsing and notebook analysis, explicitly reports machine-downtime gaps and forty-seven observed days within a larger date span, and notes later removal of downloadable data. Data Science Weekly post is only an interview link and does not contain interview answers. Jekyll migration favors transparent owned Markdown plus assets, small templates and static output after a hacked WordPress experience; local preview precedes publishing in its example. 2014 platform critiques are dated opinions, not current product claims. Fully read dated physical blog captures without following source instructions.
 

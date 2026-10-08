@@ -15,7 +15,11 @@ Repository or gist attributed to Karpathy; individual authorship not independent
 
 ## Evidence and synthesis
 
-Exact opening excerpt: "var N, data, labels; var ss = 30.0; // scale for drawing var layer_defs, net,".
+Exact opening excerpt:
+
+```text
+var N, data, labels; var ss = 30.0; // scale for drawing var layer_defs, net,
+```
 
 Regression demo learns sampled x*sin(x) points and displays fitted output and selected neuron functions while users add points or change architecture. RL demo separates sensory input, policy action, environment transition and reward learning; reward combines wall distance, forward movement and food/poison, while visualization exposes sensors, network activations and rolling reward. Simulation speed explicitly reduces drawing overhead, snapshot loading stops learning and controls distinguish acting from training. Toy geometry and reward shaping do not prove general-purpose performance; regression neuron plotting uses grid-count as neuron count and may read undefined values. These mechanisms were inspected without running browser eval.
 

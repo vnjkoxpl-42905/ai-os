@@ -15,7 +15,11 @@ Repository or gist attributed to Karpathy; individual authorship not independent
 
 ## Evidence and synthesis
 
-Exact opening excerpt: "<!doctype html> <html lang=\"en\"> <head> <meta charset=\"utf-8\"> <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\"> <title>ConvNetJS CIFAR-10 demo</title> <meta name=\"description\"".
+Exact opening excerpt:
+
+```text
+<!doctype html> <html lang="en"> <head> <meta charset="utf-8"> <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> <title>ConvNetJS CIFAR-10 demo</title> <meta name="description"
+```
 
 Convnet demos expose architecture, optimization controls, training loss, test predictions and representations in the browser. Toy 2D classification paints generalization boundaries and cycles through internal neurons. CIFAR describes augmentation and greater difficulty; its state-of-art and pretrained accuracy numbers are historical claims, not current verified performance. Image painting maps coordinates to RGB and explicitly qualifies compression as impractical, reporting deeper models better empirically at fixed parameter budget. CSS distinguishes layer types and stats with fixed desktop layouts. User-edited architecture is eval-based; these demos are educational source evidence rather than safe arbitrary-code execution patterns.
 

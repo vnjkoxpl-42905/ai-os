@@ -15,7 +15,11 @@ Repository or gist attributed to Karpathy; individual authorship not independent
 
 ## Evidence and synthesis
 
-Exact opening excerpt: "<html> <head> <title>ConvNetJS demo: Classify toy 2D data</title> <link href='http://fonts.googleapis.com/css?family=Cabin' rel='stylesheet' type='text/css'> <link rel=\"stylesheet\" href=\"css/style.css\">".
+Exact opening excerpt:
+
+```text
+<html> <head> <title>ConvNetJS demo: Classify toy 2D data</title> <link href='http://fonts.googleapis.com/css?family=Cabin' rel='stylesheet' type='text/css'> <link rel="stylesheet" href="css/style.css">
+```
 
 Trainer comparison feeds the same sampled training and test examples to seven optimizers, keeps separate rolling loss/train/test windows and visualizes curves. Networks initialize independently, so this does not control initialization confounding or establish a universal optimizer ranking. MNIST prose claims historical Ubuntu-Chrome speed and random crop averaging, whereas current shared code disables its augmentation flags and contains a nonaugmentation bug; the captured generations conflict explicitly. Regression explains squared-error mechanics and invites editable architecture and visible layer outputs. Historical numbers and UI statements were not silently promoted over actual implementation.
 

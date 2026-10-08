@@ -15,7 +15,11 @@ Repository or gist attributed to Karpathy; individual authorship not independent
 
 ## Evidence and synthesis
 
-Exact opening excerpt: "--- layout: post comments: true title: \"Breaking Linear Classifiers on ImageNet\" excerpt: \"There have been".
+Exact opening excerpt:
+
+```text
+--- layout: post comments: true title: "Breaking Linear Classifiers on ImageNet" excerpt: "There have been
+```
 
 Breaking Linear Classifiers 2015 attributes adversarial-example theory to Goodfellow and others, then isolates the phenomenon with a simpler linear ImageNet model and a ten-dimensional logistic toy example. It switches parameter-gradient training to input-gradient analysis and explains cumulative tiny changes through dot products. Initialization is diagnosed against expected random-class loss near log(1000), exploding loss leads to lower learning rate and weight visualization/validation tradeoffs guide regularization. Reported accuracy is a limited manual sweep, not exhaustive optimum. Smooth pleasing weights can validate worse than noisy ones, and robustness/accuracy tradeoffs remain uncertain for deeper models. Ordinary cross-entropy does not enforce diffuse confidence off the training manifold; unsupported expectations must not become guarantees. This educational analysis was fully read without generating attacks or executing linked notebooks. Dated findings and foreign papers retain attribution.
 

@@ -15,7 +15,11 @@ Repository or gist attributed to Karpathy; individual authorship not independent
 
 ## Evidence and synthesis
 
-Exact opening excerpt: "<!DOCTYPE HTML> <html> <head> <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"> <title>Arxiv Sanity Preserver</title> <!-- MathJax --> <script".
+Exact opening excerpt:
+
+```text
+<!DOCTYPE HTML> <html> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <title>Arxiv Sanity Preserver</title> <!-- MathJax --> <script
+```
 
 The main template combines infinite scrolling with an explicit Load more fallback and time/version filters. Its hosting-cost prompt is optional and dismissible. Thumbnail extraction uses an inelegant intermediate-file approach because it was observed to succeed more often, limits a stuck converter to 20 seconds and substitutes a missing-image marker. Twitter daemon deduplicates IDs, filters recognized papers and banned accounts, explicitly labels popularity as hype, and favors meaningful commentary while capping displayed records. Its old authenticated API and unlimited retry loop were not executed or assumed usable now. Popularity weighting and fallback markers are operational heuristics, not correctness or completeness evidence.
 

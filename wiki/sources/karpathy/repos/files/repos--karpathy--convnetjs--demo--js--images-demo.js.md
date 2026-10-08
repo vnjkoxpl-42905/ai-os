@@ -15,7 +15,11 @@ Repository or gist attributed to Karpathy; individual authorship not independent
 
 ## Evidence and synthesis
 
-Exact opening excerpt: "var sample_training_instance = function() { // find an unloaded batch var bi = Math.floor(Math.random()*loaded_train_batches.length); var".
+Exact opening excerpt:
+
+```text
+var sample_training_instance = function() { // find an unloaded batch var bi = Math.floor(Math.random()*loaded_train_batches.length); var
+```
 
 Image demos normalize pixels, augment training and test views, reserve every tenth training instance for validation without updating weights, and show classification loss, regularization, train/validation accuracy, activations and gradients. Test predictions average augmented outputs and visibly mark ground-truth labels. Reset recreates a trainer and clears metric windows. The nonaugmentation branch accidentally pushes numeric arguments alongside the volume, an explicit source bug that prevents assuming all configurations work. A rolling test-accuracy estimate is not full dataset evaluation. These details ground inspectable evaluation rather than guaranteed accuracy.
 

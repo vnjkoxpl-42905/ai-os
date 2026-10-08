@@ -15,7 +15,11 @@ Repository or gist attributed to Karpathy; individual authorship not independent
 
 ## Evidence and synthesis
 
-Exact opening excerpt: "(function(global) { \"use strict\"; var Vol = global.Vol; // convenience var assert = global.assert; //".
+Exact opening excerpt:
+
+```text
+(function(global) { "use strict"; var Vol = global.Vol; // convenience var assert = global.assert; //
+```
 
 MagicNet samples architectures and optimizers, trains shared sampled examples through repeated random holdout folds, ranks mean validation accuracy and averages retained candidates. Prediction falls back to current candidates before evaluation; export preserves best networks rather than optimizer or full training state. Net desugars classifiers, activations and dropout, uses positive ReLU bias to reduce dead units, chains layer backward passes and restores network JSON without optimizer state. Unsupported configuration logs can leave incomplete setups. These are source implementation observations, not runtime certification.
 

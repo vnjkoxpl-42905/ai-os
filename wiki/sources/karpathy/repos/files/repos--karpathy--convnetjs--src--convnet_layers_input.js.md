@@ -15,7 +15,11 @@ Repository or gist attributed to Karpathy; individual authorship not independent
 
 ## Evidence and synthesis
 
-Exact opening excerpt: "(function(global) { \"use strict\"; var Vol = global.Vol; // convenience var getopt = global.getopt; var".
+Exact opening excerpt:
+
+```text
+(function(global) { "use strict"; var Vol = global.Vol; // convenience var getopt = global.getopt; var
+```
 
 Convnet dot-product layers implement convolution weight sharing and dense connectivity explicitly, with chain-rule data/weight gradients, JSON serialization and separate bias decay. Optimized convolution credits mdda and acknowledges direct-array speed versus modularity tradeoffs. Dropout openly calls itself inefficient and distinguishes training from prediction; prediction multiplies by drop probability rather than retention probability, equivalent only at the default half, so general correctness is not claimed. Input is an identity layer and export supports browser or Node. Speedtest times a declared forward-only convolution; trainer prose is personal historical experience qualified by tuning, not a verified universal ranking.
 

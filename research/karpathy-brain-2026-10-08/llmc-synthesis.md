@@ -2,7 +2,7 @@
 
 Updated 2026-10-08. This separate ledger owns 94 files excluded from the repo agent's remaining selector; eight previously full-read files stay in its ledger.
 
-Complete model reads and physical source pages: 76. Unread: 18. All source hashes were verified against the capture manifest before compilation. No source code was executed.
+Complete model reads and physical source pages: 92. Unread: 2. All source hashes were verified against the capture manifest before compilation. No source code was executed.
 
 ## Observations supported by fully read sources
 
@@ -27,18 +27,29 @@ Source-level limitations remain visible: the [loss checker](../../wiki/sources/k
 - [dev/cpu/matmul_forward.c](../../wiki/sources/karpathy/repos/llmc/dev--cpu--matmul-forward-c.md)
 - [dev/cuda/Makefile](../../wiki/sources/karpathy/repos/llmc/dev--cuda--Makefile.md)
 - [dev/cuda/adamw.cu](../../wiki/sources/karpathy/repos/llmc/dev--cuda--adamw-cu.md)
+- [dev/cuda/attention_backward.cu](../../wiki/sources/karpathy/repos/llmc/dev--cuda--attention-backward-cu.md)
+- [dev/cuda/attention_forward.cu](../../wiki/sources/karpathy/repos/llmc/dev--cuda--attention-forward-cu.md)
 - [dev/cuda/benchmark_on_modal.py](../../wiki/sources/karpathy/repos/llmc/dev--cuda--benchmark-on-modal-py.md)
+- [dev/cuda/classifier_fused.cu](../../wiki/sources/karpathy/repos/llmc/dev--cuda--classifier-fused-cu.md)
+- [dev/cuda/common.h](../../wiki/sources/karpathy/repos/llmc/dev--cuda--common-h.md)
 - [dev/cuda/crossentropy_forward.cu](../../wiki/sources/karpathy/repos/llmc/dev--cuda--crossentropy-forward-cu.md)
 - [dev/cuda/crossentropy_softmax_backward.cu](../../wiki/sources/karpathy/repos/llmc/dev--cuda--crossentropy-softmax-backward-cu.md)
 - [dev/cuda/encoder_backward.cu](../../wiki/sources/karpathy/repos/llmc/dev--cuda--encoder-backward-cu.md)
 - [dev/cuda/encoder_forward.cu](../../wiki/sources/karpathy/repos/llmc/dev--cuda--encoder-forward-cu.md)
+- [dev/cuda/fused_residual_forward.cu](../../wiki/sources/karpathy/repos/llmc/dev--cuda--fused-residual-forward-cu.md)
 - [dev/cuda/gelu_backward.cu](../../wiki/sources/karpathy/repos/llmc/dev--cuda--gelu-backward-cu.md)
 - [dev/cuda/gelu_forward.cu](../../wiki/sources/karpathy/repos/llmc/dev--cuda--gelu-forward-cu.md)
 - [dev/cuda/global_norm.cu](../../wiki/sources/karpathy/repos/llmc/dev--cuda--global-norm-cu.md)
+- [dev/cuda/layernorm_backward.cu](../../wiki/sources/karpathy/repos/llmc/dev--cuda--layernorm-backward-cu.md)
+- [dev/cuda/layernorm_forward.cu](../../wiki/sources/karpathy/repos/llmc/dev--cuda--layernorm-forward-cu.md)
 - [dev/cuda/matmul_backward.cu](../../wiki/sources/karpathy/repos/llmc/dev--cuda--matmul-backward-cu.md)
+- [dev/cuda/matmul_backward_bias.cu](../../wiki/sources/karpathy/repos/llmc/dev--cuda--matmul-backward-bias-cu.md)
+- [dev/cuda/matmul_forward.cu](../../wiki/sources/karpathy/repos/llmc/dev--cuda--matmul-forward-cu.md)
 - [dev/cuda/nccl_all_reduce.cu](../../wiki/sources/karpathy/repos/llmc/dev--cuda--nccl-all-reduce-cu.md)
 - [dev/cuda/permute.cu](../../wiki/sources/karpathy/repos/llmc/dev--cuda--permute-cu.md)
 - [dev/cuda/residual_forward.cu](../../wiki/sources/karpathy/repos/llmc/dev--cuda--residual-forward-cu.md)
+- [dev/cuda/softmax_forward.cu](../../wiki/sources/karpathy/repos/llmc/dev--cuda--softmax-forward-cu.md)
+- [dev/cuda/trimat_forward.cu](../../wiki/sources/karpathy/repos/llmc/dev--cuda--trimat-forward-cu.md)
 - [dev/data/data_common.py](../../wiki/sources/karpathy/repos/llmc/dev--data--data-common-py.md)
 - [dev/data/edu_fineweb.sh](../../wiki/sources/karpathy/repos/llmc/dev--data--edu-fineweb-sh.md)
 - [dev/data/fineweb.py](../../wiki/sources/karpathy/repos/llmc/dev--data--fineweb-py.md)
@@ -54,6 +65,7 @@ Source-level limitations remain visible: the [loss checker](../../wiki/sources/k
 - [dev/loss_checker_ci.py](../../wiki/sources/karpathy/repos/llmc/dev--loss-checker-ci-py.md)
 - [dev/test/Makefile](../../wiki/sources/karpathy/repos/llmc/dev--test--Makefile.md)
 - [dev/test/device_file_io.cu](../../wiki/sources/karpathy/repos/llmc/dev--test--device-file-io-cu.md)
+- [dev/test/test_dataloader.c](../../wiki/sources/karpathy/repos/llmc/dev--test--test-dataloader-c.md)
 - [dev/test/test_outlier_detector.c](../../wiki/sources/karpathy/repos/llmc/dev--test--test-outlier-detector-c.md)
 - [dev/unistd.h](../../wiki/sources/karpathy/repos/llmc/dev--unistd-h.md)
 - [dev/vislog.ipynb](../../wiki/sources/karpathy/repos/llmc/dev--vislog-ipynb.md)
@@ -95,4 +107,8 @@ Source-level limitations remain visible: the [loss checker](../../wiki/sources/k
 - [scripts/run_gpt2_774M.sh](../../wiki/sources/karpathy/repos/llmc/scripts--run-gpt2-774M-sh.md)
 - [scripts/run_gpt3_125M.sh](../../wiki/sources/karpathy/repos/llmc/scripts--run-gpt3-125M-sh.md)
 - [test_gpt2.c](../../wiki/sources/karpathy/repos/llmc/test-gpt2-c.md)
+- [test_gpt2.cu](../../wiki/sources/karpathy/repos/llmc/test-gpt2-cu.md)
 - [test_gpt2_fp32.cu](../../wiki/sources/karpathy/repos/llmc/test-gpt2-fp32-cu.md)
+- [train_gpt2.c](../../wiki/sources/karpathy/repos/llmc/train-gpt2-c.md)
+- [train_gpt2.py](../../wiki/sources/karpathy/repos/llmc/train-gpt2-py.md)
+- [train_llama3.py](../../wiki/sources/karpathy/repos/llmc/train-llama3-py.md)

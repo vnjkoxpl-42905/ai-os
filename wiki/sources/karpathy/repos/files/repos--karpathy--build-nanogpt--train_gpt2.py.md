@@ -15,7 +15,11 @@ Repository or gist attributed to Karpathy; individual authorship not independent
 
 ## Evidence and synthesis
 
-Exact opening excerpt: "import os import math import time import inspect from dataclasses import dataclass import torch import".
+Exact opening excerpt:
+
+```text
+import os import math import time import inspect from dataclasses import dataclass import torch import
+```
 
 Build-nanogpt training implements GPT-2 with tied token/head weights and scaled residual initialization. Pretrained import checks key counts and individual shapes, explicitly transposing Conv1D weights into Linear orientation. Distributed sharding, loss normalization during gradient accumulation and final-microstep synchronization preserve effective batch semantics. It evaluates held-out loss and masked HellaSwag periodically, logs samples and throughput, and checkpoints model/config but explicitly omits optimizer and RNG state needed for exact resume. Compile is disabled because it interferes with evaluation and generation. Post-video comments record fixes to integer token conversion and device types; present source therefore differs from the filmed implementation. No training or benchmark was run.
 

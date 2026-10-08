@@ -15,7 +15,11 @@ Repository or gist attributed to Karpathy; individual authorship not independent
 
 ## Evidence and synthesis
 
-Exact opening excerpt: "# rustbpe \\[!\\[CI\\](https://github.com/karpathy/rustbpe/actions/workflows/ci.yml/badge.svg)\\](https://github.com/karpathy/rustbpe/actions/workflows/ci.yml) \\[!\\[PyPI\\](https://img.shields.io/pypi/v/rustbpe.svg)\\](https://pypi.org/project/rustbpe/) \\[!\\[License: MIT\\](https://img.shields.io/badge/License-MIT-yellow.svg)\\](https://opensource.org/licenses/MIT) > The missing tiktoken training code A lightweight Rust".
+Exact opening excerpt:
+
+```text
+# rustbpe \[!\[CI\](https://github.com/karpathy/rustbpe/actions/workflows/ci.yml/badge.svg)\](https://github.com/karpathy/rustbpe/actions/workflows/ci.yml) \[!\[PyPI\](https://img.shields.io/pypi/v/rustbpe.svg)\](https://pypi.org/project/rustbpe/) \[!\[License: MIT\](https://img.shields.io/badge/License-MIT-yellow.svg)\](https://opensource.org/licenses/MIT) > The missing tiktoken training code A lightweight Rust
+```
 
 PyTorch MADE reimplements a paper with masked autoregressive dependencies, contrasts cheap likelihood with sequential sampling and admits failure to reproduce claimed single-pass multi-mask gains; averaged multiple passes improve reported loss at added cost. Normalizing-flows README lists GPU/high-dimensional/image support and stable-update work as TODO, not implemented capability. Matlab Random Forest explicitly restricts itself to learning and recommends mature alternatives for serious use. Randomfun Rust notes are learning notes and broad claims about language safety need qualifications before practical reuse. Reader3 is a chapter-oriented EPUB-to-local-library/LLM co-reading illustration, explicitly mostly vibe-coded and unsupported. RecurrentJS exposes values/derivatives, expression graphs and optimizers but warns beta users must understand backprop; its example variable inconsistencies are not certified executable code. ReinforceJS marks continuous policy/actor-critic work very alpha and reuses RecurrentJS, so these are not independent implementation evidence. Researchlei separates citation acquisition and visual library while admitting sparse indexes and aggressive external throttling. RustBPE aims at a small fast training component interoperating with tiktoken inference; it explicitly discloses LLM-assisted Rust and compares equality against an author-understood Python reference rather than treating passing tests as proof of idiomatic Rust design.
 

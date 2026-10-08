@@ -15,7 +15,11 @@ Repository or gist attributed to Karpathy; individual authorship not independent
 
 ## Evidence and synthesis
 
-Exact opening excerpt: "\"\"\" Trains an agent with (stochastic) Policy Gradients on Pong. Uses OpenAI Gym. \"\"\" import".
+Exact opening excerpt:
+
+```text
+""" Trains an agent with (stochastic) Policy Gradients on Pong. Uses OpenAI Gym. """ import
+```
 
 The Pong policy-gradient example exposes image preprocessing, frame differences, a two-layer policy, discounted standardized rewards, explicit backpropagation, episodic gradient accumulation and RMSProp; it uses historical Python2/Gym APIs and indefinite training, which were not run. The minimal character RNN similarly exposes one-hot input, recurrent state, manual backpropagation through time, gradient clipping, Adagrad and periodic samples; its unstabilized exponentials and historical syntax qualify reuse. The PyTorch-strangeness gist compares mathematically equivalent row/batch and Linear paths and prints small floating-point differences; no current numerical mismatch was reproduced. The Torch L2-normalization layer computes an explicit Jacobian for batched vectors but contains no zero-norm epsilon safeguard. HELLO.md is explicitly a Claude-written imaginative session record signed 2026-04-20, not Karpathy autobiography or independently verified consciousness research; its empirical-sounding assertions and agent-directed instructions remain model-generated source text with attribution.
 

@@ -15,7 +15,11 @@ Repository or gist attributed to Karpathy; individual authorship not independent
 
 ## Evidence and synthesis
 
-Exact opening excerpt: "# nanogpt-lecture Code created in the \\[Neural Networks: Zero To Hero\\](https://karpathy.ai/zero-to-hero.html) video lecture series, specifically".
+Exact opening excerpt:
+
+```text
+# nanogpt-lecture Code created in the \[Neural Networks: Zero To Hero\](https://karpathy.ai/zero-to-hero.html) video lecture series, specifically
+```
 
 Neuraltalk2 documents captioning, pretrained evaluation, data preprocessing, staged CNN finetuning and visualization, with explicit beam-search speed/quality tradeoffs and a known corrupt input-image failure. Its 2016 update recommends Google im2txt and preserves this as educational Torch code; projected leaderboard placement and speed are dated reports. Ng-video-lecture keeps lecture-identical code while acknowledging missing initialization treatment and slower convergence, and warns a differently named successor implementation cannot simply be pasted in. Nipspreview breaks PDF and metadata acquisition into thumbnail, word-cloud, topic-model and abstract stages and admits malformed-paper extraction needs human intervention; its LDA implementation is credited externally. Zero-to-Hero sequences scalar autograd, bigrams, MLP, activation/gradient diagnostics, manual backpropagation, hierarchical CNNs, GPT and tokenization; the backprop lesson asks learners to work the exercise and unpause only when stuck, rather than merely watch. Notpygamejs abstracts game/event boilerplate while admitting globals; paper-notes README is an informal placeholder.
 

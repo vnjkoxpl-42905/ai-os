@@ -15,7 +15,11 @@ Repository or gist attributed to Karpathy; individual authorship not independent
 
 ## Evidence and synthesis
 
-Exact opening excerpt: "#NeuralTalk **Warning: Deprecated.** Hi there, this code is now quite old and inefficient, and now".
+Exact opening excerpt:
+
+```text
+#NeuralTalk **Warning: Deprecated.** Hi there, this code is now quite old and inefficient, and now
+```
 
 Neuraltalk documentation separates feature extraction, model inference and HTML visualization, warns on distribution mismatch, and uses log probabilities as a rough confusion indicator rather than guaranteed truth. Its architecture separates dataset APIs, batching, optimizers and generator modules. The root explicitly deprecates the NumPy code in favor of GPU-batched Neuraltalk2 and restricts tested-platform claims to Ubuntu; an unresolved Python-versus-Matlab feature-reproduction issue remains visible. Matlab/Python feature reference docs point to Caffe and VGG third-party models and describe starter code rather than a ready utility. Status and checkpoint folders are operational outputs. Neuraltalk2 cross-validation tools isolate each worker GPU, give runs distinct IDs, write checkpoints to shared storage and inspect outcomes in notebooks before changing search ranges; the notebook is explicitly hacky. Documented infinite worker loops were read, not executed.
 

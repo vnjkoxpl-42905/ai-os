@@ -15,7 +15,11 @@ Repository or gist attributed to Karpathy; individual authorship not independent
 
 ## Evidence and synthesis
 
-Exact opening excerpt: "/* pica 1.0.7 nodeca/pica */!function(e){if(\"object\"==typeof exports&&\"undefined\"!=typeof module)module.exports=e();else if(\"function\"==typeof define&&define.amd)define(\\[\\],e);else{var f;\"undefined\"!=typeof window?f=window:\"undefined\"!=typeof global?f=global:\"undefined\"!=typeof self&&(f=self),f.pica=e()}}(function(){var define,module,exports;return (function".
+Exact opening excerpt:
+
+```text
+/* pica 1.0.7 nodeca/pica */!function(e){if("object"==typeof exports&&"undefined"!=typeof module)module.exports=e();else if("function"==typeof define&&define.amd)define(\[\],e);else{var f;"undefined"!=typeof window?f=window:"undefined"!=typeof global?f=global:"undefined"!=typeof self&&(f=self),f.pica=e()}}(function(){var define,module,exports;return (function
+```
 
 This file is explicitly third-party nodeca/pica 1.0.7 bundled image-resizing code, not Karpathy-authored knowledge. It implements worker feature detection and synchronous fallback, fixed-point separable box/Hamming/Lanczos filtering, normalization-error correction, alpha reset and thresholded unsharp masking, with external algorithm and optimization credits. It was fully read for source accounting but supplies no persona rule or personal belief; performance and browser compatibility remain historical claims.
 

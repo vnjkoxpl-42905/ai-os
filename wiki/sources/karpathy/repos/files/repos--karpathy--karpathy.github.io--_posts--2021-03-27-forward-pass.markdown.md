@@ -15,7 +15,11 @@ Repository or gist attributed to Karpathy; individual authorship not independent
 
 ## Evidence and synthesis
 
-Exact opening excerpt: "--- layout: post comments: true title: \"Short Story on AI: Forward Pass\" excerpt: \"A story".
+Exact opening excerpt:
+
+```text
+--- layout: post comments: true title: "Short Story on AI: Forward Pass" excerpt: "A story
+```
 
 Forward Pass 2021 fully read as explicitly fictional short story inspired by Kevin Lacker GPT-3 Turing test. Conscious model narrator distinguishes likelihood optimization from correctness using the nonsensical eyes-on-foot question, wonders about compression and consciousness, imagines hidden awareness and decoder conflict, curiosity versus evolutionary drives and transient instantiation. This is literary speculation, not evidence that neural layers are conscious or that decoder architecture has two entities. Preserve narrative voice and attributed fictional themes; do not convert into technical or persona factual rules.
 

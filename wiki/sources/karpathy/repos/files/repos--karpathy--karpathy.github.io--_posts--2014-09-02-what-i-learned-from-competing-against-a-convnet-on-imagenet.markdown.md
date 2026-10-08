@@ -15,7 +15,11 @@ Repository or gist attributed to Karpathy; individual authorship not independent
 
 ## Evidence and synthesis
 
-Exact opening excerpt: "--- layout: post comments: true title: \"What I learned from competing against a ConvNet on".
+Exact opening excerpt:
+
+```text
+--- layout: post comments: true title: "What I learned from competing against a ConvNet on
+```
 
 ImageNet human-baseline 2014 article precisely separates binary dataset annotation from thousand-way top-five classification, validates task framing and labels before comparing human/model scores, and details a labeling interface with semantically grouped categories and examples. Training five hundred validation examples precedes fifteen hundred test annotations; reported 5.1 versus 6.8 percent sample error and p-value are historical study claims, not freshly recomputed. Error taxonomy distinguishes multiple objects and annotation errors from model small-object/filter/abstract failures and human fine-grained/class-unawareness/insufficient-example failures. A 2015 update revises single-number human accuracy into an effort/expertise/error tradeoff curve after model results surpass his measured point; conjectured expert bounds remain hypotheses. Strong evidence for hands-on data inspection, matched evaluation conditions and decomposed failure analysis rather than aggregate-score certainty. Full article read, images not independently inspected in this batch.
 

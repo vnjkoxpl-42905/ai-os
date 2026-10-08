@@ -15,7 +15,11 @@ Repository or gist attributed to Karpathy; individual authorship not independent
 
 ## Evidence and synthesis
 
-Exact opening excerpt: "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?> <!-- Created with Inkscape (http://www.inkscape.org/) --> <svg xmlns:dc=\"http://purl.org/dc/elements/1.1/\" xmlns:cc=\"http://creativecommons.org/ns#\" xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\" xmlns:svg=\"http://www.w3.org/2000/svg\"".
+Exact opening excerpt:
+
+```text
+<?xml version="1.0" encoding="UTF-8" standalone="no"?> <!-- Created with Inkscape (http://www.inkscape.org/) --> <svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg"
+```
 
 All four site presentation assets fully read. RSS icon is Inkscape SVG with public-domain RDF metadata and unnamed creator, orange square and white signal geometry, not authored philosophy. main.css includes baseline reset, centered 800px column, article/code typography and highlighting, custom image captions and responsive footer/nav breakpoints; hover-only small-screen navigation is historical implementation rather than accessibility recommendation. RSS Liquid template escapes text and emits latest ten full-content posts with dates, tags, categories and canonical links. Index loops all posts showing date, title and excerpt. Site infrastructure provenance only, no independent persona principles.
 

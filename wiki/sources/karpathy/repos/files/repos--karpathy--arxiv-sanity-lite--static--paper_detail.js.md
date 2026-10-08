@@ -15,7 +15,11 @@ Repository or gist attributed to Karpathy; individual authorship not independent
 
 ## Evidence and synthesis
 
-Exact opening excerpt: "'use strict'; const PaperLite = props => { const p = props.paper; return ( <div".
+Exact opening excerpt:
+
+```text
+'use strict'; const PaperLite = props => { const p = props.paper; return ( <div
+```
 
 Arxiv-sanity-lite backend exposes random/time/text/tag/exemplar ranking, pagination, inspection of TF-IDF and SVM weights, and user-tag/email preferences through lazy per-request database handles. Inspection makes feature contributions visible rather than hiding ranking behind a score. The source uses username-only sessions and a fallback dev signing key, GET mutations and limited old email validation; this is a historical prototype, not a hardened authentication model to adopt. React paper/detail/tag components render scores and links and send prompt-driven add/remove requests, but report responses only to console without refreshing state or explicit error UI. This code was read, not deployed or interacted with.
 

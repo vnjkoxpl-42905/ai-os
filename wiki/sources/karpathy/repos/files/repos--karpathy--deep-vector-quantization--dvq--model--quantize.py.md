@@ -15,7 +15,11 @@ Repository or gist attributed to Karpathy; individual authorship not independent
 
 ## Evidence and synthesis
 
-Exact opening excerpt: "\"\"\" The critical quantization layers that we sandwich in the middle of the autoencoder (between".
+Exact opening excerpt:
+
+```text
+""" The critical quantization layers that we sandwich in the middle of the autoencoder (between
+```
 
 OpenAI encoder/decoder explicitly adapts official DALL-E code: moves boundary one-by-one convolutions into quantization for cleaner symmetric comparisons and removes precision/device machinery to keep things simple; shape, channel and float32 checks remain. Quantize contrasts nearest-codebook VQVAE with Gumbel categorical relaxation, straight-through gradients, commitment/embedding losses and KL-to-uniform. VQVAE adds empirically needed data-driven kmeans initialization with an explicit multi-GPU TODO. Full Lightning model separates encoder, discrete bottleneck and decoder, logs reconstruction plus cluster perplexity/use to diagnose collapse, and asserts optimizer decay partition is disjoint and complete. Schedules credit DALL-E but openly approximate incompatible KL normalization with an empirically working scale; logit-Laplace choice remains unavailable. Seeded training and best validation reconstruction checkpoint are specified, not executed. Comparisons preserve upstream attribution and empirical uncertainty.
 

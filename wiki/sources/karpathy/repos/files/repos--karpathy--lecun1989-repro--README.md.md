@@ -15,7 +15,11 @@ Repository or gist attributed to Karpathy; individual authorship not independent
 
 ## Evidence and synthesis
 
-Exact opening excerpt: "# lecun1989-repro !\[teaser\](lecun1989.png) This code tries to reproduce the 1989 Yann LeCun et al. paper:".
+Exact opening excerpt:
+
+```text
+# lecun1989-repro !\[teaser\](lecun1989.png) This code tries to reproduce the 1989 Yann LeCun et al. paper:
+```
 
 Jobs explicitly describes its treemap as an exploratory development tool, not a serious economic report; LLM exposure scores do not predict disappearance and omit demand elasticity, regulation and preference for humans. Its cached BLS evidence and generated scores belong to payload coverage, not personal beliefs. The profile README is simply a stated interest in neural nets. The blog README prefers Jekyll after dissatisfaction with bloated slow content-locking WordPress. LeCun1989 reproduction explicitly distinguishes approximate MNIST-derived data from the unavailable original dataset, reports a numerical discrepancy, chooses simpler SGD with a quoted paper justification, and enumerates unresolved connectivity, loss scaling, learning rate, decay, initialization and target assumptions. These assumptions and approximate-reproduction boundaries strongly corroborate explicit uncertainty and matched-baseline rules; paper facts are LeCun et al. material, and captured timing/results were not rerun.
 

@@ -15,7 +15,11 @@ Repository or gist attributed to Karpathy; individual authorship not independent
 
 ## Evidence and synthesis
 
-Exact opening excerpt: "--\\[\\[ This file trains a character-level multi-layer RNN on text data Code is based on".
+Exact opening excerpt:
+
+```text
+--\[\[ This file trains a character-level multi-layer RNN on text data Code is based on
+```
 
 Char-rnn training preserves its credited Torch lineage, checks checkpoint vocabulary and overwrites architecture settings for compatibility, initializes forget gates positively, unrolls shared-weight timestep clones and clips gradients. It separates dropout training/evaluation modes, logs validation losses and stops on NaN or exploding loss with a request for environment details. Optional synchronization explicitly trades timing accuracy for overhead. Minibatch preprocessing detects stale caches, trims tails to divisibility, sorts vocabulary deterministically and rejects empty splits. Its cache-existence condition uses OR and can miss a single absent cache; full checkpoint optimizer/RNG resume is not established. Helpers were read in full without execution.
 

@@ -15,7 +15,11 @@ Repository or gist attributed to Karpathy; individual authorship not independent
 
 ## Evidence and synthesis
 
-Exact opening excerpt: "\"\"\" Compose and send recommendation emails to arxiv-sanity-lite users! I run this script in a".
+Exact opening excerpt:
+
+```text
+""" Compose and send recommendation emails to arxiv-sanity-lite users! I run this script in a
+```
 
 The email recommender trains a balanced LinearSVC for each nonempty user tag, restricts suggestions to recent untagged papers, merges candidates by maximum tag score and renders a bounded HTML list. It skips missing email, insufficient tagged examples and empty recommendation sets. A dry-run option prevents the send call, but the send helper merely prints status and does not establish delivery, while the final sent counter also increments on dry runs. This is source inspection, not authorization to send email or a verified production delivery mechanism. Historical SendGrid file-key conventions are not adopted into AI OS.
 

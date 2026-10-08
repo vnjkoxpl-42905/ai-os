@@ -15,7 +15,11 @@ Repository or gist attributed to Karpathy; individual authorship not independent
 
 ## Evidence and synthesis
 
-Exact opening excerpt: "(function(global) { \"use strict\"; // Random number utilities var return_v = false; var v_val =".
+Exact opening excerpt:
+
+```text
+(function(global) { "use strict"; // Random number utilities var return_v = false; var v_val =
+```
 
 Trainer accumulates gradients until batch boundaries, adds L1 and L2 terms and implements SGD momentum, Adagrad, moving-window gradients, Adadelta, Nesterov and Adam. Adam bias corrections multiply rather than divide by one-minus-beta-power; this historical implementation must not be treated as a current correct reference. Utilities provide cached Box-Muller Gaussian sampling, typed-array zeros, permutations and weighted sampling with assumed normalized probabilities. Vol holds weights and gradients, initializes variance proportional to inverse fan-in and deliberately serializes weights but not gradients. Augmentation square-crops with zero-padding outside bounds and flips; grayscale takes the red channel rather than luminance and image conversion aborts selected browser errors. Jasmine boot is vendored third-party test framework initialization and contributes no Karpathy persona claim. Full source read, no execution.
 

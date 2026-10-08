@@ -24,13 +24,15 @@ This page compiles deterministic file structure rather than a semantic summary o
 
 Exact bounded sample from the [raw evidence](../../../../raw/sources/karpathy-brain/raw/github/repos/karpathy/llm-council/uv.lock):
 
-> version = 1
-> revision = 3
-> requires-python = ">=3.10"
-> 
-> [[package]]
-> name = "annotated-doc"
-> version =
+```text
+version = 1
+revision = 3
+requires-python = ">=3.10"
+
+[[package]]
+name = "annotated-doc"
+version =
+```
 
 ## Limits and use
 

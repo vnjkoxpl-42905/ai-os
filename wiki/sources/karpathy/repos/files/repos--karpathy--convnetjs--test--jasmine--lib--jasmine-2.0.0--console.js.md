@@ -15,7 +15,11 @@ Repository or gist attributed to Karpathy; individual authorship not independent
 
 ## Evidence and synthesis
 
-Exact opening excerpt: "/* Copyright (c) 2008-2013 Pivotal Labs Permission is hereby granted, free of charge, to any".
+Exact opening excerpt:
+
+```text
+/* Copyright (c) 2008-2013 Pivotal Labs Permission is hereby granted, free of charge, to any
+```
 
 These three sources are vendored Jasmine 2.0 reporter code and CSS, credited to Pivotal Labs, not Karpathy authored reasoning. ConsoleReporter tracks passed, failed and pending specs, prints detailed stacks, elapsed time and a completion callback. HTML reporter builds a suite/spec results tree, exception toggle, failure details and query-string filtering; spec filter escapes regex metacharacters, and query parser normalizes boolean strings. CSS encodes passed/failed/pending status and report visibility. Retained as dependency evidence without deriving persona or engineering rules from third-party implementation. Complete text read, no test execution.
 

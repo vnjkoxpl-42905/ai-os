@@ -15,7 +15,11 @@ Repository or gist attributed to Karpathy; individual authorship not independent
 
 ## Evidence and synthesis
 
-Exact opening excerpt: "\"\"\" One-time data preparation for autoresearch experiments. Downloads data shards and trains a BPE tokenizer.".
+Exact opening excerpt:
+
+```text
+""" One-time data preparation for autoresearch experiments. Downloads data shards and trains a BPE tokenizer.
+```
 
 Autoresearch preparation pins a validation shard, excludes it from tokenizer and training documents, fixes context length and evaluation token budget, and evaluates bits per byte rather than vocabulary-dependent token loss. Downloads stream to temporary files with bounded exponential retries; cached file existence alone is accepted without checksum validation. Tokenizer roundtrip checks Unicode. Best-fit BOS packing removes padding but crops shortest documents when necessary. Evaluation masks zero-byte special tokens from loss and denominator. Runtime dataloader is CUDA-specific and does not establish Windows or CPU support; the file was read, not run.
 

@@ -15,7 +15,11 @@ Repository or gist attributed to Karpathy; individual authorship not independent
 
 ## Evidence and synthesis
 
-Exact opening excerpt: "--- layout: post comments: true title: \"A Recipe for Training Neural Networks\" excerpt: \"A collection".
+Exact opening excerpt:
+
+```text
+--- layout: post comments: true title: "A Recipe for Training Neural Networks" excerpt: "A collection
+```
 
 Recipe for Training Neural Networks 2019 fully read: patience and defensive visual inspection address silent logical failures. Inspect thousands of data examples and corruptions first; build a tiny deterministic baseline with augmentation initially off, expected initialization loss, matched final biases, human and input-independent baselines, and two-example overfit. Inspect exact input tensors and dependency gradients. Implement specific loopy functions and vectorize one loop at a time while preserving outputs. Predict experimental outcomes, add one signal at a time, overfit before regularizing, copy simplest established architectures, then tune data, augmentation, capacity and early stopping. Random search rationale and ensemble or longer-training observations are contextual, not universal guarantees. Article is a dated duplicate capture of blog evidence, not independent corroboration.
 

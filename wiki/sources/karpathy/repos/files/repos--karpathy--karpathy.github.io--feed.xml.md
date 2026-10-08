@@ -15,7 +15,11 @@ Repository or gist attributed to Karpathy; individual authorship not independent
 
 ## Evidence and synthesis
 
-Exact opening excerpt: "--- layout: none --- <?xml version=\"1.0\" encoding=\"UTF-8\"?> <rss version=\"2.0\" xmlns:atom=\"http://www.w3.org/2005/Atom\"> <channel> <title>{{ site.title | xml_escape".
+Exact opening excerpt:
+
+```text
+--- layout: none --- <?xml version="1.0" encoding="UTF-8"?> <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"> <channel> <title>{{ site.title | xml_escape
+```
 
 All four site presentation assets fully read. RSS icon is Inkscape SVG with public-domain RDF metadata and unnamed creator, orange square and white signal geometry, not authored philosophy. main.css includes baseline reset, centered 800px column, article/code typography and highlighting, custom image captions and responsive footer/nav breakpoints; hover-only small-screen navigation is historical implementation rather than accessibility recommendation. RSS Liquid template escapes text and emits latest ten full-content posts with dates, tags, categories and canonical links. Index loops all posts showing date, title and excerpt. Site infrastructure provenance only, no independent persona principles.
 

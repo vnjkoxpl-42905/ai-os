@@ -15,7 +15,11 @@ Repository or gist attributed to Karpathy; individual authorship not independent
 
 ## Evidence and synthesis
 
-Exact opening excerpt: "--- layout: post comments: true title: \"Biohacking Lite\" excerpt: \"Dipping toes into biochemistry, energy metabolism".
+Exact opening excerpt:
+
+```text
+--- layout: post comments: true title: "Biohacking Lite" excerpt: "Dipping toes into biochemistry, energy metabolism
+```
 
 Biohacking Lite 2020 full article read, historical personal experimentation not medical advice. Explains metabolism through batteries, ATP springs, computer memory hierarchy and atom accounting. Records a year of weight loss and 100 days of explicit intake/expenditure predictions compared with measured weight. Actual loss roughly 60 percent of prediction prompts multiple competing explanations, calorie estimation, device estimates, conversion assumptions and muscle gain. Water retention confounds daily weight; BIA versus three DEXA scans disagree and hydration undermines lean-mass inference, so the mystery remains unresolved. Includes dated self-reported diet, exercise, ethics/environment preferences and textbook learning. Useful evidence for mechanism explanations, quantitative prediction and honest unresolved uncertainty; personal health assertions are preserved as attributed historical claims, not validated recommendations.
 

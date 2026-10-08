@@ -15,7 +15,11 @@ Repository or gist attributed to Karpathy; individual authorship not independent
 
 ## Evidence and synthesis
 
-Exact opening excerpt: "# llm.c LLMs in simple, pure C/CUDA with no need for 245MB of PyTorch or".
+Exact opening excerpt:
+
+```text
+# llm.c LLMs in simple, pure C/CUDA with no need for 245MB of PyTorch or
+```
 
 The council frontend README is an unchanged React/Vite template voice, not personal Karpathy opinion. Llm.c CUDA development begins with a naive kernel, compares CPU reference outputs on GPU, times launch configurations, then substitutes a measured faster kernel; documented complexity and runtime tradeoffs are explicit. Data scripts own per-dataset cache directories and share helpers. The evaluation README pins a harness version for comparability and admits unresolved bfloat16 scoring and unexpectedly expensive runtime issues instead of hiding them. The root llm.c README keeps simple frozen CPU/fp32 references alongside fast production-oriented kernels, cross-checks logits/loss/training trajectories against PyTorch, supplies a stepwise layernorm tutorial, and distinguishes platform-specific distributed launch options without declaring one universally superior. It explicitly may reject 2-percent performance for 500 lines and an exotic dependency, while accepting a standard one-line library call. These are project constraints rather than universal bans on dependency use.
 

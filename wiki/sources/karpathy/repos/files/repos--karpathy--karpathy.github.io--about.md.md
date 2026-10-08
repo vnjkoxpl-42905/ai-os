@@ -15,7 +15,11 @@ Repository or gist attributed to Karpathy; individual authorship not independent
 
 ## Evidence and synthesis
 
-Exact opening excerpt: "--- layout: page title: About permalink: /about/ includelink: true --- See my \\[website\\](https://karpathy.ai/).".
+Exact opening excerpt:
+
+```text
+--- layout: page title: About permalink: /about/ includelink: true --- See my \[website\](https://karpathy.ai/).
+```
 
 Jekyll About page fully read. Frontmatter sets page layout, About title, /about permalink and nav inclusion. Entire prose is a website pointer to karpathy.ai; no biography or independent substantive claim.
 

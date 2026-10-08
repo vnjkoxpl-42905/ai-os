@@ -15,7 +15,11 @@ Repository or gist attributed to Karpathy; individual authorship not independent
 
 ## Evidence and synthesis
 
-Exact opening excerpt: "{ \"infos\" : \\[ { \"name\": \"arbitrary_name\", \"local_path\": \"/Users/example_user/cool_code\", \"cid_link\": \"https://stash.somedomain.com/projects/cool_project/repos/repo/commits/\", \"jira_link\": \"https://issues.somedomain.com/browse/\", \"dtmax\": 7".
+Exact opening excerpt:
+
+```text
+{ "infos" : \[ { "name": "arbitrary_name", "local_path": "/Users/example_user/cool_code", "cid_link": "https://stash.somedomain.com/projects/cool_project/repos/repo/commits/", "jira_link": "https://issues.somedomain.com/browse/", "dtmax": 7
+```
 
 Forest MIT license records 2012 authorship and reuse terms, without new reasoning. Gitstats separates local GitPython extraction from a static JSON-fed viewer. It sorts recently active refs, deduplicates commits by SHA across branches, excludes automatic merges, retains author/commit dates and file statistics and explicitly leaves unreliable automatic pulling disabled. Example config is a fictional path/link fixture, not actual personal infrastructure. Viewer provides author/email filtering, contributor-by-day cells, colored file types and capped detailed commit rendering. Contributions exclude tiny changes; timezone offset is explicitly uncertain and equal timestamps can break day normalization. HTML insertion of commit metadata is a historical rendering risk, not a recommended safe implementation. Full source read, no repo fetch or browser execution.
 

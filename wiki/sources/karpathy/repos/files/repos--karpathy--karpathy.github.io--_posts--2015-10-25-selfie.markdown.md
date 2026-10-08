@@ -15,7 +15,11 @@ Repository or gist attributed to Karpathy; individual authorship not independent
 
 ## Evidence and synthesis
 
-Exact opening excerpt: "--- layout: post comments: true title: \"What a Deep Neural Network thinks about your #selfie\"".
+Exact opening excerpt:
+
+```text
+--- layout: post comments: true title: "What a Deep Neural Network thinks about your #selfie"
+```
 
 Selfie 2015 article teaches ConvNet mechanism through repeated filters and incremental supervised updates, then documents five-million tagged images reduced to two million face-containing samples and a noisy likes-versus-audience proxy. It admits proxy labels are imperfect, reports sixty-percent held-out accuracy against fifty-percent baseline, and records dropout and pretrained-checkpoint comparisons. Ranked unseen images, continuum and t-SNE reveal stylistic patterns and dataset/model gender bias rather than universal attractiveness truths; conflicting celebrity exceptions and crops that remove the person expose objective mismatch. Spatial-transformer optimization failed, so bounded low-dimensional global crop search is used; iOS real-time port was unsuccessful. Closing recommendation favors learning by doing and writing up side projects. Dated tools and bot capability are not current verified services. Full text read with upstream CNN/visualization attribution; referenced images not independently analyzed here.
 

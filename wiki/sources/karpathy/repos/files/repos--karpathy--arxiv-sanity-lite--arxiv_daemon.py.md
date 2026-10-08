@@ -15,7 +15,11 @@ Repository or gist attributed to Karpathy; individual authorship not independent
 
 ## Evidence and synthesis
 
-Exact opening excerpt: "\"\"\" This script is intended to wake up every 30 min or so (eg via".
+Exact opening excerpt:
+
+```text
+""" This script is intended to wake up every 30 min or so (eg via
+```
 
 Arxiv-sanity-lite intake batches 100 papers, preserves newest versions by timestamp, stops after unchanged batches to spare the API, and signals whether feature recomputation is needed. Inspection finds the retry counter advances on exceptions but not on short successful pages, so a short page can loop indefinitely; this was not reproduced. API parsing normalizes feed records and version IDs but assumes expected fields. Database helpers centralize paths and distinguish read-only/write-open modes; a StackOverflow-credited temporary-write/rename pattern protects pickle readers, with historical platform portability not certified. Compressed pickle storage assumes trusted local data. Feature computation fits TF-IDF on a possible subset then transforms all title/abstract/author text, stores float32 vectors and ID mappings. The Makefile is a convenience launcher, not an independently verified production scheduler.
 

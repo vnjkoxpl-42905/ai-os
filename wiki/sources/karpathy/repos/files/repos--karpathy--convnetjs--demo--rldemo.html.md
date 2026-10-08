@@ -15,7 +15,11 @@ Repository or gist attributed to Karpathy; individual authorship not independent
 
 ## Evidence and synthesis
 
-Exact opening excerpt: "<!doctype html> <html lang=\"en\"> <head> <meta charset=\"utf-8\"> <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\"> <title>ConvNetJS Deep Q Learning Reinforcement".
+Exact opening excerpt:
+
+```text
+<!doctype html> <html lang="en"> <head> <meta charset="utf-8"> <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> <title>ConvNetJS Deep Q Learning Reinforcement
+```
 
 All authored prose, HTML and learner specification were fully read. Embedded pretrained numeric JSON was parsed structurally, not semantically read weight by weight: seven layers, 5700 filter weights and 105 biases, fifty-unit ReLU hidden layers, fifty-nine temporal inputs and five action outputs. The demo introduces DeepMind DQN through a simpler nine-eye two-dimensional agent with five turns, explicit observation-action-reward loop, temporal memory, replay/burn-in/exploration options, reward plots and editable specifications. It documents disabling training and epsilon for deterministic policy use. Claims of inevitable improvement and approximate training time are historical demo prose, not verified guarantees; color reward descriptions differ from earlier implementation evidence and remain explicit. Source payload is preserved unchanged.
 

@@ -15,7 +15,11 @@ Repository or gist attributed to Karpathy; individual authorship not independent
 
 ## Evidence and synthesis
 
-Exact opening excerpt: "\"\"\" Implementing SHA-256 from scratch was fun, but for RIPEMD160 I am taking an existing".
+Exact opening excerpt:
+
+```text
+""" Implementing SHA-256 from scratch was fun, but for RIPEMD160 I am taking an existing
+```
 
 SHA256 follows named FIPS sections from bit operations through prime-root constants, message padding, sixty-four-word schedule, compression rounds and digest accumulation; it explicitly says this is purely educational and should not serve serious use. Constants are regenerated via floating-point roots each call, a performance and precision boundary rather than production optimization. RIPEMD160 explicitly reuses and cleans up an existing implementation credited to Bjorn Edstrom and Markus Friedl; its bytes-to-bytes wrapper, buffered block processing, parallel eighty-round branches and final state combination are fully read, with a little-endian-only assertion. Reuse is credited rather than falsely treating all cryptographic mechanisms as Karpathy original thinking. No cryptographic correctness tests executed.
 

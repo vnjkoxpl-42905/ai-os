@@ -15,7 +15,11 @@ Repository or gist attributed to Karpathy; individual authorship not independent
 
 ## Evidence and synthesis
 
-Exact opening excerpt: "\"\"\" Classes/utils for connecting to Bitcoin nodes Protocol Documentation: https://en.bitcoin.it/wiki/Protocol_documentation \"\"\" from dataclasses import dataclass,".
+Exact opening excerpt:
+
+```text
+""" Classes/utils for connecting to Bitcoin nodes Protocol Documentation: https://en.bitcoin.it/wiki/Protocol_documentation """ from dataclasses import dataclass,
+```
 
 Cryptos network decomposes Bitcoin wire messages into dataclass payloads and a checksum-validated envelope, explicitly serializes endian conventions, assumes IPv4 and supports version/verack, ping/pong and header requests. Header decoder asserts zero transactions; the baby node automatically acknowledges versions and responds to pings. Version decoding remains a fixed default TODO stub, handshake advertises zero timestamp and nonce with a programmingbitcoin user agent, and getheaders encoder only supplies one locator despite a configurable count. Socket operations lack timeout and payload size validation is permissive. These transparent educational protocol pieces support mechanism-first instruction; they are not a complete production peer or verified live network integration. Full source read, no network connection.
 

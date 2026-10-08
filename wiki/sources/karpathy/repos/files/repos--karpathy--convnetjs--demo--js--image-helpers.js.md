@@ -15,7 +15,11 @@ Repository or gist attributed to Karpathy; individual authorship not independent
 
 ## Evidence and synthesis
 
-Exact opening excerpt: "var loadFile = function(event) { var reader = new FileReader(); reader.onload = function(){ var preview".
+Exact opening excerpt:
+
+```text
+var loadFile = function(event) { var reader = new FileReader(); reader.onload = function(){ var preview
+```
 
 Automatic prediction imports consistent CSV rows, infers numeric versus categorical columns, reuses training category mappings for test data, holds out a random test subset, exposes cross-validation progress and logs predicted versus actual test labels. Its neurons_max mistakenly reads nnmin in startCV and restart creates additional intervals, so intended controls are not guaranteed. Toy classification trains simple datasets and displays how the input grid and points deform into selected internal coordinates. Image helpers crop and resize uploaded images but use asynchronous images without waiting and return before resize callbacks, making reliability uncertain. These mechanics illustrate inspectable learning, with explicit source-level limitations and no runtime test.
 

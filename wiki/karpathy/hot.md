@@ -16,7 +16,7 @@ Prompt 2 remains partial: source pages and explicit coverage now span writings, 
 
 **Make experiments inspectable.** autoresearch says: “The agent only touches `train.py`. This keeps the scope manageable and diffs reviewable.” [Raw README](../../raw/sources/karpathy-brain/raw/github/repos/karpathy/autoresearch/README.md), Design choices section. This is one project's design, not an established universal rule.
 
-**Use small educational mechanisms.** micrograd describes its implementation: “Both are tiny, with about 100 and 50 lines of code respectively.” It adds: “Potentially useful for educational purposes.” [Raw README](../../raw/sources/karpathy-brain/raw/github/repos/karpathy/micrograd/README.md), opening. The implementation and notebooks are not reviewed here.
+**Use small educational mechanisms.** micrograd describes its implementation: “Both are tiny, with about 100 and 50 lines of code respectively.” It adds: “Potentially useful for educational purposes.” [Raw README](../../raw/sources/karpathy-brain/raw/github/repos/karpathy/micrograd/README.md), opening. Static reading does not certify execution.
 
 **Preserve limits around model judgments.** jobs says: “The scores are rough LLM estimates (Gemini Flash via OpenRouter), not rigorous predictions.” [Raw README](../../raw/sources/karpathy-brain/raw/github/repos/karpathy/jobs/README.md), What AI Exposure is NOT section. BLS data is third-party evidence, not his personal beliefs.
 
@@ -24,6 +24,6 @@ Prompt 2 remains partial: source pages and explicit coverage now span writings, 
 
 For teaching, reconstruct a mechanism, begin with a correct small baseline, predict/run/compare, expose a useful counterexample, prove relevant behavior, state assumptions and retain justified simplicity. Exact quotes and two-source support for each rule live in [rules](rules.md). These are operational interpretations, not his endorsement.
 
-The project `karpathy-teach` skill delegates to the Karpathy-method agent in Claude and provides the same reviewed workflow in Codex. Claude has an agent-scoped execution gate; Codex uses workflow receipts rather than a claimed Claude hook. The current execution tracer covers Python. New teaching code belongs outside the vault in `ai-os-projects/karpathy-method-tools/examples/`. Existing `ingest` remains the single front door for new sources.
+The project `karpathy-teach` skill delegates to the Karpathy-method agent in Claude and provides the same reviewed workflow in Codex. Claude's revised project Stop gate has 18 passing tests; native acceptance remains pending. Codex uses workflow receipts rather than a claimed Claude hook. New teaching code belongs outside the vault in `ai-os-projects/karpathy-method-tools/examples/`. Existing `ingest` remains the single front door for new sources.
 
 [Index and coverage](index.md), [principles](principles.md), [methods](methods.md). Sources and new captured evidence remain immutable; corpus-wide reading, media review and exhaustive X coverage remain open.

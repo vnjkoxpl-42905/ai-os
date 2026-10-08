@@ -15,7 +15,11 @@ Repository or gist attributed to Karpathy; individual authorship not independent
 
 ## Evidence and synthesis
 
-Exact opening excerpt: "\"\"\" Bitcoin-specific functions, classes, utilities and parameters \"\"\" from dataclasses import dataclass from .curves import".
+Exact opening excerpt:
+
+```text
+""" Bitcoin-specific functions, classes, utilities and parameters """ from dataclasses import dataclass from .curves import
+```
 
 Cryptos implements Bitcoin secp256k1 constants and transparent educational primitives: finite-field point addition, double-and-add scalar multiplication, public-key compression, hash160 and Base58Check addresses, DER signature encoding, double-SHA256 ECDSA and eighty-byte block headers. Curves credit Wikipedia for extended Euclid; modular inverse does not check coprimality and point operations do not validate curve membership. ECDSA explicitly leaves deterministic nonce and constant-time protection as TODOs; validation is basic, uses raw x rather than explicit modulo-n reduction and is not production cryptography. Block validation only tests proof-of-work, with target-field validation TODO; retarget caps elapsed interval and maximum target. Empty package initializer has no semantic content. Keys use OS randomness with rejection sampling and address checksum validation. Full read without running cryptographic or financial actions.
 

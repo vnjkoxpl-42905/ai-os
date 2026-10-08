@@ -15,7 +15,11 @@ Repository or gist attributed to Karpathy; individual authorship not independent
 
 ## Evidence and synthesis
 
-Exact opening excerpt: "//Simple game engine //Author: Andrej Karpathy //License: BSD //This function does all the boring canvas".
+Exact opening excerpt:
+
+```text
+//Simple game engine //Author: Andrej Karpathy //License: BSD //This function does all the boring canvas
+```
 
 The explicitly BSD-attributed Karpathy canvas engine abstracts update/draw/init and mouse/keyboard callbacks so educational demos can focus on learning behavior. It translates click coordinates and attaches keyboard listeners to the document because canvas cannot receive focus by default. Timing uses setInterval and random sampling uses a Box-Muller variant without rejecting zero radius. This is reusable historical interaction plumbing, not a neural-learning principle or a current accessibility guarantee.
 

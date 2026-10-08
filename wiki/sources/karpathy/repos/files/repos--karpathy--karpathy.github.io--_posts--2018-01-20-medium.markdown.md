@@ -15,7 +15,11 @@ Repository or gist attributed to Karpathy; individual authorship not independent
 
 ## Evidence and synthesis
 
-Exact opening excerpt: "--- layout: post comments: false title: \"(started posting on Medium instead)\" excerpt: \"Yes I'm still".
+Exact opening excerpt:
+
+```text
+--- layout: post comments: false title: "(started posting on Medium instead)" excerpt: "Yes I'm still
+```
 
 2018 routing notice says reduced blogging after joining Tesla and preference for Medium short/medium posts because it is faster and easier, retaining possible longer posts on this blog. This dated convenience decision qualifies the earlier 2014 strongest preference for Jekyll without silently forcing timeless consistency. It is a publication-location pointer, not a captured Medium article or current availability proof. Full notice read.
 

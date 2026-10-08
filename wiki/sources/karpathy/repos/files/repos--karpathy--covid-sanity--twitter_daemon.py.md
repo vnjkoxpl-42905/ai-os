@@ -15,7 +15,11 @@ Repository or gist attributed to Karpathy; individual authorship not independent
 
 ## Evidence and synthesis
 
-Exact opening excerpt: "\"\"\" Continuously iterates over existing database and pulls in tweets for each paper. Intended to".
+Exact opening excerpt:
+
+```text
+""" Continuously iterates over existing database and pulls in tweets for each paper. Intended to
+```
 
 Historical Covid-sanity Twitter daemon warm-starts collected tweets, searches paper v1 URLs excluding replies and retweets, filters banned accounts and preserves full text and author metrics. It explicitly calls the assumed v1 URL sketchy and slightly wrong. It writes a temporary JSON then renames it, preserves old results on broad API exceptions, and revisits recent hundred papers between older chunks while sleeping for a historical rate limit. The server must restart to reload results. This is architectural evidence for recency-prioritized incremental collection, not a verified current X API collector; broad exception handling and platform rename semantics remain limitations. No credentials read and no API executed.
 

@@ -15,7 +15,11 @@ Repository or gist attributed to Karpathy; individual authorship not independent
 
 ## Evidence and synthesis
 
-Exact opening excerpt: "(function(global) { \"use strict\"; var Vol = global.Vol; // convenience // a bit experimental layer".
+Exact opening excerpt:
+
+```text
+(function(global) { "use strict"; var Vol = global.Vol; // convenience // a bit experimental layer
+```
 
 Convnet loss layers explicitly implement stable softmax by subtracting the maximum, negative-log likelihood gradients, half-squared regression and multiclass margin loss; only a final single loss is supported while multitask loss is future work. Nonlinearities implement ReLU, sigmoid, maxout switches and tanh derivatives, with optimized one-dimensional maxout branch. Local response normalization is explicitly experimental with an uncertain gradient check, not certified correct. Pooling saves winner coordinates for gradient routing and possible visualization; its finite -99999 initial maximum is a stated assumption. These mathematical mechanisms and uncertainty boundaries were fully read, not reproduced.
 

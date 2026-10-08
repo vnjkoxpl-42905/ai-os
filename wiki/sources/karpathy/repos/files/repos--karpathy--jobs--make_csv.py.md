@@ -15,7 +15,11 @@ Repository or gist attributed to Karpathy; individual authorship not independent
 
 ## Evidence and synthesis
 
-Exact opening excerpt: "\"\"\" Build a CSV summary of all occupations from the scraped HTML files. Reads from".
+Exact opening excerpt:
+
+```text
+""" Build a CSV summary of all occupations from the scraped HTML files. Reads from
+```
 
 Jobs pipeline parses cached BLS Quick Facts and projections tables, reports missing HTML and explicitly imputes annual/hourly pay using 2080 hours per year. Site builder merges occupation CSV facts with separate model exposure scores by slug and retains missing values as null. Prompt builder compiles structured data and aggregate slices into a single reusable Markdown analysis input, preserving rationales and labeling Gemini Flash scores as model judgments. Scoring heuristic distinguishes digital home-office tasks from physical/human-presence barriers; anchors are calibration choices, not measured future job losses. Computed wages use jobs times median pay, an approximation rather than authoritative total wage statistics; exposure-weighted denominators exclude missing scores and fixed 342 headers can drift from actual count. This is evidence for explicit provenance and reusable compact analysis artifacts, not proof of socioeconomic forecasts. Full authored scripts read, generated datasets handled separately by payload worker.
 

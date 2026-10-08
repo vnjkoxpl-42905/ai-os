@@ -15,7 +15,11 @@ Repository or gist attributed to Karpathy; individual authorship not independent
 
 ## Evidence and synthesis
 
-Exact opening excerpt: ".layer { border: 1px solid #999; margin-bottom: 5px; text-align: left; padding: 10px; } .layer_act {".
+Exact opening excerpt:
+
+```text
+.layer { border: 1px solid #999; margin-bottom: 5px; text-align: left; padding: 10px; } .layer_act {
+```
 
 Convnet demos expose architecture, optimization controls, training loss, test predictions and representations in the browser. Toy 2D classification paints generalization boundaries and cycles through internal neurons. CIFAR describes augmentation and greater difficulty; its state-of-art and pretrained accuracy numbers are historical claims, not current verified performance. Image painting maps coordinates to RGB and explicitly qualifies compression as impractical, reporting deeper models better empirically at fixed parameter budget. CSS distinguishes layer types and stats with fixed desktop layouts. User-edited architecture is eval-based; these demos are educational source evidence rather than safe arbitrary-code execution patterns.
 

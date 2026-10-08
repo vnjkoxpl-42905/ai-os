@@ -15,7 +15,11 @@ Repository or gist attributed to Karpathy; individual authorship not independent
 
 ## Evidence and synthesis
 
-Exact opening excerpt: "\"\"\" Autoresearch pretraining script. Single-GPU, single-file. Cherry-picked and simplified from nanochat. Usage: uv run train.py".
+Exact opening excerpt:
+
+```text
+""" Autoresearch pretraining script. Single-GPU, single-file. Cherry-picked and simplified from nanochat. Usage: uv run train.py
+```
 
 Autoresearch train is an explicitly simplified single-GPU nanochat derivative: rotary and normalized QK attention, alternating value residual embeddings, squared ReLU MLP and learned residual/input scalars. It groups matrix parameters by shape for fused Muon and other parameters for AdamW, scales learning rates with width and initializes residual projections to zero. Training measures a fixed steady-state time budget excluding initial compilation steps, schedules rates by elapsed training time, fails fast on NaN or exploding loss and reports validation BPB, VRAM, tokens and estimated MFU. H100 peak FLOPs are hardcoded, so MFU does not establish another GPU efficiency. This is actual implementation evidence, with no run or performance reproduction.
 

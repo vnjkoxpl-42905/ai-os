@@ -15,7 +15,11 @@ Repository or gist attributed to Karpathy; individual authorship not independent
 
 ## Evidence and synthesis
 
-Exact opening excerpt: "-- misc utilities function clone_list(tensor_list, zero_too) -- utility function. todo: move away to some utils".
+Exact opening excerpt:
+
+```text
+-- misc utilities function clone_list(tensor_list, zero_too) -- utility function. todo: move away to some utils
+```
 
 Char-rnn training preserves its credited Torch lineage, checks checkpoint vocabulary and overwrites architecture settings for compatibility, initializes forget gates positively, unrolls shared-weight timestep clones and clips gradients. It separates dropout training/evaluation modes, logs validation losses and stops on NaN or exploding loss with a request for environment details. Optional synchronization explicitly trades timing accuracy for overhead. Minibatch preprocessing detects stale caches, trims tails to divisibility, sorts vocabulary deterministically and rejects empty splits. Its cache-existence condition uses OR and can miss a single absent cache; full checkpoint optimizer/RNG resume is not established. Helpers were read in full without execution.
 

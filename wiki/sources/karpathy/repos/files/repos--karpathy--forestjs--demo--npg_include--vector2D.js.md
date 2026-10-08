@@ -15,7 +15,11 @@ Repository or gist attributed to Karpathy; individual authorship not independent
 
 ## Evidence and synthesis
 
-Exact opening excerpt: "function Vector2D(xinit, yinit) { this.x = xinit; this.y = yinit; this.set = function(x, y) {".
+Exact opening excerpt:
+
+```text
+function Vector2D(xinit, yinit) { this.x = xinit; this.y = yinit; this.set = function(x, y) {
+```
 
 Forest demo makes model behavior visible through clickable labeled points, soft or hard decision coloring, retraining and tree/depth/hypothesis sliders; explanatory prose connects trees to simple randomized splits and warns depth or too many split trials may overfit. Historical always-better claims for tree count are not verified guarantees. Canvas wrapper isolates initialization/update/draw and keyboard/mouse callbacks; vector helper supplies mutable elementary operations without zero-length normalization protection. Randomforest source builds independent fixed-depth trees over index lists, averages leaf predictions and samples thresholds between example values to avoid sorting and favor high-density regions. Implementation has explicit duplication and observed limitations: options are not passed into trainFun, two-dimensional selected indices are not retained for test, dot-threshold indexing confuses original indices with compact projections, entropy q formula uses normalized p and leaf positive probability denominator omits positives. Therefore retain educational mechanism evidence while excluding this historical code from reliable algorithm claims. No runtime test performed.
 

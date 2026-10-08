@@ -15,7 +15,11 @@ Repository or gist attributed to Karpathy; individual authorship not independent
 
 ## Evidence and synthesis
 
-Exact opening excerpt: "# covid-sanity This project organizes COVID-19 SARS-CoV-2 preprints from medRxiv and bioRxiv. The raw data".
+Exact opening excerpt:
+
+```text
+# covid-sanity This project organizes COVID-19 SARS-CoV-2 preprints from medRxiv and bioRxiv. The raw data
+```
 
 Char-rnn expands the minimal NumPy RNN into multilayer Torch recurrent models, minibatches and checkpoints. It recommends validation-loss selection rather than the final checkpoint, adequate validation sample size, train-versus-validation comparison and hardware-matched checkpoint sampling, while explicitly crediting Oxford/Zaremba and Justin Johnson and recommending a cleaner successor. Its historical scaling heuristics are not universal guarantees. ConvNetJS exposes browser demonstrations and explicit volume/layer/trainer interfaces, with hand-calculated convolution shapes and generated build concatenation/minification; the README warns it is no longer maintained and npm may fail. Covid-sanity adapts TF-IDF/SVM paper retrieval to preprints but explicitly admits inability to assess similarity quality and asks for hyperparameter feedback; a live deployment or current medical reliability was not verified. None of these historical install or daemon commands were executed.
 

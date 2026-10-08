@@ -68,7 +68,7 @@ def catalog(pages):
         group = relative.parts[0] if len(relative.parts) > 1 else "Operating pages"
         label, summary = description(page)
         groups.setdefault(group, []).append(
-            f"- [[wiki/{relative.with_suffix('').as_posix()}|{label}]]: {summary}"
+            f"- [[wiki/{relative.as_posix()}|{label}]]: {summary}"
         )
     block = [START, "", "## Complete wiki catalog", "",
              "Every Markdown page under `wiki/` is listed below; this index is the catalog itself.",
@@ -133,7 +133,9 @@ def lint(pages):
         if page.name.endswith(".generated.md"):
             continue
         # The index is a directory, so its links don't prove conceptual connectivity.
-        content = re.sub(r"```.*?```", "", text, flags=re.S)
+        # Source captures can contain Markdown or code with triple backticks.
+        # Match the complete enclosing fence, never an inner shorter sequence.
+        content = re.sub(r"(?m)^(`{3,}|~{3,})[^\n]*\n.*?^\1[ \t]*$", "", text, flags=re.S)
         content = re.sub(r"`+[^`\n]*`+", "", content)
         targets = re.findall(r"\[\[([^\]|]+)(?:\|[^\]]*)?\]\]", content)
         targets += re.findall(r"(?<!!)\[[^\]\n]+\]\(([^\n)]+)\)", content)

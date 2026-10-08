@@ -15,7 +15,11 @@ Repository or gist attributed to Karpathy; individual authorship not independent
 
 ## Evidence and synthesis
 
-Exact opening excerpt: "--- layout: post comments: true title: \"microgpt\" excerpt: \"It takes 200 lines of pure, dependency-free".
+Exact opening excerpt:
+
+```text
+--- layout: post comments: true title: "microgpt" excerpt: "It takes 200 lines of pure, dependency-free
+```
 
 microgpt February 2026 guide fully read including all code, equations, training traces, progression and FAQ. Pure scalar dependency-free GPT essence separates algorithm from scale engineering. Names documents, character IDs and BOS delimiters, local derivative blocks, reverse topological chain rule and additive gradient branches have concrete a*b+a example matched to PyTorch. Token and position embeddings, QKV causal cache communication, position-local MLP computation, residuals, stable softmax, RMSNorm, average next-token log loss, bias-corrected Adam with reset gradients and autoregressive temperature sampling are explained explicitly. Train0 bigram to train5 Adam progression adds one component at a time. Expected random loss log27 compared to trace and learned samples. Production data cleaning, BPE, tensors, precision, scaling experiments, posttraining and serving distinguish efficient real systems. Philosophical understanding unresolved and plausibility versus truth stated; unspecified frontier size assertions are attributed examples rather than verified proprietary facts.
 

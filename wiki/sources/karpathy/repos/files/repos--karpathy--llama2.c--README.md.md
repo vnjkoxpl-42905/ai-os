@@ -15,7 +15,11 @@ Repository or gist attributed to Karpathy; individual authorship not independent
 
 ## Evidence and synthesis
 
-Exact opening excerpt: "## llama2.c <p align=\"center\"> <img src=\"assets/llama_cute.jpg\" width=\"300\" height=\"300\" alt=\"Cute Llama\"> </p> Have you ever wanted".
+Exact opening excerpt:
+
+```text
+## llama2.c <p align="center"> <img src="assets/llama_cute.jpg" width="300" height="300" alt="Cute Llama"> </p> Have you ever wanted
+```
 
 Llama2.c intentionally trades framework generality for a small educational hard-coded architecture, with PyTorch training and C inference. It distinguishes fp32 reference clarity from quantized weights and dynamically quantized activations, including quality tradeoffs and hardware-dependent throughput. Custom vocabulary can reduce both embedding parameters and token length, but inference must use the matching tokenizer. It supplies cross-language expected-output tests and calls for more tests; compiler fast-math can weaken IEEE compliance and more OpenMP threads can reduce throughput. Contribution criteria prefer small localized broadly useful changes and forks for platform-specific complexity. Early fp32-only claims coexist with later int8 sections, so preserve document history rather than treat old limitations as current. Sample stories, external forks and numeric performance are source demonstrations, not separately verified results or personal beliefs.
 

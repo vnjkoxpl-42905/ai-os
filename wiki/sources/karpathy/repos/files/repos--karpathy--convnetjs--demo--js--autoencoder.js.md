@@ -15,7 +15,11 @@ Repository or gist attributed to Karpathy; individual authorship not independent
 
 ## Evidence and synthesis
 
-Exact opening excerpt: "// globals var layer_defs, net, trainer; var t = \"\\ layer_defs = \\[\\];\\n\\ layer_defs.push({type:'input', out_sx:28,".
+Exact opening excerpt:
+
+```text
+// globals var layer_defs, net, trainer; var t = "\ layer_defs = \[\];\n\ layer_defs.push({type:'input', out_sx:28,
+```
 
 Convnet autoencoder JavaScript trains reconstruction directly against input pixels, separates reconstruction and regularization losses, displays forward/backward time, and visualizes input beside reconstruction plus weights, gradients and layer activations. It projects a fixed sample set into selected neuron pairs so representation changes are inspectable during training, progressively loads image batches and permits pause, JSON snapshots and architecture changes. Captured implementation does not compute held-out reconstruction metrics, although it loads a test batch. Normalization of display maps assumes nonzero range; snapshot restore recreates network but trainer compatibility is not guaranteed. Educational visualization evidence was read without running eval or training.
 

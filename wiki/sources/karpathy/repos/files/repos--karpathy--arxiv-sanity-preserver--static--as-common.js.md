@@ -15,7 +15,11 @@ Repository or gist attributed to Karpathy; individual authorship not independent
 
 ## Evidence and synthesis
 
-Exact opening excerpt: "// various JS utilities shared by all templates // helper function so that we can".
+Exact opening excerpt:
+
+```text
+// various JS utilities shared by all templates // helper function so that we can
+```
 
 The preserver frontend progressively renders captured paper results, distinguishes a complete result from the server display cap, embeds bibliographic COinS metadata for Zotero and Mendeley, and exposes save, similarity and discussion actions. Save icons follow server ON/OFF responses, but no failure handler is shown. Tweet hover text uses text rendering whereas paper metadata uses HTML rendering. Author comments acknowledge unwanted global state. The stylesheet establishes a fixed-width desktop layout, not the responsive lite rewrite. These are source-observed presentation and interoperability mechanisms, not evidence of current service availability or accessibility.
 

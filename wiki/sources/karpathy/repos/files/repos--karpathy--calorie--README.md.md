@@ -15,7 +15,11 @@ Repository or gist attributed to Karpathy; individual authorship not independent
 
 ## Evidence and synthesis
 
-Exact opening excerpt: "# calorie !\[screenshot\](screenshot.png) Calorie deficit tracking web app. You burn calories at a certain rate".
+Exact opening excerpt:
+
+```text
+# calorie !\[screenshot\](screenshot.png) Calorie deficit tracking web app. You burn calories at a certain rate
+```
 
 Arxiv-sanity-lite separates durable paper metadata, TF-IDF features and user tags from code, computes features after successful intake, and uses tagged SVM recommendations. Its README proposes a simpler rewrite, optional email delivery and unfinished scaling/mobile improvements. The older preserver README documents a manually inspected multi-stage acquisition/parse/vector/classification/cache workflow, interruption-resume indexes and rate-limit awareness; its 2021 successor notice qualifies continued use. Server status, prices and credential-storage examples are historical, not current recommended secret handling. The calorie README describes a deliberately simple two-counter self-tracking app with editable assumed metabolic rate and deficit; it is a personal utility description, not verified medical or nutrition guidance.
 

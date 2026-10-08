@@ -15,7 +15,11 @@ Repository or gist attributed to Karpathy; individual authorship not independent
 
 ## Evidence and synthesis
 
-Exact opening excerpt: "--- layout: post comments: true title: \"Quantifying Productivity\" excerpt: \"Describing a new pet project that".
+Exact opening excerpt:
+
+```text
+--- layout: post comments: true title: "Quantifying Productivity" excerpt: "Describing a new pet project that
+```
 
 Quantifying Productivity 2014 explicitly prefers data to confirmation-bias-susceptible anecdotes, implements an open free customizable local-only activity recorder and separate local visualization server, and examines windows plus keystroke frequency over eighty-three days. It inspects surprising five-to-six-hour coding totals for bugs before accepting them and acknowledges laptop activity missing from desktop logs, no cross-machine sync and computer time/typing as incomplete productivity proxies. Vacation and caffeine hypotheses are explicitly unresolved, not causal conclusions. Personal paper-writing character counts and durations are observations from one example, not universal estimates. Plugin composition is a future aspiration rather than implemented capability; historical Ubuntu/OSX-only support must not be described as a working Windows tool. Full article read without recording user activity or executing source.
 

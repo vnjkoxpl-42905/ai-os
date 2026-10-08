@@ -15,7 +15,11 @@ Repository or gist attributed to Karpathy; individual authorship not independent
 
 ## Evidence and synthesis
 
-Exact opening excerpt: "<!DOCTYPE html> <html> {% include head.html %} <body> {% include header.html %} <div class=\"page-content\"> <div".
+Exact opening excerpt:
+
+```text
+<!DOCTYPE html> <html> {% include head.html %} <body> {% include header.html %} <div class="page-content"> <div
+```
 
 Jekyll config/includes/layouts define historical blog identity, RSS, canonical links, shared navigation/footer, conditional math and Disqus plus legacy analytics; these infrastructure templates do not supply personal reasoning beyond site metadata. CIFAR 2011 essay conducts a manual four-hundred-image human baseline near 94 percent, inspects ambiguous examples and training-neighbor coverage, distinguishes visual parts from contextual cues and explicitly labels conjectures. Its 2015 update admits the predicted 85-90 percent ceiling was wrong when systems reached about 95 percent, strong evidence to inspect data and revise forecasts. Computer Vision 2012 essay decomposes a humorous scale photograph into scene geometry, identities, physics, information access, social expectations and nested mental-state inference, arguing training data must support these mechanisms and speculating embodiment/interaction may matter. Historical AI inadequacy is dated 2012 perspective, not current canonical capability assessment. Both articles retain publication dates and foreign references; blog-domain duplicates should reconcile as alternate physical sources.
 

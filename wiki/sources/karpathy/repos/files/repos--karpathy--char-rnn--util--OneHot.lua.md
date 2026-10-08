@@ -15,7 +15,11 @@ Repository or gist attributed to Karpathy; individual authorship not independent
 
 ## Evidence and synthesis
 
-Exact opening excerpt: "local OneHot, parent = torch.class('OneHot', 'nn.Module') function OneHot:__init(outputSize) parent.__init(self) self.outputSize = outputSize -- We'll construct".
+Exact opening excerpt:
+
+```text
+local OneHot, parent = torch.class('OneHot', 'nn.Module') function OneHot:__init(outputSize) parent.__init(self) self.outputSize = outputSize -- We'll construct
+```
 
 Char-rnn utilities explicitly credit adapted parameter flattening code and preserve shared storage across timestep clones; OneHot caches the identity matrix. Convnet build concatenates a declared layer order and minifies via YUI. Autoencoder demo explains a bottleneck as the mechanism forcing useful compressed representations and exposes live loss, neurons and snapshots. MagicNet demo explicitly states CSV assumptions, separates training/validation/test roles, cross-validates architectures and ensembles selected models, with export/import. The explanatory demos support interactive inspection and held-out evaluation; external datasets and borrowed utilities are not independently authored philosophy, and no browser training was performed.
 

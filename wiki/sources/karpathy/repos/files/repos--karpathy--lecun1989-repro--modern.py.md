@@ -15,7 +15,11 @@ Repository or gist attributed to Karpathy; individual authorship not independent
 
 ## Evidence and synthesis
 
-Exact opening excerpt: "\"\"\" repro.py gives: 23 eval: split train. loss 4.073383e-03. error 0.62%. misses: 45 eval: split".
+Exact opening excerpt:
+
+```text
+""" repro.py gives: 23 eval: split train. loss 4.073383e-03. error 0.62%. misses: 45 eval: split
+```
 
 All three LeCun reproduction scripts fully read. Prepro downsamples seeded MNIST to 16x16 normalized minus1-to1 and samples7291 train2007 test with plus1/minus1 labels, explicitly approximate historical data. Repro explicit sparse overlapping H2 connections, shape/parameter-count assertions, target-biased output initialization, single-example SGD23epochs, deterministic seeds, fullsplit eval and saved args/model. Modern retains size while uses ReLU, training-only one-pixel torch.roll shifts, dropout, logits crossentropy, AdamW decayed LR80epochs; notes coupled changes and historical metrics. Critical modern.eval_split computes loss using stale lowercase yhat/y from last training example rather than current uppercase Yhat/Y, explaining identical reported train/test losses, while error uses correct split tensors. Outputs are source reports not rerun validation; never copy that evaluation bug into new methods.
 

@@ -15,7 +15,11 @@ Repository or gist attributed to Karpathy; individual authorship not independent
 
 ## Evidence and synthesis
 
-Exact opening excerpt: "# Twoolpy Twitter API fun scripts using Tweepy in Python. I'm hoping people can use".
+Exact opening excerpt:
+
+```text
+# Twoolpy Twitter API fun scripts using Tweepy in Python. I'm hoping people can use
+```
 
 ScholarOctopus describes a curated paper-pointer visualization using TF-IDF and t-SNE while its collection scripts are explicitly private and absent. SVMJS starts with a linear baseline before nonlinear kernels, exposes speed/accuracy tolerances and references Matlab correctness tests; universal memory-efficiency language remains qualified historical documentation. TF-agent README merely labels Gym RL code. TSNEJS attributes the original algorithm to van der Maaten and Hinton and supplies raw-distance and CSV interfaces; illustrative clusters are not proof of causal structure. Twoolpy contains historical authenticated stream, social-graph recommendation and follower-diff examples with a preflight auth test; obsolete plain-text credential conventions are not adopted. Ulogme separates local timestamped acquisition, processing and browser visualization, keeps data local, documents malformed-log and permission/port troubleshooting, and explicitly supports historical Ubuntu/macOS rather than Windows; current browser incompatibility claims are stale.
 

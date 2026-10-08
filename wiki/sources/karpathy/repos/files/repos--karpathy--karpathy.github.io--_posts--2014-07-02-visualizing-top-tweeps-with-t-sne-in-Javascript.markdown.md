@@ -15,7 +15,11 @@ Repository or gist attributed to Karpathy; individual authorship not independent
 
 ## Evidence and synthesis
 
-Exact opening excerpt: "--- layout: post comments: true title: \"Visualizing Top Tweeps with t-SNE, in Javascript\" excerpt: \"A".
+Exact opening excerpt:
+
+```text
+--- layout: post comments: true title: "Visualizing Top Tweeps with t-SNE, in Javascript" excerpt: "A
+```
 
 2014 t-SNE project writeup explicitly says reimplementing from scratch is the best way he knows to learn. It lays out collection → UTF8 per-account files → unigram/bigram TF-IDF → normalized similarity matrix → JSON → live two-dimensional visualization. Rate limits required delays and several hours, so it does not promise complete instant collection. Algorithm explanation distinguishes Gaussian original-space affinities, Student-t embedded affinities and asymmetric KL focus on local neighbors. It uses reference implementations and explicitly checks analytic cost gradients against numeric gradients before repeated optimization and plotting, strong direct correctness-before-running evidence. Tool preferences and five-hundred-account/two-hundred-tweet sample are dated project facts, not modern recommendations or complete Twitter archive. Bonus word embedding demo credits a separate research paper. Full article read with source attribution retained.
 

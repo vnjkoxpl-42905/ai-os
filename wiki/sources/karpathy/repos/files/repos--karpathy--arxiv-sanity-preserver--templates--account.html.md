@@ -15,7 +15,11 @@ Repository or gist attributed to Karpathy; individual authorship not independent
 
 ## Evidence and synthesis
 
-Exact opening excerpt: "<!DOCTYPE HTML> <html> <head> <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"> <title>Arxiv Sanity Preserver</title> <!-- CSS --> <link".
+Exact opening excerpt:
+
+```text
+<!DOCTYPE HTML> <html> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <title>Arxiv Sanity Preserver</title> <!-- CSS --> <link
+```
 
 The account template visibly distinguishes pending from active follow relationships and asks permission to follow. Discussion offers Markdown and LaTeX preview, per-comment links, confidence labels and anonymous posting. It asks for helpful links and constructive comments rather than generic praise or disrespect. Client-side posting checks length and reports request failure; preview and comments insert marked HTML without visible sanitization here. The templates express intended participation conventions and UI feedback, not proof that backend access controls enforce those intentions or current security guarantees.
 
