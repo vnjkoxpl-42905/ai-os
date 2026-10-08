@@ -5,7 +5,7 @@ five identical sends in Gmail between 2026-08-08 and 2026-09-08 (Reet, Fernande,
 Avneet, Whitney, Cameron). This is the source of truth; the February 2026 PDF in
 `raw/sources/personal/email-templates/` (two numbered steps + Google Form) is retired.
 
-Used by [[consultation-followup-drafts]]. Voice rules: [[teaching-voice]].
+Used by [consultation-followup-drafts](../skills/codex/consultation-followup-drafts/SKILL.md). Voice rules: [[teaching-voice]].
 
 ## The template (standard rate)
 

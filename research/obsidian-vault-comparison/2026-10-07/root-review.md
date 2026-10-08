@@ -39,3 +39,7 @@ Reviewed 2026-10-07. Every listed file was read in full. Sources remain byte-pre
 | `.obsidian/workspace.json` | UI tabs and recently opened filenames; inspected without applying layout; inventoried only. |
 
 No credentials were found in these five configuration files. No hidden configuration was copied into the current `.obsidian` directory. Image-reference presence checks and all original hashes are in [comparison.generated.json](comparison.generated.json) and [source-inventory.generated.json](source-inventory.generated.json).
+
+## Followup intake completed on 2026-10-08
+
+The current local old vault contains 100 files. All are now byte-preserved and hash-verified: 93 originally reviewed visible files, two newly observed empty files, and five safe configuration files archived without activation. Workspace configuration changed since the first inventory; the followup inventory records the preserved revision. See [every-file exclusions and partial omissions](excluded-from-active-knowledge.md). Identity review found no additional verified missing personal fact to promote. Website-planning and agent-work methods are now compiled into their reference homes; source claims remain attributed and historical.

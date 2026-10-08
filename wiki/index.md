@@ -54,6 +54,8 @@ The brain runs three knowledge systems: **this wiki** (Joshua, the business, dec
 - [[../references/claude-plus-codex]] — running Claude Code + Codex on one project; shared-file architecture, plan/critique workflow, and the installed Herdr session layer for visible, persistent dual-agent execution
 - [[../references/graphify-obsidian-bridge]] — turning any corpus into a linked concept map in the vault (`--obsidian`); the source-wiring step and the fragmentation trap that silently guts the result
 - [[../references/3ms-framework]] — the Three Ms operator brain (walked weekly by `/level-up`)
+- [Website planning](../references/website-design-planning.md): recovered visitor-journey, asset-planning and rendered-review methods.
+- [Older vault comparison](../research/obsidian-vault-comparison/2026-10-07/report.md) and [every-file dispositions](../research/obsidian-vault-comparison/2026-10-07/excluded-from-active-knowledge.md): recovered knowledge, overlap, historical claims and explicit omission reasons.
 - [Cal.com stuck bookings](CALCOM-STUCK-BOOKINGS.md) — unpaid bookings hold slots invisibly; run scripts/calcom-pending-sweep.mjs
 - [LSAT U booking policy](LSATU-BOOKING-POLICY.md) — one generator, one predicate, one config row; mirrors Cal.com session-link (buffer 10, pitch 80, 45 days)
 

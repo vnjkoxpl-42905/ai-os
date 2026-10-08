@@ -2378,3 +2378,18 @@ Ran Joshua's requested npx skills add klingai-tech/skills command successfully; 
 - Verification: 125 report links and 186 original/archive hashes checked with zero errors. No canonical policy, source bytes, app configuration or Sync setting changed.
 - Open: missing media and conflicting historical claims remain. Pricing-unit drift appears within current business context too; neither wording was promoted as live verified pricing.
 
+## [2026-10-08] ingest | Complete older-vault local preservation and final dispositions
+
+- Preserved all 100 files currently present in the old local vault, including five safe historical Obsidian settings files and two newly created empty files. Original bytes and folder structure remain intact; no settings were applied. Corrected followup inventory uses actual Unicode filenames; the initial encoding-defective inventory remains historical evidence.
+- Compiled remaining useful website planning into [its reference](../references/website-design-planning.md), and session-pattern triage/work-brief methods into [Three Ms](../references/3ms-framework.md). Earlier teaching additions remain in their corpus topic homes. Identity/voice review found no verified missing personal fact to add; historical personas, permissions, prices and vendor claims were not adopted as current authority.
+- [Every-file dispositions](../research/obsidian-vault-comparison/2026-10-07/excluded-from-active-knowledge.md) explain active integrations, redundancies, archived-only material and omitted portions. Nothing was deleted.
+- Verified all 100 original/archive byte pairs. Preserved evidence separately uploaded to the private Drive workspace folder because raw sources are excluded from the GitHub/live mirror; [checksum receipt](../research/obsidian-vault-comparison/2026-10-07/drive-source-evidence.generated.json) records verified Drive size/MD5 and local SHA-256.
+- Local completeness does not establish old Obsidian remote-vault completeness. Missing media remains missing; Graphify and Obsidian Sync settings were not changed.
+
+## [2026-10-08] lint | Older-vault intake and current knowledge routes
+
+- Repaired eight verified links in six existing wiki pages and four current hot-cache paths to existing sibling app evidence. Preserved append-only historical log entries.
+- Intake checks verified source qualifications, topic homes, source metadata and local links. Final catalog and structural report regenerated after changes.
+- Remaining findings include historical log paths, inline-code examples misparsed as links, native-memory references and an unresolved windows-machine-profile reference. No missing factual evidence was invented to silence lint.
+- Final result: 12 verified link repairs; structural findings reduced from 25 to 13. Followup verification checked 100 archive hashes, 100 disposition rows and 253 local links with zero intake errors. Historical log links remain unchanged under the append-only rule.
+

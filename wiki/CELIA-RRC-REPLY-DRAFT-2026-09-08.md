@@ -8,7 +8,7 @@ status: draft
 
 # Celia · reply to "still being marked" (DRAFT, not sent)
 
-Channel: LSAT U platform message, from Joshua's admin account. Send via the [[assign-lsatu-work]] skill only after Joshua approves the text.
+Channel: LSAT U platform message, from Joshua's admin account. Send via the [assign-lsatu-work](../skills/codex/assign-lsatu-work/SKILL.md) skill only after Joshua approves the text.
 
 Context: her PT1.S3 Read, Recall, Colour run (assignment `3afbbbde-07df-41cf-871f-5106624c2988`) graded at 2026-09-08 04:47 UTC after the grader was redeployed with the clock-alignment build (`2026-09-08c`). Figures below come from the grade row after the 05:45 UTC re-grade on gemini-3.8-flash: mean coverage 86, 14 of 22 at the standard, 0 coloured (the earlier 2.5-flash grade said 6; see log 05:50 UTC before quoting a colour number), total 3,948 s against a 25-minute goal.
 

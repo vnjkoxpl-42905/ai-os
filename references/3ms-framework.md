@@ -234,3 +234,8 @@ Each plugs into the 3Ms at specific points. Start here, branch out as you need d
 
 > *Adapted from The Three Ms of AI™. © 2026 Nate Herk. All rights reserved.*
 > *Full breakdown with diagrams and examples: [insert link to YouTube companion video / public-facing page when published].*
+# Recover useful patterns without turning every session into a new tool
+
+Historical research recovered on 2026-10-08 adds a practical filter to the Three Ms: collect recurring friction from session evidence, group equivalent problems, then classify each as an existing skill to improve, an automation candidate, a direct fix, or no action. Diagnose the repeated need before building. Review existing skills for keep, merge, rewrite, or retire; check whether their activation descriptions match real requests as well as whether their instructions work.
+
+For an agent work brief, state the desired outcome, why it matters, the actual constraints, and the evidence that would establish completion. Evaluate effort on representative tasks and inspect the resulting artifact where appearance or user interaction matters. These are adapted planning methods from [the old-vault research review](../research/obsidian-vault-comparison/2026-10-07/research-review.md), including the historical Fable use-case clips and the secondhand Anthropic prompting analysis. Provider capability claims, billing deadlines, and token-consumption advice are not adopted. Existing scoped instructions and approval rules govern execution.

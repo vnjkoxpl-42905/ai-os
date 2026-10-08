@@ -7,7 +7,7 @@ aliases: []
 
 # Lovable Cloud (LSAT U backend platform)
 
-Source: [[Lovable Cloud|Lovable Cloud docs clipping]] (`raw/sources/clips/lovable-cloud/`) (docs.lovable.dev/integrations/cloud, ingested 2026-07-19). This is what runs the LSAT U production backend (`atrcqxpmqrynmtvvyjju.supabase.co`).
+Source: [Lovable Cloud docs clipping](<../raw/sources/clips/lovable-cloud/Lovable Cloud.md>) (`raw/sources/clips/lovable-cloud/`) (docs.lovable.dev/integrations/cloud, ingested 2026-07-19). This is what runs the LSAT U production backend (`atrcqxpmqrynmtvvyjju.supabase.co`).
 
 ## What it is
 

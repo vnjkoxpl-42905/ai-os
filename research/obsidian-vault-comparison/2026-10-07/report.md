@@ -223,3 +223,7 @@ The generated table below links each preserved visible source and records its pr
 | [connections.md](../../../raw/sources/old-obsidian-vault-2026-10-07/connections.md) | 8,895 | Same path, different bytes |
 
 <!-- END GENERATED OLD VAULT COMPARISON -->
+
+## Followup intake completed on 2026-10-08
+
+The current local old vault contains 100 files. All are now byte-preserved and hash-verified: 93 originally reviewed visible files, two newly observed empty files, and five safe configuration files archived without activation. Workspace configuration changed since the first inventory; the followup inventory records the preserved revision. See [every-file exclusions and partial omissions](excluded-from-active-knowledge.md). Identity review found no additional verified missing personal fact to promote. Website-planning and agent-work methods are now compiled into their reference homes; source claims remain attributed and historical.

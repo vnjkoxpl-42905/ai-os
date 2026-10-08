@@ -64,3 +64,21 @@ The useful missing contribution is a **repeatable evaluation method**: baseline 
 5. Keep Scrollcraft's visitor-belief/ordered-journey questions available for a future real website task. Existing design sources overlap; avoid inventing a new frontend doctrine or enabling paid asset calls from a transcript.
 
 All old sources remain worth preserving, even where their lessons are represented. Current source IDs, versions, prices, access windows, rankings, tool features and quoted vendor recommendations remain unverified in this review. No source instruction to install, run agents, delete, send, spend tokens or build software was executed.
+
+## Final intake status on 2026-10-08
+
+The candidate language above records the initial research pass. Final adoption is explicit in the [every-file dispositions](excluded-from-active-knowledge.md).
+
+| Source | Final status and destination |
+|---|---|
+| `Clippings/7Sage LSAT Tutoring Webinar.md` | Compiled selectively into `corpus/tutoring-diagnosis.md`, linked from corpus and student workflow. Historical logic-games advice, old scores, universal timing/confidence thresholds excluded. |
+| `Clippings/Claude Fable 5 Use Cases You Must Do NOW (Or Lose Thousands in 1 Week).md` | Session-pattern triage compiled into `references/3ms-framework.md`. Existing dashboard and independent-review methods represented by current references. Provider, deadline and savings claims remain historical. |
+| `Clippings/I Built The Ultimate Claude Website Design Skill (steal this).md` | Visitor journey, assets, attention and rendered verification compiled into `references/website-design-planning.md`. No redesign performed; software claims and branded skill implementation remain archival. |
+| `Clippings/Obsidian Plugin Atlas - Gemini Report.md` | Conflicting recommendations preserved and explicitly linked/caveated in `references/obsidian-command-center.md`. Performance assertions not adopted; no plugin installed. |
+| `Clippings/Obsidian Plugin Atlas - Priority Report.md` | Baseline and incremental trial method compiled into `references/obsidian-command-center.md`. Catalog, rankings, maintenance claims and unresolved citation tokens retained as historical research, not verified recommendations. |
+| `Clippings/Obsidian Plugin Atlas.md` | Historical catalog and disagreement preserved; research route compiled into `references/obsidian-command-center.md`. Stack, scores and installation suggestions not adopted. |
+| `Clippings/This Open Source Repo Solve Claude's 1 Problem 1.md` | Core workflow already represented by `references/claude-plus-codex.md` and skill records. Old source preserved with fresh-context/review-limit nuances in `research-review.md`; no second workflow or active skill change. |
+| `Clippings/This Repo Just Solved The 1 Claude + Codex Headache.md` | Already represented by `references/claude-plus-codex.md`, citing this exact video. Preserved only as migration evidence; no duplicate reference added. |
+| `Clippings/You Only Have 1 Day Left For These Fable 5 Use Cases (Or Pay Thousands).md` | Keep/merge/rewrite/retire and activation-versus-body review compiled into `references/3ms-framework.md`. Billing deadlines and token-exhaustion marketing excluded. |
+| `I Analyzed How Anthropic ACTUALLY Prompts Fable 5.1.md` | Outcome, rationale, constraints, representative evaluation and evidence/visual verification compiled into `references/3ms-framework.md`. Secondhand provider quotations and capability assertions not promoted as verified facts. |
+| `Steal My Exact AI OS Setup (5 simple tips).md` | Failure taxonomy and backward route tracing compiled into `references/second-brain-levels.md`. Existing router/domain/authority architecture represented already; old operational claims not adopted. |

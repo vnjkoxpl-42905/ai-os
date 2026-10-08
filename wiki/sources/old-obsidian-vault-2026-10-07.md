@@ -36,3 +36,13 @@ The first recovery made the source library and diagnostic framework reachable fr
 ## Verification limits
 
 All source/archive hashes matched after preservation. Local text and configuration inspection does not recover the 22 missing local image embeds, validate external linked media, establish remote-vault completeness, or verify phone Sync. No sources were deleted or moved, no app settings were changed, and no outbound messages or publishing actions were performed.
+
+## Followup intake completed on 2026-10-08
+
+The current local old vault contains 100 files. All are now byte-preserved and hash-verified: 93 originally reviewed visible files, two newly observed empty files, and five safe configuration files archived without activation. Workspace configuration changed since the first inventory; the followup inventory records the preserved revision. See [every-file exclusions and partial omissions](../../research/obsidian-vault-comparison/2026-10-07/excluded-from-active-knowledge.md). Identity review found no additional verified missing personal fact to promote. Website-planning and agent-work methods are now compiled into their reference homes; source claims remain attributed and historical.
+
+## Retrieve original evidence from a cloud checkout
+
+The private GitHub/live Drive workspace snapshot excludes `raw/`. Compiled knowledge and comparison reports are in that snapshot; original evidence is in the separately verified [private Drive source package](https://drive.google.com/file/d/1D0MD2Uza83Zi07VIQQ4NYX5dcoKFZrpU/view). The [checksum receipt](../../research/obsidian-vault-comparison/2026-10-07/drive-source-evidence.generated.json) records the file ID, size, MD5 and SHA-256. This package has all 100 preserved source files plus provenance and the hash manifest.
+
+When an original link is absent in a cloud checkout, retrieve this package through authenticated Drive access, verify its checksum, and extract it into a fresh private staging directory. Its paths are relative to `raw/sources/old-obsidian-vault-2026-10-07/`; verify each source with `SHA256SUMS` before reading it. Do not overwrite existing evidence or apply the archived `.obsidian` settings. A cloud runtime must independently verify its Drive authentication. The separate package does not imply every other raw archive is mirrored.

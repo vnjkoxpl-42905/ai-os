@@ -11,7 +11,7 @@ Running list of what is loaded into Superwhisper on the Windows box. Source of t
 `%LOCALAPPDATA%\com.superwhisper.app\settings\settings.json`; this note mirrors it so a
 new session can see the list without opening the file. Add via Claude ("add X to my
 dictionary", "replace X with Y"); the app is restarted after each change. Full transcript
-export used for the 2026-09-11 analysis: [[SUPERWHISPER-TRANSCRIPTS-2026-09-11]].
+export used for the 2026-09-11 analysis: [SUPERWHISPER-TRANSCRIPTS-2026-09-11](../raw/sources/superwhisper/SUPERWHISPER-TRANSCRIPTS-2026-09-11.md).
 
 ## Replacements (heard → wanted)
 

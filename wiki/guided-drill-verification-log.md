@@ -24,8 +24,8 @@ Running log of guided drills that have already been verified in the live platfor
 
 | Date verified | Drill | Slug | Verification evidence | Status | Notes |
 |---|---|---|---|---|---|
-| 2026-07-03 | Necessary Assumption - First Taste | `w2-07-necessary-assumption-first-taste` | Live preview opened; runner loaded 10 real question ids and first LR question/answer choices; targeted tests passed 33/33. | verified-working | Assigned to [C. Alexander](../students/c-alexander/c-alexander.md) the same day. |
-| 2026-07-03 | Missing Links: First Taste | `w2-06-missing-links-first-taste` | Live library card matched W2.6 metadata; runner loaded 6 real question ids and first LR question/answer choices; targeted tests passed 33/33. | verified-working | Assigned to [Bella Lorenzo](../students/bella-lorenzo/bella-lorenzo.md) the same day. |
+| 2026-07-03 | Necessary Assumption - First Taste | `w2-07-necessary-assumption-first-taste` | Live preview opened; runner loaded 10 real question ids and first LR question/answer choices; targeted tests passed 33/33. | verified-working | Assigned to [C. Alexander](../students/non-students/c-alexander/c-alexander.md) the same day. |
+| 2026-07-03 | Missing Links: First Taste | `w2-06-missing-links-first-taste` | Live library card matched W2.6 metadata; runner loaded 6 real question ids and first LR question/answer choices; targeted tests passed 33/33. | verified-working | Assigned to [Bella Lorenzo](../students/non-students/bella-lorenzo/bella-lorenzo.md) the same day. |
 
 ## Needs Reverification
 
