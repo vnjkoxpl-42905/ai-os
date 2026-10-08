@@ -81,6 +81,12 @@ rendered text differs, report the mismatch and do not resend automatically.
 ## 7. Voice and Style Constraints
 
 - Zero em-dashes anywhere in text. Use standard punctuation (colons, commas, hyphens, parentheses).
+
+## 8. Shared Windows CLI Tools
+
+- Use `uv`, `yt-dlp`, `ffmpeg`, `ffprobe`, `ffplay`, and `deno` from the Windows user PATH. Their verified locations, versions, uses, and PATH refresh steps are in `references/ai-workspace/windows-cli-toolchain.md`.
+- These are shared machine installs. Check command lookup and the package path before reinstalling. If a running Antigravity terminal inherited stale PATH, refresh that shell or restart Antigravity.
+- Keep per-project Python libraries in that project's isolated environment. Do not copy tool binaries into `.gemini/` or the vault.
 - Zero AI-slop vocabulary (never "delve", "tapestry", "testament", "demystify", "boasts", "in the realm of", and their kin).
 - Lead with decisive recommendations, not open-ended menus.
 

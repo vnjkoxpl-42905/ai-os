@@ -92,3 +92,7 @@ auto-compact.
 
 *Written 2026-09-07 from observed behavior. Correct it whenever it's wrong — that is the
 point of the file.*
+
+## Shared Windows CLI tools
+
+On Joshua's Windows laptop, `uv`, `yt-dlp`, `ffmpeg`, `ffprobe`, `ffplay`, and `deno` are shared Windows user installs. Read `C:\Users\Joshu\dev\ai-os\references\ai-workspace\windows-cli-toolchain.md` for their paths, versions, usage, and PATH refresh steps. Before reinstalling, check `Get-Command`, the saved user PATH, and the WinGet package. A running IDE may have stale PATH; refresh the shell or restart that IDE. Keep Python dependencies in project environments.

@@ -35,6 +35,7 @@ Paths are relative to the repository root.
 | Automation build backlog (what to build next, ranked) | `references/automation-backlog.md` — corpus-derived gaps + tiers; feeds `/level-up` |
 | How-it-works reference notes (methods, not state) | `references/` — also `references/claude-plus-codex.md`, `references/obsidian-command-center.md`, `references/second-brain-levels.md` |
 | Web research and Firecrawl agents | `references/firecrawl.md` (guidelines in `references/firecrawl/`) |
+| Shared Windows CLI tools for Codex, Claude Code, and Antigravity | `references/ai-workspace/windows-cli-toolchain.md` — installed paths, PATH refresh, and usage for `uv`, `yt-dlp`, FFmpeg, and Deno |
 | Immutable source evidence · intake queue | `raw/sources/` · `raw/inbox/` — one inbox, one archive |
 | Archived web clips, with provenance + hashes | `raw/sources/clips/<slug>/` — clip + `PROVENANCE.md` + `SHA256SUMS` |
 | Raw personal-data exports (Google Takeout, Gemini session transcripts) | `raw/data-about-me/` — unprocessed PII, git-ignored; never read wholesale |
@@ -78,6 +79,7 @@ Application repositories and dependencies stay outside this Obsidian vault, in s
 - **Safety is the tool layer, not prompts:** allow/deny tool lists + scoped API keys. Jay 2 acts under its own credentials and never impersonates Joshua.
 - **Connected live systems:** Cal.com, Google Calendar, LSAT U Supabase, Stripe, Gmail. Full registry in `connections.md`.
 - **Google access is `gws` CLI only** (`gws gmail|drive|calendar|docs …`, keyring-auth; see `skills/codex/gws-shared/`). Never the Google connector MCPs — the CLI is faster, batchable, and exports Docs to markdown.
+- **Shared Windows command tools:** use `uv`, `yt-dlp`, `ffmpeg`, `ffprobe`, `ffplay`, and `deno` from the Windows user PATH. For versions, locations, how to invoke them, or a stale terminal environment, read `references/ai-workspace/windows-cli-toolchain.md`. Check before reinstalling; restart the affected IDE when its inherited PATH is stale.
 - **Government IDs stay outside this OS.** Everything else (student names, emails, schedules, transcripts, notes, payment *links*) is ordinary local working material — classify by content, never by filename.
 - **Git remote is enabled.** `origin` is GitHub (`vnjkoxpl-42905/ai-os`, decided 2026-09-29). The outer repo never tracks `.env`, `../ai-os-projects/lsatu/` (own repo), runtime logs, or locks. Do not create gitlinks.
 - **New laptop restore:** GitHub contains tracked ai-os files and skills. It deliberately excludes `.env`, `raw/`, app repos, credentials, and machine sessions. Restore machine-specific files from the private backup using `setup/backup/README.md` and its `README - START HERE.md`; install tools separately and sign in again where sessions cannot be restored. Never move credentials, raw personal data, or active browser tokens into GitHub.

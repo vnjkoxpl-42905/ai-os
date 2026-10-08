@@ -2479,3 +2479,14 @@ Joshua explicitly requested undoing all changes from the preceding ingestion tur
 - Saved [full automatic caption transcript](../research/karpathy-video-2026-10-08/transcript.md), 393 segments through 10:43.8, JSON timings, yt-dlp metadata and hashes. Installed yt-dlp and Deno were invoked by absolute paths; yt-dlp caption download returned HTTP 429, existing youtube-transcript-api succeeded.
 - [Prompt record](../research/karpathy-video-2026-10-08/prompts.md) preserves five numbered cards visually read from video and the actual tokenizer teaching command shown at 8:15. A separate numbered 06 card is not verified; no invented wording claimed exact.
 - [Antigravity collection brief](../research/karpathy-video-2026-10-08/antigravity-collection-prompt.md) adapts acquisition to the logged-in X browser and free tools, with physical sources, provenance, manifests, hashes and explicit coverage gaps. Antigravity has not been messaged by this chat. Source collection and stages 2 onward await its delivered files; no runtime agent, skill or hook installed.
+
+## [2026-10-08] query | Verify uv install and tool-list update
+
+- Reviewed Antigravity's pasted install report and independently checked the WinGet package, executable, version and help command. uv 0.12.23 is installed at the reported package path, and that directory is in the saved user PATH. Reloading the saved PATH makes `uv` resolve by name; this shell itself initially had stale PATH.
+- Confirmed the download queue no longer lists uv and the installed-tool catalog now records it. No further package or Python installation was performed.
+
+## [2026-10-08] system | Document shared Windows CLI access for all runtimes
+
+- Added `references/ai-workspace/windows-cli-toolchain.md` as the machine guide for installed uv, yt-dlp, FFmpeg tools, and Deno, including paths, commands, Python environment scope, and stale-PATH recovery.
+- Added routing pointers to Codex `AGENTS.md`, Claude Code `CLAUDE.md`, and Antigravity `GEMINI.md`; also added global user rules at `.codex/AGENTS.md`, `.claude/CLAUDE.md`, and `.gemini/GEMINI.md` so other workspaces can find the same guide.
+- Root cause documented: package installs and saved user PATH are present; an already-running application may retain an older environment. Restart or refresh the shell before considering reinstall.
