@@ -7,7 +7,7 @@ description: "Use whenever Joshua wants anything changed in Superwhisper, his di
 
 Joshua dictates almost everything he sends you. Superwhisper is the app that does it, and the
 `dev/ai-os/superwhisper/` folder is its source of truth. Your job is to keep that folder right
-and get it into the app without him having to touch anything. He only ever presses Ctrl+Space.
+and get it into the app without him having to touch anything. He uses Left Alt to toggle recording; preserve it and verify it after restart.
 
 Read `dev/ai-os/superwhisper/CLAUDE.md` first if this is a new session. It holds the rules
 that cost a whole session to learn (the Claude Desktop sandbox redirects writes, the app
@@ -112,7 +112,7 @@ python C:/Users/Joshu/dev/ai-os/superwhisper/sync.py --restart
    every mode file through the `\\localhost\C$` path (the sandbox bypass).
 3. Quits Superwhisper and relaunches it through Task Scheduler so it runs outside the
    sandbox, silently, in the background. Nothing appears on his screen; he keeps using
-   Ctrl+Space.
+   Left Alt.
 4. Reads `modeKeys` back. The app rewrites that list at launch and drops any mode it
    rejected, so this is the only proof that a change loaded. A write is not a load.
 

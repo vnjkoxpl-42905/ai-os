@@ -19,7 +19,7 @@ Raw evidence (docs crawl, community pages, searches) is in `raw/sources/superwhi
 
 ## How Joshua asks for changes
 
-- "add X to my dictionary" or "save the word X" → add to `vocabulary.md` only if the model actually mis-hears it; otherwise it belongs in `replacements.md` as a fix for the specific mis-hearing. Ask nothing; run `python sync.py --restart`, which relaunches the app silently in the background (Joshua only ever presses Ctrl+Space; never open Settings for him unless asked), then report the loaded counts.
+- "add X to my dictionary" or "save the word X" → add to `vocabulary.md` only if the model actually mis-hears it; otherwise it belongs in `replacements.md` as a fix for the specific mis-hearing. Ask nothing; run `python sync.py --restart` to restart silently. Joshua uses Left Alt to toggle recording. Preserve it and read it back after restart. Never open Settings unless asked. Report the loaded counts.
 - "replace X with Y" / "X should always be Y" → a row in `replacements.md`. Lowercase the heard side; matching is case-insensitive.
 - "make a mode for ..." → a new `modes/<key>.md` copied from the closest existing one. Keep the "not an assistant" block in any mode whose output goes to an AI agent.
 - Mid-session corrections arrive as one-liners ("Blinder View -> Blind review"). Apply immediately; do not batch them for later.
@@ -51,23 +51,19 @@ Raw evidence (docs crawl, community pages, searches) is in `raw/sources/superwhi
 
 Exe: `C:\Users\Joshu\AppData\Local\superwhisper\Superwhisper.exe` (reinstalled there 2026-09-11; the old copy under the Claude package folder is dead weight).
 
-## Configured mode set (verified from local mode files 2026-10-08)
+## Configured mode set (2026-10-09)
 
 This table describes the source configuration. App-loaded state still requires rule 7 verification.
 
 | Mode | Model | Use |
 |---|---|---|
-| Claude Code | Sonnet 5 | Instructions to an agent. Keeps every detail, never answers. |
-| Student Email | Sonnet 5 | Finished email in his voice, per `wiki/teaching-voice.md`. |
-| Student Message | S1-Language | Short in-platform message or drill feedback. Coaching register. |
-| Lesson Notes | S1-Language | Spoken teaching → notes with the reasoning intact. |
-| Vault Note | S1-Language | Thinking out loud → Obsidian note, wiki-links, absolute dates. |
-| Consult Notes | S1-Language | Post-consultation debrief → structured record + follow-ups. |
+| Dictation | Sonnet 5 | General speech cleanup; preserves meaning, questions, details, and uncertainty. |
+| AI Instructions | Sonnet 5 | Requests to an agent; preserves every constraint and never answers or acts. |
+| Student Writing | Sonnet 5 | Dictated emails and messages in Joshua's voice, without invented content. |
 | Rewrite | Sonnet 5 | Select text, say what to do to it. |
-| Message | S1-Language | Texts and DMs, light cleanup. |
-| Verbatim | none | Raw transcript. |
-| Session | none | Record a live session, nothing pasted. |
-| Super | Sonnet 5 | His original generic mode, kept as fallback. |
+| Session Recording | none | Record a live session, nothing pasted. |
+
+Previous specialist modes and Verbatim are preserved in `modes/archived/`, outside the sync's active file glob. Restore a file to `modes/` and sync to re-enable it. Existing app JSON is preserved. Recording uses Left Alt in toggle mode; the disabled push-to-talk shortcut is not the active recording control.
 
 Switch with Ctrl+Shift+M, or `superwhisper://mode?key=<key>`. Per-mode hotkeys are set in the app (Modes → mode → Keyboard shortcut) and are not managed here yet.
 

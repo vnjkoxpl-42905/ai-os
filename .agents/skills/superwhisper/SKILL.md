@@ -9,7 +9,7 @@ The source of truth is `C:/Users/Joshu/dev/ai-os/superwhisper/`. Read
 `superwhisper/CLAUDE.md` before changing anything; despite its name, it contains the
 app-specific operating rules for both runtimes.
 
-Joshua normally uses only Ctrl+Space. Complete configuration changes, sync them, restart
+Joshua uses Left Alt to toggle recording. Preserve it and verify it after restart. Complete configuration changes, sync them, restart
 the app silently, and verify what loaded without opening Superwhisper or Settings.
 
 ## Correction or vocabulary request

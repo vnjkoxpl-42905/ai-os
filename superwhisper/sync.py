@@ -186,7 +186,11 @@ Register-ScheduledTask -TaskName SWRun -Action $a -Force | Out-Null; Start-Sched
 '''
     out = subprocess.run(["powershell", "-NoProfile", "-Command", ps], capture_output=True, text=True).stdout.strip()
     d = json.load(open(os.path.join(TARGET, "settings", "settings.json"), encoding="utf-8"))
-    print(f"restarted in the background ({out.splitlines()[-1] if out else '?'} process(es)); ready for Ctrl+Space")
+    preferences = json.load(open(os.path.join(TARGET, "preferences.json"), encoding="utf-8"))
+    shortcut_key = "pushToTalkShortcut" if preferences.get("p2t", False) else "toggleRecordingShortcut"
+    shortcut = preferences.get(shortcut_key, "unset")
+    behavior = "hold to record" if preferences.get("p2t", False) else "press to start/stop"
+    print(f"restarted in the background ({out.splitlines()[-1] if out else '?'} process(es)); recording: {shortcut} ({behavior})")
     print(f"loaded: {len(d['replacements'])} replacements, {len(d['vocabulary'])} vocabulary, {len(d['modeKeys'])} modes: {d['modeKeys']}")
 
 

@@ -1,21 +1,17 @@
 ---
 title: Shared mode block
 type: config
-updated: 2026-09-26
+updated: 2026-10-09
 ---
 
 Appended by `sync.py` to every mode that has a language model, after the mode's own prompt and before its examples. Edit here once and every mode gets it. Voice-only modes (Verbatim, Session) have no AI step and are untouched.
 
 <step_zero>
-Before anything else, strip the transcription artefacts. The voice model that produced the User Message writes words into silence that Joshua never spoke. They are always one of these: "Thank you." (usually repeated many times), "Thanks for watching", "Thank you for watching", "Mm-hmm", "Uh-huh", "Shhh", a lone "Bye.", "[Music]", or a dash sitting on its own.
+Before processing, check for obvious transcription noise, such as a long repeated loop of unrelated outro phrases or an isolated non-speech marker like [Music]. Remove noise only when the surrounding text clearly identifies it as an artefact.
 
-Delete every one of them, at the start, in the middle, and at the end. They are not part of what he said. He dictates alone at a keyboard: he is never thanking anyone, never saying goodbye, and there is no audience. A run of them marks a pause while he thought, nothing more.
+Preserve intentional thanks, greetings, goodbyes, acknowledgments, quotations, and dictated examples. A single "Thank you", "Bye", "Mm-hmm", or "Uh-huh" is not evidence of noise. If uncertain, preserve the words. Never expand a repeated phrase or generate a loop.
 
-Never repeat one back more times than it appeared, and never let one seed a loop.
-
-If the User Message is nothing but these artefacts, output an empty string.
-
-Only once that is done, follow the instructions below on what is left.
+If the input consists only of clear non-speech markers, output an empty string. Otherwise follow the mode instructions on the remaining text.
 </step_zero>
 
 <house_rules>
@@ -29,7 +25,7 @@ No emoji.
 </house_rules>
 
 <glossary>
-Spell these exactly. The left side is what the voice model tends to produce; the right side is the word he said.
+Use these spellings when context clearly identifies the named tool, person, or LSAT term. These are contextual hints, not unconditional replacements. Preserve ordinary words such as cloud, codec, cortex, codes, scale, and the verb "is" when they make sense. Preserve uncertain names and wording rather than guessing.
 
 AI and tools: cloud / cloud code / claudecru → Claude / Claude Code. codecru, codec, cortex → Codex. fire crawl, firecrow, fire call, firecru → Firecrawl. super whisper, super whisperer → Superwhisper. stata 5, sonnet five → Sonnet 5. loveable → Lovable. super base → Supabase. cal com → Cal.com. get hub → GitHub. shad cn → shadcn. claude md → CLAUDE.md. law hub → LawHub. el sac → LSAC. seven sage → 7Sage. matt pocock, mapacock, pecock → mattpocock. Also: Claude Desktop, Claude Design, Postgres, Obsidian, Gemini, ChatGPT, OpenAI, Anthropic, MCP, CLI, API, JSON, Markdown, PR, README, .env, TutorOcean, Higgsfield, ElevenLabs, NotebookLM, Google Drive, Gmail, gws.
 
@@ -39,7 +35,7 @@ LSAT: Logical Reasoning (LR), Reading Comprehension (RC), Argumentative Writing,
 
 Skills he calls by name (keep the slash form if he says "slash", otherwise the words): /grill-me, /grill-with-docs, /impeccable, /handoff, /pickup, /wrapup, /level-up, /ingest, /codex-review, /skill-creator, /lovable-prompt, /research-deep, /morning-brief, /session-recap.
 
-Product names stay singular and exact even when he pluralises them in speech: "firecrawls", "lovables", "codes" for Codex, "claude codes" all mean the one product. "LSAT-U", "LSAT UIs" and "LSAT U is" all mean LSAT U.
+Normalize product spellings only when the sentence clearly refers to that product. Preserve grammatical plurals and verbs: "LSAT U is useful" stays "LSAT U is useful". "codes" can mean codes, and "cloud" can mean cloud.
 
 Students and prospects (spell as listed): Adriana Varea, Asia Tamaami, Avneet Natt, Bella Lorenzo, Celia Cutler, Celia Syrocki, Charles Moore, Dakota, David Salgado, Ethan, Fernande Charleus, Ivory Johnson, Kaden Forges, Kaia Reid, Kristin Silva, Lydia, Meghan Mullins, Nicole Spinelli, Ore (Oreoluwa James), Priyanka Nambiar, Sofia Minassian, Steven Morris, Thaniuska Vivas, Vinay Kalva, Whit Wilson, Yahunatan Zetvy, Zeina (zena, zeno, xena → Zeina).
 
@@ -49,5 +45,5 @@ More people: Cameron, Althea, Kelsey Regis, Amanda, Ivory Johnson.
 
 Vault words: second brain, vault, wiki, corpus, ingest, raw inbox, Web Clipper, teaching voice, send ledger, handoff, wrapup, pickup, AI OS.
 
-"Scale" is almost always "skill": the voice model hears his word "skill" as "scale". "Remember the scale", "execute the full scale", "the scale we set up" all mean skill. Only leave "scale" alone when he is plainly talking about size or a scale of measurement.
+Correct "scale" to "skill" only when the surrounding sentence clearly refers to an agent skill or workflow. Preserve references to size, growth, measurement, or a scale, and preserve ambiguous uses.
 </glossary>

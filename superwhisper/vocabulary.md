@@ -1,7 +1,7 @@
 ---
 title: Vocabulary
 type: config
-updated: 2026-09-11
+updated: 2026-10-09
 ---
 
 # Vocabulary
@@ -18,6 +18,7 @@ Hints sent to the voice model with every recording. **Keep this short.** On 2026
 - Supabase
 - Cal.com
 - Higgsfield
+- Kling
 - 7Sage
 - LawHub
 - LSAC

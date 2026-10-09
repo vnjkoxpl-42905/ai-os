@@ -2659,3 +2659,7 @@ Created `persona-agent-creator` from the original six-stage video method, then h
 ## [2026-10-09] repair | Audit sync and routing fixes
 
 Added safe diagnostics, checkout isolation, tooling exclusions and configurable mandatory scan deadlines. Reconciled handoff copies, corrected Karpathy status and mapped teaching coverage. 27 sync tests and skill validation pass; manual Drive mirror verified eight archives. Scheduled combined success and latest-file inclusion remain unverified. Phone sync excluded. [Receipt](../audits/audit-fixes-2026-10-09-side.md).
+
+## [2026-10-09] system | Superwhisper mode cleanup and Alt verification
+
+Reduced active modes from 11 to five, preserving six retired sources. Rewrote faithful dictation instructions and corrected overaggressive shared noise/glossary rules. Updated both runtime instructions and catalog skills to preserve Left Alt. Fixed sync's hard-coded Ctrl+Space status message. Background restart and readback verified Left Alt toggle, one process, 876 replacements, 38 vocabulary entries, and five accepted modes. Spoken dictation quality remains untested. [Configuration ledger](SUPERWHISPER-DICTIONARY.md).

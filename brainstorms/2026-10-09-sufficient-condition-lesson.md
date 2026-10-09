@@ -161,3 +161,36 @@ Status: in progress again, 2026-10-09.
 - Reference issue observed: anatomy page table of contents retained sections from the previous argument page after navigation. Recorded only; no unrelated fix made.
 - This is authenticated browser evidence for the locally running app, not production deployment evidence. No explicit lesson completion button clicked.
 - Q1 and Q2 from the prior interview remain pending. Current request authorizes sign-in and live review, not an answer to those design choices. No new application edits.
+
+## Visual quality and Kling video direction, 2026-10-09
+
+### User steering
+- Joshua dislikes the current pale green, flat surfaces and lackluster boxes. He wants an engaging experience beyond Intro to LR, with distinctive visuals, movement and short teacher-style videos made through Kling CLI.
+- This establishes desired quality and interest in video generation. Presenter identity, final palette and first pilot format are still unsettled. No video submitted and no generation credits spent in this round.
+
+### Verified observations
+- Fresh Codex IAB screenshot of the sufficient page shows a pale yellow-green rule panel on a similarly light cream surface, a broad uniform reading card, thin borders and little surface depth.
+- DOM computed rule-panel background: oklch(0.945 0.022 130); shadow: none. The judgment that this looks washed out is a design assessment, not an objective color defect.
+- Kling who_am_i authenticated successfully. Current text_to_video v3_0 and v3_0_omni advertise 3 to 15 second durations, 16:9, 1080p and generated audio. A longer explanation requires multiple clips and editing. Exact output quality, spoken script fidelity and presenter consistency require pilot verification.
+
+### Assistant recommendation, pending user confirmation
+- Warm ivory #F7F5EF for the reading canvas, ink navy #172B36 for focal teaching scenes, clean white #FFFFFF for raised reading surfaces and restrained brass #B58A49 for attention. Keep green principally for correct-answer feedback, with text/icons so color does not carry meaning alone. Verify contrast in implementation; proposed hex values are not acceptance results.
+- Use depth where it establishes hierarchy: one focal demonstration, discreet layered shadows, distinct example/teaching/practice surfaces. Avoid giving every paragraph its own card or adding constant decorative movement.
+- Interactive group diagram responds to known enrollment, known student status and absent enrollment. Highlights certainty and open possibilities without implying a causal event. Continue/Replay for the worked reasoning remains recommended.
+- Kling creates short visual scenes and optional narration; application-controlled SVG/DOM graphics supply exact labels, logical relationships and learner interaction. Add editable captions/transcript and user-controlled playback. A rendered video alone cannot respond to learner input.
+- First pilot recommendation: narrated example with a law student, then an interactive group diagram. Offscreen teacher narration rather than a fabricated on-camera Joshua likeness. No claim of cloning Joshua's voice or face.
+
+### Original lecture draft for storyboard review
+A sufficient condition gives you enough information to know that something else is true. Let's use this rule: if you're enrolled in law school, you're a student. Now I tell you Maya is enrolled in law school. What do you know? She's a student. You don't need another fact. The rule already guarantees it. But suppose all I tell you is that Maya is a student. Is she in law school? We don't know. She could be studying history. Law-school enrollment is enough to establish that she's a student. Being a student doesn't tell us she's enrolled in law school.
+
+### Proposed visual beats
+1. State the definition before showing the example.
+2. Introduce Maya in a law-school setting; retain the written conditional on the page.
+3. Highlight Maya inside the law-school group, already contained in Students. Reveal what follows from the given fact.
+4. Change the given information to student status; show several possible student groups rather than selecting law school.
+5. Pause for the learner to try a fresh case, with explanation after their choice.
+
+### Pending interview frontier
+- Q1: adopt ivory, ink navy and restrained brass, with green reserved mainly for correct-answer feedback? Recommend yes.
+- Q2: make the first video a narrated visual explanation without an on-camera AI teacher, then use the interactive diagram for learner participation? Recommend yes. If Joshua wants an on-camera teacher, clarify whether a fictional presenter or a separately authorized representation of Joshua before generating.
+- After these decisions, settle the pilot shot/script and generation scope, then generate and inspect the first clip before scaling. No implementation or paid submission during this unsettled interview round.
