@@ -294,7 +294,7 @@ Native UI archive does not delete a conversation. Source-file deletion removes i
 | claude | [tell me what you think of new clipping ihad second brain stuff](claude/c7b685d1-0275-4710-b79b-a0d3c854928a.md) | C:\Users\Joshu\dev\ai-os | 2026-09-25T23:47:10+00:00 |
 | claude | [assing intro to lr conclusion bootcampt to ore on lsatprep.study](claude/c8c7f6ba-6eea-462d-968d-e5b96d9a99e9.md) | C:\Users\Joshu\dev\ai-os | 2026-09-25T23:47:10+00:00 |
 | claude | [It's done. lsatprep.study is serving the Round 8 films: all three mp4s on the live domain match the ](claude/ca06a437-15dc-4384-a774-92ebbe81419f.md) | C:\Users\Joshu\dev\ai-os | 2026-09-12T10:40:31+00:00 |
-| claude | [@"C:\Users\Joshu\Desktop\matt-pocock-skills-workflows-v2.html"](claude/cd8c3039-c93b-47b4-be4e-b4d980fc06e2.md) | C:\Users\Joshu\dev\ai-os | 2026-10-09T04:22:42+00:00 |
+| claude | [@"C:\Users\Joshu\Desktop\matt-pocock-skills-workflows-v2.html"](claude/cd8c3039-c93b-47b4-be4e-b4d980fc06e2.md) | C:\Users\Joshu\dev\ai-os | 2026-10-09T04:32:27+00:00 |
 | claude | [You are Assessment A of an `$impeccable critique`: an independent LLM design review of the Read, Rec](claude/ce0e036c-f325-4188-8abd-a3dd71548c7b-agent-a38ac1f14dc9162c7.md) | C:\Users\Joshu\dev\ai-os\projects\lsatu | 2026-09-09T21:59:14+00:00 |
 | claude | [You are Assessment B of an `$impeccable critique`: the automated detector run over the Read, Recall,](claude/ce0e036c-f325-4188-8abd-a3dd71548c7b-agent-ae44871532ba44efe.md) | C:\Users\Joshu\dev\ai-os\projects\lsatu | 2026-09-09T22:06:06+00:00 |
 | claude | [Session Handoff — RRC drill fix plan, Steps 6 and 7 built, merged to main](claude/ce0e036c-f325-4188-8abd-a3dd71548c7b.md) | C:\Users\Joshu\dev\ai-os | 2026-09-11T04:49:15+00:00 |
