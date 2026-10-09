@@ -9,14 +9,19 @@ aliases: []
 
 Freshest working state; the first page `/pickup` reads. Rebuilt fresh in the 2026-07-16 vault rebuild (the old cache is archived).
 
-## Most recent (2026-10-08): Codex Karpathy hooks enabled and verified
+## Most recent (2026-10-08): Matt Pocock skills field guide
 
-- Joshua explicitly selected Codex in place of Claude. [Authorized prompt variant](../research/karpathy-video-2026-10-08/CODEX-PROMPTS.md) preserves original prompt files; existing X capture remains the acquisition exception. The historical Claude quota no longer blocks this workflow.
-- Saved-source compilation and the [seven final rules](karpathy/rules.md) remain complete with explicit attribution, payload and acquisition limits. All 1,560 source files remain unchanged.
-- Codex agent/skill catalog and activation copies match. Hot-first, five-page cap, citations, grading and required ending remain configured. This chat used the documented generic-worker fallback; native custom-role discovery was not exercised.
-- [Fresh tokenizer acceptance](../research/karpathy-brain-2026-10-08/CODEX-TOKENIZER-ACCEPTANCE.md): expected broken Unicode decoding and a real wrong tie prediction were recorded, fixed and rerun. Seven tests pass; traced current-file receipts match. Demo: eleven bytes become five tokens with exact ASCII/Unicode round trips. All seven rules graded.
-- [Codex Stop adapter](../research/karpathy-brain-2026-10-08/CODEX-STOP-ACCEPTANCE.md) and six project hook events are enabled and Trusted through native `/hooks`. Fixed project discovery and Windows PowerShell invocation, plus compound execution ordering. 36 adapter tests and 82 combined tests pass. Native main Stop directly blocked with the exact source message, then accepted the real run; a new unrelated edit was left alone. Child SubagentStop remains unit-tested, not separately live-tested. No trust bypass.
-- [Current execution record](../research/karpathy-brain-2026-10-08/VIDEO-PROMPT-EXECUTION.md) and [operating reference](../references/ai-workspace/karpathy-method.md) supersede the historical Claude continuation. No task status, secret, raw source, global hook or account permission changed.
+- Created the interactive [Matt Pocock skills field guide](../references/matt-pocock-skills-field-guide.html) and linked it from [[index]]. It covers all 39 tracked skill folders, including four retained locally after upstream removal and Joshua's customized `grill-me`.
+- Every entry explains when to use it, its actual workflow, a sample request, dependencies or limits, and useful companion skills. Common work routes connect the individual entries into sequences.
+- The current upstream snapshot was `mattpocock/skills@b0618bc`. The updater installed `chief-of-staff`, protects custom copies, and is scheduled daily at 06:30 and at user logon.
+- Static inventory confirmed 39 unique entries and a matching local `SKILL.md` path for each. The catalog is self-contained and its source links point to local skill files or the pinned upstream tree.
+- In-app browser refused the local `file:` URL, so rendered interaction was not visually inspected here. The HTML remains available from the reference link above.
+- No task statuses, skill customizations, or upstream-removed folders were changed by this guide work.
+
+## Active priorities
+
+- The authoritative Now/Next list remains [[tasks]]. This session did not change task status.
+- The Matt Pocock updater now runs automatically; customized skill copies remain protected until Joshua names one for an update.
 
 ## Previous (2026-10-08): Karpathy collector reliability rerun
 
@@ -367,6 +372,7 @@ The sections below preserve earlier session snapshots. They are historical conte
 
 ## Open threads
 
+- Matt Pocock guide: if a rendered browser preview is needed, open `references/matt-pocock-skills-field-guide.html` locally; the Codex browser denied its `file:` URL, so its live interactions were not checked in-browser.
 - Conditional opening: preserve the recovered checkout and preview on 8097; final local tests and Codex browser evidence are linked above. Production integration remains separate and unstarted. Older Claude approval and viewport reports stay historical; no current independent Claude certification, publication or live student-persistence claim.
 
 - Yahunatan: await approval of the V7 recap before posting the exact reviewed package. Current preview and primary record are linked above.

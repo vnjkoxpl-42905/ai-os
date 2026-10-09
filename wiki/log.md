@@ -2606,3 +2606,9 @@ Final classifier follow-up, 2026-10-08: Bash/sh attached code-output redirection
 ## [2026-10-08] system | Automate safe Matt Pocock skill updates
 
 Extended `system/scripts/sync-mattpocock-skills.py` to install new upstream skills across global activation roots and all three catalog runtimes only when no destination contains different local content. Existing copies remain compare-and-swap protected; deliberate `grill-me` rewrites are still preserved. Added index regeneration when a new skill is installed. Installed `chief-of-staff` from upstream `b0618bc` into all seven configured destinations and recorded it in the skill lock. Restored the missing Task Scheduler job `AI OS - Matt Pocock Skills Sync`, daily at 06:30 and at user logon. Its installer is `system/scripts/install-mattpocock-skills-sync-task.ps1`. The previous dry-run confirmed no other catalog updates were pending; four removed upstream skills remain untouched.
+
+## [2026-10-08] system | Matt Pocock skills field guide
+
+- Created the [interactive field guide](../references/matt-pocock-skills-field-guide.html) for all 39 tracked skill folders and linked it from [[index]]. The pinned source snapshot is `mattpocock/skills@b0618bc`.
+- Each entry explains purpose, use, workflow, example request, dependencies or limits, and companion skills; common routes show how to combine them. The local `grill-me` customization and four locally retained skills missing upstream are labelled.
+- Static checks found 39 unique entries, no missing local skill files, no unresolved companion/route IDs, and a valid index target. Browser rendering was not inspected because the in-app browser rejected the local file URL. No task status or skill contents changed during catalog creation.

@@ -1,7 +1,7 @@
 ---
 type: operating-layer
 subject: Index
-updated: 2026-09-30
+updated: 2026-10-08
 aliases: []
 ---
 
@@ -49,6 +49,7 @@ The brain runs three knowledge systems: **this wiki** (Joshua, the business, dec
 
 ## References (OS method / meta)
 
+- [Matt Pocock skills field guide](../references/matt-pocock-skills-field-guide.html): interactive catalog of all 39 tracked skills, with workflows, sample requests, source status, and skill combinations.
 - [Stripe API access](../references/stripe-api.md): verified account-read route while the connected app requires reauthentication.
 - [Audit repair outcome](../research/audit-repairs-2026-10-08/outcome.md): corrected rules, routes, skills, diagnostics and remaining decisions.
 - [Recovered historical evidence](../research/audit-repairs-2026-10-08/lint-cal-repair.md): surviving dated app documents for retired worktree citations; old wiki history remains unchanged.
