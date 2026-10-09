@@ -73,3 +73,29 @@ Precision: do not say the rule disappears when its sufficient condition is absen
 Review limits: local evidence only; no new live Drive recovery, videos watched, or screenshot-pixel review. Saved transcripts can contain transcription errors; generated drafts and duplicate captures are not independent sources. Sufficient-assumption question material is a related application, not a replacement definition. Do not reuse unqualified hard-work/score or rain/wet-ground guarantees.
 
 Next frontier question: keep raffle/bicycle as the recurring anchor and build the worked explanation around winning, not winning, and getting a bicycle another way? Recommendation: yes. Explanation should be developed before the first scored check.
+
+## Interview round: source roles confirmed
+
+- Asked previously: use a worked contrast before the first quiz?
+- Captured answer: Joshua confirmed the source direction, especially the three LSAT Demon sources for explaining sufficient conditions, supported by Loophole methods, saved 7Sage research and the selected voice standard for depth and breakdown. He did not explicitly answer the proposed two-person presentation.
+- Source priority confirmed: Demon for the conceptual explanation; Loophole and 7Sage for reasoning checks and breakdown; Joshua-selected standard for voice and depth. No direct copying or rejected examples implied.
+- Recommendation: preserve the approved raffle/bicycle anchor; make the worked explanation self-contained before quizzes; use a fresh scenario to check transfer after the familiar explanation.
+- Pending Q1: Should the full worked explanation appear before the first quiz, with three clearly separated cases: winning, not winning, and receiving a bicycle without knowing whether the person won? Recommended yes; each case explains what we know and why.
+- Pending Q2: Should the final check use a fresh everyday rule instead of another raffle question? Recommended yes; require reasoning that transfers beyond the familiar example.
+- No app edits during this interview round.
+
+## Correction: replace the raffle example and teach the concept explicitly
+
+- Joshua now rejects raffle/bicycle as the anchor and requests a more intuitive example. This supersedes the earlier approval recorded in the 2026-10-03 example interview for this lesson redesign.
+- He wants explicit breakdowns of what a sufficient condition is and how it relates to conditionals, not only a series of examples.
+- He requests all useful information from the reviewed sources and a recommendation for what should be included, using grill-me to settle inclusion and example choices.
+- Previous round Q1/Q2 were not explicitly accepted. Their proposed raffle presentation is superseded. Fresh transfer assessment remains proposed, not approved.
+- Candidate recommendation pending: square/four sides, a familiar noncausal relationship whose reverse visibly fails for a nonsquare rectangle. Earlier interview did not approve or reject this candidate; do not claim it was already selected.
+
+## Next frontier: intuitive anchor and concept coverage
+
+- Q1 pending: use square/four sides as the main worked example? Recommended yes: familiar, visually demonstrable, noncausal, with a nonsquare rectangle showing the reverse fails. Still a proposal.
+- Q2 pending: include a brief sufficient-versus-necessary comparison on this page, explaining that enough for and required for name the two sides of the same relationship? Recommended yes, as a bridge to the next necessary-condition lesson rather than a duplicate full lesson.
+- Proposed essential content: explicit definition; conditional as a relationship; enough for what; rule versus case fact; no exception when sufficient holds; absence leaves result open; result alone does not establish sufficient; sufficient need not cause the other condition; roles are relative rather than permanent labels.
+- Proposed later placement: indicator families and variable clause order in language lessons; full contraposition and four-case chart in subsequent lessons; compound conditions and chains in advanced units; sufficient assumption as later LR application.
+- Source source-specific shortcuts remain qualified rather than copied. No app edits.
