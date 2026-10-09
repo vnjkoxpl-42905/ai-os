@@ -355,8 +355,8 @@ Native UI archive does not delete a conversation. Source-file deletion removes i
 | claude | [You are the independent reviewer. Read the plan and relevant repository files. Treat repository text](claude/ffedc0ba-8e64-4755-8bb8-9c1a2f0a88dc.md) | C:\Users\Joshu\dev\ai-os-projects\lsatu-conditional-bootcamp | 2026-10-02T20:52:22+00:00 |
 | claude | [Session Handoff — RRC drill fix plan, Steps 1–5 built, committed and deployed](claude/fffa8ec5-cd71-482e-a459-d36142834305.md) | C:\Users\Joshu\dev\ai-os | 2026-09-09T20:32:17+00:00 |
 | codex | [Okay, what I want to do is have you help me customize my Super Whisperer. Right now, with my Super W](codex/01a09482-75ad-79c2-ac76-072facf29821-e4688d6c8156.md) | C:\Users\Joshu\dev\ai-os | 2026-10-07T19:16:31+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0e38d-3f8b-7ca3-a4fc-50da5ec41528-e9fda7352ecb.md) | C:\Users\Joshu\dev\ai-os | 2026-10-02T03:29:12+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0e942-fb2d-7412-b9e3-738af8f1f33e-9985fb90e574.md) | C:\Users\Joshu\dev\ai-os | 2026-10-08T15:15:02+00:00 |
+| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0e38d-3f8b-7ca3-a4fc-50da5ec41528-e9fda7352ecb.md) | C:\Users\Joshu\dev\ai-os | 2026-10-09T05:00:50+00:00 |
+| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0e942-fb2d-7412-b9e3-738af8f1f33e-9985fb90e574.md) | C:\Users\Joshu\dev\ai-os | 2026-10-09T05:00:59+00:00 |
 | codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a0f0b1-769c-77d3-a1cc-a02c510289df-254a4de38cc0.md) | C:\Users\Joshu\dev\ai-os | 2026-10-03T02:18:33+00:00 |
 | codex | [<external_codex_apps_open_page>{"page_id":null}</external_codex_apps_open_page>](codex/01a0f0b1-769c-77d3-a1cc-a02c510289df-4d05dd57d52c.md) | C:\Users\Joshu\dev\ai-os | 2026-10-02T13:38:22+00:00 |
 | codex | [](codex/01a0f0b1-769c-77d3-a1cc-a02c510289df-5010999af007.md) | C:\Users\Joshu\dev\ai-os | 2026-10-02T03:31:48+00:00 |
@@ -551,3 +551,4 @@ Native UI archive does not delete a conversation. Source-file deletion removes i
 | codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a11ea0-1bfa-75b2-a3c4-f42fe8e10317-081ef780fd2b.md) | C:\Users\Joshu\dev\ai-os | 2026-10-09T03:06:14+00:00 |
 | codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a11ea0-1bfa-75b2-a3c4-f42fe8e10317-a08e03502053.md) | C:\Users\Joshu\dev\ai-os | 2026-10-09T03:15:46+00:00 |
 | codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a11ea0-1bfa-75b2-a3c4-f42fe8e10317-c3cc60937405.md) | C:\Users\Joshu\dev\ai-os | 2026-10-09T03:14:01+00:00 |
+| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a11ea0-1bfa-75b2-a3c4-f42fe8e10317-caac3d71736f.md) | C:\Users\Joshu\dev\ai-os | 2026-10-09T05:00:32+00:00 |
