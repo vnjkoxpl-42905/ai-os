@@ -294,7 +294,7 @@ Native UI archive does not delete a conversation. Source-file deletion removes i
 | claude | [tell me what you think of new clipping ihad second brain stuff](claude/c7b685d1-0275-4710-b79b-a0d3c854928a.md) | C:\Users\Joshu\dev\ai-os | 2026-09-25T23:47:10+00:00 |
 | claude | [assing intro to lr conclusion bootcampt to ore on lsatprep.study](claude/c8c7f6ba-6eea-462d-968d-e5b96d9a99e9.md) | C:\Users\Joshu\dev\ai-os | 2026-09-25T23:47:10+00:00 |
 | claude | [It's done. lsatprep.study is serving the Round 8 films: all three mp4s on the live domain match the ](claude/ca06a437-15dc-4384-a774-92ebbe81419f.md) | C:\Users\Joshu\dev\ai-os | 2026-09-12T10:40:31+00:00 |
-| claude | [@"C:\Users\Joshu\Desktop\matt-pocock-skills-workflows-v2.html"](claude/cd8c3039-c93b-47b4-be4e-b4d980fc06e2.md) | C:\Users\Joshu\dev\ai-os | 2026-10-09T04:43:41+00:00 |
+| claude | [@"C:\Users\Joshu\Desktop\matt-pocock-skills-workflows-v2.html"](claude/cd8c3039-c93b-47b4-be4e-b4d980fc06e2.md) | C:\Users\Joshu\dev\ai-os | 2026-10-09T05:55:12+00:00 |
 | claude | [You are Assessment A of an `$impeccable critique`: an independent LLM design review of the Read, Rec](claude/ce0e036c-f325-4188-8abd-a3dd71548c7b-agent-a38ac1f14dc9162c7.md) | C:\Users\Joshu\dev\ai-os\projects\lsatu | 2026-09-09T21:59:14+00:00 |
 | claude | [You are Assessment B of an `$impeccable critique`: the automated detector run over the Read, Recall,](claude/ce0e036c-f325-4188-8abd-a3dd71548c7b-agent-ae44871532ba44efe.md) | C:\Users\Joshu\dev\ai-os\projects\lsatu | 2026-09-09T22:06:06+00:00 |
 | claude | [Session Handoff — RRC drill fix plan, Steps 6 and 7 built, merged to main](claude/ce0e036c-f325-4188-8abd-a3dd71548c7b.md) | C:\Users\Joshu\dev\ai-os | 2026-09-11T04:49:15+00:00 |
@@ -324,7 +324,7 @@ Native UI archive does not delete a conversation. Source-file deletion removes i
 | claude | [Session Handoff — Removed the "Open the list" trigger from the classroom reading column and swept th](claude/deb1f53d-95a6-4aa9-bf70-0c6e350be407.md) | C:\Users\Joshu\dev\ai-os | 2026-09-09T20:54:07+00:00 |
 | claude | [Joshua (an LSAT teacher, comfortable with Python basics, new to tokenizers) wants a tiny byte-pair t](claude/df753d22-a2eb-4d12-afaf-fa1dac84e9dd-agent-ad1f8f0ec1ec1ec57.md) | C:\Users\Joshu\dev\ai-os | 2026-10-08T13:15:12+00:00 |
 | claude | [Use the project karpathy-teach skill to build me a tiny byte-pair tokenizer from scratch and teach m](claude/df753d22-a2eb-4d12-afaf-fa1dac84e9dd.md) | C:\Users\Joshu\dev\ai-os | 2026-10-08T13:16:14+00:00 |
-| claude | [](claude/df864362-ce26-4a6a-9df8-4fe0074d1f2d.md) | C:\Users\Joshu\dev\ai-os | 2026-10-09T05:43:57+00:00 |
+| claude | [](claude/df864362-ce26-4a6a-9df8-4fe0074d1f2d.md) | C:\Users\Joshu\dev\ai-os | 2026-10-09T05:56:34+00:00 |
 | claude | [i want you to haveaccest o firecrawl](claude/df988054-f0a6-423b-a20e-11dfbed8956f.md) | C:\Users\Joshu\AppData\Roaming\Claude\scratch-workspaces\3264ecb8-7644-4b8c-9aed-94ea1fae19cc\66ab068d-6d11-4b9b-bace-f3622629a61f\scratch-2026-09-07-85526f | 2026-09-25T23:47:10+00:00 |
 | claude | [i need to keeo a runnign taks list of tigns t odo i ll send u au will help me workthorrughthese thin](claude/e0868fcc-41f3-4ced-ad25-c16bbf9b390d.md) | C:\Users\Joshu\dev\ai-os | 2026-09-25T23:12:09+00:00 |
 | claude | [Session Handoff — impeccable audit, critique and full 9-phase remediation of LSAT U "Notes and recap](claude/e582e2d1-1471-4789-a38c-fd697aa8fe17.md) | C:\Users\Joshu\dev\ai-os | 2026-09-09T08:30:31+00:00 |
