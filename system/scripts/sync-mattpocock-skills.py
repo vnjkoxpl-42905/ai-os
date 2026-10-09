@@ -1,16 +1,19 @@
 """Keep every installed mattpocock/skills copy in step with GitHub.
 
 Which skills: every entry in ~/.agents/.skill-lock.json whose source is
-mattpocock/skills (installed by the `skills` CLI).
+mattpocock/skills (installed by the `skills` CLI), plus new upstream skills
+that can be installed without colliding with local work.
 
 Where copies live on this machine (plain copies, not links):
   ~/.agents/skills/<name>, ~/.claude/skills/<name>, and in the vault
   .claude/skills, .agents/skills, skills/{claude,codex,gemini}/<name>.
 
-Compare-and-swap: a copy is replaced only when it still matches the upstream
-version we last installed (recorded in the state file) or already matches the
-new one. A copy that was edited locally is left alone and reported, so a
-deliberate adaptation (e.g. the vault's grill-with-docs) is never overwritten.
+Compare-and-swap: an existing copy is replaced only when it still matches the
+upstream version we last installed (recorded in the state file) or already
+matches the new one. A copy that was edited locally is left alone and reported,
+so a deliberate adaptation (e.g. the vault's grill-me) is never overwritten.
+New skills are installed only when every destination is absent or already
+matches upstream; any name collision is left untouched for Joshua to review.
 
 Usage: python sync-mattpocock-skills.py [--dry-run] [--adopt]
   --adopt  first run only: treat copies whose SKILL.md matches upstream except
@@ -122,10 +125,50 @@ def main():
         state["skills"][name] = new_h
         if not DRY:
             entry["updatedAt"] = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%S.%f")[:-3] + "Z"
-    new_upstream = sorted(n.split("/")[-1] for n in upstream
-                          if n.split("/")[1] != "deprecated" and n.split("/")[-1] not in mine)
-    if new_upstream:
-        lines.append("NOT INSTALLED (new upstream, not auto-added): " + ", ".join(new_upstream))
+    new_upstream = sorted((path, files) for path, files in upstream.items()
+                          if path.split("/")[1] != "deprecated"
+                          and path.split("/")[-1] not in mine
+                          and "SKILL.md" in files)
+    new_skill_added = False
+    for skill_dir, files in new_upstream:
+        name = skill_dir.split("/")[-1]
+        new_h = tree_hash(files)
+        destinations = [root / name for root in ROOTS]
+        conflicts = []
+        for d in destinations:
+            if d.is_symlink():
+                conflicts.append(f"symlink: {d}")
+            elif d.exists() and (not d.is_dir() or tree_hash(read_dir(d)) != new_h):
+                conflicts.append(f"locally occupied: {d}")
+        if conflicts:
+            lines.append(f"SKIP new skill {name} (review collision): " + "; ".join(conflicts))
+            continue
+        for d in destinations:
+            if d.is_dir():
+                continue
+            lines.append(f"INSTALL {d}")
+            if not DRY:
+                for rel, data in files.items():
+                    target = d / rel
+                    target.parent.mkdir(parents=True, exist_ok=True)
+                    target.write_bytes(data)
+        now = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%S.%f")[:-3] + "Z"
+        entry = {
+            "source": REPO,
+            "sourceType": "github",
+            "sourceUrl": f"https://github.com/{REPO}.git",
+            "skillPath": f"{skill_dir}/SKILL.md",
+            "pluginName": "mattpocock-skills",
+            "installedAt": now,
+            "updatedAt": now,
+        }
+        mine[name] = entry
+        lock["skills"][name] = entry
+        state["skills"][name] = new_h
+        changed = True
+        new_skill_added = True
+    if new_skill_added and not DRY:
+        subprocess.check_call([sys.executable, str(VAULT / "system" / "scripts" / "gen-skill-index.py")])
     stamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M")
     report = f"[{stamp}] {REPO}@{sha[:7]} {'(dry run) ' if DRY else ''}{len(mine)} skills\n" + "".join(f"  {l}\n" for l in lines)
     print(report, end="")

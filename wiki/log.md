@@ -2602,3 +2602,7 @@ Signed-in Codex browser comparison of the embedded Practice RC question finder, 
 
 
 Final classifier follow-up, 2026-10-08: Bash/sh attached code-output redirection now stays pending, ordinary log output remains accepted and quoted greater-than characters are ignored. PowerShell bare argument syntax is preserved. Three additional regressions pass; current totals are 36 Codex adapter and 82 combined tests. The live main Stop evidence is unchanged; these final classifier branches have local regression coverage.
+
+## [2026-10-08] system | Automate safe Matt Pocock skill updates
+
+Extended `system/scripts/sync-mattpocock-skills.py` to install new upstream skills across global activation roots and all three catalog runtimes only when no destination contains different local content. Existing copies remain compare-and-swap protected; deliberate `grill-me` rewrites are still preserved. Added index regeneration when a new skill is installed. Installed `chief-of-staff` from upstream `b0618bc` into all seven configured destinations and recorded it in the skill lock. Restored the missing Task Scheduler job `AI OS - Matt Pocock Skills Sync`, daily at 06:30 and at user logon. Its installer is `system/scripts/install-mattpocock-skills-sync-task.ps1`. The previous dry-run confirmed no other catalog updates were pending; four removed upstream skills remain untouched.

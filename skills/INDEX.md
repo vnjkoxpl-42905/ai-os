@@ -4,7 +4,7 @@ One line per skill in the master DB, grouped by source-type within the `claude/`
 
 ## claude/
 
-179 authored/project · 42 google-workspace · 0 vendor-plugin · 9 project-fork
+180 authored/project · 42 google-workspace · 0 vendor-plugin · 9 project-fork
 
 ### Google Workspace (gws) skills
 
@@ -73,6 +73,7 @@ _Full `gws` CLI skill set. Inert in the DB. Copy selected skills into the projec
 - **build-mcpb** — This skill should be used when the user wants to "package an MCP server", "bundle an MCP", "make an MCPB", "ship a local MCP server", "distribute a local MCP", discusses ".mcpb files", mentions bundling a Node or Python runtime with their MCP server, or needs an MCP server that interacts with the local filesystem, desktop apps, or OS and must be installable without the user having Node/Python set up.
 - **canvas-design** — Create beautiful visual art in .png and .pdf documents using design philosophy. You should use this skill when the user asks to create a poster, piece of art, design, or other static piece. Create original visual designs, never copying existing artists' work to avoid copyright violations.
 - **chat-export** — Save the current conversation as a structured markdown file and generate a handoff prompt for continuing in a new chat. Use this skill whenever the user says "export this chat", "save this conversation", "create a handoff", "save this for later", "export to my chat exports folder", or anything indicating they want to preserve a conversation and carry context into a new session. Always trigger this skill proactively when a conversation has been long, complex, or has produced decisions, files, or code — even if the user hasn't explicitly asked yet.
+- **chief-of-staff** — Pursue a long-running goal in a single session by co-ordinating subagents.
 - **chrome-devtools** — Uses Chrome DevTools via MCP for efficient debugging, troubleshooting and browser automation. Use when debugging web pages, automating browser interactions, analyzing performance, or inspecting network requests. This skill does not apply to `--slim` mode (MCP configuration).
 - **claude-api** — Reference for the Claude API / Anthropic SDK — model ids, pricing, params, streaming, tool use, MCP, agents, caching, token counting, model migration. TRIGGER — read BEFORE opening the target file; don't skip because it "looks like a one-liner" — whenever: the prompt names Claude/Anthropic in any form (Claude, Anthropic, Fable, Opus, Sonnet, Haiku, `anthropic`, `@anthropic-ai`, `claude-*`, `us.anthropic.*`, `[1m]`); the user asks about an LLM (pricing/model choice/limits/caching) — never answer from memory; OR the task is LLM-shaped with provider unstated (agent/MCP/tool-definition/multi-agent/RAG/LLM-judge/computer-use; generate/summarize/extract/classify/rewrite/converse over NL; debugging refusals/cutoffs/streaming/tool-calls/tokens). SKIP only when another provider is being worked on (overrides all triggers): OpenAI/GPT/Gemini/Llama/Mistral/Cohere/Ollama named in the query; OR `grep -rE 'openai|langchain_openai|google.generativeai|genai|mistralai|cohere|ollama'` over the project hits (run this grep FIRST if no provider named — don't Read the file).
 - **claude-automation-recommender** — Analyze a codebase and recommend Claude Code automations (hooks, subagents, skills, plugins, MCP servers). Use when user asks for automation recommendations, wants to optimize their Claude Code setup, mentions improving Claude Code workflows, asks how to first set up Claude Code for a project, or wants to know what Claude Code features they should use.
@@ -261,7 +262,7 @@ _Full `gws` CLI skill set. Inert in the DB. Copy selected skills into the projec
 
 ## codex/
 
-164 authored/project · 42 google-workspace · 0 vendor-plugin · 11 project-fork
+165 authored/project · 42 google-workspace · 0 vendor-plugin · 11 project-fork
 
 ### Google Workspace (gws) skills
 
@@ -323,6 +324,7 @@ _Full `gws` CLI skill set. Inert in the DB. Copy selected skills into the projec
 - **brand-guidelines** — Applies Anthropic's official brand colors and typography to any sort of artifact that may benefit from having Anthropic's look-and-feel. Use it when brand colors or style guidelines, visual formatting, or company design standards apply.
 - **canvas-design** — Create beautiful visual art in .png and .pdf documents using design philosophy. You should use this skill when the user asks to create a poster, piece of art, design, or other static piece. Create original visual designs, never copying existing artists' work to avoid copyright violations.
 - **chat-export** — Save the current conversation as a structured markdown file and generate a handoff prompt for continuing in a new chat. Use this skill whenever the user says "export this chat", "save this conversation", "create a handoff", "save this for later", "export to my chat exports folder", or anything indicating they want to preserve a conversation and carry context into a new session. Always trigger this skill proactively when a conversation has been long, complex, or has produced decisions, files, or code — even if the user hasn't explicitly asked yet.
+- **chief-of-staff** — Pursue a long-running goal in a single session by co-ordinating subagents.
 - **claude-api** — Reference for the Claude API / Anthropic SDK — model ids, pricing, params, streaming, tool use, MCP, agents, caching, token counting, model migration. TRIGGER — read BEFORE opening the target file; don't skip because it "looks like a one-liner" — whenever: the prompt names Claude/Anthropic in any form (Claude, Anthropic, Fable, Opus, Sonnet, Haiku, `anthropic`, `@anthropic-ai`, `claude-*`, `us.anthropic.*`, `[1m]`); the user asks about an LLM (pricing/model choice/limits/caching) — never answer from memory; OR the task is LLM-shaped with provider unstated (agent/MCP/tool-definition/multi-agent/RAG/LLM-judge/computer-use; generate/summarize/extract/classify/rewrite/converse over NL; debugging refusals/cutoffs/streaming/tool-calls/tokens). SKIP only when another provider is being worked on (overrides all triggers): OpenAI/GPT/Gemini/Llama/Mistral/Cohere/Ollama named in the query; OR `grep -rE 'openai|langchain_openai|google.generativeai|genai|mistralai|cohere|ollama'` over the project hits (run this grep FIRST if no provider named — don't Read the file).
 - **claude-build** — Codex-to-Claude build workflow. Delegate a concrete work order to Claude Code, then have Codex independently inspect and verify the changes.
 - **claude-handoff** — Hand the current conversation off to a fresh background agent that picks up the work immediately.
