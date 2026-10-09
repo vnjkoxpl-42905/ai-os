@@ -31,7 +31,7 @@ sources:
 
 # Methods make a small result inspectable, testable and reusable
 
-This evolving synthesis joins the reviewed domains into concrete building, teaching, research and knowledge-maintenance methods. Each attributed pattern has preserved quotation support. Suggested local steps are adaptations, not quotations or evidence that they ran here. [Rules](rules.md) owns Prompt 3 selection; [execution status](../../research/karpathy-brain-2026-10-08/VIDEO-PROMPT-EXECUTION.md) owns what was installed and tested. Remaining repository reading, missing media and uncollected upstream material remain outside semantic coverage.
+This evolving synthesis joins the reviewed domains into concrete building, teaching, research and knowledge-maintenance methods. Each attributed pattern has preserved quotation support. Suggested local steps are adaptations, not quotations or evidence that they ran here. [Rules](rules.md) owns Prompt 3 selection; [execution status](../../research/karpathy-brain-2026-10-08/VIDEO-PROMPT-EXECUTION.md) owns what was installed and tested. All saved repository files are accounted for in the [compilation audit](../../research/karpathy-brain-2026-10-08/COMPILATION-AUDIT.md). Machine payload processing, missing media and uncollected upstream material have separate limits.
 
 ## Compile a source and preserve its evidence
 
@@ -76,7 +76,7 @@ It qualifies the generated scoring layer:
 
 > The scores are rough LLM estimates (Gemini Flash via OpenRouter), not rigorous predictions.
 
-[Raw README](../../raw/sources/karpathy-brain/raw/github/repos/karpathy/jobs/README.md), “Key files” and “What AI Exposure is NOT”; [source summary](../sources/karpathy/jobs-readme.md). The local adaptation is to trace each judgment to its inputs and retain the limits of its method. The BLS payload itself is outside this starter's semantic coverage.
+[Raw README](../../raw/sources/karpathy-brain/raw/github/repos/karpathy/jobs/README.md), “Key files” and “What AI Exposure is NOT”; [source summary](../sources/karpathy/jobs-readme.md). The local adaptation is to trace each judgment to its inputs and retain the limits of its method. BLS payload files were machine-processed, not semantically reviewed as Karpathy's personal statements; see the [compilation audit](../../research/karpathy-brain-2026-10-08/COMPILATION-AUDIT.md).
 
 ## Build the smallest end-to-end case first
 
@@ -184,11 +184,11 @@ The gist proposes recurring health checks. Local route: inspect contradictory ge
 
 ## Coverage and attribution map
 
-This synthesis uses conclusions from the reviewed source pages, not all collected bytes as personal beliefs. Consult the live ledgers for evolving counts and exact unread paths:
+This synthesis uses conclusions from the reviewed source pages, not all collected bytes as personal beliefs. Consult the coverage ledgers for the reviewed files and processing limits:
 
 - [Writings](../../research/karpathy-brain-2026-10-08/blog-synthesis.md): preserved blog text, historical course revisions, personal guides and fiction, with authorship qualifications.
 - [Lectures and interviews](../../research/karpathy-brain-2026-10-08/lecture-synthesis.md): all 17 preserved texts fully read; 14 spoken-source texts and three music/animation caption files. Audio, diagrams and missing speech are unverified.
-- [Repository and X evidence](../../research/karpathy-brain-2026-10-08/repo-x-synthesis.md): reviewed named files and all selected captured own-author X bodies; remaining repository files and upstream X completeness are separate limits.
+- [Repository and X evidence](../../research/karpathy-brain-2026-10-08/repo-x-synthesis.md): all saved repository files are accounted for with text/payload distinctions; all selected captured own-author X bodies are reviewed. Exhaustive upstream X coverage remains unverified.
 - [Supplemental repositories](../../research/karpathy-brain-2026-10-08/repo-supplemental-synthesis.md): all 175 selected paths reviewed, including 24 decoded notebooks (three exact duplicates) and two empty files; embedded images and local execution remain outside coverage.
 - [llm.c](../../research/karpathy-brain-2026-10-08/llmc-synthesis.md): reviewed reference implementations, memory/compute choices and checker limitations. Repository ownership does not establish individual contributor authorship.
 - [Payloads](../../research/karpathy-brain-2026-10-08/github-payload-synthesis.md): generated dependencies, training text, parameters and government HTML have integrity/structure records; mechanical processing does not turn them into Karpathy beliefs or full model semantic reads.

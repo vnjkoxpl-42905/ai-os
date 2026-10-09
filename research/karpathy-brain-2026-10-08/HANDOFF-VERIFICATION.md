@@ -44,4 +44,4 @@ Detailed evidence and exact affected records:
 - [YouTube/X findings](youtube-x-audit.md) and [record-level evidence](youtube-x-structural-audit.json).
 - [All 17 channel uploads](../karpathy-channel-all-17-2026-10-08/report.md).
 
-The integrity audit is complete for the registered text payloads described in these reports. Full semantic reading and compilation of the entire collection are **not complete**.
+At this handoff-verification stage, integrity checking was complete but source compilation was not. This is a historical acquisition audit. The later [compilation audit](COMPILATION-AUDIT.md) accounts for every saved source, with authored-text, machine-payload and media limitations preserved; it does not certify exhaustive public acquisition.

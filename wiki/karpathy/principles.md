@@ -38,7 +38,7 @@ sources:
 
 # Principles connect mechanisms, evidence and responsibility
 
-These are evolving, attributed observations compiled from the reviewed writings, lectures, interviews, repository documents and captured own-author X texts. They are topic navigation, not a competing seven-rule system or a claim to reproduce private thoughts. [Rules](rules.md) owns the separate Prompt 3 rule selection; [methods](methods.md) turns these observations into concrete procedures. Full-corpus semantic review is still underway, so the coverage map below remains part of this page.
+These are evolving, attributed observations compiled from the reviewed writings, lectures, interviews, repository documents and captured own-author X texts. They are topic navigation, not a competing seven-rule system or a claim to reproduce private thoughts. [Rules](rules.md) owns the separate Prompt 3 rule selection; [methods](methods.md) turns these observations into concrete procedures. Compilation of the saved collection is complete; the [audit](../../research/karpathy-brain-2026-10-08/COMPILATION-AUDIT.md) distinguishes authored text review from machine payload processing and unreviewed media.
 
 ## Maintain knowledge instead of reconstructing it
 
@@ -205,11 +205,11 @@ His societal argument describes broad model assistance as fallible. The useful r
 
 ## Coverage and attribution map
 
-This synthesis uses conclusions from the reviewed source pages, not all collected bytes as personal beliefs. Consult the live ledgers for evolving counts and exact unread paths:
+This synthesis uses conclusions from the reviewed source pages, not all collected bytes as personal beliefs. Consult the coverage ledgers for the reviewed files and processing limits:
 
 - [Writings](../../research/karpathy-brain-2026-10-08/blog-synthesis.md): preserved blog text, historical course revisions, personal guides and fiction, with authorship qualifications.
 - [Lectures and interviews](../../research/karpathy-brain-2026-10-08/lecture-synthesis.md): all 17 preserved texts fully read; 14 spoken-source texts and three music/animation caption files. Audio, diagrams and missing speech are unverified.
-- [Repository and X evidence](../../research/karpathy-brain-2026-10-08/repo-x-synthesis.md): reviewed named files and all selected captured own-author X bodies; remaining repository files and upstream X completeness are separate limits.
+- [Repository and X evidence](../../research/karpathy-brain-2026-10-08/repo-x-synthesis.md): all saved repository files are accounted for with text/payload distinctions; all selected captured own-author X bodies are reviewed. Exhaustive upstream X coverage remains unverified.
 - [Supplemental repositories](../../research/karpathy-brain-2026-10-08/repo-supplemental-synthesis.md): all 175 selected paths reviewed, including 24 decoded notebooks (three exact duplicates) and two empty files; embedded images and local execution remain outside coverage.
 - [llm.c](../../research/karpathy-brain-2026-10-08/llmc-synthesis.md): reviewed reference implementations, memory/compute choices and checker limitations. Repository ownership does not establish individual contributor authorship.
 - [Payloads](../../research/karpathy-brain-2026-10-08/github-payload-synthesis.md): generated dependencies, training text, parameters and government HTML have integrity/structure records; mechanical processing does not turn them into Karpathy beliefs or full model semantic reads.
