@@ -2612,3 +2612,7 @@ Extended `system/scripts/sync-mattpocock-skills.py` to install new upstream skil
 - Created the [interactive field guide](../references/matt-pocock-skills-field-guide.html) for all 39 tracked skill folders and linked it from [[index]]. The pinned source snapshot is `mattpocock/skills@b0618bc`.
 - Each entry explains purpose, use, workflow, example request, dependencies or limits, and companion skills; common routes show how to combine them. The local `grill-me` customization and four locally retained skills missing upstream are labelled.
 - Static checks found 39 unique entries, no missing local skill files, no unresolved companion/route IDs, and a valid index target. Browser rendering was not inspected because the in-app browser rejected the local file URL. No task status or skill contents changed during catalog creation.
+
+## [2026-10-08] plan | RC repair handoff for a cheaper executor
+Used ask-matt to select the to-spec -> to-tickets -> implement flow. Prepared local execution packet at brainstorms/2026-10-08-rc-implementation/README.md with eight bounded tickets, dependency edges, existing test seams, explicit read-only lookup/session boundary, acceptance gates and a paste-ready ticket01 prompt. The application RC quality specification remains product authority. No GitHub tickets published, app behavior changed or implementation performed. Answer-key investigation/regrading is a separate stronger-model authority lane. Recommended fresh cheaper-model chat per ticket plus independent review before continuing.
+
