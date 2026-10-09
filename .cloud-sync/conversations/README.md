@@ -530,7 +530,7 @@ Native UI archive does not delete a conversation. Source-file deletion removes i
 | codex | [](codex/01a117ea-7c95-7813-af3b-866b05ec963a-3384285a6f8f.md) | C:\Users\Joshu\dev\ai-os | 2026-10-09T12:17:45+00:00 |
 | codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a117ea-7c95-7813-af3b-866b05ec963a-3cdc144f8672.md) | C:\Users\Joshu\dev\ai-os | 2026-10-08T00:07:26+00:00 |
 | codex | [](codex/01a117ea-7c95-7813-af3b-866b05ec963a-4f4f4e9b8577.md) | C:\Users\Joshu\dev\ai-os | 2026-10-09T11:05:10+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a117ea-7c95-7813-af3b-866b05ec963a-52ee7705e601.md) | C:\Users\Joshu\dev\ai-os | 2026-10-09T16:31:07+00:00 |
+| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a117ea-7c95-7813-af3b-866b05ec963a-52ee7705e601.md) | C:\Users\Joshu\dev\ai-os | 2026-10-09T16:39:53+00:00 |
 | codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a117ea-7c95-7813-af3b-866b05ec963a-86b26578a96a.md) | C:\Users\Joshu\dev\ai-os | 2026-10-08T15:23:51+00:00 |
 | codex | [](codex/01a117ea-7c95-7813-af3b-866b05ec963a-88e9524ce8da.md) | C:\Users\Joshu\dev\ai-os | 2026-10-09T11:51:09+00:00 |
 | codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a117ea-7c95-7813-af3b-866b05ec963a-91937074c5ce.md) | C:\Users\Joshu\dev\ai-os | 2026-10-08T15:23:43+00:00 |
@@ -557,7 +557,7 @@ Native UI archive does not delete a conversation. Source-file deletion removes i
 | codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a11865-52e6-74c2-bb95-d6a32f4dd261-3cc3221ec347.md) | C:\Users\Joshu\dev\ai-os | 2026-10-08T10:03:30+00:00 |
 | codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a11865-52e6-74c2-bb95-d6a32f4dd261-469b9c6a56bc.md) | C:\Users\Joshu\dev\ai-os | 2026-10-09T13:40:55+00:00 |
 | codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a11865-52e6-74c2-bb95-d6a32f4dd261-5981b67000bd.md) | C:\Users\Joshu\dev\ai-os | 2026-10-07T22:45:25+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a11865-52e6-74c2-bb95-d6a32f4dd261-8245528ac630.md) | C:\Users\Joshu\dev\ai-os | 2026-10-09T13:51:49+00:00 |
+| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a11865-52e6-74c2-bb95-d6a32f4dd261-8245528ac630.md) | C:\Users\Joshu\dev\ai-os | 2026-10-09T16:45:27+00:00 |
 | codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a11865-52e6-74c2-bb95-d6a32f4dd261-97b48bf8632b.md) | C:\Users\Joshu\dev\ai-os | 2026-10-09T13:42:02+00:00 |
 | codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a11865-52e6-74c2-bb95-d6a32f4dd261-f6a067ed73ad.md) | C:\Users\Joshu\dev\ai-os | 2026-10-09T06:53:00+00:00 |
 | codex | [](codex/01a11919-6d64-7c42-b320-f23458477014-110490f12eb7.md) | C:\Users\Joshu\dev\ai-os | 2026-10-08T12:13:00+00:00 |
@@ -654,3 +654,4 @@ Native UI archive does not delete a conversation. Source-file deletion removes i
 | codex | [ I want you to first tell me how this skill, the Carpathi agent, could be used to do it for potentia](codex/01a120b0-53dd-7cd3-a674-8c64e7a97e1d-79c6ef8f41c3.md) | C:\Users\Joshu\dev\ai-os | 2026-10-09T12:45:01+00:00 |
 | codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a120f0-eadd-7f53-a89d-d1161956fded-7b1e2f432b0d.md) | C:\Users\Joshu\dev\ai-os | 2026-10-09T13:53:42+00:00 |
 | codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a1210d-7210-7ae2-af6c-4f3bcb43c039-b2dd5f09397c.md) | C:\Users\Joshu\dev\ai-os | 2026-10-09T14:24:52+00:00 |
+| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a1218f-f7e4-7902-803a-1551833a9dae-3b1393698a01.md) | C:\Users\Joshu\dev\ai-os | 2026-10-09T16:47:29+00:00 |
