@@ -2620,3 +2620,6 @@ Used ask-matt to select the to-spec -> to-tickets -> implement flow. Prepared lo
 ## [2026-10-08] design | Visible RC passage dividers
 Joshua requested visible passage boundaries within practice-section selection, like LSAT Lab's grouped dropdown. Updated implementation tickets02 and05: non-selectable passage headings with official question ranges/title, thin contrasting rules and spacing between groups, concise question rows, accessible group semantics, preserved official numbering and consistent in-drill navigation separators. Planning only; no app code changed.
 
+
+## [2026-10-09] Claude local launcher repair
+Verified the LR Remote Control session had no attached local execution process while a different Claude session was running. Resumed the original LR session using the native user installation (Claude Code 2.1.295), enabled Remote Control, and left it idle in default permission mode. Repaired three recovery command shims and Documents/Claude/Start Claude Second Brain.cmd to call the native installation; preserved timestamped backups. Saved user PATH already prioritizes the native installation. Restored vault, app project folders, Claude sessions, skills, and memory are present; completeness against the old computer has not been verified. No production updates or credentials were changed.
