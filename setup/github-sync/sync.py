@@ -171,6 +171,7 @@ def copy_filtered(root, destination, max_size=MAX_SIZE, originals=None, prefix='
             reason = None
             if is_link(path): reason = 'link'
             elif excluded(path): reason = 'excluded file'
+            elif path.suffix.lower() == '.lock' and relative.parent.as_posix().lower() == 'runtime/codex-hooks': reason = 'runtime process lock'
             elif relative.parent.as_posix() == '.obsidian' and name.startswith('workspace') and name.endswith('.json'): reason = 'editor runtime state'
             elif path.stat().st_size > max_size: reason = 'GitHub size limit'
             if reason:

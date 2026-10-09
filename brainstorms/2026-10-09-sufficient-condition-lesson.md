@@ -194,3 +194,13 @@ A sufficient condition gives you enough information to know that something else 
 - Q1: adopt ivory, ink navy and restrained brass, with green reserved mainly for correct-answer feedback? Recommend yes.
 - Q2: make the first video a narrated visual explanation without an on-camera AI teacher, then use the interactive diagram for learner participation? Recommend yes. If Joshua wants an on-camera teacher, clarify whether a fictional presenter or a separately authorized representation of Joshua before generating.
 - After these decisions, settle the pilot shot/script and generation scope, then generate and inspect the first clip before scaling. No implementation or paid submission during this unsettled interview round.
+
+## Implementation authorized: motion, color and Kling clips, 2026-10-09
+
+Joshua explicitly asks to execute the video generation and embedding, motion design, non-generic color refinement and detailed quality pass while preserving the approved lesson. This supersedes the previous waiting interview state. Use offscreen narration as the recommended default, do not fabricate a Joshua likeness. Authorized scope is local sufficient lesson implementation and first generated clip(s), not publication. Independent code implementation and CLI environment diagnosis delegated with separate ownership.
+
+Current research: official Kling VIDEO 3.0 guide supports native audio, multi-shot storyboarding and up to 15 seconds. W3C Pause, Stop, Hide guidance supports user-controlled moving media. Generated clip narration must be listened to before teaching-quality claims; diagram labels and logic remain exact application text.
+
+First clip planned: 15-second 1080p narrated visual showing Maya studying in a law-school setting and explaining that enrollment is enough to establish student status, then introducing the reverse as unresolved. Subtle controlled camera movement, warm natural light, ink/navy and paper tones. Avoid arbitrary admissions guarantees, caused-by imagery, fabricated instructors and generated text labels. Captions and transcript derived from actual verified audio, not merely the requested prompt.
+
+Environment issue: current shell cannot resolve kling, whereas prior account check succeeded. Investigating installed executable and runtime before reinstalling or changing login. No generation submitted yet.
