@@ -9,7 +9,14 @@ aliases: []
 
 Freshest working state; the first page `/pickup` reads. Rebuilt fresh in the 2026-07-16 vault rebuild (the old cache is archived).
 
-## Most recent (2026-10-09): Sufficient-condition motion lesson verified locally
+## Most recent (2026-10-09): Sufficient condition taught before case facts
+
+- Joshua rejected the isolated Enough for what? heading and fact-first presentation. The sufficient page now explains trigger and guaranteed outcome through full-clause exploration, an original interactive group illustration and three concept checks. Brief necessity bridge remains; no Maya facts or videos on the definition page.
+- Reviewed the full ingested LSAT Lab Conditional Logic transcript, saved Demon sources and selected voice standard. Original source: raw/sources/lsat-lab-lectures/16784/source.en-US.vtt:48-94. This source is in raw/research, not yet a complete indexed lecture package.
+- Both Kling clips are preserved and moved to reference7 on missing-requirement with explicit application context. No additional spend. [Updated evidence](../../ai-os-projects/lsatu-conditional-bootcamp/docs/agent/conditional-recovery-20261007/media/README.md).
+- Final52 tests, full typecheck, npm build/postbuild and independent review pass. Codex confirms interactions, feedback/retry, later media readiness and five actual CSS widths without overflow or undersized lesson buttons. Default docked page inspected; viewport reset and sufficient page open. Local only; real-device, screen-reader and published acceptance remain open. Task statuses unchanged.
+
+## Previous (2026-10-09): Sufficient-condition motion lesson verified locally
 
 - Added two narrated 15-second 1080p Kling clips, captions and transcripts to the sufficient lesson. Scoped warm ivory, ink and brass palette, three interactive fact cases and guided rule/fact/inference walkthrough. [Media and verification receipt](../../ai-os-projects/lsatu-conditional-bootcamp/docs/agent/conditional-recovery-20261007/media/README.md).
 - Final 32 tests, full app typecheck, production build and canonical exclusion check passed. Codex browser verified both players and caption readiness, cases, answer feedback and keyboard replay. Measured 320/400/960/1200/1600px layouts have no horizontal overflow or undersized lesson buttons.
