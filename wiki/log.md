@@ -2627,3 +2627,12 @@ Verified the LR Remote Control session had no attached local execution process w
 ## [2026-10-09] lint | Karpathy video fidelity and native handoff
 
 Rechecked all six original video entries visually and read the complete transcript. Fresh browser export matches all 393 saved caption segments. Reconciled stale partial-compilation language in principles/methods and labeled historical handoff/Claude replay claims. Native registered karpathy agent completed the tokenizer task; tightened the Codex skill to require real handoff and independent parent grading, verified in the retained native review. Original slash syntax was rejected; runnable Codex syntax is $karpathy-teach with identical task wording. Source integrity: all 1,560 files unchanged. Main Stop proof remains direct; child-stop blocking and exhaustive public acquisition remain qualified. [Requirement audit](../research/karpathy-brain-2026-10-08/VIDEO-FIDELITY-AUDIT-2026-10-09.md) preserves evidence and limitations. No raw sources, unrelated operations or outbound messages changed.
+
+## [2026-10-09] query | Sufficient-condition teaching sources
+
+- Request: inspect the corpus and second brain before revising the sufficient-condition lesson.
+- Filed comparison: [existing lesson discovery notes](../brainstorms/2026-10-09-sufficient-condition-lesson.md). No new wiki page; existing index entries retained.
+- Evidence: five indexed conditional source families; selected teaching-voice standard; Joshua's Sabrina and MBT transcripts; conditional megadoc; LSAT Lab MBT lecture; Loophole methods; dated 7Sage research and example decisions.
+- Finding: develop enough for what, fact versus rule, positive inference, absence, and unsupported reversal with the approved raffle anchor. Breathing/air is explicitly rejected as a lesson example and retained only as a depth benchmark.
+- Limits: local source review; truncated corpus excerpts and derivative drafts are identified; no live Drive recovery or new audiovisual verification. App copy unchanged during this interview.
+- Open: confirm worked-case presentation before drafting the expanded lesson.

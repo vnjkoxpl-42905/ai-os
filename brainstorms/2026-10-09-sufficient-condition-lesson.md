@@ -37,3 +37,39 @@ Date: 2026-10-09 · Goal: Make the sufficient-condition note explain the reasoni
 - Agreed title direction: The Sufficient Condition.
 - Proposed explanation: sufficient means enough to establish the stated result under the rule. The rule does not tell us whether the sufficient condition actually occurs. Once a fact establishes it, the result must follow. The result can also occur another way unless the rule says otherwise.
 - Pending next decision: use breathing/air to introduce the idea and raffle/bicycle to demonstrate another possible route to the result.
+
+## Latest answer: explanation depth, not the source example
+
+- Joshua explicitly rejected using breathing/air in this lesson. The original HTML is a benchmark for the depth of explanation for every concept, not approval to reuse that example.
+- Joshua asked for a source review of the corpus and second brain before the next interview round.
+- Existing 2026-10-03 example interview confirms raffle/bicycle was approved; apple/fruit and ready/packed were rejected. This source review should preserve those decisions.
+- Source review in progress: corpus teaching notes and archived conditional sources; distinguish captured source material, older research notes, and generated lesson drafts.
+
+## Source comparison for the sufficient-condition rewrite
+
+Verified local review, 2026-10-09. These are source-backed authoring recommendations, not a new approved lesson.
+
+- Selected HTML: [original source](../raw/sources/conditional-reasoning-voice-standard/conditional_reasoning_transcription.html), lines 156-170, supplies explanation depth and presence/absence sequence. Breathing/air must not be reused.
+- [Demon sufficient/necessary](../wiki/sources/lsat-demon-sufficient-necessary.md): a conditional rule does not itself establish that its sufficient condition occurred.
+- [Demon Mastering Conditional Statements](../wiki/sources/lsat-demon-mastering-conditional-statements.md): one sufficient route need not be the only route. The original raffle/bicycle anchor was approved in the [2026-10-03 interview](2026-10-03-conditional-intuitive-examples.md).
+- [Demon abstract conditionals](../wiki/sources/lsat-demon-abstract-conditionals.md): familiar relationships support reasoning before arbitrary symbols.
+- [LSAT Lab conditional clip](../wiki/sources/lsat-lab-conditional-logic-clip.md): keep the rule fixed while changing the supplied fact to distinguish what follows from what remains open.
+- [Voice standard](../references/lsat-teaching-voice-standard.md), lines 182-190, 399 and 477-483: answer enough for what, explain through the case before attaching the label, and avoid procedural jargon.
+- [Saved 7Sage research](2026-09-30-conditional-curriculum/research-7sage-conditionals.md): sufficient and necessary are relational roles; being enough to establish a result need not describe causation. This is an older local research account, not a fresh platform/video inspection.
+- Generated NotebookLM drafts are derivatives, not independent corroboration. The old ready/packed example is rejected and must not be restored.
+
+Teaching sequence recommendation: state the rule; explain what winning is enough for; supply a fact that someone wins and show why the bicycle follows; distinguish a rule from an event actually occurring; contrast not winning with both possible bicycle outcomes; use a possible purchase/gift to challenge the reverse; give an independent check after the worked explanation.
+
+Precision: do not say the rule disappears when its sufficient condition is absent. Do not imply causal or temporal necessity. Do not state that a sufficient condition can never also be necessary; this one-way rule alone does not establish the reverse.
+
+### Corpus findings
+
+- Joshua's [Sabrina session, 2026-02-21](<../corpus/Curriculum/Necessary Assumption/Notes/_scan_Sabrina - 2026_02_21 16_46 EST - Notes by Gemini.md>), lines 398-416 and 430-436, explains one guaranteed way versus the only way and challenges both the denial and backward inference. This is the strongest own-voice evidence for the explanation.
+- Joshua's [Must Be True session, 2025-10-31](<../corpus/Curriculum/Must be True/Notes/_scan_Must be true_ MSS - 2025_10_31 16_30 EDT - Notes by Gemini.md>), lines 550-557, prioritizes conversational understanding before diagramming.
+- [Conditional notes](<../corpus/Curriculum/Conditional Logic/Notes/_megadoc_notes_conditionals.md>), lines 58-62, distinguish chaining rules from applying a rule using a known fact. This collection has 28 source records, many truncated, so records are not complete recovered lessons.
+- [LSAT Lab MBT lecture transcript](../corpus/lectures/logical-reasoning/must-be-true/core/2026-08-27-33013/transcript.md), lines 134-155, develops the fact-plus-rule distinction.
+- [Loophole method library](../corpus/loophole-online/method-library.md), lines 65-67 and 126, supports meaning-first diagramming. [Worked examples](../corpus/loophole-online/worked-examples.generated.md), lines 33-54, show why absence of the sufficient condition does not settle the outcome.
+
+Review limits: local evidence only; no new live Drive recovery, videos watched, or screenshot-pixel review. Saved transcripts can contain transcription errors; generated drafts and duplicate captures are not independent sources. Sufficient-assumption question material is a related application, not a replacement definition. Do not reuse unqualified hard-work/score or rain/wet-ground guarantees.
+
+Next frontier question: keep raffle/bicycle as the recurring anchor and build the worked explanation around winning, not winning, and getting a bicycle another way? Recommendation: yes. Explanation should be developed before the first scored check.
