@@ -6,6 +6,8 @@ Own player breadcrumb/details, directions, navigation overview and review wordin
 
 Provide a compact passage-grouped question overview when the existing pager exceeds usable narrow-screen space. Show answered/unanswered/flagged status; expose correctness only after the configured reveal boundary. Preserve current question focus, passage scroll and keyboard navigation.
 
+Use ticket02's passage-heading/divider design consistently: labelled groups and visible spacing/rules between passages. A compact horizontal pager may use short vertical separators with accessible passage-group names; the expanded overview uses passage headings and horizontal dividers. Keep official numbering separate from drill ordinal, including mixed drills. Group boundaries must remain visible when navigation wraps on narrow screens.
+
 Explain protected source answers separately from any personal tools the mode permits. An in-progress session requested as review must not silently resume its timer under a read-only promise. Use an explicit route outcome consistent with ticket03.
 
 Existing seams: RcPlayer.saveSafety.test.tsx, RcPlayer.studyAids.test.tsx, rcSessionDestination.test.ts, protected history/results and shared footer tests.

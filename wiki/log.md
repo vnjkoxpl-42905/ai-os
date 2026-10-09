@@ -2616,3 +2616,7 @@ Extended `system/scripts/sync-mattpocock-skills.py` to install new upstream skil
 ## [2026-10-08] plan | RC repair handoff for a cheaper executor
 Used ask-matt to select the to-spec -> to-tickets -> implement flow. Prepared local execution packet at brainstorms/2026-10-08-rc-implementation/README.md with eight bounded tickets, dependency edges, existing test seams, explicit read-only lookup/session boundary, acceptance gates and a paste-ready ticket01 prompt. The application RC quality specification remains product authority. No GitHub tickets published, app behavior changed or implementation performed. Answer-key investigation/regrading is a separate stronger-model authority lane. Recommended fresh cheaper-model chat per ticket plus independent review before continuing.
 
+
+## [2026-10-08] design | Visible RC passage dividers
+Joshua requested visible passage boundaries within practice-section selection, like LSAT Lab's grouped dropdown. Updated implementation tickets02 and05: non-selectable passage headings with official question ranges/title, thin contrasting rules and spacing between groups, concise question rows, accessible group semantics, preserved official numbering and consistent in-drill navigation separators. Planning only; no app code changed.
+
