@@ -10,6 +10,33 @@ spec.loader.exec_module(module)
 
 
 class DiscoveryTests(unittest.TestCase):
+    def test_scan_uses_configured_deadline_without_skipping_scan(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            executable = root / 'scanner.exe'
+            executable.write_bytes(b'fixture')
+            destination = root / 'snapshot'
+            destination.mkdir()
+            response = type('Response', (), {'returncode': 0})()
+            with patch.object(module.subprocess, 'run', return_value=response) as call:
+                module.scan(destination, executable, timeout=900)
+            self.assertEqual(call.call_args.kwargs['timeout'], 900)
+            self.assertIn('--redact=100', call.call_args.args[0])
+
+    def test_rescan_keeps_configured_deadline(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            executable = root / 'scanner.exe'
+            executable.write_bytes(b'fixture')
+            destination = root / 'snapshot'
+            destination.mkdir()
+            (root / 'gitleaks.json').write_text('[]')
+            findings = type('Response', (), {'returncode': 1})()
+            clean = type('Response', (), {'returncode': 0})()
+            with patch.object(module.subprocess, 'run', side_effect=[findings, clean]) as call:
+                module.scan(destination, executable, timeout=900)
+            self.assertEqual([c.kwargs['timeout'] for c in call.call_args_list], [900, 900])
+
     def test_upstream_tooling_clone_is_skipped_without_inspecting_or_publishing(self):
         with tempfile.TemporaryDirectory() as temp:
             root = Path(temp)

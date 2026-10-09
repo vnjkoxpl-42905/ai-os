@@ -4,10 +4,20 @@ type: teaching-notes
 record_kind: primary
 tags: [student, celia-cutler, teaching-notes]
 created: 2026-09-25
-updated: 2026-09-28
+updated: 2026-10-09
 ---
 
 # Celia Cutler — Teaching Notes
+
+## 2026-10-08 | Reading recall and question targets
+
+Source: [[sessions/2026-10-08-rc-recall-and-question-targets/transcript]]; [[sessions/2026-10-08-rc-recall-and-question-targets/topic-map]].
+
+- Celia used line-by-line paraphrase and visualization, then retold the full paragraph. She articulated the passage's contrast between innate talent and acquired skill/training/motivation.
+- Separate defined stems (precise location), semi-defined stems (local region), and undefined stems (whole passage). For undefined stems, answer from the author's overall view rather than forcing a prephrase.
+- On the main-point choice, she challenged “irrelevant” as too strong and noted the passage did not establish universal acceptance of the older theory. Preserve this precision when evaluating answer language.
+- On the chess-memory conditional, she worked through the contrapositive: a non-typical configuration does not produce exceptional memory. “Some” means at least one; no exceptional memory does not mean no memory.
+- Joshua said he would develop an online recall drill and provide target times, speed/reading routines, and daily passages. A video crash course was only a possibility. Delivery is not verified.
 
 ## 2026-09-07 | Necessary assumptions and the negation test
 

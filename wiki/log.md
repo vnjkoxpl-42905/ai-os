@@ -2636,3 +2636,26 @@ Rechecked all six original video entries visually and read the complete transcri
 - Finding: develop enough for what, fact versus rule, positive inference, absence, and unsupported reversal with the approved raffle anchor. Breathing/air is explicitly rejected as a lesson example and retained only as a depth benchmark.
 - Limits: local source review; truncated corpus excerpts and derivative drafts are identified; no live Drive recovery or new audiovisual verification. App copy unchanged during this interview.
 - Open: confirm worked-case presentation before drafting the expanded lesson.
+
+## [2026-10-09] build | Persona Agent Creator
+
+Created `persona-agent-creator` from the original six-stage video method, then had the actual registered Karpathy agent refine its canonical skill, procedure and UI metadata. Matched project catalog/activation copies for Codex and Claude, regenerated skills index and recorded parity. Fresh browser transcript matches the saved export exactly; current Karpathy source probe followed hot-first retrieval; 82 hook regression tests pass. Creator validation and independent simulated domain/trigger checks pass. Existing unrelated session-handoff copy drift remains. [Verification and limits](../research/person-agents/creator-verification-2026-10-09.md). No raw sources, existing hooks or external systems changed; new personas require their own source corpus and native acceptance tests.
+
+## [2026-10-09] transcript intake | 2026-10-04 to 2026-10-09
+
+- Reconciled the rolling five-day window against Google Calendar and complete native-Doc searches. Two new attached transcripts were processed for Celia Cutler and Gianna Jean; Yahunatan Zetvy's 2026-10-06 transcript was already ingested and was not duplicated.
+- Filed full source copies and session packages, then updated both student inventories, teaching notes, open loops, and profile routers. Compared structure and record conventions with the 2026-10-07 intake and existing session packages.
+- Four confirmed bookings have no matching transcript in the checked sources (Sofia 2026-10-05, Ivory 2026-10-06, Whitney 2026-10-07, Sofia 2026-10-07); attendance remains uncertain. Gianna's 2026-10-06 booking is explicitly cancelled. An additional attached Gianna Notes Doc is a blank template.
+- Audit: [[../students/_audits/2026-10-09-transcript-intake]]. Discovery and export evidence: `system/logs/transcript-intake-2026-10-09/`. No recap was sent and no LSAT U assignment was made.
+
+## [2026-10-09] system | Expanded sufficient-condition note
+
+- Confirmed example: law-school enrollment is sufficient for being a student, replacing the rejected raffle/shape/percentage proposals for this page.
+- Updated local sufficient lesson and title, with visual reasoning, contrasts, a brief necessity bridge and three feedback checks. [Interview and source record](../brainstorms/2026-10-09-sufficient-condition-lesson.md).
+- Verified: 46 focused tests, full typecheck/build, Codex browser interaction and responsive geometry, independent review. Local preview only; no publication.
+- Open: expand the separate following necessary-condition note. No task status changed.
+
+
+## [2026-10-09] repair | Audit sync and routing fixes
+
+Added safe diagnostics, checkout isolation, tooling exclusions and configurable mandatory scan deadlines. Reconciled handoff copies, corrected Karpathy status and mapped teaching coverage. 27 sync tests and skill validation pass; manual Drive mirror verified eight archives. Scheduled combined success and latest-file inclusion remain unverified. Phone sync excluded. [Receipt](../audits/audit-fixes-2026-10-09-side.md).

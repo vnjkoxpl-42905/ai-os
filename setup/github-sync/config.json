@@ -7,7 +7,9 @@
   "branch_prefix": "codex/local-sync",
   "max_file_bytes": 99614720,
   "export_conversations": true,
+  "gws_executable": "C:\\Users\\Joshu\\Tools\\recovery-toolchain-20261006\\gws\\gws.exe",
   "auto_create_private_repositories": true,
+  "exclude_project_directories": ["claudex-loop", "antigravity-sdk-python"],
   "credential_sources": [
     {
       "path": "C:\\Users\\Joshu\\dev\\ai-os\\.env",
@@ -52,5 +54,6 @@
   ],
   "export_runtime": true,
   "push_timeout_seconds": 900,
+  "scan_timeout_seconds": 900,
   "auto_credential_sources": true
 }

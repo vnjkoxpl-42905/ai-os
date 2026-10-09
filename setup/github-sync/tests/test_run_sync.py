@@ -50,6 +50,14 @@ class RunnerTests(unittest.TestCase):
             self.assertTrue(failed)
             self.assertEqual(receipt['github_error'], 'OSError')
 
+    def test_failed_drive_result_is_not_reported_as_success(self):
+        with tempfile.TemporaryDirectory() as temp:
+            receipt, failed = self.run_fixture(Path(temp), drive={'results': [
+                {'checkout': 'broken', 'status': 'failed', 'error': {'category': 'api'}},
+                {'checkout': 'healthy', 'status': 'unchanged'}]})
+            self.assertTrue(failed)
+            self.assertEqual(receipt['outcome'], 'failed')
+
     def test_drive_busy_is_deferred_not_success(self):
         with tempfile.TemporaryDirectory() as temp:
             receipt, failed = self.run_fixture(Path(temp), drive={'status': 'busy', 'results': []})

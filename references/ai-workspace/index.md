@@ -2,7 +2,7 @@
 type: reference
 subject: AI workspace learning and improvements
 created: 2026-10-08
-updated: 2026-10-08
+updated: 2026-10-09
 aliases: [AI setup, AI learning, Claude and Codex improvements]
 tags: [ai-workspace, claude, codex, llm-wiki]
 sources: []
@@ -16,7 +16,7 @@ This hub organizes existing authoritative pages rather than copying their knowle
 
 [Recovered practical methods](migrated-source-methods.md) add the old vault's detailed artifact-review, skill-evaluation and evidence-checking recipes, plus its unimplemented annotation idea. [Migration coverage](../../research/obsidian-vault-comparison/2026-10-07/active-migration-coverage.md) maps the original research and root files to current homes and explains exclusions.
 
-[Karpathy source compilation](../../wiki/karpathy/index.md) now spans domain source pages and explicit semantic coverage. [Use the teaching setup](karpathy-method.md) for the reviewed rules, project agent, teaching skill and scoped Python execution gate. Full-corpus compilation remains incomplete. The [verified collection handoff](../../research/karpathy-brain-2026-10-08/HANDOFF-VERIFICATION.md) records missing coverage, attribution limits and corrections to the original completeness claims.
+[Karpathy source compilation](../../wiki/karpathy/index.md) now spans domain source pages and explicit semantic coverage. [Use the teaching setup](karpathy-method.md) for the reviewed rules, project agent, teaching skill and scoped Python execution gate. Compilation of the saved collection is complete according to the [current compilation audit](../../research/karpathy-brain-2026-10-08/COMPILATION-AUDIT.md). This does not establish exhaustive public-source acquisition or full understanding of binary, generated or media payloads. The [verified collection handoff](../../research/karpathy-brain-2026-10-08/HANDOFF-VERIFICATION.md) records missing coverage, attribution limits and corrections to the original completeness claims.
 
 [Resumable X collector](x-archive-collector.md) documents the free local script, signed-in persistent Chrome route, evidence ledgers, source-preserving repairs and retrieval limits.
 

@@ -4,10 +4,14 @@ type: open-loops
 record_kind: primary
 tags: [student, celia-cutler]
 created: 2026-09-25
-updated: 2026-09-28
+updated: 2026-10-09
 ---
 
 # Celia Cutler — Open Loops
+
+## 2026-10-08 session
+
+- [ ] Follow up on the online recall drill, target times, speed/reading routines, and daily passages Joshua said he would develop/provide. No delivery is recorded. Source: [[sessions/2026-10-08-rc-recall-and-question-targets/transcript]].
 
 ## Earlier September sessions
 

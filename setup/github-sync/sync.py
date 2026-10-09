@@ -253,12 +253,12 @@ def verify_private(repository):
     if metadata.get('private') is not True:
         raise RuntimeError(f'Repository must be private: {repository}')
 
-def scan(destination, executable, originals=None, prefix=''):
+def scan(destination, executable, originals=None, prefix='', timeout=180):
     destination = long_path(destination)
     if not executable or not Path(executable).is_file():
         raise RuntimeError('Mandatory gitleaks scanner is unavailable')
     report_path = destination.parent / 'gitleaks.json'
-    p = subprocess.run([str(executable), 'dir', str(destination), '--redact=100', '--no-banner', '--report-format', 'json', '--report-path', str(report_path)], stdout=subprocess.PIPE, stderr=subprocess.PIPE, timeout=180, creationflags=subprocess.CREATE_NO_WINDOW if os.name == 'nt' else 0)
+    p = subprocess.run([str(executable), 'dir', str(destination), '--redact=100', '--no-banner', '--report-format', 'json', '--report-path', str(report_path)], stdout=subprocess.PIPE, stderr=subprocess.PIPE, timeout=timeout, creationflags=subprocess.CREATE_NO_WINDOW if os.name == 'nt' else 0)
     removed = []
     if p.returncode == 1 and report_path.exists():
         findings_by_file = {}
@@ -295,7 +295,7 @@ def scan(destination, executable, originals=None, prefix=''):
                 for relative, finding in findings:
                     removed.append({'path': relative.as_posix(), 'reason': 'gitleaks binary file omitted: ' + finding.get('RuleID', 'secret')})
         retry_report = destination.parent / 'gitleaks-rescan.json'
-        retry = subprocess.run([str(executable), 'dir', str(destination), '--redact=100', '--no-banner', '--report-format', 'json', '--report-path', str(retry_report)], stdout=subprocess.PIPE, stderr=subprocess.PIPE, timeout=180, creationflags=subprocess.CREATE_NO_WINDOW if os.name == 'nt' else 0)
+        retry = subprocess.run([str(executable), 'dir', str(destination), '--redact=100', '--no-banner', '--report-format', 'json', '--report-path', str(retry_report)], stdout=subprocess.PIPE, stderr=subprocess.PIPE, timeout=timeout, creationflags=subprocess.CREATE_NO_WINDOW if os.name == 'nt' else 0)
         if retry.returncode:
             details = []
             if retry_report.exists():
@@ -407,7 +407,7 @@ def publish(root, repository, config, state, dry_run=False):
             (generated / 'workspace.json').write_text(json.dumps(registry, indent=2) + '\n', encoding='utf-8')
         (staging / 'CLOUD-WORKSPACE.md').write_text('This branch is an automatically generated filtered local workspace snapshot.\n\nRead .cloud-sync/workspace.json for the original source branch and commit. Work on a separate branch and return a pull request. Never write to the snapshot branch. Conversation exports in the AI OS snapshot provide handoff history; they do not recreate native chat sessions.\n', encoding='utf-8')
         progress(config, repository, 'scan secrets')
-        report.extend(scan(staging, config.get('gitleaks') or os.environ.get('GITLEAKS') or str(Path(__file__).parent / 'tools/gitleaks.exe'), visible_originals, root.name + '/'))
+        report.extend(scan(staging, config.get('gitleaks') or os.environ.get('GITLEAKS') or str(Path(__file__).parent / 'tools/gitleaks.exe'), visible_originals, root.name + '/', timeout=config.get('scan_timeout_seconds', 900)))
         if visible_originals:
             credential_spec = importlib.util.spec_from_file_location('credential_bundle', Path(__file__).parent / 'credential_bundle.py')
             credential_adapter = importlib.util.module_from_spec(credential_spec)
@@ -416,7 +416,7 @@ def publish(root, repository, config, state, dry_run=False):
             cache_id = __import__('hashlib').sha256(str(root).encode('utf-8')).hexdigest()[:20]
             registry['encrypted_original_context'] = credential_adapter.bundle([], private_state / 'context-cache' / cache_id, generated / 'private', 'redacted-context', visible_originals, key_state=private_state)
             (generated / 'workspace.json').write_text(json.dumps(registry, indent=2) + '\n', encoding='utf-8')
-            report.extend(scan(staging, config.get('gitleaks') or os.environ.get('GITLEAKS') or str(Path(__file__).parent / 'tools/gitleaks.exe')))
+            report.extend(scan(staging, config.get('gitleaks') or os.environ.get('GITLEAKS') or str(Path(__file__).parent / 'tools/gitleaks.exe'), timeout=config.get('scan_timeout_seconds', 900)))
             if not (generated / 'private/redacted-context.enc').exists():
                 raise RuntimeError('Encrypted context failed final scanner check; upload blocked')
         report.sort(key=lambda item: (item['path'], item['reason']))

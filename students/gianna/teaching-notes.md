@@ -4,10 +4,20 @@ type: teaching-notes
 record_kind: primary
 student: gianna
 created: 2026-09-25
-updated: 2026-09-25
+updated: 2026-10-09
 ---
 
 # Gianna Jean teaching notes
+
+## 2026-10-08 | Map argument structure before ranking choices
+
+Source: [[sessions/2026-10-08-argument-structure-and-smacker/transcript]]; [[sessions/2026-10-08-argument-structure-and-smacker/topic-map]].
+
+- SMACKER: structure, method of reasoning, assumptions, keywords, and ranking answer choices. The session grouped structure/method/assumptions with stimulus analysis and keywords/ranking with answer-choice evaluation.
+- Gianna practiced separating premises, intermediate conclusion, and main conclusion. In the praise/blame argument, “nations lack consciousness” supported the intermediate claim about group blameworthiness, which then supported the main conclusion about translating claims about groups into claims about individuals.
+- She practiced concession-and-pivot structure and conditional, causal, and comparative methods.
+- Gianna reported submitting her LSAC accommodation application with a doctor's letter and awaiting a response. This remains self-reported. Admissions timing in the discussion is session advice, not independently verified current policy.
+- Joshua said homework and instructions would be assigned by 2026-10-11; the source did not specify the drills or question sets.
 
 ## 2026-09-17 | Diagnose the argument before choosing
 

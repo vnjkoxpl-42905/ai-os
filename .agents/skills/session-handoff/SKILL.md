@@ -1,6 +1,6 @@
 ---
 name: session-handoff
-description: Use when Joshua says "session handoff", "hand off", "handoff summary", "summarize before I clear", or is about to /clear mid-work (especially near the ~250k dumb-zone). Produces a chat-only handoff — decisions, shipped changes, key files, running state, verification, deferrals, open questions — so a fresh agent (Codex or Codex) continues seamlessly. Distinct from `wrapup`, which updates the wiki ledgers; this writes nothing.
+description: Use when Joshua says "session handoff", "hand off", "handoff summary", "summarize before I clear", or is about to /clear mid-work (especially near the ~250k dumb-zone). Produces a chat-only handoff — decisions, shipped changes, key files, running state, verification, deferrals, open questions — so a fresh agent (Claude or Codex) continues seamlessly. Distinct from `wrapup`, which updates the wiki ledgers; this writes nothing.
 ---
 
 # Session Handoff
@@ -9,7 +9,7 @@ Produce a repeatable end-of-session summary so Joshua can `/clear` and start a f
 
 This is a **context-handoff artifact**, not a status report. The audience is a future instance of you, not a stakeholder.
 
-**Handoff vs. wrapup:** run `session-handoff` when the *context window* is the problem — nearing ~250k tokens (the dumb zone), or passing work between Codex and Codex. It is chat-only and writes nothing. Run `wrapup` when the *work day* is done — it strikes tasks, refreshes `wiki/hot.md`, and appends `wiki/log.md`. They can be run back to back (wrapup to persist, then handoff to reset).
+**Handoff vs. wrapup:** run `session-handoff` when the *context window* is the problem — nearing ~250k tokens (the dumb zone), or passing work between Claude and Codex. It is chat-only and writes nothing. Run `wrapup` when the *work day* is done — it strikes tasks, refreshes `wiki/hot.md`, and appends `wiki/log.md`. They can be run back to back (wrapup to persist, then handoff to reset).
 
 ## When to invoke
 
@@ -19,11 +19,11 @@ Joshua says: "session handoff", "hand off", "handoff summary", "summarize before
 
 1. **Review the full conversation**, not just the last few turns. Handoffs miss things when they only summarize recent context.
 2. **Pull state from these sources (in order):**
-   - Plan files referenced this session (check `~/.Codex/plans/` if a plan was mentioned).
+   - Plan files referenced this session; resolve the actual recorded path rather than assuming a runtime directory.
    - TodoWrite state — any in-progress or pending tasks.
    - Background processes started with `run_in_background` — shell IDs are load-bearing for the next agent.
    - Files created or modified this session — you know what you touched; don't grep to re-discover.
-   - Memory files written or updated (`~/.Codex/projects/C--Users-Joshu-dev-ai-os/memory/`).
+   - Memory files actually used this session. Codex guidance is under `~/.codex/memories/`; Claude native project memory is under `~/.claude/projects/C--Users-Joshu-dev-ai-os/memory/`. Do not invent a Codex project-memory path or update either store merely to produce a handoff.
    - Unresolved questions — things you asked Joshua that never got a clear answer, or things he asked that got deflected.
 3. **Do NOT audit the filesystem.** This is synthesis of what happened in THIS session. No `git log`, no broad `Glob` sweeps. If you didn't touch it this session, it doesn't belong here.
 4. **Produce the output in chat.** Do not write a file. Do not update memory. Chat-only.
@@ -75,7 +75,7 @@ Joshua says: "session handoff", "hand off", "handoff summary", "summarize before
 4. **If a plan file drove the session, name it first** in "Key files" so the next agent reads it before anything else.
 5. **No emojis, no hype, no "great job" summaries.** Terse and concrete — paths, commands, shell IDs, decisions. Tone of a seasoned engineer handing off at end-of-shift.
 6. **Background process IDs are critical.** If you started any `run_in_background` shells, their IDs must appear in "Running state" with the kill command — the next agent cannot find them otherwise.
-7. **Stamp verified state, and separate it from assumed state.** Run `date "+%H:%M"` and use the real time. Every claim about live systems (deploy status, DB contents, what was sent, what is published) is either something you actually checked this session — say how — or explicitly marked NOT re-verified. A handoff that presents stale belief as current state makes the next session re-derive everything, which is the exact cost this skill exists to remove.
+7. **Stamp verified state, and separate it from assumed state.** Read the current clock in the user's timezone and use the real time; on Windows use `Get-Date` with the applicable timezone conversion. Every claim about live systems (deploy status, DB contents, what was sent, what is published) is either something you actually checked this session — say how — or explicitly marked NOT re-verified. A handoff that presents stale belief as current state makes the next session re-derive everything, which is the exact cost this skill exists to remove.
 8. **Open questions are obligations, not notes.** Anything under OPEN must be resolved by the next session or re-asked to Joshua before it starts new work. Requirements have been silently re-typed across sessions, and a promised artifact once never arrived because nobody re-asked. If a question was open in the handoff you are picking up from, it is the first thing you raise.
 
 ## Anti-patterns — do not do these

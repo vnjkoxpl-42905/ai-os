@@ -4,10 +4,12 @@ type: open-loops
 record_kind: primary
 student: gianna
 created: 2026-09-25
-updated: 2026-09-28
+updated: 2026-10-09
 ---
 
 # Gianna Jean open loops
+
+- [ ] [2026-10-08] Provide the promised homework and instructions by 2026-10-11. The transcript does not name exact drills or question sets. Source: [[sessions/2026-10-08-argument-structure-and-smacker/transcript]].
 
 - [ ] [2026-09-17] Review Gianna's practice analytics if she provides access or data, then give a specific LR diagnosis. Source: [[transcript-downloads/2026-09-17-gianna-notes-by-gemini]].
 - [ ] [2026-09-17] If Gianna continues tutoring, confirm her October versus November test decision and whether she wants accommodation guidance. Check live registration and deadline sources before relaying dates. Source: same transcript.

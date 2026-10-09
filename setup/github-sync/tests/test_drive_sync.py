@@ -1,8 +1,9 @@
 import hashlib
 import importlib.util
+import json
 import tempfile
 import unittest
-from unittest.mock import patch
+from unittest.mock import patch, Mock
 from pathlib import Path
 
 spec = importlib.util.spec_from_file_location('drive_sync', Path(__file__).parents[1] / 'drive_sync.py')
@@ -35,6 +36,48 @@ class FakeDrive:
         return file.copy()
 
 class DriveTests(unittest.TestCase):
+    def test_configured_cli_works_without_inherited_path(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            cli = root / 'gws.exe'
+            cli.write_bytes(b'fixture')
+            config = root / 'config.json'
+            config.write_text(json.dumps({'gws_executable': str(cli)}))
+            with patch.dict(module.os.environ, {}, clear=True), patch.object(module.shutil, 'which', return_value=None):
+                module.configure_cli(config)
+                self.assertEqual(module.os.environ['GWS_EXECUTABLE'], str(cli))
+
+    def test_checkout_failure_does_not_block_healthy_mirror(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            state = root / 'state'
+            state.mkdir()
+            snapshots = {name: {'commit': 'current', 'branch': 'codex/local-sync/machine/' + name,
+                                'repository': 'owner/repo'} for name in ['broken', 'healthy']}
+            (state / 'state.json').write_text(json.dumps(snapshots))
+            mirror = Mock()
+            mirror.state = {'checkouts': {name: {'commit': 'current', 'archive_id': name,
+                                               'md5': 'digest', 'size': 10, 'folder_id': name,
+                                               'repository': 'owner/repo', 'branch': 'branch',
+                                               'updated_utc': 'previous'} for name in snapshots}}
+            mirror.folder.return_value = 'root'
+            mirror.api.side_effect = [module.DriveOperationError('api', 'get', 1, 404),
+                                      {'md5Checksum': 'digest', 'size': '10'}]
+            with patch.object(module, 'Mirror', return_value=mirror):
+                result = module._mirror_from_state(root / 'config.json')
+            self.assertEqual([r['status'] for r in result['results']], ['failed', 'unchanged'])
+            self.assertNotIn('last_success_utc', mirror.state)
+
+    def test_safe_diagnostics_do_not_expose_arbitrary_error_text(self):
+        detail = module.safe_error(RuntimeError('SECRET_SENTINEL'))
+        self.assertNotIn('SECRET_SENTINEL', str(detail))
+        self.assertEqual(detail['category'], 'unexpected_error')
+
+    def test_api_diagnostics_preserve_code_but_not_untrusted_reason(self):
+        error = module.DriveOperationError('api', 'update', 1, 403, 'SECRET_SENTINEL')
+        self.assertEqual(module.safe_error(error)['api_code'], 403)
+        self.assertNotIn('SECRET_SENTINEL', str(error))
+
     def test_transient_retry_preserves_command_and_id(self):
         error = type('Response', (), {'returncode': 1, 'stdout': '{"error":{"code":500,"reason":"internalError"}}'})()
         success = type('Response', (), {'returncode': 0, 'stdout': '{"id":"one"}'})()

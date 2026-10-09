@@ -1,7 +1,7 @@
 ---
 type: teaching-notes
 subject: Corpus LSAT teaching knowledge
-updated: 2026-07-17
+updated: 2026-10-09
 aliases: []
 ---
 
@@ -54,6 +54,23 @@ Fills through supervised ingests, one source at a time, logged in [[../wiki/log|
 **Known gaps:** topics scaffolded but still unfilled — Agree Disagree, Bootcamp, Match Family, Must Be False, Paradox, Quantifiers, Weaken, Reading Comprehension. Their source material is split between `raw/sources/lsat-curriculum/LSAT DUMP/` (many entries are stale `.gdoc` Drive pointers whose IDs no longer resolve) and Google Drive itself, where a past migration converted docs to PDFs/scans under new IDs. Recovering those needs a Drive-side pass, not a local copy.
 
 2026-10-07 recovery note: the [RC cumulative-translation protocol](<Curriculum/Reading Comprehension/Notes/cumulative-translation-review.md>) now provides one attributed method in the RC topic home. It does not establish recovery of the complete RC curriculum. Conditional and objection topic pages now link the relevant recovered evidence without replacing their current teaching standards.
+
+### Find existing coverage before recovering missing curriculum (2026-10-09)
+
+An empty curriculum home is not proof that this brain lacks the topic. The following map resolves audit F28's retrieval gap without duplicating teaching or claiming complete curriculum recovery. Read each model's weaknesses before applying it; model explanations are examples, not complete lesson sequences.
+
+| Thin curriculum home | Existing local coverage | Remaining gap |
+|---|---|---|
+| Agree Disagree | [MC, Role and Agree models](lr-explanations/models/MC-Role-Agree.md); [model index](lr-explanations/models/index.md) records 20 Agree/Disagree models | Recover the original lesson and homework sequence |
+| Must Be False | [MBT and MBF models](lr-explanations/models/MBT-MBF.md); index records 17 selected MBF models with quality caveats | Recover the original curriculum; do not treat all selected examples as equally strong |
+| Weaken | [Weaken and Evaluate models](lr-explanations/models/Weaken-Evaluate.md); [Loophole overview](loophole-online/index.md) preserves vendor doctrine caveats | Recover lesson/homework sequence and retain the vendor's limitations |
+| Paradox | [Paradox and Method models](lr-explanations/models/Paradox-Method.md) | Recover the original lesson/homework sequence |
+| Match Family | [Taxonomy](Curriculum/_meta/lr-taxonomy.md) defines the family; [model index](lr-explanations/models/index.md) routes MC, Role, Method, Parallel and Agree/Disagree examples | Family-wide teaching progression has not been verified |
+| Reading Comprehension | [Cumulative translation](<Curriculum/Reading Comprehension/Notes/cumulative-translation-review.md>) and [Loophole methods](loophole-online/method-library.md) | [RC lecture index](lectures/reading-comprehension/index.md) reports no filed lectures; full recovery remains open |
+| Quantifiers | The [taxonomy](Curriculum/_meta/lr-taxonomy.md) identifies it as a reasoning pattern | Dedicated method/source coverage remains unverified; requires a targeted source inventory |
+| Bootcamp | [Taxonomy](Curriculum/_meta/lr-taxonomy.md) records historical app bootcamp names | Verify current application curriculum in its own repository/live system before importing it |
+
+Do not manufacture lessons, copy model text into empty folders, or label a stale Drive pointer as a recovered physical source. Further recovery uses the existing supervised ingest workflow and source verification.
 
 ### `lr-explanations/` — models for writing LR explanations (2026-09-26)
 

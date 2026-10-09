@@ -1,5 +1,9 @@
 # Skill parity baseline
 
+## 2026-10-09: Persona Agent Creator
+
+`persona-agent-creator` is catalogued and activated as matching project copies in both runtimes. Its host-aware factory procedure requires actual native person-agent registration and an independently grading entry skill. It reuses existing ingest/schema conventions, derives each person's own rules, and explicitly tests new hook scope instead of inheriting Karpathy's hardcoded guard. Codex invokes `$persona-agent-creator`; generated person agents use each host's native configuration. No global activation was added.
+
 Declared single-runtime skills. `check-skills.py` fails on **undeclared** asymmetry only:
 when you deliberately add a skill to one runtime and not the other, add it here in the same
 commit. When a skill shows up as undeclared drift, either activate it for both runtimes or

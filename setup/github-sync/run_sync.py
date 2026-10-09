@@ -7,7 +7,7 @@ import subprocess
 import sys
 from datetime import datetime, timezone
 
-from drive_sync import atomic_json, mirror_from_state
+from drive_sync import atomic_json, mirror_from_state, safe_error
 from sync import process_lock
 from uuid import uuid4
 
@@ -59,7 +59,10 @@ def run_once(config, state):
             receipt['drive'] = mirror_from_state(config)
         except Exception as error:
             receipt['drive_error'] = type(error).__name__
-    failed = bool(receipt['github_exit_code'] or 'drive_error' in receipt)
+            receipt['drive_diagnostic'] = safe_error(error)
+    failed = bool(receipt['github_exit_code'] or 'drive_error' in receipt or
+                  any(item.get('status') == 'failed'
+                      for item in receipt.get('drive', {}).get('results', [])))
     busy = github_busy or receipt.get('drive', {}).get('status') == 'busy'
     outcome = 'failed' if failed else 'deferred' if busy else 'succeeded'
     receipt['outcome'] = outcome
