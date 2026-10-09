@@ -204,3 +204,11 @@ Current research: official Kling VIDEO 3.0 guide supports native audio, multi-sh
 First clip planned: 15-second 1080p narrated visual showing Maya studying in a law-school setting and explaining that enrollment is enough to establish student status, then introducing the reverse as unresolved. Subtle controlled camera movement, warm natural light, ink/navy and paper tones. Avoid arbitrary admissions guarantees, caused-by imagery, fabricated instructors and generated text labels. Captions and transcript derived from actual verified audio, not merely the requested prompt.
 
 Environment issue: current shell cannot resolve kling, whereas prior account check succeeded. Investigating installed executable and runtime before reinstalling or changing login. No generation submitted yet.
+
+## Executed local motion and media pass, 2026-10-09
+
+Two 15-second 1080p Kling clips generated with native offscreen narration and embedded in the sufficient lesson. Warm ivory, ink and brass palette; learner-controlled fact cases and rule/fact/inference walkthrough. Teaching remains concept-first and necessary conditions remain the next page. 360 credits used; 106 confirmed remaining. Current CLI works through its installed full path; no reinstall or new permissions were needed.
+
+Actual final audio was checked with local automated transcription and matched both intended scripts. Sampled frames inspected. Direct listening and subjective voice quality are not claimed. Native video playback and captions loaded in Codex browser. Final 32 tests, full typecheck, production build and no-canonical check passed. Five viewport widths showed no overflow or undersized lesson buttons. Failure/retry and persistent live-region behavior covered in tests. Real devices, screen-reader speech, slow network and deployment acceptance remain open.
+
+Full provenance, asset hashes, validation and provisional audit: ../ai-os-projects/lsatu-conditional-bootcamp/docs/agent/conditional-recovery-20261007/media/README.md. No commit, push or deployment. Temporary server stopped during verification; replaced with hidden detached server process on strict port 8097. Codex preview is now shown with actual media.

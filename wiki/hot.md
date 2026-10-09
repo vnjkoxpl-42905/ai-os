@@ -1,7 +1,7 @@
 ---
 type: operating-layer
 subject: Hot last-session cache
-updated: 2026-10-08
+updated: 2026-10-09
 aliases: []
 ---
 
@@ -9,7 +9,14 @@ aliases: []
 
 Freshest working state; the first page `/pickup` reads. Rebuilt fresh in the 2026-07-16 vault rebuild (the old cache is archived).
 
-## Most recent (2026-10-09): Karpathy native Codex method verified
+## Most recent (2026-10-09): Sufficient-condition motion lesson verified locally
+
+- Added two narrated 15-second 1080p Kling clips, captions and transcripts to the sufficient lesson. Scoped warm ivory, ink and brass palette, three interactive fact cases and guided rule/fact/inference walkthrough. [Media and verification receipt](../../ai-os-projects/lsatu-conditional-bootcamp/docs/agent/conditional-recovery-20261007/media/README.md).
+- Final 32 tests, full app typecheck, production build and canonical exclusion check passed. Codex browser verified both players and caption readiness, cases, answer feedback and keyboard replay. Measured 320/400/960/1200/1600px layouts have no horizontal overflow or undersized lesson buttons.
+- Kling used 360 credits; 106 remained at the confirmed account check. Actual media narration matches local automated transcripts. Subjective listening quality is not claimed. Local only, no commit, push or deployment.
+- Real devices, screen-reader speech, slow network and published acceptance remain outstanding. Broader bootcamp and production integration remain separate. Task statuses unchanged. Temporary preview process stopped; hidden detached process now serves strict port 8097.
+
+## Previous (2026-10-09): Karpathy native Codex method verified
 
 - Fresh native Codex discovered and delegated the tokenizer lesson to registered `karpathy`, without a generic-worker fallback. The child read hot then rules, stayed within two wiki pages, cited sources and produced the required ending. [Native acceptance](../research/karpathy-brain-2026-10-08/NATIVE-CODEX-LESSON-ACCEPTANCE.md).
 - The Codex skill now requires real handoff and independent parent grading. A retained follow-up review inspected code, lesson, receipts and current hash before reporting seven independent passes. The initial copied self-grades remain documented as a weaker first presentation.
@@ -372,7 +379,7 @@ The sections below preserve earlier session snapshots. They are historical conte
 
 ## Now
 
-- **Conditional opening:** recovered local checkout includes the audit fixes, five-stage mixed drill and final verified local copy/flow. Production merge and publication have not started; integrate carefully with current main rather than replacing it with the older detached baseline. Broader curriculum, media and signed-in production acceptance remain open; [[tasks]] is unchanged.
+- **Conditional opening:** recovered local checkout includes the audit fixes, five-stage mixed drill and sufficient lesson with two locally verified Kling clips, interactive cases and guided inference. Production merge and publication have not started; integrate carefully with current main rather than replacing it with the older detached baseline. Broader curriculum/media and signed-in production acceptance remain open; [[tasks]] is unchanged.
 
 - **D1 Step 4 (vault rebuild) executed 2026-07-16.** New `wiki/` + `corpus/` + `students/` stand; prior wiki archived at `archive/wiki-pre-rebuild-2026-07-16/`. Product work continues in [[tasks]] unchanged.
 - **Historical D1 #5 deployment report, 2026-07-16, not fresh production verification:** Lovable pass reported green (3 functions, migration present, all secrets — `EDGE_INTERNAL_KEY` is project-scoped so the same-value trap can't happen; gateway `ai.gateway.lovable.dev` confirmed unchanged). Frontend Publish verified live in the browser. **Then Joshua pivoted the workflow: the app's ingest UI is not how he'll work — Claude is the workplace; ingestion and post-session actions go through Claude directly.** The formal runbook E2E was aborted at his direction and is no longer the plan of record. **The `lsat-u-platform-actions` skill now exists (activated both runtimes)** — one entry point to assign drills/homework/activities, post to classrooms, message students, and ingest sessions from this workspace via his Chrome admin session. The original "D1 #6 gated on live E2E" adjudication predates this pivot and needs re-adjudication.
@@ -380,7 +387,7 @@ The sections below preserve earlier session snapshots. They are historical conte
 ## Open threads
 
 - Matt Pocock guide: if a rendered browser preview is needed, open `references/matt-pocock-skills-field-guide.html` locally; the Codex browser denied its `file:` URL, so its live interactions were not checked in-browser.
-- Conditional opening: preserve the recovered checkout and preview on 8097; final local tests and Codex browser evidence are linked above. Production integration remains separate and unstarted. Older Claude approval and viewport reports stay historical; no current independent Claude certification, publication or live student-persistence claim.
+- Conditional opening: preserve the recovered checkout and preview on 8097; current sufficient motion/media receipts and local Codex checks are linked above. Real-device, screen-reader and slow-network checks remain open. Production integration remains separate and unstarted. Older Claude approval and viewport reports stay historical; no current independent Claude certification, publication or live student-persistence claim.
 
 - Yahunatan: await approval of the V7 recap before posting the exact reviewed package. Current preview and primary record are linked above.
 - RRC films: seeking is dead on production because the host ignores Range; hosting move is a P0 decision in [[tasks]] Next.
