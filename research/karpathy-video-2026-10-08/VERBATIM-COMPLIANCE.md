@@ -15,7 +15,7 @@ All five numbered cards match the original fenced prompt wording in prompts.md. 
 
 ## Current runtime choice
 
-Joshua selected Codex instead of Claude on 2026-10-08. [Codex prompt variant](CODEX-PROMPTS.md) preserves the original wording except the authorized runtime name in Prompt 4. The Claude quota and replay state below are historical; Codex implementation and acceptance supersede that continuation requirement. Original video prompt files remain unchanged. [Current Codex execution](../karpathy-brain-2026-10-08/VIDEO-PROMPT-EXECUTION.md) records the fresh seven-test lesson and 36-test project hook. The six current Codex hook definitions are now reviewed, Trusted and enabled; a native main Stop block, subsequent execution and unrelated-turn acceptance are directly recorded. Child SubagentStop is configured/unit-tested but not separately live-tested. Historical native Claude pending statements below do not describe the current runtime.
+Joshua selected Codex instead of Claude on 2026-10-08. [Codex prompt variant](CODEX-PROMPTS.md) preserves the original wording except the authorized runtime name in Prompt 4. The Claude quota and replay state below are historical; Codex implementation and acceptance supersede that continuation requirement. Original video prompt files remain unchanged. [Current Codex execution](../karpathy-brain-2026-10-08/VIDEO-PROMPT-EXECUTION.md) records the fresh native registered-agent tokenizer lesson, independent parent grading and 36-test project hook. Codex uses $karpathy-teach; its native parser rejected the original slash spelling. [Native lesson acceptance](../karpathy-brain-2026-10-08/NATIVE-CODEX-LESSON-ACCEPTANCE.md). The six current Codex hook definitions are now reviewed, Trusted and enabled; a native main Stop block, subsequent execution and unrelated-turn acceptance are directly recorded. Child SubagentStop is configured/unit-tested but not separately live-tested. Historical native Claude pending statements below do not describe the current runtime.
 
 ## Historical corrections before the Codex runtime switch
 
@@ -42,3 +42,4 @@ Read [execution record](../karpathy-brain-2026-10-08/VIDEO-PROMPT-EXECUTION.md) 
 
 
 Matched later ingest demonstration: [captured 2026-07-21 voice-ramble post](../../wiki/sources/karpathy/x/posts/2079610838143623371.md), [focused source summary](../../wiki/sources/karpathy/x/voice-context.md). The date matches the video and the exact captured primary text exists. The post does not itself list six working rules; that phrase is not adopted as a factual claim.
+

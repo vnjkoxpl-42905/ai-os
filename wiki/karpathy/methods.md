@@ -2,7 +2,7 @@
 type: synthesis
 subject: Karpathy evolving methods across reviewed source domains
 created: 2026-10-08
-updated: 2026-10-08
+updated: 2026-10-09
 aliases: []
 tags: [karpathy, methods]
 sources:

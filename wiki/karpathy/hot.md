@@ -2,7 +2,7 @@
 type: synthesis
 subject: Karpathy reviewed evidence hot page
 created: 2026-10-08
-updated: 2026-10-08
+updated: 2026-10-09
 aliases: []
 tags: [karpathy, llm-wiki]
 sources: [../sources/karpathy/blog/undergraduate-study-advice.md, ../sources/karpathy/blog/recipe.md, ../sources/karpathy/blog/understand-backprop.md, ../sources/karpathy/blog/microgpt.md, ../sources/karpathy/x/claude-coding-notes.md, ../sources/karpathy/animals-vs-ghosts.md]
@@ -28,6 +28,7 @@ The [collected sources are compiled](../../research/karpathy-brain-2026-10-08/CO
 
 The configured teaching agent reads this page first, uses at most five wiki pages, cites source pages and applies all seven rules. The skill grades its answer before presentation. End with **What I ran**, **What came out**, **What I changed**. Teaching code belongs outside the vault in `ai-os-projects/karpathy-method-tools/examples/`.
 
-Joshua selected Codex for this method. The fresh [tokenizer lesson](../../research/karpathy-brain-2026-10-08/CODEX-TOKENIZER-ACCEPTANCE.md) passed seven tests with current-file receipts. The [Codex hook](../../research/karpathy-brain-2026-10-08/CODEX-STOP-ACCEPTANCE.md) passed 36 tests and its six definitions are Trusted/enabled. Native main Stop blocked a scoped edit, recovered after execution and left an unrelated turn alone. Child SubagentStop is not separately live-tested. Generic-worker fallback was exercised; native custom-role discovery was not. Claude quota is historical.
+Joshua selected Codex for this method. The fresh [tokenizer lesson](../../research/karpathy-brain-2026-10-08/CODEX-TOKENIZER-ACCEPTANCE.md) passed seven tests with current-file receipts. The [Codex hook](../../research/karpathy-brain-2026-10-08/CODEX-STOP-ACCEPTANCE.md) passed 36 tests and its six definitions are Trusted/enabled. Native main Stop blocked a scoped edit, recovered after execution and left an unrelated turn alone. Child SubagentStop is not separately live-tested. The [fresh native lesson](../../research/karpathy-brain-2026-10-08/NATIVE-CODEX-LESSON-ACCEPTANCE.md) verified registered-agent discovery, real handoff and independent parent grading. Use $karpathy-teach in Codex; its parser rejects the original slash spelling. Generic fallback is no longer permitted by the skill. Claude quota is historical.
 
 Use existing `ingest` for new sources. Preserve raw evidence. Foreign authors, payloads, caption errors and linked media retain their limits. [Index](index.md), [principles](principles.md), [methods](methods.md), [current status](../../research/karpathy-video-2026-10-08/VERBATIM-COMPLIANCE.md).
+

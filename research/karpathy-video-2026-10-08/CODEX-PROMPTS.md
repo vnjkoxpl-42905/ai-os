@@ -2,7 +2,7 @@
 
 Joshua selected Codex on 2026-10-08. This supersedes the requirement to resume the Claude replay. Original video prompt files remain unchanged. Existing X files are the authorized Prompt 1 acquisition exception; no TwitterAPI.io recollection is needed. The saved collection is already compiled.
 
-Only Prompt 4 changes its runtime name from Claude Code to Codex. Prompt 5 uses the Codex project-hook interface while retaining the exact blocking message. These are authorized runtime adaptations, not claims that the video used Codex.
+Prompt 4 changes its runtime name from Claude Code to Codex. Prompt 5 uses the Codex project-hook interface while retaining the exact blocking message. Prompt 6 uses Codex's `$karpathy-teach` skill syntax: the native Codex parser rejects the video's `/karpathy-teach` command. The task wording stays identical. These are runtime adaptations under Joshua's Codex choice, not claims that the video used Codex. All original prompt bodies, including the slash invocation, remain preserved in `verbatim/`.
 
 
 ## Prompt 1
@@ -45,5 +45,5 @@ Add a Stop hook to this project. When a turn used the karpathy agent or the karp
 ## Prompt 6
 
 ```text
-/karpathy-teach build me a tiny byte-pair tokenizer from scratch and teach me what it does
+$karpathy-teach build me a tiny byte-pair tokenizer from scratch and teach me what it does
 ```

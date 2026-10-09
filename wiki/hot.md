@@ -9,7 +9,14 @@ aliases: []
 
 Freshest working state; the first page `/pickup` reads. Rebuilt fresh in the 2026-07-16 vault rebuild (the old cache is archived).
 
-## Most recent (2026-10-08): Matt Pocock skills field guide
+## Most recent (2026-10-09): Karpathy native Codex method verified
+
+- Fresh native Codex discovered and delegated the tokenizer lesson to registered `karpathy`, without a generic-worker fallback. The child read hot then rules, stayed within two wiki pages, cited sources and produced the required ending. [Native acceptance](../research/karpathy-brain-2026-10-08/NATIVE-CODEX-LESSON-ACCEPTANCE.md).
+- The Codex skill now requires real handoff and independent parent grading. A retained follow-up review inspected code, lesson, receipts and current hash before reporting seven independent passes. The initial copied self-grades remain documented as a weaker first presentation.
+- Use `$karpathy-teach build me a tiny byte-pair tokenizer from scratch and teach me what it does`. Codex rejected the video's original slash spelling. Native broken decoding exited 1; correct decoding, exact merges and nine round trips passed with current-file receipts. Original video prompt bodies and raw sources remain unchanged.
+- All six project hooks are Trusted/enabled. Main Stop has direct exact-message blocking, execution recovery and unrelated-turn acceptance. Child SubagentStop remains configured and unit-tested, without a separate deliberate live block. [Stage status](../research/karpathy-brain-2026-10-08/VIDEO-PROMPT-EXECUTION.md).
+
+## Previous (2026-10-08): Matt Pocock skills field guide
 
 - Created the interactive [Matt Pocock skills field guide](../references/matt-pocock-skills-field-guide.html) and linked it from [[index]]. It covers all 39 tracked skill folders, including four retained locally after upstream removal and Joshua's customized `grill-me`.
 - Every entry explains when to use it, its actual workflow, a sample request, dependencies or limits, and useful companion skills. Common work routes connect the individual entries into sequences.
