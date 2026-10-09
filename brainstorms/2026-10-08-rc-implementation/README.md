@@ -2,6 +2,8 @@
 
 Date: 2026-10-08. Status: implementation handoff prepared; no implementation performed by this planning pass. These local tickets are execution instructions, not published GitHub issues. The product authority remains `C:/Users/Joshu/dev/ai-os-projects/lsatu/docs/specs/2026-10-07-rc-drill-quality.md`. Update that specification when an accepted product decision changes; do not create another competing spec.
 
+Execution update, 2026-10-09: Joshua subsequently authorized this chat to implement and release the remaining tickets. Tickets 03–07 are implemented on main in `ab5d33dd` with preview-origin follow-ups `a95d87de`/`4e45b860` and the setup-loading race fix `8ad748b0`. Ticket 08's current test, publication and signed-in acceptance evidence is recorded in [the app release ledger](../../../ai-os-projects/lsatu/docs/specs/2026-10-09-rc-release-evidence.md). That ledger distinguishes passed scenarios from remaining physical-device, screen-reader, live fault and scoring-authority checks. The planning workflow below is preserved as the original handoff, not a request to redo completed work.
+
 ## Use a stronger planner and a cheaper implementer
 
 The ask-matt route is **to-spec → to-tickets → implement → code-review**. The current audit already supplies the problem, most interaction decisions and acceptance requirements. This packet performs the local planning and ticket-drafting work so the executor does not need this long chat. It does not publish issues or claim the formal to-spec/to-tickets approval steps have occurred.

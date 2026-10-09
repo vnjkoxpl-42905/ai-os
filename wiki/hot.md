@@ -9,7 +9,15 @@ aliases: []
 
 Freshest working state; the first page `/pickup` reads. Rebuilt fresh in the 2026-07-16 vault rebuild (the old cache is archived).
 
-## Most recent (2026-10-09): Sufficient condition taught before case facts
+## Most recent (2026-10-09): RC repair implemented and published
+
+- Remaining RC tickets 03–08 code and release evidence completed in the LSAT U app. Integrated repair `ab5d33dd`; preview-origin fixes `a95d87de`/`4e45b860`; delayed-index setup fix `8ad748b0`. [Authoritative release evidence](../../ai-os-projects/lsatu/docs/specs/2026-10-09-rc-release-evidence.md). Original [ticket packet](../brainstorms/2026-10-08-rc-implementation/README.md) points to current execution state.
+- Final focused slice 409/409, separate builder 34/34, full typecheck, relevant lint and build passed. Whole-suite baseline failures remain explicit. Safe-push used without force or rollback. Free Lovable Publish changes confirmed Your website was updated; production loaded index-Dn3d15C_.js. No Lovable AI messages or credit-spending controls used.
+- Dedicated student production checks verified all 27 PT140 S4 questions, Q3/Q17 read-only lookup, correct return origins, restored highlights/flags, passage-only reading and persisted font preference. All three reveal boundaries completed; pause/reload, save/exit/resume, retry recovery, shortfall acknowledgement and practice-budget overrun observed. Final receipt: 19 owned sessions, 165 attempts, 2 annotations; test records preserved.
+- RC source/answer keys unchanged. Unrelated supabase/functions/mcp/index.ts edit preserved unstaged with its original hash. No backend deployment or migration. Existing task statuses unchanged.
+- Remaining acceptance: physical phone/cross-device and screen-reader speech; exhaustive keyboard/zoom/docked matrix; controlled live annotation/flag actor-switch or lost-reply fault injection. PT159 S2 Q2 and broader answer-key authority remain unadjudicated. Do not interpret the UI release as scoring certification.
+
+## Previous (2026-10-09): Sufficient condition taught before case facts
 
 - Joshua rejected the isolated Enough for what? heading and fact-first presentation. The sufficient page now explains trigger and guaranteed outcome through full-clause exploration, an original interactive group illustration and three concept checks. Brief necessity bridge remains; no Maya facts or videos on the definition page.
 - Reviewed the full ingested LSAT Lab Conditional Logic transcript, saved Demon sources and selected voice standard. Original source: raw/sources/lsat-lab-lectures/16784/source.en-US.vtt:48-94. This source is in raw/research, not yet a complete indexed lecture package.
@@ -392,6 +400,8 @@ The sections below preserve earlier session snapshots. They are historical conte
 - **Historical D1 #5 deployment report, 2026-07-16, not fresh production verification:** Lovable pass reported green (3 functions, migration present, all secrets — `EDGE_INTERNAL_KEY` is project-scoped so the same-value trap can't happen; gateway `ai.gateway.lovable.dev` confirmed unchanged). Frontend Publish verified live in the browser. **Then Joshua pivoted the workflow: the app's ingest UI is not how he'll work — Claude is the workplace; ingestion and post-session actions go through Claude directly.** The formal runbook E2E was aborted at his direction and is no longer the plan of record. **The `lsat-u-platform-actions` skill now exists (activated both runtimes)** — one entry point to assign drills/homework/activities, post to classrooms, message students, and ingest sessions from this workspace via his Chrome admin session. The original "D1 #6 gated on live E2E" adjudication predates this pivot and needs re-adjudication.
 
 ## Open threads
+
+- RC repair: published code and passed scenarios are in the [release evidence](../../ai-os-projects/lsatu/docs/specs/2026-10-09-rc-release-evidence.md). Physical-device/screen-reader and remaining live fault checks are open. Answer-key authority is a separate investigation; preserve all source keys and test records.
 
 - Matt Pocock guide: if a rendered browser preview is needed, open `references/matt-pocock-skills-field-guide.html` locally; the Codex browser denied its `file:` URL, so its live interactions were not checked in-browser.
 - Conditional opening: preserve the recovered checkout and preview on 8097; current sufficient motion/media receipts and local Codex checks are linked above. Real-device, screen-reader and slow-network checks remain open. Production integration remains separate and unstarted. Older Claude approval and viewport reports stay historical; no current independent Claude certification, publication or live student-persistence claim.
