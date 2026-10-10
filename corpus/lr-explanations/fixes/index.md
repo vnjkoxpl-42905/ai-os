@@ -162,3 +162,15 @@ The database is the source of truth for explanations, not the local `Explanation
 
 ## Live status check, 2026-10-10
 Read directly from the LSAT U backend (project 53b9a6f2, ref atrcqxpmqrynmtvvyjju) via query_database. 3,958 of 3,958 questions have an explanation; 0 unexplained; every question has 5 choices and exactly one key. 236 questions carry all three styles (Standard, Brief, Another Way) with 5 choice notes each; 3,722 carry one explanation. 14 style rows (13 questions, e.g. PT104-S1-Q12 Brief, PT158-S2-Q1 Brief and Another Way) have choice notes but no steps; the question's other styles have steps. PT104-S1-Q4 A reads "a larger and a small species" in both the live DB and the in-app bank (same source, so not independent evidence); unresolved pending the official PDF.
+
+## Plan vs progress, 2026-10-10 (reconciled against handoffs/2026-10-07-lr-cloud-context.md)
+Approved plan: brainstorms/2026-10-07-finish-lr-explanations.md. Definition of finished: every correctness defect fixed + the 192 Revamp rewritten; 100 Weak, 231 Watch and ~136 unread stay queued.
+
+| Phase | State |
+|---|---|
+| 772 missing explanations (batches pilot, 01-13) | Done. 3,958/3,958 explained on the live DB. |
+| Housekeeping (#138/#141/#142, Games-y LR rename, sidecars, worktrees) | Merged per the 2026-10-07 pause; checkboxes in Open above are stale. Not re-verified today. #203 production deploy and catalog activation were unconfirmed at the pause; catalogs confirmed enabled in Step 3. |
+| 192 Revamp rewrites | Done (Step 3): 191 live + PT126-S3-Q16 agreed skip. |
+| Correctness slices A, B, C, D (828 drafted edits, 772 unique rows, 300 questions) | RECONCILED 2026-10-10 against a fresh live pull of the backend (read-only, db_pull.py). 657 edits already live exactly as drafted. 108 rows sit in questions Step 3 rewrote (superseded). 14 match another slice's proposal. 11 rows (9 questions) differ from the draft but are already corrected in live wording (checked PT104-S1-Q17 and PT101-S2-Q21 against the question). 0 edits still needed. Flags: PT112-S3-Q8 E tag fixed in Step 4; PT102-S4-Q19 null tags and 15 Brief styles without choice notes (PT117-S3-Q2 through PT120-S4-Q17) are optional, none in a student-default style. |
+| Cleanup (typos, transcription damage, diagrams, hard-wrap rows) | Partly overlapped by Revamp and Step 4; remainder unmeasured. |
+| PT104-S1-Q4 A "small/smaller" | Open; needs official PT104 PDF. |
