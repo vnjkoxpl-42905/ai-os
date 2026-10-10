@@ -159,3 +159,6 @@ The database is the source of truth for explanations, not the local `Explanation
 - [ ] **Repo `CLAUDE.md` says commit straight to `main`; memory says branch + PR per session.** One should change.
 
 ## Done
+
+## Live status check, 2026-10-10
+Read directly from the LSAT U backend (project 53b9a6f2, ref atrcqxpmqrynmtvvyjju) via query_database. 3,958 of 3,958 questions have an explanation; 0 unexplained; every question has 5 choices and exactly one key. 236 questions carry all three styles (Standard, Brief, Another Way) with 5 choice notes each; 3,722 carry one explanation. 14 style rows (13 questions, e.g. PT104-S1-Q12 Brief, PT158-S2-Q1 Brief and Another Way) have choice notes but no steps; the question's other styles have steps. PT104-S1-Q4 A reads "a larger and a small species" in both the live DB and the in-app bank (same source, so not independent evidence); unresolved pending the official PDF.
