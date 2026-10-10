@@ -1,0 +1,84 @@
+{
+ "qid": "PT158-S4-Q21",
+ "type": "Principle-Strengthen",
+ "difficulty": "5",
+ "key_db": "E",
+ "stimulus_db": "Developer: The builders of the Glen Veil apartment complex will not complete the complex unless a road connecting it to the town of Sierra is built. The completed apartment complex would strengthen Sierra's economy, and a stronger economy would benefit every Sierra resident. Therefore, the residents of Sierra should vote in favor of a local tax to fund construction of the proposed road.",
+ "stem_db": "Which one of the following principles, if valid, would most help to justify the developer's reasoning?",
+ "choices_db": {
+  "A": "If a construction project is necessary in order to strengthen a town's economy, then the residents of that town should vote in favor of a local tax to fund that construction project.",
+  "B": "The residents of a town should not vote in favor of a local tax to fund a construction project unless that construction project will produce results that benefit all of those residents.",
+  "C": "Whenever a town funds a construction project, it should do so by means of a tax rather than debt.",
+  "D": "Only those residents who will benefit from the results of a construction project should be required to pay a tax to fund that project.",
+  "E": "Anyone who would benefit from the results of a construction project should vote in favor of a local tax to fund that project."
+ },
+ "bank": {
+  "stimulus": "Developer: The builders of the Glen Veil apartment\n complex will not complete the complex unless\n a road connecting it to the town of Sierra is\n built. The completed apartment complex would\n strengthen Sierra’s economy, and a stronger\n economy would benefit every Sierra resident.\n Therefore, the residents of Sierra should vote in\n favor of a local tax to fund construction of the\n proposed road.",
+  "stem": "Which one of the following principles, if valid, would\n most help to justify the developer’s reasoning?",
+  "choices": {
+   "A": "If a construction project is necessary in order to strengthen a town’s economy, then the residents of that town should vote in favor of a local tax to fund that construction project.",
+   "B": "The residents of a town should not vote in favor of a local tax to fund a construction project unless that construction project will produce results that benefit all of those residents.",
+   "C": "Whenever a town funds a construction project, it should do so by means of a tax rather than debt.",
+   "D": "Only those residents who will benefit from the results of a construction project should be required to pay a tax to fund that project.",
+   "E": "Anyone who would benefit from the results of a construction project should vote in favor of a local tax to fund that project."
+  },
+  "key": "E"
+ },
+ "explanation_id": "10c58106-45aa-4607-b1ed-91c88c504a45",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "31473c84-2428-441c-8067-b94e5081599d",
+   "position": 0,
+   "label": "Conclusion",
+   "body": "The residents of Sierra should vote in favor of a local tax to fund construction of the proposed road."
+  },
+  {
+   "row_id": "b2723059-9d7e-4017-a4a1-29ec80e7550d",
+   "position": 1,
+   "label": "Evidence",
+   "body": "If the proposed road connecting GVAC to Sierra isn't built, then the builders of GVAC won't complete the complex.\nWere the complex to be completed, it would strengthen Sierra's economy and that would benefit every Sierra resident."
+  },
+  {
+   "row_id": "3310ea29-a41b-4cd6-b66c-e5c17902eed8",
+   "position": 2,
+   "label": "Evaluate",
+   "body": "Why does the author think that residents of Sierra should vote in favor of a tax that would fund this proposed road? Ultimately, the author says, because it would benefit every Sierra resident (by making the economy stronger).\nNaturally, increasing local taxes would also affect every Sierra resident, so there's an element of weighing tradeoffs going into this recommendation: you should vote to have a new tax imposed because the benefit you'll ultimately get from the stronger economy is worth it?"
+  },
+  {
+   "row_id": "96a7eb1b-8852-45ed-8fc6-c64b3d76f940",
+   "position": 3,
+   "label": "Goal",
+   "body": "It's hard to predict what ideas they'll pair up in the correct answer choice.\nWhen it comes to Premise facts, we know the proposed road\n- is required to complete construction of something that, if constructed, would strengthen the economy / benefit everyone\nWhen it comes to what the Conclusion wants to hear, it's ideas like\n- this is a good tax to vote for\n- we do want this apartment complex to be completed\n- the benefit of the stronger economy would outweigh the harm of the new tax."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "cc4e194f-f4e9-424b-be73-95aeab57cff7",
+   "letter": "A",
+   "body": "This principle requires the project to be \"necessary\" for economic growth. The developer only claims the apartment complex would strengthen the economy, not that it is the only way to do so. The mismatch is between sufficiency and necessity. The developer argues the project is sufficient to produce benefits, but this principle demands that it be necessary — indispensable. Since other projects could also strengthen the economy, the developer cannot meet this principle's trigger condition. A principle requiring only that a project would benefit residents, rather than that it is indispensable, would be a better fit."
+  },
+  {
+   "row_id": "e636d107-674a-4d83-b787-a8759401d561",
+   "letter": "B",
+   "body": "This principle states that residents should not vote for a tax increase unless the resulting benefits accrue to all residents. While the developer does claim the economy strengthening would benefit every resident, this principle is structured as a negative condition — a reason to vote no if the condition is not met, rather than a positive reason to vote yes when it is. More importantly, this principle could easily be weaponized against the developer: any resident who argues they would not personally benefit could use this principle to justify opposition. The developer needs a principle that positively connects benefit to voting obligation, not one that sets a high bar that could defeat the proposal."
+  },
+  {
+   "row_id": "2d7ca2e6-f98d-4209-8c90-4c1711e5249c",
+   "letter": "C",
+   "body": "This principle addresses whether projects should be funded by taxes versus debt — the method of financing. The developer's logical gap is not about which funding mechanism is best but about why residents should support this particular expenditure at all. A principle about taxation being preferable to borrowing does not bridge the gap between \"you would benefit\" and \"you should vote for the tax.\" Even if taxes are the ideal funding method, this says nothing about why residents should approve this specific tax for this specific project. The principle operates in the wrong analytical domain entirely."
+  },
+  {
+   "row_id": "a0427e64-bdc2-4188-aaf7-f936532ea28d",
+   "letter": "D",
+   "body": "This principle states that only those who benefit from a project should be required to pay for it. At first glance, this seems supportive — the developer claims residents benefit, so they should pay. But the principle creates a dangerous counter-argument. The developer wants all residents to vote yes. This principle implies that residents who do NOT benefit should NOT pay the tax. Any resident could argue \"I will not personally benefit from apartments I will not live in,\" and this principle would support their opposition. Rather than unifying residents behind the tax, it fragments them into beneficiaries who should pay and non-beneficiaries who should not — undermining the developer's blanket appeal."
+  },
+  {
+   "row_id": "d3717755-0ca2-4195-8c2f-c561393018c1",
+   "letter": "E",
+   "body": "This principle precisely fills the gap in the developer's argument. The developer establishes that residents would benefit from the project. This principle states that anyone who would benefit from a project should vote for the tax that funds it. Applied together: (1) the road enables an apartment complex that strengthens the economy (premise), (2) a stronger economy benefits every resident (premise), (3) anyone who benefits should vote for the funding tax (this principle), (4) therefore, residents should vote for the tax increase (conclusion). Without this principle, there is no logical reason why benefiting from something obligates you to support its funding. This principle provides that normative bridge, making the conclusion follow necessarily from the premises."
+  }
+ ],
+ "known_problem": "Explicit-Standard register (6.6 em-dashes per 1k words; wrong-answer notes average 103.8 words).",
+ "tags": "emdash-heavy; pt157-158-register; possible-misquote"
+}

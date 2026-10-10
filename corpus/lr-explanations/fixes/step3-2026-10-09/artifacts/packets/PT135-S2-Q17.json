@@ -1,0 +1,84 @@
+{
+ "qid": "PT135-S2-Q17",
+ "type": "Role",
+ "difficulty": "5",
+ "key_db": "B",
+ "stimulus_db": "Philosopher: Graham argues that since a person is truly happy only when doing something, the best life is a life that is full of activity. But we should not be persuaded by Graham's argument. People sleep, and at least sometimes when sleeping, they are truly happy, even though they are not doing anything.",
+ "stem_db": "Which one of the following most accurately describes the role played in the philosopher's argument by the claim that at least sometimes when sleeping, people are truly happy, even though they are not doing anything?",
+ "choices_db": {
+  "A": "It is a premise of Graham's argument.",
+  "B": "It is an example intended to show that a premise of Graham's argument is false.",
+  "C": "It is an analogy appealed to by Graham but that the philosopher rejects.",
+  "D": "It is an example intended to disprove the conclusion of Graham's argument.",
+  "E": "It is the main conclusion of the philosopher's argument."
+ },
+ "bank": {
+  "stimulus": "Philosopher: Graham argues that since a person is truly happy only when doing something, the best life is a life that is full of activity. But we should not be persuaded by Graham’s argument. People sleep, and at least sometimes when sleeping, they are truly happy, even though they are not doing anything.",
+  "stem": "Which one of the following most accurately describes the role played in the philosopher’s argument by the claim that at least sometimes when sleeping, people are truly happy, even though they are not doing anything?",
+  "choices": {
+   "A": "It is a premise of Graham’s argument.",
+   "B": "It is an example intended to show that a premise of Graham’s argument is false.",
+   "C": "It is an analogy appealed to by Graham but that the philosopher rejects.",
+   "D": "It is an example intended to disprove the conclusion of Graham’s argument.",
+   "E": "It is the main conclusion of the philosopher’s argument."
+  },
+  "key": "B"
+ },
+ "explanation_id": "54578ff4-38db-4c40-a9a5-21b0d21c86b9",
+ "style": "single",
+ "steps": [
+  {
+   "row_id": "5de67afa-c920-4f55-a9ab-7675f95e9ea6",
+   "position": 0,
+   "label": "Main Conclusion",
+   "body": "We should not be persuaded by Graham's argument"
+  },
+  {
+   "row_id": "8a9798bb-aa1d-4942-9d2e-a1a428e7fb91",
+   "position": 1,
+   "label": "Premise",
+   "body": "People sleep, and at least sometimes when sleeping they are truly happy, even though they are not doing anything."
+  },
+  {
+   "row_id": "5b95a90f-0d10-4886-b6cb-159da16407ac",
+   "position": 2,
+   "label": "Opposing Point",
+   "body": "The best life is a life that is full of activity."
+  },
+  {
+   "row_id": "b65862a4-6b68-4ac1-b554-6d99edac9a87",
+   "position": 3,
+   "label": "Opposing Point",
+   "body": "A person is truly happy only when doing something."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "5e1c2178-b2a4-43de-8216-f660c339b094",
+   "letter": "A",
+   "body": "The claim is a premise of the philosopher’s argument and not of Graham’s argument."
+  },
+  {
+   "row_id": "da9f92be-86de-48fd-9e87-99bd4d68b0fe",
+   "letter": "B",
+   "body": "This correctly describes the role and purpose of the claim."
+  },
+  {
+   "row_id": "bd8ada57-4c6f-4193-8a68-f5ab5d4c2734",
+   "letter": "C",
+   "body": "Graham never appeals to sleep; the sleeping example is the philosopher's own. And the philosopher does not reject it, but relies on it to show that one of Graham's premises is false."
+  },
+  {
+   "row_id": "7844db72-b887-4859-974d-70f891c4496b",
+   "letter": "D",
+   "body": "While the claim is an example, it is not intended to disprove Graham’s conclusion, but rather a premise of Graham’s argument."
+  },
+  {
+   "row_id": "89868e79-7413-4018-ac7d-e749b9f1a4f0",
+   "letter": "E",
+   "body": "The claim is not the main conclusion of the philosopher’s argument but rather a premise."
+  }
+ ],
+ "known_problem": "d5 Role; C note says \"The author concedes this point\", but C fails because the claim is the philosopher's example, not Graham's analogy.",
+ "tags": "short-breakdown; verdict-only; thin-correct-note; thin-notes; no-prediction; damage; very-short"
+}

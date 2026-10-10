@@ -1,0 +1,66 @@
+{
+ "qid": "PT133-S2-Q19",
+ "type": "Must Be True",
+ "difficulty": "3",
+ "key_db": "D",
+ "stimulus_db": "Style manual: Archaic spellings and styles of punctuation in direct quotations from older works are to be preserved if they occur infrequently and do not interfere with a reader's comprehension. However, if they occur frequently, the editor may modernize them, inserting a note with an explanation to this effect in the text, or if similar modernizing has been done in more than one quotation, inserting a general statement in the preface. On the other hand, obvious typographical errors in quotations from modern works may be corrected without explanation.",
+ "stem_db": "Which one of the following follows logically from the statements above?",
+ "choices_db": {
+  "A": "If an editor corrects the spelling of a quoted word and the word occurs only once in the text, then an explanation should appear in a note or in the text.",
+  "B": "An editor may modernize an archaic spelling of a word found in a modern work without providing an explanation.",
+  "C": "An editor should modernize an archaic spelling of a word that is quoted from an older work if the spelling interferes with reader comprehension.",
+  "D": "An editor may modernize punctuation directly quoted from an older work if that punctuation occurs frequently and interferes with reader comprehension.",
+  "E": "If an editor modernizes only one of several similar instances of quoted archaic punctuation, an explanation should appear in the preface of the work."
+ },
+ "bank": {
+  "stimulus": "Style manual: Archaic spellings and styles of punctuation in direct quotations from older works are to be preserved if they occur infrequently and do not interfere with a reader's comprehension. However, if they occur frequently, the editor may modernize them, inserting a note with an explanation to this effect in the text, or if similar modernizing has been done in more than one quotation, inserting a general statement in the preface. On the other hand, obvious typographical errors in quotations from modern works may be corrected without explanation.",
+  "stem": "Which one of the following follows logically from the statements above?",
+  "choices": {
+   "A": "If an editor corrects the spelling of a quoted word and the word occurs only once in the text, then an explanation should appear in a note or in the text.",
+   "B": "An editor may modernize an archaic spelling of a word found in a modern work without providing an explanation.",
+   "C": "An editor should modernize an archaic spelling of a word that is quoted from an older work if the spelling interferes with reader comprehension.",
+   "D": "An editor may modernize punctuation directly quoted from an older work if that punctuation occurs frequently and interferes with reader comprehension.",
+   "E": "If an editor modernizes only one of several similar instances of quoted archaic punctuation, an explanation should appear in the preface of the work."
+  },
+  "key": "D"
+ },
+ "explanation_id": "6f0a8af5-c592-4ba7-b022-e821e909ea5d",
+ "style": "single",
+ "steps": [
+  {
+   "row_id": "4ac2e9e0-7b43-43d4-9eb3-577a3d26c8e0",
+   "position": 0,
+   "label": "Given",
+   "body": "Archaic spellings and styles of punctuation in direct quotations from older works are to be preserved if they occur infrequently and do not interfere with a reader’s comprehension. However, if they occur frequently, the editor may modernize them, inserting a note with an explanation to this effect in the text, or if similar modernizing has been done in more than one quotation, inserting a general statement in the preface. On the other hand, obvious typographical errors in quotations from modern works may be corrected without explanation."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "c75aa3a7-3401-497d-b02b-b4c882f18cb5",
+   "letter": "A",
+   "body": "This answer never says the quoted word comes from an older work. If the correction fixes an obvious typographical error in a quotation from a modern work, the third statement says it may be corrected without explanation, so an explanation is not required."
+  },
+  {
+   "row_id": "c33e1704-8443-498b-8e31-4a8f638c1816",
+   "letter": "B",
+   "body": "From the first and second statements the editor should preserve the archaic spelling of a quoted word or provide an explanation if it is modernized."
+  },
+  {
+   "row_id": "91e7e837-4afa-4412-aaf0-3f25a6ee17a7",
+   "letter": "C",
+   "body": "The style manual never says an editor should modernize anything. Archaic spellings may be modernized if they occur frequently, and are to be preserved if they occur infrequently and do not interfere with comprehension. Knowing that a spelling interferes only tells us the preservation rule does not apply; it does not create a duty to modernize.\n~F + ~IRC → P"
+  },
+  {
+   "row_id": "4222be4e-c90c-4c88-9bae-76474b680a0b",
+   "letter": "D",
+   "body": "This answer provides more than enough information to trigger the second statement.\nF + IRC → MM"
+  },
+  {
+   "row_id": "226569f5-8de0-449f-9c0c-3084624242ac",
+   "letter": "E",
+   "body": "The second part of the second statement implies that if such modernizing has been done in more than one quotation, a statement in the preface should be included. But to say that is true if such modernizing has been done in only one of several similar instances goes beyond what can be inferred."
+  }
+ ],
+ "known_problem": "A note cites the modern-works typo rule for an older-works case; C note calls C a negation instead of naming may vs should.",
+ "tags": "short-breakdown; verdict-only; thin-correct-note; thin-notes; no-prediction; damage; very-short"
+}

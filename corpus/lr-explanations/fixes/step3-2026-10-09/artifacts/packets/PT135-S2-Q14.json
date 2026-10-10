@@ -1,0 +1,66 @@
+{
+ "qid": "PT135-S2-Q14",
+ "type": "Most Strongly Supported",
+ "difficulty": "2",
+ "key_db": "C",
+ "stimulus_db": "Early urban societies could not have been maintained without large-scale farming nearby. This is because other methods of food acquisition, such as foraging, cannot support populations as dense as urban ones. Large-scale farming requires irrigation, which remained unfeasible in areas far from rivers or lakes until more recent times.",
+ "stem_db": "Which one of the following is most strongly supported by the information above?",
+ "choices_db": {
+  "A": "Most peoples who lived in early times lived in areas near rivers or lakes.",
+  "B": "Only if farming is possible in the absence of irrigation can societies be maintained in areas far from rivers or lakes.",
+  "C": "In early times it was not possible to maintain urban societies in areas far from rivers or lakes.",
+  "D": "Urban societies with farms near rivers or lakes do not have to rely upon irrigation to meet their farming needs.",
+  "E": "Early rural societies relied more on foraging than on agriculture for food."
+ },
+ "bank": {
+  "stimulus": "Early urban societies could not have been maintained without large-scale farming nearby. This is because other methods of food acquisition, such as foraging, cannot support populations as dense as urban ones. Large-scale farming requires irrigation, which remained unfeasible in areas far from rivers or lakes until more recent times.",
+  "stem": "Which one of the following is most strongly supported by the information above?",
+  "choices": {
+   "A": "Most peoples who lived in early times lived in areas near rivers or lakes.",
+   "B": "Only if farming is possible in the absence of irrigation can societies be maintained in areas far from rivers or lakes.",
+   "C": "In early times it was not possible to maintain urban societies in areas far from rivers or lakes.",
+   "D": "Urban societies with farms near rivers or lakes do not have to rely upon irrigation to meet their farming needs.",
+   "E": "Early rural societies relied more on foraging than on agriculture for food."
+  },
+  "key": "C"
+ },
+ "explanation_id": "db0144e4-130f-4db7-bd8d-55643f882b80",
+ "style": "single",
+ "steps": [
+  {
+   "row_id": "16bc259f-9356-424d-b0bb-99672b30c4e0",
+   "position": 0,
+   "label": "Given",
+   "body": "Early urban societies could not have been maintained without large-scale farming nearby.\nUS → LSF\n\nThis is because other methods of food acquisition, such as foraging, cannot support populations as dense as urban ones.\n\nLarge-scale farming requires irrigation, which remained unfeasible in areas far from rivers or lakes until more recent times.\nLSF → IR\n~RL → ~IR"
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "3c9d564a-c848-4fa0-957c-8db577cc0642",
+   "letter": "A",
+   "body": "Where people actually lived in early times is not discussed in the statements."
+  },
+  {
+   "row_id": "dd6262be-992e-4aa7-93d1-b893ed94575b",
+   "letter": "B",
+   "body": "This goes too far by changing the subject from urban societies to societies more generally."
+  },
+  {
+   "row_id": "a820170c-7235-4d23-887b-828b3b9700cd",
+   "letter": "C",
+   "body": "This follows from combining the three conditional statements.\n\n~RL → ~IR\n~IR → ~LSF\n~LSF → ~US\n∴ ~RL → ~US"
+  },
+  {
+   "row_id": "da216dbe-f0d1-40d9-b338-aeca5cb51e3f",
+   "letter": "D",
+   "body": "Urban societies require large-scale farming, and large-scale farming requires irrigation.\n\nUS → LSF → IR\n\nSo urban societies with farms near rivers or lakes still rely on irrigation, which contradicts D."
+  },
+  {
+   "row_id": "d6ed2603-9f8e-4766-9559-d4120a6e01e8",
+   "letter": "E",
+   "body": "Early rural societies are not discussed in the statements."
+  }
+ ],
+ "known_problem": "D note is a garbled diagram (\"SOC -> RC\") that never says why D fails; flattened diagrams in Given.",
+ "tags": "short-breakdown; verdict-only; thin-correct-note; thin-notes; no-prediction; damage; very-short"
+}

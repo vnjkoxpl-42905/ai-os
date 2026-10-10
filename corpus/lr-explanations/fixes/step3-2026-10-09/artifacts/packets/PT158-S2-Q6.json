@@ -1,0 +1,78 @@
+{
+ "qid": "PT158-S2-Q6",
+ "type": "Most Strongly Supported",
+ "difficulty": "3",
+ "key_db": "A",
+ "stimulus_db": "Dark honey tends to have a higher antioxidant content than light-colored honey, and the most healthful strains of honey are all unusually high in antioxidants. However, certain strains of honey produced by bees harvesting primarily sage nectar are among the most healthful strains of honey, even though they are also among the lightest-colored strains of honey.",
+ "stem_db": "Which one of the following is most strongly supported by the information above?",
+ "choices_db": {
+  "A": "Some strains of honey produced by bees harvesting sage nectar are unusually high in antioxidants.",
+  "B": "Most plants produce nectar that, when harvested by bees, results in light-colored honey.",
+  "C": "Light-colored honey tends to be more healthful than dark honey.",
+  "D": "Certain strains of honey produced by bees harvesting primarily sage nectar are unusually low in antioxidants.",
+  "E": "The strain of honey that has the highest antioxidant content is a light-colored honey."
+ },
+ "bank": {
+  "stimulus": "Dark honey tends to have a higher antioxidant content\n than light-colored honey, and the most healthful strains\n of honey are all unusually high in antioxidants. However,\n certain strains of honey produced by bees harvesting\n primarily sage nectar are among the most healthful\n strains of honey, even though they are also among the\n lightest-colored strains of honey.",
+  "stem": "Which one of the following is most strongly supported\n by the information above?",
+  "choices": {
+   "A": "Some strains of honey produced by bees harvesting sage nectar are unusually high in antioxidants.",
+   "B": "Most plants produce nectar that, when harvested by bees, results in light-colored honey.",
+   "C": "Light-colored honey tends to be more healthful than dark honey.",
+   "D": "Certain strains of honey produced by bees harvesting primarily sage nectar are unusually low in antioxidants.",
+   "E": "The strain of honey that has the highest antioxidant content is a light-colored honey."
+  },
+  "key": "A"
+ },
+ "explanation_id": "b70c5f8a-d1e7-457c-8d27-2685d63de92a",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "b6179904-d450-4140-a885-cb87c7173964",
+   "position": 0,
+   "label": "Information",
+   "body": "```\ncomparison (tends to be higher)\n(tends to)\nDark honey > light colored honey\nANTI-OXIDANTS\nsuperlative/conditional (most healthful, all)\nMost healthful → unusually high\nhoney       in anti-oxi\npivot (however)\nSome strains of honey (from sage nectar) are most healthful but light-colored.\n```"
+  },
+  {
+   "row_id": "147da0b5-3a6b-44e8-8a93-c202fd85f11c",
+   "position": 1,
+   "label": "Evaluate",
+   "body": "Can we combine any of these facts? The first two claims both talked about anti-oxidants, so it was tempting to think, \"Since dark honey as more antioxi's, and since the most healthful are high in antioxi's, maybe the most healthful are dark?\" But then the pivot at the end says, \"Not so fast -- some of the most healthful is light colored.\" Because of \"most healthful\" repeating in the final sentence, we know we can swap in the idea of \"unusually high in antioxidants\". So we could infer that \"some light honey / some honey harvested primarily from sage nectar is unusually high in antioxidants\"."
+  },
+  {
+   "row_id": "f1aab2c1-3405-4b63-8310-541591d03bb9",
+   "position": 2,
+   "label": "Goal",
+   "body": "Let's look for the most provable answer choice."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "ec2a420e-b8ce-4005-8f12-32cef9951a18",
+   "letter": "A",
+   "body": "This answer follows directly from the premises through a simple logical chain. Premise 3 tells us certain sage-nectar strains are among the most healthful. Premise 2 tells us the most healthful strains are all unusually high in antioxidants. Combining these: sage-nectar strains that are among the most healthful must be unusually high in antioxidants. This is a valid syllogistic inference. The answer says \"some strains\" of sage-nectar honey are unusually high in antioxidants, which is appropriately hedged — it does not claim all sage-nectar honey has high antioxidants, only those that are among the most healthful. This is the strongest supported inference available."
+  },
+  {
+   "row_id": "98a2ad07-a76a-403c-b935-741a1b698946",
+   "letter": "B",
+   "body": "This answer claims that \"most\" plants produce nectar resulting in light-colored honey. The premises say nothing about what most plants produce. Premise 1 establishes a general correlation between darkness and antioxidant content. Premise 3 tells us sage nectar produces light honey. But neither premise, nor any combination of them, supports a generalization about what \"most\" plants produce. We have information about one type of nectar source (sage) and a general trend about color and antioxidants. Extrapolating to a claim about the majority of plant species goes far beyond what the evidence supports."
+  },
+  {
+   "row_id": "03c90b3e-528c-4f3b-aec7-82c13d910107",
+   "letter": "C",
+   "body": "This answer reverses the general trend stated in premise 1. Premise 1 says dark honey \"tends to\" have higher antioxidant content than light honey. This answer claims light honey \"tends to be more healthful\" than dark honey. The premises do not support this reversal. While certain light sage-nectar honeys are among the most healthful, this is identified as a noteworthy exception, not the general rule. The word \"however\" in the stimulus signals that the sage-nectar case is surprising given the general trend. One cannot infer from a few exceptional cases that the overall trend runs in the opposite direction."
+  },
+  {
+   "row_id": "ac3092ed-6094-460d-8c50-0d1500af91b5",
+   "letter": "D",
+   "body": "This answer claims certain sage-nectar strains are \"unusually low\" in antioxidants. But we just established the opposite: sage-nectar strains that are among the most healthful must be unusually high in antioxidants (since all the most healthful strains are unusually high in antioxidants). This answer directly contradicts the valid inference from the premises. The sage-nectar strains are light-colored, which might lead one to expect low antioxidants based on premise 1's general trend. But premise 2 overrides that expectation for the most healthful strains, and sage-nectar strains are among the most healthful."
+  },
+  {
+   "row_id": "724397e8-0b37-4d4d-a097-7f7f30a2f2bf",
+   "letter": "E",
+   "body": "This answer claims the honey with the \"highest\" antioxidant content is a light-colored honey. The premises do not support this superlative claim. We know that certain sage-nectar strains are among the most healthful and therefore high in antioxidants. But \"among the most healthful\" does not mean \"the single most healthful,\" and being high in antioxidants does not mean having the highest antioxidant content of all honey. Given that dark honey tends to have higher antioxidant content (premise 1), it is quite possible that the single highest-antioxidant honey is dark. The premises establish that some light honeys have high antioxidants, not that a light honey tops the list."
+  }
+ ],
+ "known_problem": "Explicit-Standard register (3.0 em-dashes per 1k words; wrong-answer notes average 99.8 words).",
+ "tags": "pt157-158-register; possible-misquote"
+}

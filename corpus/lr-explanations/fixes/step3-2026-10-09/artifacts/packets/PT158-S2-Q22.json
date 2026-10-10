@@ -1,0 +1,84 @@
+{
+ "qid": "PT158-S2-Q22",
+ "type": "Parallel Flaw",
+ "difficulty": "4",
+ "key_db": "C",
+ "stimulus_db": "Devan has never bothered to be kind to me. Nor has he offered help or companionship. So, since he does not meet any of these basic criteria for friendship, he is my enemy.",
+ "stem_db": "Which one of the following exhibits flawed reasoning most similar to the flawed reasoning exhibited in the argument above?",
+ "choices_db": {
+  "A": "Each officer of this club must be a member of two years standing, or be a committee member, or have special qualifications. Evelyn cannot be an officer, for she has only been a member for one year and is not a committee member.",
+  "B": "In order to thrive, this plant needs to be located in a sunny spot and to be watered regularly. So, since this spot is not sunny, and since I did not water this plant regularly, that explains why this plant is not as healthy as it should be.",
+  "C": "This book has been widely reviewed and hasn't received even one hostile review. Hence we can conclude that, so far, all the critics have loved this book.",
+  "D": "A decision in favor of developing the northern border of the town logically implies that it would be equally acceptable to develop the southern, eastern, or western borders. So, it is possible that at least one of these other borders will also be developed.",
+  "E": "If everyone were an author, poet, or academic, then society would come crashing to a halt. But most people are not poets or authors. Nor are there many academics in our society. Therefore, our society will not come crashing to a halt."
+ },
+ "bank": {
+  "stimulus": "Devan has never bothered to be kind to me. Nor has he\n offered help or companionship. So, since he does not\n meet any of these basic criteria for friendship, he is my\n enemy.",
+  "stem": "Which one of the following exhibits flawed reasoning\n most similar to the flawed reasoning exhibited in the\n argument above?",
+  "choices": {
+   "A": "Each officer of this club must be a member of two years standing, or be a committee member, or have special qualifications. Evelyn cannot be an officer, for she has only been a member for one year and is not a committee member.",
+   "B": "In order to thrive, this plant needs to be located in a sunny spot and to be watered regularly. So, since this spot is not sunny, and since I did not water this plant regularly, that explains why this plant is not as healthy as it should be.",
+   "C": "This book has been widely reviewed and hasn’t received even one hostile review. Hence we can conclude that, so far, all the critics have loved this book.",
+   "D": "A decision in favor of developing the northern border of the town logically implies that it would be equally acceptable to develop the southern, eastern, or western borders. So, it is possible that at least one of these other borders will also be developed.",
+   "E": "If everyone were an author, poet, or academic, then society would come crashing to a halt. But most people are not poets or authors. Nor are there many academics in our society. Therefore, our society will not come crashing to a halt."
+  },
+  "key": "C"
+ },
+ "explanation_id": "8ae7f371-cd8d-4abb-86d4-7c6d0cb19166",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "891136a1-2fc9-4375-97d4-85cfbcb65b49",
+   "position": 0,
+   "label": "Conclusion (So)",
+   "body": "Devan is my enemy."
+  },
+  {
+   "row_id": "3b09f457-6f4e-41a2-a1ad-30dcd8e3b300",
+   "position": 1,
+   "label": "Evidence (since)",
+   "body": "He does not meet any of these basic criteria for friendship (being kind / offering to help / being compassionate)."
+  },
+  {
+   "row_id": "d26f253b-a72f-40df-8a3f-8c40a85aad70",
+   "position": 2,
+   "label": "Evaluate",
+   "body": "How would we object to this conclusion. Given that Devan has never been kind, offered help, or showed compassion, how could we argue that he is not our enemy? Isn't there some middle ground between \"not being a friend\" and \"being an enemy\"? Those aren't binary options. It feels like the author is imposing some False Choice that if someone isn't a friend, they must be an enemy. Maybe Devan is just a stranger or just a neutral party, who isn't necessarily for us but isn't against us."
+  },
+  {
+   "row_id": "09a4986f-7a40-41a5-a887-eecf63025b43",
+   "position": 3,
+   "label": "Goal",
+   "body": "Let's look for an argument whose conclusion feels like it's swinging to the opposite pole from what the evidence is talking about. i.e. Jim doesn't meet any of the criteria for \"best employee\". Thus, he is the worst employee."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "ddedb850-2b46-46e6-8f9e-c03f4c054790",
+   "letter": "A",
+   "body": "This argument has a different logical structure from the stimulus. It lists three ways to qualify as a club officer (two years' standing OR committee member OR special qualifications) and concludes that Evelyn cannot be an officer because Evelyn fails the first two. That is flawed, but in a different way: it ignores the third route, since Evelyn might have special qualifications. The flaw in the stimulus was jumping from \"fails friendship criteria\" to \"is an enemy\" — a false dichotomy between two extreme categories. This answer concludes only that someone is not an officer. There is no leap to an extreme opposite category. It concludes \"not-X\" from failing some of the routes to X, whereas the stimulus concluded \"anti-X\" from failing the criteria for X."
+  },
+  {
+   "row_id": "5fea0e4e-46fc-44e6-9853-9e604ee3b872",
+   "letter": "B",
+   "body": "This argument is logically sound, not flawed. It states that a plant needs a sunny location AND regular watering to thrive. The spot is not sunny and the plant was not watered regularly, so both necessary conditions are unmet. The conclusion, that this \"explains why this plant is not as healthy as it should be,\" follows reasonably: if both A and B are necessary for C, and both are absent, C should not be expected. The stimulus's flaw was a false dichotomy — leaping from \"not friend\" to \"enemy.\" This answer contains no such leap; it simply concludes that unmet necessary conditions explain the poor outcome. There is no jump to an opposite extreme category."
+  },
+  {
+   "row_id": "655f6da9-c8e4-4ea5-acfc-a2535aca3ade",
+   "letter": "C",
+   "body": "This answer perfectly mirrors the stimulus's flawed reasoning. The book has been widely reviewed and received no hostile reviews, so it does not meet the criteria for a \"bad\" book. The conclusion then leaps to: therefore it must be a masterpiece. This is the same false dichotomy as the stimulus. Just as the stimulus jumped from \"not a friend\" to \"enemy\" (ignoring mediocre, average, or indifferent relationships), this answer jumps from \"not bad\" (no hostile reviews) to \"masterpiece\" (extreme positive), ignoring the vast middle ground of books that are merely decent, competent, forgettable, or mediocre. The structure is identical: failing to meet the criteria for one extreme category, therefore belonging to the opposite extreme category, with all intermediate categories completely overlooked. A book with no hostile reviews could simply be unremarkable — just as someone who is not a friend could simply be a stranger."
+  },
+  {
+   "row_id": "a50fc229-f56d-4335-9b73-0ad6407ce44e",
+   "letter": "D",
+   "body": "This argument says a decision to develop the northern border logically implies that developing the southern, eastern, or western borders would be \"equally acceptable,\" and it concludes that at least one of those other borders may also be developed. Whatever its weakness, it is a different type of reasoning: it moves from one decision to what is acceptable, and then possible, for similar decisions. The stimulus's flaw is a false dichotomy between two extreme relational categories (friend/enemy). This answer does not leap from \"not-X\" to \"opposite of X.\" The logical structures are different: the stimulus treats two categories as exhaustive, while this answer never sorts anything into an opposite category."
+  },
+  {
+   "row_id": "fe5473dc-f56b-44cb-a977-0bdfbfad9bae",
+   "letter": "E",
+   "body": "This argument claims that if everyone belonged to certain intellectual professions, society would collapse. This is a conditional claim about a hypothetical universal scenario. The structure is entirely different from the stimulus. The stimulus identifies specific criteria not met by an individual and then classifies that individual in an extreme opposite category. This answer makes a prediction about a hypothetical world where everyone has the same profession. There is no \"not-X therefore anti-X\" structure, no false dichotomy between two extreme categories, and no ignored middle ground. The flaw, if any, is about the unrealistic hypothetical or about overlooking that society can have some authors without everyone being one. The logical pattern does not match."
+  }
+ ],
+ "known_problem": "D note describes a different D (\"not in the town's best interest to use the land for recreation\"); A note calls A valid, but A ignores the third route (\"special qualifications\"); B note calls B valid.",
+ "tags": "emdash-heavy; pt157-158-register; possible-misquote"
+}

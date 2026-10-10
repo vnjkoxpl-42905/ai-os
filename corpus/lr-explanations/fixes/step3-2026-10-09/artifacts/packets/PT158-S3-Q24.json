@@ -1,0 +1,90 @@
+{
+ "qid": "PT158-S3-Q24",
+ "type": "Weaken",
+ "difficulty": "2",
+ "key_db": "D",
+ "stimulus_db": "Scientist: Some consumer groups claim that the economic benefits of genetically engineered foodstuffs may be offset by hidden health risks to humans. However, the risk is minimal. In most cases of deliberate alteration of a plant's genetic structure only a single gene in about 750,000 has been changed. Since the change in the organism's genetic structure is so slight, it cannot have effects significant enough to be worrisome.",
+ "stem_db": "Which one of the following, if true, most weakens the scientist's argument?",
+ "choices_db": {
+  "A": "The genetically engineered plants that have been developed so far have few advantages over plants that are not genetically engineered.",
+  "B": "Whatever health risks there are in food from genetically altered plants may be somewhat reduced by other factors such as enrichment of the plants' vitamin and mineral content.",
+  "C": "Scientists have yet to determine, for each characteristic of some plants and animals used for food, the precise location of the genes that determine that characteristic.",
+  "D": "There are plants that are known to be toxic to some animals and whose toxicity is known to be affected by the alteration of a single gene.",
+  "E": "Research has shown that those consumers who are most strongly opposed to genetically altered foods tend to be ill-informed on the issue."
+ },
+ "bank": {
+  "stimulus": "Scientist: Some consumer groups claim that the\n economic benefits of genetically engineered\n foodstuffs may be offset by hidden health risks to\n humans. However, the risk is minimal. In most\n cases of deliberate alteration of a plant’s genetic\n structure only a single gene in about 750,000 has\n been changed. Since the change in the organism’s\n genetic structure is so slight, it cannot have\n effects significant enough to be worrisome.",
+  "stem": "Which one of the following, if true, most weakens the\n scientist’s argument?",
+  "choices": {
+   "A": "The genetically engineered plants that have been developed so far have few advantages over plants that are not genetically engineered.",
+   "B": "Whatever health risks there are in food from genetically altered plants may be somewhat reduced by other factors such as enrichment of the plants’ vitamin and mineral content.",
+   "C": "Scientists have yet to determine, for each characteristic of some plants and animals used for food, the precise location of the genes that determine that characteristic.",
+   "D": "There are plants that are known to be toxic to some animals and whose toxicity is known to be affected by the alteration of a single gene.",
+   "E": "Research has shown that those consumers who are most strongly opposed to genetically altered foods tend to be ill-informed on the issue."
+  },
+  "key": "D"
+ },
+ "explanation_id": "d644cdbd-5a46-4e68-9e20-83b9e89ec6d3",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "439cc71a-33dc-40c5-839e-c60b07805031",
+   "position": 0,
+   "label": "Conclusion",
+   "body": "The health risks of GMO foods are minimal."
+  },
+  {
+   "row_id": "2877638a-9b0a-47db-86d0-f53c9b5281c0",
+   "position": 1,
+   "label": "Intermediate Conclusion",
+   "body": "A GMO food can't have effects that would be significant enough to be worrisome."
+  },
+  {
+   "row_id": "4a2086fb-4f8f-4c09-931e-b45f71249778",
+   "position": 2,
+   "label": "Evidence (since)",
+   "body": "In most cases of deliberate alteration of a plant's genes, only a single gene in 750,000 has been changed. This change is very slight."
+  },
+  {
+   "row_id": "e7c236e6-3f07-496d-a532-8aa9c3d48c14",
+   "position": 3,
+   "label": "Evaluate",
+   "body": "There are two conclusions here, so we could potentially resist either one. The mini-argument in the last sentence is making a move from \"since the change is slight, the effect wouldn't be significant\". Does that have to be true? Can slight changes have significant effects? I know sometimes I only pull our one Jenga tile but the whole tower comes crashing down. So one way to weaken would be to present information suggesting that slight changes can have significant and possibly worrisome effects. The other move is that \"Since most case of deliberately altering a gene involve only a slight change (that couldn't produce a significant effect), the risk of GMO foods is minimal.\" Does that have to be true? How do we know that GMO foods fall into this category of \"most cases in which we deliberately alter a gene\"? What if in the case of GMO foods, we typically change a whole bunch of genes?"
+  },
+  {
+   "row_id": "cc5cddc8-5124-4d99-8a32-b5a6c0ffe14b",
+   "position": 4,
+   "label": "Goal",
+   "body": "Look for an answer helping us to argue \"slight changes can still have big effects\", an answer suggesting that \"GMO foods are an typical case of deliberately altering the genetic structure of a plant, in that many genes are changed\", or just an answer that helps us argue that \"the health risks of GMO are significant\"."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "f6edadf6-60d5-48ce-9f90-cede1bf6c5a3",
+   "letter": "A",
+   "body": "Whether genetically engineered plants have advantages over natural ones is irrelevant to the health risk question. The argument is about whether modified foods pose health risks, not about whether they offer benefits. Even if the modifications provide no advantages, that does not make them risky. And even if they provide enormous advantages, that does not make them safe. Benefits and risks are independent considerations. This answer addresses the value proposition of genetic engineering, not its safety profile. To weaken the scientist's argument about minimal risk, we need evidence that the modification COULD cause harm, not evidence about whether it provides benefits."
+  },
+  {
+   "row_id": "e4c5265c-4434-4562-938d-c0d88273a7e3",
+   "letter": "B",
+   "body": "Saying that health risks may be \"somewhat reduced by cooking\" does not weaken the claim that the risks are minimal. If anything, it concedes that risks exist (they can be reduced) while offering a partial mitigation. But the scientist's argument is that the risks are minimal in the first place because the genetic change is so small. This answer does not address whether that reasoning is sound — it just offers a separate consideration about cooking that, if anything, suggests the risks are manageable rather than challenging whether they exist. To weaken the argument, we need evidence that small genetic changes CAN produce significant effects."
+  },
+  {
+   "row_id": "4d40c543-17df-42e6-8d14-566aa99ab8ee",
+   "letter": "C",
+   "body": "The fact that scientists have not yet identified which genes control each characteristic does not weaken the argument. If anything, it introduces uncertainty that could cut either way — maybe the changed genes are important, maybe they are not. Uncertainty about which genes control what does not establish that a single-gene change CAN produce significant harmful effects. To weaken the argument, we need affirmative evidence that small genetic changes can have outsized impacts, not merely an admission that we do not fully understand the genome. General scientific uncertainty does not specifically challenge the proportionality assumption."
+  },
+  {
+   "row_id": "19951a99-4f90-4c1c-8211-45dc8f710fe4",
+   "letter": "D",
+   "body": "This answer directly demolishes the scientist's proportionality assumption. The scientist argues that changing one gene in 750,000 is so slight it cannot have significant effects. This answer provides a concrete counterexample: some plants are known to be toxic, and their toxicity is known to result from a single gene. This proves that one gene — exactly the proportion of change the scientist dismisses as insignificant — can control a critically important trait like toxicity. If a single gene can make a plant toxic, then changing a single gene in a food plant could potentially make it toxic as well. The scientist's reasoning that \"the change is too small to matter\" collapses in the face of evidence that single genes can control consequential biological functions. The proportion of genetic material changed is irrelevant; what matters is the function of the specific gene that was altered."
+  },
+  {
+   "row_id": "a6b349da-7c52-4d0b-be95-85f7c3ecaa46",
+   "letter": "E",
+   "body": "What consumers opposed to genetic engineering know about genetic science has no bearing on whether the scientist's argument is logically sound. The scientist's claim is about the actual risk level of genetically modified food, not about what opponents know or do not know. Even if every opponent were scientifically illiterate, the argument could still be flawed. And even if every opponent were a geneticist, the argument could still be sound. The knowledge level of the opposition is irrelevant to whether the proportionality reasoning holds. This is an ad hominem consideration — attacking the credentials of those who disagree rather than engaging with the substantive question of risk."
+  }
+ ],
+ "known_problem": "Explicit-Standard register (6.2 em-dashes per 1k words; wrong-answer notes average 101.5 words).",
+ "tags": "emdash-heavy; pt157-158-register; possible-misquote"
+}

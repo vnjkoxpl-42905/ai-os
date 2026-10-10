@@ -1,0 +1,84 @@
+{
+ "qid": "PT105-S4-Q14",
+ "type": "Necessary Assumption",
+ "difficulty": "4",
+ "key_db": "D",
+ "stimulus_db": "Citizen: Our legislators need to act quickly to counter the effects of the recession, especially the present level of unemployment, which is the highest ever. We urgently need a major tax cut for our upper-income citizens. There would then be a correspondingly large increase in investment that would create new jobs. If this measure is not taken, investment will not grow.",
+ "stem_db": "The citizen's argument depends on the assumption that",
+ "choices_db": {
+  "A": "the recession in the citizen's country is the worst one in its history",
+  "B": "the greater the tax cut given to a group of people, the more likely it is that members of that group will invest the money",
+  "C": "upper-income citizens have invested more money in total than have lower-income citizens",
+  "D": "upper-income citizens could use the money gained from the tax cut in ways that increase investment",
+  "E": "in the past tax cuts for certain groups of people have tended to create new jobs"
+ },
+ "bank": {
+  "stimulus": "Citizen: Our legislators need to act quickly to counter the effects of the recession, especially the present level of unemployment, which is the highest ever. We urgently need a major tax cut for our upper-income citizens. There would then be a correspondingly large increase in investment that would create new jobs. If this measure is not taken, investment will not grow.",
+  "stem": "The citizen’s argument depends on the assumption that",
+  "choices": {
+   "A": "the recession in the citizen’s country is the worst one in its history",
+   "B": "the greater the tax cut given to a group of people, the more likely it is that members of that group will invest the money",
+   "C": "upper-income citizens have invested more money in total than have lower-income citizens",
+   "D": "upper-income citizens could use the money gained from the tax cut in ways that increase investment",
+   "E": "in the past, tax cuts for certain groups of people have tended to create new jobs"
+  },
+  "key": "D"
+ },
+ "explanation_id": "352458de-28ad-43f0-a977-cf5751c9f621",
+ "style": "single",
+ "steps": [
+  {
+   "row_id": "571d6ff9-d237-4403-85aa-8f5eea9ec5ba",
+   "position": 0,
+   "label": "Conclusion",
+   "body": "We urgently need a major tax cut for our upper-income citizens."
+  },
+  {
+   "row_id": "d9e1801a-2a20-4932-9c10-4fd1e54cfdb5",
+   "position": 1,
+   "label": "Evidence",
+   "body": "The present level of unemployment is the highest ever due to the recession.\n\nA major tax cut for upper-income citizens would lead to a large increase in investment, thereby creating new jobs.\n\nWithout this measure, investment will not grow."
+  },
+  {
+   "row_id": "9257949a-230b-4b41-a4c4-abd07679c010",
+   "position": 2,
+   "label": "Evaluate",
+   "body": "The citizen is arguing for a specific solution to counter the effects of the recession, namely by proposing a tax cut. The premise that connects this solution to the desired effect (job creation) is that if upper-income citizens receive tax cuts, they will invest the extra money, thus creating new jobs.\n\nFor this argument to hold, the citizen is assuming that tax cuts for upper-income citizens will directly lead to increased investment. Put another way, the citizen assumes that the money saved from taxes will be used in a way that stimulates economic activity.\n\nA potential objection could be that upper-income citizens might choose to save the extra money or spend it on non-investment ventures, which wouldn't create jobs. Therefore, for the citizen's argument to stand, there must be an assumed link between the tax cuts and increased investment."
+  },
+  {
+   "row_id": "2ba7efc6-5622-4ad3-8663-b4ca174d2aea",
+   "position": 3,
+   "label": "Goal",
+   "body": "We need to identify an assumption that explicitly links tax cuts for upper-income earners to increased investment. An answer choice that confirms the reasoning that tax cuts will result in the behavior needed to support job growth (i.e., investing) is crucial."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "8087806a-c139-4f86-9acd-24154744ec16",
+   "letter": "A",
+   "body": "Option (A) is irrelevant to the logic of how a tax cut would lead to job creation. The severity of the recession doesn’t necessarily affect how the tax cut would be used for investment."
+  },
+  {
+   "row_id": "8df43ddc-caab-4df4-94c0-f741a2a344e0",
+   "letter": "B",
+   "body": "Option (B) suggests a generalized likelihood that bigger tax cuts lead to more investment but doesn’t specify the necessity of investment increasing solely due to the tax cut as argued."
+  },
+  {
+   "row_id": "b38784e8-3834-455b-b400-c498ed5b7f9d",
+   "letter": "C",
+   "body": "The argument is about whether this tax cut would make upper-income citizens invest. How their past investment compares with lower-income citizens' does not matter. Negate it and nothing changes."
+  },
+  {
+   "row_id": "0b839eed-266d-4c14-b984-dff421bb2429",
+   "letter": "D",
+   "body": "The correct answer should indicate that the money gained from a tax cut by upper-income citizens will indeed increase investment, which aligns with choice (D).\n\nChoice (D) states that upper-income citizens could use the money gained from the tax cut in ways that increase investment. This directly connects the proposed tax cut to the likely behavior that would fulfill the citizen's ultimate goal: job creation through increased investment."
+  },
+  {
+   "row_id": "1eddc2f4-ab1a-4c05-b1c4-53e0791b6b74",
+   "letter": "E",
+   "body": "The citizen predicts what this tax cut will do. It does not need past tax cuts to have worked. Negate it, \"past tax cuts did not tend to create jobs,\" and this one still could."
+  }
+ ],
+ "known_problem": "No breakdown; no notes for C or E; D note misquotes D (\"could use\" for \"would use\") and reads as generic filler (\"Option (A) is irrelevant\").",
+ "tags": "no-breakdown; missing-notes; very-short"
+}

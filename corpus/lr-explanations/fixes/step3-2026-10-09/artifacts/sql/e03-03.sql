@@ -1,0 +1,5 @@
+insert into lr_explanation_steps (explanation_id,position,label,body) select v.e,v.p,v.l,v.b from (values
+('7144db35-6bd3-4550-9829-c1e2610f865c'::uuid,3,'Goal','Look for an answer saying the argument assumes that whatever the best seafood gumbo requires, good seafood gumbo also requires. It might also say the argument fails to consider that good gumbo could be made without fresh okra.'),
+('1d85577c-9c31-4d04-b00c-58e6989a52d7'::uuid,3,'Goal','Look for an answer saying the argument treats anarchy and totalitarian control as the only two options, or that it fails to consider some form of government between the two.'),
+('90d0a0ad-1274-49b4-885f-bdeb59333623'::uuid,3,'Goal','Look for an answer saying the analogy between web sites and real estate rests only on shared words. A "fails to show" version works too: the argument fails to show the two are alike in any way that matters for trespass law.')
+) v(e,p,l,b) where not exists (select 1 from lr_explanation_steps x where x.explanation_id=v.e and x.position=v.p) returning id;

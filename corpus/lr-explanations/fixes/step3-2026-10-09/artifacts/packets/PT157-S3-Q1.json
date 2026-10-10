@@ -1,0 +1,84 @@
+{
+ "qid": "PT157-S3-Q1",
+ "type": "Strengthen",
+ "difficulty": "1",
+ "key_db": "C",
+ "stimulus_db": "Over the long run, apple orchards that use organic farming methods cost no more to run than, and are just as productive as, apple orchards using conventional methods. However, organically grown apples tend to be better tasting, and thus, organic orchards are likely to be more profitable than conventional orchards in the long run.",
+ "stem_db": "Which one of the following, if true, most strengthens the argument?",
+ "choices_db": {
+  "A": "The use of organic farming methods has recently increased in the commercial apple farming industry.",
+  "B": "The apple orchards that tend to be most profitable in the long run tend to be those that are most profitable in the short run.",
+  "C": "Demand for a given kind of apple is based primarily on flavor.",
+  "D": "Most people prefer to buy apples that have the lowest price.",
+  "E": "Many consumers prefer the appearance of apples grown using conventional methods to that of apples grown organically."
+ },
+ "bank": {
+  "stimulus": "Over the long run, apple orchards that use organic\n farming methods cost no more to run than, and are just as\n productive as, apple orchards using conventional methods.\n However, organically grown apples tend to be better\n tasting, and thus, organic orchards are likely to be more\n profitable than conventional orchards in the long run.",
+  "stem": "Which one of the following, if true, most strengthens the\n argument?",
+  "choices": {
+   "A": "The use of organic farming methods has recently increased in the commercial apple farming industry.",
+   "B": "The apple orchards that tend to be most profitable in the long run tend to be those that are most profitable in the short run.",
+   "C": "Demand for a given kind of apple is based primarily on flavor.",
+   "D": "Most people prefer to buy apples that have the lowest price.",
+   "E": "Many consumers prefer the appearance of apples grown using conventional methods to that of apples grown organically."
+  },
+  "key": "C"
+ },
+ "explanation_id": "83cd82f8-9f6c-4c09-ab76-f47222da3f40",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "c46df184-897f-4725-b25e-d682f42520e7",
+   "position": 0,
+   "label": "Evidence",
+   "body": "Over the long run, apple orchards that use organic farming methods cost no more to run than, and are just as productive as, apple orchards using conventional methods. Organically grown apples tend to be better tasting."
+  },
+  {
+   "row_id": "f9bd84ad-a656-4afb-8d9f-65f14711e06c",
+   "position": 1,
+   "label": "Conclusion",
+   "body": "Organic orchards are likely to be more profitable than conventional orchards in the long run."
+  },
+  {
+   "row_id": "5255bdef-38f2-4903-8b12-a8ead7021a4d",
+   "position": 2,
+   "label": "Evaluate",
+   "body": "To reach this conclusion, we need to assume that an orchard which grows apples that taste better is guaranteed to be more profitable. `better tasting → more profitable`. This link is missing from the argument as it's written."
+  },
+  {
+   "row_id": "957258e0-ab27-4290-af10-9ffb6680eb9e",
+   "position": 3,
+   "label": "Goal",
+   "body": "We're looking for an answer which makes this missing link more likely to be true. We want more evidence showing that better tasting apples are more profitable."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "445b6fca-7df8-49df-9f51-95244c54ab53",
+   "letter": "A",
+   "body": "An increased use of organic farming methods does not establish that organic orchards are more profitable. There could be many reasons for the trend — environmental concerns, government subsidies, consumer pressure — none of which necessarily connect to profitability. More importantly, this answer does nothing to strengthen the specific link the argument needs: that better-tasting apples generate more revenue. The argument's gap is between taste and profit, and an industry trend toward organic methods does not bridge that gap."
+  },
+  {
+   "row_id": "dd12d76a-7952-46e4-88ef-d4bdbd2ffecd",
+   "letter": "B",
+   "body": "This answer introduces a relationship between short-term and long-term profitability. Even if orchards that are profitable in the short term tend to remain profitable in the long term, this does not help the argument. The argument never discusses short-term profitability, and we have no information about whether organic orchards are more profitable in the short term. Without that information, this answer has no clear connection to the argument's conclusion. The gap the argument needs to bridge is between taste and profit, not between short-term and long-term profitability."
+  },
+  {
+   "row_id": "7d0460f9-53b3-48c2-9c79-cdfb2295d084",
+   "letter": "C",
+   "body": "This answer directly bridges the argument's gap. The argument establishes that organic and conventional orchards have equal costs and equal productivity, with the only difference being that organic apples taste better. The conclusion that organic orchards are more profitable requires an assumption that better taste leads to higher revenue. If demand for apples is primarily based on flavor, then better-tasting organic apples will generate more demand and therefore more revenue. With equal costs and higher revenue, organic orchards would indeed be more profitable. This answer provides exactly the missing link between taste and profit."
+  },
+  {
+   "row_id": "60124784-d5cc-439d-b064-a275f8384cff",
+   "letter": "D",
+   "body": "Price sensitivity among consumers does not help the argument. The argument does not provide any information about the price of organic versus conventional apples. If most people prefer the lowest price, organic orchards would need to price their apples competitively. But we do not know whether organic apples cost more, less, or the same as conventional apples at retail. This answer fails to connect to the taste-to-profit link that the argument requires. Even if organic apples were cheaper, this answer still would not explain why they are more profitable — lower prices could mean lower revenue per unit."
+  },
+  {
+   "row_id": "46491d84-f8b9-4c82-845f-40e14d445868",
+   "letter": "E",
+   "body": "Consumer preferences about the appearance of apples are not directly relevant to the argument. The argument is about taste, not appearance. There might be some relationship between how an apple looks and how it tastes, but neither the argument nor this answer establishes that connection. Without knowing whether appearance influences purchasing decisions more than taste does, or whether appearance correlates with taste, this information does not clearly strengthen or weaken the link between the superior flavor of organic apples and higher profitability. If anything, by suggesting conventional apples look better, it might slightly weaken the argument — but that depends on assumptions not provided."
+  }
+ ],
+ "known_problem": "Explicit-Standard register (6.9 em-dashes per 1k words; wrong-answer notes average 93.0 words).",
+ "tags": "emdash-heavy; pt157-158-register"
+}

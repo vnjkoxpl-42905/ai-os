@@ -1,0 +1,84 @@
+{
+ "qid": "PT158-S2-Q3",
+ "type": "Necessary Assumption",
+ "difficulty": "4",
+ "key_db": "A",
+ "stimulus_db": "Bovine remains found in a certain region of Africa date back to a time when the climate was arid. While there were people in the region at this time, there were no other large mammals there. Any natural sources of water available to these bovines would have brought other large mammals to the area. Thus, these bovines had been domesticated and the people living in the region were no longer exclusively hunter-gatherers.",
+ "stem_db": "Which one of the following is an assumption on which the argument depends?",
+ "choices_db": {
+  "A": "Unless they are domesticated, bovines are unlikely to exist in a region where there are no natural sources of water available to them.",
+  "B": "Domesticating animals is one of the first practices that a society must adopt in order to change from hunting and gathering to agriculture.",
+  "C": "With the help of humans, other large mammals would have been able to inhabit this arid region.",
+  "D": "No human culture obtains food both through agriculture and through hunting and gathering.",
+  "E": "Domesticated animals of a given size do not need as much water as do wild animals of comparable size."
+ },
+ "bank": {
+  "stimulus": "Bovine remains found in a certain region of Africa date\n back to a time when the climate was arid. While there\n were people in the region at this time, there were no\n other large mammals there. Any natural sources of water\n available to these bovines would have brought other\n large mammals to the area. Thus, these bovines had been\n domesticated and the people living in the region were no\n longer exclusively hunter-gatherers.",
+  "stem": "Which one of the following is an assumption on which\n the argument depends?",
+  "choices": {
+   "A": "Unless they are domesticated, bovines are unlikely to exist in a region where there are no natural sources of water available to them.",
+   "B": "Domesticating animals is one of the first practices that a society must adopt in order to change from hunting and gathering to agriculture.",
+   "C": "With the help of humans, other large mammals would have been able to inhabit this arid region.",
+   "D": "No human culture obtains food both through agriculture and through hunting and gathering.",
+   "E": "Domesticated animals of a given size do not need as much water as do wild animals of comparable size."
+  },
+  "key": "A"
+ },
+ "explanation_id": "654c2903-6ff1-4302-95a6-4a00c16056d0",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "ec033fa6-c4cd-46e9-a5ce-c6a9bf705fd1",
+   "position": 0,
+   "label": "Conclusion (Thus)",
+   "body": "These bovines had been domesticated and the people living in the region were no longer exclusively hunter-gatherers."
+  },
+  {
+   "row_id": "02d6150a-f77b-4cc0-915a-b5d1cd17553a",
+   "position": 1,
+   "label": "Evidence",
+   "body": "These bovine were found in a region with humans and no other large mammals. If there had been a natural source of water available to these bovines, then there would have been other large mammals in the area."
+  },
+  {
+   "row_id": "24d6aff9-8e44-4be2-8be9-9fde247f1c8c",
+   "position": 2,
+   "label": "Evaluate",
+   "body": "There is a mini-Inference problem we should do with the two premises. There's a conditional statement:\n```\nNatural source of → other large mammals\nwater was available in the area\n```\nAnd we are factually told that there are not large mammals in the area. So by contrapositive we know that there was not a natural source of water. The author is thinking that if there were bovines and humans and no other mammals and an unnatural source of water, this sounds like agriculture! It sounds like humans were irrigating water (an unnatural source of water) and domesticating livestock like bovines (bovines are cows / bulls)."
+  },
+  {
+   "row_id": "28fcdfc5-cf41-4456-8dd5-1651a8049d7f",
+   "position": 3,
+   "label": "Goal",
+   "body": "The argument is making a Linking move that since there wasn't any natural water available to these bovines, they must have been living with humans, so they must have been domesticated. And the author's also assuming that if humans were domesticating cows, then they weren't exclusively nomadic hunter-gatherers. The argument is also making Defender assumptions, such as \"there isn't some other reason why we found bovine remains in this area\"."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "0e2e7822-a1bc-49f7-a7c1-ca2959f1bf15",
+   "letter": "A",
+   "body": "This answer states that unless they are domesticated, bovines are unlikely to exist in a region where there are no natural sources of water. This is exactly the assumption the argument requires. The argument's logic runs: no other large mammals were present, which proves there were no natural water sources, yet bovines were present. For this to prove domestication, wild bovines must be unable to survive without natural water — otherwise, they could have been wild bovines surviving in the arid region without human help. Apply the negation test: if wild bovines could readily survive in a waterless region, the entire argument collapses, because the presence of bovines without natural water would not indicate domestication. This answer bridges the critical gap between \"no natural water\" and \"must be domesticated.\""
+  },
+  {
+   "row_id": "bddf34e2-a2e5-4efd-87a1-e15d78c39ef4",
+   "letter": "B",
+   "body": "This answer claims that domesticating animals is \"one of the first practices\" a society must adopt to transition from hunting and gathering to agriculture. The argument does not need anything this broad or prescriptive. The argument needs a specific link between bovines, water, and domestication — not a general theory about the stages of societal development. The argument concludes these people were no longer exclusively hunter-gatherers based on the evidence of domesticated bovines; it does not need to establish that animal domestication is a prerequisite for leaving the hunter-gatherer stage. The word \"must\" makes this answer far too strong — the argument would survive even if some societies transitioned to agriculture without domesticating animals first."
+  },
+  {
+   "row_id": "4a397b82-bdc0-4b91-933d-2cc10fd6d22a",
+   "letter": "C",
+   "body": "This answer suggests that with human help, other large mammals could have inhabited the arid region. But the argument does not need to establish anything about what humans could have done with other animals. The argument's reasoning is: no other large mammals were present (fact), so there was no natural water (inference), yet bovines were present (fact), so bovines were domesticated (conclusion). Whether humans could have also helped other animals survive is irrelevant to this chain. The argument needs an assumption about why bovine presence without water implies domestication, not about the theoretical possibility of humans supporting other species."
+  },
+  {
+   "row_id": "44cdfd6e-03ed-4ddd-9ba7-f42ffb1663ff",
+   "letter": "D",
+   "body": "This answer claims no human culture obtains food both through agriculture and through hunting and gathering. This is far too extreme. The argument concludes that these people were \"no longer exclusively hunter-gatherers\" — meaning they had added domestication to their repertoire. But the argument does not need to assume that agriculture and hunting are mutually exclusive. In fact, the conclusion's use of \"exclusively\" implies the opposite: these people may still have hunted and gathered but also practiced animal husbandry. The argument is perfectly compatible with cultures that combine agricultural and hunter-gatherer practices; it only claims these particular people were not limited to the latter."
+  },
+  {
+   "row_id": "7c4077a6-5d08-431e-ad1a-5f5379e8f3df",
+   "letter": "E",
+   "body": "This answer compares the water needs of domesticated versus wild animals of the same size. While this is a factual claim about animal biology, it does not address the argument's gap. The argument needs to know whether wild bovines could survive without natural water in an arid region — not whether domesticated bovines need less water than wild ones. Even if this comparison were true, it would not explain why the presence of bovines without natural water implies domestication. The key question is whether wild bovines require the same natural water sources that would attract other large mammals, not whether the domestication process itself changes water requirements."
+  }
+ ],
+ "known_problem": "Explicit-Standard register (6.4 em-dashes per 1k words; wrong-answer notes average 106.2 words).",
+ "tags": "emdash-heavy; pt157-158-register"
+}

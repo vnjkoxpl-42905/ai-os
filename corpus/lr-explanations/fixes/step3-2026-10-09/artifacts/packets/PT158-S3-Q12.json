@@ -1,0 +1,84 @@
+{
+ "qid": "PT158-S3-Q12",
+ "type": "Role",
+ "difficulty": "3",
+ "key_db": "B",
+ "stimulus_db": "Professor Shanaz: People generally notice and are concerned about only the most obvious public health problems. Although there is indisputable evidence that ozone, an air pollutant, can be dangerous for severe asthmatics even if found in levels much lower than maximum levels permitted by law, most people are currently well aware that contaminated water presents a much more widespread threat to our community. Hence, there is unlikely to be a widespread, grassroots effort for new, more restrictive air pollution controls at this time.",
+ "stem_db": "Which one of the following most accurately describes the role played in Professor Shanaz's argument by the claim that people generally notice and are concerned about only the most obvious public health problems?",
+ "choices_db": {
+  "A": "It is a premise offered in support of the claim that contaminated water currently presents a much more widespread threat to the community than does ozone.",
+  "B": "It is a premise offered in support of the claim that there is unlikely to be a widespread, grassroots effort for new, more restrictive air pollution controls at this time.",
+  "C": "It is used to explain the current public awareness of the severity of the problem of contaminated water.",
+  "D": "It is presented as indisputable evidence that ozone can be dangerous for severe asthmatics even if found in levels much lower than maximum levels permitted by law.",
+  "E": "It is the main conclusion drawn in the argument."
+ },
+ "bank": {
+  "stimulus": "Professor Shanaz: People generally notice and are\n concerned about only the most obvious public\n health problems. Although there is indisputable\n evidence that ozone, an air pollutant, can be\n dangerous for severe asthmatics even if found\n in levels much lower than maximum levels\n permitted by law, most people are currently\n well aware that contaminated water presents a\n much more widespread threat to our community.\n Hence, there is unlikely to be a widespread,\n grassroots effort for new, more restrictive air\n pollution controls at this time.",
+  "stem": "Which one of the following most accurately describes\n the role played in Professor Shanaz’s argument by the\n claim that people generally notice and are concerned\n about only the most obvious public health problems?",
+  "choices": {
+   "A": "It is a premise offered in support of the claim that contaminated water currently presents a much more widespread threat to the community than does ozone.",
+   "B": "It is a premise offered in support of the claim that there is unlikely to be a widespread, grassroots effort for new, more restrictive air pollution controls at this time.",
+   "C": "It is used to explain the current public awareness of the severity of the problem of contaminated water.",
+   "D": "It is presented as indisputable evidence that ozone can be dangerous for severe asthmatics even if found in levels much lower than maximum levels permitted by law.",
+   "E": "It is the main conclusion drawn in the argument."
+  },
+  "key": "B"
+ },
+ "explanation_id": "849f7305-817f-419c-8ed4-0deff4871c3c",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "8fd79da4-0031-4824-b4b3-68e37621dee1",
+   "position": 0,
+   "label": "Conclusion (Hence)",
+   "body": "There's unlikely to be a widespread, grassroots effort for new, more restrictive air pollution controls at this time."
+  },
+  {
+   "row_id": "e7fb608f-759d-4f90-a6c5-1c34f0d4af6c",
+   "position": 1,
+   "label": "Evidence",
+   "body": "People generally notice and are concerned about only the most obvious public health problems. And most people are currently well aware that contaminated water is a much more widespread threat to the community than is air pollution (such as ozone)."
+  },
+  {
+   "row_id": "8b4c7808-551e-4002-a35e-98c711a9ad06",
+   "position": 2,
+   "label": "Evaluate",
+   "body": "On Main Conclusion and Role, the conclusion is usually found earlier than the support, but in this case it was the final sentence, signified by \"Hence\". Because this is Role, we want to be highly alert for whether that \"hence\" is actually just an Intermediate Conclusion, but in this case we can tell it's the main conclusion because the 1st and 3rd claim combine to support this 4th claim. There are four claims in this argument, and structurally they go in this order:\n    1. Premise\n    2. Counterpoint (although)\n    3. Premise\n    4. Conclusion (hence)\n    We're being asked about the first sentence, which was one of the two premises for the conclusion in the final sentence."
+  },
+  {
+   "row_id": "590aeacf-663b-4031-8953-c7c6fe3e9d29",
+   "position": 3,
+   "label": "Goal",
+   "body": "Look for something like \"it was a premise / evidence / partial support for the Conclusion that there's unlikely to be a widespread effort for more air pollution controls right now\"."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "414e6fb6-4645-4924-8005-1c4c8456e7ee",
+   "letter": "A",
+   "body": "This answer says the targeted statement supports the claim that contaminated water is a widespread threat. But the argument does not use the \"people notice only obvious problems\" principle to argue that water contamination is a serious threat — the argument treats the seriousness of water contamination as an independent fact that most people already know. The targeted statement instead combines with the water contamination fact to support the main conclusion: people will not mobilize for stricter air pollution controls. The relationship is: because people focus on the most obvious threats (targeted statement), and because water contamination is currently the obvious threat (separate premise), people will not push for air controls (conclusion). The targeted statement supports the conclusion about inaction, not the premise about water."
+  },
+  {
+   "row_id": "5197c74f-24c3-4dd6-9fbf-a31228dac97e",
+   "letter": "B",
+   "body": "The targeted statement — that people generally notice and are concerned about only the most obvious public health problems — functions as a premise supporting the main conclusion that there is unlikely to be a widespread, grassroots effort for stricter air pollution controls. The argument's logic is: people focus on the most obvious threats (this premise) + water contamination is currently the obvious threat in the community (another premise) + ozone pollution is a less visible concern (implicit) = people will not rally for stricter ozone controls (conclusion). The targeted statement provides the behavioral principle that connects the specific factual observations to the predicted public response. Without this premise, the facts about ozone danger and water contamination prominence would not lead to the conclusion about grassroots inaction."
+  },
+  {
+   "row_id": "e7ac4fd7-cf43-4c09-a4d7-fe66b31bf742",
+   "letter": "C",
+   "body": "This answer, like (A), misidentifies the inferential target. It claims the targeted statement explains why people are currently aware of water contamination's severity. But the argument does not use the \"people focus on obvious problems\" principle to explain awareness of water contamination. Public awareness of water contamination is treated as an independent fact, not as something that needs to be explained by the targeted statement. The targeted statement and the water awareness fact are parallel premises that jointly support the main conclusion. Additionally, \"explaining\" awareness of water contamination would require the targeted statement to show why water contamination is obvious, but the statement is about what people attend to, not about what makes a problem obvious. The causal direction proposed by this answer does not match the argument's actual structure."
+  },
+  {
+   "row_id": "84acef38-3552-428e-8ce2-a5404e51f4bb",
+   "letter": "D",
+   "body": "The targeted statement is not presented as evidence for ozone's danger. The argument treats ozone's danger as a separate factual premise supported by \"indisputable evidence\" — that language attaches to the ozone claim, not to the targeted statement about public attention. The targeted statement is a behavioral generalization about what people notice and care about; it has nothing to do with establishing the medical or environmental danger of ozone. These are completely different types of claims serving different functions in the argument. The ozone danger premise establishes the underlying public health reality; the targeted statement explains why people are unlikely to act on that reality. Different roles, different parts of the argument."
+  },
+  {
+   "row_id": "d53c9305-2adb-4c5f-af10-c5a74d60ed52",
+   "letter": "E",
+   "body": "The targeted statement is not the main conclusion — the main conclusion is the prediction that there is unlikely to be a widespread grassroots effort for stricter air pollution controls. The targeted statement is a general principle about human behavior that supports this specific prediction. The test for identifying the main conclusion is: what claim does everything else in the argument work to support? The targeted statement works to support the prediction about grassroots inaction; the prediction does not work to support the targeted statement. Additionally, the targeted statement is presented as a general given — a behavioral observation — while the main conclusion is a specific prediction derived from applying that general observation to particular circumstances."
+  }
+ ],
+ "known_problem": "Correct; 150-word em-dash notes.",
+ "tags": "emdash-heavy; pt157-158-register; possible-misquote"
+}

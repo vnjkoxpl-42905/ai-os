@@ -1,0 +1,84 @@
+{
+ "qid": "PT158-S4-Q5",
+ "type": "Parallel Reasoning",
+ "difficulty": "2",
+ "key_db": "B",
+ "stimulus_db": "The railway authority inspector who recently thoroughly checked the tracks testified that they were in good condition. Thus, since the inspector has no bias in the matter, we should be suspicious of the newspaper reporter's claim that the tracks are in poor condition.",
+ "stem_db": "The reasoning in the argument above is most similar to the reasoning in which one of the following arguments?",
+ "choices_db": {
+  "A": "My pottery instructor says that making pottery will not cause repetitive-motion injuries if it is done properly. So I will probably not get such injuries, for whenever I do pottery I use the proper techniques that my instructor taught me.",
+  "B": "Gardner, a noted paleontologist who has no vested interest in the case, assures us that the alleged dinosaur bones are not old enough to be from dinosaurs. So we should be skeptical of Penwick's claim to have found dinosaur bones, for Gardner inspected the bones carefully.",
+  "C": "The engineer hired by the company that maintains the bridge has examined the bridge and declared it safe. This engineer is the only one who has given the bridge a close examination recently. Thus, we should consider the bridge safe.",
+  "D": "The reporter who recently interviewed the prime minister said the prime minister appeared to be in poor health. But despite the fact that the reporter works for a paper with opposition leanings, we should accept that the prime minister is in poor health. After all, reporters won't let their bias affect them when the truth of their claims will eventually be discovered.",
+  "E": "The snowblower salesperson claims that there will be above-average snowfall this winter, but because the salesperson is biased, we can discount that claim."
+ },
+ "bank": {
+  "stimulus": "The railway authority inspector who recently thoroughly\n checked the tracks testified that they were in good\n condition. Thus, since the inspector has no bias in\n the matter, we should be suspicious of the newspaper\n reporter’s claim that the tracks are in poor condition.",
+  "stem": "The reasoning in the argument above is most similar to\n the reasoning in which one of the following arguments?",
+  "choices": {
+   "A": "My pottery instructor says that making pottery will not cause repetitive-motion injuries if it is done properly. So I will probably not get such injuries, for whenever I do pottery I use the proper techniques that my instructor taught me.",
+   "B": "Gardner, a noted paleontologist who has no vested interest in the case, assures us that the alleged dinosaur bones are not old enough to be from dinosaurs. So we should be skeptical of Penwick’s claim to have found dinosaur bones, for Gardner inspected the bones carefully.",
+   "C": "The engineer hired by the company that maintains the bridge has examined the bridge and declared it safe. This engineer is the only one who has given the bridge a close examination recently. Thus, we should consider the bridge safe.",
+   "D": "The reporter who recently interviewed the prime minister said the prime minister appeared to be in poor health. But despite the fact that the reporter works for a paper with opposition leanings, we should accept that the prime minister is in poor health. After all, reporters won’t let their bias affect them when the truth of their claims will eventually be discovered.",
+   "E": "The snowblower salesperson claims that there will be above-average snowfall this winter, but because the salesperson is biased, we can discount that claim."
+  },
+  "key": "B"
+ },
+ "explanation_id": "1f31908a-c626-4db4-b44e-47309d2f8c85",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "024ee0c7-4f34-445f-a42e-9df1e48c17d0",
+   "position": 0,
+   "label": "Conclusion (thus)",
+   "body": "We should be suspicious of the newspaper reporter's claim that the tracks are in poor condition."
+  },
+  {
+   "row_id": "5575d2a8-d7ec-4394-8030-5b0274c249ff",
+   "position": 1,
+   "label": "Evidence (since)",
+   "body": "The inspector has no bias in the matter.\nThe inspector who thoroughly checked the tracks said that they were in good condition."
+  },
+  {
+   "row_id": "dae977ee-437c-422b-92e2-77b07b511064",
+   "position": 2,
+   "label": "Evaluate",
+   "body": "This is a reasonable argument. There's a He Said / She Said aspect to the underlying conversation.\nThe reporter says, \"tracks are in poor condition\". The inspector said \"good condition\". Who should we believe?\nThe author, to her credit, is not convinced that one is right and one is wrong, but her conclusion leans toward believing the inspector and toward doubting the reporter.\nWhy? The inspector is the qualified authority to judge. He recently and thoroughly inspected the tracks and said they were fine. And we have no reason to doubt his testimony based on bias."
+  },
+  {
+   "row_id": "c4d869c5-7a8f-4996-810b-9fe73e1797b4",
+   "position": 3,
+   "label": "Goal",
+   "body": "Let's look for an argument where the author gently sides with an unbiased expert or authority figure, when it comes to some He Said / She Said debate."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "98eafbb3-ae00-4a98-a8aa-bba239b3a6c6",
+   "letter": "A",
+   "body": "The original argument uses an expert's impartial assessment to cast doubt on a specific person's contrary claim. This answer involves a pottery instructor teaching proper technique and concluding that the student probably will not get injuries if they follow the instructions. The conclusion's logical structure is fundamentally different: it predicts a future outcome based on expert guidance rather than using an expert's finding to doubt a specific person's assertion. There is no named individual making a contrary claim that gets undermined by the expert's assessment. The instructor is teaching, not conducting an independent evaluation that contradicts someone else's position. Surface similarity (both involve expertise) does not equal structural similarity — the reasoning pattern diverges at every key point."
+  },
+  {
+   "row_id": "c26225ce-8026-4565-a9e3-4323a3205c15",
+   "letter": "B",
+   "body": "This answer perfectly replicates every structural element of the original argument. The original: (1) a railway inspector with no bias (impartial expert) thoroughly checked the tracks (direct examination), (2) testified they are in good condition (negative finding — no problem), (3) therefore we should be suspicious of the reporter's claim that the tracks are in poor condition (doubt a specific person's contrary claim). This answer: (1) Gardner, who has no vested interest (impartial expert), assures that the bones are not dinosaur bones (direct examination with finding), (2) the finding contradicts Penwick's claim (negative finding relative to the disputed assertion), (3) therefore we should be skeptical of Penwick's claim that they are dinosaur bones (doubt a specific person's contrary claim). Every element maps: impartial expert, examination of the subject, finding that contradicts the claim, and a conclusion casting doubt on a named individual's assertion based on the expert's authority."
+  },
+  {
+   "row_id": "2e4a5acf-2816-4fbc-a957-4fbc34dee1f0",
+   "letter": "C",
+   "body": "A critical feature of the original argument is the inspector's impartiality — \"no bias\" is explicitly stated and is foundational to the reasoning. The inspector's neutrality is what gives the assessment its authority over the reporter's contrary claim. In this answer, the engineer was hired by the company that owns the bridge, creating an obvious potential conflict of interest. A company-hired engineer has financial and professional incentives to declare the bridge safe, which fundamentally changes the logical weight of the assessment. The original argument works because the expert has no reason to shade the findings either way; this answer introduces a relationship that compromises that neutrality. Additionally, the conclusion here may be about accepting the engineer's assessment rather than doubting a specific contrary claim, further diverging from the original pattern."
+  },
+  {
+   "row_id": "9814d6ba-c8b4-4048-a950-bf938e7a96d0",
+   "letter": "D",
+   "body": "This answer introduces two structural divergences from the original. First, the reporter writes for an opposition newspaper, injecting a bias element that the original argument never uses. The original doubts the reporter's claim purely because the inspector's expert finding contradicts it — the reporter's credibility, motives, and affiliations are irrelevant. This answer partially relies on undermining the claimant's credibility through their political affiliation, which is an ad hominem dimension absent from the original. Second, the conclusion's direction may differ: rather than using an expert's finding to doubt a claim, this answer may be accepting a potentially biased reporter's claim based on the reporter's affiliations. The original's clean structure (neutral expert versus uncharacterized claimant) gets muddied by introducing motivational analysis of the person making the claim."
+  },
+  {
+   "row_id": "7a7a150e-7f5a-498a-8818-26ebfaf25818",
+   "letter": "E",
+   "body": "A snowblower salesperson has an obvious financial incentive to claim that heavy snow is coming, because that would drive snowblower sales. This directly contradicts the original argument's foundational requirement of expert impartiality. The railway inspector's credibility rests entirely on having no bias — no reason to shade the findings in either direction. A salesperson whose income depends on the product's perceived necessity is the polar opposite of an impartial assessor. The original's reasoning is: the expert is unbiased, so the expert's assessment is credible, so the contrary claim is doubtful. With a biased \"expert,\" the first link in that chain snaps: the salesperson's claim that heavy snow is coming carries diminished weight precisely because they profit from people believing it. If anything, the appropriate conclusion is to discount the salesperson's prediction, not to accept it."
+  }
+ ],
+ "known_problem": "Explicit-Standard register (6.2 em-dashes per 1k words; wrong-answer notes average 126.2 words).",
+ "tags": "emdash-heavy; pt157-158-register"
+}

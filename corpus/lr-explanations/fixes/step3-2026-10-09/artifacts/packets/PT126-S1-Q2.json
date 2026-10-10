@@ -1,0 +1,78 @@
+{
+ "qid": "PT126-S1-Q2",
+ "type": "Necessary Assumption",
+ "difficulty": "1",
+ "key_db": "A",
+ "stimulus_db": "Soaking dried beans overnight before cooking them reduces cooking time. However, cooking without presoaking yields plumper beans. Therefore, when a bean dish's quality is more important than the need to cook that dish quickly, beans should not be presoaked.",
+ "stem_db": "Which one of the following is an assumption required by the argument?",
+ "choices_db": {
+  "A": "Plumper beans enhance the quality of a dish.",
+  "B": "There are no dishes whose quality improves with faster cooking.",
+  "C": "A dish's appearance is as important as its taste.",
+  "D": "None of the other ingredients in the dish need to be presoaked.",
+  "E": "The plumper the bean, the better it tastes."
+ },
+ "bank": {
+  "stimulus": "Soaking dried beans overnight before cooking them reduces cooking time. However, cooking without presoaking yields plumper beans. Therefore, when a bean dish's quality is more important than the need to cook that dish quickly, beans should not be presoaked.",
+  "stem": "Which one of the following is an assumption required by the argument?",
+  "choices": {
+   "A": "Plumper beans enhance the quality of a dish.",
+   "B": "There are no dishes whose quality improves with faster cooking.",
+   "C": "A dish's appearance is as important as its taste.",
+   "D": "None of the other ingredients in the dish need to be presoaked.",
+   "E": "The plumper the bean, the better it tastes."
+  },
+  "key": "A"
+ },
+ "explanation_id": "bac90585-099b-4faf-8c88-95545859dfec",
+ "style": "single",
+ "steps": [
+  {
+   "row_id": "a84f83e3-d8de-4501-af6a-bbf150e7394c",
+   "position": 0,
+   "label": "Evidence",
+   "body": "Soaking dried beans overnight before cooking them reduces cooking time.\nHowever, cooking without presoaking yields plumper beans."
+  },
+  {
+   "row_id": "043c0111-cb9a-4c3a-a9e6-a7aba142b4dc",
+   "position": 1,
+   "label": "Conclusion",
+   "body": "Therefore, when a bean dish's quality is more important than the need to cook that dish quickly, beans should not be presoaked."
+  },
+  {
+   "row_id": "7b91f97d-2de9-4390-ab49-d7c537e4a795",
+   "position": 2,
+   "label": "Evaluate",
+   "body": "The argument assumes that plumper beans enhance the quality of the dish."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "ab7be3d8-c1dd-47b3-b2ff-b9d7d4a150fc",
+   "letter": "A",
+   "body": "This bridges the gap between plumper beans and a higher quality dish."
+  },
+  {
+   "row_id": "5c001f33-ab9c-4ad7-b4cf-8b46e8cd9384",
+   "letter": "B",
+   "body": "B is too strong. The argument can allow that some dishes do better with faster cooking. It only says that when a bean dish's quality matters more than speed, the beans shouldn't be presoaked."
+  },
+  {
+   "row_id": "f31a8a84-1968-4ba8-bd45-fa0be5bb5518",
+   "letter": "C",
+   "body": "The argument never compares appearance with taste. Plumper beans could improve a dish for any reason, so the argument doesn't need appearance to be as important as taste."
+  },
+  {
+   "row_id": "9c1c8ef9-cc19-4ac0-94e8-bd1a3ce0c8f8",
+   "letter": "D",
+   "body": "The argument is only about whether to presoak the beans. It needs no claim about whether anything else in the dish gets presoaked."
+  },
+  {
+   "row_id": "da4d557d-8fb8-416e-8dfd-f51c62ccde63",
+   "letter": "E",
+   "body": "E links plumpness to taste, but the conclusion is about a dish's quality. The argument doesn't need plumpness to work through taste: plumper beans could improve a dish's quality even if they taste no better."
+  }
+ ],
+ "known_problem": "One-line notes, no negation test on a Necessary Assumption; typo \"This fail to connect\".",
+ "tags": "short-breakdown; verdict-only; thin-correct-note; thin-notes; no-prediction; very-short"
+}

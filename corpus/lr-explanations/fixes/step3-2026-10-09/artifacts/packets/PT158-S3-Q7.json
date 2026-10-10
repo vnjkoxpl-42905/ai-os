@@ -1,0 +1,84 @@
+{
+ "qid": "PT158-S3-Q7",
+ "type": "Weaken",
+ "difficulty": "1",
+ "key_db": "C",
+ "stimulus_db": "Ethicist: This hospital's ethics code states that hospital staff must not deceive patients about their medical treatment. But we know that Dr. Faris administered medication A to a patient and informed him that it would help him sleep. Medication A has no known sleep-inducing properties. So, Dr. Faris is clearly in violation of the ethics code, despite the fact that the patient's sleep did improve after taking medication A.",
+ "stem_db": "Which one of the following, if true, most seriously weakens the ethicist's argument?",
+ "choices_db": {
+  "A": "Dr. Faris was aware that medication A had no known sleep-inducing properties.",
+  "B": "A committee at the hospital is currently considering revisions to the hospital's ethics code.",
+  "C": "Medication A is a pain reliever that can indirectly lead to sleep due to a reduction in the patient's discomfort.",
+  "D": "Several other members of the hospital staff prescribed medication A to patients who had trouble sleeping.",
+  "E": "Dr. Faris knew that the patient was not taking any other medications that have sleep-inducing properties."
+ },
+ "bank": {
+  "stimulus": "Ethicist: This hospital’s ethics code states that hospital\n staff must not deceive patients about their\n medical treatment. But we know that Dr. Faris\n administered medication A to a patient and\n informed him that it would help him sleep.\n Medication A has no known sleep-inducing\n properties. So, Dr. Faris is clearly in violation of\n the ethics code, despite the fact that the patient’s\n sleep did improve after taking medication A.",
+  "stem": "Which one of the following, if true, most seriously\n weakens the ethicist’s argument?",
+  "choices": {
+   "A": "Dr. Faris was aware that medication A had no known sleep-inducing properties.",
+   "B": "A committee at the hospital is currently considering revisions to the hospital’s ethics code.",
+   "C": "Medication A is a pain reliever that can indirectly lead to sleep due to a reduction in the patient’s discomfort.",
+   "D": "Several other members of the hospital staff prescribed medication A to patients who had trouble sleeping.",
+   "E": "Dr. Faris knew that the patient was not taking any other medications that have sleep-inducing properties."
+  },
+  "key": "C"
+ },
+ "explanation_id": "bdf1e531-f216-430f-8a88-6b96c7ed1f59",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "7f3a56f3-de2d-4d61-8740-d0f470414abe",
+   "position": 0,
+   "label": "Conclusion (So / clearly)",
+   "body": "Dr. Faris is in violation of the ethics code. rephrase: Dr. Faris deceived a patient about their medical treatment."
+  },
+  {
+   "row_id": "920cf5e0-3247-44bf-b993-b02c8f4426dc",
+   "position": 1,
+   "label": "Evidence",
+   "body": "The ethic code says, \"you mustn't deceive patients about their medical treatment\". Dr. Faris gave medication A to a patient and told him it would help him sleep, even though it has no known sleep-inducing properties (although the patient's sleep did improve after taking medication A)."
+  },
+  {
+   "row_id": "4d56fe9e-9cb8-4746-b18d-2cff9326adcd",
+   "position": 2,
+   "label": "Evaluate",
+   "body": "Is it clear that Dr. Faris deceived her patient? Is there any way that we could argue that even though Med A has no known sleep-inducing properties, she was still being honest in saying \"this medication will help you sleep\"? Maybe she thought the placebo effect would help the patient sleep. She knew the medication didn't have sleep altering properties, but she surmised that this patient probably would get some psychological comfort out of receiving some treatment, and that psychological comfort would lead to better sleep. Or maybe the Dr. was thinking that Med A would alleviate some condition that is keeping the patient awake at night. Maybe medication A does nothing for sleep, but it's good at alleviating the pain from headaches, and the patient can sleep when he has a headache. In that sense, she wouldn't have been deceptive to say \"taking this med should help you sleep\"."
+  },
+  {
+   "row_id": "251f4e25-b347-43df-b27f-1243c8ddf3c5",
+   "position": 3,
+   "label": "Goal",
+   "body": "Look for an answer that gives us a way to argue that the Dr. genuinely believed that if the patient took this Med A, the process of doing so would help him sleep."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "9bb3041a-a32f-4879-b791-28c06d0408c7",
+   "letter": "A",
+   "body": "If Dr. Faris was aware that medication A had no known sleep-inducing properties, this actually strengthens the case for an ethics violation. The argument concludes that Dr. Faris deceived the patient by telling him the medication would help him sleep when it has no such properties. If Dr. Faris knew this, the deception was intentional rather than the result of an honest mistake. Intentional deception is a stronger ethics violation than accidental misinformation. This answer makes the ethicist's case more compelling, not less, by establishing that the doctor knowingly told the patient something he had reason to believe was false."
+  },
+  {
+   "row_id": "29e12894-f4ee-43aa-bab0-20ed96bd5d13",
+   "letter": "B",
+   "body": "Whether a committee is considering revisions to the ethics code has no bearing on whether Dr. Faris violated the current code. The ethicist's argument is about whether the doctor's conduct violated the existing rules, not about whether those rules might change in the future. Even if the ethics code is revised tomorrow, that does not retroactively alter whether Dr. Faris's statement constituted deception under the code as it currently stands. Future changes to the rules cannot excuse past violations of them. This answer introduces information about potential future policy that is completely irrelevant to the backward-looking question of whether a violation occurred."
+  },
+  {
+   "row_id": "fdcbd4a7-5ec3-4c34-8756-386693c7f80a",
+   "letter": "C",
+   "body": "This answer provides the indirect mechanism that makes Dr. Faris's statement truthful. If medication A is a pain reliever that reduces pain, and that pain reduction indirectly leads to better sleep, then telling the patient the medication would help him sleep was accurate — not deceptive. The medication genuinely helps the patient sleep, just not through direct sleep-inducing properties. The ethicist's reasoning assumed that \"no known sleep-inducing properties\" means \"cannot help with sleep,\" but this answer shows that assumption is wrong. A medication can legitimately improve sleep by addressing an underlying condition — in this case, pain — that was preventing sleep. Since Dr. Faris's statement turns out to be truthful, there was no deception, and therefore no violation of the ethics code. The entire argument unravels because the central premise — that Dr. Faris deceived the patient — is shown to be false."
+  },
+  {
+   "row_id": "8be65a8d-135f-418f-ab00-2fda0ae9d3c2",
+   "letter": "D",
+   "body": "Other staff members prescribing medication A for sleep difficulties tells us that Dr. Faris was not alone in the practice, but it does not establish whether the practice was actually deceptive. Widespread behavior does not determine whether that behavior is truthful or deceptive. If medication A truly cannot help with sleep, then many doctors are violating the ethics code — the violation is just more widespread. If medication A can help with sleep, then we need to know why, which this answer does not explain. The fact that others did the same thing is relevant to whether Dr. Faris should be singled out, but not to whether the statement itself was deceptive. The ethicist's argument is about the nature of the act, not about how many people committed it."
+  },
+  {
+   "row_id": "2ad4ba2e-b9b0-42c4-9fa4-ffbf299d8f40",
+   "letter": "E",
+   "body": "If Dr. Faris knew the patient was not taking any other sleep-inducing medications, this eliminates the possibility that the patient's improved sleep was caused by something other than medication A. But the ethicist's argument is not about whether the patient's sleep actually improved — the ethicist acknowledges it did. The argument is about whether Dr. Faris's statement was deceptive at the time it was made, given that medication A has no known sleep-inducing properties. Knowing that no other medications contributed to the sleep improvement, if anything, makes the situation more puzzling but does not provide a legitimate basis for Dr. Faris's claim. It does not establish a mechanism by which medication A helps sleep, so it does not show the statement was truthful."
+  }
+ ],
+ "known_problem": "Explicit-Standard register (8.3 em-dashes per 1k words; wrong-answer notes average 114.0 words).",
+ "tags": "emdash-heavy; pt157-158-register; possible-misquote"
+}

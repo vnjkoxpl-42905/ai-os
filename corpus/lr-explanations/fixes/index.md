@@ -1,7 +1,7 @@
 ---
 type: task-list
 subject: Fix list, LR explanation project
-updated: 2026-10-02
+updated: 2026-10-09
 ---
 
 # Fix list
@@ -140,6 +140,10 @@ The database is the source of truth for explanations, not the local `Explanation
 - [x] **Verified after a fresh mirror pull:** 846 of 849 rows equal the planned text exactly. The other three (c2b6fc9c step, a3328c66 and bc96b75f notes) already held a hand-improved version that is better than the plan (the c2b6fc9c step also drops a gendered pronoun), so they were left alone.
 - [x] **Timed catalogs active:** both configs read `99a84478…` (PT) and `45ef6f55…` (sections), checked 2026-10-08.
 - Working files (old text kept as the snapshot): session scratchpad `step2/payload.json`, `verdicts-*.jsonl`, `sql*-final.json`.
+
+### Step 3: Revamp rewrites verified (2026-10-09)
+- [x] **192 Revamp inventory items accounted for:** 191 rewritten explanations plus the independently agreed skip PT126-S3-Q16. The prior 173 explanations were verified against live text before writing; batches 22 to 24 added the remaining 18. Full final comparison matched all 1,687 expected rows and all 191 question mappings, with zero missing, duplicate or extra slots.
+- [x] **Remaining batch writes verified:** 41 step updates, 90 note updates and 2 new steps, guarded atomically on ownership, question/choice snapshots, row identities, old MD5 and labels. One fresh content correction and a caught-and-repaired Windows line-ending defect are documented in the [durable evidence](step3-2026-10-09/README.md). No fresh student visual check. Broader Weak/Watch, step 4 and source disputes remain open.
 
 ### Repo housekeeping
 - [x] ~~**Codex's redundant repair branch and worktree.**~~ 2026-09-27: deleted on Joshua's OK. Its uncommitted changes kept at raw/sources/lsatu-lr-snapshots/2026-09-27-codex-repair-worktree-uncommitted.patch.

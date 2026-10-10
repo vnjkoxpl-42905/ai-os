@@ -1,0 +1,90 @@
+{
+ "qid": "PT158-S2-Q13",
+ "type": "Main Conclusion",
+ "difficulty": "4",
+ "key_db": "B",
+ "stimulus_db": "The widespread use of encryption software, which makes electronic documents accessible by password only, will bring the writing of biographical history virtually to an end. Public figures' private correspondence and diaries are intended to be confidential when written, but they later become biographers' principal sources. In the future, most such documents are likely to be stored as encrypted text, so the most interesting, revealing material will be unavailable to historians unless they have the necessary passwords.",
+ "stem_db": "Which one of the following most accurately expresses the main conclusion drawn in the argument?",
+ "choices_db": {
+  "A": "In the future, most private correspondence and diaries of public figures will be stored as encrypted text.",
+  "B": "The widespread use of encryption software will cause the writing of biographical history to decline significantly or cease.",
+  "C": "Historians will probably not have access to much of the private correspondence and diaries of public figures in the future.",
+  "D": "In the future, biographers' access to the most interesting, revealing material will be determined by their knowledge of the necessary passwords.",
+  "E": "Public figures' private correspondence and diaries are the most interesting and revealing sources for the writing of biographical history."
+ },
+ "bank": {
+  "stimulus": "The widespread use of encryption software, which makes\n electronic documents accessible by password only, will\n bring the writing of biographical history virtually to an\n end. Public figures’ private correspondence and diaries\n are intended to be confidential when written, but they\n later become biographers’ principal sources. In the future,\n most such documents are likely to be stored as encrypted\n text, so the most interesting, revealing material will be\n unavailable to historians unless they have the necessary\n passwords.",
+  "stem": "Which one of the following most accurately expresses\n the main conclusion drawn in the argument?",
+  "choices": {
+   "A": "In the future, most private correspondence and diaries of public figures will be stored as encrypted text.",
+   "B": "The widespread use of encryption software will cause the writing of biographical history to decline significantly or cease.",
+   "C": "Historians will probably not have access to much of the private correspondence and diaries of public figures in the future.",
+   "D": "In the future, biographers’ access to the most interesting, revealing material will be determined by their knowledge of the necessary passwords.",
+   "E": "Public figures’ private correspondence and diaries are the most interesting and revealing sources for the writing of biographical history."
+  },
+  "key": "B"
+ },
+ "explanation_id": "05941cfc-03c9-42ac-bd74-70db9caac22f",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "a7204690-1202-46ba-9d0f-de38fdadb91f",
+   "position": 0,
+   "label": "Conclusion (prediction = opinion)",
+   "body": "Widespread use of encryption software will bring the writing of biographical history virtually to an end."
+  },
+  {
+   "row_id": "fc3ff556-2ee1-4ee3-a8d9-ffa50cbc4bd3",
+   "position": 1,
+   "label": "Intermediate Conclusion (so)",
+   "body": "The most interesting, revealing source material for a biography will be unavailable to historians unless they have the necessary passwords."
+  },
+  {
+   "row_id": "48db2e4a-ddf3-48ca-b47e-83cf548f3ec8",
+   "position": 2,
+   "label": "Evidence",
+   "body": "When historians write biographical history, their principal sources are often the private correspondence and diaries of the public figure. These confidential writings will more likely be stored as encrypted text in the future, meaning they will be password protected."
+  },
+  {
+   "row_id": "b1263c88-23c0-4741-b8db-d358aca86a38",
+   "position": 3,
+   "label": "Evaluate",
+   "body": "Whenever we do Main Conclusion (or Role), we read the paragraph with a different mindset, because we know that 90% of the time the conclusion is going to be earlier than the evidence. Specifically, the conclusion is usually: - the first sentence, or - some Pivot / Rebuttal sentence. So we read the first sentence, actively asking ourselves, \"Is this the Conclusion? Does it sound like the paragraph starts with an opinion from the author?\" The first sentence here is a prediction, which is by definition an opinion. Does the author proceed to defend / support that prediction? She does. So we know that the first sentence is the overarching conclusion."
+  },
+  {
+   "row_id": "8fc0988e-af43-4bb4-9943-667e173bd4fd",
+   "position": 4,
+   "label": "Goal",
+   "body": "We just need a meaning-match for the first sentence."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "5716c1d9-c32d-47a3-90b2-be88d637aae9",
+   "letter": "A",
+   "body": "This answer restates a premise of the argument, not the main conclusion. The statement that most private correspondence and diaries will be stored as encrypted text is presented as a factual prediction about future technology adoption. It is one link in the causal chain that supports the main conclusion. The main conclusion is about the consequence of this encryption — the end of biographical history. This answer describes the cause (encrypted storage), not the effect (the end of biographical writing). In the argument's structure, this fact is offered as evidence for why biographical history will suffer, not as the main point the argument is trying to establish."
+  },
+  {
+   "row_id": "28dd4f0c-3a92-4e30-8dbb-d279c9f10308",
+   "letter": "B",
+   "body": "This answer accurately expresses the argument's main conclusion. The first sentence of the stimulus declares that the widespread use of encryption software will bring biographical history \"virtually to an end.\" This is the broadest, most consequential claim in the argument — everything else supports it. The evidence about private documents being biographers' sources, the prediction about encrypted storage, and the intermediate conclusion about historians lacking passwords all feed into this overarching claim. This answer paraphrases the first sentence faithfully: encryption will cause biographical history to virtually cease. It captures the right claim at the right level of generality without overstating or understating the argument's position."
+  },
+  {
+   "row_id": "521a059e-21a5-453f-a0c6-7dd5511d7a25",
+   "letter": "C",
+   "body": "This answer says historians will probably not have access to much private correspondence and diaries of public figures in the future. While this is a reasonable inference from the argument, it functions as an intermediate conclusion or unstated implication — not the main conclusion. The argument's main conclusion is about the broader consequence of this inaccessibility: the end of biographical history. This answer describes a step in the causal chain (historians lose access) rather than the final result (biographical history ends). The main conclusion is the ultimate destination of the reasoning; this answer stops one step short."
+  },
+  {
+   "row_id": "e44d8779-ecc1-47c9-9c5d-c39104e57583",
+   "letter": "D",
+   "body": "This answer says biographers' access to interesting material will be determined by the availability of passwords. While this is implied by the argument, it is an intermediate conclusion, not the main conclusion. The argument uses this point — that password access will control information availability — to support its broader claim that biographical history will virtually end. This answer describes a mechanism or condition, not the ultimate consequence. Additionally, this is a classic \"last-claim trap\": test-takers sometimes select the last statement in an argument as the main conclusion simply because it appears at the end. But in this argument, the main conclusion appears in the first sentence, and the final sentence provides supporting detail."
+  },
+  {
+   "row_id": "e07233f4-c780-4715-9e57-d3fe27d6d275",
+   "letter": "E",
+   "body": "This answer says public figures' private correspondence and diaries are the most interesting and revealing sources for biographical history. The argument does say that this material constitutes biographers' \"principal sources\" and refers to it as \"the most interesting, revealing material.\" However, this is a background premise or assumption of the argument, not its main conclusion. The argument uses this claim to explain why the loss of access to encrypted documents would be devastating to biographical history. It is a building block, not the final structure. The main conclusion is about the consequence of losing access to these sources: the end of biographical history writing."
+  }
+ ],
+ "known_problem": "Explicit-Standard register (7.0 em-dashes per 1k words; wrong-answer notes average 105.0 words).",
+ "tags": "emdash-heavy; pt157-158-register"
+}

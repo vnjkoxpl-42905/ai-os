@@ -1,0 +1,78 @@
+{
+ "qid": "PT134-S2-Q6",
+ "type": "Flaw",
+ "difficulty": "2",
+ "key_db": "E",
+ "stimulus_db": "Beck: Our computer program estimates municipal automotive use based on weekly data. Some staff question the accuracy of the program's estimates. But because the figures it provides are remarkably consistent from week to week, we can be confident of its accuracy.",
+ "stem_db": "The reasoning in Beck's argument is flawed in that it",
+ "choices_db": {
+  "A": "fails to establish that consistency is a more important consideration than accuracy",
+  "B": "fails to consider the program's accuracy in other tasks that it may perform",
+  "C": "takes for granted that the program's output would be consistent even if its estimates were inaccurate",
+  "D": "regards accuracy as the sole criterion for judging the program's value",
+  "E": "fails to consider that the program could produce consistent but inaccurate output"
+ },
+ "bank": {
+  "stimulus": "Beck: Our computer program estimates municipal automotive use based on weekly data. Some staff question the accuracy of the program’s estimates. But because the figures it provides are remarkably consistent from week to week, we can be confident of its accuracy.",
+  "stem": "The reasoning in Beck’s argument is flawed in that it",
+  "choices": {
+   "A": "fails to establish that consistency is a more important consideration than accuracy",
+   "B": "fails to consider the program’s accuracy in other tasks that it may perform",
+   "C": "takes for granted that the program’s output would be consistent even if its estimates were inaccurate",
+   "D": "regards accuracy as the sole criterion for judging the program’s value",
+   "E": "fails to consider that the program could produce consistent but inaccurate output"
+  },
+  "key": "E"
+ },
+ "explanation_id": "6e5e2f99-16fd-4746-94d4-54fbd32182f9",
+ "style": "single",
+ "steps": [
+  {
+   "row_id": "0ffd2b3d-74c4-41d5-8bda-ee53fe3518d0",
+   "position": 0,
+   "label": "Evidence",
+   "body": "The figures our computer program provides are remarkably consistent from week to week. (C)"
+  },
+  {
+   "row_id": "274cdce0-e580-4603-ada2-7483a127bd9e",
+   "position": 1,
+   "label": "Conclusion",
+   "body": "We can be confident of its accuracy. (A)"
+  },
+  {
+   "row_id": "508136f4-1fb5-4f54-a32a-ff670e870566",
+   "position": 2,
+   "label": "Evaluate",
+   "body": "The argument assumes that if the figures are consistent, then they are accurate.\n\nC → A"
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "56f30592-2656-4219-9a42-0e7a63f26ae9",
+   "letter": "A",
+   "body": "Beck never ranks consistency against accuracy. Beck treats consistency as proof of accuracy, so the flaw is in that inference, not in a judgment about which matters more."
+  },
+  {
+   "row_id": "ad3ae8af-3794-44f9-9116-44793695fe2e",
+   "letter": "B",
+   "body": "Beck's conclusion is only about the accuracy of the program's estimates of municipal automotive use. How accurate it is at other tasks has no bearing on that claim."
+  },
+  {
+   "row_id": "f93fb7ff-ccd7-4eab-9d10-7ee0723453fd",
+   "letter": "C",
+   "body": "The argument takes for granted that the program’s output would be consistent only if its estimates were accurate.\n\nC → A\n\nChoice C says the reverse: consistent even if its estimates were inaccurate.\n\nC + ~A\n\nThat is the possibility Beck ignores, not something Beck assumes."
+  },
+  {
+   "row_id": "bb95918f-0553-4fd1-b61f-ff29aee09c6d",
+   "letter": "D",
+   "body": "Beck doesn't judge the program's overall value. The argument is only about whether its estimates are accurate, so D describes a criterion Beck never uses."
+  },
+  {
+   "row_id": "ab3c156d-0a6e-4b4d-b199-95b79f886e58",
+   "letter": "E",
+   "body": "This attacks the argument’s assumption by raising the possibility Beck overlooks.\n\nC + ~A\n\nIf output can be consistent but inaccurate, consistency doesn't prove accuracy."
+  }
+ ],
+ "known_problem": "C note is a broken diagram; A, B, D are \"not relevant\"; C (the near-miss reversal of E) gets no real explanation.",
+ "tags": "short-breakdown; verdict-only; thin-correct-note; thin-notes; no-prediction; very-short"
+}

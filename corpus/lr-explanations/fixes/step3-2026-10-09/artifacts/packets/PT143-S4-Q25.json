@@ -1,0 +1,78 @@
+{
+ "qid": "PT143-S4-Q25",
+ "type": "Sufficient Assumption",
+ "difficulty": "5",
+ "key_db": "B",
+ "stimulus_db": "There can be no individual freedom without the rule of law, for there is no individual freedom without social integrity, and pursuing the good life is not possible without social integrity.",
+ "stem_db": "The conclusion drawn above follows logically if which one of the following is assumed?",
+ "choices_db": {
+  "A": "There can be no rule of law without social integrity.",
+  "B": "There can be no social integrity without the rule of law.",
+  "C": "One cannot pursue the good life without the rule of law.",
+  "D": "Social integrity is possible only if individual freedom prevails.",
+  "E": "There can be no rule of law without individual freedom."
+ },
+ "bank": {
+  "stimulus": "There can be no individual freedom without the rule of\nlaw, for there is no individual freedom without social\nintegrity, and pursuing the good life is not possible\nwithout social integrity.",
+  "stem": "The conclusion drawn above follows logically if which\none of the following is assumed?",
+  "choices": {
+   "A": "There can be no rule of law without social integrity.",
+   "B": "There can be no social integrity without the rule of law.",
+   "C": "One cannot pursue the good life without the rule of law.",
+   "D": "Social integrity is possible only if individual freedom prevails.",
+   "E": "There can be no rule of law without individual freedom."
+  },
+  "key": "B"
+ },
+ "explanation_id": "76988d38-839f-4b5e-a212-48d3dece30c8",
+ "style": "single",
+ "steps": [
+  {
+   "row_id": "3d1ff9f9-4099-40e6-9e1e-86fcaf485884",
+   "position": 0,
+   "label": "Evidence",
+   "body": "```\nThere is no individual   IF → SI\nfreedom without social\nintegrity.\nPursuing the good life is   GL → SI\nnot possible without social\nintegrity.\n```"
+  },
+  {
+   "row_id": "74c50797-a803-4897-ad50-3044f024d32d",
+   "position": 1,
+   "label": "Conclusion",
+   "body": "```\nThere can be no individual   IF → RL\nfreedom without the rule of\nlaw.\n```"
+  },
+  {
+   "row_id": "9560d25c-6fa3-40ec-ac88-b074d3779532",
+   "position": 2,
+   "label": "Evaluate",
+   "body": "The argument assumes that\n```\nSI → RL\n```\nsocial integrity requires the rule of law."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "042aef57-bc70-4eec-9d97-b1e39ee1c248",
+   "letter": "A",
+   "body": "This reverses the gap\n```\nRL → SI\n```\nbetween the first premise and the conclusion."
+  },
+  {
+   "row_id": "ef210e79-2019-4dc6-b357-a516021df7fd",
+   "letter": "B",
+   "body": "This bridges the gap\n```\nSI → RL\n```\nbetween the first premise and the conclusion."
+  },
+  {
+   "row_id": "2537095c-c154-420b-815c-fd855119d919",
+   "letter": "C",
+   "body": "This would bridge\n```\nIF → SI\nSI → GL\nGL → RL\n∴ IF → RL\n```\nthe gap if the second premise were reversed."
+  },
+  {
+   "row_id": "dfac5e14-f75c-471d-ae82-62ace6cd97fd",
+   "letter": "D",
+   "body": "This reverses the first premise.\n```\nSI → IF\n```"
+  },
+  {
+   "row_id": "dc8d503e-f9f3-4b83-a1ff-c57a13053453",
+   "letter": "E",
+   "body": "This reverses the conclusion of the argument.\n```\nRL → IF\n```"
+  }
+ ],
+ "known_problem": "Hard (d5) SA explained only by arrow diagrams; no prose on why B links SI to RL or why the reversal traps tempt.",
+ "tags": "short-breakdown; verdict-only; thin-correct-note; thin-notes; no-prediction; damage; very-short"
+}

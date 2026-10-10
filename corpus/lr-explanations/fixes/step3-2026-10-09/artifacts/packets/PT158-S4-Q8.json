@@ -1,0 +1,84 @@
+{
+ "qid": "PT158-S4-Q8",
+ "type": "Main Conclusion",
+ "difficulty": "4",
+ "key_db": "C",
+ "stimulus_db": "Climatologist: The waters off the Pacific coast of North America have warmed about 4 degrees over the past 15 years. Some scientists claim that this trend is a symptom of a more general, global warming caused by human-generated air pollution. However, this conclusion is far from justified—it is known that there are many natural cycles of ocean temperature changes that last 60 years or more.",
+ "stem_db": "Which one of the following most accurately expresses the main conclusion drawn in the climatologist's argument?",
+ "choices_db": {
+  "A": "Some scientists have found evidence that the waters off the Pacific coast of North America have grown significantly warmer over the past 15 years.",
+  "B": "The warming of the waters off the Pacific coast of North America is not a symptom of a more general, global warming caused by human-generated air pollution.",
+  "C": "The conclusion that the warming of the waters off the Pacific coast of North America is a symptom of a more general, global warming caused by human-generated air pollution is far from justified.",
+  "D": "The warming of the waters off the Pacific coast of North America may be the result of a natural cycle of ocean temperature changes.",
+  "E": "If the warming of the waters off the Pacific coast of North America is due to a natural cycle of ocean temperature changes, then it is not a symptom of a more general, global warming caused by human-generated air pollution."
+ },
+ "bank": {
+  "stimulus": "Climatologist: The waters off the Pacific coast of North\n America have warmed about 4 degrees over\n the past 15 years. Some scientists claim that\n this trend is a symptom of a more general,\n global warming caused by human-generated air\n pollution. However, this conclusion is far from\n justified—it is known that there are many natural\n cycles of ocean temperature changes that last 60\n years or more.",
+  "stem": "Which one of the following most accurately expresses\n the main conclusion drawn in the climatologist’s\n argument?",
+  "choices": {
+   "A": "Some scientists have found evidence that the waters off the Pacific coast of North America have grown significantly warmer over the past 15 years.",
+   "B": "The warming of the waters off the Pacific coast of North America is not a symptom of a more general, global warming caused by human-generated air pollution.",
+   "C": "The conclusion that the warming of the waters off the Pacific coast of North America is a symptom of a more general, global warming caused by human-generated air pollution is far from justified.",
+   "D": "The warming of the waters off the Pacific coast of North America may be the result of a natural cycle of ocean temperature changes.",
+   "E": "If the warming of the waters off the Pacific coast of North America is due to a natural cycle of ocean temperature changes, then it is not a symptom of a more general, global warming caused by human-generated air pollution."
+  },
+  "key": "C"
+ },
+ "explanation_id": "fde9627b-7bdf-4838-ba2d-78673f24de82",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "6a6fc370-eeba-42a5-8ca6-79376540dd0a",
+   "position": 0,
+   "label": "Conclusion (not justified = opinion)",
+   "body": "The conclusion that ocean warming is a symptom of a more general, global warming caused by human-generated air pollution is far from justified."
+  },
+  {
+   "row_id": "96651725-77d5-4530-bb6c-2b7dccbe8476",
+   "position": 1,
+   "label": "Evidence (it is known that)",
+   "body": "There are many natural cycles of ocean temperature changes that last 60 years or more."
+  },
+  {
+   "row_id": "16dc0f84-9a71-46ad-b41d-fd85cadbad55",
+   "position": 2,
+   "label": "Evaluate",
+   "body": "Whenever we do Main Conclusion (or Role), we remind ourselves that 90% of the time, the conclusion will be the first sentence or it will be a rebuttal.\nIn this argument, the first case is clearly factual, not the author's opinion, so it's not a First Sentence Conclusion.\nAnd when the second sentence begins with an attribution, \"Some scientists claim\", we would anticipate a Pivot into a Rebuttal.\nSure enough, we get \"However, this conclusion is far from justified\". The last sentence provides factual support. We can tell the last claim is factual because it is prefaced by \"it is known that\"."
+  },
+  {
+   "row_id": "6ac0393c-cece-4f85-8987-4ad9af488b5e",
+   "position": 3,
+   "label": "Goal",
+   "body": "Since our conclusion has a pronoun, \"this conclusion is far from justified\", we should take a sec and insert in the specific language the pronoun is referring to, as we did above when we wrote the Conclusion.\nWe should also limber up our synonym faculties by thinking, \"What's another way to say this conclusion is far from justified?\" Saying it's incorrect is too strong. It's more like \"it's hasty to draw this conclusion / it's prematurely inferred / we don't have strong evidence for this\"."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "26eb1366-0dea-4184-80d8-2ddf3efd4771",
+   "letter": "A",
+   "body": "The observation that waters have warmed by four degrees is a factual premise that the climatologist accepts and does not dispute. It is the starting point from which the climatologist builds an argument about what the warming means, not the destination of that argument. The climatologist's argument is not about whether warming occurred — that is taken as given by all parties.\n\nMain conclusions are the claims arguments try to establish, not the facts they take for granted. Background facts serve as premises; the conclusion is the contested claim built on top of them. Here, the warming data is the foundation, and the \"far from justified\" judgment is the building erected upon it. The argument is about whether the warming justifies a particular interpretation (that it demonstrates global warming), not about whether warming occurred."
+  },
+  {
+   "row_id": "d1376c36-dca3-42ba-a7f3-670317b442a6",
+   "letter": "B",
+   "body": "The climatologist does not flatly deny that the warming is a symptom of global warming. The climatologist's actual position is that the conclusion linking warming to global warming is \"far from justified\" — a claim about evidential sufficiency, not an outright denial. These are fundamentally different positions. \"Far from justified\" means the evidence is inadequate to support the global warming interpretation. It leaves open the possibility that global warming could be the cause; the argument merely contends that the evidence presented so far does not establish it. This mirrors the legal distinction between \"not proven\" and \"proven false.\" The climatologist occupies the former position; this answer choice ascribes the latter. By upgrading cautious skepticism to categorical denial, this answer overstates the climatologist's claim."
+  },
+  {
+   "row_id": "f75897ef-f6fb-446e-be86-c99cf5167d1e",
+   "letter": "C",
+   "body": "The climatologist's argument contains several components: the acknowledged fact of ocean warming, the existence of natural temperature cycles, and the evaluative judgment that the global warming conclusion is \"far from justified.\" The main conclusion is this last piece — the overarching claim that every other statement serves to establish. The argument's flow runs: natural ocean cycles could explain the warming (supporting premise), therefore the conclusion that warming is a symptom of global warming is far from justified (main conclusion). The warming data is a premise everyone accepts. The natural cycles point is the evidence. The \"far from justified\" judgment is the destination. To identify the main conclusion, ask: which claim is everything else aimed at establishing? Every element of the climatologist's argument funnels toward and supports this evaluative judgment about evidence quality."
+  },
+  {
+   "row_id": "9d8a7224-bd06-422c-bf8f-8184d4145a57",
+   "letter": "D",
+   "body": "The possibility that the observed warming is the result of a natural cycle is a supporting premise in the climatologist's argument. The argument's logical structure makes this clear: the natural cycle explanation is the reason the climatologist offers for the \"far from justified\" judgment. The reasoning runs: \"Warming could be natural [premise], so the global warming conclusion is far from justified [conclusion].\" To distinguish premises from conclusions, ask: \"Is this statement being used to support something else, or is something else being used to support it?\" The natural cycle point is deployed in support of the evaluative judgment.\n\nPremises provide reasons; conclusions are what those reasons point toward. The natural cycle claim serves the conclusion — it is not the conclusion itself. It provides the evidential basis for the broader evaluative judgment that the global warming interpretation is \"far from justified.\" The direction of support runs from this claim toward the main conclusion, not the other way around."
+  },
+  {
+   "row_id": "55575f40-2926-4e36-8394-972cb728c7f8",
+   "letter": "E",
+   "body": "This conditional statement — if the warming is due to a natural cycle, then it is not a symptom of global warming — is a specific logical point within the argument, not the overarching claim that everything else supports. It functions as a narrower, more technical premise that feeds into the broader evaluative judgment. A conditional about the implications of natural versus anthropogenic causes is one building block in the argument's foundation.\n\nThe main conclusion should be the broadest, most encompassing claim that all other statements collectively support. The main conclusion is the \"far from justified\" judgment — the edifice constructed from those building blocks. When an argument contains both specific supporting claims and a broad evaluative conclusion, the broad evaluation is the main conclusion."
+  }
+ ],
+ "known_problem": "Correct, but notes run 100-150 words with repeated points (\"building blocks\", \"edifice\").",
+ "tags": "emdash-heavy; pt157-158-register; possible-misquote"
+}

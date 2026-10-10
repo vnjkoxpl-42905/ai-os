@@ -1,0 +1,84 @@
+{
+ "qid": "PT102-S3-Q14",
+ "type": "Flaw",
+ "difficulty": "1",
+ "key_db": "C",
+ "stimulus_db": "Herbalist: Many of my customers find that their physical coordination improves after drinking juice containing certain herbs. A few doctors assert that the herbs are potentially harmful, but doctors are always trying to maintain a monopoly over medical therapies. So there is no reason not to try my herb juice.",
+ "stem_db": "The reasoning in the herbalist's argument is flawed because the argument",
+ "choices_db": {
+  "A": "attempts to force acceptance of a claim by inducing fear of the consequences of rejecting that claim",
+  "B": "bases a conclusion on claims that are inconsistent with each other",
+  "C": "rejects a claim by attacking the proponents of the claim rather than addressing the claim itself",
+  "D": "relies on evidence presented in terms that presuppose the truth of the claim for which the evidence is offered",
+  "E": "mistakes the observation that one thing happens after another for proof that the second thing is the result of the first"
+ },
+ "bank": {
+  "stimulus": "Herbalist: Many of my customers find that their physical coordination improves after drinking juice containing certain herbs. A few doctors assert that the herbs are potentially harmful, but doctors are always trying to maintain a monopoly over medical therapies. So there is no reason not to try my herb juice.",
+  "stem": "The reasoning in the herbalist's argument is flawed because the argument",
+  "choices": {
+   "A": "attempts to force acceptance of a claim by inducing fear of the consequences of rejecting that claim",
+   "B": "bases a conclusion on claims that are inconsistent with each other",
+   "C": "rejects a claim by attacking the proponents of the claim rather than addressing the claim itself",
+   "D": "relies on evidence presented in terms that presuppose the truth of the claim for which the evidence is offered",
+   "E": "mistakes the observation that one thing happens after another for proof that the second thing is the result of the first"
+  },
+  "key": "C"
+ },
+ "explanation_id": "1a6dea07-9e31-47d5-9577-b87cd1a4eec1",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "54fa7506-43f4-4a82-8f8b-475ca86da8fa",
+   "position": 0,
+   "label": "Conclusion (So)",
+   "body": "There is no reason not to try my herb juice."
+  },
+  {
+   "row_id": "db9d9905-a22f-4c4a-97c3-90abd0b9c891",
+   "position": 1,
+   "label": "Evidence",
+   "body": "Customers report improved physical coordination.\n  A few doctors say the herbs are potentially harmful, but doctors are always trying to maintain a monopoly over medical therapies."
+  },
+  {
+   "row_id": "bfbb2fa9-f17a-41dd-ae12-f53af0c9af03",
+   "position": 2,
+   "label": "Evaluate",
+   "body": "If we're the other lawyer and we're arguing,\n*there IS some reason not to try this herb juice*\nwhat would we say?\n  We could start with, \"wait — some doctors said the juice was harmful? That would be a reason not to try it.\"\n  And the author will say, \"Oh, don't listen to them. Doctors don't want herbs to work. They want a monopoly over medicine, so they talk smack about anything that isn't pharmaceuticals.\"\n  We need a response. We could say, \"Sure, I would imagine that Big Pharma is incentivized to diminish non-pharmaceutical treatments. Buuuut, we can't just ignore warnings that something is harmful. What if it's actually harmful? Do you have evidence it's safe?\"\n  If we know our Famous Flaws, then we'll hopefully recognize this as a classic Ad Hominem. That's when the author dismisses someone's view because they (1) have an ulterior motive / vested interest, or (2) have conflicting past behavior / hypocrisy.\n  In this case, the author is trying to immediately disqualify what these doctors are saying just because doctors do have a financial interest in herbal treatments being bad ideas."
+  },
+  {
+   "row_id": "1c0d8000-8f52-451a-8497-28414f832400",
+   "position": 3,
+   "label": "Goal",
+   "body": "Look for an answer addressing the Ad Hominem move where the author fails to seriously address the concerns of the doctors and wipes them away by pointing out their self-interest.\n  Or, there might be an answer saying, \"even if the herb juice isn't harmful, there still might be some *other* reason not to try it\" (e.g. its awful taste, the farts it gives you, etc.)"
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "d0e37fc7-a4b8-4a25-b6d4-ac1d0ed28730",
+   "letter": "A",
+   "body": "The herbalist does not warn customers of frightening consequences if they reject the juice. The doctors' warning that the herbs might be harmful is the point the herbalist dismisses."
+  },
+  {
+   "row_id": "e2ee319d-f723-40e0-9f20-44493b7aeb85",
+   "letter": "B",
+   "body": "Customers can report improved coordination while the herbs still carry a risk of harm. Those claims can both be true, so the herbalist's evidence is not internally inconsistent."
+  },
+  {
+   "row_id": "ae200272-4dfb-4865-a572-40b509bbc532",
+   "letter": "C",
+   "body": "The doctors assert that the herbs might be harmful. The herbalist replies that doctors want to protect a monopoly, then concludes there is no reason not to try the juice. A motive to make a claim does not show that the claim is false. The potential harm has not been addressed. This is the Ad Hominem move."
+  },
+  {
+   "row_id": "6c54307e-858c-4e07-a8cc-87380a97345a",
+   "letter": "D",
+   "body": "The customer reports are not phrased to assume the juice is safe. The error occurs in dismissing the warning, not in wording the evidence as the conclusion."
+  },
+  {
+   "row_id": "84b56780-a752-4424-8adc-8cbe5d94a39d",
+   "letter": "E",
+   "body": "The report that coordination improves *after* drinking juice might invite a post hoc objection if the conclusion were that the juice caused the improvement. The conclusion is that there is **no reason not to try** it. The live objection is the possible harm raised by doctors, and the herbalist attacks the doctors instead."
+  }
+ ],
+ "known_problem": "Breakdown only; all five choice notes missing.",
+ "tags": "no-notes"
+}

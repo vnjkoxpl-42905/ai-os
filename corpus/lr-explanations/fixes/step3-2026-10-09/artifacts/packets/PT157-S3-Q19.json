@@ -1,0 +1,84 @@
+{
+ "qid": "PT157-S3-Q19",
+ "type": "Parallel Flaw",
+ "difficulty": "4",
+ "key_db": "B",
+ "stimulus_db": "If a film is accepted by the festival committee, then one of the distributors attending the festival buys it. If a distributor buys a film, the film's financial backers are assured of recouping their investment. This film was not accepted by the festival committee, so this film's financial backers will not recoup their investment.",
+ "stem_db": "Which one of the following arguments employs a flawed pattern of reasoning most similar to the flawed pattern of reasoning in the argument above?",
+ "choices_db": {
+  "A": "If a film has a good story, it will be praised by critics. If a film is praised by critics, it will do well at the box office. This film did not do well at the box office, so it must not have a good story.",
+  "B": "If a film features several stars, it will be successful at the box office. A box office success has a long run at theaters. This film features only one star, so it will not have a long run at theaters.",
+  "C": "If a film is directed by a talented artist, it will be praised by critics. If a film is praised by critics, it will do well on video. This film did well on video, so it was directed by a talented artist.",
+  "D": "If a film is a box office success, then one of its stars is nominated for an award. If a star receives an award, the film is assured of doing well on video. This star was not nominated for an award, so the film will not do well on video.",
+  "E": "If a film has a big budget, it will be heavily promoted. A heavily promoted film will be released all over the country at once. This film has a big budget, so it will be released all over the country at once."
+ },
+ "bank": {
+  "stimulus": "If a film is accepted by the festival committee, then one\n of the distributors attending the festival buys it. If a\n distributor buys a film, the film’s financial backers are\n assured of recouping their investment. This film was\n not accepted by the festival committee, so this film’s\n financial backers will not recoup their investment.",
+  "stem": "Which one of the following arguments employs a flawed\n pattern of reasoning most similar to the flawed pattern of\n reasoning in the argument above?",
+  "choices": {
+   "A": "If a film has a good story, it will be praised by critics. If a film is praised by critics, it will do well at the box office. This film did not do well at the box office, so it must not have a good story.",
+   "B": "If a film features several stars, it will be successful at the box office. A box office success has a long run at theaters. This film features only one star, so it will not have a long run at theaters.",
+   "C": "If a film is directed by a talented artist, it will be praised by critics. If a film is praised by critics, it will do well on video. This film did well on video, so it was directed by a talented artist.",
+   "D": "If a film is a box office success, then one of its stars is nominated for an award. If a star receives an award, the film is assured of doing well on video. This star was not nominated for an award, so the film will not do well on video.",
+   "E": "If a film has a big budget, it will be heavily promoted. A heavily promoted film will be released all over the country at once. This film has a big budget, so it will be released all over the country at once."
+  },
+  "key": "B"
+ },
+ "explanation_id": "de13874e-74c5-4ae2-bc21-480e15c71713",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "8b6b518a-5da5-48ea-89f6-d5aeadc43cc5",
+   "position": 0,
+   "label": "Evidence",
+   "body": "If a film is accepted by the festival committee, then one of the distributors attending the festival buys it. `accepted → distributor buys` If a distributor buys a film, the film's financial backers are assured of recouping their investment. `distributor buys → recoup` This film was not accepted by the festival committee. `~accepted`"
+  },
+  {
+   "row_id": "fa629c6e-3d03-4f13-be68-a55506c4c8c7",
+   "position": 1,
+   "label": "Conclusion",
+   "body": "This film's financial backers will not recoup their investment. `~recoup`"
+  },
+  {
+   "row_id": "0784c1a8-17e4-4f09-b84d-9d2771c21dbe",
+   "position": 2,
+   "label": "Evaluate",
+   "body": "By connecting the first two premises, we can conclude that if a film is accepted by the festival committee, the film's financial backers are assured of recouping their investment: `accepted → recoup`. To reach the argument's conclusion, we need to assume that if a film is not accepted by the festival committee, the film's financial backers are not assured of recouping their investment: `~accepted → ~recoup`. This is an illegal negation."
+  },
+  {
+   "row_id": "644c3ff2-f372-4a52-b5df-e2ac4855c463",
+   "position": 3,
+   "label": "Goal",
+   "body": "We're looking for an argument that makes an assumption which is an illegal negation of the statements given as evidence."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "cea60072-071d-439c-a650-59ec228dc961",
+   "letter": "A",
+   "body": "This argument negates the necessary condition (not do well at the box office) and concludes the sufficient condition is negated (not a good story). That is the contrapositive — a valid inference. The original argument commits an illegal negation by denying the sufficient condition (not accepted) and concluding the necessary condition is negated (not recoup). A valid argument cannot match the pattern of a flawed argument. The structure here is: good story leads to praised, praised leads to do well, not do well, therefore not good story. That chain of contrapositives is logically sound."
+  },
+  {
+   "row_id": "090bb381-983a-4c25-8f3d-74ddd748e1df",
+   "letter": "B",
+   "body": "This argument replicates the original's flawed structure precisely. The chain is: several stars leads to successful, successful leads to long run. The argument then negates the sufficient condition (not several stars — only one star) and concludes the final necessary condition is negated (not long run). This is the same illegal negation as the original: accepted leads to distributor buys leads to recoup, not accepted, therefore not recoup. In both cases, the sufficient condition is denied and the argument incorrectly infers that the necessary condition must also be denied. The film with one star could still have a long run for reasons unrelated to its star count, just as the original film's backers could recoup through means other than festival acceptance."
+  },
+  {
+   "row_id": "d1b9dc11-d6aa-4929-9aeb-7a967da33a3a",
+   "letter": "C",
+   "body": "This argument affirms the necessary condition (did well on video) and concludes the sufficient condition is true (directed by a talented artist). That is an affirming the consequent error — a different flaw from the original. The original denies the sufficient condition and concludes the necessary is denied (illegal negation). This answer commits a reversal flaw, not the same illegal negation. The structure is: talented director leads to praised leads to do well, did well, therefore talented director. Both are conditional logic errors, but they are different errors."
+  },
+  {
+   "row_id": "0b32cbfd-173d-4fdd-84f7-f521965dbb7f",
+   "letter": "D",
+   "body": "This argument has a more fundamental problem than just the conditional flaw. The first premise says if a film is a box office success, then a star is \"nominated\" for an award. The second premise says if a star \"receives\" an award, the film does well on video. \"Nominated\" and \"receives\" are different conditions — being nominated for an award is not the same as receiving one. The original argument's chain is seamless: the necessary condition of the first premise (distributor buys) is the sufficient condition of the second premise (distributor buys). Here, the chain is broken by a term shift between \"nominated\" and \"receives.\" This additional flaw makes the pattern a poor match."
+  },
+  {
+   "row_id": "048311b7-1be7-44d0-8681-4ddf1394aa6c",
+   "letter": "E",
+   "body": "This argument correctly connects two conditionals: big budget leads to heavily promoted, heavily promoted leads to released countrywide. It then affirms the sufficient condition (big budget) and concludes the final necessary condition (released countrywide). This is a perfectly valid inference — affirming the antecedent and following the chain forward. The original argument is flawed because it denies the antecedent. This argument is valid because it affirms the antecedent. A valid argument cannot parallel a flawed one."
+  }
+ ],
+ "known_problem": "Explicit-Standard register (7.8 em-dashes per 1k words; wrong-answer notes average 92.0 words).",
+ "tags": "emdash-heavy; pt157-158-register; possible-misquote"
+}

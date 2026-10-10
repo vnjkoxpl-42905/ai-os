@@ -1,0 +1,78 @@
+{
+ "qid": "PT157-S3-Q15",
+ "type": "Weaken",
+ "difficulty": "2",
+ "key_db": "C",
+ "stimulus_db": "Ants sometimes live in hollow places in the roots of a certain orchid species. Those orchids of that species that house ants are far healthier than those that do not. Since the ants store organic matter in the orchids' roots, an explanation for the superior health of the orchids that house ants is that the organic matter stored by the ants provides those orchids with additional nutrients.",
+ "stem_db": "Which one of the following, if true, is an alternative explanation for the better health of orchids that house the ants?",
+ "choices_db": {
+  "A": "Microscopic organisms that are present in the orchids' roots break down the organic matter stored there by the ants.",
+  "B": "The nutrients present in the organic matter stored by the ants are the same as those present in the soil in which the orchids are found.",
+  "C": "The ants that live in hollow places in the roots of orchids prey on an insect species whose members eat the orchids' roots.",
+  "D": "The ants that live in hollow places in the roots of orchids do not play a role in pollinating the flowers of the plant.",
+  "E": "Most plant species whose roots, stems, or leaves harbor insects are more prone to disease and rot than are other plants."
+ },
+ "bank": {
+  "stimulus": "Ants sometimes live in hollow places in the roots of\n a certain orchid species. Those orchids of that species\n that house ants are far healthier than those that do not.\n Since the ants store organic matter in the orchids’ roots,\n an explanation for the superior health of the orchids that\n house ants is that the organic matter stored by the ants\n provides those orchids with additional nutrients.",
+  "stem": "Which one of the following, if true, is an alternative\n explanation for the better health of orchids that house\n the ants?",
+  "choices": {
+   "A": "Microscopic organisms that are present in the orchids’ roots break down the organic matter stored there by the ants.",
+   "B": "The nutrients present in the organic matter stored by the ants are the same as those present in the soil in which the orchids are found.",
+   "C": "The ants that live in hollow places in the roots of orchids prey on an insect species whose members eat the orchids’ roots.",
+   "D": "The ants that live in hollow places in the roots of orchids do not play a role in pollinating the flowers of the plant.",
+   "E": "Most plant species whose roots, stems, or leaves harbor insects are more prone to disease and rot than are other plants."
+  },
+  "key": "C"
+ },
+ "explanation_id": "68e07835-80f6-4d2b-bcf6-84bd72392116",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "faa09ae2-90d0-4b77-8853-991a67088b89",
+   "position": 0,
+   "label": "Curious Fact",
+   "body": "Why are the ant-hosting orchids of a given species healthier than the orchids that don't host ants?"
+  },
+  {
+   "row_id": "5205ebe2-22a8-4fa2-9cdc-abe1faf43572",
+   "position": 1,
+   "label": "Provided Explanation",
+   "body": "The ants store organic matter in the orchids' roots, which provides the orchids with additional nutrients, which makes them healthier?"
+  },
+  {
+   "row_id": "538dd554-512a-414f-90be-474ab36025b9",
+   "position": 2,
+   "label": "Goal",
+   "body": "Our task is to get an alternate explanation for why there's this correlation between hosting ants and being a healthier orchid. Whenever we're seeking an alternate explanation for a correlation, we consider two things: Reverse Causality — Maybe the orchid's superior health comes first, and that causes ants to shelter there. Third Factor — Maybe some factor that is associated with the presence of ants (for example, a water supply) is also causing those orchids to grow better. It's also possible that we just get an alternate explanation where the ants are the cause of the orchid's health, but not because they're putting extra nutrients in the orchid's roots."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "540e752c-aa3a-4352-868d-664d1cc15d22",
+   "letter": "A",
+   "body": "Microscopic organisms breaking down the organic matter addresses the mechanism of the provided explanation, not an alternative one. We need a different causal story, not more detail about the existing one."
+  },
+  {
+   "row_id": "8620ce62-64f6-443d-8150-799dadd8b047",
+   "letter": "B",
+   "body": "If the ant-deposited nutrients are the same as those in the surrounding soil, this weakens the provided explanation but does not offer an alternative. We need a different reason for the health correlation, not a reason to doubt the current one."
+  },
+  {
+   "row_id": "7682f35c-a461-48ce-816d-b08cb8b4790a",
+   "letter": "C",
+   "body": "This provides a completely different causal explanation. The ants prey on insects that eat orchid roots. If the ants protect the orchids from root-eating insects, orchids with ants would be healthier — not because of extra nutrients, but because their roots are not being eaten. This is a different mechanism connecting ants to orchid health: pest control rather than nutrient supplementation."
+  },
+  {
+   "row_id": "a12f6dcb-5618-4d40-8ad2-335af2c5ad07",
+   "letter": "D",
+   "body": "The ants not playing a role in pollination has no causal power. We need an explanation where ants do something beneficial. Saying the ants do not do something provides no alternative explanation for the health correlation."
+  },
+  {
+   "row_id": "8ed91780-476a-491a-aaba-a1772edc189f",
+   "letter": "E",
+   "body": "If most insect-harboring plants are more prone to disease, this suggests ants should make orchids less healthy, not more. This deepens the puzzle rather than explaining it, and potentially weakens any explanation involving ants benefiting orchids."
+  }
+ ],
+ "known_problem": "Explicit-Standard register (8.5 em-dashes per 1k words; wrong-answer notes average 36.5 words).",
+ "tags": "emdash-heavy; pt157-158-register"
+}

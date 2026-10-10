@@ -1,0 +1,84 @@
+{
+ "qid": "PT157-S3-Q6",
+ "type": "Weaken",
+ "difficulty": "2",
+ "key_db": "C",
+ "stimulus_db": "Winchester Township cannot afford to keep its several small branch libraries supplied with a wide selection of current books. However, if the branch libraries were closed, then Winchester could afford to open one large library, which could carry broader and more current selections. Thus, Winchester would better meet its residents' needs by closing its small branch libraries and opening one larger, well-supplied library.",
+ "stem_db": "Which one of the following, if true, most weakens the argument above?",
+ "choices_db": {
+  "A": "Many Winchester residents never use the branch libraries because of the irregular hours each branch keeps.",
+  "B": "Most Winchester residents have complained about the selection of books at the branch libraries.",
+  "C": "The only possible site for a new library is not readily accessible to most Winchester residents.",
+  "D": "It would cost Winchester a significant amount of money to build a larger library.",
+  "E": "Each of Winchester's branch libraries attempts to cater to the tastes of the residents of the entire township."
+ },
+ "bank": {
+  "stimulus": "Winchester Township cannot afford to keep its several\n small branch libraries supplied with a wide selection\n of current books. However, if the branch libraries were\n closed, then Winchester could afford to open one large\n library, which could carry broader and more current\n selections. Thus, Winchester would better meet its\n residents’ needs by closing its small branch libraries and\n opening one larger, well-supplied library.",
+  "stem": "Which one of the following, if true, most weakens the\n argument above?",
+  "choices": {
+   "A": "Many Winchester residents never use the branch libraries because of the irregular hours each branch keeps.",
+   "B": "Most Winchester residents have complained about the selection of books at the branch libraries.",
+   "C": "The only possible site for a new library is not readily accessible to most Winchester residents.",
+   "D": "It would cost Winchester a significant amount of money to build a larger library.",
+   "E": "Each of Winchester’s branch libraries attempts to cater to the tastes of the residents of the entire township."
+  },
+  "key": "C"
+ },
+ "explanation_id": "fd503d16-bf1e-4ec7-82ae-a3d6bfa80905",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "cc53aff6-ee23-421c-b35e-5ba80a773af0",
+   "position": 0,
+   "label": "Evidence",
+   "body": "If the branch libraries were closed, then Winchester could afford to open one large library. The large library could carry broader and more current selections [books]."
+  },
+  {
+   "row_id": "68621288-103b-44ab-9e0e-845125bcb6da",
+   "position": 1,
+   "label": "Conclusion",
+   "body": "Winchester would better meet its residents' needs by closing its small branch libraries and opening one larger, well-supplied library."
+  },
+  {
+   "row_id": "e636f5a1-765a-49c7-994b-f5129fddd592",
+   "position": 2,
+   "label": "Evaluate",
+   "body": "The conclusion makes a recommendation about building a new library. It does this by introducing a new concept of better meeting residents' needs. A couple of assumptions are required to reach this conclusion. First, the argument assumes that one large library would better meet residents' needs than several smaller ones. We can easily envision a situation where it's convenient for residents to visit the branch libraries that are close to their neighborhoods, while a single main library would be farther away and therefore less accessible. The argument also assumes that a broader and more current selection of books would better meet residents' needs. But people use libraries for many reasons other than borrowing books. Libraries often have computers, study rooms, and meeting rooms that residents can use. Libraries often offer classes and events. And people are likely to borrow older books from libraries, not just current ones."
+  },
+  {
+   "row_id": "555b06cd-74bb-4c12-9cd2-e149030e0e28",
+   "position": 3,
+   "label": "Goal",
+   "body": "A correct answer is likely to focus on one of these unintended consequences of closing branch libraries and having one large library, a consequence which would prevent one large library from serving residents better than the existing branch libraries."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "cc81cecf-f6fe-442b-b254-530fc6c2342c",
+   "letter": "A",
+   "body": "If many residents never use the branch libraries because of irregular hours, this actually supports closing them. Residents who are not using the branches have nothing to lose from their closure and might gain access to a larger library with more consistent hours. This answer strengthens the argument for consolidation by suggesting that the branch libraries are already failing to serve some residents."
+  },
+  {
+   "row_id": "6d21b69b-2c6f-4d17-aa28-a4bd25c33fcc",
+   "letter": "B",
+   "body": "If residents are already complaining about the book selection at branch libraries, this supports the argument for a larger library with better selection. The complaints validate the argument's premise that branch libraries are inadequately supplied and suggest residents would welcome a better-stocked alternative."
+  },
+  {
+   "row_id": "dd8204b9-7a09-4650-81d9-f5617f203182",
+   "letter": "C",
+   "body": "This answer identifies the key unintended consequence of consolidation. If the only possible site for a new library is not readily accessible to most Winchester residents, then the improved book selection becomes irrelevant for the majority of the community. A library that people cannot easily reach does not meet their needs regardless of how well-stocked it is. The branch libraries, despite their limited selections, at least provided convenient local access. Replacing accessible but poorly supplied libraries with an inaccessible but well-supplied library could easily leave residents worse off overall."
+  },
+  {
+   "row_id": "625b0672-92bf-45a7-8d48-e04bb352d8c3",
+   "letter": "D",
+   "body": "The argument already accounts for the financial dimension by stating that closing branches would allow Winchester to afford a larger library. The word \"significant\" does not tell us whether the cost would exceed the savings from closing branch libraries. Without information about whether the cost exceeds available resources, this answer does not clearly weaken the argument."
+  },
+  {
+   "row_id": "02f3b727-dcf3-4720-b920-9f0ba475f927",
+   "letter": "E",
+   "body": "The phrase \"attempts to cater\" significantly weakens this answer. If each branch library merely attempts to serve the entire township's tastes, that does not mean it succeeds. The branch libraries could be attempting and failing to meet diverse tastes, which would actually support the argument for a larger, better-stocked library. This answer would be stronger if it said each branch library successfully caters to local neighborhood tastes."
+  }
+ ],
+ "known_problem": "Explicit-Standard register (0.0 em-dashes per 1k words; wrong-answer notes average 57.8 words).",
+ "tags": "pt157-158-register"
+}

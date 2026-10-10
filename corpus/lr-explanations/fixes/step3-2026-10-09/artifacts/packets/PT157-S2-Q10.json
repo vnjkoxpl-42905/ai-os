@@ -1,0 +1,78 @@
+{
+ "qid": "PT157-S2-Q10",
+ "type": "Weaken",
+ "difficulty": "3",
+ "key_db": "D",
+ "stimulus_db": "The Industrial Revolution decreased the value that society conferred on physical labor because it enabled unskilled workers to quickly produce goods that formerly took skilled craftspeople long periods of time to produce. Clearly, our most important intellectual skills will similarly be devalued by electronic data-processing technology. Computations that once took skilled mathematicians a long time to perform can now be quickly performed by moderately well-trained high school students using computers.",
+ "stem_db": "Which one of the following, if true, most seriously weakens the argument?",
+ "choices_db": {
+  "A": "Much industrial machinery is now designed and built with the aid of computers.",
+  "B": "Before electronic data-processing technology, improvements in mathematical techniques reduced the amount of time it took to perform computations.",
+  "C": "On average, skilled mathematicians tend to be much younger when they are in their most productive years than are skilled craftspeople.",
+  "D": "The intellectual skills that society values most highly are not computational ones.",
+  "E": "Electronic data-processing technology has enabled people to perform some tasks that previously could not be performed at all."
+ },
+ "bank": {
+  "stimulus": "The Industrial Revolution decreased the value that\n society conferred on physical labor because it enabled\n unskilled workers to quickly produce goods that\n formerly took skilled craftspeople long periods of time\n to produce. Clearly, our most important intellectual\n skills will similarly be devalued by electronic data-processing technology. Computations that once took\n skilled mathematicians a long time to perform can now\n be quickly performed by moderately well-trained high\n school students using computers.",
+  "stem": "Which one of the following, if true, most seriously\n weakens the argument?",
+  "choices": {
+   "A": "Much industrial machinery is now designed and built with the aid of computers.",
+   "B": "Before electronic data-processing technology, improvements in mathematical techniques reduced the amount of time it took to perform computations.",
+   "C": "On average, skilled mathematicians tend to be much younger when they are in their most productive years than are skilled craftspeople.",
+   "D": "The intellectual skills that society values most highly are not computational ones.",
+   "E": "Electronic data-processing technology has enabled people to perform some tasks that previously could not be performed at all."
+  },
+  "key": "D"
+ },
+ "explanation_id": "fd9e2842-7328-4f9b-a5be-91c166ba5213",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "1bbf6bde-0947-45be-b529-63a0e32d5041",
+   "position": 0,
+   "label": "Evidence",
+   "body": "The Industrial Revolution decreased the value that society conferred on physical labor because it enabled unskilled workers to quickly produce goods that formerly took skilled craftspeople long periods of time to produce. Computations that once took skilled mathematicians a long time to perform can now be quickly performed by moderately well-trained high school students using computers."
+  },
+  {
+   "row_id": "5518c8ee-9430-44d9-a8e6-e07d2fd9e2fe",
+   "position": 1,
+   "label": "Conclusion",
+   "body": "Our most important intellectual skills will be devalued by electronic data-processing technology [similar to the way that the Industrial Revolution decreased the value that society conferred on physical labor]."
+  },
+  {
+   "row_id": "24081875-5063-47eb-a9f4-a2c4a0095108",
+   "position": 2,
+   "label": "Evaluate",
+   "body": "The argument makes a significant leap by discussing mathematical computations in the evidence and \"our most important intellectual skills\" in the conclusion. Aren't other types of intellectual skills important? Aren't reading and logical reasoning skills, such as those tested on the LSAT, also important? There might also be important differences between intellectual skills and physical skills, or differences between the Industrial Revolution and our current time, which would prevent us from devaluing intellectual skills."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "35313d0b-d48d-465b-acf9-a2e5185d08d1",
+   "letter": "A",
+   "body": "This answer states that industrial machinery is now designed with the aid of computers. If anything, this supports the value of computers and data-processing technology, perhaps even strengthening the argument that such technology has significant capabilities. It certainly does not weaken the claim that intellectual skills will be devalued. The argument is about the devaluation of human skills, and showing that computers can also help design machinery only reinforces the trend the argument describes."
+  },
+  {
+   "row_id": "ac7199da-4955-4229-b57d-d0631874b88e",
+   "letter": "B",
+   "body": "This answer says that improvements in mathematical techniques had already reduced computation time before computers arrived. The impact on the argument is unclear. Even with these improvements, the argument's evidence — that high school students with computers can now do what formerly required skilled mathematicians — might still hold. Pre-computer improvements in technique do not necessarily change the fact that computers represent a much larger leap in accessibility. This answer does not clearly undermine the argument's key assumption about which intellectual skills society values most."
+  },
+  {
+   "row_id": "e933847f-0634-46d0-a149-805e9410234b",
+   "letter": "C",
+   "body": "The age at which skilled mathematicians and craftspeople are most productive has no clear connection to whether intellectual skills will be devalued by technology. The argument is about value that society places on skills, not about when people peak in those skills. Even if mathematicians peak younger, this does not affect whether computer technology will devalue the intellectual skills society considers most important. The relevance of this age comparison to the argument's conclusion is completely unclear."
+  },
+  {
+   "row_id": "3ac71c80-1166-4628-9d88-c266bfb4759b",
+   "letter": "D",
+   "body": "This directly attacks the argument's key assumption — that computational skills are among society's most important intellectual skills. The evidence shows computers can perform computations that once required skilled mathematicians. The conclusion claims \"our most important intellectual skills\" will be devalued. But if the intellectual skills society values most are not computational ones, then the computer's ability to replace mathematical computation does not threaten those valued skills. The analogy between the Industrial Revolution and computers breaks down precisely at the point that matters: the Industrial Revolution devalued the physical skills that society most relied upon, but computers are devaluing computational skills, which may not be the intellectual skills society values most."
+  },
+  {
+   "row_id": "98263328-ec6d-452f-9ece-55d59bd4b70c",
+   "letter": "E",
+   "body": "This answer says that electronic data-processing technology has enabled people to perform tasks that previously could not be performed at all. Rather than weakening the argument, this reinforces the idea that technology is expanding capabilities and potentially replacing human intellectual work. It provides additional evidence for the power and reach of the technology, which, if anything, supports the prediction that intellectual skills will be devalued. A weakening answer needs to show why the prediction is wrong, not why the technology is impressive."
+  }
+ ],
+ "known_problem": "Explicit-Standard register (5.1 em-dashes per 1k words; wrong-answer notes average 79.5 words).",
+ "tags": "no-prediction; emdash-heavy; pt157-158-register"
+}

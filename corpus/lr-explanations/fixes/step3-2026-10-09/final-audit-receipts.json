@@ -1,0 +1,382 @@
+[
+  {
+    "group": 0,
+    "response": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\n  \"rows\": [\n    {\n      \"audit\": {\n        \"batch\": \"pilot\",\n        \"duplicate_slots\": 0,\n        \"expected_rows\": 53,\n        \"extra_slots\": [],\n        \"final_rows\": 53,\n        \"mismatches\": [],\n        \"missing\": 0,\n        \"old_rows\": 12\n      }\n    },\n    {\n      \"audit\": {\n        \"batch\": \"e01\",\n        \"duplicate_slots\": 0,\n        \"expected_rows\": 67,\n        \"extra_slots\": [],\n        \"final_rows\": 67,\n        \"mismatches\": [],\n        \"missing\": 0,\n        \"old_rows\": 15\n      }\n    },\n    {\n      \"audit\": {\n        \"batch\": \"e02\",\n        \"duplicate_slots\": 0,\n        \"expected_rows\": 71,\n        \"extra_slots\": [],\n        \"final_rows\": 71,\n        \"mismatches\": [],\n        \"missing\": 0,\n        \"old_rows\": 17\n      }\n    },\n    {\n      \"audit\": {\n        \"batch\": \"e03\",\n        \"duplicate_slots\": 0,\n        \"expected_rows\": 73,\n        \"extra_slots\": [],\n        \"final_rows\": 73,\n        \"mismatches\": [],\n        \"missing\": 0,\n        \"old_rows\": 16\n      }\n    },\n    {\n      \"audit\": {\n        \"batch\": \"e04\",\n        \"duplicate_slots\": 0,\n        \"expected_rows\": 72,\n        \"extra_slots\": [],\n        \"final_rows\": 72,\n        \"mismatches\": [],\n        \"missing\": 0,\n        \"old_rows\": 9\n      }\n    }\n  ]\n}"
+        }
+      ],
+      "structuredContent": {
+        "rows": [
+          {
+            "audit": {
+              "batch": "pilot",
+              "duplicate_slots": 0,
+              "expected_rows": 53,
+              "extra_slots": [],
+              "final_rows": 53,
+              "mismatches": [],
+              "missing": 0,
+              "old_rows": 12
+            }
+          },
+          {
+            "audit": {
+              "batch": "e01",
+              "duplicate_slots": 0,
+              "expected_rows": 67,
+              "extra_slots": [],
+              "final_rows": 67,
+              "mismatches": [],
+              "missing": 0,
+              "old_rows": 15
+            }
+          },
+          {
+            "audit": {
+              "batch": "e02",
+              "duplicate_slots": 0,
+              "expected_rows": 71,
+              "extra_slots": [],
+              "final_rows": 71,
+              "mismatches": [],
+              "missing": 0,
+              "old_rows": 17
+            }
+          },
+          {
+            "audit": {
+              "batch": "e03",
+              "duplicate_slots": 0,
+              "expected_rows": 73,
+              "extra_slots": [],
+              "final_rows": 73,
+              "mismatches": [],
+              "missing": 0,
+              "old_rows": 16
+            }
+          },
+          {
+            "audit": {
+              "batch": "e04",
+              "duplicate_slots": 0,
+              "expected_rows": 72,
+              "extra_slots": [],
+              "final_rows": 72,
+              "mismatches": [],
+              "missing": 0,
+              "old_rows": 9
+            }
+          }
+        ]
+      },
+      "isError": false
+    }
+  },
+  {
+    "group": 1,
+    "response": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\n  \"rows\": [\n    {\n      \"audit\": {\n        \"batch\": \"e05\",\n        \"duplicate_slots\": 0,\n        \"expected_rows\": 79,\n        \"extra_slots\": [],\n        \"final_rows\": 79,\n        \"mismatches\": [],\n        \"missing\": 0,\n        \"old_rows\": 17\n      }\n    },\n    {\n      \"audit\": {\n        \"batch\": \"e06\",\n        \"duplicate_slots\": 0,\n        \"expected_rows\": 74,\n        \"extra_slots\": [],\n        \"final_rows\": 74,\n        \"mismatches\": [],\n        \"missing\": 0,\n        \"old_rows\": 14\n      }\n    },\n    {\n      \"audit\": {\n        \"batch\": \"d07\",\n        \"duplicate_slots\": 0,\n        \"expected_rows\": 56,\n        \"extra_slots\": [],\n        \"final_rows\": 56,\n        \"mismatches\": [],\n        \"missing\": 0,\n        \"old_rows\": 5\n      }\n    },\n    {\n      \"audit\": {\n        \"batch\": \"e08\",\n        \"duplicate_slots\": 0,\n        \"expected_rows\": 64,\n        \"extra_slots\": [],\n        \"final_rows\": 64,\n        \"mismatches\": [],\n        \"missing\": 0,\n        \"old_rows\": 7\n      }\n    },\n    {\n      \"audit\": {\n        \"batch\": \"e09\",\n        \"duplicate_slots\": 0,\n        \"expected_rows\": 63,\n        \"extra_slots\": [],\n        \"final_rows\": 63,\n        \"mismatches\": [],\n        \"missing\": 0,\n        \"old_rows\": 6\n      }\n    }\n  ]\n}"
+        }
+      ],
+      "structuredContent": {
+        "rows": [
+          {
+            "audit": {
+              "batch": "e05",
+              "duplicate_slots": 0,
+              "expected_rows": 79,
+              "extra_slots": [],
+              "final_rows": 79,
+              "mismatches": [],
+              "missing": 0,
+              "old_rows": 17
+            }
+          },
+          {
+            "audit": {
+              "batch": "e06",
+              "duplicate_slots": 0,
+              "expected_rows": 74,
+              "extra_slots": [],
+              "final_rows": 74,
+              "mismatches": [],
+              "missing": 0,
+              "old_rows": 14
+            }
+          },
+          {
+            "audit": {
+              "batch": "d07",
+              "duplicate_slots": 0,
+              "expected_rows": 56,
+              "extra_slots": [],
+              "final_rows": 56,
+              "mismatches": [],
+              "missing": 0,
+              "old_rows": 5
+            }
+          },
+          {
+            "audit": {
+              "batch": "e08",
+              "duplicate_slots": 0,
+              "expected_rows": 64,
+              "extra_slots": [],
+              "final_rows": 64,
+              "mismatches": [],
+              "missing": 0,
+              "old_rows": 7
+            }
+          },
+          {
+            "audit": {
+              "batch": "e09",
+              "duplicate_slots": 0,
+              "expected_rows": 63,
+              "extra_slots": [],
+              "final_rows": 63,
+              "mismatches": [],
+              "missing": 0,
+              "old_rows": 6
+            }
+          }
+        ]
+      },
+      "isError": false
+    }
+  },
+  {
+    "group": 2,
+    "response": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\n  \"rows\": [\n    {\n      \"audit\": {\n        \"batch\": \"e10\",\n        \"duplicate_slots\": 0,\n        \"expected_rows\": 64,\n        \"extra_slots\": [],\n        \"final_rows\": 64,\n        \"mismatches\": [],\n        \"missing\": 0,\n        \"old_rows\": 1\n      }\n    },\n    {\n      \"audit\": {\n        \"batch\": \"e11\",\n        \"duplicate_slots\": 0,\n        \"expected_rows\": 70,\n        \"extra_slots\": [],\n        \"final_rows\": 70,\n        \"mismatches\": [],\n        \"missing\": 0,\n        \"old_rows\": 24\n      }\n    },\n    {\n      \"audit\": {\n        \"batch\": \"e12\",\n        \"duplicate_slots\": 0,\n        \"expected_rows\": 73,\n        \"extra_slots\": [],\n        \"final_rows\": 73,\n        \"mismatches\": [],\n        \"missing\": 0,\n        \"old_rows\": 13\n      }\n    },\n    {\n      \"audit\": {\n        \"batch\": \"e13\",\n        \"duplicate_slots\": 0,\n        \"expected_rows\": 69,\n        \"extra_slots\": [],\n        \"final_rows\": 69,\n        \"mismatches\": [],\n        \"missing\": 0,\n        \"old_rows\": 21\n      }\n    },\n    {\n      \"audit\": {\n        \"batch\": \"e14\",\n        \"duplicate_slots\": 0,\n        \"expected_rows\": 68,\n        \"extra_slots\": [],\n        \"final_rows\": 68,\n        \"mismatches\": [],\n        \"missing\": 0,\n        \"old_rows\": 13\n      }\n    }\n  ]\n}"
+        }
+      ],
+      "structuredContent": {
+        "rows": [
+          {
+            "audit": {
+              "batch": "e10",
+              "duplicate_slots": 0,
+              "expected_rows": 64,
+              "extra_slots": [],
+              "final_rows": 64,
+              "mismatches": [],
+              "missing": 0,
+              "old_rows": 1
+            }
+          },
+          {
+            "audit": {
+              "batch": "e11",
+              "duplicate_slots": 0,
+              "expected_rows": 70,
+              "extra_slots": [],
+              "final_rows": 70,
+              "mismatches": [],
+              "missing": 0,
+              "old_rows": 24
+            }
+          },
+          {
+            "audit": {
+              "batch": "e12",
+              "duplicate_slots": 0,
+              "expected_rows": 73,
+              "extra_slots": [],
+              "final_rows": 73,
+              "mismatches": [],
+              "missing": 0,
+              "old_rows": 13
+            }
+          },
+          {
+            "audit": {
+              "batch": "e13",
+              "duplicate_slots": 0,
+              "expected_rows": 69,
+              "extra_slots": [],
+              "final_rows": 69,
+              "mismatches": [],
+              "missing": 0,
+              "old_rows": 21
+            }
+          },
+          {
+            "audit": {
+              "batch": "e14",
+              "duplicate_slots": 0,
+              "expected_rows": 68,
+              "extra_slots": [],
+              "final_rows": 68,
+              "mismatches": [],
+              "missing": 0,
+              "old_rows": 13
+            }
+          }
+        ]
+      },
+      "isError": false
+    }
+  },
+  {
+    "group": 3,
+    "response": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\n  \"rows\": [\n    {\n      \"audit\": {\n        \"batch\": \"e15\",\n        \"duplicate_slots\": 0,\n        \"expected_rows\": 71,\n        \"extra_slots\": [],\n        \"final_rows\": 71,\n        \"mismatches\": [],\n        \"missing\": 0,\n        \"old_rows\": 14\n      }\n    },\n    {\n      \"audit\": {\n        \"batch\": \"e16\",\n        \"duplicate_slots\": 0,\n        \"expected_rows\": 68,\n        \"extra_slots\": [],\n        \"final_rows\": 68,\n        \"mismatches\": [],\n        \"missing\": 0,\n        \"old_rows\": 25\n      }\n    },\n    {\n      \"audit\": {\n        \"batch\": \"e17\",\n        \"duplicate_slots\": 0,\n        \"expected_rows\": 75,\n        \"extra_slots\": [],\n        \"final_rows\": 75,\n        \"mismatches\": [],\n        \"missing\": 0,\n        \"old_rows\": 17\n      }\n    },\n    {\n      \"audit\": {\n        \"batch\": \"e18\",\n        \"duplicate_slots\": 0,\n        \"expected_rows\": 76,\n        \"extra_slots\": [],\n        \"final_rows\": 76,\n        \"mismatches\": [],\n        \"missing\": 0,\n        \"old_rows\": 12\n      }\n    },\n    {\n      \"audit\": {\n        \"batch\": \"e19\",\n        \"duplicate_slots\": 0,\n        \"expected_rows\": 72,\n        \"extra_slots\": [],\n        \"final_rows\": 72,\n        \"mismatches\": [],\n        \"missing\": 0,\n        \"old_rows\": 11\n      }\n    }\n  ]\n}"
+        }
+      ],
+      "structuredContent": {
+        "rows": [
+          {
+            "audit": {
+              "batch": "e15",
+              "duplicate_slots": 0,
+              "expected_rows": 71,
+              "extra_slots": [],
+              "final_rows": 71,
+              "mismatches": [],
+              "missing": 0,
+              "old_rows": 14
+            }
+          },
+          {
+            "audit": {
+              "batch": "e16",
+              "duplicate_slots": 0,
+              "expected_rows": 68,
+              "extra_slots": [],
+              "final_rows": 68,
+              "mismatches": [],
+              "missing": 0,
+              "old_rows": 25
+            }
+          },
+          {
+            "audit": {
+              "batch": "e17",
+              "duplicate_slots": 0,
+              "expected_rows": 75,
+              "extra_slots": [],
+              "final_rows": 75,
+              "mismatches": [],
+              "missing": 0,
+              "old_rows": 17
+            }
+          },
+          {
+            "audit": {
+              "batch": "e18",
+              "duplicate_slots": 0,
+              "expected_rows": 76,
+              "extra_slots": [],
+              "final_rows": 76,
+              "mismatches": [],
+              "missing": 0,
+              "old_rows": 12
+            }
+          },
+          {
+            "audit": {
+              "batch": "e19",
+              "duplicate_slots": 0,
+              "expected_rows": 72,
+              "extra_slots": [],
+              "final_rows": 72,
+              "mismatches": [],
+              "missing": 0,
+              "old_rows": 11
+            }
+          }
+        ]
+      },
+      "isError": false
+    }
+  },
+  {
+    "group": 4,
+    "response": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\n  \"rows\": [\n    {\n      \"audit\": {\n        \"batch\": \"e20\",\n        \"duplicate_slots\": 0,\n        \"expected_rows\": 71,\n        \"extra_slots\": [],\n        \"final_rows\": 71,\n        \"mismatches\": [],\n        \"missing\": 0,\n        \"old_rows\": 11\n      }\n    },\n    {\n      \"audit\": {\n        \"batch\": \"e21\",\n        \"duplicate_slots\": 0,\n        \"expected_rows\": 72,\n        \"extra_slots\": [],\n        \"final_rows\": 72,\n        \"mismatches\": [],\n        \"missing\": 0,\n        \"old_rows\": 11\n      }\n    },\n    {\n      \"audit\": {\n        \"batch\": \"e22\",\n        \"duplicate_slots\": 0,\n        \"expected_rows\": 73,\n        \"extra_slots\": [],\n        \"final_rows\": 73,\n        \"mismatches\": [],\n        \"missing\": 0,\n        \"old_rows\": 16\n      }\n    },\n    {\n      \"audit\": {\n        \"batch\": \"e23\",\n        \"duplicate_slots\": 0,\n        \"expected_rows\": 75,\n        \"extra_slots\": [],\n        \"final_rows\": 75,\n        \"mismatches\": [],\n        \"missing\": 0,\n        \"old_rows\": 15\n      }\n    },\n    {\n      \"audit\": {\n        \"batch\": \"e24\",\n        \"duplicate_slots\": 0,\n        \"expected_rows\": 18,\n        \"extra_slots\": [],\n        \"final_rows\": 18,\n        \"mismatches\": [],\n        \"missing\": 0,\n        \"old_rows\": 2\n      }\n    }\n  ]\n}"
+        }
+      ],
+      "structuredContent": {
+        "rows": [
+          {
+            "audit": {
+              "batch": "e20",
+              "duplicate_slots": 0,
+              "expected_rows": 71,
+              "extra_slots": [],
+              "final_rows": 71,
+              "mismatches": [],
+              "missing": 0,
+              "old_rows": 11
+            }
+          },
+          {
+            "audit": {
+              "batch": "e21",
+              "duplicate_slots": 0,
+              "expected_rows": 72,
+              "extra_slots": [],
+              "final_rows": 72,
+              "mismatches": [],
+              "missing": 0,
+              "old_rows": 11
+            }
+          },
+          {
+            "audit": {
+              "batch": "e22",
+              "duplicate_slots": 0,
+              "expected_rows": 73,
+              "extra_slots": [],
+              "final_rows": 73,
+              "mismatches": [],
+              "missing": 0,
+              "old_rows": 16
+            }
+          },
+          {
+            "audit": {
+              "batch": "e23",
+              "duplicate_slots": 0,
+              "expected_rows": 75,
+              "extra_slots": [],
+              "final_rows": 75,
+              "mismatches": [],
+              "missing": 0,
+              "old_rows": 15
+            }
+          },
+          {
+            "audit": {
+              "batch": "e24",
+              "duplicate_slots": 0,
+              "expected_rows": 18,
+              "extra_slots": [],
+              "final_rows": 18,
+              "mismatches": [],
+              "missing": 0,
+              "old_rows": 2
+            }
+          }
+        ]
+      },
+      "isError": false
+    }
+  }
+]

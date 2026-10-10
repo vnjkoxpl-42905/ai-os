@@ -1,0 +1,72 @@
+{
+ "qid": "PT123-S3-Q2",
+ "type": "Paradox EXCEPT",
+ "difficulty": "1",
+ "key_db": "A",
+ "stimulus_db": "After replacing his old gas water heater with a new, pilotless, gas water heater that is rated as highly efficient, Jimmy’s gas bills increased.",
+ "stem_db": "Each of the following, if true, contributes to an explanation of the increase mentioned above EXCEPT:",
+ "choices_db": {
+  "A": "The new water heater uses a smaller percentage of the gas used by Jimmy’s household than did the old one.",
+  "B": "Shortly after the new water heater was installed, Jimmy’s uncle came to live with him, doubling the size of the household.",
+  "C": "After having done his laundry at a laundromat, Jimmy bought and started using a gas dryer when he replaced his water heater.",
+  "D": "Jimmy’s utility company raised the rates for gas consumption following installation of the new water heater.",
+  "E": "Unusually cold weather following installation of the new water heater resulted in heavy gas usage."
+ },
+ "bank": {
+  "stimulus": "After replacing his old gas water heater with a new, pilotless, gas water heater that is rated as highly efficient, Jimmy's gas bills increased.",
+  "stem": "Each of the following, if true, contributes to an explanation of the increase mentioned above except:",
+  "choices": {
+   "A": "The new water heater uses a smaller percentage of the gas used by Jimmy's household than did the old one.",
+   "B": "Shortly after the new water heater was installed, Jimmy's uncle came to live with him, doubling the size of the household.",
+   "C": "After having done his laundry at a laundromat, Jimmy bought and started using a gas dryer when he replaced his water heater.",
+   "D": "Jimmy's utility company raised the rates for gas consumption following installation of the new water heater.",
+   "E": "Unusually cold weather following installation of the new water heater resulted in heavy gas usage."
+  },
+  "key": "A"
+ },
+ "explanation_id": "024b58e6-5d5c-4e51-b8ff-f32dc5ce5e85",
+ "style": "single",
+ "steps": [
+  {
+   "row_id": "c7a81d9b-e963-497e-8042-2e432a697a8f",
+   "position": 0,
+   "label": "Apparent Paradox",
+   "body": "After replacing his old gas water heater with a new, pilotless, gas water heater that is rated as highly efficient, Jimmy’s gas bills increased."
+  },
+  {
+   "row_id": "a6a23aa9-aaaa-4593-b1bd-99de298dc8b6",
+   "position": 1,
+   "label": "Evaluate",
+   "body": "More gas usage or higher gas rates would explain the increase in Jimmy’s gas bills."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "dfc41b19-dd36-46d8-b6cb-a4e8fae00a46",
+   "letter": "A",
+   "body": "This deepens the paradox since it implies that Jimmy’s new water heater used less gas than before."
+  },
+  {
+   "row_id": "9f68be7b-734d-4880-baf5-c9d681c84059",
+   "letter": "B",
+   "body": "Doubling the household means more people using hot water and more gas used overall. More gas used would raise the bill even with an efficient heater, so B helps explain the increase."
+  },
+  {
+   "row_id": "37408eef-a873-4ef6-975c-86786a866e8a",
+   "letter": "C",
+   "body": "Jimmy started using a gas dryer at the same time the water heater was replaced. That is a new source of gas use, which helps explain why the bill went up."
+  },
+  {
+   "row_id": "1139d3e6-47bd-485f-a0b3-8f09b9d53771",
+   "letter": "D",
+   "body": "If the utility raised its rates, Jimmy pays more for each unit of gas. Jimmy's bill could rise even if the new heater uses less gas, so D helps explain the increase."
+  },
+  {
+   "row_id": "e5a42386-31c9-48c0-9d8d-d1b763f5e930",
+   "letter": "E",
+   "body": "The unusually cold weather led to heavy gas usage. More gas burned for heat would raise the bill, whatever the water heater's efficiency, so E helps explain the increase."
+  }
+ ],
+ "known_problem": "EXCEPT Paradox: B-E share one pasted sentence; no prediction of the two routes (more usage, higher rates).",
+ "tags": "short-breakdown; verdict-only; thin-correct-note; thin-notes; no-prediction; very-short"
+}

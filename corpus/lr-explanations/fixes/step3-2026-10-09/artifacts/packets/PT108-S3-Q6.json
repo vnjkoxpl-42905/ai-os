@@ -1,0 +1,84 @@
+{
+ "qid": "PT108-S3-Q6",
+ "type": "Paradox EXCEPT",
+ "difficulty": "4",
+ "key_db": "C",
+ "stimulus_db": "Shortly after the power plant opened and began discharging its wastewater into the river, there was a decrease in the overall number of bass caught by anglers downstream from the plant.",
+ "stem_db": "Each of the following, if true, could explain the decrease described above EXCEPT:",
+ "choices_db": {
+  "A": "The discharged wastewater made the river more attractive to fish that are the natural predators of bass.",
+  "B": "The discharged water was warmer than the normal river temperature, leading the bass to seek cooler water elsewhere.",
+  "C": "Because of the new plant, access to the part of the river downstream from the plant was improved, leading to an increase in the number of anglers fishing for bass.",
+  "D": "Because of the new plant, the level of noise downstream increased, making that section of the river a less popular place for anglers to fish.",
+  "E": "The discharged wastewater created turbulence that disrupted the vegetation of the river downstream, destroying some of the bass's natural habitat."
+ },
+ "bank": {
+  "stimulus": "Shortly after the power plant opened and began discharging its wastewater into the river, there was a decrease in the overall number of bass caught by anglers downstream from the plant.",
+  "stem": "Each of the following, if true, could explain the decrease described above EXCEPT:",
+  "choices": {
+   "A": "The discharged wastewater made the river more attractive to fish that are the natural predators of bass.",
+   "B": "The discharged water was warmer than the normal river temperature, leading the bass to seek cooler water elsewhere.",
+   "C": "Because of the new plant, access to the part of the river downstream from the plant was improved, leading to an increase in the number of anglers fishing for bass.",
+   "D": "Because of the new plant, the level of noise downstream increased, making that section of the river a less popular place for anglers to fish.",
+   "E": "The discharged wastewater created turbulence that disrupted the vegetation of the river downstream, destroying some of the bass's natural habitat."
+  },
+  "key": "C"
+ },
+ "explanation_id": "7aca97bc-3629-4277-bbd4-5597bdda2c4c",
+ "style": "single",
+ "steps": [
+  {
+   "row_id": "020f306b-a3e9-4046-8b8f-8e2726f19554",
+   "position": 0,
+   "label": "Given that ...",
+   "body": "The power plant opened and started discharging wastewater into the river."
+  },
+  {
+   "row_id": "78fa0921-1787-4fe5-870a-f74547986e47",
+   "position": 1,
+   "label": "Why is it that ...",
+   "body": "Shortly after, anglers downstream caught fewer bass overall?"
+  },
+  {
+   "row_id": "30050c0b-3c74-407f-a7ab-42bd91a5178d",
+   "position": 2,
+   "label": "Evaluate",
+   "body": "This isn't a true paradox. Nothing here is surprising. The stem just wants explanations for a drop in the number of bass caught.\r\n\r\nThink about what \"number of bass caught\" depends on. It takes two things: bass in the water and people fishing for them. So there are two roads to fewer bass caught:\r\n1. **Fewer bass downstream.** They died, got eaten, moved away, or lost their habitat.\r\n2. **Less fishing downstream.** Fewer anglers, or anglers fishing less.\r\n\r\nExpect most of the answers we eliminate to come in on road 1, with at least one sneaking in on road 2.\r\n\r\nMost students only think of road 1, because the wastewater feels like it must be hurting the fish. But road 2 is just as good. If half the anglers stop showing up, half as many bass get caught, even if the bass are thriving."
+  },
+  {
+   "row_id": "3a915989-8077-4179-8156-11839c6a5952",
+   "position": 3,
+   "label": "Goal",
+   "body": "Eliminate four answers that explain fewer bass caught, by either road. The correct answer will do neither, or it will push the other way: more bass or more fishing, which should mean *more* bass caught.\r\n\r\nBe careful with any answer about anglers. It isn't out of scope. Anglers are half the equation."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "bc1e9cd3-871c-463a-ae9e-14108e66a53e",
+   "letter": "A",
+   "body": "There are fewer bass to be caught, because an increase in predators has depleted the bass population."
+  },
+  {
+   "row_id": "09715b96-d8dc-43ac-9da7-8df2738d6c9d",
+   "letter": "B",
+   "body": "There are fewer bass to be caught, because the bass have swum upstream or far downstream to cooler water."
+  },
+  {
+   "row_id": "a7363b92-0e04-4d9f-92f5-559a26c2300a",
+   "letter": "C",
+   "body": "If there are more people fishing, we'd expect MORE bass to be caught. This doesn't explain why FEWER bass are being caught."
+  },
+  {
+   "row_id": "96597a73-05b1-4189-b7a8-85bb2b514718",
+   "letter": "D",
+   "body": "There are fewer bass being caught, because there are fewer anglers fishing downstream of the plant."
+  },
+  {
+   "row_id": "6b186f39-db7c-4cdb-811b-9d07def23aa5",
+   "letter": "E",
+   "body": "There are fewer bass to be caught, because destruction of the habitat downstream from the plant has led to a smaller population of bass in the area."
+  }
+ ],
+ "known_problem": "DB stimulus (bass catch fell) and every note (predators, anglers) do not match the official question in the bank (algae rose; choices about detergents, temperature, oxygen). The whole item is for a different question.",
+ "tags": "no-breakdown; thin-notes; very-short"
+}

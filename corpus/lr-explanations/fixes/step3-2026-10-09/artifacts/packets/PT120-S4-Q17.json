@@ -1,0 +1,78 @@
+{
+ "qid": "PT120-S4-Q17",
+ "type": "Parallel Flaw",
+ "difficulty": "5",
+ "key_db": "A",
+ "stimulus_db": "People who have never been asked to do more than they can easily do are people who never do all they can. Alex is someone who has clearly not done all that he is capable of doing, so obviously no one has ever pushed him to do more than what comes to him easily.",
+ "stem_db": "The flawed reasoning in which one of the following is most similar to the flawed reasoning in the argument above?",
+ "choices_db": {
+  "A": "Anybody who has a dog knows the true value of companionship, and Alicia has demonstrated that she knows the true value of companionship; thus we can safely conclude that Alicia has a dog.",
+  "B": "Anyone who discovers something new is someone who has examined all the possible solutions to a problem. Fran has surely never discovered something new. Therefore, Fran has never explored all the possible solutions to a problem.",
+  "C": "Any person who does not face sufficient challenges is a person who does not accomplish everything he or she can. Jill is a person who accomplishes everything she can, so Jill is a person who faces sufficient challenges.",
+  "D": "By definition, a polygon is any closed plane figure bounded by straight lines. That object pictured on the chalkboard is certainly a closed plane figure bounded by a large number of straight lines, so that object pictured on the chalkboard must be a polygon.",
+  "E": "People who have never lost something that they cannot afford to lose will be lax about keeping their property secure. Jon is lax about keeping property secure when it is something he can afford to lose, so Jon must never have lost anything."
+ },
+ "bank": {
+  "stimulus": "People who have never been asked to do more than they can easily do are people who never do all they can. Alex is someone who has clearly not done all that he is capable of doing, so obviously no one has ever pushed him to do more than what comes to him easily.",
+  "stem": "The flawed reasoning in which one of the following is most similar to the flawed reasoning in the argument above?",
+  "choices": {
+   "A": "Anybody who has a dog knows the true value of companionship, and Alicia has demonstrated that she knows the true value of companionship; thus we can safely conclude that Alicia has a dog.",
+   "B": "Anyone who discovers something new is someone who has examined all the possible solutions to a problem. Fran has surely never discovered something new. Therefore, Fran has never explored all the possible solutions to a problem.",
+   "C": "Any person who does not face sufficient challenges is a person who does not accomplish everything he or she can. Jill is a person who accomplishes everything she can, so Jill is a person who faces sufficient challenges.",
+   "D": "By definition, a polygon is any closed plane figure bounded by straight lines. That object pictured on the chalkboard is certainly a closed plane figure bounded by a large number of straight lines, so that object pictured on the chalkboard must be a polygon.",
+   "E": "People who have never lost something that they cannot afford to lose will be lax about keeping their property secure. Jon is lax about keeping property secure when it is something he can afford to lose, so Jon must never have lost anything."
+  },
+  "key": "A"
+ },
+ "explanation_id": "c8f0c599-a68f-44d8-b43c-61ed3d475627",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "6ea0a928-0732-4f7d-8489-f6b316a10c6f",
+   "position": 0,
+   "label": "Original Argument",
+   "body": "Premise: People who have never been pushed beyond their comfort zone never do all they can. (Never pushed → never doing all they can.)\nPremise: Alex has not done all he is capable of doing.\nConclusion: Alex has never been pushed beyond his comfort zone."
+  },
+  {
+   "row_id": "2e179b89-b749-4bf4-8adb-9d1284ecddf1",
+   "position": 1,
+   "label": "Evaluate",
+   "body": "The flaw is affirming the consequent / mistaking necessary for sufficient. The first premise gives: never pushed → not doing all you can. The argument observes that Alex is not doing all he can and concludes he was never pushed. But \"not doing all you can\" can have causes other than \"never pushed\" — laziness, illness, bad luck. The condition (never pushed) is sufficient for \"not doing all you can,\" but the argument treats it as if it were necessary."
+  },
+  {
+   "row_id": "24c39abf-6eb6-48c7-88c3-ba3de8524ecf",
+   "position": 2,
+   "label": "Goal",
+   "body": "Find an answer with the same flaw: a conditional (\"X → Y\"), then observation that Y holds, then conclusion that X holds — affirming the consequent."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "032af2ef-7b04-4e8a-b8ac-06089eb4a686",
+   "letter": "A",
+   "body": "Has a dog → knows companionship. Alicia knows companionship, so the argument concludes Alicia has a dog. Same reversal as the original: the result is observed and the trigger is assumed."
+  },
+  {
+   "row_id": "9d03fdbc-0075-4134-ab8c-540b5bc04a4e",
+   "letter": "B",
+   "body": "Fran never discovered anything, so the argument concludes Fran never examined all solutions. That denies the trigger, a different flaw."
+  },
+  {
+   "row_id": "84486f6b-e004-407a-845f-94f513d0e5b5",
+   "letter": "C",
+   "body": "Jill accomplishes everything possible, so Jill faces challenges. That's a valid contrapositive."
+  },
+  {
+   "row_id": "54a2433e-0e48-40b7-84a2-271439ee6fb7",
+   "letter": "D",
+   "body": "A definition works both ways, so this is valid."
+  },
+  {
+   "row_id": "55cf07b4-a8ee-4104-b320-c9c80e8aef00",
+   "letter": "E",
+   "body": "The rule is about things one can't afford to lose, but the evidence is about things Jon can afford to lose. The terms don't line up."
+  }
+ ],
+ "known_problem": "d5 Parallel Flaw with a sound breakdown; all five choice notes missing, which is where this question is won.",
+ "tags": "no-notes; very-short"
+}

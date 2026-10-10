@@ -1,0 +1,84 @@
+{
+ "qid": "PT120-S1-Q23",
+ "type": "Flaw",
+ "difficulty": "3",
+ "key_db": "D",
+ "stimulus_db": "Columnist: Neuroscientists have found that states of profound creativity are accompanied by an increase of theta brain waves, which occur in many regions of the brain, including the hippocampus. They also found that listening to music increases theta waves dramatically. Thus, one can attain a state of profound creativity merely by listening to a tape of recorded music.",
+ "stem_db": "The columnist's reasoning is most vulnerable to criticism on the grounds that it",
+ "choices_db": {
+  "A": "takes for granted that there is a causal connection between the hippocampus and being in a state of profound creativity",
+  "B": "fails to consider that music is not necessary for one to be in a state of profound creativity",
+  "C": "does not rule out the possibility that listening to music by means other than a tape recording also increases theta waves",
+  "D": "ignores the possibility that an increase in theta waves may not always be accompanied by a state of profound creativity",
+  "E": "provides insufficient reasons to believe that people who are not in states of profound creativity have low levels of theta brain waves"
+ },
+ "bank": {
+  "stimulus": "Columnist: Neuroscientists have found that states of profound creativity are accompanied by an increase of theta brain waves, which occur in many regions of the brain, including the hippocampus. They also found that listening to music increases theta waves dramatically. Thus, one can attain a state of profound creativity merely by listening to a tape of recorded music.",
+  "stem": "The columnist’s reasoning is most vulnerable to criticism on the grounds that it",
+  "choices": {
+   "A": "takes for granted that there is a causal connection between the hippocampus and being in a state of profound creativity",
+   "B": "fails to consider that music is not necessary for one to be in a state of profound creativity",
+   "C": "does not rule out the possibility that listening to music by means other than a tape recording also increases theta waves",
+   "D": "ignores the possibility that an increase in theta waves may not always be accompanied by a state of profound creativity",
+   "E": "provides insufficient reasons to believe that people who are not in states of profound creativity have low levels of theta brain waves"
+  },
+  "key": "D"
+ },
+ "explanation_id": "953f9b2b-cb76-40a5-a65a-3c3f44ba133f",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "1201fbd9-0cd9-4b77-a774-fbb4814ba6c3",
+   "position": 0,
+   "label": "Conclusion",
+   "body": "One can attain a state of profound creativity merely by listening to a tape of recorded music."
+  },
+  {
+   "row_id": "8009525e-d34f-42b4-8be1-ec126bdbbb56",
+   "position": 1,
+   "label": "Evidence",
+   "body": "Profound creativity is accompanied by an increase of theta brain waves. Listening to music dramatically increases theta waves."
+  },
+  {
+   "row_id": "bdf0a819-b92d-4f0e-9717-bb131e5adfae",
+   "position": 2,
+   "label": "Evaluate",
+   "body": "The argument observes that theta waves accompany creativity (creativity → theta waves) and that music produces theta waves (music → theta waves). It then leaps to \"music produces creativity.\" But theta waves coming with creativity does not mean theta waves *cause* creativity. Music could raise theta waves without producing creativity at all."
+  },
+  {
+   "row_id": "1e6e5a48-b204-4ff2-b652-3f7d6b427983",
+   "position": 3,
+   "label": "Goal",
+   "body": "Find an answer that points out theta waves can rise without creativity following — i.e., the argument confuses an accompaniment of creativity with something that produces creativity."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "78949977-e5e9-4cb9-8dab-2783c28b1b08",
+   "letter": "A",
+   "body": "The hippocampus is just one place theta waves occur. The argument's leap is from theta waves to creativity; no claim about the hippocampus causing anything is needed."
+  },
+  {
+   "row_id": "31e3b49d-76e0-4e6f-ad38-0c0faee59866",
+   "letter": "B",
+   "body": "The columnist says music is *enough* for creativity, not that it is *required*. Pointing out that people can be creative without music agrees with everything the columnist said."
+  },
+  {
+   "row_id": "1920313a-662a-47d6-982b-4d00b92a09f5",
+   "letter": "C",
+   "body": "If live music or a phone speaker also raises theta waves, that is perfectly consistent with the argument. It would only widen the conclusion, not undermine it."
+  },
+  {
+   "row_id": "16bddf47-5d12-4baf-9b4b-41e0ece86400",
+   "letter": "D",
+   "body": "The rule is creativity → more theta waves. The columnist runs it backward: more theta waves → creativity. Ask, \"Could theta waves rise without creativity showing up?\" If yes, music can raise theta waves and leave you no more creative than before. A fever comes with a rising temperature, but warming up in a sauna does not give you a fever."
+  },
+  {
+   "row_id": "14994764-6347-4804-88ea-aa217dfb794c",
+   "letter": "E",
+   "body": "This one is close, so check the wording. The evidence and conclusion are about an *increase* in theta waves. (E) is about people having *low levels* of them. Someone could start with moderate theta levels, get an increase from music, and still not be creative. The gap is whether an increase guarantees creativity, which (D) states directly; a claim about baseline levels does not capture it."
+  }
+ ],
+ "known_problem": "Breakdown only; all five choice notes missing.",
+ "tags": "no-notes; very-short"
+}

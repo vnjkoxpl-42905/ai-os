@@ -1,0 +1,72 @@
+{
+ "qid": "PT158-S2-Q4",
+ "type": "Most Strongly Supported",
+ "difficulty": "3",
+ "key_db": "C",
+ "stimulus_db": "Cerrato: Economists argue both that the higher turnover rate of part-time workers shows them to be much more likely to be dissatisfied with their jobs than full-time workers are and that lower-paid, part-time workers threaten to take jobs from full-time employees. But because job efficiency is positively correlated with job satisfaction, companies are unlikely to replace satisfied employees with dissatisfied ones. Therefore, _______.",
+ "stem_db": "Which one of the following most logically completes Cerrato's argument?",
+ "choices_db": {
+  "A": "full-time workers are likely to lose jobs to part-time workers",
+  "B": "the companies earning the greatest profits tend to be those that pay their workers the highest wages",
+  "C": "dissatisfied part-time workers are unlikely to threaten the jobs of full-time workers",
+  "D": "the higher turnover rate of part-time workers is only partly caused by their greater job dissatisfaction",
+  "E": "companies generally hire part-time workers only when they are unable to hire full-time ones"
+ },
+ "bank": {
+  "stimulus": "Cerrato: Economists argue both that the higher turnover\n rate of part-time workers shows them to be\n much more likely to be dissatisfied with their\n jobs than full-time workers are and that lower-paid, part-time workers threaten to take jobs\n from full-time employees. But because job\n efficiency is positively correlated with job\n satisfaction, companies are unlikely to replace\n satisfied employees with dissatisfied ones.\n Therefore, _______.",
+  "stem": "Which one of the following most logically completes\n Cerrato’s argument?",
+  "choices": {
+   "A": "full-time workers are likely to lose jobs to part-time workers",
+   "B": "the companies earning the greatest profits tend to be those that pay their workers the highest wages",
+   "C": "dissatisfied part-time workers are unlikely to threaten the jobs of full-time workers",
+   "D": "the higher turnover rate of part-time workers is only partly caused by their greater job dissatisfaction",
+   "E": "companies generally hire part-time workers only when they are unable to hire full-time ones"
+  },
+  "key": "C"
+ },
+ "explanation_id": "4e844e06-ca7c-4ee9-8eaa-7693926013be",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "5138f680-3896-4bde-a665-f9af8203321e",
+   "position": 0,
+   "label": "Given",
+   "body": "Economists argue that the higher turnover rate of part-time workers shows them to be much more likely to be dissatisfied with their jobs than full-time workers are. Economists also argue that lower-paid, part-time workers threaten to take jobs from full-time employees. But because job efficiency is positively correlated with job satisfaction, companies are unlikely to replace satisfied employees with dissatisfied ones."
+  },
+  {
+   "row_id": "1e8e2fc0-11a1-4b69-8992-84747db42253",
+   "position": 1,
+   "label": "Evaluate / Goal",
+   "body": "Since we're told that part-time workers are more likely to be dissatisfied with their jobs than full-time workers, and companies are unlikely to replace satisfied employees with dissatisfied ones, we might conclude that companies are unlikely to replace full-time employees with part-time employees. This suggests that the economists' second claim about part-time workers taking jobs from full-time workers is unlikely to be true. But wait! This is assuming that the economists first claim about part-time workers being dissatisfied is true. We don't actually know that. So, a possible conclusion is that one of the two claims argued by economists is true and the other isn't."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "dd98680f-34ea-443d-87b1-edd626d2abbe",
+   "letter": "A",
+   "body": "This answer says full-time workers are likely to lose jobs to part-time workers — the exact opposite of what Cerrato's argument establishes. Cerrato's entire point is that dissatisfied part-timers are less efficient than satisfied full-timers, so companies will not make that replacement. Concluding that full-timers will lose jobs to part-timers directly contradicts the reasoning chain about efficiency and satisfaction. Cerrato is arguing against the economists' threat claim, not endorsing it."
+  },
+  {
+   "row_id": "c4187029-612b-49dc-823f-b5ccba691768",
+   "letter": "B",
+   "body": "This answer introduces a claim about the relationship between employee pay and company profits — a topic the argument never touches. Cerrato's argument is about the relationship between job satisfaction, efficiency, and job replacement. Whether the highest-paying companies earn the most profits is a separate economic question that does not follow from the premises about part-time workers' dissatisfaction and the satisfaction-efficiency correlation. The argument has no basis for drawing any conclusion about profit maximization or compensation strategies."
+  },
+  {
+   "row_id": "1df36749-55c2-44e2-85c5-e7b207125490",
+   "letter": "C",
+   "body": "This answer logically completes Cerrato's argument. The reasoning chain is: (1) economists claim part-timers are dissatisfied and threaten full-time jobs; (2) efficiency correlates with satisfaction; (3) companies will not replace satisfied, efficient employees with dissatisfied, inefficient ones. The natural conclusion is that dissatisfied part-time workers do not actually threaten full-time jobs. This answer captures exactly that: the very dissatisfaction that economists attribute to part-timers makes them unlikely replacements for the satisfied full-timers they supposedly threaten. The economists' own premise about dissatisfaction undermines their conclusion about job displacement."
+  },
+  {
+   "row_id": "d2a63931-4bb0-4445-a711-48f357a39824",
+   "letter": "D",
+   "body": "This answer introduces a causal claim about what drives turnover — that dissatisfaction is only partly responsible. But Cerrato's argument does not investigate the causes of turnover. Cerrato accepts the economists' claim that part-timers are dissatisfied and uses it against their job-threat claim. The question of whether dissatisfaction fully or partially explains turnover is irrelevant to Cerrato's reasoning about whether dissatisfied part-timers will replace satisfied full-timers. Nothing in the premises supports a conclusion about the causal structure of turnover rates."
+  },
+  {
+   "row_id": "3eb79107-60fa-4b94-898f-5d89f428ca0f",
+   "letter": "E",
+   "body": "This answer claims companies only hire part-timers when they cannot find full-timers. Nothing in the argument addresses companies' hiring preferences or the circumstances under which they turn to part-time workers. Cerrato's reasoning is about the satisfaction-efficiency connection and its implications for job replacement. The claim about when companies resort to part-time hiring introduces an entirely new premise about labor market dynamics that has no connection to the argument's conclusion about dissatisfied part-timers not threatening full-time positions."
+  }
+ ],
+ "known_problem": "Explicit-Standard register (5.1 em-dashes per 1k words; wrong-answer notes average 80.0 words).",
+ "tags": "emdash-heavy; pt157-158-register"
+}

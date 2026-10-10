@@ -1,0 +1,90 @@
+{
+ "qid": "PT158-S2-Q19",
+ "type": "Necessary Assumption",
+ "difficulty": "5",
+ "key_db": "D",
+ "stimulus_db": "The differences in distance from Earth between the stars in any one distant galaxy are negligible compared to the vast distance to the galaxy itself. Thus, if two stars are in the same distant galaxy, any significant difference in the apparent brightness of those stars results from differences in how brightly each is actually burning. Therefore, we should be able to determine how a star's relative actual brightness correlates with other characteristics by studying stars in the same distant galaxy.",
+ "stem_db": "Which one of the following is an assumption the argument requires?",
+ "choices_db": {
+  "A": "If two stars are in two different galaxies, it is not possible to determine whether or not they are approximately the same distance from Earth.",
+  "B": "If any two stars are in the same distant galaxy, differences in the elements each is burning will be detectable from Earth.",
+  "C": "The stars in our own galaxy are not all approximately the same distance from Earth.",
+  "D": "There are stars in distant galaxies that have characteristics, other than brightness, discernible from Earth.",
+  "E": "If there are significant differences in how far away two stars are from Earth, then those stars will differ significantly in apparent brightness."
+ },
+ "bank": {
+  "stimulus": "The differences in distance from Earth between the stars\n in any one distant galaxy are negligible compared to the\n vast distance to the galaxy itself. Thus, if two stars are in\n the same distant galaxy, any significant difference in the\n apparent brightness of those stars results from differences\n in how brightly each is actually burning. Therefore,\n we should be able to determine how a star’s relative\n actual brightness correlates with other characteristics by\n studying stars in the same distant galaxy.",
+  "stem": "Which one of the following is an assumption the\n argument requires?",
+  "choices": {
+   "A": "If two stars are in two different galaxies, it is not possible to determine whether or not they are approximately the same distance from Earth.",
+   "B": "If any two stars are in the same distant galaxy, differences in the elements each is burning will be detectable from Earth.",
+   "C": "The stars in our own galaxy are not all approximately the same distance from Earth.",
+   "D": "There are stars in distant galaxies that have characteristics, other than brightness, discernible from Earth.",
+   "E": "If there are significant differences in how far away two stars are from Earth, then those stars will differ significantly in apparent brightness."
+  },
+  "key": "D"
+ },
+ "explanation_id": "ea55ba2b-56a2-4ac1-b13f-c24c1fb27769",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "208f2789-89c1-4f27-b0a3-68e6dc42134d",
+   "position": 0,
+   "label": "Conclusion (Therefore)",
+   "body": "We should be able to determine how a star's relative actual brightness correlates with other characteristics by studying stars in the same distant galaxy."
+  },
+  {
+   "row_id": "400ac85e-963b-4dce-b61e-5fc0d717551e",
+   "position": 1,
+   "label": "Intermediate Conclusion (Thus)",
+   "body": "If two stars are in the same distant galaxy, any big difference in the apparent brightness of those stars results from differences in how brightly each is actually burning."
+  },
+  {
+   "row_id": "2112e6d7-0f77-4cc5-a82a-ad44bd21084d",
+   "position": 2,
+   "label": "Evidence",
+   "body": "If two stars are in the same distant galaxy, their difference in their respective distances from Earth is negligible."
+  },
+  {
+   "row_id": "f8974692-c638-4c6e-8e57-5237e9b6455f",
+   "position": 3,
+   "label": "Evaluate",
+   "body": "There are two conclusions here, so we can scrutinize both reasoning moves. The first move is saying that if star X and star Y are both in distant Galaxy A, it doesn't matter is X is 1.21 trillion miles away and Y is 1.22 trillion miles alone. The difference between 1.21 and 1.22 trillion miles is negligible. Two equally bright stars would appear the same from Earth, whether it's 1.21 or 1.22 trillion. So, if we have two such stars and they appear with different brightness, does that have to be based on how brightly each one is burning? Not necessarily. What if one of the stars is hidden by some dust cloud or nebula? That would make it look dimmer than it really is. What if one of the stars ends up having another star right behind it (from our angle of viewing it). If there were another star behind the star we're looking at, in the same direction, then it would add extra brightness. It would make that front-star look brighter than it really is. The second move is saying that \"if all differences in brightness indicate differences in how brightly each star is burning, then we can correlate brightness with other characteristics by looking at stars in the same galaxy\". That move isn't really that ripe for objections. If the measurement we get for how brightly the stars burn is accurate, then, sure, we can correlate that brightness number with any other numbers we get (f.e. the chemical composition of the stars based on spectral readings)."
+  },
+  {
+   "row_id": "80145eb7-c868-4f62-a13a-49b7e59bc156",
+   "position": 4,
+   "label": "Goal",
+   "body": "The answer is probably targeting the move from the first sentence to the second, since that move seems to take a big, risky leap. Just because two stars in a distant galaxy are, in practical terms, the \"same\" distance from Earth, that doesn't necessarily mean we should accept that differences in apparent brightness stem from differences in actual brightness. Is distance really the only factor to consider? There are probably other factors that can also impact apparent brightness. The author is assuming a Linking idea that, \"If it's essentially the same distance from Earth and the stars are the same size, they will appear equivalently bright\". The author is assuming Defending ideas like, 'There is not some other factor besides distance that could affect the apparent brightness of a star'."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "03b432cf-7013-4934-9d05-1755544b9320",
+   "letter": "A",
+   "body": "This answer claims it is \"not possible\" to determine brightness differences between stars in different galaxies. The argument does not need this extreme claim. The argument only needs studying same-galaxy stars to be a viable method — not that it is the only possible method. Even if cross-galaxy brightness comparisons were perfectly feasible, the argument's conclusion (that same-galaxy study can reveal correlations) would still hold. The argument advocates for one research approach; it does not need to rule out all others. Moreover, the argument's core vulnerability is about non-brightness variation, not about the exclusivity of its proposed methodology."
+  },
+  {
+   "row_id": "f000c431-4adc-46ea-b2d9-521ecdc15a76",
+   "letter": "B",
+   "body": "Whether differences in the elements each star burns account for differences in brightness is a specific causal claim about what produces brightness variation. The argument does not need to assume any particular cause of brightness differences — it only needs brightness differences to exist and to be measurable (which it established through the distance-control reasoning). The conclusion is about correlating brightness with other characteristics, not about explaining why stars have different brightnesses. Furthermore, the \"other characteristics\" in the conclusion are characteristics that could be correlated with brightness, not necessarily the causes of brightness. This answer addresses a causal question the argument never raises."
+  },
+  {
+   "row_id": "8aff2e25-ed1c-4803-bdb3-7e4bf6755d04",
+   "letter": "C",
+   "body": "Whether the stars in our own galaxy are at approximately the same distance from Earth is irrelevant to the argument's reasoning. The argument specifically discusses distant galaxies, where the enormous distance from Earth makes intra-galaxy distance differences negligible. Our own galaxy — the Milky Way — is a different case entirely because we live inside it, so distance differences between stars are very significant. The argument never claims or needs to assume anything about the distance distribution of stars in our galaxy. Its methodological proposal is specifically about distant galaxies, and conditions within our own galaxy are outside the scope of the argument."
+  },
+  {
+   "row_id": "fccec791-9884-4917-9e30-080a2a6dd3ab",
+   "letter": "D",
+   "body": "The argument concludes that we can determine how brightness correlates with \"other characteristics\" by studying same-galaxy stars. This conclusion has an essential prerequisite: there must actually be variation in those other characteristics among stars within the same distant galaxy. If every star in a given distant galaxy had identical non-brightness characteristics — the same size, temperature, composition, age, and spectral type — then there would be nothing to correlate brightness with. The research would find brightness differences but zero variation in the variables being correlated, making the study pointless. Apply the Negation Test: \"There are NO stars in distant galaxies with discernibly different non-brightness characteristics.\" Under this negation, the proposed research method fails completely — you cannot find correlations when one set of variables shows no variation. The argument absolutely requires that such variation exists, making this a necessary assumption."
+  },
+  {
+   "row_id": "57b26ce6-355e-433a-8ca9-b8fc9eab34c1",
+   "letter": "E",
+   "body": "This answer describes a relationship that is actually consistent with the argument's reasoning rather than being an assumption the argument requires. The argument already establishes that distance differences affect apparent brightness — that is the very reason it proposes studying same-galaxy stars (where distance is controlled). This answer essentially restates a consequence of the argument's own premises rather than identifying an unstated assumption needed to reach the conclusion. The argument needs something about non-brightness variation, not a restatement of the distance-brightness relationship it already acknowledged. Moreover, this answer does not pass the Negation Test in a way that undermines the conclusion: negating it would mean distance differences do NOT cause apparent brightness differences, which would actually undermine the premise (not the unstated assumption) of the argument."
+  }
+ ],
+ "known_problem": "Explicit-Standard register (7.7 em-dashes per 1k words; wrong-answer notes average 108.5 words).",
+ "tags": "emdash-heavy; pt157-158-register; possible-misquote"
+}

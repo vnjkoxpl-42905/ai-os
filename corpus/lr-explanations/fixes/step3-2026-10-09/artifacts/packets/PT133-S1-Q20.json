@@ -1,0 +1,66 @@
+{
+ "qid": "PT133-S1-Q20",
+ "type": "Must Be True",
+ "difficulty": "4",
+ "key_db": "B",
+ "stimulus_db": "Council member: The profits of downtown businesses will increase if more consumers live in the downtown area, and a decrease in the cost of living in the downtown area will guarantee that the number of consumers living there will increase. However, the profits of downtown businesses will not increase unless downtown traffic congestion decreases.",
+ "stem_db": "If all the council member's statements are true, which one of the following must be true?",
+ "choices_db": {
+  "A": "If downtown traffic congestion decreases, the number of consumers living in the downtown area will increase.",
+  "B": "If the cost of living in the downtown area decreases, the profits of downtown businesses will increase.",
+  "C": "If downtown traffic congestion decreases, the cost of living in the downtown area will increase.",
+  "D": "If downtown traffic congestion decreases, the cost of living in the downtown area will decrease.",
+  "E": "If the profits of downtown businesses increase, the number of consumers living in the downtown area will increase."
+ },
+ "bank": {
+  "stimulus": "Council member: The profits of downtown businesses will increase if more consumers live in the downtown area, and a decrease in the cost of living in the downtown area will guarantee that the number of consumers living there will increase. However, the profits of downtown businesses will not increase unless downtown traffic congestion decreases.",
+  "stem": "If all the council member's statements are true, which one of the following must be true?",
+  "choices": {
+   "A": "If downtown traffic congestion decreases, the number of consumers living in the downtown area will increase.",
+   "B": "If the cost of living in the downtown area decreases, the profits of downtown businesses will increase.",
+   "C": "If downtown traffic congestion decreases, the cost of living in the downtown area will increase.",
+   "D": "If downtown traffic congestion decreases, the cost of living in the downtown area will decrease.",
+   "E": "If the profits of downtown businesses increase, the number of consumers living in the downtown area will increase"
+  },
+  "key": "B"
+ },
+ "explanation_id": "fa9d395e-6f34-483b-8af6-e2d7a964a3f2",
+ "style": "single",
+ "steps": [
+  {
+   "row_id": "67ac86fa-48ee-4867-9b1a-2777854e3093",
+   "position": 0,
+   "label": "Given",
+   "body": "The profits of downtown businesses will increase if more consumers live in the downtown area.\n↑C → ↑P\n\nA decrease in the cost of living in the downtown area will guarantee that the number of consumers living there will increase.\n↓CL → ↑C\n\nHowever, the profits of downtown businesses will not increase unless downtown traffic congestion decreases.\n↑P → ↓TC"
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "9d203d1a-6832-4fce-bcb2-7c0b8cc90f70",
+   "letter": "A",
+   "body": "This reverses the inference that can be made from the first and third statements.\n↑C → ↑P\n↑P → ↓TC\n∴ ↑C → ↓TC"
+  },
+  {
+   "row_id": "e338d583-4982-45f7-9c6c-b5716cdd2329",
+   "letter": "B",
+   "body": "This follows from the first and second statements.\n↓CL → ↑C\n↑C → ↑P\n∴ ↓CL → ↑P"
+  },
+  {
+   "row_id": "341e2b59-68f5-4027-83a0-0018d9606aa2",
+   "letter": "C",
+   "body": "The statements tell us what follows when the cost of living decreases, not what follows when traffic congestion decreases. A decrease in congestion is only a necessary condition for higher profits, so it triggers nothing, and nothing in the statements says the cost of living will increase.\n↓CL → ↑C → ↑P → ↓TC"
+  },
+  {
+   "row_id": "7dbb893a-33e7-4a2b-898b-627e3bb7fc00",
+   "letter": "D",
+   "body": "This reverses the inference that can be made from all three statements.\n↓CL → ↑C\n↑C → ↑P\n↑P → ↓TC\n∴ ↓CL → ↓TC"
+  },
+  {
+   "row_id": "972db7df-6686-420e-b5a9-11dd101ad4c9",
+   "letter": "E",
+   "body": "This reverses the first statement.\n↑P → ↑C"
+  }
+ ],
+ "known_problem": "d4 conditional chain; C and D notes are garbled diagrams, and D's diagram concludes ~CL -> up TC, which is not what the chain yields.",
+ "tags": "short-breakdown; verdict-only; thin-correct-note; thin-notes; no-prediction; damage; very-short"
+}

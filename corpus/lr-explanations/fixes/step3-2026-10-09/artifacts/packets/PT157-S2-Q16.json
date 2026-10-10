@@ -1,0 +1,84 @@
+{
+ "qid": "PT157-S2-Q16",
+ "type": "Sufficient Assumption",
+ "difficulty": "4",
+ "key_db": "E",
+ "stimulus_db": "Child psychologist: Psychologists have found that most children under the age of six are egocentric and selfish in their attitudes toward animals. Ordinarily, it is only between the ages of six and nine that children begin to understand that animals are independent creatures with their own feelings and needs. Hence, most children should not have pets until they are at least six years old.",
+ "stem_db": "The child psychologist’s conclusion follows logically if which one of the following is assumed?",
+ "choices_db": {
+  "A": "Most children who are egocentric and selfish in their attitudes towards animals rely on others to take care of a pet.",
+  "B": "Children who are old enough to understand that animals are independent creatures with their own feelings and needs should be allowed to have pets.",
+  "C": "Most children who are egocentric and selfish in their attitudes towards animals do not have pets.",
+  "D": "Most children are egocentric and selfish in their attitudes towards their pets and do not understand that their pets are independent creatures with their own feelings and needs.",
+  "E": "The only children who should have pets are those who understand that their pets are independent creatures with their own feelings and needs."
+ },
+ "bank": {
+  "stimulus": "Child psychologist: Psychologists have found that most\n children under the age of six are egocentric\n and selfish in their attitudes toward animals. Ordinarily, it is only between the ages of six\n and nine that children begin to understand that\n animals are independent creatures with their own\n feelings and needs. Hence, most children should\n not have pets until they are at least six years old.",
+  "stem": "The child psychologist’s conclusion follows logically if\n which one of the following is assumed?",
+  "choices": {
+   "A": "Most children who are egocentric and selfish in their attitudes towards animals rely on others to take care of a pet.",
+   "B": "Children who are old enough to understand that animals are independent creatures with their own feelings and needs should be allowed to have pets.",
+   "C": "Most children who are egocentric and selfish in their attitudes towards animals do not have pets.",
+   "D": "Most children are egocentric and selfish in their attitudes towards their pets and do not understand that their pets are independent creatures with their own feelings and needs.",
+   "E": "The only children who should have pets are those who understand that their pets are independent creatures with their own feelings and needs."
+  },
+  "key": "E"
+ },
+ "explanation_id": "9ec7492d-5811-415d-8493-351b5612fe77",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "85a2d1a6-42aa-4496-adf4-0d1642958629",
+   "position": 0,
+   "label": "Evidence",
+   "body": "Ordinarily, it is only between the ages of six and nine that children begin to understand that animals are independent creatures with their own feelings and needs."
+  },
+  {
+   "row_id": "b46edbbb-c0b8-4131-babb-ef13a912c45c",
+   "position": 1,
+   "label": "Conclusion",
+   "body": "Most children should not have pets until they are at least six years old."
+  },
+  {
+   "row_id": "472a536c-d84c-49b2-aad8-6e30ad1e0350",
+   "position": 2,
+   "label": "Evaluate",
+   "body": "Conditional statements are generally about things that must always be true. We don't usually consider something a conditional statement when it merely describes something that \"ordinarily\" happens or something that happens with \"most\" people in a group. However, in this case, as long as we remember the words \"ordinarily\" and \"most\" in the original argument, we can use conditional statements to better understand the argument. The premise states that most children under age six do not understand that animals are independent creatures with their own feelings and needs. (under 6 → not understand) The conclusion states that most children under six should not have pets. (under 6 → should not have pets)"
+  },
+  {
+   "row_id": "e501b187-6096-4885-ace4-2b883984f8ee",
+   "position": 3,
+   "label": "Goal",
+   "body": "We're looking for an answer which states that anyone who does not understand that animals are independent creatures with their own feelings and needs should not have pets. (not understand → should not have pets) The contrapositive of this would also be correct. (should have pets → understand)"
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "9ade4d67-f775-47e3-8471-517a0b140a36",
+   "letter": "A",
+   "body": "This answer says most egocentric and selfish children rely on others to care for pets. The argument does not discuss who takes care of pets or whether children rely on others. The argument's gap is about whether not understanding animals' independence means children should not have pets. Relying on others for pet care is an entirely different issue from whether a child should own a pet in the first place."
+  },
+  {
+   "row_id": "d11a7cb4-e3de-4e02-931a-2da00d648b8f",
+   "letter": "B",
+   "body": "This answer says children who understand animals' independence should be allowed to have pets. Diagrammed: Understand -> Should have pets. But we need the reverse: Should have pets -> Understand. This answer provides an illegal negation of the needed assumption. The argument needs to establish that understanding is a requirement for having pets, not that understanding guarantees permission to have pets. A child who understands animals should perhaps be allowed a pet, but that does not help us conclude that a child who does not understand animals should not have one."
+  },
+  {
+   "row_id": "18eeb4f8-c8c6-4dde-9ad0-b2b3e1d12dad",
+   "letter": "C",
+   "body": "This answer says most egocentric and selfish children do not have pets. This describes what is actually the case, not what should be the case. The argument's conclusion is prescriptive — most children should not have pets until age six. Knowing that most egocentric children currently do not have pets does not establish whether they should or should not. Descriptive facts about pet ownership patterns cannot bridge the gap to a normative conclusion about what ought to happen."
+  },
+  {
+   "row_id": "255e69f0-195e-4c1d-8288-cf4a80f565a8",
+   "letter": "D",
+   "body": "This answer says most children are egocentric and do not understand their pets' feelings and needs. This essentially restates and combines aspects of the two premises but does not connect them to the conclusion's prescription that children should not have pets. The argument already tells us children under six are egocentric and do not understand animals. Restating this fact does not explain why this means they should not have pets. The answer fails to address the should/should-not component that is essential to bridging evidence and conclusion."
+  },
+  {
+   "row_id": "73f300eb-dde0-40cf-9825-c0551a684316",
+   "letter": "E",
+   "body": "This answer states that the only children who should have pets are those who understand their pets are independent creatures with their own feelings and needs. Diagrammed: Should have pets -> Understand. Contrapositive: Not understand -> Should not have pets. The evidence establishes that most children under six do not understand animals' independence (Under 6 -> Not understand). Combining: Under 6 -> Not understand -> Should not have pets. This produces the conclusion: most children under six should not have pets. The answer perfectly bridges the gap between the evidence about understanding and the conclusion about pet ownership."
+  }
+ ],
+ "known_problem": "Explicit-Standard register (1.6 em-dashes per 1k words; wrong-answer notes average 81.0 words).",
+ "tags": "pt157-158-register"
+}

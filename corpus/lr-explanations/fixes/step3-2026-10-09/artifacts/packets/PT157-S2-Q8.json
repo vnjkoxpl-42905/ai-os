@@ -1,0 +1,84 @@
+{
+ "qid": "PT157-S2-Q8",
+ "type": "Parallel Reasoning",
+ "difficulty": "3",
+ "key_db": "B",
+ "stimulus_db": "Buyer: As a buyer for a large chain of department stores, I will buy a garment only if it is fashionable and not too expensive for our clientele. The evening dress from the fall collection by Peruka is certainly fashionable, but it is far too expensive for our clientele. Therefore, I will not buy that dress.",
+ "stem_db": "The pattern of reasoning in which one of the following arguments most closely resembles the pattern of reasoning in the buyer's argument?",
+ "choices_db": {
+  "A": "A snowflake will melt if it is in a warm place and not protected by insulation. This snowflake is in a warm place, but it is protected by insulation. Therefore, this snowflake will not melt.",
+  "B": "A stuffed animal, in order to pass inspection, must be free of sharp edges and completely sealed. This stuffed hippo is free of sharp edges, but it is not completely sealed. Therefore, this hippo will not pass inspection.",
+  "C": "A sidewalk is accessible if its edges are fully graded and if it has no sizable bumps. This sidewalk's edges are fully graded, and it has no sizable bumps. Therefore, this sidewalk is accessible.",
+  "D": "A poetic translation is accurate only if it adequately expresses the meaning of the original poem and gives an idea of the meter. This translation adequately expresses the meaning of the original and gives an idea of the meter. Therefore, this translation is accurate.",
+  "E": "An assembly may call a meeting of the executive board only if the assembly meets quorum requirements and the motion passes by two-thirds. This assembly meets quorum requirements, so unless the motion does not pass by two-thirds, this assembly may call a meeting of the executive board."
+ },
+ "bank": {
+  "stimulus": "Buyer: As a buyer for a large chain of department stores,\n I will buy a garment only if it is fashionable\n and not too expensive for our clientele. The\n evening dress from the fall collection by Peruka\n is certainly fashionable, but it is far too expensive\n for our clientele. Therefore, I will not buy that\n dress.",
+  "stem": "The pattern of reasoning in which one of the following\n arguments most closely resembles the pattern of\n reasoning in the buyer’s argument?",
+  "choices": {
+   "A": "A snowflake will melt if it is in a warm place and not protected by insulation. This snowflake is in a warm place, but it is protected by insulation. Therefore, this snowflake will not melt.",
+   "B": "A stuffed animal, in order to pass inspection, must be free of sharp edges and completely sealed. This stuffed hippo is free of sharp edges, but it is not completely sealed. Therefore, this hippo will not pass inspection.",
+   "C": "A sidewalk is accessible if its edges are fully graded and if it has no sizable bumps. This sidewalk’s edges are fully graded, and it has no sizable bumps. Therefore, this sidewalk is accessible.",
+   "D": "A poetic translation is accurate only if it adequately expresses the meaning of the original poem and gives an idea of the meter. This translation adequately expresses the meaning of the original and gives an idea of the meter. Therefore, this translation is accurate.",
+   "E": "An assembly may call a meeting of the executive board only if the assembly meets quorum requirements and the motion passes by two-thirds. This assembly meets quorum requirements, so unless the motion does not pass by two-thirds, this assembly may call a meeting of the executive board."
+  },
+  "key": "B"
+ },
+ "explanation_id": "e91f3d11-2026-4c7f-8197-98341d818c8b",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "940a9dc4-5544-4ca5-a8e7-6e5f7c2c8c1a",
+   "position": 0,
+   "label": "Evidence",
+   "body": "The buyer will buy a garment only if it is fashionable and not too expensive for our clientele. The evening dress from the fall collection by Peruka is certainly fashionable, but the dress is far too expensive for our clientele.\n```\nBG → F and ~TE\nF\nTE\n```"
+  },
+  {
+   "row_id": "a60f8ff0-ef76-4168-baac-29b3bec7cbbf",
+   "position": 1,
+   "label": "Conclusion",
+   "body": "The buyer will not buy that dress [garment].\n```\n~BG\n```"
+  },
+  {
+   "row_id": "96627553-322b-4dda-872f-a820f72a0373",
+   "position": 2,
+   "label": "Evaluate",
+   "body": "This is a valid argument. The first premise has two necessary conditions that both must be met in order to buy a garment. One of these necessary conditions will be met but the other will not. Based on this, the conclusion states that the evening dress [a garment] will not be bought. It can also help to look at the contrapositive of the first premise: If a garment is not fashionable or it is too expensive then the buyer will not buy the garment.\n```\n~F or TE → ~BG\n```\nThe third premise triggers one of these sufficient conditions (TE), so we can conclude that the buyer will not buy this garment (~BG)."
+  },
+  {
+   "row_id": "07295199-3b8c-4852-a42b-7a1b932528e6",
+   "position": 3,
+   "label": "Goal",
+   "body": "A correct answer will probably use this same type of contrapositive logic to reach its conclusion. In all likelihood, it will also have the other key features of this original argument: a compound necessary condition in which one item is fulfilled and the other is not."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "69155bf9-5b9d-48b3-a4d1-b93faafa503b",
+   "letter": "A",
+   "body": "This answer places the compound condition in the sufficient position (\"if warm AND not insulated, then melts\"), not the necessary position. In the original, the compound condition is necessary (buy only if fashionable AND affordable). Additionally, this answer concludes the snowflake will not melt because it is insulated, which constitutes denying part of the sufficient condition — an invalid inference (illegal negation). The original argument validly denies one of the necessary conditions. Both the structural placement of the compound condition and the validity of the reasoning differ from the original."
+  },
+  {
+   "row_id": "0f36ae99-a71a-4237-a008-7a3366c50822",
+   "letter": "B",
+   "body": "This answer perfectly replicates the original's structure. The first premise establishes a compound necessary condition: to pass inspection, a stuffed animal must be free of sharp edges AND completely sealed (Pass -> Free of sharp edges AND Sealed). The second premise states the hippo is free of sharp edges (one necessary condition met) but not completely sealed (other necessary condition unmet). The conclusion: the hippo will not pass inspection. Via the contrapositive: Not free of sharp edges OR Not sealed -> Not pass. Since the hippo is not sealed, the contrapositive is triggered, and the conclusion follows validly. Every structural element matches: compound necessary condition, one met and one unmet, valid denial."
+  },
+  {
+   "row_id": "e151027e-6002-4d80-8bce-75125c137bac",
+   "letter": "C",
+   "body": "This answer has a compound condition in the sufficient position (\"if fully graded AND no bumps, then accessible\"), and both conditions are met, leading to a conclusion that the sidewalk is accessible. The original has a compound necessary condition with one condition unmet. Here, both are met and the conclusion follows by affirming the sufficient condition — a valid inference, but a completely different logical pattern. The original concludes something will not happen because a necessary condition is unmet; this answer concludes something will happen because all sufficient conditions are met."
+  },
+  {
+   "row_id": "f3b8c88b-4830-42e5-a794-6f95a4981773",
+   "letter": "D",
+   "body": "This answer has the compound condition in the necessary position (accurate only if expresses meaning AND gives idea of meter), matching the original structurally. However, both necessary conditions are met, and the conclusion states the translation is accurate. This is an illegal reversal — affirming the necessary condition does not establish the sufficient condition. In the original, one necessary condition was unmet and the conclusion validly denied the sufficient condition. Here, both are met and the conclusion invalidly affirms it. The evidence pattern (both conditions met vs. one unmet) and the validity (invalid vs. valid) both differ."
+  },
+  {
+   "row_id": "7f4dba36-ff9f-419f-a03f-f3588e4834c4",
+   "letter": "E",
+   "body": "Multiple mismatches disqualify this answer. First, only one necessary condition is confirmed (meets quorum requirements), while the status of the other (two-thirds vote) is left open — unlike the original, where one is confirmed and one is definitively denied. Second, the conclusion is a conditional statement (\"unless the motion does not pass by two-thirds, this assembly may call a meeting\"), whereas the original's conclusion is a simple categorical statement. Third, the conclusion commits an illegal reversal: from ACM -> Q AND MP2/3, plus Q, it concludes MP2/3 -> ACM. The structure, conclusion form, and validity all differ from the original."
+  }
+ ],
+ "known_problem": "Explicit-Standard register (5.7 em-dashes per 1k words; wrong-answer notes average 94.0 words).",
+ "tags": "emdash-heavy; pt157-158-register; possible-misquote"
+}

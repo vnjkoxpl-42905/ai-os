@@ -1,0 +1,72 @@
+{
+ "qid": "PT157-S3-Q7",
+ "type": "Must Be True",
+ "difficulty": "3",
+ "key_db": "D",
+ "stimulus_db": "News report: Some recently invented television screens are built out of small tiles seamlessly joined together, each tile a separate miniature screen. Television sets with these compound screens are just a few inches thick. For a noncompound screen in a set of this thickness, the larger the screen is, the dimmer it is. However, each tile in a compound screen is small enough to be quite bright. Moreover, an unlimited number of the tiles can be joined together, without making the resulting screen any less bright or the set any thicker.",
+ "stem_db": "Which one of the following can be properly inferred from the information in the news report?",
+ "choices_db": {
+  "A": "The technology used to make compound television screens is not appropriate for television sets with relatively small screens.",
+  "B": "There is a great consumer demand for television sets that are just a few inches thick and that have very large screens.",
+  "C": "In a television set with a noncompound screen, the thicker the television set, the brighter the screen.",
+  "D": "Television sets that are just a few inches thick can now be made with screens that are both bright and very large.",
+  "E": "Television sets with compound screens do not have any disadvantages relative to sets with noncompound screens."
+ },
+ "bank": {
+  "stimulus": "News report: Some recently invented television screens\n are built out of small tiles seamlessly joined\n together, each tile a separate miniature screen.\n Television sets with these compound screens\n are just a few inches thick. For a noncompound\n screen in a set of this thickness, the larger the\n screen is, the dimmer it is. However, each tile in\n a compound screen is small enough to be quite\n bright. Moreover, an unlimited number of the\n tiles can be joined together, without making the\n resulting screen any less bright or the set any\n thicker.",
+  "stem": "Which one of the following can be properly inferred\n from the information in the news report?",
+  "choices": {
+   "A": "The technology used to make compound television screens is not appropriate for television sets with relatively small screens.",
+   "B": "There is a great consumer demand for television sets that are just a few inches thick and that have very large screens.",
+   "C": "In a television set with a noncompound screen, the thicker the television set, the brighter the screen.",
+   "D": "Television sets that are just a few inches thick can now be made with screens that are both bright and very large.",
+   "E": "Television sets with compound screens do not have any disadvantages relative to sets with noncompound screens."
+  },
+  "key": "D"
+ },
+ "explanation_id": "92043ea4-ffbd-42ba-b249-6faaf3768e45",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "0ff1d58b-fb9d-4164-a172-b8c96e2934ee",
+   "position": 0,
+   "label": "Given",
+   "body": "  - Some recently invented television screens are built out of small tiles seamlessly joined together.\n  - Each tile is a separate miniature screen.\n  - Television sets with these compound screens are just a few inches thick.\n  - For a noncompound screen in a set of this thickness, the larger the screen is, the dimmer it is.\n  - However, each tile in a compound screen is small enough to be quite bright.\n  - Moreover, an unlimited number of the tiles can be joined together, without making the resulting screen any less bright or the set any thicker."
+  },
+  {
+   "row_id": "8ff6050d-272c-4107-b9f4-b1ad274ce116",
+   "position": 1,
+   "label": "Evaluate",
+   "body": "The stimulus provides a comparison between noncompound screens and the new, recently invented compound screens. A noncompound screen that is just a few inches thick will get dimmer as it is made larger. However, since each tile in a new compound screen is bright, and an unlimited number of tiles can be joined together without reducing the brightness, it follows that the new compound screens can be made very large without becoming dimmer. Also, joining tiles together doesn't make the new compound screens any thicker, so we can make large, bright compound screens that are still only a few inches thick."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "9bf9af78-c1ff-4171-8855-60df2e39885f",
+   "letter": "A",
+   "body": "Nothing suggests compound screen technology is inappropriate for small screens. The ability to go large does not mean small is impossible. A few tiles would make a small, bright screen."
+  },
+  {
+   "row_id": "39a9401b-5cd4-4c88-ae7f-5858da4e7447",
+   "letter": "B",
+   "body": "The stimulus describes technological capability but says nothing about consumer demand. Whether consumers want these TVs is a market question the stimulus does not address."
+  },
+  {
+   "row_id": "3094c624-6649-4953-a36b-6587ea8759fb",
+   "letter": "C",
+   "body": "The stimulus describes the size-brightness relationship at one thickness. It does not describe how changing thickness affects brightness. \"The thicker the set, the brighter the screen\" asserts an unbounded correlation the stimulus cannot support. Maybe thickness helps to a point, maybe not."
+  },
+  {
+   "row_id": "15f1e9c6-1913-4426-b843-71cb92a57ccb",
+   "letter": "D",
+   "body": "This follows directly from combining premises. Compound screens are a few inches thick. Each tile is bright. Unlimited tiles can be added without losing brightness or gaining thickness. Therefore: thin TVs can now have screens that are both bright and very large. Each element of this answer corresponds to a supported proposition, and the conjunction follows without additional assumptions."
+  },
+  {
+   "row_id": "9071ab01-af53-4183-b3f6-ba3609cf6036",
+   "letter": "E",
+   "body": "The stimulus describes advantages of compound screens but never claims they have no disadvantages. There could be many drawbacks not mentioned: higher cost, lower resolution, visible seams, shorter lifespan. Silence on disadvantages does not prove their absence."
+  }
+ ],
+ "known_problem": "Explicit-Standard register (0.0 em-dashes per 1k words; wrong-answer notes average 33.8 words).",
+ "tags": "no-prediction; pt157-158-register"
+}

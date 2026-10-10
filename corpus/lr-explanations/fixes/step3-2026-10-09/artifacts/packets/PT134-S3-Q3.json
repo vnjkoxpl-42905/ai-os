@@ -1,0 +1,66 @@
+{
+ "qid": "PT134-S3-Q3",
+ "type": "Most Strongly Supported",
+ "difficulty": "1",
+ "key_db": "C",
+ "stimulus_db": "Engine noise from boats traveling through killer whales’ habitats ranges in frequency from 100 hertz to 3,000 hertz, an acoustical range that overlaps that in which the whales communicate through screams and squeals. Though killer whales do not seem to behave differently around running boat engines, engine noise from boats can be loud enough to damage their hearing over time. Therefore, _______ .",
+ "stem_db": "Which one of the following most logically completes the argument?",
+ "choices_db": {
+  "A": "younger killer whales are better able to tolerate engine noise from boats than older whales are",
+  "B": "killer whales are less likely to attempt to communicate with one another when boat engines are operating nearby",
+  "C": "noise from boat engines may impair killer whales’ ability to communicate",
+  "D": "killer whales are most likely to prefer areas where boat traffic is present, but light",
+  "E": "killer whales would probably be more successful in finding food if boats did not travel through their habitats"
+ },
+ "bank": {
+  "stimulus": "Engine noise from boats traveling through killer whales’ habitats ranges in frequency from 100 hertz to 3,000 hertz, an acoustical range that overlaps that in which the whales communicate through screams and squeals. Though killer whales do not seem to behave differently around running boat engines, engine noise from boats can be loud enough to damage their hearing over time. Therefore, _______ .",
+  "stem": "Which one of the following most logically completes the argument?",
+  "choices": {
+   "A": "younger killer whales are better able to tolerate engine noise from boats than older whales are",
+   "B": "killer whales are less likely to attempt to communicate with one another when boat engines are operating nearby",
+   "C": "noise from boat engines may impair killer whales’ ability to communicate",
+   "D": "killer whales are most likely to prefer areas where boat traffic is present, but light",
+   "E": "killer whales would probably be more successful in finding food if boats did not travel through their habitats"
+  },
+  "key": "C"
+ },
+ "explanation_id": "81205ffa-816c-4c4f-8466-43873dfa8ead",
+ "style": "single",
+ "steps": [
+  {
+   "row_id": "f8806d83-8d1b-400b-bd14-682593ffa525",
+   "position": 0,
+   "label": "Given",
+   "body": "Engine noise from boats traveling through killer whales’ habitats ranges in frequency from 100 hertz to 3,000 hertz, an acoustical range that overlaps that in which the whales communicate through screams and squeals. Though killer whales do not seem to behave differently around running boat engines, engine noise from boats can be loud enough to damage their hearing over time."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "e37834ba-2537-45da-9d07-0c0bbee7925e",
+   "letter": "A",
+   "body": "Nothing in the statements compares younger and older whales. The passage says engine noise \"can be loud enough to damage their hearing over time,\" but it never says how well whales of any age tolerate the noise, so this conclusion has no support."
+  },
+  {
+   "row_id": "3a52b47a-b2f8-447f-9c58-a17a5fbd84f0",
+   "letter": "B",
+   "body": "When killer whales attempt to communicate is not discussed in the statements."
+  },
+  {
+   "row_id": "72aaacd6-11ba-4940-b6e3-8a114451fec2",
+   "letter": "C",
+   "body": "Since engine noise from boats can damage killer whales’ hearing, it may impair their ability to communicate."
+  },
+  {
+   "row_id": "9b34258e-4710-4eaf-b47c-4b21ba20e83d",
+   "letter": "D",
+   "body": "The areas preferred by killer whales is not discussed in the statements."
+  },
+  {
+   "row_id": "d887952e-572b-4284-8001-a85085e3cad1",
+   "letter": "E",
+   "body": "How successful whales would be in finding food is not discussed in the statements."
+  }
+ ],
+ "known_problem": "Given step truncated mid-sentence; A note argues older whales probably tolerate noise better, which is speculation, not the reason A fails.",
+ "tags": "short-breakdown; verdict-only; thin-correct-note; thin-notes; no-prediction; damage; very-short"
+}

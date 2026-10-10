@@ -1,0 +1,78 @@
+{
+ "qid": "PT157-S2-Q25",
+ "type": "Flaw",
+ "difficulty": "4",
+ "key_db": "D",
+ "stimulus_db": "Columnist: Consent forms filled out by subjects prior to their participation in tests of experimental medicines designed to treat the diseases from which they are suffering show that almost all subjects accept the risk of receiving ineffective substances. This casts doubt on the claim made by some medical ethicists that many test subjects resent being given placebos (as happens to roughly half of all test subjects) or resent being given medicines that turn out to be ineffective (as also often occurs).",
+ "stem_db": "The reasoning in the columnist’s argument is most vulnerable to criticism on the grounds that the argument",
+ "choices_db": {
+  "A": "infers that two phenomena are associated merely from the claim that there are many instances in which both phenomena are present",
+  "B": "uses as evidence the opinions of people who are unlikely to be qualified to make informed judgments about the scientific value of placebos",
+  "C": "uses evidence drawn from a sample that is likely to be unrepresentative",
+  "D": "takes for granted that most test subjects do not change their attitudes toward the chance of taking ineffective substances once the substances they take turn out to be ineffective",
+  "E": "draws a conclusion that is essentially about a moral issue by appealing to evidence that is purely factual"
+ },
+ "bank": {
+  "stimulus": "Columnist: Consent forms filled out by subjects prior\n to their participation in tests of experimental\n medicines designed to treat the diseases from\n which they are suffering show that almost all\n subjects accept the risk of receiving ineffective\n substances. This casts doubt on the claim made\n by some medical ethicists that many test subjects\n resent being given placebos (as happens to\n roughly half of all test subjects) or resent being\n given medicines that turn out to be ineffective (as\n also often occurs).",
+  "stem": "The reasoning in the columnist’s argument is most\n vulnerable to criticism on the grounds that the argument",
+  "choices": {
+   "A": "infers that two phenomena are associated merely from the claim that there are many instances in which both phenomena are present",
+   "B": "uses as evidence the opinions of people who are unlikely to be qualified to make informed judgments about the scientific value of placebos",
+   "C": "uses evidence drawn from a sample that is likely to be unrepresentative",
+   "D": "takes for granted that most test subjects do not change their attitudes toward the chance of taking ineffective substances once the substances they take turn out to be ineffective",
+   "E": "draws a conclusion that is essentially about a moral issue by appealing to evidence that is purely factual"
+  },
+  "key": "D"
+ },
+ "explanation_id": "e584e358-2f47-439a-a3db-cd92322c75ac",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "a966c56a-0e34-48a8-997a-a82b96fffb2d",
+   "position": 0,
+   "label": "Evidence",
+   "body": "Consent forms that medical test subjects fill out before medical tests show that almost all of these subjects accept the risk of receiving ineffective substances."
+  },
+  {
+   "row_id": "c1535b12-92f6-4ccd-b2e2-078067a942e2",
+   "position": 1,
+   "label": "Conclusion",
+   "body": "This casts doubt on the claim that many test subjects resent being given placebos or resent being given medicines that turn out to be ineffective."
+  },
+  {
+   "row_id": "243e6ec7-ea2e-4f77-b29b-db10400a82d9",
+   "position": 2,
+   "label": "Evaluate",
+   "body": "It's very possible that the test subjects could accept the risk of receiving ineffective substances and then still feel resentment later on. So, the forms that they complete before the tests do not cast doubt on a claim about them feeling resentment at a later time."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "bcc78acd-7f8d-404a-a93f-a667edb16350",
+   "letter": "A",
+   "body": "This answer describes a correlation-to-association flaw: inferring two things are associated merely because they often co-occur. The columnist's argument does not involve any claim of association or correlation between two phenomena. Instead, the columnist uses evidence about one attitude (pre-test acceptance) to cast doubt on a different attitude (post-test resentment). The reasoning error is about conflating two different time points and mental states, not about inferring association from co-occurrence. This is the wrong flaw category for this argument."
+  },
+  {
+   "row_id": "6bcbd390-1bdb-4adc-8476-7ff19ecc5f3a",
+   "letter": "B",
+   "body": "This answer says the argument uses opinions from people unqualified to judge the scientific value of placebos. But the argument does not rely on subjects' understanding of placebos' scientific value. The evidence is about subjects' willingness to accept risk, not about their scientific expertise. The conclusion is about whether subjects feel resentment, not about whether placebos have scientific value. The argument would be equally flawed if every subject had a PhD in pharmacology — the problem is the gap between pre-test acceptance and post-test resentment, not the subjects' qualifications."
+  },
+  {
+   "row_id": "a450dc87-4178-4eba-acc1-6f6b5b6ab32f",
+   "letter": "C",
+   "body": "This answer says the argument uses an unrepresentative sample. But the evidence states that \"almost all subjects\" accept the risk, and the subjects described are the same people the conclusion discusses — test subjects in experimental medicine trials. There is no indication that the sample is different from or unrepresentative of the relevant population. The people filling out consent forms are the same people who may or may not feel resentment later. The argument's problem is not about who was surveyed but about what the survey measures (pre-test acceptance) versus what the conclusion claims (post-test resentment)."
+  },
+  {
+   "row_id": "db4f9adf-253b-4dc4-b2e4-24b58a5bfe5e",
+   "letter": "D",
+   "body": "This answer identifies the argument's central flaw: it takes for granted that subjects who accept the risk of receiving ineffective substances before the test will not change their attitudes once the substances they receive turn out to be ineffective. The consent forms measure pre-test willingness to accept a risk. The resentment claim is about post-test emotional reaction to an actual outcome. These are psychologically distinct states. A subject can rationally accept a 50% chance of receiving a placebo while simultaneously feeling deep resentment when they actually receive one — especially when dealing with a serious disease. The argument assumes attitudinal consistency across the pre-test/post-test boundary, and this answer correctly identifies that unwarranted assumption."
+  },
+  {
+   "row_id": "97638749-e69c-4650-892e-349370a7db9b",
+   "letter": "E",
+   "body": "This answer says the argument draws a moral conclusion from purely factual evidence. But the conclusion is not a moral claim. The conclusion says the evidence \"casts doubt\" on the claim that subjects feel resentment — this is an empirical dispute about whether subjects experience a particular emotional state, not a moral judgment about whether they should or should not feel resentment. Both the evidence (subjects accept risk) and the conclusion (subjects probably do not resent outcomes) are factual/empirical claims. The argument stays within the empirical domain throughout. There is no is-ought transition."
+  }
+ ],
+ "known_problem": "Explicit-Standard register (6.9 em-dashes per 1k words; wrong-answer notes average 91.2 words).",
+ "tags": "no-prediction; emdash-heavy; pt157-158-register"
+}

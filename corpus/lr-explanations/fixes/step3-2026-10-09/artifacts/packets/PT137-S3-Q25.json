@@ -1,0 +1,72 @@
+{
+ "qid": "PT137-S3-Q25",
+ "type": "Agree/Disagree",
+ "difficulty": "2",
+ "key_db": "C",
+ "stimulus_db": "Graham: The defeat of the world's chess champion by a computer shows that any type of human intellectual activity governed by fixed principles can be mastered by machines and thus that a truly intelligent machine will inevitably be devised. Adelaide: But you are overlooking the fact that the computer in the case you cite was simply an extension of the people who programmed it. It was their successful distillation of the principles of chess that enabled them to defeat a chess champion using a computer.",
+ "stem_db": "The statements above provide the most support for holding that Graham and Adelaide disagree about whether",
+ "choices_db": {
+  "A": "chess is the best example of a human intellectual activity that is governed by fixed principles",
+  "B": "chess is a typical example of the sorts of intellectual activities in which human beings characteristically engage",
+  "C": "a computer's defeat of a human chess player is an accomplishment that should be attributed to the computer",
+  "D": "intelligence can be demonstrated by the performance of an activity in accord with fixed principles",
+  "E": "tools can be designed to aid in any human activity that is governed by fixed principles"
+ },
+ "bank": {
+  "stimulus": "Graham: The defeat of the world's chess champion by a computer shows that any type of human intellectual activity governed by fixed principles can be mastered by machines and thus that a truly intelligent machine will inevitably be devised.\nAdelaide: But you are overlooking the fact that the computer in the case you cite was simply an extension of the people who programmed it. It was their successful distillation of the principles of chess that enabled them to defeat a chess champion using a computer.",
+  "stem": "The statements above provide the most support for holding that Graham and Adelaide disagree about whether",
+  "choices": {
+   "A": "chess is the best example of a human intellectual activity that is governed by fixed principles",
+   "B": "chess is a typical example of the sorts of intellectual activities in which human beings characteristically engage",
+   "C": "a computer's defeat of a human chess player is an accomplishment that should be attributed to the computer",
+   "D": "intelligence can be demonstrated by the performance of an activity in accord with fixed principles",
+   "E": "tools can be designed to aid in any human activity that is governed by fixed principles"
+  },
+  "key": "C"
+ },
+ "explanation_id": "644767bf-220e-477d-bd9c-ecfc58f280cd",
+ "style": "single",
+ "steps": [
+  {
+   "row_id": "c8c0fd62-38a4-45af-ac32-f074fd153498",
+   "position": 0,
+   "label": "Graham / Adelaide",
+   "body": "Graham: The defeat of the world's chess champion by a computer shows that any type of human intellectual activity governed by fixed principles can be mastered by machines. Thus, a truly intelligent machine will inevitably be devised.\n\nAdelaide: But you are overlooking the fact that the computer in the case you cite was simply an extension of the people who programmed it."
+  },
+  {
+   "row_id": "4c5204e4-b044-4185-b590-9f832ae67e34",
+   "position": 1,
+   "label": "Evaluate",
+   "body": "Graham and Adelaide disagree about whether the computer itself deserves the credit for beating the chess champion. Graham treats the win as the machine's achievement. Adelaide says the credit belongs to the people who programmed it."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "23c2f278-4af7-4e3c-b15c-8e1d31e197a2",
+   "letter": "A",
+   "body": "Neither Graham nor Adelaide would agree that chess is the best example of such an activity."
+  },
+  {
+   "row_id": "f0b601f8-a1ad-4d2c-8fda-0b24c1d47fc9",
+   "letter": "B",
+   "body": "Neither Graham nor Adelaide would agree that chess is a typical example of such an activity."
+  },
+  {
+   "row_id": "bd8b3976-1153-4505-bd61-b01c60bd8c8b",
+   "letter": "C",
+   "body": "Graham would agree with this statement, while Adelaide would disagree with it."
+  },
+  {
+   "row_id": "379db44e-a024-4912-b720-af13ef49f92a",
+   "letter": "D",
+   "body": "While Graham might agree with this statement, Adelaide does not address it."
+  },
+  {
+   "row_id": "f3541d8a-33eb-407d-85e2-562b1e58d1d6",
+   "letter": "E",
+   "body": "Neither Graham nor Adelaide go so far as to suggest that tools can be designed to aid in any human activity that is governed by fixed principles. Graham discusses human intellectual activities, while Adelaide discusses a particular intellectual activity."
+  }
+ ],
+ "known_problem": "Evaluate step is from a different question (\"Denise and Reshmi agree that people decide whether to commit a crime\"); speaker table flattened; notes are labels.",
+ "tags": "verdict-only; thin-correct-note; thin-notes; no-prediction; very-short"
+}

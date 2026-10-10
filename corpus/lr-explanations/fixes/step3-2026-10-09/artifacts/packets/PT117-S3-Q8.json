@@ -1,0 +1,84 @@
+{
+ "qid": "PT117-S3-Q8",
+ "type": "Method of Reasoning",
+ "difficulty": "3",
+ "key_db": "A",
+ "stimulus_db": "Rossi: It is undemocratic for people to live under a government in which their interests are not represented. So children should have the right to vote, since sometimes the interests of children are different from those of their parents.\nSmith: Granted, children’s interests are not always the same as their parents’; governmental deficits incurred by their parents’ generation will later affect their own generation’s standard of living. But even if children are told about the issues affecting them, which is not generally the case, their conceptions of what can or should be done are too simple, and their time horizons are radically different from those of adults, so we cannot give them the responsibility of voting.",
+ "stem_db": "Which one of the following most accurately describes Rossi's argument?",
+ "choices_db": {
+  "A": "It makes an appeal to a general principle.",
+  "B": "It denies the good faith of an opponent.",
+  "C": "It relies on evaluating the predictable consequences of a proposal.",
+  "D": "It substitutes description for giving a rationale for a policy.",
+  "E": "It employs a term on two different occasions in different senses."
+ },
+ "bank": {
+  "stimulus": "Rossi: It is undemocratic for people to live under a government in which their interests are not represented. So children should have the right to vote, since sometimes the interests of children are different from those of their parents.\nSmith: Granted, children's interests are not always the same as their parents'; governmental deficits incurred by their parents' generation will later affect their own generation's standard of living. But even if children are told about the issues affecting them, which is not generally the case, their conceptions of what can or should be done are too simple, and their time horizons are radically different from those of adults, so we cannot give them the responsibility of voting.",
+  "stem": "Which one of the following most accurately describes Rossi's argument?",
+  "choices": {
+   "A": "It makes an appeal to a general principle.",
+   "B": "It denies the good faith of an opponent.",
+   "C": "It relies on evaluating the predictable consequences of a proposal.",
+   "D": "It substitutes description for giving a rationale for a policy.",
+   "E": "It employs a term on two different occasions in different senses."
+  },
+  "key": "A"
+ },
+ "explanation_id": "a0084eb1-010f-486a-9dd2-51acfc8f4d80",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "040f7ebc-2ab8-4f5d-a00f-e1748dd5dc72",
+   "position": 0,
+   "label": "Rossi's argument structure",
+   "body": "Rossi states a general principle (\"It is undemocratic for people to live under a government in which their interests are not represented\") and applies it to children: since children's interests are sometimes different from their parents', children should have the right to vote."
+  },
+  {
+   "row_id": "be305fdd-e135-4bbe-b8c7-2e0d57d44f1c",
+   "position": 1,
+   "label": "Smith's response (background)",
+   "body": "Smith concedes Rossi's point about different interests but raises a separate practical objection: children's conceptions and time horizons are too immature for voting responsibility."
+  },
+  {
+   "row_id": "64ff2094-a2ad-452d-b663-2ae8fe80efbf",
+   "position": 2,
+   "label": "Evaluate",
+   "body": "The question asks how Rossi's argument is structured. Rossi opens with a general principle (about democracy and representation) and then applies it to a specific case (children). That's an appeal to a general principle."
+  },
+  {
+   "row_id": "9ed8ab00-1856-4758-ac73-2673fa84fbef",
+   "position": 3,
+   "label": "Goal",
+   "body": "Find the answer that describes Rossi as appealing to a general principle."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "5f94de0b-c9e8-424d-ab16-ebba4e5e1658",
+   "letter": "A",
+   "body": "Rossi's first sentence is a general rule: it's undemocratic for *anyone* to live under a government that doesn't represent their interests. Then he applies it to one group. Children's interests sometimes differ from their parents', so, by the rule, children need their own representation, which means the vote.\n\n\"Appeal to a general principle\" is how the LSAT describes this move. Whenever an argument opens with a broad \"it is wrong / undemocratic / unfair to ...\" and then applies it to a specific case, this answer is in play."
+  },
+  {
+   "row_id": "42536bcf-8259-468e-8e07-74eea53c32b6",
+   "letter": "B",
+   "body": "Rossi speaks first. He has no opponent yet, and he never questions anyone's honesty. (Smith doesn't do this either.)"
+  },
+  {
+   "row_id": "31f8e41a-ef98-4e07-ad56-220638f59925",
+   "letter": "C",
+   "body": "Rossi's argument is about what's *democratic*, not what would happen if children voted. He never predicts any results. If anyone weighs practical consequences, it's Smith, who worries children's views are too simple for the responsibility. That's probably why this answer feels familiar: it describes the other speaker."
+  },
+  {
+   "row_id": "027271a5-c2dd-4155-9166-90f07b61e9bc",
+   "letter": "D",
+   "body": "This is the most popular wrong answer, maybe because Rossi's argument is short and sounds like he's just stating things. But he does give a rationale. The policy is \"children should vote.\" The rationale is the principle (unrepresented interests are undemocratic) plus the fact (children's interests sometimes differ). That's a reason, not a description."
+  },
+  {
+   "row_id": "475f1a9c-a62a-4af2-869f-032a3e397a54",
+   "letter": "E",
+   "body": "This is the famous Equivocation flaw. The only term Rossi uses twice is \"interests,\" and it means the same thing both times: what's good for a person. No shift in meaning."
+  }
+ ],
+ "known_problem": "Breakdown only, in a different register (\"Rossi's argument structure\"); all five choice notes missing.",
+ "tags": "no-notes; very-short"
+}

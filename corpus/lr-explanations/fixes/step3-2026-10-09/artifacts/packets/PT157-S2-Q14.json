@@ -1,0 +1,84 @@
+{
+ "qid": "PT157-S2-Q14",
+ "type": "Principle-Strengthen",
+ "difficulty": "4",
+ "key_db": "E",
+ "stimulus_db": "Politician: Our public libraries are open only on weekdays and generally at times when most children are at school and most adults at work. Hence, most taxpayers and their families have few opportunities to use public libraries. Therefore, no new taxes supporting the library system should be approved unless the library hours are changed to better suit taxpayers and their families.",
+ "stem_db": "Which one of the following principles, if valid, would most help to justify the politician’s reasoning?",
+ "choices_db": {
+  "A": "Libraries and other public facilities that serve an educational purpose should be made as convenient as possible for taxpayers and their families to use.",
+  "B": "If use of a public facility is made more convenient for taxpayers and their families, then new taxes supporting that facility should be approved.",
+  "C": "Taxpayers who have plenty of opportunities to use a public facility should have to pay taxes to support that facility.",
+  "D": "The best way to increase usage of public libraries is to change the library hours for the convenience of most people.",
+  "E": "A new tax supporting a public facility should be approved only when most taxpayers have ample opportunities to use that facility."
+ },
+ "bank": {
+  "stimulus": "Politician: Our public libraries are open only on\n weekdays and generally at times when most\n children are at school and most adults at work.\n Hence, most taxpayers and their families\n have few opportunities to use public libraries.\n Therefore, no new taxes supporting the library\n system should be approved unless the library\n hours are changed to better suit taxpayers and\n their families.",
+  "stem": "Which one of the following principles, if valid, would\n most help to justify the politician’s reasoning?",
+  "choices": {
+   "A": "Libraries and other public facilities that serve an educational purpose should be made as convenient as possible for taxpayers and their families to use.",
+   "B": "If use of a public facility is made more convenient for taxpayers and their families, then new taxes supporting that facility should be approved.",
+   "C": "Taxpayers who have plenty of opportunities to use a public facility should have to pay taxes to support that facility.",
+   "D": "The best way to increase usage of public libraries is to change the library hours for the convenience of most people.",
+   "E": "A new tax supporting a public facility should be approved only when most taxpayers have ample opportunities to use that facility."
+  },
+  "key": "E"
+ },
+ "explanation_id": "7768c002-4400-4e17-904d-42f56d51fe1a",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "d1cb8926-cae6-490c-8f09-387ddffe9b59",
+   "position": 0,
+   "label": "Evidence",
+   "body": "Most taxpayers and their families have few opportunities to use public libraries because they are only open at times when most children are at school and most adults are at work."
+  },
+  {
+   "row_id": "bdc514ef-27cc-436f-9e0d-caed003d5e07",
+   "position": 1,
+   "label": "Conclusion",
+   "body": "If new taxes supporting the library system are approved, the library hours should be changed to better suit taxpayers and their families."
+  },
+  {
+   "row_id": "2bed2adb-7829-444d-bdd3-405f25ef5253",
+   "position": 2,
+   "label": "Evaluate",
+   "body": "This sounds like a reasonable argument, but it's not airtight. There might be ways to make libraries more useful to taxpayers without changing the hours. Additional tax money could be used to improve libraries' web sites and online services, allowing taxpayers to benefit from libraries even when the actual library facilities aren't open. We could pass laws requiring employers and schools to give people time off so they can use the library when it's open. If any of these alternatives occur, the conclusion doesn't necessarily hold up."
+  },
+  {
+   "row_id": "70c15f55-a227-49cf-b90b-83ef9bd4db06",
+   "position": 3,
+   "label": "Goal",
+   "body": "An ideal correct answer might state that creating any new taxes to support the library system requires giving taxpayers more opportunities to use libraries. (New taxes → more opportunities for taxpayers) Or, it might state that giving taxpayers these opportunities requires changing the library hours. (More opportunities for taxpayers → change hours)"
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "4728053e-0744-4c03-8d26-749ef74478eb",
+   "letter": "A",
+   "body": "This answer says libraries and educational facilities \"should be made as convenient as possible.\" While this sounds related, it does not connect convenience to tax approval. The argument's conclusion is specifically about whether new taxes should be approved, and this principle says nothing about taxation. Making libraries convenient could be achieved in ways unrelated to taxes or library hours — for example, through online services or mobile libraries. This principle is too detached from the argument's specific conclusion about tax approval to justify it."
+  },
+  {
+   "row_id": "c3fe0553-6d96-400f-871c-f16744d14de7",
+   "letter": "B",
+   "body": "This answer says: if use of a facility is made more convenient, then new taxes should be approved. That gives us: more convenient -> approve taxes. But the argument needs: approve taxes -> more convenient (or more specifically, approve taxes -> adequate access). This answer provides the reverse conditional. Under this principle, we could conclude taxes should be approved if hours are changed, but we could not conclude that taxes should not be approved unless hours are changed. The direction is backward."
+  },
+  {
+   "row_id": "dd7e59da-1181-4e37-83d6-057ab1c9b82d",
+   "letter": "C",
+   "body": "This answer says taxpayers with plenty of opportunities to use a facility \"should have to pay taxes\" for it. This gives us: plenty of opportunities -> should pay taxes. Like answer B, this is the reverse of what we need. The argument needs: should pay taxes -> adequate opportunities. This principle tells us when people should pay taxes (when they have access), not when taxes should be denied (when they lack access). Furthermore, the argument is about approving new taxes, not about whether existing taxpayers \"should have to pay.\""
+  },
+  {
+   "row_id": "9dcccc43-f2c5-4de3-b112-e9b02bac7107",
+   "letter": "D",
+   "body": "This answer says the best way to increase usage is to change library hours. But the argument's conclusion is about whether new taxes should be approved, not about the best way to increase library usage. Usage and opportunity are different concepts — the argument is about giving taxpayers opportunities to use libraries, not about maximizing actual usage. Even if changing hours is the best way to increase usage, this principle does not connect that fact to the question of tax approval. The argument needs a principle about taxation, not a principle about usage optimization."
+  },
+  {
+   "row_id": "62331210-17ca-443e-833a-13c246a6cb9a",
+   "letter": "E",
+   "body": "This principle states that new taxes supporting a public facility should be approved only when most taxpayers have ample opportunities to use that facility. Applied to the argument: new library taxes should be approved only when most taxpayers can actually use libraries. Since libraries are currently open only when most taxpayers cannot attend, most taxpayers lack ample opportunities. Therefore, new library taxes should not be approved unless hours change to provide those opportunities. The principle bridges the gap between \"taxpayers lack access\" and \"taxes should be conditional on improved access.\" The use of \"public facility\" rather than \"library\" is acceptably broader — the argument's specific case fits within this general principle."
+  }
+ ],
+ "known_problem": "Explicit-Standard register (4.7 em-dashes per 1k words; wrong-answer notes average 85.5 words).",
+ "tags": "emdash-heavy; pt157-158-register; possible-misquote"
+}

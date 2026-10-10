@@ -1,0 +1,66 @@
+{
+ "qid": "PT135-S4-Q6",
+ "type": "Must Be True",
+ "difficulty": "2",
+ "key_db": "E",
+ "stimulus_db": "The calm, shallow waters of coastal estuaries are easily polluted by nutrient-rich sewage. When estuary waters become overnutrified as a result, algae proliferate. The abundant algae, in turn, sometimes provide a rich food source for microorganisms that are toxic to fish, thereby killing most of the fish in the estuary.",
+ "stem_db": "Which one of the following can be properly inferred from the information above?",
+ "choices_db": {
+  "A": "Fish in an estuary that has been polluted by sewage are generally more likely to die from pollution than are fish in an estuary that has been polluted in some other way.",
+  "B": "In estuary waters that contain abundant algae, microorganisms that are toxic to fish reproduce more quickly than other types of microorganisms.",
+  "C": "Nutrients and other components of sewage do not harm fish in coastal estuaries in any way other than through the resulting proliferation of toxic microorganisms.",
+  "D": "Algae will not proliferate in coastal estuaries that are not polluted by nutrient-rich sewage.",
+  "E": "Overnutrifying estuary waters by sewage can result in the death of most of the fish in the estuary."
+ },
+ "bank": {
+  "stimulus": "The calm, shallow waters of coastal estuaries are easily polluted by nutrient-rich sewage. When estuary waters become overnutrified as a result, algae proliferate. The abundant algae, in turn, sometimes provide a rich food source for microorganisms that are toxic to fish, thereby killing most of the fish in the estuary.",
+  "stem": "Which one of the following can be properly inferred from the information above?",
+  "choices": {
+   "A": "Fish in an estuary that has been polluted by sewage are generally more likely to die from pollution than are fish in an estuary that has been polluted in some other way.",
+   "B": "In estuary waters that contain abundant algae, microorganisms that are toxic to fish reproduce more quickly than other types of microorganisms.",
+   "C": "Nutrients and other components of sewage do not harm fish in coastal estuaries in any way other than through the resulting proliferation of toxic microorganisms.",
+   "D": "Algae will not proliferate in coastal estuaries that are not polluted by nutrient-rich sewage.",
+   "E": "Overnutrifying estuary waters by sewage can result in the death of most of the fish in the estuary."
+  },
+  "key": "E"
+ },
+ "explanation_id": "ac2194b1-6d03-4995-b8f9-556aa1f12fa4",
+ "style": "single",
+ "steps": [
+  {
+   "row_id": "5412f9a3-8035-4b00-b2bf-04a8aa800dbf",
+   "position": 0,
+   "label": "Given",
+   "body": "The calm, shallow waters of coastal estuaries are easily polluted by nutrient-rich sewage.\nS -causes→ ON\n\nWhen estuary waters become overnutrified as a result, algae proliferate.\nON -causes→ A\n\nThe abundant algae, in turn, sometimes provide a rich food source for microorganisms that are toxic to fish, thereby killing most of the fish in the estuary.\nA -causes→ FD"
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "1ba9f93a-e161-4092-aa9b-4847ae6d45ae",
+   "letter": "A",
+   "body": "The likelihood that fish would die from pollution other than sewage is not discussed in the statements."
+  },
+  {
+   "row_id": "60b97f01-e22f-43fd-aa71-03aeb36a0cf0",
+   "letter": "B",
+   "body": "The rate that microorganisms that are not toxic to fish reproduce is not discussed in the statements."
+  },
+  {
+   "row_id": "2fda1789-c0e0-44df-85a1-6f053ce8a0b2",
+   "letter": "C",
+   "body": "The statements describe one way sewage can harm fish: the algae it produces feed microorganisms that are toxic to fish. They never rule out other kinds of harm, so saying sewage does not harm fish \"in any way other than\" this one goes too far."
+  },
+  {
+   "row_id": "d5985aac-6834-4aa5-b3a2-6293ba6f8ccb",
+   "letter": "D",
+   "body": "That algae will proliferate in estuaries polluted by nutrient-rich sewage, does not imply that they will not proliferate in estuaries that are not polluted."
+  },
+  {
+   "row_id": "702c16eb-6f6d-4fcd-8897-8b6b1ade5c68",
+   "letter": "E",
+   "body": "This links together the causal chain.\nS -causes→ FD"
+  }
+ ],
+ "known_problem": "Given step copies \"over- nitrified\"; C note never says the problem is C's \"in any way other than\".",
+ "tags": "short-breakdown; verdict-only; thin-correct-note; thin-notes; no-prediction; very-short"
+}

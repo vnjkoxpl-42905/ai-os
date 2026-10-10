@@ -1,0 +1,84 @@
+{
+ "qid": "PT157-S2-Q6",
+ "type": "Principle-Conform",
+ "difficulty": "1",
+ "key_db": "E",
+ "stimulus_db": "Democratic societies in which there is widespread discontent more often blame their politicians than they do other powerful figures who are at least as responsible for those societies’ woes. This is not primarily because politicians are more familiar to people than are other powerful figures; rather it is because people in democratic societies feel that they have more power over politicians than they have over other powerful figures.",
+ "stem_db": "The case described above best illustrates which one of the following generalizations?",
+ "choices_db": {
+  "A": "Often the people who have the most power in a society are not the people who are generally perceived by the public as having the most power.",
+  "B": "People tend to ascribe more power to a person with whom they are familiar than to one with whom they are unfamiliar.",
+  "C": "To the extent that a person is well known to the public, that person is more likely to be blamed for the woes of society.",
+  "D": "Publicly known people are usually not held sufficiently responsible for the problems they cause.",
+  "E": "People are more inclined to blame a publicly known person if that person is someone over whom they feel they have power."
+ },
+ "bank": {
+  "stimulus": "Democratic societies in which there is widespread\n discontent more often blame their politicians than they\n do other powerful figures who are at least as responsible\n for those societies’ woes. This is not primarily because\n politicians are more familiar to people than are\n other powerful figures; rather it is because people in\n democratic societies feel that they have more power over\n politicians than they have over other powerful figures.",
+  "stem": "The case described above best illustrates which one of\n the following generalizations?",
+  "choices": {
+   "A": "Often the people who have the most power in a society are not the people who are generally perceived by the public as having the most power.",
+   "B": "People tend to ascribe more power to a person with whom they are familiar than to one with whom they are unfamiliar.",
+   "C": "To the extent that a person is well known to the public, that person is more likely to be blamed for the woes of society.",
+   "D": "Publicly known people are usually not held sufficiently responsible for the problems they cause.",
+   "E": "People are more inclined to blame a publicly known person if that person is someone over whom they feel they have power."
+  },
+  "key": "E"
+ },
+ "explanation_id": "4c75a8d6-ee84-4af7-bee9-32cc7f2acacc",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "ae2446cc-e0b9-4224-9015-b0013e6d3bab",
+   "position": 0,
+   "label": "Evidence",
+   "body": "Democratic societies in which there is widespread discontent more often blame their politicians than they do other powerful figures who are at least as responsible for those societies’ woes."
+  },
+  {
+   "row_id": "c313f57f-cffc-4bb8-a474-f93851545056",
+   "position": 1,
+   "label": "Conclusion",
+   "body": "This [blaming of politicians] is not primarily because politicians are more familiar to people than are other powerful figures. People blame politicians because they feel that they have more power over politicians than they have over other powerful figures."
+  },
+  {
+   "row_id": "2f36e995-a397-4279-b070-de3509a8a40f",
+   "position": 2,
+   "label": "Evaluate",
+   "body": "Both of these explanations in the conclusion—politicians being more familiar to people, or the feeling of having more power over politicians—seem equally plausible. Why is one a better explanation than the other?"
+  },
+  {
+   "row_id": "dd11ceed-c9f5-4468-bfd1-31071f1c4906",
+   "position": 3,
+   "label": "Goal",
+   "body": "We're looking for a generalization (assumption) indicating that having more power over politicians is more likely to lead us to blame them, or one indicating that being familiar isn't what makes us blame them."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "a0dabe1a-8844-44c7-b890-aaf04db0c502",
+   "letter": "A",
+   "body": "This answer discusses the difference between who actually has the most power and who is perceived to have the most power. The stimulus is not about perceptions of how much power someone holds — it is about how much power people feel they have over that person. These are different concepts. Believing a politician has a lot of power is different from believing you have power over a politician. The case in the stimulus illustrates the latter, not the former."
+  },
+  {
+   "row_id": "f1300a61-c45e-4816-b53d-112537638812",
+   "letter": "B",
+   "body": "This answer says people ascribe more power to familiar people than to unfamiliar ones. The stimulus is about the relationship between feeling power over someone and blaming them, not about how familiarity affects power perception. The stimulus explicitly rejects familiarity as the primary explanation for blame patterns. This answer reintroduces familiarity as a relevant variable in a way the stimulus does not support and connects it to a concept (ascribing power) that is not part of the argument's framework."
+  },
+  {
+   "row_id": "6fd26bd8-e5d9-4c4c-b2dd-4e2cdb59ede4",
+   "letter": "C",
+   "body": "This answer says that the more well-known a person is, the more likely they are to be blamed. But the stimulus explicitly rejects familiarity as the primary reason for disproportionate blame. The stimulus argues that people blame politicians more because they feel they have power over politicians, not because politicians are more familiar. This answer endorses the explanation the stimulus dismisses and ignores the one it accepts. It captures the opposite of the argument's conclusion."
+  },
+  {
+   "row_id": "39743271-aedf-4cc7-ae43-350d50350193",
+   "letter": "D",
+   "body": "This answer discusses whether publicly known people are held \"sufficiently responsible\" for problems they cause. The stimulus does not address whether the level of blame directed at politicians is appropriate, excessive, or insufficient. The argument explains why politicians receive disproportionate blame compared to other powerful figures, not whether anyone is held sufficiently responsible. The concept of sufficient responsibility is an evaluative judgment that goes beyond the descriptive and explanatory framework of the stimulus."
+  },
+  {
+   "row_id": "d900629c-87dd-4d7f-acf8-b61fbcf0ea8b",
+   "letter": "E",
+   "body": "This answer captures the generalization the case illustrates. The stimulus shows that people in democracies blame politicians more than other equally responsible figures because they feel they have power over politicians. Generalized: people are more inclined to blame a publicly known person when they feel they have power over that person. This correctly identifies perceived power as the variable that drives blame, which is exactly the causal mechanism the stimulus endorses. The answer uses \"publicly known person\" (broad enough to cover politicians and other public figures) and \"someone over whom they feel they have power\" (the specific mechanism the argument identifies)."
+  }
+ ],
+ "known_problem": "Explicit-Standard register (5.5 em-dashes per 1k words; wrong-answer notes average 76.8 words).",
+ "tags": "emdash-heavy; pt157-158-register"
+}

@@ -1,0 +1,84 @@
+{
+ "qid": "PT158-S3-Q9",
+ "type": "Weaken",
+ "difficulty": "4",
+ "key_db": "A",
+ "stimulus_db": "Consumer advocate: Even relatively minor drug-related interactions can still be harmful to patients. For example, aspirin taken with fruit juice is ineffective. People unaware of this suffer unnecessary discomfort or take more aspirin than necessary. The government should, therefore, require drug companies to notify consumers of all known drug-related interactions.",
+ "stem_db": "Which one of the following, if true, most weakens the consumer advocate's argument?",
+ "choices_db": {
+  "A": "Providing information on minor drug-related interactions would detract from a patient's attention to serious interactions.",
+  "B": "Many drugs have fewer documented drug-related interactions than does aspirin.",
+  "C": "Providing information about all drug-related interactions would result in only negligible price increases for consumers.",
+  "D": "Current research is such that many drug-related interactions have not yet been identified.",
+  "E": "Pharmacists usually draw patients' attention to printed warnings that are provided with drugs."
+ },
+ "bank": {
+  "stimulus": "Consumer advocate: Even relatively minor drug-related\n interactions can still be harmful to patients.\n For example, aspirin taken with fruit juice\n is ineffective. People unaware of this suffer\n unnecessary discomfort or take more aspirin than\n necessary. The government should, therefore,\n require drug companies to notify consumers of all\n known drug-related interactions.",
+  "stem": "Which one of the following, if true, most weakens the\n consumer advocate’s argument?",
+  "choices": {
+   "A": "Providing information on minor drug-related interactions would detract from a patient’s attention to serious interactions.",
+   "B": "Many drugs have fewer documented drug-related interactions than does aspirin.",
+   "C": "Providing information about all drug-related interactions would result in only negligible price increases for consumers.",
+   "D": "Current research is such that many drug-related interactions have not yet been identified.",
+   "E": "Pharmacists usually draw patients’ attention to printed warnings that are provided with drugs."
+  },
+  "key": "A"
+ },
+ "explanation_id": "a7039aed-20e3-447c-9b3d-3671418db577",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "fa2c75b7-5486-4ff6-91bd-050293d3aeca",
+   "position": 0,
+   "label": "Conclusion (Therefore)",
+   "body": "The government should require drug companies to notify consumers of all known drug-related interactions."
+  },
+  {
+   "row_id": "2754dcc9-7cb2-42be-97db-d24c29b4a625",
+   "position": 1,
+   "label": "Evidence",
+   "body": "Relatively minor drug-related interactions can still be harmful to patients (such as the fact that fruit juice can render aspirin ineffective, leading to people either not getting the pain relief they expected or to people taking more aspirin than necessary)."
+  },
+  {
+   "row_id": "bbd59f2d-ab07-471d-b1e1-8f06fa8f458c",
+   "position": 2,
+   "label": "Evaluate",
+   "body": "Given that ... relatively minor drug-related interactions can be harmful to patients (such as the fruit juice / aspirin example), How can we argue that ... drug companies should not be required to notify consumers of all known drug-related interactions? The author is presenting one potential upside of this Plan / Recommendation (people taking aspirin would realize not to take it with fruit juice). We should try to think of potential downsides."
+  },
+  {
+   "row_id": "7a8595dc-6018-42ae-9961-837af202ebe0",
+   "position": 3,
+   "label": "Goal",
+   "body": "Look for an answer bringing up something negative about the plan of requiring drug companies to notify consumers of all known drug-related interactions. Is there some way in which it wouldn't be feasible or cost prohibitive? (Maybe it's impossible or impossibly costly to figure out every single way a new drug could interact with every other substance. Could it backfire in some way? (would people suddenly be afraid to take their needed medicines because they read about a possible interaction that is extremely rare but scares them out of taking their meds?)"
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "e121ea5c-6f98-454c-b02d-eb3f65891491",
+   "letter": "A",
+   "body": "This answer identifies the self-defeating consequence of the proposed policy. The consumer advocate wants all drug interactions disclosed so patients can avoid harmful interactions. But if the volume of information about minor interactions overwhelms patients, they will pay less attention to the serious, potentially life-threatening interactions that matter most. The policy would achieve the opposite of its intended purpose: instead of making patients safer, it would make them less safe by diluting their attention across a massive list of interactions, most of which are minor. The aspirin-and-fruit-juice type interactions would crowd out warnings about interactions that could cause organ damage, severe allergic reactions, or death. This is a classic \"more is not always better\" weakener — the proposed remedy creates a new problem that is worse than the original one."
+  },
+  {
+   "row_id": "dda1fcc5-ed53-403d-9cdf-fb01fe50241d",
+   "letter": "B",
+   "body": "The fact that many drugs have fewer interactions than aspirin does not undermine the consumer advocate's argument. The advocate's proposal covers all drugs, not just aspirin. Even if most drugs have fewer interactions, the policy still requires disclosure of all known interactions for every drug. A drug with five interactions instead of fifty still requires those five to be disclosed under the proposed policy. The volume of information per drug is not the issue — the advocate's argument is about the principle of comprehensive disclosure regardless of quantity. This answer provides context about the aspirin example but does not challenge the reasoning or the policy recommendation in any meaningful way."
+  },
+  {
+   "row_id": "bdd9d97b-a74e-4994-a38e-d924c938cc46",
+   "letter": "C",
+   "body": "If providing information about all interactions would result in only negligible price increases for consumers, this removes a potential practical objection to the policy, but it does not address the argument's logical vulnerability. The consumer advocate's argument could be weakened by showing the policy would be ineffective or counterproductive, not by showing it would be inexpensive. The cost of implementation is a practical concern, and showing that costs are negligible actually makes the policy look more feasible, not less desirable. This answer addresses a potential objection (cost) that the argument never raised, and it addresses it in a way that supports the policy rather than undermining it. The real weakness is about information overload, not financial burden."
+  },
+  {
+   "row_id": "5f88031f-93d6-4d6e-94cf-1df926d3304b",
+   "letter": "D",
+   "body": "The fact that many interactions have not yet been identified is irrelevant to whether the government should require disclosure of those that have been identified. The advocate's proposal covers \"all known\" interactions, and the existence of unknown ones does not affect the case for disclosing known ones. If anything, this answer might slightly strengthen the advocate's position by suggesting the problem is even larger than currently understood — but that would only affect the scope of future disclosure, not the current proposal. The argument is about whether known interactions should be disclosed, not about the completeness of current research."
+  },
+  {
+   "row_id": "51687569-98e5-4477-809f-82ca97513ddf",
+   "letter": "E",
+   "body": "If pharmacists draw patients' attention to printed warnings, this supports the idea that disclosure actually works — people do read and act on the information they receive. The consumer advocate argues that patients should be given interaction information, and this answer confirms that when warnings are provided, healthcare professionals help ensure patients notice them. Rather than weakening the argument, this answer provides evidence that the disclosure mechanism is effective: warnings are not ignored but are actively communicated by pharmacists. This makes the case for comprehensive disclosure stronger, since it suggests the information would actually reach and influence patients."
+  }
+ ],
+ "known_problem": "C note turns \"negligible price increases for consumers\" into \"negligible additional costs to drug companies\".",
+ "tags": "emdash-heavy; pt157-158-register; possible-misquote"
+}

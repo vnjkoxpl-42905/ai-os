@@ -1,0 +1,84 @@
+{
+ "qid": "PT158-S3-Q4",
+ "type": "Flaw",
+ "difficulty": "3",
+ "key_db": "A",
+ "stimulus_db": "Generally, it is important that people practice what they preach, yet there are exceptions. For instance, it is no more necessary for logicians to be logical in their discussions of logic than it is for physicians to have healthy lifestyles in order to treat people.",
+ "stem_db": "A questionable aspect of the reasoning above is that it fails to take into account that",
+ "choices_db": {
+  "A": "logicians' being illogical in their discussions of logic constitutes incompetence, whereas physicians' having an unhealthy lifestyle does not",
+  "B": "if a physician's health deteriorates badly, the physician may not be able to treat patients effectively",
+  "C": "physicians who are incompetent to practice medicine can cause more harm than can logicians who discuss logic illogically",
+  "D": "it is more difficult to become logical in one's discussions of logic than it is to modify an unhealthy lifestyle",
+  "E": "although it is not necessary for logicians to be logical in order to be competent to discuss logic, it is highly desirable"
+ },
+ "bank": {
+  "stimulus": "Generally, it is important that people practice what\n they preach, yet there are exceptions. For instance, it\n is no more necessary for logicians to be logical in their\n discussions of logic than it is for physicians to have\n healthy lifestyles in order to treat people.",
+  "stem": "A questionable aspect of the reasoning above is that it\n fails to take into account that",
+  "choices": {
+   "A": "logicians’ being illogical in their discussions of logic constitutes incompetence, whereas physicians’ having an unhealthy lifestyle does not",
+   "B": "if a physician’s health deteriorates badly, the physician may not be able to treat patients effectively",
+   "C": "physicians who are incompetent to practice medicine can cause more harm than can logicians who discuss logic illogically",
+   "D": "it is more difficult to become logical in one’s discussions of logic than it is to modify an unhealthy lifestyle",
+   "E": "although it is not necessary for logicians to be logical in order to be competent to discuss logic, it is highly desirable"
+  },
+  "key": "A"
+ },
+ "explanation_id": "3ccd6ac4-a64d-49fb-b269-6b2f6505f6ba",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "ab7e94a7-ddbd-4d45-9caf-4cb90af52647",
+   "position": 0,
+   "label": "Conclusion",
+   "body": "There are exceptions to the general rule that you should practice what you preach. rephrase: Sometimes its okay if you don't act in accordance with what they say."
+  },
+  {
+   "row_id": "d9b0a365-ab76-41ff-b451-3a338496b16a",
+   "position": 1,
+   "label": "Evidence (for instance)",
+   "body": "Logicians don't need to be logical when they discuss logic, just like physicians don't have to be healthy to discuss health."
+  },
+  {
+   "row_id": "fc848127-25d4-473d-8483-fd17e81006ed",
+   "position": 2,
+   "label": "Evaluate",
+   "body": "The author is trying to support the idea that sometimes it's okay if you don't practice what you preach. The evidence is an analogy, in which the author is assuming in both cases that it's okay if you don't practice what you preach. It's okay for a doctor to tell her patient to stop smoking cigarettes, even though she herself hasn't been able to quit smoking. It's okay for a logician to be discussing logic, even though they are being illogical as they do so. Any time an argument is based on an Analogy, we should be asking ourselves whether the two things feel fair to compare. In this case, it does seem perfectly fine for a doctor to treat my health conditions, even if they don't live a healthy lifestyle. But it doesn't seem as fine for a logician to be illogical while discussing logic. How will I emerge with a better understanding of logic, if the logician teaches it to me in some illogically? To put it another way, what a physician does outside her clinic to her own body doesn't really affect how she treats people inside her clinic. The former is her life. The latter is her job. But what a logician does within a discussion of logic seems like it is his job, not his life. If he can't be logical while discussing logic, then he's messing up being a logician."
+  },
+  {
+   "row_id": "1a1ff027-bd4f-45ee-a3cb-3be320682ecd",
+   "position": 3,
+   "label": "Goal",
+   "body": "Look for an answer complaining about the analogy, probably regarding the fact that while the physician example works for \"you don't need to practice what you preach\", the logician example seems weirder."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "a97b10c9-de1c-47e4-be9b-a95dfa7610e7",
+   "letter": "A",
+   "body": "This answer identifies the critical disanalogy that undermines the argument. The argument treats two cases as parallel exceptions to \"practice what you preach,\" but they are fundamentally different. A logician who is illogical in discussions of logic is failing at the core competency of their profession. Logic is not just what logicians preach — it is the tool they must use to do their work. Being illogical when discussing logic means being incompetent at the very activity that defines the profession. By contrast, a physician's personal lifestyle is separate from their professional competence. A doctor who smokes, overeats, or never exercises can still diagnose diseases, perform surgery, and prescribe effective treatments. The physician's failure to practice what they preach involves personal behavior, not professional skill. The argument treats these as equivalent exceptions, but one involves professional incompetence while the other involves a personal shortcoming that does not affect job performance. This disanalogy destroys the argument's reasoning."
+  },
+  {
+   "row_id": "8226c5b7-99ba-4b58-9bfd-aa8d2607dc55",
+   "letter": "B",
+   "body": "This answer raises a scenario where a physician's health deterioration might prevent them from treating patients. While this is true in extreme cases, it does not identify the argument's actual flaw. The argument's problem is not that unhealthy physicians might eventually become too sick to work — it is that the comparison between logicians and physicians is fundamentally flawed from the start. Even a physician in perfect enough health to practice medicine can have unhealthy habits without being professionally incompetent, whereas a logician who is illogical in logical discussions is incompetent by definition. This answer addresses a peripheral concern about the physician example rather than identifying the core disanalogy between the two cases."
+  },
+  {
+   "row_id": "0709acf4-1129-4409-b210-403e29a4b695",
+   "letter": "C",
+   "body": "The argument is not about the relative harm that incompetent professionals might cause. Whether incompetent physicians cause more harm than incompetent logicians is irrelevant to whether the two cases are proper exceptions to \"practice what you preach.\" The argument's flaw is that it treats two structurally different situations as equivalent: one where the gap between preaching and practice constitutes incompetence (logicians), and one where it does not (physicians). Comparing the severity of harm from incompetence in each profession is a completely different conversation that does not touch the argument's actual reasoning error. The issue is whether the analogy holds, not which profession poses greater risks when things go wrong."
+  },
+  {
+   "row_id": "57813257-6e00-4afa-9bc9-5735ba55b978",
+   "letter": "D",
+   "body": "The relative difficulty of becoming logical versus adopting a healthy lifestyle does not address the argument's flaw. The argument fails because it treats two structurally different cases as analogous: a logician being illogical in discussions of logic is a case of professional incompetence, while a physician having an unhealthy lifestyle is a personal shortcoming separate from professional skill. How hard it is to achieve either standard is irrelevant to whether the two situations are properly analogous. Even if becoming logical were the easiest thing in the world, the argument would still fail because the analogy compares two fundamentally different types of \"not practicing what you preach.\" Difficulty is beside the point when the core issue is the nature of the gap between preaching and practice."
+  },
+  {
+   "row_id": "b35bd705-24d2-4c21-a16a-936a63b35560",
+   "letter": "E",
+   "body": "This answer concedes the argument's claim about logicians and then adds that being logical is still \"desirable.\" But the argument's flaw is not that being logical is merely desirable rather than necessary — the flaw is that the analogy between logicians and physicians is broken. The argument treats the logician case as equivalent to the physician case, when in fact a logician who is illogical in logical discussions is professionally incompetent, while a physician with an unhealthy lifestyle is not. This answer essentially agrees with the argument's framing (logicians need not be logical to be competent) and adds a minor qualification, missing the fundamental problem with the comparison entirely."
+  }
+ ],
+ "known_problem": "Explicit-Standard register (3.2 em-dashes per 1k words; wrong-answer notes average 113.5 words).",
+ "tags": "pt157-158-register; possible-misquote"
+}

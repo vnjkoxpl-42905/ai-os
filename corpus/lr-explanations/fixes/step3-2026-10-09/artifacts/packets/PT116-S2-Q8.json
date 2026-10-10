@@ -1,0 +1,78 @@
+{
+ "qid": "PT116-S2-Q8",
+ "type": "Strengthen EXCEPT",
+ "difficulty": "3",
+ "key_db": "C",
+ "stimulus_db": "Criminologist: Increasing the current prison term for robbery will result in no significant effect in discouraging people from committing robbery.",
+ "stem_db": "Each of the following, if true, supports the criminologist's claim EXCEPT:",
+ "choices_db": {
+  "A": "Many people who rob are motivated primarily by thrill-seeking and risk-taking.",
+  "B": "An increase in the prison term for embezzlement did not change the rate at which that crime was committed.",
+  "C": "Prison terms for robbery have generally decreased in length recently.",
+  "D": "Most people committing robbery believe that they will not get caught.",
+  "E": "Most people committing robbery have no idea what the average sentence for robbery is."
+ },
+ "bank": {
+  "stimulus": "Criminologist: Increasing the current prison term for robbery will result in no significant effect in discouraging people from committing robbery.",
+  "stem": "Each of the following, if true, supports the criminologist's claim except:",
+  "choices": {
+   "A": "Many people who rob are motivated primarily by thrill-seeking and risk-taking.",
+   "B": "An increase in the prison term for embezzlement did not change the rate at which that crime was committed.",
+   "C": "Prison terms for robbery have generally decreased in length recently.",
+   "D": "Most people committing robbery believe that they will not get caught.",
+   "E": "Most people committing robbery have no idea what the average sentence for robbery is."
+  },
+  "key": "C"
+ },
+ "explanation_id": "93608ab2-4df1-4b12-a0c0-bfd063ef40d9",
+ "style": "single",
+ "steps": [
+  {
+   "row_id": "014efff6-0851-49c0-96bf-2597b43b7075",
+   "position": 0,
+   "label": "Claim",
+   "body": "Increasing the prison term for robbery won’t discourage people from committing robbery."
+  },
+  {
+   "row_id": "19040624-732b-4a02-93a5-00bc449fc4b1",
+   "position": 1,
+   "label": "Evaluate",
+   "body": "There's no argument to grapple with. It's just one solitary claim."
+  },
+  {
+   "row_id": "d0bb375a-3648-4bd9-a02b-6fb47fef2005",
+   "position": 2,
+   "label": "Goal",
+   "body": "Get rid of the four answers that help us argue that increasing the penalties for robbery won't do much, if anything, to discourage people from robbing."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "65750e5e-9b29-4c54-83ed-64e151e80a0d",
+   "letter": "A",
+   "body": "This indicates that many who commit robbery are motivated by thrill-seeking and risk-taking. A longer sentence increases the risk, so it might increase the thrill of committing robbery, supporting the claim that harsher penalties won't discourage it."
+  },
+  {
+   "row_id": "928882e6-b545-40eb-98d5-ebd431a15301",
+   "letter": "B",
+   "body": "This presents an analogous case where increasing prison terms did not discourage embezzlement, therefore lending support to the claim that a similar approach wouldn't deter robbery."
+  },
+  {
+   "row_id": "8fe2f2a7-a4bb-476a-89dc-5bb4d29062b2",
+   "letter": "C",
+   "body": "This suggests that prison terms for robbery have generally decreased in length without addressing the impact of increasing them. It doesn't provide information that supports or undercuts the claim about the deterrent effect of longer sentences for robbery.\n\nIf anything, it hints that current terms may have become too short to deter, which leaves open the possibility that raising them would work. That is the opposite of support."
+  },
+  {
+   "row_id": "a0d5bed2-5993-4708-a4b1-e0910d43ca8a",
+   "letter": "D",
+   "body": "This claims that most people who commit robbery believe they won't be caught, so the length of the prison term is irrelevant to them, supporting the idea that increased penalties won't act as a deterrent."
+  },
+  {
+   "row_id": "b8247c03-271a-4dac-98bb-02dec610ed00",
+   "letter": "E",
+   "body": "This suggests that most people committing robbery are unaware of the prison sentence, indicating they wouldn't be deterred by lengthening it, aligning with the claim that increasing terms won't discourage robbery."
+  }
+ ],
+ "known_problem": "No breakdown on a Strengthen EXCEPT; C note hedges (\"it almost might suggest\"). Key C is right; bank says E (see side issues).",
+ "tags": "no-breakdown; possible-key-conflict; very-short"
+}

@@ -1,0 +1,78 @@
+{
+ "qid": "PT157-S2-Q12",
+ "type": "Flaw",
+ "difficulty": "2",
+ "key_db": "B",
+ "stimulus_db": "Art student: Great works of art evoke passionate responses in those who view them. Thus, since it is well known in art circles that the provocative work of abstract painter Ezekiel Reilly elicits intensely emotional responses in those who view them, his art is great.",
+ "stem_db": "Which one of the following most accurately describes a flaw in the argument’s reasoning?",
+ "choices_db": {
+  "A": "One of the premises used to support the argument’s conclusion assumes the truth of that conclusion.",
+  "B": "The argument treats a condition that is necessary for having a certain quality as if it must also be sufficient for having that quality.",
+  "C": "The argument misapplies a general claim about the members of a class to an atypical instance of that class.",
+  "D": "The argument contains a generalization derived from an insufficient number of instances.",
+  "E": "The argument draws a conclusion expressing a value judgment from premises that do not involve statements about values."
+ },
+ "bank": {
+  "stimulus": "Art student: Great works of art evoke passionate\n responses in those who view them. Thus, since it\n is well known in art circles that the provocative\n work of abstract painter Ezekiel Reilly elicits\n intensely emotional responses in those who view\n them, his art is great.",
+  "stem": "Which one of the following most accurately describes a\n flaw in the argument’s reasoning?",
+  "choices": {
+   "A": "One of the premises used to support the argument’s conclusion assumes the truth of that conclusion.",
+   "B": "The argument treats a condition that is necessary for having a certain quality as if it must also be sufficient for having that quality.",
+   "C": "The argument misapplies a general claim about the members of a class to an atypical instance of that class.",
+   "D": "The argument contains a generalization derived from an insufficient number of instances.",
+   "E": "The argument draws a conclusion expressing a value judgment from premises that do not involve statements about values."
+  },
+  "key": "B"
+ },
+ "explanation_id": "395281fb-7c82-4015-ac20-8df0d0b7beaa",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "bb7e7ca7-6bf8-4c7c-b7da-9337f46059bf",
+   "position": 0,
+   "label": "Evidence",
+   "body": "Great works of art evoke passionate responses in those who view them. (GW → PR) The work of abstract painter Ezekiel Reilly elicits intensely emotional responses in those who view them. (PR)"
+  },
+  {
+   "row_id": "5ccb5709-390f-4679-a7b8-88c20b32ce20",
+   "position": 1,
+   "label": "Conclusion",
+   "body": "His art is great. (GW)"
+  },
+  {
+   "row_id": "756f3aef-e1fe-4ef6-b6d7-8d935db47e25",
+   "position": 2,
+   "label": "Evaluate",
+   "body": "In order to draw this conclusion, we must assume that any work of art which elicits a passionate response is a great work. This is an illegal reversal of the first premise. (PR → GW)"
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "ed3f23fc-7335-48a5-ab29-cb6c56562dab",
+   "letter": "A",
+   "body": "Circular reasoning occurs when a premise is essentially a restatement of the conclusion — the argument assumes what it is trying to prove. That is not happening here. The premise that great art evokes passionate responses is not the same as the conclusion that Reilly's art is great. The premise about Reilly's work evoking emotional responses is also not a restatement of the conclusion. These are distinct claims. The argument's problem is that it reverses the conditional, not that it assumes its own conclusion."
+  },
+  {
+   "row_id": "9f62d0be-f013-44f2-9602-36d8d2ad58ff",
+   "letter": "B",
+   "body": "This precisely describes the argument's flaw. The first premise establishes that evoking passionate responses is a necessary condition for being great art — all great art has this quality. The argument then treats this necessary condition as if it were also sufficient — as if having this quality guarantees greatness. But many things that are not great art could evoke passionate responses. Provocative, disturbing, or even terrible art can elicit intense emotions. The argument assumes that because Reilly's art satisfies a necessary condition for greatness, it must therefore be great. This is the formal fallacy of affirming the consequent, equivalently described as confusing necessary and sufficient conditions."
+  },
+  {
+   "row_id": "c264dadb-e5fd-40a0-9fc4-26d2b5811dda",
+   "letter": "C",
+   "body": "This answer suggests the argument misapplies a general claim to an atypical instance. But there is no reason to believe Reilly's work is atypical of the class being discussed. The argument applies the claim \"great art evokes passion\" to Reilly's work, which does evoke passion. The problem is not that Reilly's work is an unusual case that does not fit the general claim — it is that the argument reverses the direction of the conditional. Even if Reilly's work were perfectly typical, the argument would still be flawed."
+  },
+  {
+   "row_id": "d107ecbb-6eba-4813-a22c-25320516fdc7",
+   "letter": "D",
+   "body": "This answer describes a hasty generalization — drawing a broad conclusion from too few instances. The argument is not making a generalization at all. It is making a specific claim about one artist's work (Reilly's art is great). There is no indication that the argument uses an insufficient number of Reilly's works or an insufficient number of viewer reactions. The flaw is structural — reversing a conditional — not statistical."
+  },
+  {
+   "row_id": "63816d8a-5592-4f98-9776-424061a296a8",
+   "letter": "E",
+   "body": "This answer claims the argument draws a value judgment from non-value premises. But the first premise is itself a value statement: \"great works of art evoke passionate responses\" contains the value-laden term \"great.\" The conclusion (\"his art is great\") and the premise both involve the concept of artistic quality. So the argument does not lack value-laden premises — it has one. The flaw is not about moving from factual premises to value conclusions; it is about reversing the direction of a conditional relationship within those value claims."
+  }
+ ],
+ "known_problem": "Accurate, but every note is a 90-word em-dash paragraph restating \"reverses the conditional\".",
+ "tags": "no-prediction; emdash-heavy; pt157-158-register; possible-misquote"
+}

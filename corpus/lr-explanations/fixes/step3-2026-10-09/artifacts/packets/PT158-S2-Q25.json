@@ -1,0 +1,78 @@
+{
+ "qid": "PT158-S2-Q25",
+ "type": "Parallel Reasoning",
+ "difficulty": "3",
+ "key_db": "A",
+ "stimulus_db": "If you complete 24 graduate credits and a thesis in our department, you are eligible to receive a master's degree. Roger has completed 24 graduate credits in our department, yet he is not eligible to receive a master's degree. So he must not have finished his thesis yet.",
+ "stem_db": "The reasoning in the argument above is most similar to the reasoning in which one of the following?",
+ "choices_db": {
+  "A": "If the mayor and the city council had approved the proposed budget, the botanical gardens would be able to open this week. The botanical gardens cannot open this week even though the city council approved the proposed budget. Thus, the mayor must not have approved the proposed budget.",
+  "B": "If I see a science fiction movie, I either love it or hate it. I do not hate the movie I am watching now. Therefore, I will probably end up loving the movie, since it is a science fiction movie.",
+  "C": "If the government or some other party had bought the processing plant, the local economy would have improved. But the local economy did not improve. Therefore, neither the government nor any other party bought the processing plant.",
+  "D": "Books at Falling Embers Bookshop are on sale only if they are either used books or paperbacks. The book I am looking for at Falling Embers is on sale. Therefore, if the book I am looking for is not a paperback, it is a used book.",
+  "E": "If Doria owes more money than she can pay back, then she must either get a higher paying job or declare bankruptcy. Doria does in fact owe more than she can pay back, yet she does not want to declare bankruptcy. So, Doria must get a higher paying job."
+ },
+ "bank": {
+  "stimulus": "If you complete 24 graduate credits and a thesis in\n our department, you are eligible to receive a master’s\n degree. Roger has completed 24 graduate credits in our\n department, yet he is not eligible to receive a master’s\n degree. So he must not have finished his thesis yet.",
+  "stem": "The reasoning in the argument above is most similar to\n the reasoning in which one of the following?",
+  "choices": {
+   "A": "If the mayor and the city council had approved the proposed budget, the botanical gardens would be able to open this week. The botanical gardens cannot open this week even though the city council approved the proposed budget. Thus, the mayor must not have approved the proposed budget.",
+   "B": "If I see a science fiction movie, I either love it or hate it. I do not hate the movie I am watching now. Therefore, I will probably end up loving the movie, since it is a science fiction movie.",
+   "C": "If the government or some other party had bought the processing plant, the local economy would have improved. But the local economy did not improve. Therefore, neither the government nor any other party bought the processing plant.",
+   "D": "Books at Falling Embers Bookshop are on sale only if they are either used books or paperbacks. The book I am looking for at Falling Embers is on sale. Therefore, if the book I am looking for is not a paperback, it is a used book.",
+   "E": "If Doria owes more money than she can pay back, then she must either get a higher paying job or declare bankruptcy. Doria does in fact owe more than she can pay back, yet she does not want to declare bankruptcy. So, Doria must get a higher paying job."
+  },
+  "key": "A"
+ },
+ "explanation_id": "f85baf42-7d02-4a96-a32e-6e293ce4c72c",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "f04fb107-82ee-43c2-8c06-8cd429300110",
+   "position": 0,
+   "label": "Evidence",
+   "body": "```\nIf you complete 24\ngraduate credits\nand a thesis in our\ndepartment, you\nare eligible to\nreceive a master's\ndegree.                  24 GC and T → EM\nRoger has\ncompleted 24\ngraduate credits\nin our department        24 GC\nyet he is not\neligible to receive\na master's degree.       ~EM\nSo he must not\nhave finished his\nthesis yet.              ~T\n```"
+  },
+  {
+   "row_id": "ce3ce8f9-c18a-478b-9482-8f771a498090",
+   "position": 1,
+   "label": "Evaluate",
+   "body": "The argument has one conditional premise with \"and\" in the sufficient condition: 24 GC and T → EM. A second premise fulfills one part of the sufficient condition: 24 GC. A third premise states that the necessary condition is not true: ~EM. The conclusion states that the second sufficient condition must not have been met: Therefore, ~T."
+  },
+  {
+   "row_id": "2b6dd56f-9b93-4a93-96e2-24aa919cf549",
+   "position": 2,
+   "label": "Goal",
+   "body": "We should expect a lot of similar-looking answer choices, but only one will match this exact pattern of logic. Others will contain at least one significant difference."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "cf75fe04-f5b9-4b3a-bd51-7002547fbc78",
+   "letter": "A",
+   "body": "This answer perfectly mirrors the stimulus's logical structure. The conditional: if the mayor AND the city council had approved the budget, then the botanical gardens would have received funding. One condition is met: the city council approved the budget. The result did not occur: the botanical gardens did not receive funding. Conclusion: the mayor must not have approved the budget. The form is identical: If (A and B), then C. B is true. Not-C is true. Therefore, not-A. This matches the stimulus precisely: If (credits and thesis), then eligible. Credits is true. Not-eligible is true. Therefore, not-thesis. Both arguments use valid contrapositive reasoning with conjunctive conditions, confirming one condition and denying the result to conclude that the other condition was not met."
+  },
+  {
+   "row_id": "458b51b5-1fc5-459f-8501-6b021071d55d",
+   "letter": "B",
+   "body": "This answer has a fundamentally different structure. The conditional is: if science fiction movie, then either love it or hate it. The evidence: does not hate the current movie. The conclusion: therefore must love it. While this uses process of elimination within a disjunction, the stimulus's structure is different — it has a conjunctive trigger condition (A AND B), not a disjunctive consequent (love OR hate). The stimulus denies the consequent of a conjunction to eliminate one conjunct. This answer affirms the trigger (it is a science fiction movie) and eliminates one disjunct from the consequent. The logical forms are different: the stimulus works with conjunctive antecedents, while this answer works with disjunctive consequents. The reasoning structure does not parallel the original."
+  },
+  {
+   "row_id": "3a29a908-1a51-400a-8395-c5ec6c9c3cf0",
+   "letter": "C",
+   "body": "This answer uses a disjunctive antecedent (government OR other party) rather than a conjunctive one (A AND B). The conditional is: if the government or some other party had bought the plant, the economy would have improved. Neither the government nor another party bought the plant. The economy did not improve. This has the form: If (A or B) then C; not-A and not-B; not-C. The stimulus has the form: If (A and B) then C; A; not-C; therefore not-B. These are structurally different. The stimulus works with a conjunction in the antecedent and eliminates one conjunct; this answer has a disjunction in the antecedent with both disjuncts denied. The reasoning direction and the compound proposition types do not match."
+  },
+  {
+   "row_id": "ff244581-5bf2-4b56-952e-07576b441e70",
+   "letter": "D",
+   "body": "This answer starts with: books are on sale only if they are used OR paperbacks. This establishes a necessary condition with a disjunction (on sale requires used or paperback). The stimulus has a sufficient condition with a conjunction (credits and thesis are sufficient for eligibility). The logical relationships are reversed. In the stimulus, the two conditions together guarantee the result; here, the result (being on sale) requires at least one of the conditions. Moreover, the conclusion structure does not match — this answer reasons about whether a specific book meets the sale criteria, not about which of two conjunctive conditions failed. The conditional direction (sufficient vs. necessary) and the compound structure (conjunction vs. disjunction) both differ from the stimulus."
+  },
+  {
+   "row_id": "3a5ffece-90a9-4efe-adc1-49e992d63175",
+   "letter": "E",
+   "body": "This answer has a different structure from the stimulus. The conditional: if Doria owes more than she can pay, then she must either get a higher paying job or borrow money. The conclusion introduces an additional conditional (if she borrows, it must be from a friend) and ends up reasoning about which of the two options she should pursue. The stimulus's structure is about determining which of two conjunctive conditions was not met based on the absence of a result. This answer starts from a condition being met (Doria owes too much) and reasons about which of two disjunctive solutions she should pursue. The direction of reasoning — from condition to solution rather than from absent result to absent condition — is different. There is no conjunctive antecedent being broken apart through denial of the consequent."
+  }
+ ],
+ "known_problem": "Explicit-Standard register (5.2 em-dashes per 1k words; wrong-answer notes average 124.5 words).",
+ "tags": "emdash-heavy; pt157-158-register"
+}

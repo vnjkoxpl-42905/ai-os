@@ -1,0 +1,90 @@
+{
+ "qid": "PT158-S2-Q7",
+ "type": "Weaken",
+ "difficulty": "4",
+ "key_db": "C",
+ "stimulus_db": "Researcher: In a recent study of elementary school computers, we found that all keyboards and most monitors were positioned higher than recommended for children. Consequently, children were seated in ways that encouraged craned necks, awkwardly placed wrists, and other unhealthy postures. Evidently, most elementary school computers are installed without consideration of their effect on posture, and thus put children at the same risk for repetitive stress injuries as office workers.",
+ "stem_db": "Which one of the following, if true, most seriously weakens the researcher's argument?",
+ "choices_db": {
+  "A": "The recommended height for computers is different for children than for adults.",
+  "B": "Children spend more time working with computers at home than at school.",
+  "C": "The greater suppleness of children's bodies makes them less susceptible than adults to repetitive stress injuries.",
+  "D": "Office workers' keyboards and monitors are usually not at the recommended heights for healthy postures for adults.",
+  "E": "Office workers are more likely to report injuries than children are."
+ },
+ "bank": {
+  "stimulus": "Researcher: In a recent study of elementary school\n computers, we found that all keyboards and\n most monitors were positioned higher than\n recommended for children. Consequently,\n children were seated in ways that encouraged\n craned necks, awkwardly placed wrists, and other\n unhealthy postures. Evidently, most elementary\n school computers are installed without\n consideration of their effect on posture, and thus\n put children at the same risk for repetitive stress\n injuries as office workers.",
+  "stem": "Which one of the following, if true, most seriously\n weakens the researcher’s argument?",
+  "choices": {
+   "A": "The recommended height for computers is different for children than for adults.",
+   "B": "Children spend more time working with computers at home than at school.",
+   "C": "The greater suppleness of children’s bodies makes them less susceptible than adults to repetitive stress injuries.",
+   "D": "Office workers’ keyboards and monitors are usually not at the recommended heights for healthy postures for adults.",
+   "E": "Office workers are more likely to report injuries than children are."
+  },
+  "key": "C"
+ },
+ "explanation_id": "2ffb4f88-b5e4-45e8-a4ee-50292e7ee60e",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "ed0624ce-16b3-401d-bd64-6850a477baf1",
+   "position": 0,
+   "label": "Conclusion (thus)",
+   "body": "Children are put at the same risk for repetitive stress injuries as office workers."
+  },
+  {
+   "row_id": "7490754d-b9e7-4886-888a-ae5e3b514965",
+   "position": 1,
+   "label": "Intermediate Conclusion (Evidently)",
+   "body": "Most elementary school computers are installed without consideration of their effect on students' posture."
+  },
+  {
+   "row_id": "dca4144c-656e-41b0-8f88-948072ec94cd",
+   "position": 2,
+   "label": "Evidence",
+   "body": "In a study, all the keyboards and most monitors were placed higher than recommended for children, leading children to sit in ways that encourage craned necks, awkward wrists, and other unhealthy postures."
+  },
+  {
+   "row_id": "79015267-f501-444a-9d22-ede9236fd38d",
+   "position": 3,
+   "label": "Evaluate",
+   "body": "The argument makes two conclusions, so we should scrutinize each of those reasoning moves. Given that ... all the keyboards and most monitors were installed in positions higher than what's recommended for kids (giving them bad postures while using the computers), How can we argue ... most elementary school computers are installed with consideration of their effect on posture? We'd have to make up some story for why someone would consider the effect on kids' posture of installing the computers that high but do it anyway. Maybe they hate kids. Maybe they don't want kids to have too much screen time, so they want using a computer to be slightly uncomfortable. Maybe adults also need to use these computers at times, so the computers were installed in a position that tries to balance the needs of both body types. Given that ... most elementary school computers are installed without consideration of their effect on posture, How can we argue ... this does not put children at the same risk for repetitive stress injuries as office workers? We would want to make it seem like the situation with kids is different from the situation with office workers. Presumably, kids don't use the computer for as much time as adults do, so can we really say they're at the \"same risk\"?"
+  },
+  {
+   "row_id": "a5c9db99-26be-4a80-9b43-2dc96995471d",
+   "position": 4,
+   "label": "Goal",
+   "body": "Look for an Alternate Explanation for why computers are installed in a non-kid-friendly way, an answer that makes it seem like the computer-installers do consider kids' posture, or an answer that makes it seem like the situation with kids in computer labs is not fair to equate with office workers getting repetitive stress injuries."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "7267ba23-e0b6-4c08-82b5-b6a7bc036340",
+   "letter": "A",
+   "body": "This answer says the recommended height for computers differs between children and adults. But the argument already established that the computers are positioned too high for children — confirming that the standard is different and that the school computers do not meet the child-appropriate standard. If anything, acknowledging that children have different ergonomic requirements supports the claim that the current setup is problematic for them. This answer reinforces the premise that the computers are improperly positioned for children rather than undermining the conclusion about injury risk."
+  },
+  {
+   "row_id": "6a6b61cb-d8d8-4b2c-b28d-34c4becdf41f",
+   "letter": "B",
+   "body": "This answer says children spend more time on computers at home than at school. While this is interesting, its impact on the argument is uncertain. It could mean children accumulate more total exposure to bad posture, which might strengthen the risk claim. Or it could be irrelevant if home computers are better positioned. The argument specifically concerns school computers and their posture effects. Whether children face additional risks at home does not address whether school computer posture problems produce the same injury risk as office workers face. The argument's comparison is between school children and office workers, not between total child computer exposure and adult exposure."
+  },
+  {
+   "row_id": "d5fd00ef-8776-47b4-89e6-dc59ecabf247",
+   "letter": "C",
+   "body": "This answer directly attacks the argument's bridge assumption — that similar posture problems produce similar injury risks in children and adults. By establishing that children's bodies are more supple and therefore less susceptible to repetitive stress injuries, this answer drives a wedge between \"same bad posture\" and \"same injury risk.\" The argument assumed that because children experience the same types of unhealthy postures as office workers, they face the same risk of RSI. But if children's greater physical suppleness acts as a protective factor, the same postures could produce significantly lower injury risk. The posture problems are real, but the risk comparison to office workers fails because children's bodies are biologically more resilient to the specific type of damage that RSI represents."
+  },
+  {
+   "row_id": "36c218a0-b435-4f75-9d5c-77b9b27d6cce",
+   "letter": "D",
+   "body": "This answer says office workers' computers are also not at recommended heights. If anything, this strengthens the parallel between children and office workers — both groups face improperly positioned equipment. The argument claims children face the same RSI risk as office workers. Showing that office workers also use poorly positioned computers supports the comparison by confirming that both populations experience similar ergonomic failures. To weaken the argument, we need a reason why the same posture problems do not produce the same risk, not additional evidence that the posture problems are comparable."
+  },
+  {
+   "row_id": "a3d85147-0498-4315-a9af-66cf96041a74",
+   "letter": "E",
+   "body": "This answer says office workers are more likely to report injuries than children. But the argument's conclusion is about actual risk — the likelihood of developing RSI — not about reporting rates. Even if children underreport injuries, that does not change whether they actually face the same physiological risk. The argument is making a claim about biological susceptibility based on posture analysis, not about injury statistics based on self-reporting. Differences in reporting behavior might affect how we measure injuries, but the argument's conclusion is about whether the risk exists, not about whether it is documented."
+  }
+ ],
+ "known_problem": "Explicit-Standard register (6.0 em-dashes per 1k words; wrong-answer notes average 94.0 words).",
+ "tags": "emdash-heavy; pt157-158-register"
+}

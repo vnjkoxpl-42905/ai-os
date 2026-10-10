@@ -1,0 +1,78 @@
+{
+ "qid": "PT157-S2-Q20",
+ "type": "Flaw",
+ "difficulty": "5",
+ "key_db": "A",
+ "stimulus_db": "The olecranon process is a bony part of the mammalian elbow. The shorter the olecranon process, the faster the forelimbs can typically be moved. Predatory mammals must move their forelimbs very quickly when attacking prey, and thus generally have short olecranon processes. It has recently been found that the extinct mammal Megatherium had a short olecranon process. Hence, in all probability, Megatherium was a predator.",
+ "stem_db": "The argument is most vulnerable to criticism on which one of the following grounds?",
+ "choices_db": {
+  "A": "It fails to address the possibility that most mammals with short olecranon processes have not been predators.",
+  "B": "It takes for granted that the only reason predators need to move their forelimbs quickly is to attack prey.",
+  "C": "It overlooks the possibility that Megatherium could have been a successful predator even if it did not have a short olecranon process.",
+  "D": "It takes for granted that, on average, the olecranon processes of extinct mammals were no shorter than those of living mammals are.",
+  "E": "It fails to address the possibility that a longer olecranon process may confer some other advantage, such as greater strength."
+ },
+ "bank": {
+  "stimulus": "The olecranon process is a bony part of the mammalian\n elbow. The shorter the olecranon process, the faster the\n forelimbs can typically be moved. Predatory mammals\n must move their forelimbs very quickly when attacking\n prey, and thus generally have short olecranon processes. It has recently been found that the extinct mammal\n Megatherium had a short olecranon process. Hence, in all\n probability, Megatherium was a predator.",
+  "stem": "The argument is most vulnerable to criticism on which\n one of the following grounds?",
+  "choices": {
+   "A": "It fails to address the possibility that most mammals with short olecranon processes have not been predators.",
+   "B": "It takes for granted that the only reason predators need to move their forelimbs quickly is to attack prey.",
+   "C": "It overlooks the possibility that Megatherium could have been a successful predator even if it did not have a short olecranon process.",
+   "D": "It takes for granted that, on average, the olecranon processes of extinct mammals were no shorter than those of living mammals are.",
+   "E": "It fails to address the possibility that a longer olecranon process may confer some other advantage, such as greater strength."
+  },
+  "key": "A"
+ },
+ "explanation_id": "73c328e3-c57e-44eb-bba9-8421e3101d46",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "15760073-8a3b-4d1e-932d-d681b28a5416",
+   "position": 0,
+   "label": "Evidence",
+   "body": "Predatory mammals generally have short olecranon processes. (predator → short OP (generally)) Megatherium had a short olecranon process. (Meg → short OP)"
+  },
+  {
+   "row_id": "9bcd013b-c6df-4929-adb2-cf5197086a25",
+   "position": 1,
+   "label": "Conclusion",
+   "body": "In all probability, Megatherium was a predator. (Meg → predator (probably))"
+  },
+  {
+   "row_id": "bc1b2578-0d0a-4a85-a768-14fcc305ca5c",
+   "position": 2,
+   "label": "Evaluate",
+   "body": "Let's just call Megatherium \"Meg\" and call the olecranon process \"OP.\" The argument takes evidence about Meg having a short OP and jumps to a conclusion about Meg being a predator. We can reach that conclusion if we know that any extinct mammal with a short OP was probably a predator: (short OP → predator (probably)) But that's a reversal of the first premise: (predator → short OP (generally)) Here's another way of saying this: the evidence doesn't establish that most mammals with a short OP are predators. It's possible that most extinct mammals with short OPs were not predators."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "0f248727-4894-4753-9003-dc641bf61838",
+   "letter": "A",
+   "body": "This answer identifies the argument's central flaw: it fails to consider that most mammals with short olecranon processes might not have been predators. The argument establishes that predators generally have short olecranon processes (predator -> short OP), but this does not mean that most mammals with short olecranon processes are predators (short OP -> predator). Many non-predatory mammals could have short olecranon processes for other reasons — digging, climbing, swimming, or defense. Without establishing that predation is the primary or dominant reason for this trait, the argument cannot conclude that Megatherium was probably a predator just because it had the trait. The answer correctly identifies the reversal of the conditional."
+  },
+  {
+   "row_id": "802e05ee-fea9-400e-9d9e-37363437f3e8",
+   "letter": "B",
+   "body": "This answer says the argument assumes the only reason predators need to move forelimbs quickly is to attack prey. But the argument does not depend on this being the only reason. The argument's conclusion is based on the link between short olecranon processes and predation — not on whether predators also move fast for other reasons. Even if predators also use fast forelimbs for chasing, defending territory, or other activities, the argument's reasoning would be equally flawed (or not) because those additional uses do not affect the reversal problem. The flaw lies in the direction of the inference, not in whether predators have multiple uses for fast limbs."
+  },
+  {
+   "row_id": "1eff26af-34ed-4722-a4a0-d857e02c710d",
+   "letter": "C",
+   "body": "This answer says the argument overlooks the possibility that Megatherium could have been a successful predator without a short olecranon process. But the argument is trying to prove that Megatherium was a predator because it had a short olecranon process. Whether Megatherium could have been a predator without this trait is irrelevant to whether having the trait indicates predation. To weaken the argument, we would need to show that having a short OP does not indicate predation — not that predation is possible without it. This answer addresses an alternative scenario that has no bearing on the argument's actual reasoning."
+  },
+  {
+   "row_id": "21687cc2-1a02-4190-842c-5b501d928818",
+   "letter": "D",
+   "body": "This answer suggests the argument assumes extinct mammals' olecranon processes were no shorter on average than those of living mammals. But the argument's premises speak about mammals generally, not specifically about living mammals. The claim that predatory mammals have short olecranon processes is presented as a general biological principle. There is no indication that this principle applies only to living mammals. Whether extinct mammals had shorter olecranon processes on average than living ones does not affect the argument's logic — the flaw is in reversing the conditional, not in making improper comparisons between extinct and living species."
+  },
+  {
+   "row_id": "c789ea93-0028-4030-a9e8-b04f45b49ab9",
+   "letter": "E",
+   "body": "This answer says the argument fails to consider that a longer olecranon process might confer advantages like greater strength. While this is biologically interesting, it is irrelevant to the argument's reasoning. The argument is about what a short olecranon process indicates, not about what a long olecranon process offers. The benefits of a long olecranon process do not affect whether a short one indicates predation. The argument's flaw is that it reverses the conditional between predation and short olecranon processes, and information about the advantages of long olecranon processes does not address this reversal."
+  }
+ ],
+ "known_problem": "Explicit-Standard register (6.3 em-dashes per 1k words; wrong-answer notes average 99.0 words).",
+ "tags": "no-prediction; emdash-heavy; pt157-158-register"
+}

@@ -1,0 +1,78 @@
+{
+ "qid": "PT157-S2-Q18",
+ "type": "Sufficient Assumption",
+ "difficulty": "5",
+ "key_db": "C",
+ "stimulus_db": "In an experiment, each of 200 randomly selected people was videotaped while describing action-packed excerpts from previously unfamiliar cartoons. Half the subjects were allowed to gesture while speaking, and the other half were not. Those who gestured spoke more quickly and repeated themselves less. This indicates that gesturing helps speakers quickly find the phrases they want.",
+ "stem_db": "Which one of the following, if assumed, enables the conclusion in the argument to be properly drawn?",
+ "choices_db": {
+  "A": "Ordinarily almost everyone regularly gestures when speaking quickly and with little repetition, regardless of the topic being discussed.",
+  "B": "The cartoons were chosen by those who conducted the experiment and were selected from a variety of sources.",
+  "C": "Any form of behavior correlated with quicker speech and less repetition in speech helps speakers find the phrases they want quickly.",
+  "D": "Any form of behavior that helps speakers quickly find the phrases they want also enables them to speak more quickly and repeat themselves less than they would if they were not engaged in that behavior.",
+  "E": "Of the subjects who were allowed to gesture, those who spoke the most quickly and repeated themselves least were among those who gestured the most."
+ },
+ "bank": {
+  "stimulus": "In an experiment, each of 200 randomly selected people\n was videotaped while describing action-packed excerpts\n from previously unfamiliar cartoons. Half the subjects were\n allowed to gesture while speaking, and the other half were\n not. Those who gestured spoke more quickly and repeated\n themselves less. This indicates that gesturing helps\n speakers quickly find the phrases they want.",
+  "stem": "Which one of the following, if assumed, enables the\n conclusion in the argument to be properly drawn?",
+  "choices": {
+   "A": "Ordinarily almost everyone regularly gestures when speaking quickly and with little repetition, regardless of the topic being discussed.",
+   "B": "The cartoons were chosen by those who conducted the experiment and were selected from a variety of sources.",
+   "C": "Any form of behavior correlated with quicker speech and less repetition in speech helps speakers find the phrases they want quickly.",
+   "D": "Any form of behavior that helps speakers quickly find the phrases they want also enables them to speak more quickly and repeat themselves less than they would if they were not engaged in that behavior.",
+   "E": "Of the subjects who were allowed to gesture, those who spoke the most quickly and repeated themselves least were among those who gestured the most."
+  },
+  "key": "C"
+ },
+ "explanation_id": "13d2121f-3a1b-4502-8593-2af9ab5f95d4",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "e22a1235-1b8a-493d-9730-2389bc4d1396",
+   "position": 0,
+   "label": "Evidence",
+   "body": "The subjects in an experiment who gestured spoke more quickly and repeated themselves less than those who didn't gesture. (G → SQ and ↓R)"
+  },
+  {
+   "row_id": "6c0dcf04-1ad2-456e-9c21-182306f1a7f2",
+   "position": 1,
+   "label": "Conclusion",
+   "body": "gesturing helps speakers quickly find the phrases they want. (G → QFP) It's worth noting that the conclusion isn't truly a conditional statement. It's similar to one, but it only claims that gesturing helps speakers to find phrases. It doesn't state that gesturing guarantees anything. However, as long as we keep the actual language of the conclusion in mind, diagramming the conclusion as a conditional statement can help us understand the argument."
+  },
+  {
+   "row_id": "d2de34f4-7f8e-4820-b578-a74b19bebb08",
+   "position": 2,
+   "label": "Goal",
+   "body": "We're looking for an answer which states that when someone speaks quickly or repeats themselves less, this helps them to quickly find the phrases they want. (SQ or ↓R → QFP)"
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "8614b418-d011-48c3-a40c-31c9ae37ef8f",
+   "letter": "A",
+   "body": "This answer says that almost everyone ordinarily gestures when speaking quickly with little repetition. This tells us gesturing is common when people already speak quickly and repeat little, but it does not establish that gesturing causes or helps with finding phrases. The conclusion is about gesturing helping find phrases, and this answer says nothing about phrase retrieval. It also reverses the relationship: instead of gesturing leading to quicker speech, it says quicker speech is accompanied by gesturing — which does not bridge the gap to the conclusion about finding phrases."
+  },
+  {
+   "row_id": "1095c381-be8c-4e0b-a62d-0dae646e7505",
+   "letter": "B",
+   "body": "This answer describes how the cartoons were selected — chosen by experimenters from a variety of sources. This is a methodological detail about the experiment's design that has no bearing on whether gesturing helps speakers find phrases. The argument's gap is between speech outcomes (speed, repetition) and cognitive function (phrase retrieval). How the cartoon stimuli were chosen is completely irrelevant to bridging that gap. This answer does not address phrase-finding at all."
+  },
+  {
+   "row_id": "4efb2500-3b16-4358-aef4-235164d28667",
+   "letter": "C",
+   "body": "This answer states that any behavior correlated with quicker speech and less repetition helps speakers find the phrases they want quickly. The evidence established that gesturing correlates with quicker speech and less repetition. This answer provides the bridge principle: if a behavior correlates with those speech outcomes, it helps with phrase-finding. Applying this principle to gesturing: gesturing correlates with quicker speech and less repetition (from the evidence), therefore gesturing helps speakers find phrases quickly (the conclusion). The assumption perfectly fills the gap between the measured outcomes and the cognitive claim, making the conclusion follow logically from the evidence."
+  },
+  {
+   "row_id": "cd62b45d-1d5f-4c79-a194-fec46ab7545b",
+   "letter": "D",
+   "body": "This answer says that behavior helping speakers find phrases quickly also enables quicker speech with less repetition. Diagrammed: Helps find phrases -> Quicker speech and less repetition. The argument needs the opposite direction: Quicker speech and less repetition -> Helps find phrases. This answer provides the reverse conditional. Knowing that phrase-finding leads to better speech does not establish that better speech indicates phrase-finding. The argument observed the speech outcomes and needs to infer the cognitive cause, but this answer only confirms that the cognitive cause would produce those outcomes — which does not validate the inference in the needed direction."
+  },
+  {
+   "row_id": "0dbc2c0b-3cc0-43e5-a17c-7a616abbc59f",
+   "letter": "E",
+   "body": "This answer says that among the gesturing subjects, those who spoke most quickly and repeated least were among those who gestured most. This describes a dose-response relationship within the gesturing group (more gesturing correlates with more fluent speech), but it says nothing about finding phrases. The conclusion is specifically about phrase retrieval, and this answer never addresses that concept. Even if more gesturing produces more fluent speech, that does not establish why fluent speech indicates finding phrases quickly. The phrase-retrieval gap remains unbridged."
+  }
+ ],
+ "known_problem": "Explicit-Standard register (5.3 em-dashes per 1k words; wrong-answer notes average 86.2 words).",
+ "tags": "emdash-heavy; pt157-158-register"
+}

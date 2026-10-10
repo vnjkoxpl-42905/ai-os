@@ -1,0 +1,84 @@
+{
+ "qid": "PT158-S4-Q19",
+ "type": "Paradox",
+ "difficulty": "4",
+ "key_db": "E",
+ "stimulus_db": "It is widely known that the rescue squads serving high mountain areas with treacherous weather save the lives of many mountain climbers every year. However, many experienced climbers believe that the rising annual toll of deaths and injuries among climbers in these regions can be significantly reduced only by completely abolishing the rescue squads.",
+ "stem_db": "Which one of the following, if true, would most help to justify the apparently paradoxical belief of the experienced climbers?",
+ "choices_db": {
+  "A": "It is difficult to recruit and train members for the rescue squads.",
+  "B": "The recording of deaths and injuries tends to be more accurate in mountain regions served by rescue squads.",
+  "C": "People who commonly take risks with their lives and health do not expect other people to take those risks to rescue them.",
+  "D": "Most of the people injured or killed while mountain climbing were not adequately prepared for the dangers they would face.",
+  "E": "The lower the risk of climbing a particular mountain is perceived to be, the greater the number of less competent climbers who attempt to climb it."
+ },
+ "bank": {
+  "stimulus": "It is widely known that the rescue squads serving high\n mountain areas with treacherous weather save the lives\n of many mountain climbers every year. However, many\n experienced climbers believe that the rising annual toll of\n deaths and injuries among climbers in these regions can\n be significantly reduced only by completely abolishing\n the rescue squads.",
+  "stem": "Which one of the following, if true, would most help to\n justify the apparently paradoxical belief of the\n experienced climbers?",
+  "choices": {
+   "A": "It is difficult to recruit and train members for the rescue squads.",
+   "B": "The recording of deaths and injuries tends to be more accurate in mountain regions served by rescue squads.",
+   "C": "People who commonly take risks with their lives and health do not expect other people to take those risks to rescue them.",
+   "D": "Most of the people injured or killed while mountain climbing were not adequately prepared for the dangers they would face.",
+   "E": "The lower the risk of climbing a particular mountain is perceived to be, the greater the number of less competent climbers who attempt to climb it."
+  },
+  "key": "E"
+ },
+ "explanation_id": "dcff1b7e-a539-4c36-b474-8fbf22cd4b8a",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "f1d943ee-1639-48ce-b23e-59ffb53754a1",
+   "position": 0,
+   "label": "Given that",
+   "body": "It's widely known that rescue squads save the lives of lots of mountain climbers every year."
+  },
+  {
+   "row_id": "8e2483f0-da50-49bf-8dc0-04c9644e0f78",
+   "position": 1,
+   "label": "How can it be that",
+   "body": "A lot of experienced climbers think that the only way to significantly reduce climbing deaths and injuries among climbers is to abolish the rescue squad."
+  },
+  {
+   "row_id": "dfd0a1a1-b154-4f26-8541-e0651f776943",
+   "position": 2,
+   "label": "Evaluate",
+   "body": "Since we know rescue squads save the lives of climbers, how would getting rid of the rescue squad lead to fewer climbing deaths and injuries?\nThere must something else different in a world without rescue squads that would lead to fewer climbing deaths and injuries. Maybe having a rescue squad emboldens people to take risks they wouldn't otherwise take. It's like if you take away the safety net from a trapeze, a lot fewer people are going to attempt the trapeze, and so maybe you get a net reduction in trapeze injuries."
+  },
+  {
+   "row_id": "6138ce7b-e290-43db-ab1d-8ffaf0fe97c8",
+   "position": 3,
+   "label": "Goal",
+   "body": "Look for something that would be different in a world without rescue squads, that could help explain fewer climbing deaths and injuries."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "fd725bcc-aae7-4a96-bab4-cdee55d6e90f",
+   "letter": "A",
+   "body": "Difficulty recruiting members for rescue squads is an operational staffing challenge that has no bearing on the paradox. The question is not about whether rescue squads are hard to maintain — it is about why their existence correlates with more deaths and injuries. Even if recruitment were effortless, the paradox would remain. This answer addresses the wrong question entirely: it discusses why squads are difficult to run, not why their presence might cause net harm."
+  },
+  {
+   "row_id": "7d44c74d-f118-4dc2-bda5-aca5deb463b9",
+   "letter": "B",
+   "body": "This answer suggests that mountains with rescue squads simply have more thorough record-keeping, making deaths and injuries appear higher when they may not actually be. While this is a reasonable real-world observation, resolve-the-paradox questions require accepting both facts as true and finding a way to reconcile them. If the higher numbers are merely a recording artifact, then the premise is wrong rather than paradoxical. The question asks us to explain why experienced climbers genuinely believe abolishing squads would reduce casualties — not to dispute the data underlying their belief."
+  },
+  {
+   "row_id": "cdb89b2e-d774-4c86-b6a8-41259e0e4723",
+   "letter": "C",
+   "body": "This answer states that people who take the most extreme risks on mountains do so regardless of whether rescue squads are present. If the most reckless climbers' behavior is unchanged by rescue squads, then removing squads would leave the same reckless climbers on the mountain but without anyone to save them. That would increase deaths, not decrease them. This answer actually strengthens the case for keeping rescue squads rather than explaining why they should be abolished. The correct resolution requires rescue squads to change the composition of who climbs, which this answer explicitly denies for the most dangerous subgroup."
+  },
+  {
+   "row_id": "19e4f3f2-6727-40ff-b8ac-b3bb9f6439db",
+   "letter": "D",
+   "body": "This answer tells us that most of the people who get injured on mountains with rescue squads were inadequately prepared. That is a useful description of the casualty profile, but it is incomplete as a resolution. The critical question remains unanswered: why are unprepared people attempting dangerous climbs in the first place? This answer provides the \"what\" without the \"because.\" It would need one additional logical step — that rescue squads' presence encouraged these unprepared climbers to attempt the climb — to actually resolve the paradox. As stated, it describes a pattern in the casualties without explaining the cause of that pattern."
+  },
+  {
+   "row_id": "2e928907-d966-43b1-ac7f-0ea3881e17c7",
+   "letter": "E",
+   "body": "This answer provides the complete causal chain that resolves the paradox. When rescue squads are present, the perceived risk of climbing decreases. Lower perceived risk encourages a much larger number of less competent climbers to attempt the mountain — people who would not have tried it without the safety net. These inexperienced climbers get into dangerous situations at a high rate. Even though rescue squads save some of them, the massive increase in the number of at-risk climbers produces a net increase in total deaths and injuries. This is the moral hazard principle: a safety mechanism that changes behavior in ways that increase overall risk. The squads do not just help existing climbers — they change the composition of who climbs."
+  }
+ ],
+ "known_problem": "Explicit-Standard register (9.4 em-dashes per 1k words; wrong-answer notes average 91.2 words).",
+ "tags": "emdash-heavy; pt157-158-register"
+}

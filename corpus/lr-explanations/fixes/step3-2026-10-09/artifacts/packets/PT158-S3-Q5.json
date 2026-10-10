@@ -1,0 +1,84 @@
+{
+ "qid": "PT158-S3-Q5",
+ "type": "Weaken",
+ "difficulty": "2",
+ "key_db": "C",
+ "stimulus_db": "Domesticated animals, such as dogs, have come into existence by the breeding of only the individuals of a wild species that are sufficiently tame. For example, if when breeding wolves one breeds only those that display tameness when young, then after a number of generations the offspring will be a species of dog. Therefore, all animals can, in principle, be bred for domesticity.",
+ "stem_db": "Which one of the following, if true, most weakens the argument?",
+ "choices_db": {
+  "A": "Domesticated animals cannot be turned into wild species by breeding only those animals that display some wild characteristics.",
+  "B": "In some animal species, wild members mate more frequently than tame members.",
+  "C": "In some animal species, no members ever display tameness.",
+  "D": "In some animal species, tame members are less fertile than wild members.",
+  "E": "In some domesticated animal species, some members are much more tame than other members."
+ },
+ "bank": {
+  "stimulus": "Domesticated animals, such as dogs, have come into\n existence by the breeding of only the individuals of a\n wild species that are sufficiently tame. For example, if\n when breeding wolves one breeds only those that display\n tameness when young, then after a number of generations\n the offspring will be a species of dog. Therefore, all\n animals can, in principle, be bred for domesticity.",
+  "stem": "Which one of the following, if true, most weakens the\n argument?",
+  "choices": {
+   "A": "Domesticated animals cannot be turned into wild species by breeding only those animals that display some wild characteristics.",
+   "B": "In some animal species, wild members mate more frequently than tame members.",
+   "C": "In some animal species, no members ever display tameness.",
+   "D": "In some animal species, tame members are less fertile than wild members.",
+   "E": "In some domesticated animal species, some members are much more tame than other members."
+  },
+  "key": "C"
+ },
+ "explanation_id": "36d09dd2-0238-4398-b978-e59168bafba1",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "40d87d6b-7241-4bb1-8d14-2d14f7092136",
+   "position": 0,
+   "label": "Conclusion (Therefore)",
+   "body": "All animal can, in principle, be bred for domesticity."
+  },
+  {
+   "row_id": "84b6f8bd-424a-4d23-99d6-bc8b77efe3ed",
+   "position": 1,
+   "label": "Evidence",
+   "body": "Domesticated animals have come into existence by breeding only the tamest individuals of a wild species. If you only breed the individuals that show they're tame when they're young, then through successive generations of breeding you will \"evolved\" a domesticated version of the animal."
+  },
+  {
+   "row_id": "803a5983-bcc7-4f36-ba62-eed7a5e23a79",
+   "position": 2,
+   "label": "Evaluate",
+   "body": "How could the Defense make the case that \"Nuh-uh ... not all animals can be bred for domesticity\"? They could maybe say that for some species, none of the individuals are tame enough for us to start the selective breeding process. Maybe we're trying to domesticate a hyena, and we go through a litter of hyena babies, but none of them display tameness when young. If they we can't get our hands on multiple tame individuals, then we can't keep breeding tame-with-tame to get ever more tame versions of a hyena."
+  },
+  {
+   "row_id": "c964c786-b430-4290-ad9a-d07a9f8d0e65",
+   "position": 3,
+   "label": "Goal",
+   "body": "Look for an answer saying \"you can't always find some individuals that display tameness when young\") or something that helps us argue that the conclusion is too universal, that some animals would not theoretically be eligible for the domestication process."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "ab8446c4-0b25-48dd-a6f0-b8af498ad570",
+   "letter": "A",
+   "body": "The argument claims that wild animals can be domesticated through selective breeding. Whether domesticated animals can be turned back into wild ones through the reverse process is a completely separate question. The argument is about the feasibility of one-directional transformation — wild to domestic — and the reversibility of that process has no bearing on whether the forward process works for all species. Even if domesticated animals cannot be turned wild again, that tells us nothing about whether all wild species have the tame members needed to begin the domestication process. This answer addresses the reverse direction of a process when the argument is only about the forward direction."
+  },
+  {
+   "row_id": "c00a699a-f633-4f26-ab6f-759634e49a6e",
+   "letter": "B",
+   "body": "The frequency of mating between wild and tame members does not address the argument's core assumption. The argument claims all animals can be domesticated by selectively breeding tame individuals. For this to fail, there must be species where the process cannot get started — where no tame individuals exist. Whether wild members mate more frequently than tame ones is a practical complication about breeding logistics, not a fundamental barrier to the process. As long as some tame individuals exist, a determined breeder could isolate them for selective breeding regardless of the mating preferences of wild members. The process might be slower or more difficult, but it would not be impossible in principle, and the argument's claim is about what is possible \"in principle.\""
+  },
+  {
+   "row_id": "d60f6eb9-593f-48cd-8344-d0afd8724180",
+   "letter": "C",
+   "body": "The argument's domestication process requires a specific starting condition: some members of the species must display tameness, so that a breeder can select and breed them. The argument then generalizes: since this process works (as demonstrated with wolves), all animals can be domesticated. But this generalization assumes that every species has at least some tame individuals to work with. This answer directly attacks that assumption by stating that in some animal species, no members ever display tameness. If there are zero tame individuals, the selective breeding process cannot begin — there is nothing to select for. The method is useless without the raw material it requires. This eliminates the precondition for domestication in at least some species, directly contradicting the universal claim that \"all animals\" can be bred for domesticity."
+  },
+  {
+   "row_id": "fd61136d-1740-4e90-9dee-861159b64f34",
+   "letter": "D",
+   "body": "Lower fertility among tame members creates a practical challenge for selective breeding but does not make the process impossible in principle. The argument claims all animals can be domesticated \"in principle,\" which concerns theoretical possibility rather than practical ease. Even if tame members are less fertile, they are not infertile — they can still reproduce, just at lower rates. A selective breeding program would take longer and be more difficult, but it could still proceed as long as tame individuals exist and can produce offspring. The argument's real vulnerability is the assumption that tame individuals exist in every species, not that the existing tame individuals breed at optimal rates. This answer identifies a speed bump, not a roadblock."
+  },
+  {
+   "row_id": "b842bf1c-b79a-4aae-948d-3a7aa3828afd",
+   "letter": "E",
+   "body": "The existence of varying tameness levels within already-domesticated species tells us nothing about whether all wild species can be domesticated in the first place. The argument's claim is about the universality of the domestication process across species, not about variation within species that have already been domesticated. The fact that some dogs are tamer than others does not address whether, say, a completely wild species with no tame members can be domesticated. This answer describes a characteristic of the outcome of successful domestication rather than addressing whether the process can succeed universally. It is about post-domestication variation, while the argument's vulnerability concerns pre-domestication preconditions."
+  }
+ ],
+ "known_problem": "Correct; padded.",
+ "tags": "emdash-heavy; pt157-158-register"
+}

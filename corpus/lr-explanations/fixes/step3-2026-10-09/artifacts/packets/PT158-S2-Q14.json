@@ -1,0 +1,84 @@
+{
+ "qid": "PT158-S2-Q14",
+ "type": "Flaw",
+ "difficulty": "5",
+ "key_db": "E",
+ "stimulus_db": "Unlike stars, planets do not generate light, but only reflect it. Besides stars, there are many other celestial objects in this galaxy that are not planets. Hence, there are celestial objects in this galaxy that generate light but are not stars.",
+ "stem_db": "The reasoning in the argument is most vulnerable to criticism on the grounds that the argument fails to consider the possibility that",
+ "choices_db": {
+  "A": "this galaxy contains no celestial objects that reflect light other than planets",
+  "B": "celestial objects in this galaxy comprise only a minute percentage of all the celestial objects in the universe",
+  "C": "celestial objects in this galaxy are not the only celestial objects that generate light",
+  "D": "there are numerous features that distinguish stars from planets besides the ability to generate light",
+  "E": "planets are not the only celestial objects that do not generate light"
+ },
+ "bank": {
+  "stimulus": "Unlike stars, planets do not generate light, but only reflect\n it. Besides stars, there are many other celestial objects in\n this galaxy that are not planets. Hence, there are celestial\n objects in this galaxy that generate light but are not stars.",
+  "stem": "The reasoning in the argument is most vulnerable to\n criticism on the grounds that the argument fails to\n consider the possibility that",
+  "choices": {
+   "A": "this galaxy contains no celestial objects that reflect light other than planets",
+   "B": "celestial objects in this galaxy comprise only a minute percentage of all the celestial objects in the universe",
+   "C": "celestial objects in this galaxy are not the only celestial objects that generate light",
+   "D": "there are numerous features that distinguish stars from planets besides the ability to generate light",
+   "E": "planets are not the only celestial objects that do not generate light"
+  },
+  "key": "E"
+ },
+ "explanation_id": "c5e8fdf8-96fa-4637-bbf5-61dfd7ae2727",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "b4ebde2a-e0eb-475e-a5cc-5a57682cd4cd",
+   "position": 0,
+   "label": "Conclusion (Hence)",
+   "body": "There are celestial objects in this galaxy that generate light but are not stars."
+  },
+  {
+   "row_id": "848846a8-f0b8-4aed-ab0d-6840a6d1ff35",
+   "position": 1,
+   "label": "Evidence",
+   "body": "Stars generate light. Planets do not generate light. There are many other celestial objects in this galaxy that are not planets."
+  },
+  {
+   "row_id": "492f384f-6a7a-4799-a551-2ca7ac5c336a",
+   "position": 2,
+   "label": "Evaluate",
+   "body": "This argument is so bad that it's hard to understand what the author is going for. She establishes a difference between stars and planets (the former generates light and the latter doesn't). Then she affirms that there are other celestial objects besides stars and planets. Then she concludes these other objects (or at least some of them) are like stars, rather than like planets, when it comes to generating light. Why? Why wouldn't we just as easily assume that the other objects are like planets and don't generate light? She seems to be assuming that planets are uniquely the celestial objects that don't generate light and that all the other celestial objects do. Her argument could be thought of as an illegal negation:\n```\nPlanet → does not generate light\nSome X's are not Planets.\nHence, Some X's do generate light.\n```\nShe's arguing, \"if there are other celestial objects that aren't planets, then there are other celestial objects that do generate light\", which means she's assuming, \"If it's not a planet, then it does generate light\"."
+  },
+  {
+   "row_id": "c7d28d53-3548-4654-945d-960ddbd4e443",
+   "position": 3,
+   "label": "Goal",
+   "body": "We could potentially call out this Illegal Negation with an answer saying the author is confusing a condition that's sufficient to show you don't generate light (being a planet) with one that's necessary. However, since this question stem prefaced with \"fails to consider\" they might weaken the Nec vs. Suff error the \"conversational\" way, where we object to the conditional relationship the author is imagining by saying that the Left side could be true while the Right side is false. This author is imagining that \"If it's not a planet, then it generates light\". So we can say she fails to consider that something could be the Left side but not the Right side (something could be \"not a planet\" but not be \"something that generates light\"). Or we could just complain that the author presents two celestial objects (stars and planets), one that does generate light and one that doesn't. Then she assumes that a 3rd category of celestial objects (\"other\" celestial objects) belongs in the generating light category, for no apparent reason. The author fails to consider that these other celestial objects could be more like planets than they are like stars, when it comes to light-generating properties."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "a87522a7-6533-4cec-b41e-6c51f40708b2",
+   "letter": "A",
+   "body": "Whether or not there are other celestial objects that reflect light besides planets is irrelevant to the argument's flaw. The argument's error is about generating light, not reflecting it. Even if planets were the only objects that reflect light, the argument would still fail because it assumes that all non-planet, non-star objects must generate light. The distinction between reflecting and not reflecting light does not address the core gap: the argument never establishes that every non-planet object generates light. Objects that neither reflect nor generate light (like dark asteroids or dust clouds) would also undermine the conclusion, and this answer does not touch that possibility."
+  },
+  {
+   "row_id": "ed5d2a49-4bf1-4e6b-adf3-482e4502c131",
+   "letter": "B",
+   "body": "The percentage of celestial objects in this galaxy relative to all celestial objects everywhere is irrelevant to the argument's reasoning. The argument is about what types of objects exist in this galaxy and whether they generate light. Whether this galaxy contains 1% or 99% of all celestial objects in the universe has no bearing on whether the non-planet, non-star objects in this galaxy generate light. The flaw is entirely about the logical categories within this galaxy — specifically, the assumption that non-planet objects must generate light. Scaling the argument to the broader universe does not address this internal logical error."
+  },
+  {
+   "row_id": "a4752c56-4624-429c-ad28-17383d439f91",
+   "letter": "C",
+   "body": "Whether celestial objects outside this galaxy also generate light has no relevance to the argument's flaw. The argument concludes that there are light-generating non-stars in this galaxy. The reasoning error is the assumption that all non-planet objects in this galaxy must generate light. Objects in other galaxies — whether they generate light or not — do not affect this internal logical gap. The argument could be perfectly correct or perfectly flawed about this galaxy regardless of what happens in distant galaxies. The flaw is about how categories of objects are classified within the argument's own scope."
+  },
+  {
+   "row_id": "8665cb3c-f38c-41f1-95a7-55b53b5c32a9",
+   "letter": "D",
+   "body": "The argument never claims that the only difference between stars and planets is light generation. The argument's reasoning depends on a simple chain: planets do not generate light, other non-planet objects exist, therefore those other objects generate light. The number of features distinguishing stars from planets is irrelevant to this chain. Even if there are a hundred differences between stars and planets, the argument's flaw remains: it assumes that all non-planet objects must generate light. Knowing that stars and planets differ in additional ways beyond light generation does not address whether that assumption is justified. The overlooked possibility is about what non-planet objects do, not about how stars and planets compare."
+  },
+  {
+   "row_id": "222e83dd-8235-489b-b1b9-52331375ef09",
+   "letter": "E",
+   "body": "The argument's logical chain runs as follows: stars generate light, planets do not generate light, and there are non-star, non-planet celestial objects in this galaxy — therefore some non-star objects must generate light. This conclusion follows only if planets are the only celestial objects that do not generate light. If other non-planet objects — such as asteroids, comets, dust clouds, or dark matter — also fail to generate light, then the mere existence of non-planet objects does not establish that any of them are light-generating. The argument treated the celestial object classification as a simple three-way split: stars (generate light), planets (do not generate light), and everything else (must generate light by default). But \"everything else\" could easily fall into the non-light-generating camp alongside planets. This answer identifies exactly that overlooked possibility: planets might not be the only objects that fail to generate light, which would collapse the entire inference."
+  }
+ ],
+ "known_problem": "Explicit-Standard register (6.1 em-dashes per 1k words; wrong-answer notes average 105.2 words).",
+ "tags": "emdash-heavy; pt157-158-register"
+}

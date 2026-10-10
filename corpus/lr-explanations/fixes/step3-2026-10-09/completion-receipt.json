@@ -1,0 +1,276 @@
+{
+  "ownership": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"rows\": [\n    {\n      \"expected_questions\": 191,\n      \"matched_questions\": 191,\n      \"mismatches\": []\n    }\n  ]\n}"
+      }
+    ],
+    "structuredContent": {
+      "rows": [
+        {
+          "expected_questions": 191,
+          "matched_questions": 191,
+          "mismatches": []
+        }
+      ]
+    },
+    "isError": false
+  },
+  "skip": {
+    "qid": "PT126-S3-Q16",
+    "exactSnapshotMatch": true,
+    "expected": 8,
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\n  \"rows\": [\n    {\n      \"body\": \"Common threats like car and industrial accidents get reported only when unusual. Rare threats like product tampering get reported every time. People judge risk by how often a threat comes to their attention.\",\n      \"id\": \"bb2f61b3-86dc-4c7a-aa18-d7c5dfdc5461\",\n      \"kind\": \"step\",\n      \"label\": \"Statements\",\n      \"slot\": \"0\"\n    },\n    {\n      \"body\": \"Pause and infer by chaining the last sentence to the first two. Rare threats show up in the news every time; common threats mostly don't. People judge risk by how often they hear about a threat. So people who get their information from the news will see rare threats as bigger, compared with common ones, than they really are.\",\n      \"id\": \"ed2e6b27-7fc1-4ab2-ace5-ddc613e5b6dd\",\n      \"kind\": \"step\",\n      \"label\": \"Evaluate\",\n      \"slot\": \"1\"\n    },\n    {\n      \"body\": \"News-reliant people overestimate rare threats relative to common ones.\",\n      \"id\": \"d0021f7a-fe50-42c2-87a3-8e427768247d\",\n      \"kind\": \"step\",\n      \"label\": \"Goal\",\n      \"slot\": \"2\"\n    },\n    {\n      \"body\": \"Nothing in the statements compares the resources spent on avoiding different threats, and weather threats never come up. The passage is about how people estimate risk, not how much is spent avoiding it.\",\n      \"id\": \"cad0872c-b0d8-4427-9277-2a3c1f13e3d4\",\n      \"kind\": \"note\",\n      \"label\": \"\",\n      \"slot\": \"E\"\n    },\n    {\n      \"body\": \"The statements say nothing about government action. They cover only how the news media report threats and how people estimate risk, so nothing supports a claim about what drives governmental action.\",\n      \"id\": \"977fe26d-948c-4a71-b997-5e8da74d1054\",\n      \"kind\": \"note\",\n      \"label\": \"\",\n      \"slot\": \"A\"\n    },\n    {\n      \"body\": \"The statements say people judge risk by how often a threat comes to their attention. Nothing is said about how dreadful a threat seems or whether people can control it, so B relies on factors the passage never mentions.\",\n      \"id\": \"5ca81bb0-1f06-47d9-baf5-2edf55ce6084\",\n      \"kind\": \"note\",\n      \"label\": \"\",\n      \"slot\": \"B\"\n    },\n    {\n      \"body\": \"Rare threats are universally reported in the news media, while only unusual instances of common threats are reported in the media. Since the people this answer is talking about base their estimate of the risk of various threats by the frequency those threats appear in the media, people will overestimate rare threats relative to common ones.\",\n      \"id\": \"30f2fd6d-8bfe-44dd-b1f7-b7701f818fac\",\n      \"kind\": \"note\",\n      \"label\": \"\",\n      \"slot\": \"C\"\n    },\n    {\n      \"body\": \"The passage contrasts common threats with rare ones, not near threats with far-off ones. Nothing in it tells us whether reporters look into long-range future threats.\",\n      \"id\": \"7ba90569-b5d5-4087-8e17-713a940cfdd3\",\n      \"kind\": \"note\",\n      \"label\": \"\",\n      \"slot\": \"D\"\n    }\n  ]\n}"
+        }
+      ],
+      "structuredContent": {
+        "rows": [
+          {
+            "body": "Common threats like car and industrial accidents get reported only when unusual. Rare threats like product tampering get reported every time. People judge risk by how often a threat comes to their attention.",
+            "id": "bb2f61b3-86dc-4c7a-aa18-d7c5dfdc5461",
+            "kind": "step",
+            "label": "Statements",
+            "slot": "0"
+          },
+          {
+            "body": "Pause and infer by chaining the last sentence to the first two. Rare threats show up in the news every time; common threats mostly don't. People judge risk by how often they hear about a threat. So people who get their information from the news will see rare threats as bigger, compared with common ones, than they really are.",
+            "id": "ed2e6b27-7fc1-4ab2-ace5-ddc613e5b6dd",
+            "kind": "step",
+            "label": "Evaluate",
+            "slot": "1"
+          },
+          {
+            "body": "News-reliant people overestimate rare threats relative to common ones.",
+            "id": "d0021f7a-fe50-42c2-87a3-8e427768247d",
+            "kind": "step",
+            "label": "Goal",
+            "slot": "2"
+          },
+          {
+            "body": "Nothing in the statements compares the resources spent on avoiding different threats, and weather threats never come up. The passage is about how people estimate risk, not how much is spent avoiding it.",
+            "id": "cad0872c-b0d8-4427-9277-2a3c1f13e3d4",
+            "kind": "note",
+            "label": "",
+            "slot": "E"
+          },
+          {
+            "body": "The statements say nothing about government action. They cover only how the news media report threats and how people estimate risk, so nothing supports a claim about what drives governmental action.",
+            "id": "977fe26d-948c-4a71-b997-5e8da74d1054",
+            "kind": "note",
+            "label": "",
+            "slot": "A"
+          },
+          {
+            "body": "The statements say people judge risk by how often a threat comes to their attention. Nothing is said about how dreadful a threat seems or whether people can control it, so B relies on factors the passage never mentions.",
+            "id": "5ca81bb0-1f06-47d9-baf5-2edf55ce6084",
+            "kind": "note",
+            "label": "",
+            "slot": "B"
+          },
+          {
+            "body": "Rare threats are universally reported in the news media, while only unusual instances of common threats are reported in the media. Since the people this answer is talking about base their estimate of the risk of various threats by the frequency those threats appear in the media, people will overestimate rare threats relative to common ones.",
+            "id": "30f2fd6d-8bfe-44dd-b1f7-b7701f818fac",
+            "kind": "note",
+            "label": "",
+            "slot": "C"
+          },
+          {
+            "body": "The passage contrasts common threats with rare ones, not near threats with far-off ones. Nothing in it tells us whether reporters look into long-range future threats.",
+            "id": "7ba90569-b5d5-4087-8e17-713a940cfdd3",
+            "kind": "note",
+            "label": "",
+            "slot": "D"
+          }
+        ]
+      },
+      "isError": false
+    }
+  },
+  "fullAuditRows": 1687,
+  "rewritten": 191,
+  "inventoryItems": 192,
+  "applied": [
+    {
+      "batch": 22,
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\n  \"rows\": [\n    {\n      \"atomic_assertion\": 1,\n      \"eligible\": true,\n      \"inserted_notes\": 0,\n      \"inserted_steps\": 2,\n      \"updated_notes\": 40,\n      \"updated_steps\": 15\n    }\n  ]\n}"
+          }
+        ],
+        "structuredContent": {
+          "rows": [
+            {
+              "atomic_assertion": 1,
+              "eligible": true,
+              "inserted_notes": 0,
+              "inserted_steps": 2,
+              "updated_notes": 40,
+              "updated_steps": 15
+            }
+          ]
+        },
+        "isError": false
+      }
+    },
+    {
+      "batch": 23,
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\n  \"rows\": [\n    {\n      \"atomic_assertion\": 1,\n      \"eligible\": true,\n      \"inserted_notes\": 0,\n      \"inserted_steps\": 0,\n      \"updated_notes\": 40,\n      \"updated_steps\": 20\n    }\n  ]\n}"
+          }
+        ],
+        "structuredContent": {
+          "rows": [
+            {
+              "atomic_assertion": 1,
+              "eligible": true,
+              "inserted_notes": 0,
+              "inserted_steps": 0,
+              "updated_notes": 40,
+              "updated_steps": 20
+            }
+          ]
+        },
+        "isError": false
+      }
+    },
+    {
+      "batch": 24,
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\n  \"rows\": [\n    {\n      \"atomic_assertion\": 1,\n      \"eligible\": true,\n      \"inserted_notes\": 0,\n      \"inserted_steps\": 0,\n      \"updated_notes\": 10,\n      \"updated_steps\": 6\n    }\n  ]\n}"
+          }
+        ],
+        "structuredContent": {
+          "rows": [
+            {
+              "atomic_assertion": 1,
+              "eligible": true,
+              "inserted_notes": 0,
+              "inserted_steps": 0,
+              "updated_notes": 10,
+              "updated_steps": 6
+            }
+          ]
+        },
+        "isError": false
+      }
+    }
+  ],
+  "repair22": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"rows\": [\n    {\n      \"atomic_assertion\": 1,\n      \"eligible\": true,\n      \"note_repairs\": 8,\n      \"step_repairs\": 8\n    }\n  ]\n}"
+      }
+    ],
+    "structuredContent": {
+      "rows": [
+        {
+          "atomic_assertion": 1,
+          "eligible": true,
+          "note_repairs": 8,
+          "step_repairs": 8
+        }
+      ]
+    },
+    "isError": false
+  },
+  "after": [
+    {
+      "batch": 22,
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\n  \"rows\": [\n    {\n      \"audit\": {\n        \"batch\": \"e22\",\n        \"duplicate_slots\": 0,\n        \"expected_rows\": 73,\n        \"extra_slots\": [],\n        \"final_rows\": 73,\n        \"mismatches\": [],\n        \"missing\": 0,\n        \"old_rows\": 16\n      }\n    }\n  ]\n}"
+          }
+        ],
+        "structuredContent": {
+          "rows": [
+            {
+              "audit": {
+                "batch": "e22",
+                "duplicate_slots": 0,
+                "expected_rows": 73,
+                "extra_slots": [],
+                "final_rows": 73,
+                "mismatches": [],
+                "missing": 0,
+                "old_rows": 16
+              }
+            }
+          ]
+        },
+        "isError": false
+      }
+    },
+    {
+      "batch": 23,
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\n  \"rows\": [\n    {\n      \"audit\": {\n        \"batch\": \"e23\",\n        \"duplicate_slots\": 0,\n        \"expected_rows\": 75,\n        \"extra_slots\": [],\n        \"final_rows\": 75,\n        \"mismatches\": [],\n        \"missing\": 0,\n        \"old_rows\": 15\n      }\n    }\n  ]\n}"
+          }
+        ],
+        "structuredContent": {
+          "rows": [
+            {
+              "audit": {
+                "batch": "e23",
+                "duplicate_slots": 0,
+                "expected_rows": 75,
+                "extra_slots": [],
+                "final_rows": 75,
+                "mismatches": [],
+                "missing": 0,
+                "old_rows": 15
+              }
+            }
+          ]
+        },
+        "isError": false
+      }
+    },
+    {
+      "batch": 24,
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\n  \"rows\": [\n    {\n      \"audit\": {\n        \"batch\": \"e24\",\n        \"duplicate_slots\": 0,\n        \"expected_rows\": 18,\n        \"extra_slots\": [],\n        \"final_rows\": 18,\n        \"mismatches\": [],\n        \"missing\": 0,\n        \"old_rows\": 2\n      }\n    }\n  ]\n}"
+          }
+        ],
+        "structuredContent": {
+          "rows": [
+            {
+              "audit": {
+                "batch": "e24",
+                "duplicate_slots": 0,
+                "expected_rows": 18,
+                "extra_slots": [],
+                "final_rows": 18,
+                "mismatches": [],
+                "missing": 0,
+                "old_rows": 2
+              }
+            }
+          ]
+        },
+        "isError": false
+      }
+    }
+  ]
+}

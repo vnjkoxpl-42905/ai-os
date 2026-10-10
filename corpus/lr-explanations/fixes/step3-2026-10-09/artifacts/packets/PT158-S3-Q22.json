@@ -1,0 +1,84 @@
+{
+ "qid": "PT158-S3-Q22",
+ "type": "Method of Reasoning",
+ "difficulty": "5",
+ "key_db": "C",
+ "stimulus_db": "Some researchers claim that people tend to gesture less when they articulate what would typically be regarded as abstract rather than physical concepts. To point out that such a correlation is far from universal is insufficient reason to reject the researchers' claim, because some people perceive words like \"comprehension\" as expressing a physical action, like grasping something, rather than a state of understanding, which is abstract.",
+ "stem_db": "Which one of the following most accurately describes the method of reasoning used in the argument?",
+ "choices_db": {
+  "A": "appealing to the ambiguity of a word in an attempt to show that a correlation is universal",
+  "B": "appealing to a universal psychological generalization in an attempt to support a claim about the use of gestures",
+  "C": "citing a psychological fact to try to reconcile a generalization with apparently disconfirming evidence",
+  "D": "advocating an explanation for a phenomenon by attempting to demonstrate that other possible explanations are implausible",
+  "E": "offering a reason for believing that a widely accepted generalization requires still more supporting evidence"
+ },
+ "bank": {
+  "stimulus": "Some researchers claim that people tend to gesture less\n when they articulate what would typically be regarded\n as abstract rather than physical concepts. To point out\n that such a correlation is far from universal is insufficient\n reason to reject the researchers’ claim, because some\n people perceive words like “comprehension” as\n expressing a physical action, like grasping something,\n rather than a state of understanding, which is abstract.",
+  "stem": "Which one of the following most accurately describes\n the method of reasoning used in the argument?",
+  "choices": {
+   "A": "appealing to the ambiguity of a word in an attempt to show that a correlation is universal",
+   "B": "appealing to a universal psychological generalization in an attempt to support a claim about the use of gestures",
+   "C": "citing a psychological fact to try to reconcile a generalization with apparently disconfirming evidence",
+   "D": "advocating an explanation for a phenomenon by attempting to demonstrate that other possible explanations are implausible",
+   "E": "offering a reason for believing that a widely accepted generalization requires still more supporting evidence"
+  },
+  "key": "C"
+ },
+ "explanation_id": "62362e32-c2f0-4649-9400-568127d38322",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "a317e1e5-ab37-4e5b-bbab-d8b82a2d5887",
+   "position": 0,
+   "label": "Conclusion",
+   "body": "The fact that the correlation between gesturing and talking about physical, rather than abstract, concepts is not a perfect correlation does not provide any grounds for rejecting that the correlation exists."
+  },
+  {
+   "row_id": "19f9c71a-58b8-411d-8e59-a606c1293ce5",
+   "position": 1,
+   "label": "Evidence (because)",
+   "body": "There are some words, such as 'comprehension', that are in a gray area. Some people feel them more like abstract concepts; others feel them more like physical concepts."
+  },
+  {
+   "row_id": "cf1bccc3-eaff-40dc-85d7-d20d5fbc952f",
+   "position": 2,
+   "label": "Evaluate",
+   "body": "So it sounds like some people, who interpret 'comprehension' more like a physical act of grasping something would be more likely to gesture when talking about it, whereas other people who interpret 'comprehension' more like an abstract concept would be less likely to gesture when talking about it. If a contrarian was saying, \"Hey, researchers --- how come this person is gesturing while they're talking about the abstract concept of comprehension?\", the researchers might say, \"This person doesn't perceive comprehension as an abstract concept. They perceive it more as a physical act of grasping something, so their behavior does still accord with our correlation.\""
+  },
+  {
+   "row_id": "d4decaa6-f9e5-49e7-9cc9-94df1d943950",
+   "position": 3,
+   "label": "Goal",
+   "body": "If we were trying to characterize this type of evidence by choosing from Method's Big 8 types of answers (analogy, counter/example of a general claim, implications of logic, ruling out alternatives, suggesting alternate explanation, raising overlooked consideration, calling out a dubious assumption, making a distinction or definition), we could use a couple of these: The author cites an example of a data point that could lead someone to challenge the researchers' correlation and then offers an alternate explanation for it, that would make ti more compatible with the researchers correlation (they're gesturing about 'comprehension' not because the researchers were wrong but because they think of 'comprehension' as a physical concept)."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "0f527ec1-f488-46a7-95c6-f2bb3a15c62f",
+   "letter": "A",
+   "body": "The argument does not attempt to show that the correlation is universal. In fact, it explicitly acknowledges that the correlation is \"far from universal.\" The argument's goal is to defend the generalization against the objection that non-universality disproves it — not to prove universality. The ambiguity of a word (like \"comprehension\") is cited to explain why apparent exceptions are not genuine counterexamples, not to establish that no exceptions exist. This answer mischaracterizes both the conclusion (the argument concedes non-universality) and the method (the argument reconciles, not universalizes)."
+  },
+  {
+   "row_id": "ff966cbd-fa9f-4875-b058-d3043173a65b",
+   "letter": "B",
+   "body": "The argument does not appeal to a universal psychological generalization to support a claim about gesturing. The psychological fact cited — that some people perceive \"comprehension\" as expressing physical action — is not universal. It is a specific observation about individual variation in concept categorization. The argument uses this particular psychological observation to explain apparent exceptions to the researchers' claim, not as a sweeping generalization about all human psychology. Furthermore, the argument is defending the researchers' claim, not establishing a new one. This answer mischaracterizes both the type of psychological evidence (particular, not universal) and the argumentative goal (defense, not support of a new claim)."
+  },
+  {
+   "row_id": "af40a8f1-dcb4-474f-a81e-6bfcef83793d",
+   "letter": "C",
+   "body": "The argument cites a psychological fact — that some people perceive words like \"comprehension\" as expressing physical actions rather than abstract states — to reconcile the researchers' generalization (people gesture less when discussing abstract concepts) with apparently disconfirming instances (cases where the correlation does not hold). The psychological fact explains why these cases are not genuine counterexamples: if someone perceives \"comprehension\" as physical, then gesturing while discussing it is actually consistent with the rule, not a violation of it. The method is reconciliation through reinterpretation: the exceptions look like exceptions only because we are miscategorizing what the speaker considers abstract. This answer precisely describes that strategy."
+  },
+  {
+   "row_id": "aa561e26-d14f-4d56-b28f-c8f0b5173efe",
+   "letter": "D",
+   "body": "The argument does not attempt to demonstrate that other explanations are impossible. It provides a single explanation for the apparent exceptions and uses that to defend the generalization. There is no systematic elimination of alternative accounts. The argument does not even address alternative explanations for the gesture-abstraction correlation — it addresses alternative interpretations of the apparent counterexamples. \"Advocating an explanation by demonstrating other possibilities are unlikely\" describes process-of-elimination reasoning, which is not what happens here. The argument is constructive (here is why the exceptions are not real exceptions), not eliminative (here is why no other explanation works)."
+  },
+  {
+   "row_id": "6b8dc3a9-84b7-4b4d-91c3-9687a797ef2f",
+   "letter": "E",
+   "body": "The argument's entire purpose is to DEFEND the generalization against the claim that it needs more support or should be rejected. This answer says the argument offers reasons for believing the generalization requires still more evidence. That is the exact opposite of what the argument does. The argument says: the apparent exceptions do not disprove the claim (because of individual variation in concept perception), so the non-universality objection fails. It is strengthening the generalization's position, not arguing that it needs additional evidence. This answer describes the objection the argument is responding to, not the argument's own method."
+  }
+ ],
+ "known_problem": "Explicit-Standard register (7.8 em-dashes per 1k words; wrong-answer notes average 97.0 words).",
+ "tags": "emdash-heavy; pt157-158-register; possible-misquote"
+}

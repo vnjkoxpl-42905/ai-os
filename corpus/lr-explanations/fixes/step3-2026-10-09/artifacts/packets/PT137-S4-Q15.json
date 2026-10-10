@@ -1,0 +1,66 @@
+{
+ "qid": "PT137-S4-Q15",
+ "type": "Most Strongly Supported",
+ "difficulty": "4",
+ "key_db": "E",
+ "stimulus_db": "Any good garden compost may appropriately be used for soil drainage and fertility. The best compost is 40 to 60 percent organic matter and is dark brown in color. However, compost that emits a strong ammonia smell should not be used for drainage and fertility, for that smell means that the organic matter has not sufficiently decomposed.",
+ "stem_db": "Which one of the following is most strongly supported by the information above?",
+ "choices_db": {
+  "A": "Compost that is 80 percent organic matter has probably not decomposed sufficiently.",
+  "B": "If compost is less than 40 percent organic matter and is not dark brown in color, then it will make soil less fertile and will worsen soil drainage.",
+  "C": "If compost is 50 percent organic matter and that organic matter is sufficiently decomposed, then the compost is good.",
+  "D": "In the best garden compost, the organic matter is completely decomposed.",
+  "E": "Compost that is dark brown in color and emits a strong ammonia smell is not good garden compost."
+ },
+ "bank": {
+  "stimulus": "Any good garden compost may appropriately be used for soil drainage and fertility. The best compost is 40 to 60 percent organic matter and is dark brown in color. However, compost that emits a strong ammonia smell should not be used for drainage and fertility, for that smell means that the organic matter has not sufficiently decomposed.",
+  "stem": "Which one of the following is most strongly supported by the information above?",
+  "choices": {
+   "A": "Compost that is 80 percent organic matter has probably not decomposed sufficiently.",
+   "B": "If compost is less than 40 percent organic matter and is not dark brown in color, then it will make soil less fertile and will worsen soil drainage.",
+   "C": "If compost is 50 percent organic matter and that organic matter is sufficiently decomposed, then the compost is good.",
+   "D": "In the best garden compost, the organic matter is completely decomposed.",
+   "E": "Compost that is dark brown in color and emits a strong ammonia smell is not good garden compost."
+  },
+  "key": "E"
+ },
+ "explanation_id": "3271c974-3514-4332-a22a-1f337613f0ba",
+ "style": "single",
+ "steps": [
+  {
+   "row_id": "6bebcdb5-73b8-4213-a5d4-ace8df4b040b",
+   "position": 0,
+   "label": "Given",
+   "body": "Any good garden compost may appropriately be used for soil drainage and fertility.\nGGC → SDF\n\nThe best compost is 40 to 60 percent organic matter and is dark brown in color.\nBC → 40-60% + DB\n\nHowever, compost that emits a strong ammonia smell should not be used for drainage and fertility, for that smell means that the organic matter has not sufficiently decomposed.\nSA → ~SDF\nSA → ~D"
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "9bc2c618-d490-48e9-93fa-f12d25aae03f",
+   "letter": "A",
+   "body": "The statements do not indicate that there is a relationship between the percent of organic material and the level of decomposition."
+  },
+  {
+   "row_id": "78fae39e-101e-4beb-929f-0ef124884caa",
+   "letter": "B",
+   "body": "While compost that is less than 40 percent organic matter is not the best compost, that does not imply that it will make soil less fertile and will worsen soil drainage."
+  },
+  {
+   "row_id": "9439dc7f-76f2-4532-ac68-b4946cc7ee42",
+   "letter": "C",
+   "body": "This reverses the first statement.\n\nSDF → GGC\n\nBeing sufficiently decomposed only removes one reason not to use compost. Nothing in the stimulus says that compost meeting these conditions is good."
+  },
+  {
+   "row_id": "5543b41a-98b9-487a-81e1-8896a6abaf3b",
+   "letter": "D",
+   "body": "The statements do not indicate that organic matter is completely decomposed."
+  },
+  {
+   "row_id": "b2448822-0874-41b4-b90f-a5fa28261b6c",
+   "letter": "E",
+   "body": "This follows from the first and third statements.\n\nSA → ~SDF\n~SDF → ~GGC\n∴ SA → ~GGC\n\nCompost with a strong ammonia smell shouldn't be used for drainage and fertility, and any good compost can be. So smelly compost isn't good compost, whatever its color."
+  }
+ ],
+ "known_problem": "Flattened diagram in Given; B note misquotes the choice (\"worsen soil damage\"); d4 with one-line notes.",
+ "tags": "short-breakdown; verdict-only; thin-correct-note; thin-notes; no-prediction; damage; very-short"
+}

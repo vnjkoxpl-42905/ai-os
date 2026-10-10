@@ -1,0 +1,90 @@
+{
+ "qid": "PT158-S2-Q21",
+ "type": "Weaken",
+ "difficulty": "5",
+ "key_db": "B",
+ "stimulus_db": "A geologist recently claimed to have discovered in clay a previously unknown form of life: \"nanobes,\" one-tenth the size of the smallest known bacteria. However, it is unlikely that nanobes truly are living things. They are probably inanimate artifacts of the clay's microscopic structure, because a nanobe is too small to contain a reproductive mechanism, a prerequisite for life.",
+ "stem_db": "Which one of the following, if true, most seriously weakens the argument?",
+ "choices_db": {
+  "A": "No known form of bacteria is complicated enough in structure to engage in a sexual type of reproduction.",
+  "B": "Single-celled creatures can combine to form a multicelled structure and then reproduce before they disband into separate single cells again.",
+  "C": "The material phenomena that some scientists claim are the fossilized remains of bacteria in meteorites from Mars are approximately the same size as nanobes.",
+  "D": "Previous definitions of life were based on research done with inferior microscopes no longer in use.",
+  "E": "Animals such as cold-blooded lizards can be physiologically simpler, though still larger, than other animals."
+ },
+ "bank": {
+  "stimulus": "A geologist recently claimed to have discovered in clay\n a previously unknown form of life: “nanobes,” one-tenth\n the size of the smallest known bacteria. However, it is\n unlikely that nanobes truly are living things. They are\n probably inanimate artifacts of the clay’s microscopic\n structure, because a nanobe is too small to contain a\n reproductive mechanism, a prerequisite for life.",
+  "stem": "Which one of the following, if true, most seriously\n weakens the argument?",
+  "choices": {
+   "A": "No known form of bacteria is complicated enough in structure to engage in a sexual type of reproduction.",
+   "B": "Single-celled creatures can combine to form a multicelled structure and then reproduce before they disband into separate single cells again.",
+   "C": "The material phenomena that some scientists claim are the fossilized remains of bacteria in meteorites from Mars are approximately the same size as nanobes.",
+   "D": "Previous definitions of life were based on research done with inferior microscopes no longer in use.",
+   "E": "Animals such as cold-blooded lizards can be physiologically simpler, though still larger, than other animals."
+  },
+  "key": "B"
+ },
+ "explanation_id": "33de40bb-4bd3-4832-9dae-75e4e611455b",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "d8c93675-7aca-4bcb-978a-ab5e0404bd37",
+   "position": 0,
+   "label": "Conclusion (unlikely = opinion)",
+   "body": "It's unlikely that nanobes are living things."
+  },
+  {
+   "row_id": "b7ec3d9d-68d1-46e6-ade3-b81981f980cd",
+   "position": 1,
+   "label": "Intermediate Conclusion",
+   "body": "Nanobes are probably inanimate artifacts of the microscopic structure of the clay in which they're found."
+  },
+  {
+   "row_id": "f86da2e7-ec11-46a0-a913-9e9df69dd6b2",
+   "position": 2,
+   "label": "Evidence (because)",
+   "body": "Nanobes are 1/10 the size of the smallest known bacteria. They are too small to contain a reproductive mechanism, which is a prerequisite for life."
+  },
+  {
+   "row_id": "61bc06f2-ec10-4479-b3b6-b972064e44dc",
+   "position": 3,
+   "label": "Evaluate",
+   "body": "This feels like a tough one to figure out on our own (we'll need the answers to help), but we can frame the right tension in our brain. Given that .. living things all have a reproductive mechanism, but nanobes are too small to have a reproductive mechanism, How could we still argue that ... nanobes are living things?"
+  },
+  {
+   "row_id": "437e8fee-c681-4344-9b4d-70ef4ceffda4",
+   "position": 4,
+   "label": "Goal",
+   "body": "Let's look for something that helps us say, even though \"nanobes are too small to contain a reproductive mechanism\" it still could be the case that \"nanobes are living things\", after all .. [answer choice]. Or, less likely, look for something that hurts the plausibility that nanobes are just inanimate artifacts of the clay's microscopic structure."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "a0382964-136b-40dd-8ff0-c7ad7655832c",
+   "letter": "A",
+   "body": "Whether known bacteria engage in sexual reproduction is irrelevant to whether nanobes are alive. Nanobes aren't bacteria. If this answer were meant to imply that bacteria isn't complicated enough to reproduce, then it would probably strengthen the argument. We know, in reality, that bacteria is a form of life (there are other forms of reproduction besides sexual reproduction, such as asexual reproduction). But if we thought this answer was saying that bacteria isn't even complex enough to be life, then that would support the author's notion that nanobes, 1/10 the size, are also not life."
+  },
+  {
+   "row_id": "fc820d3c-e52d-45d1-8d50-3d52873bdf95",
+   "letter": "B",
+   "body": "I'd never dream up this answer on my own, but it gives us a way us, as the anti-conclusion lawyer, to respond to the author's evidence. US: nanobes are living things! AUTHOR: no. they're too small to contain a reproductive mechanism, which is required to be alive. US: yes, they're too small for any one individual to have a reproductive mechanism, but they can combine with other nanobes in order to reproduce. So they do have a reproductive mechanism."
+  },
+  {
+   "row_id": "5d818801-84bc-45e1-b52e-d5959257cef8",
+   "letter": "C",
+   "body": "If we were told about something as small as a nanobe that WAS a form of life, then that would badly weaken. These remains of bacteria are as small as a nanobe, but we're not told they're alive. They are \"material phenomena\". They might just be a fragment of a bacterium. The bacterium is a form of life, but the fragmented remains aren't necessarily life."
+  },
+  {
+   "row_id": "7e6a1830-afe4-439b-bb1e-09465e9804d8",
+   "letter": "D",
+   "body": "We aren't talking about previous definitions of life. The author is yielding the current definition of life, one that includes as a prerequisite that an entity has a reproductive mechanism. And for all we know the previous definition of life ALSO held that any form of life must have a reproductive method."
+  },
+  {
+   "row_id": "ee8dfbe5-e812-4b20-ba36-087458e5095f",
+   "letter": "E",
+   "body": "This is saying you can be bigger but simpler than some other animal. Being bigger doesn't necessarily mean you're more complicated. Being smaller doesn't necessarily mean you're less complicated. Could we stretch this to say, \"Being smaller than bacteria doesn't necessarily mean that nanobes are less complicated than bacteria\"? No, that's a big stretch. This is just one example about some cold-blooded lizards, not a rule of life we can extrapolate to the microscopic scale. At the scale of lizards and other animals near their size, everyone is WAY big enough to have DNA, a reproductive mechanism. We're talking about a thing that is INCREDIBLY small, potentially smaller than DNA itself."
+  }
+ ],
+ "known_problem": "Explicit-Standard register (0.0 em-dashes per 1k words; wrong-answer notes average 81.2 words).",
+ "tags": "pt157-158-register; possible-misquote"
+}

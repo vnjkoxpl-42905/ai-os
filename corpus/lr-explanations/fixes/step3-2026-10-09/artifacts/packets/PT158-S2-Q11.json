@@ -1,0 +1,84 @@
+{
+ "qid": "PT158-S2-Q11",
+ "type": "Necessary Assumption",
+ "difficulty": "3",
+ "key_db": "D",
+ "stimulus_db": "The chorus in a play, like a narrator in a novel, introduces a point of view not tied to any of the characters, and both chorus and narrator allow the author to comment on the characters' actions and to introduce information about the context in which these actions take place. However, since the information introduced by the chorus in a play is sometimes not consistent with the rest of the information in the play, the chorus in a play is not equivalent to the narrator in a novel.",
+ "stem_db": "Which one of the following is an assumption on which the argument depends?",
+ "choices_db": {
+  "A": "The narrator in a novel is never deceptive.",
+  "B": "The voice of a narrator is sometimes necessary in plays that employ a chorus.",
+  "C": "Information necessary for the audience to understand events in a play is sometimes introduced by the chorus.",
+  "D": "Information introduced by a narrator in a novel can never be inconsistent with the rest of the information in the novel.",
+  "E": "Authors sometimes use choruses in plays to mislead audiences about events in the plays."
+ },
+ "bank": {
+  "stimulus": "The chorus in a play, like a narrator in a novel, introduces\n a point of view not tied to any of the characters, and both\n chorus and narrator allow the author to comment on the\n characters’ actions and to introduce information about the\n context in which these actions take place. However, since\n the information introduced by the chorus in a play is\n sometimes not consistent with the rest of the information\n in the play, the chorus in a play is not equivalent to the\n narrator in a novel.",
+  "stem": "Which one of the following is an assumption on which\n the argument depends?",
+  "choices": {
+   "A": "The narrator in a novel is never deceptive.",
+   "B": "The voice of a narrator is sometimes necessary in plays that employ a chorus.",
+   "C": "Information necessary for the audience to understand events in a play is sometimes introduced by the chorus.",
+   "D": "Information introduced by a narrator in a novel can never be inconsistent with the rest of the information in the novel.",
+   "E": "Authors sometimes use choruses in plays to mislead audiences about events in the plays."
+  },
+  "key": "D"
+ },
+ "explanation_id": "a0eb6c4a-95e9-4025-ae7e-ff8c26b770b3",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "2c64baf6-6482-434f-bda0-aed4de0ae92a",
+   "position": 0,
+   "label": "Conclusion",
+   "body": "The chorus in a play is not equivalent to the narrator in a novel."
+  },
+  {
+   "row_id": "0e76c443-a2c4-4adc-9310-3cfe1103fc78",
+   "position": 1,
+   "label": "Evidence (since)",
+   "body": "The information introduced by the chorus in a play is sometimes inconsistent with the rest of the information in th eplay."
+  },
+  {
+   "row_id": "64cfec38-2b0e-4301-8b93-4b272a491c89",
+   "position": 2,
+   "label": "Evaluate",
+   "body": "This argument is pretty sparse. It's mostly background until we hit the however pivot, and then the author says, \"X and Y are not the same, since X does thing A.\" Okay, so what's being assumed in that case? The author is Assuming a Difference. If she's saying, \"the fact that X does thing A proves that X and Y are not the same\", she must think that \"Y does not do thing A\". If I said, \"The fact that Max owns a Lebron jersey shows that Max and Karen are not equally fans of Lebron\", I would be assuming that \"Karen doesn't own a Lebron jersey\" (among other things). The author said, \"since the chorus introduces inconsistent info, it's not the same as a narrator.\""
+  },
+  {
+   "row_id": "3541bb89-c5f4-4fc9-b95a-6e01d01cc757",
+   "position": 3,
+   "label": "Goal",
+   "body": "So let's look for an answer saying, \"narrators do not introduce information in a novel that is inconsistent with the rest of the novel\"."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "b5eb2aec-a2d9-4c59-9947-d9913a3dd8dd",
+   "letter": "A",
+   "body": "This answer says the narrator is \"never deceptive.\" But the argument is about inconsistency with the rest of the work, not about deception. A narrator could be consistent with everything in the novel while still being deceptive (e.g., an unreliable narrator who consistently misleads). Conversely, a narrator could be non-deceptive but occasionally inconsistent with other elements. Deception and inconsistency are different concepts. The argument's gap is specifically about whether narrators can introduce information inconsistent with the rest of the novel, not about whether they can be deceptive. Additionally, \"never deceptive\" is far more extreme than needed."
+  },
+  {
+   "row_id": "41e60f3d-ace8-407d-8244-8b3d8c8a4e03",
+   "letter": "B",
+   "body": "This answer says a narrator's voice is \"sometimes necessary\" in plays with a chorus. The argument never discusses whether plays need narrators in addition to choruses. The argument is comparing the chorus to a narrator to determine whether they are equivalent. Whether a play could benefit from both a chorus and a narrator is a separate question about dramatic technique that has no bearing on the argument's logic. The necessary assumption is about the narrator's consistency properties, not about whether narrators are needed in plays that already have choruses."
+  },
+  {
+   "row_id": "da835237-aab3-43ce-a2c3-771c813a1d16",
+   "letter": "C",
+   "body": "This answer says the chorus sometimes provides information \"necessary for the audience to understand events.\" While this might be true, it does not address the argument's gap. The argument's conclusion rests on inconsistency as a differentiating factor — the chorus can contradict the rest of the play. Whether the chorus also provides necessary information is a separate attribute that does not bear on the consistency comparison. The argument needs an assumption about narrators' consistency, not about the informational necessity of what choruses provide. This answer describes a feature of choruses but does not address the comparison that drives the conclusion."
+  },
+  {
+   "row_id": "b3eb8b7b-d986-47c0-8a44-c837d7f7f959",
+   "letter": "D",
+   "body": "This answer states that information introduced by a narrator in a novel can never be inconsistent with the rest of the information in the novel. This is exactly the assumption the argument requires. The argument's structure is: the chorus can be inconsistent with the rest of the play, and this inconsistency makes the chorus non-equivalent to the narrator. For inconsistency to serve as a differentiating factor, the narrator must lack this property — narrators must always be consistent. Apply the negation test: if narrators can sometimes be inconsistent with the rest of the novel, then inconsistency would be a shared feature rather than a distinguishing one, and the argument's basis for non-equivalence collapses. The argument needs narrators to be the consistent counterpart to differentiate them from the potentially inconsistent chorus."
+  },
+  {
+   "row_id": "e7732893-26b2-4393-8d55-d339e5101bef",
+   "letter": "E",
+   "body": "This answer says authors sometimes use choruses to mislead audiences. While this is related to the idea that choruses can be inconsistent, it does not fill the argument's logical gap. The argument already established that choruses can introduce inconsistent information — that is the stated premise. What the argument needs is an assumption about narrators: that they cannot do the same thing. Learning more about why authors use choruses (to mislead) adds detail to the premise side but does not address the comparison side. The gap is on the narrator end, not the chorus end."
+  }
+ ],
+ "known_problem": "Explicit-Standard register (4.3 em-dashes per 1k words; wrong-answer notes average 95.0 words).",
+ "tags": "emdash-heavy; pt157-158-register"
+}

@@ -1,0 +1,84 @@
+{
+ "qid": "PT157-S3-Q11",
+ "type": "Role",
+ "difficulty": "4",
+ "key_db": "A",
+ "stimulus_db": "Biologist: The evolutionary advantage of sexual reproduction is that it increases the range of genetic variation in a species, which is an advantage for the species as a whole. However, an increased range of genetic variation in a species is not advantageous for any individual member of the species. It follows that the sole reason that sexual reproduction has become the rule among both animals and plants is that natural selection has favored some entire species over others.",
+ "stem_db": "The claim that an increased range of genetic variation in a species is not advantageous for any individual member of the species plays which one of the following roles in the biologist's argument?",
+ "choices_db": {
+  "A": "It is a claim offered in support of the argument's conclusion.",
+  "B": "It is presented to raise a question that sheds doubt on the argument's conclusion.",
+  "C": "It is a claim that the argument is designed to call into question.",
+  "D": "It describes an observed phenomenon for which the argument seeks an explanation.",
+  "E": "It is presented as the main explanation of the origin of an observed phenomenon."
+ },
+ "bank": {
+  "stimulus": "Biologist: The evolutionary advantage of sexual\n reproduction is that it increases the range of\n genetic variation in a species, which is an\n advantage for the species as a whole. However,\n an increased range of genetic variation in a\n species is not advantageous for any individual\n member of the species. It follows that the sole\n reason that sexual reproduction has become the\n rule among both animals and plants is that natural\n selection has favored some entire species over\n others.",
+  "stem": "The claim that an increased range of genetic variation in\n a species is not advantageous for any individual member\n of the species plays which one of the following roles in\n the biologist’s argument?",
+  "choices": {
+   "A": "It is a claim offered in support of the argument’s conclusion.",
+   "B": "It is presented to raise a question that sheds doubt on the argument’s conclusion.",
+   "C": "It is a claim that the argument is designed to call into question.",
+   "D": "It describes an observed phenomenon for which the argument seeks an explanation.",
+   "E": "It is presented as the main explanation of the origin of an observed phenomenon."
+  },
+  "key": "A"
+ },
+ "explanation_id": "452f234d-0121-433a-8c31-25b9c2f53ad7",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "067608e1-0ff7-4f27-bc0d-817b0696de2f",
+   "position": 0,
+   "label": "Conclusion (it follows that)",
+   "body": "The sole reason that sexual reproduction has become the rule among both animals and plants is that natural selection has favored some entire species over others."
+  },
+  {
+   "row_id": "21922f05-e8be-427e-85b2-ce475ef19f95",
+   "position": 1,
+   "label": "Evidence",
+   "body": "The evolutionary advantage of sexual reproduction is that it increases the range of genetic variation in a species, which is an advantage for the species as a whole. But an increased range of genetic variation in a species is not advantageous for any individual member of the species."
+  },
+  {
+   "row_id": "74fef0de-d608-4bbf-932a-97adf76734dc",
+   "position": 2,
+   "label": "Evaluate",
+   "body": "The word \"however\" in the second sentence indicates a pivot from the idea in the first sentence to a different, contrasting idea. In the final sentence, the phrase \"it follows that\" indicates that this final sentence contains a conclusion, supported by evidence in the previous sentences."
+  },
+  {
+   "row_id": "e781f424-c2e2-4c0a-bee0-c4bc68159971",
+   "position": 3,
+   "label": "Goal",
+   "body": "The statement quoted by the question stem is in the second sentence of the stimulus, which contains the argument's evidence or premise."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "a34288b4-5159-4d0c-a53a-3bd05394722a",
+   "letter": "A",
+   "body": "The quoted statement is evidence — a claim that supports the conclusion. It establishes that genetic variation does not benefit individuals, which forces the explanation for sexual reproduction's prevalence to the species level. This directly supports the conclusion about species-level natural selection."
+  },
+  {
+   "row_id": "135f0d2e-36cd-4a0d-a7d0-a49079a211da",
+   "letter": "B",
+   "body": "The quoted statement does not raise doubt about the conclusion — it supports it. By showing that genetic variation does not benefit individuals, it strengthens the case for species-level selection. It is an ally of the conclusion, not a challenger."
+  },
+  {
+   "row_id": "f9498e5b-3939-4dbf-a8fd-d195f6a59c35",
+   "letter": "C",
+   "body": "The argument does not call the quoted statement into question — it embraces it as support for the conclusion. The argument builds upon this claim rather than attempting to undermine it."
+  },
+  {
+   "row_id": "70556a57-0376-4693-a86c-8707e38f9ce4",
+   "letter": "D",
+   "body": "The conclusion explains why sexual reproduction has become the rule — the \"observed phenomenon\" if there is one. But the quoted statement is about whether genetic variation benefits individuals, which is evidence, not the phenomenon being explained. The phenomenon the argument seeks to explain is the prevalence of sexual reproduction, described in the conclusion itself."
+  },
+  {
+   "row_id": "65f6ca62-fd4f-4734-aa9c-a1cfec939d47",
+   "letter": "E",
+   "body": "The main explanation of why sexual reproduction prevails is in the conclusion: species-level natural selection. The quoted statement is not the explanation — it is evidence that leads to the explanation. It establishes that individual-level selection cannot explain sexual reproduction, which then supports the species-level explanation in the conclusion."
+  }
+ ],
+ "known_problem": "Explicit-Standard register (13.9 em-dashes per 1k words; wrong-answer notes average 43.8 words).",
+ "tags": "emdash-heavy; pt157-158-register"
+}

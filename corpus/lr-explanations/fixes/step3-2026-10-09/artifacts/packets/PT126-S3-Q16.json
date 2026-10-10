@@ -1,0 +1,78 @@
+{
+ "qid": "PT126-S3-Q16",
+ "type": "Most Strongly Supported",
+ "difficulty": "2",
+ "key_db": "C",
+ "stimulus_db": "When a threat to life is common, as are automobile and industrial accidents, only unusual instances tend to be prominently reported by the news media. Instances of rare threats, such as product tampering, however, are seen as news by reporters and are universally reported in featured stories. People in general tend to estimate the risk of various threats by how frequently those threats come to their attention.",
+ "stem_db": "If the statements above are true, which one of the following is most strongly supported on the basis of them?",
+ "choices_db": {
+  "A": "Whether governmental action will be taken to lessen a common risk depends primarily on the prominence given to the risk by the news media.",
+  "B": "People tend to magnify the risk of a threat if the threat seems particularly dreadful or if those who would be affected have no control over it.",
+  "C": "Those who get their information primarily from the news media tend to overestimate the risk of uncommon threats relative to the risk of common threats.",
+  "D": "Reporters tend not to seek out information about long-range future threats but to concentrate their attention on the immediate past and future.",
+  "E": "The resources that are spent on avoiding product tampering are greater than the resources that are spent on avoiding threats that stem from the weather."
+ },
+ "bank": {
+  "stimulus": "When a threat to life is common, as are automobile and industrial accidents, only unusual instances tend to be prominently reported by the news media. Instances of rare threats, such as product tampering, however, are seen as news by reporters and are universally reported in featured stories. People in general tend to estimate the risk of various threats by how frequently those threats come to their attention.",
+  "stem": "If the statements above are true, which one of the following is most strongly supported on the basis of them?",
+  "choices": {
+   "A": "Whether governmental action will be taken to lessen a common risk depends primarily on the prominence given to the risk by the news media.",
+   "B": "People tend to magnify the risk of a threat if the threat seems particularly dreadful or if those who would be affected have no control over it.",
+   "C": "Those who get their information primarily from the news media tend to overestimate the risk of uncommon threats relative to the risk of common threats.",
+   "D": "Reporters tend not to seek out information about long-range future threats but to concentrate their attention on the immediate past and future.",
+   "E": "The resources that are spent on avoiding product tampering are greater than the resources that are spent on avoiding threats that stem from the weather."
+  },
+  "key": "C"
+ },
+ "explanation_id": "cc38882a-af24-4ead-b93e-54588e58eeca",
+ "style": "single",
+ "steps": [
+  {
+   "row_id": "bb2f61b3-86dc-4c7a-aa18-d7c5dfdc5461",
+   "position": 0,
+   "label": "Statements",
+   "body": "Common threats like car and industrial accidents get reported only when unusual. Rare threats like product tampering get reported every time. People judge risk by how often a threat comes to their attention."
+  },
+  {
+   "row_id": "ed2e6b27-7fc1-4ab2-ace5-ddc613e5b6dd",
+   "position": 1,
+   "label": "Evaluate",
+   "body": "Pause and infer by chaining the last sentence to the first two. Rare threats show up in the news every time; common threats mostly don't. People judge risk by how often they hear about a threat. So people who get their information from the news will see rare threats as bigger, compared with common ones, than they really are."
+  },
+  {
+   "row_id": "d0021f7a-fe50-42c2-87a3-8e427768247d",
+   "position": 2,
+   "label": "Goal",
+   "body": "News-reliant people overestimate rare threats relative to common ones."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "977fe26d-948c-4a71-b997-5e8da74d1054",
+   "letter": "A",
+   "body": "The statements say nothing about government action. They cover only how the news media report threats and how people estimate risk, so nothing supports a claim about what drives governmental action."
+  },
+  {
+   "row_id": "5ca81bb0-1f06-47d9-baf5-2edf55ce6084",
+   "letter": "B",
+   "body": "The statements say people judge risk by how often a threat comes to their attention. Nothing is said about how dreadful a threat seems or whether people can control it, so B relies on factors the passage never mentions."
+  },
+  {
+   "row_id": "30f2fd6d-8bfe-44dd-b1f7-b7701f818fac",
+   "letter": "C",
+   "body": "Rare threats are universally reported in the news media, while only unusual instances of common threats are reported in the media. Since the people this answer is talking about base their estimate of the risk of various threats by the frequency those threats appear in the media, people will overestimate rare threats relative to common ones."
+  },
+  {
+   "row_id": "7ba90569-b5d5-4087-8e17-713a940cfdd3",
+   "letter": "D",
+   "body": "The passage contrasts common threats with rare ones, not near threats with far-off ones. Nothing in it tells us whether reporters look into long-range future threats."
+  },
+  {
+   "row_id": "cad0872c-b0d8-4427-9277-2a3c1f13e3d4",
+   "letter": "E",
+   "body": "Nothing in the statements compares the resources spent on avoiding different threats, and weather threats never come up. The passage is about how people estimate risk, not how much is spent avoiding it."
+  }
+ ],
+ "known_problem": "No breakdown; four wrong notes are all \"X is not discussed in the statements\".",
+ "tags": "no-breakdown; verdict-only; thin-notes; very-short"
+}

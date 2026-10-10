@@ -1,0 +1,90 @@
+{
+ "qid": "PT158-S2-Q12",
+ "type": "Principle-Strengthen",
+ "difficulty": "5",
+ "key_db": "C",
+ "stimulus_db": "Some of the rare pygmy bears should be moved from their native island to the neighboring island. The bears risk extinction from the loss of habitat on their native island, and since the neighboring island is the only place that has a similar habitat, this move represents the only viable chance of saving these valuable animals.",
+ "stem_db": "Which one of the following principles, if valid, most helps to justify the reasoning above?",
+ "choices_db": {
+  "A": "Some species are more deserving of protection than are other species.",
+  "B": "Rare animals should not be moved from one habitat to another unless these habitats are similar to one another.",
+  "C": "If a species is in danger of extinction, whatever is most likely to prevent the extinction should be undertaken.",
+  "D": "The rarer a species of plant or animal is, the more that should be done to protect that species.",
+  "E": "If an animal's original habitat is in danger of being lost, it is permissible to try to find a new habitat for the animal."
+ },
+ "bank": {
+  "stimulus": "Some of the rare pygmy bears should be moved from\n their native island to the neighboring island. The bears\n risk extinction from the loss of habitat on their native\n island, and since the neighboring island is the only place\n that has a similar habitat, this move represents the only\n viable chance of saving these valuable animals.",
+  "stem": "Which one of the following principles, if valid, most\n helps to justify the reasoning above?",
+  "choices": {
+   "A": "Some species are more deserving of protection than are other species.",
+   "B": "Rare animals should not be moved from one habitat to another unless these habitats are similar to one another.",
+   "C": "If a species is in danger of extinction, whatever is most likely to prevent the extinction should be undertaken.",
+   "D": "The rarer a species of plant or animal is, the more that should be done to protect that species.",
+   "E": "If an animal’s original habitat is in danger of being lost, it is permissible to try to find a new habitat for the animal."
+  },
+  "key": "C"
+ },
+ "explanation_id": "bfc70d5f-ca40-4149-a0b8-18e12b0015f0",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "0d09bc04-0083-4b2d-96b9-7eb8213f784e",
+   "position": 0,
+   "label": "Conclusion",
+   "body": "This move (moving some of the rare pygmy bears should be moved from their native island to the neighboring island."
+  },
+  {
+   "row_id": "44c9d556-0db7-4cd3-b443-8fc367e97032",
+   "position": 1,
+   "label": "Intermediate Conclusion",
+   "body": "This move represents the only viable chance of saving these valuable animals."
+  },
+  {
+   "row_id": "765c7f63-9029-4a43-ae1c-d1e1f0940835",
+   "position": 2,
+   "label": "Evidence (since)",
+   "body": "The bears risk extinction from the loss of habitat on their native island. The neighboring island is the only place that has a similar habitat."
+  },
+  {
+   "row_id": "c4703bac-bb67-4310-8584-fba462a4d54e",
+   "position": 3,
+   "label": "Evaluate",
+   "body": "We're trying to justify a decision to move bears from their home island to a neighboring island. The motivating concerns are these: 1. their habitat on the home island is disappearing 2. the neighboring island is the only place with a similar habitat 3. moving them is the only chance we have of saving these valuable animals"
+  },
+  {
+   "row_id": "cba5d9bc-60e0-461e-8e97-50a242ce3fcc",
+   "position": 4,
+   "label": "Goal",
+   "body": "Let's look for answer choices that pair up language from any one (or more) of our supporting concerns with the conclusion's language of \"we should do it\". For example, \"If X's native habitat is disappearing, then we should move X to a place with a similar habitat\". \"If X is a valuable animal, then we should do whatever is our only viable chance of saving them\"."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "14c69f22-24ad-4a01-970f-82080d664b96",
+   "letter": "A",
+   "body": "This answer says some species deserve more protection than others. While the argument does call the bears \"valuable,\" it does not argue that pygmy bears deserve more protection than other species. The argument's reasoning is about the bears' specific situation — extinction risk and the availability of exactly one viable option — not about comparative species ranking. Even if all species deserve equal protection, the argument's conclusion would still follow from the fact that these bears face extinction and the move is the only viable remedy. This principle does not connect the evidence to the conclusion."
+  },
+  {
+   "row_id": "b98bc33c-a71d-4a19-8b5d-d5a59fac0d0b",
+   "letter": "B",
+   "body": "This answer says animals should not be moved unless their habitats are similar. This is a restriction on when moves are permissible, not a justification for making a move. The argument already establishes that the habitats are similar, so this condition is satisfied. But satisfying a necessary condition does not prove the action should be taken — it only shows a prerequisite is met. The argument needs a principle that drives the conclusion forward: \"you should move them.\" This answer only eliminates one reason not to. Furthermore, this answer's logical form is a necessary condition for permissibility, whereas the argument needs a sufficient condition for action. The argument says the move \"should\" happen, not merely that it \"may\" happen."
+  },
+  {
+   "row_id": "61bcecb4-b6e3-4425-9128-ce5433016348",
+   "letter": "C",
+   "body": "This principle states: if a species is in danger of extinction, whatever is most likely to prevent that extinction should be done. Apply this to the facts: (1) the pygmy bears are in danger of extinction, (2) the move to the neighboring island is the only viable chance — and therefore the option most likely to prevent extinction, (3) therefore, according to this principle, the move should be done. The principle bridges the gap between \"this is the only viable option\" and \"this should be done\" by establishing that the most effective prevention of extinction should be pursued. Since the move is the only option, it is by default the best option, satisfying the principle's condition. This directly justifies the argument's conclusion."
+  },
+  {
+   "row_id": "27551518-1945-4dec-94f5-6f7974d0f28b",
+   "letter": "D",
+   "body": "This answer establishes a proportional principle: the rarer the species, the more protection it deserves. But the argument does not depend on relative rarity as a justification for action. The argument is about an absolute situation: the bears face extinction, and there is one viable option to save them. Whether rarer species deserve proportionally more protection is a separate philosophical question that does not connect the specific evidence (only one viable option) to the specific conclusion (do it). The argument would work the same way even if the bears were moderately rare rather than extremely rare — the key driver is the extinction threat and the sole remedy, not the degree of rarity."
+  },
+  {
+   "row_id": "dbd7cf6a-0a2b-4653-a01a-0e7a580dd390",
+   "letter": "E",
+   "body": "This answer says it is \"permissible\" to find a new habitat when the original is in danger. While this is consistent with the argument, it is too weak to justify the conclusion. The argument says the bears \"should\" be moved — a normative claim about what ought to happen. Permissibility only establishes that the action is allowed, not that it should be taken. \"You may do this\" is weaker than \"you should do this.\" The argument needs a principle strong enough to generate a \"should\" conclusion, not merely a \"may\" conclusion. Additionally, this answer does not incorporate the extinction element or the \"only viable option\" aspect, which are central to the argument's reasoning."
+  }
+ ],
+ "known_problem": "Explicit-Standard register (8.1 em-dashes per 1k words; wrong-answer notes average 109.0 words).",
+ "tags": "emdash-heavy; pt157-158-register; possible-misquote; damage"
+}

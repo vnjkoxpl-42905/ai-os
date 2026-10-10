@@ -1,0 +1,84 @@
+{
+ "qid": "PT157-S3-Q2",
+ "type": "Main Conclusion",
+ "difficulty": "1",
+ "key_db": "B",
+ "stimulus_db": "Banking industry visionaries foresee a bright day in the near future when customers will be able to transact all their financial business by means of computers or telephones from the comfort of their own homes. But that may be more of a paradise for banks than for their customers. As banks eliminate their branch offices and customer-service employees, customers will have to serve as their own tellers—and pay more transaction fees for their efforts.",
+ "stem_db": "Which one of the following most accurately expresses the conclusion of the argument?",
+ "choices_db": {
+  "A": "In the near future, bank customers will be able to transact all their financial business by means of computers or telephones from their own homes.",
+  "B": "Enabling bank customers to transact all their financial business by means of computers or telephones from their own homes may be more beneficial to banks than to their customers.",
+  "C": "As banks eliminate branch offices and customer service employees, bank customers will have to serve as their own tellers and pay more fees.",
+  "D": "Eliminating branch offices and customer-service employees would benefit the banking industry.",
+  "E": "Enabling customers to transact all their financial business by means of computers or telephones from their own homes would allow banks to eliminate branch offices and customer-service employees."
+ },
+ "bank": {
+  "stimulus": "Banking industry visionaries foresee a bright day in\n the near future when customers will be able to transact\n all their financial business by means of computers or\n telephones from the comfort of their own homes. But\n that may be more of a paradise for banks than for their\n customers. As banks eliminate their branch offices and\n customer-service employees, customers will have to\n serve as their own tellers—and pay more transaction fees\n for their efforts.",
+  "stem": "Which one of the following most accurately expresses\n the conclusion of the argument?",
+  "choices": {
+   "A": "In the near future, bank customers will be able to transact all their financial business by means of computers or telephones from their own homes.",
+   "B": "Enabling bank customers to transact all their financial business by means of computers or telephones from their own homes may be more beneficial to banks than to their customers.",
+   "C": "As banks eliminate branch offices and customer-service employees, bank customers will have to serve as their own tellers and pay more fees.",
+   "D": "Eliminating branch offices and customer-service employees would benefit the banking industry.",
+   "E": "Enabling customers to transact all their financial business by means of computers or telephones from their own homes would allow banks to eliminate branch offices and customer-service employees."
+  },
+  "key": "B"
+ },
+ "explanation_id": "886b6f2d-ba7b-4892-89b4-5c2d44327e59",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "33828dbe-43ee-4861-b7df-b175a3adf075",
+   "position": 0,
+   "label": "Opposing Evidence",
+   "body": "Banking industry visionaries foresee a bright day in the near future when customers will be able to transact all their financial business by means of computers or telephones from the comfort of their own homes."
+  },
+  {
+   "row_id": "85330639-4abc-478b-a33d-fcdc1909d63d",
+   "position": 1,
+   "label": "Conclusion",
+   "body": "That [transacting all financial business from home by means of computers or telephones] may be more of a paradise for banks than for their customers."
+  },
+  {
+   "row_id": "094f289f-7210-494a-85ae-098afcfce9b5",
+   "position": 2,
+   "label": "Evicence",
+   "body": "As banks eliminate their branch offices and customer-service employees, customers will have to serve as their own tellers—and pay more transaction fees for their efforts."
+  },
+  {
+   "row_id": "34c9d326-a55d-4f8d-a204-c0e5e8a6d76c",
+   "position": 3,
+   "label": "Goal",
+   "body": "A correct answer will indicate that conducting financial business from home by computer or telephone is not as beneficial for customers as it is for banks."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "784154d3-91a9-4bff-9bc3-c9ffede00744",
+   "letter": "A",
+   "body": "This answer restates the opposing view presented in the first sentence of the argument — the banking industry's optimistic vision of home banking. The author introduces this view only to push back against it with \"but.\" The conclusion is the author's own position, not the position being challenged. This answer captures the setup, not the punchline."
+  },
+  {
+   "row_id": "55857aef-7f50-4226-8bb5-ec695429f11a",
+   "letter": "B",
+   "body": "This answer accurately paraphrases the author's conclusion from the second sentence. The author states that home banking \"may be more of a paradise for banks than for their customers.\" This answer restates that idea: enabling home banking \"may be more beneficial to banks than to their customers.\" The wording is different but the meaning is identical — a comparative claim that home banking disproportionately serves banks' interests. This is exactly what a correct Main Conclusion answer should do: capture the same idea in slightly different language."
+  },
+  {
+   "row_id": "818466bb-800f-44b8-abd9-e79e53f912c4",
+   "letter": "C",
+   "body": "This answer restates the evidence from the third sentence of the argument. The fact that customers will serve as their own tellers and pay more fees is the reason the author believes home banking benefits banks more than customers. It is the support for the conclusion, not the conclusion itself. In the argument's structure, this information explains why the author holds the view expressed in the second sentence."
+  },
+  {
+   "row_id": "fde78b54-6b5d-4261-bd67-4c9080c33ede",
+   "letter": "D",
+   "body": "This answer captures only half of the conclusion. The author's point is comparative — home banking benefits banks more than customers. This answer only addresses the bank side: eliminating branches would benefit banks. It omits the customer side entirely and drops the crucial comparison. The conclusion is not just that banks will benefit; it is that banks will benefit more than customers will. Additionally, the conclusion is about the broader phenomenon of home banking, not just about eliminating branch offices specifically."
+  },
+  {
+   "row_id": "bccd5dc9-a22c-4ba7-8cbc-1e6d250e4ed9",
+   "letter": "E",
+   "body": "This answer cobbles together language from different parts of the argument without accurately representing any single claim the author makes. It connects home banking to the elimination of branches and employees, blending the opposing view (home banking) with the evidence (eliminating branches) into a causal claim the author never explicitly states. The conclusion is about who benefits more from home banking, not about what home banking enables banks to do. This answer sounds like it could be part of the argument, but it does not match the actual conclusion."
+  }
+ ],
+ "known_problem": "Explicit-Standard register (8.2 em-dashes per 1k words; wrong-answer notes average 73.0 words).",
+ "tags": "emdash-heavy; pt157-158-register"
+}

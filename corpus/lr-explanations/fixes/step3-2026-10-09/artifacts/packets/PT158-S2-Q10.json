@@ -1,0 +1,84 @@
+{
+ "qid": "PT158-S2-Q10",
+ "type": "Flaw",
+ "difficulty": "5",
+ "key_db": "E",
+ "stimulus_db": "Historian: In the fourteenth and fifteenth centuries, the Swahili civilization of East Africa built tombs with large pillars and paneled facades. Such structures are widespread among the Oromo people of Somalia and Kenya, but are unknown among any other people with whom the Swahili civilization had contact. This indicates that Swahili culture was, to some extent, influenced by Oromo culture.",
+ "stem_db": "The historian's argument is most vulnerable to criticism on the grounds that it",
+ "choices_db": {
+  "A": "fails to address adequately the possibility that the Oromo people did not use the structures as tombs",
+  "B": "concludes, simply because one event occurred earlier than another event, that the first event caused the second event",
+  "C": "draws a restricted conclusion from premises that provide strong support for a much broader conclusion",
+  "D": "takes for granted that there was no third civilization responsible for creating the first tombs of the kind found in both the Oromo and Swahili cultures",
+  "E": "takes for granted that the Oromo people began constructing tombs with large pillars and paneled facades earlier than the Swahili civilization did"
+ },
+ "bank": {
+  "stimulus": "Historian: In the fourteenth and fifteenth centuries, the\n Swahili civilization of East Africa built tombs\n with large pillars and paneled facades. Such\n structures are widespread among the Oromo\n people of Somalia and Kenya, but are unknown\n among any other people with whom the Swahili\n civilization had contact. This indicates that\n Swahili culture was, to some extent, influenced\n by Oromo culture.",
+  "stem": "The historian’s argument is most vulnerable to criticism\n on the grounds that it",
+  "choices": {
+   "A": "fails to address adequately the possibility that the Oromo people did not use the structures as tombs",
+   "B": "concludes, simply because one event occurred earlier than another event, that the first event caused the second event",
+   "C": "draws a restricted conclusion from premises that provide strong support for a much broader conclusion",
+   "D": "takes for granted that there was no third civilization responsible for creating the first tombs of the kind found in both the Oromo and Swahili cultures",
+   "E": "takes for granted that the Oromo people began constructing tombs with large pillars and paneled facades earlier than the Swahili civilization did"
+  },
+  "key": "E"
+ },
+ "explanation_id": "5b6e6a77-8a8e-4229-9ebb-3626cb21bf9e",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "0da08f67-ec8d-413d-a065-3d22425a97ef",
+   "position": 0,
+   "label": "Conclusion (This indicates that)",
+   "body": "Swahili culture was to some extent influenced by Oromo culture."
+  },
+  {
+   "row_id": "6f132fab-840a-4a18-b3e8-71a5552fbe18",
+   "position": 1,
+   "label": "Evidence",
+   "body": "In the 14th and 15th centuries, the Swahilis built tombs with big pillars and paneled outsides. Those types of tombs are also super common among the Oromo, who were in contact with Swahili. But no other culture known to have mixed with the Swahili has these types of tombs."
+  },
+  {
+   "row_id": "3d7044df-b611-43ef-bc37-d1034be5d990",
+   "position": 2,
+   "label": "Evaluate",
+   "body": "There is a curious fact — how come both the Oromo and the Swahili both have this style of tomb? The author's causal explanation is that the Oromo invented that style and then influenced the Swahili, who 'copied' that style. We can object that the author is being overconfident in settling on that causal storyline, when there could be other ways to explain it. Maybe the Swahili invented the style and the Oromo copied it from them. Normally, we'd say, \"maybe they both copied it from some 3rd culture\", but it says that no other culture the Swahili was in contact with had this style of tomb. It could be that both cultures just happened to coincidentally start the same style, without being influenced by each other."
+  },
+  {
+   "row_id": "85f2aa0c-b959-4739-b2cd-80f2eb60e896",
+   "position": 3,
+   "label": "Goal",
+   "body": "The answer will deal with an Alternate Explanation for how Oromo and Swahili both ended up with that distinctive style of tomb, or it will deal with the plausibility of the author's story that the Oromo created the style and then influenced Swahili culture to use the same style."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "c69683a6-ec91-4a15-b1c8-a5746f49625d",
+   "letter": "A",
+   "body": "This answer suggests the Oromo might not have used the structures as tombs. But the argument's claim is about architectural influence, not about the specific function of the structures. Even if the Oromo used pillar-and-panel structures for different purposes, the architectural similarity still suggests cultural contact and potential influence. The historian's conclusion is about the transmission of an architectural style, and the specific use to which the structures were put does not affect whether the style was shared and who influenced whom. The real flaw is about directionality, not about functional differences."
+  },
+  {
+   "row_id": "cf285e65-f822-4053-843f-f3b576dafbdd",
+   "letter": "B",
+   "body": "This answer describes a post hoc ergo propter hoc flaw — concluding that because one event preceded another, the first caused the second. But the historian's argument does not establish any temporal sequence. The historian never claims the Oromo had the structures before the Swahili. In fact, the absence of temporal evidence is precisely the flaw — the historian assumes a direction of influence without establishing chronological priority. This answer describes a flaw that would require the historian to have claimed chronological precedence, which the historian did not. The actual flaw is the failure to consider that the chronological relationship might run in the opposite direction."
+  },
+  {
+   "row_id": "d06b0378-d8ef-4185-800a-2801b0e1d690",
+   "letter": "C",
+   "body": "Drawing a restricted conclusion from strong premises is not a flaw — it is actually a logical virtue. If the premises strongly support a broader conclusion and the argument draws a narrower one, the argument is being appropriately cautious. The historian's conclusion includes the hedge \"to some extent,\" which is indeed a restricted claim. But being cautious is not a logical error. The problem with the argument is not that the conclusion is too narrow — it is that the direction of influence is assumed without evidence. This answer describes something praiseworthy about the argument's structure rather than identifying its actual weakness."
+  },
+  {
+   "row_id": "6f1a46ce-d1db-4c3b-8e24-c0b2510aeb64",
+   "letter": "D",
+   "body": "This answer suggests the argument should have considered whether a third civilization created the original structures. While this is a conceivable alternative explanation, it is less central than the primary flaw. The historian already noted that these structures \"are unknown among any other people with whom the Swahili civilization had contact,\" which partially addresses the third-party concern for known contacts. The more fundamental flaw is simpler: even if only two groups are involved, the argument fails to establish which one influenced the other. The direction of influence between the two known groups is the critical unaddressed question, not the existence of an unknown third party."
+  },
+  {
+   "row_id": "138c0180-b00d-4676-860d-88f4ea869bb7",
+   "letter": "E",
+   "body": "This answer identifies the argument's central flaw: the historian assumes the Oromo had these structures before the Swahili did, without providing any evidence for that temporal ordering. The argument establishes that both groups share a distinctive architectural feature not found among other Swahili contacts. This supports the inference that influence occurred between the two groups. But influence is directional, and the shared feature alone does not indicate which direction. The Swahili could have developed the style first and transmitted it to the Oromo. By concluding that \"Swahili culture was influenced by Oromo culture,\" the historian assumes the Oromo had temporal priority — a claim the evidence does not establish. Without knowing who built the structures first, the argument cannot determine the direction of influence."
+  }
+ ],
+ "known_problem": "Explicit-Standard register (7.9 em-dashes per 1k words; wrong-answer notes average 101.0 words).",
+ "tags": "emdash-heavy; pt157-158-register"
+}

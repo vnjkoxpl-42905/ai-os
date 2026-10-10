@@ -1,0 +1,84 @@
+{
+ "qid": "PT157-S3-Q16",
+ "type": "Principle-Conform",
+ "difficulty": "3",
+ "key_db": "B",
+ "stimulus_db": "Future overall demand for professors can be predicted with reasonable accuracy from current birth rates. But the accuracy of predictions of future demand for music professors is lower, and that for jazz studies professors lower still.",
+ "stem_db": "The situation described above best illustrates which one of the following principles?",
+ "choices_db": {
+  "A": "The more detailed and complete the evidence, the more precise predictions based on that evidence are.",
+  "B": "The more general the level of a prediction, the more accurate it is.",
+  "C": "Predicting future trends becomes more difficult as the events those predictions concern become more temporally remote.",
+  "D": "The more detailed and complete the evidence, the more confidence we can have in predictions based on that evidence.",
+  "E": "Predictions based only on general trends are unlikely to be accurate."
+ },
+ "bank": {
+  "stimulus": "Future overall demand for professors can be predicted\n with reasonable accuracy from current birth rates. But\n the accuracy of predictions of future demand for music\n professors is lower, and that for jazz studies professors\n lower still.",
+  "stem": "The situation described above best illustrates which one\n of the following principles?",
+  "choices": {
+   "A": "The more detailed and complete the evidence, the more precise predictions based on that evidence are.",
+   "B": "The more general the level of a prediction, the more accurate it is.",
+   "C": "Predicting future trends becomes more difficult as the events those predictions concern become more temporally remote.",
+   "D": "The more detailed and complete the evidence, the more confidence we can have in predictions based on that evidence.",
+   "E": "Predictions based only on general trends are unlikely to be accurate."
+  },
+  "key": "B"
+ },
+ "explanation_id": "3baf639c-8fc1-4ea4-8efd-20f1d581a5c8",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "9675582f-ed7e-444f-aa56-cdd6a8976f37",
+   "position": 0,
+   "label": "Situation",
+   "body": "Future overall demand for professors can be predicted with reasonable accuracy from current birth rates."
+  },
+  {
+   "row_id": "3966e8ed-f2d8-43f0-b5e2-490d4f7916b8",
+   "position": 1,
+   "label": "However...",
+   "body": "The accuracy of predictions of future demand for music professors is lower, and that for jazz studies professors lower still."
+  },
+  {
+   "row_id": "a6cc7e3f-e3f1-4661-bddd-ec8c2215ad05",
+   "position": 2,
+   "label": "Evaluate",
+   "body": "In this situation we're comparing a prediction about a general group, professors, to a prediction about a subset of that group, music professors. We then compare the prediction about music professors to a prediction about a subset of music professors, namely jazz studies professors. The demand for the overall group can be predicted reasonably well by birth rates. But as we look at each smaller, more specific subset, there's a decrease in the ability to accurately predict demand."
+  },
+  {
+   "row_id": "69428a7d-1deb-41a1-ad53-4eba9bee6ba1",
+   "position": 3,
+   "label": "Goal",
+   "body": "We're expecting an answer to state that we have a greater ability to predict something about a general group, with less and less ability to make accurate predictions as we look at specific categories within groups."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "9901c3d7-142b-4104-9488-80a979c2869e",
+   "letter": "A",
+   "body": "The same evidence — birth rates — is used for all three predictions. The evidence does not change in detail or completeness. The accuracy changes because the target becomes more specific, not because the evidence becomes more detailed."
+  },
+  {
+   "row_id": "beeeaf67-2e21-4f2f-a80e-48e500bf8ab2",
+   "letter": "B",
+   "body": "The situation shows exactly this: the most general prediction (all professors) is most accurate, and accuracy declines as the prediction targets more specific subgroups (music professors, then jazz studies professors). More general level of prediction, more accuracy."
+  },
+  {
+   "row_id": "865fe7a0-c43e-4d70-bfbd-67d029302f81",
+   "letter": "C",
+   "body": "The situation does not involve temporal distance. All predictions are about the future from the same present point. Accuracy varies because of specificity, not because some events are further in the future."
+  },
+  {
+   "row_id": "a1cf05f6-2b77-488b-b0ae-b5f276185dff",
+   "letter": "D",
+   "body": "Same as answer A — the evidence does not vary in detail or completeness. Birth rates are the same evidence used for all three prediction levels. Confidence should vary with prediction specificity, not evidence quality."
+  },
+  {
+   "row_id": "c64313da-309a-44f9-8183-732e2f3401e4",
+   "letter": "E",
+   "body": "The situation shows the opposite: predictions based on general trends (birth rates) are reasonably accurate for overall professor demand. This answer claims such predictions are \"unlikely to be accurate,\" which directly contradicts the first sentence of the stimulus."
+  }
+ ],
+ "known_problem": "Explicit-Standard register (9.2 em-dashes per 1k words; wrong-answer notes average 35.0 words).",
+ "tags": "emdash-heavy; pt157-158-register"
+}

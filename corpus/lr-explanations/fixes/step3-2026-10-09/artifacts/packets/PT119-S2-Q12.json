@@ -1,0 +1,78 @@
+{
+ "qid": "PT119-S2-Q12",
+ "type": "Most Strongly Supported",
+ "difficulty": "",
+ "key_db": "E",
+ "stimulus_db": "Researcher: We studied two groups of subjects over a period of six months. Over this period, one of the groups had a daily routine of afternoon exercise. The other group, the control group, engaged in little or no exercise during the study. It was found that those in the exercise group got 33 percent more deep-sleep at night than did the control group. Exercising in the afternoon tends to raise body temperature slightly until after bedtime, and this extra heat induces deeper sleep.",
+ "stem_db": "The researcher's statements, if true, most strongly support which one of the following?",
+ "choices_db": {
+  "A": "Regular afternoon exercise is one of the things required for adequate deep-sleep.",
+  "B": "Exercise in the morning is almost as likely to have as many beneficial effects on sleep as is exercise in the afternoon.",
+  "C": "The best way to get increased deep-sleep is to induce a slight increase in body temperature just before bedtime.",
+  "D": "No one in the control group experienced a rise in body temperature just before bedtime.",
+  "E": "Raising body temperature slightly by taking a warm bath just before bedtime will likely result in increased deep-sleep."
+ },
+ "bank": {
+  "stimulus": "Researcher: We studied two groups of subjects over a period of six months. Over this period, one of the groups had a daily routine of afternoon exercise. The other group, the control group, engaged in little or no exercise during the study. It was found that those in the exercise group got 33 percent more deep-sleep at night than did the control group. Exercising in the afternoon tends to raise body temperature slightly until after bedtime, and this extra heat induces deeper sleep.",
+  "stem": "The researcher's statements, if true, most strongly support which one of the following?",
+  "choices": {
+   "A": "Regular afternoon exercise is one of the things required for adequate deep-sleep.",
+   "B": "Exercise in the morning is almost as likely to have as many beneficial effects on sleep as is exercise in the afternoon.",
+   "C": "The best way to get increased deep-sleep is to induce a slight increase in body temperature just before bedtime.",
+   "D": "No one in the control group experienced a rise in body temperature just before bedtime.",
+   "E": "Raising body temperature slightly by taking a warm bath just before bedtime will likely result in increased deep-sleep."
+  },
+  "key": "E"
+ },
+ "explanation_id": "ba027d65-3993-417a-9d15-840243736e99",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "f28b5aa2-83d9-4cc5-83cb-457cc169312e",
+   "position": 0,
+   "label": "Premises",
+   "body": "In a six-month study, an afternoon-exercise group got 33% more deep sleep than a control group.\nAfternoon exercise tends to raise body temperature slightly until after bedtime, and this extra heat induces deeper sleep."
+  },
+  {
+   "row_id": "e58b20ed-9724-4eb6-9e88-0a23a49369da",
+   "position": 1,
+   "label": "Evaluate",
+   "body": "The researcher is offering a mechanism: a slight rise in body temperature lasting until after bedtime causes deeper sleep. Anything that produces that same condition (slight body-temperature rise persisting until bedtime) should produce deeper sleep too — even if it is not exercise."
+  },
+  {
+   "row_id": "9d4092fb-98d3-4c44-aa6a-00bd3cb999c9",
+   "position": 2,
+   "label": "Goal",
+   "body": "Find an answer that the mechanism statement directly supports. Be wary of answers that overstate (e.g., \"necessary,\" \"best way,\" \"no one\"). The right answer should be a modest extension of the mechanism, not a sweeping claim."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "9c0ce691-0918-4027-bfba-0f5ea6a58ebc",
+   "letter": "A",
+   "body": "\"Required\" means no one gets enough deep sleep without afternoon exercise. The study only shows exercisers got *more* deep sleep."
+  },
+  {
+   "row_id": "1ebea67e-4423-4cf3-aa35-c5e3edd1e656",
+   "letter": "B",
+   "body": "The mechanism depends on body heat lasting until bedtime. Morning exercise is never discussed, and its heat could easily wear off by night."
+  },
+  {
+   "row_id": "db0dc54b-4fa7-444a-8f01-1804375a5c5d",
+   "letter": "C",
+   "body": "\"The best way\" needs a comparison with every other method. The passage describes one method that works."
+  },
+  {
+   "row_id": "1a80dc2a-0dce-41ef-929f-7669bef1f561",
+   "letter": "D",
+   "body": "This is the most popular wrong answer. \"No one\" covers every person in the control group. They exercised little, but someone could have been warmed by a hot meal or a fever. The study reports group results, not every individual."
+  },
+  {
+   "row_id": "5eb2188f-1b6a-4a72-ada2-eb0666580b82",
+   "letter": "E",
+   "body": "The researcher says the deep sleep comes from a slight rise in body temperature lasting past bedtime. A warm bath right before bed creates that same condition, so it should help too. \"Will likely\" is exactly as strong as the mechanism allows."
+  }
+ ],
+ "known_problem": "Breakdown only, no choice notes, and no bank entry, so the choices are not on file anywhere we checked.",
+ "tags": "no-notes; very-short; no-bank-match"
+}

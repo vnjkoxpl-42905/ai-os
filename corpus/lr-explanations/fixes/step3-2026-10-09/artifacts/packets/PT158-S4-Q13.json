@@ -1,0 +1,84 @@
+{
+ "qid": "PT158-S4-Q13",
+ "type": "Necessary Assumption",
+ "difficulty": "4",
+ "key_db": "B",
+ "stimulus_db": "Medical researcher: A new screening test detects certain polyps at such an early stage that it is generally unclear whether the polyps are malignant. But the risk that a polyp might be malignant leads doctors, in most cases, to have such polyps surgically removed, which is a dangerous process. Yet some of those polyps turn out not to be malignant. Thus, the new screening test can prompt dangerous operations that actually are not medically necessary.",
+ "stem_db": "Which one of the following is an assumption that the medical researcher's argument requires?",
+ "choices_db": {
+  "A": "A surgical operation that is dangerous is ethically justified only for treating a medical condition that is more dangerous.",
+  "B": "Surgical removal of nonmalignant polyps detected by the new screening test is not always medically necessary.",
+  "C": "If the new screening test encourages medically unnecessary operations, then probably it either should not be used or its use should be modified.",
+  "D": "A polyp detected by the new screening test should be surgically removed if it is malignant.",
+  "E": "The screening test is medically useful only when it detects a polyp that requires treatment."
+ },
+ "bank": {
+  "stimulus": "Medical researcher: A new screening test detects certain\n polyps at such an early stage that it is generally\n unclear whether the polyps are malignant. But\n the risk that a polyp might be malignant leads\n doctors, in most cases, to have such polyps\n surgically removed, which is a dangerous\n process. Yet some of those polyps turn out not to\n be malignant. Thus, the new screening test can\n prompt dangerous operations that actually are not\n medically necessary.",
+  "stem": "Which one of the following is an assumption that the\n medical researcher’s argument requires?",
+  "choices": {
+   "A": "A surgical operation that is dangerous is ethically justified only for treating a medical condition that is more dangerous.",
+   "B": "Surgical removal of nonmalignant polyps detected by the new screening test is not always medically necessary.",
+   "C": "If the new screening test encourages medically unnecessary operations, then probably it either should not be used or its use should be modified.",
+   "D": "A polyp detected by the new screening test should be surgically removed if it is malignant.",
+   "E": "The screening test is medically useful only when it detects a polyp that requires treatment."
+  },
+  "key": "B"
+ },
+ "explanation_id": "5b35d309-c504-47a4-9a49-ddedebfc0691",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "b7627f5c-0027-47a9-b666-953594d908be",
+   "position": 0,
+   "label": "Conclusion (Thus)",
+   "body": "The new screening test can prompt dangerous operations that actually are not medically necessary."
+  },
+  {
+   "row_id": "2683beef-fc8d-4edd-9907-02c9b623e24a",
+   "position": 1,
+   "label": "Evidence",
+   "body": "The new screening test detects some polyps that turn out not to be malignant, but doctors usually have them surgically removed, which is a dangerous process."
+  },
+  {
+   "row_id": "4e39deec-4023-4995-829c-82c8a07c2ae5",
+   "position": 2,
+   "label": "Evaluate",
+   "body": "The conclusion is very weakly worded; it's only claiming that the new test can prompt a dangerous operation that is not medically necessary.\nDo we know that the new test has prompted any \"dangerous operations\"?\nNot yet, but it has the potential to, since it will detect very early polyps, which aren't clearly malignant or benign. Most doctors, not wanting to risk leaving a polyp inside someone in case it turns out to be malignant (i.e. cancerous), will surgically remove the polyp, which is a dangerous process.\nSo, while we don't know that the new test has already prompted any polyp removal operations, it seems pretty likely that it could. And we know those operations are dangerous because they told us so.\nDo we know that the polyp removal surgery was \"medically unnecessary\"?\nNot quite. We're getting the sense that the author thinks, \"Hey, if it turns out that this polyp we removed wasn't malignant after all, then that was a medically unnecessary surgery.\"\nBut maybe that's too big a leap. Maybe it's medically necessary to remove polyps for other reasons, whether or not they're malignant."
+  },
+  {
+   "row_id": "d8805a25-d6a2-4027-991a-44fffca76e7a",
+   "position": 3,
+   "label": "Goal",
+   "body": "Look for an answer expressing the author's linking move,\n\"If the polyp wasn't malignant, then the surgery to remove it was medically unnecessary\"\nor look for an answer ruling out some objection, like\n\"doctors will not refuse to order any surgeries on the basis of a screening test that detects polyps at such an early stage\"."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "445761f0-a033-44dd-8f8a-e9fe3f314c29",
+   "letter": "A",
+   "body": "This answer introduces a general ethical principle about when dangerous surgery is justified — namely, that it should only be performed for conditions more dangerous than the surgery itself. But the argument does not depend on any such sweeping principle. The argument's reasoning is narrower: it moves from \"some polyps are nonmalignant\" to \"some surgeries are unnecessary.\" The assumption needed is a factual claim about nonmalignant polyps specifically, not a broad ethical standard governing all surgery. Apply the negation test: if we deny this principle (dangerous surgery can sometimes be justified even without a more dangerous condition), the argument about unnecessary polyp surgery still stands on its own terms."
+  },
+  {
+   "row_id": "e67dd86c-ba1d-401c-ba7a-3776c1f4d704",
+   "letter": "B",
+   "body": "The argument concludes that the test leads to unnecessary dangerous surgeries because some removed polyps are nonmalignant. This reasoning requires the assumption that removing nonmalignant polyps is not always medically necessary. Without this assumption, the argument collapses: if every nonmalignant polyp removal were medically justified — because nonmalignant polyps cause blockages, carry future cancer risk, or create other medical complications — then no surgery would be truly \"unnecessary,\" and the conclusion would fail.\n\nApply the negation test: \"Removal of nonmalignant polyps IS always medically necessary.\" If that were true, every polyp removal prompted by the test would be justified, and the conclusion that some surgeries are unnecessary becomes impossible. The negation destroys the argument, confirming this is a necessary assumption. Note the careful wording: \"not always\" means \"at least sometimes unnecessary\" — an appropriately modest claim for a necessary assumption."
+  },
+  {
+   "row_id": "aa811b8e-a357-4266-a385-36a5328c0e36",
+   "letter": "C",
+   "body": "The argument concludes that the test leads to some unnecessary surgeries — a limited critique identifying a drawback. It does not conclude that the test should be abandoned entirely. A medical test can have downsides (some unnecessary procedures) while still being valuable overall (catching genuinely malignant polyps). The argument does not need the stronger assumption that the test should not be used. Apply the negation test: if we deny this (the test should continue to be used), the argument's conclusion that some surgeries are unnecessary still holds perfectly well."
+  },
+  {
+   "row_id": "9b3bb964-6578-4b8e-9880-6cbdc1c8948e",
+   "letter": "D",
+   "body": "This answer addresses malignant polyps — the uncontroversial side of the issue. Nobody disputes that cancerous polyps should be removed. The argument's gap concerns nonmalignant polyps and whether their removal is always necessary. Affirming that malignant polyps need surgery does nothing to bridge the gap between \"nonmalignant\" and \"unnecessary removal.\" It is answering a question the argument is not asking."
+  },
+  {
+   "row_id": "fdb97b9a-5be5-4229-a810-01eed8999bc1",
+   "letter": "E",
+   "body": "This answer claims the test is useful \"only when\" it detects polyps requiring treatment. The argument does not need such a restrictive assumption about the test's overall utility. The test could be useful for many purposes — monitoring, early detection, research — while still leading to some unnecessary surgeries. The argument's narrow conclusion is about unnecessary procedures, not about the test's entire value proposition. The \"only when\" language creates a condition far stronger than what the argument requires. The necessary assumption is simply that some nonmalignant polyp removals are medically unjustified — not that the test has limited usefulness."
+  }
+ ],
+ "known_problem": "Explicit-Standard register (11.7 em-dashes per 1k words; wrong-answer notes average 87.8 words).",
+ "tags": "emdash-heavy; pt157-158-register; possible-misquote"
+}

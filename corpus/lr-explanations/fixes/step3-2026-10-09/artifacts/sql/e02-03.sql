@@ -1,0 +1,9 @@
+insert into lr_explanation_steps (explanation_id,position,label,body) select v.e,v.p,v.l,v.b from (values
+('6e5e2f99-16fd-4746-94d4-54fbd32182f9'::uuid,3,'Goal','Look for an answer saying Beck overlooks that the program could produce consistent figures that are still inaccurate. That''s the scale that is always five pounds off.
+
+Watch for the reversed wording. Beck assumes consistent figures could only come from accurate estimates. An answer saying Beck assumes the output would stay consistent even if inaccurate has it backwards.'),
+('73c328e3-c57e-44eb-bba9-8421e3101d46'::uuid,3,'Goal','Look for an answer saying the argument overlooks that most mammals with short olecranon processes might not be predators. That''s the reversal in plain words: knowing most predators have short OPs doesn''t tell us most short-OP mammals are predators.
+
+Quick numbers. Say there are 10 predator species and 100 non-predator species. Every predator has a short OP, and so do 30 of the non-predators. Most predators have short OPs, but most short-OP mammals (30 of 40) are not predators. A short-OP mammal would then more likely be a non-predator than a predator, so Meg''s short OP wouldn''t make predation probable.'),
+('e584e358-2f47-439a-a3db-cd92322c75ac'::uuid,3,'Goal','Look for an answer saying the columnist takes for granted that subjects'' acceptance before the test holds up after they learn their substance was ineffective. Or the "fails to consider" version: subjects can accept a risk in advance and still resent it when it happens.')
+) v(e,p,l,b) where not exists (select 1 from lr_explanation_steps x where x.explanation_id=v.e and x.position=v.p) returning id;

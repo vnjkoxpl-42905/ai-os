@@ -1,0 +1,55 @@
+update lr_explanation_steps t set body=v.nb, label=case when v.nl='' then t.label else v.nl end from (values
+('114c6613-8f3a-454f-8f2e-e40c2085209b'::uuid,'1314d8d09e282e39c1bf35e56f5525f8','Start with the curious fact: a volcanic boulder is sitting in an area where all the other rock is sedimentary. Something brought it here.
+
+The author''s explanation is a glacier. That story comes with a direction built in. The glaciers in this area moved south, so a glacier could only have carried the boulder down from somewhere north of here. The explanation quietly needs a volcanic birthplace to the north.
+
+Given that, how could we argue the glacier did not bring it? Two routes. Take away the starting point: if there is nowhere to the north the boulder could have come from, the southward glacier had nothing to pick up. Or offer a different way the boulder got here.','Evaluate','Evaluate'),
+('5bed442a-0871-4c85-b185-6b44a3002a69'::uuid,'db86aa7161851eddfe3f4ec6ca99e8bc','The physics is given to us, and we should not fight it: a smaller radius means faster spin. The geologist''s real claim is about Earth. More earthquakes meant more plate movement toward the center, which shrank the radius, which sped up the spin.
+
+Look at what the evidence actually shows. Right after each earthquake, the plates move inward. That is one push on the radius. It does not tell us the radius ended the decade smaller overall. If something else pushed outward at the same time, the inward movement could be cancelled.
+
+So, given that earthquakes increased and the plates move inward after each one, how could we argue earthquakes do not explain the faster spin? Show that the radius did not actually shrink, because some other force offset the movement.','Evaluate','Evaluate'),
+('67be5e38-0e7c-48b6-b0e6-d4997ffbd8df'::uuid,'857a12c63306bf3a811e9072b368c145','Look for an answer saying something else pushed back against the inward plate movement, so the earthquakes produced no net shrinking of Earth''s radius. An answer giving a different cause of the faster rotation would also work. Don''t expect the answer to attack the skater physics; it is a stated law, and the argument''s weak point is whether the radius really decreased.','Goal','Goal'),
+('24081875-5063-47eb-a9f4-a2c4a0095108'::uuid,'b07702f0e6f0431d875407ad12af9661','The argument makes a significant leap. The evidence is about mathematical computations. The conclusion is about "our most important intellectual skills." Those are only the same thing if computation is one of our most important intellectual skills.
+
+Given the evidence, how could we argue the most important skills will not be devalued? Easy: the skills we value most could be ones a computer cannot do, like judgment, writing, or the kind of reasoning tested on the LSAT. Computers taking over arithmetic would then devalue a skill, just not the important ones.
+
+There is a second, weaker opening in the analogy. The Industrial Revolution and electronic data processing might differ in ways that matter, or intellectual skills might lose value differently than physical labor did. But the computation-to-most-important-skills leap is the cleanest target.','Evaluate','Evaluate'),
+('75b21cda-5a4f-4c37-afff-c0981c884fb5'::uuid,'56bade48c019f66e7e02f9d1fcb3ed1f','Sonora was sculpted by Barajas’s assistants, working from three sketches Barajas drew in preparing to sculpt the statue.','Evidence (because)','Evidence (because)'),
+('2a173cf6-f9f7-4074-b0d7-31bd805631d4'::uuid,'52b5587e6682fef15f035b77cd13b556','The evidence in this argument is pretty flimsy, leaving it open to several objections. Were the assistants skilled enough to sculpt Sonora the way Barajas would have? Did three sketches give them enough information about how Barajas wanted the finished statue to look? And what if Barajas''s statues often ended up looking quite different from the early sketches?
+
+That last one is the sharpest. The whole argument leans on the sketches standing in for the finished statue. Given that the assistants followed the sketches, how could the statue still look different from what Barajas would have made? It could, if the sketches were only an early draft of an idea that Barajas would have kept changing.','Evaluate','Evaluate'),
+('f1f97302-da9c-4a73-b232-ef2eefc03b31'::uuid,'10d2da952a35cda7eefc9af4e4ca8f8c','Look for an answer showing that three sketches do not capture what Barajas''s finished statue would have looked like, for example because Barajas''s designs usually changed a lot after the first sketches. An answer showing the assistants could not carry out Barajas''s style would also work. Weaken answers don''t always match the prediction, so test each one: does it make the resemblance less likely?','Goal','Goal'),
+('a0e0bee0-1faf-4a65-bea8-ec3c897f4ec8'::uuid,'175a026743dba80bb85db65f0ff44df5','There isn''t a huge gap in logic between needing as much capital as possible (the evidence) and not wanting any reduction in the existing amount of capital (the intermediate conclusion).
+
+But there is a significant gap between the intermediate conclusion and the main conclusion. Wanting to avoid any reduction in investments does not automatically support the idea that we should pass laws making it more difficult for investors to remove their capital.
+
+This main conclusion is a recommendation. Plans and recommendations tend to be vulnerable to a variety of objections, and the correct answer to a Weaken question might focus on any one of them. It helps to think about the kinds of objections that this argument is particularly vulnerable to.
+
+For example, a recommendation might have the opposite effect. Maybe these laws would discourage investors from making future investments, which would prevent us from acquiring "as much capital as possible." Or there might be some reason why this particular recommendation can''t be implemented, or won''t be effective. Maybe these types of laws are almost impossible to enforce, and therefore tend to be ineffective.','Evaluate','Evaluate'),
+('5205ebe2-22a8-4fa2-9cdc-abe1faf43572'::uuid,'1ef541c22a799c0db145aae1e6d8b646','The ants store organic matter in the orchids'' roots. That matter gives the orchids extra nutrients, and the extra nutrients make them healthier.','Provided Explanation','Provided Explanation'),
+('538dd554-512a-414f-90be-474ab36025b9'::uuid,'a9f2e09e9492231b080fe90db5e8b456','Our task is an alternate explanation for the correlation between housing ants and being a healthier orchid. We are not asked to attack the nutrient story, only to give another story that would also explain the fact.
+
+Whenever we need an alternate explanation for a correlation, check the usual routes.
+
+Reverse cause: maybe the healthier orchids come first, and ants prefer to move into healthy roots.
+
+Third factor: maybe something that comes with the ants, such as a damp spot in the soil, is what makes those orchids healthier.
+
+Same cause, different mechanism: maybe the ants do help the orchids, just not through nutrients. They could protect the roots, for example.
+
+So look for an answer that explains why ant-housing orchids are healthier without relying on the stored organic matter. An answer that only makes the nutrient story weaker, or adds detail to it, is not an alternative.','Goal','Goal'),
+('5b90d24d-3bc5-4de9-9096-fbd5e6b4df0d'::uuid,'62da77033f804db46c9ac2fe7521dc5e','Let''s be clear about which groups are being compared. Overall, the vitamin C group had less severe acne than the placebo group. Then it turned out that half of each group knew which pill they had, and half could not tell.
+
+Among the subjects who could not tell, there was no difference in acne. So the overall gap came from the subjects who knew. The author''s reading: knowing you got the vitamin made the difference, not the vitamin. The blind comparison is treated as the fair test, and that test found nothing.
+
+That reading depends on the blind comparison really being fair. Finding "no difference in the severity of acne" means both blind groups ended up in the same place during the study. It only shows the vitamin did nothing if both groups started in the same place too.
+
+Given that, how could we argue vitamin C did help? Suppose the vitamin C subjects started with worse acne. Then ending up equal to the placebo group means they improved more. The "no difference" result would hide a real benefit.','Evaluate','Evaluate'),
+('3f4a73c5-614b-4bf2-ab31-81985b672320'::uuid,'b128c72210a1298b2ce9db33f277334e','Look for an answer showing the blind comparison was not a fair one: most likely, that the vitamin C subjects started out with worse acne than the placebo subjects, so matching them during the study is evidence of improvement. More generally, any answer giving evidence that vitamin C actually helped the blind subjects will weaken.','Goal','Goal'),
+('cc53aff6-ee23-421c-b35e-5ba80a773af0'::uuid,'27e8969ac147a22bc90964b7c3ff0c5c','Winchester can''t afford to keep its several small branch libraries supplied with a wide selection of current books. If the branch libraries were closed, then Winchester could afford to open one large library. The large library could carry broader and more current selections [of books].','Evidence','Evidence'),
+('e636f5a1-765a-49c7-994b-f5129fddd592'::uuid,'468b4a271c78c5779c7d51ff9125ef28','The conclusion makes a recommendation about building a new library. It does this by introducing a new concept of better meeting residents'' needs. A couple of assumptions are required to reach this conclusion. First, the argument assumes that one large library would better meet residents'' needs than several smaller ones. We can easily envision a situation where it''s convenient for residents to visit the branch libraries that are close to their neighborhoods, while a single main library would be farther away and therefore less accessible. The argument also assumes that a broader and more current selection of books would better meet residents'' needs. But people use libraries for many reasons other than borrowing books. Libraries often have computers, study rooms, and meeting rooms that residents can use. Libraries often offer classes and events. And people are likely to borrow older books from libraries, not just current ones.
+
+So, given that one big library would have better books, how could we argue residents would be worse off? Show that the new library would fail them in some other way, most likely because they could not easily get to it.','Evaluate','Evaluate'),
+('555b06cd-74bb-4c12-9cd2-e149030e0e28'::uuid,'854311ac18f87a6ddc64d5ad7e322d1a','A correct answer is likely to focus on one of these unintended consequences of closing the branches, a cost that would stop one large library from serving residents better than the existing branches. The likeliest target: residents could not easily reach the single new library.','Goal','Goal')
+) v(id,ob,nb,ol,nl) where t.id=v.id and md5(t.body)=v.ob returning t.id;

@@ -1,0 +1,84 @@
+{
+ "qid": "PT158-S4-Q24",
+ "type": "Weaken",
+ "difficulty": "4",
+ "key_db": "D",
+ "stimulus_db": "Consumer advocate: Some agricultural crops are now being genetically engineered to produce important pharmaceuticals. However, this development raises the possibility that the drugs will end up in the general food supply, since if pollen from a drug-producing crop drifts into a nearby field in which an ordinary, non-drug-producing crop of the same species is being grown, the pollen could fertilize that crop and turn it into a drug-producing crop as well.",
+ "stem_db": "Which one of the following, if true, would most weaken the consumer advocate's argument?",
+ "choices_db": {
+  "A": "As far as scientists know, none of the pharmaceuticals produced by genetically engineered crops would present any danger to public health if they were present in the general food supply.",
+  "B": "If pollen from a genetically engineered crop is prevented from drifting into fields in which ordinary crops of the same species are being grown, then there is no risk of the pollen fertilizing the latter crops.",
+  "C": "The genetically engineered crops that produce pharmaceuticals are not among the crop species that comprise the largest portions of the general food supply.",
+  "D": "In crops genetically engineered to produce pharmaceuticals, the drugs are not present in any part of the plant used for food in ordinary crops of the same species.",
+  "E": "If pollen from a drug-producing crop turned an ordinary crop of the same species into a drug-producing crop, it would be possible for scientists to identify the latter crop."
+ },
+ "bank": {
+  "stimulus": "Consumer advocate: Some agricultural crops are\n now being genetically engineered to produce\n important pharmaceuticals. However, this\n development raises the possibility that the drugs\n will end up in the general food supply, since if\n pollen from a drug-producing crop drifts into\n a nearby field in which an ordinary, non-drug-producing crop of the same species is being\n grown, the pollen could fertilize that crop and\n turn it into a drug-producing crop as well.",
+  "stem": "Which one of the following, if true, would most weaken\n the consumer advocate’s argument?",
+  "choices": {
+   "A": "As far as scientists know, none of the pharmaceuticals produced by genetically engineered crops would present any danger to public health if they were present in the general food supply.",
+   "B": "If pollen from a genetically engineered crop is prevented from drifting into fields in which ordinary crops of the same species are being grown, then there is no risk of the pollen fertilizing the latter crops.",
+   "C": "The genetically engineered crops that produce pharmaceuticals are not among the crop species that comprise the largest portions of the general food supply.",
+   "D": "In crops genetically engineered to produce pharmaceuticals, the drugs are not present in any part of the plant used for food in ordinary crops of the same species.",
+   "E": "If pollen from a drug-producing crop turned an ordinary crop of the same species into a drug-producing crop, it would be possible for scientists to identify the latter crop."
+  },
+  "key": "D"
+ },
+ "explanation_id": "571e3119-bcb6-4ccd-b487-3f2b10167cc0",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "168cd86b-f30d-4918-b872-9377446e405c",
+   "position": 0,
+   "label": "Conclusion",
+   "body": "The fact that some crops are being genetically engineered to produce important drugs raises the possibility that these drugs will end up in the general food supply."
+  },
+  {
+   "row_id": "c6f428a8-8d04-4dbf-b508-bb7e55130399",
+   "position": 1,
+   "label": "Evidence",
+   "body": "If pollen from a drug-producing crop drifts into a nearby field of ordinary crops of the same species, the pollen could fertilize that ordinary crop and turn it into a drug-producing crop."
+  },
+  {
+   "row_id": "d1c38a19-c55c-4bbc-99be-1c6bb16adb74",
+   "position": 2,
+   "label": "Evaluate",
+   "body": "The author seems to be making a couple assumptions:\n1. She thinks that crops being genetically engineered to produce important drugs are the drugs themselves.\nIs that right? I thought maybe scientists were bioengineering a crop that has a certain structure or molecule that's used in combination with other ingredients to make the finished product drug, but the plant might not itself be a drug.\nMaybe they're bioengineering a special type of wheat crop that has an enzyme that works well with a chemotherapy pill, so the combined drug will be easier on people's stomachs.\nWhile the genetically engineered version of the plant may reach our food supply, will the drug reach our food supply?\n2. Is it really a plausible concern that a \"drug\" plant would cross-pollinate with a non-drug plant and sneak into the food supply?\nFirst of all, are there any non-drug crop X's being grown close enough to a drug crop X for this pollen story to happen? Maybe they don't grow the drug version and the regular version anywhere near each other.\nMaybe the drug versions are all grown in greenhouses, where the wind would have no ability to spread the pollen.\nLet's say the pollen is spread, do we need to worry that the GMO version would overtake the normal version? What if the GMO stuff is recessive and the normal stuff is dominant genetics. It might be that even if pollen from drug plants blew over to normal plants, the normal plants would win out.\nLet's say the pollen is spread, and the drug version of the crop does overtake the regular crops, do we need to worry that those crops will enter the food supply?"
+  },
+  {
+   "row_id": "28c5b825-0584-4296-ba19-94bc4225d797",
+   "position": 3,
+   "label": "Goal",
+   "body": "Look for an answer making it seem like we have less to be worried about, whether that's because the plant isn't \"a drug\" in and of itself, or because the storyline of it accidentally pollinating and overtaking regular plants before sneaking into our food supply sounds far fetched."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "3ae82b06-98b5-4ef7-a819-629993fad1a7",
+   "letter": "A",
+   "body": "This answer addresses the severity of the consequence rather than the likelihood of it occurring. The argument claims drugs could contaminate the food supply through pollen drift. Saying the drugs are not harmful does not challenge whether contamination happens — it just says the contamination would not be dangerous. But the argument's concern is about unintended pharmaceutical contamination of the food supply as a matter of principle and safety. Conceding that contamination occurs while arguing it is harmless does not weaken the claim that drugs will \"end up in the general food supply.\" A strong weakener must challenge the mechanism, not downplay the consequences."
+  },
+  {
+   "row_id": "3ca3bfff-6aa0-45d5-b8e4-5dc7bf7e6f7c",
+   "letter": "B",
+   "body": "This answer says that if pollen drift were prevented, there would be no risk of contamination. But this actually confirms the argument's core claim — that pollen drift IS the mechanism by which drugs could enter the food supply. Saying \"you can prevent the risk by preventing drift\" validates the causal chain rather than breaking it. It is an operational suggestion for risk management, not a logical challenge to the argument's reasoning. The argument would still be correct that the risk exists; this answer just says the risk could be mitigated through active prevention measures."
+  },
+  {
+   "row_id": "bf754625-bf1f-488f-afde-ff800c3dcbac",
+   "letter": "C",
+   "body": "This answer says the plants engineered for drug production are not among those constituting the largest portion of the food supply. This limits the potential scope of contamination to minor food crops — pollen would only affect closely related species, and if the drug crops are not closely related to major staples, the biggest crops might be safe. However, this does not eliminate the risk. Cross-pollination could still affect some food crops, even minor ones. \"Minor\" food crops still enter the food supply; they are just consumed in smaller quantities. The argument's concern is that drugs could contaminate any food crops, and narrowing the scope does not break the causal mechanism."
+  },
+  {
+   "row_id": "a289da90-b50c-4d22-b9cf-e6c42994d2b3",
+   "letter": "D",
+   "body": "This answer breaks the causal chain at its most critical link. Even if pollen drifts from drug-producing crops to ordinary food crops of the same species, and even if cross-pollination transfers the drug-producing genetic trait, the drugs are not present in the parts of the plant that people actually eat. The genetic modification may be inherited, and the plant may technically produce the pharmaceutical compound, but if that compound appears only in roots, stems, or leaves of a crop harvested for its fruit or grain, it never enters the food supply. The mechanism exists, but it does not reach your plate. The argument's conclusion — that drugs will end up in the food people consume — does not follow."
+  },
+  {
+   "row_id": "88958a04-d640-4eb8-8590-63e0d3cf36b2",
+   "letter": "E",
+   "body": "This answer says scientists could identify which food crops have been cross-pollinated with drug-producing crops. While detection capability might help manage the problem, it does not weaken the argument that contamination could occur. Detection is a response after the fact, not a prevention mechanism. If scientists can identify contaminated crops, that implicitly concedes contamination happens — the ability to detect it actually supports the argument's premise that cross-pollination occurs. A true weakener should show the contamination cannot meaningfully occur, not offer a monitoring program for contamination that does occur."
+  }
+ ],
+ "known_problem": "Explicit-Standard register (6.6 em-dashes per 1k words; wrong-answer notes average 99.8 words).",
+ "tags": "emdash-heavy; pt157-158-register; possible-misquote"
+}

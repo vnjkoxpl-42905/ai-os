@@ -1,0 +1,78 @@
+{
+ "qid": "PT157-S3-Q13",
+ "type": "Necessary Assumption",
+ "difficulty": "2",
+ "key_db": "C",
+ "stimulus_db": "Political theorist: The purpose of government is to prevent individuals from injuring others in the pursuit of their own welfare. Hence, if most individuals take a reasoned approach to getting what they want, the power of government should be less.",
+ "stem_db": "Which one of the following is an assumption required by the political theorist's argument?",
+ "choices_db": {
+  "A": "Governments alone are not able to convince individuals to take a reasoned approach to getting what they want.",
+  "B": "Government can serve its purpose without diminishing people's ability to promote their own welfare.",
+  "C": "People who take a reasoned approach to getting what they want are less likely to injure other people than are those who do not.",
+  "D": "People who injure other people in the pursuit of their own welfare will eventually be treated in the same fashion by others.",
+  "E": "The more interest people have in promoting their own welfare, the less likely they are to be injured by others."
+ },
+ "bank": {
+  "stimulus": "Political theorist: The purpose of government is to\n prevent individuals from injuring others in the\n pursuit of their own welfare. Hence, if most\n individuals take a reasoned approach to getting\n what they want, the power of government should\n be less.",
+  "stem": "Which one of the following is an assumption required by\n the political theorist’s argument?",
+  "choices": {
+   "A": "Governments alone are not able to convince individuals to take a reasoned approach to getting what they want.",
+   "B": "Government can serve its purpose without diminishing people’s ability to promote their own welfare.",
+   "C": "People who take a reasoned approach to getting what they want are less likely to injure other people than are those who do not.",
+   "D": "People who injure other people in the pursuit of their own welfare will eventually be treated in the same fashion by others.",
+   "E": "The more interest people have in promoting their own welfare, the less likely they are to be injured by others."
+  },
+  "key": "C"
+ },
+ "explanation_id": "a2c47cef-4985-40e5-9b84-e604a10211eb",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "7282d74b-f116-45a7-a710-af8cc9a0826d",
+   "position": 0,
+   "label": "Evidence",
+   "body": "The purpose of government is to prevent individuals from injuring others in the pursuit of their own welfare."
+  },
+  {
+   "row_id": "16d15d5a-401a-46bf-9e58-e73d77fb0c4b",
+   "position": 1,
+   "label": "Conclusion",
+   "body": "If most individuals take a reasoned approach to getting what they want, the power of government should be less."
+  },
+  {
+   "row_id": "20b3aae8-d377-4109-b735-c908acfcdea6",
+   "position": 2,
+   "label": "Evaluate",
+   "body": "As is sometimes the case in a Necessary Assumption question, this argument contains more than one gap in logic. There are several new concepts in the conclusion that are different from concepts discussed in the evidence. The evidence mentions \"injuring others\" in the pursuit of our own welfare. The conclusion shifts to \"a reasoned approach\" to getting what we want. Many people would agree that taking a reasoned approach to something involves not injuring others, but that might not always be true. If someone tries to physically attack me, it might be reasonable for me to injure that person to prevent them from hurting me. This argument assumes that for most people, taking a reasoned approach to getting what we want involves not injuring others in pursuit of our own welfare. The evidence also mentions \"the purpose of government,\" while the conclusion discusses \"the power of government.\" These are different things. The argument assumes that the power of government should be reduced if individuals do not need the government to fulfill its purpose. We can get a sense for the structure of the argument, including the assumptions it makes, by putting it all together like this: Most individuals who take a reasoned approach to getting what they want will not injure others in the pursuit of their own welfare, so they will not need the government to fulfill its purpose. And if most individuals do not need the government to fulfill its purpose, the power of government should be less."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "98fb449c-dbe4-4f1b-8241-fcb4e09160e5",
+   "letter": "A",
+   "body": "Whether governments can convince individuals to be reasonable is not part of the argument. The evidence is about government preventing injury; the conclusion is about what happens if people are reasonable. How people become reasonable is outside the scope."
+  },
+  {
+   "row_id": "cab48aae-47a5-4fa6-a1d7-78a31f45233d",
+   "letter": "B",
+   "body": "Whether government can serve its purpose without diminishing people's ability to promote their welfare is not required by the argument. The argument is about what happens when people are reasonable — not about how government exercises its power. Even if government sometimes diminishes people's welfare while preventing injury, the argument's logic would still hold."
+  },
+  {
+   "row_id": "873db1a2-d32b-47b8-aa8b-77575bbd7d64",
+   "letter": "C",
+   "body": "This bridges the central gap. The evidence says government exists to prevent people from injuring others. The conclusion says reasonable people need less government. The missing link: reasonable people are less likely to injure others. If this is not true — if reasonable people injure others just as often — then being reasonable would not reduce the need for government's injury-prevention purpose. Negating this assumption destroys the argument."
+  },
+  {
+   "row_id": "a0f691c3-1168-408d-b794-e568158be582",
+   "letter": "D",
+   "body": "Whether people who injure others will be treated the same way is about reciprocity or karma, not about the argument's logic. The argument concerns the relationship between reasonable behavior and government power, not what happens to people who injure others."
+  },
+  {
+   "row_id": "125cc63e-93fe-4f81-81ab-cbb50d35287a",
+   "letter": "E",
+   "body": "The argument discusses people injuring others. Whether interest in one's own welfare affects the likelihood of being injured oneself is a different question. The evidence is about preventing people from committing injury, not about factors that make people more or less likely to be victims."
+  }
+ ],
+ "known_problem": "Explicit-Standard register (5.6 em-dashes per 1k words; wrong-answer notes average 44.2 words).",
+ "tags": "no-prediction; emdash-heavy; pt157-158-register"
+}

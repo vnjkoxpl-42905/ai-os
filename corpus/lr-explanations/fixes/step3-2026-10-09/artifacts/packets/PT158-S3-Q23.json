@@ -1,0 +1,78 @@
+{
+ "qid": "PT158-S3-Q23",
+ "type": "Must Be True",
+ "difficulty": "5",
+ "key_db": "A",
+ "stimulus_db": "According to rational-choice theory, popular support for various political parties can be explained sufficiently in terms of deliberate decisions by individual voters to support the party whose policies they believe will yield them the greatest economic advantage. This theory is opposed by many sociologists on the grounds that a complex phenomenon such as the rise of a political organization cannot be caused by a simple phenomenon.",
+ "stem_db": "It can be properly inferred from the statements above that many sociologists believe that",
+ "choices_db": {
+  "A": "economically motivated decisions by voters need not constitute a complex phenomenon",
+  "B": "a complex phenomenon generally will have many complex causes",
+  "C": "political phenomena often have religious and cultural causes as well as economic ones",
+  "D": "popular support for political parties is never a complex phenomenon",
+  "E": "the decisions of individual voters are not usually influenced by their beliefs about which policies will yield them the greatest economic advantage"
+ },
+ "bank": {
+  "stimulus": "According to rational-choice theory, popular support for\n various political parties can be explained sufficiently\n in terms of deliberate decisions by individual voters to\n support the party whose policies they believe will yield\n them the greatest economic advantage. This theory is\n opposed by many sociologists on the grounds that a\n complex phenomenon such as the rise of a political\n organization cannot be caused by a simple phenomenon.",
+  "stem": "It can be properly inferred from the statements above\n that many sociologists believe that",
+  "choices": {
+   "A": "economically motivated decisions by voters need not constitute a complex phenomenon",
+   "B": "a complex phenomenon generally will have many complex causes",
+   "C": "political phenomena often have religious and cultural causes as well as economic ones",
+   "D": "popular support for political parties is never a complex phenomenon",
+   "E": "the decisions of individual voters are not usually influenced by their beliefs about which policies will yield them the greatest economic advantage"
+  },
+  "key": "A"
+ },
+ "explanation_id": "af5ff5d7-8978-4ecf-9452-5af6b682b57b",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "23d5102b-96fc-41ac-8764-fe1960b791f9",
+   "position": 0,
+   "label": "Statements",
+   "body": "Rational Choice Theory: The reason various political parties are popular is that individual voters make a deliberate decision to support the party they think has policies that will yield them the greatest economic advantage. Many Sociologists: This theory is wrong. A complex phenomenon such as the rise of a political party cannot be caused by a simple phenomenon."
+  },
+  {
+   "row_id": "bc3a398f-5239-4954-85b8-150de15bb487",
+   "position": 1,
+   "label": "Evaluate",
+   "body": "If we're matching up the parts of the sociologists' response, they seem to be saying that \"individual voters making a deliberate decision about which party's policies would most help them economically\" is a simple phenomenon. They're objecting to a theory that says \"the reason for X is Y\", and their objection is that \"a complex thing like X can't be explained by a simple phenomenon\". So they apparently assume that Y is a simple phenomenon."
+  },
+  {
+   "row_id": "47832198-bd32-4ead-ae25-2ab4f3e8e78b",
+   "position": 2,
+   "label": "Goal",
+   "body": "Look for an answer that connects \"simple phenomenon\" to the idea of \"individual voters deciding on which party's policies would benefits them most economically\"."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "ea62f47c-ca93-4465-a834-b51fde78e899",
+   "letter": "A",
+   "body": "The sociologists' argument: complex phenomena cannot be caused by simple phenomena. They apply this to reject rational-choice theory, which explains political party support (a complex phenomenon) through individual voters' economically motivated decisions. For this objection to be internally coherent, the sociologists must be classifying economically motivated voter decisions as a simple — not complex — phenomenon. If those decisions were complex, the sociologists' own principle would not apply to the situation, and the objection would fail. This answer captures exactly what the sociologists must believe: economically motivated decisions by voters need not constitute a complex phenomenon. The \"need not\" qualifier is appropriately modest — the sociologists believe these decisions do not automatically rise to the level of complexity, which is all that is required for their objection to function."
+  },
+  {
+   "row_id": "91303727-b979-40ca-97e8-03e3c45302de",
+   "letter": "B",
+   "body": "The sociologists' principle is that complex phenomena cannot be caused by simple phenomena. This does not mean they believe complex phenomena generally have \"many complex causes.\" Their principle distinguishes only between simple and complex causes — it does not make a claim about the quantity of causes. A complex phenomenon might have a single complex cause, according to their logic. This answer adds a claim about multiplicity (\"many complex causes\") that goes beyond what the sociologists' stated principle requires. The passage gives us their principle about simple vs. complex, not a theory about how many causes complex phenomena typically have."
+  },
+  {
+   "row_id": "d0fbbc49-2a5e-41dc-b342-a1693f9f0d03",
+   "letter": "C",
+   "body": "The passage says nothing about religious and cultural causes of political phenomena. The sociologists' objection is structural — they argue that a simple phenomenon cannot cause a complex one. They do not specify what the correct (complex) cause would be. They might believe the causes are cultural, religious, economic, social, or something else entirely — the passage provides no information about their preferred alternative explanation. This answer introduces a specific alternative causal theory that is nowhere mentioned or implied in the passage."
+  },
+  {
+   "row_id": "d598225c-6950-457b-9118-8100a31a6498",
+   "letter": "D",
+   "body": "The sociologists' argument depends on popular support for political parties BEING a complex phenomenon. They argue: complex phenomena cannot be caused by simple phenomena; therefore, individual economic decisions (simple) cannot explain political party support (complex). If popular support were never a complex phenomenon, the sociologists' own principle would have no application to this case, and their objection would be meaningless. This answer claims the sociologists believe popular support is never complex — the exact opposite of what their argument requires. Their argument only works BECAUSE they consider it complex."
+  },
+  {
+   "row_id": "96c1bf06-f611-4656-8b35-6f3266092de7",
+   "letter": "E",
+   "body": "The passage describes rational-choice theory as explaining support through decisions motivated by \"greatest economic advantage.\" The sociologists oppose the theory's causal structure, not its claim about voter motivation. Nothing in the passage suggests the sociologists believe voters are not influenced by economic considerations. They simply believe that economically motivated individual decisions — even if they exist — are too simple a cause for a complex phenomenon like the rise of political organizations. The sociologists' complaint is about simplicity vs. complexity of causal mechanisms, not about whether economic beliefs actually influence voters."
+  }
+ ],
+ "known_problem": "Explicit-Standard register (14.0 em-dashes per 1k words; wrong-answer notes average 89.2 words).",
+ "tags": "emdash-heavy; pt157-158-register"
+}

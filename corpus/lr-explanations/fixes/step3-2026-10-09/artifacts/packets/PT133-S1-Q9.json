@@ -1,0 +1,66 @@
+{
+ "qid": "PT133-S1-Q9",
+ "type": "Must Be True",
+ "difficulty": "2",
+ "key_db": "D",
+ "stimulus_db": "Computer scientist: For several decades, the number of transistors on new computer microchips, and hence the microchips' computing speed, has doubled about every 18 months. However, from the mid-1990s into the next decade, each such doubling in a microchip's computing speed was accompanied by a doubling in the cost of producing that microchip.",
+ "stem_db": "Which one of the following can be properly inferred from the computer scientist's statements?",
+ "choices_db": {
+  "A": "The only effective way to double the computing speed of computer microchips is to increase the number of transistors per microchip.",
+  "B": "From the mid-1990s into the next decade, there was little if any increase in the retail cost of computers as a result of the increased number of transistors on microchips.",
+  "C": "For the last several decades, computer engineers have focused on increasing the computing speed of computer microchips without making any attempt to control the cost of producing them.",
+  "D": "From the mid-1990s into the next decade, a doubling in the cost of fabricating new computer microchips accompanied each doubling in the number of transistors on those microchips.",
+  "E": "It is unlikely that engineers will ever be able to increase the computing speed of microchips without also increasing the cost of producing them."
+ },
+ "bank": {
+  "stimulus": "Computer scientist: For several decades, the number of transistors on new computer microchips, and hence the microchips' computing speed, has doubled about every 18 months. However, from the mid-1990s into the next decade, each such doubling in a microchip's computing speed was accompanied by a doubling in the cost of producing that microchip.",
+  "stem": "Which one of the following can be properly inferred from the computer scientist's statements?",
+  "choices": {
+   "A": "The only effective way to double the computing speed of computer microchips is to increase the number of transistors per microchip.",
+   "B": "From the mid-1990s into the next decade, there was little if any increase in the retail cost of computers as a result of the increased number of transistors on microchips.",
+   "C": "For the last several decades, computer engineers have focused on increasing the computing speed of computer microchips without making any attempt to control the cost of producing them.",
+   "D": "From the mid-1990s into the next decade, a doubling in the cost of fabricating new computer microchips accompanied each doubling in the number of transistors on those microchips.",
+   "E": "It is unlikely that engineers will ever be able to increase the computing speed of microchips without also increasing the cost of producing them."
+  },
+  "key": "D"
+ },
+ "explanation_id": "fa360b2e-cdb0-4824-80b2-17740d6bbb08",
+ "style": "single",
+ "steps": [
+  {
+   "row_id": "f5f44b74-357b-411f-83c9-46f59f9143e8",
+   "position": 0,
+   "label": "Given",
+   "body": "For several decades, the number of transistors on new computer microchips, and hence the microchips’ computing speed, has doubled about every 18 months. However, from the mid-1990s into the next decade, each such doubling in a microchip’s computing speed was accompanied by a doubling in the cost of producing that microchip."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "7f8276e6-b225-4a23-8915-35350d3d6325",
+   "letter": "A",
+   "body": "The statements do link the two: the number of transistors doubled, \"and hence\" computing speed doubled. But they never say adding transistors is the only effective way to double computing speed. The word \"only\" goes beyond what the statements support."
+  },
+  {
+   "row_id": "8399393d-dc4f-4b66-a9c0-483dedcae7f0",
+   "letter": "B",
+   "body": "The statements are about the cost of producing microchips, not the retail cost of computers. Nothing tells us how retail prices changed, so B can't be inferred."
+  },
+  {
+   "row_id": "fc59617f-41f3-41ac-92fe-6514b23e0a80",
+   "letter": "C",
+   "body": "The statements say nothing about what engineers focused on or whether they tried to control costs. The cost doubling is reported as a fact, not as the result of anyone ignoring cost."
+  },
+  {
+   "row_id": "f017809c-eba1-4690-b9ee-e7604fa70181",
+   "letter": "D",
+   "body": "This restates the second premise."
+  },
+  {
+   "row_id": "909ee52b-70d6-4f48-bac1-9861707062db",
+   "letter": "E",
+   "body": "The cost doubling is reported only for the mid-1990s into the next decade. A pattern from that period tells us nothing about whether engineers will ever break it."
+  }
+ ],
+ "known_problem": "A note says the statements do not link transistor count to speed, but the stimulus says speed doubled \"hence\" from transistors; A is wrong for \"only effective way\".",
+ "tags": "short-breakdown; verdict-only; thin-correct-note; thin-notes; no-prediction; very-short"
+}

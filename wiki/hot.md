@@ -9,7 +9,14 @@ aliases: []
 
 Freshest working state; the first page `/pickup` reads. Rebuilt fresh in the 2026-07-16 vault rebuild (the old cache is archived).
 
-## Most recent (2026-10-09): RC repair implemented and published
+## Most recent (2026-10-09): LR Step 3 Revamp verified in production
+
+- [Durable outcome and receipts](../corpus/lr-explanations/fixes/step3-2026-10-09/README.md): verified the prior 173 explanations against 1,521 live rows, then applied batches 22 to 24 through guarded Lovable database queries. No Lovable credit spend.
+- All 191 rewritten explanations match 1,687 final rows, including labels, existing IDs, positions/letters and question ownership. PT126-S3-Q16 remains the independently agreed skip and matches its 8-row snapshot, accounting for all 192 inventory items.
+- Fresh review corrected PT158-S3-Q5 choice D's fertility overstatement. Batch 22 readback caught 16 CRLF-only differences; guarded repair restored exact LF text before proceeding. Final audit has no mismatches, missing rows, duplicate or extra slots.
+- Timed catalogs remain enabled on PT 99a84478 and sections 45ef6f55. Live PT103 S3 has two Rule Puzzle occurrences. Broader LR cleanup, step 4 and source disputes remain open; no student-session visual check or fresh whole-mirror pull. Task statuses unchanged.
+
+## Previous (2026-10-09): RC repair implemented and published
 
 - Remaining RC tickets 03–08 code and release evidence completed in the LSAT U app. Integrated repair `ab5d33dd`; preview-origin fixes `a95d87de`/`4e45b860`; delayed-index setup fix `8ad748b0`. [Authoritative release evidence](../../ai-os-projects/lsatu/docs/specs/2026-10-09-rc-release-evidence.md). Original [ticket packet](../brainstorms/2026-10-08-rc-implementation/README.md) points to current execution state.
 - Final focused slice 409/409, separate builder 34/34, full typecheck, relevant lint and build passed. Whole-suite baseline failures remain explicit. Safe-push used without force or rollback. Free Lovable Publish changes confirmed Your website was updated; production loaded index-Dn3d15C_.js. No Lovable AI messages or credit-spending controls used.

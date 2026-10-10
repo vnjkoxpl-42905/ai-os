@@ -1,0 +1,78 @@
+{
+ "qid": "PT127-S2-Q8",
+ "type": "Weaken",
+ "difficulty": "4",
+ "key_db": "D",
+ "stimulus_db": "This boulder is volcanic in origin and yet the rest of the rock in this area is sedimentary. Since this area was covered by southward-moving glaciers during the last ice age, this boulder was probably deposited here, hundreds of miles from its geological birthplace, by a glacier.",
+ "stem_db": "Which one of the following, if true, most seriously undermines the conclusion drawn in the argument above?",
+ "choices_db": {
+  "A": "Most boulders that have been moved by glaciers have not been moved more than 100 miles.",
+  "B": "The closest geological source of volcanic rock is 50 miles south of this boulder.",
+  "C": "The closest geological source of volcanic rock is 50 miles north of this boulder.",
+  "D": "There are no geological sources of volcanic rock north of this boulder.",
+  "E": "No other boulders of volcanic origin exist within 50 miles of this boulder."
+ },
+ "bank": {
+  "stimulus": "This boulder is volcanic in origin and yet the rest of the rock in this area is sedimentary. Since this area was covered by southward-moving glaciers during the last ice age, this boulder was probably deposited here, hundreds of miles from its geological birthplace, by a glacier.",
+  "stem": "Which one of the following, if true, most seriously undermines the conclusion drawn in the argument above?",
+  "choices": {
+   "A": "Most boulders that have been moved by glaciers have not been moved more than 100 miles.",
+   "B": "The closest geological source of volcanic rock is 50 miles south of this boulder.",
+   "C": "The closest geological source of volcanic rock is 50 miles north of this boulder.",
+   "D": "There are no geological sources of volcanic rock north of this boulder.",
+   "E": "No other boulders of volcanic origin exist within 50 miles of this boulder."
+  },
+  "key": "D"
+ },
+ "explanation_id": "42bc61ac-a0e5-41af-84c5-b5be13a99497",
+ "style": "single",
+ "steps": [
+  {
+   "row_id": "109e4327-e3de-4400-9392-f84f102fbeac",
+   "position": 0,
+   "label": "Evidence",
+   "body": "This boulder is volcanic in origin and yet the rest of the rock in this area is sedimentary. This area was covered by southward-moving glaciers during the last ice age."
+  },
+  {
+   "row_id": "0e474025-1f58-4e24-848f-411f0367a05a",
+   "position": 1,
+   "label": "Conclusion",
+   "body": "This boulder was probably deposited here, hundreds of miles from its geological birthplace, by a glacier."
+  },
+  {
+   "row_id": "114c6613-8f3a-454f-8f2e-e40c2085209b",
+   "position": 2,
+   "label": "Evaluate",
+   "body": "Since glaciers once covered the area it is plausible that the boulder was deposited here by a glacier. For that to be the case there would need to be a source of volcanic rock north of the boulder."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "07fef24a-0e0c-44d2-988b-27495e35837f",
+   "letter": "A",
+   "body": "This is about glacier-moved boulders in general, and \"most\" leaves room for this boulder to be an exception. The conclusion only says this boulder was \"probably\" carried here by a glacier, and A does not show it wasn't. At most it casts slight doubt on the \"hundreds of miles\" detail, far less than D does."
+  },
+  {
+   "row_id": "6079fb88-967a-43d6-9e31-c83ae7d15037",
+   "letter": "B",
+   "body": "A source 50 miles south doesn't hurt the argument. The glaciers moved south, so the boulder would have come from somewhere north, and nothing says the nearest source has to be the one it came from."
+  },
+  {
+   "row_id": "c4a41bc9-b580-43ac-afce-01c732e86cc3",
+   "letter": "C",
+   "body": "A volcanic source to the north fits the argument: a southward-moving glacier could have carried the boulder from there. And the boulder need not have come from the nearest source; there could be other volcanic sources farther north. So this does not undermine the conclusion."
+  },
+  {
+   "row_id": "e97313c9-6429-4e0a-b101-fdd6098e6e02",
+   "letter": "D",
+   "body": "A southward-moving glacier could only have brought the boulder from the north. If there is no volcanic rock north of the boulder, the glacier had nowhere to pick it up, so D seriously undermines the argument's explanation."
+  },
+  {
+   "row_id": "eb8e8aab-45e1-4cf2-b2e4-03dca68a55a9",
+   "letter": "E",
+   "body": "Whether other volcanic boulders lie nearby says nothing about where this one came from. A glacier could have carried a single boulder, so E doesn't undercut the conclusion."
+  }
+ ],
+ "known_problem": "d4 Weaken; A is dismissed as \"other boulders are not relevant\" though it bears on distance; C (a source to the north) is treated like B with no word on why it would strengthen; \"bolder\" typo.",
+ "tags": "verdict-only; thin-correct-note; thin-notes; no-prediction; very-short"
+}

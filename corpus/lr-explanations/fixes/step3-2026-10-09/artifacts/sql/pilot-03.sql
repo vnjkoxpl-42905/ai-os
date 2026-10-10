@@ -1,0 +1,10 @@
+insert into lr_explanation_steps (explanation_id,position,label,body) select v.e,v.p,v.l,v.b from (values
+('395281fb-7c82-4015-ac20-8df0d0b7beaa'::uuid,3,'Goal','Look for the classic necessary vs. sufficient answer: the argument treats something required for greatness (a passionate response) as if it were enough for greatness. A conversational version would say the argument fails to consider that a work can evoke passionate responses without being great.'),
+('785f2e9b-575c-46db-baf6-f3c2b5be2798'::uuid,1,'Conclusion','Clearly, then, these speeches are selfishly motivated and the promises made in them are unreliable.'),
+('785f2e9b-575c-46db-baf6-f3c2b5be2798'::uuid,2,'Evaluate','The evidence is about motive: candidates give speeches to get elected. The conclusion has two parts. The first, that the speeches are selfishly motivated, follows closely from that motive. The second is the leap: the promises are unreliable.
+
+Why would a selfish motive make a promise unreliable? The author never says. This is an attack on the source rather than the content. The reason someone has for saying something doesn''t tell us whether it is true or whether it will be kept.
+
+Given that candidates make promises to get elected, how could we argue the promises are still reliable? A candidate who wants to win the next election also has a selfish reason to keep them, since broken promises cost votes. The motive might even make the promises more reliable. Either way, an ulterior motive alone doesn''t settle whether a promise can be trusted.'),
+('785f2e9b-575c-46db-baf6-f3c2b5be2798'::uuid,3,'Goal','Look for an answer saying the argument overlooks that a promise made for a self-interested reason can still be reliable. In formal terms: it rejects the promises because of the speaker''s motive rather than because of any evidence about the promises themselves.')
+) v(e,p,l,b) where not exists (select 1 from lr_explanation_steps x where x.explanation_id=v.e and x.position=v.p) returning id;

@@ -1,0 +1,84 @@
+{
+ "qid": "PT158-S2-Q2",
+ "type": "Flaw",
+ "difficulty": "3",
+ "key_db": "A",
+ "stimulus_db": "Council president: Councilmember Smith has proposed a new city ordinance prohibiting the use of the \"bait-and-switch\" sales tactic. Smith must have amnesia. Four years ago he owned an appliance store that was famous for its use of bait-and-switch. Clearly, Smith's proposed ordinance does not even merit consideration.",
+ "stem_db": "The council president's reasoning is most vulnerable to criticism on the grounds that the president",
+ "choices_db": {
+  "A": "dismisses the proposed ordinance because of its source rather than because of its content",
+  "B": "takes a single fact that is incompatible with a claim as enough to show that claim to be false",
+  "C": "fails to make a needed distinction between deceptive sales tactics and legitimate methods of increasing sales",
+  "D": "draws a conclusion that simply restates a claim presented in support of that conclusion",
+  "E": "generalizes from a limited number of instances of a certain kind to all instances of that kind"
+ },
+ "bank": {
+  "stimulus": "Council president: Councilmember Smith has proposed\n a new city ordinance prohibiting the use of the\n “bait-and-switch” sales tactic. Smith must have\n amnesia. Four years ago he owned an appliance\n store that was famous for its use of bait-and-switch. Clearly, Smith’s proposed ordinance does\n not even merit consideration.",
+  "stem": "The council president’s reasoning is most vulnerable to\n criticism on the grounds that the president",
+  "choices": {
+   "A": "dismisses the proposed ordinance because of its source rather than because of its content",
+   "B": "takes a single fact that is incompatible with a claim as enough to show that claim to be false",
+   "C": "fails to make a needed distinction between deceptive sales tactics and legitimate methods of increasing sales",
+   "D": "draws a conclusion that simply restates a claim presented in support of that conclusion",
+   "E": "generalizes from a limited number of instances of a certain kind to all instances of that kind"
+  },
+  "key": "A"
+ },
+ "explanation_id": "e9dbeec3-2277-4bd3-861a-a723ee66e523",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "e915e16d-a5e8-49ce-b392-43495f5c308c",
+   "position": 0,
+   "label": "Conclusion (Clearly)",
+   "body": "Smith's proposed ordinance does not even merit consideration."
+  },
+  {
+   "row_id": "46e6d3c1-5e7f-4f40-939c-ab4d239521b5",
+   "position": 1,
+   "label": "Evidence",
+   "body": "He's currently proposing a new city ordinance prohibiting \"bait-and-switch\", but four years ago he owned an appliance store that was famous for its use of bait-and-switch."
+  },
+  {
+   "row_id": "b8076a74-666d-40bb-83ae-1b88584557ef",
+   "position": 2,
+   "label": "Evaluate",
+   "body": "Whenever we're doing Flaw and we see a Rebuttal style argument, we consider the 2 of the 10 Famous Flaws that deal with rebuttals: Ad Hominem - This refers to when an author dismisses an argument because the source of the argument has a biased interest or conflicting past behavior. Unproven vs. Proven False - This refers to when an author argues that \"because there's no evidence for X, or because someone's attempt to prove X failed, that shows that X is false\". This looks to be an example of Ad Hominem. The author isn't saying that Smith's claim is false, so it couldn't be Unproven vs. Proven False. She's just dismissing his view, saying \"it doesn't even merit consideration\". And why? Because of Smith's conflicting past behavior. We should never reject someone's suggestion that we do Y just because that person used to say/do the opposite of Y. People and circumstances can change. Maybe there was someone who was really into cryptocurrency when it first came out but now is against it because of how bad its energy demands are for the environment. We can't say, \"Don't listen to that crypto-critic. After all, he was way into Bitcoin when it first came out.\""
+  },
+  {
+   "row_id": "ad800681-0a94-41ea-8555-bb6f06b8e828",
+   "position": 3,
+   "label": "Goal",
+   "body": "Look for an answer describing this famous flaw; often it sounds like \"the author dismisses an argument because of its source rather than its content\". Otherwise, it might be a more specific answer that says, \"because Person X did thing A in the past, we shouldn't listen to X's idea to do away with thing A.\""
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "fe20e582-d97b-4f70-8f45-7289d1888aea",
+   "letter": "A",
+   "body": "This answer precisely identifies the argument's flaw. The council president dismisses the proposed ordinance entirely because of who proposed it — Smith, a former bait-and-switch practitioner — rather than because of any problem with the ordinance itself. The merits of a proposal are logically independent of the personal history of its author. Smith's past use of bait-and-switch might make him a hypocrite, but it says nothing about whether the ordinance is well-crafted, enforceable, or beneficial to consumers. By attacking the source rather than the content, the president avoids engaging with the substance of the proposal entirely. This is a classic ad hominem fallacy: the argument treats biographical information about the proposer as grounds for rejecting the proposition."
+  },
+  {
+   "row_id": "21daac46-1951-4f64-b320-b945b4ac83dc",
+   "letter": "B",
+   "body": "This answer describes using a single incompatible fact to dismiss a claim as false. But the argument does not work that way. The president is not identifying a fact that contradicts the ordinance and using it to prove the ordinance is wrong. Instead, the president is using a fact about Smith's personal history to dismiss the ordinance without evaluating it. The distinction matters: the incompatibility described in this answer would be between evidence and the claim being evaluated, but here the \"evidence\" (Smith's history) has no logical bearing on the claim (the ordinance's merit).\n\nEven if an argument did use a single incompatible fact to reject a claim, that is not inherently fallacious. A single counterexample can legitimately refute a universal claim. The flaw described here — relying on one piece of contradictory evidence — is a valid form of reasoning in many contexts, not a logical error. The actual flaw in the argument is ad hominem reasoning, not insufficient evidence against the proposal."
+  },
+  {
+   "row_id": "c37e9689-cc6e-4dc1-95a0-005311fe4061",
+   "letter": "C",
+   "body": "This answer suggests the argument fails to distinguish between deceptive and legitimate sales tactics. While such a distinction could theoretically be relevant to a discussion about regulating sales practices, it does not describe the actual flaw in this argument. The president never discusses the substance of sales tactics at all — the president never addresses what the ordinance would prohibit or whether bait-and-switch is appropriately classified. The entire argument operates at the level of \"who proposed it\" rather than \"what it proposes.\" The fundamental flaw is the ad hominem attack on Smith, not a failure to make nuanced distinctions about different types of sales tactics."
+  },
+  {
+   "row_id": "1aaa836f-8659-4cb1-8e78-54f6fba46fe0",
+   "letter": "D",
+   "body": "Circular reasoning occurs when the conclusion simply restates one of its own premises — when the argument assumes what it is trying to prove. For this to apply, the president's conclusion (the ordinance does not merit consideration) would need to be the same as one of the premises. But the premise is that Smith used bait-and-switch four years ago, and the conclusion is that his ordinance should be dismissed. These are different claims. The argument may be invalid (because the premise is irrelevant to the conclusion), but it is not circular — it does not assume its own conclusion. Circular arguments at least have the right kind of connection between premise and conclusion; this argument's problem is the wrong kind of connection entirely."
+  },
+  {
+   "row_id": "04933fd5-a80b-4a9e-9426-74683bb5986e",
+   "letter": "E",
+   "body": "A sampling or generalization flaw occurs when a conclusion about a broader category is drawn from an unrepresentative or insufficient sample. The president is not generalizing from instances at all. The argument does not say \"Smith's store used bait-and-switch and was bad, therefore all bait-and-switch is bad\" or \"one case proves a pattern.\" The president's reasoning is entirely about Smith as an individual and his relationship to the ordinance he proposed. The flaw is about the type of evidence used (biographical rather than substantive), not about the quantity of instances examined. No sampling, surveying, or generalizing is involved in the argument."
+  }
+ ],
+ "known_problem": "Explicit-Standard register (7.7 em-dashes per 1k words; wrong-answer notes average 124.0 words).",
+ "tags": "emdash-heavy; pt157-158-register; possible-misquote"
+}

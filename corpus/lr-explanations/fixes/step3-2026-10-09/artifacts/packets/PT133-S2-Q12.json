@@ -1,0 +1,66 @@
+{
+ "qid": "PT133-S2-Q12",
+ "type": "Most Strongly Supported",
+ "difficulty": "5",
+ "key_db": "A",
+ "stimulus_db": "Commentator: Recently, articles criticizing the environmental movement have been appearing regularly in newspapers. According to Winslow, this is due not so much to an antienvironmental bias among the media as to a preference on the part of newspaper editors for articles that seem \"daring\" in that they seem to challenge prevailing political positions. It is true that editors like to run antienvironmental pieces mainly because they seem to challenge the political orthodoxy. But serious environmentalism is by no means politically orthodox, and antienvironmentalists can hardly claim to be dissidents, however much they may have succeeded in selling themselves as renegades.",
+ "stem_db": "The commentator's statements, if true, most strongly support which one of the following?",
+ "choices_db": {
+  "A": "Winslow is correct about the preference of newspaper editors for controversial articles.",
+  "B": "Critics of environmentalism have not successfully promoted themselves as renegades.",
+  "C": "Winslow's explanation is not consonant with the frequency with which critiques of environmentalism are published.",
+  "D": "The position attacked by critics of environmentalism is actually the prevailing political position.",
+  "E": "Serious environmentalism will eventually become a prevailing political position."
+ },
+ "bank": {
+  "stimulus": "Commentator: Recently, articles criticizing the environmental movement have been appearing regularly in newspapers. According to Winslow, this is due not so much to an antienvironmental bias among the media as to a preference on the part of newspaper editors for articles that seem \"daring\" in that they seem to challenge prevailing political positions. It is true that editors like to run antienvironmental pieces mainly because they seem to challenge the political orthodoxy. But serious environmentalism is by no means politically orthodox, and antienvironmentalists can hardly claim to be dissidents, however much they may have succeeded in selling themselves as renegades.",
+  "stem": "The commentator's statements, if true, most strongly support which one of the following?",
+  "choices": {
+   "A": "Winslow is correct about the preference of newspaper editors for controversial articles.",
+   "B": "Critics of environmentalism have not successfully promoted themselves as renegades.",
+   "C": "Winslow's explanation is not consonant with the frequency with which critiques of environmentalism are published.",
+   "D": "The position attacked by critics of environmentalism is actually the prevailing political position.",
+   "E": "Serious environmentalism will eventually become a prevailing political position."
+  },
+  "key": "A"
+ },
+ "explanation_id": "979d1f49-6d4d-4f2a-a294-59fd314c0fbd",
+ "style": "single",
+ "steps": [
+  {
+   "row_id": "863d68ce-2bf8-4261-a390-0d946de21044",
+   "position": 0,
+   "label": "Given",
+   "body": "Recently, articles criticizing the environmental movement have been appearing regularly in newspapers. According to Winslow, this is due not so much to an antienvironmental bias among the media as to a preference on the part of newspaper editors for articles that seem “daring” in that they seem to challenge prevailing political positions. It is true that editors like to run antienvironmental pieces mainly because they seem to challenge the political orthodoxy. But serious environmentalism is by no means politically orthodox, and antienvironmentalists can hardly claim to be dissidents, however much they may have succeeded in selling themselves as renegades."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "8220c83c-c7af-4f32-a64a-1b18a520b482",
+   "letter": "A",
+   "body": "This is supported by the second and third statements."
+  },
+  {
+   "row_id": "e5dc97e8-3971-4ead-adb5-2c0e1ffd4858",
+   "letter": "B",
+   "body": "The fourth statement undermines this answer."
+  },
+  {
+   "row_id": "339b8df5-1dad-4542-a389-3dd84be18520",
+   "letter": "C",
+   "body": "This is undermined by the first, second, and third statements. Winslow’s explanation is consonant with the frequency since Winslow is correct about the editors’ preference for articles that seem daring and antienvironmental articles have been appearing regularly."
+  },
+  {
+   "row_id": "1e835550-0977-4074-b736-31305a031805",
+   "letter": "D",
+   "body": "The fourth statement undermines this answer."
+  },
+  {
+   "row_id": "e17f4d50-96b1-4168-bd49-baaa878c30a1",
+   "letter": "E",
+   "body": "The statements do not make any predictions."
+  }
+ ],
+ "known_problem": "d5 Most Supported answered with \"supported by the second and third statements\"; never explains the Winslow split.",
+ "tags": "short-breakdown; verdict-only; thin-correct-note; thin-notes; no-prediction; very-short"
+}

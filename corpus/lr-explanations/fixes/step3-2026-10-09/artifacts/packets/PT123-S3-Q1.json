@@ -1,0 +1,66 @@
+{
+ "qid": "PT123-S3-Q1",
+ "type": "Principle-Conform",
+ "difficulty": "2",
+ "key_db": "C",
+ "stimulus_db": "Situation: Someone living in a cold climate buys a winter coat that is stylish but not warm in order to appear sophisticated.\nAnalysis: People are sometimes willing to sacrifice sensual comfort or pleasure for the sake of appearances.",
+ "stem_db": "The analysis provided for the situation above is most appropriate for which one of the following situations?",
+ "choices_db": {
+  "A": "A person buys an automobile to commute to work even though public transportation is quick and reliable.",
+  "B": "A parent buys a car seat for a young child because it is more colorful and more comfortable for the child than the other car seats on the market, though no safer.",
+  "C": "A couple buys a particular wine even though their favorite wine is less expensive and better tasting because they think it will impress their dinner guests.",
+  "D": "A person sets her thermostat at a low temperature during the winter because she is concerned about the environmental damage caused by using fossil fuels to heat her home.",
+  "E": "An acrobat convinces the circus that employs him to purchase an expensive outfit for him so that he can wear it during his act to impress the audience."
+ },
+ "bank": {
+  "stimulus": "Situation: Someone living in a cold climate buys a winter coat that is stylish but not warm in order to appear sophisticated.\nAnalysis: People are sometimes willing to sacrifice sensual comfort or pleasure for the sake of appearances.",
+  "stem": "The analysis provided for the situation above is most appropriate for which one of the following situations?",
+  "choices": {
+   "A": "A person buys an automobile to commute to work even though public transportation is quick and reliable.",
+   "B": "A parent buys a car seat for a young child because it is more colorful and more comfortable for the child than the other car seats on the market, though no safer.",
+   "C": "A couple buys a particular wine even though their favorite wine is less expensive and better tasting because they think it will impress their dinner guests.",
+   "D": "A person sets her thermostat at a low temperature during the winter because she is concerned about the environmental damage caused by using fossil fuels to heat her home.",
+   "E": "An acrobat convinces the circus that employs him to purchase an expensive outfit for him so that he can wear it during his act to impress the audience."
+  },
+  "key": "C"
+ },
+ "explanation_id": "502b30bb-33b7-433b-9333-2980364a57dd",
+ "style": "single",
+ "steps": [
+  {
+   "row_id": "b59d5d95-c3d2-4ca3-b4d1-1c589562462e",
+   "position": 0,
+   "label": "Given",
+   "body": "People are sometimes willing to sacrifice sensual comfort and pleasure for the sake of appearances."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "30fa6d0f-d2bc-4e6b-9a60-f74a95050250",
+   "letter": "A",
+   "body": "The person chooses a car over quick, reliable public transportation, but nothing says they give up comfort or pleasure, and nothing says they do it to look good to anyone. The analysis needs both pieces: a sacrifice, made for the sake of appearances."
+  },
+  {
+   "row_id": "57bb7873-6fba-4c23-9a0d-6367974c1327",
+   "letter": "B",
+   "body": "The parent picks the car seat because it is more colorful and more comfortable for the child. That gains comfort instead of sacrificing it, and the choice isn't made to impress anyone."
+  },
+  {
+   "row_id": "25c2f540-0a00-41b4-be44-924f3db1b5f9",
+   "letter": "C",
+   "body": "This situation includes people who sometimes put the opinions of others above their own desires."
+  },
+  {
+   "row_id": "a510c08b-21e0-4efc-a927-97564ea68692",
+   "letter": "D",
+   "body": "Keeping the thermostat low does sacrifice comfort, but the reason is concern about environmental damage, not appearances. The analysis requires the sacrifice to be made for how one looks to others."
+  },
+  {
+   "row_id": "1e4ca18e-385c-4a1a-82d8-a2f95a708bca",
+   "letter": "E",
+   "body": "The acrobat does care about appearances, since the outfit is meant to impress the audience. But the acrobat gives up nothing: the circus pays, and nothing suggests the outfit is less comfortable or pleasant. With no sacrifice of comfort or pleasure, the analysis doesn't fit."
+  }
+ ],
+ "known_problem": "Breakdown restates the analysis; correct note never names the sacrifice (better-tasting, cheaper wine).",
+ "tags": "short-breakdown; verdict-only; thin-correct-note; thin-notes; no-prediction; very-short"
+}

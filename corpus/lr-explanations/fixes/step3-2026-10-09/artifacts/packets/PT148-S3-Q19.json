@@ -1,0 +1,84 @@
+{
+ "qid": "PT148-S3-Q19",
+ "type": "Agree/Disagree",
+ "difficulty": "3",
+ "key_db": "C",
+ "stimulus_db": "Ana: On libertarian principles, I oppose the proposed smoking ban. It is not the government's business to prevent people from doing things that harm only themselves.\n\nPankaj: But keep in mind that the ban would apply only to smoking in public places. People could still smoke all they want in private.",
+ "stem_db": "The dialogue provides the most support for the claim that Ana and Pankaj disagree over whether",
+ "choices_db": {
+  "A": "it is the government's business to prevent people from harming themselves",
+  "B": "government should be restrained by libertarian principles",
+  "C": "the proposed smoking ban is intended to prevent harm only to smokers themselves",
+  "D": "the proposed ban would prohibit smoking in public places",
+  "E": "there are cases in which government should attempt to regulate private behavior"
+ },
+ "bank": {
+  "stimulus": "Ana: On libertarian principles, I oppose the proposed smoking ban. It is not the government’s business to prevent people from doing things that harm only themselves.\nPankaj: But keep in mind that the ban would apply only to smoking in public places. People could still smoke all they want in private.",
+  "stem": "The dialogue provides the most support for the claim that Ana and Pankaj disagree over whether",
+  "choices": {
+   "A": "it is the government’s business to prevent people from harming themselves",
+   "B": "government should be restrained by libertarian principles",
+   "C": "the proposed smoking ban is intended to prevent harm only to smokers themselves",
+   "D": "the proposed ban would prohibit smoking in public places",
+   "E": "there are cases in which government should attempt to regulate private behavior"
+  },
+  "key": "C"
+ },
+ "explanation_id": "bec64040-7b47-40b1-b728-b9e4400c8cc1",
+ "style": "single",
+ "steps": [
+  {
+   "row_id": "1065ffe0-ba4e-4097-bc0b-700539237a92",
+   "position": 0,
+   "label": "Ana's 1st Claim",
+   "body": "On libertarian principles, I oppose the proposed smoking ban.\n*Does Pankaj say he does not oppose the smoking ban?*\n\nNo, nothing definitive. He pushes back against Ana's opposition, but that doesn't necessarily mean that he supports the ban. On LSAT, it's common for someone to disagree with person A's rationale for reaching position X, even though they don't necessarily disagree with position X."
+  },
+  {
+   "row_id": "ca6d1705-3f5c-4664-8d1c-488a1a167d09",
+   "position": 1,
+   "label": "Ana's 2nd Claim",
+   "body": "It isn't the government's business to prevent people from doing things that harm only themselves.\n*Does Pankaj say he thinks that it* **is** *the government's business sometimes to prevent people from doing things that harm only themselves?*\n\nNo, he doesn't say anything about the government or what its role is."
+  },
+  {
+   "row_id": "86bd2159-9263-434f-8549-6e0e40e2259d",
+   "position": 2,
+   "label": "Evaluate",
+   "body": "Since Pankaj didn't disagree with any of Ana's explicit claims, we should start asking ourselves what Ana was *assuming*, because maybe Pankaj is disagreeing with an assumption.\n\nThe connection between Ana's two sentences assumes that \"the proposed smoking ban *is trying to prevent people from doing things that harm only themselves*\".\n\nDoes Pankaj disagree with this?\n\nYes! He's saying that people are still allowed to smoke all they want in private (it's not preventing people from doing things that harm only themselves). The ban applies only to smoking public spaces (so it's aimed at preventing people from doing things that harm *others*, in this case preventing cigarette smokers from harming others with their secondhand smoke)."
+  },
+  {
+   "row_id": "4f316b8c-be35-4d13-8f21-b59ae16185c2",
+   "position": 3,
+   "label": "Goal",
+   "body": "Look for something like \"Whether the ban is preventing people from doing things that harm only themselves\"."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "e6e3674d-1b5b-4e8a-bab7-82c680153aa8",
+   "letter": "A",
+   "body": "Ana says it is not the government's business to prevent people from doing things that harm only themselves. Pankaj never says what the government's business is; Pankaj only describes where the ban applies. With Pankaj silent, this cannot be their disagreement."
+  },
+  {
+   "row_id": "0ac01bec-dc9d-45df-bbe7-cc2615ebf4af",
+   "letter": "B",
+   "body": "Ana appeals to libertarian principles, but Pankaj never says whether government should be restrained by them. Pankaj only points out that the ban covers public places. With Pankaj silent, this cannot be their disagreement."
+  },
+  {
+   "row_id": "c40a32c3-0ce4-4b22-a830-6fc26f568985",
+   "letter": "C",
+   "body": "Ana would agree with this. It's implied by her statements that she opposes the ban because she thinks it's intended to prevent harm only to smokers themselves and she rejects that on libertarian principles.\n\nPankaj would disagree with this, because by pointing out that you are banned from smoking in public places but not in private, he's implying that the ban is targeting the effects of smoking on others not on the smoker him/herself."
+  },
+  {
+   "row_id": "c9c7d3fd-6a1d-4bbb-a8c5-5d180dd7bb40",
+   "letter": "D",
+   "body": "Pankaj would clearly agree with this because he explicitly says this. Can we derive from Ana's paragraph that she thinks that \"the proposed ban would not prohibit smoking in public places\"?\n\nNo, we can't derive that. She may think that the smoking ban applies to public places (as well as private places).\n\nIf we changed this answer to say \"the proposed ban would prohibit smoking only in public places\", then we could probably pick it."
+  },
+  {
+   "row_id": "05b3361f-7bf0-4d38-be89-b3ff19bec065",
+   "letter": "E",
+   "body": "Pankaj notes that people \"could still smoke all they want in private,\" which describes the limits of the ban, not a view on whether government should ever regulate private behavior. Ana's principle covers only things that harm the person doing them, so Ana does not settle that general question either."
+  }
+ ],
+ "known_problem": "No breakdown, yet A, B and E say \"As we analyzed\"; three notes pasted; \"Panjak\" typo.",
+ "tags": "no-breakdown; verdict-only; very-short"
+}

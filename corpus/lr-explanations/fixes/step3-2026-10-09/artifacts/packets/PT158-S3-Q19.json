@@ -1,0 +1,84 @@
+{
+ "qid": "PT158-S3-Q19",
+ "type": "Sufficient Assumption",
+ "difficulty": "5",
+ "key_db": "E",
+ "stimulus_db": "For there to be a thriving population of turtles in a pond, conditions at that pond must be beneficial to turtles. The water in Wallakim Pond, unlike that in Sosachi Pond, is acidic. Thus, there must not be a thriving population of turtles at Wallakim Pond.",
+ "stem_db": "Which one of the following, if assumed, enables the argument's conclusion to be properly drawn?",
+ "choices_db": {
+  "A": "If the water in a pond is not acidic, the conditions at that pond are beneficial to turtles.",
+  "B": "The most important factor that determines whether a pond will have a thriving turtle population is the acidity of the water.",
+  "C": "The water conditions at Sosachi Pond are more beneficial to turtles than are the water conditions at Wallakim Pond.",
+  "D": "Wallakim Pond would have a thriving population of turtles if it were not acidic.",
+  "E": "The conditions at a pond are beneficial to turtles only if the water in the pond is not acidic."
+ },
+ "bank": {
+  "stimulus": "For there to be a thriving population of turtles in a pond,\n conditions at that pond must be beneficial to turtles. The\n water in Wallakim Pond, unlike that in Sosachi Pond, is\n acidic. Thus, there must not be a thriving population of\n turtles at Wallakim Pond.",
+  "stem": "Which one of the following, if assumed, enables the\n argument’s conclusion to be properly drawn?",
+  "choices": {
+   "A": "If the water in a pond is not acidic, the conditions at that pond are beneficial to turtles.",
+   "B": "The most important factor that determines whether a pond will have a thriving turtle population is the acidity of the water.",
+   "C": "The water conditions at Sosachi Pond are more beneficial to turtles than are the water conditions at Wallakim Pond.",
+   "D": "Wallakim Pond would have a thriving population of turtles if it were not acidic.",
+   "E": "The conditions at a pond are beneficial to turtles only if the water in the pond is not acidic."
+  },
+  "key": "E"
+ },
+ "explanation_id": "25becc90-4905-4b96-bb97-9f540d7685ee",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "76b7023a-61b5-4c87-bf39-f01b67a68f7d",
+   "position": 0,
+   "label": "Conclusion (Thus)",
+   "body": "Wallakim Pond doesn't have a thriving population of turtles."
+  },
+  {
+   "row_id": "aa629d31-a0a0-420d-a245-fe69cf370cd6",
+   "position": 1,
+   "label": "Evidence",
+   "body": "Thriving populations of turtles require conditions that are beneficial to turtles. Wallakim Pond has acidic water."
+  },
+  {
+   "row_id": "69d8de67-a247-45fd-ad3a-e04bf08d846b",
+   "position": 2,
+   "label": "Evaluate",
+   "body": "It looks like we just need to hear \"acidic water is not a condition that is beneficial to turtles\". If we don't hear that missing link intuitively, then we can derive it by turning the Conclusion into an elongated logic path, looking at what parts of that path have been provided by the Evidence, and then solving for the missing part of the path as our desired Sufficient Assumption.\n```\nCONCLUSION\nWallakim -------------------------------> ~Thriving\nPond                                       Pop of T's\nEVIDENCE\nWallakim --> acidic     Cond's --> ~Thriving\nPond         water      not ben    Pop of T's\nMISSING LINK\nacidic --> Cond's\nwater      not ben\n```"
+  },
+  {
+   "row_id": "4d2c72d0-003e-4884-8ca7-9c482e665c7b",
+   "position": 3,
+   "label": "Goal",
+   "body": "We want an answer to convey that \"if there's acidic water, then the conditions are not beneficial to turtles\". Or we'll take any other answer that we could combine with our evidence in order to derive the conclusion that Wallakim Pond doesn't have a thriving population of turtles."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "bcf50a2d-7d9a-4b78-83bb-da8006520c9a",
+   "letter": "A",
+   "body": "This answer says: if the water is NOT acidic, conditions are beneficial. Formally: not acidic → beneficial. But the argument needs the reverse: if the water IS acidic, conditions are NOT beneficial (acidic → not beneficial). This answer provides the wrong direction. Knowing that non-acidic water creates beneficial conditions tells us nothing about what acidic water does. The argument already knows Wallakim is acidic; it needs a rule about what acidity means for turtles, not a rule about what non-acidity means. This is a classic Illegal Negation trap — it affirms the consequence of the condition we need rather than the condition itself."
+  },
+  {
+   "row_id": "57d19364-0c3e-4182-8ae9-a44db39ecc23",
+   "letter": "B",
+   "body": "This answer says water acidity is \"the most important factor\" determining whether a pond has a thriving turtle population. But \"most important\" does not mean \"decisive.\" Even if acidity is the most important factor, it could still be outweighed by other favorable conditions at Wallakim Pond. The argument needs a guarantee: acidic water makes conditions not beneficial, period. \"Most important factor\" leaves room for exceptions — a pond could have acidic water but compensate with other favorable conditions. For a Sufficient Assumption question, the answer must make the conclusion follow with certainty. \"Most important\" introduces ambiguity about whether the conclusion necessarily follows."
+  },
+  {
+   "row_id": "1a37c9a0-14c0-4614-8029-10fe06c8a2d0",
+   "letter": "C",
+   "body": "This answer compares Sosachi Pond's conditions to Wallakim's — saying Sosachi is more beneficial. But a relative comparison does not establish whether Wallakim's conditions are beneficial or not in absolute terms. Wallakim's conditions could be \"less beneficial than Sosachi's\" while still being beneficial enough for turtles to thrive. The argument needs to know whether Wallakim's acidic conditions are beneficial to turtles at all, not how they rank against another pond. Additionally, the argument's conclusion is about Wallakim specifically; a relative comparison between two ponds does not seal the deal about either one in absolute terms."
+  },
+  {
+   "row_id": "473f7832-f974-40dc-80a4-8650bb84212a",
+   "letter": "D",
+   "body": "This answer says: Wallakim would have a thriving turtle population if it were not acidic. Formally: not acidic → thriving. But the argument does not conclude what WOULD happen if Wallakim were not acidic — it concludes what IS happening given that it IS acidic. This answer tells us about a hypothetical non-acidic Wallakim, but the argument needs to handle the actual acidic Wallakim. Furthermore, even knowing that removing acidity would allow turtles to thrive does not prove that acidity prevents thriving — it could be that acidity is one obstacle among many, and removing it would remove one obstacle while others remain. The argument needs: acidic → not beneficial → not thriving."
+  },
+  {
+   "row_id": "8a0f1ceb-b244-4a4e-9e20-1c92afae5245",
+   "letter": "E",
+   "body": "This answer states: conditions at a pond are beneficial to turtles ONLY IF the water is not acidic. Formally: beneficial → not acidic. The contrapositive: acidic → not beneficial. This is exactly the bridge the argument needs. Combine with the existing premise: thriving → beneficial (contrapositive: not beneficial → not thriving). The full chain becomes: acidic (Wallakim) → not beneficial → not thriving. The conclusion that there must not be a thriving population at Wallakim follows with deductive certainty. The \"only if\" phrasing is key: it establishes that non-acidity is a necessary condition for beneficial conditions, which means acidity is sufficient to make conditions non-beneficial. This single assumption, added to the existing premises, makes the conclusion logically airtight."
+  }
+ ],
+ "known_problem": "Explicit-Standard register (7.3 em-dashes per 1k words; wrong-answer notes average 101.5 words).",
+ "tags": "emdash-heavy; pt157-158-register; possible-misquote"
+}

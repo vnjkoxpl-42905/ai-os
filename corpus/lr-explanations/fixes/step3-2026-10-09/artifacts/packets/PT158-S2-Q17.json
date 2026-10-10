@@ -1,0 +1,84 @@
+{
+ "qid": "PT158-S2-Q17",
+ "type": "Necessary Assumption",
+ "difficulty": "5",
+ "key_db": "E",
+ "stimulus_db": "To establish a human colony on Mars would involve assembling tremendous quantities of basic materials at the site of the colony. But because the costs of transporting such materials through space would be so high, it will not be economically feasible to colonize Mars.",
+ "stem_db": "Which one of the following is an assumption required by the argument?",
+ "choices_db": {
+  "A": "Only if the cost of transporting materials from Earth to Mars decreases will human habitation be established on Mars.",
+  "B": "The cost of transporting basic materials through space is not expected to decrease in the near future.",
+  "C": "Earth is the only source of the basic materials that would be needed to establish human habitation on Mars.",
+  "D": "No significant benefit would result from establishing human habitation on Mars.",
+  "E": "Mars is not a practical source of the basic materials required for establishing human habitation there."
+ },
+ "bank": {
+  "stimulus": "To establish a human colony on Mars would involve\n assembling tremendous quantities of basic materials\n at the site of the colony. But because the costs of\n transporting such materials through space would be so\n high, it will not be economically feasible to\n colonize Mars.",
+  "stem": "Which one of the following is an assumption required by\n the argument?",
+  "choices": {
+   "A": "Only if the cost of transporting materials from Earth to Mars decreases will human habitation be established on Mars.",
+   "B": "The cost of transporting basic materials through space is not expected to decrease in the near future.",
+   "C": "Earth is the only source of the basic materials that would be needed to establish human habitation on Mars.",
+   "D": "No significant benefit would result from establishing human habitation on Mars.",
+   "E": "Mars is not a practical source of the basic materials required for establishing human habitation there."
+  },
+  "key": "E"
+ },
+ "explanation_id": "6c7e3f13-d653-4ac0-bfee-23ce18f73eac",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "33b570d6-dccb-4511-8266-effd4e8967d9",
+   "position": 0,
+   "label": "Conclusion",
+   "body": "It will not be economically feasible to colonize Mars."
+  },
+  {
+   "row_id": "fc1aa280-0951-4cee-ba80-295ed81fe7e3",
+   "position": 1,
+   "label": "Evidence (because)",
+   "body": "To colonize Mars, you would have to assemble tremendous quantities of basic materials at the site of the colony. But the costs of transporting such materials through space would be so high."
+  },
+  {
+   "row_id": "b2e8e91b-42f7-4831-b9ad-7c235b408b34",
+   "position": 2,
+   "label": "Evaluate",
+   "body": "We can predict a Linking assumption like, \"If the cost of transporting basic materials through space would be super costly, then it won't be economically feasible to colonize Mars\". But it's unlikely that this question is testing a Linking idea, since the argument feels more practical and real world. Hence, we should shift to our Objection thinking: Given that ... colonizing requires tons of basic materials at the site of the colony, and that transporting those materials through space would be super high. How could we argue that ... it could be economically feasible to colonize Mars? We can't get around the need for basic materials. Can we get around the cost of transporting those materials through space? What if we send a bunch of 3D printers to Mars and 3D-printed the basic materials there? What if we develop teleportation technology, so we're not transporting the materials through space but rather through some teleportation wormhole? What if we find lots of usable materials on Mars, so we don't have to transport them through space? If we gave up on that line of objection and accepted that the only way to get these needed basic materials to Mars was through expensive transportation through space, is there any way to argue that it would be economically feasible? Maybe tech companies will be so starved for the precious metals that go into computers / phones (which we've nearly exhausted on Earth) that they will be willing to pay for a colony on Mars, so that mining operations on Mars can procure them their precious metals?"
+  },
+  {
+   "row_id": "11335347-84c9-48bf-8f02-a4104a507262",
+   "position": 3,
+   "label": "Goal",
+   "body": "Look for a Defender answer saying something like, - \"We can not just use a 3D printer\" - \"We can not teleport materials there\" - \"We can not use the materials we find on Mars\" - \"There is not so much money to be made by colonizing Mars that companies on Earth would be willing to foot the bill for the expensive cost of transporting basic materials there\""
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "0d179acb-747a-4331-87dc-c7693e449427",
+   "letter": "A",
+   "body": "This answer says human habitation on Mars will only be feasible if transport costs decrease. The word \"only\" makes this far stronger than what the argument requires. The argument needs the assumption that Mars cannot supply materials locally — which is one specific reason transport remains necessary. But this answer rules out every possible path to feasibility except decreased transport costs, ignoring alternatives like technological innovations in colony construction, discovery of Mars-based resources, or entirely different approaches. A necessary assumption must be something the argument cannot survive without; this sweeping claim goes well beyond what is needed and introduces constraints the argument never implied."
+  },
+  {
+   "row_id": "8571e1fe-e6a5-4949-99ca-1141c159475b",
+   "letter": "B",
+   "body": "This answer claims transport costs are \"not expected to decrease\" in the foreseeable future. The argument does not need this assumption. Even if transport costs were expected to decrease eventually, the argument could still hold if they would not decrease enough, or if the decrease would take too long, or if Mars still could not supply materials locally regardless. The argument's core reasoning is about the current economic infeasibility based on current costs and the absence of local materials. Whether costs might decline in the future is a separate question the argument does not need to address. The necessary assumption is about the availability of Mars-based materials, not about future transport cost projections."
+  },
+  {
+   "row_id": "9c79500e-b8de-42cd-aac9-3f40835ccb4e",
+   "letter": "C",
+   "body": "This answer claims Earth is \"the only source\" of basic materials needed for a Mars colony. While this is in the right conceptual territory — the argument does need to rule out Mars as a source — this answer goes too far by claiming Earth is literally the only source in existence. The argument only needs Mars not to be a practical source. There could be other theoretical sources (asteroids, other moons) that are also impractical; the argument does not need to address them. More precisely, the argument requires that Mars itself cannot supply the materials, not that Earth has a universal monopoly on basic materials throughout the solar system. The necessary assumption is narrower than this answer's sweeping exclusivity claim."
+  },
+  {
+   "row_id": "499051ad-9656-4321-b8ec-30781ead655c",
+   "letter": "D",
+   "body": "The argument claims Mars colonization is not economically feasible, not that it would produce no significant benefits. An undertaking can have tremendous benefits and still be economically infeasible if the costs exceed those benefits. The argument focuses entirely on the cost side of the equation — the expense of transporting materials — without needing to claim that the benefits are zero. Even if colonizing Mars would yield enormous scientific, strategic, or survival benefits, the argument can still hold if the costs are prohibitively high. This answer addresses a dimension (benefits) that the argument neither discusses nor needs to assume anything about."
+  },
+  {
+   "row_id": "31a98f97-f0fe-4f3a-8934-f0c23ef7ef4a",
+   "letter": "E",
+   "body": "The argument concludes that Mars colonization is not economically feasible because transporting basic materials through space is too expensive. This conclusion depends entirely on the assumption that the materials must be transported from somewhere else — specifically, that Mars itself cannot supply them. If Mars were a practical source of the basic materials needed (rock for construction, ice for water, minerals for manufacturing), then colonists could obtain materials locally, and the prohibitive cost of space transport would be irrelevant. Apply the Negation Test: if Mars IS a practical source of basic materials, then the tremendous quantities needed could be assembled on-site without interplanetary shipping, completely undermining the cost argument and potentially making colonization feasible. The entire economic infeasibility argument rests on the necessity of importing materials, which only holds if local sourcing is not practical."
+  }
+ ],
+ "known_problem": "Explicit-Standard register (6.4 em-dashes per 1k words; wrong-answer notes average 109.0 words).",
+ "tags": "emdash-heavy; pt157-158-register"
+}

@@ -1,0 +1,78 @@
+{
+ "qid": "PT158-S3-Q6",
+ "type": "Paradox",
+ "difficulty": "2",
+ "key_db": "B",
+ "stimulus_db": "Surprisingly, a new study has revealed that shortly after a heavy rainfall, pollution levels in Crystal Bay reach their highest levels. This occurs despite the fact that rainwater is almost totally pure and one would therefore expect that it would dilute the polluted seawater.",
+ "stem_db": "Which one of the following, if true, most helps to explain why pollution levels in Crystal Bay increase after a heavy rainfall?",
+ "choices_db": {
+  "A": "Compared to the total amount of polluted seawater, the amount of rainwater that falls into Crystal Bay is negligible.",
+  "B": "Most of the rainwater that eventually reaches Crystal Bay falls on pesticide-treated fields before being carried into the bay.",
+  "C": "Most rainwater carried by clouds consists of water that has evaporated from oceans around the world.",
+  "D": "The single leading cause of pollution in Crystal Bay is beachgoers' leaving behind their trash and debris, which then blows into the bay.",
+  "E": "Other nearby ocean areas experience a pattern of pollutant increase and decrease that is extremely similar to that of Crystal Bay."
+ },
+ "bank": {
+  "stimulus": "Surprisingly, a new study has revealed that shortly after a\n heavy rainfall, pollution levels in Crystal Bay reach their\n highest levels. This occurs despite the fact that rainwater\n is almost totally pure and one would therefore expect that\n it would dilute the polluted seawater.",
+  "stem": "Which one of the following, if true, most helps to\n explain why pollution levels in Crystal Bay increase\n after a heavy rainfall?",
+  "choices": {
+   "A": "Compared to the total amount of polluted seawater, the amount of rainwater that falls into Crystal Bay is negligible.",
+   "B": "Most of the rainwater that eventually reaches Crystal Bay falls on pesticide-treated fields before being carried into the bay.",
+   "C": "Most rainwater carried by clouds consists of water that has evaporated from oceans around the world.",
+   "D": "The single leading cause of pollution in Crystal Bay is beachgoers’ leaving behind their trash and debris, which then blows into the bay.",
+   "E": "Other nearby ocean areas experience a pattern of pollutant increase and decrease that is extremely similar to that of Crystal Bay."
+  },
+  "key": "B"
+ },
+ "explanation_id": "04dc9c00-8385-4252-b13c-1733475e97ab",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "2362da94-2e63-4d93-bf5a-0e8d72d4907f",
+   "position": 0,
+   "label": "Given that ...",
+   "body": "Rainwater is almost totally pure and thus should be expected to dilute polluted seawater when it falls onto Crystal Bay."
+  },
+  {
+   "row_id": "24d87b1f-c3b0-45f2-b018-3552b9bf696c",
+   "position": 1,
+   "label": "How can it be that ...",
+   "body": "Shortly after a heavy rainfall, pollution levels in Crystal Bay reach their highest levels?"
+  },
+  {
+   "row_id": "d6a66e7b-c8bf-42d7-aef8-bced3c92abbd",
+   "position": 2,
+   "label": "Evaluate / Goal",
+   "body": "We need a way to explain how rain, or something that accompanies rain is adding pollution to Crystal Bay. Maybe when it rains heavily, people in this town light more fires in their fireplace, and the smoke from the fireplace drifts over the Bay and drops particulates on the water, adding to its pollution levels. Who knows. Let's just find some way to connect heavy rainfall to pollution in the Bay."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "f6f341d7-2b02-40f0-bfca-1a390be7a6bc",
+   "letter": "A",
+   "body": "If the amount of rainwater falling into Crystal Bay is small compared to the total seawater, this might explain why the dilution effect is minimal, but it does not explain why pollution actually increases. A small dilution effect would mean pollution levels stay roughly the same after rainfall — not that they rise to their highest levels. The paradox is not merely that dilution fails to occur; it is that pollution actively increases. This answer addresses only half the puzzle (why dilution does not work) without addressing the more striking half (why pollution goes up). Something must be actively introducing new pollutants, and this answer provides no such mechanism."
+  },
+  {
+   "row_id": "003048d4-686d-424f-a90f-b313836a70bc",
+   "letter": "B",
+   "body": "This answer resolves the paradox completely. The rainwater is pure when it falls from the sky, but it does not go directly into Crystal Bay. Most of it falls on pesticide-treated fields first, where it picks up agricultural chemicals. The contaminated runoff then flows into the bay, carrying a heavy load of pesticides and other pollutants. The more it rains, the more runoff, and the more pollutants are washed from the fields into the bay. This mechanism explains why heavy rainfall leads to peak pollution levels: the rain acts as a transport vehicle for land-based pollutants. The rainwater's purity at the point of falling is irrelevant because it becomes contaminated during the journey from field to bay. The dilution effect of the rain is overwhelmed by the pollution it carries with it, producing a net increase in Crystal Bay's pollution levels after every heavy rainfall."
+  },
+  {
+   "row_id": "889a07ef-854a-4956-9c3f-ad86c48b8177",
+   "letter": "C",
+   "body": "The origin of the water in rain clouds — evaporated ocean water — tells us nothing about why pollution increases after rainfall. The fact that rainwater originated from oceans is a basic element of the water cycle and does not explain how pure rain leads to increased bay pollution. The water evaporates, leaving pollutants behind, and falls as clean rain. What happens to that clean rain between falling and reaching the bay is the relevant question, and this answer does not address it. The composition of rain clouds is irrelevant when the paradox concerns what the rain carries into the bay, not where the rain came from originally."
+  },
+  {
+   "row_id": "54d91e1c-005a-4966-8f74-4f32c0c91758",
+   "letter": "D",
+   "body": "If the leading cause of pollution is beachgoer litter, this provides background about the bay's normal pollution sources but does not explain why pollution peaks after heavy rainfall. Beachgoers littering is presumably a relatively constant activity — or arguably less common during heavy rain, when fewer people visit the beach. This answer identifies a pollution source that is unrelated to rainfall and therefore cannot explain the rainfall-pollution correlation. The paradox specifically concerns the timing: why does pollution spike after rain? An answer that identifies a constant or rain-independent pollution source does not address the timing question at all."
+  },
+  {
+   "row_id": "e78d8afc-4e17-4531-8a75-7c639b296ff3",
+   "letter": "E",
+   "body": "Other ocean areas experiencing similar pollution patterns does not explain why the pattern occurs in Crystal Bay. If anything, this merely confirms that the paradox is widespread rather than local, but confirmation of a pattern is not an explanation for it. The question asks what resolves the apparent contradiction between pure rain and increased pollution. Learning that the same contradiction exists elsewhere multiplies the mystery rather than solving it. An explanation must identify a causal mechanism — something about rainfall that introduces pollutants — not merely observe that the same unexplained phenomenon occurs in other locations."
+  }
+ ],
+ "known_problem": "Explicit-Standard register (9.1 em-dashes per 1k words; wrong-answer notes average 101.8 words).",
+ "tags": "emdash-heavy; pt157-158-register"
+}

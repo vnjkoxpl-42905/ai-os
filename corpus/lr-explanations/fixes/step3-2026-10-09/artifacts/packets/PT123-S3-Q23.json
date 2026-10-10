@@ -1,0 +1,66 @@
+{
+ "qid": "PT123-S3-Q23",
+ "type": "Flaw",
+ "difficulty": "3",
+ "key_db": "D",
+ "stimulus_db": "Political candidates’ speeches are loaded with promises and with expressions of good intention, but one must not forget that the politicians’ purpose in giving these speeches is to get themselves elected. Clearly, then, these speeches are selfishly motivated and the promises made in them are unreliable.",
+ "stem_db": "Which one of the following most accurately describes a flaw in the argument above?",
+ "choices_db": {
+  "A": "The argument presumes, without providing justification, that if a person’s promise is not selfishly motivated then that promise is reliable.",
+  "B": "The argument presumes, without providing justification, that promises made for selfish reasons are never kept.",
+  "C": "The argument confuses the effect of an action with its cause.",
+  "D": "The argument overlooks the fact that a promise need not be unreliable just because the person who made it had an ulterior motive for doing so.",
+  "E": "The argument overlooks the fact that a candidate who makes promises for selfish reasons may nonetheless be worthy of the office for which he or she is running."
+ },
+ "bank": {
+  "stimulus": "Political candidates' speeches are loaded with promises and with expressions of good intention, but one must not forget that the politicians' purpose in giving these speeches is to get themselves elected. Clearly, then, these speeches are selfishly motivated and the promises made in them are unreliable.",
+  "stem": "Which one of the following most accurately describes a flaw in the argument above?",
+  "choices": {
+   "A": "The argument presumes, without providing justification, that if a person's promise is not selfishly motivated then that promise is reliable.",
+   "B": "The argument presumes, without providing justification, that promises made for selfish reasons are never kept.",
+   "C": "The argument confuses the effect of an action with its cause.",
+   "D": "The argument overlooks the fact that a promise need not be unreliable just because the person who made it had an ulterior motive for doing so.",
+   "E": "The argument overlooks the fact that a candidate who makes promises for selfish reasons may nonetheless be worthy of the office for which he or she is running."
+  },
+  "key": "D"
+ },
+ "explanation_id": "785f2e9b-575c-46db-baf6-f3c2b5be2798",
+ "style": "single",
+ "steps": [
+  {
+   "row_id": "688ff509-a7ab-4c06-b061-692fbc4d62ad",
+   "position": 0,
+   "label": "Evidence",
+   "body": "Political candidates’ speeches are loaded with promises and with expressions of good intention.\nBut one must not forget that the politicians’ purpose in giving these speeches is to get themselves elected.\nConclusion\nClearly, then, these speeches are selfishly motivated and the promises made in them are unreliable.\nEvaluate\nThis is an ad hominem attack. Just because politicians are motivated to win election does not mean that their promises are unreliable."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "a8162afd-26ef-4db8-ae4d-e24315bdde22",
+   "letter": "A",
+   "body": "This negates the assumption of the argument that if a person's promise is selfishly motivated then that promise is unreliable."
+  },
+  {
+   "row_id": "9621931d-ac06-4316-ba83-092ba343f2e5",
+   "letter": "B",
+   "body": "The argument does not go so far as to say that such promises are never kept, but rather says that they are unreliable."
+  },
+  {
+   "row_id": "82f4a5c5-d965-4586-9952-b263dfe274c8",
+   "letter": "C",
+   "body": "This describes a causal reasoning error: confusing an effect with its cause. That flaw isn't in this argument, which moves from a selfish motive to the claim that the promises are unreliable."
+  },
+  {
+   "row_id": "22db832a-30a1-4d0c-8c23-319b3eb9a985",
+   "letter": "D",
+   "body": "This correctly describes the difference between a questionable source and an unreliable claim."
+  },
+  {
+   "row_id": "2c4ee1a5-b0d6-4ccc-9687-626ad737eba3",
+   "letter": "E",
+   "body": "Whether a candidate is worthy of office is a different issue. The argument concludes only that the speeches are selfishly motivated and the promises unreliable, so a criticism about the candidate's worthiness misses what the argument claims."
+  }
+ ],
+ "known_problem": "Conclusion and Evaluate labels are fused into the Evidence step body; C note carries two \"- paragraph\" markup lines.",
+ "tags": "short-breakdown; verdict-only; thin-correct-note; thin-notes; no-prediction; damage; very-short"
+}

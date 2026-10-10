@@ -1,7 +1,7 @@
 ---
 type: operating-layer
 subject: Index
-updated: 2026-10-08
+updated: 2026-10-09
 aliases: []
 ---
 
@@ -42,6 +42,7 @@ The brain runs three knowledge systems: **this wiki** (Joshua, the business, dec
 
 ## Operations
 
+- [LR explanation fix ledger](../corpus/lr-explanations/fixes/index.md): current quality work and Step 3 production verification; 191 rewrites plus one agreed skip account for the 192 Revamp items.
 - [[guided-drill-verification-log]] — living QA log of guided drills verified to launch on the platform (restored from the pre-rebuild archive 2026-07-16; skills cite it before re-verifying)
 - [[lr-missing-explanations]] + [[lr-missing-explanations-by-category]]: the 772 LR questions with no, partial, or never-loaded explanations (PT/S/Q list, then by type, reasoning, feature, difficulty); snapshot 2026-09-26
 - [[../corpus/lr-explanations/golden-set|LR golden set]]: the 50 model explanations (and rubric) the missing ones are written from; 2026-09-26
