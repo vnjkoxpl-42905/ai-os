@@ -9,7 +9,15 @@ aliases: []
 
 Freshest working state; the first page `/pickup` reads. Rebuilt fresh in the 2026-07-16 vault rebuild (the old cache is archived).
 
-## Most recent (2026-10-10): LR correctness cleanup verified in production
+## Most recent (2026-10-10): Necessary-condition lesson verified locally
+
+- Revised the necessary page to define required before engagement, continuing the sufficient lesson's law-school enrollment/student relationship. The interactive comparison leaves enrollment possible when studenthood is present and rules it out when studenthood is absent. Necessary does not by itself mean enough; a necessary condition can also be sufficient under another established relationship.
+- Reviewed the original HTML, selected voice standard and copy corrections, Loophole sources, four conditional megadocs, three Demon sources, LSAT Lab 16784, 7Sage overview/relational clarification and teacher Group 2/intro review. [Source comparison and implementation evidence](../../ai-os-projects/lsatu-conditional-bootcamp/docs/agent/conditional-recovery-20261007/media/necessary-source-review.md). No named Savim source found in the routed inventory; no claim that all unindexed files were reviewed.
+- Kept the reviewed seven Group 2 indicators and added fresh current-reference-letter checks with separate jobs: preserve the qualification and distinguish required from enough. Wrong-answer explanations, retry focus and the existing next/previous path are retained.
+- Final 21 tests across three suites, full application typecheck, npm build/postbuild and final-bundle corrected-copy check pass. Codex Browser verifies keyboard toggles, present/missing states, both wrong/correct answer paths, retry focus, navigation and palette isolation. Actual CSS widths 320/400/960/1200/1600 have no overflow or lesson buttons below 44px; viewport reset and necessary page left open at the top.
+- Local only: no commit, push, deployment or spending. Physical devices, screen-reader speech and production acceptance remain unverified. Broader bootcamp work remains open; task statuses and other priorities unchanged.
+
+## Previous (2026-10-10): LR correctness cleanup verified in production
 
 - Continued from the verified Step 3 closeout. Independently reviewed and applied 25 guarded database edits, then fresh read-after audits matched all 25 with no source/key/choice mismatches. [Durable evidence](../corpus/lr-explanations/fixes/step4-2026-10-10/README.md).
 - Corrected PT157-S3-Q25's contradictory Brief/Another Way notes while preserving Standard; repaired four source stimuli, Burns spellings across source/prose, PT112's serialized tag and two CRLF-only steps.
