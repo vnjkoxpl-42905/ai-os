@@ -230,3 +230,7 @@ Latest sufficient page opens with Sufficient means enough and a worked explanati
 ## 2026-10-10: Marked concept and reveal corrections
 
 Latest lesson defines sufficient as enough on its own and guarantee as certainty before the law-school example. The sufficient condition now appears alone; activating it reveals the guaranteed outcome. Reset restores trigger focus. Replaced causal aside with sufficiency for a specific outcome. Replaced sentence-centric commentary with conditional relationship language. Archived LSAT Lab16784 and three Demon source pages reviewed through delegated source analysis. 53 tests/typecheck passed; live initial/revealed/reset and responsive layouts checked. Local only, no additional paid generation or deployment. See app refinement-log and trigger-reveal-build.log for current receipts.
+
+## 2026-10-10: Whole-page flow refinement
+
+After full HTML/source comparison, consolidated sufficient definition and certainty, added hypothetical-vs-actual enrollment distinction and both open possibilities without enrollment. Removed repeated grades/graduation aside. Two checks now cover transfer/direction and absent-condition uncertainty. Interaction copy has separate teaching jobs; group highlight explicitly shows one possible case. 53 tests/typecheck passed, independent whole-page review found no material gaps. Live reveal and open-case text verified. Local only. Current app receipt: full-page-flow-build.log and refinement-log.md.
