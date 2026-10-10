@@ -2714,3 +2714,7 @@ Fixed PT157-S3-Q25 alternate notes' placebo/vitamin C logic, PT112-S3-Q8 E's ser
 Corrected PT119-S2-Q19's stale inventory match/difficulty/features with all other fields preserved. Current published bank and DB agree on historical PT119/PT101 alignment targets after typography/whitespace normalization. Both PT104 wording disputes remain unresolved because available PT104-105 files lack choice text. Optional missing Brief notes and null tags were not invented. Broader Weak/Watch and unread work remain queued.
 
 Evidence, snapshots, approved payloads, SQL, independent verdicts and server receipts: [Step 4 record](../corpus/lr-explanations/fixes/step4-2026-10-10/README.md). Updated fix ledger, [[hot]] and [[index]] narrowly; wiki/tasks.md statuses unchanged. No app code, bootcamp changes, commit, push, deployment, Lovable credit spend, whole-mirror refresh or student visual acceptance.
+
+## [2026-10-10] build | Sufficient condition trigger and outcome reveal
+
+Implemented Joshua's four browser corrections in the local conditional preview. Definition precedes example; sufficient condition starts alone and reveals its guaranteed outcome on activation; reset restores focus. Conditional-specific feedback replaces sentence-centric wording. Cause aside replaced with a specific-outcome explanation. Archived LSAT Lab and three Demon source references reviewed. 53 focused tests, full typecheck and full npm build/postbuild passed; live reveal/reset and widths320-1600 checked. No commit, push, deployment or paid generation. App refinement-log holds receipts.

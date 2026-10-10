@@ -226,3 +226,7 @@ Verified:52 focused tests, full typecheck, complete npm build and postbuild excl
 ## 2026-10-09 follow-up: explanation before interaction
 
 Latest sufficient page opens with Sufficient means enough and a worked explanation of why law-school enrollment guarantees being a student. Controls follow the explanation. Replaced mechanical student-status phrasing with you have to be a student; retained the noncausal boundary as a quieter aside. Reduced closing checks to two distinct purposes. Machine comparisons change the SVG itself, with an explicitly excluded hypothetical exception. Verified 52/52 tests, typecheck, full build/postbuild, independent review and Codex browser widths320/400/960/1200/1600. Local only, no publish or further Kling spending.
+
+## 2026-10-10: Marked concept and reveal corrections
+
+Latest lesson defines sufficient as enough on its own and guarantee as certainty before the law-school example. The sufficient condition now appears alone; activating it reveals the guaranteed outcome. Reset restores trigger focus. Replaced causal aside with sufficiency for a specific outcome. Replaced sentence-centric commentary with conditional relationship language. Archived LSAT Lab16784 and three Demon source pages reviewed through delegated source analysis. 53 tests/typecheck passed; live initial/revealed/reset and responsive layouts checked. Local only, no additional paid generation or deployment. See app refinement-log and trigger-reveal-build.log for current receipts.
