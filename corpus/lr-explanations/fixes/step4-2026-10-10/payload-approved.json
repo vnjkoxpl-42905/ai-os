@@ -1,0 +1,250 @@
+[
+  {
+    "qid": "PT157-S3-Q25",
+    "table": "lr_explanation_choice_notes",
+    "column": "body",
+    "row_id": "fa758a01-be00-4123-be04-47a3fdc10084",
+    "explanation_id": "b378e1b0-88e3-450f-9bdf-10644a048ea1",
+    "style": "another_way",
+    "letter": "D",
+    "old": "The placebo group was eating vitamin C-rich foods? If anything, that helps the argument. If both groups were getting vitamin C (one through pills, one through diet) and there was no difference, that is more evidence vitamin C does not help with acne. This answer accidentally supports the conclusion instead of weakening it.",
+    "old_md5": "992dbdb6768119db9ba315d2bb9621cb",
+    "new": "Suppose vitamin C does help, but some placebo subjects get it from food. Their improvement could make the groups look alike even though the vitamin works. That would undermine the conclusion, not support it.\n\nD leaves too much open, though. How much vitamin C did those subjects get? Were they among the subjects who couldn't tell which pill they had? The answer doesn't say. A gives a clearer reason the comparison could hide a benefit: the vitamin C group had a history of worse acne.",
+    "new_md5": "707b20f79713abb4ca3f73b0cc41cc8a",
+    "rationale": "Dietary vitamin C in a control group can contaminate the comparison; it does not strengthen a conclusion of no real benefit. Limited quantifier/dose/blind-subgroup information makes D a weaker objection than A.",
+    "source": "q157-styles-live.json"
+  },
+  {
+    "qid": "PT157-S3-Q25",
+    "table": "lr_explanation_choice_notes",
+    "column": "body",
+    "row_id": "b4f8ee68-7f98-489f-9339-ff0242629f75",
+    "explanation_id": "882d0369-ee56-4170-93df-3b78be87975c",
+    "style": "brief",
+    "letter": "D",
+    "old": "If the placebo group also got vitamin C through food, the lack of difference between groups still suggests the pills added no benefit. This supports the conclusion rather than weakening it.",
+    "old_md5": "9c7a7cc22ea2105635e420466da59f38",
+    "new": "Vitamin C in the placebo group's food could blur the comparison, which weakens rather than supports the conclusion. But D only says some subjects ate those foods. We don't know the dose or whether those subjects were in the blind comparison. A gives stronger evidence: the vitamin C group had a history of worse acne.",
+    "new_md5": "5a66fe497c45163f173e0d004383a039",
+    "rationale": "Dietary vitamin C in a control group can contaminate the comparison; it does not strengthen a conclusion of no real benefit. Limited quantifier/dose/blind-subgroup information makes D a weaker objection than A.",
+    "source": "q157-styles-live.json"
+  },
+  {
+    "qid": "PT157-S3-Q25",
+    "table": "lr_answer_choices",
+    "column": "tag",
+    "row_id": "75ee6f0d-1181-4f16-90d8-cb8c768d6e42",
+    "letter": "D",
+    "old": "Strengthens",
+    "old_md5": "edaf7be68b7a514ddc7cde0bb5b1e585",
+    "new": "Too Weak",
+    "new_md5": "ce0120b1ff9299fa01209aa62720c95d",
+    "rationale": "Potential control contamination weakens rather than strengthens, but D supplies less decisive evidence than credited A.",
+    "source": "q157-styles-live.json"
+  },
+  {
+    "qid": "PT141-S2-Q5",
+    "table": "lr_questions",
+    "column": "stimulus",
+    "row_id": "b101f714-e4a4-46fa-8642-ac3fd459ee5f",
+    "old": "Science writer: Lemaitre argued that the universe began with the explosion of a \"primeval in atom,\" a singular point of infinite gravity in space and time. If this is correct, our current observations should reveal galaxies accelerating away from one another. This is precisely what we observe. Yet because there is another theory—the oscillating universe theory—that makes exactly this same prediction, Lemaitre's theory must be considered inadequate.",
+    "old_md5": "dc75d1c6a64e8377435d1b31cefc7cd1",
+    "new": "Science writer: Lemaître argued that the universe began with the explosion of a \"primeval atom,\" a singular point of infinite gravity in space and time. If this is correct, our current observations should reveal galaxies accelerating away from one another. This is precisely what we observe. Yet because there is another theory—the oscillating universe theory—that makes exactly this same prediction, Lemaître's theory must be considered inadequate.",
+    "new_md5": "4d53dd8f668d7fc024ad23bb240c9b0d",
+    "rationale": "Minimal transcription repairs confirmed against published bank and source review.",
+    "replacements": [
+      [
+        "Lemaitre",
+        "Lemaître"
+      ],
+      [
+        "primeval in atom",
+        "primeval atom"
+      ]
+    ],
+    "source": "initial-live-snapshot.json + live-bank-source.json"
+  },
+  {
+    "qid": "PT143-S1-Q13",
+    "table": "lr_questions",
+    "column": "stimulus",
+    "row_id": "a6f85102-12cf-4ec1-9cba-812d75ff4b5c",
+    "old": "Dr. Khan: Professor Bums recognizes that recent observations fail to confirm earlier ones that apparently showed a comet reservoir far out in our solar system. She claims this nonconfirmation is enough to show that the earlier observations are incorrect. But the recent observations occurred under poor conditions.",
+    "old_md5": "8cd4cc4d629717733206512a826c99a6",
+    "new": "Dr. Khan: Professor Burns recognizes that recent observations fail to confirm earlier ones that apparently showed a comet reservoir far out in our solar system. She claims this nonconfirmation is enough to show that the earlier observations are incorrect. But the recent observations occurred under poor conditions.",
+    "new_md5": "fb5fc99584c029320d471c1ae5202d62",
+    "rationale": "Minimal transcription repairs confirmed against published bank and source review.",
+    "replacements": [
+      [
+        "Bums",
+        "Burns"
+      ]
+    ],
+    "source": "initial-live-snapshot.json + live-bank-source.json"
+  },
+  {
+    "qid": "PT108-S2-Q18",
+    "table": "lr_questions",
+    "column": "stimulus",
+    "row_id": "44c33d89-1b57-4844-9d8e-3bec2e953a9a",
+    "old": "Sid: The sign says \"Keep off the grass:\"\n\nMicki: I know, but just one person walking across the grass doesn't hurt it.\n\nSid: Your statement is false. If everyone believed as you do, everyone would walk across the grass, and the grass would die.",
+    "old_md5": "38e820f6ba5a48aeab040232261cc01b",
+    "new": "Sid: The sign says \"Keep off the grass.\"\n\nMicki: I know, but just one person walking across the grass doesn't hurt it.\n\nSid: Your statement is false. If everyone believed as you do, everyone would walk across the grass, and the grass would die.",
+    "new_md5": "24a79cc967ad2d9b2e10f08c6aafcf6c",
+    "rationale": "Minimal transcription repairs confirmed against published bank and source review.",
+    "replacements": [
+      [
+        "grass:",
+        "grass."
+      ]
+    ],
+    "source": "initial-live-snapshot.json + live-bank-source.json"
+  },
+  {
+    "qid": "PT143-S4-Q1",
+    "table": "lr_questions",
+    "column": "stimulus",
+    "row_id": "d69be8e3-91c0-4621-a616-7eed636de408",
+    "old": "Among Trinidadians guppies, males with large spots are more attractive to females than are males with small spots, who consequently are presented with less frequent mating opportunities. Yet guppies with small spots are more likely to avoid detection by predators, so in waters where predators are abundant only guppies with small spots live to maturity.",
+    "old_md5": "abf17a1a824f62459d50a83b5519ea1d",
+    "new": "Among Trinidadian guppies, males with large spots are more attractive to females than are males with small spots, who consequently are presented with less frequent mating opportunities. Yet guppies with small spots are more likely to avoid detection by predators, so in waters where predators are abundant only guppies with small spots live to maturity.",
+    "new_md5": "3cabe46133b878783ba42c49a5fb81d6",
+    "rationale": "Minimal transcription repairs confirmed against published bank and source review.",
+    "replacements": [
+      [
+        "Trinidadians",
+        "Trinidadian"
+      ]
+    ],
+    "source": "initial-live-snapshot.json + live-bank-source.json"
+  },
+  {
+    "qid": "PT108-S3-Q6",
+    "table": "lr_explanation_steps",
+    "column": "body",
+    "row_id": "30050c0b-3c74-407f-a7ab-42bd91a5178d",
+    "explanation_id": "7aca97bc-3629-4277-bbd4-5597bdda2c4c",
+    "position": 2,
+    "label": "Evaluate",
+    "old": "This isn't a true paradox. Nothing here is surprising. The stem just wants explanations for a drop in the number of bass caught.\r\n\r\nThink about what \"number of bass caught\" depends on. It takes two things: bass in the water and people fishing for them. So there are two roads to fewer bass caught:\r\n1. **Fewer bass downstream.** They died, got eaten, moved away, or lost their habitat.\r\n2. **Less fishing downstream.** Fewer anglers, or anglers fishing less.\r\n\r\nExpect most of the answers we eliminate to come in on road 1, with at least one sneaking in on road 2.\r\n\r\nMost students only think of road 1, because the wastewater feels like it must be hurting the fish. But road 2 is just as good. If half the anglers stop showing up, half as many bass get caught, even if the bass are thriving.",
+    "old_md5": "c9fe331374bbbe17c7ac3f9ed1a95db6",
+    "new": "This isn't a true paradox. Nothing here is surprising. The stem just wants explanations for a drop in the number of bass caught.\n\nThink about what \"number of bass caught\" depends on. It takes two things: bass in the water and people fishing for them. So there are two roads to fewer bass caught:\n1. **Fewer bass downstream.** They died, got eaten, moved away, or lost their habitat.\n2. **Less fishing downstream.** Fewer anglers, or anglers fishing less.\n\nExpect most of the answers we eliminate to come in on road 1, with at least one sneaking in on road 2.\n\nMost students only think of road 1, because the wastewater feels like it must be hurting the fish. But road 2 is just as good. If half the anglers stop showing up, half as many bass get caught, even if the bass are thriving.",
+    "new_md5": "1ccdbd3ca089eac750b68e5cf4223598",
+    "rationale": "Normalize actual CRLF paragraph breaks to LF, preserving every visible character.",
+    "source": "initial-live-snapshot.json"
+  },
+  {
+    "qid": "PT108-S3-Q6",
+    "table": "lr_explanation_steps",
+    "column": "body",
+    "row_id": "3a915989-8077-4179-8156-11839c6a5952",
+    "explanation_id": "7aca97bc-3629-4277-bbd4-5597bdda2c4c",
+    "position": 3,
+    "label": "Goal",
+    "old": "Eliminate four answers that explain fewer bass caught, by either road. The correct answer will do neither, or it will push the other way: more bass or more fishing, which should mean *more* bass caught.\r\n\r\nBe careful with any answer about anglers. It isn't out of scope. Anglers are half the equation.",
+    "old_md5": "3c26722b61516a64cf1806abf64423e2",
+    "new": "Eliminate four answers that explain fewer bass caught, by either road. The correct answer will do neither, or it will push the other way: more bass or more fishing, which should mean *more* bass caught.\n\nBe careful with any answer about anglers. It isn't out of scope. Anglers are half the equation.",
+    "new_md5": "2a912b4ff39edb7a272df9230230e31a",
+    "rationale": "Normalize actual CRLF paragraph breaks to LF, preserving every visible character.",
+    "source": "initial-live-snapshot.json"
+  },
+  {
+    "qid": "PT112-S3-Q8",
+    "table": "lr_answer_choices",
+    "column": "tag",
+    "row_id": "3976281f-826d-4f05-afca-d869efae008c",
+    "question_id": "5700edca-2d54-44d4-a3e3-cc2442064523",
+    "letter": "E",
+    "old": "\"Not a Case of \\\"Reliable Process\\\"\" [level=5]",
+    "old_md5": "63458ef6f2b0f9d9982cb17007e021fb",
+    "new": "Not a Case of \"Reliable Process\"",
+    "new_md5": "01ab52d51829c00880b83d93fd13fae6",
+    "rationale": "Remove escaped quote and level metadata parser artifacts without changing tag meaning.",
+    "source": "tag-live.json"
+  },
+  {
+    "qid": "PT143-S1-Q13",
+    "table": "lr_answer_choices",
+    "column": "choice_text",
+    "row_id": "5382a509-006b-4ca9-a7da-4f143167bf4d",
+    "question_id": "a6f85102-12cf-4ec1-9cba-812d75ff4b5c",
+    "letter": "B",
+    "old": "Contrary to Professor Bums's view, the recent observations confirm the earlier ones.",
+    "old_md5": "48c120e13b8760413e56d8dc05e45135",
+    "new": "Contrary to Professor Burns's view, the recent observations confirm the earlier ones.",
+    "new_md5": "c4f95ca57eb599a819bb8d8a246d674f",
+    "rationale": "Same OCR name error as stimulus; current published bank has Burns in B and C.",
+    "source": "initial-live-snapshot.json + live-bank-source.json"
+  },
+  {
+    "qid": "PT143-S1-Q13",
+    "table": "lr_answer_choices",
+    "column": "choice_text",
+    "row_id": "e5dfb652-c5e4-4454-92b9-edc47efa8528",
+    "question_id": "a6f85102-12cf-4ec1-9cba-812d75ff4b5c",
+    "letter": "C",
+    "old": "Professor Bums's claim about the implications of the recent observations is incorrect.",
+    "old_md5": "b7bfe6f9bd512b122a7c3a1fb38ad023",
+    "new": "Professor Burns's claim about the implications of the recent observations is incorrect.",
+    "new_md5": "169b9b1d8a113ef8d4a3d578b3cc79ae",
+    "rationale": "Same OCR name error as stimulus; current published bank has Burns in B and C.",
+    "source": "initial-live-snapshot.json + live-bank-source.json"
+  },
+  {
+    "qid": "PT143-S1-Q13",
+    "table": "lr_explanation_steps",
+    "column": "body",
+    "row_id": "8c372d18-2721-49a8-b820-0b191e9d476a",
+    "explanation_id": "577fb3da-65b1-420a-aa0f-261d60c7bf05",
+    "old": "We have to distinguish between factual claims and attributed opinions sometimes on Inference questions, but the first sentence is both.\nSaying that \"Professor Bums recognizes X\" means both that X is true (according to the speaker, whose statements we are accepting as true) and that Professor Bums believes it.\nThere isn't any Conditional, Causal, or Mathematical wording in this paragraph but there is a Pivot. Typically, if a Most Supported paragraph ends with a Pivot sentence, the correct answer represents a safely worded way of resolving the tension created by the pivot word. We call that sort of pattern Reconcile the Pivot.\nThe tension here is that Professor Bums thinks that new observations refute old observations, but the speaker is pointing out that these new observations occurred under poor conditions.\nThis seems to suggest that the new data points aren't super trustworthy. Would we be a little hasty to toss out the old observations as invalid, based off some sketchy new observations?",
+    "old_md5": "f88c029f45ba3361ea5a8cb60db2c30e",
+    "new": "We have to distinguish between factual claims and attributed opinions sometimes on Inference questions, but the first sentence is both.\nSaying that \"Professor Burns recognizes X\" means both that X is true (according to the speaker, whose statements we are accepting as true) and that Professor Burns believes it.\nThere isn't any Conditional, Causal, or Mathematical wording in this paragraph but there is a Pivot. Typically, if a Most Supported paragraph ends with a Pivot sentence, the correct answer represents a safely worded way of resolving the tension created by the pivot word. We call that sort of pattern Reconcile the Pivot.\nThe tension here is that Professor Burns thinks that new observations refute old observations, but the speaker is pointing out that these new observations occurred under poor conditions.\nThis seems to suggest that the new data points aren't super trustworthy. Would we be a little hasty to toss out the old observations as invalid, based off some sketchy new observations?",
+    "new_md5": "368abf5845fb4addb807b738abd09280",
+    "rationale": "Propagate verified name spelling through the affected existing prose; remove gendered pronoun in changed E note.",
+    "source": "burns-prose-live.json + live-bank-source.json",
+    "position": 1,
+    "label": "Evaluate"
+  },
+  {
+    "qid": "PT143-S1-Q13",
+    "table": "lr_explanation_choice_notes",
+    "column": "body",
+    "row_id": "e91824f1-a6b1-437a-9fda-973eeb6bcef8",
+    "explanation_id": "577fb3da-65b1-420a-aa0f-261d60c7bf05",
+    "old": "This flies too far in the right direction. The author is pointing out that the recent observations are sketchy to push back a little at Bums's view that the new data refutes the old data.\n\nOur author is merely suggesting, \"Whoa ... these aren't great observations. They were under poor conditions. Let's not draw any definitive conclusions about the old observations based on these sketchy ones.\"\n\nThis answer is saying, \"Whoa .. these aren't great observations. Thus, you're dead wrong, Bums. They actually confirm the earlier observations.\"",
+    "old_md5": "c6e1aad8391aadfd45d8ec6269a836c3",
+    "new": "This flies too far in the right direction. The author is pointing out that the recent observations are sketchy to push back a little at Burns's view that the new data refutes the old data.\n\nOur author is merely suggesting, \"Whoa ... these aren't great observations. They were under poor conditions. Let's not draw any definitive conclusions about the old observations based on these sketchy ones.\"\n\nThis answer is saying, \"Whoa .. these aren't great observations. Thus, you're dead wrong, Burns. They actually confirm the earlier observations.\"",
+    "new_md5": "0da52b420efa11adc112e3958a55149c",
+    "rationale": "Propagate verified name spelling through the affected existing prose; remove gendered pronoun in changed E note.",
+    "source": "burns-prose-live.json + live-bank-source.json",
+    "letter": "B"
+  },
+  {
+    "qid": "PT143-S1-Q13",
+    "table": "lr_explanation_choice_notes",
+    "column": "body",
+    "row_id": "414818a5-50b9-4acf-84f1-41110cd57212",
+    "explanation_id": "577fb3da-65b1-420a-aa0f-261d60c7bf05",
+    "old": "This still sounds more definitive than I'd expect (Bums's claim is incorrect), but this is the most supportable answer available.\n\nThe author is definitely suggesting that we'd be hasty to throw out the old observations based on these sketchy new ones. So our author disagrees that these new observations imply that the old ones are incorrect.\n\nBums's claim was extreme, so denying it is a moderate idea.\n\nBums was like, \"These new observations are enough / are sufficient ... these new observations prove that the earlier ones were wrong.\"\n\nBy saying Bums's claim is incorrect, we're only saying, \"Whoa --- the new observations don't prove the old ones were wrong\".",
+    "old_md5": "addd8a3f22b62562d3df98467aef467d",
+    "new": "This still sounds more definitive than I'd expect (Burns's claim is incorrect), but this is the most supportable answer available.\n\nThe author is definitely suggesting that we'd be hasty to throw out the old observations based on these sketchy new ones. So our author disagrees that these new observations imply that the old ones are incorrect.\n\nBurns's claim was extreme, so denying it is a moderate idea.\n\nBurns was like, \"These new observations are enough / are sufficient ... these new observations prove that the earlier ones were wrong.\"\n\nBy saying Burns's claim is incorrect, we're only saying, \"Whoa --- the new observations don't prove the old ones were wrong\".",
+    "new_md5": "0efd9ba8754f327568c3d9b9aa4aca24",
+    "rationale": "Propagate verified name spelling through the affected existing prose; remove gendered pronoun in changed E note.",
+    "source": "burns-prose-live.json + live-bank-source.json",
+    "letter": "C"
+  },
+  {
+    "qid": "PT143-S1-Q13",
+    "table": "lr_explanation_choice_notes",
+    "column": "body",
+    "row_id": "5dcc5f41-dcce-4ef6-8b8d-fa2be7982dac",
+    "explanation_id": "577fb3da-65b1-420a-aa0f-261d60c7bf05",
+    "old": "This also goes too far in the correct direction. The author is pointing out that the recent observations are sketchy, not worthless.\n\nHe's just trying to push back a little at Bums's view that the new data refutes the old data.\n\nOur author is merely suggesting, \"Hey ... these aren't great observations. They were under poor conditions. Let's not draw any definitive conclusions about the old observations based on these sketchy ones.\"\n\nBut it's taking it to a whole other level to say the recent observations are worthless.",
+    "old_md5": "3ed29d1472ea0ad8532a37749c5aa011",
+    "new": "This also goes too far in the correct direction. The author is pointing out that the recent observations are sketchy, not worthless.\n\nThe speaker is just trying to push back a little at Burns's view that the new data refutes the old data.\n\nOur author is merely suggesting, \"Hey ... these aren't great observations. They were under poor conditions. Let's not draw any definitive conclusions about the old observations based on these sketchy ones.\"\n\nBut it's taking it to a whole other level to say the recent observations are worthless.",
+    "new_md5": "1cb2407b9b12704ce09a1afb01a23db0",
+    "rationale": "Propagate verified name spelling through the affected existing prose; remove gendered pronoun in changed E note.",
+    "source": "burns-prose-live.json + live-bank-source.json",
+    "letter": "E"
+  }
+]
