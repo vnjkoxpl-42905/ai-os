@@ -13,7 +13,9 @@ The first two atomic batches applied 18 edits: four question stimuli, six answer
 - PT108-S3-Q6: normalized two retained step bodies from CRLF to LF without changing their words or slots.
 - Official PDFs settled PT102-S4-Q2 C `insure` to `ensure`, and PT134-S1-Q12 E `government only do` to `government to do only`. The published bank already has the verified wording.
 
-PT132-S2-Q3 modality review is a separate batch. Its Strengthen label is supported by the recorded manual taxonomy decision, the strongest-support stem, and the qualified premise/conclusion. Any later receipt in this folder documents that batch separately; it must not be inferred from the 18-edit receipts.
+PT132-S2-Q3 received a separate seven-edit modality correction: four steps and notes A/B/C now preserve the qualified "generally" premise and "most likely" conclusion rather than presenting a guaranteed outcome. Its Strengthen label and key B were retained. Fresh audit matched 7/7 edits, preserved notes D/E, and confirmed the source question and all five choices unchanged. The label is supported by the recorded manual taxonomy decision and strongest-support stem.
+
+Total for this pass: **25 verified live edits**, comprising four stimuli, six choice fields, seven steps and eight notes. All three batches had independent content/SQL approval and exact fresh read-after matches.
 
 ## Sources and provenance
 
@@ -32,7 +34,7 @@ Both are 40-page PrepTest PDFs. A second reviewer independently extracted the re
 
 All SQL content uses escaped PostgreSQL E literals and UTF-8/LF file bytes. Old CRLF body guards remain explicit escaped bytes, avoiding the Windows transport error encountered and repaired during Step 3. The Step 4 newline changes intentionally supersede two old Step 3 retained-body expectations.
 
-`apply-receipt.json` and `read-after-receipt.json` document 16 edits; `pdf-apply-receipt.json` and `pdf-read-after-receipt.json` document two. `SHA256SUMS` inventories this evidence folder when closeout finishes.
+`apply-receipt.json` and `read-after-receipt.json` document 16 edits; `pdf-apply-receipt.json` and `pdf-read-after-receipt.json` document two; `pt132-apply-receipt.json` and `pt132-read-after-receipt.json` document seven. `reviewer-pt132.json` records the final seven-edit content and SQL approval. `SHA256SUMS` inventories this evidence folder.
 
 ## Inventory and historical issue reconciliation
 

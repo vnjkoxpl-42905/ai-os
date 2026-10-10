@@ -11,10 +11,10 @@ Freshest working state; the first page `/pickup` reads. Rebuilt fresh in the 202
 
 ## Most recent (2026-10-10): LR correctness cleanup verified in production
 
-- Continued from the verified Step 3 closeout. Independently reviewed and applied 18 guarded database edits, then fresh read-after audits matched all 18 with no source/key/choice mismatches. [Durable evidence](../corpus/lr-explanations/fixes/step4-2026-10-10/README.md).
+- Continued from the verified Step 3 closeout. Independently reviewed and applied 25 guarded database edits, then fresh read-after audits matched all 25 with no source/key/choice mismatches. [Durable evidence](../corpus/lr-explanations/fixes/step4-2026-10-10/README.md).
 - Corrected PT157-S3-Q25's contradictory Brief/Another Way notes while preserving Standard; repaired four source stimuli, Burns spellings across source/prose, PT112's serialized tag and two CRLF-only steps.
 - Official Drive PDFs settled PT102-S4-Q2 C "ensure" and PT134-S1-Q12 E "to do only". Published bank already agrees. PT119 inventory metadata repaired; PT101/PT119 historical bank misalignment is absent in current live checks.
-- Both PT104 wording disputes remain unresolved. PT132-S2-Q3 stays Strengthen under the recorded manual taxonomy decision; explanation modality review is in progress. Broader Weak/Watch and unread work remain queued. No app deployment, Lovable credit spend, whole-mirror refresh or student visual acceptance. Task statuses unchanged.
+- PT132-S2-Q3 stays Strengthen under the recorded manual taxonomy decision; seven explanation passages now preserve "generally" and "most likely" rather than a guaranteed outcome. Both PT104 wording disputes remain unresolved. Broader Weak/Watch and unread work remain queued. No app deployment, Lovable credit spend, whole-mirror refresh or student visual acceptance. Task statuses unchanged.
 
 ## Previous (2026-10-09): LR Step 3 Revamp verified in production
 

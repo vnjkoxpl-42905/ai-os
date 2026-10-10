@@ -15,5 +15,12 @@
     "Current bank, database and recorded manual taxonomy verdict agree on Strengthen; this stem asks for strongest support rather than a logically guaranteed conclusion.",
     "Question wording, key B, type, labels, positions, letters, ownership and notes D/E remain unchanged."
   ],
-  "limitations": "Read-only artifact and reasoning review. No independent live database call, SQL execution or production write performed by this reviewer. Separate atomic SQL review and fresh server readback are required before claiming application."
+  "sql_verdict": "APPROVE",
+  "sql_checks": [
+    "Reviewed build-pt132.py and its preflight/apply/read-after construction: escaped E literals and LF query bytes preserve exact guarded content.",
+    "Guards one question, one single-style explanation, five choice rows and all nine existing step/note bodies with identities, slots, labels, exact old text and MD5.",
+    "Atomic assertion requires seven verified writes, specifically four steps and three notes, or zero writes when ineligible.",
+    "Fresh read-after construction checks seven changed bodies, both preserved D/E notes, unchanged source/key/type/choice hashes and row counts."
+  ],
+  "limitations": "Read-only artifact and reasoning review. No independent live database call, SQL execution or production write performed by this reviewer. Fresh server readback is required before claiming application."
 }
