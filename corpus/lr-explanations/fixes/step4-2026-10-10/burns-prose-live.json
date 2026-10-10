@@ -1,0 +1,73 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\n  \"rows\": [\n    {\n      \"explanation_id\": \"577fb3da-65b1-420a-aa0f-261d60c7bf05\",\n      \"notes\": [\n        {\n          \"body\": \"It's always dangerous to predict the outcome of a counterfactual.\\n\\nWe don't know anything about what would be true if the recent observations had been made under good conditions. They may have refuted the old comet reservoir observations; they may have corroborated them. Who knows?\",\n          \"id\": \"98d4cc1e-dab8-4a1f-8753-d1b2e60279e8\",\n          \"letter\": \"A\",\n          \"md5\": \"d568c7fab88e5807c289e6681bb8625b\"\n        },\n        {\n          \"body\": \"This flies too far in the right direction. The author is pointing out that the recent observations are sketchy to push back a little at Bums's view that the new data refutes the old data.\\n\\nOur author is merely suggesting, \\\"Whoa ... these aren't great observations. They were under poor conditions. Let's not draw any definitive conclusions about the old observations based on these sketchy ones.\\\"\\n\\nThis answer is saying, \\\"Whoa .. these aren't great observations. Thus, you're dead wrong, Bums. They actually confirm the earlier observations.\\\"\",\n          \"id\": \"e91824f1-a6b1-437a-9fda-973eeb6bcef8\",\n          \"letter\": \"B\",\n          \"md5\": \"c6e1aad8391aadfd45d8ec6269a836c3\"\n        },\n        {\n          \"body\": \"This still sounds more definitive than I'd expect (Bums's claim is incorrect), but this is the most supportable answer available.\\n\\nThe author is definitely suggesting that we'd be hasty to throw out the old observations based on these sketchy new ones. So our author disagrees that these new observations imply that the old ones are incorrect.\\n\\nBums's claim was extreme, so denying it is a moderate idea.\\n\\nBums was like, \\\"These new observations are enough / are sufficient ... these new observations prove that the earlier ones were wrong.\\\"\\n\\nBy saying Bums's claim is incorrect, we're only saying, \\\"Whoa --- the new observations don't prove the old ones were wrong\\\".\",\n          \"id\": \"414818a5-50b9-4acf-84f1-41110cd57212\",\n          \"letter\": \"C\",\n          \"md5\": \"addd8a3f22b62562d3df98467aef467d\"\n        },\n        {\n          \"body\": \"We don't know anything about what would be true if the recent observations had been made under good conditions. They may have refuted the old comet reservoir observations; they may have corroborated them. Who knows?\",\n          \"id\": \"af2abb3e-27b3-4922-9fe3-9f44b96491af\",\n          \"letter\": \"D\",\n          \"md5\": \"4f09914c03c672ddbea76a95700fc351\"\n        },\n        {\n          \"body\": \"This also goes too far in the correct direction. The author is pointing out that the recent observations are sketchy, not worthless.\\n\\nHe's just trying to push back a little at Bums's view that the new data refutes the old data.\\n\\nOur author is merely suggesting, \\\"Hey ... these aren't great observations. They were under poor conditions. Let's not draw any definitive conclusions about the old observations based on these sketchy ones.\\\"\\n\\nBut it's taking it to a whole other level to say the recent observations are worthless.\",\n          \"id\": \"5dcc5f41-dcce-4ef6-8b8d-fa2be7982dac\",\n          \"letter\": \"E\",\n          \"md5\": \"3ed29d1472ea0ad8532a37749c5aa011\"\n        }\n      ],\n      \"qid\": \"PT143-S1-Q13\",\n      \"steps\": [\n        {\n          \"body\": \"Recent observations fail to confirm earlier ones that apparently showed a comet reservoir far out in our solar system (i.e. recent observations did not provide evidence of a comet reservoir far out in the solar system).\\nProfessor B recognizes this and claims that this nonconfirmation is enough to show that earlier observations were incorrect.\\npivot (But)\\nThe recent observations occurred under poor conditions.\",\n          \"id\": \"c36bc396-0adb-4355-83db-e8843777cd7d\",\n          \"label\": \"Statements\",\n          \"md5\": \"19d7b1ff27518c64f6878254c1b4b1b3\",\n          \"position\": 0\n        },\n        {\n          \"body\": \"We have to distinguish between factual claims and attributed opinions sometimes on Inference questions, but the first sentence is both.\\nSaying that \\\"Professor Bums recognizes X\\\" means both that X is true (according to the speaker, whose statements we are accepting as true) and that Professor Bums believes it.\\nThere isn't any Conditional, Causal, or Mathematical wording in this paragraph but there is a Pivot. Typically, if a Most Supported paragraph ends with a Pivot sentence, the correct answer represents a safely worded way of resolving the tension created by the pivot word. We call that sort of pattern Reconcile the Pivot.\\nThe tension here is that Professor Bums thinks that new observations refute old observations, but the speaker is pointing out that these new observations occurred under poor conditions.\\nThis seems to suggest that the new data points aren't super trustworthy. Would we be a little hasty to toss out the old observations as invalid, based off some sketchy new observations?\",\n          \"id\": \"8c372d18-2721-49a8-b820-0b191e9d476a\",\n          \"label\": \"Evaluate\",\n          \"md5\": \"f88c029f45ba3361ea5a8cb60db2c30e\",\n          \"position\": 1\n        },\n        {\n          \"body\": \"The wrong answers will probably go overboard and say, \\\"Thus, the recent observations are worthless. Thus, we should still believe the earlier observations. Thus, there is a comet reservoir far out in the solar system.\\\"\\nBut we want something much more moderate, like, \\\"Thus, it may be hasty to deem to old observations as incorrect based on this somewhat questionable new data\\\" or \\\"Thus, we don't have a good grasp right now on whether or not evidence of a comet reservoir exists\\\".\",\n          \"id\": \"de68ed46-63d5-474c-aa5a-08e1d6f9b53f\",\n          \"label\": \"Goal\",\n          \"md5\": \"2121b6407092a754f9e2b5c9ad7afcee\",\n          \"position\": 2\n        }\n      ],\n      \"style\": \"single\"\n    }\n  ]\n}"
+    }
+  ],
+  "structuredContent": {
+    "rows": [
+      {
+        "explanation_id": "577fb3da-65b1-420a-aa0f-261d60c7bf05",
+        "notes": [
+          {
+            "body": "It's always dangerous to predict the outcome of a counterfactual.\n\nWe don't know anything about what would be true if the recent observations had been made under good conditions. They may have refuted the old comet reservoir observations; they may have corroborated them. Who knows?",
+            "id": "98d4cc1e-dab8-4a1f-8753-d1b2e60279e8",
+            "letter": "A",
+            "md5": "d568c7fab88e5807c289e6681bb8625b"
+          },
+          {
+            "body": "This flies too far in the right direction. The author is pointing out that the recent observations are sketchy to push back a little at Bums's view that the new data refutes the old data.\n\nOur author is merely suggesting, \"Whoa ... these aren't great observations. They were under poor conditions. Let's not draw any definitive conclusions about the old observations based on these sketchy ones.\"\n\nThis answer is saying, \"Whoa .. these aren't great observations. Thus, you're dead wrong, Bums. They actually confirm the earlier observations.\"",
+            "id": "e91824f1-a6b1-437a-9fda-973eeb6bcef8",
+            "letter": "B",
+            "md5": "c6e1aad8391aadfd45d8ec6269a836c3"
+          },
+          {
+            "body": "This still sounds more definitive than I'd expect (Bums's claim is incorrect), but this is the most supportable answer available.\n\nThe author is definitely suggesting that we'd be hasty to throw out the old observations based on these sketchy new ones. So our author disagrees that these new observations imply that the old ones are incorrect.\n\nBums's claim was extreme, so denying it is a moderate idea.\n\nBums was like, \"These new observations are enough / are sufficient ... these new observations prove that the earlier ones were wrong.\"\n\nBy saying Bums's claim is incorrect, we're only saying, \"Whoa --- the new observations don't prove the old ones were wrong\".",
+            "id": "414818a5-50b9-4acf-84f1-41110cd57212",
+            "letter": "C",
+            "md5": "addd8a3f22b62562d3df98467aef467d"
+          },
+          {
+            "body": "We don't know anything about what would be true if the recent observations had been made under good conditions. They may have refuted the old comet reservoir observations; they may have corroborated them. Who knows?",
+            "id": "af2abb3e-27b3-4922-9fe3-9f44b96491af",
+            "letter": "D",
+            "md5": "4f09914c03c672ddbea76a95700fc351"
+          },
+          {
+            "body": "This also goes too far in the correct direction. The author is pointing out that the recent observations are sketchy, not worthless.\n\nHe's just trying to push back a little at Bums's view that the new data refutes the old data.\n\nOur author is merely suggesting, \"Hey ... these aren't great observations. They were under poor conditions. Let's not draw any definitive conclusions about the old observations based on these sketchy ones.\"\n\nBut it's taking it to a whole other level to say the recent observations are worthless.",
+            "id": "5dcc5f41-dcce-4ef6-8b8d-fa2be7982dac",
+            "letter": "E",
+            "md5": "3ed29d1472ea0ad8532a37749c5aa011"
+          }
+        ],
+        "qid": "PT143-S1-Q13",
+        "steps": [
+          {
+            "body": "Recent observations fail to confirm earlier ones that apparently showed a comet reservoir far out in our solar system (i.e. recent observations did not provide evidence of a comet reservoir far out in the solar system).\nProfessor B recognizes this and claims that this nonconfirmation is enough to show that earlier observations were incorrect.\npivot (But)\nThe recent observations occurred under poor conditions.",
+            "id": "c36bc396-0adb-4355-83db-e8843777cd7d",
+            "label": "Statements",
+            "md5": "19d7b1ff27518c64f6878254c1b4b1b3",
+            "position": 0
+          },
+          {
+            "body": "We have to distinguish between factual claims and attributed opinions sometimes on Inference questions, but the first sentence is both.\nSaying that \"Professor Bums recognizes X\" means both that X is true (according to the speaker, whose statements we are accepting as true) and that Professor Bums believes it.\nThere isn't any Conditional, Causal, or Mathematical wording in this paragraph but there is a Pivot. Typically, if a Most Supported paragraph ends with a Pivot sentence, the correct answer represents a safely worded way of resolving the tension created by the pivot word. We call that sort of pattern Reconcile the Pivot.\nThe tension here is that Professor Bums thinks that new observations refute old observations, but the speaker is pointing out that these new observations occurred under poor conditions.\nThis seems to suggest that the new data points aren't super trustworthy. Would we be a little hasty to toss out the old observations as invalid, based off some sketchy new observations?",
+            "id": "8c372d18-2721-49a8-b820-0b191e9d476a",
+            "label": "Evaluate",
+            "md5": "f88c029f45ba3361ea5a8cb60db2c30e",
+            "position": 1
+          },
+          {
+            "body": "The wrong answers will probably go overboard and say, \"Thus, the recent observations are worthless. Thus, we should still believe the earlier observations. Thus, there is a comet reservoir far out in the solar system.\"\nBut we want something much more moderate, like, \"Thus, it may be hasty to deem to old observations as incorrect based on this somewhat questionable new data\" or \"Thus, we don't have a good grasp right now on whether or not evidence of a comet reservoir exists\".",
+            "id": "de68ed46-63d5-474c-aa5a-08e1d6f9b53f",
+            "label": "Goal",
+            "md5": "2121b6407092a754f9e2b5c9ad7afcee",
+            "position": 2
+          }
+        ],
+        "style": "single"
+      }
+    ]
+  },
+  "isError": false
+}

@@ -1,0 +1,45 @@
+[
+  {
+    "qid": "PT157-S3-Q25",
+    "table": "lr_explanation_choice_notes",
+    "column": "body",
+    "row_id": "fa758a01-be00-4123-be04-47a3fdc10084",
+    "explanation_id": "b378e1b0-88e3-450f-9bdf-10644a048ea1",
+    "style": "another_way",
+    "letter": "D",
+    "old": "The placebo group was eating vitamin C-rich foods? If anything, that helps the argument. If both groups were getting vitamin C (one through pills, one through diet) and there was no difference, that is more evidence vitamin C does not help with acne. This answer accidentally supports the conclusion instead of weakening it.",
+    "old_md5": "992dbdb6768119db9ba315d2bb9621cb",
+    "new": "Suppose vitamin C does help, but some placebo subjects get it from food. Their improvement could make the groups look alike even though the vitamin works. That would undermine the conclusion, not support it.\n\nD leaves too much open, though. How much vitamin C did those subjects get? Were they among the subjects who couldn't tell which pill they had? The answer doesn't say. A gives a clearer reason the comparison could hide a benefit: the vitamin C group had a history of worse acne.",
+    "new_md5": "707b20f79713abb4ca3f73b0cc41cc8a",
+    "rationale": "Dietary vitamin C in a control group can contaminate the comparison; it does not strengthen a conclusion of no real benefit. Limited quantifier/dose/blind-subgroup information makes D a weaker objection than A.",
+    "source": "q157-styles-live.json"
+  },
+  {
+    "qid": "PT157-S3-Q25",
+    "table": "lr_explanation_choice_notes",
+    "column": "body",
+    "row_id": "b4f8ee68-7f98-489f-9339-ff0242629f75",
+    "explanation_id": "882d0369-ee56-4170-93df-3b78be87975c",
+    "style": "brief",
+    "letter": "D",
+    "old": "If the placebo group also got vitamin C through food, the lack of difference between groups still suggests the pills added no benefit. This supports the conclusion rather than weakening it.",
+    "old_md5": "9c7a7cc22ea2105635e420466da59f38",
+    "new": "Vitamin C in the placebo group's food could blur the comparison, which weakens rather than supports the conclusion. But D only says some subjects ate those foods. We don't know the dose or whether those subjects were in the blind comparison. A gives stronger evidence: the vitamin C group had a history of worse acne.",
+    "new_md5": "5a66fe497c45163f173e0d004383a039",
+    "rationale": "Dietary vitamin C in a control group can contaminate the comparison; it does not strengthen a conclusion of no real benefit. Limited quantifier/dose/blind-subgroup information makes D a weaker objection than A.",
+    "source": "q157-styles-live.json"
+  },
+  {
+    "qid": "PT157-S3-Q25",
+    "table": "lr_answer_choices",
+    "column": "tag",
+    "row_id": "75ee6f0d-1181-4f16-90d8-cb8c768d6e42",
+    "letter": "D",
+    "old": "Strengthens",
+    "old_md5": "edaf7be68b7a514ddc7cde0bb5b1e585",
+    "new": "Too Weak",
+    "new_md5": "ce0120b1ff9299fa01209aa62720c95d",
+    "rationale": "Potential control contamination weakens rather than strengthens, but D supplies less decisive evidence than credited A.",
+    "source": "q157-styles-live.json"
+  }
+]
