@@ -9,7 +9,15 @@ aliases: []
 
 Freshest working state; the first page `/pickup` reads. Rebuilt fresh in the 2026-07-16 vault rebuild (the old cache is archived).
 
-## Most recent (2026-10-10): Necessary-condition lesson verified locally
+## Most recent (2026-10-10): Conditional lesson films verified locally
+
+- Restored both preserved sufficient-condition clips as optional examples after the concept visual, with explicit hypothetical Maya context. Their later placements remain. The definition still comes first.
+- Generated one 11-second 720p necessary-condition Kling film for 99 credits, with local poster, captions and transcript. Automated base.en transcription matches the intended narration; six sampled frames match the existing library/navy visual style. Subjective audio quality is not claimed. [Media and verification receipt](../../ai-os-projects/lsatu-conditional-bootcamp/docs/agent/conditional-recovery-20261007/media/necessary-film-20261010.md).
+- All three players reach readyState 4 and caption readyState 2. Codex Browser verifies native keyboard playback and visible captions on the new film beyond seven seconds. Both pages at widths 320/400/960/1200/1600 have no overflow or visible lesson buttons below 44px; viewport override reset.
+- 35 focused tests pass, plus 14 affected tests after adding distinct player keys for route changes. Full typecheck and final code build/postbuild pass. The build preceded the new static media download; final media assets were verified in the local preview only.
+- No commit, push or deployment. Physical devices, screen-reader speech and production acceptance remain unverified. Task statuses and unrelated priorities unchanged.
+
+## Previous (2026-10-10): Necessary-condition lesson verified locally
 
 - Revised the necessary page to define required before engagement, continuing the sufficient lesson's law-school enrollment/student relationship. The interactive comparison leaves enrollment possible when studenthood is present and rules it out when studenthood is absent. Necessary does not by itself mean enough; a necessary condition can also be sufficient under another established relationship.
 - Reviewed the original HTML, selected voice standard and copy corrections, Loophole sources, four conditional megadocs, three Demon sources, LSAT Lab 16784, 7Sage overview/relational clarification and teacher Group 2/intro review. [Source comparison and implementation evidence](../../ai-os-projects/lsatu-conditional-bootcamp/docs/agent/conditional-recovery-20261007/media/necessary-source-review.md). No named Savim source found in the routed inventory; no claim that all unindexed files were reviewed.
@@ -416,7 +424,7 @@ The sections below preserve earlier session snapshots. They are historical conte
 
 ## Now
 
-- **Conditional opening:** recovered local checkout includes the audit fixes, five-stage mixed drill and sufficient lesson with two locally verified Kling clips, interactive cases and guided inference. Production merge and publication have not started; integrate carefully with current main rather than replacing it with the older detached baseline. Broader curriculum/media and signed-in production acceptance remain open; [[tasks]] is unchanged.
+- **Conditional opening:** recovered local checkout includes the audit fixes, five-stage mixed drill, condition-first sufficient/necessary lessons, two restored optional sufficient clips and one new necessary film verified in the local preview. Production merge and publication have not started; integrate carefully with current main rather than replacing it with the older detached baseline. Broader curriculum/media and signed-in production acceptance remain open; [[tasks]] is unchanged.
 
 - **D1 Step 4 (vault rebuild) executed 2026-07-16.** New `wiki/` + `corpus/` + `students/` stand; prior wiki archived at `archive/wiki-pre-rebuild-2026-07-16/`. Product work continues in [[tasks]] unchanged.
 - **Historical D1 #5 deployment report, 2026-07-16, not fresh production verification:** Lovable pass reported green (3 functions, migration present, all secrets — `EDGE_INTERNAL_KEY` is project-scoped so the same-value trap can't happen; gateway `ai.gateway.lovable.dev` confirmed unchanged). Frontend Publish verified live in the browser. **Then Joshua pivoted the workflow: the app's ingest UI is not how he'll work — Claude is the workplace; ingestion and post-session actions go through Claude directly.** The formal runbook E2E was aborted at his direction and is no longer the plan of record. **The `lsat-u-platform-actions` skill now exists (activated both runtimes)** — one entry point to assign drills/homework/activities, post to classrooms, message students, and ingest sessions from this workspace via his Chrome admin session. The original "D1 #6 gated on live E2E" adjudication predates this pivot and needs re-adjudication.
@@ -426,7 +434,7 @@ The sections below preserve earlier session snapshots. They are historical conte
 - RC repair: published code and passed scenarios are in the [release evidence](../../ai-os-projects/lsatu/docs/specs/2026-10-09-rc-release-evidence.md). Physical-device/screen-reader and remaining live fault checks are open. Answer-key authority is a separate investigation; preserve all source keys and test records.
 
 - Matt Pocock guide: if a rendered browser preview is needed, open `references/matt-pocock-skills-field-guide.html` locally; the Codex browser denied its `file:` URL, so its live interactions were not checked in-browser.
-- Conditional opening: preserve the recovered checkout and preview on 8097; current sufficient motion/media receipts and local Codex checks are linked above. Real-device, screen-reader and slow-network checks remain open. Production integration remains separate and unstarted. Older Claude approval and viewport reports stay historical; no current independent Claude certification, publication or live student-persistence claim.
+- Conditional opening: preserve the recovered checkout and preview on 8097; current sufficient/necessary film receipts and local Codex checks are linked above. The final code build preceded the necessary media download; complete production packaging and acceptance remain separate. Real-device, screen-reader and slow-network checks remain open. Production integration remains unstarted. Older Claude approval and viewport reports stay historical; no current independent Claude certification, publication or live student-persistence claim.
 
 - Yahunatan: await approval of the V7 recap before posting the exact reviewed package. Current preview and primary record are linked above.
 - RRC films: seeking is dead on production because the host ignores Range; hosting move is a P0 decision in [[tasks]] Next.
