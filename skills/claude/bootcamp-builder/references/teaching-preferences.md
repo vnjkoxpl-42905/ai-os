@@ -132,3 +132,20 @@ Explicit correction: Drill 1 needs more than seven application questions. Joshua
 
 ### Progress presentation, 2026-10-11
 Joshua explicitly rejected Drill 1's small answered/remaining counter and requested a more refined visual progress bar. This supersedes the earlier specific answered/remaining display preference for this drill. Implemented candidate: continuous completion rail, prominent percentage, brief start/in-progress/completed state. Keep question position separate and only advance completion after checked answers. Verify narrow widths and reduced-motion support. Visual treatment remains open to his review.
+
+### Necessary-condition rule and indicator presentation, 2026-10-11
+Status: explicit browser corrections in the current conversation; directions to implement, not accepted implementation.
+
+- In the case-comparison panel, state the actual rule: **If you are enrolled in law school, then you are a student.** Replace the generic instruction "Keep the same rule. Choose a person and see what their situation tells you." The rule must remain visible and intelligible while comparing cases.
+- State explicitly that the indicator words help identify the **necessary condition**. Do not substitute the vague label "find a requirement" for the concept being taught. Keep the indicator distinct from the complete necessary condition.
+- Match the indicator-box order and the worked-example order, so learners can move through one consistent sequence. Retain the existing coverage of only, only if, only when, only where, always, requires and must; read each in its full sentence rather than treating it as a context-free substitution rule.
+- Give the indicator box a clear ordered hierarchy, readable spacing and an engaging visual response on hover. Provide equivalent keyboard-focus and touch access; essential explanations cannot depend on hover alone.
+
+Acceptance: compare the visible list and examples item by item for identical order; inspect the actual rule in every case state; verify pointer, keyboard and touch interactions and readable narrow layouts. Resulting copy and visual treatment remain provisional until Joshua reviews them.
+
+### Extend ASTRA visual direction to the lesson pages, 2026-10-11
+Status: explicit extension of creative scope to the necessary-condition and Must arrow pages, not approval of a finished design or publication.
+
+Joshua requested ASTRA-level artistic treatment for these pages, including refined color, typography, dimensional depth and advanced motion where useful. Inspect the entire Must arrow page for awkward alignment, insufficient breathing room and weak section grouping. Keep the left sufficient condition, the connecting arrow and the right necessary condition spatially unambiguous. Artistic effects must strengthen the instructional relationship and preserve complete conditions, readability, responsive access and reduced-motion alternatives.
+
+Complete at least **three genuine iteration passes**: inspect the rendered result closely, record concrete weaknesses, and improve them before inspecting again. Record the actual changes and verification for each pass rather than calling three screenshots three iterations. Generated imagery, GIFs and Kling media are optional means, not required deliverables; procedural visuals may better serve the explanation. Preserve existing authorization boundaries for paid tools. The intended audience of 10,000+ students raises the quality bar but does not authorize deployment or establish acceptance.
