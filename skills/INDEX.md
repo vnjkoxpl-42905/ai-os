@@ -64,7 +64,7 @@ _Full `gws` CLI skill set. Inert in the DB. Copy selected skills into the projec
 - **assign-lsatu-work** — Operate LSAT U headlessly. Assign guided drills and daily schedules through a mapped catalog and verified batch MCP; assign activities or timed sections, read student progress, manage access and Classroom work, and handle platform messages.
 - **audit** — Use when someone asks to audit their AIOS, score the Four Cs, find stale paths or unlinked projects, compare AGENTS.md and CLAUDE.md, check Claude/Codex skill compatibility, or assess migration readiness. Automatically saves dated reports and tracks evidence-backed improvements across runs.
 - **booking-link** — Use whenever Joshua wants a one-off booking link for LSAT U — "make me a link for Dakota at 7:15 tomorrow", "send her a link to book tonight", "one-off link, $60", "short notice link", "I need a link she can schedule herself with". Mints a single-use URL that sells exactly one session at a price you set, optionally pinned to one exact time, and closes after she books. Also covers listing and revoking existing links.
-- **bootcamp-builder** — Build a complete repo-native LSAT U bootcamp for a new topic, cloning the Intro to LR (Main Conclusion) build process end to end. Interviews Joshua, ingests the content files he feeds it plus a scan of /Curriculum/{Topic}/, then drives a gated multi-session build inside the LSATU repo (src/bootcamps/{slug}/) until bootcamp-parity-audit passes against Intro to LR. Replaces lsat-u-topic-builder. Use when Joshua says "build a [topic] bootcamp", "new bootcamp", "spin up [topic]", "/bootcamp-builder [topic]", or wants to replicate the Intro to LR process for another topic.
+- **bootcamp-builder** — Build or revise a repo-native LSAT U bootcamp using corpus sources, approved teaching preferences, and the Intro to LR benchmark. Use when Joshua asks to build a topic bootcamp, revise a bootcamp, or save bootcamp teaching preferences. Preserves scope approvals and carries corrections across sessions.
 - **bootcamp-parity-audit** — Compare a named LSAT U bootcamp with current Intro to LR source, product and visual benchmarks. Use for explicit bootcamp parity or shipped-quality audits, not general second-brain audits. Diagnose without implementation unless requested.
 - **brainstorming** — Use for explicit brainstorming or consequential design choices whose requirements remain unresolved. Not for already approved mechanical/configuration fixes.
 - **brand-guidelines** — Apply Anthropic brand styling only when explicitly requested. Not for Joshua or LSAT U branding.
@@ -264,7 +264,7 @@ _Full `gws` CLI skill set. Inert in the DB. Copy selected skills into the projec
 
 ## codex/
 
-169 authored/project · 42 google-workspace · 0 vendor-plugin · 11 project-fork
+170 authored/project · 42 google-workspace · 0 vendor-plugin · 11 project-fork
 
 ### Google Workspace (gws) skills
 
@@ -322,6 +322,7 @@ _Full `gws` CLI skill set. Inert in the DB. Copy selected skills into the projec
 - **assign-lsatu-work** — Operate LSAT U headlessly. Assign guided drills and daily schedules through a mapped catalog and verified batch MCP; assign activities or timed sections, read student progress, manage access and Classroom work, and handle platform messages.
 - **audit** — Use when someone asks to audit their AIOS, score the Four Cs, find stale paths or unlinked projects, compare AGENTS.md and CLAUDE.md, check Claude/Codex skill compatibility, or assess migration readiness. Automatically saves dated reports and tracks evidence-backed improvements across runs.
 - **booking-link** — Use whenever Joshua wants a one-off booking link for LSAT U — "make me a link for Dakota at 7:15 tomorrow", "send her a link to book tonight", "one-off link, $60", "short notice link", "I need a link she can schedule herself with". Mints a single-use URL that sells exactly one session at a price you set, optionally pinned to one exact time, and closes after she books. Also covers listing and revoking existing links.
+- **bootcamp-builder** — Build or revise a repo-native LSAT U bootcamp using corpus sources, approved teaching preferences, and the Intro to LR benchmark. Use when Joshua asks to build a topic bootcamp, revise a bootcamp, or save bootcamp teaching preferences. Preserves scope approvals and carries corrections across sessions.
 - **brainstorming** — Use for explicit brainstorming or consequential design choices whose requirements remain unresolved. Not for already approved mechanical/configuration fixes.
 - **brand-guidelines** — Apply Anthropic brand styling only when explicitly requested. Not for Joshua or LSAT U branding.
 - **canvas-design** — Create beautiful visual art in .png and .pdf documents using design philosophy. You should use this skill when the user asks to create a poster, piece of art, design, or other static piece. Create original visual designs, never copying existing artists' work to avoid copyright violations.

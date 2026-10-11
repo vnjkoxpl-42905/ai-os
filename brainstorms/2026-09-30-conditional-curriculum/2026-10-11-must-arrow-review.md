@@ -16,3 +16,6 @@ Read installed impeccable SKILL.md, audit/product references, and product/design
 - Limits: no full WCAG certification, screen-reader session, performance profiling or live dark-theme contrast measurement. The walkthrough remains guided reveals; the following question tests independent direction choice.
 
 Screenshot: C:/Users/Joshu/.codex/visualizations/2026/10/10/01a1282c-ac7e-7380-90fe-9ca58e32512f/must-arrow-updated.png
+
+## Source-driven correction, 2026-10-11
+Joshua rejected the abstract opening and asked for explicit direction. New local draft: The must arrow points from left to right. If the left side is true, the right side must be true. The LSAT Lab clip jeDnykOrswY at0:31 supports this certainty reading;8:19 supports left requires right. Retained rule-versus-fact boundary. This exact new wording is implemented, not yet expressly approved by Joshua.14 focused tests and production build passed; actual browser DOM verified. Screenshot: C:/Users/Joshu/.codex/visualizations/2026/10/10/01a1282c-ac7e-7380-90fe-9ca58e32512f/must-arrow-source-wording.png

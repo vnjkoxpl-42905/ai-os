@@ -19,6 +19,8 @@ Fills through supervised ingests, one source at a time, logged in [[../wiki/log|
 
 ## Pages
 
+- [The must arrow shows a direction of guarantee](<Curriculum/Conditional Logic/Notes/_megadoc_reference_conditionals.md#the-must-arrow-shows-a-direction-of-guarantee>): sufficient-to-necessary readback, what a rule leaves open, and limits on the trigger-disappears metaphor, supported by the full LSAT Lab transcript ingested 2026-10-11.
+
 ### Teaching methods recovered from the old local vault (2026-10-07)
 
 - [Loophole teacher reference](loophole-online/index.md): translation, quipping, CLIR, question strategies and review routines, with attributed source navigation and defective-capture warnings.

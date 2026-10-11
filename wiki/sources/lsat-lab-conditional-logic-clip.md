@@ -2,14 +2,43 @@
 type: source
 subject: LSAT Lab conditional logic clip and boards
 created: 2026-10-03
-updated: 2026-10-03
+updated: 2026-10-11
 aliases: []
 tags: [llm-wiki, lsat, conditional-logic]
 sources:
+  - ../../raw/sources/clips/lsat-lab-conditional-logic-2026-10-11/Conditional Logic  LSAT Logical Reasoning 1.md
   - ../../raw/sources/clips/lsat-lab-conditional-logic-2026-10-03/Conditional Logic  LSAT Logical Reasoning.md
 ---
 
-# LSAT Lab's opening boards explain roles before keyword fluency
+# LSAT Lab explains the arrow as certainty from sufficient to necessary
+
+The 2026-10-11 capture extends this source review through the full supplied transcript, 0:02–24:19. The earlier screenshot review below remains distinct evidence. For the current Must arrow lesson, the core is simple: **if the left condition is true, the right condition must be true**. The arrow gives a direction of guarantee; the rule alone does not establish that either condition is actually true. See the [corpus teaching synthesis](<../../corpus/Curriculum/Conditional Logic/Notes/_megadoc_reference_conditionals.md#the-must-arrow-shows-a-direction-of-guarantee>).
+
+## Full transcript generation ingested on 2026-10-11
+
+- [Preserved clip](../../raw/sources/clips/lsat-lab-conditional-logic-2026-10-11/Conditional%20Logic%20%20LSAT%20Logical%20Reasoning%201.md), [provenance](../../raw/sources/clips/lsat-lab-conditional-logic-2026-10-11/PROVENANCE.md), [hash manifest](../../raw/sources/clips/lsat-lab-conditional-logic-2026-10-11/SHA256SUMS).
+- SHA-256: `853f3bed5bf7f5c8033956b81675cadf12d72251c7c6e2ecbf7f96384ad5efba`; 23241 bytes. Different capture of the same video, not a new author or a duplicate source summary. Original and prior generation retained.
+- The transcript identifies Patrick from LSAT Lab. Publication identity in the earlier research remains historical metadata, not newly fetched video metadata. Capture date is user/local-file context, not embedded metadata.
+
+| Time | Source teaching and usable meaning |
+|---|---|
+| 0:31–1:02 | The arrow is certainty. If the sufficient condition on the left is true, the necessary condition on the right must be true. The geographic example separates logical dependence from a sequence in time. |
+| 1:02–2:56 | Positive left supports positive right. Negative left and positive right leave the other side unresolved. Negative right rules out left. The rule is not reversible merely because the right side holds. |
+| 2:56–5:02 | Contraposition reverses direction and negates each complete condition. Negating a compound changes AND/OR as well as its component truth values. Captions reference visual symbols incompletely, so do not reconstruct exact diagrams from those fragments. |
+| 5:02–7:51 | Distinguish deriving a conditional from rules from deriving a fact using rules plus facts. Chain matching conditions; retain intermediate inferences. A partly met compound trigger still needs its remaining condition. |
+| 8:19–10:18 | Read left requires right. Identify the required idea even when an unfamiliar expression signals it; keywords support understanding rather than replace it. |
+| 10:18–12:52 | A negative universal means A implies not B, equivalently B implies not A. Do not turn it into not A implies B. The source also discusses few/not-all translations; those belong in quantifier work, not the Must arrow introduction. |
+| 12:52–16:29 | Unless/until/without can be understood through the requirement or an if-not paraphrase. Negate the whole attached compound carefully. These need their own lessons after the simple arrow. |
+| 16:29–18:47 | Biconditionals explicitly supply both directions. The illustrated otherwise sentence adds a second rule; it is not permission to reverse any single conditional. Context must support both rules. |
+| 18:47–24:19 | Ten worked translations revisit universals, no, unless, only, without and prerequisite. At19:36 the instructor treats implies as the arrow. At23:18 prerequisite is understood by asking what is required despite not appearing in the displayed list. |
+
+### Adaptation limits and explicit correction
+
+The transcript says the rule disappears when the trigger is absent (1:26). Preserve this as source wording, not course doctrine: **the rule still holds; that fact alone does not settle the right side**. This caveat also applies to older corpus shorthand about ignoring a rule when its sufficient condition is absent. The source's main certainty claim agrees with Joshua's conditional teaching; the loose disappears metaphor should not replace precise wording.
+
+Captions include recognition errors such as country positive and a garbled tea/snacks phrase. Exact slide statements are not fully recoverable from this new clip alone. The full text was read, but no new live video/audio or instructional images were inspected. Earlier twelve-board inspection remains evidence only for the earlier package. Do not repeat unsupported prevalence/mastery claims or turn illustrative admissions requirements into real admissions advice. Advanced sections are retained for later lessons, not all added to the arrow page.
+
+## Earlier screenshot generation, reviewed on 2026-10-03
 
 Joshua clipped Patrick's **Conditional Logic | LSAT Logical Reasoning** on 2026-10-03, with a transcript and twelve embedded screenshots. This bounded review covers the transcript from 0:02 through the transition at 10:18 and explicitly inspects every embedded image. The screenshots add actual board evidence to the [existing lecture research](../../brainstorms/2026-09-30-conditional-curriculum/research-lsatlab-conditional-lesson.md). They are private source evidence, not student lesson assets.
 

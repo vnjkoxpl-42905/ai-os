@@ -65,10 +65,9 @@ system/scripts/sync-claudex-skills.py updates four upstream support trees and th
   there. **Revisit if Codex gains a YouTube MCP** — this is a capability gap, not a design
   decision.
 
-### Claude-specific tooling (1)
+### Bootcamp builder shared workflow (2026-10-11)
 
-- `bootcamp-builder` — built around AskUserQuestion gating and subagent fan-out. A Codex copy
-  would need a rewrite, not a port.
+`bootcamp-builder` now has matching Claude/Codex catalogs and project activations. The workflow uses host-available questions, preserves existing authorization, resolves current source paths, and reads the accumulated teaching-preference reference. The previously installed global copy was updated in place; no new global activation was added.
 
 ### Other ledger workflows held to one runtime (4)
 
