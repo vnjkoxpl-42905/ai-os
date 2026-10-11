@@ -2833,3 +2833,6 @@ Claude Sonnet 5.5 reviewed saved rendered screenshots, current code, original HT
 - Changed Windows Terminal's Ctrl+V binding to `unbound` so the key can reach the focused CLI. AutoHotkey now forwards Ctrl+V when the clipboard contains an image, allowing native image attachment; ordinary text paste uses Ctrl+Shift+V. The original Windows Terminal settings were backed up before editing.
 - Clipboard image detection was checked with a synthetic image and text, restoring the original clipboard afterward. AutoHotkey is running. The previous path-insertion helper remains as a fallback.
 - Updated the operational reference. Live end-to-end attachment in the Herdr panes remains unverified; Herdr's own local Windows image bridge is still unsupported.
+
+## [2026-10-11] build | Must arrow practice fixes approved by Opus
+Implemented prior review findings and Opus followups. Actual choices, option-specific feedback, answered progress, focus, complete condition wording and mobile spacing. Opus5.5 high effort standard speed APPROVED round2. 18 tests, typecheck/build passed; fresh Codex browser checks completed. Three optional low polish notes remain in review record. Local only. See brainstorms/2026-09-30-conditional-curriculum/2026-10-11-must-arrow-review.md.

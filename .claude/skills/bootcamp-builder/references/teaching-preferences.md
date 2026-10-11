@@ -96,3 +96,7 @@ Provenance:
 ## Continue the same record
 
 For each new correction, add a dated entry here with topic/page scope, exact wording when approved, status, evidence, and a concrete acceptance check. Keep rejected wording visible only as a regression warning. Do not turn ambiguous dictation into a named person or a universal rule. Reconcile conflicts with Joshua's newest explicit direction. At completion, report what was verified and what remains provisional. Reuse the existing bootcamp-builder skill as the master workflow.
+
+### Must-arrow review follow-through, 2026-10-11
+Joshua authorized fixing the review findings and explicitly requested Claude Opus at normal (slow) speed for the next review. This run used Opus5.5, high effort, standard speed. Preserve a learner answer before feedback, specific reasoning for each wrong choice, answered-question progress, complete conditions and keyboard focus. Narrow layouts must preserve this lesson's left-to-right direction without breaking words mid-word. These are scoped corrections, not an assertion of user approval of all resulting copy. Review evidence: brainstorms/2026-09-30-conditional-curriculum/2026-10-11-must-arrow-review.md.
+
