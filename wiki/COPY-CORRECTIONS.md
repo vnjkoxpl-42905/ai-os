@@ -170,6 +170,22 @@ From the glossary. Internal names may stay in code, never on the page.
 | The Read | The Recall |
 | Recall Rephrase Colour | Read, Recall, Colour |
 | em dash, en dash | a full stop, or a colon before a list |
+| expression ("Which expression identifies...") | "indicators" for the taught words, "phrase" for a multi-word indicator read as one unit ("read only if as one phrase"), "idea" or "condition" for what it points to. Added 2026-10-11: "expression" is vague and stiff; the student is looking for an indicator, so name it and reinforce the term being taught |
+| statement ("Statement 1 of 7") | sentence. Added 2026-10-11: students read sentences; "statement" sounds like a logic textbook |
+| Practise / "N statements" on drill cards | say what the drill has the student do. Added 2026-10-11 |
+| establish ("enough to establish") | prove, or tells you. Added 2026-10-11: plainer; keep "guarantee", it is plain and sticks |
+| preserve ("preserves the rule") | keeps. Added 2026-10-11 |
+| relationship (when a rule is meant) | rule. Added 2026-10-11 |
+| stipulated | this rule. Added 2026-10-11 |
+| classify | sort. Added 2026-10-11 |
+| "That keeps the meaning." on every correct step | name what was right: "Right indicator.", "Right direction."; wrong: "Not quite. Try again." Added 2026-10-11 |
+| Personalized If/Then | Put yourself in it. Added 2026-10-11: names what the student does, not a feature |
+| target ("the sufficient target") | what it points to, or the group. Added 2026-10-11; "target" stays in code |
+| the model ("compare with the model") | our version. Added 2026-10-11 |
+| "Drill 1" as a title | the task itself, e.g. "Spot the condition". Added 2026-10-11: a number says nothing about the reasoning |
+
+**Before designing any new homework, bootcamp, drill or note, read this table.** When a
+word is rejected in review, add it here first, with the reason, then fix the copy.
 
 ## Conditional Rephrase: name the student action, not the internal model (2026-09-15)
 
