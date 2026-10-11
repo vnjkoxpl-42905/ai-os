@@ -3,6 +3,10 @@ name: lsat-u-platform-actions
 description: Operate LSAT U from AI OS. Assign complete interactive Classroom lessons directly through the local lsat-u-lessons MCP server, verify the saved content and student visibility headlessly, and log the assignment. Use the Node CLI for other supported actions.
 ---
 
+## Current AI OS execution contract
+
+Resolve the actual host browser/CLI before use, preserve marker-based idempotency, exact recipient/action verification and live readback. Do not replace a working transport simply because a reference names another runtime.
+
 For drills, messages, student data, access, signups, due dates, unassign, and unsend, use `assign-lsatu-work`. On Windows, invoke its Node entry point directly instead of relying on Bash being on PATH.
 
 

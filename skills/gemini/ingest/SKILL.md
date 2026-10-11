@@ -35,7 +35,7 @@ ambiguous, ask once. Do not guess and file it somewhere wrong.
 | Input | Where it lands | Section |
 |---|---|---|
 | Web clip from Obsidian Web Clipper (`.md` in `raw/inbox/`) | `raw/inbox/` | [Clips](#clips) |
-| A clip that is a YouTube / video page | `raw/inbox/` | [Clips](#clips), read via `watch` |
+| Public video or lecture clip | `raw/inbox/` | [Clips](#clips); acquire source captions if missing, never student intake |
 | Student or consultation session transcript, live or archival | Student records | Delegate to `transcript-intake`; do not compile through this pipeline |
 | Superwhisper `recordings/` dirs (`meta.json` + `output.wav`) or `settings.json` | wherever they were dropped | hand to `superwhisper`; not this skill's |
 | Student evidence: PT score report, screenshot, homework export | `~/Downloads`, chat attachment | [Student evidence](#student-evidence) |
@@ -82,11 +82,19 @@ there (a `recordings/` tree, a `settings.json`) is not a clip; route it by the
 table above and tell Joshua it was in the wrong place rather than processing it
 here.
 
-1. List `raw/inbox/*.md` newest-first. "The latest" means the newest; a named
-   topic means match on it; several new ones means list them and ask which.
+1. List source clips in `raw/inbox/` newest-first, excluding queue README and
+   other operating files. Honor a named file/topic first. For "latest new" or
+   "unprocessed" clips, check hash and completed outputs before choosing the
+   newest pending source; retained completed originals are not new work. Resume
+   an archived-but-uncompiled source. Process one source unless a batch was
+   requested; when several candidates remain ambiguous, show a short selection.
 2. Dedupe (above).
-3. Read the clip fully. If it is a video page with no transcript, use the
-   appropriate transcript intake workflow; do not treat its thumbnail as evidence.
+3. Read the clip fully. For a public video with no transcript, obtain its
+   native captions or an authorized source-transcription route. Selected LSAT Lab
+   lectures use `lsat-lab-lecture-transcribe`; other public videos use available
+   caption tools following their reference instructions. Never send public video
+   sources to student `transcript-intake`. If acquisition is blocked, report the
+   missing transcript and limited coverage; do not infer content from a thumbnail.
 4. Copy and hash-verify the clip into `raw/sources/clips/<slug>/`, using
    `PROVENANCE.md` and `SHA256SUMS`. Reuse an existing identical archive.
    Preserve the inbox original. Processed status comes from its hash, source

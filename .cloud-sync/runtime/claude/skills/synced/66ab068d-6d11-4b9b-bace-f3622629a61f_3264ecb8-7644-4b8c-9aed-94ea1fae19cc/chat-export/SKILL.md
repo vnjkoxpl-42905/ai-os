@@ -1,6 +1,6 @@
 ---
 name: chat-export
-description: Save the current conversation as a structured markdown file and generate a handoff prompt for continuing in a new chat. Use this skill whenever the user says "export this chat", "save this conversation", "create a handoff", "save this for later", "export to my chat exports folder", or anything indicating they want to preserve a conversation and carry context into a new session. Always trigger this skill proactively when a conversation has been long, complex, or has produced decisions, files, or code — even if the user hasn't explicitly asked yet.
+description: "Export a conversation to a local Markdown file when explicitly asked to save or export the chat. Retrieve original session logs for a verbatim export; disclose missing ranges. Chat-only continuation uses session-handoff."
 ---
 
 # Chat Export Skill
@@ -22,9 +22,7 @@ Example: `2026-04-28_claude-folder-cleanup-notebooklm.md`
 
 ## Steps
 
-1. **Reconstruct the full transcript** from the conversation in context.
-   Write every user message and every Claude reply verbatim under
-   `### User` and `### Claude` headings. Do not paraphrase or skip.
+1. **Retrieve original session logs** for the requested conversation. Verify which turns are available and write retrieved user/assistant messages verbatim. If original logs are unavailable or incomplete, export visible turns only, label the transcript partial, and list missing or compacted ranges. Never reconstruct absent messages as verbatim.
 
 2. **Write the structured summary** (see template below).
 
@@ -34,8 +32,7 @@ Example: `2026-04-28_claude-folder-cleanup-notebooklm.md`
    - State what was done
    - State what to do next (ask the user if unclear)
 
-4. **Save the file** using Desktop Commander's `write_file` to the
-   output path above.
+4. **Save the file** using an available host file-writing tool, then read it back and verify its coverage label and output path.
 
 5. **Tell the user**:
    - The filename
@@ -78,7 +75,7 @@ One paragraph. What was this chat about, what was the goal, what was accomplishe
 
 ---
 
-## Full transcript
+## Transcript (complete or partial, with coverage)
 
 ### User
 [message]
@@ -86,12 +83,12 @@ One paragraph. What was this chat about, what was the goal, what was accomplishe
 ### Claude
 [reply]
 
-[...repeat for every message in the conversation...]
+[Repeat for every retrieved message; list unavailable ranges above.]
 ```
 
 ## Notes
 
-- Never truncate the transcript. If it's long, write all of it.
+- Preserve all retrieved turns. A partial source must remain explicitly partial; report unavailable ranges.
 - The "Open threads" section is the most important part for handoffs —
   be precise about what is unfinished.
 - If the user specifies a subfolder (e.g. "save this under lsat-u"),

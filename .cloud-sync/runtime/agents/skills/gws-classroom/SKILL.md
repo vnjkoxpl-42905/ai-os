@@ -1,6 +1,6 @@
 ---
 name: gws-classroom
-description: "Google Classroom: Manage classes, rosters, and coursework."
+description: "Inspect or operate explicitly Google Classroom API resources. LSAT U classroom/assignment requests route to project lsat-u-platform-actions."
 metadata:
   version: 0.22.5
   openclaw:
@@ -10,6 +10,13 @@ metadata:
         - gws
     cliHelp: "gws classroom --help"
 ---
+
+
+## Local execution contract (2026-10-10)
+
+This API is Google Classroom only. LSAT U classroom/assignment work routes to project lsat-u-platform-actions. Never infer LSAT U authority from Google Classroom naming; scope actual courses/invitations and notification authorization.
+
+## Workflow
 
 # classroom (v1)
 

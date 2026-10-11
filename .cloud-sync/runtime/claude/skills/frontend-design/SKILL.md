@@ -1,8 +1,15 @@
 ---
 name: frontend-design
-description: Guidance for distinctive, intentional visual design when building new UI or reshaping an existing one. Helps with aesthetic direction, typography, and making choices that don't read as templated defaults.
+description: "Design requested frontend interfaces while preserving user brief, existing design system, factual data and accessibility. Opinionated legacy creative presets apply only when selected."
 license: Complete terms in LICENSE.txt
 ---
+
+
+## Local execution contract (2026-10-10)
+
+Follow requested brief and established design system. Legacy font/palette/layout prohibitions are optional creative presets, not universal rules. Preserve reduced-motion, keyboard/readability and real product data. Prefer maintained project frontend-design for ordinary app work.
+
+## Workflow
 
 # Frontend Design
 

@@ -4,6 +4,10 @@ description: Interview the user to sharpen a plan while recording settled termin
 disable-model-invocation: true
 ---
 
+## Current AI OS execution contract
+
+Resolve domain-modeling and the actual host-supported interview skill from the installed entry point. Do not invoke an unavailable literal Skill tool. Preserve the document-backed composition and previously resolved requirements.
+
 # Grill with docs
 
 Read and apply both sibling files directly. Do not depend on invoking them through the Skill tool: a dependency may disable model invocation.

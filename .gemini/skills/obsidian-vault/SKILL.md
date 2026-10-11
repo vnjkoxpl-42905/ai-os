@@ -1,13 +1,18 @@
 ---
 name: obsidian-vault
-description: Search, create, and manage notes in the Obsidian vault with wikilinks and index notes. Use when user wants to find, create, or organize notes in Obsidian.
+description: "Historical alternate-vault reference available only by explicit name. Current AI OS uses ingest, second-brain-query and second-brain-lint."
+disable-model-invocation: true
 ---
+
+## Current AI OS execution contract
+
+Historical alternate-vault reference only. Do not run it against current AI OS. Current knowledge work routes to ingest, second-brain-query or second-brain-lint and its existing folder schema.
 
 # Obsidian Vault
 
 ## Vault location
 
-`/mnt/d/Obsidian Vault/AI Research/`
+Historical alternate vault only; current AI OS root is resolved from AGENTS.md.
 
 Mostly flat at root level.
 
@@ -15,7 +20,7 @@ Mostly flat at root level.
 
 - **Index notes**: aggregate related topics (e.g., `Ralph Wiggum Index.md`, `Skills Index.md`, `RAG Index.md`)
 - **Title case** for all note names
-- No folders for organization - use links and index notes instead
+- For the historical reference only. Current AI OS keeps its registered folders and schema.
 
 ## Linking
 

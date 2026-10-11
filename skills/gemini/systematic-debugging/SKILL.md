@@ -3,6 +3,10 @@ name: systematic-debugging
 description: Use when encountering any bug, test failure, or unexpected behavior, before proposing fixes
 ---
 
+## Current AI OS execution contract
+
+Check environment variable presence without printing values. Vendor percentage/time anecdotes are not measured guarantees. Use meaningful tests proportionate to the change; cosmetic edits do not require invented test ceremony.
+
 # Systematic Debugging
 
 ## Overview
@@ -94,7 +98,7 @@ You MUST complete each phase before proceeding to the next.
 
    # Layer 2: Build script
    echo "=== Env vars in build script: ==="
-   env | grep IDENTITY || echo "IDENTITY not in environment"
+   python -c "import os; print({k: bool(os.environ.get(k)) for k in os.environ if 'IDENTITY' in k})" || echo "IDENTITY not in environment"
 
    # Layer 3: Signing script
    echo "=== Keychain state: ==="

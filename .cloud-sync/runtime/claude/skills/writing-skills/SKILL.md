@@ -1,7 +1,14 @@
 ---
 name: writing-skills
-description: Use when creating new skills, editing existing skills, or verifying skills work before deployment
+description: "Use only when the user explicitly selects writing-skills or its specific documented preset/reference. Does not trigger on generic current-vault, frontend, AI or everyday workflow requests."
 ---
+
+
+## Local execution contract (2026-10-10)
+
+Use explicit skill authoring or behavior-test requests. Preserve useful pressure tests and mechanics; do not delete existing implementation as test-first ceremony. Use current skill-creator for primary authoring and retain this as specialized testing guidance.
+
+## Workflow
 
 # Writing Skills
 
@@ -379,7 +386,7 @@ NO SKILL WITHOUT A FAILING TEST FIRST
 
 This applies to NEW skills AND EDITS to existing skills.
 
-Write skill before testing? Delete it. Start over.
+Existing work is preserved. Add a meaningful regression/behavior test and demonstrate it detects the failure.
 Edit skill without testing? Same violation.
 
 **No exceptions:**
@@ -388,7 +395,7 @@ Edit skill without testing? Same violation.
 - Not for "documentation updates"
 - Don't keep untested changes as "reference"
 - Don't "adapt" while running tests
-- Delete means delete
+- Preserve work and verify behavior
 
 **REQUIRED BACKGROUND:** The superpowers:test-driven-development skill explains why this matters. Same principles apply to documentation.
 
@@ -487,19 +494,19 @@ Don't just state the rule - forbid specific workarounds:
 
 <Bad>
 ```markdown
-Write code before test? Delete it.
+Preserve existing code; demonstrate the regression test detects the defect.
 ```
 </Bad>
 
 <Good>
 ```markdown
-Write code before test? Delete it. Start over.
+Existing work is preserved. Add a meaningful regression/behavior test and demonstrate it detects the failure.
 
 **No exceptions:**
 - Don't keep it as "reference"
 - Don't "adapt" it while writing tests
 - Don't look at it
-- Delete means delete
+- Preserve work and verify behavior
 ```
 </Good>
 
@@ -538,7 +545,7 @@ Make it easy for agents to self-check when rationalizing:
 - "It's about spirit not ritual"
 - "This is different because..."
 
-**All of these mean: Delete code. Start over with TDD.**
+**These are prompts to inspect test quality, not instructions to delete existing code. Preserve work and repair verification.**
 ```
 
 ### Update SDO for Violation Symptoms

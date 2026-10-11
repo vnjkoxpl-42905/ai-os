@@ -4,6 +4,10 @@ description: Ask which skill or flow fits your situation. A router over the skil
 disable-model-invocation: true
 ---
 
+## Current AI OS execution contract
+
+The current grill-me interview checkpoints decisions in brainstorms. Resolve the actual sibling skill entry point and preserve its checkpoint contract; do not describe it as stateless.
+
 # Ask Matt
 
 You don't remember every skill, so ask.

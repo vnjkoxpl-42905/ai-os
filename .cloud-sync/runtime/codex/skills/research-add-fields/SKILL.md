@@ -3,6 +3,13 @@ name: research-add-fields
 description: Add field definitions to existing research outline.
 ---
 
+
+## Local execution contract (2026-10-10)
+
+Select exact requested research topic/file before modification. Multiple fields.yaml files are ambiguous; inspect current context or ask only when unresolved. Preserve existing schema/fields.
+
+## Workflow
+
 # Research Add Fields - Supplement Research Fields
 
 ## Trigger

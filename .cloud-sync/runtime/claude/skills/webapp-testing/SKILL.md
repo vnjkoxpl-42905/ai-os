@@ -4,6 +4,13 @@ description: Toolkit for interacting with and testing local web applications usi
 license: Complete terms in LICENSE.txt
 ---
 
+
+## Local execution contract (2026-10-10)
+
+Resolve helper paths relative to this installed skill. Wait for actual observed app-ready DOM/assertions, not universal networkidle. Polling sockets can remain busy. Report tested routes/interactions and failures; static or network quiet is not acceptance.
+
+## Workflow
+
 # Web Application Testing
 
 To test local web applications, write native Python Playwright scripts.
@@ -26,7 +33,7 @@ User task → Is it static HTML?
         │        Then use the helper + write simplified Playwright script
         │
         └─ Yes → Reconnaissance-then-action:
-            1. Navigate and wait for networkidle
+            1. Navigate and wait for the actual app-ready selector/state
             2. Take screenshot or inspect DOM
             3. Identify selectors from rendered state
             4. Execute actions with discovered selectors
@@ -57,7 +64,7 @@ with sync_playwright() as p:
     browser = p.chromium.launch(headless=True) # Always launch chromium in headless mode
     page = browser.new_page()
     page.goto('http://localhost:5173') # Server already running and ready
-    page.wait_for_load_state('networkidle') # CRITICAL: Wait for JS to execute
+    page.wait_for_selector('ACTUAL_APP_READY_SELECTOR') # CRITICAL: Wait for JS to execute
     # ... your automation logic
     browser.close()
 ```
@@ -78,7 +85,7 @@ with sync_playwright() as p:
 ## Common Pitfall
 
 ❌ **Don't** inspect the DOM before waiting for `networkidle` on dynamic apps
-✅ **Do** wait for `page.wait_for_load_state('networkidle')` before inspection
+✅ **Do** wait for `page.wait_for_selector('ACTUAL_APP_READY_SELECTOR')` before inspection
 
 ## Best Practices
 

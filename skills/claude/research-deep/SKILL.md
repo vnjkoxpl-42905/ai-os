@@ -8,6 +8,10 @@ description: Read research outline, launch independent agent for each item for d
 ## Trigger
 `/research-deep`
 
+## Resolve support before dispatch
+
+Locate the activated research package for the current runtime and verify its actual `validate_json.py` support path. Check the local file before passing an absolute path as `{validator_path}`. The historical hardcoded paths were absent on 2026-10-10. If no validator exists, report the missing dependency and do not claim validated completion. Use available host researcher roles rather than assuming `web-search-agent` is registered.
+
 ## Workflow
 
 ### Step 1: Auto-locate Outline
@@ -51,7 +55,7 @@ Read {fields_path} to get all field definitions
 
 ## Validation
 After completing JSON output, run validation script to ensure complete field coverage:
-python ~/ai-os/skills/claude/research/validate_json.py -f {fields_path} -j {output_path}
+python "{validator_path}" -f {fields_path} -j {output_path}
 Task is complete only after validation passes.
 """
 ```
@@ -77,7 +81,7 @@ Read {project_dir}/fields.yaml to get all field definitions
 
 ## Validation
 After completing JSON output, run validation script to ensure complete field coverage:
-python ~/ai-os/skills/claude/research/validate_json.py -f {project_dir}/fields.yaml -j {project_dir}/results/GitHub_Copilot.json
+python "{validator_path}" -f {project_dir}/fields.yaml -j {project_dir}/results/GitHub_Copilot.json
 Task is complete only after validation passes.
 ```
 

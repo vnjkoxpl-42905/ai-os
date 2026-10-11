@@ -3,6 +3,10 @@ name: prototype
 description: Build a throwaway prototype to answer a design question. Use when the user wants to sanity-check whether a state model or logic feels right, or explore what a UI should look like.
 ---
 
+## Current AI OS execution contract
+
+Place application dependencies and temporary executable projects in sibling ai-os-projects, not the vault root. Keep the probe limited to the design question and do not promote it to production without authorization.
+
 # Prototype
 
 A prototype is **throwaway code that answers a question**. The question decides the shape.

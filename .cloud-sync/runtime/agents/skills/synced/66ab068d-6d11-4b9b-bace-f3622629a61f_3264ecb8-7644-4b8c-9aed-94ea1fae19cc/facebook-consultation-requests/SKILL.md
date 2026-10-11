@@ -10,6 +10,13 @@ description: >-
   It types the reply into the chat but never sends without Joshua's explicit approval.
 ---
 
+
+## Local execution contract (2026-10-10)
+
+Discover the actual supported signed-in Messenger browser surface, not a renamed Claude-in-Chrome tool or assumed Work-profile login. Preserve exact prospect thread. Typing a reply is not proof of persistent draft or absence of send; verify composer/thread state. Send only authorized content and read back/log one copy.
+
+## Workflow
+
 # Facebook Consultation Requests
 
 Joshua gets LSAT tutoring inquiries through Facebook Messenger, not just email. This skill finds the real service requests among his conversations and drafts the same consultation reply he'd send by hand, using the browser (Facebook has no data connector, so this runs through Codex in Chrome on his logged-in Chrome).

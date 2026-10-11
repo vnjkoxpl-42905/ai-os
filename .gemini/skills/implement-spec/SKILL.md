@@ -4,6 +4,10 @@ description: "Implement a specification in code."
 disable-model-invocation: true
 ---
 
+## Current AI OS execution contract
+
+Prefer the native managed worktree facility when available; reuse a suitable active worktree. Do not create an unsolicited extra checkout. Preserve task graph, integration checks and user work.
+
 You have been provided a spec. This spec should have tickets associated with it, describing how to implement the spec.
 
 The goal is a PR which implements the entire spec on a single branch.

@@ -3,6 +3,13 @@ name: skill-creator
 description: Create new skills, modify and improve existing skills, and measure skill performance. Use when users want to create a skill from scratch, edit, or optimize an existing skill, run evals to test a skill, benchmark skill performance with variance analysis, or optimize a skill's description for better triggering accuracy.
 ---
 
+
+## Local execution contract (2026-10-10)
+
+Detect the actual provider invoked by trigger/evaluation support scripts before running them. Claude CLI evaluations prove Claude behavior only, never native Codex selector acceptance. Use current host-native routes and label static trigger tests accurately.
+
+## Workflow
+
 # Skill Creator
 
 A skill for creating new skills and iteratively improving them.

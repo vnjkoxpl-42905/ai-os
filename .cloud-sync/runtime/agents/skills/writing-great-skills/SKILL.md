@@ -1,8 +1,15 @@
 ---
 name: writing-great-skills
-description: Reference for writing and editing skills well — the vocabulary and principles that make a skill predictable.
+description: "Use only when the user explicitly selects writing-great-skills or its specific documented preset/reference. Does not trigger on generic current-vault, frontend, AI or everyday workflow requests."
 disable-model-invocation: true
 ---
+
+
+## Local execution contract (2026-10-10)
+
+Use current skill-creator for authoring and writing-for-agents/SKILL-MECHANICS for shared reference where installed. Preserve specialist mechanics and explicit invocation; do not create competing broad authoring trigger.
+
+## Workflow
 
 A skill exists to wrangle determinism out of a stochastic system. **Predictability** — the agent taking the same _process_ every run, not producing the same output — is the root virtue; every lever below serves it.
 

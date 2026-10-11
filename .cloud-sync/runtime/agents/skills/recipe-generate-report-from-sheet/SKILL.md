@@ -15,6 +15,13 @@ metadata:
         - gws-drive
 ---
 
+
+## Local execution contract (2026-10-10)
+
+Use installed gws docs +write --document, not --document-id; fetch actual sheet values, derive grounded report, consume actual created document ID and read back content.
+
+## Workflow
+
 # Generate a Google Docs Report from Sheet Data
 
 > **PREREQUISITE:** Load the following skills to execute this recipe: `gws-sheets`, `gws-docs`, `gws-drive`
@@ -23,16 +30,17 @@ Read data from a Google Sheet and create a formatted Google Docs report.
 
 ## Steps
 
-1. Read the data: `gws sheets +read --spreadsheet SHEET_ID --range "Sales!A1:D"`
-2. Create the report doc: `gws docs documents create --json '{"title": "Sales Report - January 2025"}'`
-3. Write the report: `gws docs +write --document-id DOC_ID --text '## Sales Report - January 2025
+1. Resolve actual target IDs, requested data, date interval/timezone and existing state. Illustrative names, dates and recipients are not user data.
+2. Use installed gws docs +write --document, not --document-id; fetch actual sheet values, derive grounded report, consume actual created document ID and read back content.
+3. Discover the required method using installed `gws <service> --help` and `gws schema <service>.<resource>.<method>`; build parameters from real returned IDs and requested data. For retries reconcile existing output identity first.
+4. Execute only the requested authorized operation. Draft email unless send is authorized. Inspect resulting resource/file and report any missing sections or failed items.
 
-### Summary
-Total deals: 45
-Revenue: $125,000
+## Relevant endpoint references
 
-### Top Deals
-1. Acme Corp - $25,000
-2. Widget Inc - $18,000'`
-4. Share with stakeholders: `gws drive permissions create --params '{"fileId": "DOC_ID"}' --json '{"role": "reader", "type": "user", "emailAddress": "cfo@company.com"}'`
+- `gws docs` (inspect help/schema before invocation)
+- `gws docs documents create --json` (inspect help/schema before invocation)
+- `gws drive permissions create --params` (inspect help/schema before invocation)
+- `gws sheets` (inspect help/schema before invocation)
 
+
+Write helper: `gws docs +write --document ACTUAL_DOCUMENT_ID --text ACTUAL_TEXT`. Create titles through `gws docs documents create`, not +write --title/--body.

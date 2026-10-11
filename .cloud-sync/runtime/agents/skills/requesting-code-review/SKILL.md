@@ -3,6 +3,13 @@ name: requesting-code-review
 description: Use when completing tasks, implementing major features, or before merging to verify work meets requirements
 ---
 
+
+## Local execution contract (2026-10-10)
+
+Select a reviewer supported by the current host. For precommit review include staged, unstaged and relevant untracked contents alongside any committed base range. Pass exact scope and dirty baseline; do not invent a completed reviewer verdict.
+
+## Workflow
+
 # Requesting Code Review
 
 Dispatch a code reviewer subagent to catch issues before they cascade. The reviewer gets precisely crafted context for evaluation — never your session's history. This keeps the reviewer focused on the work product, not your thought process, and preserves your own context for continued work.

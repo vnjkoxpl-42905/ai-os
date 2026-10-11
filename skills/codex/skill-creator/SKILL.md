@@ -5,6 +5,10 @@ metadata:
   short-description: Create or update a skill
 ---
 
+## Current AI OS execution contract
+
+Use as the primary explicit skill-authoring workflow. Description triggers must specify concrete user intent and negative cases, not maximize broad matching. Select held-out evaluation cases before tuning, retain failures, and distinguish semantic tests from native selector execution.
+
 # Skill Creator
 
 This skill provides guidance for creating effective skills.

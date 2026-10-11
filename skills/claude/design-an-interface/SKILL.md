@@ -3,6 +3,10 @@ name: design-an-interface
 description: Generate multiple radically different interface designs for a module using parallel sub-agents. Use when user wants to design an API, explore interface options, compare module shapes, or mentions "design it twice".
 ---
 
+## Current AI OS execution contract
+
+Reuse resolved requirements. Delegate only with host-supported tools and available concurrency; literal Claude Task calls are not portable. Interface comparison remains design-only unless implementation was authorized.
+
 # Design an Interface
 
 Based on "Design It Twice" from "A Philosophy of Software Design": your first idea is unlikely to be the best. Generate multiple radically different designs, then compare.

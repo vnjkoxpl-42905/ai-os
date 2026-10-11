@@ -3,6 +3,13 @@ name: onboard
 description: Use on Day 1 of an AIS-OS install, when someone says "set me up", "onboard me", "let's get started", "fill in my AIOS", or has just cloned the kit. Combined wizard — runs the 7-question intake AND scaffolds the Day-1 file set at the end. Idempotent — re-run any time after editing aios-intake.md.
 ---
 
+
+## Local execution contract (2026-10-10)
+
+Respect existing hand-owned AGENTS.md and CLAUDE.md separately. Mirror scoped shared pointers into both when required; no regeneration or destructive scaffold in populated workspace.
+
+## Workflow
+
 ## What this skill does
 
 Single combined wizard. Reads or writes `aios-intake.md` (the canonical intake), conducts the 7-question interview if the file isn't filled, then scaffolds the Day-1 file set inline at the end of the run. No separate `/scaffold-from-intake` skill — this is one flow.

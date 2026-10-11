@@ -8,9 +8,11 @@ skill and are not repeated here.
 1. Read the complete source, inspecting important referenced images separately.
    If it is too large, process a bounded section and record coverage; never claim
    complete ingestion of unread material. Use available format-reading tools.
-2. Read `wiki/index.md` and relevant domain indexes, then follow their links.
-   Search for existing subject/source pages before creating anything. Do not
-   dump the whole raw collection or wiki into context.
+2. Read the curated navigation at the start of `wiki/index.md`, stopping before
+   its generated catalog. Search that catalog and relevant domain indexes with
+   bounded `rg` results for the subject, title or aliases, then follow the matched
+   links. Do not load a large index wholesale. Search for an existing source and
+   owning subject before creating pages; do not dump the wiki or raw collection.
 3. State the important takeaways and any evidence conflict. Follow the user's
    stated focus. Ask only when a consequential ambiguity remains; an explicit
    instruction to ingest and file authorizes routine completion.
@@ -32,6 +34,9 @@ skill and are not repeated here.
    Markdown file links in chat.
    Do not create a page for every noun or force 10-15 pages per source. Create
    only distinct, useful subjects and link them from an index or related page.
+   Make useful material reachable from its domain hub and owning topic page.
+   A source-only summary is appropriate when no topic change is warranted; state
+   that reason rather than creating empty or duplicate topic pages.
 7. Update `wiki/index.md` for every created or materially changed page, preserving
    existing categories and domain index links. Each entry has a resolvable link
    and a one-line content description. Follow the owning generator for generated
@@ -45,9 +50,17 @@ skill and are not repeated here.
    paths resolve, modified pages appear in the index, and the log entry exists.
    Run `py system/scripts/wiki-maintenance.py --lint` in ai-os for structural
    links/index checks, then review claims semantically. Read back changed pages.
-   Report the preserved source and finished pages with
-   links, plus any unread coverage, unresolved conflict, or skipped work.
+   Check one natural question the source helps answer: follow the index/domain
+   route to the compiled page and confirm the answer has supporting evidence,
+   without relying on this conversation or rereading the whole raw source.
+   Report the preserved source, finished pages and a useful example question,
+   plus unread coverage, unresolved conflicts, or skipped work. An archive copy
+   or generated catalog entry alone does not establish finished usable knowledge.
 
 Generated sections require compare-and-swap. Read expected target bytes, prepare
 the replacement, and confirm the target still has that hash before writing.
 Human-owned content and unrelated concurrent edits must be preserved.
+
+## Route AI workspace knowledge separately from teaching
+
+Joshua clips substantial Claude/Codex updates, skill ideas, repos, prompts, tips and workflows. Follow system/schema/llm-wiki.md and references/ai-workspace/index.md for this domain. Preserve the source through the same raw pipeline and wiki/sources summary, then update the existing AI subject reference or create a useful page under references/ai-workspace when no authoritative subject home exists. Do not file generic AI setup material as LSAT curriculum. For mixed material, link both domain homes. Record dated source claims, verification evidence and proposed versus tested/implemented status; clipping or ingestion alone does not install a tool, activate a skill, or prove a provider feature current.

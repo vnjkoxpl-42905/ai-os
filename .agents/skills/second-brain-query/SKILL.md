@@ -18,9 +18,12 @@ workflows. Do not assume a saved Windows or Mac path. If no schema exists in the
 target vault, report that gap before changing its structure; never initialize a
 second vault to solve a request about an existing one.
 
-1. Read `wiki/index.md` first. Follow relevant page and domain-index links;
-   use `wiki/hot.md` for session context when needed. Search with `rg` only when
-   the index leaves a gap. No whole-wiki or whole-raw dump is needed.
+1. Start with the curated navigation before the generated catalog in
+   `wiki/index.md`. Use bounded `rg` searches within large catalogs/domain
+   indexes for the subject, title or aliases, then follow relevant page links.
+   Do not load a large index wholesale. Use `wiki/hot.md` only when session
+   context matters. Broader search is a fallback for a missing route; do not
+   dump the wiki or raw collection into context.
 2. Read the selected pages and source summaries. Follow source evidence when
    precise wording, conflicting claims, or missing detail requires it. Distinguish
    verified facts, dated operational snapshots, interpretations, and unknowns.

@@ -5,6 +5,13 @@ disable-model-invocation: true
 argument-hint: "A workflow to design, or nothing to go find one"
 ---
 
+
+## Local execution contract (2026-10-10)
+
+Use existing canonical workflow notes instead of assuming root NOTES.md ownership. Create/edit only requested scope; delete workflow specs only with explicit deletion confirmation. Preserve previous definitions and relevant dependencies.
+
+## Workflow
+
 Run a stateful `/grilling` session whose only output is **workflow** specs. Use the grilling discipline (relentless, a round of questions at a time, a recommended answer attached to each) aimed at the vocabulary and goal below. Create, edit, and delete specs as the grilling resolves things.
 
 ## The loop lens

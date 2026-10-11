@@ -4,6 +4,10 @@ description: This skill should be used when the user asks to "create a plugin", 
 version: 0.1.0
 ---
 
+## Current AI OS execution contract
+
+This is a Claude plugin packaging reference, not the AI OS project skill activation model. Verify wrapper output and current host tools before treating sample scaffolds as executable complete plugins.
+
 # Plugin Structure for Claude Code
 
 ## Overview

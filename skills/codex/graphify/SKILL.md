@@ -4,6 +4,10 @@ description: "any input (code, docs, papers, images) - knowledge graph - cluster
 trigger: /graphify
 ---
 
+## Current AI OS execution contract
+
+Graphify is optional derived analysis, not an intake pipeline. Use existing ingest for new sources. Workers must write valid JSON to the exact assigned .graphify_chunk_NN.json path; validate disk content before counting success. Current basename AST IDs are not collision-safe: check duplicate IDs across source_file paths and stop with the collisions rather than silently merge. Until a shared AST/semantic path-ID migration is verified, use a fresh full rebuild for changed/deleted inputs, not stale incremental merge. Missing chunks prevent a completeness claim. Preserve intermediates unless removal is explicitly authorized.
+
 # /graphify
 
 Turn any folder of files into a navigable knowledge graph with community detection, an honest audit trail, and three outputs: interactive HTML, GraphRAG-ready JSON, and a plain-language GRAPH_REPORT.md.
@@ -108,7 +112,9 @@ if [ -z "$PYTHON" ] && [ -n "$GRAPHIFY_BIN" ]; then
 fi
 # 3. Fall back to python3
 if [ -z "$PYTHON" ]; then PYTHON="python3"; fi
-"$PYTHON" -c "import graphify" 2>/dev/null || "$PYTHON" -m pip install graphifyy -q 2>/dev/null || "$PYTHON" -m pip install graphifyy -q --break-system-packages 2>&1 | tail -3
+"$PYTHON" -c "import graphify"
+# If missing, stop this block and install in a dedicated sibling project environment.
+# Rerun import verification with that interpreter before proceeding; no managed-system override.
 # Write interpreter path for all subsequent steps (persists across invocations)
 mkdir -p graphify-out
 "$PYTHON" -c "import sys; open('graphify-out/.graphify_python', 'w').write(sys.executable)"
@@ -234,7 +240,7 @@ else:
 
 **Fast path:** If detection found zero docs, papers, and images (code-only corpus), skip Part B entirely and go straight to Part C. AST handles code - there is nothing for semantic subagents to do.
 
-**MANDATORY: You MUST use the Agent tool here. Reading files yourself one-by-one is forbidden - it is 5-10x slower. If you do not use the Agent tool you are doing this wrong.**
+Use actual host-supported delegation when authorized and available. Unsupported Agent tool names must not be invoked.
 
 Before dispatching subagents, print a timing estimate:
 - Load `total_words` and file counts from `graphify-out/.graphify_detect.json`
@@ -272,9 +278,9 @@ Load files from `graphify-out/.graphify_uncached.txt`. Split into chunks of 20-2
 
 **Step B2 - Dispatch ALL subagents in a single message**
 
-Call the Agent tool multiple times IN THE SAME RESPONSE - one call per chunk. This is the only way they run in parallel. If you make one Agent call, wait, then make another, you are doing it sequentially and defeating the purpose.
+Dispatch chunks through the actual authorized host delegation mechanism, respecting its concurrency limit and keeping independent ownership. A named Claude Agent tool is only a host example.
 
-**IMPORTANT - subagent type:** Always use `subagent_type="general-purpose"`. Do NOT use `Explore` - it is read-only and cannot write chunk files to disk, which silently drops extraction results. General-purpose has Write and Bash access which the subagent needs.
+**Worker capability:** Use a host-supported worker allowed to write the assigned chunk file. Read-only exploration cannot satisfy disk-output success. Verify capability rather than assuming `general-purpose` or `Explore` names exist in Codex.
 
 Concrete example for 3 chunks:
 ```
@@ -288,7 +294,7 @@ Each subagent receives this exact prompt (substitute FILE_LIST, CHUNK_NUM, TOTAL
 
 ```
 You are a graphify extraction subagent. Read the files listed and extract a knowledge graph fragment.
-Output ONLY valid JSON matching the schema below - no explanation, no markdown fences, no preamble.
+Write valid JSON matching the schema below to the assigned graphify-out/.graphify_chunk_NN.json file. Return the exact saved path and validation result; a chat-only JSON response is not success.
 
 Files (chunk CHUNK_NUM of TOTAL_CHUNKS):
 FILE_LIST
@@ -337,7 +343,7 @@ confidence_score is REQUIRED on every edge - never omit it, never use 0.5 as a d
 
 Node ID format: lowercase, only `[a-z0-9_]`, no dots or slashes. Format: `{stem}_{entity}` where stem is the filename without extension and entity is the symbol name, both normalized (lowercase, non-alphanumeric chars replaced with `_`). Example: `src/auth/session.py` + `ValidateToken` → `session_validatetoken`. This must match the ID the AST extractor generates so cross-references between code and semantic nodes connect correctly. CRITICAL: never append chunk numbers, sequence numbers, or any suffix to an ID (no `_c1`, `_c2`, `_chunk2`, etc.). IDs must be deterministic from the label alone — the same entity must always produce the same ID regardless of which chunk processes it.
 
-Output exactly this JSON (no other text):
+Save exactly this JSON in the assigned disk file:
 {"nodes":[{"id":"session_validatetoken","label":"Human Readable Name","file_type":"code|document|paper|image","source_file":"relative/path","source_location":null,"source_url":null,"captured_at":null,"author":null,"contributor":null}],"edges":[{"source":"node_id","target":"node_id","relation":"calls|implements|references|cites|conceptually_related_to|shares_data_with|semantically_similar_to|rationale_for","confidence":"EXTRACTED|INFERRED|AMBIGUOUS","confidence_score":1.0,"source_file":"relative/path","source_location":null,"weight":1.0}],"hyperedges":[{"id":"snake_case_id","label":"Human Readable Label","nodes":["node_id1","node_id2","node_id3"],"relation":"participate_in|implement|form","confidence":"EXTRACTED|INFERRED","confidence_score":0.75,"source_file":"relative/path"}],"input_tokens":0,"output_tokens":0}
 ```
 
@@ -347,9 +353,9 @@ Wait for all subagents. For each result:
 - Check that `graphify-out/.graphify_chunk_NN.json` exists on disk — this is the success signal
 - If the file exists and contains valid JSON with `nodes` and `edges`, include it and save to cache
 - If the file is missing, the subagent was likely dispatched as read-only (Explore type) — print a warning: "chunk N missing from disk — subagent may have been read-only. Re-run with general-purpose agent." Do not silently skip.
-- If a subagent failed or returned invalid JSON, print a warning and skip that chunk - do not abort
+- If any chunk failed or returned invalid JSON, report its source-file scope and retry only that chunk where possible. Do not proceed to a complete graph claim until every required chunk validates; partial outputs must be labeled partial.
 
-If more than half the chunks failed or are missing, stop and tell the user to re-run and ensure `subagent_type="general-purpose"` is used.
+If required chunks remain missing/invalid, stop complete generation and report their exact scope. A partial graph is permitted only when the user accepts that reduced scope, labeled explicitly.
 
 Save new results to cache:
 ```bash
@@ -376,6 +382,14 @@ new = json.loads(Path('graphify-out/.graphify_semantic_new.json').read_text()) i
 all_nodes = cached['nodes'] + new.get('nodes', [])
 all_edges = cached['edges'] + new.get('edges', [])
 all_hyperedges = cached.get('hyperedges', []) + new.get('hyperedges', [])
+# Stop cross-file basename-ID collisions before any deduplication.
+identity = {}
+for node in all_nodes:
+    nid = node['id']
+    source = node.get('source_file')
+    if nid in identity and identity[nid] != source:
+        raise ValueError(f'Node ID collision: {nid}: {identity[nid]} vs {source}')
+    identity[nid] = source
 seen = set()
 deduped = []
 for n in all_nodes:
@@ -394,7 +408,7 @@ Path('graphify-out/.graphify_semantic.json').write_text(json.dumps(merged, inden
 print(f'Extraction complete - {len(deduped)} nodes, {len(all_edges)} edges ({len(cached[\"nodes\"])} from cache, {len(new.get(\"nodes\",[]))} new)')
 "
 ```
-Clean up temp files: `rm -f graphify-out/.graphify_cached.json graphify-out/.graphify_uncached.txt graphify-out/.graphify_semantic_new.json`
+Retain intermediate captures for verification; remove only after explicit authorization.
 
 #### Part C - Merge AST + semantic into final extraction
 
@@ -405,6 +419,15 @@ from pathlib import Path
 
 ast = json.loads(Path('graphify-out/.graphify_ast.json').read_text())
 sem = json.loads(Path('graphify-out/.graphify_semantic.json').read_text())
+
+# Stop cross-file basename-ID collisions before any deduplication.
+identity = {}
+for node in ast['nodes'] + sem['nodes']:
+    nid = node['id']
+    source = node.get('source_file')
+    if nid in identity and identity[nid] != source:
+        raise ValueError(f'Node ID collision: {nid}: {identity[nid]} vs {source}')
+    identity[nid] = source
 
 # Merge: AST nodes first, semantic nodes deduplicated by id
 seen = {n['id'] for n in ast['nodes']}
@@ -655,7 +678,7 @@ print('cypher.txt written - import with: cypher-shell < graphify-out/cypher.txt'
 "
 ```
 
-**If `--neo4j-push <uri>`** - push directly to a running Neo4j instance. Ask the user for credentials if not provided:
+**If `--neo4j-push <uri>`** - push directly to a running Neo4j instance. Verify explicit target/write authorization, then use credentials privately entered in the central `.env` through the approved loader:
 
 ```bash
 $(cat graphify-out/.graphify_python) -c "
@@ -670,12 +693,14 @@ analysis   = json.loads(Path('graphify-out/.graphify_analysis.json').read_text()
 G = build_from_json(extraction)
 communities = {int(k): v for k, v in analysis['communities'].items()}
 
-result = push_to_neo4j(G, uri='NEO4J_URI', user='NEO4J_USER', password='NEO4J_PASSWORD', communities=communities)
+# Load private values through the approved central credential loader, never literals/arguments.
+import os
+result = push_to_neo4j(G, uri=os.environ['NEO4J_URI'], user=os.environ['NEO4J_USER'], password=os.environ['NEO4J_PASSWORD'], communities=communities)
 print(f'Pushed to Neo4j: {result[\"nodes\"]} nodes, {result[\"edges\"]} edges')
 "
 ```
 
-Replace `NEO4J_URI`, `NEO4J_USER`, `NEO4J_PASSWORD` with actual values. Default URI is `bolt://localhost:7687`, default user is `neo4j`. Uses MERGE - safe to re-run without creating duplicates.
+Do not substitute secret literals into this code or command. Load the central credential entries privately and expose no values. Default URI is `bolt://localhost:7687`, default user is `neo4j`. Uses MERGE - safe to re-run without creating duplicates.
 
 ### Step 7b - SVG export (only if --svg flag)
 
@@ -796,8 +821,7 @@ cost_path.write_text(json.dumps(cost, indent=2))
 print(f'This run: {input_tok:,} input tokens, {output_tok:,} output tokens')
 print(f'All time: {cost[\"total_input_tokens\"]:,} input, {cost[\"total_output_tokens\"]:,} output ({len(cost[\"runs\"])} runs)')
 "
-rm -f graphify-out/.graphify_detect.json graphify-out/.graphify_extract.json graphify-out/.graphify_ast.json graphify-out/.graphify_semantic.json graphify-out/.graphify_analysis.json graphify-out/.graphify_labels.json graphify-out/.graphify_chunk_*.json
-rm -f graphify-out/.needs_update 2>/dev/null || true
+# Preserve intermediate captures until explicit removal authorization.
 ```
 
 Tell the user (omit the obsidian line unless --obsidian was given):
@@ -849,9 +873,9 @@ if [ ! -f graphify-out/.graphify_python ]; then
 fi
 ```
 
-## For --update (incremental re-extraction)
+## For --update (incremental reference only)
 
-Use when you've added or modified files since the last run. Only re-extracts changed files - saves tokens and time.
+For changed/deleted inputs, perform a fresh full rebuild in a new derived output directory and bypass old semantic caches for that rebuild. Reuse immutable sources but regenerate all required chunks. Until incremental pruning is verified, all code in this reference section is non-operational; do not follow its later incremental steps. Preserve prior output as evidence.
 
 ```bash
 $(cat graphify-out/.graphify_python) -c "
@@ -964,7 +988,7 @@ if old_data:
 ```
 
 Before the merge step, save the old graph: `cp graphify-out/graph.json graphify-out/.graphify_old.json`
-Clean up after: `rm -f graphify-out/.graphify_old.json`
+Retain intermediate captures for verification; remove only after explicit authorization.
 
 ---
 
@@ -1132,7 +1156,7 @@ print(output)
 
 Replace `QUESTION` with the user's actual question, `MODE` with `bfs` or `dfs`, and `BUDGET` with the token budget (default `2000`, or whatever `--budget N` specifies). Then answer based on the subgraph output above.
 
-After writing the answer, save it back into the graph so it improves future queries:
+Saving this generated answer is optional derived output, not new source evidence. Only when requested, label it model-generated with cited source IDs, and keep it out of future evidence extraction unless explicitly selected as derived material:
 
 ```bash
 $(cat graphify-out/.graphify_python) -m graphify save-result --question "QUESTION" --answer "ANSWER" --type query --nodes NODE1 NODE2
@@ -1207,7 +1231,7 @@ except nx.NodeNotFound as e:
 
 Replace `NODE_A` and `NODE_B` with the actual concept names from the user. Then explain the path in plain language - what each hop means, why it's significant.
 
-After writing the explanation, save it back:
+When requested, save a clearly labeled derived explanation with its source IDs; never treat it as first-party source evidence:
 
 ```bash
 $(cat graphify-out/.graphify_python) -m graphify save-result --question "Path from NODE_A to NODE_B" --answer "ANSWER" --type path_query --nodes NODE_A NODE_B
@@ -1273,7 +1297,7 @@ for neighbor in G.neighbors(nid):
 
 Replace `NODE_NAME` with the concept the user asked about. Then write a 3-5 sentence explanation of what this node is, what it connects to, and why those connections are significant. Use the source locations as citations.
 
-After writing the explanation, save it back:
+When requested, save a clearly labeled derived explanation with its source IDs; never treat it as first-party source evidence:
 
 ```bash
 $(cat graphify-out/.graphify_python) -m graphify save-result --question "Explain NODE_NAME" --answer "ANSWER" --type explain --nodes NODE_NAME
@@ -1281,37 +1305,9 @@ $(cat graphify-out/.graphify_python) -m graphify save-result --question "Explain
 
 ---
 
-## For /graphify add
+## For graphify add in AI OS
 
-Fetch a URL and add it to the corpus, then update the graph.
-
-```bash
-$(cat graphify-out/.graphify_python) -c "
-import sys
-from graphify.ingest import ingest
-from pathlib import Path
-
-try:
-    out = ingest('URL', Path('./raw'), author='AUTHOR', contributor='CONTRIBUTOR')
-    print(f'Saved to {out}')
-except ValueError as e:
-    print(f'error: {e}', file=sys.stderr)
-    sys.exit(1)
-except RuntimeError as e:
-    print(f'error: {e}', file=sys.stderr)
-    sys.exit(1)
-"
-```
-
-Replace `URL` with the actual URL, `AUTHOR` with the user's name if provided, `CONTRIBUTOR` likewise. If the command exits with an error, tell the user what went wrong - do not silently continue. After a successful save, automatically run the `--update` pipeline on `./raw` to merge the new file into the existing graph.
-
-Supported URL types (auto-detected):
-- YouTube / any video URL → audio downloaded via yt-dlp, transcribed to `.txt` on next run (requires `pip install 'graphifyy[video]'`)
-- Twitter/X → fetched via oEmbed, saved as `.md` with tweet text and author
-- arXiv → abstract + metadata saved as `.md`
-- PDF → downloaded as `.pdf`
-- Images (.png/.jpg/.webp) → downloaded, Claude vision extracts on next run
-- Any webpage → converted to markdown via html2text
+New source intake uses the existing `ingest` skill only. Retrieve/copy/hash-verify the new source through that canonical workflow, preserve provenance and immutable evidence, then derive a graph from the verified source paths. Do not run `graphify.ingest`, write a parallel `./raw` store or automatically promote arbitrary URLs into a new intake pipeline. A changed source set uses the validated fresh-full-rebuild route; legacy incremental code remains reference-only until pruning is verified.
 
 ---
 
@@ -1338,7 +1334,7 @@ For agentic workflows: run `--watch` in a background terminal. Code changes from
 
 ## For git commit hook
 
-Install a post-commit hook that auto-rebuilds the graph after every commit. No background process needed - triggers once per commit, works with any editor.
+Only when explicitly requested, preserve existing hooks and inspect the actual installer before installing a post-commit hook that auto-rebuilds the graph after every commit. No background process needed - triggers once per commit, works with any editor.
 
 ```bash
 graphify hook install    # install
@@ -1354,7 +1350,7 @@ If a post-commit hook already exists, graphify appends to it rather than replaci
 
 ## For native CLAUDE.md integration
 
-Run once per project to make graphify always-on in Claude Code sessions:
+Reference only: install always-on integration only when explicitly requested. Preserve hand-owned instructions; in AI OS shared rules require deliberate changes to both AGENTS.md and CLAUDE.md, not an automatic vendor installer:
 
 ```bash
 graphify claude install

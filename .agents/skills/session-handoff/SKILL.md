@@ -3,6 +3,10 @@ name: session-handoff
 description: Use when Joshua says "session handoff", "hand off", "handoff summary", "summarize before I clear", or is about to /clear mid-work (especially near the ~250k dumb-zone). Produces a chat-only handoff — decisions, shipped changes, key files, running state, verification, deferrals, open questions — so a fresh agent (Claude or Codex) continues seamlessly. Distinct from `wrapup`, which updates the wiki ledgers; this writes nothing.
 ---
 
+## Current AI OS execution contract
+
+Use the host-supported time/file tools, preserve current open state and explicit scope. Chat-only continuity remains distinct from file-writing wrapup or a broad system audit.
+
 # Session Handoff
 
 Produce a repeatable end-of-session summary so Joshua can `/clear` and start a fresh agent without losing continuity. The next agent should pick up by reading this summary alone.
@@ -20,7 +24,7 @@ Joshua says: "session handoff", "hand off", "handoff summary", "summarize before
 1. **Review the full conversation**, not just the last few turns. Handoffs miss things when they only summarize recent context.
 2. **Pull state from these sources (in order):**
    - Plan files referenced this session; resolve the actual recorded path rather than assuming a runtime directory.
-   - TodoWrite state — any in-progress or pending tasks.
+   - Current task ledger state, including in-progress or pending tasks.
    - Background processes started with `run_in_background` — shell IDs are load-bearing for the next agent.
    - Files created or modified this session — you know what you touched; don't grep to re-discover.
    - Memory files actually used this session. Codex guidance is under `~/.codex/memories/`; Claude native project memory is under `~/.claude/projects/C--Users-Joshu-dev-ai-os/memory/`. Do not invent a Codex project-memory path or update either store merely to produce a handoff.

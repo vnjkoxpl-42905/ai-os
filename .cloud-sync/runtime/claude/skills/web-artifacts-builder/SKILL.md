@@ -4,6 +4,13 @@ description: Suite of tools for creating elaborate, multi-component claude.ai HT
 license: Complete terms in LICENSE.txt
 ---
 
+
+## Local execution contract (2026-10-10)
+
+Build in a task-owned sibling application directory outside AI OS vault, not current vault cwd. Inspect existing project/tool support and run relevant functional/build/render checks. Use actual host artifact presentation capability; the actual host artifact panel is not an assumed artifact destination.
+
+## Workflow
+
 # Web Artifacts Builder
 
 To build powerful frontend claude.ai artifacts, follow these steps:

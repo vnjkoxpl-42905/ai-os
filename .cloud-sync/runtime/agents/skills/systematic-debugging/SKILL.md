@@ -3,6 +3,13 @@ name: systematic-debugging
 description: Use when encountering any bug, test failure, or unexpected behavior, before proposing fixes
 ---
 
+
+## Local execution contract (2026-10-10)
+
+Inspect environment variable presence only, never env values or python -c "import os; print('IDENTITY present:', 'IDENTITY' in os.environ)". Use redacted probes. Keep hypothesis/reproduction core; vendor percentages/timings are anecdotes, not guarantees. Choose proportionate checks for actual behavior rather than cosmetic test ceremony.
+
+## Workflow
+
 # Systematic Debugging
 
 ## Overview
@@ -94,7 +101,7 @@ You MUST complete each phase before proceeding to the next.
 
    # Layer 2: Build script
    echo "=== Env vars in build script: ==="
-   env | grep IDENTITY || echo "IDENTITY not in environment"
+   python -c "import os; print('IDENTITY present:', 'IDENTITY' in os.environ)" || echo "IDENTITY not in environment"
 
    # Layer 3: Signing script
    echo "=== Keychain state: ==="

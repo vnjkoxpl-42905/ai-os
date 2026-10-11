@@ -1,7 +1,14 @@
 ---
 name: browser-harness
-description: "Always use browser-harness for any web interaction: automation, scraping, testing, or site/app work."
+description: "Use this installed CDP browser transport for explicitly requested browser interaction when supported. Respect selected browser/tab and prefer purpose-built available tools; not every web question needs browser control."
 ---
+
+
+## Local execution contract (2026-10-10)
+
+Select only for requested browser interaction when this transport is supported. Respect explicit browser/tab/tool choice and prefer purpose-built available connectors. Do not assume local/cloud browser shares login or screenshot tab. Remote daemon costs need authorization; translate shell examples for actual host.
+
+## Workflow
 
 # browser-harness
 

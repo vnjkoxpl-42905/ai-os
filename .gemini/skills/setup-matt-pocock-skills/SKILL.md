@@ -4,6 +4,10 @@ description: "Configure this repo for the engineering skills: set up its issue t
 disable-model-invocation: true
 ---
 
+## Current AI OS execution contract
+
+When this project has both hand-owned manuals, mirror shared routing pointers into AGENTS.md and CLAUDE.md without regeneration. Preserve intentional local forks and upstream identity.
+
 # Setup Matt Pocock's Skills
 
 Scaffold the per-repo configuration that the engineering skills assume:

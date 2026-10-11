@@ -11,6 +11,13 @@ metadata:
     cliHelp: "gws forms --help"
 ---
 
+
+## Local execution contract (2026-10-10)
+
+Create sets title fields only. Add/edit form questions with forms.batchUpdate using the installed gws schema; forms.update is not the edit method. Verify questions and respondent access before claiming completion. Publishing and emailing require separate actual authorization.
+
+## Workflow
+
 # forms (v1)
 
 > **PREREQUISITE:** Read `../gws-shared/SKILL.md` for auth, global flags, and security rules. If missing, run `gws generate-skills` to create it.
@@ -24,7 +31,7 @@ gws forms <resource> <method> [flags]
 ### forms
 
   - `batchUpdate` — Change the form with a batch of updates.
-  - `create` — Create a new form using the title given in the provided form message in the request. *Important:* Only the form.info.title and form.info.document_title fields are copied to the new form. All other fields including the form description, items and settings are disallowed. To create a new form and add items, you must first call forms.create to create an empty form with a title and (optional) document title, and then call forms.update to add the items.
+  - `create` — Create a new form using the title given in the provided form message in the request. *Important:* Only the form.info.title and form.info.document_title fields are copied to the new form. All other fields including the form description, items and settings are disallowed. To create a new form and add items, you must first call forms.create to create an empty form with a title and (optional) document title, and then call forms.batchUpdate to add the items.
   - `get` — Get a form.
   - `setPublishSettings` — Updates the publish settings of a form. Legacy forms aren't supported because they don't have the `publish_settings` field.
   - `responses` — Operations on the 'responses' resource

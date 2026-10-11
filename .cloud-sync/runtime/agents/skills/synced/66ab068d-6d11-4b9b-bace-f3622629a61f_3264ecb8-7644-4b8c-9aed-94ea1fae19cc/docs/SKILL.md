@@ -1,6 +1,13 @@
 ---
 name: docs
-description: 'docs (editable docs people share and comment on; the default for any document, named as a doc or not: a document, report, proposal, resume, cover letter, letter, contract, policy, form, template, worksheet, essay, handbook, guide, how-to, cheat sheet, SOP or other writing to keep, share, collaborate on, send, submit, print or sign; a doc exports to Word, PDF, Markdown or Google Docs, so needing a file to send, attach, upload, submit or print is no reason to pick Word, and a file nobody asked for is a doc, not Word; a plan, comparison, summary or notes asked in chat stays in chat; a pasted Codex.ai artifact link may be a doc: check with docs tools first; Word or another file format named, tracked changes wanted, or a .docx to change or use as a template → that format''s skill): making one → if no docs-connector instructions are in context, call its `guide` (topic.instructions) first; then create the doc (headings only, no body) before any search, file read or plan, even with files attached.'
+description: "Create or edit documents when requested using available host tools. Read the existing source first; ordinary questions/research do not require document creation."
 ---
+
+
+## Local execution contract (2026-10-10)
+
+Inspect the requested existing source before deciding whether a new document is needed. Use actual host document tools and installed skill reference, not assumed docs connectors or the actual host artifact panel artifacts. Create only requested output; do not impose a document artifact on every information task.
+
+## Workflow
 
 Everything about docs is served by the docs connector — follow its instructions (they say what to call first). If no docs tools are present (they may be listed as pages tools on some accounts), say so.

@@ -3,6 +3,13 @@ name: review
 description: Review the changes since a fixed point (commit, branch, tag, or merge-base) along two axes — Standards (does the code follow this repo's documented coding standards?) and Spec (does the code match what the originating issue/PRD asked for?). Runs both reviews in parallel sub-agents and reports them side by side. Use when the user wants to review a branch, a PR, work-in-progress changes, or asks to "review since X".
 ---
 
+
+## Local execution contract (2026-10-10)
+
+Inventory git status --short and include staged, unstaged and relevant untracked changes for WIP requests. A merge-base...HEAD diff covers committed changes only. Preserve committed-only mode when requested and state exclusions.
+
+## Workflow
+
 Two-axis review of the diff between `HEAD` and a fixed point the user supplies:
 
 - **Standards** — does the code conform to this repo's documented coding standards?
@@ -19,6 +26,7 @@ The issue tracker should have been provided to you — run `/setup-matt-pocock-s
 Whatever the user said is the fixed point — a commit SHA, branch name, tag, `main`, `HEAD~5`, etc. If they didn't specify one, ask for it.
 
 Capture the diff command once: `git diff <fixed-point>...HEAD` (three-dot, so the comparison is against the merge-base). Also note the list of commits via `git log <fixed-point>..HEAD --oneline`.
+# Also inventory requested worktree scope: git status --short; git diff; git diff --cached; inspect relevant untracked files.
 
 Before going further, confirm the fixed point resolves (`git rev-parse <fixed-point>`) and the diff is non-empty. A bad ref or empty diff should fail here — not inside two parallel sub-agents.
 

@@ -3,6 +3,10 @@ name: chrome-devtools
 description: Uses Chrome DevTools via MCP for efficient debugging, troubleshooting and browser automation. Use when debugging web pages, automating browser interactions, analyzing performance, or inspecting network requests. This skill does not apply to `--slim` mode (MCP configuration).
 ---
 
+## Current AI OS execution contract
+
+Discover actual exposed browser tools before using named MCP operations. If unavailable, use the connected supported browser route and report its limits. A bundled reference is not proof this MCP is connected.
+
 ## Core Concepts
 
 **Browser lifecycle**: Browser starts automatically on first tool call using a persistent Chrome profile. Configure via CLI args in the MCP server configuration: `npx chrome-devtools-mcp@latest --help`.

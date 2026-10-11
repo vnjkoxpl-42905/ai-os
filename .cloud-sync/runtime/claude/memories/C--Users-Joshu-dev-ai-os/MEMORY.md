@@ -46,7 +46,7 @@
 - [Bash heredoc collapses backslashes](bash-heredoc-collapses-backslashes.md) — inline Python patches with `\` silently fail to match; write the script to the scratchpad and run it by path.
 - [Smart Drill is the drill hub's smart tool](smart-drill-is-the-drill-hubs-smart-tool.md) — label it Smart Drill in LR and RC; keep assigned work out of the Welcome back hero and in the lower Today area.
 - [Accommodations email is auto-send](accommodations-email-is-auto-send.md) — "accommodations email/scale to X" = run the skill and send now; fixed wording; script logs itself.
-- [Codex model roles](codex-model-roles.md) — gpt-6-astra designs, specs and reviews; gpt-6-luna high builds; a 400 on sol or luna means a stale CLI, use dev/tools/node/codex. State the model before launch.
+- [Codex model roles](codex-model-roles.md) — gpt-6-astra designs, specs and reviews; gpt-6-luna high builds; a 400 on sol or luna means a stale CLI; Codex 0.162.1 now lives in AppData Roaming npm (dev/tools/node is gone). State the model before launch.
 - [Never clear storage on dev tabs](never-clear-browser-storage-on-dev-tabs.md) — it signs Joshua out of LSAT U; each localhost port is its own sign-in.
 - [Minimize Lovable credits](minimize-lovable-credits.md) — free paths first (SQL, deploy_project, git); only Edge Function deploys go to the agent, batched in one short message.
 - [Download requests are pre-authorized](download-requests-are-preauthorized.md) — when Joshua asks to download a specific item, do it without a separate permission question; still honor action-time confirmation for installs that grant sensitive access.

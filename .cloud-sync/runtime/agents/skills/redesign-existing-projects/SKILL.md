@@ -3,6 +3,13 @@ name: redesign-existing-projects
 description: Upgrades existing websites and apps to premium quality. Audits current design, identifies generic AI patterns, and applies high-end design standards without breaking functionality. Works with any CSS framework or vanilla CSS.
 ---
 
+
+## Local execution contract (2026-10-10)
+
+Preserve actual fonts/palette/density/design system unless user approves a redesign direction. Never fabricate organic business data/dates or replace authoritative supplied visuals. Test relevant interaction/accessibility after scoped changes.
+
+## Workflow
+
 # Redesign Skill
 
 ## How This Works

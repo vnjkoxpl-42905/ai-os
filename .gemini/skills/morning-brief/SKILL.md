@@ -9,6 +9,10 @@ description: >
 allowed-tools: Bash Read Write Edit Glob Grep
 ---
 
+## Current AI OS execution contract
+
+Before creating a draft, check actual Gmail thread/sent/draft state with the stable event/thread/recipient key. Reuse an existing unsent draft. Update ledger status only from fresh authoritative evidence.
+
 # Morning brief
 
 **19% of every email Joshua writes is an apology for replying late.** That is a

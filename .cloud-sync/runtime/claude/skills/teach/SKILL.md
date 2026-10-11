@@ -5,6 +5,13 @@ disable-model-invocation: true
 argument-hint: "What would you like to learn about?"
 ---
 
+
+## Local execution contract (2026-10-10)
+
+Select a separate learning project under sibling ai-os-projects before writing MISSION/lessons/assets. Do not clutter current AI OS root. Assessment validity depends on content and learner need, not exact equal answer word counts.
+
+## Workflow
+
 The user has asked you to teach them something. This is a stateful request - they intend to learn the topic over multiple sessions.
 
 ## Teaching Workspace

@@ -3,6 +3,13 @@ name: brainstorming
 description: "You MUST use this before any creative work - creating features, building components, adding functionality, or modifying behavior. Explores user intent, requirements and design before implementation."
 ---
 
+
+## Local execution contract (2026-10-10)
+
+Interview only unresolved consequential design choices or when requested. Reuse approved scope and known requirements. Small approved configuration fixes proceed with appropriate verification; no compulsory new design approval ceremony.
+
+## Workflow
+
 # Brainstorming Ideas Into Designs
 
 Help turn ideas into fully formed designs and specs through natural collaborative dialogue.

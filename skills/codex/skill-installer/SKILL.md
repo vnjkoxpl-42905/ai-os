@@ -1,9 +1,13 @@
 ---
 name: skill-installer
-description: Install Codex skills into $CODEX_HOME/skills from a curated list or a GitHub repo path. Use when a user asks to list installable skills, install a curated skill, or install a skill from another repo (including private repos).
+description: Install Codex skills into an explicitly selected destination from a curated list or a GitHub repo path. Use when a user asks to list installable skills, install a curated skill, or install a skill from another repo (including private repos).
 metadata:
   short-description: Install curated skills from openai/skills or other repos
 ---
+
+## Current scoped workflow
+
+In AI OS, install with --dest targeting the selected project activation directory, plus its correct catalog copy. Global installation requires an explicit global scope; do not accept the vendor default home implicitly.
 
 # Skill Installer
 
@@ -36,16 +40,16 @@ All of these scripts use network, so when running in the sandbox, request escala
 - `scripts/list-skills.py` (prints skills list with installed annotations)
 - `scripts/list-skills.py --format json`
 - Example (experimental list): `scripts/list-skills.py --path skills/.experimental`
-- `scripts/install-skill-from-github.py --repo <owner>/<repo> --path <path/to/skill> [<path/to/skill> ...]`
-- `scripts/install-skill-from-github.py --url https://github.com/<owner>/<repo>/tree/<ref>/<path>`
-- Example (experimental skill): `scripts/install-skill-from-github.py --repo openai/skills --path skills/.experimental/<skill-name>`
+- `scripts/install-skill-from-github.py --repo <owner>/<repo> --path <path/to/skill> [<path/to/skill> ...] --dest <explicit-project-activation-path>`
+- `scripts/install-skill-from-github.py --url https://github.com/<owner>/<repo>/tree/<ref>/<path> --dest <explicit-project-activation-path>`
+- Example (experimental skill): `scripts/install-skill-from-github.py --repo openai/skills --path skills/.experimental/<skill-name> --dest <explicit-project-activation-path>`
 
 ## Behavior and Options
 
 - Defaults to direct download for public GitHub repos.
 - If download fails with auth/permission errors, falls back to git sparse checkout.
 - Aborts if the destination skill directory already exists.
-- Installs into `$CODEX_HOME/skills/<skill-name>` (defaults to `~/.codex/skills`).
+- The vendor helper defaults globally, so AI OS commands must specify --dest for the selected project scope; use the global default only with explicit global authorization.
 - Multiple `--path` values install multiple skills in one run, each named from the path basename unless `--name` is supplied.
 - Options: `--ref <ref>` (default `main`), `--dest <path>`, `--method auto|download|git`.
 

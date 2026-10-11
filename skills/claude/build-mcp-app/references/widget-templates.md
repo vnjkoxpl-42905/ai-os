@@ -66,7 +66,12 @@ const { App } = globalThis.ExtApps;
     ul.innerHTML = "";
     for (const it of items) {
       const li = document.createElement("li");
-      li.innerHTML = `<div>${it.label}</div><div class="sub">${it.sub ?? ""}</div>`;
+      const label = document.createElement("div");
+      label.textContent = it.label ?? "";
+      const sub = document.createElement("div");
+      sub.className = "sub";
+      sub.textContent = it.sub ?? "";
+      li.append(label, sub);
       li.addEventListener("click", () => {
         app.sendMessage({
           role: "user",

@@ -6,7 +6,7 @@ version: 0.1.0
 
 # Build an MCPB (Bundled Local MCP Server)
 
-MCPB is a local MCP server **packaged with its runtime**. The user installs one file; it runs without needing Node, Python, or any toolchain on their machine. It's the sanctioned way to distribute local MCP servers.
+MCPB packages a local MCP server and its manifest. Runtime availability depends on the host and bundle: Claude Desktop supplies Node.js, while other hosts must provide a compatible runtime or use a bundled executable. The example below launches `node`; it does not embed Node in the archive. Verify the target host on a clean machine. See the [official runtime guidance](https://github.com/modelcontextprotocol/mcpb#language-choice-recommendation).
 
 > MCPB is the **secondary** distribution path. Anthropic recommends remote MCP servers for directory listing — see https://claude.com/docs/connectors/building/what-to-build.
 
@@ -82,12 +82,22 @@ The server itself is a standard stdio MCP server. Nothing MCPB-specific in the t
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { z } from "zod";
-import { readFile, readdir } from "node:fs/promises";
-import { join } from "node:path";
+import { readFile, readdir, realpath } from "node:fs/promises";
+import { join, resolve, relative, isAbsolute, sep } from "node:path";
 import { homedir } from "node:os";
 
 // ROOT_DIR comes from what you put in manifest's server.mcp_config.env — no auto-prefix
-const ROOT = (process.env.ROOT_DIR ?? join(homedir(), "Documents"));
+const ROOT = await realpath(process.env.ROOT_DIR ?? join(homedir(), "Documents"));
+
+async function confinedPath(path) {
+  if (isAbsolute(path)) throw new Error("Use a path relative to ROOT");
+  const candidate = await realpath(resolve(ROOT, path));
+  const rel = relative(ROOT, candidate);
+  if (rel === ".." || rel.startsWith(".." + sep) || isAbsolute(rel)) {
+    throw new Error("Path escapes ROOT");
+  }
+  return candidate;
+}
 
 const server = new McpServer({ name: "local-files", version: "0.1.0" });
 
@@ -99,7 +109,7 @@ server.registerTool(
     annotations: { readOnlyHint: true },
   },
   async ({ path }) => {
-    const entries = await readdir(join(ROOT, path), { withFileTypes: true });
+    const entries = await readdir(await confinedPath(path), { withFileTypes: true });
     const list = entries.map(e => ({ name: e.name, dir: e.isDirectory() }));
     return { content: [{ type: "text", text: JSON.stringify(list, null, 2) }] };
   },
@@ -113,7 +123,7 @@ server.registerTool(
     annotations: { readOnlyHint: true },
   },
   async ({ path }) => {
-    const text = await readFile(join(ROOT, path), "utf8");
+    const text = await readFile(await confinedPath(path), "utf8");
     return { content: [{ type: "text", text }] };
   },
 );
@@ -121,6 +131,8 @@ server.registerTool(
 const transport = new StdioServerTransport();
 await server.connect(transport);
 ```
+
+This read-only example checks existing real paths, including symlink/junction targets. It is not a process sandbox and does not prevent a malicious concurrent filesystem change between validation and access. Use OS isolation or handle-based protections when that threat applies; new write targets need a separate validated-parent procedure.
 
 **Sandboxing is entirely your job.** There is no manifest-level sandbox — the process runs with full user privileges. Validate paths, refuse to escape `ROOT`, allowlist spawns. See `references/local-security.md`.
 

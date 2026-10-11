@@ -3,6 +3,10 @@ name: notebooklm
 description: Complete API for Google NotebookLM - full programmatic access including features not in the web UI. Create notebooks, add sources, generate all artifact types, download in multiple formats. Activates on explicit /notebooklm or intent like "create a podcast about X"
 ---
 
+## Current AI OS execution contract
+
+Use explicit full notebook/source/artifact IDs. Inspect current --help and real JSON response: generation may return task_id, while polling/download requires the corresponding artifact ID. Resolve the actual artifact from the returned response or artifact listing; never pretend the fields are interchangeable. Unsupported IDs/capabilities remain explicit blocked steps. Generation/readback, not a CLI exit alone, proves artifact completion.
+
 # NotebookLM Automation
 
 Complete programmatic access to Google NotebookLM—including capabilities not exposed in the web UI. Create notebooks, add sources (URLs, YouTube, PDFs, audio, video, images), chat with content, generate all artifact types, and download results in multiple formats.
@@ -285,8 +289,8 @@ When user wants full automation (generate and download when ready):
 
 1. Create notebook and add sources as usual
 2. Wait for sources to be ready (use `source wait` or check `source list --json`)
-3. Run `notebooklm generate audio "..." --json` → parse `artifact_id` from output
-4. **Spawn a background agent** using Task tool:
+3. Run `notebooklm generate audio "..." --json` → inspect the actual response; parse its returned ID, and resolve task_id to the corresponding artifact ID before polling/downloading
+4. **Use an actual host-supported background agent when authorized and available; otherwise perform the wait/download directly.** The following Claude-native example is reference only:
    ```
    Task(
      prompt="Wait for artifact {artifact_id} in notebook {notebook_id} to complete, then download.

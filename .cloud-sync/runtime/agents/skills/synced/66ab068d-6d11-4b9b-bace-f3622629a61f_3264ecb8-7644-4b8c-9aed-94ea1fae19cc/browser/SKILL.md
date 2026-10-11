@@ -1,7 +1,14 @@
 ---
 name: browser
-description: Direct browser control via CDP. Use when the user wants to automate, scrape, test, or interact with web pages. Connects to the user's already-running Chrome.
+description: "Use this browser transport when explicitly selected and supported for the requested browser task. Does not authorize public contributions or paid remote browser sessions."
 ---
+
+
+## Local execution contract (2026-10-10)
+
+Use supported browser transport and actual user-selected signed-in surface. Do not contribute a public PR or start paid remote daemon from routine browser work. Preserve requested local session and report access limitations; no invented Codex-in-Chrome API.
+
+## Workflow
 
 # browser-harness
 

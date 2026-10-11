@@ -14,6 +14,13 @@ metadata:
         - gws-drive
 ---
 
+
+## Local execution contract (2026-10-10)
+
+Create requested structure only unless real expense entries are supplied. Do not append illustrative expense data or share with an example manager. Consume returned spreadsheet ID, use actual authorized recipients and verify sheet headers/entries.
+
+## Workflow
+
 # Create a Google Sheets Expense Tracker
 
 > **PREREQUISITE:** Load the following skills to execute this recipe: `gws-sheets`, `gws-drive`
@@ -22,8 +29,14 @@ Set up a Google Sheets spreadsheet for tracking expenses with headers and initia
 
 ## Steps
 
-1. Create spreadsheet: `gws drive files create --json '{"name": "Expense Tracker 2025", "mimeType": "application/vnd.google-apps.spreadsheet"}'`
-2. Add headers: `gws sheets +append --spreadsheet SHEET_ID --range 'Sheet1' --values '["Date", "Category", "Description", "Amount"]'`
-3. Add first entry: `gws sheets +append --spreadsheet SHEET_ID --range 'Sheet1' --values '["2025-01-15", "Travel", "Flight to NYC", "450.00"]'`
-4. Share with manager: `gws drive permissions create --params '{"fileId": "SHEET_ID"}' --json '{"role": "reader", "type": "user", "emailAddress": "manager@company.com"}'`
+1. Resolve actual target IDs, requested data, date interval/timezone and existing state. Illustrative names, dates and recipients are not user data.
+2. Create requested structure only unless real expense entries are supplied. Do not append illustrative expense data or share with an example manager. Consume returned spreadsheet ID, use actual authorized recipients and verify sheet headers/entries.
+3. Discover the required method using installed `gws <service> --help` and `gws schema <service>.<resource>.<method>`; build parameters from real returned IDs and requested data. For retries reconcile existing output identity first.
+4. Execute only the requested authorized operation. Draft email unless send is authorized. Inspect resulting resource/file and report any missing sections or failed items.
+
+## Relevant endpoint references
+
+- `gws drive files create --json` (inspect help/schema before invocation)
+- `gws drive permissions create --params` (inspect help/schema before invocation)
+- `gws sheets` (inspect help/schema before invocation)
 

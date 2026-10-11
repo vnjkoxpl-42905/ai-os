@@ -4,6 +4,13 @@ description: "Implement the result of /to-spec and /to-tickets in code."
 disable-model-invocation: true
 ---
 
+
+## Local execution contract (2026-10-10)
+
+Resolve task graph/dependencies before execution; use host-supported delegation only when authorized. Application code/worktrees stay sibling-managed. Preserve approved scope and relevant integration checks, not forced Git ceremony.
+
+## Workflow
+
 You have been provided a spec. This spec should have tickets associated with it, describing how to implement the spec.
 
 The issue tracker should have been provided to you. If not, tell the user to run `/setup-matt-pocock-skills`.

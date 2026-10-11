@@ -3,6 +3,13 @@ name: find-skills
 description: Helps users discover and install agent skills when they ask questions like "how do I do X", "find a skill for X", "is there a skill that can...", or express interest in extending capabilities. This skill should be used when the user is looking for functionality that might exist as an installable skill.
 ---
 
+
+## Local execution contract (2026-10-10)
+
+Trigger on requests to discover/install skills, not generic how-do-I/can-you questions. Use actual upstream names including ComposioHQ/awesome-claude-skills. Popularity shows adoption, not verified safety/quality. Inspect compatibility before recommending activation.
+
+## Workflow
+
 # Find Skills
 
 This skill helps you discover and install skills from the open agent skills ecosystem.
@@ -121,7 +128,7 @@ When searching, consider these common categories:
 
 1. **Use specific keywords**: "react testing" is better than just "testing"
 2. **Try alternative terms**: If "deploy" doesn't work, try "deployment" or "ci-cd"
-3. **Check popular sources**: Many skills come from `vercel-labs/agent-skills` or `ComposioHQ/awesome-Codex-skills`
+3. **Check popular sources**: Many skills come from `vercel-labs/agent-skills` or `ComposioHQ/awesome-claude-skills`
 
 ## When No Skills Are Found
 

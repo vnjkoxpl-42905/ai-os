@@ -3,6 +3,13 @@ name: lsat-u-platform-actions
 description: Perform any LSAT U platform action for Joshua directly from the brain workspace — assign guided drills, homework, or activities; post classroom items and notes; send inbox messages; ingest session notes — by driving the deployed app (lsatprep.study) through his logged-in Chrome admin session, verifying the result, and logging it to the student's folder. Trigger on "assign <student> …", "post … to <student>", "message <student>", "send <student> homework", "give <student> an activity", or any request to make something happen on the platform from here.
 ---
 
+
+## Local execution contract (2026-10-10)
+
+Use maintained project action wrapper and current app authority, preserving dry-run/read-after-write and actual authorization. Discover browser or backend transport supported by current task; obsolete Chrome-only or blanket backend bans are not current policy.
+
+## Workflow
+
 # LSAT U Platform Actions
 
 Joshua's workplace is this brain workspace, not the app's admin UI. This skill makes

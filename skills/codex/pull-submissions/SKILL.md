@@ -3,6 +3,10 @@ name: pull-submissions
 description: Pull booking-time student submissions (files + comments) from the LSAT U backend into students/<name>/submissions/. Use when Joshua says "pull submissions", "get the booking uploads", "sync student submissions", or as part of /pickup. On-demand only — no cron, no watcher.
 ---
 
+## Current AI OS execution contract
+
+Resolve current booking mirror paths and relationship IDs from the canonical root/live systems. Use stable source IDs for idempotent filing and do not infer a student identity from a loose name match.
+
 # Pull Submissions
 
 When a student books a session through their `/book/<slug>` link, the confirm step lets them optionally attach work (any file, up to 5) and leave a comment. Those land in the LSAT U backend (Supabase storage + `external_work_uploads`, comment on `booking_pass_redemptions.student_note`) and are surfaced in the Bookings admin tab and the booking confirmation email to Joshua.

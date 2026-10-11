@@ -4,6 +4,13 @@ description: Applies Anthropic's official brand colors and typography to any sor
 license: Complete terms in LICENSE.txt
 ---
 
+
+## Local execution contract (2026-10-10)
+
+Use only for explicitly requested Anthropic visual identity. Its palette/fonts are not Joshua brand defaults; preserve existing project brand and brief.
+
+## Workflow
+
 # Anthropic Brand Styling
 
 ## Overview

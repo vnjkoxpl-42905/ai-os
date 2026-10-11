@@ -4,6 +4,10 @@ description: "Implement a piece of work based on a spec or set of tickets."
 disable-model-invocation: true
 ---
 
+## Current AI OS execution contract
+
+Resolve available host tools before execution. Stage and commit only owned paths when authorized; retain focused checks and fresh review.
+
 Implement the work described by the user in the spec or tickets.
 
 Use /tdd where possible, at pre-agreed seams.

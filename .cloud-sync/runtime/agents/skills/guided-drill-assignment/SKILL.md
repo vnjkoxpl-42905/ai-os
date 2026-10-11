@@ -3,6 +3,13 @@ name: guided-drill-assignment
 description: Use this whenever Joshua asks to look at a student's transcript, choose an appropriate LSAT U guided drill, verify the drill works, assign it through the platform, or confirm that the student received a clear notification. This skill covers the full workflow from transcript review to guided drill recommendation, platform/browser QA, assignment, and notification verification.
 ---
 
+
+## Local execution contract (2026-10-10)
+
+Select inspect, recommend or assign mode from the actual request. Transcript inspection/recommendation performs no assignment, send or live write. Explicit assignment routes through current project assign-lsatu-work/lsat-u-platform-actions, verifies exact student/artifact and uses dry-run/read-after-write.
+
+## Workflow
+
 # Guided Drill Assignment
 
 Use this skill to turn student performance context into a verified guided drill assignment in LSAT U.

@@ -14,7 +14,9 @@ description: Set up Husky pre-commit hooks with lint-staged (Prettier), type che
 
 ## Steps
 
-### 1. Detect package manager
+### 1. Preserve existing configuration and detect package manager
+
+Record dirty/staged baseline. Inspect package scripts, `core.hooksPath`, `.husky/`, current pre-commit hook and existing lint-staged/Prettier configuration. Merge required checks without overwriting existing commands, secrets or unrelated entries; reuse installed versions and repo conventions. Back up any configuration changed. Never run `husky init` blindly over an existing setup.
 
 Check for `package-lock.json` (npm), `pnpm-lock.yaml` (pnpm), `yarn.lock` (yarn), `bun.lockb` (bun). Use whichever is present. Default to npm if unclear.
 
@@ -32,11 +34,11 @@ husky lint-staged prettier
 npx husky init
 ```
 
-This creates `.husky/` dir and adds `prepare: "husky"` to package.json.
+Use initialization only for a missing Husky setup after checking its installed version. Preserve any existing `prepare` behavior when adding Husky; do not replace it unconditionally.
 
 ### 4. Create `.husky/pre-commit`
 
-Write this file (no shebang needed for Husky v9+):
+Merge these checks into the existing hook, preserving its behavior. For a new Husky v9+ file this is an example (older versions may require their existing bootstrap):
 
 ```
 npx lint-staged
@@ -76,11 +78,11 @@ Only create if no Prettier config exists. Use these defaults:
 - [ ] `.lintstagedrc` exists
 - [ ] `prepare` script in package.json is `"husky"`
 - [ ] `prettier` config exists
-- [ ] Run `npx lint-staged` to verify it works
+- [ ] Run the hook/checks on an isolated fixture or only scoped staged paths; lint-staged may modify files/stash the index, so preserve unrelated staged work
 
 ### 8. Commit
 
-Stage all changed/created files and commit with message: `Add pre-commit hooks (husky + lint-staged + prettier)`
+Commit only when authorized by the current task. Stage only the reviewed hook/config/package/lockfile paths owned by this setup and inspect the staged diff, preserving the prior index. Suggested message: `Add pre-commit hooks (husky + lint-staged + prettier)`. Otherwise leave changes for review.
 
 This will run through the new pre-commit hooks: a good smoke test that everything works.
 

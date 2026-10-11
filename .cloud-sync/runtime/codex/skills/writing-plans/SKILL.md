@@ -3,6 +3,13 @@ name: writing-plans
 description: Use when you have a spec or requirements for a multi-step task, before touching code
 ---
 
+
+## Local execution contract (2026-10-10)
+
+Plan proportionately from resolved scope using supported host tools. Do not require superpowers invocation, frequent commits or full implementation code in every plan. Preserve task boundaries/interfaces and actual commit authorization.
+
+## Workflow
+
 # Writing Plans
 
 ## Overview
@@ -121,7 +128,7 @@ Expected: PASS
 
 ```bash
 git add tests/path/test.py src/path/file.py
-git commit -m "feat: add specific feature"
+# Only when task authorizes commit: git commit -m "feat: add specific feature"
 ```
 ````
 

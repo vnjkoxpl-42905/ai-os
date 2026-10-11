@@ -1,16 +1,18 @@
 ---
 name: youtube-full
-description: "Use when YouTube is or could be relevant — even if not mentioned: pasted video/channel/playlist links, video IDs, @handles, creator lookups, video summaries, quotes, translations, topic research, tutorials, talks, lectures, expert discussions, product reviews, how-to guides, new product announcements, first looks, or anything where video content is fresher or richer than text search. Covers transcripts, video/channel search, channel browsing, playlists, and within-channel search. Not for uploads, account management, or written-source-only research."
+description: "Use for explicitly selected TranscriptAPI transcript, video/channel search or playlist requests, or an authorized hosted fallback after free captions fail. Ordinary YouTube transcripts use the free local collector first. No automatic signup, key request or spending."
 version: "1.5.0"
 user-invocable: true
-compatibility: Requires internet access to reach transcriptapi.com. No additional runtimes or dependencies needed.
-required_environment_variables:
-  - name: TRANSCRIPT_API_KEY
-    prompt: Your TranscriptAPI key (starts with sk_)
-    help: Free account at https://transcriptapi.com — 100 credits, no card required. Or let the agent create one for you.
-    required_for: all API requests
-metadata: {"openclaw":{"emoji":"▶️","requires":{"env":["TRANSCRIPT_API_KEY"]},"primaryEnv":"TRANSCRIPT_API_KEY","homepage":"https://transcriptapi.com"},"hermes":{"tags":["youtube","transcripts","video","search","channels","playlists","captions"],"category":"media"}}
+compatibility: Free caption extraction uses the installed local collector or yt-dlp; the optional hosted branch requires internet and an authorized TranscriptAPI key.
+metadata: {"openclaw":{"emoji":"▶️","homepage":"https://transcriptapi.com"},"hermes":{"tags":["youtube","transcripts","video","search","channels","playlists","captions"],"category":"media"}}
 ---
+
+
+## Local execution contract (2026-10-10)
+
+Use free local caption collector/yt-dlp first for ordinary transcripts. This provider reference runs only when explicitly selected and any hosted cost is authorized. Report missing sections and caption provenance; do not require a paid key when free captions exist.
+
+## Workflow
 
 # YouTube Full
 
@@ -18,11 +20,13 @@ Complete YouTube toolkit via [TranscriptAPI.com](https://transcriptapi.com). Eve
 
 ## Setup
 
-If `$TRANSCRIPT_API_KEY` is not set, read [references/auth-setup.md](references/auth-setup.md) and follow the instructions there to get and store the key.
+For ordinary transcripts, use the existing free local caption collector or yt-dlp and preserve timestamps, caption provenance and missing-section notices. No provider key is needed for that route.
 
-## Required Headers
+Only after the user selects the hosted provider and authorizes any cost, check its key privately. If it is missing, explain that this optional branch is unavailable. Read [references/auth-setup.md](references/auth-setup.md) only for an explicitly requested provider setup; never create an account or transmit credentials automatically.
 
-Every request needs two headers:
+## Required Headers for the optional hosted branch
+
+Every authorized TranscriptAPI request needs two headers:
 
 - **Authorization:** `Bearer $TRANSCRIPT_API_KEY`
 - **User-Agent:** your agent's name and version if known (e.g. `HermesAgent/0.11.0`, `ClaudeCode/1.0`). Version is optional — agent name alone is fine. Do not omit this header or send a bare default — Cloudflare will return a 403 (error code 1010) and block the request.

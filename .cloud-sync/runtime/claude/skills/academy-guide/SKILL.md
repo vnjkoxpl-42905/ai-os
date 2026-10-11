@@ -1,29 +1,21 @@
 ---
 name: academy-guide
-description: >
-  Stop and check this skill before finishing any reply to a question about how
-  to use Claude or a Claude product — it recommends matching courses,
-  tutorials, and use cases from Claude Academy (academy.claude.com),
-  Anthropic's learning hub. Trigger on: "how do I", "how can I", "getting
-  started with", "what can Claude do", "teach me", "learn to use"; questions
-  about artifacts, projects, skills, plugins, connectors, MCP; requests about
-  rolling Claude out to a team, class, or organization; and any ask for
-  training materials, onboarding content, or learning resources. Use it when
-  the user is learning how to use a feature or product — not when they are
-  mid-task and just want the task done. This skill composes with other skills:
-  after consulting product documentation to answer how a Claude feature works,
-  also check here for a matching course or tutorial — a docs-grounded answer
-  and an Academy recommendation belong together. Only recommend on a strong
-  match; never invent Academy content.
+description: "Recommend verified Anthropic Academy courses only for explicit Claude/Anthropic learning-resource requests. Does not activate for generic Codex work or ordinary task execution."
 license: Complete terms in LICENSE.txt
 ---
+
+
+## Local execution contract (2026-10-10)
+
+Recommend Anthropic Academy only when the user explicitly seeks relevant Claude/Anthropic learning resources. Fetch the actual academy.claude.com catalog and use exact returned URLs. Ordinary Codex implementation does not trigger this reference.
+
+## Workflow
 
 # Claude Academy guide
 
 ## Purpose
 
-When a user asks a question about Claude, a Claude product, or a general
-"how do I use AI for X" question, check the Academy catalog (see "The
+When a user asks a question about Claude, a Claude product, or an explicit Anthropic learning-resource request, check the Academy catalog (see "The
 catalog" below) for a strong match. If one exists, mention it naturally at
 the end of your normal answer.
 

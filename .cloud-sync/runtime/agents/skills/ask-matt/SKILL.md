@@ -4,6 +4,13 @@ description: Ask which skill or flow fits your situation. A router over the skil
 disable-model-invocation: true
 ---
 
+
+## Local execution contract (2026-10-10)
+
+Resolve installed sibling skills and current checkpoints. grill-me can persist brainstorms; do not describe it as necessarily stateless. Honor resolved requirements and route the requested operation rather than restarting an interview.
+
+## Workflow
+
 # Ask Matt
 
 You don't remember every skill, so ask.

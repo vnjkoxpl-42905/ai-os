@@ -3,6 +3,13 @@ name: research-deep
 description: Read research outline, launch independent agent for each item for deep research. Disable task output.
 ---
 
+
+## Local execution contract (2026-10-10)
+
+Resolve validator from actual installed skill support directory; if absent, validate required JSON schema directly and report missing helper. Never run invented ~/ai-os or ~/.codex/skills/research paths.
+
+## Workflow
+
 # Research Deep - Deep Research
 
 ## Trigger

@@ -4,6 +4,10 @@ description: Analyze a codebase and recommend Claude Code automations (hooks, su
 tools: Read, Glob, Grep, Bash
 ---
 
+## Current AI OS execution contract
+
+Recommendations are read-only. Prefer existing CLIs, account for tool-definition/token costs, and discover actual connected tools before recommending MCP additions. No installation follows from a recommendation request.
+
 # Claude Automation Recommender
 
 Analyze codebase patterns to recommend tailored Claude Code automations across all extensibility options.

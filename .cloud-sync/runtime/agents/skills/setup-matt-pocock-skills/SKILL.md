@@ -4,6 +4,13 @@ description: "Configure this repo for the engineering skills: set up its issue t
 disable-model-invocation: true
 ---
 
+
+## Local execution contract (2026-10-10)
+
+Preserve vendor skill sources and local forks. When shared project pointers change, mirror narrowly into both existing AGENTS.md and CLAUDE.md; do not select one or regenerate manuals.
+
+## Workflow
+
 # Setup Matt Pocock's Skills
 
 Scaffold the per-repo configuration that the engineering skills assume:

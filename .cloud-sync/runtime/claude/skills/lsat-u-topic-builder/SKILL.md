@@ -1,7 +1,14 @@
 ---
 name: lsat-u-topic-builder
-description: Audit-driven bootstrap for a new LSAT U topic bootcamp. Walks the topic's source corpus, tier-grades every file (S/A/B/C/D), scans the Mac for related files outside /Curriculum/, identifies content gaps, anchors the quality bar to Causation Station / Abstraction (coaching tone, comprehensive, guiding), then generates the project folder with audit findings baked into all four files. Use when Joshua wants to start a new LSAT U topic bootcamp (Causation, Comparison, Necessary Assumption, Conditional Logic, etc.) and have the build start from real corpus knowledge, not generic templates. Trigger phrases include "create a new LSAT U topic bootcamp", "spin up a [topic] bootcamp", "audit and init [topic]", "replicate Main Conclusion for [topic]", "scaffold [topic] project".
+description: "Explicit legacy topic-builder reference only. New LSAT U topic/module creation uses current bootcamp-builder; preserve useful references without competing automatic triggers."
 ---
+
+
+## Local execution contract (2026-10-10)
+
+Legacy topic reference only; current bootcamp-builder owns new module creation. Resolve current sibling ai-os-projects/lsatu app and preserve source material. No old Mac/vault-contained app output, provider substitution or destructive duplicate heuristics.
+
+## Workflow
 
 # LSAT U Topic Builder (v2: Audit-Driven Bootstrap)
 

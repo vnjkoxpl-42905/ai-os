@@ -42,7 +42,7 @@ def main() -> int:
         "--whisper",
         choices=["groq", "openai"],
         default=None,
-        help="Force a specific Whisper backend. Default: prefer Groq, fall back to OpenAI.",
+        help="Explicitly enable this Whisper provider after upload/cost authorization. Default: captions only.",
     )
     args = ap.parse_args()
 
@@ -52,6 +52,8 @@ def main() -> int:
         work = Path(args.out_dir).expanduser().resolve()
     else:
         work = Path(tempfile.mkdtemp(prefix="watch-"))
+    if work.exists() and any(work.iterdir()):
+        raise SystemExit("Output directory is not empty; choose a fresh task directory")
     work.mkdir(parents=True, exist_ok=True)
     print(f"[watch] working dir: {work}", file=sys.stderr)
 
@@ -116,7 +118,7 @@ def main() -> int:
         except Exception as exc:
             print(f"[watch] subtitle parse failed: {exc}", file=sys.stderr)
 
-    if not transcript_segments and not args.no_whisper:
+    if not transcript_segments and not args.no_whisper and args.whisper is not None:
         backend, api_key = load_api_key(args.whisper)
         if backend and api_key:
             try:
@@ -188,7 +190,7 @@ def main() -> int:
     print(f"Frames live at: `{work / 'frames'}`")
     print()
     print(
-        "**Read each frame path below with the Read tool to view the image.** "
+        "**View selected frame paths with an available host image-viewing tool.** "
         "Frames are in chronological order; `t=MM:SS` is the absolute timestamp in the source video."
     )
     print()
@@ -211,17 +213,12 @@ def main() -> int:
     elif focused and dl.get("subtitle_path"):
         print(f"_No transcript lines fell inside {format_time(effective_start)} → {format_time(effective_end)}._")
     else:
-        setup_py = SCRIPT_DIR / "setup.py"
-        print(
-            "_No transcript available — proceed with frames only. "
-            "Captions were missing and the Whisper fallback was unavailable "
-            "(no API key set, or `--no-whisper` was used). "
-            f"Run `python3 {setup_py}` to enable Whisper, then re-run._"
-        )
+        print("_No transcript available. Proceed with frames only and report missing captions. "
+              "Optional API transcription requires an explicitly selected provider and upload/cost authorization._")
 
     print()
     print("---")
-    print(f"_Work dir: `{work}` — delete when done._")
+    print(f"_Work dir: `{work}`. Preserve output; remove only with explicit authorization._")
 
     return 0
 

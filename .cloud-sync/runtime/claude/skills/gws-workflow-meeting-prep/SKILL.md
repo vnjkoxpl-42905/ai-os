@@ -11,6 +11,13 @@ metadata:
     cliHelp: "gws workflow +meeting-prep --help"
 ---
 
+
+## Local execution contract (2026-10-10)
+
+Distinguish calendar metadata and document links from retrieved document contents. Fetch linked docs only when available and relevant, otherwise state unavailable sections. Use selected calendar and current student/client preparation context.
+
+## Workflow
+
 # workflow +meeting-prep
 
 > **PREREQUISITE:** Read `../gws-shared/SKILL.md` for auth, global flags, and security rules. If missing, run `gws generate-skills` to create it.

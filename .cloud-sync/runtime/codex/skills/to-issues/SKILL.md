@@ -4,6 +4,13 @@ description: Break a plan, spec, or PRD into independently-grabbable issues on t
 disable-model-invocation: true
 ---
 
+
+## Local execution contract (2026-10-10)
+
+Use existing to-tickets workflow as shared decomposition core when available, retaining issue-specific compatibility/parent semantics. Local breakdown is draft by default; publishing issues requires actual authorization.
+
+## Workflow
+
 # To Issues
 
 Break a plan into independently-grabbable issues using vertical slices (tracer bullets).

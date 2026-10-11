@@ -3,6 +3,13 @@ name: consultation-inquiry-drafts
 description: "Daily sweep: draft, but do not send, personalized consultation-link replies to new LSAT tutoring inquiries"
 ---
 
+
+## Local execution contract (2026-10-10)
+
+Before creation, reconcile Gmail live sent/thread state and existing unsent drafts using stable thread/event/recipient identity. Reuse the matching draft; update only with scope, or explicitly supersede. Never create a duplicate on repeated sweeps. Follow current teaching voice; draft unless send authorized.
+
+## Workflow
+
 # Consultation Inquiry Drafts
 
 Find new LSAT tutoring inquiries and prepare Gmail drafts for Joshua to review. Never send. AI-generated replies remain drafts unless Joshua separately approves the exact message.

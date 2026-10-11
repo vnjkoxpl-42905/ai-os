@@ -38,14 +38,18 @@ Each ticket must be sized to one 100K token agent session.
 There are three types of tickets:
 
 - **Research**: Reading documentation, third-party API's, or local resources like knowledge bases. Creates a markdown summary as an asset. Use this when knowledge outside the current working directory is required.
-- **Prototype**: Writing UI or logic code to test a hypothesis, or to explore a design space. Uses the /prototype skill. Creates a prototype as an asset. Use this when "how should it look" or "how should it behave" is the key question.
-- **Discuss**: Conversation with the agent. Uses the /grilling and /domain-modelling skills. The default case.
+- **Prototype**: Writing UI or logic code to test a hypothesis, or to explore a design space. Uses the prototype skill. Creates a prototype as an asset. Use this when "how should it look" or "how should it behave" is the key question.
+- **Discuss**: Conversation with the agent. Uses the grilling and domain-modeling skills. The default case.
 
 ## Fog of war
 
 The map is _deliberately_ incomplete beyond the frontier. Your job is to investigate the frontier, and to resolve tickets in order to push the frontier forward. Push back the fog of war, one node at a time.
 
 At some point, the fog of war should have been pushed back far enough that the path to the finish line is clear. At that point, no more tickets will be required and the decision map can be considered 'done'.
+
+## Dependency routing
+
+Resolve and read the actual activated entry points for `grilling` and `domain-modeling` in the current host. For prototypes or PRDs verify that the optional skill exists; otherwise use the authorized direct workflow and disclose the missing helper. Do not invoke nonexistent slash commands or a Claude-only Skill tool in Codex.
 
 ## Invocation
 
@@ -55,7 +59,7 @@ There are two ways this skill can be invoked: **bootstrap** and **resume**.
 
 User invokes with a loose idea.
 
-1. Run a /grilling and /domain-modelling session to surface the open decisions.
+1. Run a grilling and domain-modeling session to surface the open decisions.
 2. Write a new decision map — mostly fog, frontier identified, trivially-decidable entries resolved inline.
 3. Stop. Map-building is one session's work; do not also resolve tickets.
 
@@ -64,12 +68,12 @@ User invokes with a loose idea.
 User invokes with a path to an existing map and a ticket number.
 
 1. Load the **whole map** as context.
-2. Run a session to resolve the ticket, invoking skills as needed. If in doubt, use `/grilling` and `/domain-modelling`.
+2. Run a session to resolve the ticket, invoking skills as needed. If in doubt, use `grilling` and `domain-modeling`.
 3. Record what the session resolved in the ticket's body.
 4. Add newly-discovered tickets (with correct `blocked_by` edges).
 5. Stop.
 
-If the decisions made invalidate other parts of the map, update or delete those nodes.
+If the decisions made invalidate other parts of the map, update those nodes or mark them superseded, preserving the decision history.
 
 ## Parallelism
 
@@ -81,4 +85,4 @@ Many times, the initial grilling will result in no fog of war. No unresolved tic
 
 In those situations, you should offer the user the chance to skip the decision map - since the decision map is only needed if multi-session decisions need to be made.
 
-If they skip it, you should recommend either implementing directly or using `/to-prd` to schedule a multi-session implementation.
+If they skip it, you should recommend either implementing directly or using the installed `to-prd` skill when available to schedule a multi-session implementation.

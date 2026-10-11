@@ -4,6 +4,10 @@ description: This skill should be used when the user asks to "create a hook", "a
 version: 0.1.0
 ---
 
+## Current AI OS execution contract
+
+Claude hook schemas are reference material for Claude only. For Codex use the current native schema and /hooks trust review. Never infer native activation or blocking from writing a configuration; merge existing definitions and verify a safe scoped block-and-recover case.
+
 # Hook Development for Claude Code Plugins
 
 ## Overview

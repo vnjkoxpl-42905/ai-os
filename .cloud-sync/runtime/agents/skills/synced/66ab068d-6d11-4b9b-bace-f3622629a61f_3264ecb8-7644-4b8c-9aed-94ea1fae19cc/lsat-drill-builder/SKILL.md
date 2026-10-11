@@ -3,6 +3,13 @@ name: lsat-drill-builder
 description: Generate a new LSAT "argument dissection" drill in the same interactive style as the First Sentence vs Rebuttal drill, for any LR topic. Use when Joshua asks to build, create, or generate a drill, a dissection lab, an argument-parts practice set, or a "drill like the rebuttal one" for a new topic (assumptions, flaws, strengthen/weaken, parallel reasoning, conclusion ID, etc.). Produces a standalone single-file HTML drill with all the same features.
 ---
 
+
+## Local execution contract (2026-10-10)
+
+Use this two-option first/rebuttal engine only for compatible requested pedagogy. Apply current teaching voice. Preserve source question identity and data invariants; label/control changes alter rendering and require actual interaction/accessibility verification. Mental walkthrough alone is not acceptance.
+
+## Workflow
+
 # LSAT Drill Builder
 
 This skill regenerates the interactive argument-dissection drill for a new topic by reusing a finished template and swapping only the content. Every interaction, animation, color rule, and scoring behavior carries over automatically because you do not rewrite the engine. You replace two data blocks.

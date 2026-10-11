@@ -3,6 +3,13 @@ name: lsat-lab-transcribe
 description: Transcribe a full LSAT Lab PrepTest's written explanations verbatim into one organized markdown file per test, capturing ALL THREE authored explanation styles (Standard, Brief, Another Way) for every question, driving Joshua's open Chrome via the claude-in-chrome browser extension. Use when Joshua says "transcribe PT###", "pull the explanations for PT###", "do the LSAT Lab transcription", "do another practice test", or points at an open LSAT Lab practice tab and wants its explanations captured. One question at a time, verbatim, skipping video-only questions.
 ---
 
+
+## Local execution contract (2026-10-10)
+
+Verify each current item capture saved successfully before advancing. Preserve per-style tag identities; all-style mode uses distinct tags rather than one mislabeled catchall. Resolve Windows browser/shortcuts and task-owned logs. No source deletion without authorization.
+
+## Workflow
+
 # LSAT Lab explanation transcription
 
 Drive Joshua's open Chrome (Claude browser extension) on the LSAT Lab practice player and transcribe the full written explanation for every question that HAS one, into a single organized markdown file per PrepTest. Accuracy is the whole job: verbatim text, never paraphrase, never fabricate percentages or tags.

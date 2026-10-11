@@ -5,6 +5,13 @@ disable-model-invocation: true
 argument-hint: "<file, folder, URL, or context> [when to use it]"
 ---
 
+
+## Local execution contract (2026-10-10)
+
+Resolve both AGENTS.md and CLAUDE.md as distinct runtime manuals. Mirror only approved shared pointers into both existing hand-owned files; never duplicate AGENTS as the Claude manual or regenerate either.
+
+## Workflow
+
 # Link
 
 Make the supplied target findable from the operating manual with the smallest useful routing edit. Input: `$ARGUMENTS` or the target from the conversation.

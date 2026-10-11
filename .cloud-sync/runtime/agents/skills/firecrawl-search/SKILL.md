@@ -7,6 +7,13 @@ allowed-tools:
   - Bash(npx firecrawl-cli *)
 ---
 
+
+## Local execution contract (2026-10-10)
+
+Use actual Windows-compatible shell or explicitly selected Bash runtime. Feedback transmission is opt-in; search does not authorize external feedback. Verify hosted credit scope and official-source constraints.
+
+## Workflow
+
 # firecrawl search
 
 Web search with optional content scraping. Returns search results as JSON, optionally with full page content.

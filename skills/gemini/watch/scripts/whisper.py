@@ -61,7 +61,6 @@ def load_api_key(preferred: str | None = None) -> tuple[str, str] | tuple[None, 
         return None
 
     dotenv_paths = [
-        Path.home() / ".config" / "watch" / ".env",
         Path.cwd() / ".env",
     ]
 

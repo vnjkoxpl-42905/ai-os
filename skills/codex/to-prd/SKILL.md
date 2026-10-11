@@ -1,8 +1,12 @@
 ---
 name: to-prd
-description: Turn the current conversation into a PRD and publish it to the project issue tracker — no interview, just synthesis of what you've already discussed.
+description: Turn the current conversation into a local PRD; publish to the project tracker only when explicitly requested — no interview, just synthesis of what you've already discussed.
 disable-model-invocation: true
 ---
+
+## Current scoped workflow
+
+Draft-only PRD requests create a local document. Creating/updating an external issue is a separately authorized publication action. Use supported source requirements instead of inventing exhaustive stories.
 
 This skill takes the current conversation context and codebase understanding and produces a PRD. Do NOT interview the user — just synthesize what you already know.
 
@@ -16,7 +20,7 @@ The issue tracker and triage label vocabulary should have been provided to you �
 
 Check with the user that these seams match their expectations.
 
-3. Write the PRD using the template below, then publish it to the project issue tracker. Apply the `ready-for-agent` triage label - no need for additional triage.
+3. Write the PRD using the template below, save it in the selected project document home. Only if tracker publication is explicitly authorized, publish it and apply the agreed triage label.
 
 <prd-template>
 

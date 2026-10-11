@@ -6,24 +6,21 @@ description: >
 allowed-tools: Bash Read Write Edit Glob Grep
 ---
 
-# Use the single ingest workflow
+# Resolve the current vault workflow
 
-## Resolve the vault and schema first
+This existing user-level entrypoint is a compatibility dispatcher, not an
+independent knowledge or student-intake pipeline. Find the target vault from the
+current workspace and its applicable instructions. Do not assume a saved machine
+path, initialize a new vault, or use another project's records.
 
-Find the vault root from the current workspace and its nearest instruction files.
-Read `system/schema/llm-wiki.md` relative to that root. It is the authority for
-folder conventions, page metadata, provenance, index, log, and ingest/query/lint
-workflows. Do not assume a saved Windows or Mac path. If no schema exists in the
-target vault, report that gap before changing its structure; never initialize a
-second vault to solve a request about an existing one.
+Read its `system/schema/llm-wiki.md`. For this runtime, read and follow the vault's
+`.agents/skills/ingest/SKILL.md` and its referenced resources.
+If that project entrypoint is unavailable, use its `skills/codex/ingest/SKILL.md`
+catalog copy. Resolve all sibling skill references from that chosen skills root,
+not this user-level folder. If the schema or workflow is missing, report the exact
+missing route instead of reviving a legacy workflow.
 
-Resolve the current vault, then read its active `ingest/SKILL.md` and follow it
-through completion, including `ingest/references/wiki-compilation.md`.
-If only catalog copies exist, use the matching runtime's `skills/<runtime>/ingest/`
-workflow. Existing global activation may use its sibling `ingest/` only after
-resolving the target vault and schema. If that dependency is missing, report the
-missing workflow rather than improvising a parallel intake procedure.
-
-Public activation phrases belong to `ingest`: "ingest this", "add this to my
-second brain", "file these notes", and "process this source". This old explicit
-name remains compatible without asking the user to invoke another skill.
+Student/session transcripts use that vault's `transcript-intake`; student-facing
+lessons use `post-session-recap`. Public clips and reusable knowledge use `ingest`;
+questions use `second-brain-query` and health checks use `second-brain-lint`.
+Respect the requested scope and stop conditions in the resolved project skill.

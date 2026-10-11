@@ -4,6 +4,13 @@ description: Turn the current conversation into a PRD and publish it to the proj
 disable-model-invocation: true
 ---
 
+
+## Local execution contract (2026-10-10)
+
+Produce requested PRD locally by default. Tracker issue publication requires explicit task authorization. Preserve seams and actual requirements; do not manufacture exhaustive stories.
+
+## Workflow
+
 This skill takes the current conversation context and codebase understanding and produces a PRD. Do NOT interview the user — just synthesize what you already know.
 
 The issue tracker and triage label vocabulary should have been provided to you — run `/setup-matt-pocock-skills` if not.

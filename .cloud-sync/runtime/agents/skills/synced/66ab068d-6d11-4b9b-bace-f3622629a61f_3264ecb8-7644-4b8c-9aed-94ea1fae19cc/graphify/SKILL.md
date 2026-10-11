@@ -4,6 +4,13 @@ description: "any input (code, docs, papers, images) - knowledge graph - cluster
 trigger: /graphify
 ---
 
+
+## Local execution contract (2026-10-10)
+
+Use existing ingest for durable sources; graph is derived, not alternate knowledge truth. Chunk tasks must save and validate the agreed JSON output file. Node IDs must include source-relative identity, not basename alone. Replace stale nodes/edges for changed/deleted sources. Do not edit hand-owned manuals automatically.
+
+## Workflow
+
 # /graphify
 
 Turn any folder of files into a navigable knowledge graph with community detection, an honest audit trail, and three outputs: interactive HTML, GraphRAG-ready JSON, and a plain-language GRAPH_REPORT.md.

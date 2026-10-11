@@ -1,25 +1,15 @@
 ---
 version: 0.12.0
 name: higgsfield-websites
-description: |
-  Build, edit, and deploy full-stack websites via the Higgsfield CLI
-  (`higgsfield website …`). Each site is a React 19 + TanStack Start SSR app in
-  one Cloudflare Worker (D1/R2/KV/DO/Containers). TWO product types, picked via
-  `--type` on create: `website` (standalone, NO Higgsfield integration,
-  independent brand, custom CSS — the image-grounded pipeline in
-  references/website-flow.md) vs `app` (Sign in with Higgsfield + fnf SDK,
-  Quanta + app layouts per references/app-flow.md). This file routes to
-  the right flow; each flow carries its own workflow, references, hard rules,
-  and deploy/publish gates.
-  Use when: "build me a website", "make a landing page", "create a web app",
-  "build a SaaS dashboard / tool / portfolio", "deploy this site", "edit my
-  site", "publish", "ship to production".
-  NOT for: single image/video/audio generation (higgsfield-generate), product
-  photos (higgsfield-product-photoshoot), marketplace cards
-  (higgsfield-marketplace-cards).
+description: "Explicitly selected higgsfield-websites provider workflow only. Not generic media, product or website requests."
 argument-hint: "[what to build or edit] [--type website|app]"
 allowed-tools: Bash
+disable-model-invocation: true
 ---
+
+## Current scoped workflow
+
+Use only for an explicitly requested Higgsfield-backed website workflow. Creating a local preview is separate from public deployment; deploy/publish only when explicitly authorized.
 
 # Higgsfield website builder (CLI) — two product types, two flows
 
@@ -110,7 +100,7 @@ are rejected — if that happens, try a close variant.
    SAME first question, also ask whether they want to **publish it to the
    Higgsfield community feed (marketplace)** when it's ready (yes/no). Remember
    the answer: if yes, publish automatically at the end (after deploy +
-   metadata), no need to ask again; if no, only deploy. Don't block the build
+   metadata), no need to ask again; if no, retain the local preview; live deployment still requires explicit authorization. Don't block the build
    on it.
 2. Read the matching flow and follow it — it is the complete workflow for that
    type, including its own references, hard rules, editing map, and
@@ -122,7 +112,7 @@ are rejected — if that happens, try a close variant.
 | `--type app` | **`references/app-flow.md`** — the Quanta toolkit, the six code layouts, fnf SDK + auth + D1 contract, launch cover + metadata, publish gate |
 
 Both flows share the same platform mechanics (SSR Worker, `app.manifest.json`
-infra, a single live deploy via `higgsfield website deploy <website_id>`,
+infra, a separately authorized live deploy via `higgsfield website deploy <website_id>`,
 the cover + metadata requirement below, and the publish gate) — each flow
 restates what it needs, so you never have to read the other one.
 
@@ -172,7 +162,7 @@ user cares about:
 
 - "Setting up your site…" — not "cloning the repo" / "scaffolding the project".
 - "Saving your changes…" / "Updating the site…" — not "committing" / "pushing".
-- "Your preview is ready: <url>" — not "deployed the branch" / "the build passed".
+- "Your public site is deployed: <url>" (only after authorized public deployment) — not "deployed the branch" / "the build passed".
 - "Publishing your site…" — not "merging to main" / "pushing to production".
 
 This is about the WORDS in chat only — keep doing the real steps behind the

@@ -18,12 +18,15 @@ workflows. Do not assume a saved Windows or Mac path. If no schema exists in the
 target vault, report that gap before changing its structure; never initialize a
 second vault to solve a request about an existing one.
 
-1. Read the schema and `wiki/index.md`, plus the domain indexes it links.
+1. Read the schema and curated `wiki/index.md` navigation, then use bounded
+   searches of its generated catalog and relevant linked domain indexes.
    Establish the requested scope. Structural checks cover indexed knowledge
    and existing wiki pages, including legacy flat pages; do not assume every
    page lives in entities/concepts/sources/synthesis.
 2. In ai-os run `py system/scripts/wiki-maintenance.py --lint` for structural
    checks. Its generated findings are a starting point, not semantic verification.
+   Check heading anchors, frontmatter aliases, index completeness and cross-domain
+   coverage separately; the helper does not establish these or factual accuracy.
    Use `py system/scripts/wiki-maintenance.py --index` when index repair is
    authorized. Check both Markdown links and vault wikilinks, including path-qualified
    targets, aliases and anchors. Resolve targets against actual vault paths;

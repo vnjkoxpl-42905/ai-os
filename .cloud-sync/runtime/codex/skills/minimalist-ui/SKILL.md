@@ -1,7 +1,14 @@
 ---
 name: minimalist-ui
-description: Clean editorial-style interfaces. Warm monochrome palette, typographic contrast, flat bento grids, muted pastels. No gradients, no heavy shadows.
+description: "Use only when the user explicitly selects minimalist-ui or its specific documented preset/reference. Does not trigger on generic current-vault, frontend, AI or everyday workflow requests."
 ---
+
+
+## Local execution contract (2026-10-10)
+
+Apply only as requested visual preset; preserve product design system. Resolve gradient/no-gradient choices from actual brief. Motion/reveals are optional and require reduced-motion, keyboard and readable static alternatives.
+
+## Workflow
 
 # Protocol: Premium Utilitarian Minimalism UI Architect
 
@@ -15,7 +22,7 @@ The AI must strictly avoid the following generic web development defaults:
 - DO NOT use generic, thin-line icon libraries like "Lucide", "Feather", or standard "Heroicons".
 - DO NOT use Tailwind's default heavy drop shadows (e.g., `shadow-md`, `shadow-lg`, `shadow-xl`). Shadows must be practically non-existent or heavily customized to be ultra-diffuse and low opacity (< 0.05).
 - DO NOT use primary colored backgrounds for large elements or sections (e.g., no bright blue, green, or red hero sections).
-- DO NOT use gradients, neon colors, or 3D glassmorphism (beyond subtle navbar blurs).
+- Avoid prominent gradients, neon colors and 3D glassmorphism in this preset; subtle requested background radial treatments below are optional.
 - DO NOT use `rounded-full` (pill shapes) for large containers, cards, or primary buttons.
 - DO NOT use emojis anywhere in code, markup, text content, headings, or alt text. Replace with proper icons or clean SVG primitives.
 - DO NOT use generic placeholder names like "John Doe", "Acme Corp", or "Lorem Ipsum". Use realistic, contextual content.
@@ -81,5 +88,5 @@ When tasked with writing frontend code (HTML, React, Tailwind, Vue) or designing
 3. Apply the custom typographic hierarchy and monochromatic color variables immediately.
 4. Ensure every card, divider, and border adheres strictly to the `1px solid #EAEAEA` rule.
 5. Add scroll-entry animations to all major content blocks.
-6. Ensure sections have visual depth through imagery, ambient gradients, or subtle textures — no empty flat backgrounds.
+6. Use optional depth treatments only when requested and accessible; flat readable backgrounds are valid.
 7. Provide code that reflects this high-end, uncluttered, editorial aesthetic natively without requiring manual adjustments.

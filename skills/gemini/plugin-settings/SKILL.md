@@ -4,6 +4,10 @@ description: This skill should be used when the user asks about "plugin settings
 version: 0.1.0
 ---
 
+## Current AI OS execution contract
+
+Parse YAML with a proper parser rather than sourcing it as shell code. Under set -e/pipefail, optional grep misses must be handled explicitly. Verify the installed host's reload behavior; config edits are not proof a plugin reloaded.
+
 # Plugin Settings Pattern for Claude Code Plugins
 
 ## Overview
@@ -79,8 +83,8 @@ fi
 FRONTMATTER=$(sed -n '/^---$/,/^---$/{ /^---$/d; p; }' "$STATE_FILE")
 
 # Extract individual fields
-ENABLED=$(echo "$FRONTMATTER" | grep '^enabled:' | sed 's/enabled: *//' | sed 's/^"\(.*\)"$/\1/')
-STRICT_MODE=$(echo "$FRONTMATTER" | grep '^strict_mode:' | sed 's/strict_mode: *//' | sed 's/^"\(.*\)"$/\1/')
+ENABLED=$(echo "$FRONTMATTER" | { grep '^enabled:' || true; } | sed 's/enabled: *//' | sed 's/^"\(.*\)"$/\1/')
+STRICT_MODE=$(echo "$FRONTMATTER" | { grep '^strict_mode:' || true; } | sed 's/strict_mode: *//' | sed 's/^"\(.*\)"$/\1/')
 
 # Check if enabled
 if [[ "$ENABLED" != "true" ]]; then
@@ -146,18 +150,18 @@ FRONTMATTER=$(sed -n '/^---$/,/^---$/{ /^---$/d; p; }' "$FILE")
 
 **String fields:**
 ```bash
-VALUE=$(echo "$FRONTMATTER" | grep '^field_name:' | sed 's/field_name: *//' | sed 's/^"\(.*\)"$/\1/')
+VALUE=$(echo "$FRONTMATTER" | { grep '^field_name:' || true; } | sed 's/field_name: *//' | sed 's/^"\(.*\)"$/\1/')
 ```
 
 **Boolean fields:**
 ```bash
-ENABLED=$(echo "$FRONTMATTER" | grep '^enabled:' | sed 's/enabled: *//')
+ENABLED=$(echo "$FRONTMATTER" | { grep '^enabled:' || true; } | sed 's/enabled: *//')
 # Compare: if [[ "$ENABLED" == "true" ]]; then
 ```
 
 **Numeric fields:**
 ```bash
-MAX=$(echo "$FRONTMATTER" | grep '^max_value:' | sed 's/max_value: *//')
+MAX=$(echo "$FRONTMATTER" | { grep '^max_value:' || true; } | sed 's/max_value: *//')
 # Use: if [[ $MAX -gt 100 ]]; then
 ```
 
@@ -187,7 +191,7 @@ fi
 
 # Read enabled flag
 FRONTMATTER=$(sed -n '/^---$/,/^---$/{ /^---$/d; p; }' "$STATE_FILE")
-ENABLED=$(echo "$FRONTMATTER" | grep '^enabled:' | sed 's/enabled: *//')
+ENABLED=$(echo "$FRONTMATTER" | { grep '^enabled:' || true; } | sed 's/enabled: *//')
 
 if [[ "$ENABLED" != "true" ]]; then
   exit 0  # Disabled
@@ -227,8 +231,8 @@ Implement JWT authentication for the API.
 Read from hooks to coordinate agents:
 
 ```bash
-AGENT_NAME=$(echo "$FRONTMATTER" | grep '^agent_name:' | sed 's/agent_name: *//')
-COORDINATOR=$(echo "$FRONTMATTER" | grep '^coordinator_session:' | sed 's/coordinator_session: *//')
+AGENT_NAME=$(echo "$FRONTMATTER" | { grep '^agent_name:' || true; } | sed 's/agent_name: *//')
+COORDINATOR=$(echo "$FRONTMATTER" | { grep '^coordinator_session:' || true; } | sed 's/coordinator_session: *//')
 
 # Send notification to coordinator
 tmux send-keys -t "$COORDINATOR" "Agent $AGENT_NAME completed task" Enter
@@ -254,7 +258,7 @@ All writes validated against security policies.
 Use in hooks or commands:
 
 ```bash
-LEVEL=$(echo "$FRONTMATTER" | grep '^validation_level:' | sed 's/validation_level: *//')
+LEVEL=$(echo "$FRONTMATTER" | { grep '^validation_level:' || true; } | sed 's/validation_level: *//')
 
 case "$LEVEL" in
   strict)
@@ -355,7 +359,7 @@ fi
 Validate settings values:
 
 ```bash
-MAX=$(echo "$FRONTMATTER" | grep '^max_value:' | sed 's/max_value: *//')
+MAX=$(echo "$FRONTMATTER" | { grep '^max_value:' || true; } | sed 's/max_value: *//')
 
 # Validate numeric range
 if ! [[ "$MAX" =~ ^[0-9]+$ ]] || [[ $MAX -lt 1 ]] || [[ $MAX -gt 100 ]]; then
@@ -405,7 +409,7 @@ EOF
 If settings contain file paths:
 
 ```bash
-FILE_PATH=$(echo "$FRONTMATTER" | grep '^data_file:' | sed 's/data_file: *//')
+FILE_PATH=$(echo "$FRONTMATTER" | { grep '^data_file:' || true; } | sed 's/data_file: *//')
 
 # Check for path traversal
 if [[ "$FILE_PATH" == *".."* ]]; then
@@ -487,7 +491,7 @@ project-root/
 FRONTMATTER=$(sed -n '/^---$/,/^---$/{ /^---$/d; p; }' "$FILE")
 
 # Read field
-VALUE=$(echo "$FRONTMATTER" | grep '^field:' | sed 's/field: *//' | sed 's/^"\(.*\)"$/\1/')
+VALUE=$(echo "$FRONTMATTER" | { grep '^field:' || true; } | sed 's/field: *//' | sed 's/^"\(.*\)"$/\1/')
 ```
 
 ### Body Parsing

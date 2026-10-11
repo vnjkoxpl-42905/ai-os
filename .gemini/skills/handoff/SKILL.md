@@ -5,6 +5,10 @@ argument-hint: "What will the next session be used for?"
 disable-model-invocation: true
 ---
 
+## Current AI OS execution contract
+
+Explicit legacy compatibility reference. Prefer session-handoff for current continuity. Resolve host-supported skill entry points rather than assuming a Skill invocation tool.
+
 Write a handoff document summarising the current conversation so a fresh agent can continue the work. Save to the temporary directory of the user's OS - not the current workspace.
 
 Include a "suggested skills" section in the document, naming which skills the next agent should call the Skill tool for.

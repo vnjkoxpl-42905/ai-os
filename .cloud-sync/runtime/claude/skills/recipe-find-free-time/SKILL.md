@@ -13,6 +13,13 @@ metadata:
         - gws-calendar
 ---
 
+
+## Local execution contract (2026-10-10)
+
+Find-only mode returns candidate slots from the requested interval/timezone and freebusy result, with no event creation. Book only when explicitly requested, recheck availability and deduplicate. Do not run the event-insert example for availability inspection.
+
+## Workflow
+
 # Find Free Time Across Calendars
 
 > **PREREQUISITE:** Load the following skills to execute this recipe: `gws-calendar`
@@ -21,7 +28,13 @@ Query Google Calendar free/busy status for multiple users to find a meeting slot
 
 ## Steps
 
-1. Query free/busy: `gws calendar freebusy query --json '{"timeMin": "2024-03-18T08:00:00Z", "timeMax": "2024-03-18T18:00:00Z", "items": [{"id": "user1@company.com"}, {"id": "user2@company.com"}]}'`
-2. Review the output to find overlapping free slots
-3. Create event in the free slot: `gws calendar +insert --summary 'Meeting' --attendee user1@company.com --attendee user2@company.com --start '2024-03-18T14:00:00' --end '2024-03-18T14:30:00'`
+1. Resolve actual target IDs, requested data, date interval/timezone and existing state. Illustrative names, dates and recipients are not user data.
+2. Find-only mode returns candidate slots from the requested interval/timezone and freebusy result, with no event creation. Book only when explicitly requested, recheck availability and deduplicate. Do not run the event-insert example for availability inspection.
+3. Discover the required method using installed `gws <service> --help` and `gws schema <service>.<resource>.<method>`; build parameters from real returned IDs and requested data. For retries reconcile existing output identity first.
+4. Execute only the requested authorized operation. Draft email unless send is authorized. Inspect resulting resource/file and report any missing sections or failed items.
+
+## Relevant endpoint references
+
+- `gws calendar` (inspect help/schema before invocation)
+- `gws calendar freebusy query --json` (inspect help/schema before invocation)
 

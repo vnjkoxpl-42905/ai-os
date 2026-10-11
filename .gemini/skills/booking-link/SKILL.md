@@ -3,6 +3,10 @@ name: booking-link
 description: Use whenever Joshua wants a one-off booking link for LSAT U — "make me a link for Dakota at 7:15 tomorrow", "send her a link to book tonight", "one-off link, $60", "short notice link", "I need a link she can schedule herself with". Mints a single-use URL that sells exactly one session at a price you set, optionally pinned to one exact time, and closes after she books. Also covers listing and revoking existing links.
 ---
 
+## Current AI OS execution contract
+
+Resolve this repository root from AGENTS.md and the application from its registered sibling project. Read credentials only through the central private .env loader. Legacy home-relative application or secret paths below are examples, not current authorities. Draft/send authority is unchanged.
+
 # One-off booking links
 
 A URL Joshua sends to one person. She opens it, books one session, pays, and

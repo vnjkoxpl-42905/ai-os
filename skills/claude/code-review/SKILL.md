@@ -16,11 +16,11 @@ The issue tracker should have been provided to you. If not, tell the user to run
 
 ### 1. Pin the fixed point
 
-Whatever the user said is the fixed point (a commit SHA, branch name, tag, `main`, `HEAD~5`, etc.). If they didn't specify one, ask for it.
+Determine scope first: committed branch/PR, current work in progress, or both. Use a supplied fixed point; for branch/PR review resolve its actual base. A request to review uncommitted work needs no invented base or extra confirmation.
 
-Capture the diff command once: `git diff <fixed-point>...HEAD` (three-dot, so the comparison is against the merge-base). Also note the list of commits via `git log <fixed-point>..HEAD --oneline`.
+Record `git status --short` first. For committed scope use `git diff <fixed-point>...HEAD` and `git log <fixed-point>..HEAD --oneline`. For worktree scope include `git diff --cached`, `git diff`, and `git ls-files --others --exclude-standard`, reading each in-scope untracked file. Capture exact paths/revisions and distinguish staged, unstaged and untracked content. Do not stage or mutate to simplify review.
 
-Before going further, confirm the fixed point resolves (`git rev-parse <fixed-point>`) and the diff is non-empty. A bad ref or empty diff should fail here, not inside two parallel sub-agents.
+Validate a supplied base with `git rev-parse <fixed-point>`. Empty committed diffs do not imply empty WIP: finish the staged/unstaged/untracked inventory before reporting no changes. Pass the same captured scope to both reviewers; if files change during review, refresh the affected scope.
 
 ### 2. Identify the spec source
 
@@ -61,7 +61,7 @@ Issue both sub-agent calls together, in the foreground, and aggregate the report
 
 **Standards sub-agent prompt** should include:
 
-- The full diff command and commit list.
+- The complete captured review scope: committed diff (if requested), staged/unstaged diffs, in-scope untracked contents, exact paths and commit list.
 - The list of standards-source files you found in step 3, **plus the smell baseline from step 3** pasted in full (the sub-agent has no other access to it).
 - The brief: "Report, per file/hunk where relevant, (a) every place the diff violates a documented standard: cite the standard (file + the rule); and (b) any baseline smell you spot: name it and quote the hunk. Distinguish hard violations from judgement calls: documented-standard breaches can be hard, but baseline smells are always judgement calls, and a documented repo standard overrides the baseline. Skip anything tooling enforces. Under 400 words."
 

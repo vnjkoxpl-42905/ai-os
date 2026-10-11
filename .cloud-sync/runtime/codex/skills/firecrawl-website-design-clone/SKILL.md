@@ -13,6 +13,13 @@ inputs:
     required: true
 ---
 
+
+## Local execution contract (2026-10-10)
+
+Collect branding/images/screenshots through allowed host media tools. Do not bypass media-display restrictions by remote downloads. Preserve measured versus inferred tokens and supplied visuals. Implement only in sibling application root and validate actual visual output.
+
+## Workflow
+
 # Firecrawl Website Design Clone
 
 Use this when the user wants one URL turned into a practical design system file agents can use immediately.

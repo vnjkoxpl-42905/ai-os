@@ -13,6 +13,13 @@ inputs:
     required: true
 ---
 
+
+## Local execution contract (2026-10-10)
+
+Report scoped routes/interactions, reproduction evidence and observed findings. Do not invent x/10 health score without an explicit rubric and measured coverage. Preserve tester deduplication and separate report from publication.
+
+## Workflow
+
 # Firecrawl QA
 
 Use this to test a live site and return a unified QA report.

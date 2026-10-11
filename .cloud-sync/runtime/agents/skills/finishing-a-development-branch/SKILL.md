@@ -3,6 +3,13 @@ name: finishing-a-development-branch
 description: Use when implementation is complete, all tests pass, and you need to decide how to integrate the work - guides completion of development work by presenting structured options for merge, PR, or cleanup
 ---
 
+
+## Local execution contract (2026-10-10)
+
+Honor the already selected authorized completion action. Reuse still-current passing checks unless changes justify rerun. A requested PR requires actual creation plus returned URL; pushing a branch alone is incomplete. Discard requires explicit confirmation and preserve unrelated work.
+
+## Workflow
+
 # Finishing a Development Branch
 
 ## Overview

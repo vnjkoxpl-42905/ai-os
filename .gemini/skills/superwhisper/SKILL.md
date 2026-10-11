@@ -3,11 +3,16 @@ name: superwhisper
 description: "Use whenever Joshua wants anything changed in Superwhisper, his dictation app on the Windows laptop. Triggers on \"save X in my vocabulary\", \"add X to my dictionary\", \"X --> Y\", \"X should always be Y\", \"replace X with Y\", a bare mis-heard word with an arrow, \"make a mode for ...\", \"scan my transcripts\", \"what keeps getting messed up\", \"what should I add to Superwhisper\", \"restart Superwhisper\", and any mention of Superwhisper, Super Whisper, or \"the dictation\" in the same breath as a word, a spelling, or a mode. Also use it when a dictated message from Joshua arrives with an obvious mis-hearing of a known term, even if he does not ask: note it and offer the fix. Covers the whole loop: edit the vault files, think through the likely mis-hearing variants, sync into the app, restart it silently, verify the load, and scan the transcript history for the next improvements."
 ---
 
+## Gemini host boundary
+
+Use the current shared runner/CLI contract. Claude-native browser, task and hook tools named in the reference are available only when actually exposed; otherwise use the supported host route and report unavailable operations. Keep project paths relative to this registered root.
+
+
 # Superwhisper
 
 Joshua dictates almost everything he sends you. Superwhisper is the app that does it, and the
 `dev/ai-os/superwhisper/` folder is its source of truth. Your job is to keep that folder right
-and get it into the app without him having to touch anything. He only ever presses Ctrl+Space.
+and get it into the app without him having to touch anything. He uses Left Alt to toggle recording; preserve it and verify it after restart.
 
 Read `dev/ai-os/superwhisper/CLAUDE.md` first if this is a new session. It holds the rules
 that cost a whole session to learn (the Claude Desktop sandbox redirects writes, the app
@@ -112,7 +117,7 @@ python C:/Users/Joshu/dev/ai-os/superwhisper/sync.py --restart
    every mode file through the `\\localhost\C$` path (the sandbox bypass).
 3. Quits Superwhisper and relaunches it through Task Scheduler so it runs outside the
    sandbox, silently, in the background. Nothing appears on his screen; he keeps using
-   Ctrl+Space.
+   Left Alt.
 4. Reads `modeKeys` back. The app rewrites that list at launch and drops any mode it
    rejected, so this is the only proof that a change loaded. A write is not a load.
 

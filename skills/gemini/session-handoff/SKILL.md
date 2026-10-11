@@ -3,6 +3,10 @@ name: session-handoff
 description: Use when Joshua says "session handoff", "hand off", "handoff summary", "summarize before I clear", or is about to /clear mid-work (especially near the ~250k dumb-zone). Produces a chat-only handoff — decisions, shipped changes, key files, running state, verification, deferrals, open questions — so a fresh agent (Claude or Codex) continues seamlessly. Distinct from `wrapup`, which updates the wiki ledgers; this writes nothing.
 ---
 
+## Current AI OS execution contract
+
+Use the host-supported time/file tools, preserve current open state and explicit scope. Chat-only continuity remains distinct from file-writing wrapup or a broad system audit.
+
 # Session Handoff
 
 Produce a repeatable end-of-session summary so Joshua can `/clear` and start a fresh agent without losing continuity. The next agent should pick up by reading this summary alone.

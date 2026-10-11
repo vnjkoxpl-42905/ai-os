@@ -5,11 +5,15 @@ disable-model-invocation: true
 argument-hint: "What would you like to learn about?"
 ---
 
+## Current AI OS execution contract
+
+Choose a dedicated sibling learning project before creating MISSION, lessons, assets or dependencies. Do not initialize an executable lesson workspace in the Obsidian vault. Assessment quality does not require identical word counts.
+
 The user has asked you to teach them something. This is a stateful request - they intend to learn the topic over multiple sessions.
 
 ## Teaching Workspace
 
-Treat the current directory as a teaching workspace. The state of their learning is captured in this directory in several files:
+Reuse a verified dedicated learning project or choose one under `../ai-os-projects/` before writing. Workspace paths (`./lessons/` and the rest) resolve from that selected project, never the caller's vault cwd; only the `*-FORMAT.md` links resolve from this skill's folder. The state of their learning is captured in this directory in several files:
 
 - `MISSION.md`: A document capturing the _reason_ the user is interested in the topic. This should be used to ground all teaching. Use the format in [MISSION-FORMAT.md](./MISSION-FORMAT.md).
 - `./reference/*.html`: A directory of reference materials. These are the compressed learnings from the lessons - cheat sheets, reference algorithms, syntax, yoga poses, glossaries. They are the raw units of learning. They should be beautiful documents which print out well, and are designed for quick reference.
@@ -107,7 +111,7 @@ For skill acquisition, difficulty is the tool. Effortful retrieval is what build
 
 Each of these should be based on a **feedback loop**, where the user receives feedback on their performance. This feedback loop should be as tight as possible, giving feedback immediately - and ideally automatically.
 
-For quizzes, each answer should be exactly the same number of words (and characters, if possible). Don't give the user any clues about the answer through formatting.
+For quizzes, keep options comparable in wording/detail without forcing identical word/character counts that distort meaning. Preserve modality and complete conditions. Vary which position holds the correct answer across questions. Don't give the user any clues about the answer through formatting or order.
 
 ## Acquiring Wisdom
 

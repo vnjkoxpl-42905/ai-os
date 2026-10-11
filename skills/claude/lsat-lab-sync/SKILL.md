@@ -3,6 +3,10 @@ name: lsat-lab-sync
 description: Pull LSAT Lab's data in bulk and audit or sync the LSAT U LR question bank and database against it, with scripts instead of clicking through pages. Use when Joshua says "pull from LSAT Lab", "sync with LSAT Lab", "tag these questions", "check the bank against LSAT Lab", "are any answer keys wrong", "is anything misfiled", "which explanations does LSAT Lab have that we don't", "full scan", or after any import into public/data/PT*-LR.json or the lr_* tables. Covers difficulty, reasoning type, features, answer keys, question text, choice text, missing slots and explanation coverage.
 ---
 
+## Current AI OS execution contract
+
+Resolve current host scripts and output homes before action. Surface conflicting answer keys before writes, use a representative sample and guarded full reconciliation. Mac-specific legacy shortcuts are not instructions on this Windows host.
+
 # LSAT Lab sync
 
 Everything lives in `system/scripts/lsatlab-pull/` in the vault; its `README.md` has the endpoint details. Run the LSAT U steps from an LSAT U checkout on its own branch (never the main checkout another session may be using), and ship bank changes as a PR.

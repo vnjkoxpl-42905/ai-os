@@ -2762,3 +2762,22 @@ Consolidated repeated explanations, added both open possibilities without enroll
 - Created shared project transcript-intake skill in the runtime catalogs and active copies. Moved session processing responsibilities out of ingest; retained dispatch for older requests and shared recap retrieval procedure.
 - Updated recap routing, operating schema, root skill routes and parity declaration. Transcript intake resumes incomplete existing records and distinguishes failed searches from completed searches without a match.
 - No student records, source bytes, live systems, global activations, or sent messages were changed. Validation results are reported in the current chat.
+
+## [2026-10-10] ingest | This Repo Just Solved The #1 Claude + Codex Headache (Herdr), second generation and local setup refresh
+
+- Source: [source summary](sources/herdr-claude-codex-headache.md); evidence in `raw/sources/clips/herdr-claude-codex-headache/`. Archived clip SHA-256 `44d232646d6de038bfeecc4e2496f01b60ce16b305b87b377fcfb7b8a8f47d2e`, verified against the inbox original.
+- This video was already ingested on 2026-09-22 (entry above), which wrote no source summary and archived no clip. This entry adds the summary and the archive from a newer caption generation; the reference page was not re-digested.
+- Changed: new source summary; `references/claude-plus-codex.md` installed-setup table corrected and linked to the summary; generated index refreshed.
+- Local setup, checked 2026-10-10: Herdr was `0.9.1` and not on the user PATH, and no `codex` command resolved (the shared Node tools directory in the 2026-09-22 notes no longer exists). Ran `herdr update` to `0.9.3` (latest stable, published 2026-09-29; its installer put the release directory on the user PATH). Installed Codex CLI `0.162.1` with `npm install -g @openai/codex` into `AppData\Roaming
+pm`; `codex login status` reports ChatGPT sign-in. Claude Code is `2.1.295`. `herdr integration status` reports Claude `v10` and Codex `v8` current. Refreshed the global Herdr skill in `~/.claude/skills/herdr` and `~/.agents/skills/herdr` from the official `herdrdev/herdr` copy (one line of added guidance; previous copy kept in the session scratchpad).
+- Also corrected the `codex-model-roles` memory, which still pointed at the removed `dev/tools/node` path.
+- Unresolved: the 2026-09-22 log entry cites SHA-256 `24DE185F…` but `raw/This Repo Just Solved The 1 Claude + Codex Headache.md` now hashes to `0d453f18…` and was modified after that entry; the original ingested bytes cannot be recovered. The inbox clip `Claude Now Does Video ... JavaScript 1.md` changed after its 2026-10-10 archive (inbox hash `f07c45bb…`, archive `8772757f…`); the archive is intact and was not touched.
+- Open: no interactive Herdr launch with Claude and Codex in panes was run here; whether sol/luna models run on Codex `0.162.1` was not tested; whether panes started from a Microsoft Store PowerShell see `AppData\Roaming
+pm` was not checked.
+
+
+## [2026-10-10] system | Verify paired clip-to-knowledge pathway
+
+- Corrected public-video routing, pending selection, bounded index reads, usable-knowledge completion check and lint limits in matching Claude/Codex skills. Existing user-level entrypoints now dispatch into the current vault. Previous bytes retained; concurrent global-prefix additions preserved.
+- [Outcome and native Claude receipt](../research/second-brain-pathway-2026-10-10/20261011T011434Z/outcome.md): project validator passes; native Claude activated ingest and retrieved saved knowledge; archive hashes pass. Structural lint retains two old history links.
+- Updated [architecture reference](../references/second-brain-levels.md). No source bytes or student records changed. Browser template, new-source acquisition and cloud publication not verified.

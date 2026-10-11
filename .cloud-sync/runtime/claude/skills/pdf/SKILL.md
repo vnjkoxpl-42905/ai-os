@@ -4,6 +4,13 @@ description: Use this skill whenever the user wants to do anything with PDF file
 license: Proprietary. LICENSE.txt has complete terms
 ---
 
+
+## Local execution contract (2026-10-10)
+
+Preserve PDF extract/OCR/forms workflow. Use task-owned copies for edits, resolve helper paths from installed package, and verify page/text preservation; keep source untouched and report OCR gaps.
+
+## Workflow
+
 # PDF Processing Guide
 
 ## Overview

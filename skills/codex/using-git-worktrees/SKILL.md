@@ -80,10 +80,10 @@ Follow this priority order. Explicit user preference always beats observed files
 **MUST verify directory is ignored before creating worktree:**
 
 ```bash
-git check-ignore -q .worktrees 2>/dev/null || git check-ignore -q worktrees 2>/dev/null
+git check-ignore -q -- "$LOCATION"
 ```
 
-**If NOT ignored:** Add to .gitignore, commit the change, then proceed.
+**If NOT ignored:** Check the selected location only. Add its scoped ignore rule while preserving existing entries when authorized, then recheck that exact location. Do not auto-commit `.gitignore`; commit only within the task's Git authorization. Prefer an allowed outside-repo location when no ignore change is appropriate.
 
 **Why critical:** Prevents accidentally committing worktree contents to repository.
 
@@ -151,7 +151,7 @@ Ready to implement <feature-name>
 | `worktrees/` exists | Use it (verify ignored) |
 | Both exist | Use `.worktrees/` |
 | Neither exists | Check instruction file, then default `.worktrees/` |
-| Directory not ignored | Add to .gitignore + commit |
+| Directory not ignored | Scoped ignore change + exact-location recheck; no automatic commit |
 | Permission error on create | Sandbox fallback, work in place |
 | Tests fail during baseline | Report failures + ask |
 | No package.json/Cargo.toml | Skip dependency install |

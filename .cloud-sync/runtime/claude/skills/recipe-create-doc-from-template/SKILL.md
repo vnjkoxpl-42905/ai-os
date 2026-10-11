@@ -14,6 +14,13 @@ metadata:
         - gws-docs
 ---
 
+
+## Local execution contract (2026-10-10)
+
+Use returned copy document ID and gws docs +write --document, not --document. Preserve template source and existing formatting; apply actual replacements using supported batchUpdate where appropriate and read back.
+
+## Workflow
+
 # Create a Google Doc from a Template
 
 > **PREREQUISITE:** Load the following skills to execute this recipe: `gws-drive`, `gws-docs`
@@ -22,11 +29,16 @@ Copy a Google Docs template, fill in content, and share with collaborators.
 
 ## Steps
 
-1. Copy the template: `gws drive files copy --params '{"fileId": "TEMPLATE_DOC_ID"}' --json '{"name": "Project Brief - Q2 Launch"}'`
-2. Get the new doc ID from the response
-3. Add content: `gws docs +write --document-id NEW_DOC_ID --text '## Project: Q2 Launch
+1. Resolve actual target IDs, requested data, date interval/timezone and existing state. Illustrative names, dates and recipients are not user data.
+2. Use returned copy document ID and gws docs +write --document, not --document-id. Preserve template source and existing formatting; apply actual replacements using supported batchUpdate where appropriate and read back.
+3. Discover the required method using installed `gws <service> --help` and `gws schema <service>.<resource>.<method>`; build parameters from real returned IDs and requested data. For retries reconcile existing output identity first.
+4. Execute only the requested authorized operation. Draft email unless send is authorized. Inspect resulting resource/file and report any missing sections or failed items.
 
-### Objective
-Launch the new feature by end of Q2.'`
-4. Share with team: `gws drive permissions create --params '{"fileId": "NEW_DOC_ID"}' --json '{"role": "writer", "type": "user", "emailAddress": "team@company.com"}'`
+## Relevant endpoint references
 
+- `gws docs` (inspect help/schema before invocation)
+- `gws drive files copy --params` (inspect help/schema before invocation)
+- `gws drive permissions create --params` (inspect help/schema before invocation)
+
+
+Write helper: `gws docs +write --document ACTUAL_DOCUMENT_ID --text ACTUAL_TEXT`. Create titles through `gws docs documents create`, not +write --title/--body.

@@ -3,6 +3,13 @@ name: booking-link
 description: Use whenever Joshua wants a one-off booking link for LSAT U — "make me a link for Dakota at 7:15 tomorrow", "send her a link to book tonight", "one-off link, $60", "short notice link", "I need a link she can schedule herself with". Mints a single-use URL that sells exactly one session at a price you set, optionally pinned to one exact time, and closes after she books. Also covers listing and revoking existing links.
 ---
 
+
+## Local execution contract (2026-10-10)
+
+Resolve current project booking-link and sibling ai-os-projects/lsatu root. Preserve actual recipient/event identity and existing draft on retries. Do not use obsolete projects/lsatu inside vault.
+
+## Workflow
+
 # One-off booking links
 
 A URL Joshua sends to one person. She opens it, books one session, pays, and
@@ -30,7 +37,7 @@ Everything else is optional. Ask for nothing you were not given.
 
 ## Running it
 
-From `~/ai-os/projects/lsatu`:
+From `<current-ai-os-root>/../ai-os-projects/lsatu`:
 
 ```bash
 npm run booking:link -- --for "Dakota" --price 45 --at "2026-09-10 19:15"

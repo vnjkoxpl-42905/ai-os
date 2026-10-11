@@ -1,11 +1,11 @@
 ---
 name: codex-model-roles
-description: "Which Codex model does what — gpt-6-astra designs, specs and reviews; gpt-6-luna high builds; a 400 on sol or luna means a stale CLI, use dev/tools/node/codex."
+description: "Which Codex model does what — gpt-6-astra designs, specs and reviews; gpt-6-luna high builds; a 400 on sol or luna means a stale CLI; check codex --version (0.162.1 in AppData Roaming npm as of 2026-10-10)."
 metadata:
   node_type: memory
   type: feedback
   originSessionId: fe553725-d881-4068-8809-1fb7b342eee9
-  modified: 2026-09-23T17:32:39.178Z
+  modified: 2026-10-11T01:19:09.273Z
 ---
 
 Codex model by role (Joshua, 2026-09-23):
@@ -13,7 +13,7 @@ Codex model by role (Joshua, 2026-09-23):
 - **Building code** (`/codex-build`, any Codex implementation run): `gpt-6-luna` at `high` reasoning effort. Never astra.
 - The config default (`gpt-6-luna`, low) is neither; always pass `-m` and `-c model_reasoning_effort=` explicitly and echo them before launch.
 
-- **Fixed 2026-09-23:** a 400 "not supported when using Codex with a ChatGPT account" on sol/luna meant an outdated CLI, not the login. The stale 0.153.4 in `AppData\Roaming\npm` sits first on the bash PATH; the current CLI is `C:\Users\Joshu\dev\tools\node\codex` (0.156.1), where sol and luna both run on the ChatGPT login. Call it by full path. Joshua does not want an API-key login and picked `gpt-6-luna` high for builds (never luna low).
+- **Fixed 2026-09-23, path changed 2026-10-10:** a 400 "not supported when using Codex with a ChatGPT account" on sol/luna meant an outdated CLI, not the login. The fix then was 0.156.1 in `C:\Users\Joshu\dev\tools\node\codex`, but that directory no longer exists. On 2026-10-10 Codex CLI 0.162.1 was installed from npm into `AppData\Roaming\npm` and is the only `codex` on PATH (signed in with ChatGPT). Whether sol and luna run on 0.162.1 was not tested; if a 400 returns, check `codex --version` first. Joshua does not want an API-key login and picked `gpt-6-luna` high for builds (never luna low).
 
 **Why:** building from a frozen spec does not need the strongest model; astra's value is in thinking through design and specs. He objected when astra built Classroom Home phase 1 (PR #133).
 

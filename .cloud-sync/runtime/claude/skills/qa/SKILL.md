@@ -1,11 +1,18 @@
 ---
 name: qa
-description: Interactive QA session where user reports bugs or issues conversationally, and the agent files GitHub issues. Explores the codebase in the background for context and domain language. Use when user wants to report bugs, do QA, file issues conversationally, or mentions "QA session".
+description: "Inspect and reproduce reported bugs, then produce a findings report. Publish GitHub issues only when explicitly authorized."
 ---
+
+
+## Local execution contract (2026-10-10)
+
+Default to a local findings report with reproduction evidence. File GitHub issues only when issue publication is explicitly authorized. Preserve existing issue deduplication and exact target repository; QA alone does not authorize publication.
+
+## Workflow
 
 # QA Session
 
-Run an interactive QA session. The user describes problems they're encountering. You clarify, explore the codebase for context, and file GitHub issues that are durable, user-focused, and use the project's domain language.
+Run an interactive QA session. The user describes problems they're encountering. You clarify, explore the codebase for context, and draft issue reports that are durable, user-focused, and use the project's domain language.
 
 ## For each issue the user raises
 
@@ -44,9 +51,9 @@ Keep as a single issue when:
 - It's one behavior that's wrong in one place
 - The symptoms are all caused by the same root behavior
 
-### 4. File the GitHub issue(s)
+### 4. Draft the report, or file explicitly authorized issues
 
-Create issues with `gh issue create`. Do NOT ask the user to review first — just file and share URLs.
+Draft issue reports locally by default. When the user explicitly requests issue publication, use `gh issue create` and report actual URLs. Existing authorization needs no repeated confirmation.
 
 Issues must be **durable** — they should still make sense after major refactors. Write from the user's perspective.
 

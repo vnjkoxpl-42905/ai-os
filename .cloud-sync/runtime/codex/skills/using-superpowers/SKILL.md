@@ -1,16 +1,23 @@
 ---
 name: using-superpowers
-description: Use when starting any conversation - establishes how to find and use skills, requiring skill invocation before ANY response including clarifying questions
+description: "Use only when the user explicitly selects using-superpowers or its specific documented preset/reference. Does not trigger on generic current-vault, frontend, AI or everyday workflow requests."
 ---
+
+
+## Local execution contract (2026-10-10)
+
+Use only when explicitly requested or a specific unresolved workflow requires this reference. Do not load on every conversation or a one-percent relevance guess. System/developer instructions outrank skills; user scope and established authorization govern. Discover supported host tools instead of assuming Skill exists.
+
+## Workflow
 
 <SUBAGENT-STOP>
 If you were dispatched as a subagent to execute a specific task, ignore this skill.
 </SUBAGENT-STOP>
 
 <EXTREMELY-IMPORTANT>
-If you think there is even a 1% chance a skill might apply to what you are doing, you ABSOLUTELY MUST invoke the skill.
+Consult a skill when explicitly selected or substantively required by the task. Do not invoke skills for speculative one-percent relevance.
 
-IF A SKILL APPLIES TO YOUR TASK, YOU DO NOT HAVE A CHOICE. YOU MUST USE IT.
+Use applicable skill guidance through the supported host route while honoring higher-priority instructions and task scope.
 
 This is not negotiable. You cannot rationalize your way out of this.
 </EXTREMELY-IMPORTANT>

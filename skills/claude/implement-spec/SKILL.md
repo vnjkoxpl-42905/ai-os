@@ -4,6 +4,10 @@ description: "Implement the result of /to-spec and /to-tickets in code."
 disable-model-invocation: true
 ---
 
+## Current AI OS execution contract
+
+Prefer the native managed worktree facility when available; reuse a suitable active worktree. Do not create an unsolicited extra checkout. Preserve task graph, integration checks and user work.
+
 You have been provided a spec. This spec should have tickets associated with it, describing how to implement the spec.
 
 The issue tracker should have been provided to you. If not, tell the user to run `/setup-matt-pocock-skills`.

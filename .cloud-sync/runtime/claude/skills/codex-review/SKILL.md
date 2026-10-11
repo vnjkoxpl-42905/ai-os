@@ -3,6 +3,13 @@ name: codex-review
 description: "Claude-host entry point: Codex handles independent review or scoped delegation. Have Codex independently review an existing implementation plan while Claude coordinates a bounded revision loop. For automatic reviewer selection from either host, use claudex-loop with mode=review."
 ---
 
+
+## Local execution contract (2026-10-10)
+
+Respect explicit Codex reviewer selection; use current project codex-review and shared runner. Review only. Same-provider review is ordinary review, not cross-provider approval; never invent completed verdicts.
+
+## Workflow
+
 ## Installed direction: Claude to Codex
 
 This copy is for the Claude host. The current Claude conversation coordinates. Use `host=claude` in the shared runner. The default independent reviewer and cross-provider handoff target is Codex. Preserve explicit user provider/model choices and authorized scope. For the loop, the host builds by default and the other provider inspects; the build compatibility entry point separately selects the other provider as builder.

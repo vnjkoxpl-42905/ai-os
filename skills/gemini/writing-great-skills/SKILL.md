@@ -1,8 +1,12 @@
 ---
 name: writing-great-skills
-description: Reference for writing and editing skills well — the vocabulary and principles that make a skill predictable.
+description: "Explicit request for this skill-writing reference. General skill creation uses skill-creator."
 disable-model-invocation: true
 ---
+
+## Current AI OS execution contract
+
+Explicit skill-writing reference, not an automatic competing creator. Use the primary skill creator for implementation and writing-for-agents for shared vocabulary; retain specialized mechanics.
 
 A skill exists to wrangle determinism out of a stochastic system. **Predictability** — the agent taking the same _process_ every run, not producing the same output — is the root virtue; every lever below serves it.
 

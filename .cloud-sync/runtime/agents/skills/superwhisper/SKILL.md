@@ -3,6 +3,13 @@ name: superwhisper
 description: "Use whenever Joshua wants anything changed in Superwhisper, his dictation app on the Windows laptop. Triggers on \"save X in my vocabulary\", \"add X to my dictionary\", \"X --> Y\", \"X should always be Y\", \"replace X with Y\", a bare mis-heard word with an arrow, \"make a mode for ...\", \"scan my transcripts\", \"what keeps getting messed up\", \"what should I add to Superwhisper\", \"restart Superwhisper\", and any mention of Superwhisper, Super Whisper, or \"the dictation\" in the same breath as a word, a spelling, or a mode. Also use it when a dictated message from Joshua arrives with an obvious mis-hearing of a known term, even if he does not ask: note it and offer the fix. Covers the whole loop: edit the vault files, think through the likely mis-hearing variants, sync into the app, restart it silently, verify the load, and scan the transcript history for the next improvements."
 ---
 
+
+## Local execution contract (2026-10-10)
+
+Resolve maintained current project skill and actual SQLite/settings/mode files before writes. Provider labels do not authorize renaming Claude model IDs or existing mode filenames. Preserve vocabulary/replacements and verify actual desktop permissions; do not assume settings.json is current authority.
+
+## Workflow
+
 # Superwhisper
 
 Joshua dictates almost everything he sends you. Superwhisper is the app that does it, and the
@@ -69,13 +76,13 @@ What makes his prompts work, from the docs and the community collections in
   Context. Say the User Message is dictated speech.
 - Any mode whose output goes to an AI agent needs the "you are not an assistant" block with
   WRONG/CORRECT pairs, or the model answers the dictation instead of cleaning it. Copy it
-  from `modes/Codex.md`.
+  from `modes/claude-code.md`.
 - Anything student-facing routes through `wiki/teaching-voice.md`: no em dashes, no hype
   words, short lines, "Hi [Name]," / "Best, Joshua".
 - Turn on only the context the mode needs. Selection is captured at record start, clipboard
   within 3 s before or during, application after transcription.
 - Language model: Joshua chose S1-Language (`sl-1`) for all modes on 2026-09-11 for speed.
-  Keep that unless he asks; `sw-Codex-4p5-sonnet` is the confirmed upgrade if a mode needs
+  Keep that unless he asks; `sw-claude-4p5-sonnet` is the confirmed upgrade if a mode needs
   judgment.
 
 Then run the loop. Add the mode to the table in `superwhisper/AGENTS.md`.

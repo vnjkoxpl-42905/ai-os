@@ -3,6 +3,13 @@ name: level-up
 description: Use when someone asks to level up their AIOS, close an audit gap, find what to automate next, or improve one workflow. Walks the 3Ms from choosing the constraint to shipping one useful artifact or verified repair.
 ---
 
+
+## Local execution contract (2026-10-10)
+
+Use actual activation/catalog paths (.agents/.claude, skills/codex/claude), not .Codex. Applications/dependencies stay sibling ai-os-projects. Reuse known mindset answers and authorized task; dates/KPI exits are planning suggestions. Eliminate/no-artifact outcomes are valid; habit claims are attributed hypotheses.
+
+## Workflow
+
 > *Adapted from The Three Ms of AI™. © 2026 Nate Herk. All rights reserved.*
 > *The Three Ms of AI™ is a trademark of Nate Herk.*
 

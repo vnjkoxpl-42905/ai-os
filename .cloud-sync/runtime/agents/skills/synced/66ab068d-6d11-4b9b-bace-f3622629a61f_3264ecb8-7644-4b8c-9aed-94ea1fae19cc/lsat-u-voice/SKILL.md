@@ -3,6 +3,13 @@ name: lsat-u-voice
 description: Write LSAT U curriculum content in Joshua's signature voice, a unified blend of Feynman's earned clarity, Sagan's stakes-naming, Bret Victor's grounded abstraction, Ciechanowski's tour-guide demonstration, and Tim Urban's casual punch. Use whenever creating student-facing LSAT teaching material, including chapter content, conceptual explanations, drill walkthroughs, question-type reference cards, motivational openers and closers, FAQ entries, lesson notes, or any text where an LSAT student is the reader. Trigger this skill on requests like "write the chapter on X," "explain Y for students," "draft this lesson," "reference card for Z," "what should this lesson sound like," or any rewrite of curriculum text. Trigger this skill whenever Joshua mentions curriculum content, lesson writing, student-facing LSAT material, or asks for content in his voice, even when he doesn't explicitly say "use the voice skill."
 ---
 
+
+## Local execution contract (2026-10-10)
+
+For AI OS student/prospect copy route to project-owned lsat-u-voice and current lsat-teaching-voice-standard.md. Older Tim Urban/vendor blends are optional references and cannot replace Joshua-selected teaching voice.
+
+## Workflow
+
 # LSAT U Voice
 
 A skill for writing student-facing LSAT teaching content in Joshua's signature voice. Read this whole file before drafting. Then read `references/worked_examples.md` so you can hear the voice before you produce it.

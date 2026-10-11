@@ -3,6 +3,13 @@ name: lsat-u-architecture
 description: Architectural source of truth and entry point for LSAT U platform rules. Use this skill whenever building, modifying, speccing, or referencing LSAT U platform features. Trigger when discussing component picks, routing, state models, design tokens, drill mechanics, Foyer navigation, Supabase realtime channels, identity/admin patterns, the always-violate rules, or any decision about how LSAT U is built. Also trigger when writing Claude Code build briefs for LSAT U, when comparing topic modules to the Causation Station architectural template, when explaining LSAT U component patterns, or when reviewing code against platform rules. This skill is the indexed entry point. The canonical full sources live in the vault; this skill gives you the always-violate rules at a glance and routes you to the deeper references. Trigger automatically when Joshua mentions LSAT U code, architecture, components, drill behavior, Foyer, Supabase, build briefs, or topic module integration, even without explicit invocation.
 ---
 
+
+## Local execution contract (2026-10-10)
+
+Treat hardcoded backend IDs as historical references until matched against current sibling app instructions/live authority. Resolve sibling ai-os-projects/lsatu root; do not assert stale ID is current.
+
+## Workflow
+
 # LSAT U Architecture
 
 This skill is the entry point for LSAT U platform architecture. The canonical full content lives in the Obsidian vault and Joshua's memory. This skill gives you the always-violate rules at a glance, the quick decision rules, and explicit pointers to the deeper sources.
@@ -43,7 +50,7 @@ These are the daily-use rules. Every contributor follows them without exception.
 
 For anything beyond the daily-use rules above, route to the canonical content. Authority order when sources conflict, from highest to lowest:
 
-1. **Live repo `~/ai-os/projects/lsatu/`**. Code is ground truth when documentation drifts.
+1. **Live repo `<current-ai-os-root>/../ai-os-projects/lsatu/`**. Code is ground truth when documentation drifts.
 2. **April 2026 audit bundle `~/ai-os/archive/wiki-pre-rebuild-2026-07-16/domains/lsat-u/sources/april-2026-audit.md/`**. 14 files documenting verified bugs (F-IDs), the schema drift chain, audit corrections, persistence layer status. Entry points: `PLAYBOOK.md`, `master-reference.md`, `00-index.md`.
 3. **Vault `~/ai-os/CLAUDE.md`**. Architecture rules section plus curriculum/pedagogy rules.
 4. **Joshua's memory, edit #4** ("LSAT U architecture rules, never violate"). Short reminder list.

@@ -4,6 +4,10 @@ description: Use this skill whenever the user wants to do anything with PDF file
 license: Proprietary. LICENSE.txt has complete terms
 ---
 
+## Current AI OS execution contract
+
+Preserve source PDFs and write edited outputs to a separate task-owned file. Verify extraction/OCR or form/render output appropriate to the requested change; do not silently overwrite originals.
+
 # PDF Processing Guide
 
 ## Overview

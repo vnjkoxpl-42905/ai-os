@@ -3,6 +3,13 @@ name: lsat-lab-set-builder
 description: Build LSAT Lab practice sets from a CSV of questions by splitting the list into evenly sized sets and selecting the exact questions in the LSAT Lab web app via Codex in Chrome. Use when Joshua wants to turn a CSV/list of LSAT questions (columns like practiceTest, section, question) into one or more saved practice sets on app.lsatlab.com, "make a set", "build set 2", "split my missing questions into sets", or "add these questions to LSAT Lab". Handles the full browser flow: Create Practice Set, LR/RC, test-range filter, per-question checkbox matching, verification, naming, and Submit.
 ---
 
+
+## Local execution contract (2026-10-10)
+
+Use actual supported browser/DOM rather than fixed bridge names/table indices. Respect authorized batch scope; reconcile extras/missing exact question IDs and verify saved set identity/count after Submit. A success banner alone is insufficient.
+
+## Workflow
+
 # LSAT Lab Set Builder
 
 Turn a CSV of LSAT questions into named practice sets inside LSAT Lab (app.lsatlab.com), one set at a time, by selecting the exact questions and clicking Create. The hard part is reliably ticking the right ~100 individual questions out of a 600+ question bank, so this skill drives selection through the page's DataTable rather than by eye.

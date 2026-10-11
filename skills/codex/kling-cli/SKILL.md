@@ -15,6 +15,10 @@ homepage_cn: https://klingai.com
 homepage_global: https://kling.ai
 ---
 
+## Current AI OS execution contract
+
+Use only for an explicit Kling/media-generation task. Do not submit unrequested feedback. Verify current parameter and credit/price contracts before any billable call, with the user's bounded authorization.
+
 # 可灵 AI 官方图片/视频生成、Element 主体与动作控制
 
 ## 语言与回复风格

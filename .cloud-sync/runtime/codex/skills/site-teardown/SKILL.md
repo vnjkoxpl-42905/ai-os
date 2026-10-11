@@ -3,6 +3,13 @@ name: site-teardown
 description: "Reverse engineer any website into a complete build blueprint. Analyzes the HTML structure, fetches and extracts all animation/interaction code from the site's JavaScript, and pulls the complete design system from the CSS. Outputs a structured teardown document with tech stack, every visual effect and how it's implemented, design tokens, assets needed, and a section-by-section build plan. Use this skill whenever the user wants to analyze how a website was built, reverse engineer a site, clone or recreate a website, understand what tech stack or animations a site uses, do a site teardown, deconstruct a page, figure out how an effect works on a website, or says things like 'steal this website', 'break down this site', 'how did they build this', 'website blueprint', 'analyze this site for me', or gives you a URL and asks you to figure out how it works. Also trigger when the user pastes raw HTML source code and asks what's going on or how to recreate it."
 ---
 
+
+## Local execution contract (2026-10-10)
+
+Report exactly fetched pages, viewport states and interactions. Limited WebFetch is not exhaustive site or live interaction acceptance. Preserve useful analysis while identifying untested sections.
+
+## Workflow
+
 # Site Teardown
 
 Reverse engineer any website into a complete build blueprint — tech stack, every visual effect with implementation details, full design system, and a section-by-section build plan. The output should be thorough enough that someone could hand it to a fresh agent session and build a clone without ever visiting the original site.

@@ -3,6 +3,13 @@ name: hatch-pet
 description: Create, repair, validate, visually QA, and package Codex-compatible v2 animated pets from character art, generated images, company or prospect brand cues, or visual references. Use for any new Codex pet, custom mascot, non-pixel pet style, brand-inspired pet, existing-pet repair, or 8x11 spritesheet workflow requiring all 9 standard animation rows, 16 look directions, deterministic assembly, QA artifacts, and spriteVersionNumber 2 packaging.
 ---
 
+
+## Local execution contract (2026-10-10)
+
+Preserve generated source, manifest, frames and prompt evidence. Source/intermediate deletion commands below require explicit deletion confirmation and are otherwise skipped. Verify Bash/jq prerequisites on actual host. After repairing a row rerun row QA, then whole-sheet QA before marking complete or packaging.
+
+## Workflow
+
 # Hatch Pet
 
 ## Overview
@@ -49,7 +56,7 @@ The built-in `$imagegen` path stores generated PNG bytes in the rollout that inv
 - Use one lightweight generation worker per visual job. Do not batch multiple base/row jobs into the same worker.
 - Workers must return only `selected_source=...` and `qa_note=...`; they must not include Markdown image previews, base64, or extra visual attachments in their final response.
 - The parent must not open every generated PNG visually. Use worker QA for each job and inspect only the final contact sheet.
-- After copying the selected generated output into `decoded/`, remove the selected original from `${CODEX_HOME:-$HOME/.codex}/generated_images` when it lives there, then remove its now-empty generation directory if possible.
+- After copying the selected generated output into `decoded/`, preserve the selected original unless deletion is explicitly authorized; only then remove it from `${CODEX_HOME:-$HOME/.codex}/generated_images` when it lives there, then remove its now-empty generation directory if possible.
 - For storage-sensitive full runs, ask the user whether to use the `$imagegen` CLI fallback when available. That path requires local API credentials and explicit user confirmation, but it can avoid built-in image payloads being embedded in rollout events.
 
 ## Brand Discovery
@@ -336,13 +343,13 @@ mv "$TMP_MANIFEST" "$RUN_DIR/imagegen-jobs.json"
 
 After `decoded/look-anchors-approved.png` exists and all four cardinals have passed semantic review, mark `look-cardinals` complete. Row 9 then becomes ready immediately.
 
-If the copied source is under `${CODEX_HOME:-$HOME/.codex}/generated_images`, delete the original generated file after the decoded copy exists:
+If the copied source is under `${CODEX_HOME:-$HOME/.codex}/generated_images`, preserve the original generated file. Only after explicit deletion authorization and verified decoded copy may the following cleanup example run:
 
 ```bash
 GENERATED_ROOT="${CODEX_HOME:-$HOME/.codex}/generated_images"
 case "$SOURCE" in
   "$GENERATED_ROOT"/*)
-    rm -f "$SOURCE"
+# Only after explicit deletion authorization: rm -f "$SOURCE"
     rmdir "$(dirname "$SOURCE")" 2>/dev/null || true
     ;;
 esac
@@ -668,7 +675,7 @@ Write `qa/run-summary.json` after packaging:
 jq -n --arg run_dir "$RUN_DIR" --arg spritesheet "$RUN_DIR/final/spritesheet-extended.webp" --arg validation "$RUN_DIR/final/validation-extended.json" --arg chroma_despill "$RUN_DIR/qa/chroma-despill-extended.json" --arg contact_sheet "$RUN_DIR/qa/contact-sheet-extended.png" --arg direction_sheet "$RUN_DIR/qa/look-directions.png" --arg direction_semantics "$RUN_DIR/qa/direction-semantics.json" --arg blind_direction_validation "$RUN_DIR/qa/direction-blind-validation.json" --arg blind_review_resolution "$RUN_DIR/qa/blind-review-resolution.json" --arg continuity "$RUN_DIR/qa/look-continuity.json" --arg review "$RUN_DIR/qa/review.json" --arg package "$PET_DIR" '{ok: true, spriteVersionNumber: 2, run_dir: $run_dir, spritesheet: $spritesheet, validation: $validation, chroma_despill: $chroma_despill, contact_sheet: $contact_sheet, direction_sheet: $direction_sheet, direction_semantics: $direction_semantics, blind_direction_validation: $blind_direction_validation, blind_review_resolution: $blind_review_resolution, continuity: $continuity, review: $review, package: $package}' > "$RUN_DIR/qa/run-summary.json"
 ```
 
-After all QA and packaging succeed, keep `pet_request.json`, `final/spritesheet-extended.webp`, `final/validation-extended.json`, `qa/chroma-despill-extended.json`, `qa/contact-sheet-extended.png`, `qa/look-directions.png`, `qa/direction-semantics.json`, `qa/direction-blind-pairs.png`, `qa/direction-blind-answer-key.json`, `qa/direction-blind-verdicts.json`, `qa/direction-blind-validation.json`, `qa/blind-review-resolution.json` when an override was used, `qa/look-continuity.json`, `qa/previews/`, `qa/review.json`, and `qa/run-summary.json`. Remove prompts, layout guides, generated row strips, extracted frames, PNG intermediates, the 8x9 intermediate atlas, and the imagegen job manifest unless the user wants debug artifacts.
+After all QA and packaging succeed, keep `pet_request.json`, `final/spritesheet-extended.webp`, `final/validation-extended.json`, `qa/chroma-despill-extended.json`, `qa/contact-sheet-extended.png`, `qa/look-directions.png`, `qa/direction-semantics.json`, `qa/direction-blind-pairs.png`, `qa/direction-blind-answer-key.json`, `qa/direction-blind-verdicts.json`, `qa/direction-blind-validation.json`, `qa/blind-review-resolution.json` when an override was used, `qa/look-continuity.json`, `qa/previews/`, `qa/review.json`, and `qa/run-summary.json`. Preserve prompts, layout guides, generated row strips, extracted frames, PNG intermediates, the 8x9 intermediate atlas and the imagegen job manifest. Remove only exact task-owned paths after explicit deletion authorization.
 
 ## Lightweight Visual Workers
 
@@ -858,7 +865,7 @@ repair_notes=<short row-specific notes, or none>
 
 ## Repair Workflow
 
-If frame inspection or final visual QA fails, read `qa/review.json`, regenerate the smallest failing row, copy the replacement row into the same decoded output path, and keep that job marked complete with the new `source_path` and `completed_at`. Repair the failed row, not the whole sheet.
+If frame inspection or final visual QA fails, read `qa/review.json`, regenerate the smallest failing row, copy the replacement row into the same decoded output path, and keep that job marked complete only after repaired-row QA and whole-sheet QA pass with the new `source_path` and `completed_at`. Repair the failed row, not the whole sheet.
 
 ## Rules
 
@@ -878,7 +885,7 @@ If frame inspection or final visual QA fails, read `qa/review.json`, regenerate 
 - If one look direction fails, strengthen the containing row's direction instructions and resynthesize the complete row. Do not patch the final cell directly, even when deterministic assembly supports individual-cell input.
 - Deterministically register each coherent look row, then run final-cell edge diagnostics and explicit labeled semantics immediately after generation, before expensive final atlas assembly. Run blind horizontal-and-vertical axis QA as soon as both coherent rows exist.
 - Never substitute locally drawn, tiled, transformed, or code-generated row strips for missing `$imagegen` outputs.
-- Only mark a visual job complete after its selected output has been copied into the decoded output path.
+- Only mark a visual job complete after its selected output is copied into decoded and its required deterministic/visual QA passes; repairs must rerun row and whole-sheet QA.
 - Never mark a failed coherent row, diagnostic iteration, or one-off repair cell as packaging eligible.
 - Do not rely on generated images for exact atlas geometry; use this skill's deterministic image scripts.
 - Use the chroma key stored in `pet_request.json`; do not force a fixed green screen.

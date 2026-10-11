@@ -11,11 +11,10 @@ The bootcamp name/slug (e.g. "Abstract", "Flaw & Famous Flaws", "Causation Stati
 
 ## Anchor documents (read these first, in order)
 
-1. `~/ai-os/archive/wiki-pre-rebuild-2026-07-16/domains/lsat-u/synthesis/bootcamp-quality-bar.md` — the shared bar every bootcamp finishes to.
-2. `~/ai-os/archive/wiki-pre-rebuild-2026-07-16/domains/lsat-u/synthesis/intro-to-lr-product.md` — the flagship's product spec (what "done" looks like).
-3. `~/ai-os/archive/wiki-pre-rebuild-2026-07-16/domains/lsat-u/synthesis/intro-to-lr-design.md` — the flagship's design system (colors, type, role tokens).
-4. `~/ai-os/wiki/entities/intro-to-lr-bootcamp.md` if it exists, for entity-level facts.
-5. Whatever entity page exists for the target bootcamp under `wiki/entities/` — read it if present; if it doesn't exist yet, say so, that itself is a gap.
+1. Resolve the current repository root from `AGENTS.md`, then consult `wiki/index.md` and the owning application's instructions for the current quality bar, Intro to LR product spec and design system. Search by subject/name and inspect candidate contents; do not assume an old archived absolute path is authoritative.
+2. Record each verified anchor path, revision/date and its benchmark role. Compare current source/UI where documentation is stale.
+3. The legacy filenames `bootcamp-quality-bar.md`, `intro-to-lr-product.md` and `intro-to-lr-design.md` were absent on 2026-10-10. If an authoritative replacement cannot be found, report that exact missing benchmark and limit the audit to observed differences. Do not fabricate replacements or a full parity verdict.
+4. Read the current Intro to LR and target bootcamp entity pages if present; missing pages are explicit documentation gaps.
 
 ## Codebase pass
 
@@ -32,7 +31,7 @@ Joshua's preferred format (per past sessions):
 1. Feature parity: <what Intro to LR has that this bootcamp is missing>
 2. Visual parity: <design-system deviations from intro-to-lr-design.md — colors, type, spacing, tokens>
 3. Content/pedagogy parity: <coaching tone, teach-first-calibrate-after gaps vs teaching-voice.md>
-4. Data/quality-bar gaps: <fake data, dead buttons, error handling — anything bootcamp-quality-bar.md flags>
+4. Data/quality-bar gaps: <fake data, dead buttons, error handling — anything the verified current quality bar flags>
 5. Verdict: <shipped-quality / in-progress / needs-work, one line, plus the single highest-leverage next fix>
 ```
 

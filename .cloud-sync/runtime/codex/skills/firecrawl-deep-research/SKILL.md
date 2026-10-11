@@ -28,6 +28,13 @@ inputs:
     required: true
 ---
 
+
+## Local execution contract (2026-10-10)
+
+Use user-specified depth/time budget or a proportionate stated default when scope is clear. Ask only when an unresolved choice affects the result. Retain formal report citations and paper/web boundaries; no compulsory runtime question.
+
+## Workflow
+
 # Firecrawl Deep Research
 
 Use this only for report-scale research: a rigorous, cited synthesis the user

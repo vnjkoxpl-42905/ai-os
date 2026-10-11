@@ -1,9 +1,14 @@
 ---
 name: example-command
-description: An example user-invoked skill that demonstrates frontmatter options and the skills/<name>/SKILL.md layout
+description: "Explicit request to inspect this legacy command-format example. Reference only; not general skill creation."
 argument-hint: <required-arg> [optional-arg]
 allowed-tools: [Read, Glob, Grep, Bash]
+disable-model-invocation: true
 ---
+
+## Current AI OS execution contract
+
+Explicit reference example only. Do not auto-select for real creation tasks; use the primary skill creator. The legacy command equivalence below describes a third-party host and is not the AI OS activation model.
 
 # Example Command (Skill Format)
 

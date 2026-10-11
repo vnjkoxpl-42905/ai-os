@@ -1,11 +1,17 @@
 ---
 name: firecrawl
-description: |
-  Any live-web task via the Firecrawl CLI — including ordinary web research: searching the web, reading or extracting pages, gathering sources, discovering site URLs, bulk extraction, downloading a site, change alerts, or pages needing clicks/login — web only; local files route to firecrawl-parse. For papers use firecrawl-research-index; for library, API, error, or bug questions use firecrawl-developer-index.
+description: "Use Firecrawl for explicitly selected search/scrape/crawl or appropriate web-source collection. Respect explicit browser/tools, official-source requirements and hosted cost authorization; ordinary local file work does not trigger."
 allowed-tools:
   - Bash(firecrawl *)
   - Bash(npx firecrawl-cli *)
 ---
+
+
+## Local execution contract (2026-10-10)
+
+Use Firecrawl for selected web collection needs while honoring explicit browser/tool and official-source requirements. Check existing credentials/credits; hosted use is not free by default. Feedback transmission is opt-in; never send telemetry from routine research. Adapt shell/background syntax to host.
+
+## Workflow
 
 # Firecrawl CLI
 

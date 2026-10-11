@@ -1,11 +1,17 @@
 ---
 name: firecrawl-parse
-description: |
-  Convert a local file (PDF, DOCX, XLSX, HTML, …) to markdown, or answer questions about its content. Use whenever the input is a file path, not a URL.
+description: "Use explicitly selected Firecrawl remote document conversion when local parsing cannot satisfy the task and upload/credit scope is authorized. Does not trigger on ordinary local Markdown/code paths."
 allowed-tools:
   - Bash(firecrawl *)
   - Bash(npx firecrawl-cli *)
 ---
+
+
+## Local execution contract (2026-10-10)
+
+Use only for explicitly selected remote document conversion or when local tools cannot satisfy request. Ordinary Markdown/code reads stay local. Verify external upload and hosted credit scope before transmission; preserve source.
+
+## Workflow
 
 # firecrawl parse
 

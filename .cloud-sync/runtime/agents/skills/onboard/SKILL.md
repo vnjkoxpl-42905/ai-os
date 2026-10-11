@@ -3,6 +3,13 @@ name: onboard
 description: Use on Day 1 of an AIS-OS install, when someone says "set me up", "onboard me", "let's get started", "fill in my AIOS", or has just cloned the kit. Combined wizard — runs the 7-question intake AND scaffolds the Day-1 file set at the end. Idempotent — re-run any time after editing aios-intake.md.
 ---
 
+
+## Local execution contract (2026-10-10)
+
+Respect existing hand-owned AGENTS.md and CLAUDE.md separately. Mirror scoped shared pointers into both when required; no regeneration or destructive scaffold in populated workspace.
+
+## Workflow
+
 ## What this skill does
 
 Single combined wizard. Reads or writes `aios-intake.md` (the canonical intake), conducts the 7-question interview if the file isn't filled, then scaffolds the Day-1 file set inline at the end of the run. No separate `/scaffold-from-intake` skill — this is one flow.
@@ -18,7 +25,7 @@ Single combined wizard. Reads or writes `aios-intake.md` (the canonical intake),
 
 ### Existing projects and portable installation
 
-Read the applicable `AGENTS.md` and `AGENTS.md` first. The paths below are starter-kit defaults; use an established project's equivalent canonical context, voice, and connection sources instead of creating parallel sources of truth. Preserve unrelated operating rules and routing, and synchronize shared manual edits where required. Onboarding updates selected personal context, not the entire operating manual.
+Read the applicable `AGENTS.md` and `CLAUDE.md` first. The paths below are starter-kit defaults; use an established project's equivalent canonical context, voice, and connection sources instead of creating parallel sources of truth. Preserve unrelated operating rules and routing, and synchronize shared manual edits where required. Onboarding updates selected personal context, not the entire operating manual.
 
 If `aios-intake.md` is missing, use the bundled [intake template](assets/aios-intake.md). Populate only answers explicitly supported by existing sources, with references; leave unknowns for the interview. Installing this skill does not itself run onboarding or change the user's context.
 

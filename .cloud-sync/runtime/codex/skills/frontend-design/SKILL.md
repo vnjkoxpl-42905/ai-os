@@ -1,8 +1,15 @@
 ---
 name: frontend-design
-description: Create distinctive, production-grade frontend interfaces with high design quality. Use this skill when the user asks to build web components, pages, artifacts, posters, or applications (examples include websites, landing pages, dashboards, React components, HTML/CSS layouts, or when styling/beautifying any web UI). Generates creative, polished code and UI design that avoids generic AI aesthetics.
+description: "Design requested frontend interfaces while preserving user brief, existing design system, factual data and accessibility. Opinionated legacy creative presets apply only when selected."
 license: Complete terms in LICENSE.txt
 ---
+
+
+## Local execution contract (2026-10-10)
+
+Follow requested brief and established design system. Legacy font/palette/layout prohibitions are optional creative presets, not universal rules. Preserve reduced-motion, keyboard/readability and real product data. Prefer maintained project frontend-design for ordinary app work.
+
+## Workflow
 
 This skill guides creation of distinctive, production-grade frontend interfaces that avoid generic "AI slop" aesthetics. Implement real working code with exceptional attention to aesthetic details and creative choices.
 

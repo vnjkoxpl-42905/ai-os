@@ -3,6 +3,13 @@ name: morning
 description: "Render the user's morning brief as a styled HTML artifact, or set it up as a recurring weekday task. Use only when the user explicitly asks to run, see, or set up their morning brief, or if they invoke /morning by name. A question about their day, schedule, or calendar is not by itself a request for the brief; answer it directly instead."
 ---
 
+
+## Local execution contract (2026-10-10)
+
+Resolve actual host launch links and installed browser/render executable. Do not invent https://Codex.ai/new or assume Linux Chromium on Windows. Use actual returned artifact links or local file paths and report rendering limitations.
+
+## Workflow
+
 ## Context
 
 This page is my 30-second morning glance: one calm view of the shape of my day and the few things worth knowing, so I start oriented instead of overwhelmed.

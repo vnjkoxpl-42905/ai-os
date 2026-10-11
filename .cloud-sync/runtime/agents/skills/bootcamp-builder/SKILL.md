@@ -3,6 +3,13 @@ name: bootcamp-builder
 description: Build a complete repo-native LSAT U bootcamp for a new topic, cloning the Intro to LR (Main Conclusion) build process end to end. Interviews Joshua, ingests the content files he feeds it plus a scan of /Curriculum/{Topic}/, then drives a gated multi-session build inside the LSATU repo (src/bootcamps/{slug}/) until bootcamp-parity-audit passes against Intro to LR. Replaces lsat-u-topic-builder. Use when Joshua says "build a [topic] bootcamp", "new bootcamp", "spin up [topic]", "/bootcamp-builder [topic]", or wants to replicate the Intro to LR process for another topic.
 ---
 
+
+## Local execution contract (2026-10-10)
+
+Preserve current curriculum sources and brainstorms checkpoints. Resolve sibling app root/current quality benchmark and installed parity helper. Absent authoritative quality reference blocks parity claim. Commit/push only when actual task authorizes it, not merely because build is green.
+
+## Workflow
+
 # Bootcamp Builder
 
 Turn a topic + content into a shipped, repo-native LSAT U bootcamp that matches Intro to LR quality. This is the productized version of the Intro to LR (Main Conclusion) build process. It replaces `lsat-u-topic-builder`.

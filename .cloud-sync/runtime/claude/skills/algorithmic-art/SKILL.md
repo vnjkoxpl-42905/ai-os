@@ -4,6 +4,13 @@ description: Creating algorithmic art using p5.js with seeded randomness and int
 license: Complete terms in LICENSE.txt
 ---
 
+
+## Local execution contract (2026-10-10)
+
+Preserve generative algorithms and explicit user parameters. Present artifacts using actual host file/image capabilities; do not assume the actual host artifact panel is an artifact destination. Write application dependencies outside the vault and verify exported output.
+
+## Workflow
+
 Algorithmic philosophies are computational aesthetic movements that are then expressed through code. Output .md files (philosophy), .html files (interactive viewer), and .js files (generative algorithms).
 
 This happens in two steps:

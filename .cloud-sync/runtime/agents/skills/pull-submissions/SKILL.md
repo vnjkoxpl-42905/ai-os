@@ -3,6 +3,13 @@ name: pull-submissions
 description: Pull booking-time student submissions (files + comments) from the LSAT U backend into students/<name>/submissions/. Use when Joshua says "pull submissions", "get the booking uploads", "sync student submissions", or as part of /pickup. On-demand only — no cron, no watcher.
 ---
 
+
+## Local execution contract (2026-10-10)
+
+Resolve actual skills/claude or skills/codex helper and sibling app root. Credentials come from central project .env/current approved auth, never exposed. Preserve source identity, deduplicate repeated collection and verify resulting physical artifacts.
+
+## Workflow
+
 # Pull Submissions
 
 When a student books a session through their `/book/<slug>` link, the confirm step lets them optionally attach work (any file, up to 5) and leave a comment. Those land in the LSAT U backend (Supabase storage + `external_work_uploads`, comment on `booking_pass_redemptions.student_note`) and are surfaced in the Bookings admin tab and the booking confirmation email to Joshua.
@@ -23,7 +30,7 @@ bash ~/ai-os/skills/Codex/pull-submissions/pull-submissions.sh            # pull
 bash ~/ai-os/skills/Codex/pull-submissions/pull-submissions.sh --dry-run  # list only, write nothing
 ```
 
-Requires `curl` and `jq`. Reads `VITE_SUPABASE_URL` / `VITE_SUPABASE_PUBLISHABLE_KEY` from `projects/lsatu/.env` and the admin creds from the root `.env` (both sourced with absolute paths — cwd is unreliable).
+Requires `curl` and `jq`. Reads `VITE_SUPABASE_URL` / `VITE_SUPABASE_PUBLISHABLE_KEY` from `../ai-os-projects/lsatu/.env` and the admin creds from the root `.env` (both sourced with absolute paths — cwd is unreliable).
 
 ## Output layout
 

@@ -1,7 +1,12 @@
 ---
 name: writing-skills
-description: Use when creating new skills, editing existing skills, or verifying skills work before deployment
+description: "Explicit request for skill pressure tests or the writing-skills reference. General skill creation uses skill-creator."
+disable-model-invocation: true
 ---
+
+## Current AI OS execution contract
+
+Explicit pressure-testing/reference workflow, not automatic primary creator. Preserve unrelated implementation; never delete existing user code solely because a test-first ceremony was absent.
 
 # Writing Skills
 
@@ -237,7 +242,7 @@ When searching, dispatch subagent with template...
 [20 lines of repeated instructions]
 
 # ✅ GOOD: Reference other skill
-Always use subagents (50-100x context savings). REQUIRED: Use [other-skill-name] for workflow.
+Use authorized delegation when it helps; read the installed [other-skill-name] entry point through available host tools.
 ```
 
 **Compress examples:**
@@ -371,26 +376,11 @@ pptx/
 ```
 When: Reference material too large for inline
 
-## The Iron Law (Same as TDD)
+## Verify edits while preserving work
 
-```
-NO SKILL WITHOUT A FAILING TEST FIRST
-```
+Keep the existing skill, support files and user edits. Never delete a skill because a baseline scenario was not run first. For a confirmed instruction defect, preserve the original, write a targeted repair and validate the relevant trigger/contract; distinguish static checks from observed host behavior.
 
-This applies to NEW skills AND EDITS to existing skills.
-
-Write skill before testing? Delete it. Start over.
-Edit skill without testing? Same violation.
-
-**No exceptions:**
-- Not for "simple additions"
-- Not for "just adding a section"
-- Not for "documentation updates"
-- Don't keep untested changes as "reference"
-- Don't "adapt" while running tests
-- Delete means delete
-
-**REQUIRED BACKGROUND:** The superpowers:test-driven-development skill explains why this matters. Same principles apply to documentation.
+For a new discipline workflow, compare a meaningful baseline scenario with the repaired guidance when practical. Use bounded evaluation proportional to the risk and available tools. Missing behavioral evidence is a stated limit, not a mandate to rewrite or delete useful knowledge.
 
 ## Testing All Skill Types
 
@@ -454,7 +444,7 @@ Different skill types need different test approaches:
 | "Academic review is enough" | Reading ≠ using. Test application scenarios. |
 | "No time to test" | Deploying untested skill wastes more time fixing it later. |
 
-**All of these mean: Test before deploying. No exceptions.**
+Use appropriate verification before claiming success; disclose checks that could not run. Do not erase existing skills to manufacture a red baseline.
 
 ## Match the Form to the Failure
 
@@ -481,65 +471,9 @@ Skills that enforce discipline (like TDD) need to resist rationalization. Agents
 
 **Psychology note:** Understanding WHY persuasion techniques work helps you apply them systematically. See persuasion-principles.md for research foundation (Cialdini, 2021; Meincke et al., 2025) on authority, commitment, scarcity, social proof, and unity principles.
 
-### Close Every Loophole Explicitly
+### State the authorized boundary clearly
 
-Don't just state the rule - forbid specific workarounds:
-
-<Bad>
-```markdown
-Write code before test? Delete it.
-```
-</Bad>
-
-<Good>
-```markdown
-Write code before test? Delete it. Start over.
-
-**No exceptions:**
-- Don't keep it as "reference"
-- Don't "adapt" it while writing tests
-- Don't look at it
-- Delete means delete
-```
-</Good>
-
-### Address "Spirit vs Letter" Arguments
-
-Add foundational principle early:
-
-```markdown
-**Violating the letter of the rules is violating the spirit of the rules.**
-```
-
-This cuts off entire class of "I'm following the spirit" rationalizations.
-
-### Build Rationalization Table
-
-Capture rationalizations from baseline testing (see Testing section below). Every excuse agents make goes in the table:
-
-```markdown
-| Excuse | Reality |
-|--------|---------|
-| "Too simple to test" | Simple code breaks. Test takes 30 seconds. |
-| "I'll test after" | Tests passing immediately prove nothing. |
-| "Tests after achieve same goals" | Tests-after = "what does this do?" Tests-first = "what should this do?" |
-```
-
-### Create Red Flags List
-
-Make it easy for agents to self-check when rationalizing:
-
-```markdown
-## Red Flags - STOP and Start Over
-
-- Code before test
-- "I already manually tested it"
-- "Tests after achieve the same purpose"
-- "It's about spirit not ritual"
-- "This is different because..."
-
-**All of these mean: Delete code. Start over with TDD.**
-```
+Use observable conditions and positive contracts: preserve original work, identify the exact task scope, run the appropriate verification and report gaps. A skill must never manufacture authority through destructive examples or override the user's instructions. Keep exceptions explicit and grounded in actual project requirements.
 
 ### Update SDO for Violation Symptoms
 
@@ -613,14 +547,14 @@ helper1, helper2, step3, pattern4
 
 ## STOP: Before Moving to Next Skill
 
-**After writing ANY skill, you MUST STOP and complete the deployment process.**
+Before claiming a skill repair complete, finish its relevant verification. A user-authorized batch repair may validate the batch while preserving per-skill evidence.
 
 **Do NOT:**
-- Create multiple skills in batch without testing each
-- Move to next skill before current one is verified
-- Skip testing because "batching is more efficient"
+- Claim batch success without scoped per-skill checks
+- Hide untested limits while moving through a repair batch
+- Substitute generic scan results for the behavior being claimed
 
-**The deployment checklist below is MANDATORY for EACH skill.**
+Use the following checklist proportionately; mark irrelevant or unavailable checks with reasons.
 
 Deploying untested skills = deploying untested code. It's a violation of quality standards.
 
@@ -662,8 +596,8 @@ Deploying untested skills = deploying untested code. It's a violation of quality
 - [ ] Supporting files only for tools or heavy reference
 
 **Deployment:**
-- [ ] Commit skill to git and push to your fork (if configured)
-- [ ] Consider contributing back via PR (if broadly useful)
+- [ ] Commit/push only when explicitly authorized, and stage only owned paths
+- [ ] Propose an upstream contribution only when relevant; publish only when authorized
 
 ## Discovery Workflow
 
@@ -682,7 +616,7 @@ How future agents find your skill:
 
 **Creating skills IS TDD for process documentation.**
 
-Same Iron Law: No skill without failing test first.
+Preserve existing skills; demonstrate the relevant repaired contract.
 Same cycle: RED (baseline) → GREEN (write skill) → REFACTOR (close loopholes).
 Same benefits: Better quality, fewer surprises, bulletproof results.
 

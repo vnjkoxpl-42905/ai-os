@@ -20,8 +20,10 @@ Subagent (general-purpose):
 
     [PLAN_OR_REQUIREMENTS]
 
-    ## Git Range to Review
+    ## Captured Scope to Review
 
+    **Scope:** [REVIEW_SCOPE] (committed, WIP, or both)
+    **Paths/untracked contents:** [REVIEW_PATHS]
     **Base:** [BASE_SHA]
     **Head:** [HEAD_SHA]
 
@@ -30,9 +32,11 @@ Subagent (general-purpose):
     git diff [BASE_SHA]..[HEAD_SHA]
     ```
 
+    For WIP or combined scope also inspect `git diff --cached`, `git diff` and the provided in-scope untracked files. A committed range alone omits these. Reconcile status with the captured path list; report omitted/unavailable files instead of implying a complete review.
+
     ## Read-Only Review
 
-    Your review is read-only on this checkout. Do not mutate the working tree, the index, HEAD, or branch state in any way. Use tools like `git show`, `git diff`, and `git log` to inspect history. If you need a working copy of a different revision, check it out into a separate temporary directory (e.g. `git worktree add /tmp/review-[SHA] [SHA]`) — never move HEAD on this checkout.
+    Your review is read-only on this checkout. Do not mutate the working tree, the index, HEAD, or branch state in any way. Use tools like `git show`, `git diff`, and `git log` to inspect history. If you need a working copy of a different revision, use a host-approved separate temporary checkout outside this vault, preserving existing worktree state — never move HEAD on this checkout.
 
     ## What to Check
 
@@ -128,6 +132,7 @@ Subagent (general-purpose):
 **Placeholders:**
 - `[DESCRIPTION]` — brief summary of what was built
 - `[PLAN_OR_REQUIREMENTS]` — what it should do (plan file path, task text, or requirements)
+- `[REVIEW_SCOPE]` / `[REVIEW_PATHS]` - requested change classes and exact captured paths/content
 - `[BASE_SHA]` — starting commit
 - `[HEAD_SHA]` — ending commit
 

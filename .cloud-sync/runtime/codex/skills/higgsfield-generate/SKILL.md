@@ -1,29 +1,17 @@
 ---
 version: 0.12.0
 name: higgsfield-generate
-description: |
-  Generate images/videos/3D assets/audio via Higgsfield AI. Defaults:
-  GPT Image 2 for image/design/text, Seedance 2.0 for
-  video, Nano Banana 2/Lite/Pro for character/reference
-  images, Marketing Studio for ads, Seed Audio 1.0 for audio.
-  Use when: "generate an image", "make a video", "animate
-  this photo", "image-to-video", "edit/stylize/remix this
-  image", "reframe this video", "edit this video from a
-  sketch", "create a 3D model/GLB", "create a sound effect",
-  "make music", "text-to-audio", "create an ad", "make a UGC
-  video", "unboxing", "presenter video", "import product from
-  URL", or "analyze video virality". Supports image-to-3D
-  (`multi_image_to_3d`),
-  text-to-audio/music (`seed_audio`), workflow generation
-  (`draw_to_video`, `reframe`), Marketing Studio, and
-  Virality Predictor (`brain_activity`).
-  Chain with higgsfield-soul-id for face/identity consistency.
-  NOT for: Soul Character training (use higgsfield-soul-id),
-  product photoshoots, marketplace listing cards,
-  text/chat/TTS tasks.
+description: "Use only when the user explicitly selects higgsfield-generate or its specific documented preset/reference. Does not trigger on generic current-vault, frontend, AI or everyday workflow requests."
 argument-hint: "[prompt-or-analysis-request] [--model <name>] [--image|--video <path-or-id>]"
 allowed-tools: Bash
 ---
+
+
+## Local execution contract (2026-10-10)
+
+Use only when the user explicitly selects Higgsfield provider/workflow. Verify available credentials and authorized cost before media generation. Generic image/video/website requests do not select this provider. Preserve outputs; build preview separately from explicit authorized public deployment.
+
+## Workflow
 
 # Higgsfield Generate
 

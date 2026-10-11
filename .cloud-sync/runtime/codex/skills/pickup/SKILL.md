@@ -3,10 +3,17 @@ name: pickup
 description: Load LSAT U project state from the Obsidian vault only when Joshua explicitly asks for pickup. Never run automatically at session start. Reports open tasks. Trigger with /pickup or an explicit request to run pickup.
 ---
 
+
+## Local execution contract (2026-10-10)
+
+Run only on explicit pickup request. Resolve current checkout/handoff/remote and current native memory, never assumed ~/.Codex/plans or projects/lsatu. An explicit continue request authorizes unfinished scoped work; do not force a second permission pause.
+
+## Workflow
+
 Load the current LSAT U / Aspiring Attorneys project state from the Obsidian vault so this session can continue immediately, with no re-explaining from Joshua. Be fast and terse. Do NOT start doing work after this; brief, then wait.
 
 Vault root: `~/ai-os/`.
-Live LSAT U repo locator: `~/ai-os/projects/lsatu`.
+Live LSAT U repo locator: `<current-ai-os-root>/../ai-os-projects/lsatu`.
 
 ## Steps (in order)
 

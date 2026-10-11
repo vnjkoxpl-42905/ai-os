@@ -11,6 +11,13 @@ metadata:
     cliHelp: "gws gmail +triage --help"
 ---
 
+
+## Local execution contract (2026-10-10)
+
+Use in:inbox is:unread for inbox-only triage, not merely is:unread. State max/paging limits and distinguish returned results from total unread count. Read-only triage does not authorize archive/send/filter writes.
+
+## Workflow
+
 # gmail +triage
 
 > **PREREQUISITE:** Read `../gws-shared/SKILL.md` for auth, global flags, and security rules. If missing, run `gws generate-skills` to create it.

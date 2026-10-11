@@ -13,6 +13,13 @@ inputs:
     required: true
 ---
 
+
+## Local execution contract (2026-10-10)
+
+Collect source evidence, then use existing AI OS ingest/schema for durable compilation. .firecrawl staging/chunks are temporary tool artifacts, never a second wiki truth. Keep immutable evidence/provenance and existing domain homes.
+
+## Workflow
+
 # Firecrawl Knowledge Base
 
 Use this to turn URLs or topics into organized LLM-ready content.

@@ -3,6 +3,13 @@ name: using-git-worktrees
 description: Use when starting feature work that needs isolation from current workspace or before executing implementation plans - ensures an isolated workspace exists via native tools or git worktree fallback
 ---
 
+
+## Local execution contract (2026-10-10)
+
+Prefer managed native worktree capabilities when available. Check the selected target directory itself with git check-ignore; an ignored alternative directory does not validate this target. Preserve unrelated changes and modify .gitignore only if needed. Commit only with task authorization; do not auto-commit .gitignore.
+
+## Workflow
+
 # Using Git Worktrees
 
 ## Overview
@@ -80,10 +87,10 @@ Follow this priority order. Explicit user preference always beats observed files
 **MUST verify directory is ignored before creating worktree:**
 
 ```bash
-git check-ignore -q .worktrees 2>/dev/null || git check-ignore -q worktrees 2>/dev/null
+git check-ignore -q <SELECTED_TARGET_DIRECTORY>
 ```
 
-**If NOT ignored:** Add to .gitignore, commit the change, then proceed.
+**If NOT ignored:** Add only the selected target to .gitignore if required, then proceed. Commit only if explicitly authorized.
 
 **Why critical:** Prevents accidentally committing worktree contents to repository.
 
@@ -151,7 +158,7 @@ Ready to implement <feature-name>
 | `worktrees/` exists | Use it (verify ignored) |
 | Both exist | Use `.worktrees/` |
 | Neither exists | Check instruction file, then default `.worktrees/` |
-| Directory not ignored | Add to .gitignore + commit |
+| Directory not ignored | Add selected path to .gitignore; commit only as authorized |
 | Permission error on create | Sandbox fallback, work in place |
 | Tests fail during baseline | Report failures + ask |
 | No package.json/Cargo.toml | Skip dependency install |

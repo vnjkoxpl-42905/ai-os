@@ -1,7 +1,7 @@
 ---
 type: reference
 subject: Running Claude Code and Codex on one project the idea, and where ai-os stands
-updated: 2026-09-22
+updated: 2026-10-10
 aliases: []
 ---
 
@@ -11,7 +11,7 @@ Distilled from three clips: two ingested 2026-07-18 (archived at `raw/sources/cl
 
 - **"You're Using Claude Code Wrong (Add Codex)"** — Chase AI, YouTube `VdxUKiF8CWI`, 2026-05-07. The *why + the tandem workflow*.
 - **"How to Use Your Claude Code Projects in Codex in 5 Mins"** — Nate Herk, YouTube `kB9iMD0EjT8`, 2026-05-18. The *how of file structure* — one project, both agents.
-- **"This Repo Just Solved The #1 Claude + Codex Headache"** — Chase AI, YouTube `neK8ydl0Vlk`, 2026-07-16. The *execution and observability layer* using Herdr.
+- **"This Repo Just Solved The #1 Claude + Codex Headache"** — Chase AI, YouTube `neK8ydl0Vlk`, 2026-07-16. The *execution and observability layer* using Herdr. [Source summary](../wiki/sources/herdr-claude-codex-headache.md), written 2026-10-10.
 
 ## The pitch: it's "and," not "or"
 
@@ -66,15 +66,17 @@ Herdr is the terminal and session layer around Claude Code and Codex. It does no
 
 ### Installed setup on Joshua's Windows machine
 
-Installed and verified on 2026-09-22:
+Re-verified and updated on 2026-10-10 (the 2026-09-22 install had drifted: Herdr was off the user PATH and no `codex` command resolved):
 
-| Component | Installed state |
+| Component | Installed state, 2026-10-10 |
 |---|---|
-| Herdr | Stable `0.9.1`; installed under `C:\Users\Joshu\.herdr\packages\standalone\releases\0.9.1-x86_64-pc-windows-msvc`; user PATH updated |
-| Claude Code | `2.1.280`; installed in the shared Node tools directory so Herdr panes can resolve it |
-| Codex CLI | `0.156.1`; installed in the shared Node tools directory so Herdr panes can resolve it |
-| Herdr integrations | Claude `v10` and Codex `v8`, both current |
-| Herdr agent skill | Installed globally for Claude Code and Codex |
+| Herdr | Stable `0.9.3`, installed with `herdr update`; under `C:\Users\Joshu\.herdr\packages\standalone\releases\0.9.3-x86_64-pc-windows-msvc`, which is on the user PATH. `0.9.1` is still on disk, unused. |
+| Claude Code | `2.1.295` at `C:\Users\Joshu\.local\bin\claude.exe` |
+| Codex CLI | `0.162.1` from npm `@openai/codex`, in `C:\Users\Joshu\AppData\Roaming\npm`; signed in with ChatGPT |
+| Herdr integrations | Claude `v10` and Codex `v8`, both reported current by `herdr integration status` |
+| Herdr agent skill | Refreshed from the official `herdrdev/herdr` copy (SHA-256 `b16ba0d9…`) in `~/.claude/skills/herdr` and `~/.agents/skills/herdr` |
+
+The 2026-09-22 values were Herdr `0.9.1`, Claude Code `2.1.280` and Codex CLI `0.156.1`, both CLIs in a shared Node tools directory that no longer exists on this machine. Not checked: an interactive Herdr launch with both agents in panes, and whether panes launched from a Microsoft Store PowerShell can see `AppData\Roaming\npm`.
 
 Open a new PowerShell window so it receives the updated user PATH. Then:
 

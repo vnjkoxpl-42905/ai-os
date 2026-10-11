@@ -39,6 +39,7 @@ SPECIAL = {"_snapshots", "_project-forks", "_inactive", "README.md", "INDEX.md"}
 PROJECT_ACTIVE_ROOTS = [
     os.path.join(BRAIN, ".claude", "skills"),
     os.path.join(BRAIN, ".agents", "skills"),
+    os.path.join(BRAIN, ".gemini", "skills"),
     str(project_path("email-hq", ".claude", "skills")),
 ]
 
@@ -86,18 +87,39 @@ def entrypoints_match(first, second):
             return False
     return True
 
+
+def owned_provider_errors(roots):
+    """Check two maintained provider references, not arbitrary plugin payloads."""
+    errors = []
+    for root in roots:
+        for name in ("claude-api", "academy-guide"):
+            path = Path(root) / name / "SKILL.md"
+            if not path.is_file():
+                continue
+            text = path.read_text(encoding="utf-8")
+            if name == "claude-api":
+                match = re.search(r"(?mi)^name:\s*([^\r\n]+)", text)
+                if match and match.group(1).strip().strip("\"'") != "claude-api":
+                    errors.append(f"provider identity mismatch: {path}")
+                if re.search(r"(?i)\bCodex(?:-| )opus\b|\bCodex API / Anthropic SDK", text):
+                    errors.append(f"mixed Codex/Anthropic identity: {path}")
+            if name == "academy-guide" and re.search(r"(?i)academy\.codex\.com", text):
+                errors.append(f"corrupted Anthropic Academy URL: {path}")
+    return errors
+
 def main():
     fails = []
     # DB structure
-    for sub in ("claude", "codex"):
+    for sub in ("claude", "codex", "gemini"):
         if not os.path.isdir(os.path.join(DB, sub)):
             fails.append(f"DB subtree missing: skills/{sub}")
     claude_db = db_names("claude")
     codex_db = db_names("codex")
+    gemini_db = db_names("gemini")
 
     # (d) duplicate canonical names within a subtree — filesystem guarantees uniqueness,
     # but validate SKILL.md name matches dir name where a SKILL.md exists.
-    for sub, names in (("claude", claude_db), ("codex", codex_db)):
+    for sub, names in (("claude", claude_db), ("codex", codex_db), ("gemini", gemini_db)):
         for n in names:
             # Vendor entries are symlinks whose dir name may be disambiguated
             # (e.g. discord-access -> plugin skill named 'access'); skip name check.
@@ -113,7 +135,7 @@ def main():
                     fails.append(f"name mismatch: skills/{sub}/{n} declares '{m.group(1).strip()}'")
 
     # (a)+(b) active roots
-    all_db = claude_db | codex_db
+    all_db = claude_db | codex_db | gemini_db
     for root in PROJECT_ACTIVE_ROOTS:
         if not os.path.isdir(root):
             continue
@@ -132,10 +154,13 @@ def main():
                     fails.append(f"un-mirrored skill in active root: {root}/{n} (not in DB)")
                     continue
                 # (e) drift check: copied activation's SKILL.md vs its DB source
-                sub = "codex" if ".agents" in Path(root).parts else "claude"
+                parts = Path(root).parts
+                sub = "gemini" if ".gemini" in parts else "codex" if ".agents" in parts else "claude"
                 db_dir = os.path.join(DB, sub, n)
                 act_skf = os.path.join(p, "SKILL.md")
                 db_skf = os.path.join(db_dir, "SKILL.md")
+                if not os.path.isfile(db_skf):
+                    fails.append(f"activation missing runtime DB source: {root}/{n} -> skills/{sub}/{n}")
                 if os.path.isfile(act_skf) and os.path.isfile(db_skf):
                     if not entrypoints_match(act_skf, db_skf):
                         fails.append(f"stale activation copy: {root}/{n} differs from skills/{sub}/{n} — re-copy from DB")
@@ -148,7 +173,7 @@ def main():
         with open(idx, encoding="utf-8") as f:
             itext = f.read()
         indexed = set(re.findall(r"^- \*\*(?:[a-z0-9-]+: )?([^*]+)\*\*", itext, re.M))
-        for sub, names in (("claude", claude_db), ("codex", codex_db)):
+        for sub, names in (("claude", claude_db), ("codex", codex_db), ("gemini", gemini_db)):
             for n in names:
                 if n not in indexed:
                     fails.append(f"INDEX missing DB skill: {sub}/{n}")
@@ -266,12 +291,19 @@ def main():
             elif not filecmp.cmp(source, activated, shallow=False):
                 fails.append(f"stale Codex agent activation: .codex/agents/{name}")
 
+    # Owned global provider sanity is deliberately bounded; external packages
+    # need not be catalogued or automatically mirrored to satisfy this check.
+    fails.extend(owned_provider_errors([
+        Path(HOME) / ".agents/skills", Path(HOME) / ".codex/skills",
+        Path(HOME) / ".claude/skills",
+    ]))
+
     if fails:
         for msg in fails:
             print(f"skills: FAIL — {msg}", file=sys.stderr)
         print(f"skills: FAIL ({len(fails)} problems)", file=sys.stderr)
         sys.exit(1)
-    print(f"skills: PASS (claude={len(claude_db)} codex={len(codex_db)} DB skills; "
+    print(f"skills: PASS (claude={len(claude_db)} codex={len(codex_db)} gemini={len(gemini_db)} DB skills; "
           f"activations resolve; INDEX complete)")
 
 if __name__ == "__main__":

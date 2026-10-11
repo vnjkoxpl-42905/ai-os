@@ -9,6 +9,13 @@ description: >
 allowed-tools: Bash Read Write Edit Glob Grep
 ---
 
+
+## Local execution contract (2026-10-10)
+
+Reconcile live Gmail thread/sent state and existing drafts by stable event/thread/recipient identity before creating or changing draft status. Reuse matching drafts. A notes attachment does not prove attendance. Never schedule or send implicitly.
+
+## Workflow
+
 # Morning brief
 
 **19% of every email Joshua writes is an apology for replying late.** That is a

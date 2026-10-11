@@ -16,6 +16,8 @@ STEP 3 — Read the transcript. For each event that has Gemini notes, use `gws d
 
 STEP 4 — Check it isn't already handled. Use `gws gmail users messages list --params '{"userId":"me","q":"<email>"}'` to find any existing thread with that attendee. If a next-steps / follow-up email has already been sent to them since the consultation date, SKIP (one follow-up per consultation). If they already booked and paid, draft the short onboarding note from the template instead of the sales-y next-steps email.
 
+Before STEP 5, inspect all existing drafts through `gws` (paginate). Match the stable consultation event ID + normalized recipient + workflow (`consultation-followup`); corroborate with thread ID and the ledger. Reuse a matching unsent draft ID rather than creating another. Update only that draft when revision is authorized; multiple matches require a conflict report, not deletion. Failed lookup blocks creation. Record event ID, thread ID, draft ID and workflow in `wiki/send-ledger.md`, and read the draft back after a write. A repeat sweep must retain one matching draft.
+
 STEP 5 — Draft using wiki/CONSULTATION-FOLLOW-UP-TEMPLATE.md. Default rate tier $45/$40/$35. Include the 7Sage line only if the notes say they use 7Sage. Greeting "Hi [First name],". Sign "Best,
 
 Joshua". Create it with `gws gmail users drafts create` (raw RFC822, base64url), replying in the existing thread (threadId + In-Reply-To) if one exists, otherwise a new draft with subject "Next steps + tutoring options". Do NOT send.

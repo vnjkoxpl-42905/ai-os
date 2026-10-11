@@ -3,6 +3,10 @@ name: grill-me
 description: A relentless interview to sharpen a plan, design, or topic, checkpointing every answer to a brainstorm file so nothing is lost. Use when the user wants to stress-test a plan, get grilled on a design, run a brainstorm or discovery session, extract what's in their head into a doc, build up their AI OS context over time, or says "grill me".
 ---
 
+## Current AI OS execution contract
+
+Preserve the current host-specific checkpoint behavior and explain it accurately in routers. Do not erase saved brainstorm state merely to make another host stateless. Reuse answered questions and prior approval.
+
 # Grill Me
 
 Two layers. The **interview method** comes from the `grilling` skill and is not restated here. The **capture discipline** below is what this wrapper adds: every answer lands in a durable markdown file, so nothing is lost as context fills up.

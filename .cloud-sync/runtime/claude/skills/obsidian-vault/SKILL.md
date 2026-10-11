@@ -1,7 +1,14 @@
 ---
 name: obsidian-vault
-description: Search, create, and manage notes in the Obsidian vault with wikilinks and index notes. Use when user wants to find, create, or organize notes in Obsidian.
+description: "Explicit legacy/new-vault reference only. Existing AI OS work uses project ingest, second-brain-query and second-brain-lint; do not select alternate vault automatically."
 ---
+
+
+## Local execution contract (2026-10-10)
+
+This is an explicit legacy/new-vault reference only. For existing AI OS use project ingest, second-brain-query and second-brain-lint under current schema. Never select /mnt/d or a flat alternate vault for current work.
+
+## Workflow
 
 # Obsidian Vault
 

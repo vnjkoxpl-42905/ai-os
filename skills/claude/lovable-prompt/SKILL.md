@@ -3,6 +3,10 @@ name: lovable-prompt
 description: Produce a short, paste-ready prompt for Lovable when a change can only happen through the Lovable UI (not code Claude Code can reach directly, not a Supabase migration). Use when Joshua asks "give me the prompt for Lovable", "what do I send Lovable", or a task turns out to require Lovable-side config/UI action. Trigger with /lovable-prompt.
 ---
 
+## Current AI OS execution contract
+
+Read the owning application manual for current backend and deployment. Discover available approved transport instead of assuming Supabase MCP. Lovable-managed Edge Functions deploy through the authorized Lovable route; this does not prohibit approved direct SQL. Lovable credit spending requires immediate confirmation.
+
 Produce a short, paste-ready prompt for Lovable's chat, for the residual class of changes Claude Code cannot reach directly.
 
 ## When this applies

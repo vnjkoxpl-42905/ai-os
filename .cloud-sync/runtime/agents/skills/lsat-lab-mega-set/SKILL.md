@@ -3,6 +3,13 @@ name: lsat-lab-mega-set
 description: Build one consolidated LSAT Lab Logical Reasoning practice set containing EVERY LR question for a SINGLE PrepTest, in correct order, driving Joshua's logged-in Chrome via the Codex-in-chrome extension end to end (create, select-all, rename to "PT### LR (S...)", start, capture URL, log). Use when Joshua gives a bare PrepTest number to turn into a set, e.g. "create set 154", "mega set 154", "LSAT Lab set 154", "make a set for PT 154", "build the LR set for PT 154", "make an LR set for 154". Runs autonomously to completion. NOT for a CSV/list of specific questions (that is lsat-lab-set-builder) and NOT for transcribing written explanations (that is lsat-lab-transcribe).
 ---
 
+
+## Local execution contract (2026-10-10)
+
+Use actual supported signed-in browser transport, current sibling app/corpus routes and Windows shortcuts. Verify saved exact question IDs/counts before advancement or completion. Preserve recovery artifacts; deletion requires explicit confirmation.
+
+## Workflow
+
 # lsat-lab-mega-set
 
 Build one consolidated Logical Reasoning (LR) practice set containing **every LR question for one PrepTest (PT)**, in correct order, on LSAT Lab (app.lsatlab.com), driving Joshua's logged-in Chrome. Written so any agent or human can execute it perfectly on the first try.

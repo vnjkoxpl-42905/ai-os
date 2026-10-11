@@ -3,6 +3,13 @@ name: level-up
 description: Use weekly (or when Joshua says "let's level up", "what should I automate next", "find me leverage this week") to surface and ship ONE new automation. Walks the 3Ms interview — Mindset (find the candidate) → Method (scope it) → Machine (build it). One run = one shipped artifact. Adapted for the ai-os EA workspace.
 ---
 
+
+## Local execution contract (2026-10-10)
+
+Use actual activation/catalog paths (.agents/.claude, skills/codex/claude), not .Codex. Applications/dependencies stay sibling ai-os-projects. Reuse known mindset answers and authorized task; dates/KPI exits are planning suggestions. Eliminate/no-artifact outcomes are valid; habit claims are attributed hypotheses.
+
+## Workflow
+
 > *Adapted from The Three Ms of AI™. © 2026 Nate Herk (MIT — github.com/nateherkai/AIS-OS).*
 > *The Three Ms of AI™ is a trademark of Nate Herk.*
 

@@ -16,6 +16,13 @@ description: >-
   browser tools and a logged-in LSAT Lab session.
 ---
 
+
+## Local execution contract (2026-10-10)
+
+Use actual available browser transport and current selectors. For read-only extraction avoid Start because it creates an attempt. Save mixed-section output with exact section/question identity to prevent overwrite. Preserve source/provenance and compile through existing corpus ingest.
+
+## Workflow
+
 # LSAT Lab Question Feature Extractor
 
 ## What this does and why

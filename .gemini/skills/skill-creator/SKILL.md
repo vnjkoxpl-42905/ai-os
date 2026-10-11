@@ -3,6 +3,10 @@ name: skill-creator
 description: Create new skills, modify and improve existing skills, and measure skill performance. Use when users want to create a skill from scratch, edit, or optimize an existing skill, run evals to test a skill, benchmark skill performance with variance analysis, or optimize a skill's description for better triggering accuracy.
 ---
 
+## Current AI OS execution contract
+
+Use as the primary explicit skill-authoring workflow. Description triggers must specify concrete user intent and negative cases, not maximize broad matching. Select held-out evaluation cases before tuning, retain failures, and distinguish semantic tests from native selector execution.
+
 # Skill Creator
 
 A skill for creating new skills and iteratively improving them.

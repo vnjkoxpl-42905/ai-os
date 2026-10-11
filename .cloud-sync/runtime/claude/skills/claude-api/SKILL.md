@@ -1,11 +1,15 @@
 ---
 name: claude-api
-description: |-
-  Reference for the Claude API / Anthropic SDK — model ids, pricing, params, streaming, tool use, MCP, agents, caching, token counting, model migration.
-  TRIGGER — read BEFORE opening the target file; don't skip because it "looks like a one-liner" — whenever: the prompt names Claude/Anthropic in any form (Claude, Anthropic, Fable, Opus, Sonnet, Haiku, `anthropic`, `@anthropic-ai`, `claude-*`, `us.anthropic.*`, `[1m]`); the user asks about an LLM (pricing/model choice/limits/caching) — never answer from memory; OR the task is LLM-shaped with provider unstated (agent/MCP/tool-definition/multi-agent/RAG/LLM-judge/computer-use; generate/summarize/extract/classify/rewrite/converse over NL; debugging refusals/cutoffs/streaming/tool-calls/tokens).
-  SKIP only when another provider is being worked on (overrides all triggers): OpenAI/GPT/Gemini/Llama/Mistral/Cohere/Ollama named in the query; OR `grep -rE 'openai|langchain_openai|google.generativeai|genai|mistralai|cohere|ollama'` over the project hits (run this grep FIRST if no provider named — don't Read the file).
+description: "Build or modify explicitly Anthropic Claude API integrations using the Anthropic SDK. Does not trigger on generic AI, Codex, persona creation or provider-neutral tasks."
 license: Complete terms in LICENSE.txt
 ---
+
+
+## Local execution contract (2026-10-10)
+
+This is Anthropic API implementation only. Use actual Anthropic documentation and identifiers; never substitute Codex for Claude in packages, model IDs or URLs. Generic persona creation belongs to persona-agent-creator. Verify current models and API signatures before implementation.
+
+## Workflow
 
 # Building LLM-Powered Applications with Claude
 
@@ -13,7 +17,7 @@ This skill helps you build LLM-powered applications with Claude. Choose the righ
 
 ## Before You Start
 
-Scan the target file (or, if no target file, the prompt and project) for non-Anthropic provider markers - `import openai`, `from openai`, `langchain_openai`, `OpenAI(`, `gpt-4`, `gpt-5`, file names like `agent-openai.py` or `*-generic.py`, or any explicit instruction to keep the code provider-neutral. If you find any, stop and tell the user that this skill produces Claude/Anthropic SDK code; ask whether they want to switch the file to Claude or want a non-Claude implementation. Do not edit a non-Anthropic file with Anthropic SDK calls. (Exception: the `prompt-audit` subcommand is non-interactive and does not stop here - it records non-Anthropic provider markers in its report's stated assumptions and never proposes switching a non-Anthropic file to the Anthropic SDK.)
+Scan the target file (or, if no target file, the prompt and project) for non-Anthropic provider markers - `import openai`, `from openai`, `langchain_openai`, `OpenAI(`, `gpt-4`, `gpt-5`, file names like `agent-openai.py` or `*-generic.py`, or any explicit instruction to keep the code provider-neutral. If you find any, stop and tell the user that this skill produces Claude/Anthropic SDK code; respect the selected provider and route to its appropriate documentation; do not propose switching providers merely to use this skill. Do not edit a non-Anthropic file with Anthropic SDK calls. (Exception: the `prompt-audit` subcommand is non-interactive and does not stop here - it records non-Anthropic provider markers in its report's stated assumptions and never proposes switching a non-Anthropic file to the Anthropic SDK.)
 
 ## Output Requirement
 
@@ -30,9 +34,7 @@ Never mix the two - don't reach for `requests`/`fetch` in a Python or TypeScript
 
 ## Defaults
 
-Unless the user requests otherwise:
-
-For the Claude model version, please use Claude Opus 5, which you can access via the exact model string `claude-opus-5`. Please default to using adaptive thinking (`thinking: {type: "adaptive"}`) for anything remotely complicated. And finally, please default to streaming for any request that may involve long input, long output, or high `max_tokens` - it prevents hitting request timeouts. Use the SDK's `.get_final_message()` / `.finalMessage()` helper to get the complete response if you don't need to handle individual stream events
+Use the user-selected Anthropic model ID when supplied. Otherwise discover supported model IDs through the installed SDK or current official Anthropic documentation before selecting one. Do not infer a model ID from a marketing name or mechanically substitute a provider. Enable thinking/streaming only according to that selected model and current SDK contract.
 
 ## Warning: API Drift - Your Training Prior May Be Stale
 
@@ -172,7 +174,7 @@ Everything goes through `POST /v1/messages`. Tools and output constraints are fe
 
 ---
 
-## Current Models (cached: 2026-06-24)
+## Historical model reference (cached: 2026-06-24; verify before use)
 
 | Model             | Model ID            | Context        | Input $/1M | Output $/1M |
 | ----------------- | ------------------- | -------------- | ---------- | ----------- |
@@ -189,7 +191,7 @@ Everything goes through `POST /v1/messages`. Tools and output constraints are fe
 
 **Partner pricing:** The prices above are Anthropic first-party API rates - they also apply to Claude on Microsoft Foundry, which is billed through the Microsoft Marketplace at standard API rates. Claude on Amazon Bedrock and Vertex AI is partner-operated with separate pricing - see [Bedrock](https://aws.amazon.com/bedrock/pricing/) or [Vertex AI](https://cloud.google.com/vertex-ai/generative-ai/pricing#claude-models). For WebFetch, use the Pricing row in `shared/live-sources.md`.
 
-**ALWAYS use `claude-opus-5` unless the user explicitly names a different model.** This is non-negotiable. Do not use `claude-sonnet-5`, `claude-sonnet-4-6`, or any other model unless the user literally says "use sonnet" or "use haiku". Never downgrade for cost - that's the user's decision, not yours. Use `claude-fable-5-1` only when the user explicitly asks for Claude Fable 5.1, "fable", or Anthropic's most capable model - it has different API behavior than the Opus family (see below) and pricing that exceeds Opus-tier. **Use only the exact model ID strings from the table - they are complete as-is; never append date suffixes** (`claude-sonnet-4-6`, never `claude-sonnet-4-6-20251114` or any other date-suffixed variant you might recall from training data). If the user requests an older model not in the table (e.g., "opus 4.5", "sonnet 3.7"), read `shared/models.md` for the exact ID - do not construct one yourself.
+**Model selection:** Honor explicit user choices. Otherwise verify available IDs and capabilities through the Models API or [official model documentation](https://platform.claude.com/docs/en/models/overview), then choose within the authorized quality and cost constraints. The cached table is historical reference, not a mandatory default or proof of current availability. Never construct model IDs or add date suffixes without documentation.
 
 ### Claude Fable 5.1 (`claude-fable-5-1`) - most capable widely released model
 
@@ -277,7 +279,7 @@ For placement patterns, architectural guidance, and the silent-invalidator audit
 
 ```python
 client.beta.messages.create(
-    model="claude-opus-5", max_tokens=4096,
+    model=ACTUAL_VERIFIED_MODEL_ID, max_tokens=4096,
     speed="fast", betas=["fast-mode-2026-02-01"],
     messages=[...],
 )
@@ -305,7 +307,7 @@ client.beta.messages.create(
 
 ```python
 with client.beta.messages.stream(
-    model="claude-opus-5", max_tokens=128000,
+    model=ACTUAL_VERIFIED_MODEL_ID, max_tokens=128000,
     output_config={"effort": "high", "task_budget": {"type": "tokens", "total": 64000}},
     betas=["task-budgets-2026-03-13"],
     messages=[...], tools=[...],
@@ -373,7 +375,7 @@ Two required constructor args: GCP `project_id` and `region`. Vertex model IDs t
 
 ```python
 client.beta.messages.create(
-    model="claude-opus-5", max_tokens=4096,
+    model=ACTUAL_VERIFIED_MODEL_ID, max_tokens=4096,
     betas=["context-management-2025-06-27"],
     context_management={"edits": [{"type": "clear_tool_uses_20250919"}]},
     tools=[...], messages=[...],
@@ -456,7 +458,7 @@ Server-side tools run on Anthropic's infrastructure - no client-side execution l
 
 **Message Batches (no beta; availability: `shared/platform-availability.md`):** `client.messages.batches.create(requests=[{custom_id, params}, ...])` -> poll `client.messages.batches.retrieve(id).processing_status` until `"ended"` -> stream `client.messages.batches.results(id)`. Each result has `.custom_id` + `.result.type` (`succeeded`/`errored`/`canceled`/`expired`); on success read `.result.message.content`. Python wraps requests as `Request(custom_id=..., params=MessageCreateParamsNonStreaming(...))`. Results arrive in **any order** - key by `custom_id`, never by position.
 
-**Models API (no beta; availability: `shared/platform-availability.md`):** `client.models.list()` (auto-paginates) and `client.models.retrieve("claude-opus-5")`. Each model object has `id`, `display_name`, `created_at`, and - since Mar 2026 - `max_input_tokens` (the context window), `max_tokens` (the output cap), and `capabilities`. There is no `context_window` field.
+**Models API (no beta; availability: `shared/platform-availability.md`):** `client.models.list()` (auto-paginates) and `client.models.retrieve(ACTUAL_VERIFIED_MODEL_ID)`. Each model object has `id`, `display_name`, `created_at`, and - since Mar 2026 - `max_input_tokens` (the context window), `max_tokens` (the output cap), and `capabilities`. There is no `context_window` field.
 
 **Stop details (GA, Opus 4.7+):** `response.stop_details` is populated **only when `stop_reason == "refusal"`** (fields: `type: "refusal"`, `category` - an open set, e.g. `"cyber"`, `"bio"`, `"reasoning_extraction"`, `"frontier_llm"`, or `null`; see the docs for the full list - and `explanation`). It is `null` for every other `stop_reason` (`end_turn`, `max_tokens`, `tool_use`, `pause_turn`, ...) - always guard before reading.
 

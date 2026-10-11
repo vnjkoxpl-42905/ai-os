@@ -1,12 +1,19 @@
 ---
 name: web-artifacts-builder
-description: Suite of tools for creating elaborate, multi-component Codex.ai HTML artifacts using modern frontend web technologies (React, Tailwind CSS, shadcn/ui). Use for complex artifacts requiring state management, routing, or shadcn/ui components - not for simple single-file HTML/JSX artifacts.
+description: Suite of tools for creating elaborate, multi-component the actual host artifact panel HTML artifacts using modern frontend web technologies (React, Tailwind CSS, shadcn/ui). Use for complex artifacts requiring state management, routing, or shadcn/ui components - not for simple single-file HTML/JSX artifacts.
 license: Complete terms in LICENSE.txt
 ---
 
+
+## Local execution contract (2026-10-10)
+
+Build in a task-owned sibling application directory outside AI OS vault, not current vault cwd. Inspect existing project/tool support and run relevant functional/build/render checks. Use actual host artifact presentation capability; the actual host artifact panel is not an assumed artifact destination.
+
+## Workflow
+
 # Web Artifacts Builder
 
-To build powerful frontend Codex.ai artifacts, follow these steps:
+To build powerful frontend the actual host artifact panel artifacts, follow these steps:
 1. Initialize the frontend repo using `scripts/init-artifact.sh`
 2. Develop your artifact by editing the generated code
 3. Bundle all code into a single HTML file using `scripts/bundle-artifact.sh`

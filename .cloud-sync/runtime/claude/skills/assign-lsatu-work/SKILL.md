@@ -3,6 +3,13 @@ name: assign-lsatu-work
 description: Use whenever Joshua wants to do anything on LSAT U headlessly, with no browser. That covers assigning an Activity, a guided drill, a homework set, or a timed PT section to one or many students ("assign this to Celia", "give Lydia the Negation Station", "put PT156.S2 on Avneet due Friday", "assign RRC to Celia, Lydia and Dakota"). It covers messaging a student from his admin account ("send Dakota a message", "tell Celia to start with PT105.S2"). It covers reading how students are doing ("how is Celia doing", "what does Lydia have", "who is overdue", "who has gone quiet", "Celia's weakest question types", "Avneet's last sections"). It covers accounts and upkeep: new signups ("who signed up", "did anyone new join"), access ("give Venusa access", "turn on drills for X", "what can X see"), archiving, moving a due date, unassigning, booking passes ("how many sessions does Sandra have left"), notifications, and reading or marking messages ("who messaged me", "show my thread with Celia"). It is the one place for any operation on the LSAT U platform, and none of it uses Lovable.
 ---
 
+
+## Local execution contract (2026-10-10)
+
+Use current project assign-lsatu-work and sibling ai-os-projects/lsatu app instructions. AI OS is a Git repository. Respect actual current user authorization, not a historical person-count approval rule. Preserve dry-run, exact artifact/student identity, duplicate guards and read-after-write; archive/revoke/unsend require explicit deletion scope.
+
+## Workflow
+
 # Assign work on LSAT U
 
 Assign work, message students, and read how they are doing on LSAT U, all
@@ -190,7 +197,7 @@ Read from `~/ai-os/.env`, which is **not** a git repo:
 
 - `LSATPREP_ADMIN_EMAIL`, `LSATPREP_ADMIN_PASSWORD` — already set
 
-Never put a credential in `projects/lsatu/.env`. That file **is tracked in git**
+Never put a credential in `../ai-os-projects/lsatu/.env`. That file **is tracked in git**
 and would be committed. The script signs in as Joshua and works under normal
 admin RLS, the same permission path the UI uses.
 

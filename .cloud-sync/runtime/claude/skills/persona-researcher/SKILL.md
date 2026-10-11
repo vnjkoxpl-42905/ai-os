@@ -1,6 +1,6 @@
 ---
 name: persona-researcher
-description: "Organize research — manage references, notes, and collaboration."
+description: "Use this specific persona-researcher Workspace role when requested; perform only selected operations. Planning or inspection does not authorize sends, invitations, publication or cloud scheduling. Distinct from persona-agent-creator."
 metadata:
   version: 0.22.5
   openclaw:
@@ -14,6 +14,13 @@ metadata:
         - gws-sheets
         - gws-gmail
 ---
+
+
+## Local execution contract (2026-10-10)
+
+Use this optional Workspace role only for the specific requested operations. Planning/inspection/content creation does not authorize sends, Chat announcements, invitations, cloud publication or new schedules. Use actual existing records and AI OS domain homes. Model Armor --sanitize requires verified configured template/scopes and external-payload/cost authorization; it is not proof of local privacy protection.
+
+## Workflow
 
 # Researcher
 

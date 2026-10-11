@@ -1,18 +1,12 @@
 ---
 name: math-olympiad
-description:
-  "Solve competition math problems (IMO, Putnam, USAMO, AIME) with adversarial
-  verification that catches the errors self-verification misses. Activates when
-  asked to 'solve this IMO problem', 'prove this olympiad inequality', 'verify
-  this competition proof', 'find a counterexample', 'is this proof correct', or
-  for any problem with 'IMO', 'Putnam', 'USAMO', 'olympiad', or 'competition
-  math' in it. Uses pure reasoning (no tools) — then a fresh-context adversarial
-  verifier attacks the proof using specific failure patterns, not generic 'check
-  logic'. Outputs calibrated confidence — will say 'no confident solution'
-  rather than bluff. If LaTeX is available, produces a clean PDF after
-  verification passes."
+description: "Explicit mathematical olympiad proof/problem request. Not generic debugging or counterexample language."
 version: 0.1.0
 ---
+
+## Current AI OS execution contract
+
+Activate for an explicit mathematical proof/problem request, not generic counterexample/debugging wording. Use only available justified agent budget; preserve the distinct proof reference.
 
 # Math Olympiad Solver
 

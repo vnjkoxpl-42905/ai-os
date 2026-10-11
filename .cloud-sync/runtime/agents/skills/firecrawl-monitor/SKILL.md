@@ -7,6 +7,13 @@ allowed-tools:
   - Bash(npx firecrawl-cli *)
 ---
 
+
+## Local execution contract (2026-10-10)
+
+Persistent 429 is a reported rate-limit failure, never permission to delete monitor/data. Use Codex supported automation for requested recurrence unless user explicitly selects hosted Firecrawl monitor. Creation/cleanup costs and deletion scope require actual authorization.
+
+## Workflow
+
 # firecrawl monitor
 
 Detect when content on a website changes and get notified by webhook or email. Firecrawl handles fetching, diffing, judging, and notifying server-side. Each page in a check is labeled `same`, `new`, `changed`, `removed`, or `error`.
@@ -52,7 +59,7 @@ firecrawl monitor run <monitorId>             # trigger a check now
 firecrawl monitor checks <monitorId>          # list all checks
 firecrawl monitor check <monitorId> <checkId> --page-status changed
 firecrawl monitor update <monitorId> --state paused
-firecrawl monitor delete <monitorId>
+# Only after explicit deletion authorization: firecrawl monitor delete <monitorId>
 ```
 
 Subcommands: `create | list | get | update | delete | run | checks | check`. Run `firecrawl monitor <subcommand> --help` for the full option list.
@@ -66,12 +73,12 @@ Read [goals.md](goals.md) when writing or refining `--goal` (and `--queries` for
 - Each check uses credits for its underlying scrape, crawl, or search, plus optional judging. See [Monitoring pricing](https://docs.firecrawl.dev/features/monitoring#pricing).
 - Minimum schedule interval is **5 minutes**. Monitoring is **not available for zero-data-retention teams**.
 - **Prefer one monitor over repeated one-off scrapes** whenever the user wants the same URL checked more than once.
-- **Silence temporarily with `update --state paused`**; reserve `delete` for monitors that are permanently done. (`--state` is an update flag; `--status` is the global CLI status flag.)
+- **Silence temporarily with `update --state paused`**; reserve `delete` for explicitly authorized removal of monitors that are permanently done. (`--state` is an update flag; `--status` is the global CLI status flag.)
 - **Filter check pages with `--page-status changed`** (or `new`, `removed`, `error`) to skip the noise from `same` pages.
 - **`firecrawl monitor run <id>`** triggers a check immediately — useful for smoke-testing a monitor right after creating it.
 - **`--retention-days`** controls how long snapshots are kept for diffing. Lower it for high-frequency monitors to save storage.
 - **External email recipients must opt in.** First time they're added, Firecrawl sends a confirmation email and they only receive alerts after they confirm. Team-owned addresses are auto-confirmed. Once a recipient unsubscribes, they must be re-added by the owner for a fresh confirmation email.
-- **On HTTP 429 / rate-limit errors, back off once**: wait ~30s and retry once. If it persists, stop, report the rate limit as the blocking reason, and delete any monitors created for this task. Never retry in a loop.
+- **On HTTP 429 / rate-limit errors, back off once**: wait ~30s and retry once. If it persists, stop, report the rate limit as the blocking reason, and preserve monitors/evidence. Delete only after explicit deletion authorization. Never retry in a loop.
 - **Monitor-triggered scrapes default `maxAge` to `0`** — every check performs a fresh scrape unless `scrapeOptions.maxAge` is set explicitly in a JSON payload.
 
 ## See also

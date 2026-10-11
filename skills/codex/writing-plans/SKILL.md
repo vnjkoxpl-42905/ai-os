@@ -3,6 +3,10 @@ name: writing-plans
 description: Use when you have a spec or requirements for a multi-step task, before touching code
 ---
 
+## Current AI OS execution contract
+
+Reuse approved scope, choose proportional task boundaries and host-supported tools. Do not require repeated Superpowers invocations, speculative full implementations or automatic commits for every small edit.
+
 # Writing Plans
 
 ## Overview
@@ -121,7 +125,7 @@ Expected: PASS
 
 ```bash
 git add tests/path/test.py src/path/file.py
-git commit -m "feat: add specific feature"
+# Run only with explicit commit authorization: git commit -m "feat: add specific feature"
 ```
 ````
 

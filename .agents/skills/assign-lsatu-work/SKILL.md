@@ -3,6 +3,10 @@ name: assign-lsatu-work
 description: Operate LSAT U headlessly. Assign guided drills and daily schedules through a mapped catalog and verified batch MCP; assign activities or timed sections, read student progress, manage access and Classroom work, and handle platform messages.
 ---
 
+## Current AI OS execution contract
+
+Classify the request first: inspection and recommendations do not assign work. Only an explicit assignment request uses the current assignment executor. Resolve the supported transport, verify exact student and assignment, then read back the live result.
+
 # Assign LSAT U work
 
 For guided-drill selection or schedules, follow [the guided-drill workflow](references/guided-drill-workflow.md). Use the mapped catalog, one live preview and one batch MCP assignment. This local branch contains its authorization and verification rules; do not load the global reference for a routine guided schedule.

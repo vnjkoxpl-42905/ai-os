@@ -13,6 +13,13 @@ inputs:
     required: true
 ---
 
+
+## Local execution contract (2026-10-10)
+
+Treat this as authenticated collection only; compile durable knowledge through project ingest and current schema. Preserve sources/hashes and failure/progress receipts; do not create an alternate knowledge pipeline.
+
+## Workflow
+
 # Firecrawl Knowledge Ingest
 
 Use this when a docs portal needs browser navigation, auth, pagination, or JS rendering.

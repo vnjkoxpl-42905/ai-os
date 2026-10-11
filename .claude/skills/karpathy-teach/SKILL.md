@@ -3,6 +3,10 @@ name: karpathy-teach
 description: Teach an AI or programming topic using the evidence-supported Karpathy method. Use when Joshua asks for Karpathy-style teaching, a runnable explanation, or the saved Karpathy tokenizer demonstration.
 ---
 
+## Current AI OS execution contract
+
+Verify hook activation separately from configuration or old receipts. Current-file execution receipts are required for edited code; never claim new native trust based solely on a historical acceptance report.
+
 # Teach with the reviewed Karpathy method
 
 Hand the user's topic and success criterion to the project `karpathy` subagent. Give the minimum relevant context; do not include unrelated student or personal records. The agent reads wiki/karpathy/hot.md first, uses at most five wiki pages and applies wiki/karpathy/rules.md. The wiki is compiled public evidence, not a clone of a person; its collected-source coverage and media limits are documented.

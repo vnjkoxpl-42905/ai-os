@@ -1,25 +1,17 @@
 ---
 version: 0.12.0
 name: higgsfield-websites
-description: |
-  Build, edit, and deploy full-stack websites via the Higgsfield CLI
-  (`higgsfield website …`). Each site is a React 19 + TanStack Start SSR app in
-  one Cloudflare Worker (D1/R2/KV/DO/Containers). TWO product types, picked via
-  `--type` on create: `website` (standalone, NO Higgsfield integration,
-  independent brand, custom CSS — the image-grounded pipeline in
-  references/website-flow.md) vs `app` (Sign in with Higgsfield + fnf SDK,
-  Quanta + app layouts per references/app-flow.md). This file routes to
-  the right flow; each flow carries its own workflow, references, hard rules,
-  and deploy/publish gates.
-  Use when: "build me a website", "make a landing page", "create a web app",
-  "build a SaaS dashboard / tool / portfolio", "deploy this site", "edit my
-  site", "publish", "ship to production".
-  NOT for: single image/video/audio generation (higgsfield-generate), product
-  photos (higgsfield-product-photoshoot), marketplace cards
-  (higgsfield-marketplace-cards).
+description: "Use only when the user explicitly selects higgsfield-websites or its specific documented preset/reference. Does not trigger on generic current-vault, frontend, AI or everyday workflow requests."
 argument-hint: "[what to build or edit] [--type website|app]"
 allowed-tools: Bash
 ---
+
+
+## Local execution contract (2026-10-10)
+
+Use only when the user explicitly selects Higgsfield provider/workflow. Verify available credentials and authorized cost before media generation. Generic image/video/website requests do not select this provider. Preserve outputs; build preview separately from explicit authorized public deployment.
+
+## Workflow
 
 # Higgsfield website builder (CLI) — two product types, two flows
 
@@ -109,7 +101,7 @@ are rejected — if that happens, try a close variant.
 1. Resolve the `--type` (ask the user if unclear — it's their choice). In the
    SAME first question, also ask whether they want to **publish it to the
    Higgsfield community feed (marketplace)** when it's ready (yes/no). Remember
-   the answer: if yes, publish automatically at the end (after deploy +
+Prepare preview only; public deployment requires explicit publication authorization.
    metadata), no need to ask again; if no, only deploy. Don't block the build
    on it.
 2. Read the matching flow and follow it — it is the complete workflow for that

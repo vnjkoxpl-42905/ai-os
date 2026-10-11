@@ -3,6 +3,13 @@ name: resolving-merge-conflicts
 description: "Use when you need to resolve an in-progress git merge/rebase conflict."
 ---
 
+
+## Local execution contract (2026-10-10)
+
+Capture preexisting dirty/untracked baseline; resolve only scoped conflicts and stage exact owned paths. Never git add <EXACT_OWNED_PATHS> or concluding commit by default. Preserve unrelated work and use actual task commit authorization.
+
+## Workflow
+
 1. **See the current state** of the merge/rebase. Check git history, and the conflicting files.
 
 2. **Find the primary sources** for each conflict. Understand deeply why each change was made, and what the original intent was. Read the commit messages, check the PRs, check original issues/tickets.

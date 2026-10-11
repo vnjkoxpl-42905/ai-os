@@ -3,6 +3,13 @@ name: test-driven-development
 description: Use when implementing any feature or bugfix, before writing implementation code
 ---
 
+
+## Local execution contract (2026-10-10)
+
+Preserve existing and unrelated implementation. Never delete/restart production work because a failing test was not written first. Use proportionate red-green regression tests for meaningful behavior changes; low-impact prose/config changes need appropriate verification rather than ceremonial tests.
+
+## Workflow
+
 # Test-Driven Development (TDD)
 
 ## Overview
@@ -21,28 +28,22 @@ Write the test first. Watch it fail. Write minimal code to pass.
 - Refactoring
 - Behavior changes
 
-**Exceptions (ask your human partner):**
+**Use proportionate verification for:**
 - Throwaway prototypes
 - Generated code
 - Configuration files
 
-Thinking "skip TDD just this once"? Stop. That's rationalization.
+Use meaningful tests for behavior changes; do not mirror reversible low-impact edits.
 
 ## The Iron Law
 
 ```
-NO PRODUCTION CODE WITHOUT A FAILING TEST FIRST
+PRESERVE EXISTING WORK; PROVE CHANGED BEHAVIOR WITH APPROPRIATE CHECKS
 ```
 
-Write code before the test? Delete it. Start over.
+Existing work is preserved. Add a meaningful regression/behavior test and demonstrate it detects the failure.
 
-**No exceptions:**
-- Don't keep it as "reference"
-- Don't "adapt" it while writing tests
-- Don't look at it
-- Delete means delete
-
-Implement fresh from tests. Period.
+Preserve useful implementation and unrelated edits. Refactor only when required by the tested behavior.
 
 ## Red-Green-Refactor
 
@@ -228,7 +229,7 @@ Automated tests are systematic. They run the same way every time.
 **"Deleting X hours of work is wasteful"**
 
 Sunk cost fallacy. The time is already gone. Your choice now:
-- Delete and rewrite with TDD (X more hours, high confidence)
+- Preserve and validate with meaningful regression tests (X more hours, high confidence)
 - Keep it and add tests after (30 min, low confidence, likely bugs)
 
 The "waste" is keeping code you can't trust. Working code without real tests is technical debt.
@@ -262,7 +263,7 @@ Tests-first force edge case discovery before implementing. Tests-after verify yo
 | "Tests after achieve same goals" | Tests-after = "what does this do?" Tests-first = "what should this do?" |
 | "Already manually tested" | Ad-hoc ≠ systematic. No record, can't re-run. |
 | "Deleting X hours is wasteful" | Sunk cost fallacy. Keeping unverified code is technical debt. |
-| "Keep as reference, write tests first" | You'll adapt it. That's testing after. Delete means delete. |
+| "Keep as reference, write tests first" | You'll adapt it. That's testing after. Preserve work and verify behavior. |
 | "Need to explore first" | Fine. Throw away exploration, start with TDD. |
 | "Test hard = design unclear" | Listen to test. Hard to test = hard to use. |
 | "TDD will slow me down" | TDD faster than debugging. Pragmatic = test-first. |
@@ -285,7 +286,7 @@ Tests-first force edge case discovery before implementing. Tests-after verify yo
 - "TDD is dogmatic, I'm being pragmatic"
 - "This is different because..."
 
-**All of these mean: Delete code. Start over with TDD.**
+**These are prompts to inspect test quality, not instructions to delete existing code. Preserve work and repair verification.**
 
 ## Example: Bug Fix
 

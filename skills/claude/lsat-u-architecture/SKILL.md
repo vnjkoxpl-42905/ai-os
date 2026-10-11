@@ -3,6 +3,10 @@ name: lsat-u-architecture
 description: Architectural source of truth and entry point for LSAT U platform rules. Use this skill whenever building, modifying, speccing, or referencing LSAT U platform features. Trigger when discussing component picks, routing, state models, design tokens, drill mechanics, Foyer navigation, Supabase realtime channels, identity/admin patterns, the always-violate rules, or any decision about how LSAT U is built. Also trigger when writing Claude Code build briefs for LSAT U, when comparing topic modules to the Causation Station architectural template, when explaining LSAT U component patterns, or when reviewing code against platform rules. This skill is the indexed entry point. The canonical full sources live in the vault; this skill gives you the always-violate rules at a glance and routes you to the deeper references. Trigger automatically when Joshua mentions LSAT U code, architecture, components, drill behavior, Foyer, Supabase, build briefs, or topic module integration, even without explicit invocation.
 ---
 
+## Current AI OS execution contract
+
+Treat backend identifiers in the reference as historical. Resolve current application root and backend from its nearest hand-owned manual/live configuration before use. Do not copy a historical backend ID or Mac path into new work.
+
 # LSAT U Architecture
 
 This skill is the entry point for LSAT U platform architecture. The canonical full content lives in the Obsidian vault and Joshua's memory. This skill gives you the always-violate rules at a glance, the quick decision rules, and explicit pointers to the deeper sources.
@@ -54,7 +58,7 @@ If you find a contradiction between sources, fix the lower-authority source, not
 
 - **Frontend:** React 18, Vite 5, TypeScript (`strict: false`, do not rely on type safety), Tailwind 3.4, shadcn/ui, motion/react
 - **Component primitives:** @base-ui/react
-- **Backend:** Supabase, project ID `qodidbkoqrmqhdfwvcmk`
+- **Backend:** Supabase, project ID `<resolve-current-backend-from-owning-app-manual>`
 - **Hosting:** Lovable, auto-deploy from GitHub
 - **Build:** SWC, no type checking at build time
 

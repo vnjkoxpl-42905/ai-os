@@ -55,6 +55,8 @@ Do not copy canned situation lines blindly. Mirror the person's message in natur
 
 ## Gmail draft behavior
 
+Before creating, list and inspect existing Gmail drafts through `gws`, following pagination and matching the inquiry thread ID + normalized recipient + workflow (`consultation-inquiry`). Reuse the matching unsent draft ID; update only that draft if the current request authorizes revision. Multiple matches are a conflict: report them without deletion. A failed/partial draft lookup blocks creation, rather than assuming none. Repeated sweeps must leave one matching draft. Record draft ID, thread ID and workflow key in the ledger, then verify the draft by ID after the write.
+
 Create the draft through `gws`. Reply inside the existing Gmail thread whenever one exists. Preserve the thread context and reply headers rather than starting a new conversation. Do not send.
 
 ## Report and log

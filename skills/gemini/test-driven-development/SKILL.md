@@ -15,34 +15,15 @@ Write the test first. Watch it fail. Write minimal code to pass.
 
 ## When to Use
 
-**Always:**
-- New features
-- Bug fixes
-- Refactoring
-- Behavior changes
+**Use for meaningful behavioral changes:** new behavior, bug fixes and risky refactors. Choose tests that distinguish correct behavior from the failure, not tests mirroring implementation. Existing project/user testing requirements win.
 
-**Exceptions (ask your human partner):**
-- Throwaway prototypes
-- Generated code
-- Configuration files
+For reversible low-impact configuration/docs or generated code, run appropriate validation instead of ceremonial tests. Use existing authorization; no extra permission is needed for that routine choice.
 
-Thinking "skip TDD just this once"? Stop. That's rationalization.
+## Preserve existing work
 
-## The Iron Law
+Never delete or restart existing implementation because tests were written later. Keep user and unrelated edits. For an existing bug, add a focused regression test, demonstrate its expected failure on the broken behavior in isolation where safe, make the smallest fix and rerun. If a test already passes, determine whether it proves existing behavior or misses the target failure; do not manufacture a production bug.
 
-```
-NO PRODUCTION CODE WITHOUT A FAILING TEST FIRST
-```
-
-Write code before the test? Delete it. Start over.
-
-**No exceptions:**
-- Don't keep it as "reference"
-- Don't "adapt" it while writing tests
-- Don't look at it
-- Delete means delete
-
-Implement fresh from tests. Period.
+For new behavior, prefer one vertical red-green slice at a time. A missing initial red run is an evidence limitation to report and remedy with an appropriate counterexample, not permission to delete work.
 
 ## Red-Green-Refactor
 
@@ -225,67 +206,9 @@ Manual testing is ad-hoc. You think you tested everything but:
 
 Automated tests are systematic. They run the same way every time.
 
-**"Deleting X hours of work is wasteful"**
+## Avoid ritual over evidence
 
-Sunk cost fallacy. The time is already gone. Your choice now:
-- Delete and rewrite with TDD (X more hours, high confidence)
-- Keep it and add tests after (30 min, low confidence, likely bugs)
-
-The "waste" is keeping code you can't trust. Working code without real tests is technical debt.
-
-**"TDD is dogmatic, being pragmatic means adapting"**
-
-TDD IS pragmatic:
-- Finds bugs before commit (faster than debugging after)
-- Prevents regressions (tests catch breaks immediately)
-- Documents behavior (tests show how to use code)
-- Enables refactoring (change freely, tests catch breaks)
-
-"Pragmatic" shortcuts = debugging in production = slower.
-
-**"Tests after achieve the same goals - it's spirit not ritual"**
-
-No. Tests-after answer "What does this do?" Tests-first answer "What should this do?"
-
-Tests-after are biased by your implementation. You test what you built, not what's required. You verify remembered edge cases, not discovered ones.
-
-Tests-first force edge case discovery before implementing. Tests-after verify you remembered everything (you didn't).
-
-30 minutes of tests after ≠ TDD. You get coverage, lose proof tests work.
-
-## Common Rationalizations
-
-| Excuse | Reality |
-|--------|---------|
-| "Too simple to test" | Simple code breaks. Test takes 30 seconds. |
-| "I'll test after" | Tests passing immediately prove nothing. |
-| "Tests after achieve same goals" | Tests-after = "what does this do?" Tests-first = "what should this do?" |
-| "Already manually tested" | Ad-hoc ≠ systematic. No record, can't re-run. |
-| "Deleting X hours is wasteful" | Sunk cost fallacy. Keeping unverified code is technical debt. |
-| "Keep as reference, write tests first" | You'll adapt it. That's testing after. Delete means delete. |
-| "Need to explore first" | Fine. Throw away exploration, start with TDD. |
-| "Test hard = design unclear" | Listen to test. Hard to test = hard to use. |
-| "TDD will slow me down" | TDD faster than debugging. Pragmatic = test-first. |
-| "Manual test faster" | Manual doesn't prove edge cases. You'll re-test every change. |
-| "Existing code has no tests" | You're improving it. Add tests for existing code. |
-
-## Red Flags - STOP and Start Over
-
-- Code before test
-- Test after implementation
-- Test passes immediately
-- Can't explain why test failed
-- Tests added "later"
-- Rationalizing "just this once"
-- "I already manually tested it"
-- "Tests after achieve the same purpose"
-- "It's about spirit not ritual"
-- "Keep as reference" or "adapt existing code"
-- "Already spent X hours, deleting is wasteful"
-- "TDD is dogmatic, I'm being pragmatic"
-- "This is different because..."
-
-**All of these mean: Delete code. Start over with TDD.**
+Preserve existing code and confirm meaningful behavior with regression/reference checks. A passing test alone does not prove it catches the reported failure; inspect its assertions and use a safe counterexample when needed. Never delete user work, dismiss project constraints or force blanket rewrites to satisfy TDD chronology.
 
 ## Example: Bug Fix
 
@@ -328,8 +251,8 @@ Extract validation for multiple fields if needed.
 
 Before marking work complete:
 
-- [ ] Every new function/method has a test
-- [ ] Watched each test fail before implementing
+- [ ] Meaningful changed behaviors have focused tests or a justified relevant validation
+- [ ] For new behavior/regressions, observed the expected failure where practical; recorded existing-code exceptions
 - [ ] Each test failed for expected reason (feature missing, not typo)
 - [ ] Wrote minimal code to pass each test
 - [ ] All tests pass
@@ -337,7 +260,7 @@ Before marking work complete:
 - [ ] Tests use real code (mocks only if unavoidable)
 - [ ] Edge cases and errors covered
 
-Can't check all boxes? You skipped TDD. Start over.
+Report missing evidence and perform the relevant check; preserve existing work.
 
 ## When Stuck
 
@@ -352,7 +275,7 @@ Can't check all boxes? You skipped TDD. Start over.
 
 Bug found? Write failing test reproducing it. Follow TDD cycle. Test proves fix and prevents regression.
 
-Never fix bugs without a test.
+For behavioral bugs, use a focused regression test when practical; report any constraint and the alternative verification used.
 
 ## Testing Anti-Patterns
 
@@ -364,8 +287,8 @@ When adding mocks or test utilities, read [testing-anti-patterns.md](testing-ant
 ## Final Rule
 
 ```
-Production code → test exists and failed first
-Otherwise → not TDD
+New behavioral slice -> expected failure, minimal fix, green verification
+Existing implementation -> preserve work, regression/reference verification
 ```
 
-No exceptions without your human partner's permission.
+Follow the project and user testing scope. Preserve work and disclose verification limitations.

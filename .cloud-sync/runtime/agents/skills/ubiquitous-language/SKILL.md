@@ -4,6 +4,13 @@ description: Extract a DDD-style ubiquitous language glossary from the current c
 disable-model-invocation: true
 ---
 
+
+## Local execution contract (2026-10-10)
+
+Use the existing authoritative domain-modeling glossary (normally GLOSSARY.md) rather than creating parallel UBIQUITOUS_LANGUAGE truth. Preserve ambiguity/relationship analysis and update current vocabulary only within scope.
+
+## Workflow
+
 # Ubiquitous Language
 
 Extract and formalize domain terminology from the current conversation into a consistent glossary, saved to a local file.

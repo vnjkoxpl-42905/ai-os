@@ -3,6 +3,10 @@ name: finishing-a-development-branch
 description: Use when implementation is complete, all tests pass, and you need to decide how to integrate the work - guides completion of development work by presenting structured options for merge, PR, or cleanup
 ---
 
+## Current AI OS execution contract
+
+Honor the already requested completion route and existing valid test receipts. Push/commit/PR actions require the task authorization and owned path scope. A PR request must actually create or update the PR, then attach it, not merely push a branch.
+
 # Finishing a Development Branch
 
 ## Overview
@@ -112,7 +116,7 @@ git merge <feature-branch>
 # Only after merge succeeds: cleanup worktree (Step 6), then delete branch
 ```
 
-Then: Cleanup worktree (Step 6), then delete branch:
+Then, only if cleanup and branch deletion were explicitly authorized: cleanup the worktree and delete the branch:
 
 ```bash
 git branch -d <feature-branch>
@@ -153,7 +157,7 @@ MAIN_ROOT=$(git -C "$(git rev-parse --git-common-dir)/.." rev-parse --show-tople
 cd "$MAIN_ROOT"
 ```
 
-Then: Cleanup worktree (Step 6), then force-delete branch:
+Then, only with explicit discard and branch deletion authorization: cleanup the worktree and delete the branch:
 ```bash
 git branch -D <feature-branch>
 ```

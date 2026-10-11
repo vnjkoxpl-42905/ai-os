@@ -3,6 +3,10 @@ name: lsat-lab-transcribe
 description: Use when Joshua asks to transcribe an LSAT Lab PrepTest, pull explanations for a PT, continue a transcription, or capture explanations from the open LSAT Lab tab in the Codex in-app Browser.
 ---
 
+## Current AI OS execution contract
+
+Read the current item identity first. Capture and persist all required styles for that item before advancing. On resume, compare the saved completed-item identity and NEXT pointer; do not click Next merely because the browser is open. Use current registered corpus and handoffs homes and supported browser, not obsolete Mac shortcuts or legacy docs paths.
+
 # LSAT Lab explanation transcription
 
 Use Codex's in-app Browser to operate the open LSAT Lab practice player and transcribe the full written explanation for every question that HAS one, into a single organized markdown file per PrepTest. Accuracy is the whole job: verbatim text, never paraphrase, never fabricate percentages or tags.

@@ -4,6 +4,13 @@ description: "Implement a piece of work based on a spec or set of tickets."
 disable-model-invocation: true
 ---
 
+
+## Local execution contract (2026-10-10)
+
+Execute only explicitly selected spec/ticket scope. Use actual host planning/delegation tools and relevant typecheck/test/review sequence. Preserve dirty baseline and do not commit/publish beyond authorization.
+
+## Workflow
+
 Implement the work described by the user in the spec or tickets.
 
 If the user passes a ticket reference, fetch it from the issue tracker and state its title before starting. If the reference is ambiguous, ask.

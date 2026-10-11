@@ -4,6 +4,13 @@ description: Writing, exploit; assemble raw material into a journey of beats, gr
 disable-model-invocation: true
 ---
 
+
+## Local execution contract (2026-10-10)
+
+Use existing writing-shape as shared authoring core with beat mode, retaining explicit alias and source-grounded rhythm. Keep writing-fragments distinct exploration. Avoid duplicate drafts/truths and preserve approved source pile.
+
+## Workflow
+
 <what-to-do>
 
 The user has passed (or will pass) a markdown file of raw material. This is **exploit**: the exploring is done, the pile is fixed. Commit to a path through it and mine the pile to fill each beat.

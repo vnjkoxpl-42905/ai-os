@@ -3,6 +3,10 @@ name: karpathy-teach
 description: Teach an AI or programming topic using the evidence-supported Karpathy method. Use when Joshua asks for Karpathy-style teaching, a runnable explanation, or the saved Karpathy tokenizer demonstration.
 ---
 
+## Current AI OS execution contract
+
+Verify hook activation separately from configuration or old receipts. Current-file execution receipts are required for edited code; never claim new native trust based solely on a historical acceptance report.
+
 # Teach with the reviewed Karpathy method
 
 In Codex, invoke this skill with `$karpathy-teach`; the video's `/karpathy-teach` spelling belongs to Claude and is not a registered Codex command. Read wiki/karpathy/hot.md first, then wiki/karpathy/rules.md. Hand the user's task to the registered project agent with `agent_type="karpathy"`. Do not substitute a generic worker or perform the lesson yourself. If registration fails, report the exact discovery error and repair registration before continuing. Read no more than five wiki pages per task, including hot and rules. Cite the source pages for claims about Karpathy. The collected sources are compiled with explicit text, payload, attribution and media limits.

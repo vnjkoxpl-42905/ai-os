@@ -15,6 +15,13 @@ metadata:
         - gws-chat
 ---
 
+
+## Local execution contract (2026-10-10)
+
+Create with gws docs documents create using title JSON, consume returned documentId, then gws docs +write --document ID --text TEXT. Do not use unsupported +write --title/--body. Use actual incident facts and draft-only announcements.
+
+## Workflow
+
 # Set Up Post-Mortem
 
 > **PREREQUISITE:** Load the following skills to execute this recipe: `gws-docs`, `gws-calendar`, `gws-chat`
@@ -23,7 +30,17 @@ Create a Google Docs post-mortem, schedule a Google Calendar review, and notify 
 
 ## Steps
 
-1. Create post-mortem doc: `gws docs +write --title 'Post-Mortem: [Incident]' --body '## Summary\n\n## Timeline\n\n## Root Cause\n\n## Action Items'`
-2. Schedule review meeting: `gws calendar +insert --summary 'Post-Mortem Review: [Incident]' --attendee team@company.com --start '2026-03-16T14:00:00' --end '2026-03-16T15:00:00'`
-3. Notify in Chat: `gws chat +send --space spaces/ENG_SPACE --text '🔍 Post-mortem scheduled for [Incident].'`
+1. Resolve actual target IDs, requested data, date interval/timezone and existing state. Illustrative names, dates and recipients are not user data.
+2. Create with gws docs documents create using title JSON, consume returned documentId, then gws docs +write --document ID --text TEXT. Do not use unsupported +write --title/--body. Use actual incident facts and draft-only announcements.
+3. Discover the required method using installed `gws <service> --help` and `gws schema <service>.<resource>.<method>`; build parameters from real returned IDs and requested data. For retries reconcile existing output identity first.
+4. Execute only the requested authorized operation. Draft email unless send is authorized. Inspect resulting resource/file and report any missing sections or failed items.
 
+## Relevant endpoint references
+
+- `gws calendar` (inspect help/schema before invocation)
+- `gws chat` (inspect help/schema before invocation)
+- `gws docs` (inspect help/schema before invocation)
+- `gws docs documents create using title` (inspect help/schema before invocation)
+
+
+Write helper: `gws docs +write --document ACTUAL_DOCUMENT_ID --text ACTUAL_TEXT`. Create titles through `gws docs documents create`, not +write --title/--body.

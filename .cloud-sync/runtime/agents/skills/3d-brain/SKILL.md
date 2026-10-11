@@ -5,6 +5,13 @@ disable-model-invocation: true
 argument-hint: "[brain name] [categories or existing app path]"
 ---
 
+
+## Local execution contract (2026-10-10)
+
+Create runnable applications/dependencies in a task-owned sibling ai-os-projects directory. Resolve the actual .codex/.claude runtime directories; .Codex is a corrupted label, not a new runtime. Preserve source evidence and verify actual rendering.
+
+## Workflow
+
 # 3D Brain
 
 Turn the user's actual AIOS files into a personalized, local 3D knowledge globe. Use the bundled working application, not a new interpretation of its appearance. Preserve its spherical composition, colored categories, central orb, restrained connection particles, Cinema mode, and interactive growth replay.

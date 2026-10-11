@@ -3,6 +3,10 @@ name: level-up
 description: Use weekly (or when Joshua says "let's level up", "what should I automate next", "find me leverage this week") to surface and ship ONE new automation. Walks the 3Ms interview — Mindset (find the candidate) → Method (scope it) → Machine (build it). One run = one shipped artifact. Adapted for the ai-os EA workspace.
 ---
 
+## Current AI OS execution contract
+
+New shared skills require their matching catalog and project activation copies for Claude and Codex, with deliberate differences documented. Application code/dependencies live in sibling ai-os-projects. Eliminating an unnecessary workflow can be a completed result without creating a new artifact.
+
 > *Adapted from The Three Ms of AI™. © 2026 Nate Herk (MIT — github.com/nateherkai/AIS-OS).*
 > *The Three Ms of AI™ is a trademark of Nate Herk.*
 
@@ -62,7 +66,7 @@ Ask: *"How do you want to ship this?"* Ordered by Boring-is-Beautiful default:
 
 **Default = highest non-AI option that solves it.** More autonomy requires explicit choice.
 
-**Save-to-both (this OS's standing rule):** write every new skill/agent to BOTH `.claude/skills/<name>/SKILL.md` (activated) AND the DB `skills/claude/<name>/SKILL.md`, project-scoped. For a Codex twin, mirror to `.agents/skills/`. Then note it for `system/scripts/gen-skill-index.py`.
+**Save-to-both (this OS's standing rule):** write every new skill/agent to BOTH `.claude/skills/<name>/SKILL.md` (activated) AND the DB `skills/claude/<name>/SKILL.md`, project-scoped. For a Codex twin, write BOTH `skills/codex/<name>/SKILL.md` and `.agents/skills/<name>/SKILL.md`. Then note it for `system/scripts/gen-skill-index.py`.
 
 **Every scaffolded artifact ships with:**
 ```markdown

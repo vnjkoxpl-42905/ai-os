@@ -3,6 +3,9 @@ name: "openai-docs"
 description: "Use when the user asks how to build with OpenAI products or APIs, asks about Codex itself or choosing Codex surfaces, needs up-to-date official documentation with citations, help choosing the latest model for a use case, or model upgrade and prompt-upgrade guidance; use OpenAI docs MCP tools for non-Codex docs questions, use the Codex manual helper first for broad Codex self-knowledge, and restrict fallback browsing to official OpenAI domains."
 ---
 
+## Current scoped workflow
+
+Routine documentation retrieval uses available official sources. Adding an MCP server or changing configuration is a separately requested setup task, never automatic remediation for a lookup.
 
 # OpenAI Docs
 
@@ -113,7 +116,7 @@ Use this quick product map when needed: CLI is terminal-first local repo work; I
 
 If MCP tools fail or no OpenAI docs resources are available:
 
-1. Run the install command yourself: `codex mcp add openaiDeveloperDocs --url https://developers.openai.com/mcp`
+If the user explicitly requests MCP installation, follow the approved setup workflow; ordinary documentation lookup uses official web fallback.
 2. If it fails due to permissions/sandboxing, immediately retry the same command with escalated permissions and include a 1-sentence justification for approval.
 3. Ask the user to run the install command only if the escalated attempt fails.
 4. Ask the user to restart Codex.

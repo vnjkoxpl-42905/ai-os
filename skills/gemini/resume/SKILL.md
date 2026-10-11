@@ -3,6 +3,10 @@ name: resume
 description: Continue from the most recent chat export or handoff doc without Joshua having to hand-type a path. Finds the newest file in C:/Users/Joshu/dev/ai-os/handoffs/ and, if in the LSATU repo, the newest file in docs/agent/handoffs/ and docs/implementation-plans/, reads it, and picks up from the last open thread. Trigger with /resume.
 ---
 
+## Current AI OS execution contract
+
+Resolve the requested active task from its explicit ledger/handoff pointer. Newest-file time alone cannot identify the right project or task. Preserve unresolved context and report ambiguity.
+
 Continue exactly where the last session left off, without Joshua re-explaining or hand-typing a path.
 
 ## Steps (in order)

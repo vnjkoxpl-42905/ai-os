@@ -126,6 +126,8 @@ Use operation names `ingest`, `query`, `lint`, or `system`. Include source/outpu
 
 Run a focused consistency check after each ingest or durable query edit. Run a broader lint when Joshua asks, after a substantial batch or structural change, or when retrieval exposes contradictions or broken navigation. Periodically suggest a wider check when the vault has accumulated unchecked changes; no scheduled automation is implied.
 
+Read large indexes through curated navigation and bounded catalog searches, not whole-file dumps. Before calling knowledge ingestion finished, test one natural retrieval question through the relevant index/domain hub to a compiled page with evidence. Copying a source or adding a catalog entry alone is not sufficient.
+
 Run `py system/scripts/wiki-maintenance.py --lint` for structural checks; results go to `system/generated/wiki-lint.generated.tsv`. This checks local links, source metadata, and possible orphans. It does not establish semantic truth, freshness, or completeness.
 
 Inspect contradictory claims, facts superseded by newer evidence, stale operational snapshots, orphan pages without useful inbound links, missing targets, missing reciprocal links, concepts that merit a page, duplicate subject pages, absent provenance, and evidence gaps. Report each finding with affected links, why it matters, and a recommended correction or research question. Fix clear reversible link/index errors within authorized scope. Keep interpretive conflicts explicit and ask Joshua only where his judgment is required. Do not invent fresh evidence or silently merge incompatible claims. Append a lint entry with scope, fixes, unresolved findings, and verification limits.

@@ -4,6 +4,13 @@ description: Creating algorithmic art using p5.js with seeded randomness and int
 license: Complete terms in LICENSE.txt
 ---
 
+
+## Local execution contract (2026-10-10)
+
+Preserve generative algorithms and explicit user parameters. Present artifacts using actual host file/image capabilities; do not assume the actual host artifact panel is an artifact destination. Write application dependencies outside the vault and verify exported output.
+
+## Workflow
+
 Algorithmic philosophies are computational aesthetic movements that are then expressed through code. Output .md files (philosophy), .html files (interactive viewer), and .js files (generative algorithms).
 
 This happens in two steps:
@@ -214,7 +221,7 @@ Output:
 1. **Algorithmic Philosophy** - As markdown or text explaining the generative aesthetic
 2. **Single HTML Artifact** - Self-contained interactive generative art built from `templates/viewer.html` (see STEP 0 and next section)
 
-The HTML artifact contains everything: p5.js (from CDN), the algorithm, parameter controls, and UI - all in one file that works immediately in Codex.ai artifacts or any browser. Start from the template file, not from scratch.
+The HTML artifact contains everything: p5.js (from CDN), the algorithm, parameter controls, and UI - all in one file that works immediately in the actual host artifact panel artifacts or any browser. Start from the template file, not from scratch.
 
 ---
 
@@ -222,7 +229,7 @@ The HTML artifact contains everything: p5.js (from CDN), the algorithm, paramete
 
 **REMINDER: `templates/viewer.html` should have already been read (see STEP 0). Use that file as the starting point.**
 
-To allow exploration of the generative art, create a single, self-contained HTML artifact. Ensure this artifact works immediately in Codex.ai or any browser - no setup required. Embed everything inline.
+To allow exploration of the generative art, create a single, self-contained HTML artifact. Ensure this artifact works immediately in the actual host artifact panel or any browser - no setup required. Embed everything inline.
 
 ### CRITICAL: WHAT'S FIXED VS VARIABLE
 
@@ -338,7 +345,7 @@ Add as many control-group divs as there are parameters.
 ### USING THE ARTIFACT
 
 The HTML artifact works immediately:
-1. **In Codex.ai**: Displayed as an interactive artifact - runs instantly
+1. **In the actual host artifact panel**: Displayed as an interactive artifact - runs instantly
 2. **As a file**: Save and open in any browser - no server needed
 3. **Sharing**: Send the HTML file - it's completely self-contained
 

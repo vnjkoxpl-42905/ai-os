@@ -3,6 +3,13 @@ name: superwhisper
 description: "Use whenever Joshua wants anything changed in Superwhisper, his dictation app on the Windows laptop. Triggers on \"save X in my vocabulary\", \"add X to my dictionary\", \"X --> Y\", \"X should always be Y\", \"replace X with Y\", a bare mis-heard word with an arrow, \"make a mode for ...\", \"scan my transcripts\", \"what keeps getting messed up\", \"what should I add to Superwhisper\", \"restart Superwhisper\", and any mention of Superwhisper, Super Whisper, or \"the dictation\" in the same breath as a word, a spelling, or a mode. Also use it when a dictated message from Joshua arrives with an obvious mis-hearing of a known term, even if he does not ask: note it and offer the fix. Covers the whole loop: edit the vault files, think through the likely mis-hearing variants, sync into the app, restart it silently, verify the load, and scan the transcript history for the next improvements."
 ---
 
+
+## Local execution contract (2026-10-10)
+
+Resolve maintained current project skill and actual SQLite/settings/mode files before writes. Provider labels do not authorize renaming Claude model IDs or existing mode filenames. Preserve vocabulary/replacements and verify actual desktop permissions; do not assume settings.json is current authority.
+
+## Workflow
+
 # Superwhisper
 
 Joshua dictates almost everything he sends you. Superwhisper is the app that does it, and the

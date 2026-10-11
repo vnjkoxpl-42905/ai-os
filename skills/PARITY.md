@@ -147,3 +147,8 @@ karpathy-teach is cataloged and activated in both runtimes. Claude delegates to 
 ## 2026-10-10: session transcript intake separated from knowledge ingestion
 
 `transcript-intake` is catalogued and activated as matching project copies for Claude, Codex and Gemini. It owns student/session source retrieval, filing, reconciliation and private distillation, reusing the existing shared Calendar/Drive procedure. `ingest` and its compatibility alias dispatch session transcripts to that skill; their compilation pipeline remains for reusable knowledge sources. `post-session-recap` continues to own student-facing lessons. No new global activation or external operation is implied.
+
+
+## 2026-10-10: knowledge pathway and existing user-level dispatchers
+
+Claude/Codex project ingest, query and lint share bounded index navigation and a usable-knowledge retrieval check. Public videos stay outside session transcript-intake. Existing user-level ingest/compatibility/query/lint entrypoints now resolve the target vault project skill (catalog fallback); no new global skill activation was created. Earlier user-entrypoint bytes and hashes are preserved under research/second-brain-pathway-2026-10-10/. Fresh runtime discovery is a separate check from these files.

@@ -3,6 +3,13 @@ name: bootcamp-parity-audit
 description: Audit a given LSAT U bootcamp's feature and visual parity against the flagship Intro to LR (Main Conclusion) bootcamp, anchored to the quality bar doc. Use when Joshua asks to "compare against Intro to LR", "check parity", "audit [bootcamp name]", or wants to know how far a bootcamp is from shipped quality. Trigger with /bootcamp-parity-audit <bootcamp-name>.
 ---
 
+
+## Local execution contract (2026-10-10)
+
+Resolve existing authoritative current benchmarks from the target app/manual/curriculum. Legacy archive anchors are unavailable until verified; report parity blocked for absent benchmarks and never invent a replacement. Current application lives in sibling ai-os-projects.
+
+## Workflow
+
 Audit a named LSAT U bootcamp against the flagship Intro to LR (Main Conclusion) bootcamp and the shared quality bar, and report the delta.
 
 ## Inputs
@@ -19,7 +26,7 @@ The bootcamp name/slug (e.g. "Abstract", "Flaw & Famous Flaws", "Causation Stati
 
 ## Codebase pass
 
-In the LSATU repo (`C:/Users/Joshu/dev/ai-os/projects/lsatu/`):
+In the LSATU repo (`C:/Users/Joshu/dev/ai-os/../ai-os-projects/lsatu/`):
 1. Find the target bootcamp's source directory under `src/bootcamps/`.
 2. Compare its file/component structure against the Intro to LR structure (`src/bootcamps/main-conclusion/`) at a glance, don't read every file, sample the key surfaces (overview, drill/practice flow, data layer).
 3. Note any surface Intro to LR has that the target bootcamp lacks entirely.

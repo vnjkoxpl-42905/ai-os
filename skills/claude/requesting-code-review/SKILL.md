@@ -23,7 +23,11 @@ Dispatch a code reviewer subagent to catch issues before they cascade. The revie
 
 ## How to Request
 
-**1. Get git SHAs:**
+**1. Capture review scope before dispatch:**
+
+Read `git status --short`. Use the actual task baseline for committed changes; do not assume `HEAD~1` is the start. For WIP capture `git diff --cached`, `git diff`, and `git ls-files --others --exclude-standard`; read each requested untracked file. Pass these paths/content with the Git range to the reviewer. An empty range is not proof no work exists. Preserve the index/worktree.
+
+Example committed scope only:
 ```bash
 BASE_SHA=$(git rev-parse HEAD~1)  # or origin/main
 HEAD_SHA=$(git rev-parse HEAD)
@@ -31,12 +35,13 @@ HEAD_SHA=$(git rev-parse HEAD)
 
 **2. Dispatch code reviewer subagent:**
 
-Dispatch a `general-purpose` subagent, filling the template at [code-reviewer.md](code-reviewer.md)
+Use the available host reviewer role/tool, filling the template at [code-reviewer.md](code-reviewer.md). `general-purpose` is a Claude host name, not a required Codex tool. If delegation is unavailable, perform the same read-only review and disclose that limitation.
 
 **Placeholders:**
 - `{DESCRIPTION}` - Brief summary of what you built
 - `{PLAN_OR_REQUIREMENTS}` - What it should do
-- `{BASE_SHA}` - Starting commit
+- `{REVIEW_SCOPE}` / `{REVIEW_PATHS}` - committed/WIP scope and exact path/content inventory
+- `{BASE_SHA}` - Starting commit for requested committed scope
 - `{HEAD_SHA}` - Ending commit
 
 **3. Act on feedback:**

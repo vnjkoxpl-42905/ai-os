@@ -3,6 +3,10 @@ name: lsat-lab-mega-set
 description: Build one consolidated LSAT Lab Logical Reasoning practice set containing EVERY LR question for a SINGLE PrepTest, in correct order, driving Joshua's logged-in Chrome via the claude-in-chrome extension end to end (create, select-all, rename to "PT### LR (S...)", start, capture URL, log). Use when Joshua gives a bare PrepTest number to turn into a set, e.g. "create set 154", "mega set 154", "LSAT Lab set 154", "make a set for PT 154", "build the LR set for PT 154", "make an LR set for 154". Runs autonomously to completion. NOT for a CSV/list of specific questions (that is lsat-lab-set-builder) and NOT for transcribing written explanations (that is lsat-lab-transcribe).
 ---
 
+## Current AI OS execution contract
+
+Use the active host-supported browser and current Windows/project log homes. Wrongly created sets are preserved and flagged until deletion is explicitly authorized; do not delete as automatic recovery. Verify count and set identity before declaring success.
+
 # lsat-lab-mega-set
 
 Build one consolidated Logical Reasoning (LR) practice set containing **every LR question for one PrepTest (PT)**, in correct order, on LSAT Lab (app.lsatlab.com), driving Joshua's logged-in Chrome. Written so any agent or human can execute it perfectly on the first try.
@@ -117,7 +121,7 @@ If the badge still says "0 selected", the click missed the checkbox (this happen
 - Locate the **Create** button (outline style) at the form bottom; use find + scroll_to rather than blind scrolling. Do NOT click **Start** (blue), which launches immediately.
 - Click **Create**.
 
-**GATE 4 - Dialog count:** the "Practice set created" dialog states the question count: `Created "LR Practice Set - <date, time>" with N questions.` N must equal Gate 2/3's N. If it says 10 (or anything else), the set is wrong: click OK, delete that set via its row's kebab menu (the only permitted delete: a set you just created wrongly), and redo from step 6.
+**GATE 4 - Dialog count:** the "Practice set created" dialog states the question count: `Created "LR Practice Set - <date, time>" with N questions.` N must equal Gate 2/3's N. If it says 10 (or anything else), the set is wrong: click OK, preserve and flag that set; request explicit removal authorization before deleting it, then redo from step 6 without altering other sets.
 - Click **OK**. You land on the **In Progress** tab; your set is the top row.
 
 ### 8. Rename the set
@@ -155,7 +159,7 @@ If the badge still says "0 selected", the click missed the checkbox (this happen
 | Filter count ~5,000 at Gate 2 | Clear not pressed / grid never filtered | Reopen Tests grid, Clear, select the one PT |
 | Filter count 45-80 but wrong | Wrong tile or a second tile selected | Reopen grid, zoom to inspect, fix |
 | "0 selected" after select-all click | Stale coordinates, click missed | Fresh screenshot, click header checkbox again |
-| Dialog says 10 questions | Select-all skipped | OK -> delete the bad set -> redo step 6 |
+| Dialog says 10 questions | Select-all skipped | OK -> flag and preserve the bad set -> redo step 6; delete only with explicit permission |
 | Opened set shows wrong PT in footer | Row-click race opened another set | Open by qsid directly (A4), verify footer |
 | JS returns `[BLOCKED: ...]` | Output contained URL/long string | Re-run returning compact JSON only; get URLs from Tab Context |
 | JS finds no `<table>` rows | Grid is div-based, tables elsewhere on page | Use the leaf-node technique in A2 |

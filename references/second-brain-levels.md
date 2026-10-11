@@ -1,13 +1,29 @@
 ---
 type: reference
 subject: The 5 levels of a Claude second brain where ai-os stands
-updated: 2026-10-08
+updated: 2026-10-10
 aliases: []
 ---
 
 # The 5 levels of a Claude second brain — where ai-os stands
 
 Comparative analysis of ai-os against Nate/Herk's "Every Level of a Claude Second Brain Explained" and the Karpathy LLM-wiki video (both in the NotebookLM `SETUp` notebook). Written 2026-07-18.
+
+## Current clip pathway, verified 2026-10-10
+
+Save a clip to `raw/inbox/`, then ask **"Ingest this into my second brain"**.
+`ingest` preserves evidence, compiles the useful content into its existing domain
+pages, updates navigation, and checks one natural retrieval question. Later ask
+**"What do we know about this, and how can I use it?"**; `second-brain-query`
+retrieves compiled knowledge with source links and qualifications. AI clips route
+through [the AI workspace hub](ai-workspace/index.md); LSAT knowledge uses the
+[corpus](../corpus/index.md). Saving alone does not automatically run ingestion.
+
+Student/session records use `transcript-intake`; student-facing lessons use
+`post-session-recap`. Claude and Codex project copies share these boundaries.
+A native Claude read-only check successfully activated ingest and retrieved one
+saved video example. Browser template settings and live acquisition were not
+checked. [Verification and remaining limits](../research/second-brain-pathway-2026-10-10/20261011T011434Z/outcome.md).
 
 ## The model
 
