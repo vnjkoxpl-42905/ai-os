@@ -89,6 +89,39 @@ Avatar/talking-head, if you ever want a synthetic you on camera:
 For teaching content none of this beats screen-rendered graphics plus your real
 voice. Generated footage is for atmosphere, not instruction.
 
+## Added 2026-10-10: a second free route, plain JavaScript with no framework
+
+Source claim, not tested here. Chase AI's video ([summary](sources/claude-now-does-video-free-javascript.md))
+says Claude Code can skip Remotion entirely. Claude writes one function that
+turns a time `t` into a picture, Playwright's headless browser draws each frame,
+and FFmpeg stitches 60 frames per second into an MP4. Claude then reviews an
+FFmpeg contact sheet of frames and fixes the function until it looks right.
+Sound is code or a supplied narration file.
+
+How it compares with the recommendation above:
+
+| | Remotion route (above) | Plain JavaScript route (2026-10-10 source) |
+|---|---|---|
+| Framework | Remotion 4.x, official skills and plugin | None; headless browser plus FFmpeg |
+| Cost claim | Free for organizations of three or fewer, per the pricing page checked 2026-09-09 | "Essentially free"; Claude usage only, per the narrator |
+| Licence question | Headcount trigger at four people | None stated in the source; not checked |
+| Evidence | Official docs, pricing page, several repositories | One creator's demonstration; no repository or skill URL in the clip |
+| Overlap | | The narrator made his own reference video with Remotion and used it as a style reference, so he treats the two as compatible |
+
+Workflow ideas in the source that apply to either route and cost nothing to
+adopt: ask for a storyboard of scene frames before any code runs; state length,
+aspect ratio and audio route in the prompt; end the prompt with "pull a contact
+sheet, look at it, fix, re-render, repeat"; supply narration first and time the
+visuals to it. The narrator reports one 15-second showreel took about 20 minutes
+at low effort, 30 at high, and 8 hours at the highest setting, with little
+quality difference between low and high. Those timings are his, unverified.
+
+Open and untested: whether Playwright is installed here (only FFmpeg is recorded
+in the [toolchain note](../references/ai-workspace/windows-cli-toolchain.md)),
+whether the plain route beats Remotion on a real RRC or conditional lesson, and
+the name and source of the skill he distributes. Nothing was installed or
+changed by ingesting the clip.
+
 ## Sources
 
 remotion.dev/docs/license/pricing · remotion.dev/docs/ai/coding-agents ·

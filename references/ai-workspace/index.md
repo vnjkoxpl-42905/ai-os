@@ -2,7 +2,7 @@
 type: reference
 subject: AI workspace learning and improvements
 created: 2026-10-08
-updated: 2026-10-09
+updated: 2026-10-10
 aliases: [AI setup, AI learning, Claude and Codex improvements]
 tags: [ai-workspace, claude, codex, llm-wiki]
 sources: []
@@ -26,7 +26,7 @@ This hub organizes existing authoritative pages rather than copying their knowle
 |---|---|---|
 | Claude and Codex workflows | Build/review handoffs, work briefs, tool orchestration, runtime differences | [Claude plus Codex](../claude-plus-codex.md) |
 | Skills and reusable prompts | Skill evaluation, reusable instructions, activation rules, deciding whether an existing skill already covers the job | [Skill catalog](../../skills/INDEX.md), [declared runtime differences](../../skills/PARITY.md), [operating rules](../../AGENTS.md), and [Three Ms framework](../3ms-framework.md) |
-| Tools, repositories, and integrations | What a tool could solve, prerequisites, overlaps, costs, and evidence from testing | [Obsidian command center](../obsidian-command-center.md), [Firecrawl methods](../firecrawl.md), or the existing reference for the particular tool |
+| Tools, repositories, and integrations | What a tool could solve, prerequisites, overlaps, costs, and evidence from testing | [Obsidian command center](../obsidian-command-center.md), [Firecrawl methods](../firecrawl.md), [video generation options](../../wiki/VIDEO-GENERATION-OPTIONS-2026-09-09.md) for Remotion and plain-JavaScript video, or the existing reference for the particular tool |
 | Tips, insights, and prompting methods | Useful reasoning patterns, context management, evaluating outputs, and methods that survive product changes | [Three Ms framework](../3ms-framework.md), [second-brain architecture](../second-brain-levels.md), and [website planning](../website-design-planning.md) when relevant |
 | Product updates | Claimed new capabilities, affected runtime/version, official evidence, availability, and practical consequences | Update the existing affected reference. Keep release evidence in its source summary rather than creating an undated universal claim |
 | Proposed improvements | A concrete gap, expected benefit, alternatives, and a testable next action | [Automation backlog](../automation-backlog.md) for automation proposals; [work ledger](../../wiki/tasks.md) for agreed work |

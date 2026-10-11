@@ -140,6 +140,7 @@ Regenerate this section after page changes with `py system/scripts/wiki-maintena
 
 ### Sources
 
+- [[wiki/sources/claude-now-does-video-free-javascript.md|Claude writes the video as a function of time, then checks its own frames]]: Chase AI's video "Claude Now Does Video (FOR FREE) Thanks To JavaScript" (YouTube) argues that Claude Code can produce finished MP4s with plain JavaScript, with no Remotion, no Aft
 - [[wiki/sources/conditional-reasoning-voice.md|Conditional Reasoning supplies the selected LSAT teaching voice]]: Joshua supplied this HTML on 2026-10-02 and explicitly selected its tone, wording, cadence, point of view, explanatory flow, and depth as the standard for LSAT teaching material. T
 - [[wiki/sources/i-built-another-andrej-karpathy-using-claude.md|Build an evidence-grounded teaching agent]]: Nate Herk's video describes collecting public sources, compiling an interconnected wiki, deriving corroborated rules, creating a teaching agent and skill, enforcing execution, and
 - [[wiki/sources/karpathy/animals-vs-ghosts.md|Animals and LLMs may occupy different paths to intelligence]]: Original: Animals vs Ghosts, Andrej Karpathy, published 2025-10-01 according to the preserved article. Collection and compilation date 2026-10-08. The complete preserved Markdown t

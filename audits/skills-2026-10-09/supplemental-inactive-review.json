@@ -1,0 +1,572 @@
+[
+  {
+    "runtime": "claude",
+    "name": "subtitles",
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\_inactive\\subtitles\\SKILL.md",
+    "sha256": "a12bb9a7b4c7fc3684f8892e00fb7130f659477eda6026661f2e9257f81ecdd9",
+    "lines": 102,
+    "semantic_review": "full-body-read",
+    "disposition": "keep-inactive; consolidation-reference candidate",
+    "reason": "Timestamp-free language-learning default differs from ordinary transcript default, but is a mode rather than independent service. All use the same credit-based TRANSCRIPT_API_KEY provider; preserve useful endpoint details behind one router and prefer installed free yt-dlp absent a reason for API fallback. No deletion recommended solely from overlap.",
+    "confidence": "High for instruction overlap; live service/pricing/API behavior unverified",
+    "support_coverage": "Entrypoint fully read. Shared auth-setup reviewed for transcriptapi; each reference physical hash recorded, full vendor support tree unexecuted.",
+    "auth_setup_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\_inactive\\subtitles\\references\\auth-setup.md",
+[REDACTED CREDENTIAL]
+    "issues": [
+      {
+        "kind": "broad-trigger",
+        "line": 3,
+        "text": "description: \"Use when subtitles or the spoken text of a YouTube video is needed: pasted video links or IDs, requests to translate a video, read along, follow foreign-language content, or extract what was said. Also use for language learning or accessibility. Fetches timestamped subtitles from any YouTube video. Not for uploading subtitles or account management.\""
+      },
+      {
+        "kind": "paid-key-fallback",
+        "line": 7,
+        "text": "Credit-based hosted service; free introductory credits are not unlimited free use."
+      }
+    ]
+  },
+  {
+    "runtime": "gemini",
+    "name": "subtitles",
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\gemini\\_inactive\\subtitles\\SKILL.md",
+    "sha256": "a12bb9a7b4c7fc3684f8892e00fb7130f659477eda6026661f2e9257f81ecdd9",
+    "lines": 102,
+    "semantic_review": "inherited-exact-byte-hash-completed-review",
+    "disposition": "keep-inactive; consolidation-reference candidate",
+    "reason": "Timestamp-free language-learning default differs from ordinary transcript default, but is a mode rather than independent service. All use the same credit-based TRANSCRIPT_API_KEY provider; preserve useful endpoint details behind one router and prefer installed free yt-dlp absent a reason for API fallback. No deletion recommended solely from overlap.",
+    "confidence": "High for instruction overlap; live service/pricing/API behavior unverified",
+    "support_coverage": "Entrypoint fully read. Shared auth-setup reviewed for transcriptapi; each reference physical hash recorded, full vendor support tree unexecuted.",
+    "auth_setup_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\_inactive\\subtitles\\references\\auth-setup.md",
+[REDACTED CREDENTIAL]
+    "issues": [
+      {
+        "kind": "broad-trigger",
+        "line": 3,
+        "text": "description: \"Use when subtitles or the spoken text of a YouTube video is needed: pasted video links or IDs, requests to translate a video, read along, follow foreign-language content, or extract what was said. Also use for language learning or accessibility. Fetches timestamped subtitles from any YouTube video. Not for uploading subtitles or account management.\""
+      },
+      {
+        "kind": "paid-key-fallback",
+        "line": 7,
+        "text": "Credit-based hosted service; free introductory credits are not unlimited free use."
+      }
+    ],
+    "semantic_base_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\_inactive\\subtitles\\SKILL.md",
+    "semantic_base_sha256": "a12bb9a7b4c7fc3684f8892e00fb7130f659477eda6026661f2e9257f81ecdd9"
+  },
+  {
+    "runtime": "claude",
+    "name": "transcript",
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\_inactive\\transcript\\SKILL.md",
+    "sha256": "47a004145881ead28d84386502b9f95f44243c162df93844a0f8e518d0503a49",
+    "lines": 97,
+    "semantic_review": "full-body-read",
+    "disposition": "keep-inactive; consolidation-reference candidate",
+    "reason": "Transcript/text default with timestamps and summary-first tip overlaps video-transcript; full transcript requests must override summary-first. All use the same credit-based TRANSCRIPT_API_KEY provider; preserve useful endpoint details behind one router and prefer installed free yt-dlp absent a reason for API fallback. No deletion recommended solely from overlap.",
+    "confidence": "High for instruction overlap; live service/pricing/API behavior unverified",
+    "support_coverage": "Entrypoint fully read. Shared auth-setup reviewed for transcriptapi; each reference physical hash recorded, full vendor support tree unexecuted.",
+    "auth_setup_path": null,
+    "auth_setup_sha256": null,
+    "issues": [
+      {
+        "kind": "broad-trigger",
+        "line": 3,
+        "text": "description: \"Use when the spoken content of a YouTube video is needed — even if not explicitly requested: pasted video links or IDs, requests to summarize, quote, transcribe, translate, fact-check, or extract anything from a video. Also use for research or learning when a video is the source. Not for uploads or account management.\""
+      },
+      {
+        "kind": "paid-key-fallback",
+        "line": 7,
+        "text": "Credit-based hosted service; free introductory credits are not unlimited free use."
+      }
+    ]
+  },
+  {
+    "runtime": "gemini",
+    "name": "transcript",
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\gemini\\_inactive\\transcript\\SKILL.md",
+    "sha256": "47a004145881ead28d84386502b9f95f44243c162df93844a0f8e518d0503a49",
+    "lines": 97,
+    "semantic_review": "inherited-exact-byte-hash-completed-review",
+    "disposition": "keep-inactive; consolidation-reference candidate",
+    "reason": "Transcript/text default with timestamps and summary-first tip overlaps video-transcript; full transcript requests must override summary-first. All use the same credit-based TRANSCRIPT_API_KEY provider; preserve useful endpoint details behind one router and prefer installed free yt-dlp absent a reason for API fallback. No deletion recommended solely from overlap.",
+    "confidence": "High for instruction overlap; live service/pricing/API behavior unverified",
+    "support_coverage": "Entrypoint fully read. Shared auth-setup reviewed for transcriptapi; each reference physical hash recorded, full vendor support tree unexecuted.",
+    "auth_setup_path": null,
+    "auth_setup_sha256": null,
+    "issues": [
+      {
+        "kind": "broad-trigger",
+        "line": 3,
+        "text": "description: \"Use when the spoken content of a YouTube video is needed — even if not explicitly requested: pasted video links or IDs, requests to summarize, quote, transcribe, translate, fact-check, or extract anything from a video. Also use for research or learning when a video is the source. Not for uploads or account management.\""
+      },
+      {
+        "kind": "paid-key-fallback",
+        "line": 7,
+        "text": "Credit-based hosted service; free introductory credits are not unlimited free use."
+      }
+    ],
+    "semantic_base_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\_inactive\\transcript\\SKILL.md",
+    "semantic_base_sha256": "47a004145881ead28d84386502b9f95f44243c162df93844a0f8e518d0503a49"
+  },
+  {
+    "runtime": "claude",
+    "name": "transcriptapi",
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\_inactive\\transcriptapi\\SKILL.md",
+    "sha256": "e6d0aec73d5d686d9568919823e49bb5bf5b27fe656412679ecd27a93bfb6bad",
+    "lines": 293,
+    "semantic_review": "full-body-read",
+    "disposition": "keep-inactive; consolidation-reference candidate",
+    "reason": "Comprehensive endpoint reference duplicates youtube-full family capability; unusually broad could-be-relevant trigger should stay inactive. All use the same credit-based TRANSCRIPT_API_KEY provider; preserve useful endpoint details behind one router and prefer installed free yt-dlp absent a reason for API fallback. No deletion recommended solely from overlap.",
+    "confidence": "High for instruction overlap; live service/pricing/API behavior unverified",
+    "support_coverage": "Entrypoint fully read. Shared auth-setup reviewed for transcriptapi; each reference physical hash recorded, full vendor support tree unexecuted.",
+    "auth_setup_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\_inactive\\transcriptapi\\references\\auth-setup.md",
+[REDACTED CREDENTIAL]
+    "issues": [
+      {
+        "kind": "broad-trigger",
+        "line": 3,
+        "text": "description: \"Use when YouTube is or could be relevant — even if not mentioned: pasted video/channel/playlist links, video IDs, @handles, creator lookups, video summaries, quotes, translations, topic research, tutorials, talks, lectures, expert discussions, product reviews, how-to guides, new product announcements, or anything where video content is fresher or richer than text search. Covers transcripts, video/channel search, channel browsing, playlists, and within-channel search. Not for uploads, account management, or written-source-only research.\""
+      },
+      {
+        "kind": "paid-key-fallback",
+        "line": 7,
+        "text": "Credit-based hosted service; free introductory credits are not unlimited free use."
+      },
+      {
+        "kind": "secret-provisioning-conflict",
+        "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\_inactive\\transcriptapi\\references\\auth-setup.md",
+        "evidence": [
+          {
+            "line": 24,
+            "text": "If `TRANSCRIPT_API_KEY` is unset, **stop and ask Joshua for it.** He signs up at"
+          },
+          {
+            "line": 25,
+            "text": "<https://transcriptapi.com> and pastes the `sk_...` key; the agent appends it to `.env`."
+          }
+        ],
+        "recommendation": "Ask to add key privately in root .env editor; never paste key into chat."
+      }
+    ]
+  },
+  {
+    "runtime": "gemini",
+    "name": "transcriptapi",
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\gemini\\_inactive\\transcriptapi\\SKILL.md",
+    "sha256": "e6d0aec73d5d686d9568919823e49bb5bf5b27fe656412679ecd27a93bfb6bad",
+    "lines": 293,
+    "semantic_review": "inherited-exact-byte-hash-completed-review",
+    "disposition": "keep-inactive; consolidation-reference candidate",
+    "reason": "Comprehensive endpoint reference duplicates youtube-full family capability; unusually broad could-be-relevant trigger should stay inactive. All use the same credit-based TRANSCRIPT_API_KEY provider; preserve useful endpoint details behind one router and prefer installed free yt-dlp absent a reason for API fallback. No deletion recommended solely from overlap.",
+    "confidence": "High for instruction overlap; live service/pricing/API behavior unverified",
+    "support_coverage": "Entrypoint fully read. Shared auth-setup reviewed for transcriptapi; each reference physical hash recorded, full vendor support tree unexecuted.",
+    "auth_setup_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\_inactive\\transcriptapi\\references\\auth-setup.md",
+[REDACTED CREDENTIAL]
+    "issues": [
+      {
+        "kind": "broad-trigger",
+        "line": 3,
+        "text": "description: \"Use when YouTube is or could be relevant — even if not mentioned: pasted video/channel/playlist links, video IDs, @handles, creator lookups, video summaries, quotes, translations, topic research, tutorials, talks, lectures, expert discussions, product reviews, how-to guides, new product announcements, or anything where video content is fresher or richer than text search. Covers transcripts, video/channel search, channel browsing, playlists, and within-channel search. Not for uploads, account management, or written-source-only research.\""
+      },
+      {
+        "kind": "paid-key-fallback",
+        "line": 7,
+        "text": "Credit-based hosted service; free introductory credits are not unlimited free use."
+      },
+      {
+        "kind": "secret-provisioning-conflict",
+        "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\_inactive\\transcriptapi\\references\\auth-setup.md",
+        "evidence": [
+          {
+            "line": 24,
+            "text": "If `TRANSCRIPT_API_KEY` is unset, **stop and ask Joshua for it.** He signs up at"
+          },
+          {
+            "line": 25,
+            "text": "<https://transcriptapi.com> and pastes the `sk_...` key; the agent appends it to `.env`."
+          }
+        ],
+        "recommendation": "Ask to add key privately in root .env editor; never paste key into chat."
+      }
+    ],
+    "semantic_base_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\_inactive\\transcriptapi\\SKILL.md",
+    "semantic_base_sha256": "e6d0aec73d5d686d9568919823e49bb5bf5b27fe656412679ecd27a93bfb6bad"
+  },
+  {
+    "runtime": "claude",
+    "name": "video-transcript",
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\_inactive\\video-transcript\\SKILL.md",
+    "sha256": "54d7d3122b5e0453fe5bcace205ddaf19965926e0416f9496565339c8fb11bc1",
+    "lines": 99,
+    "semantic_review": "full-body-read",
+    "disposition": "keep-inactive; consolidation-reference candidate",
+    "reason": "Same transcript endpoint as transcript with near-identical examples and summary-first default; consolidate reference mode. All use the same credit-based TRANSCRIPT_API_KEY provider; preserve useful endpoint details behind one router and prefer installed free yt-dlp absent a reason for API fallback. No deletion recommended solely from overlap.",
+    "confidence": "High for instruction overlap; live service/pricing/API behavior unverified",
+    "support_coverage": "Entrypoint fully read. Shared auth-setup reviewed for transcriptapi; each reference physical hash recorded, full vendor support tree unexecuted.",
+    "auth_setup_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\_inactive\\video-transcript\\references\\auth-setup.md",
+[REDACTED CREDENTIAL]
+    "issues": [
+      {
+        "kind": "broad-trigger",
+        "line": 3,
+        "text": "description: \"Use when video content needs to be extracted as text: pasted YouTube links or IDs, requests to transcribe, summarize, quote, translate, convert video to text, or extract information from video content. Also use when a user shares a video URL without explanation and wants to know what it says. Not for uploads or account management.\""
+      },
+      {
+        "kind": "paid-key-fallback",
+        "line": 7,
+        "text": "Credit-based hosted service; free introductory credits are not unlimited free use."
+      }
+    ]
+  },
+  {
+    "runtime": "gemini",
+    "name": "video-transcript",
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\gemini\\_inactive\\video-transcript\\SKILL.md",
+    "sha256": "54d7d3122b5e0453fe5bcace205ddaf19965926e0416f9496565339c8fb11bc1",
+    "lines": 99,
+    "semantic_review": "inherited-exact-byte-hash-completed-review",
+    "disposition": "keep-inactive; consolidation-reference candidate",
+    "reason": "Same transcript endpoint as transcript with near-identical examples and summary-first default; consolidate reference mode. All use the same credit-based TRANSCRIPT_API_KEY provider; preserve useful endpoint details behind one router and prefer installed free yt-dlp absent a reason for API fallback. No deletion recommended solely from overlap.",
+    "confidence": "High for instruction overlap; live service/pricing/API behavior unverified",
+    "support_coverage": "Entrypoint fully read. Shared auth-setup reviewed for transcriptapi; each reference physical hash recorded, full vendor support tree unexecuted.",
+    "auth_setup_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\_inactive\\video-transcript\\references\\auth-setup.md",
+[REDACTED CREDENTIAL]
+    "issues": [
+      {
+        "kind": "broad-trigger",
+        "line": 3,
+        "text": "description: \"Use when video content needs to be extracted as text: pasted YouTube links or IDs, requests to transcribe, summarize, quote, translate, convert video to text, or extract information from video content. Also use when a user shares a video URL without explanation and wants to know what it says. Not for uploads or account management.\""
+      },
+      {
+        "kind": "paid-key-fallback",
+        "line": 7,
+        "text": "Credit-based hosted service; free introductory credits are not unlimited free use."
+      }
+    ],
+    "semantic_base_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\_inactive\\video-transcript\\SKILL.md",
+    "semantic_base_sha256": "54d7d3122b5e0453fe5bcace205ddaf19965926e0416f9496565339c8fb11bc1"
+  },
+  {
+    "runtime": "claude",
+    "name": "youtube-api",
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\_inactive\\youtube-api\\SKILL.md",
+    "sha256": "6e00e2d7dc4ecac7474d9a0a37a7ba69b4a45d84175a673038aba5a6295c3a5c",
+    "lines": 134,
+    "semantic_review": "full-body-read",
+    "disposition": "keep-inactive; consolidation-reference candidate",
+    "reason": "Same third-party endpoints, not official YouTube API. Google-quota/pricing/OAuth comparison is an unverified current claim and needs official verification before advice. All use the same credit-based TRANSCRIPT_API_KEY provider; preserve useful endpoint details behind one router and prefer installed free yt-dlp absent a reason for API fallback. No deletion recommended solely from overlap.",
+    "confidence": "High for instruction overlap; live service/pricing/API behavior unverified",
+    "support_coverage": "Entrypoint fully read. Shared auth-setup reviewed for transcriptapi; each reference physical hash recorded, full vendor support tree unexecuted.",
+    "auth_setup_path": null,
+    "auth_setup_sha256": null,
+    "issues": [
+      {
+        "kind": "broad-trigger",
+        "line": 3,
+        "text": "description: \"Use when YouTube data is needed without Google API quotas or OAuth setup: transcripts, video metadata, channel info, search results, playlists. Triggers on pasted YouTube links, creator names, @handles, topic research, video summaries, channel browsing, or any request where YouTube content would help — even if not mentioned explicitly. Not for uploads, account management, or written-source-only research.\""
+      },
+      {
+        "kind": "paid-key-fallback",
+        "line": 7,
+        "text": "Credit-based hosted service; free introductory credits are not unlimited free use."
+      }
+    ]
+  },
+  {
+    "runtime": "gemini",
+    "name": "youtube-api",
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\gemini\\_inactive\\youtube-api\\SKILL.md",
+    "sha256": "6e00e2d7dc4ecac7474d9a0a37a7ba69b4a45d84175a673038aba5a6295c3a5c",
+    "lines": 134,
+    "semantic_review": "inherited-exact-byte-hash-completed-review",
+    "disposition": "keep-inactive; consolidation-reference candidate",
+    "reason": "Same third-party endpoints, not official YouTube API. Google-quota/pricing/OAuth comparison is an unverified current claim and needs official verification before advice. All use the same credit-based TRANSCRIPT_API_KEY provider; preserve useful endpoint details behind one router and prefer installed free yt-dlp absent a reason for API fallback. No deletion recommended solely from overlap.",
+    "confidence": "High for instruction overlap; live service/pricing/API behavior unverified",
+    "support_coverage": "Entrypoint fully read. Shared auth-setup reviewed for transcriptapi; each reference physical hash recorded, full vendor support tree unexecuted.",
+    "auth_setup_path": null,
+    "auth_setup_sha256": null,
+    "issues": [
+      {
+        "kind": "broad-trigger",
+        "line": 3,
+        "text": "description: \"Use when YouTube data is needed without Google API quotas or OAuth setup: transcripts, video metadata, channel info, search results, playlists. Triggers on pasted YouTube links, creator names, @handles, topic research, video summaries, channel browsing, or any request where YouTube content would help — even if not mentioned explicitly. Not for uploads, account management, or written-source-only research.\""
+      },
+      {
+        "kind": "paid-key-fallback",
+        "line": 7,
+        "text": "Credit-based hosted service; free introductory credits are not unlimited free use."
+      }
+    ],
+    "semantic_base_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\_inactive\\youtube-api\\SKILL.md",
+    "semantic_base_sha256": "6e00e2d7dc4ecac7474d9a0a37a7ba69b4a45d84175a673038aba5a6295c3a5c"
+  },
+  {
+    "runtime": "claude",
+    "name": "youtube-channels",
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\_inactive\\youtube-channels\\SKILL.md",
+    "sha256": "25f166062ac1b275be611987e499baa9fd78df64e3ee754fa52a3bb28da4da8e",
+    "lines": 198,
+    "semantic_review": "full-body-read",
+    "disposition": "keep-inactive; consolidation-reference candidate",
+    "reason": "Channel latest/resolve free versus per-page browsing costs are useful modes; latest15 is not full upload inventory. All use the same credit-based TRANSCRIPT_API_KEY provider; preserve useful endpoint details behind one router and prefer installed free yt-dlp absent a reason for API fallback. No deletion recommended solely from overlap.",
+    "confidence": "High for instruction overlap; live service/pricing/API behavior unverified",
+    "support_coverage": "Entrypoint fully read. Shared auth-setup reviewed for transcriptapi; each reference physical hash recorded, full vendor support tree unexecuted.",
+    "auth_setup_path": null,
+    "auth_setup_sha256": null,
+    "issues": [
+      {
+        "kind": "broad-trigger",
+        "line": 3,
+        "text": "description: \"Use when a YouTube channel is the focus: pasted @handles or channel URLs, requests to browse a creator's uploads, see what a channel has posted recently, search within a channel, or resolve a handle to a channel ID. Also use when the user names a creator and wants to explore their content or monitor their uploads. Not for creating channels or account management.\""
+      },
+      {
+        "kind": "paid-key-fallback",
+        "line": 7,
+        "text": "Credit-based hosted service; free introductory credits are not unlimited free use."
+      }
+    ]
+  },
+  {
+    "runtime": "gemini",
+    "name": "youtube-channels",
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\gemini\\_inactive\\youtube-channels\\SKILL.md",
+    "sha256": "25f166062ac1b275be611987e499baa9fd78df64e3ee754fa52a3bb28da4da8e",
+    "lines": 198,
+    "semantic_review": "inherited-exact-byte-hash-completed-review",
+    "disposition": "keep-inactive; consolidation-reference candidate",
+    "reason": "Channel latest/resolve free versus per-page browsing costs are useful modes; latest15 is not full upload inventory. All use the same credit-based TRANSCRIPT_API_KEY provider; preserve useful endpoint details behind one router and prefer installed free yt-dlp absent a reason for API fallback. No deletion recommended solely from overlap.",
+    "confidence": "High for instruction overlap; live service/pricing/API behavior unverified",
+    "support_coverage": "Entrypoint fully read. Shared auth-setup reviewed for transcriptapi; each reference physical hash recorded, full vendor support tree unexecuted.",
+    "auth_setup_path": null,
+    "auth_setup_sha256": null,
+    "issues": [
+      {
+        "kind": "broad-trigger",
+        "line": 3,
+        "text": "description: \"Use when a YouTube channel is the focus: pasted @handles or channel URLs, requests to browse a creator's uploads, see what a channel has posted recently, search within a channel, or resolve a handle to a channel ID. Also use when the user names a creator and wants to explore their content or monitor their uploads. Not for creating channels or account management.\""
+      },
+      {
+        "kind": "paid-key-fallback",
+        "line": 7,
+        "text": "Credit-based hosted service; free introductory credits are not unlimited free use."
+      }
+    ],
+    "semantic_base_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\_inactive\\youtube-channels\\SKILL.md",
+    "semantic_base_sha256": "25f166062ac1b275be611987e499baa9fd78df64e3ee754fa52a3bb28da4da8e"
+  },
+  {
+    "runtime": "claude",
+    "name": "youtube-data",
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\_inactive\\youtube-data\\SKILL.md",
+    "sha256": "52439f5ac81da83e20c124cca2ac614b4f6006b9c57fea5a947df35aa6f7e87b",
+    "lines": 151,
+    "semantic_review": "full-body-read",
+    "disposition": "keep-inactive; consolidation-reference candidate",
+    "reason": "Structured JSON mode adds useful output guidance but not separate capability; needs provenance and exhaustion checks for completeness. All use the same credit-based TRANSCRIPT_API_KEY provider; preserve useful endpoint details behind one router and prefer installed free yt-dlp absent a reason for API fallback. No deletion recommended solely from overlap.",
+    "confidence": "High for instruction overlap; live service/pricing/API behavior unverified",
+    "support_coverage": "Entrypoint fully read. Shared auth-setup reviewed for transcriptapi; each reference physical hash recorded, full vendor support tree unexecuted.",
+    "auth_setup_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\_inactive\\youtube-data\\references\\auth-setup.md",
+[REDACTED CREDENTIAL]
+    "issues": [
+      {
+        "kind": "broad-trigger",
+        "line": 3,
+        "text": "description: \"Use when structured YouTube data is needed: pasted video/channel/playlist links, transcripts for analysis, video metadata, channel upload history, search results, or playlist contents — without Google API quotas or OAuth. Triggers on YouTube URLs, creator names, topic research, or any request needing YouTube content, even if not mentioned explicitly. Not for uploads, account management, or written-source-only research.\""
+      },
+      {
+        "kind": "paid-key-fallback",
+        "line": 7,
+        "text": "Credit-based hosted service; free introductory credits are not unlimited free use."
+      }
+    ]
+  },
+  {
+    "runtime": "gemini",
+    "name": "youtube-data",
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\gemini\\_inactive\\youtube-data\\SKILL.md",
+    "sha256": "52439f5ac81da83e20c124cca2ac614b4f6006b9c57fea5a947df35aa6f7e87b",
+    "lines": 151,
+    "semantic_review": "inherited-exact-byte-hash-completed-review",
+    "disposition": "keep-inactive; consolidation-reference candidate",
+    "reason": "Structured JSON mode adds useful output guidance but not separate capability; needs provenance and exhaustion checks for completeness. All use the same credit-based TRANSCRIPT_API_KEY provider; preserve useful endpoint details behind one router and prefer installed free yt-dlp absent a reason for API fallback. No deletion recommended solely from overlap.",
+    "confidence": "High for instruction overlap; live service/pricing/API behavior unverified",
+    "support_coverage": "Entrypoint fully read. Shared auth-setup reviewed for transcriptapi; each reference physical hash recorded, full vendor support tree unexecuted.",
+    "auth_setup_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\_inactive\\youtube-data\\references\\auth-setup.md",
+[REDACTED CREDENTIAL]
+    "issues": [
+      {
+        "kind": "broad-trigger",
+        "line": 3,
+        "text": "description: \"Use when structured YouTube data is needed: pasted video/channel/playlist links, transcripts for analysis, video metadata, channel upload history, search results, or playlist contents — without Google API quotas or OAuth. Triggers on YouTube URLs, creator names, topic research, or any request needing YouTube content, even if not mentioned explicitly. Not for uploads, account management, or written-source-only research.\""
+      },
+      {
+        "kind": "paid-key-fallback",
+        "line": 7,
+        "text": "Credit-based hosted service; free introductory credits are not unlimited free use."
+      }
+    ],
+    "semantic_base_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\_inactive\\youtube-data\\SKILL.md",
+    "semantic_base_sha256": "52439f5ac81da83e20c124cca2ac614b4f6006b9c57fea5a947df35aa6f7e87b"
+  },
+  {
+    "runtime": "claude",
+    "name": "youtube-playlist",
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\_inactive\\youtube-playlist\\SKILL.md",
+    "sha256": "d0afb294bf5489278968de510c73d6044c5c5db03b2bdfeb5a63039e184589ac",
+    "lines": 130,
+    "semantic_review": "full-body-read",
+    "disposition": "keep-inactive; consolidation-reference candidate",
+    "reason": "Playlist pagination is useful; keep logic and conditional channel/continuation constraints in shared reference. No need separate auto-trigger. All use the same credit-based TRANSCRIPT_API_KEY provider; preserve useful endpoint details behind one router and prefer installed free yt-dlp absent a reason for API fallback. No deletion recommended solely from overlap.",
+    "confidence": "High for instruction overlap; live service/pricing/API behavior unverified",
+    "support_coverage": "Entrypoint fully read. Shared auth-setup reviewed for transcriptapi; each reference physical hash recorded, full vendor support tree unexecuted.",
+    "auth_setup_path": null,
+    "auth_setup_sha256": null,
+    "issues": [
+      {
+        "kind": "broad-trigger",
+        "line": 3,
+        "text": "description: \"Use when a YouTube playlist is involved: pasted playlist links or IDs, requests to list playlist videos, browse playlist contents, or work through a playlist for transcripts or research. Also use when the user wants all videos from a series, course, or collection. Not for creating playlists or account management.\""
+      },
+      {
+        "kind": "paid-key-fallback",
+        "line": 7,
+        "text": "Credit-based hosted service; free introductory credits are not unlimited free use."
+      }
+    ]
+  },
+  {
+    "runtime": "gemini",
+    "name": "youtube-playlist",
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\gemini\\_inactive\\youtube-playlist\\SKILL.md",
+    "sha256": "d0afb294bf5489278968de510c73d6044c5c5db03b2bdfeb5a63039e184589ac",
+    "lines": 130,
+    "semantic_review": "inherited-exact-byte-hash-completed-review",
+    "disposition": "keep-inactive; consolidation-reference candidate",
+    "reason": "Playlist pagination is useful; keep logic and conditional channel/continuation constraints in shared reference. No need separate auto-trigger. All use the same credit-based TRANSCRIPT_API_KEY provider; preserve useful endpoint details behind one router and prefer installed free yt-dlp absent a reason for API fallback. No deletion recommended solely from overlap.",
+    "confidence": "High for instruction overlap; live service/pricing/API behavior unverified",
+    "support_coverage": "Entrypoint fully read. Shared auth-setup reviewed for transcriptapi; each reference physical hash recorded, full vendor support tree unexecuted.",
+    "auth_setup_path": null,
+    "auth_setup_sha256": null,
+    "issues": [
+      {
+        "kind": "broad-trigger",
+        "line": 3,
+        "text": "description: \"Use when a YouTube playlist is involved: pasted playlist links or IDs, requests to list playlist videos, browse playlist contents, or work through a playlist for transcripts or research. Also use when the user wants all videos from a series, course, or collection. Not for creating playlists or account management.\""
+      },
+      {
+        "kind": "paid-key-fallback",
+        "line": 7,
+        "text": "Credit-based hosted service; free introductory credits are not unlimited free use."
+      }
+    ],
+    "semantic_base_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\_inactive\\youtube-playlist\\SKILL.md",
+    "semantic_base_sha256": "d0afb294bf5489278968de510c73d6044c5c5db03b2bdfeb5a63039e184589ac"
+  },
+  {
+    "runtime": "claude",
+    "name": "youtube-search",
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\_inactive\\youtube-search\\SKILL.md",
+    "sha256": "231b6d12a5a8636a6a78cee3d710a24d2957de25fb5caa5c34c032a5e74830ab",
+    "lines": 150,
+    "semantic_review": "full-body-read",
+    "disposition": "keep-inactive; consolidation-reference candidate",
+    "reason": "Global/channel search mode overlaps comprehensive router; limit/search result cap is not exhaustive coverage. All use the same credit-based TRANSCRIPT_API_KEY provider; preserve useful endpoint details behind one router and prefer installed free yt-dlp absent a reason for API fallback. No deletion recommended solely from overlap.",
+    "confidence": "High for instruction overlap; live service/pricing/API behavior unverified",
+    "support_coverage": "Entrypoint fully read. Shared auth-setup reviewed for transcriptapi; each reference physical hash recorded, full vendor support tree unexecuted.",
+    "auth_setup_path": null,
+    "auth_setup_sha256": null,
+    "issues": [
+      {
+        "kind": "broad-trigger",
+        "line": 3,
+        "text": "description: \"Use when the user wants to find YouTube content on any topic: searching for videos or channels, finding creators who cover a subject, discovering tutorials, talks, or expert discussions, or looking up a channel by name or handle. Also use proactively when the user wants to research a topic and YouTube is a good source. Not for account management or written-source-only research.\""
+      },
+      {
+        "kind": "paid-key-fallback",
+        "line": 7,
+        "text": "Credit-based hosted service; free introductory credits are not unlimited free use."
+      }
+    ]
+  },
+  {
+    "runtime": "gemini",
+    "name": "youtube-search",
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\gemini\\_inactive\\youtube-search\\SKILL.md",
+    "sha256": "231b6d12a5a8636a6a78cee3d710a24d2957de25fb5caa5c34c032a5e74830ab",
+    "lines": 150,
+    "semantic_review": "inherited-exact-byte-hash-completed-review",
+    "disposition": "keep-inactive; consolidation-reference candidate",
+    "reason": "Global/channel search mode overlaps comprehensive router; limit/search result cap is not exhaustive coverage. All use the same credit-based TRANSCRIPT_API_KEY provider; preserve useful endpoint details behind one router and prefer installed free yt-dlp absent a reason for API fallback. No deletion recommended solely from overlap.",
+    "confidence": "High for instruction overlap; live service/pricing/API behavior unverified",
+    "support_coverage": "Entrypoint fully read. Shared auth-setup reviewed for transcriptapi; each reference physical hash recorded, full vendor support tree unexecuted.",
+    "auth_setup_path": null,
+    "auth_setup_sha256": null,
+    "issues": [
+      {
+        "kind": "broad-trigger",
+        "line": 3,
+        "text": "description: \"Use when the user wants to find YouTube content on any topic: searching for videos or channels, finding creators who cover a subject, discovering tutorials, talks, or expert discussions, or looking up a channel by name or handle. Also use proactively when the user wants to research a topic and YouTube is a good source. Not for account management or written-source-only research.\""
+      },
+      {
+        "kind": "paid-key-fallback",
+        "line": 7,
+        "text": "Credit-based hosted service; free introductory credits are not unlimited free use."
+      }
+    ],
+    "semantic_base_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\_inactive\\youtube-search\\SKILL.md",
+    "semantic_base_sha256": "231b6d12a5a8636a6a78cee3d710a24d2957de25fb5caa5c34c032a5e74830ab"
+  },
+  {
+    "runtime": "claude",
+    "name": "yt",
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\_inactive\\yt\\SKILL.md",
+    "sha256": "edc99273e022711ee9349abe78aa83a5c33c1a066be227de16b3553171f2a8fd",
+    "lines": 87,
+    "semantic_review": "full-body-read",
+    "disposition": "keep-inactive; consolidation-reference candidate",
+    "reason": "Broadest shortcut catches any remotely YouTube-shaped research; redundant service router that should remain inactive. All use the same credit-based TRANSCRIPT_API_KEY provider; preserve useful endpoint details behind one router and prefer installed free yt-dlp absent a reason for API fallback. No deletion recommended solely from overlap.",
+    "confidence": "High for instruction overlap; live service/pricing/API behavior unverified",
+    "support_coverage": "Entrypoint fully read. Shared auth-setup reviewed for transcriptapi; each reference physical hash recorded, full vendor support tree unexecuted.",
+    "auth_setup_path": null,
+    "auth_setup_sha256": null,
+    "issues": [
+      {
+        "kind": "broad-trigger",
+        "line": 3,
+        "text": "description: \"Use when YouTube is relevant: pasted video links or IDs, @handles, quick video lookups, summaries, channel latest uploads, topic search, or any request involving YouTube content — even if YouTube is not mentioned explicitly. Covers transcripts, search, and channel latest. Not for uploads or account management.\""
+      },
+      {
+        "kind": "paid-key-fallback",
+        "line": 7,
+        "text": "Credit-based hosted service; free introductory credits are not unlimited free use."
+      }
+    ]
+  },
+  {
+    "runtime": "gemini",
+    "name": "yt",
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\gemini\\_inactive\\yt\\SKILL.md",
+    "sha256": "edc99273e022711ee9349abe78aa83a5c33c1a066be227de16b3553171f2a8fd",
+    "lines": 87,
+    "semantic_review": "inherited-exact-byte-hash-completed-review",
+    "disposition": "keep-inactive; consolidation-reference candidate",
+    "reason": "Broadest shortcut catches any remotely YouTube-shaped research; redundant service router that should remain inactive. All use the same credit-based TRANSCRIPT_API_KEY provider; preserve useful endpoint details behind one router and prefer installed free yt-dlp absent a reason for API fallback. No deletion recommended solely from overlap.",
+    "confidence": "High for instruction overlap; live service/pricing/API behavior unverified",
+    "support_coverage": "Entrypoint fully read. Shared auth-setup reviewed for transcriptapi; each reference physical hash recorded, full vendor support tree unexecuted.",
+    "auth_setup_path": null,
+    "auth_setup_sha256": null,
+    "issues": [
+      {
+        "kind": "broad-trigger",
+        "line": 3,
+        "text": "description: \"Use when YouTube is relevant: pasted video links or IDs, @handles, quick video lookups, summaries, channel latest uploads, topic search, or any request involving YouTube content — even if YouTube is not mentioned explicitly. Covers transcripts, search, and channel latest. Not for uploads or account management.\""
+      },
+      {
+        "kind": "paid-key-fallback",
+        "line": 7,
+        "text": "Credit-based hosted service; free introductory credits are not unlimited free use."
+      }
+    ],
+    "semantic_base_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\_inactive\\yt\\SKILL.md",
+    "semantic_base_sha256": "edc99273e022711ee9349abe78aa83a5c33c1a066be227de16b3553171f2a8fd"
+  }
+]

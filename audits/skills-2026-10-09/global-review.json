@@ -100,15 +100,19 @@
       "sha256": "e86e95aad1676fa43576c257ab79bfc804ca179c0675bb7f352c8db0b227ae42",
       "lines": 405,
       "chars": 19730,
-      "disposition": "keep-pending-semantic-review",
-      "coverage": "full-body-machine-pattern-and-local-link-scan; no runtime execution",
+      "disposition": "repair",
+      "coverage": "Complete provider substitution comparison and all additional difference hunks inspected; base completion required",
       "issues": [],
       "missing_markdown_links": [],
-      "support_coverage": "Local Markdown-link existence scan only; supporting payloads not exhaustively reviewed or executed.",
-      "semantic_review": "partial-or-machine-only; full semantic review pending",
-      "confidence": "undetermined",
-      "reason": "Do not infer usefulness or semantic correctness from inventory/hash/pattern scans.",
-      "normalized_text_sha256": "e86e95aad1676fa43576c257ab79bfc804ca179c0675bb7f352c8db0b227ae42"
+      "support_coverage": "SKILL.md body or full reviewed-base plus complete difference; local reference existence scan. Supporting payloads not exhaustively inspected or executed.",
+      "semantic_review": "full-variant-difference-reviewed; inherits completed base",
+      "confidence": "High for inspected instruction/difference findings; live workflow unverified",
+      "reason": "Useful generative art workflow; mechanical provider replacement introduces Codex.ai artifact destination claims. Preserve algorithm mechanism while adapt host presentation.",
+      "normalized_text_sha256": "e86e95aad1676fa43576c257ab79bfc804ca179c0675bb7f352c8db0b227ae42",
+      "semantic_base_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\algorithmic-art\\SKILL.md",
+      "semantic_base_sha256": "3bc4092c09804853186524c826bc0621b940bb6122c05b84496dff95388e6eef",
+      "variant_transform": "case-insensitive Claude Code→Codex then Claude→Codex, plus complete residual diff reviewed",
+      "semantic_evidence_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\algorithmic-art\\SKILL.md"
     },
     {
       "path": "C:\\Users\\Joshu\\.agents\\skills\\ask-matt\\SKILL.md",
@@ -173,15 +177,19 @@
       "sha256": "efd470d3fe4f4f7313561177f76eaba005c6229f30c1d65c15a0e27c180dd2f9",
       "lines": 122,
       "chars": 5240,
-      "disposition": "keep-pending-semantic-review",
-      "coverage": "full-body-machine-pattern-and-local-link-scan; no runtime execution",
+      "disposition": "repair",
+      "coverage": "Complete provider substitution comparison and all additional difference hunks inspected; base completion required",
       "issues": [],
       "missing_markdown_links": [],
-      "support_coverage": "Local Markdown-link existence scan only; supporting payloads not exhaustively reviewed or executed.",
-      "semantic_review": "partial-or-machine-only; full semantic review pending",
-      "confidence": "undetermined",
-      "reason": "Do not infer usefulness or semantic correctness from inventory/hash/pattern scans.",
-      "normalized_text_sha256": "efd470d3fe4f4f7313561177f76eaba005c6229f30c1d65c15a0e27c180dd2f9"
+      "support_coverage": "SKILL.md body or full reviewed-base plus complete difference; local reference existence scan. Supporting payloads not exhaustively inspected or executed.",
+      "semantic_review": "full-variant-difference-reviewed; inherits completed base",
+      "confidence": "High for inspected instruction/difference findings; live workflow unverified",
+      "reason": "Global variant restores projects/lsatu path inside vault instead of sibling app root; route to maintained project copy.",
+      "normalized_text_sha256": "efd470d3fe4f4f7313561177f76eaba005c6229f30c1d65c15a0e27c180dd2f9",
+      "semantic_base_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\booking-link\\SKILL.md",
+      "semantic_base_sha256": "d4f9678592e74026b2011b871182709bc6260aea1a0c3417b5da28fb8fe3e498",
+      "variant_transform": "case-insensitive Claude Code→Codex then Claude→Codex, plus complete residual diff reviewed",
+      "semantic_evidence_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\booking-link\\SKILL.md"
     },
     {
       "path": "C:\\Users\\Joshu\\.agents\\skills\\bootcamp-builder\\SKILL.md",
@@ -233,20 +241,22 @@
       "sha256": "276a8659d080f7207bc85794a74f0f1eda85506f96aefe2514adcbb4113cd133",
       "lines": 159,
       "chars": 10393,
-      "disposition": "keep-pending-semantic-review",
-      "coverage": "full-body-machine-pattern-and-local-link-scan; no runtime execution",
+      "disposition": "fix",
+      "coverage": "Entire normalized text identical; only line-ending bytes differ; base completion required",
       "issues": [],
       "missing_markdown_links": [],
-      "semantic_review": "inherited-identical-full-text-only-line-ending-difference",
-      "support_coverage": "Local Markdown-link existence scan only; supporting payloads not exhaustively reviewed or executed.",
+      "semantic_review": "inherited-identical-full-text-completed-base",
+      "support_coverage": "SKILL.md body or full reviewed-base plus complete difference; local reference existence scan. Supporting payloads not exhaustively inspected or executed.",
       "canonical_matches": [
         "skills\\claude\\brainstorming\\SKILL.md",
         "skills\\codex\\brainstorming\\SKILL.md"
       ],
-      "confidence": "pending completed canonical review",
-      "reason": "Same entire normalized body as fully reviewed source; byte hashes differ. Do not infer usefulness or semantic correctness from inventory/hash/pattern scans.",
+      "confidence": "High for inspected instruction/difference findings; live workflow unverified",
+      "reason": "See concrete findings in claude-review.md",
       "normalized_text_sha256": "e14914605f640e0841758e45d0ab2a53243b59b921f929e47921c99668f2e61d",
-      "semantic_evidence_path": "C:\\Users\\Joshu\\.codex\\skills\\brainstorming\\SKILL.md"
+      "semantic_evidence_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\brainstorming\\SKILL.md",
+      "semantic_base_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\brainstorming\\SKILL.md",
+      "semantic_base_sha256": "e14914605f640e0841758e45d0ab2a53243b59b921f929e47921c99668f2e61d"
     },
     {
       "path": "C:\\Users\\Joshu\\.agents\\skills\\brand-guidelines\\SKILL.md",
@@ -293,15 +303,19 @@
       "sha256": "4919b8bfdcc06618577ecd56c91cbd2f85271e52c54e51213e72482c5e3fb693",
       "lines": 130,
       "chars": 11935,
-      "disposition": "keep-pending-semantic-review",
-      "coverage": "full-body-machine-pattern-and-local-link-scan; no runtime execution",
+      "disposition": "keep",
+      "coverage": "Complete provider substitution comparison and all additional difference hunks inspected; base completion required",
       "issues": [],
       "missing_markdown_links": [],
-      "support_coverage": "Local Markdown-link existence scan only; supporting payloads not exhaustively reviewed or executed.",
-      "semantic_review": "partial-or-machine-only; full semantic review pending",
-      "confidence": "undetermined",
-      "reason": "Do not infer usefulness or semantic correctness from inventory/hash/pattern scans.",
-      "normalized_text_sha256": "4919b8bfdcc06618577ecd56c91cbd2f85271e52c54e51213e72482c5e3fb693"
+      "support_coverage": "SKILL.md body or full reviewed-base plus complete difference; local reference existence scan. Supporting payloads not exhaustively inspected or executed.",
+      "semantic_review": "full-variant-difference-reviewed; inherits completed base",
+      "confidence": "High for inspected instruction/difference findings; live workflow unverified",
+      "reason": "Provider prose-only substitutions do not alone change canvas capability; keep specialized art workflow, inherited canonical limitations remain.",
+      "normalized_text_sha256": "4919b8bfdcc06618577ecd56c91cbd2f85271e52c54e51213e72482c5e3fb693",
+      "semantic_base_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\canvas-design\\SKILL.md",
+      "semantic_base_sha256": "a1f288079624402f30682753c1d43920b6664785698d21d3e7aa197450a6448b",
+      "variant_transform": "case-insensitive Claude Code→Codex then Claude→Codex, plus complete residual diff reviewed",
+      "semantic_evidence_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\canvas-design\\SKILL.md"
     },
     {
       "path": "C:\\Users\\Joshu\\.agents\\skills\\chat-export\\SKILL.md",
@@ -350,8 +364,8 @@
       "sha256": "dd7010947565bb3257a78551eee9b8ee9cb12560e3b6190a35b40831cd4a2cca",
       "lines": 572,
       "chars": 85935,
-      "disposition": "repair",
-      "coverage": "full-body-machine-pattern-and-local-link-scan; no runtime execution",
+      "disposition": "pending-base-review",
+      "coverage": "Complete provider substitution comparison and all additional difference hunks inspected; base completion required",
       "issues": [
         {
           "kind": "provider-model-corruption",
@@ -393,11 +407,15 @@
         }
       ],
       "missing_markdown_links": [],
-      "support_coverage": "Local Markdown-link existence scan only; supporting payloads not exhaustively reviewed or executed.",
-      "semantic_review": "partial-or-machine-only; full semantic review pending",
-      "confidence": "undetermined",
-      "reason": "Provider identity corrupted: Codex-api uses Anthropic SDK and Codex-opus-5 default.",
-      "normalized_text_sha256": "dd7010947565bb3257a78551eee9b8ee9cb12560e3b6190a35b40831cd4a2cca"
+      "support_coverage": "SKILL.md body or full reviewed-base plus complete difference; local reference existence scan. Supporting payloads not exhaustively inspected or executed.",
+      "semantic_review": "full-variant-difference-reviewed; awaiting completed base",
+      "confidence": "variant reviewed; canonical base completion pending",
+      "reason": "Exact mechanical Claude→Codex substitution corrupts provider identity, Anthropic package/model identifiers and paths; broad agent/NL triggers can select it outside API work. Restore Anthropic identity and narrow scope.",
+      "normalized_text_sha256": "dd7010947565bb3257a78551eee9b8ee9cb12560e3b6190a35b40831cd4a2cca",
+      "semantic_base_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\claude-api\\SKILL.md",
+      "semantic_base_sha256": "8227f0d1192594bfea04df6c9f1d9d727dd300c3f4b2c42d315dd9fe58b1a421",
+      "variant_transform": "case-insensitive Claude Code→Codex then Claude→Codex, plus complete residual diff reviewed",
+      "semantic_evidence_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\claude-api\\SKILL.md"
     },
     {
       "path": "C:\\Users\\Joshu\\.agents\\skills\\claude-build\\SKILL.md",
@@ -631,20 +649,22 @@
       "sha256": "a4f046b1830f0b3f6b5b344d7595437fbd1f8d70ad79447ae393fde48043d460",
       "lines": 41,
       "chars": 1119,
-      "disposition": "keep-pending-semantic-review",
-      "coverage": "full-body-machine-pattern-and-local-link-scan; no runtime execution",
+      "disposition": "keep candidate",
+      "coverage": "Entire normalized text identical; only line-ending bytes differ; base completion required",
       "issues": [],
       "missing_markdown_links": [],
-      "semantic_review": "inherited-identical-full-text-only-line-ending-difference",
-      "support_coverage": "Local Markdown-link existence scan only; supporting payloads not exhaustively reviewed or executed.",
+      "semantic_review": "inherited-identical-full-text-completed-base",
+      "support_coverage": "SKILL.md body or full reviewed-base plus complete difference; local reference existence scan. Supporting payloads not exhaustively inspected or executed.",
       "canonical_matches": [
         "skills\\claude\\defuddle\\SKILL.md",
         "skills\\codex\\defuddle\\SKILL.md"
       ],
-      "confidence": "pending completed canonical review",
-      "reason": "Same entire normalized body as fully reviewed source; byte hashes differ. Do not infer usefulness or semantic correctness from inventory/hash/pattern scans.",
+      "confidence": "High for inspected instruction/difference findings; live workflow unverified",
+      "reason": "No confirmed removal rationale in inspected evidence; lack of usage evidence is not proof of uselessness",
       "normalized_text_sha256": "10673a4dc70a0a057612d443243ab7a5aa4abdd4a0fadc3f6eec5fd71ad5a971",
-      "semantic_evidence_path": "C:\\Users\\Joshu\\.codex\\skills\\defuddle\\SKILL.md"
+      "semantic_evidence_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\defuddle\\SKILL.md",
+      "semantic_base_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\defuddle\\SKILL.md",
+      "semantic_base_sha256": "10673a4dc70a0a057612d443243ab7a5aa4abdd4a0fadc3f6eec5fd71ad5a971"
     },
     {
       "path": "C:\\Users\\Joshu\\.agents\\skills\\design-an-interface\\SKILL.md",
@@ -739,20 +759,22 @@
       "sha256": "257280ee9727380c4c38e58ed790c9e3403e227c256ab0b14f1f7da2b378c327",
       "lines": 185,
       "chars": 6618,
-      "disposition": "keep-pending-semantic-review",
-      "coverage": "full-body-machine-pattern-and-local-link-scan; no runtime execution",
+      "disposition": "keep",
+      "coverage": "Entire normalized text identical; only line-ending bytes differ; base completion required",
       "issues": [],
       "missing_markdown_links": [],
-      "semantic_review": "inherited-identical-full-text-only-line-ending-difference",
-      "support_coverage": "Local Markdown-link existence scan only; supporting payloads not exhaustively reviewed or executed.",
+      "semantic_review": "inherited-identical-full-text-completed-base",
+      "support_coverage": "SKILL.md body or full reviewed-base plus complete difference; local reference existence scan. Supporting payloads not exhaustively inspected or executed.",
       "canonical_matches": [
         "skills\\claude\\dispatching-parallel-agents\\SKILL.md",
         "skills\\codex\\dispatching-parallel-agents\\SKILL.md"
       ],
-      "confidence": "pending completed canonical review",
-      "reason": "Same entire normalized body as fully reviewed source; byte hashes differ. Do not infer usefulness or semantic correctness from inventory/hash/pattern scans.",
+      "confidence": "High for inspected instruction/difference findings; live workflow unverified",
+      "reason": "Useful independent domain ownership and integration checks; preserve current runtime delegation authorization and capacity.",
       "normalized_text_sha256": "f0df13f584049059cc5619f90061405b89dcc6e28ab3f2a8517d27d99c7a46a6",
-      "semantic_evidence_path": "C:\\Users\\Joshu\\.codex\\skills\\dispatching-parallel-agents\\SKILL.md"
+      "semantic_evidence_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\dispatching-parallel-agents\\SKILL.md",
+      "semantic_base_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\dispatching-parallel-agents\\SKILL.md",
+      "semantic_base_sha256": "f0df13f584049059cc5619f90061405b89dcc6e28ab3f2a8517d27d99c7a46a6"
     },
     {
       "path": "C:\\Users\\Joshu\\.agents\\skills\\doc-coauthoring\\SKILL.md",
@@ -760,15 +782,19 @@
       "sha256": "e9fafa32ea79c19f2d17d7507d4008c0f978294023ecf788c175426b8ce19831",
       "lines": 375,
       "chars": 15783,
-      "disposition": "keep-pending-semantic-review",
-      "coverage": "full-body-machine-pattern-and-local-link-scan; no runtime execution",
+      "disposition": "pending-base-review",
+      "coverage": "Complete provider substitution comparison and all additional difference hunks inspected; base completion required",
       "issues": [],
       "missing_markdown_links": [],
-      "support_coverage": "Local Markdown-link existence scan only; supporting payloads not exhaustively reviewed or executed.",
-      "semantic_review": "partial-or-machine-only; full semantic review pending",
-      "confidence": "undetermined",
-      "reason": "Do not infer usefulness or semantic correctness from inventory/hash/pattern scans.",
-      "normalized_text_sha256": "e9fafa32ea79c19f2d17d7507d4008c0f978294023ecf788c175426b8ce19831"
+      "support_coverage": "SKILL.md body or full reviewed-base plus complete difference; local reference existence scan. Supporting payloads not exhaustively inspected or executed.",
+      "semantic_review": "full-variant-difference-reviewed; awaiting completed base",
+      "confidence": "variant reviewed; canonical base completion pending",
+      "reason": "Distinct iterative coauthoring workflow; provider substitutions mostly names, inherit reviewed canonical scope/trigger findings.",
+      "normalized_text_sha256": "e9fafa32ea79c19f2d17d7507d4008c0f978294023ecf788c175426b8ce19831",
+      "semantic_base_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\doc-coauthoring\\SKILL.md",
+      "semantic_base_sha256": "2e47d78846faeea4a56e9809c52700087a15a2155a3f293a3efbaded81398ef4",
+      "variant_transform": "case-insensitive Claude Code→Codex then Claude→Codex, plus complete residual diff reviewed",
+      "semantic_evidence_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\doc-coauthoring\\SKILL.md"
     },
     {
       "path": "C:\\Users\\Joshu\\.agents\\skills\\docx\\SKILL.md",
@@ -866,15 +892,19 @@
       "sha256": "b6f9fb54513545c6d0cf644d74fb9417a8fd4c33eaf4fcecc054b3f4d132ec4f",
       "lines": 70,
       "chars": 2582,
-      "disposition": "keep-pending-semantic-review",
-      "coverage": "full-body-machine-pattern-and-local-link-scan; no runtime execution",
+      "disposition": "keep",
+      "coverage": "Complete provider substitution comparison and all additional difference hunks inspected; base completion required",
       "issues": [],
       "missing_markdown_links": [],
-      "support_coverage": "Local Markdown-link existence scan only; supporting payloads not exhaustively reviewed or executed.",
-      "semantic_review": "partial-or-machine-only; full semantic review pending",
-      "confidence": "undetermined",
-      "reason": "Do not infer usefulness or semantic correctness from inventory/hash/pattern scans.",
-      "normalized_text_sha256": "0f8d286c3e67545d4b09901fe1d8120fb6318d018b75879994983485722b1078"
+      "support_coverage": "SKILL.md body or full reviewed-base plus complete difference; local reference existence scan. Supporting payloads not exhaustively inspected or executed.",
+      "semantic_review": "full-variant-difference-reviewed; inherits completed base",
+      "confidence": "High for inspected instruction/difference findings; live workflow unverified",
+      "reason": "Plan execution remains distinct from planning; inherited base scope and explicit delegation authorization still apply.",
+      "normalized_text_sha256": "0f8d286c3e67545d4b09901fe1d8120fb6318d018b75879994983485722b1078",
+      "semantic_base_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\executing-plans\\SKILL.md",
+      "semantic_base_sha256": "bbd8d28bb655a52817cc129ce49f9e46fa7c6303f72ed5de95bfe914ef8e0ce8",
+      "variant_transform": "case-insensitive Claude Code→Codex then Claude→Codex, plus complete residual diff reviewed",
+      "semantic_evidence_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\executing-plans\\SKILL.md"
     },
     {
       "path": "C:\\Users\\Joshu\\.agents\\skills\\extract-design\\SKILL.md",
@@ -882,22 +912,24 @@
       "sha256": "469abb8374d9a7b7c7eda09fac54f12ce2ff2fc846dd54c89a0ab527ec5a3d30",
       "lines": 86,
       "chars": 3142,
-      "disposition": "keep-pending-semantic-review",
-      "coverage": "full-body-machine-pattern-and-local-link-scan; no runtime execution",
+      "disposition": "keep",
+      "coverage": "Entire normalized text identical; only line-ending bytes differ; base completion required",
       "issues": [],
       "missing_markdown_links": [],
-      "semantic_review": "inherited-identical-full-text-only-line-ending-difference",
-      "support_coverage": "Local Markdown-link existence scan only; supporting payloads not exhaustively reviewed or executed.",
+      "semantic_review": "inherited-identical-full-text-completed-base",
+      "support_coverage": "SKILL.md body or full reviewed-base plus complete difference; local reference existence scan. Supporting payloads not exhaustively inspected or executed.",
       "canonical_matches": [
         "skills\\claude\\extract-design\\SKILL.md",
         "skills\\claude\\_project-forks\\lsatu\\extract-design\\SKILL.md",
         "skills\\codex\\extract-design\\SKILL.md",
         "skills\\codex\\_project-forks\\lsatu\\extract-design\\SKILL.md"
       ],
-      "confidence": "pending completed canonical review",
-      "reason": "Same entire normalized body as fully reviewed source; byte hashes differ. Do not infer usefulness or semantic correctness from inventory/hash/pattern scans.",
+      "confidence": "High for inspected instruction/difference findings; live workflow unverified",
+      "reason": "Distinct token extraction and preview utility; package/dependency availability and generated output need explicit target directory, no install was run.",
       "normalized_text_sha256": "0523d33cadab98ad082d52b68effe0e35103d5453e98b301891f52cae63b5640",
-      "semantic_evidence_path": "C:\\Users\\Joshu\\.codex\\skills\\extract-design\\SKILL.md"
+      "semantic_evidence_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\extract-design\\SKILL.md",
+      "semantic_base_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\extract-design\\SKILL.md",
+      "semantic_base_sha256": "0523d33cadab98ad082d52b68effe0e35103d5453e98b301891f52cae63b5640"
     },
     {
       "path": "C:\\Users\\Joshu\\.agents\\skills\\find-skills\\SKILL.md",
@@ -905,15 +937,19 @@
       "sha256": "3a5b1bdeca262b0e7691dd8d9cad280285a75a0ddf071162a5d3de5088d67175",
       "lines": 142,
       "chars": 5429,
-      "disposition": "keep-pending-semantic-review",
-      "coverage": "full-body-machine-pattern-and-local-link-scan; no runtime execution",
+      "disposition": "repair",
+      "coverage": "Complete provider substitution comparison and all additional difference hunks inspected; base completion required",
       "issues": [],
       "missing_markdown_links": [],
-      "support_coverage": "Local Markdown-link existence scan only; supporting payloads not exhaustively reviewed or executed.",
-      "semantic_review": "partial-or-machine-only; full semantic review pending",
-      "confidence": "undetermined",
-      "reason": "Do not infer usefulness or semantic correctness from inventory/hash/pattern scans.",
-      "normalized_text_sha256": "2a55760a46bf3459ae1e289869b2290edc0dad02f46663871a9620f810ac0957"
+      "support_coverage": "SKILL.md body or full reviewed-base plus complete difference; local reference existence scan. Supporting payloads not exhaustively inspected or executed.",
+      "semantic_review": "full-variant-difference-reviewed; inherits completed base",
+      "confidence": "High for inspected instruction/difference findings; live workflow unverified",
+      "reason": "Useful skill search; mechanical provider replacement corrupts literal ComposioHQ/awesome-claude-skills repo reference.",
+      "normalized_text_sha256": "2a55760a46bf3459ae1e289869b2290edc0dad02f46663871a9620f810ac0957",
+      "semantic_base_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\find-skills\\SKILL.md",
+      "semantic_base_sha256": "1e85f6f9686e145aca4a124e3b704b9bbea9aa87e08515c1e352eee70f6e6e7a",
+      "variant_transform": "case-insensitive Claude Code→Codex then Claude→Codex, plus complete residual diff reviewed",
+      "semantic_evidence_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\find-skills\\SKILL.md"
     },
     {
       "path": "C:\\Users\\Joshu\\.agents\\skills\\finishing-a-development-branch\\SKILL.md",
@@ -921,20 +957,22 @@
       "sha256": "c51f87cbbfbc0100bfacb21ad0696e7125e5e61ddeb3e839fa48fa6d4d0223c7",
       "lines": 241,
       "chars": 6814,
-      "disposition": "keep-pending-semantic-review",
-      "coverage": "full-body-machine-pattern-and-local-link-scan; no runtime execution",
+      "disposition": "keep candidate",
+      "coverage": "Entire normalized text identical; only line-ending bytes differ; base completion required",
       "issues": [],
       "missing_markdown_links": [],
-      "semantic_review": "inherited-identical-full-text-only-line-ending-difference",
-      "support_coverage": "Local Markdown-link existence scan only; supporting payloads not exhaustively reviewed or executed.",
+      "semantic_review": "inherited-identical-full-text-completed-base",
+      "support_coverage": "SKILL.md body or full reviewed-base plus complete difference; local reference existence scan. Supporting payloads not exhaustively inspected or executed.",
       "canonical_matches": [
         "skills\\claude\\finishing-a-development-branch\\SKILL.md",
         "skills\\codex\\finishing-a-development-branch\\SKILL.md"
       ],
-      "confidence": "pending completed canonical review",
-      "reason": "Same entire normalized body as fully reviewed source; byte hashes differ. Do not infer usefulness or semantic correctness from inventory/hash/pattern scans.",
+      "confidence": "High for inspected instruction/difference findings; live workflow unverified",
+      "reason": "No confirmed removal rationale in inspected evidence; lack of usage evidence is not proof of uselessness",
       "normalized_text_sha256": "e6d4a812de900d33c6eacfb40747f99427f25c304a7b7099120f9373b115a47f",
-      "semantic_evidence_path": "C:\\Users\\Joshu\\.codex\\skills\\finishing-a-development-branch\\SKILL.md"
+      "semantic_evidence_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\finishing-a-development-branch\\SKILL.md",
+      "semantic_base_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\finishing-a-development-branch\\SKILL.md",
+      "semantic_base_sha256": "e6d4a812de900d33c6eacfb40747f99427f25c304a7b7099120f9373b115a47f"
     },
     {
       "path": "C:\\Users\\Joshu\\.agents\\skills\\firecrawl\\SKILL.md",
@@ -1459,8 +1497,8 @@
       "sha256": "45b8efd1abea70e2ed11e2f026e92ac4b02697ac7b8863fd8b4869f15895ee0b",
       "lines": 90,
       "chars": 5958,
-      "disposition": "keep-pending-semantic-review",
-      "coverage": "full-body-machine-pattern-and-local-link-scan; no runtime execution",
+      "disposition": "fix",
+      "coverage": "Entire SKILL.md read in bounded sections; no target runtime execution",
       "issues": [
         {
           "kind": "runtime-tool-portability-review",
@@ -1477,11 +1515,12 @@
         }
       ],
       "missing_markdown_links": [],
-      "support_coverage": "Local Markdown-link existence scan only; supporting payloads not exhaustively reviewed or executed.",
-      "semantic_review": "partial-or-machine-only; full semantic review pending",
-      "confidence": "undetermined",
-      "reason": "Do not infer usefulness or semantic correctness from inventory/hash/pattern scans.",
-      "normalized_text_sha256": "2d782f5da2f905178f7773c9d3b18b15331b0892d6d1cb678d166dc672ac41f5"
+      "support_coverage": "SKILL.md body or full reviewed-base plus complete difference; local reference existence scan. Supporting payloads not exhaustively inspected or executed.",
+      "semantic_review": "full-body-read",
+      "confidence": "High for inspected instruction/difference findings; live workflow unverified",
+      "reason": "Search workflow is useful; repair Bash-only command example for Windows and make feedback transmission opt-in or explicitly covered by invoked workflow. Paid hosted service, not free local search.",
+      "normalized_text_sha256": "2d782f5da2f905178f7773c9d3b18b15331b0892d6d1cb678d166dc672ac41f5",
+      "semantic_evidence_path": "C:\\Users\\Joshu\\.agents\\skills\\firecrawl-search\\SKILL.md"
     },
     {
       "path": "C:\\Users\\Joshu\\.agents\\skills\\firecrawl-seo-audit\\SKILL.md",
@@ -1489,15 +1528,16 @@
       "sha256": "26531eadc941020e543462e7ba9a79d472e8b345a4017c9c8dc603e1281ab64f",
       "lines": 79,
       "chars": 2591,
-      "disposition": "keep-pending-semantic-review",
-      "coverage": "full-body-machine-pattern-and-local-link-scan; no runtime execution",
+      "disposition": "keep",
+      "coverage": "Entire SKILL.md read in bounded sections; no target runtime execution",
       "issues": [],
       "missing_markdown_links": [],
-      "support_coverage": "Local Markdown-link existence scan only; supporting payloads not exhaustively reviewed or executed.",
-      "semantic_review": "partial-or-machine-only; full semantic review pending",
-      "confidence": "undetermined",
-      "reason": "Do not infer usefulness or semantic correctness from inventory/hash/pattern scans.",
-      "normalized_text_sha256": "a04bf7f3806fef718e48ad05ad20d38548410b2d51b92a4ad43cd8838068e0bc"
+      "support_coverage": "SKILL.md body or full reviewed-base plus complete difference; local reference existence scan. Supporting payloads not exhaustively inspected or executed.",
+      "semantic_review": "full-body-read",
+      "confidence": "High for inspected instruction/difference findings; live workflow unverified",
+      "reason": "Focused SEO evidence collection; distinct from generic crawl. Hosted API dependencies and ranking conclusions remain untested.",
+      "normalized_text_sha256": "a04bf7f3806fef718e48ad05ad20d38548410b2d51b92a4ad43cd8838068e0bc",
+      "semantic_evidence_path": "C:\\Users\\Joshu\\.agents\\skills\\firecrawl-seo-audit\\SKILL.md"
     },
     {
       "path": "C:\\Users\\Joshu\\.agents\\skills\\firecrawl-shop\\SKILL.md",
@@ -1505,15 +1545,16 @@
       "sha256": "6d32003567a503804c4025bddcebfad1e95024dcf54321a25c5e2a29b0eac7f9",
       "lines": 68,
       "chars": 2290,
-      "disposition": "keep-pending-semantic-review",
-      "coverage": "full-body-machine-pattern-and-local-link-scan; no runtime execution",
+      "disposition": "keep",
+      "coverage": "Entire SKILL.md read in bounded sections; no target runtime execution",
       "issues": [],
       "missing_markdown_links": [],
-      "support_coverage": "Local Markdown-link existence scan only; supporting payloads not exhaustively reviewed or executed.",
-      "semantic_review": "partial-or-machine-only; full semantic review pending",
-      "confidence": "undetermined",
-      "reason": "Do not infer usefulness or semantic correctness from inventory/hash/pattern scans.",
-      "normalized_text_sha256": "aafea0f0ecdf3a098492635b5f1a24ff4b8cf339945170beee8b75ce12ff4f0c"
+      "support_coverage": "SKILL.md body or full reviewed-base plus complete difference; local reference existence scan. Supporting payloads not exhaustively inspected or executed.",
+      "semantic_review": "full-body-read",
+      "confidence": "High for inspected instruction/difference findings; live workflow unverified",
+      "reason": "Distinct personal shopping workflow with cart authorization and checkout boundary; hosted paid API availability untested.",
+      "normalized_text_sha256": "aafea0f0ecdf3a098492635b5f1a24ff4b8cf339945170beee8b75ce12ff4f0c",
+      "semantic_evidence_path": "C:\\Users\\Joshu\\.agents\\skills\\firecrawl-shop\\SKILL.md"
     },
     {
       "path": "C:\\Users\\Joshu\\.agents\\skills\\firecrawl-website-design-clone\\SKILL.md",
@@ -1555,15 +1596,19 @@
       "sha256": "e445d0a6d1c6809b145249499a9e806ab13a73ab0208255e9c2ccef954460647",
       "lines": 71,
       "chars": 9362,
-      "disposition": "keep-pending-semantic-review",
-      "coverage": "full-body-machine-pattern-and-local-link-scan; no runtime execution",
+      "disposition": "narrow-trigger",
+      "coverage": "Complete provider substitution comparison and all additional difference hunks inspected; base completion required",
       "issues": [],
       "missing_markdown_links": [],
-      "support_coverage": "Local Markdown-link existence scan only; supporting payloads not exhaustively reviewed or executed.",
-      "semantic_review": "partial-or-machine-only; full semantic review pending",
-      "confidence": "undetermined",
-      "reason": "Do not infer usefulness or semantic correctness from inventory/hash/pattern scans.",
-      "normalized_text_sha256": "e445d0a6d1c6809b145249499a9e806ab13a73ab0208255e9c2ccef954460647"
+      "support_coverage": "SKILL.md body or full reviewed-base plus complete difference; local reference existence scan. Supporting payloads not exhaustively inspected or executed.",
+      "semantic_review": "full-variant-difference-reviewed; inherits completed base",
+      "confidence": "High for inspected instruction/difference findings; live workflow unverified",
+      "reason": "Old synced preset bans normal fonts and attracts all frontend work; prefer current maintained counterpart for ordinary product work while preserving explicit creative preset use.",
+      "normalized_text_sha256": "e445d0a6d1c6809b145249499a9e806ab13a73ab0208255e9c2ccef954460647",
+      "semantic_base_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\frontend-design\\SKILL.md",
+      "semantic_base_sha256": "d91970639e9f5c37682ac7ab60094d35f1c7c1f38d731bd56396563aee10c1d3",
+      "variant_transform": "case-insensitive Claude Code→Codex then Claude→Codex, plus complete residual diff reviewed",
+      "semantic_evidence_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\frontend-design\\SKILL.md"
     },
     {
       "path": "C:\\Users\\Joshu\\.agents\\skills\\git-guardrails-claude-code\\SKILL.md",
@@ -1593,15 +1638,19 @@
       "sha256": "3acad1d87ed63178e07bab5ebe8e5ece2333f1358a855364f4b054af7575049e",
       "lines": 1377,
       "chars": 60449,
-      "disposition": "keep-pending-semantic-review",
-      "coverage": "full-body-machine-pattern-and-local-link-scan; no runtime execution",
+      "disposition": "pending-base-review",
+      "coverage": "Complete provider substitution comparison and all additional difference hunks inspected; base completion required",
       "issues": [],
       "missing_markdown_links": [],
-      "support_coverage": "Local Markdown-link existence scan only; supporting payloads not exhaustively reviewed or executed.",
-      "semantic_review": "partial-or-machine-only; full semantic review pending",
-      "confidence": "undetermined",
-      "reason": "Do not infer usefulness or semantic correctness from inventory/hash/pattern scans.",
-      "normalized_text_sha256": "222da2079d6c1166e367220b43dbbf233f0b117d63958f55f6d3152ef14c83c2"
+      "support_coverage": "SKILL.md body or full reviewed-base plus complete difference; local reference existence scan. Supporting payloads not exhaustively inspected or executed.",
+      "semantic_review": "full-variant-difference-reviewed; awaiting completed base",
+      "confidence": "variant reviewed; canonical base completion pending",
+      "reason": "Useful graph capability; automatic AGENTS.md integration and altered Codex desktop naming need scope/manual safeguards. Global variant not proof graph runtime works.",
+      "normalized_text_sha256": "222da2079d6c1166e367220b43dbbf233f0b117d63958f55f6d3152ef14c83c2",
+      "semantic_base_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\graphify\\SKILL.md",
+      "semantic_base_sha256": "edeec794075177bd7c275197e652b01a3011f332703239a8e9545f55117724f4",
+      "variant_transform": "case-insensitive Claude Code→Codex then Claude→Codex, plus complete residual diff reviewed",
+      "semantic_evidence_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\graphify\\SKILL.md"
     },
     {
       "path": "C:\\Users\\Joshu\\.agents\\skills\\grill-by-claude\\SKILL.md",
@@ -2569,20 +2618,22 @@
       "sha256": "2d11cdcefc8bf319429ee17d94d69a390802e2acf7163662d1eacbcf5be3ff79",
       "lines": 98,
       "chars": 10545,
-      "disposition": "keep-pending-semantic-review",
-      "coverage": "full-body-machine-pattern-and-local-link-scan; no runtime execution",
+      "disposition": "fix",
+      "coverage": "Entire normalized text identical; only line-ending bytes differ; base completion required",
       "issues": [],
       "missing_markdown_links": [],
-      "semantic_review": "inherited-identical-full-text-only-line-ending-difference",
-      "support_coverage": "Local Markdown-link existence scan only; supporting payloads not exhaustively reviewed or executed.",
+      "semantic_review": "inherited-identical-full-text-completed-base",
+      "support_coverage": "SKILL.md body or full reviewed-base plus complete difference; local reference existence scan. Supporting payloads not exhaustively inspected or executed.",
       "canonical_matches": [
         "skills\\claude\\high-end-visual-design\\SKILL.md",
         "skills\\codex\\high-end-visual-design\\SKILL.md"
       ],
-      "confidence": "pending completed canonical review",
-      "reason": "Same entire normalized body as fully reviewed source; byte hashes differ. Do not infer usefulness or semantic correctness from inventory/hash/pattern scans.",
+      "confidence": "High for inspected instruction/difference findings; live workflow unverified",
+      "reason": "Make selected aesthetic preset only: conflicts with impeccable on nested cards and frontend-design on labels, mandates scroll reveals without reduced-motion fallback.",
       "normalized_text_sha256": "e1e32f5e2d420872c6c7332b53d5ff7721946766b78c4822b424c2d512c8fdbc",
-      "semantic_evidence_path": "C:\\Users\\Joshu\\.codex\\skills\\high-end-visual-design\\SKILL.md"
+      "semantic_evidence_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\high-end-visual-design\\SKILL.md",
+      "semantic_base_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\high-end-visual-design\\SKILL.md",
+      "semantic_base_sha256": "e1e32f5e2d420872c6c7332b53d5ff7721946766b78c4822b424c2d512c8fdbc"
     },
     {
       "path": "C:\\Users\\Joshu\\.agents\\skills\\image-to-code\\SKILL.md",
@@ -2611,20 +2662,22 @@
       "sha256": "2291f40c01e5ea13e8803ddfdfb07583057b815de26d3fa78f145cef4b19c336",
       "lines": 176,
       "chars": 13722,
-      "disposition": "keep-pending-semantic-review",
-      "coverage": "full-body-machine-pattern-and-local-link-scan; no runtime execution",
+      "disposition": "fix",
+      "coverage": "Entire normalized text identical; only line-ending bytes differ; base completion required",
       "issues": [],
       "missing_markdown_links": [],
-      "semantic_review": "inherited-identical-full-text-only-line-ending-difference",
-      "support_coverage": "Local Markdown-link existence scan only; supporting payloads not exhaustively reviewed or executed.",
+      "semantic_review": "inherited-identical-full-text-completed-base",
+      "support_coverage": "SKILL.md body or full reviewed-base plus complete difference; local reference existence scan. Supporting payloads not exhaustively inspected or executed.",
       "canonical_matches": [
         "skills\\claude\\impeccable\\SKILL.md",
         "skills\\codex\\impeccable\\SKILL.md"
       ],
-      "confidence": "pending completed canonical review",
-      "reason": "Same entire normalized body as fully reviewed source; byte hashes differ. Do not infer usefulness or semantic correctness from inventory/hash/pattern scans.",
+      "confidence": "High for inspected instruction/difference findings; live workflow unverified",
+      "reason": "Loader path assumes project activation .agents/skills/impeccable; actual availability must be discovered. Do not impose new confirmation for already authorized brief.",
       "normalized_text_sha256": "e034374978326b564a86b7ebc580ab587e750f14f9984bd095e203f86da11fb7",
-      "semantic_evidence_path": "C:\\Users\\Joshu\\.codex\\skills\\impeccable\\SKILL.md"
+      "semantic_evidence_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\impeccable\\SKILL.md",
+      "semantic_base_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\impeccable\\SKILL.md",
+      "semantic_base_sha256": "e034374978326b564a86b7ebc580ab587e750f14f9984bd095e203f86da11fb7"
     },
     {
       "path": "C:\\Users\\Joshu\\.agents\\skills\\implement\\SKILL.md",
@@ -2889,15 +2942,19 @@
       "sha256": "8a9f6fc90557a4f5a6df7e80702c52c77616d66adea84fb22d893c21f80ff71e",
       "lines": 241,
       "chars": 16868,
-      "disposition": "keep-pending-semantic-review",
-      "coverage": "full-body-machine-pattern-and-local-link-scan; no runtime execution",
+      "disposition": "pending-base-review",
+      "coverage": "Complete provider substitution comparison and all additional difference hunks inspected; base completion required",
       "issues": [],
       "missing_markdown_links": [],
-      "support_coverage": "Local Markdown-link existence scan only; supporting payloads not exhaustively reviewed or executed.",
-      "semantic_review": "partial-or-machine-only; full semantic review pending",
-      "confidence": "undetermined",
-      "reason": "Do not infer usefulness or semantic correctness from inventory/hash/pattern scans.",
-      "normalized_text_sha256": "8a9f6fc90557a4f5a6df7e80702c52c77616d66adea84fb22d893c21f80ff71e"
+      "support_coverage": "SKILL.md body or full reviewed-base plus complete difference; local reference existence scan. Supporting payloads not exhaustively inspected or executed.",
+      "semantic_review": "full-variant-difference-reviewed; awaiting completed base",
+      "confidence": "variant reviewed; canonical base completion pending",
+      "reason": "Distinct consolidated PrepTest set workflow; Codex-in-chrome invented by provider replacement, use actual available browser transport and authenticated verification.",
+      "normalized_text_sha256": "8a9f6fc90557a4f5a6df7e80702c52c77616d66adea84fb22d893c21f80ff71e",
+      "semantic_base_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\lsat-lab-mega-set\\SKILL.md",
+      "semantic_base_sha256": "5ecfa40a84b0d23af1f18f547bb0ee16897381889c7da86c7ef6626ac89c7d8a",
+      "variant_transform": "case-insensitive Claude Code→Codex then Claude→Codex, plus complete residual diff reviewed",
+      "semantic_evidence_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\lsat-lab-mega-set\\SKILL.md"
     },
     {
       "path": "C:\\Users\\Joshu\\.agents\\skills\\lsat-lab-transcribe\\SKILL.md",
@@ -3057,20 +3114,22 @@
       "sha256": "1a292d1459292649dc5b422e029093259b6127e7df2f37ad8c22033174333a57",
       "lines": 85,
       "chars": 7896,
-      "disposition": "keep-pending-semantic-review",
-      "coverage": "full-body-machine-pattern-and-local-link-scan; no runtime execution",
+      "disposition": "fix",
+      "coverage": "Entire normalized text identical; only line-ending bytes differ; base completion required",
       "issues": [],
       "missing_markdown_links": [],
-      "semantic_review": "inherited-identical-full-text-only-line-ending-difference",
-      "support_coverage": "Local Markdown-link existence scan only; supporting payloads not exhaustively reviewed or executed.",
+      "semantic_review": "inherited-identical-full-text-completed-base",
+      "support_coverage": "SKILL.md body or full reviewed-base plus complete difference; local reference existence scan. Supporting payloads not exhaustively inspected or executed.",
       "canonical_matches": [
         "skills\\claude\\minimalist-ui\\SKILL.md",
         "skills\\codex\\minimalist-ui\\SKILL.md"
       ],
-      "confidence": "pending completed canonical review",
-      "reason": "Same entire normalized body as fully reviewed source; byte hashes differ. Do not infer usefulness or semantic correctness from inventory/hash/pattern scans.",
+      "confidence": "High for inspected instruction/difference findings; live workflow unverified",
+      "reason": "Use explicit style preset instead of every frontend task; no-gradients rule conflicts radial-gradient instructions, no reduced-motion fallback for mandatory reveals.",
       "normalized_text_sha256": "36bc7328f085405f43b476938e62460fa573bf7e984e949e072bcf014831a44c",
-      "semantic_evidence_path": "C:\\Users\\Joshu\\.codex\\skills\\minimalist-ui\\SKILL.md"
+      "semantic_evidence_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\minimalist-ui\\SKILL.md",
+      "semantic_base_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\minimalist-ui\\SKILL.md",
+      "semantic_base_sha256": "36bc7328f085405f43b476938e62460fa573bf7e984e949e072bcf014831a44c"
     },
     {
       "path": "C:\\Users\\Joshu\\.agents\\skills\\morning-brief\\SKILL.md",
@@ -3144,20 +3203,22 @@
       "sha256": "b4d398c64e086d84cfd51bed896b9bdc243a5fd8a9ea2815a261cd9cb4da3155",
       "lines": 106,
       "chars": 3177,
-      "disposition": "keep-pending-semantic-review",
-      "coverage": "full-body-machine-pattern-and-local-link-scan; no runtime execution",
+      "disposition": "fix",
+      "coverage": "Entire normalized text identical; only line-ending bytes differ; base completion required",
       "issues": [],
       "missing_markdown_links": [],
-      "semantic_review": "inherited-identical-full-text-only-line-ending-difference",
-      "support_coverage": "Local Markdown-link existence scan only; supporting payloads not exhaustively reviewed or executed.",
+      "semantic_review": "inherited-identical-full-text-completed-base",
+      "support_coverage": "SKILL.md body or full reviewed-base plus complete difference; local reference existence scan. Supporting payloads not exhaustively inspected or executed.",
       "canonical_matches": [
         "skills\\claude\\obsidian-cli\\SKILL.md",
         "skills\\codex\\obsidian-cli\\SKILL.md"
       ],
-      "confidence": "pending completed canonical review",
-      "reason": "Same entire normalized body as fully reviewed source; byte hashes differ. Do not infer usefulness or semantic correctness from inventory/hash/pattern scans.",
+      "confidence": "High for inspected instruction/difference findings; live workflow unverified",
+      "reason": "Pin verified AI OS vault identity/path before commands; latest focused vault default can modify older vault. CLI help is availability check, not proof installed.",
       "normalized_text_sha256": "b54257cdc0e5d04488b35b0c797bfe427b24359f0848d3c73924dcacf8da6358",
-      "semantic_evidence_path": "C:\\Users\\Joshu\\.codex\\skills\\obsidian-cli\\SKILL.md"
+      "semantic_evidence_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\obsidian-cli\\SKILL.md",
+      "semantic_base_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\obsidian-cli\\SKILL.md",
+      "semantic_base_sha256": "b54257cdc0e5d04488b35b0c797bfe427b24359f0848d3c73924dcacf8da6358"
     },
     {
       "path": "C:\\Users\\Joshu\\.agents\\skills\\obsidian-markdown\\SKILL.md",
@@ -3439,21 +3500,23 @@
       "sha256": "00ccb3def86a81decc5521d8d9b5202d6951b22a255d745ee50449508a04db6b",
       "lines": 117,
       "chars": 6461,
-      "disposition": "keep-pending-semantic-review",
-      "coverage": "full-body-machine-pattern-and-local-link-scan; no runtime execution",
+      "disposition": "keep",
+      "coverage": "Entire normalized text identical; only line-ending bytes differ; base completion required",
       "issues": [],
       "missing_markdown_links": [],
-      "semantic_review": "inherited-identical-full-text-only-line-ending-difference",
-      "support_coverage": "Local Markdown-link existence scan only; supporting payloads not exhaustively reviewed or executed.",
+      "semantic_review": "inherited-identical-full-text-completed-base",
+      "support_coverage": "SKILL.md body or full reviewed-base plus complete difference; local reference existence scan. Supporting payloads not exhaustively inspected or executed.",
       "canonical_matches": [
         "skills\\claude\\ponytail\\SKILL.md",
         "skills\\claude\\_project-forks\\lsatu\\ponytail\\SKILL.md",
         "skills\\codex\\ponytail\\SKILL.md"
       ],
-      "confidence": "pending completed canonical review",
-      "reason": "Same entire normalized body as fully reviewed source; byte hashes differ. Do not infer usefulness or semantic correctness from inventory/hash/pattern scans.",
+      "confidence": "High for inspected instruction/difference findings; live workflow unverified",
+      "reason": "Useful explicitly selected simplicity discipline; body preserves requested full scope, validation/security/accessibility and runnable nontrivial checks.",
       "normalized_text_sha256": "d11df477b1a4e807155a7e578b135a4d9c52beef06eb3a44322940c331a06942",
-      "semantic_evidence_path": "C:\\Users\\Joshu\\.codex\\skills\\ponytail\\SKILL.md"
+      "semantic_evidence_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\ponytail\\SKILL.md",
+      "semantic_base_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\ponytail\\SKILL.md",
+      "semantic_base_sha256": "d11df477b1a4e807155a7e578b135a4d9c52beef06eb3a44322940c331a06942"
     },
     {
       "path": "C:\\Users\\Joshu\\.agents\\skills\\pptx\\SKILL.md",
@@ -3505,15 +3568,19 @@
       "sha256": "6df0d25ca92d86bea4c067a92d8506b881357785d0e5e9810f0eaa280b611fbc",
       "lines": 231,
       "chars": 8187,
-      "disposition": "keep-pending-semantic-review",
-      "coverage": "full-body-machine-pattern-and-local-link-scan; no runtime execution",
+      "disposition": "repair",
+      "coverage": "Complete provider substitution comparison and all additional difference hunks inspected; base completion required",
       "issues": [],
       "missing_markdown_links": [],
-      "support_coverage": "Local Markdown-link existence scan only; supporting payloads not exhaustively reviewed or executed.",
-      "semantic_review": "partial-or-machine-only; full semantic review pending",
-      "confidence": "undetermined",
-      "reason": "Do not infer usefulness or semantic correctness from inventory/hash/pattern scans.",
-      "normalized_text_sha256": "6df0d25ca92d86bea4c067a92d8506b881357785d0e5e9810f0eaa280b611fbc"
+      "support_coverage": "SKILL.md body or full reviewed-base plus complete difference; local reference existence scan. Supporting payloads not exhaustively inspected or executed.",
+      "semantic_review": "full-variant-difference-reviewed; inherits completed base",
+      "confidence": "High for inspected instruction/difference findings; live workflow unverified",
+      "reason": "Useful prompt refinement but mechanical Codex Cowork naming and duplicated Codex modes distort target product distinctions; scope to user chosen runtime.",
+      "normalized_text_sha256": "6df0d25ca92d86bea4c067a92d8506b881357785d0e5e9810f0eaa280b611fbc",
+      "semantic_base_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\prompt-architect-refiner\\SKILL.md",
+      "semantic_base_sha256": "311e47edd43923ec372706ba1a944cae59e53b67be7edcccabcac8487d4b1886",
+      "variant_transform": "case-insensitive Claude Code→Codex then Claude→Codex, plus complete residual diff reviewed",
+      "semantic_evidence_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\prompt-architect-refiner\\SKILL.md"
     },
     {
       "path": "C:\\Users\\Joshu\\.agents\\skills\\prototype\\SKILL.md",
@@ -3582,20 +3649,22 @@
       "sha256": "bec8a68af4750ad86d074b3cdab4f430bbed1a66b141837b5007be8ccb79e960",
       "lines": 213,
       "chars": 6344,
-      "disposition": "keep-pending-semantic-review",
-      "coverage": "full-body-machine-pattern-and-local-link-scan; no runtime execution",
+      "disposition": "keep",
+      "coverage": "Entire normalized text identical; only line-ending bytes differ; base completion required",
       "issues": [],
       "missing_markdown_links": [],
-      "semantic_review": "inherited-identical-full-text-only-line-ending-difference",
-      "support_coverage": "Local Markdown-link existence scan only; supporting payloads not exhaustively reviewed or executed.",
+      "semantic_review": "inherited-identical-full-text-completed-base",
+      "support_coverage": "SKILL.md body or full reviewed-base plus complete difference; local reference existence scan. Supporting payloads not exhaustively inspected or executed.",
       "canonical_matches": [
         "skills\\claude\\receiving-code-review\\SKILL.md",
         "skills\\codex\\receiving-code-review\\SKILL.md"
       ],
-      "confidence": "pending completed canonical review",
-      "reason": "Same entire normalized body as fully reviewed source; byte hashes differ. Do not infer usefulness or semantic correctness from inventory/hash/pattern scans.",
+      "confidence": "High for inspected instruction/difference findings; live workflow unverified",
+      "reason": "Distinct feedback adjudication; verify before implementation. Ask only on consequential ambiguity, preserve independent progress.",
       "normalized_text_sha256": "647036bbdab7bf2317e14e079595e984c9030f64295e2b4c0fb57dbeb48f25dd",
-      "semantic_evidence_path": "C:\\Users\\Joshu\\.codex\\skills\\receiving-code-review\\SKILL.md"
+      "semantic_evidence_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\receiving-code-review\\SKILL.md",
+      "semantic_base_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\receiving-code-review\\SKILL.md",
+      "semantic_base_sha256": "647036bbdab7bf2317e14e079595e984c9030f64295e2b4c0fb57dbeb48f25dd"
     },
     {
       "path": "C:\\Users\\Joshu\\.agents\\skills\\recipe-backup-sheet-as-csv\\SKILL.md",
@@ -4300,20 +4369,22 @@
       "sha256": "d5a62efaf36fa52ea1966e06ce74452b3466a4f179af34fbce65f2c8e5461349",
       "lines": 178,
       "chars": 15032,
-      "disposition": "keep-pending-semantic-review",
-      "coverage": "full-body-machine-pattern-and-local-link-scan; no runtime execution",
+      "disposition": "fix",
+      "coverage": "Entire normalized text identical; only line-ending bytes differ; base completion required",
       "issues": [],
       "missing_markdown_links": [],
-      "semantic_review": "inherited-identical-full-text-only-line-ending-difference",
-      "support_coverage": "Local Markdown-link existence scan only; supporting payloads not exhaustively reviewed or executed.",
+      "semantic_review": "inherited-identical-full-text-completed-base",
+      "support_coverage": "SKILL.md body or full reviewed-base plus complete difference; local reference existence scan. Supporting payloads not exhaustively inspected or executed.",
       "canonical_matches": [
         "skills\\claude\\redesign-existing-projects\\SKILL.md",
         "skills\\codex\\redesign-existing-projects\\SKILL.md"
       ],
-      "confidence": "pending completed canonical review",
-      "reason": "Same entire normalized body as fully reviewed source; byte hashes differ. Do not infer usefulness or semantic correctness from inventory/hash/pattern scans.",
+      "confidence": "High for inspected instruction/difference findings; live workflow unverified",
+      "reason": "Useful UI audit, but aesthetic mandates replace fonts, palette, density and data with organic fabricated values/dates; preserve design system and real product facts, limit decorative changes to brief.",
       "normalized_text_sha256": "98ad3e5b051bfb71b2795f7e8a6aa0d32b51ee095606c098a4b2822ac07926c9",
-      "semantic_evidence_path": "C:\\Users\\Joshu\\.codex\\skills\\redesign-existing-projects\\SKILL.md"
+      "semantic_evidence_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\redesign-existing-projects\\SKILL.md",
+      "semantic_base_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\redesign-existing-projects\\SKILL.md",
+      "semantic_base_sha256": "98ad3e5b051bfb71b2795f7e8a6aa0d32b51ee095606c098a4b2822ac07926c9"
     },
     {
       "path": "C:\\Users\\Joshu\\.agents\\skills\\request-refactor-plan\\SKILL.md",
@@ -4343,20 +4414,22 @@
       "sha256": "9ce6ba14c17aff85ab4c77c4c1e718c29502b4f2af2220c935861bd1b9f84751",
       "lines": 103,
       "chars": 2824,
-      "disposition": "keep-pending-semantic-review",
-      "coverage": "full-body-machine-pattern-and-local-link-scan; no runtime execution",
+      "disposition": "fix",
+      "coverage": "Entire normalized text identical; only line-ending bytes differ; base completion required",
       "issues": [],
       "missing_markdown_links": [],
-      "semantic_review": "inherited-identical-full-text-only-line-ending-difference",
-      "support_coverage": "Local Markdown-link existence scan only; supporting payloads not exhaustively reviewed or executed.",
+      "semantic_review": "inherited-identical-full-text-completed-base",
+      "support_coverage": "SKILL.md body or full reviewed-base plus complete difference; local reference existence scan. Supporting payloads not exhaustively inspected or executed.",
       "canonical_matches": [
         "skills\\claude\\requesting-code-review\\SKILL.md",
         "skills\\codex\\requesting-code-review\\SKILL.md"
       ],
-      "confidence": "pending completed canonical review",
-      "reason": "Same entire normalized body as fully reviewed source; byte hashes differ. Do not infer usefulness or semantic correctness from inventory/hash/pattern scans.",
+      "confidence": "High for inspected instruction/difference findings; live workflow unverified",
+      "reason": "BASE_SHA/HEAD_SHA committed review assumes commits exist; include staged/unstaged/untracked work for precommit review; route available reviewer tool without hardcoded host.",
       "normalized_text_sha256": "1017ccdd5bc61fab67c654cf118cbdb520464b313073a0a6b9a6b9aa647a3ad6",
-      "semantic_evidence_path": "C:\\Users\\Joshu\\.codex\\skills\\requesting-code-review\\SKILL.md"
+      "semantic_evidence_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\requesting-code-review\\SKILL.md",
+      "semantic_base_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\requesting-code-review\\SKILL.md",
+      "semantic_base_sha256": "1017ccdd5bc61fab67c654cf118cbdb520464b313073a0a6b9a6b9aa647a3ad6"
     },
     {
       "path": "C:\\Users\\Joshu\\.agents\\skills\\research\\SKILL.md",
@@ -4586,21 +4659,24 @@
       "sha256": "1ab1c23c7f9863d8d67dcf1cd5e5338c169fca1b69d386f6a8c81d672c78a6ac",
       "lines": 52,
       "chars": 3261,
-      "disposition": "keep-pending-semantic-review",
-      "coverage": "full-body-machine-pattern-and-local-link-scan; no runtime execution",
+      "disposition": "keep candidate",
+      "coverage": "Entire normalized text identical; only line-ending bytes differ; base completion required",
       "issues": [],
       "missing_markdown_links": [],
-      "semantic_review": "partial-or-machine-only; full semantic review pending",
-      "support_coverage": "Local Markdown-link existence scan only; supporting payloads not exhaustively reviewed or executed.",
+      "semantic_review": "inherited-identical-full-text-completed-base",
+      "support_coverage": "SKILL.md body or full reviewed-base plus complete difference; local reference existence scan. Supporting payloads not exhaustively inspected or executed.",
       "canonical_matches": [
         "skills\\claude\\second-brain-lint\\SKILL.md",
         "skills\\codex\\second-brain-lint\\SKILL.md",
         ".agents\\skills\\second-brain-lint\\SKILL.md",
         ".claude\\skills\\second-brain-lint\\SKILL.md"
       ],
-      "confidence": "pending completed canonical review",
-      "reason": "Do not infer usefulness or semantic correctness from inventory/hash/pattern scans.",
-      "normalized_text_sha256": "7eb9ab700fcd5d6dbe5748a10acc8bce667b88469525949657574ecb96d8dbdc"
+      "confidence": "High for inspected instruction/difference findings; live workflow unverified",
+      "reason": "No confirmed removal rationale in inspected evidence; lack of usage evidence is not proof of uselessness",
+      "normalized_text_sha256": "7eb9ab700fcd5d6dbe5748a10acc8bce667b88469525949657574ecb96d8dbdc",
+      "semantic_base_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\second-brain-lint\\SKILL.md",
+      "semantic_base_sha256": "7eb9ab700fcd5d6dbe5748a10acc8bce667b88469525949657574ecb96d8dbdc",
+      "semantic_evidence_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\second-brain-lint\\SKILL.md"
     },
     {
       "path": "C:\\Users\\Joshu\\.agents\\skills\\second-brain-query\\SKILL.md",
@@ -4608,21 +4684,24 @@
       "sha256": "20476909d5d661ef2a1d50f45390759985eacb1e5a167bcf4b1fbbfb81ed5189",
       "lines": 49,
       "chars": 2942,
-      "disposition": "keep-pending-semantic-review",
-      "coverage": "full-body-machine-pattern-and-local-link-scan; no runtime execution",
+      "disposition": "keep candidate",
+      "coverage": "Entire normalized text identical; only line-ending bytes differ; base completion required",
       "issues": [],
       "missing_markdown_links": [],
-      "semantic_review": "partial-or-machine-only; full semantic review pending",
-      "support_coverage": "Local Markdown-link existence scan only; supporting payloads not exhaustively reviewed or executed.",
+      "semantic_review": "inherited-identical-full-text-completed-base",
+      "support_coverage": "SKILL.md body or full reviewed-base plus complete difference; local reference existence scan. Supporting payloads not exhaustively inspected or executed.",
       "canonical_matches": [
         "skills\\claude\\second-brain-query\\SKILL.md",
         "skills\\codex\\second-brain-query\\SKILL.md",
         ".agents\\skills\\second-brain-query\\SKILL.md",
         ".claude\\skills\\second-brain-query\\SKILL.md"
       ],
-      "confidence": "pending completed canonical review",
-      "reason": "Do not infer usefulness or semantic correctness from inventory/hash/pattern scans.",
-      "normalized_text_sha256": "ed0ab7077780bd73f27781aa33717aac9b6d49453cc92f5a9713dabf50a8f654"
+      "confidence": "High for inspected instruction/difference findings; live workflow unverified",
+      "reason": "No confirmed removal rationale in inspected evidence; lack of usage evidence is not proof of uselessness",
+      "normalized_text_sha256": "ed0ab7077780bd73f27781aa33717aac9b6d49453cc92f5a9713dabf50a8f654",
+      "semantic_base_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\second-brain-query\\SKILL.md",
+      "semantic_base_sha256": "ed0ab7077780bd73f27781aa33717aac9b6d49453cc92f5a9713dabf50a8f654",
+      "semantic_evidence_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\second-brain-query\\SKILL.md"
     },
     {
       "path": "C:\\Users\\Joshu\\.agents\\skills\\send-booking-link\\SKILL.md",
@@ -4668,11 +4747,11 @@
           "evidence": [
             {
               "line": 3,
-              "text": "description: Use when Joshua says \"session handoff\", \"hand off\", \"handoff summary\", \"summarize before I clear\", or is about to /clear mid-work (especially near the ~250k dumb-zone). Produces a chat-only handoff \u2014 decisions, shipped changes,"
+              "text": "description: Use when Joshua says \"session handoff\", \"hand off\", \"handoff summary\", \"summarize before I clear\", or is about to /clear mid-work (especially near the ~250k dumb-zone). Produces a chat-only handoff — decisions, shipped changes,"
             },
             {
               "line": 12,
-              "text": "**Handoff vs. wrapup:** run `session-handoff` when the *context window* is the problem \u2014 nearing ~250k tokens (the dumb zone), or passing work between Codex and Codex. It is chat-only and writes nothing. Run `wrapup` when the *work day* is "
+              "text": "**Handoff vs. wrapup:** run `session-handoff` when the *context window* is the problem — nearing ~250k tokens (the dumb zone), or passing work between Codex and Codex. It is chat-only and writes nothing. Run `wrapup` when the *work day* is "
             }
           ]
         },
@@ -4681,7 +4760,7 @@
           "evidence": [
             {
               "line": 23,
-              "text": "   - TodoWrite state \u2014 any in-progress or pending tasks."
+              "text": "   - TodoWrite state — any in-progress or pending tasks."
             }
           ]
         }
@@ -4911,20 +4990,22 @@
       "sha256": "ae543a3d48ebe7e6bbe8cfa8dd03e89e9fe9aaa3f1dc3f3a7fe2299d8193af99",
       "lines": 418,
       "chars": 21540,
-      "disposition": "keep-pending-semantic-review",
-      "coverage": "full-body-machine-pattern-and-local-link-scan; no runtime execution",
+      "disposition": "keep",
+      "coverage": "Entire normalized text identical; only line-ending bytes differ; base completion required",
       "issues": [],
       "missing_markdown_links": [],
-      "semantic_review": "inherited-identical-full-text-only-line-ending-difference",
-      "support_coverage": "Local Markdown-link existence scan only; supporting payloads not exhaustively reviewed or executed.",
+      "semantic_review": "inherited-identical-full-text-completed-base",
+      "support_coverage": "SKILL.md body or full reviewed-base plus complete difference; local reference existence scan. Supporting payloads not exhaustively inspected or executed.",
       "canonical_matches": [
         "skills\\claude\\subagent-driven-development\\SKILL.md",
         "skills\\codex\\subagent-driven-development\\SKILL.md"
       ],
-      "confidence": "pending completed canonical review",
-      "reason": "Same entire normalized body as fully reviewed source; byte hashes differ. Do not infer usefulness or semantic correctness from inventory/hash/pattern scans.",
+      "confidence": "High for inspected instruction/difference findings; live workflow unverified",
+      "reason": "Distinct reviewed plan orchestration with durable ledger, recorded BASE and task-specific review; keep authorization/host mapping overlay, referenced superpowers namespace needs resolution.",
       "normalized_text_sha256": "41ab239a6ad1c487cd839fdac972a8c9cf0f5e90efa59a63f963767864f0df4c",
-      "semantic_evidence_path": "C:\\Users\\Joshu\\.codex\\skills\\subagent-driven-development\\SKILL.md"
+      "semantic_evidence_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\subagent-driven-development\\SKILL.md",
+      "semantic_base_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\subagent-driven-development\\SKILL.md",
+      "semantic_base_sha256": "41ab239a6ad1c487cd839fdac972a8c9cf0f5e90efa59a63f963767864f0df4c"
     },
     {
       "path": "C:\\Users\\Joshu\\.agents\\skills\\superwhisper\\SKILL.md",
@@ -4949,15 +5030,16 @@
       "sha256": "5e4b035a76f2e036b54c1980e9db6f84138bb02f765a75d76fb5c472e8287a7c",
       "lines": 156,
       "chars": 9126,
-      "disposition": "keep-pending-semantic-review",
-      "coverage": "full-body-machine-pattern-and-local-link-scan; no runtime execution",
+      "disposition": "fix",
+      "coverage": "Entire SKILL.md read in bounded sections; no target runtime execution",
       "issues": [],
       "missing_markdown_links": [],
-      "support_coverage": "Local Markdown-link existence scan only; supporting payloads not exhaustively reviewed or executed.",
-      "semantic_review": "partial-or-machine-only; full semantic review pending",
-      "confidence": "undetermined",
-      "reason": "Do not infer usefulness or semantic correctness from inventory/hash/pattern scans.",
-      "normalized_text_sha256": "5e4b035a76f2e036b54c1980e9db6f84138bb02f765a75d76fb5c472e8287a7c"
+      "support_coverage": "SKILL.md body or full reviewed-base plus complete difference; local reference existence scan. Supporting payloads not exhaustively inspected or executed.",
+      "semantic_review": "full-body-read",
+      "confidence": "High for inspected instruction/difference findings; live workflow unverified",
+      "reason": "Useful CDP transport and documented profile limits. Default public contribution PR and paid remote daemon need task-scoped authorization; preserve local browser tools and secrets boundary.",
+      "normalized_text_sha256": "5e4b035a76f2e036b54c1980e9db6f84138bb02f765a75d76fb5c472e8287a7c",
+      "semantic_evidence_path": "C:\\Users\\Joshu\\.agents\\skills\\synced\\66ab068d-6d11-4b9b-bace-f3622629a61f_3264ecb8-7644-4b8c-9aed-94ea1fae19cc\\browser\\SKILL.md"
     },
     {
       "path": "C:\\Users\\Joshu\\.agents\\skills\\synced\\66ab068d-6d11-4b9b-bace-f3622629a61f_3264ecb8-7644-4b8c-9aed-94ea1fae19cc\\chat-export\\SKILL.md",
@@ -4965,16 +5047,19 @@
       "sha256": "f3d9c429c20ca253e9c27864623c74168ff851de3870c8004c98b86809de9a1d",
       "lines": 101,
       "chars": 3156,
-      "disposition": "keep-pending-semantic-review",
-      "coverage": "full-body-machine-pattern-and-local-link-scan; no runtime execution",
+      "disposition": "repair",
+      "coverage": "Complete provider substitution comparison and all additional difference hunks inspected; base completion required",
       "issues": [],
       "missing_markdown_links": [],
-      "support_coverage": "Local Markdown-link existence scan only; supporting payloads not exhaustively reviewed or executed.",
-      "semantic_review": "inherited-identical-full-text-only-line-ending-difference",
-      "confidence": "undetermined",
-      "reason": "Same entire normalized body as fully reviewed source; byte hashes differ. Do not infer usefulness or semantic correctness from inventory/hash/pattern scans.",
+      "support_coverage": "SKILL.md body or full reviewed-base plus complete difference; local reference existence scan. Supporting payloads not exhaustively inspected or executed.",
+      "semantic_review": "full-variant-difference-reviewed; inherits completed base",
+      "confidence": "High for inspected instruction/difference findings; live workflow unverified",
+      "reason": "Global output paths differ from current handoffs home and claim every verbatim message from current context; must retrieve available logs or disclose missing compacted history.",
       "normalized_text_sha256": "f3d9c429c20ca253e9c27864623c74168ff851de3870c8004c98b86809de9a1d",
-      "semantic_evidence_path": "C:\\Users\\Joshu\\.agents\\skills\\chat-export\\SKILL.md"
+      "semantic_evidence_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\chat-export\\SKILL.md",
+      "semantic_base_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\chat-export\\SKILL.md",
+      "semantic_base_sha256": "ca235b11b0c81a82b288f30488a3b9f81d69371286e75db6d5cb1070b62c4818",
+      "variant_transform": "case-insensitive Claude Code→Codex then Claude→Codex, plus complete residual diff reviewed"
     },
     {
       "path": "C:\\Users\\Joshu\\.agents\\skills\\synced\\66ab068d-6d11-4b9b-bace-f3622629a61f_3264ecb8-7644-4b8c-9aed-94ea1fae19cc\\consultation-email-assistant\\SKILL.md",
@@ -4999,15 +5084,19 @@
       "sha256": "e9fafa32ea79c19f2d17d7507d4008c0f978294023ecf788c175426b8ce19831",
       "lines": 375,
       "chars": 15783,
-      "disposition": "keep-pending-semantic-review",
-      "coverage": "full-body-machine-pattern-and-local-link-scan; no runtime execution",
+      "disposition": "pending-base-review",
+      "coverage": "Complete provider substitution comparison and all additional difference hunks inspected; base completion required",
       "issues": [],
       "missing_markdown_links": [],
-      "support_coverage": "Local Markdown-link existence scan only; supporting payloads not exhaustively reviewed or executed.",
-      "semantic_review": "partial-or-machine-only; full semantic review pending",
-      "confidence": "undetermined",
-      "reason": "Do not infer usefulness or semantic correctness from inventory/hash/pattern scans.",
-      "normalized_text_sha256": "e9fafa32ea79c19f2d17d7507d4008c0f978294023ecf788c175426b8ce19831"
+      "support_coverage": "SKILL.md body or full reviewed-base plus complete difference; local reference existence scan. Supporting payloads not exhaustively inspected or executed.",
+      "semantic_review": "full-variant-difference-reviewed; awaiting completed base",
+      "confidence": "variant reviewed; canonical base completion pending",
+      "reason": "Distinct iterative coauthoring workflow; provider substitutions mostly names, inherit reviewed canonical scope/trigger findings.",
+      "normalized_text_sha256": "e9fafa32ea79c19f2d17d7507d4008c0f978294023ecf788c175426b8ce19831",
+      "semantic_base_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\doc-coauthoring\\SKILL.md",
+      "semantic_base_sha256": "2e47d78846faeea4a56e9809c52700087a15a2155a3f293a3efbaded81398ef4",
+      "variant_transform": "case-insensitive Claude Code→Codex then Claude→Codex, plus complete residual diff reviewed",
+      "semantic_evidence_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\doc-coauthoring\\SKILL.md"
     },
     {
       "path": "C:\\Users\\Joshu\\.agents\\skills\\synced\\66ab068d-6d11-4b9b-bace-f3622629a61f_3264ecb8-7644-4b8c-9aed-94ea1fae19cc\\docs\\SKILL.md",
@@ -5015,15 +5104,16 @@
       "sha256": "d35db4eaeb32be04086884008fc07aa1c120fe2065fcf518e93eddd5c8776f39",
       "lines": 6,
       "chars": 1242,
-      "disposition": "keep-pending-semantic-review",
-      "coverage": "full-body-machine-pattern-and-local-link-scan; no runtime execution",
+      "disposition": "fix",
+      "coverage": "Entire SKILL.md read in bounded sections; no target runtime execution",
       "issues": [],
       "missing_markdown_links": [],
-      "support_coverage": "Local Markdown-link existence scan only; supporting payloads not exhaustively reviewed or executed.",
-      "semantic_review": "partial-or-machine-only; full semantic review pending",
-      "confidence": "undetermined",
-      "reason": "Do not infer usefulness or semantic correctness from inventory/hash/pattern scans.",
-      "normalized_text_sha256": "d35db4eaeb32be04086884008fc07aa1c120fe2065fcf518e93eddd5c8776f39"
+      "support_coverage": "SKILL.md body or full reviewed-base plus complete difference; local reference existence scan. Supporting payloads not exhaustively inspected or executed.",
+      "semantic_review": "full-body-read",
+      "confidence": "High for inspected instruction/difference findings; live workflow unverified",
+      "reason": "Overbroad document catchall and mandatory creation before any source inspection; provider substitutions introduce Codex.ai artifact claim and unavailable docs-connector assumptions.",
+      "normalized_text_sha256": "d35db4eaeb32be04086884008fc07aa1c120fe2065fcf518e93eddd5c8776f39",
+      "semantic_evidence_path": "C:\\Users\\Joshu\\.agents\\skills\\synced\\66ab068d-6d11-4b9b-bace-f3622629a61f_3264ecb8-7644-4b8c-9aed-94ea1fae19cc\\docs\\SKILL.md"
     },
     {
       "path": "C:\\Users\\Joshu\\.agents\\skills\\synced\\66ab068d-6d11-4b9b-bace-f3622629a61f_3264ecb8-7644-4b8c-9aed-94ea1fae19cc\\docx\\SKILL.md",
@@ -5031,15 +5121,16 @@
       "sha256": "41373257a5b614ef482d9a56df681fdedc67f5d8c93794a7fe8881d0a6a7a807",
       "lines": 93,
       "chars": 7594,
-      "disposition": "keep-pending-semantic-review",
-      "coverage": "full-body-machine-pattern-and-local-link-scan; no runtime execution",
+      "disposition": "keep",
+      "coverage": "Entire SKILL.md read in bounded sections; no target runtime execution",
       "issues": [],
       "missing_markdown_links": [],
-      "support_coverage": "Local Markdown-link existence scan only; supporting payloads not exhaustively reviewed or executed.",
-      "semantic_review": "partial-or-machine-only; full semantic review pending",
-      "confidence": "undetermined",
-      "reason": "Do not infer usefulness or semantic correctness from inventory/hash/pattern scans.",
-      "normalized_text_sha256": "41373257a5b614ef482d9a56df681fdedc67f5d8c93794a7fe8881d0a6a7a807"
+      "support_coverage": "SKILL.md body or full reviewed-base plus complete difference; local reference existence scan. Supporting payloads not exhaustively inspected or executed.",
+      "semantic_review": "full-body-read",
+      "confidence": "High for inspected instruction/difference findings; live workflow unverified",
+      "reason": "Useful deterministic Word mechanics; resolve preinstalled runtime through current dependency tool, Bash examples need Windows adaptation; avoid unconditional native-doc takeover.",
+      "normalized_text_sha256": "41373257a5b614ef482d9a56df681fdedc67f5d8c93794a7fe8881d0a6a7a807",
+      "semantic_evidence_path": "C:\\Users\\Joshu\\.agents\\skills\\synced\\66ab068d-6d11-4b9b-bace-f3622629a61f_3264ecb8-7644-4b8c-9aed-94ea1fae19cc\\docx\\SKILL.md"
     },
     {
       "path": "C:\\Users\\Joshu\\.agents\\skills\\synced\\66ab068d-6d11-4b9b-bace-f3622629a61f_3264ecb8-7644-4b8c-9aed-94ea1fae19cc\\facebook-consultation-requests\\SKILL.md",
@@ -5064,15 +5155,19 @@
       "sha256": "2a55760a46bf3459ae1e289869b2290edc0dad02f46663871a9620f810ac0957",
       "lines": 142,
       "chars": 5429,
-      "disposition": "keep-pending-semantic-review",
-      "coverage": "full-body-machine-pattern-and-local-link-scan; no runtime execution",
+      "disposition": "repair",
+      "coverage": "Complete provider substitution comparison and all additional difference hunks inspected; base completion required",
       "issues": [],
       "missing_markdown_links": [],
-      "support_coverage": "Local Markdown-link existence scan only; supporting payloads not exhaustively reviewed or executed.",
-      "semantic_review": "partial-or-machine-only; full semantic review pending",
-      "confidence": "undetermined",
-      "reason": "Do not infer usefulness or semantic correctness from inventory/hash/pattern scans.",
-      "normalized_text_sha256": "2a55760a46bf3459ae1e289869b2290edc0dad02f46663871a9620f810ac0957"
+      "support_coverage": "SKILL.md body or full reviewed-base plus complete difference; local reference existence scan. Supporting payloads not exhaustively inspected or executed.",
+      "semantic_review": "full-variant-difference-reviewed; inherits completed base",
+      "confidence": "High for inspected instruction/difference findings; live workflow unverified",
+      "reason": "Useful skill search; mechanical provider replacement corrupts literal ComposioHQ/awesome-claude-skills repo reference.",
+      "normalized_text_sha256": "2a55760a46bf3459ae1e289869b2290edc0dad02f46663871a9620f810ac0957",
+      "semantic_base_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\find-skills\\SKILL.md",
+      "semantic_base_sha256": "1e85f6f9686e145aca4a124e3b704b9bbea9aa87e08515c1e352eee70f6e6e7a",
+      "variant_transform": "case-insensitive Claude Code→Codex then Claude→Codex, plus complete residual diff reviewed",
+      "semantic_evidence_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\find-skills\\SKILL.md"
     },
     {
       "path": "C:\\Users\\Joshu\\.agents\\skills\\synced\\66ab068d-6d11-4b9b-bace-f3622629a61f_3264ecb8-7644-4b8c-9aed-94ea1fae19cc\\frontend-design\\SKILL.md",
@@ -5080,15 +5175,16 @@
       "sha256": "8254e377881b60ef6963f035f100976141268915de6c6186f1a0b33ade903719",
       "lines": 42,
       "chars": 4439,
-      "disposition": "keep-pending-semantic-review",
-      "coverage": "full-body-machine-pattern-and-local-link-scan; no runtime execution",
+      "disposition": "narrow-trigger",
+      "coverage": "Entire SKILL.md read in bounded sections; no target runtime execution",
       "issues": [],
       "missing_markdown_links": [],
-      "support_coverage": "Local Markdown-link existence scan only; supporting payloads not exhaustively reviewed or executed.",
-      "semantic_review": "partial-or-machine-only; full semantic review pending",
-      "confidence": "undetermined",
-      "reason": "Do not infer usefulness or semantic correctness from inventory/hash/pattern scans.",
-      "normalized_text_sha256": "8254e377881b60ef6963f035f100976141268915de6c6186f1a0b33ade903719"
+      "support_coverage": "SKILL.md body or full reviewed-base plus complete difference; local reference existence scan. Supporting payloads not exhaustively inspected or executed.",
+      "semantic_review": "full-body-read",
+      "confidence": "High for inspected instruction/difference findings; live workflow unverified",
+      "reason": "Old synced preset bans normal fonts and attracts all frontend work; prefer current maintained counterpart for ordinary product work while preserving explicit creative preset use.",
+      "normalized_text_sha256": "8254e377881b60ef6963f035f100976141268915de6c6186f1a0b33ade903719",
+      "semantic_evidence_path": "C:\\Users\\Joshu\\.agents\\skills\\synced\\66ab068d-6d11-4b9b-bace-f3622629a61f_3264ecb8-7644-4b8c-9aed-94ea1fae19cc\\frontend-design\\SKILL.md"
     },
     {
       "path": "C:\\Users\\Joshu\\.agents\\skills\\synced\\66ab068d-6d11-4b9b-bace-f3622629a61f_3264ecb8-7644-4b8c-9aed-94ea1fae19cc\\google-workspace\\SKILL.md",
@@ -5118,15 +5214,19 @@
       "sha256": "222da2079d6c1166e367220b43dbbf233f0b117d63958f55f6d3152ef14c83c2",
       "lines": 1377,
       "chars": 60449,
-      "disposition": "keep-pending-semantic-review",
-      "coverage": "full-body-machine-pattern-and-local-link-scan; no runtime execution",
+      "disposition": "pending-base-review",
+      "coverage": "Complete provider substitution comparison and all additional difference hunks inspected; base completion required",
       "issues": [],
       "missing_markdown_links": [],
-      "support_coverage": "Local Markdown-link existence scan only; supporting payloads not exhaustively reviewed or executed.",
-      "semantic_review": "partial-or-machine-only; full semantic review pending",
-      "confidence": "undetermined",
-      "reason": "Do not infer usefulness or semantic correctness from inventory/hash/pattern scans.",
-      "normalized_text_sha256": "222da2079d6c1166e367220b43dbbf233f0b117d63958f55f6d3152ef14c83c2"
+      "support_coverage": "SKILL.md body or full reviewed-base plus complete difference; local reference existence scan. Supporting payloads not exhaustively inspected or executed.",
+      "semantic_review": "full-variant-difference-reviewed; awaiting completed base",
+      "confidence": "variant reviewed; canonical base completion pending",
+      "reason": "Useful graph capability; automatic AGENTS.md integration and altered Codex desktop naming need scope/manual safeguards. Global variant not proof graph runtime works.",
+      "normalized_text_sha256": "222da2079d6c1166e367220b43dbbf233f0b117d63958f55f6d3152ef14c83c2",
+      "semantic_base_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\graphify\\SKILL.md",
+      "semantic_base_sha256": "edeec794075177bd7c275197e652b01a3011f332703239a8e9545f55117724f4",
+      "variant_transform": "case-insensitive Claude Code→Codex then Claude→Codex, plus complete residual diff reviewed",
+      "semantic_evidence_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\graphify\\SKILL.md"
     },
     {
       "path": "C:\\Users\\Joshu\\.agents\\skills\\synced\\66ab068d-6d11-4b9b-bace-f3622629a61f_3264ecb8-7644-4b8c-9aed-94ea1fae19cc\\grill-me\\SKILL.md",
@@ -5134,15 +5234,16 @@
       "sha256": "f573f0fb02f59293cc439118bd91a8a7666b0fbfc876df13975c2ae0b4d1c287",
       "lines": 60,
       "chars": 3698,
-      "disposition": "keep-pending-semantic-review",
-      "coverage": "full-body-machine-pattern-and-local-link-scan; no runtime execution",
+      "disposition": "keep",
+      "coverage": "Entire SKILL.md read in bounded sections; no target runtime execution",
       "issues": [],
       "missing_markdown_links": [],
-      "support_coverage": "Local Markdown-link existence scan only; supporting payloads not exhaustively reviewed or executed.",
-      "semantic_review": "partial-or-machine-only; full semantic review pending",
-      "confidence": "undetermined",
-      "reason": "Do not infer usefulness or semantic correctness from inventory/hash/pattern scans.",
-      "normalized_text_sha256": "f573f0fb02f59293cc439118bd91a8a7666b0fbfc876df13975c2ae0b4d1c287"
+      "support_coverage": "SKILL.md body or full reviewed-base plus complete difference; local reference existence scan. Supporting payloads not exhaustively inspected or executed.",
+      "semantic_review": "full-body-read",
+      "confidence": "High for inspected instruction/difference findings; live workflow unverified",
+      "reason": "Checkpointed interview is useful and distinct from review/execution; older synced variant should route to current project capture workflow; Bash date is only fallback.",
+      "normalized_text_sha256": "f573f0fb02f59293cc439118bd91a8a7666b0fbfc876df13975c2ae0b4d1c287",
+      "semantic_evidence_path": "C:\\Users\\Joshu\\.agents\\skills\\synced\\66ab068d-6d11-4b9b-bace-f3622629a61f_3264ecb8-7644-4b8c-9aed-94ea1fae19cc\\grill-me\\SKILL.md"
     },
     {
       "path": "C:\\Users\\Joshu\\.agents\\skills\\synced\\66ab068d-6d11-4b9b-bace-f3622629a61f_3264ecb8-7644-4b8c-9aed-94ea1fae19cc\\gws-gmail-read\\SKILL.md",
@@ -5176,8 +5277,8 @@
       "sha256": "48b0512b3ffa718ab382c3d816d6945cbc9ec6139b50eff0427498a645580600",
       "lines": 51,
       "chars": 1203,
-      "disposition": "keep-pending-semantic-review",
-      "coverage": "full-body-machine-pattern-and-local-link-scan; no runtime execution",
+      "disposition": "keep",
+      "coverage": "Complete provider substitution comparison and all additional difference hunks inspected; base completion required",
       "issues": [],
       "missing_markdown_links": [
         {
@@ -5189,12 +5290,15 @@
           "line": 51
         }
       ],
-      "support_coverage": "Local Markdown-link existence scan only; supporting payloads not exhaustively reviewed or executed.",
-      "semantic_review": "inherited-identical-full-text-only-line-ending-difference",
-      "confidence": "undetermined",
-      "reason": "Same entire normalized body as fully reviewed source; byte hashes differ. Do not infer usefulness or semantic correctness from inventory/hash/pattern scans.",
+      "support_coverage": "SKILL.md body or full reviewed-base plus complete difference; local reference existence scan. Supporting payloads not exhaustively inspected or executed.",
+      "semantic_review": "full-variant-difference-reviewed; inherits completed base",
+      "confidence": "High for inspected instruction/difference findings; live workflow unverified",
+      "reason": "Distinct capability; inherit completed matching canonical semantic disposition and support/runtime limitations.",
       "normalized_text_sha256": "48b0512b3ffa718ab382c3d816d6945cbc9ec6139b50eff0427498a645580600",
-      "semantic_evidence_path": "C:\\Users\\Joshu\\.agents\\skills\\gws-gmail-triage\\SKILL.md"
+      "semantic_evidence_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\gws-gmail-triage\\SKILL.md",
+      "semantic_base_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\gws-gmail-triage\\SKILL.md",
+      "semantic_base_sha256": "dcb9bce24b6fb2cd3b70db7205e964cad99461e1cd2ffd0445074dd585f8ff5c",
+      "variant_transform": "case-insensitive Claude Code→Codex then Claude→Codex, plus complete residual diff reviewed"
     },
     {
       "path": "C:\\Users\\Joshu\\.agents\\skills\\synced\\66ab068d-6d11-4b9b-bace-f3622629a61f_3264ecb8-7644-4b8c-9aed-94ea1fae19cc\\import-memory\\SKILL.md",
@@ -5202,15 +5306,16 @@
       "sha256": "123a54cb83675df7c9ce73dd4fa091b3774379d69fc20024d05d6ad7838fcd14",
       "lines": 89,
       "chars": 10605,
-      "disposition": "keep-pending-semantic-review",
-      "coverage": "full-body-machine-pattern-and-local-link-scan; no runtime execution",
+      "disposition": "repair",
+      "coverage": "Entire SKILL.md read in bounded sections; no target runtime execution",
       "issues": [],
       "missing_markdown_links": [],
-      "support_coverage": "Local Markdown-link existence scan only; supporting payloads not exhaustively reviewed or executed.",
-      "semantic_review": "partial-or-machine-only; full semantic review pending",
-      "confidence": "undetermined",
-      "reason": "Do not infer usefulness or semantic correctness from inventory/hash/pattern scans.",
-      "normalized_text_sha256": "123a54cb83675df7c9ce73dd4fa091b3774379d69fc20024d05d6ad7838fcd14"
+      "support_coverage": "SKILL.md body or full reviewed-base plus complete difference; local reference existence scan. Supporting payloads not exhaustively inspected or executed.",
+      "semantic_review": "full-body-read",
+      "confidence": "High for inspected instruction/difference findings; live workflow unverified",
+      "reason": "Provider substitution turns Anthropic memory workflow into Codex memory tools/Settings URL; actual Codex native notes workflow differs. Preserve additive conflict handling and pasted-data boundary.",
+      "normalized_text_sha256": "123a54cb83675df7c9ce73dd4fa091b3774379d69fc20024d05d6ad7838fcd14",
+      "semantic_evidence_path": "C:\\Users\\Joshu\\.agents\\skills\\synced\\66ab068d-6d11-4b9b-bace-f3622629a61f_3264ecb8-7644-4b8c-9aed-94ea1fae19cc\\import-memory\\SKILL.md"
     },
     {
       "path": "C:\\Users\\Joshu\\.agents\\skills\\synced\\66ab068d-6d11-4b9b-bace-f3622629a61f_3264ecb8-7644-4b8c-9aed-94ea1fae19cc\\internal-comms\\SKILL.md",
@@ -5388,15 +5493,19 @@
       "sha256": "6c20f2928ca83f21bfed741aa2bbaf2069818f924199e9f7cd600ee2ed943ed3",
       "lines": 241,
       "chars": 21671,
-      "disposition": "keep-pending-semantic-review",
-      "coverage": "full-body-machine-pattern-and-local-link-scan; no runtime execution",
+      "disposition": "pending-base-review",
+      "coverage": "Complete provider substitution comparison and all additional difference hunks inspected; base completion required",
       "issues": [],
       "missing_markdown_links": [],
-      "support_coverage": "Local Markdown-link existence scan only; supporting payloads not exhaustively reviewed or executed.",
-      "semantic_review": "partial-or-machine-only; full semantic review pending",
-      "confidence": "undetermined",
-      "reason": "Do not infer usefulness or semantic correctness from inventory/hash/pattern scans.",
-      "normalized_text_sha256": "6c20f2928ca83f21bfed741aa2bbaf2069818f924199e9f7cd600ee2ed943ed3"
+      "support_coverage": "SKILL.md body or full reviewed-base plus complete difference; local reference existence scan. Supporting payloads not exhaustively inspected or executed.",
+      "semantic_review": "full-variant-difference-reviewed; awaiting completed base",
+      "confidence": "variant reviewed; canonical base completion pending",
+      "reason": "Distinct capability; inherit completed matching canonical semantic disposition and support/runtime limitations.",
+      "normalized_text_sha256": "6c20f2928ca83f21bfed741aa2bbaf2069818f924199e9f7cd600ee2ed943ed3",
+      "semantic_base_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\pptx\\SKILL.md",
+      "semantic_base_sha256": "a7ff03e2c85b636f55232a6b1555f5dd90216b7a1a359ab289d8364e6acbc6a0",
+      "variant_transform": "case-insensitive Claude Code→Codex then Claude→Codex, plus complete residual diff reviewed",
+      "semantic_evidence_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\pptx\\SKILL.md"
     },
     {
       "path": "C:\\Users\\Joshu\\.agents\\skills\\synced\\66ab068d-6d11-4b9b-bace-f3622629a61f_3264ecb8-7644-4b8c-9aed-94ea1fae19cc\\site-teardown\\SKILL.md",
@@ -5421,8 +5530,8 @@
       "sha256": "614cc82a45173d04a481eb7e2a3c78d060a6c9ce13dfe4234212aeb23aae5b63",
       "lines": 485,
       "chars": 33125,
-      "disposition": "repair",
-      "coverage": "full-body-machine-pattern-and-local-link-scan; no runtime execution",
+      "disposition": "keep",
+      "coverage": "Entire SKILL.md read in bounded sections; no target runtime execution",
       "issues": [
         {
           "kind": "runtime-replacement-corruption",
@@ -5435,11 +5544,12 @@
         }
       ],
       "missing_markdown_links": [],
-      "support_coverage": "Local Markdown-link existence scan only; supporting payloads not exhaustively reviewed or executed.",
-      "semantic_review": "partial-or-machine-only; full semantic review pending",
-      "confidence": "undetermined",
-      "reason": "Codex-labeled trigger optimizer scripts actually invoke Claude; cannot certify native Codex trigger selection.",
-      "normalized_text_sha256": "614cc82a45173d04a481eb7e2a3c78d060a6c9ce13dfe4234212aeb23aae5b63"
+      "support_coverage": "SKILL.md body or full reviewed-base plus complete difference; local reference existence scan. Supporting payloads not exhaustively inspected or executed.",
+      "semantic_review": "full-body-read",
+      "confidence": "High for inspected instruction/difference findings; live workflow unverified",
+      "reason": "Current system creator has precise discovery, scope preservation and optional forward testing; synced Anthropic creator is a different eval/package workflow. Preserve both only with clear target environment.",
+      "normalized_text_sha256": "614cc82a45173d04a481eb7e2a3c78d060a6c9ce13dfe4234212aeb23aae5b63",
+      "semantic_evidence_path": "C:\\Users\\Joshu\\.agents\\skills\\synced\\66ab068d-6d11-4b9b-bace-f3622629a61f_3264ecb8-7644-4b8c-9aed-94ea1fae19cc\\skill-creator\\SKILL.md"
     },
     {
       "path": "C:\\Users\\Joshu\\.agents\\skills\\synced\\66ab068d-6d11-4b9b-bace-f3622629a61f_3264ecb8-7644-4b8c-9aed-94ea1fae19cc\\web-artifacts-builder\\SKILL.md",
@@ -5447,15 +5557,16 @@
       "sha256": "4b937b6572321c502657a4ad229629befc5b993db6f0944031ee52458bd44850",
       "lines": 74,
       "chars": 3070,
-      "disposition": "keep-pending-semantic-review",
-      "coverage": "full-body-machine-pattern-and-local-link-scan; no runtime execution",
+      "disposition": "fix",
+      "coverage": "Entire SKILL.md read in bounded sections; no target runtime execution",
       "issues": [],
       "missing_markdown_links": [],
-      "support_coverage": "Local Markdown-link existence scan only; supporting payloads not exhaustively reviewed or executed.",
-      "semantic_review": "partial-or-machine-only; full semantic review pending",
-      "confidence": "undetermined",
-      "reason": "Do not infer usefulness or semantic correctness from inventory/hash/pattern scans.",
-      "normalized_text_sha256": "4b937b6572321c502657a4ad229629befc5b993db6f0944031ee52458bd44850"
+      "support_coverage": "SKILL.md body or full reviewed-base plus complete difference; local reference existence scan. Supporting payloads not exhaustively inspected or executed.",
+      "semantic_review": "full-body-read",
+      "confidence": "High for inspected instruction/difference findings; live workflow unverified",
+      "reason": "Useful bundler; altered Codex.ai artifact claim, relative app creation risks vault boundary, and discouraging upfront testing conflict relevant verification. Keep outputs in sibling app root.",
+      "normalized_text_sha256": "4b937b6572321c502657a4ad229629befc5b993db6f0944031ee52458bd44850",
+      "semantic_evidence_path": "C:\\Users\\Joshu\\.agents\\skills\\synced\\66ab068d-6d11-4b9b-bace-f3622629a61f_3264ecb8-7644-4b8c-9aed-94ea1fae19cc\\web-artifacts-builder\\SKILL.md"
     },
     {
       "path": "C:\\Users\\Joshu\\.agents\\skills\\synced\\66ab068d-6d11-4b9b-bace-f3622629a61f_3264ecb8-7644-4b8c-9aed-94ea1fae19cc\\webapp-testing\\SKILL.md",
@@ -5508,20 +5619,22 @@
       "sha256": "a27779def5a1ca57e2e7eda8e17dc490b48f84644bfdc520ec7935c443136846",
       "lines": 296,
       "chars": 9861,
-      "disposition": "keep-pending-semantic-review",
-      "coverage": "full-body-machine-pattern-and-local-link-scan; no runtime execution",
+      "disposition": "fix",
+      "coverage": "Entire normalized text identical; only line-ending bytes differ; base completion required",
       "issues": [],
       "missing_markdown_links": [],
-      "semantic_review": "inherited-identical-full-text-only-line-ending-difference",
-      "support_coverage": "Local Markdown-link existence scan only; supporting payloads not exhaustively reviewed or executed.",
+      "semantic_review": "inherited-identical-full-text-completed-base",
+      "support_coverage": "SKILL.md body or full reviewed-base plus complete difference; local reference existence scan. Supporting payloads not exhaustively inspected or executed.",
       "canonical_matches": [
         "skills\\claude\\systematic-debugging\\SKILL.md",
         "skills\\codex\\systematic-debugging\\SKILL.md"
       ],
-      "confidence": "pending completed canonical review",
-      "reason": "Same entire normalized body as fully reviewed source; byte hashes differ. Do not infer usefulness or semantic correctness from inventory/hash/pattern scans.",
+      "confidence": "High for inspected instruction/difference findings; live workflow unverified",
+      "reason": "Keep diagnosis/hypothesis core; sample env | grep IDENTITY exposes values, use presence-only/redacted checks. Absolute percentages/time claims are unattributed vendor anecdotes; avoid universal mandatory tests for cosmetic edits.",
       "normalized_text_sha256": "3b20719eca4f0461cb51a195221320d775dcf03b6859271066a03a5132a6ce7a",
-      "semantic_evidence_path": "C:\\Users\\Joshu\\.codex\\skills\\systematic-debugging\\SKILL.md"
+      "semantic_evidence_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\systematic-debugging\\SKILL.md",
+      "semantic_base_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\systematic-debugging\\SKILL.md",
+      "semantic_base_sha256": "3b20719eca4f0461cb51a195221320d775dcf03b6859271066a03a5132a6ce7a"
     },
     {
       "path": "C:\\Users\\Joshu\\.agents\\skills\\tdd\\SKILL.md",
@@ -5573,18 +5686,21 @@
       "sha256": "a6732a345b9ea9f7aa97a2a9a20dbb6fe58085c318c2e17fb37bf5d73d28c17a",
       "lines": 371,
       "chars": 9884,
-      "disposition": "keep-pending-semantic-review",
-      "coverage": "full-body-machine-pattern-and-local-link-scan; no runtime execution",
+      "disposition": "fix",
+      "coverage": "Entire normalized text identical; only line-ending bytes differ; base completion required",
       "issues": [],
       "missing_markdown_links": [],
-      "semantic_review": "partial-or-machine-only; full semantic review pending",
-      "support_coverage": "Local Markdown-link existence scan only; supporting payloads not exhaustively reviewed or executed.",
+      "semantic_review": "inherited-identical-full-text-completed-base",
+      "support_coverage": "SKILL.md body or full reviewed-base plus complete difference; local reference existence scan. Supporting payloads not exhaustively inspected or executed.",
       "canonical_matches": [
         "skills\\claude\\test-driven-development\\SKILL.md"
       ],
-      "confidence": "pending completed canonical review",
-      "reason": "Do not infer usefulness or semantic correctness from inventory/hash/pattern scans.",
-      "normalized_text_sha256": "b5b4717b8b761cce15a6cfe9022e33fd959e0894c0c39d72c9cb49c23486c10e"
+      "confidence": "High for inspected instruction/difference findings; live workflow unverified",
+      "reason": "Preserve meaningful red-green tests; universal delete/rewrite production code mandate conflicts preservation and low-impact test policy. Never delete user work merely because tests were not written first.",
+      "normalized_text_sha256": "b5b4717b8b761cce15a6cfe9022e33fd959e0894c0c39d72c9cb49c23486c10e",
+      "semantic_base_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\test-driven-development\\SKILL.md",
+      "semantic_base_sha256": "b5b4717b8b761cce15a6cfe9022e33fd959e0894c0c39d72c9cb49c23486c10e",
+      "semantic_evidence_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\test-driven-development\\SKILL.md"
     },
     {
       "path": "C:\\Users\\Joshu\\.agents\\skills\\theme-factory\\SKILL.md",
@@ -5788,15 +5904,19 @@
       "sha256": "251a6f8f0485d7dacd9f0d886c1165e194ef3837bccf1274221bf28df45e111c",
       "lines": 62,
       "chars": 3051,
-      "disposition": "keep-pending-semantic-review",
-      "coverage": "full-body-machine-pattern-and-local-link-scan; no runtime execution",
+      "disposition": "repair",
+      "coverage": "Complete provider substitution comparison and all additional difference hunks inspected; base completion required",
       "issues": [],
       "missing_markdown_links": [],
-      "support_coverage": "Local Markdown-link existence scan only; supporting payloads not exhaustively reviewed or executed.",
-      "semantic_review": "partial-or-machine-only; full semantic review pending",
-      "confidence": "undetermined",
-      "reason": "Do not infer usefulness or semantic correctness from inventory/hash/pattern scans.",
-      "normalized_text_sha256": "2686d8f1610e0011291f7fea0d3478003a47f0c99f7fad96a14c6bf3303d91c9"
+      "support_coverage": "SKILL.md body or full reviewed-base plus complete difference; local reference existence scan. Supporting payloads not exhaustively inspected or executed.",
+      "semantic_review": "full-variant-difference-reviewed; inherits completed base",
+      "confidence": "High for inspected instruction/difference findings; live workflow unverified",
+      "reason": "Global always-load/invoke Skill assumption and provider substitutions require compatible host adapter; do not treat every request as permission to invoke unavailable tool.",
+      "normalized_text_sha256": "2686d8f1610e0011291f7fea0d3478003a47f0c99f7fad96a14c6bf3303d91c9",
+      "semantic_base_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\using-superpowers\\SKILL.md",
+      "semantic_base_sha256": "55379fe7c1c473a02c61961c822996bff30e1320d6921d9062509bc508482c05",
+      "variant_transform": "case-insensitive Claude Code→Codex then Claude→Codex, plus complete residual diff reviewed",
+      "semantic_evidence_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\using-superpowers\\SKILL.md"
     },
     {
       "path": "C:\\Users\\Joshu\\.agents\\skills\\verification-before-completion\\SKILL.md",
@@ -5804,21 +5924,23 @@
       "sha256": "c35ac975d145f74d9f3668c1b035a3754d3c0f4edb491cc80a6a0265cfdf7749",
       "lines": 139,
       "chars": 4149,
-      "disposition": "keep-pending-semantic-review",
-      "coverage": "full-body-machine-pattern-and-local-link-scan; no runtime execution",
+      "disposition": "keep",
+      "coverage": "Entire normalized text identical; only line-ending bytes differ; base completion required",
       "issues": [],
       "missing_markdown_links": [],
-      "semantic_review": "inherited-identical-full-text-only-line-ending-difference",
-      "support_coverage": "Local Markdown-link existence scan only; supporting payloads not exhaustively reviewed or executed.",
+      "semantic_review": "inherited-identical-full-text-completed-base",
+      "support_coverage": "SKILL.md body or full reviewed-base plus complete difference; local reference existence scan. Supporting payloads not exhaustively inspected or executed.",
       "canonical_matches": [
         "skills\\claude\\verification-before-completion\\SKILL.md",
         "skills\\codex\\verification-before-completion\\SKILL.md",
         "skills\\codex\\_project-forks\\lsatu\\verification-before-completion\\SKILL.md"
       ],
-      "confidence": "pending completed canonical review",
-      "reason": "Same entire normalized body as fully reviewed source; byte hashes differ. Do not infer usefulness or semantic correctness from inventory/hash/pattern scans.",
+      "confidence": "High for inspected instruction/difference findings; live workflow unverified",
+      "reason": "Useful claim-evidence gate. Fresh means matching current artifact and environment, not rerun identical expensive test every message.",
       "normalized_text_sha256": "ea52d15aabaf72bc6b558efe2c126f161b53961090ddcd712000273bfe8c7b6c",
-      "semantic_evidence_path": "C:\\Users\\Joshu\\.codex\\skills\\verification-before-completion\\SKILL.md"
+      "semantic_evidence_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\verification-before-completion\\SKILL.md",
+      "semantic_base_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\verification-before-completion\\SKILL.md",
+      "semantic_base_sha256": "ea52d15aabaf72bc6b558efe2c126f161b53961090ddcd712000273bfe8c7b6c"
     },
     {
       "path": "C:\\Users\\Joshu\\.agents\\skills\\wait-what\\SKILL.md",
@@ -5860,11 +5982,11 @@
             },
             {
               "line": 45,
-              "text": "**If an API key is still missing after install:** use `AskUserQuestion` to ask the user whether they have a Groq API key (preferred \u2014 cheaper, faster) or an OpenAI key. Then write it into `~/.config/watch/.env` \u2014 set the matching `GROQ_API_"
+              "text": "**If an API key is still missing after install:** use `AskUserQuestion` to ask the user whether they have a Groq API key (preferred — cheaper, faster) or an OpenAI key. Then write it into `~/.config/watch/.env` — set the matching `GROQ_API_"
             },
             {
               "line": 139,
-              "text": "- **Setup preflight failed** \u2192 run `python3 \"${CLAUDE_SKILL_DIR}/scripts/setup.py\"` (auto-installs ffmpeg/yt-dlp via brew on macOS, scaffolds the `.env`). For API key, ask the user via `AskUserQuestion` and write it to `~/.config/watch/.env"
+              "text": "- **Setup preflight failed** → run `python3 \"${CLAUDE_SKILL_DIR}/scripts/setup.py\"` (auto-installs ffmpeg/yt-dlp via brew on macOS, scaffolds the `.env`). For API key, ask the user via `AskUserQuestion` and write it to `~/.config/watch/.env"
             }
           ]
         }
@@ -5910,15 +6032,19 @@
       "sha256": "4b937b6572321c502657a4ad229629befc5b993db6f0944031ee52458bd44850",
       "lines": 74,
       "chars": 3070,
-      "disposition": "keep-pending-semantic-review",
-      "coverage": "full-body-machine-pattern-and-local-link-scan; no runtime execution",
+      "disposition": "fix",
+      "coverage": "Complete provider substitution comparison and all additional difference hunks inspected; base completion required",
       "issues": [],
       "missing_markdown_links": [],
-      "support_coverage": "Local Markdown-link existence scan only; supporting payloads not exhaustively reviewed or executed.",
-      "semantic_review": "partial-or-machine-only; full semantic review pending",
-      "confidence": "undetermined",
-      "reason": "Do not infer usefulness or semantic correctness from inventory/hash/pattern scans.",
-      "normalized_text_sha256": "4b937b6572321c502657a4ad229629befc5b993db6f0944031ee52458bd44850"
+      "support_coverage": "SKILL.md body or full reviewed-base plus complete difference; local reference existence scan. Supporting payloads not exhaustively inspected or executed.",
+      "semantic_review": "full-variant-difference-reviewed; inherits completed base",
+      "confidence": "High for inspected instruction/difference findings; live workflow unverified",
+      "reason": "Useful bundler; altered Codex.ai artifact claim, relative app creation risks vault boundary, and discouraging upfront testing conflict relevant verification. Keep outputs in sibling app root.",
+      "normalized_text_sha256": "4b937b6572321c502657a4ad229629befc5b993db6f0944031ee52458bd44850",
+      "semantic_base_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\web-artifacts-builder\\SKILL.md",
+      "semantic_base_sha256": "81c5002c6643b0de7b8710b00e7a9038daa6fb9b68d59870ee6adb12da8d10f8",
+      "variant_transform": "case-insensitive Claude Code→Codex then Claude→Codex, plus complete residual diff reviewed",
+      "semantic_evidence_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\web-artifacts-builder\\SKILL.md"
     },
     {
       "path": "C:\\Users\\Joshu\\.agents\\skills\\webapp-testing\\SKILL.md",
@@ -6081,20 +6207,22 @@
       "sha256": "1a6c44068f69fed47bcdf5bb9939caffe0c803a5b3285db7461b2b3c96ff423d",
       "lines": 174,
       "chars": 7070,
-      "disposition": "keep-pending-semantic-review",
-      "coverage": "full-body-machine-pattern-and-local-link-scan; no runtime execution",
+      "disposition": "fix",
+      "coverage": "Entire normalized text identical; only line-ending bytes differ; base completion required",
       "issues": [],
       "missing_markdown_links": [],
-      "semantic_review": "inherited-identical-full-text-only-line-ending-difference",
-      "support_coverage": "Local Markdown-link existence scan only; supporting payloads not exhaustively reviewed or executed.",
+      "semantic_review": "inherited-identical-full-text-completed-base",
+      "support_coverage": "SKILL.md body or full reviewed-base plus complete difference; local reference existence scan. Supporting payloads not exhaustively inspected or executed.",
       "canonical_matches": [
         "skills\\claude\\writing-plans\\SKILL.md",
         "skills\\codex\\writing-plans\\SKILL.md"
       ],
-      "confidence": "pending completed canonical review",
-      "reason": "Same entire normalized body as fully reviewed source; byte hashes differ. Do not infer usefulness or semantic correctness from inventory/hash/pattern scans.",
+      "confidence": "High for inspected instruction/difference findings; live workflow unverified",
+      "reason": "Useful task-boundary/spec checklist; mandatory superpowers calls, frequent commits and full-code plans need host/project overlay and authorized scope, not unconditional ceremony.",
       "normalized_text_sha256": "272e1af349f5062c28dc282b3e21b220d58d683a7314a10c455b7432ec91d845",
-      "semantic_evidence_path": "C:\\Users\\Joshu\\.codex\\skills\\writing-plans\\SKILL.md"
+      "semantic_evidence_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\writing-plans\\SKILL.md",
+      "semantic_base_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\writing-plans\\SKILL.md",
+      "semantic_base_sha256": "272e1af349f5062c28dc282b3e21b220d58d683a7314a10c455b7432ec91d845"
     },
     {
       "path": "C:\\Users\\Joshu\\.agents\\skills\\writing-shape\\SKILL.md",
@@ -6184,15 +6312,16 @@
       "sha256": "706d4d96e1d5c9e6023fe3ccabba1bb34b364024d344fd25b8515ec7d28fe3c4",
       "lines": 315,
       "chars": 19161,
-      "disposition": "keep-pending-semantic-review",
-      "coverage": "full-body-machine-pattern-and-local-link-scan; no runtime execution",
+      "disposition": "keep",
+      "coverage": "Entire SKILL.md read in bounded sections; no target runtime execution",
       "issues": [],
       "missing_markdown_links": [],
-      "support_coverage": "Local Markdown-link existence scan only; supporting payloads not exhaustively reviewed or executed.",
-      "semantic_review": "partial-or-machine-only; full semantic review pending",
-      "confidence": "undetermined",
-      "reason": "Do not infer usefulness or semantic correctness from inventory/hash/pattern scans.",
-      "normalized_text_sha256": "681ddb4ad6d06a2acc78a3535b583f8d0c1ea800ecda3d56370d3310fd2cd4ba"
+      "support_coverage": "SKILL.md body or full reviewed-base plus complete difference; local reference existence scan. Supporting payloads not exhaustively inspected or executed.",
+      "semantic_review": "full-body-read",
+      "confidence": "High for inspected instruction/difference findings; live workflow unverified",
+      "reason": "Current system imagegen supports built-in real transparency, explicit API fallback, and non-destructive asset handling; this current body supersedes earlier stale catalog chromakey guidance.",
+      "normalized_text_sha256": "681ddb4ad6d06a2acc78a3535b583f8d0c1ea800ecda3d56370d3310fd2cd4ba",
+      "semantic_evidence_path": "C:\\Users\\Joshu\\.codex\\skills\\.system\\imagegen\\SKILL.md"
     },
     {
       "path": "C:\\Users\\Joshu\\.codex\\skills\\.system\\openai-docs\\SKILL.md",
@@ -6200,15 +6329,16 @@
       "sha256": "8ce8021101bcea594ff92ee6cfd8ca7641a49ee66d7bc6070555f1a33fc239d9",
       "lines": 38,
       "chars": 5433,
-      "disposition": "keep-pending-semantic-review",
-      "coverage": "full-body-machine-pattern-and-local-link-scan; no runtime execution",
+      "disposition": "keep",
+      "coverage": "Entire SKILL.md read in bounded sections; no target runtime execution",
       "issues": [],
       "missing_markdown_links": [],
-      "support_coverage": "Local Markdown-link existence scan only; supporting payloads not exhaustively reviewed or executed.",
-      "semantic_review": "partial-or-machine-only; full semantic review pending",
-      "confidence": "undetermined",
-      "reason": "Do not infer usefulness or semantic correctness from inventory/hash/pattern scans.",
-      "normalized_text_sha256": "aa6829e21df2223167c85d2e49b6337a7345c84c1033f1ec10182c7882b36d45"
+      "support_coverage": "SKILL.md body or full reviewed-base plus complete difference; local reference existence scan. Supporting payloads not exhaustively inspected or executed.",
+      "semantic_review": "full-body-read",
+      "confidence": "High for inspected instruction/difference findings; live workflow unverified",
+      "reason": "Focused current official evidence guidance and generic-task exclusion; docs-first order conflicts local-first project preference and should be honored by runtime higher-priority instructions, not silently transferred wholesale.",
+      "normalized_text_sha256": "aa6829e21df2223167c85d2e49b6337a7345c84c1033f1ec10182c7882b36d45",
+      "semantic_evidence_path": "C:\\Users\\Joshu\\.codex\\skills\\.system\\openai-docs\\SKILL.md"
     },
     {
       "path": "C:\\Users\\Joshu\\.codex\\skills\\.system\\review-agent\\SKILL.md",
@@ -6216,15 +6346,16 @@
       "sha256": "bb46315f6bc4b7051c05f807d19b1689b20418ac6c42590406d805c10fa2fd1a",
       "lines": 57,
       "chars": 2659,
-      "disposition": "keep-pending-semantic-review",
-      "coverage": "full-body-machine-pattern-and-local-link-scan; no runtime execution",
+      "disposition": "keep",
+      "coverage": "Entire SKILL.md read in bounded sections; no target runtime execution",
       "issues": [],
       "missing_markdown_links": [],
-      "support_coverage": "Local Markdown-link existence scan only; supporting payloads not exhaustively reviewed or executed.",
-      "semantic_review": "partial-or-machine-only; full semantic review pending",
-      "confidence": "undetermined",
-      "reason": "Do not infer usefulness or semantic correctness from inventory/hash/pattern scans.",
-      "normalized_text_sha256": "07079efd0dc76f05fade424e5dfb048dce1de2df7626e1a4f56292a4f3f92228"
+      "support_coverage": "SKILL.md body or full reviewed-base plus complete difference; local reference existence scan. Supporting payloads not exhaustively inspected or executed.",
+      "semantic_review": "full-body-read",
+      "confidence": "High for inspected instruction/difference findings; live workflow unverified",
+      "reason": "Read-only diff review preserves scope and discrete demonstrated regressions; distinct from library-wide skill inspection.",
+      "normalized_text_sha256": "07079efd0dc76f05fade424e5dfb048dce1de2df7626e1a4f56292a4f3f92228",
+      "semantic_evidence_path": "C:\\Users\\Joshu\\.codex\\skills\\.system\\review-agent\\SKILL.md"
     },
     {
       "path": "C:\\Users\\Joshu\\.codex\\skills\\.system\\skill-creator\\SKILL.md",
@@ -6232,8 +6363,8 @@
       "sha256": "cccd291077ec57c6f50ca6529f0f3fb93212da09473effb2fcec808e81b21288",
       "lines": 229,
       "chars": 15311,
-      "disposition": "repair",
-      "coverage": "full-body-machine-pattern-and-local-link-scan; no runtime execution",
+      "disposition": "keep",
+      "coverage": "Entire SKILL.md read in bounded sections; no target runtime execution",
       "issues": [],
       "missing_markdown_links": [
         {
@@ -6245,11 +6376,12 @@
           "line": 142
         }
       ],
-      "support_coverage": "Local Markdown-link existence scan only; supporting payloads not exhaustively reviewed or executed.",
-      "semantic_review": "partial-or-machine-only; full semantic review pending",
-      "confidence": "undetermined",
-      "reason": "Codex-labeled trigger optimizer scripts actually invoke Claude; cannot certify native Codex trigger selection.",
-      "normalized_text_sha256": "6656e54755638e8efcf275a472b9672eaa8a9a1b9e59dc210e275b03b59e1e66"
+      "support_coverage": "SKILL.md body or full reviewed-base plus complete difference; local reference existence scan. Supporting payloads not exhaustively inspected or executed.",
+      "semantic_review": "full-body-read",
+      "confidence": "High for inspected instruction/difference findings; live workflow unverified",
+      "reason": "Current system creator has precise discovery, scope preservation and optional forward testing; synced Anthropic creator is a different eval/package workflow. Preserve both only with clear target environment.",
+      "normalized_text_sha256": "6656e54755638e8efcf275a472b9672eaa8a9a1b9e59dc210e275b03b59e1e66",
+      "semantic_evidence_path": "C:\\Users\\Joshu\\.codex\\skills\\.system\\skill-creator\\SKILL.md"
     },
     {
       "path": "C:\\Users\\Joshu\\.codex\\skills\\.system\\skill-installer\\SKILL.md",
@@ -6257,18 +6389,19 @@
       "sha256": "2892d8b2fb11631132118f340aed80ae17e59d5a571fc2c4f4a4a7e73f139d52",
       "lines": 58,
       "chars": 3367,
-      "disposition": "keep-pending-semantic-review",
-      "coverage": "full-body-machine-pattern-and-local-link-scan; no runtime execution",
+      "disposition": "keep",
+      "coverage": "Entire58line body inspected; no installer executed",
       "issues": [],
       "missing_markdown_links": [],
-      "semantic_review": "partial-or-machine-only; full semantic review pending",
+      "semantic_review": "full-body-read",
       "support_coverage": "Local Markdown-link existence scan only; supporting payloads not exhaustively reviewed or executed.",
       "canonical_matches": [
         "skills\\codex\\skill-installer\\SKILL.md"
       ],
-      "confidence": "pending completed canonical review",
-      "reason": "Do not infer usefulness or semantic correctness from inventory/hash/pattern scans.",
-      "normalized_text_sha256": "d68b77e5bbb34dedab89d134da52855f140fc4b4299b80104f534e3b9e98f8ee"
+      "confidence": "High for instruction review; actual installer unexecuted",
+      "reason": "Distinct curated/private repo installation mechanism. In AI OS override global install default with project/catalog activation contract; never request forbidden escalation or treat installer overwrite as delete authorization.",
+      "normalized_text_sha256": "d68b77e5bbb34dedab89d134da52855f140fc4b4299b80104f534e3b9e98f8ee",
+      "semantic_evidence_path": "C:\\Users\\Joshu\\.codex\\skills\\.system\\skill-installer\\SKILL.md"
     },
     {
       "path": "C:\\Users\\Joshu\\.codex\\skills\\audit\\SKILL.md",
@@ -6316,8 +6449,8 @@
       "sha256": "21b6d5c378f5e5bd513ce981244e19ab5070d43c48159b98eb0113b1232d0e2d",
       "lines": 101,
       "chars": 3135,
-      "disposition": "keep-pending-semantic-review",
-      "coverage": "full-body-machine-pattern-and-local-link-scan; no runtime execution",
+      "disposition": "repair",
+      "coverage": "Complete provider substitution comparison and all additional difference hunks inspected; base completion required",
       "issues": [
         {
           "kind": "Mac-path-review",
@@ -6346,11 +6479,15 @@
         }
       ],
       "missing_markdown_links": [],
-      "support_coverage": "Local Markdown-link existence scan only; supporting payloads not exhaustively reviewed or executed.",
-      "semantic_review": "partial-or-machine-only; full semantic review pending",
-      "confidence": "undetermined",
-      "reason": "Do not infer usefulness or semantic correctness from inventory/hash/pattern scans.",
-      "normalized_text_sha256": "21b6d5c378f5e5bd513ce981244e19ab5070d43c48159b98eb0113b1232d0e2d"
+      "support_coverage": "SKILL.md body or full reviewed-base plus complete difference; local reference existence scan. Supporting payloads not exhaustively inspected or executed.",
+      "semantic_review": "full-variant-difference-reviewed; inherits completed base",
+      "confidence": "High for inspected instruction/difference findings; live workflow unverified",
+      "reason": "Global output paths differ from current handoffs home and claim every verbatim message from current context; must retrieve available logs or disclose missing compacted history.",
+      "normalized_text_sha256": "21b6d5c378f5e5bd513ce981244e19ab5070d43c48159b98eb0113b1232d0e2d",
+      "semantic_base_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\chat-export\\SKILL.md",
+      "semantic_base_sha256": "ca235b11b0c81a82b288f30488a3b9f81d69371286e75db6d5cb1070b62c4818",
+      "variant_transform": "case-insensitive Claude Code→Codex then Claude→Codex, plus complete residual diff reviewed",
+      "semantic_evidence_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\chat-export\\SKILL.md"
     },
     {
       "path": "C:\\Users\\Joshu\\.codex\\skills\\claude-build\\SKILL.md",
@@ -7256,8 +7393,8 @@
       "sha256": "45b8efd1abea70e2ed11e2f026e92ac4b02697ac7b8863fd8b4869f15895ee0b",
       "lines": 90,
       "chars": 5958,
-      "disposition": "keep-pending-semantic-review",
-      "coverage": "full-body-machine-pattern-and-local-link-scan; no runtime execution",
+      "disposition": "fix",
+      "coverage": "Entire SKILL.md read in bounded sections; no target runtime execution",
       "issues": [
         {
           "kind": "runtime-tool-portability-review",
@@ -7274,11 +7411,12 @@
         }
       ],
       "missing_markdown_links": [],
-      "support_coverage": "Local Markdown-link existence scan only; supporting payloads not exhaustively reviewed or executed.",
-      "semantic_review": "partial-or-machine-only; full semantic review pending",
-      "confidence": "undetermined",
-      "reason": "Do not infer usefulness or semantic correctness from inventory/hash/pattern scans.",
-      "normalized_text_sha256": "2d782f5da2f905178f7773c9d3b18b15331b0892d6d1cb678d166dc672ac41f5"
+      "support_coverage": "SKILL.md body or full reviewed-base plus complete difference; local reference existence scan. Supporting payloads not exhaustively inspected or executed.",
+      "semantic_review": "full-body-read",
+      "confidence": "High for inspected instruction/difference findings; live workflow unverified",
+      "reason": "Search workflow is useful; repair Bash-only command example for Windows and make feedback transmission opt-in or explicitly covered by invoked workflow. Paid hosted service, not free local search.",
+      "normalized_text_sha256": "2d782f5da2f905178f7773c9d3b18b15331b0892d6d1cb678d166dc672ac41f5",
+      "semantic_evidence_path": "C:\\Users\\Joshu\\.codex\\skills\\firecrawl-search\\SKILL.md"
     },
     {
       "path": "C:\\Users\\Joshu\\.codex\\skills\\firecrawl-seo-audit\\SKILL.md",
@@ -7286,15 +7424,16 @@
       "sha256": "26531eadc941020e543462e7ba9a79d472e8b345a4017c9c8dc603e1281ab64f",
       "lines": 79,
       "chars": 2591,
-      "disposition": "keep-pending-semantic-review",
-      "coverage": "full-body-machine-pattern-and-local-link-scan; no runtime execution",
+      "disposition": "keep",
+      "coverage": "Entire SKILL.md read in bounded sections; no target runtime execution",
       "issues": [],
       "missing_markdown_links": [],
-      "support_coverage": "Local Markdown-link existence scan only; supporting payloads not exhaustively reviewed or executed.",
-      "semantic_review": "partial-or-machine-only; full semantic review pending",
-      "confidence": "undetermined",
-      "reason": "Do not infer usefulness or semantic correctness from inventory/hash/pattern scans.",
-      "normalized_text_sha256": "a04bf7f3806fef718e48ad05ad20d38548410b2d51b92a4ad43cd8838068e0bc"
+      "support_coverage": "SKILL.md body or full reviewed-base plus complete difference; local reference existence scan. Supporting payloads not exhaustively inspected or executed.",
+      "semantic_review": "full-body-read",
+      "confidence": "High for inspected instruction/difference findings; live workflow unverified",
+      "reason": "Focused SEO evidence collection; distinct from generic crawl. Hosted API dependencies and ranking conclusions remain untested.",
+      "normalized_text_sha256": "a04bf7f3806fef718e48ad05ad20d38548410b2d51b92a4ad43cd8838068e0bc",
+      "semantic_evidence_path": "C:\\Users\\Joshu\\.codex\\skills\\firecrawl-seo-audit\\SKILL.md"
     },
     {
       "path": "C:\\Users\\Joshu\\.codex\\skills\\firecrawl-shop\\SKILL.md",
@@ -7302,15 +7441,16 @@
       "sha256": "6d32003567a503804c4025bddcebfad1e95024dcf54321a25c5e2a29b0eac7f9",
       "lines": 68,
       "chars": 2290,
-      "disposition": "keep-pending-semantic-review",
-      "coverage": "full-body-machine-pattern-and-local-link-scan; no runtime execution",
+      "disposition": "keep",
+      "coverage": "Entire SKILL.md read in bounded sections; no target runtime execution",
       "issues": [],
       "missing_markdown_links": [],
-      "support_coverage": "Local Markdown-link existence scan only; supporting payloads not exhaustively reviewed or executed.",
-      "semantic_review": "partial-or-machine-only; full semantic review pending",
-      "confidence": "undetermined",
-      "reason": "Do not infer usefulness or semantic correctness from inventory/hash/pattern scans.",
-      "normalized_text_sha256": "aafea0f0ecdf3a098492635b5f1a24ff4b8cf339945170beee8b75ce12ff4f0c"
+      "support_coverage": "SKILL.md body or full reviewed-base plus complete difference; local reference existence scan. Supporting payloads not exhaustively inspected or executed.",
+      "semantic_review": "full-body-read",
+      "confidence": "High for inspected instruction/difference findings; live workflow unverified",
+      "reason": "Distinct personal shopping workflow with cart authorization and checkout boundary; hosted paid API availability untested.",
+      "normalized_text_sha256": "aafea0f0ecdf3a098492635b5f1a24ff4b8cf339945170beee8b75ce12ff4f0c",
+      "semantic_evidence_path": "C:\\Users\\Joshu\\.codex\\skills\\firecrawl-shop\\SKILL.md"
     },
     {
       "path": "C:\\Users\\Joshu\\.codex\\skills\\firecrawl-website-design-clone\\SKILL.md",
@@ -8390,15 +8530,26 @@
       "sha256": "ac22ec3cbabc95ba03ee3d7cf43a1209fcd139d56c69d35b10c57b9b5f794da0",
       "lines": 923,
       "chars": 85507,
-      "disposition": "keep-pending-semantic-review",
-      "coverage": "full-body-machine-pattern-and-local-link-scan; no runtime execution",
+      "disposition": "fix",
+      "coverage": "Full923line body read in bounded nontruncated ranges by two reviewers; no scripts executed",
       "issues": [],
       "missing_markdown_links": [],
       "support_coverage": "Local Markdown-link existence scan only; supporting payloads not exhaustively reviewed or executed.",
-      "semantic_review": "partial-or-machine-only; full semantic review pending",
-      "confidence": "undetermined",
-      "reason": "Do not infer usefulness or semantic correctness from inventory/hash/pattern scans.",
-      "normalized_text_sha256": "ccfabd5d761faa721586f8793dd93bdd735e2a2c07099a5d593a7e31286e58f3"
+      "semantic_review": "full-body-read-distributed",
+      "confidence": "High for directly inspected instruction issues; runtime unverified",
+      "reason": "Preserve optional unique pet capability; require explicit permission for source/intermediate deletions at336–349 and677, adapt Bash/jq host prerequisites, and re-QA repaired row before marking complete at871.",
+      "normalized_text_sha256": "ccfabd5d761faa721586f8793dd93bdd735e2a2c07099a5d593a7e31286e58f3",
+      "semantic_evidence_path": "C:\\Users\\Joshu\\.codex\\skills\\hatch-pet\\SKILL.md",
+      "semantic_read_ranges": [
+        {
+          "reviewer": "remaining_global",
+          "lines": "1-180"
+        },
+        {
+          "reviewer": "root",
+          "lines": "181-350,351-540,541-730,731-923"
+        }
+      ]
     },
     {
       "path": "C:\\Users\\Joshu\\.codex\\skills\\higgsfield-generate\\SKILL.md",
@@ -8729,14 +8880,18 @@
       "lines": 88,
       "chars": 6214,
       "disposition": "repair",
-      "coverage": "full-body-machine-pattern-and-local-link-scan; no runtime execution",
+      "coverage": "Complete provider substitution comparison and all additional difference hunks inspected; base completion required",
       "issues": [],
       "missing_markdown_links": [],
-      "support_coverage": "Local Markdown-link existence scan only; supporting payloads not exhaustively reviewed or executed.",
-      "semantic_review": "partial-or-machine-only; full semantic review pending",
-      "confidence": "undetermined",
-      "reason": "Stale backend qodidbkoqrmqhdfwvcmk and old app root.",
-      "normalized_text_sha256": "c0627060dad6a62c76e6636203c9b9bac12ef8e29d66400ce9ed06562683f5d4"
+      "support_coverage": "SKILL.md body or full reviewed-base plus complete difference; local reference existence scan. Supporting payloads not exhaustively inspected or executed.",
+      "semantic_review": "full-variant-difference-reviewed; inherits completed base",
+      "confidence": "High for inspected instruction/difference findings; live workflow unverified",
+      "reason": "Legacy app root inside vault and stale authority bundle compete with current app-root instruction routing; backend correctness needs authoritative comparison, not inferred from old date.",
+      "normalized_text_sha256": "c0627060dad6a62c76e6636203c9b9bac12ef8e29d66400ce9ed06562683f5d4",
+      "semantic_base_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\lsat-u-architecture\\SKILL.md",
+      "semantic_base_sha256": "d0c1f55ff2b350e536566b8e5ac1bf1717876e53f197bc5cfcd379c051845a22",
+      "variant_transform": "case-insensitive Claude Code→Codex then Claude→Codex, plus complete residual diff reviewed",
+      "semantic_evidence_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\lsat-u-architecture\\SKILL.md"
     },
     {
       "path": "C:\\Users\\Joshu\\.codex\\skills\\lsat-u-platform-actions\\SKILL.md",
@@ -8745,14 +8900,15 @@
       "lines": 75,
       "chars": 4813,
       "disposition": "repair",
-      "coverage": "full-body-machine-pattern-and-local-link-scan; no runtime execution",
+      "coverage": "Entire SKILL.md read in bounded sections; no target runtime execution",
       "issues": [],
       "missing_markdown_links": [],
-      "support_coverage": "Local Markdown-link existence scan only; supporting payloads not exhaustively reviewed or executed.",
-      "semantic_review": "partial-or-machine-only; full semantic review pending",
-      "confidence": "undetermined",
-      "reason": "Old Chrome-only direct-backend prohibition conflicts current project-supported actions.",
-      "normalized_text_sha256": "b635a1f25276e41afcb7cd21117d6ae74544ba561a3199715eb14d7fce130836"
+      "support_coverage": "SKILL.md body or full reviewed-base plus complete difference; local reference existence scan. Supporting payloads not exhaustively inspected or executed.",
+      "semantic_review": "full-body-read",
+      "confidence": "High for inspected instruction/difference findings; live workflow unverified",
+      "reason": "Global browser-only legacy workflow contradicts maintained headless Node/MCP project route, carries old teacher?ws URLs and cross-runtime tool assumptions; retain UI fallback mechanics in current canonical route.",
+      "normalized_text_sha256": "b635a1f25276e41afcb7cd21117d6ae74544ba561a3199715eb14d7fce130836",
+      "semantic_evidence_path": "C:\\Users\\Joshu\\.codex\\skills\\lsat-u-platform-actions\\SKILL.md"
     },
     {
       "path": "C:\\Users\\Joshu\\.codex\\skills\\lsat-u-topic-builder\\SKILL.md",
@@ -8760,8 +8916,8 @@
       "sha256": "0a66ae75efd517576b00479e25d2e6e7cedd919fb4b46e994c53d81c4d3fa3fd",
       "lines": 312,
       "chars": 16622,
-      "disposition": "retire-active-candidate",
-      "coverage": "full-body-machine-pattern-and-local-link-scan; no runtime execution",
+      "disposition": "repair",
+      "coverage": "Complete provider substitution comparison and all additional difference hunks inspected; base completion required",
       "issues": [
         {
           "kind": "Mac-path-review",
@@ -8786,11 +8942,15 @@
         }
       ],
       "missing_markdown_links": [],
-      "support_coverage": "Local Markdown-link existence scan only; supporting payloads not exhaustively reviewed or executed.",
-      "semantic_review": "partial-or-machine-only; full semantic review pending",
-      "confidence": "undetermined",
-      "reason": "Explicitly superseded by bootcamp-builder; Mac-specific duplicate workflow. Preserve useful references before deactivation.",
-      "normalized_text_sha256": "0a66ae75efd517576b00479e25d2e6e7cedd919fb4b46e994c53d81c4d3fa3fd"
+      "support_coverage": "SKILL.md body or full reviewed-base plus complete difference; local reference existence scan. Supporting payloads not exhaustively inspected or executed.",
+      "semantic_review": "full-variant-difference-reviewed; inherits completed base",
+      "confidence": "High for inspected instruction/difference findings; live workflow unverified",
+      "reason": "Useful audited topic bootstrap; global paths restore Mac roots or vault-contained app output, provider products/templates require current runtime adaptation.",
+      "normalized_text_sha256": "0a66ae75efd517576b00479e25d2e6e7cedd919fb4b46e994c53d81c4d3fa3fd",
+      "semantic_base_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\lsat-u-topic-builder\\SKILL.md",
+      "semantic_base_sha256": "c10625661c68de4d84de806e7b479e036ecc273a8922c7a193de18b7bad4c463",
+      "variant_transform": "case-insensitive Claude Code→Codex then Claude→Codex, plus complete residual diff reviewed",
+      "semantic_evidence_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\lsat-u-topic-builder\\SKILL.md"
     },
     {
       "path": "C:\\Users\\Joshu\\.codex\\skills\\lsatu-cc-handoff\\SKILL.md",
@@ -8799,7 +8959,7 @@
       "lines": 114,
       "chars": 8542,
       "disposition": "repair",
-      "coverage": "full-body-machine-pattern-and-local-link-scan; no runtime execution",
+      "coverage": "Complete provider substitution comparison and all additional difference hunks inspected; base completion required",
       "issues": [
         {
           "kind": "Mac-path-review",
@@ -8812,11 +8972,15 @@
         }
       ],
       "missing_markdown_links": [],
-      "support_coverage": "Local Markdown-link existence scan only; supporting payloads not exhaustively reviewed or executed.",
-      "semantic_review": "partial-or-machine-only; full semantic review pending",
-      "confidence": "undetermined",
-      "reason": "Moves handoffs into immutable raw/sources, hardcodes retired paths and main push workflow.",
-      "normalized_text_sha256": "67108f5c0de6857f55e450455ad4d9481c41b8d1a1ac29fa6c59e20699e7743d"
+      "support_coverage": "SKILL.md body or full reviewed-base plus complete difference; local reference existence scan. Supporting payloads not exhaustively inspected or executed.",
+      "semantic_review": "full-variant-difference-reviewed; inherits completed base",
+      "confidence": "High for inspected instruction/difference findings; live workflow unverified",
+      "reason": "Useful code-backed build brief; unconditional commit/push wording and raw-source brief writes/archive moves violate task-scoped authority and source preservation. Use current handoff/workproduct home.",
+      "normalized_text_sha256": "67108f5c0de6857f55e450455ad4d9481c41b8d1a1ac29fa6c59e20699e7743d",
+      "semantic_base_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\lsatu-cc-handoff\\SKILL.md",
+      "semantic_base_sha256": "087ce8303dba247e773e450e1d3845bbcf0c3951f85570c64c00b41723651a92",
+      "variant_transform": "case-insensitive Claude Code→Codex then Claude→Codex, plus complete residual diff reviewed",
+      "semantic_evidence_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\lsatu-cc-handoff\\SKILL.md"
     },
     {
       "path": "C:\\Users\\Joshu\\.codex\\skills\\minimalist-ui\\SKILL.md",
@@ -9047,15 +9211,19 @@
       "sha256": "c6888fbcb19de15ac078c87153a019a3fee0505f3dd5b2464974fb42450a34c4",
       "lines": 43,
       "chars": 2711,
-      "disposition": "keep-pending-semantic-review",
-      "coverage": "full-body-machine-pattern-and-local-link-scan; no runtime execution",
+      "disposition": "repair",
+      "coverage": "Complete provider substitution comparison and all additional difference hunks inspected; base completion required",
       "issues": [],
       "missing_markdown_links": [],
-      "support_coverage": "Local Markdown-link existence scan only; supporting payloads not exhaustively reviewed or executed.",
-      "semantic_review": "partial-or-machine-only; full semantic review pending",
-      "confidence": "undetermined",
-      "reason": "Do not infer usefulness or semantic correctness from inventory/hash/pattern scans.",
-      "normalized_text_sha256": "c6888fbcb19de15ac078c87153a019a3fee0505f3dd5b2464974fb42450a34c4"
+      "support_coverage": "SKILL.md body or full reviewed-base plus complete difference; local reference existence scan. Supporting payloads not exhaustively inspected or executed.",
+      "semantic_review": "full-variant-difference-reviewed; inherits completed base",
+      "confidence": "High for inspected instruction/difference findings; live workflow unverified",
+      "reason": "Global script route uses legacy catalog/runtime and projects/lsatu env path inside vault; reconnect to actual sibling app dependency without exposing keys.",
+      "normalized_text_sha256": "c6888fbcb19de15ac078c87153a019a3fee0505f3dd5b2464974fb42450a34c4",
+      "semantic_base_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\pull-submissions\\SKILL.md",
+      "semantic_base_sha256": "af6bef8077a5d8979ab185fc97e8f049ce0439d71c22076d3db21a6839ec3177",
+      "variant_transform": "case-insensitive Claude Code→Codex then Claude→Codex, plus complete residual diff reviewed",
+      "semantic_evidence_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\pull-submissions\\SKILL.md"
     },
     {
       "path": "C:\\Users\\Joshu\\.codex\\skills\\qa\\SKILL.md",
@@ -9315,21 +9483,24 @@
       "sha256": "1ab1c23c7f9863d8d67dcf1cd5e5338c169fca1b69d386f6a8c81d672c78a6ac",
       "lines": 52,
       "chars": 3261,
-      "disposition": "keep-pending-semantic-review",
-      "coverage": "full-body-machine-pattern-and-local-link-scan; no runtime execution",
+      "disposition": "keep candidate",
+      "coverage": "Entire normalized text identical; only line-ending bytes differ; base completion required",
       "issues": [],
       "missing_markdown_links": [],
-      "semantic_review": "partial-or-machine-only; full semantic review pending",
-      "support_coverage": "Local Markdown-link existence scan only; supporting payloads not exhaustively reviewed or executed.",
+      "semantic_review": "inherited-identical-full-text-completed-base",
+      "support_coverage": "SKILL.md body or full reviewed-base plus complete difference; local reference existence scan. Supporting payloads not exhaustively inspected or executed.",
       "canonical_matches": [
         "skills\\claude\\second-brain-lint\\SKILL.md",
         "skills\\codex\\second-brain-lint\\SKILL.md",
         ".agents\\skills\\second-brain-lint\\SKILL.md",
         ".claude\\skills\\second-brain-lint\\SKILL.md"
       ],
-      "confidence": "pending completed canonical review",
-      "reason": "Do not infer usefulness or semantic correctness from inventory/hash/pattern scans.",
-      "normalized_text_sha256": "7eb9ab700fcd5d6dbe5748a10acc8bce667b88469525949657574ecb96d8dbdc"
+      "confidence": "High for inspected instruction/difference findings; live workflow unverified",
+      "reason": "No confirmed removal rationale in inspected evidence; lack of usage evidence is not proof of uselessness",
+      "normalized_text_sha256": "7eb9ab700fcd5d6dbe5748a10acc8bce667b88469525949657574ecb96d8dbdc",
+      "semantic_base_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\second-brain-lint\\SKILL.md",
+      "semantic_base_sha256": "7eb9ab700fcd5d6dbe5748a10acc8bce667b88469525949657574ecb96d8dbdc",
+      "semantic_evidence_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\second-brain-lint\\SKILL.md"
     },
     {
       "path": "C:\\Users\\Joshu\\.codex\\skills\\second-brain-query\\SKILL.md",
@@ -9337,21 +9508,24 @@
       "sha256": "20476909d5d661ef2a1d50f45390759985eacb1e5a167bcf4b1fbbfb81ed5189",
       "lines": 49,
       "chars": 2942,
-      "disposition": "keep-pending-semantic-review",
-      "coverage": "full-body-machine-pattern-and-local-link-scan; no runtime execution",
+      "disposition": "keep candidate",
+      "coverage": "Entire normalized text identical; only line-ending bytes differ; base completion required",
       "issues": [],
       "missing_markdown_links": [],
-      "semantic_review": "partial-or-machine-only; full semantic review pending",
-      "support_coverage": "Local Markdown-link existence scan only; supporting payloads not exhaustively reviewed or executed.",
+      "semantic_review": "inherited-identical-full-text-completed-base",
+      "support_coverage": "SKILL.md body or full reviewed-base plus complete difference; local reference existence scan. Supporting payloads not exhaustively inspected or executed.",
       "canonical_matches": [
         "skills\\claude\\second-brain-query\\SKILL.md",
         "skills\\codex\\second-brain-query\\SKILL.md",
         ".agents\\skills\\second-brain-query\\SKILL.md",
         ".claude\\skills\\second-brain-query\\SKILL.md"
       ],
-      "confidence": "pending completed canonical review",
-      "reason": "Do not infer usefulness or semantic correctness from inventory/hash/pattern scans.",
-      "normalized_text_sha256": "ed0ab7077780bd73f27781aa33717aac9b6d49453cc92f5a9713dabf50a8f654"
+      "confidence": "High for inspected instruction/difference findings; live workflow unverified",
+      "reason": "No confirmed removal rationale in inspected evidence; lack of usage evidence is not proof of uselessness",
+      "normalized_text_sha256": "ed0ab7077780bd73f27781aa33717aac9b6d49453cc92f5a9713dabf50a8f654",
+      "semantic_base_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\second-brain-query\\SKILL.md",
+      "semantic_base_sha256": "ed0ab7077780bd73f27781aa33717aac9b6d49453cc92f5a9713dabf50a8f654",
+      "semantic_evidence_path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\second-brain-query\\SKILL.md"
     },
     {
       "path": "C:\\Users\\Joshu\\.codex\\skills\\session-handoff\\SKILL.md",
@@ -9367,7 +9541,7 @@
           "evidence": [
             {
               "line": 23,
-              "text": "   - TodoWrite state \u2014 any in-progress or pending tasks."
+              "text": "   - TodoWrite state — any in-progress or pending tasks."
             }
           ]
         }
@@ -9447,15 +9621,16 @@
       "sha256": "2eb942759cf00cc5ab86525ac09f5e1effe7a7f734bfb5d99a61ae9d2dc51f68",
       "lines": 74,
       "chars": 8400,
-      "disposition": "keep-pending-semantic-review",
-      "coverage": "full-body-machine-pattern-and-local-link-scan; no runtime execution",
+      "disposition": "keep",
+      "coverage": "Entire SKILL.md read in bounded sections; no target runtime execution",
       "issues": [],
       "missing_markdown_links": [],
-      "support_coverage": "Local Markdown-link existence scan only; supporting payloads not exhaustively reviewed or executed.",
-      "semantic_review": "partial-or-machine-only; full semantic review pending",
-      "confidence": "undetermined",
-      "reason": "Do not infer usefulness or semantic correctness from inventory/hash/pattern scans.",
-      "normalized_text_sha256": "2eb942759cf00cc5ab86525ac09f5e1effe7a7f734bfb5d99a61ae9d2dc51f68"
+      "support_coverage": "SKILL.md body or full reviewed-base plus complete difference; local reference existence scan. Supporting payloads not exhaustively inspected or executed.",
+      "semantic_review": "full-body-read",
+      "confidence": "High for inspected instruction/difference findings; live workflow unverified",
+      "reason": "Evidence-oriented audit/evaluate/apply distinction, no usage inference from mentions, scoped backups and audit-only no-mutation; strong reusable complement to current inspection.",
+      "normalized_text_sha256": "2eb942759cf00cc5ab86525ac09f5e1effe7a7f734bfb5d99a61ae9d2dc51f68",
+      "semantic_evidence_path": "C:\\Users\\Joshu\\.codex\\skills\\skill-audit\\SKILL.md"
     },
     {
       "path": "C:\\Users\\Joshu\\.codex\\skills\\subagent-driven-development\\SKILL.md",
@@ -9693,11 +9868,11 @@
             },
             {
               "line": 45,
-              "text": "**If an API key is still missing after install:** use `AskUserQuestion` to ask the user whether they have a Groq API key (preferred \u2014 cheaper, faster) or an OpenAI key. Then write it into `~/.config/watch/.env` \u2014 set the matching `GROQ_API_"
+              "text": "**If an API key is still missing after install:** use `AskUserQuestion` to ask the user whether they have a Groq API key (preferred — cheaper, faster) or an OpenAI key. Then write it into `~/.config/watch/.env` — set the matching `GROQ_API_"
             },
             {
               "line": 139,
-              "text": "- **Setup preflight failed** \u2192 run `python3 \"${CLAUDE_SKILL_DIR}/scripts/setup.py\"` (auto-installs ffmpeg/yt-dlp via brew on macOS, scaffolds the `.env`). For API key, ask the user via `AskUserQuestion` and write it to `~/.config/watch/.env"
+              "text": "- **Setup preflight failed** → run `python3 \"${CLAUDE_SKILL_DIR}/scripts/setup.py\"` (auto-installs ffmpeg/yt-dlp via brew on macOS, scaffolds the `.env`). For API key, ask the user via `AskUserQuestion` and write it to `~/.config/watch/.env"
             }
           ]
         }
@@ -9828,13 +10003,17 @@
     }
   ],
   "semantic_counts": {
-    "full-body-read": 215,
+    "full-body-read": 236,
     "inherited-exact-byte-hash-completed-review": 187,
-    "partial-or-machine-only; full semantic review pending": 77
+    "full-variant-difference-reviewed; inherits completed base": 17,
+    "inherited-identical-full-text-completed-base": 22,
+    "full-variant-difference-reviewed; awaiting completed base": 7,
+    "inherited-identical-full-text-only-line-ending-difference": 9,
+    "full-body-read-distributed": 1
   },
   "reviewed_distinct_bodies": 178,
   "remaining_distinct_noncanonical_bodies": 70,
-  "status": "IN_PROGRESS: canonical review inheritance and remaining full semantic bodies still required.",
+  "status": "All remaining unique noncanonical global bodies or complete differences inspected; completed canonical base inheritance still requires final integration",
   "hash_contract": "sha256 is physical file bytes; normalized_text_sha256 is scanner initial LF-normalized UTF-8 text hash, not byte identity.",
   "inherited_distinct_bodies": 161
 }
