@@ -202,12 +202,13 @@ for di,(d,rows) in enumerate(zip(drills,blocks)):
         if statement!=original:notes.append('Reviewed derivative: the learner-facing statement clarifies the source. The exact original remains in originalStatement.')
         items.append(dict(id=f'{ids[di]}-{j:02}',sourceId=f'{["intro-p1","indicator-p1","intro-p2","indicator-p2","rephrase","indicator-p3","translation"][di]}-{j:02}',originalStatement=original,statement=statement,indicators=[dict(text=x.rsplit(':',1)[0],group=int(x.rsplit(':',1)[1])) for x in indicator.split(';')],sufficient=left,necessary=right,diagram=f'{left} → {right}',contrapositive=f'NOT ({right}) → NOT ({left})',ifThen=f'If {left}, then {right}.',contrapositiveWords=f'If {negate_same_subject(right)}, then {negate_same_subject(left)}.',explanation=explanation,correctionNotes=notes,source=dict(file=file,sha256=sha,part=d['source'],item=j)))
     instruction=d['instruction']
-    if di==0:instruction='Select the indicator expression, then place the complete sufficient and necessary conditions. Keep words that limit who, when, or what the rule covers.'
+    if di==0:instruction='Select the indicator expressions and their groups. Then write the two complete conditions before comparing with the model. Keep words that limit who, when, or what the rule covers.'
     if di==1:instruction='Select each indicator expression and identify its group. A sentence may contain expressions from both groups. Check which condition each expression helps you find.'
-    if di==2:instruction='Place each complete sufficient condition on the left and each necessary condition on the right. These are the same 15 statements you identified earlier. Read your arrow back before checking.'
-    if di==3:instruction='Select the complete sufficient and necessary conditions and place them beside the arrow. Their order in the sentence may differ from their order in the diagram.'
-    if di==4:instruction='Select each indicator and its group, place the complete conditions beside the arrow, then rewrite the rule as “If …, then …”. Keep permissions, duties, deadlines, and restrictions.'
-    if di==5:instruction='Build the original diagram and its contrapositive. Then write both in ordinary if/then language. Reverse the conditions and negate each complete idea, including its restrictions.'
+    if di==2:instruction='Return to the 15 intro statements. Write the complete conditions, assign each a symbol, then construct the original arrow using your own legend. Compare its direction and complete meaning.'
+    if di==3:instruction='Write the two complete conditions. Compare their meaning, then place the sufficient condition on the left and the necessary condition on the right. Their order in the sentence may differ.'
+    if di==4:instruction='Rewrite the statement as “If …, then …” before looking at a model. Then identify each indicator and its group and build the original arrow. Keep permissions, duties, deadlines, and restrictions.'
+    if di==5:instruction='Identify each indicator and its group, then write the complete conditions and define your symbols. Build the original diagram and its contrapositive, then read both back in ordinary if/then language. Complete your own translation before revealing the model.'
+    if di==6:instruction='Translate each statement independently: identify the indicators, write the complete conditions, define your symbols, build both arrows, and read them back in words. Complete your attempt before comparing with the model. Keep every qualifier and negate whole conditions.'
     sets.append(dict(id=ids[di],title=d['title'],shortTitle=d['short'],stage=d['stage'],taskKind=kinds[di],instructions=instruction,items=items))
 header='''/** Reviewed derivatives of Joshua's Group 1/2 worksheets. Original source text and hashes are retained.
  * NOT (...) negates the entire proposition, including qualifiers and compound predicates.
@@ -257,7 +258,7 @@ export const getSourceWorksheetDrill = (id: string): SourceWorksheetDrillSet | u
     shortTitle: revisit.shortTitle,
     stage: 'After contraposition',
     taskKind: 'contrapositive',
-    instructions: 'Return to these familiar statements. Build the original diagram and its contrapositive, then write both in ordinary if/then language. Reverse the conditions and negate each complete idea, including its restrictions.',
+    instructions: 'Return to these familiar statements. Identify the indicators, write the complete conditions, and define your symbols. Build the original diagram and its contrapositive, then write both in ordinary if/then language. Reverse the conditions and negate each complete idea, including its restrictions.',
   };
 };
 '''

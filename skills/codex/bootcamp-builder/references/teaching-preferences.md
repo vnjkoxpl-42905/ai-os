@@ -172,3 +172,12 @@ Status: explicit implementation authorization, not acceptance or publication.
 Joshua wants the finished course, not another isolated prototype or plan. Create the conceptual contrapositive note first, compare the actual Intro to LR lesson/drill progression, then integrate every source question at the point its prerequisites have been taught. Preserve the existing 24 foundation questions; rewriting them is not required. Keep familiar statements when the learner performs a new operation. Preserve all original source text and record corrections separately. Improve interaction and visual design, not merely copy worksheets into cards. Show the complete sequence at the end.
 
 Implementation direction: concept and example, learner decision, explanation; then indicator selection, complete-condition placement, forward diagrams, faithful if/then rewriting, formal contraposition, and full mixed practice. Keep prose self-review distinct from reliable automatic checks, local-device persistence distinct from account records, and source coverage distinct from mastery. Entire-bank availability does not require one long sitting. Provide short-session resume and review.
+
+
+### 2026-10-11: source procedure matters as much as coverage
+
+- Joshua rejected the legacy sufficient-practice drill after source-bank integration. Counting imported items does not prove that the source teaching procedure was implemented. Audit every existing drill route alongside new source sets.
+- Preserve the notes' progression: indicators, complete conditions, learner-defined symbols, original arrow, contrapositive, English readbacks. Introduce each prerequisite before testing it.
+- Fade assistance across the course. Guided recognition can supply choices; independent translation must begin with blank production and withhold models until the whole attempt is written.
+- Keep one active operation, the source rule in view, readable stage progress and specific feedback. Correct objectively wrong answers before advancing; label written comparison honestly as self-review.
+- Validate actual rendered contrast, responsive layout, stage gating and draft recovery. A source import, passing tests or a wrapper stylesheet alone is not a polished drill.

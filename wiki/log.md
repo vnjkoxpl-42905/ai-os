@@ -2882,3 +2882,8 @@ Saved brainstorms/2026-09-30-conditional-curriculum/2026-10-11-contrapositive-an
 
 ## [2026-10-11] build | Conditional contrapositive and complete worksheet integration
 Joshua authorized finished local implementation. Moved conceptual contrapositive immediately after Must arrow; preserved formal writing later. Integrated seven source banks containing all 133 source task instances, plus two later contrapositive revisit routes for the introductory diagram and rephrase tasks. Retained the 24 foundation questions. Compared live Intro to LR progression and drill interaction. Saved direction in all four bootcamp preference references. Independent source/UI review corrected modality, indicator classifications and subject scope; exact originals/hashes remain in bank and generator. Three visual iterations, desktop/mobile and reload checks completed. Focused tests and typecheck pass. Build passes with existing warnings. Local-device self-review only; no account-sync, publish, commit or deployment claim. Full checkpoint: [contrapositive integration](../brainstorms/2026-09-30-conditional-curriculum/2026-10-11-contrapositive-and-drill-integration-plan.md).
+
+
+## [2026-10-11] build | Repair conditional drill procedure
+
+Rebuilt legacy sufficient/contrapositive drills and source worksheets around staged operations; independent translation now requires learner-written conditions, symbol legends, diagrams and readbacks. Preserved133source task instances and existing foundation/adaptive content. Added missing prerequisite explanation and maintained allfour bootcamp preference ledgers. Localpreview only; no deployment. Checkpoint: brainstorms/2026-09-30-conditional-curriculum/2026-10-11-staged-drill-repair.md.

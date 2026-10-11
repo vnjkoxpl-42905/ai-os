@@ -119,3 +119,14 @@ Check each answer against the source adjudication; independently review explanat
 ## Review boundary
 
 This plan proposes the sequence and implementation. It does not certify all items as ready, alter the current course, or publish work. First concrete implementation should be the conceptual contrapositive lesson plus cleaned Intro Training, reviewed together before bulk importing the later sets.
+
+
+## 2026-10-11 repair after full-drill audit
+
+The user rejected the legacy sufficient-practice surface. Earlier item-count integration was incomplete as a teaching implementation. Full audit found missing symbol assignment, overly supplied conditions in independent sets, and prerequisite scope-negation gaps. See `2026-10-11-staged-drill-repair.md`.
+
+- Foundation24 retained; sufficient24 now staged; mixed24 adaptive retained; contra9 explicitly diagnostic.
+- All133 source task instances retained. Source tasks now fade from indicator/condition recognition to blank production with symbols, diagrams and readbacks. Final models withheld until complete attempt.
+- Whole-meaning moved before source banks; modal, temporal and symbol-legend explanations added. Formal contrapositive now includes not-both, not-every and qualified-existential negation checks.
+- Browser second pass exposed mixed intro white-on-cream text; corrected explicit contrast. Guided wrong-answer gating and source full-operation model reveal were exercised. Local source draft survived reload.
+- Focused tests49 passed; mixed/staged retention14 passed (4 overlapping); TypeScript passed; production build passed with existing Tailwind/noise/chunk warnings. Claude Opus high-effort inspection running, not yet approval.
