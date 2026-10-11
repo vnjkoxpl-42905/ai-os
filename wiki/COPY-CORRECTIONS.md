@@ -182,6 +182,8 @@ From the glossary. Internal names may stay in code, never on the page.
 | Personalized If/Then | Put yourself in it. Added 2026-10-11: names what the student does, not a feature |
 | target ("the sufficient target") | what it points to, or the group. Added 2026-10-11; "target" stays in code |
 | the model ("compare with the model") | our version. Added 2026-10-11 |
+| "has to be true for it" (legend) | "required for the result". Added 2026-10-11: "it" had nothing to refer to; every label must make sense on its own |
+| wrong-answer feedback that explains the right answer | a hint about why the chosen answer fails ("“only if” introduces what is required, not what is enough"). Added 2026-10-11: the explanation gave the answer away |
 | "Drill 1" as a title | the task itself, e.g. "Spot the condition". Added 2026-10-11: a number says nothing about the reasoning |
 
 **Before designing any new homework, bootcamp, drill or note, read this table.** When a
