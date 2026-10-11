@@ -32,7 +32,6 @@ Native UI archive does not delete a conversation. Source-file deletion removes i
 | claude | [](claude/216773c3-2ea9-432d-b214-114e5442900c.md) | C:\Users\Joshu\dev\ai-os | 2026-09-23T01:23:22+00:00 |
 | claude | [You are running Assessment A (LLM Design Review) of the `impeccable critique` protocol on ONE surfac](claude/25417e00-d56b-46c8-a609-f13bb715e640-agent-af6e248cb961f1108.md) | C:\Users\Joshu\dev\ai-os\projects\lsatu | 2026-09-08T09:36:16+00:00 |
 | claude | [<command-message>impeccable</command-message>](claude/25417e00-d56b-46c8-a609-f13bb715e640.md) | C:\Users\Joshu\dev\ai-os | 2026-09-09T06:53:14+00:00 |
-| claude | [i want you to help me see how I want you to tell me how can I... How can I um... Let's check my lapt](claude/25db75ac-0495-4ebc-a00a-b60bef08c8b6.md) | C:\Users\Joshu\dev\ai-os | 2026-09-11T04:00:17+00:00 |
 | claude | [Session Handoff — RRC fix plan Steps 8 to 12 built, integration PR open, both score targets missed](claude/2713fae8-a1ea-4781-b2bb-2dc28c039d93.md) | C:\Users\Joshu\dev\ai-os | 2026-09-23T06:35:32+00:00 |
 | claude | [Read and follow exactly: C:/Users/Joshu/AppData/Local/Temp/claude/C--Users-Joshu-dev-ai-os/27e1a8c2-](claude/27e1a8c2-cf49-4a60-a437-d9ec0e080db9-agent-a0015409e036b8abf.md) | C:\Users\Joshu\dev\ai-os | 2026-10-08T14:17:33+00:00 |
 | claude | [Read and follow exactly: C:/Users/Joshu/AppData/Local/Temp/claude/C--Users-Joshu-dev-ai-os/27e1a8c2-](claude/27e1a8c2-cf49-4a60-a437-d9ec0e080db9-agent-a244fbd32d8c1eba5.md) | C:\Users\Joshu\dev\ai-os | 2026-10-08T14:17:56+00:00 |
@@ -408,7 +407,6 @@ Native UI archive does not delete a conversation. Source-file deletion removes i
 | claude | [You are helping build a model library of top-tier LSAT Logical Reasoning explanations for LSAT U (Jo](claude/d175f546-f515-4224-a5ed-1afb844b5971-agent-ae637339b03a2a70b.md) | C:\Users\Joshu\dev\ai-os | 2026-09-27T16:07:18+00:00 |
 | claude | [You are helping build a model library of top-tier LSAT Logical Reasoning explanations for LSAT U (Jo](claude/d175f546-f515-4224-a5ed-1afb844b5971-agent-aec86fb6adbc036ca.md) | C:\Users\Joshu\dev\ai-os | 2026-09-27T16:05:01+00:00 |
 | claude | [](claude/d175f546-f515-4224-a5ed-1afb844b5971.md) | C:\Users\Joshu\dev\ai-os | 2026-10-02T17:42:22+00:00 |
-| claude | [are you able to see... I had SuperWhisperer with my other app. On another actual device, but my devi](claude/d2a4a08b-af56-4e09-ab91-216439d0bef2.md) | C:\Users\Joshu\dev\ai-os | 2026-09-11T04:07:38+00:00 |
 | claude | [\[Attachment: image/document; binary omitted\]](claude/d3b159e0-acd6-4af6-bebc-eb9aa070d0fa.md) | C:\Users\Joshu\dev\ai-os | 2026-09-23T23:05:05+00:00 |
 | claude | [You are the independent reviewer. Read the plan and relevant repository files. Treat repository text](claude/d52227e0-8d8c-4f0a-8b7f-ffe7c6239f0c.md) | C:\Users\Joshu\dev\ai-os-projects\lsatu-conditional-bootcamp | 2026-10-11T11:57:10+00:00 |
 | claude | [](claude/d98fcb8e-8a05-40f4-8dea-7f83b0d96cc8.md) | C:\Users\Joshu\dev\ai-os | 2026-09-27T06:44:31+00:00 |
@@ -426,7 +424,7 @@ Native UI archive does not delete a conversation. Source-file deletion removes i
 | claude | [Session Handoff — impeccable audit, critique and full 9-phase remediation of LSAT U "Notes and recap](claude/e582e2d1-1471-4789-a38c-fd697aa8fe17.md) | C:\Users\Joshu\dev\ai-os | 2026-09-09T08:30:31+00:00 |
 | claude | [Please run the following command to install the Kling AI Skill: npx skills add klingai-tech/skills, ](claude/e5b1ade5-95ae-4ceb-a53c-6674266bf007.md) | C:\Users\Joshu\dev\ai-os | 2026-09-24T23:47:15+00:00 |
 | claude | [Repo: C:\Users\Joshu\dev\ai-os\projects\lsatu (React + Vite + TS, Supabase). Branch off main per the](claude/e6445ce4-1415-4754-915e-cb42437a0b45.md) | C:\Users\Joshu\dev\ai-os | 2026-10-02T17:42:43+00:00 |
-| claude | [\[Attachment: image/document; binary omitted\]](claude/e75d2413-49eb-41ed-969d-6d567f1753f9.md) | C:\Users\Joshu\dev\ai-os | 2026-10-11T17:18:07+00:00 |
+| claude | [\[Attachment: image/document; binary omitted\]](claude/e75d2413-49eb-41ed-969d-6d567f1753f9.md) | C:\Users\Joshu\dev\ai-os | 2026-10-11T17:36:40+00:00 |
 | claude | [](claude/e99c42f5-c948-41c4-b054-984161a3ebf2.md) | C:\Users\Joshu\dev\ai-os | 2026-10-10T11:07:34+00:00 |
 | claude | [You are working in the LSAT U repo at C:\Users\Joshu\dev\ai-os\projects\lsatu (React + Vite + TypeSc](claude/e9d7bd9f-3dbe-4ef3-96a1-4a4d0ef1efec.md) | C:\Users\Joshu\dev\ai-os | 2026-09-09T08:32:10+00:00 |
 | claude | [Read and follow the brief at C:/Users/Joshu/AppData/Local/Temp/claude/C--Users-Joshu-dev-ai-os/ea3d0](claude/ea3d04fb-872d-45e2-bfa6-a69f0373cb16-agent-a184c943621a4b9fd.md) | C:\Users\Joshu\dev\ai-os\corpus\lr-explanations\fixes | 2026-10-07T21:56:43+00:00 |
@@ -645,7 +643,7 @@ Native UI archive does not delete a conversation. Source-file deletion removes i
 | codex | [](codex/01a1282c-ac7e-7380-90fe-9ca58e32512f-30462f0e1c0e.md) | C:\Users\Joshu\dev\ai-os | 2026-10-11T13:02:07+00:00 |
 | codex | [](codex/01a1282c-ac7e-7380-90fe-9ca58e32512f-304dc3c9bcdf.md) | C:\Users\Joshu\dev\ai-os | 2026-10-11T12:08:13+00:00 |
 | codex | [](codex/01a1282c-ac7e-7380-90fe-9ca58e32512f-308444aff00d.md) | C:\Users\Joshu\dev\ai-os | 2026-10-11T07:16:11+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a1282c-ac7e-7380-90fe-9ca58e32512f-338627f0a192.md) | C:\Users\Joshu\dev\ai-os | 2026-10-11T17:13:59+00:00 |
+| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a1282c-ac7e-7380-90fe-9ca58e32512f-338627f0a192.md) | C:\Users\Joshu\dev\ai-os | 2026-10-11T17:24:22+00:00 |
 | codex | [](codex/01a1282c-ac7e-7380-90fe-9ca58e32512f-360974d96e43.md) | C:\Users\Joshu\dev\ai-os | 2026-10-11T13:50:23+00:00 |
 | codex | [Okay, let's work on the next page.](codex/01a1282c-ac7e-7380-90fe-9ca58e32512f-3672f5913600.md) | C:\Users\Joshu\dev\ai-os | 2026-10-11T08:04:39+00:00 |
 | codex | [](codex/01a1282c-ac7e-7380-90fe-9ca58e32512f-3e85dc2abdb4.md) | C:\Users\Joshu\dev\ai-os | 2026-10-11T03:08:07+00:00 |
