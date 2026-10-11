@@ -184,6 +184,7 @@ From the glossary. Internal names may stay in code, never on the page.
 | the model ("compare with the model") | our version. Added 2026-10-11 |
 | "has to be true for it" (legend) | "required for the result". Added 2026-10-11: "it" had nothing to refer to; every label must make sense on its own |
 | wrong-answer feedback that explains the right answer | a hint about why the chosen answer fails ("“only if” introduces what is required, not what is enough"). Added 2026-10-11: the explanation gave the answer away |
+| "Build the arrow" | "Build the diagram". Added 2026-10-11: the student builds a diagram; the arrow is one symbol in it |
 | "Drill 1" as a title | the task itself, e.g. "Spot the condition". Added 2026-10-11: a number says nothing about the reasoning |
 
 **Before designing any new homework, bootcamp, drill or note, read this table.** When a

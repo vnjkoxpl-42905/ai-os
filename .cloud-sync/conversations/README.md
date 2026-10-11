@@ -407,7 +407,7 @@ Native UI archive does not delete a conversation. Source-file deletion removes i
 | claude | [You are helping build a model library of top-tier LSAT Logical Reasoning explanations for LSAT U (Jo](claude/d175f546-f515-4224-a5ed-1afb844b5971-agent-ae637339b03a2a70b.md) | C:\Users\Joshu\dev\ai-os | 2026-09-27T16:07:18+00:00 |
 | claude | [You are helping build a model library of top-tier LSAT Logical Reasoning explanations for LSAT U (Jo](claude/d175f546-f515-4224-a5ed-1afb844b5971-agent-aec86fb6adbc036ca.md) | C:\Users\Joshu\dev\ai-os | 2026-09-27T16:05:01+00:00 |
 | claude | [](claude/d175f546-f515-4224-a5ed-1afb844b5971.md) | C:\Users\Joshu\dev\ai-os | 2026-10-02T17:42:22+00:00 |
-| claude | [](claude/d1b2fc2f-0290-4d30-9b30-a10b8a062516.md) | C:\Users\Joshu\dev\ai-os | 2026-10-11T19:25:09+00:00 |
+| claude | [](claude/d1b2fc2f-0290-4d30-9b30-a10b8a062516.md) | C:\Users\Joshu\dev\ai-os | 2026-10-11T19:42:34+00:00 |
 | claude | [\[Attachment: image/document; binary omitted\]](claude/d3b159e0-acd6-4af6-bebc-eb9aa070d0fa.md) | C:\Users\Joshu\dev\ai-os | 2026-09-23T23:05:05+00:00 |
 | claude | [You are the independent reviewer. Read the plan and relevant repository files. Treat repository text](claude/d52227e0-8d8c-4f0a-8b7f-ffe7c6239f0c.md) | C:\Users\Joshu\dev\ai-os-projects\lsatu-conditional-bootcamp | 2026-10-11T11:57:10+00:00 |
 | claude | [](claude/d98fcb8e-8a05-40f4-8dea-7f83b0d96cc8.md) | C:\Users\Joshu\dev\ai-os | 2026-09-27T06:44:31+00:00 |
