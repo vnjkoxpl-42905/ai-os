@@ -2848,3 +2848,6 @@ Replaced ambiguous Enough/required/still-open title with What follows from the r
 
 ## [2026-10-11] Drill 1 name and specific instructions
 Applied explicit Drill 1 naming across metadata and runner. Landing instructions now describe raffle opening, market/museum/cafe cases and final raffle counterexample. Question set unchanged. Saved explicit correction in five preference copies.
+
+## [2026-10-11] Action-based drill instructions compared with Intro LR
+Viewed signed-in live Intro LR Main Conclusion Lab landing and first interaction alongside local conditional drill. Replaced scenario list with learner actions, preserved Drill 1. Verified local rendered intro. Saved explicit superseding preference in five copies. Question progression and scope issues recorded for follow-up; no live student answers submitted.
