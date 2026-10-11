@@ -2887,3 +2887,8 @@ Joshua authorized finished local implementation. Moved conceptual contrapositive
 ## [2026-10-11] build | Repair conditional drill procedure
 
 Rebuilt legacy sufficient/contrapositive drills and source worksheets around staged operations; independent translation now requires learner-written conditions, symbol legends, diagrams and readbacks. Preserved133source task instances and existing foundation/adaptive content. Added missing prerequisite explanation and maintained allfour bootcamp preference ledgers. Localpreview only; no deployment. Checkpoint: brainstorms/2026-09-30-conditional-curriculum/2026-10-11-staged-drill-repair.md.
+
+
+## [2026-10-11] repair | Conditional drills recovered after Codex usage ran out
+
+Recovered Codex thread 01a1282c (copies and handoff in handoffs/codex-2026-10-10-conditional-bootcamp-thread/). Fixed three stale tests; indicator step now checked in Drills 7, 8 and both Revisit drills; worksheet drafts scoped by user id; "who" indicator matched to the answer key; Drill 1 completion notice and dead practice code removed. 302 tests, typecheck and build pass; Drill 7 walked end to end in the browser. Nothing committed or deployed. Seven open decisions listed in HANDOFF-2026-10-11.md.
