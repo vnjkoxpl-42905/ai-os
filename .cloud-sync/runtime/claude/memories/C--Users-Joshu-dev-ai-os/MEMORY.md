@@ -62,3 +62,4 @@
 - [Selected LSAT teaching voice](lsat-teaching-voice-standard.md): source-grounded wording, cadence, questions, reasoning, and progression; read the detailed standard before LSAT authoring.
 - [Use root env for existing logins](use-root-env-for-existing-logins.md): Joshua authorizes normal sign-in for requested work; retrieve credentials locally before asking him, never store their values in memory.
 - [Bank edits need timed catalog rotation](bank-edits-need-timed-catalog-rotation.md) - LR bank text changes break timed PTs and sections until both frozen catalogs are regenerated, seeded and activated; since #201 type/level relabels no longer break sealed sittings.
+- [Conditional bootcamp not yet live](conditional-bootcamp-not-yet-live.md) - unpublished to students as of 2026-10-11; no live drill progress to protect yet, re-check before relying on it.
