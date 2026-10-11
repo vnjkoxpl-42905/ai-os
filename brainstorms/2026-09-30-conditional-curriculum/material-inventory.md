@@ -58,3 +58,7 @@ Packaging gaps are the unified home, teaching sequence, independently assignable
 Content gaps requiring closer question review are beginner rule/fact/invalid-move contrast reps; no-link/shared-result contrasts; enough fresh items for each advanced AND/OR, negation, biconditional and mixed-chain skill; and application teaching beyond the well-supported MBT/SA examples. These are unproven sufficiency gaps, not claims that all such material is absent. Legacy truncated sources need recovery before counting them.
 
 Do not use question count, a named stage, a difficulty band, or successful repetition of an explained structure as proof of mastery. The next discovery decision is what a student must demonstrate independently in each area before advancing, and whether quantifiers enter this curriculum or a separate linked pathway.
+
+## Desktop final-set audit, 2026-10-11
+Reviewed all 11 files in the user-named Desktop Group 1 and 2 - EVERYTHING folder: 42 PDF pages plus the complete DOCX. See [integration audit](2026-10-11-desktop-group-1-2-integration-audit.md), its three item-level/source reports, and [SHA256 manifest](source-audit-2026-10-11/manifest.json). 133 worksheet task instances include deliberate repeats;108 is the sum of within-set distinct statement entries, not a globally deduplicated new bank. The new keys expose correctness, modality, scope and classification defects. This is source analysis and version reconciliation, not formal ingestion, application import or deployment. Originals unchanged.
+

@@ -2867,3 +2867,11 @@ Implemented explicit case rule, ordered accessible indicator explorer, aligned d
 ## [2026-10-11] Conditional lesson focus
 Reframed the local sufficient-words destination as Find the complete condition after comparing preceding lessons, Drill 1, the curriculum skeleton and next drill. Removed repeated definitions, word-selector presentation and embedded flashcards from this route; retained source-grounded complete-condition examples with two answer-first checks. Saved Joshua's cut-repetition and course-purpose correction in all four bootcamp preference copies. Browser checked wrong-answer feedback, retry, correct answers and narrow layout. Local preview only; no publication.
 
+
+## [2026-10-11] query | Group 1 and 2 final-set source audit
+Read all11user-named Desktop materials:10PDFs/42pages plus DOCX;133worksheet task instances. Saved item ledgers, reference-note audit, source hashes and integration recommendation under brainstorms/2026-09-30-conditional-curriculum/2026-10-11-desktop-group-1-2-integration-audit.md; linked from existing material-inventory.md. Recommended staged practice bank, with flawed keys/ambiguous scope held for adjudication. Verified original hashes unchanged. No app import, assignment or publication.
+
+
+## [2026-10-11] prototype | Seven Group 1/2 drill pages
+Built one standalone HTML at brainstorms/2026-09-30-conditional-curriculum/prototype/group-1-2-drills.html with seven hash-routed drill pages and133source question entries. Intro first; optional/later contraposition. Browser verified routes, question sets, open/close controls and local draft reload. No answer-key grading. Opened in Codex Browser at localhost8098. No bootcamp app changes or deployment.
+
