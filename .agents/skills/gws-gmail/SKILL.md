@@ -23,13 +23,13 @@ gws gmail <resource> <method> [flags]
 
 | Command | Description |
 |---------|-------------|
-| [`+send`](../../../skills/codex/gws-gmail-send/SKILL.md) | Send an email |
+| [`+send`](../gws-gmail-send/SKILL.md) | Send an email |
 | [`+triage`](../gws-gmail-triage/SKILL.md) | Show unread inbox summary (sender, subject, date) |
-| [`+reply`](../../../skills/codex/gws-gmail-reply/SKILL.md) | Reply to a message (handles threading automatically) |
-| [`+reply-all`](../../../skills/codex/gws-gmail-reply-all/SKILL.md) | Reply-all to a message (handles threading automatically) |
-| [`+forward`](../../../skills/codex/gws-gmail-forward/SKILL.md) | Forward a message to new recipients |
+| [`+reply`](../gws-gmail-reply/SKILL.md) | Reply to a message (handles threading automatically) |
+| [`+reply-all`](../gws-gmail-reply-all/SKILL.md) | Reply-all to a message (handles threading automatically) |
+| [`+forward`](../gws-gmail-forward/SKILL.md) | Forward a message to new recipients |
 | [`+read`](../gws-gmail-read/SKILL.md) | Read a message and extract its body or headers |
-| [`+watch`](../../../skills/codex/gws-gmail-watch/SKILL.md) | Watch for new emails and stream them as NDJSON |
+| [`+watch`](../gws-gmail-watch/SKILL.md) | Watch for new emails and stream them as NDJSON |
 
 ## API Resources
 

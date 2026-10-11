@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: reference
   originSessionId: 0b4c747a-84ce-4095-8c2c-9bb1b7ec4ec8
-  modified: 2026-09-07T22:58:04.061Z
+  modified: 2026-10-11T01:47:48.578Z
 ---
 
 On Windows, `winget install Microsoft.PowerShell --scope user` installs the
@@ -27,3 +27,16 @@ Terminal's well-known PowerShell profile GUID
 installer type as `msix` — so there is no winget-only path to the MSI.
 
 Verified 2026-09-07 on the Dell 15 DC15250 during [[ai-os-vault-location]] setup.
+
+**Same trap, Windows Terminal and Herdr (verified 2026-10-10 on LAPTOP-LE9A083P).**
+Windows Terminal is also a Store app. A Herdr server started under it
+(`WindowsTerminal.exe` is its ancestor), and every pane, sees
+`AppData\Roaming\npm` as empty even though the PATH entry is present and the
+files exist on disk. `codex`, `firecrawl` and `kling` vanished inside Herdr;
+`claude` (`.local\bin`) and `gws` (recovery-toolchain) survived because they
+live outside AppData. The fix is not an MSI this time. Install npm CLIs with
+`npm install -g --prefix C:\Users\Joshu\dev\tools\node <pkg>` and keep that
+folder first on the user PATH. The Herdr desktop shortcut launcher
+(`C:\Users\Joshu\.herdr\launch-herdr.ps1`) rebuilds PATH from the registry.
+Check the first step of any "tool missing in Herdr" report with `Test-Path` on
+the npm shim from inside a pane.

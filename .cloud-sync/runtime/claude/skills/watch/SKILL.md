@@ -60,7 +60,7 @@ Optional flags:
 - `--resolution W` — change frame width in px (default 512; bump to 1024 only if the user needs to read on-screen text)
 - `--fps F` — override auto-fps (clamped to 2 fps max)
 - `--out-dir DIR` — keep working files somewhere specific (default: an auto-generated tmp dir)
-- `--whisper groq|openai` — force a specific Whisper backend (default: prefer Groq if both keys exist)
+- `--whisper groq|openai` enables only that provider after upload/cost authorization. Default: free captions only.
 - `--no-whisper` — disable the Whisper fallback entirely (frames-only if no captions)
 
 ### Focusing on a section (higher frame rate)
@@ -86,13 +86,13 @@ Examples:
 python "<actual-installed-skill-directory>/scripts/watch.py" --no-whisper video.mp4 --start 50 --end 60
 
 # Zoom into 2:15 → 2:45 at 2 fps (60 frames)
-python "<actual-installed-skill-directory>/scripts/watch.py" --no-whisper "$URL" --start 2:15 --end 2:45 --fps 3
+python "<actual-installed-skill-directory>/scripts/watch.py" --no-whisper "$URL" --start 2:15 --end 2:45 --fps 2
 
 # From 1h12m to the end of the video
 python "<actual-installed-skill-directory>/scripts/watch.py" --no-whisper "$URL" --start 1:12:00
 ```
 
-**Step 3 — Read every frame path the script lists.** The Read tool renders JPEGs directly as images for you. Read all frames in a single message (parallel tool calls) so you see them together. The frames are in chronological order with a `t=MM:SS` timestamp so you can align them to the transcript.
+**Step 3: view the frames with an available host image-viewing tool.** Inspect every frame relevant to the requested claim; disclose any unsampled ranges. Use chronological timestamps to compare images and captions. Do not claim visual verification from filenames alone.
 
 **Step 4 — answer the user.** You now have two streams of evidence:
 - **Frames** — what's on screen at each timestamp
@@ -109,7 +109,7 @@ The script gets a timestamped transcript in one of two ways:
 1. **Native captions (free, preferred).** yt-dlp pulls manual or auto-generated subtitles from the source platform if available.
 2. **Whisper API fallback (optional).** Missing captions do not trigger an upload. Only an explicitly selected `--whisper groq` or `--whisper openai` enables that provider after upload and cost authorization. `--no-whisper` always disables it.
 
-Keep keys in the current project central .env and never create a second store. Bundled legacy scripts can read ~/.config/watch/.env or cwd .env and prefer Groq when both are set; do not run their installer. Use --no-whisper by default. Paid fallback runs only with explicit provider/cost authorization and a verified environment/cwd supplying the approved key without printing it.
+Keep keys in the current project central .env/environment. The repaired loader no longer reads the legacy ~/.config/watch/.env store. Do not run the legacy installer. Paid fallback needs explicit provider, upload and cost authorization; ordinary extraction remains free.
 
 ## Failure modes and handling
 

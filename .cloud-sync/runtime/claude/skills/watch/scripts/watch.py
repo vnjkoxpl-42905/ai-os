@@ -139,11 +139,8 @@ def main() -> int:
                 if args.whisper else
                 "no subtitles and no Whisper API key found"
             )
-            setup_py = SCRIPT_DIR / "setup.py"
-            print(
-                f"[watch] {hint} — run `python3 {setup_py}` to enable the Whisper fallback",
-                file=sys.stderr,
-            )
+            print(f"[watch] {hint}. Optional provider setup needs explicit authorization; "
+                  "keep keys private in the project environment/.env.", file=sys.stderr)
 
     info = dl.get("info") or {}
 

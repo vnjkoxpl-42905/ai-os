@@ -84,14 +84,16 @@ def load_api_key(preferred: str | None = None) -> tuple[str, str] | tuple[None, 
 def extract_audio(video_path: str, out_path: Path) -> Path:
     """Extract mono 16kHz 64kbps mp3 — ~480 kB/min, fits any Whisper limit."""
     if shutil.which("ffmpeg") is None:
-        raise SystemExit("ffmpeg is not installed. Install with: brew install ffmpeg")
+        raise SystemExit("ffmpeg is not installed. Check installed FFmpeg and refresh PATH before installing for your platform")
 
+    if out_path.exists():
+        raise SystemExit("Audio output already exists; choose a fresh path")
     out_path.parent.mkdir(parents=True, exist_ok=True)
     cmd = [
         "ffmpeg",
         "-hide_banner",
         "-loglevel", "error",
-        "-y",
+        "-n",
         "-i", str(Path(video_path).resolve()),
         "-vn",
         "-acodec", "libmp3lame",
@@ -270,18 +272,13 @@ def transcribe_video(
 
     Returns (segments, backend_used). Raises SystemExit on any failure.
     """
-    if backend is None or api_key is None:
-        detected_backend, detected_key = load_api_key()
-        backend = backend or detected_backend
-        api_key = api_key or detected_key
-
-    if not backend or not api_key:
-        setup_py = Path(__file__).resolve().parent / "setup.py"
-        raise SystemExit(
-            "No Whisper API key available. Set GROQ_API_KEY (preferred) or OPENAI_API_KEY "
-            "in the environment or in ~/.config/watch/.env. "
-            f"Run `python3 {setup_py}` to configure."
-        )
+    if backend not in ("groq", "openai"):
+        raise SystemExit("Select groq or openai explicitly after upload/cost authorization")
+    if api_key is None:
+        _, api_key = load_api_key(backend)
+    if not api_key:
+        raise SystemExit("No key for the explicitly selected provider. Authorized setup uses "
+                         "the private project environment/.env; no legacy setup wizard is required.")
 
     print(f"[watch] extracting audio for Whisper ({backend})…", file=sys.stderr)
     audio_path = extract_audio(video_path, audio_out)

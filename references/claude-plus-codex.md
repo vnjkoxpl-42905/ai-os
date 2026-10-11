@@ -72,11 +72,21 @@ Re-verified and updated on 2026-10-10 (the 2026-09-22 install had drifted: Herdr
 |---|---|
 | Herdr | Stable `0.9.3`, installed with `herdr update`; under `C:\Users\Joshu\.herdr\packages\standalone\releases\0.9.3-x86_64-pc-windows-msvc`, which is on the user PATH. `0.9.1` is still on disk, unused. |
 | Claude Code | `2.1.295` at `C:\Users\Joshu\.local\bin\claude.exe` |
-| Codex CLI | `0.162.1` from npm `@openai/codex`, in `C:\Users\Joshu\AppData\Roaming\npm`; signed in with ChatGPT |
+| Codex CLI | `0.162.1` from npm `@openai/codex`, in `C:\Users\Joshu\dev\tools\node` (first on the user PATH); signed in with ChatGPT. A second copy in `AppData\Roaming\npm` is invisible inside Herdr and is shadowed by the first. `firecrawl-cli` `1.26.3` and `@klingai/cli-global` `0.2.1` are installed beside it for the same reason. |
 | Herdr integrations | Claude `v10` and Codex `v8`, both reported current by `herdr integration status` |
 | Herdr agent skill | Refreshed from the official `herdrdev/herdr` copy (SHA-256 `b16ba0d9…`) in `~/.claude/skills/herdr` and `~/.agents/skills/herdr` |
 
-The 2026-09-22 values were Herdr `0.9.1`, Claude Code `2.1.280` and Codex CLI `0.156.1`, both CLIs in a shared Node tools directory that no longer exists on this machine. Not checked: an interactive Herdr launch with both agents in panes, and whether panes launched from a Microsoft Store PowerShell can see `AppData\Roaming\npm`.
+The 2026-09-22 values were Herdr `0.9.1`, Claude Code `2.1.280` and Codex CLI `0.156.1`, both CLIs in a shared Node tools directory. That directory did not exist when checked on 2026-10-10, and was recreated that day.
+
+**Keep CLIs out of `AppData` for Herdr.** Windows Terminal is a Microsoft Store app. Anything it launches, including the Herdr server and every pane, sees `AppData\Roaming\npm` as an empty folder (verified 2026-10-10: a pane listed no files there while the disk had them). Tools installed with plain `npm install -g` are therefore invisible inside Herdr. Install them with `npm install -g --prefix C:\Users\Joshu\dev\tools\node <package>`. The desktop shortcut's launcher `C:\Users\Joshu\.herdr\launch-herdr.ps1` also rebuilds PATH from the registry on every start.
+
+**What a pane sees, verified 2026-10-10** in a separate test session started through Windows Terminal: `codex`, `firecrawl`, `kling`, `gws`, `claude`, `herdr`, `node`, `git`, `gh`, `py`, `ffmpeg`, `yt-dlp`, `deno` and `uv` all resolve; Codex `0.162.1` and Claude Code `2.1.295` run; Codex reports ChatGPT sign-in; the vault and both skill folders are readable. An already-running Herdr server keeps the environment it started with, so run `herdr server stop` and relaunch from the desktop shortcut to pick up the new PATH.
+
+**Skills seen from a terminal launch, 2026-10-10.** Claude Code started in the vault loads 376 skills, 7 agents and 11 plugins. Codex reports about 200 skills in its visible list, and its own startup warning says the skills context budget was exceeded, all descriptions were dropped and 321 skills were left out of the visible list. Codex has 303 unique skills across its three roots (project `.agents/skills`, `~/.agents/skills`, `~/.codex/skills`). Told to look for `wrapup` and `herdr`, two skills missing from its visible list, Codex found both by listing the folder. Automatic triggering of hidden Codex skills was not shown.
+
+**Skill differences for Claude, 2026-10-10.** `claude-build` and `pre-consultation-check-in` are Codex-side by declared design in `skills/PARITY.md`. `kling-cli` is declared active for both runtimes, but its project copy under `.claude/skills/kling-cli` was deleted in the working tree (uncommitted) while the `.agents` copy was being edited, so Claude does not load it. Not changed here. `system/scripts/check-skills.sh` could not run because `python` is the Microsoft Store stub on this laptop; `py` works.
+
+Not checked: Herdr panes with Claude and Codex editing side by side in your live session.
 
 Open a new PowerShell window so it receives the updated user PATH. Then:
 

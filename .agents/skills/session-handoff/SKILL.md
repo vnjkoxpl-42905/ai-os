@@ -24,7 +24,7 @@ Joshua says: "session handoff", "hand off", "handoff summary", "summarize before
 1. **Review the full conversation**, not just the last few turns. Handoffs miss things when they only summarize recent context.
 2. **Pull state from these sources (in order):**
    - Plan files referenced this session; resolve the actual recorded path rather than assuming a runtime directory.
-   - Current task ledger state, including in-progress or pending tasks.
+   - Current task ledger state, including any in-progress or pending tasks.
    - Background processes started with `run_in_background` — shell IDs are load-bearing for the next agent.
    - Files created or modified this session — you know what you touched; don't grep to re-discover.
    - Memory files actually used this session. Codex guidance is under `~/.codex/memories/`; Claude native project memory is under `~/.claude/projects/C--Users-Joshu-dev-ai-os/memory/`. Do not invent a Codex project-memory path or update either store merely to produce a handoff.

@@ -152,3 +152,14 @@ karpathy-teach is cataloged and activated in both runtimes. Claude delegates to 
 ## 2026-10-10: knowledge pathway and existing user-level dispatchers
 
 Claude/Codex project ingest, query and lint share bounded index navigation and a usable-knowledge retrieval check. Public videos stay outside session transcript-intake. Existing user-level ingest/compatibility/query/lint entrypoints now resolve the target vault project skill (catalog fallback); no new global skill activation was created. Earlier user-entrypoint bytes and hashes are preserved under research/second-brain-pathway-2026-10-10/. Fresh runtime discovery is a separate check from these files.
+
+
+## 2026-10-10: reviewed skill adaptations and preserved compatibility
+
+The full-catalog repair preserves provider identities and runtime-specific host calls. Current Codex `codex-build` and `codex-review` activations are explicit compatibility wrappers to `claude-build` and `claude-review`; their inert Codex catalog copies preserve this route. Current primary triggers remain the provider named by the caller. No additional global activations were created.
+
+Existing catalog/activation drift was reconciled, including Gemini copies. Three previously uncatalogued Gemini browser-operation skills remain Gemini-only; they are not automatically ported or activated for Claude/Codex. The validator skips inactive/snapshot/fork container directories and checks Gemini entrypoints against their owning catalog without imposing feature parity.
+
+Targeted local adaptations supersede old verbatim-upstream invocation claims where the actual host lacks a literal Skill/Task tool. Matt Pocock compare-and-swap maintenance preserves these edits for review. Claude-host Codex build/review corrections persist under `system/skill-overrides/claudex/claude/`; Claudex offline dry run is a clean no-op. Never use adoption/reset to discard these changes. Native skill discovery and duplicate-name precedence are distinct from static catalog validation.
+
+[Repair report, tests and remaining dependencies](../audits/skills-2026-10-10-repairs/SUMMARY.md). Historical `_snapshots` and `_project-forks` remain preserved.

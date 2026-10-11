@@ -140,7 +140,7 @@ def main():
         if not os.path.isdir(root):
             continue
         for n in os.listdir(root):
-            if n.startswith("."):
+            if n.startswith(".") or n in SPECIAL:
                 continue
             p = os.path.join(root, n)
             if os.path.islink(p):

@@ -3,6 +3,13 @@ name: codex-build
 description: "Claude-host entry point: Codex handles independent review or scoped delegation. Have Codex implement a concrete work order and have Claude independently inspect the final changes. Preserves the explicit Codex builder choice; use claudex-loop for host-based planning and automatic reviewer selection."
 ---
 
+
+## Local execution contract (2026-10-10)
+
+Respect explicit Codex builder selection; use current project codex-build and shared Claudex runner. Do not silently redirect to a Claude builder. Preserve task scope/dirty baseline and label provider direction truthfully.
+
+## Workflow
+
 ## Installed direction: Claude to Codex
 
 This copy is for the Claude host. The current Claude conversation coordinates. Use `host=claude` in the shared runner. The default independent reviewer and cross-provider handoff target is Codex. Preserve explicit user provider/model choices and authorized scope. For the loop, the host builds by default and the other provider inspects; the build compatibility entry point separately selects the other provider as builder.

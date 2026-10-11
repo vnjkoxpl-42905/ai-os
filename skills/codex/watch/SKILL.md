@@ -57,7 +57,7 @@ Optional flags:
 - `--resolution W` — change frame width in px (default 512; bump to 1024 only if the user needs to read on-screen text)
 - `--fps F` — override auto-fps (clamped to 2 fps max)
 - `--out-dir DIR` — keep working files somewhere specific (default: an auto-generated tmp dir)
-- `--whisper groq|openai` — force a specific Whisper backend (default: prefer Groq if both keys exist)
+- `--whisper groq|openai` enables only that provider after upload/cost authorization. Default: free captions only.
 - `--no-whisper` — disable the Whisper fallback entirely (frames-only if no captions)
 
 ### Focusing on a section (higher frame rate)
@@ -89,7 +89,7 @@ python3 "${CLAUDE_SKILL_DIR}/scripts/watch.py" "$URL" --start 2:15 --end 2:45 --
 python3 "${CLAUDE_SKILL_DIR}/scripts/watch.py" "$URL" --start 1:12:00 --no-whisper
 ```
 
-**Step 3 — Read every frame path the script lists.** The Read tool renders JPEGs directly as images for you. Read all frames in a single message (parallel tool calls) so you see them together. The frames are in chronological order with a `t=MM:SS` timestamp so you can align them to the transcript.
+**Step 3: view the frames with an available host image-viewing tool.** Inspect every frame relevant to the requested claim; disclose any unsampled ranges. Use chronological timestamps to compare images and captions. Do not claim visual verification from filenames alone.
 
 **Step 4 — answer the user.** You now have two streams of evidence:
 - **Frames** — what's on screen at each timestamp

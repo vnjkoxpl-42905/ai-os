@@ -9,7 +9,16 @@ aliases: []
 
 Freshest working state; the first page `/pickup` reads. Rebuilt fresh in the 2026-07-16 vault rebuild (the old cache is archived).
 
-## Most recent (2026-10-10): Necessary-condition explanation deepened
+## Most recent (2026-10-10): Skill catalog repaired and verified locally
+
+- Implemented the approved full skill-audit repairs, highest risk first, through the installed Karpathy agent and independent review. [Complete result](../audits/skills-2026-10-10-repairs/SUMMARY.md); [hashes, backups and validation](../audits/skills-2026-10-10-repairs/FINAL-VERIFICATION.json).
+- Narrowed overlapping provider/export/video/persona triggers; fixed WIP review scope, dirty-worktree staging/deletion assumptions, runtime calls, stale paths and activation drift. Useful workflows and extra payloads retained; no new global activation.
+- Video helpers preserve existing frames/audio and require an explicit paid provider; missing Codex-global watch payload restored. MCP examples now use text nodes and resolved-root containment. Tracer resolves each filename once.
+- Catalog validator passes (Claude 224, Codex 211, Gemini 222). YAML check covers 1,732 current entrypoints; 900 repaired/added physical files reconcile; all 74 historical snapshot hashes preserved. Nine video, four validator/generator, two MCP fixtures and 82 hook/gate regression tests pass.
+- Claudex offline dry run has zero changes/conflicts; reviewed Claude overrides persist. Matt Pocock dry run preserves intentional local edits. No source/student/live data write, paid provider call, deletion, commit, push or publication. Task statuses unchanged.
+- Missing bootcamp benchmark documents and the research JSON validator remain explicit legacy input gaps. Native selectors, every vendor pipeline and fresh native child-hook acceptance are not certified; a separate terminal check recorded Codex skill-context omissions. Existing sessions may require a fresh session to load changed skills.
+
+## Previous (2026-10-10): Necessary-condition explanation deepened
 
 - Reviewed the original HTML and routed LSAT Lab, Demon, 7Sage and recovered corpus evidence against the existing page. The main omission was teaching the meaning of all seven indicator expressions rather than listing them. [Follow-up source review and evidence](../../ai-os-projects/lsatu-conditional-bootcamp/docs/agent/conditional-recovery-20261007/media/necessary-source-review.md).
 - Expanded required-for reasoning, the same law-school/student example and paired sufficient/necessary roles before the interaction. Developed the history-student counterexample and retained the distinction between necessary and sufficient without claiming they can never coincide.
