@@ -2875,3 +2875,7 @@ Read all11user-named Desktop materials:10PDFs/42pages plus DOCX;133worksheet tas
 ## [2026-10-11] prototype | Seven Group 1/2 drill pages
 Built one standalone HTML at brainstorms/2026-09-30-conditional-curriculum/prototype/group-1-2-drills.html with seven hash-routed drill pages and133source question entries. Intro first; optional/later contraposition. Browser verified routes, question sets, open/close controls and local draft reload. No answer-key grading. Opened in Codex Browser at localhost8098. No bootcamp app changes or deployment.
 
+
+## [2026-10-11] plan | Contrapositive and seven-drill integration
+Saved brainstorms/2026-09-30-conditional-curriculum/2026-10-11-contrapositive-and-drill-integration-plan.md. Recommends conceptual missing-requirement inference immediately after Must arrow, formal reverse/negate after forward translation, and staged reuse of all seven source sets with corrected keys/prerequisites. Source HTML, desktop audits, preserved LSAT Lab review and currentapp compared. Proposed only; no app reorder/import/publication.
+
