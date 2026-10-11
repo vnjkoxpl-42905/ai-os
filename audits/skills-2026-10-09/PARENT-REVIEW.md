@@ -37,7 +37,9 @@ The Lovable finding was also narrowed: the inspected helper requires unavailable
 
 ## What I ran
 
-Bounded source reads, complete project-fork diffs, selected hash checks, the isolated Git fixture, and read-only GWS command help.
+Bounded source reads, complete project-fork diffs, selected hash checks, the isolated Git fixture, and read-only GWS command help. During quality recovery I freshly read 15 canonical Claude bodies and 41 global Workspace recipe/persona bodies, recording specific decisions and hashes in `parent-canonical-quality.json` and `parent-global-quality.json`.
+
+The integrated canonical checkpoint was independently reconciled against current disk: 649 ledger rows, 649 distinct paths, and 649 direct canonical files. No missing/extra paths, hash mismatches, or pending dispositions were found. This validates inventory identity and completed decision fields, not live execution of 649 workflows.
 
 ## What came out
 
@@ -46,3 +48,9 @@ High-priority findings have direct instruction evidence, a WIP review defect has
 ## What I changed
 
 This review record only. No skill, activation, runtime manual, hook, or live system was changed by the parent audit.
+
+## Final independent reconciliation on 2026-10-10
+
+The frozen all-entry machine ledger contains 1,316 distinct existing paths. Fresh SHA-256 calculations match every saved entry. No pending disposition, empty reason, generic provisional removal reason, or missing file remains. All 697 exact-byte inheritance pairs match byte for byte; all 31 normalized-text inheritance pairs match after UTF-8 BOM and CRLF normalization. All 47 complete-difference inheritance base paths exist; none of the referenced ledger bases is inventory-only. Complete-difference semantic review relies on the saved review receipts, not hash equality. The 74 historical snapshots remain explicitly inventory-only. A final rerun after freezing confirmed zero errors; repeated identical body receipts are conservatively classified as inheritance rather than separate reads.
+
+Read-only GWS Forms command help confirms batchUpdate exists, update does not, and create copies only title fields. No live Forms request was made.

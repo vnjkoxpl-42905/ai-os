@@ -1,7 +1,7 @@
 {
   "enabled": true,
   "format": 2,
-  "file_count": 191,
+  "file_count": 194,
   "paths": [
     "ai-os/.cloud-sync/conversations/claude/0850cc70-b315-4080-b799-206dbc270f0b.md",
     "ai-os/.cloud-sync/conversations/claude/184bd7f4-1801-435a-a464-e37067478e55.md",
@@ -81,6 +81,7 @@
     "ai-os/.cloud-sync/runtime/claude/skills/notebooklm/tests/cassettes/sources_rename.yaml",
     "ai-os/.cloud-sync/runtime/claude/skills/skill-doctor/scripts/collect_sessions.py",
     "ai-os/.cloud-sync/runtime/claude/skills/synced/66ab068d-6d11-4b9b-bace-f3622629a61f_3264ecb8-7644-4b8c-9aed-94ea1fae19cc/browser/agent-workspace/domain-skills/metacritic/scraping.md",
+    "ai-os/.cloud-sync/runtime/codex/memories.json",
     "ai-os/.cloud-sync/runtime/codex/plugins/claude-cowork/anthropic-skills/1.0.0/skills/browser/agent-workspace/domain-skills/metacritic/scraping.md",
     "ai-os/.cloud-sync/runtime/codex/skills/higgsfield-websites/references/security.md",
     "ai-os/.gemini/skills/_inactive/transcriptapi/SKILL.md",
@@ -109,7 +110,9 @@
     "ai-os/.gemini/skills/notebooklm/tests/cassettes/sources_check_freshness.yaml",
     "ai-os/.gemini/skills/skill-doctor/scripts/collect_sessions.py",
     "ai-os/.gemini/skills/watch/scripts/setup.py",
+    "ai-os/audits/skills-2026-10-09/all-skill-dispositions.json",
     "ai-os/audits/skills-2026-10-09/supplemental-inactive-review.json",
+    "ai-os/audits/skills-2026-10-09/supplemental-integrated-checkpoint.json",
     "ai-os/graph-imports/claude-code-docs/_sources/en__agent-sdk__overview.md",
     "ai-os/research/2026-09-27-stripe-integration/check_connection.py",
     "ai-os/research/karpathy-brain-2026-10-08/NATIVE-CODEX-LESSON-ACCEPTANCE.md",
@@ -195,17 +198,17 @@
     "ai-os/wiki/sources/karpathy/repos/files/repos--karpathy--cryptos--getnewaddress.py.md",
     "ai-os/wiki/sources/karpathy/repos/files/repos--karpathy--karpathy.github.io--_posts--2021-06-21-blockchain.markdown.md"
   ],
-  "ciphertext_sha256": "68e29241c3f3487032de5abb3e023d0ad6b6b6a7710402f0f69394b5c52b5be8",
+  "ciphertext_sha256": "792a6769daab0372bef4a627852bbe6d5eb8e3de7c9edbb7376a9d3bff73808c",
   "ciphertext_parts": [
     {
       "file": "redacted-context.enc.part0001",
       "bytes": 52428800,
-      "sha256": "0f96fb72f84c4776cb0941b9158acb4fa29fe3ff6502ad509b9c5eb11cf0ffac"
+      "sha256": "97bdcb2d4793d79f4a64e297744d0516164f762bfb34c702610f8115734a9a1f"
     },
     {
       "file": "redacted-context.enc.part0002",
-      "bytes": 34881796,
-      "sha256": "ff078b0d4b2264fa2cba38fdbf1e27891e1557b217acf3604978df6d3484d646"
+      "bytes": 35790849,
+      "sha256": "546e25aa36bd875a6620659facfc249e21cb34d40a1d57b963d00c0d990e6383"
     }
   ]
 }

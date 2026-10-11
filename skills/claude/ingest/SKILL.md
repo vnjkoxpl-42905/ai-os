@@ -6,7 +6,8 @@ description: >
   my second brain", "ingest the latest clips", or a supplied document meant
   to become saved knowledge. Finds the input, checks content hashes, preserves
   provenance, and compiles it into linked wiki pages. Session write-ups and
-  student-facing post-session recaps belong to post-session-recap.
+  student-facing post-session recaps belong to post-session-recap. Student and
+  consultation session transcripts belong to transcript-intake, not this pipeline.
 allowed-tools: Bash Read Write Edit Glob Grep
 ---
 
@@ -35,13 +36,13 @@ ambiguous, ask once. Do not guess and file it somewhere wrong.
 |---|---|---|
 | Web clip from Obsidian Web Clipper (`.md` in `raw/inbox/`) | `raw/inbox/` | [Clips](#clips) |
 | A clip that is a YouTube / video page | `raw/inbox/` | [Clips](#clips), read via `watch` |
-| Gemini "Notes by Gemini" from a live session (this week, last week) | Google Drive | [Transcripts, live](#transcripts-live) |
-| Archival Gemini `.docx` / `.txt` (Apr to Jul 2026 Takeout batch) | `raw/data-about-me/transcripts/` | [Transcripts, archival](#transcripts-archival) |
+| Student or consultation session transcript, live or archival | Student records | Delegate to `transcript-intake`; do not compile through this pipeline |
 | Superwhisper `recordings/` dirs (`meta.json` + `output.wav`) or `settings.json` | wherever they were dropped | hand to `superwhisper`; not this skill's |
 | Student evidence: PT score report, screenshot, homework export | `~/Downloads`, chat attachment | [Student evidence](#student-evidence) |
 | A source document meant to become wiki knowledge | `raw/` | dedupe below, then read `references/wiki-compilation.md` |
 | Takeout or platform dump | `raw/data-about-me/` | [Bulk exports](#bulk-exports) |
 
+Student/session transcript intake is owned by `transcript-intake`.
 Knowledge-source compilation is this skill's internal reference. `post-session-recap`
 owns the complete student-facing session write-up workflow. A request only to
 retrieve or file a transcript stays narrow; a recap request goes directly to that
@@ -99,72 +100,16 @@ file, or ingest with a stated focus authorizes completing that scope; do not
 introduce an extra confirmation step. Ask when unresolved emphasis, identity,
 or contradictory evidence materially changes what should be written.
 
-## Transcripts, live
+## Session transcripts use a separate workflow
 
-Gemini writes "Notes by Gemini" docs to Google Drive after each Meet session.
-The brain's copy is `students/<slug>/transcript-downloads/YYYY-MM-DD-<slug>-notes-by-gemini.md`
-(primary record: the brain is its only home). Getting them there is step 1 of
-`post-session-recap/references/transcript-intake-and-record.md`; follow that section exactly (Calendar sweep by guest email,
-Drive sweep for unattached docs, export as `text/plain`, resolve the person
-with `students/_aliases.md`, consultations and unknowns to
-`students/_other-sessions/`). It is the single source of truth for the pull;
-do not re-derive the `gws` commands here.
+Student and consultation transcripts go to the sibling
+`transcript-intake/SKILL.md`. Delegate the authorized lookup, filing, or
+reconciliation there without running this skill's source-summary, wiki-page, or
+index-compilation steps. A requested student-facing lesson instead goes directly
+to `post-session-recap/SKILL.md`. Do not ask the user to invoke a second skill.
 
-Then, per transcript that is new on disk:
-
-1. Read the whole transcript, not the Gemini summary at the top. The summary
-   flattens what the student actually did; the distillation has to name the
-   answer they picked and the line they misread.
-2. Append to the student's `teaching-notes.md` (create it from a sibling if the
-   folder lacks one; it is a standard primary file): what was taught, where they
-   struggled, what was assigned, what to follow up. Dated heading, append-only,
-   never regenerate.
-3. Anything needing an action goes to `open-loops.md` (same rules).
-4. Add one line to `transcripts.md` so the folder's inventory matches disk.
-5. Never write to a `*.generated.md` file; those mirror a live backend.
-6. Append to `wiki/log.md`.
-
-Done means every session in the window either has its transcript on disk and
-distilled, or is listed in the log as "no Gemini doc anywhere" with the date and
-student, so the next session does not sweep it again.
-
-If Joshua requests a session write-up or recap, activate `post-session-recap`
-and complete its workflow; do not stop at telling him another skill is needed.
-
-## Transcripts, archival
-
-The Takeout batch of 52 `.docx` / `.txt` files in `raw/data-about-me/transcripts/`
-(2026-04-28 to 2026-07-15) was distilled on 2026-07-20 (`wiki/log.md`). It is
-git-ignored PII; never read the folder wholesale into context.
-
-**Start with the inventory. Do not re-derive the mapping by hand.**
-
-```
-python system/scripts/transcript-inventory.py              # full report
-python system/scripts/transcript-inventory.py --unmatched  # only the gaps
-python system/scripts/transcript-inventory.py --json       # machine-readable
-python system/scripts/transcript-inventory.py --text "<file>.docx"   # one transcript as text
-```
-
-It maps each file to a folder using `students/_aliases.md`, knows that former
-students live in `students/non-students/`, and prints what it cannot resolve.
-`--text` exists because this box has no python-docx and no pandoc; it is how a
-`.docx` gets read. The script is read-only.
-
-For an unmapped file, resolve before filing:
-- a name variant of an existing student: add it under `## Aliases` in
-  `students/_aliases.md`, re-run, continue;
-- a consultation or one-off: add under `## Prospects, no record yet` (the
-  section the script parses) so it stops surfacing;
-- a real recurring student with no folder: **ask Joshua before creating one.**
-  A folder is a judgment about the relationship, not a filing detail.
-
-Then distill exactly as in the live section, steps 1 to 6. The `.docx` stays in
-`raw/`; what lands in the student folder is what a human wants to read before
-the next session.
-
-If the inventory gets a mapping wrong, fix the script or the alias file. Working
-around it silently means the next session re-derives the same mapping.
+Public lecture transcripts and research interviews supplied as reusable knowledge
+remain knowledge sources for `ingest`. Purpose determines the route.
 
 ## Student evidence
 

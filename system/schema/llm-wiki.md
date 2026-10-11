@@ -83,7 +83,7 @@ Distinguish source claims from verified facts and agent synthesis. Cite factual 
 
 ## Ingest compiles one source into the existing knowledge
 
-Natural requests such as "ingest this", "add this to my second brain", and "process this article" enter one public workflow. Specialized session write-up requests use `post-session-recap`, which owns the finished student lesson and its intake; transcript filing does not silently create or send a lesson.
+Natural requests such as "ingest this", "add this to my second brain", and "process this article" enter one public workflow. Student and consultation session transcripts use `transcript-intake` for retrieval, filing, reconciliation and private distillation. They do not enter the general wiki-compilation pipeline. Public lecture transcripts supplied as teaching or research knowledge still use `ingest`. Specialized session write-up requests use `post-session-recap`, which owns the finished student lesson and reuses the shared retrieval procedure; transcript filing does not silently create or send a lesson.
 
 1. Resolve the supplied source, owning domain, and scoped instructions. Check `wiki/index.md` and the appropriate domain index for an existing source or subject.
 2. Compute the source hash and compare available provenance or summaries for an identical source. Identical bytes do not need a second summary. A changed version keeps its own provenance and an explicit relationship to the earlier generation. Do not equate similar titles with identical contents.

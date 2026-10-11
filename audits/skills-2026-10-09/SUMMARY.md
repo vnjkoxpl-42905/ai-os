@@ -1,12 +1,20 @@
 # Repair routing and stale instructions before removing useful skills
 
-Audit started 2026-10-09; resumed 2026-10-10. Completion and exact coverage are recorded in `coverage.json` and `ALL-SKILL-DISPOSITIONS.md`. This is a specialist skill-library audit, not a Four Cs score or evidence every workflow ran successfully.
+Audit started 2026-10-09; completed 2026-10-10. Exact coverage is recorded in [coverage.json](coverage.json) and [every entry disposition](ALL-SKILL-DISPOSITIONS.md). This is a specialist skill-library audit, not a Four Cs score or evidence every workflow ran successfully.
 
 ## Recommendation
 
 Keep the useful capabilities. Repair the exposed global provider corruption first, then restrict broad triggers that turn reading or inspection into paid calls, publication, assignments or destructive cleanup. Consolidate a few overlapping authoring routes after preserving their differences. Matching runtime copies, snapshots and compatibility aliases are not automatically redundant.
 
 The project catalogs contain **649 physical entries: Claude 223, Codex 208, Gemini 218**. Those are copies and variants, not 649 unique capabilities. Global discovery adds entries outside those catalogs. Catalog presence alone does not mean a skill is active. Each disposition retains its exact path and scope in the complete ledger.
+
+## Completed coverage
+
+All **1,316 distinct physical entries** in the declared scope have current SHA-256 verification: 649 canonical catalog entries, 479 discovered non-snapshot global entries, 59 project activations and 129 stored supplemental entries. There are **zero pending semantic dispositions** and zero hash/base reconciliation errors. These paths contain 555 distinct byte hashes, not 555 proven independent capabilities.
+
+**1,242 current, inactive or project-fork entries are semantically accounted for.** The remaining **74 frozen historical snapshots** are explicitly inventory-only. Coverage consists of 408 full-body receipts, one distributed full hatch-pet read, 697 exact-byte inheritances, 31 exact normalized-text inheritances, 47 complete-difference/base reviews and 58 original runtime-variant receipts recorded as full-body-or-complete-diff. That original variant category is retained honestly rather than inventing a more precise historical read classification.
+
+Fresh recovery replaced generic provisional conclusions with individual reasons. Current-file and reviewed-base hashes were checked again after integration. The [machine ledger](all-skill-dispositions.json) retains the exact path, disposition, reason, read method, source receipt and base identity. No pending machine scan is counted as completed semantic review.
 
 ## Repair in this order
 
@@ -84,6 +92,18 @@ The full per-entry table records scope and recommended disposition. Historical s
 
 The existing validator checks project activated/catalog drift and Claude/Codex parity; it does not certify owned global body correctness or Gemini. Add bounded owned-global/provider sanity and Gemini checks rather than mirroring every external vendor package into this repo.
 
+## Workspace helper findings
+
+The fresh global GWS review found a broken shared-auth prerequisite in the synced `gws-gmail-read` copy: its `../gws-shared/SKILL.md` target is absent. Top-level GWS prerequisites are present. Other concrete corrections are the Forms `forms.update` prose versus `batchUpdate` inventory, apparent agent-task/message-stream resources mixed into Workspace Events, an unread-mail query described as inbox triage, and meeting preparation that promises linked-document contents without demonstrating retrieval. The shared GWS prerequisite does require write/delete confirmation, so local omissions are evaluated against that existing policy rather than reported as universally unguarded writes.
+
+## Recipe and global routing recovery
+
+The fresh recipe/persona review preserves useful Google Workspace endpoint references but identifies concrete contract mistakes. `recipe-find-free-time` creates an event after a find-only request; `recipe-plan-weekly-schedule` queries 2025 free/busy while inserting a 2026 event; `recipe-copy-sheet-for-new-month` renames hardcoded sheet ID 123 instead of the response ID. Other recipes promise initial presentation slides, feedback questions, an attachment or bounded vacation dates without supplying those steps. The Gmail filter recipe removes INBOX during a generic labeling workflow, and the expense tracker appends a sample expense as real data. Repair these narrow contracts before reuse, rather than deleting all recipes.
+
+Role personas such as event coordinator or researcher are convenience routers, not evidence-based replicas of a real person's method. Keep their distinct Workspace recipes but narrow automatic publishing and role-wide triggers. The reusable `persona-agent-creator` remains a different capability.
+
+Current Gemini Superwhisper still contains an older settings.json/modeKeys workflow while current Claude/Codex bodies use the revised SQLite workflow. Align that stale runtime copy without discarding vocabulary/replacement guidance.
+
 ## Additional full-body recovery findings
 
 The long-body review adds concrete repair candidates without discarding the underlying capability:
@@ -103,7 +123,7 @@ Both current root manuals were read in full. Shared routing and guardrails agree
 
 The parent ran an isolated temporary Git repository: commit one file, then edit it without committing. Predicted the committed three-dot range would miss the edit while worktree diff would show it. Observed `git diff HEAD...HEAD` was empty; `git diff` contained `+changed`. This demonstrates the documented review scope defect. The proposed correction is to add explicit worktree/staged/untracked inventory, not change the production skills during an audit. The temporary fixture was cleaned by its isolated TemporaryDirectory lifecycle; no AI OS commit or mutation occurred.
 
-The parent also ran `gws gmail +send --help`, which explicitly supports `--draft` and `--dry-run`. The booking draft flag is valid. No message or draft was sent/created.
+The parent also ran `gws gmail +send --help`, which explicitly supports `--draft` and `--dry-run`. The booking draft flag is valid. No message or draft was sent/created. The parent also ran `gws forms forms --help`: `batchUpdate` is available while `update` is absent, and `create` copies only title fields. This supports the Forms instruction and empty-form recipe findings without making a live API write.
 
 ## Seven-rule grades
 

@@ -27,3 +27,6 @@ missing workflow rather than improvising a parallel intake procedure.
 Public activation phrases belong to `ingest`: "ingest this", "add this to my
 second brain", "file these notes", and "process this source". This old explicit
 name remains compatible without asking the user to invoke another skill.
+
+Session transcript requests are dispatched to `transcript-intake` by ingest;
+this alias does not turn student records into general wiki knowledge.

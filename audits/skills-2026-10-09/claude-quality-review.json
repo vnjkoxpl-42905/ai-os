@@ -1,0 +1,612 @@
+{
+  "audit_date": "2026-10-10",
+  "scope": "43 Claude canonical bodies replacing original generic quality reasons",
+  "method": "All43 SKILL.md files directly read in full in bounded batches without truncated body output; no inherited generic flags used as semantic evidence. Hash/line receipts computed from current disk. Support existence checked selectively only.",
+  "semantic_review_status": "43/43 full body reviewed",
+  "runtime_validation": "Not performed. This is read-only semantic audit, not live workflow/trigger/provider acceptance.",
+  "changes": "Only claude-quality-review.json. No skills/config/deletions/external calls.",
+  "rows": [
+    {
+      "name": "edit-article",
+      "path": "skills/claude/edit-article/SKILL.md",
+      "semantic_review": "full body reviewed",
+      "read_method": "direct full canonical body read",
+      "disposition": "keep-and-fix",
+      "reason": "Useful section dependency ordering and manual-only edit trigger. Fixed 240-character paragraph cap can damage Joshua's complete explanations; mandatory section confirmation should respect existing approval.",
+      "evidence": [
+        "15-line body ends with max240 characters/paragraph and confirm sections. Replace fixed cap with complete ideas/readability; only ask material unresolved structure."
+      ],
+      "confidence": "Specific static body evidence; current runtime and all support-file content unverified",
+      "sha256": "e10fba546f45357fe0aaa7494b9e186910d4525818d19f9b2ad6f28cc506aa5e",
+      "lines": 15
+    },
+    {
+      "name": "find-skills",
+      "path": "skills/claude/find-skills/SKILL.md",
+      "semantic_review": "full body reviewed",
+      "read_method": "direct full canonical body read",
+      "disposition": "keep-and-fix",
+      "reason": "Distinct skill discovery, not implementation. Generic how-do-I/can-you triggers overreach; popularity is evidence of adoption rather than verified quality.",
+      "evidence": [
+        "Leaderboard-first, install-count/stars rules and -g -y default install conflict project-scoped activation. Read candidate bodies, compare installed catalog first, default project copies and meaningful fit/security checks."
+      ],
+      "confidence": "Specific static body evidence; current runtime and all support-file content unverified",
+      "sha256": "1e85f6f9686e145aca4a124e3b704b9bbea9aa87e08515c1e352eee70f6e6e7a",
+      "lines": 142
+    },
+    {
+      "name": "finishing-a-development-branch",
+      "path": "skills/claude/finishing-a-development-branch/SKILL.md",
+      "semantic_review": "full body reviewed",
+      "read_method": "direct full canonical body read",
+      "disposition": "keep-and-fix",
+      "reason": "Useful completion/ownership safeguards and discard confirmation. Mandatory menu/test rerun can duplicate known verified request; PR branch only pushes without creating a PR.",
+      "evidence": [
+        "Option2 titled Push/CreatePR contains only git push; Step6 infers ownership from .worktrees path alone. Include actual PR+attach path, explicit managed ownership and honor user selected integration action."
+      ],
+      "confidence": "Specific static body evidence; current runtime and all support-file content unverified",
+      "sha256": "e6d4a812de900d33c6eacfb40747f99427f25c304a7b7099120f9373b115a47f",
+      "lines": 241
+    },
+    {
+      "name": "git-guardrails-claude-code",
+      "path": "skills/claude/git-guardrails-claude-code/SKILL.md",
+      "semantic_review": "full body reviewed",
+      "read_method": "direct full canonical body read",
+      "disposition": "keep-with-runtime-verification",
+      "reason": "Specific Claude PreToolUse policy is distinct from general Git hygiene; merges existing settings and synthetic blocked-input test are good.",
+      "evidence": [
+        "Blocks all push, not only destructive forms, and installs Bash script via chmod. Scope/defaults must reflect Joshua's authorized push policy, Windows shell availability and actual hook activation; one blocked sample does not prove shell composition coverage."
+      ],
+      "confidence": "Specific static body evidence; current runtime and all support-file content unverified",
+      "sha256": "69b291d655626a01602b998a1836fcb93c058ede68dfafddfd71e87f17074764",
+      "lines": 95
+    },
+    {
+      "name": "grill-by-claude",
+      "path": "skills/claude/grill-by-claude/SKILL.md",
+      "semantic_review": "full body reviewed",
+      "read_method": "direct full canonical body read",
+      "disposition": "retain-explicit-compatibility",
+      "reason": "Thin alias delegates current claudex-loop, preserves scope and rejects invented reviewer completion. This Claude canonical copy explicitly requires Codex host.",
+      "evidence": [
+        "Final paragraph refuses Claude invocation rather than substituting. Mark runtime-specific catalog availability explicitly; no reason to duplicate workflow or call this provider corruption."
+      ],
+      "confidence": "Specific static body evidence; current runtime and all support-file content unverified",
+      "sha256": "a9aeb181d6c19b090f990f1e35a4ec7bc49211468dc6f9100f8faad6a692d8d5",
+      "lines": 16
+    },
+    {
+      "name": "grill-me-codex",
+      "path": "skills/claude/grill-me-codex/SKILL.md",
+      "semantic_review": "full body reviewed",
+      "read_method": "direct full canonical body read",
+      "disposition": "retain-compatibility",
+      "reason": "Claude-host Codex-review alias shares authoritative loop and refuses legacy instructions; does not grant implementation on review.",
+      "evidence": [
+        "Opening host=claude requirement then actual-host roles section is redundant but not a missing mechanism. Narrow alias discovery and keep PARITY declaration; runner/runtime behavior not executed."
+      ],
+      "confidence": "Specific static body evidence; current runtime and all support-file content unverified",
+      "sha256": "a9115994ba7a254cc290040c48ade687f4e6e3fdabcb958a214c4392aa72bc85",
+      "lines": 18
+    },
+    {
+      "name": "grill-with-docs",
+      "path": "skills/claude/grill-with-docs/SKILL.md",
+      "semantic_review": "full body reviewed",
+      "read_method": "direct full canonical body read",
+      "disposition": "keep-and-fix-adapter",
+      "reason": "Manual-only seven-line composition of interview and domain modeling is useful shorthand, distinct from cross-provider review alias.",
+      "evidence": [
+        "Only body calls Skill tool twice; assumes tool exists and does not resolve skill roots. Specify read/run matching loaded skills in actual host and preserve documentation ownership."
+      ],
+      "confidence": "Specific static body evidence; current runtime and all support-file content unverified",
+      "sha256": "7de372c13488f1ee96cc11cd8907b56b6809cc93eef776eeddd37de6b6cbe3fe",
+      "lines": 7
+    },
+    {
+      "name": "grill-with-docs-codex",
+      "path": "skills/claude/grill-with-docs-codex/SKILL.md",
+      "semantic_review": "full body reviewed",
+      "read_method": "direct full canonical body read",
+      "disposition": "retain-compatibility",
+      "reason": "Document-backed cross-provider review delegates existing loop, preserving glossary/ADR/context pointers and authorized scope.",
+      "evidence": [
+        "Explicit Claude->Codex installation, actual-host roles and no legacy restoration. Retain as explicit alias rather than separately activated competing generic grilling route."
+      ],
+      "confidence": "Specific static body evidence; current runtime and all support-file content unverified",
+      "sha256": "b708502623465fb8b14a60e4835ebd88df124c837a0484cacb9985656a12a6d9",
+      "lines": 20
+    },
+    {
+      "name": "grilling",
+      "path": "skills/claude/grilling/SKILL.md",
+      "semantic_review": "full body reviewed",
+      "read_method": "direct full canonical body read",
+      "disposition": "keep-with-bounded-rounds",
+      "reason": "Decision frontier separates dependent questions and requires agent to find facts. Fits user-requested collaborative planning.",
+      "evidence": [
+        "Every decision branch visited and whole frontier can produce excessive interviews. Treat agreed scope/known answers as settled; bound round size to cognitive load and stop once materially consequential decisions are resolved."
+      ],
+      "confidence": "Specific static body evidence; current runtime and all support-file content unverified",
+      "sha256": "befdff1e27a1dfe2a294d5871169ac1afe16d983911daa4f32627514a48c1e15",
+      "lines": 30
+    },
+    {
+      "name": "implement",
+      "path": "skills/claude/implement/SKILL.md",
+      "semantic_review": "full body reviewed",
+      "read_method": "direct full canonical body read",
+      "disposition": "keep-and-fix-adapter",
+      "reason": "Manual-only spec/ticket executor has relevant typecheck/test/review sequence, separate from multi-ticket orchestration.",
+      "evidence": [
+        "Uses Skill tool tdd/code-review and unconditionally commits current branch. Resolve active host, pre-agreed seams, current branch ownership and task commit authorization; do not stage unrelated edits."
+      ],
+      "confidence": "Specific static body evidence; current runtime and all support-file content unverified",
+      "sha256": "483bdc4ccf4ac31d86ac7beeaa0d0db80313e71e120bb8c59b3196ae5decd53d",
+      "lines": 17
+    },
+    {
+      "name": "implement-spec",
+      "path": "skills/claude/implement-spec/SKILL.md",
+      "semantic_review": "full body reviewed",
+      "read_method": "direct full canonical body read",
+      "disposition": "keep-and-fix-worktree-boundary",
+      "reason": "Task-graph implementation distinct from single-ticket implement; integrations/tests/review are valuable.",
+      "evidence": [
+        "Worker resets worktree onto integration branch when wrong without checking local changes; final cleanup all implementer worktrees assumes ownership. Preserve dirty work and use managed worktree attach/archive mechanism, budget available concurrency, attach every created PR."
+      ],
+      "confidence": "Specific static body evidence; current runtime and all support-file content unverified",
+      "sha256": "7a22dd2e60b8fcece478ced9d2533582adf3520d695acd3ab715341535c9e56d",
+      "lines": 40
+    },
+    {
+      "name": "inbound-tutoring-replies",
+      "path": "skills/claude/inbound-tutoring-replies/SKILL.md",
+      "semantic_review": "full body reviewed",
+      "read_method": "direct full canonical body read",
+      "disposition": "keep-and-refresh-authority",
+      "reason": "Tailored short inbound lead replies are useful and separate from follow-up templates.",
+      "evidence": [
+        "Default $40/h and free-first-session are fixed business claims; booking URL and wiki/knowledge/tutoring-outreach-log.md need current authority. Explicitly draft-only/voice route/send ledger, check current offer before copying rate."
+      ],
+      "confidence": "Specific static body evidence; current runtime and all support-file content unverified",
+      "sha256": "085711e5c82c66e9c1845a11e0c99bee045c036819f8e6e4216814282ceead9d",
+      "lines": 55
+    },
+    {
+      "name": "ingest",
+      "path": "skills/claude/ingest/SKILL.md",
+      "semantic_review": "full body reviewed",
+      "read_method": "direct full canonical body read",
+      "disposition": "keep-primary",
+      "reason": "Well-defined single intake owns SHA256 dedupe, preserved bytes/revisions, routing, compilation and narrow recap handoff. Sources are never deleted; archived vs completed differentiated.",
+      "evidence": [
+        "208-line body explicit source hashes, immutable originals, CAS/generated ownership and no publishing. watch exists; compilation reference exists. Historical no python-docx/pandoc machine claim should be verified rather than assumed, otherwise preserve mechanism."
+      ],
+      "confidence": "Specific static body evidence; current runtime and all support-file content unverified",
+      "sha256": "450e1033e1a679e7fbb00ef4e1a2b804a0306bcc7fe2ac965dad8209ac60c578",
+      "lines": 208
+    },
+    {
+      "name": "internal-comms",
+      "path": "skills/claude/internal-comms/SKILL.md",
+      "semantic_review": "full body reviewed",
+      "read_method": "direct full canonical body read",
+      "disposition": "keep-with-voice-overlay",
+      "reason": "Distinct communications format router loads topic-specific reference, without duplicating full templates.",
+      "evidence": [
+        "32-line body says company formats, but vendor examples not Joshua authority. examples/3p-updates.md and general-comms.md exist. Apply Joshua voice/actual audience, draft-only and approved formats rather than assuming vendor company norms."
+      ],
+      "confidence": "Specific static body evidence; current runtime and all support-file content unverified",
+      "sha256": "067b7587a344a928fc6534ef66b1bcd591fc7c26d207ea7ca3334aeb678d6475",
+      "lines": 32
+    },
+    {
+      "name": "jev-audit",
+      "path": "skills/claude/jev-audit/SKILL.md",
+      "semantic_review": "full body reviewed",
+      "read_method": "direct full canonical body read",
+      "disposition": "keep",
+      "reason": "Strong evidence-limited opportunity assessment with no paid calls or history upload to Jev during audit, bounded selection and simpler-baseline comparison.",
+      "evidence": [
+        "61-line body distinguishes snapshots from acceptance, observed/estimated/unknown units, zero-fit success, and concrete reviewable authorization for setup. Support/real history and live pricing not executed; no confirmed body defect."
+      ],
+      "confidence": "Specific static body evidence; current runtime and all support-file content unverified",
+      "sha256": "affc55830c81938bc34c8de052e27a861f4bd81c13b2204c7286fa86b2f54150",
+      "lines": 61
+    },
+    {
+      "name": "karpathy-teach",
+      "path": "skills/claude/karpathy-teach/SKILL.md",
+      "semantic_review": "full body reviewed",
+      "read_method": "direct full canonical body read",
+      "disposition": "keep-and-verify-hook-claim",
+      "reason": "Correct small task-entry delegates project karpathy, evidence-grounded rather than impersonation; grades, limits and ingest reuse explicit.",
+      "evidence": [
+        "14-line body states project Stop hook returns exact video message, stronger than configuration alone proves. Qualify until current native block-then-run acceptance verified, retain Python receipt as supplemental not universal prerequisite."
+      ],
+      "confidence": "Specific static body evidence; current runtime and all support-file content unverified",
+      "sha256": "5bb09786db45ba14618c4b7a5a0b6170a75b42a1db8e20319ed153261bd72071",
+      "lines": 14
+    },
+    {
+      "name": "lovable-prompt",
+      "path": "skills/claude/lovable-prompt/SKILL.md",
+      "semantic_review": "full body reviewed",
+      "read_method": "direct full canonical body read",
+      "disposition": "keep-and-fix-routing",
+      "reason": "Short paste-ready Lovable prompt scope is useful, but infrastructure directives predate current project authority.",
+      "evidence": [
+        "31-line body directs Supabase MCP apply_migration/execute_sql confirm_cost and .claude/safe-push.sh. Current backend/CLI/deploy instructions must win; do not route managed-cloud functions to old direct deployment route or imply credit approval."
+      ],
+      "confidence": "Specific static body evidence; current runtime and all support-file content unverified",
+      "sha256": "29184a438b4ad09e8cddd19bb7a466c0835321ce66e78304cf8af11aca3199af",
+      "lines": 31
+    },
+    {
+      "name": "lsat-lab-sync",
+      "path": "skills/claude/lsat-lab-sync/SKILL.md",
+      "semantic_review": "full body reviewed",
+      "read_method": "direct full canonical body read",
+      "disposition": "keep-and-fix",
+      "reason": "Distinct bulk tag/key/explanation audit uses scripts and explicit sample validation; answer-key conflicts surfaced before write.",
+      "evidence": [
+        "56-line body says delete data/public to force refresh, assumes Claude browser JS tool and deploy_project free; hardcoded question totals may drift. Preserve source cache and fresh capture, use actual browser/CLI/deploy mechanism, guarded data snapshot+expected-new verification."
+      ],
+      "confidence": "Specific static body evidence; current runtime and all support-file content unverified",
+      "sha256": "1a2675278ffd3ac8428bb1d3c6d5323b0589ef986328a741c8ff99c3a6a1ecfa",
+      "lines": 56
+    },
+    {
+      "name": "lsat-u-platform-actions",
+      "path": "skills/claude/lsat-u-platform-actions/SKILL.md",
+      "semantic_review": "full body reviewed",
+      "read_method": "direct full canonical body read",
+      "disposition": "keep-with-host-adapter",
+      "reason": "Detailed headless lesson publishing, exact readback, idempotent marker/revisions, student visibility limits and logging are strong operational mechanisms.",
+      "evidence": [
+        "48-line body describes Codex registration/new-session/browser specifically in Claude catalog. Local server/admin entrypoints exist; detect actual Claude tool registration, use direct Node fallback and never call server-readback a signed-in student interaction test."
+      ],
+      "confidence": "Specific static body evidence; current runtime and all support-file content unverified",
+      "sha256": "f24108778b842422fa645de295231b369033f997133e6a37e478a482cd4bf16f",
+      "lines": 48
+    },
+    {
+      "name": "lsat-u-voice",
+      "path": "skills/claude/lsat-u-voice/SKILL.md",
+      "semantic_review": "full body reviewed",
+      "read_method": "direct full canonical body read",
+      "disposition": "keep-primary",
+      "reason": "Project-owned selected teaching standard avoids vendor blend, fixed quotas and topic contamination; source/artifact check preserves modality.",
+      "evidence": [
+        "24-line body links canonical teaching voice, standard and copy corrections, distinguishes local authoring from posting/paid media. Preserve this override across activation copies; cited support not read in this shard due bounded task scope."
+      ],
+      "confidence": "Specific static body evidence; current runtime and all support-file content unverified",
+      "sha256": "58e3e48c6a8ecf17b6f11b86b6756d2a66fd1405cd60891bb626bf77af1695cd",
+      "lines": 24
+    },
+    {
+      "name": "persona-agent-creator",
+      "path": "skills/claude/persona-agent-creator/SKILL.md",
+      "semantic_review": "full body reviewed",
+      "read_method": "direct full canonical body read",
+      "disposition": "keep",
+      "reason": "Focused persona factory with explicit boundaries, six stages, dual-source rules, native discovery/trust checks and held scope tests.",
+      "evidence": [
+        "35-line body distinguishes documented-method assistant from actual person and adaptations from verbatim; procedure reference exists. Entry refers to Codex invocation inside Claude catalog, so host adapter should expose equivalent Claude invocation. No unverified clone/completeness claims accepted."
+      ],
+      "confidence": "Specific static body evidence; current runtime and all support-file content unverified",
+      "sha256": "bd1149cf4a62f3e291fe3b9fa147f9388c450d8a11be39c8e3952d23e82acef6",
+      "lines": 35
+    },
+    {
+      "name": "pickup",
+      "path": "skills/claude/pickup/SKILL.md",
+      "semantic_review": "full body reviewed",
+      "read_method": "direct full canonical body read",
+      "disposition": "keep",
+      "reason": "Explicit-only orientation verifies current roots, ledger/plan pointers and load-bearing live freshness. Continue request overrides stop.",
+      "evidence": [
+        "53-line body LSATU-scoped and first tasks then hot; compatibility with broader retrieval hot-first needs owning policy check. Scope-related open questions should block dependent work only, not independent authorized continuation."
+      ],
+      "confidence": "Specific static body evidence; current runtime and all support-file content unverified",
+      "sha256": "bfded8bf4111ba4e53b16bdf73a3e25e46a64f7d4ae0fb2d2456296968817387",
+      "lines": 53
+    },
+    {
+      "name": "post-session-recap",
+      "path": "skills/claude/post-session-recap/SKILL.md",
+      "semantic_review": "full body reviewed",
+      "read_method": "direct full canonical body read",
+      "disposition": "keep-primary-with-approval-clarity",
+      "reason": "Full teaching lesson, transcript grounding, private continuation, preview/source checks and narrow transcript exclusion are useful distinct end-to-end workflow.",
+      "evidence": [
+        "78-line body says plain approved authorizes posting, while draft approval alone may be ambiguous under root send-only rule. Require explicit post/send/assign intent or already-authorized posting, preserve single canonical session lesson and source record."
+      ],
+      "confidence": "Specific static body evidence; current runtime and all support-file content unverified",
+      "sha256": "50143123d12ff33bd0ba835b1fe0f5e95a88c68a871345e140a2af1d4dbc81a9",
+      "lines": 78
+    },
+    {
+      "name": "prototype",
+      "path": "skills/claude/prototype/SKILL.md",
+      "semantic_review": "full body reviewed",
+      "read_method": "direct full canonical body read",
+      "disposition": "keep-with-project-placement",
+      "reason": "Small temporary state/visual probe answers design question, not production implementation; visible state and no persistence default valuable.",
+      "evidence": [
+        "26-line body recommends nearby module code then captures via commit throwaway branch. LOGIC/UI refs exist. In vault application files must remain ai-os-projects; permanent branch/issue writes should respect task authorization and supplied visuals."
+      ],
+      "confidence": "Specific static body evidence; current runtime and all support-file content unverified",
+      "sha256": "714de632d116bb73f65cdb5a882db15b9369a6713b9a47c0fad827848f0bfbe3",
+      "lines": 26
+    },
+    {
+      "name": "pull-submissions",
+      "path": "skills/claude/pull-submissions/SKILL.md",
+      "semantic_review": "full body reviewed",
+      "read_method": "direct full canonical body read",
+      "disposition": "keep-and-fix",
+      "reason": "Distinct idempotent booking submission mirror, not recap/intake duplicate. Paths and relationship resolution are stale.",
+      "evidence": [
+        "43-line body ~/ai-os/.env and ~/ai-os/skills/claude script fail current Windows canonical root; derives slug from pass name and auto-creates student folder. Resolve roots and aliases/verified email before writes, apply existing student-folder relationship gate; script exists but not run."
+      ],
+      "confidence": "Specific static body evidence; current runtime and all support-file content unverified",
+      "sha256": "af6bef8077a5d8979ab185fc97e8f049ce0439d71c22076d3db21a6839ec3177",
+      "lines": 43
+    },
+    {
+      "name": "request-refactor-plan",
+      "path": "skills/claude/request-refactor-plan/SKILL.md",
+      "semantic_review": "full body reviewed",
+      "read_method": "direct full canonical body read",
+      "disposition": "keep-with-scope-gate",
+      "reason": "Incremental working-state commits and behavior test planning add value, separate from immediate implementation.",
+      "evidence": [
+        "68-line body asks user long problem description before exploring and creates GitHub issue even planning-only request. Use existing brief/context first and prepare reviewable issue draft unless user authorized filing; keep scope and incremental plan."
+      ],
+      "confidence": "Specific static body evidence; current runtime and all support-file content unverified",
+      "sha256": "d59de4ba6cc1fe2dd267e8b9b5a1fd88e3e739e2130bc9dd78061d2a072830b8",
+      "lines": 68
+    },
+    {
+      "name": "research",
+      "path": "skills/claude/research/SKILL.md",
+      "semantic_review": "full body reviewed",
+      "read_method": "direct full canonical body read",
+      "disposition": "keep",
+      "reason": "Small primary-source background researcher with per-claim citations and existing note home matches bulk delegation.",
+      "evidence": [
+        "12-line body only demands research artifact; add explicit uncertainty/date scope when sources are inaccessible, but no reason to replace it with duplicated intake. New durable sources still follow ingest rather than claiming research note is processed corpus."
+      ],
+      "confidence": "Specific static body evidence; current runtime and all support-file content unverified",
+      "sha256": "985569f15739c713d6784887c3d186d4ef9ac85bec5ad9c068d25bf0739928e4",
+      "lines": 12
+    },
+    {
+      "name": "research-add-items",
+      "path": "skills/claude/research-add-items/SKILL.md",
+      "semantic_review": "full body reviewed",
+      "read_method": "direct full canonical body read",
+      "disposition": "keep-and-fix",
+      "reason": "Outline supplementation useful when existing research workflow owns outline.yaml.",
+      "evidence": [
+        "28-line body auto-selects */outline.yaml despite multiple candidates, asks items despite user already naming them, append before confirmation then save. Resolve requested topic/outline, preserve existing entries/CAS and dedupe by identity; ask only ambiguous outline or missing requested names."
+      ],
+      "confidence": "Specific static body evidence; current runtime and all support-file content unverified",
+      "sha256": "52195e187e55941525e6006709dacb0b409448717958af86e73cbf6682b9e616",
+      "lines": 28
+    },
+    {
+      "name": "resume",
+      "path": "skills/claude/resume/SKILL.md",
+      "semantic_review": "full body reviewed",
+      "read_method": "direct full canonical body read",
+      "disposition": "keep-and-fix",
+      "reason": "Fast resume pointer useful and distinct from full pickup, but current newest-file algorithm can resume unrelated work.",
+      "evidence": [
+        "34-line body compares global handoff mtimes with app plans, fixed Windows root plus ~/ai-os/, always stops even explicit continue. Select task-matching source/ledger first, resolve canonical roots and verify live assertions; honor explicit continuation."
+      ],
+      "confidence": "Specific static body evidence; current runtime and all support-file content unverified",
+      "sha256": "bdfd9d7d60a52de24845e3811a8d4e98d6e626871acacb032fdebc549a3ce557",
+      "lines": 34
+    },
+    {
+      "name": "retro",
+      "path": "skills/claude/retro/SKILL.md",
+      "semantic_review": "full body reviewed",
+      "read_method": "direct full canonical body read",
+      "disposition": "keep",
+      "reason": "Manual retrospective proposes navigation/check/access/environment improvements grounded in current session, without blindly changing skills.",
+      "evidence": [
+        "44-line body references writing-for-agents (exists), reads existing checks before recommending, separates mechanical checks from judgment standards. No runtime/code diff proof produced here; host tool adapter and authorization must bound any later implementation."
+      ],
+      "confidence": "Specific static body evidence; current runtime and all support-file content unverified",
+      "sha256": "33fbc28568e3146f20fd908b12998bc0ab30aa4f4c87288199a40793efa94696",
+      "lines": 44
+    },
+    {
+      "name": "second-brain",
+      "path": "skills/claude/second-brain/SKILL.md",
+      "semantic_review": "full body reviewed",
+      "read_method": "direct full canonical body read",
+      "disposition": "keep-new-vault-only",
+      "reason": "Explicit new-vault setup is now separated from existing intake/query/lint; preserves populated target and hand-owned instructions.",
+      "evidence": [
+        "46-line body resolves schema then forbids parallel existing vault, legacy scaffold and unsolicited installs. New target may lack schema: initial read should fall through explicit agreed setup rather than require pre-existing schema indefinitely."
+      ],
+      "confidence": "Specific static body evidence; current runtime and all support-file content unverified",
+      "sha256": "cfe54f4f21d33c448249ae04be33cda1603d83c175ae775a001e6f4210bb2065",
+      "lines": 46
+    },
+    {
+      "name": "second-brain-ingest",
+      "path": "skills/claude/second-brain-ingest/SKILL.md",
+      "semantic_review": "full body reviewed",
+      "read_method": "direct full canonical body read",
+      "disposition": "retain-explicit-alias",
+      "reason": "29-line compatibility alias resolves matching runtime ingest and internal compilation; refuses second pipeline and does not require second activation.",
+      "evidence": [
+        "Old explicit name only; generic ingest phrases assigned primary ingest. Active/catalog/sibling resolution adequate; no body defect confirmed."
+      ],
+      "confidence": "Specific static body evidence; current runtime and all support-file content unverified",
+      "sha256": "8b94c93fcd4411d4f3f9f89d5ea02a74756357d9d1ac26887d9a62e982b4b51f",
+      "lines": 29
+    },
+    {
+      "name": "second-brain-lint",
+      "path": "skills/claude/second-brain-lint/SKILL.md",
+      "semantic_review": "full body reviewed",
+      "read_method": "direct full canonical body read",
+      "disposition": "keep",
+      "reason": "Knowledge health distinct from general OS scoring and package lint, with semantic review explicitly not replaced by generated structural findings.",
+      "evidence": [
+        "52-line body scope/index/domain evidence, age not falsehood, dual-source contradictions, reversible authorized repair/CAS, no research or empty pages. --lint runtime not executed in this shard; maintain distinction in reports."
+      ],
+      "confidence": "Specific static body evidence; current runtime and all support-file content unverified",
+      "sha256": "7eb9ab700fcd5d6dbe5748a10acc8bce667b88469525949657574ecb96d8dbdc",
+      "lines": 52
+    },
+    {
+      "name": "second-brain-query",
+      "path": "skills/claude/second-brain-query/SKILL.md",
+      "semantic_review": "full body reviewed",
+      "read_method": "direct full canonical body read",
+      "disposition": "keep",
+      "reason": "Index-first evidence questions preserve useful synthesis and live-owner escalation, clearly separate new intake from query.",
+      "evidence": [
+        "49-line body permits routine filing but avoids locking suggestions as decisions and skips transient/trivial logging. Host/schema and source freshness must remain authority; no confirmed semantic body defect."
+      ],
+      "confidence": "Specific static body evidence; current runtime and all support-file content unverified",
+      "sha256": "ed0ab7077780bd73f27781aa33717aac9b6d49453cc92f5a9713dabf50a8f654",
+      "lines": 49
+    },
+    {
+      "name": "session-handoff",
+      "path": "skills/claude/session-handoff/SKILL.md",
+      "semantic_review": "full body reviewed",
+      "read_method": "direct full canonical body read",
+      "disposition": "keep-and-fix-host-portability",
+      "reason": "Chat-only continuity artifact distinct from ledger wrapup; verifies timestamps and preserves open state without broad audit.",
+      "evidence": [
+        "88-line body assumes TodoWrite/run_in_background/date POSIX, exact ~/.claude path and fixed ~250k threshold. Use actual host task/process IDs and current context budget. Open question should block dependent work, not re-ask resolved authorization or all new work."
+      ],
+      "confidence": "Specific static body evidence; current runtime and all support-file content unverified",
+      "sha256": "4db01e4999c1d38130f6bc3ddc90f39b0f415554e0946940923c9043f23e36fd",
+      "lines": 88
+    },
+    {
+      "name": "skill-doctor",
+      "path": "skills/claude/skill-doctor/SKILL.md",
+      "semantic_review": "full body reviewed",
+      "read_method": "direct full canonical body read",
+      "disposition": "keep",
+      "reason": "History-based rubric grade distinct from static skill-lint; strong minimum-excerpt privacy disclosure and deterministic validated scoring.",
+      "evidence": [
+        "88-line body no real history collected during installation, labels-only aggregator, sample IDs bound suggestions, no fake score, proposed-only changes and explicit Windows ACL limits. Runtime helper not run; full support-tree/schema not verified by body review."
+      ],
+      "confidence": "Specific static body evidence; current runtime and all support-file content unverified",
+      "sha256": "3a5feeae102def31706b0d0d889a940ef0197385cdc7ac3fbeb8fde4a9842ef3",
+      "lines": 88
+    },
+    {
+      "name": "skill-lint",
+      "path": "skills/claude/skill-lint/SKILL.md",
+      "semantic_review": "full body reviewed",
+      "read_method": "direct full canonical body read",
+      "disposition": "keep-primary-static-audit",
+      "reason": "Static package/path/trigger diagnosis complementary to history-based doctor. Read-only/synthetic checks and repair scope preserve current sources.",
+      "evidence": [
+        "26-line body resolves runtime/canonical roots, no substantive workflow execution or default external report, length not defect and explicit deletion authorization. reference.md exists. No confirmed body defect."
+      ],
+      "confidence": "Specific static body evidence; current runtime and all support-file content unverified",
+      "sha256": "6f69966fa5653f1aa5f3b525da42243ad95e889b00f69928cbcda708c9e33055",
+      "lines": 26
+    },
+    {
+      "name": "tdd",
+      "path": "skills/claude/tdd/SKILL.md",
+      "semantic_review": "full body reviewed",
+      "read_method": "direct full canonical body read",
+      "disposition": "keep-with-authorized-seams",
+      "reason": "Public behavior seam and independent expected value principles useful, specific user test-first trigger avoids all tiny-edit overhead.",
+      "evidence": [
+        "38-line body requires user confirmation for every seam even existing agreed spec defines it; says refactoring not loop despite red-green-refactor trigger. Honor pre-agreed/context seams and clarify local refactor versus later independent review."
+      ],
+      "confidence": "Specific static body evidence; current runtime and all support-file content unverified",
+      "sha256": "5505d25bbaa8fc14a79e4d20163936958992a2995b7f1dd1d6197edc9ed722e0",
+      "lines": 38
+    },
+    {
+      "name": "to-questionnaire",
+      "path": "skills/claude/to-questionnaire/SKILL.md",
+      "semantic_review": "full body reviewed",
+      "read_method": "direct full canonical body read",
+      "disposition": "keep-and-fix-output-home",
+      "reason": "Manual-only knowledge-gap questionnaire distinct from interview/grilling; questions target actual recipient knowledge and include partial-answer option.",
+      "evidence": [
+        "54-line body forces recipient/need questions despite known context and writes current-directory root file. Reuse supplied details, store in topic-owned brainstorm/research/project folder; draft only, no implied send."
+      ],
+      "confidence": "Specific static body evidence; current runtime and all support-file content unverified",
+      "sha256": "b5eb929842ee0e93d867c5e906d183d350f2f2d149eaeaa86967d94d8eda1d3b",
+      "lines": 54
+    },
+    {
+      "name": "triage",
+      "path": "skills/claude/triage/SKILL.md",
+      "semantic_review": "full body reviewed",
+      "read_method": "direct full canonical body read",
+      "disposition": "keep-with-explicit-action-scope",
+      "reason": "Role/state machine and claim reproduction create useful agent briefs, distinct from implementation; does not treat external code as trusted.",
+      "evidence": [
+        "112-line body state and label mapping required, recommendation waits then posts/closes in outcome. Read-only triage request should yield recommendation until external labels/comments/closure authorized; preserve exact destination/scope, inspect safely before running external PR code."
+      ],
+      "confidence": "Specific static body evidence; current runtime and all support-file content unverified",
+      "sha256": "917b0baf74be583e74f110857ed45df2766617f75c00baf61fd136d7af515edf",
+      "lines": 112
+    },
+    {
+      "name": "wait-what",
+      "path": "skills/claude/wait-what/SKILL.md",
+      "semantic_review": "full body reviewed",
+      "read_method": "direct full canonical body read",
+      "disposition": "keep",
+      "reason": "Seven-line manual explain-again skill addresses user confusion directly, not duplicate technical workflow.",
+      "evidence": [
+        "Uses ASD-STE100 and project glossary if present. Plain language matters more than forcing nonexistent glossary/spec compliance; explain mechanism/current objective with concrete example, not childlike condescension."
+      ],
+      "confidence": "Specific static body evidence; current runtime and all support-file content unverified",
+      "sha256": "d961bb37defd975c539427edb8f450cdbccdcdd552e213c1ece46676a7970905",
+      "lines": 7
+    },
+    {
+      "name": "wrapup",
+      "path": "skills/claude/wrapup/SKILL.md",
+      "semantic_review": "full body reviewed",
+      "read_method": "direct full canonical body read",
+      "disposition": "keep",
+      "reason": "Ledger session close distinct from chat handoff and explicit pickup. Task status approval gate scoped, logs/handoff already-authorized updates need no duplicate permission.",
+      "evidence": [
+        "47-line body preserves older log/task records, re-reads anchors, avoids duplicate filing and unknown completion. LSATU-only description may undertrigger general AI OS substantive sessions required by root; broaden scope to owning workspace session without new knowledge pipeline."
+      ],
+      "confidence": "Specific static body evidence; current runtime and all support-file content unverified",
+      "sha256": "189a03c3955c72e876ac019f43cffa47276b3afd937761409bc144eddefdb8bf",
+      "lines": 47
+    },
+    {
+      "name": "xlsx",
+      "path": "skills/claude/xlsx/SKILL.md",
+      "semantic_review": "full body reviewed",
+      "read_method": "direct full canonical body read",
+      "disposition": "keep-with-safe-output-copy",
+      "reason": "Distinct spreadsheet input/output file skill with useful formula/cached-value/macros/link checks and explicit non-Sheets exclusion.",
+      "evidence": [
+        "99-line body states dependencies preinstalled and forces LibreOffice recalc in-place; loses external links and runtime spill support varies. Resolve current runtime, operate output copy, preserve source/macros/external links and disclose unsupported formula verification rather than flattening linked originals."
+      ],
+      "confidence": "Specific static body evidence; current runtime and all support-file content unverified",
+      "sha256": "6712b39718fe815054abca9c3ee72f989613e6f771c8a5c58f30a65a6c905622",
+      "lines": 99
+    }
+  ]
+}

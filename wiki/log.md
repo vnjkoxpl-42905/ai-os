@@ -2755,3 +2755,10 @@ Consolidated repeated explanations, added both open possibilities without enroll
 - Preserved: two inbox generations of this video exist. Only the newer cleaned copy (`... JavaScript 1.md`, 2026-10-10) was archived and compiled, on Joshua's instruction to ingest once. The earlier copy (`d5bb8d0e748cb35829169f55aa2cdfc9c236188fe47bd194d8e9dc4ade11b05a`, 2026-10-08) stays in `raw/inbox/` untouched and uncompiled; its hash is recorded in the provenance file.
 - Verification: archive hash matches inbox original; SHA256SUMS passes; links and index entry checked.
 - Open: the skill the narrator distributes has no URL in the clip, so it is unidentified. The clipped description blurb belongs to a different Chase AI video (`Rn4nmFRPe0s`, also in the inbox). Playwright and faster-whisper not checked locally. Nothing installed or tested.
+
+
+## [2026-10-10] system | Separate session transcript intake from knowledge ingest
+
+- Created shared project transcript-intake skill in the runtime catalogs and active copies. Moved session processing responsibilities out of ingest; retained dispatch for older requests and shared recap retrieval procedure.
+- Updated recap routing, operating schema, root skill routes and parity declaration. Transcript intake resumes incomplete existing records and distinguishes failed searches from completed searches without a match.
+- No student records, source bytes, live systems, global activations, or sent messages were changed. Validation results are reported in the current chat.

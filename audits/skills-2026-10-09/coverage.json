@@ -1,0 +1,98 @@
+{
+  "audit_started": "2026-10-09",
+  "completed_on": "2026-10-10",
+  "status": "complete within declared scope",
+  "physical_entries": 1316,
+  "distinct_paths": 1316,
+  "distinct_byte_hashes": 555,
+  "hash_verified": 1316,
+  "pending_semantic": 0,
+  "inventory_only": 74,
+  "semantically_accounted": 1242,
+  "methods": {
+    "full-body": 408,
+    "exact-byte-inherited": 697,
+    "full-body-or-complete-diff": 58,
+    "complete-diff-inherited": 47,
+    "normalized-text-inherited": 31,
+    "full-body-distributed": 1,
+    "inventory-only": 74
+  },
+  "scopes": {
+    "catalog-claude": {
+      "physical": 223,
+      "methods": {
+        "full-body": 223
+      },
+      "distinct_byte_hashes": 223
+    },
+    "catalog-codex": {
+      "physical": 208,
+      "methods": {
+        "exact-byte-inherited": 170,
+        "full-body-or-complete-diff": 37,
+        "full-body": 1
+      },
+      "distinct_byte_hashes": 208
+    },
+    "catalog-gemini": {
+      "physical": 218,
+      "methods": {
+        "exact-byte-inherited": 196,
+        "full-body-or-complete-diff": 21,
+        "full-body": 1
+      },
+      "distinct_byte_hashes": 218
+    },
+    "global": {
+      "physical": 479,
+      "methods": {
+        "full-body": 169,
+        "exact-byte-inherited": 238,
+        "complete-diff-inherited": 40,
+        "normalized-text-inherited": 31,
+        "full-body-distributed": 1
+      },
+      "distinct_byte_hashes": 409
+    },
+    "project-activation": {
+      "physical": 59,
+      "methods": {
+        "exact-byte-inherited": 58,
+        "full-body": 1
+      },
+      "distinct_byte_hashes": 45
+    },
+    "supplemental-inactive": {
+      "physical": 26,
+      "methods": {
+        "full-body": 12,
+        "exact-byte-inherited": 14
+      },
+      "distinct_byte_hashes": 12
+    },
+    "supplemental-project-forks": {
+      "physical": 29,
+      "methods": {
+        "exact-byte-inherited": 21,
+        "complete-diff-inherited": 7,
+        "full-body": 1
+      },
+      "distinct_byte_hashes": 17
+    },
+    "supplemental-snapshots": {
+      "physical": 74,
+      "methods": {
+        "inventory-only": 74
+      },
+      "distinct_byte_hashes": 37
+    }
+  },
+  "errors": [],
+  "limits": [
+    "Historical _snapshots inventoried, not all unique historical bodies semantically reviewed.",
+    "SKILL.md entry points, selected supporting routes; supporting trees and external plugin cache roots not exhaustively reviewed or executed.",
+    "No native skill trigger-selection execution or live external workflow acceptance claimed.",
+    "Full-body-or-complete-diff is the retained original runtime-variant receipt category; not falsely recast into a more precise original read type."
+  ]
+}

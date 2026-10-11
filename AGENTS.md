@@ -98,6 +98,7 @@ Active in this root. Run `pickup` only when Joshua explicitly asks for it. Do no
 | `audit` | scoring the OS against the Four Cs (structural health, /100) |
 | `level-up` | weekly 3Ms interview to find + ship one automation |
 | `consultation-inquiry-drafts`, `-followup-drafts`, `inbound-tutoring-replies` | drafting to prospects/students — always via the teaching voice |
+| `transcript-intake` | retrieving, filing or reconciling student/session transcripts; separate from knowledge `ingest` |
 | `guided-drill-assignment` | assigning a student a drill |
 | `lsat-u-platform-actions` | doing anything ON lsatprep.study from here (assign, post, message, ingest) |
 | `tutorocean-profile-fill` | TutorOcean profile work |
