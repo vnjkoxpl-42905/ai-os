@@ -1,6 +1,6 @@
 # Conditional indicator flashcards: Brainstorm / Discovery Notes
 Date: 2026-10-11 · Goal: Pin down the redesigned indicator flashcards (indicator word on the front, student commits to a group, card flips, back says the group and what to do with it)
-Status: in progress
+Status: all decisions confirmed; building
 Context sources: `ai-os-projects/lsatu-conditional-bootcamp/src/bootcamps/conditionals/` (`components/StudyDeck.tsx`, `components/FlashcardTools.tsx`, `content/indicatorFlashcards.ts`)
 
 ## What exists today (verified 2026-10-11, from the code)
@@ -22,6 +22,29 @@ Confirmed by Joshua (round 1):
 - Choosing a button flips the card and says right or wrong.
 - A wrong pick still flips. The screen shakes, the card flips, and it says what the right group is and what was wrong.
 - Back text: very short, one or two lines, mainly which group it is. Clear, organized, not complicated. Quick feedback.
+
+## Round 2 decisions (confirmed by Joshua, 2026-10-11)
+- Mixed groups only. One deck, both groups together.
+- Include ALL indicator words from both groups (not my 21-word cut). Do not label the groups on the deck listing; the cards are mixed.
+- Group wording: Group 2 is a "necessary condition indicator"; by the same pattern Group 1 is a "sufficient condition indicator" (my inference for Group 1).
+- Back of the card: "This is a necessary condition indicator word, Group 2." One line, group named, in those words.
+- Order truly randomized. No long same-group runs; a few back-to-backs are fine.
+- A card answered wrong comes back ONCE, at the end of the round, after every card has been seen.
+- A running count of cards done so far is shown.
+- ALL progress saved to the database. The student can leave and resume exactly where they were.
+
+## FINAL word list (Joshua, 2026-10-11, overrides my 26-card proposal)
+- Group 1, sufficient condition indicator (13): if, when, whenever, where, all, every, any, anyone, anytime, every time, each, the only, who. (His list typed "every" twice; read as one card.)
+- Group 2, necessary condition indicator (7): only, only if, only when, only where, always, must, requires.
+- Dropped from my proposal: people who, in order to, only after, only those, required for, necessary for.
+- 20 cards total.
+
+## Round 3 decisions (confirmed by Joshua, 2026-10-11)
+- "only" and "the only" are two separate cards. "Only" is Group 2 (necessary condition indicator). "The only" is Group 1 (sufficient condition indicator). His reason: the word itself is an essential part of the indicator.
+- End of round (my recommendation, accepted): a second miss on the returned card is logged as missed with no third try; a one-line summary ("18 right first time. 5 needed a second look."); "Go again" reshuffles every card and keeps the earlier round's score.
+- Progress is saved in the student's existing account record (the same way the drills resume), no new tables, no Lovable deploy. Saved: shuffled order, current card, each answer, the queue of missed cards.
+- Lesson "Recall" steps use the new deck, limited to the words that lesson has taught so far. The 26 old question-style Group 1 and Group 2 cards stop showing as decks but their data is kept. The 4 concept cards stay as they are.
+- On a wrong pick the CARD shakes (not the whole page).
 
 ## Q&A log
 ### Round 1
@@ -47,6 +70,29 @@ Confirmed by Joshua (round 1):
 #### Q6 - Mixed groups or one at a time
 - Captured: not answered. Asked again in round 2.
 
+### Round 2
+#### Q6 - Mixed groups
+- Captured: "mixed gorups only"
+#### Q7 - Words
+- Captured: include all the words for both groups, mixed, groups not named; "all of them should be specific"; order really randomized, some back-to-backs allowed but not continuous.
+- Tentative: "specific" read as each indicator being its own card (not "if: condition comes last" variants). Confirm.
+#### Q8 - Back wording
+- Captured: "you say this is a necessary condition indicator word, group two"
+- Tentative: the back is only that one line, with no arrow side and no example. Confirm.
+#### Q9 - Order, repeats, counter
+- Captured: shuffled; a missed card returns once at the end after all cards; counter of cards done so far; progress saved through the database and resumable.
+- Not answered: end-of-round summary; a second miss on the returned card; what "go again" does.
+#### Q10 - Lessons, old cards, shake
+- Not answered. Asked again in round 3.
+
+### Round 3
+#### Q11 - "the only": two separate cards. Only = Group 2, the only = Group 1. Captured in his words above.
+#### Q12 - Word list: NOT answered by Joshua. Falls under his round-2 rule "include all of the words for both groups".
+- Recommended and proposed in recap: the 23 words from the old decks plus "anyone", "only after" and "only those", which the worksheet drills already teach as indicators (26 cards). Bare "require" is left out as a duplicate of "requires". Flagged for his confirmation.
+#### Q13 - End of round: recommended, accepted ("go with the recommended")
+#### Q14 - Saved progress: recommended, accepted
+#### Q15 - Lessons, old cards, concept cards: recommended, accepted
+#### Q16 - Shake: the card only. Accepted.
+
 ## Open flags (pending input)
-- Whether rounds mix both groups (Q6 unanswered in round 1).
-- What happens to the old question-style cards and the 4 concept cards.
+- The final word list (26 cards) needs one yes from Joshua. Extra words I proposed: anyone, only after, only those, who.
