@@ -1,0 +1,16 @@
+# Drill 1: intensive foundational quiz
+
+User authorized expanding the existing local drill with necessary/sufficient definitions, identifying complete conditions, left/right placement, trigger/required outcome and conditional indicator recognition. Keep the existing ASTRA visual design and the original seven applications; add varied, reasoned practice rather than repeated trivia. Do not deploy or commit.
+
+Acceptance: questions require an answer before feedback; each distractor receives a specific explanation; definitions do not appear as answers in the context panel; trigger/outcome does not imply physical cause or chronology. The arrow runs sufficient to necessary. Sentence order does not determine diagram position. Indicator words are distinct from complete conditions. Do not treat then as a standalone necessary indicator. Familiar indicators are rehearsed; detailed later transformations remain in their own lessons. Final counterexample stays last. Progress, first-attempt results, retries and review must handle the expanded count.
+
+Changes owned by this revision: DrillOneExperience.tsx, OpeningCourseContent.tsx, their focused tests, and related foundation integration expectations. Surrounding dirty files predate this work. The introduction's removed subtitle and storage note must stay removed. Instructions describe learner actions without scenario titles or answer spoilers.
+
+Review: fresh read-only Claude Code Opus, high effort, standard speed. Inspect the final expanded questions against preceding lessons and the saved preferences in C:/Users/Joshu/dev/ai-os/.agents/skills/bootcamp-builder/references/teaching-preferences.md. Scope review to the expansion, not all prior uncommitted work. Read the final UI screenshots if supplied. Host runs tests and browser interaction separately. At most two inspection rounds.
+
+Verification: focused DrillOneExperience, OpeningCourseContent, OpeningFoundations, OpeningCourse tests; typecheck and build. Browser check entry, definition item, placement item, indicator item, answer feedback, progress and completion. Read-after check the actual text and ensure answer keys and feedback match each option.
+
+## Implemented coverage and host checks
+24 total:17 new questions, then the original7, counterexample last. New coverage: definitions2; arrow roles/reading3; trigger/outcome2; complete placement2; sentence-order transfer1; if1; every2; only if2; requires2. Source boundary: current preceding ConditionalReferenceSequence.tsx sufficient page249-263 and necessary page294-307 teach the tested indicators. No contrapositive procedures added.
+
+All24 completed correctly in browser, ending24 answered/0 remaining and24/24 first attempt. Automated tests exercise every option and distinct feedback, deliberate checking, retry score and results review.38 focused tests pass after updating the stale landing/run expectation from raffle to necessary definition. Typecheck and production build pass. At320 CSS pixels document scroll width301 and24 progress segments fit. Normal browser dimensions restored. Screenshots: drill-expanded-definition.png, drill-expanded-placement.png, drill-expanded-indicator.png, drill-expanded-mobile.png under task visualization folder. Expansion changes the sequence; count-key remount prevents stale seven-question state. Local only.
