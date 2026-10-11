@@ -2818,3 +2818,18 @@ pm` was not checked.
 - Added [the must-arrow synthesis](<../corpus/Curriculum/Conditional Logic/Notes/_megadoc_reference_conditionals.md#the-must-arrow-shows-a-direction-of-guarantee>) and linked it from [the corpus index](../corpus/index.md). Compiles direction of guarantee, required-on-right readback, four fact positions and limits on the source's loose trigger-disappears metaphor. Advanced operations remain later-lesson material. Unsupported prevalence/mastery claims and illustrative admissions requirements are not promoted.
 - Regenerated the complete wiki catalog. Retrieval question: What does the arrow guarantee, and does it establish the left side? Corpus index now leads to the sourced answer: if left is true right must be true; the rule alone establishes neither fact.
 - Parent implementation applies the source locally to the Must arrow lead and preserves bootcamp correction continuity. Parent reports actual browser verification and 14 focused passing tests; application build and final skill verification are owned by the parent and are not certified by this ingestion entry. No production publication, source deletion or raw-byte edit.
+
+## [2026-10-11] review | Must arrow Claude Code inspection
+Claude Sonnet 5.5 reviewed saved rendered screenshots, current code, original HTML, relevant LSAT Lab passages, corpus and saved preferences. REVISE: arrow explanation/source match is sound; reveal-only practice violates the required learner decision before feedback. Findings remain open; no application edits. Host 16 focused tests passed. Fresh UI access blocked by browser security; saved screenshot review only. See brainstorms/2026-09-30-conditional-curriculum/2026-10-11-must-arrow-review.md.
+
+## [2026-10-11] system | Windows Herdr clipboard image paste
+
+- Installed AutoHotkey v2.0.30 and configured a user-startup hotkey for Windows Terminal. Ctrl+V now converts clipboard images into temporary PNGs and pastes their paths into the active Herdr pane; ordinary text still pastes through Windows Terminal. Helper and startup paths are documented in `references/claude-plus-codex.md`.
+- Verified with a synthetic clipboard bitmap: helper created a readable PNG, updated the clipboard with its path, and the original clipboard data was restored. AutoHotkey is running.
+- Herdr's native local Windows clipboard-image bridge remains unsupported. The workaround inserts a path the CLI agent can read, not an embedded attachment. No Herdr server or active pane was controlled.
+
+## [2026-10-11] system | Herdr image paste corrected to direct clipboard attachment
+
+- Changed Windows Terminal's Ctrl+V binding to `unbound` so the key can reach the focused CLI. AutoHotkey now forwards Ctrl+V when the clipboard contains an image, allowing native image attachment; ordinary text paste uses Ctrl+Shift+V. The original Windows Terminal settings were backed up before editing.
+- Clipboard image detection was checked with a synthetic image and text, restoring the original clipboard afterward. AutoHotkey is running. The previous path-insertion helper remains as a fallback.
+- Updated the operational reference. Live end-to-end attachment in the Herdr panes remains unverified; Herdr's own local Windows image bridge is still unsupported.

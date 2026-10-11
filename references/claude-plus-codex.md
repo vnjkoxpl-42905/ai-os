@@ -1,7 +1,7 @@
 ---
 type: reference
 subject: Running Claude Code and Codex on one project the idea, and where ai-os stands
-updated: 2026-10-10
+updated: 2026-10-11
 aliases: []
 ---
 
@@ -81,6 +81,8 @@ The 2026-09-22 values were Herdr `0.9.1`, Claude Code `2.1.280` and Codex CLI `0
 **Keep CLIs out of `AppData` for Herdr.** Windows Terminal is a Microsoft Store app. Anything it launches, including the Herdr server and every pane, sees `AppData\Roaming\npm` as an empty folder (verified 2026-10-10: a pane listed no files there while the disk had them). Tools installed with plain `npm install -g` are therefore invisible inside Herdr. Install them with `npm install -g --prefix C:\Users\Joshu\dev\tools\node <package>`. The desktop shortcut's launcher `C:\Users\Joshu\.herdr\launch-herdr.ps1` also rebuilds PATH from the registry on every start.
 
 **What a pane sees, verified 2026-10-10** in a separate test session started through Windows Terminal: `codex`, `firecrawl`, `kling`, `gws`, `claude`, `herdr`, `node`, `git`, `gh`, `py`, `ffmpeg`, `yt-dlp`, `deno` and `uv` all resolve; Codex `0.162.1` and Claude Code `2.1.295` run; Codex reports ChatGPT sign-in; the vault and both skill folders are readable. An already-running Herdr server keeps the environment it started with, so run `herdr server stop` and relaunch from the desktop shortcut to pick up the new PATH.
+
+**Windows clipboard-image paste, 2026-10-11.** Herdr's native local Windows panes do not provide its clipboard-image bridge. AutoHotkey v2 is installed with a user startup shortcut at `%APPDATA%\Microsoft\Windows\Start Menu\Programs\Startup\Herdr image paste.lnk`; its active script is `C:\Users\Joshu\.herdr\clipboard-paste\herdr-image-paste.ahk`. Windows Terminal's Ctrl+V paste binding is unbound so the key can reach the focused CLI. The AutoHotkey shortcut checks whether the clipboard contains an image: for images it forwards Ctrl+V to the CLI for its native image attachment; for text it sends Windows Terminal's Ctrl+Shift+V text-paste shortcut. The image check is `C:\Users\Joshu\.herdr\clipboard-paste\has-image.ps1`. The previous path-insertion helper remains at `paste-image.ps1` as a fallback but is not used by the active shortcut. Clipboard detection is verified; an end-to-end attachment in the live Herdr panes remains unverified.
 
 **Skills seen from a terminal launch, 2026-10-10.** Claude Code started in the vault loads 376 skills, 7 agents and 11 plugins. Codex reports about 200 skills in its visible list, and its own startup warning says the skills context budget was exceeded, all descriptions were dropped and 321 skills were left out of the visible list. Codex has 303 unique skills across its three roots (project `.agents/skills`, `~/.agents/skills`, `~/.codex/skills`). Told to look for `wrapup` and `herdr`, two skills missing from its visible list, Codex found both by listing the folder. Automatic triggering of hidden Codex skills was not shown.
 
