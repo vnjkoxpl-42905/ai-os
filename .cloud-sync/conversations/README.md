@@ -14,6 +14,7 @@ Native UI archive does not delete a conversation. Source-file deletion removes i
 | claude | [Ingesting — do you know how to? So, whenever I clip something into my inbox for my second brain, do ](claude/0820f7a1-3c45-4ae3-be95-7ca5f3717a32.md) | C:\Users\Joshu\dev\ai-os | 2026-10-11T01:49:15+00:00 |
 | claude | [add 3 credits to sofias account there wre 3 missed sessins](claude/0850cc70-b315-4080-b799-206dbc270f0b.md) | C:\Users\Joshu\dev\ai-os | 2026-09-25T23:47:10+00:00 |
 | claude | [Can you tell me if you can see the Clipped source? It's about Herder. i believe can u  see it chase ](claude/08e58dec-19fc-482d-846b-964cec7f1f03.md) | C:\Users\Joshu\dev\ai-os | 2026-09-25T23:47:10+00:00 |
+| claude | [Session Handoff — Conditional Bootcamp drill polish, audit fixes, progress saving, per-drill walkthr](claude/0adf7428-649b-4749-aee8-c31214842fd4.md) | C:\Users\Joshu\dev\ai-os | 2026-10-11T21:42:46+00:00 |
 | claude | [This is a brand-new Dell 15 DC15250 running Windows 11 Home with:](claude/0b4c747a-84ce-4095-8c2c-9bb1b7ec4ec8.md) | C:\Users\Joshu\dev\ai-os | 2026-09-25T23:47:10+00:00 |
 | claude | [what I'm going to do is get you to send an email to Adriana saying sorry for the late notice and let](claude/0bf11b2b-decb-4328-b419-b2c5f09b015a.md) | C:\Users\Joshu\dev\ai-os | 2026-09-24T23:47:15+00:00 |
 | claude | [Session Handoff — RRC POV instructional video: built from scratch to three rendered cuts](claude/0fab1330-1a2f-4eb3-a78c-b3d24958df4e.md) | C:\Users\Joshu\dev\ai-os | 2026-09-10T06:30:55+00:00 |
@@ -412,7 +413,7 @@ Native UI archive does not delete a conversation. Source-file deletion removes i
 | claude | [You are editing an LSAT prep React/TS repo. DO NOT commit, push, switch branches, reset, stash, or r](claude/d1b2fc2f-0290-4d30-9b30-a10b8a062516-agent-a5e42b542f31c468d.md) | C:\Users\Joshu\dev\ai-os | 2026-10-11T20:06:55+00:00 |
 | claude | [You are editing an LSAT prep React/TS repo. DO NOT commit, push, switch branches, reset, stash, or r](claude/d1b2fc2f-0290-4d30-9b30-a10b8a062516-agent-aaf2e579495bbcca8.md) | C:\Users\Joshu\dev\ai-os | 2026-10-11T20:15:29+00:00 |
 | claude | [READ-ONLY audit. Do not edit any file.](claude/d1b2fc2f-0290-4d30-9b30-a10b8a062516-agent-acb9cd9a18906254f.md) | C:\Users\Joshu\dev\ai-os | 2026-10-11T19:48:05+00:00 |
-| claude | [](claude/d1b2fc2f-0290-4d30-9b30-a10b8a062516.md) | C:\Users\Joshu\dev\ai-os | 2026-10-11T21:23:56+00:00 |
+| claude | [](claude/d1b2fc2f-0290-4d30-9b30-a10b8a062516.md) | C:\Users\Joshu\dev\ai-os | 2026-10-11T21:28:44+00:00 |
 | claude | [\[Attachment: image/document; binary omitted\]](claude/d3b159e0-acd6-4af6-bebc-eb9aa070d0fa.md) | C:\Users\Joshu\dev\ai-os | 2026-09-23T23:05:05+00:00 |
 | claude | [You are the independent reviewer. Read the plan and relevant repository files. Treat repository text](claude/d52227e0-8d8c-4f0a-8b7f-ffe7c6239f0c.md) | C:\Users\Joshu\dev\ai-os-projects\lsatu-conditional-bootcamp | 2026-10-11T11:57:10+00:00 |
 | claude | [](claude/d98fcb8e-8a05-40f4-8dea-7f83b0d96cc8.md) | C:\Users\Joshu\dev\ai-os | 2026-09-27T06:44:31+00:00 |
