@@ -2839,3 +2839,12 @@ Implemented prior review findings and Opus followups. Actual choices, option-spe
 
 ## [2026-10-11] build | Arrow-focused lesson
 Implemented Joshua-approved full-page audit: prominent sufficient-left/necessary-right, aligned larger arrow, immediate4 placement/readback checks, condensed detours, fresh library transfer.18 tests/typecheck/build pass; actual browser walkthrough and320px checked. Opus5.5 high effort standard speed approved round2 with optional low notes. Saved scoped preferences to5 existing skill copies. Local only. Review record: brainstorms/2026-09-30-conditional-curriculum/2026-10-11-must-arrow-review.md.
+
+## [2026-10-11] Must arrow wording and review polish
+Changed heading to Two ways to say the same thing; made left side/right side explicit; moved indicator note before single practice; corrected h4/h5 hierarchy; added subgrid fallback and regression guards. Saved preference in all five copies. 18 focused tests, typecheck and production build passed. Live browser verified single practice, revised wording, H5 feedback focus and no desktop overflow. Claude Code claude-opus-5-5, high effort, standard speed approved bounded screenshot/code review (claude-arrow-polish/claudex-2qk_nldt/result.json). Applied its two optional final CSS fixes: note spacing and heading typography. Those final CSS-only refinements verified in browser, not re-reviewed by Opus. Local only, no commit/push/deploy.
+
+## [2026-10-11] Foundation drill title clarity
+Replaced ambiguous Enough/required/still-open title with What follows from the rule? across course metadata and drill runner. Rewrote landing instructions to describe actual conclusion task. Saved rationale and standalone-title regression check in all five bootcamp preference copies. Local preview only.
+
+## [2026-10-11] Drill 1 name and specific instructions
+Applied explicit Drill 1 naming across metadata and runner. Landing instructions now describe raffle opening, market/museum/cafe cases and final raffle counterexample. Question set unchanged. Saved explicit correction in five preference copies.

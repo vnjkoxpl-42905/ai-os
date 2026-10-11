@@ -108,3 +108,12 @@ Joshua flagged the conflicting-looking 1 of 4 answered above Question 2 of 4. Ke
 ### Keep the arrow lesson focused, 2026-10-11
 Joshua approved the audit sequence: see the two sides, understand why, place conditions, read the arrow, try a new example. Foreground Left: sufficient condition and Right: necessary condition; align a prominent arrow between the actual conditions at every width. Immediate answer-first placement practice replaces answer-labelled click-through construction. Condense indicator/abbreviation detours. Practice must primarily test left, right, reading and sentence-order transfer. Keep law-school anchor, brief no-reversal boundary and sentence-order comparison. A visible recap must not give away a fresh transfer question. This approval authorizes direction, not blanket approval of final copy.
 
+
+### Natural comparison headings, 2026-10-11
+Joshua rejected "Sentence order can change. The arrow stays the same" as awkward and authorized the remaining review polish. The implemented replacement is "Two ways to say the same thing". In the arrow lesson, name the left side and right side explicitly. Teach the condition-versus-indicator distinction before practice. Keep one practice sequence and logical heading levels. Replacement wording remains open to his review.
+
+### Name the learner task, 2026-10-11
+Explicit correction: Joshua rejected the drill title "Enough, required, or still open?" because it does not make sense without missing context. Enough and required need a referent; still open is vague. It mixes condition roles with uncertainty about a conclusion, so it does not tell a learner what to do. Prefer a concrete, standalone task title and explain the actual activity in its subtitle. Check a title without surrounding lesson text: can a learner tell what they will practice? Match landing, navigation and in-drill titles. Implemented candidate: "What follows from the rule?" with a subtitle naming sufficient and necessary conditions. This wording is provisional, not quoted user approval.
+
+### Drill names and specific instructions, 2026-10-11
+Joshua explicitly named the foundation practice "Drill 1" and rejected "What follows from the rule?" as generic and unclear. Instructions must be specific to the actual drill: name its examples, what the learner does, and the sequence. Do not substitute broad labels such as Conditional logic practice for useful guidance. Keep instructions accurate to current questions; narrowing the question set is a separate curriculum change. Prior proposed title is superseded.
