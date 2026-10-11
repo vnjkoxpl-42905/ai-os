@@ -104,3 +104,7 @@ Joshua authorized fixing the review findings and explicitly requested Claude Opu
 ### Distinguish position from completion, 2026-10-11
 Joshua flagged the conflicting-looking 1 of 4 answered above Question 2 of 4. Keep the question-position heading, but express progress as answered and remaining (for example, 1 answered / 3 remaining), avoiding two adjacent fractions with different meanings. Implemented label remains provisional pending his review.
 
+
+### Keep the arrow lesson focused, 2026-10-11
+Joshua approved the audit sequence: see the two sides, understand why, place conditions, read the arrow, try a new example. Foreground Left: sufficient condition and Right: necessary condition; align a prominent arrow between the actual conditions at every width. Immediate answer-first placement practice replaces answer-labelled click-through construction. Condense indicator/abbreviation detours. Practice must primarily test left, right, reading and sentence-order transfer. Keep law-school anchor, brief no-reversal boundary and sentence-order comparison. A visible recap must not give away a fresh transfer question. This approval authorizes direction, not blanket approval of final copy.
+

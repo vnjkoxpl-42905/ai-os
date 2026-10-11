@@ -2836,3 +2836,6 @@ Claude Sonnet 5.5 reviewed saved rendered screenshots, current code, original HT
 
 ## [2026-10-11] build | Must arrow practice fixes approved by Opus
 Implemented prior review findings and Opus followups. Actual choices, option-specific feedback, answered progress, focus, complete condition wording and mobile spacing. Opus5.5 high effort standard speed APPROVED round2. 18 tests, typecheck/build passed; fresh Codex browser checks completed. Three optional low polish notes remain in review record. Local only. See brainstorms/2026-09-30-conditional-curriculum/2026-10-11-must-arrow-review.md.
+
+## [2026-10-11] build | Arrow-focused lesson
+Implemented Joshua-approved full-page audit: prominent sufficient-left/necessary-right, aligned larger arrow, immediate4 placement/readback checks, condensed detours, fresh library transfer.18 tests/typecheck/build pass; actual browser walkthrough and320px checked. Opus5.5 high effort standard speed approved round2 with optional low notes. Saved scoped preferences to5 existing skill copies. Local only. Review record: brainstorms/2026-09-30-conditional-curriculum/2026-10-11-must-arrow-review.md.
