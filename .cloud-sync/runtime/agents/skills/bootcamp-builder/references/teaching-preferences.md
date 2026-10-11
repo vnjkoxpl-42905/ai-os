@@ -55,6 +55,19 @@ Status: explicit newest user direction, relayed in this chat; resulting markup i
 
 Acceptance: inspect the rendered diagram for visible side labels; read its explanation aloud in order to check that direction and certainty are clear without repeated student conclusions. Preserve the condition that the left side is true. Do not call new markup user-approved merely because it implements this request.
 
+### Must-arrow layout and practice corrections, 2026-10-11
+
+Status: six explicit browser corrections relayed in this chat. These record requested outcomes; resulting implementation remains provisional.
+
+- Give the two diagram sides balanced, breathable space, especially the right side. Use spatial presentation and meaningful motion to teach the relationship. GIF or Kling video is an option, not a requirement; native motion may serve the same purpose. Preserve reduced-motion access and existing spending authorization boundaries.
+- Shorten the explanation of why reversing the arrow is invalid, and visually separate its ideas so the learner can follow them.
+- Replace the practice presentation labelled “Recall card” and its counter. Do not keep card-count machinery merely because it already exists.
+- Remove the confusing “Think before you turn” framing and the corner “Explain in own words” / “Turn explanation” controls from this practice presentation.
+- Resolve the ambiguous “Revisit card” action. Labels should make the next action and its learning purpose obvious.
+- Add a clear progress bar and a polished sequence through the practice. Preserve the learning function: these presentation corrections do not authorize deleting all practice or eliminating the learner's reasoning step.
+
+Acceptance: inspect both diagram sides at docked and narrow widths; verify the direction remains intelligible with motion disabled. Walk the practice from start through response, feedback, progress and completion. Confirm rejected labels are absent, actions are clear, and a substantive learning check remains. Do not treat a progress bar alone as proof of mastery, or mark new implementation approved without Joshua's review.
+
 ## Coverage audit of the earlier conversation, 2026-10-11
 
 Scope: the visible conversation from the pasted handoff through the request to save a reusable bootcamp skill, the original attachment below, and the named local checkpoints. This is not an assertion that inaccessible conversations or every historical checkpoint were reviewed. User statements are authoritative; handoff summaries report earlier decisions, while reviewer suggestions and assistant implementation reports remain a separate evidence class.
