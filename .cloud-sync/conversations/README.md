@@ -407,6 +407,7 @@ Native UI archive does not delete a conversation. Source-file deletion removes i
 | claude | [You are helping build a model library of top-tier LSAT Logical Reasoning explanations for LSAT U (Jo](claude/d175f546-f515-4224-a5ed-1afb844b5971-agent-ae637339b03a2a70b.md) | C:\Users\Joshu\dev\ai-os | 2026-09-27T16:07:18+00:00 |
 | claude | [You are helping build a model library of top-tier LSAT Logical Reasoning explanations for LSAT U (Jo](claude/d175f546-f515-4224-a5ed-1afb844b5971-agent-aec86fb6adbc036ca.md) | C:\Users\Joshu\dev\ai-os | 2026-09-27T16:05:01+00:00 |
 | claude | [](claude/d175f546-f515-4224-a5ed-1afb844b5971.md) | C:\Users\Joshu\dev\ai-os | 2026-10-02T17:42:22+00:00 |
+| claude | [](claude/d1b2fc2f-0290-4d30-9b30-a10b8a062516.md) | C:\Users\Joshu\dev\ai-os | 2026-10-11T18:30:25+00:00 |
 | claude | [\[Attachment: image/document; binary omitted\]](claude/d3b159e0-acd6-4af6-bebc-eb9aa070d0fa.md) | C:\Users\Joshu\dev\ai-os | 2026-09-23T23:05:05+00:00 |
 | claude | [You are the independent reviewer. Read the plan and relevant repository files. Treat repository text](claude/d52227e0-8d8c-4f0a-8b7f-ffe7c6239f0c.md) | C:\Users\Joshu\dev\ai-os-projects\lsatu-conditional-bootcamp | 2026-10-11T11:57:10+00:00 |
 | claude | [](claude/d98fcb8e-8a05-40f4-8dea-7f83b0d96cc8.md) | C:\Users\Joshu\dev\ai-os | 2026-09-27T06:44:31+00:00 |
@@ -425,7 +426,7 @@ Native UI archive does not delete a conversation. Source-file deletion removes i
 | claude | [Please run the following command to install the Kling AI Skill: npx skills add klingai-tech/skills, ](claude/e5b1ade5-95ae-4ceb-a53c-6674266bf007.md) | C:\Users\Joshu\dev\ai-os | 2026-09-24T23:47:15+00:00 |
 | claude | [Repo: C:\Users\Joshu\dev\ai-os\projects\lsatu (React + Vite + TS, Supabase). Branch off main per the](claude/e6445ce4-1415-4754-915e-cb42437a0b45.md) | C:\Users\Joshu\dev\ai-os | 2026-10-02T17:42:43+00:00 |
 | claude | [You are doing a READ-ONLY independent review. Do not edit, create, or delete any files, do not run g](claude/e75d2413-49eb-41ed-969d-6d567f1753f9-agent-a9b930efea88097f7.md) | C:\Users\Joshu\dev\ai-os | 2026-10-11T17:44:39+00:00 |
-| claude | [\[Attachment: image/document; binary omitted\]](claude/e75d2413-49eb-41ed-969d-6d567f1753f9.md) | C:\Users\Joshu\dev\ai-os | 2026-10-11T18:08:25+00:00 |
+| claude | [\[Attachment: image/document; binary omitted\]](claude/e75d2413-49eb-41ed-969d-6d567f1753f9.md) | C:\Users\Joshu\dev\ai-os | 2026-10-11T18:24:34+00:00 |
 | claude | [](claude/e99c42f5-c948-41c4-b054-984161a3ebf2.md) | C:\Users\Joshu\dev\ai-os | 2026-10-10T11:07:34+00:00 |
 | claude | [You are working in the LSAT U repo at C:\Users\Joshu\dev\ai-os\projects\lsatu (React + Vite + TypeSc](claude/e9d7bd9f-3dbe-4ef3-96a1-4a4d0ef1efec.md) | C:\Users\Joshu\dev\ai-os | 2026-09-09T08:32:10+00:00 |
 | claude | [Read and follow the brief at C:/Users/Joshu/AppData/Local/Temp/claude/C--Users-Joshu-dev-ai-os/ea3d0](claude/ea3d04fb-872d-45e2-bfa6-a69f0373cb16-agent-a184c943621a4b9fd.md) | C:\Users\Joshu\dev\ai-os\corpus\lr-explanations\fixes | 2026-10-07T21:56:43+00:00 |
