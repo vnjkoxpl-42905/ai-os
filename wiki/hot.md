@@ -9,7 +9,15 @@ aliases: []
 
 Freshest working state; the first page `/pickup` reads. Rebuilt fresh in the 2026-07-16 vault rebuild (the old cache is archived).
 
-## Most recent (2026-10-10): Conditional lesson films verified locally
+## Most recent (2026-10-10): Necessary-condition explanation deepened
+
+- Reviewed the original HTML and routed LSAT Lab, Demon, 7Sage and recovered corpus evidence against the existing page. The main omission was teaching the meaning of all seven indicator expressions rather than listing them. [Follow-up source review and evidence](../../ai-os-projects/lsatu-conditional-bootcamp/docs/agent/conditional-recovery-20261007/media/necessary-source-review.md).
+- Expanded required-for reasoning, the same law-school/student example and paired sufficient/necessary roles before the interaction. Developed the history-student counterexample and retained the distinction between necessary and sufficient without claiming they can never coincide.
+- Added complete examples and explanations for all seven Group 2 forms, scoped only when/always carefully, used a separate place example for only where, and directly compared if with only if. Existing film, captions, transcript and transfer questions remain.
+- 30 relevant tests, full typecheck and build/postbuild pass; final wording confirmed in the bundle. Codex Browser checks definition/roles/indicators and both interaction states. Actual CSS widths 320/400/960/1200/1600 show no overflow or lesson buttons below 44px; paired roles collapse at narrow widths.
+- Local only: no new media generation, spend, commit, push or deployment. Physical devices, screen-reader speech and production acceptance remain unverified. Task statuses and unrelated priorities unchanged.
+
+## Previous (2026-10-10): Conditional lesson films verified locally
 
 - Restored both preserved sufficient-condition clips as optional examples after the concept visual, with explicit hypothetical Maya context. Their later placements remain. The definition still comes first.
 - Generated one 11-second 720p necessary-condition Kling film for 99 credits, with local poster, captions and transcript. Automated base.en transcription matches the intended narration; six sampled frames match the existing library/navy visual style. Subjective audio quality is not claimed. [Media and verification receipt](../../ai-os-projects/lsatu-conditional-bootcamp/docs/agent/conditional-recovery-20261007/media/necessary-film-20261010.md).
