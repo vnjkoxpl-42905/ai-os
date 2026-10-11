@@ -122,6 +122,17 @@
         "--strictPort"
       ],
       "port": 8094
+    },
+    {
+      "name": "conditional-bootcamp",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "--prefix",
+        "../ai-os-projects/lsatu-conditional-bootcamp",
+        "run",
+        "dev:conditional"
+      ],
+      "port": 8097
     }
   ]
 }
