@@ -158,3 +158,10 @@ Status: newest explicit user direction, relayed in this conversation; not approv
 - Support practice of individual indicator words and phrases and clear movement among them. Direct links from individual indicators to matching cards may supplement the button; they are optional, not a replacement for the requested primary button. Preserve the existing group coverage and the distinction between an indicator and the complete condition it identifies.
 
 Acceptance: inspect the list's position on the sufficient page, then activate each page's Go to flashcards button and confirm it opens the correct dedicated group set. Confirm the general concepts/terms deck remains separate. Verify moving among individual words/phrases with keyboard and touch, accurate naming, preservation of all group items, and correct targets for any supplementary individual links. Record implementation and verification separately from Joshua's approval.
+
+### Each lesson must advance the course, 2026-10-11
+Status: explicit review and revision direction for the sufficient-words destination.
+
+Joshua questions the need for a separate indicator-word page after the preceding lessons and Drill 1. Inspect preceding content, the curriculum skeleton/source intent, and the next drill before revising. Cut repeated definitions, recaps and UI that add no useful reasoning task. Do not organize this lesson as word-selector tabs. Keep indicator reference and dedicated flashcard practice in their existing homes. The proposed applied lesson on selecting the complete sufficient condition is an implementation direction, not acceptance of finished wording.
+
+Acceptance: explain the distinct skill this lesson adds, show how it prepares the next drill, and check overlap with later Keep the whole meaning. Inspect the actual rendered lesson and its interaction. Preserve useful source-backed restrictions and distinctions while removing repetition; do not equate shorter copy with complete teaching.

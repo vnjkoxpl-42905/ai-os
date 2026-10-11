@@ -2863,3 +2863,7 @@ Read-only audit of24 questions, options, feedback and current UI. Fresh Claude C
 
 ## [2026-10-11] build | ASTRA necessary and must-arrow visual revision
 Implemented explicit case rule, ordered accessible indicator explorer, aligned dimensional arrow panels and purposeful motion through three rendered refinement passes. Saved preferences in four existing skill-reference copies. Claude Opus5.5 high/standard APPROVED final inspection after dark contrast/hover/tab fixes.38 tests/typecheck/build passed; host desktop/docked/narrow/dark/reduced-motion checks. Local preview only. Details: brainstorms/2026-09-30-conditional-curriculum/2026-10-11-astra-lessons-visual-review.md. Adjacent necessary-words standalone then issue recorded for follow-up; not changed in this scope.
+
+## [2026-10-11] Conditional lesson focus
+Reframed the local sufficient-words destination as Find the complete condition after comparing preceding lessons, Drill 1, the curriculum skeleton and next drill. Removed repeated definitions, word-selector presentation and embedded flashcards from this route; retained source-grounded complete-condition examples with two answer-first checks. Saved Joshua's cut-repetition and course-purpose correction in all four bootcamp preference copies. Browser checked wrong-answer feedback, retry, correct answers and narrow layout. Local preview only; no publication.
+
