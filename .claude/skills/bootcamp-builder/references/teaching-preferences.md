@@ -100,3 +100,7 @@ For each new correction, add a dated entry here with topic/page scope, exact wor
 ### Must-arrow review follow-through, 2026-10-11
 Joshua authorized fixing the review findings and explicitly requested Claude Opus at normal (slow) speed for the next review. This run used Opus5.5, high effort, standard speed. Preserve a learner answer before feedback, specific reasoning for each wrong choice, answered-question progress, complete conditions and keyboard focus. Narrow layouts must preserve this lesson's left-to-right direction without breaking words mid-word. These are scoped corrections, not an assertion of user approval of all resulting copy. Review evidence: brainstorms/2026-09-30-conditional-curriculum/2026-10-11-must-arrow-review.md.
 
+
+### Distinguish position from completion, 2026-10-11
+Joshua flagged the conflicting-looking 1 of 4 answered above Question 2 of 4. Keep the question-position heading, but express progress as answered and remaining (for example, 1 answered / 3 remaining), avoiding two adjacent fractions with different meanings. Implemented label remains provisional pending his review.
+
