@@ -1,7 +1,7 @@
 {
   "enabled": true,
   "format": 2,
-  "file_count": 194,
+  "file_count": 198,
   "paths": [
     "ai-os/.cloud-sync/conversations/claude/0850cc70-b315-4080-b799-206dbc270f0b.md",
     "ai-os/.cloud-sync/conversations/claude/184bd7f4-1801-435a-a464-e37067478e55.md",
@@ -21,16 +21,17 @@
     "ai-os/.cloud-sync/conversations/claude/f9e1648e-8435-402f-acdc-5221fda60fbf-agent-a012ba6cc11d82aeb.md",
     "ai-os/.cloud-sync/conversations/codex/01a0e38d-3f8b-7ca3-a4fc-50da5ec41528-d9a471add895.md",
     "ai-os/.cloud-sync/conversations/codex/01a0e38d-3f8b-7ca3-a4fc-50da5ec41528-e9fda7352ecb.md",
-    "ai-os/.cloud-sync/conversations/codex/01a0f0b1-769c-77d3-a1cc-a02c510289df-254a4de38cc0.md",
-    "ai-os/.cloud-sync/conversations/codex/01a0f4dc-9dd3-7451-b3fa-ef81e994e2a7-e239a9c02801.md",
-    "ai-os/.cloud-sync/conversations/codex/01a10187-c712-7793-aca3-6aa1c102a76a-958a58299265.md",
-    "ai-os/.cloud-sync/conversations/codex/01a10188-7822-7671-85ca-81b3e2734a38-2e6aa521f578.md",
-    "ai-os/.cloud-sync/conversations/codex/01a1018a-695a-7313-b4d4-513203dfec91-73d42a2ebb64.md",
-    "ai-os/.cloud-sync/conversations/codex/01a1083a-4c32-76a0-9cd8-68a85b9044ab-b589c75e85dd.md",
+    "ai-os/.cloud-sync/conversations/codex/01a0f0b1-769c-77d3-a1cc-a02c510289df-5e5c306abea2.md",
+    "ai-os/.cloud-sync/conversations/codex/01a0f4dc-9dd3-7451-b3fa-ef81e994e2a7-f10119d1da03.md",
+    "ai-os/.cloud-sync/conversations/codex/01a10187-c712-7793-aca3-6aa1c102a76a-099c6fe91aae.md",
+    "ai-os/.cloud-sync/conversations/codex/01a10188-7822-7671-85ca-81b3e2734a38-685d5a72f7f1.md",
+    "ai-os/.cloud-sync/conversations/codex/01a1018a-695a-7313-b4d4-513203dfec91-a53b66abf2cf.md",
+    "ai-os/.cloud-sync/conversations/codex/01a1083a-4c32-76a0-9cd8-68a85b9044ab-321b45410a97.md",
     "ai-os/.cloud-sync/conversations/codex/01a11919-6d64-7c42-b320-f23458477014-1f44f07b4a10.md",
     "ai-os/.cloud-sync/conversations/codex/01a11919-6d64-7c42-b320-f23458477014-54722e686d70.md",
     "ai-os/.cloud-sync/conversations/codex/01a11919-6d64-7c42-b320-f23458477014-66563472635d.md",
     "ai-os/.cloud-sync/conversations/codex/01a11919-6d64-7c42-b320-f23458477014-704792c0c55a.md",
+    "ai-os/.cloud-sync/conversations/codex/01a11919-6d64-7c42-b320-f23458477014-a354d45dde0e.md",
     "ai-os/.cloud-sync/conversations/codex/01a11919-6d64-7c42-b320-f23458477014-eb48b2726e97.md",
     "ai-os/.cloud-sync/conversations/codex/01a1282c-ac7e-7380-90fe-9ca58e32512f-338627f0a192.md",
     "ai-os/.cloud-sync/runtime/agents/skills/notebooklm/tests/cassettes/artifacts_delete.yaml",
@@ -109,10 +110,16 @@
     "ai-os/.gemini/skills/notebooklm/tests/cassettes/settings_set_output_language.yaml",
     "ai-os/.gemini/skills/notebooklm/tests/cassettes/sources_check_freshness.yaml",
     "ai-os/.gemini/skills/skill-doctor/scripts/collect_sessions.py",
-    "ai-os/.gemini/skills/watch/scripts/setup.py",
     "ai-os/audits/skills-2026-10-09/all-skill-dispositions.json",
     "ai-os/audits/skills-2026-10-09/supplemental-inactive-review.json",
     "ai-os/audits/skills-2026-10-09/supplemental-integrated-checkpoint.json",
+    "ai-os/audits/skills-2026-10-11-native/watch-preflight/2c7ba867513e2d9b.before",
+    "ai-os/audits/skills-2026-10-11-native/watch-preflight/60a9b812eeddee3f.before",
+    "ai-os/audits/skills-2026-10-11-native/watch-preflight/658cecb16fc8cd4c.before",
+    "ai-os/audits/skills-2026-10-11-native/watch-preflight/86ce01f7c21aee6a.before",
+    "ai-os/audits/skills-2026-10-11-native/watch-preflight/a79a666d416fbdaa.before",
+    "ai-os/audits/skills-2026-10-11-native/watch-preflight/claude-global-scripts-setup.py.before",
+    "ai-os/audits/skills-2026-10-11-native/watch-preflight/e649c3a7c49968be.before",
     "ai-os/graph-imports/claude-code-docs/_sources/en__agent-sdk__overview.md",
     "ai-os/research/2026-09-27-stripe-integration/check_connection.py",
     "ai-os/research/karpathy-brain-2026-10-08/NATIVE-CODEX-LESSON-ACCEPTANCE.md",
@@ -141,7 +148,6 @@
     "ai-os/skills/claude/notebooklm/tests/cassettes/settings_set_output_language.yaml",
     "ai-os/skills/claude/notebooklm/tests/cassettes/sources_check_freshness.yaml",
     "ai-os/skills/claude/skill-doctor/scripts/collect_sessions.py",
-    "ai-os/skills/claude/watch/scripts/setup.py",
     "ai-os/skills/codex/_project-forks/lsatu/notebooklm/tests/cassettes/artifacts_delete.yaml",
     "ai-os/skills/codex/_project-forks/lsatu/notebooklm/tests/cassettes/artifacts_export_report.yaml",
     "ai-os/skills/codex/_project-forks/lsatu/notebooklm/tests/cassettes/notebooks_get.yaml",
@@ -165,7 +171,6 @@
     "ai-os/skills/codex/notebooklm/tests/cassettes/sources_add_drive.yaml",
     "ai-os/skills/codex/notebooklm/tests/cassettes/sources_add_file.yaml",
     "ai-os/skills/codex/skill-doctor/scripts/collect_sessions.py",
-    "ai-os/skills/codex/watch/scripts/setup.py",
     "ai-os/skills/gemini/_inactive/transcriptapi/SKILL.md",
     "ai-os/skills/gemini/_inactive/youtube-channels/SKILL.md",
     "ai-os/skills/gemini/_inactive/youtube-playlist/SKILL.md",
@@ -191,24 +196,23 @@
     "ai-os/skills/gemini/notebooklm/tests/cassettes/settings_set_output_language.yaml",
     "ai-os/skills/gemini/notebooklm/tests/cassettes/sources_check_freshness.yaml",
     "ai-os/skills/gemini/skill-doctor/scripts/collect_sessions.py",
-    "ai-os/skills/gemini/watch/scripts/setup.py",
     "ai-os/system/scripts/verify_all_tabs.mjs",
     "ai-os/wiki/sources/karpathy/repos/files/repos--karpathy--cryptos--README.md.md",
     "ai-os/wiki/sources/karpathy/repos/files/repos--karpathy--cryptos--blog.ipynb.md",
     "ai-os/wiki/sources/karpathy/repos/files/repos--karpathy--cryptos--getnewaddress.py.md",
     "ai-os/wiki/sources/karpathy/repos/files/repos--karpathy--karpathy.github.io--_posts--2021-06-21-blockchain.markdown.md"
   ],
-  "ciphertext_sha256": "2580b07da678836b0cbf15f1081036ae860a9c76dade751dfb3a78d35c049a8d",
+  "ciphertext_sha256": "2ef7bb7a41ff03141bb06b1471f719dbdf62fbd6e68f0c87228af3999d0ea25d",
   "ciphertext_parts": [
     {
       "file": "redacted-context.enc.part0001",
       "bytes": 52428800,
-      "sha256": "8a3cde174f7f37b218b0f4032dc09bf9dc32f83bcc60b4c3946719e49e32ae9f"
+      "sha256": "b4400d781840f47226dcf7157b579536bfbfe4c699c2e1bfa1ce57b92dd80e17"
     },
     {
       "file": "redacted-context.enc.part0002",
-      "bytes": 38220137,
-      "sha256": "0827912482d0f1a212455d39dfde1c4cc5201b2d791b2f6f1cd70776efe314f1"
+      "bytes": 39189277,
+      "sha256": "12892704b19223b962ddbf21f6129c73e8acd81ab837bf5b91c1d025dbf0bea5"
     }
   ]
 }

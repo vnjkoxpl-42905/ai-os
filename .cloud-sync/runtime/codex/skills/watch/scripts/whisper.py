@@ -60,9 +60,13 @@ def load_api_key(preferred: str | None = None) -> tuple[str, str] | tuple[None, 
             return None
         return None
 
-    dotenv_paths = [
-        Path.cwd() / ".env",
-    ]
+    # Use the same central workspace root as the read-only setup preflight.
+    # Never silently select a nested project credential file.
+    dotenv_paths = []
+    for candidate in (Path.cwd(), *Path.cwd().parents):
+        if (candidate / "AGENTS.md").is_file() and (candidate / "CLAUDE.md").is_file():
+            dotenv_paths = [candidate / ".env"]
+            break
 
     candidates = (("GROQ_API_KEY", "groq"), ("OPENAI_API_KEY", "openai"))
     if preferred is not None:

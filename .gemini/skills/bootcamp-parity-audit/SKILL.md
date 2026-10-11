@@ -1,43 +1,38 @@
 ---
 name: bootcamp-parity-audit
-description: Audit a given LSAT U bootcamp's feature and visual parity against the flagship Intro to LR (Main Conclusion) bootcamp, anchored to the quality bar doc. Use when Joshua asks to "compare against Intro to LR", "check parity", "audit [bootcamp name]", or wants to know how far a bootcamp is from shipped quality. Trigger with /bootcamp-parity-audit <bootcamp-name>.
+description: Compare a named LSAT U bootcamp with current Intro to LR source, product and visual benchmarks. Use for explicit bootcamp parity or shipped-quality audits, not general second-brain audits. Diagnose without implementation unless requested.
 ---
 
-Audit a named LSAT U bootcamp against the flagship Intro to LR (Main Conclusion) bootcamp and the shared quality bar, and report the delta.
+# Compare a bootcamp against current evidence
 
-## Inputs
+Use the specified bootcamp name/slug. Ask once only if absent. Resolve the actual AI OS root and target application's working tree; read its applicable instructions. The local default is the sibling `ai-os-projects/lsatu`, not code inside the vault. Different worktrees can hold newer task-specific state.
 
-The bootcamp name/slug (e.g. "Abstract", "Flaw & Famous Flaws", "Causation Station"). If not given, ask which one, once, don't guess.
+## Benchmarks to read first
 
-## Anchor documents (read these first, in order)
+Resolve these paths from the AI OS root:
 
-1. Resolve the current repository root from `AGENTS.md`, then consult `wiki/index.md` and the owning application's instructions for the current quality bar, Intro to LR product spec and design system. Search by subject/name and inspect candidate contents; do not assume an old archived absolute path is authoritative.
-2. Record each verified anchor path, revision/date and its benchmark role. Compare current source/UI where documentation is stale.
-3. The legacy filenames `bootcamp-quality-bar.md`, `intro-to-lr-product.md` and `intro-to-lr-design.md` were absent on 2026-10-10. If an authoritative replacement cannot be found, report that exact missing benchmark and limit the audit to observed differences. Do not fabricate replacements or a full parity verdict.
-4. Read the current Intro to LR and target bootcamp entity pages if present; missing pages are explicit documentation gaps.
+1. `references/bootcamp-quality-bar.md`: source coverage, teaching, actual interactions, persistence/access, accessibility and validation boundaries.
+2. `references/intro-to-lr-product.md`: observed current comparison surfaces and historical intent limits.
+3. `references/intro-to-lr-design.md`: imported scoped style evidence and the cream-versus-legacy-dark conflict.
+4. `references/lsat-teaching-voice-standard.md`: Joshua's current selected instructional voice.
 
-## Codebase pass
+These three benchmark replacements were reconstructed on 2026-10-11 from identified existing documents/code. They are usable current references, not recovered historical originals or proof of live acceptance. Check their owning source paths and current imports before relying on numeric values. If a source is absent, disclose that limited comparison rather than inventing a standard. If a relevant entity/product page exists, read it; absence is a documentation gap, not proof of a missing feature.
 
-In the LSATU repo (`C:/Users/Joshu/dev/ai-os-projects/lsatu/`):
-1. Find the target bootcamp's source directory under `src/bootcamps/`.
-2. Compare its file/component structure against the Intro to LR structure (`src/bootcamps/main-conclusion/`) at a glance, don't read every file, sample the key surfaces (overview, drill/practice flow, data layer).
-3. Note any surface Intro to LR has that the target bootcamp lacks entirely.
+## Inspect a focused comparison
 
-## Output: 5-point delta report
+1. Locate the target source in the actual app checkout. Compare meaningful equivalents against `src/bootcamps/main-conclusion/`: overview/learning flow, drill/review, source/data layer and saved progress. Do not infer a feature is absent only because folders differ.
+2. Identify the current route mount and imported styles. Historical `/bootcamp/structure`, standalone no-auth plans and dark `tokens.css` cannot override current `/bootcamp/intro-to-lr` routes or imported cream `scoped.css`.
+3. Sample relevant components and tests, then use a signed-in browser when authorized and available. Preserve live/backend authority. Code, old audit results, deployed rendering and real account persistence are different evidence levels.
+4. Diagnose only. If asked to fix, follow the owning app's workflow and authorization. Do not change design/product decisions merely to obtain visual sameness.
 
-Joshua's preferred format (per past sessions):
+## Report five deltas
 
+```text
+1. Feature parity: useful analogous capabilities missing from the target.
+2. Visual parity: accidental deviations from current imported styles versus deliberate differences.
+3. Content/pedagogy parity: reasoning, feedback, source coverage and teaching-standard gaps.
+4. Data/quality gaps: dead interactions, fabricated state, persistence/access/error handling.
+5. Verdict: shipped-quality / in-progress / needs-work, evidence limits and the highest-value next fix.
 ```
-1. Feature parity: <what Intro to LR has that this bootcamp is missing>
-2. Visual parity: <design-system deviations from intro-to-lr-design.md — colors, type, spacing, tokens>
-3. Content/pedagogy parity: <coaching tone, teach-first-calibrate-after gaps vs teaching-voice.md>
-4. Data/quality-bar gaps: <fake data, dead buttons, error handling — anything the verified current quality bar flags>
-5. Verdict: <shipped-quality / in-progress / needs-work, one line, plus the single highest-leverage next fix>
-```
 
-## Rules
-
-- No em dashes. Terse per finding, don't pad with rationale unless asked.
-- Diagnosis only unless Joshua asks you to fix something. Report the delta, don't start building.
-- Don't re-read the full 216-file Intro to LR tree each time; use the entity/synthesis docs as the source of truth for what "done" means, and spot-check the codebase only where the docs are ambiguous.
-- If the target bootcamp has no entity page in `wiki/entities/`, flag that as a documentation gap in point 5 rather than silently skipping it.
+State checkout/commit, inspected surfaces and checks actually run. Qualify source-only review and unverified live acceptance. Keep findings short; use no em dashes. An undocumented target is a documentation gap to report, not a reason to silently skip it. Activate through the host's skill picker or a plain-language request; `$bootcamp-parity-audit` is Codex syntax, not a universal slash command.

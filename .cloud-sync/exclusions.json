@@ -172,31 +172,31 @@
     "reason": "gitleaks credential redacted in snapshot: generic-api-key"
   },
   {
-    "path": ".cloud-sync/conversations/codex/01a0f0b1-769c-77d3-a1cc-a02c510289df-254a4de38cc0.md",
+    "path": ".cloud-sync/conversations/codex/01a0f0b1-769c-77d3-a1cc-a02c510289df-5e5c306abea2.md",
     "reason": "API token redacted in snapshot"
   },
   {
-    "path": ".cloud-sync/conversations/codex/01a0f0b1-769c-77d3-a1cc-a02c510289df-254a4de38cc0.md",
+    "path": ".cloud-sync/conversations/codex/01a0f0b1-769c-77d3-a1cc-a02c510289df-5e5c306abea2.md",
     "reason": "gitleaks credential redacted in snapshot: generic-api-key"
   },
   {
-    "path": ".cloud-sync/conversations/codex/01a0f4dc-9dd3-7451-b3fa-ef81e994e2a7-e239a9c02801.md",
+    "path": ".cloud-sync/conversations/codex/01a0f4dc-9dd3-7451-b3fa-ef81e994e2a7-f10119d1da03.md",
     "reason": "API token redacted in snapshot"
   },
   {
-    "path": ".cloud-sync/conversations/codex/01a10187-c712-7793-aca3-6aa1c102a76a-958a58299265.md",
+    "path": ".cloud-sync/conversations/codex/01a10187-c712-7793-aca3-6aa1c102a76a-099c6fe91aae.md",
     "reason": "API token redacted in snapshot"
   },
   {
-    "path": ".cloud-sync/conversations/codex/01a10188-7822-7671-85ca-81b3e2734a38-2e6aa521f578.md",
+    "path": ".cloud-sync/conversations/codex/01a10188-7822-7671-85ca-81b3e2734a38-685d5a72f7f1.md",
     "reason": "API token redacted in snapshot"
   },
   {
-    "path": ".cloud-sync/conversations/codex/01a1018a-695a-7313-b4d4-513203dfec91-73d42a2ebb64.md",
+    "path": ".cloud-sync/conversations/codex/01a1018a-695a-7313-b4d4-513203dfec91-a53b66abf2cf.md",
     "reason": "API token redacted in snapshot"
   },
   {
-    "path": ".cloud-sync/conversations/codex/01a1083a-4c32-76a0-9cd8-68a85b9044ab-b589c75e85dd.md",
+    "path": ".cloud-sync/conversations/codex/01a1083a-4c32-76a0-9cd8-68a85b9044ab-321b45410a97.md",
     "reason": "API token redacted in snapshot"
   },
   {
@@ -222,6 +222,10 @@
   {
     "path": ".cloud-sync/conversations/codex/01a11919-6d64-7c42-b320-f23458477014-704792c0c55a.md",
     "reason": "gitleaks credential redacted in snapshot: generic-api-key"
+  },
+  {
+    "path": ".cloud-sync/conversations/codex/01a11919-6d64-7c42-b320-f23458477014-a354d45dde0e.md",
+    "reason": "API token redacted in snapshot"
   },
   {
     "path": ".cloud-sync/conversations/codex/01a11919-6d64-7c42-b320-f23458477014-eb48b2726e97.md",
@@ -636,10 +640,6 @@
     "reason": "gitleaks credential redacted in snapshot: generic-api-key"
   },
   {
-    "path": ".gemini/skills/watch/scripts/setup.py",
-    "reason": "credential assignment redacted in snapshot"
-  },
-  {
     "path": ".gemini/skills/web-artifacts-builder/scripts/shadcn-components.tar.gz",
     "reason": "excluded file"
   },
@@ -746,6 +746,38 @@
   {
     "path": "audits/skills-2026-10-09/supplemental-integrated-checkpoint.json",
     "reason": "gitleaks credential redacted in snapshot: generic-api-key"
+  },
+  {
+    "path": "audits/skills-2026-10-11-dependencies/__pycache__",
+    "reason": "excluded directory"
+  },
+  {
+    "path": "audits/skills-2026-10-11-native/watch-preflight/2c7ba867513e2d9b.before",
+    "reason": "credential assignment redacted in snapshot"
+  },
+  {
+    "path": "audits/skills-2026-10-11-native/watch-preflight/60a9b812eeddee3f.before",
+    "reason": "credential assignment redacted in snapshot"
+  },
+  {
+    "path": "audits/skills-2026-10-11-native/watch-preflight/658cecb16fc8cd4c.before",
+    "reason": "credential assignment redacted in snapshot"
+  },
+  {
+    "path": "audits/skills-2026-10-11-native/watch-preflight/86ce01f7c21aee6a.before",
+    "reason": "credential assignment redacted in snapshot"
+  },
+  {
+    "path": "audits/skills-2026-10-11-native/watch-preflight/a79a666d416fbdaa.before",
+    "reason": "credential assignment redacted in snapshot"
+  },
+  {
+    "path": "audits/skills-2026-10-11-native/watch-preflight/claude-global-scripts-setup.py.before",
+    "reason": "credential assignment redacted in snapshot"
+  },
+  {
+    "path": "audits/skills-2026-10-11-native/watch-preflight/e649c3a7c49968be.before",
+    "reason": "credential assignment redacted in snapshot"
   },
   {
     "path": "brainstorms/2026-09-30-conditional-curriculum/visual-proof/astra-opening/course-build.log",
@@ -956,10 +988,6 @@
     "reason": "gitleaks credential redacted in snapshot: generic-api-key"
   },
   {
-    "path": "skills/claude/watch/scripts/setup.py",
-    "reason": "credential assignment redacted in snapshot"
-  },
-  {
     "path": "skills/claude/web-artifacts-builder/scripts/shadcn-components.tar.gz",
     "reason": "excluded file"
   },
@@ -1052,12 +1080,16 @@
     "reason": "gitleaks credential redacted in snapshot: generic-api-key"
   },
   {
+    "path": "skills/codex/research-deep/scripts/__pycache__",
+    "reason": "excluded directory"
+  },
+  {
     "path": "skills/codex/skill-doctor/scripts/collect_sessions.py",
     "reason": "gitleaks credential redacted in snapshot: generic-api-key"
   },
   {
-    "path": "skills/codex/watch/scripts/setup.py",
-    "reason": "credential assignment redacted in snapshot"
+    "path": "skills/codex/watch/scripts/__pycache__",
+    "reason": "excluded directory"
   },
   {
     "path": "skills/codex/web-artifacts-builder/scripts/shadcn-components.tar.gz",
@@ -1166,10 +1198,6 @@
   {
     "path": "skills/gemini/skill-doctor/scripts/collect_sessions.py",
     "reason": "gitleaks credential redacted in snapshot: generic-api-key"
-  },
-  {
-    "path": "skills/gemini/watch/scripts/setup.py",
-    "reason": "credential assignment redacted in snapshot"
   },
   {
     "path": "skills/gemini/web-artifacts-builder/scripts/shadcn-components.tar.gz",

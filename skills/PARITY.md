@@ -163,3 +163,9 @@ Existing catalog/activation drift was reconciled, including Gemini copies. Three
 Targeted local adaptations supersede old verbatim-upstream invocation claims where the actual host lacks a literal Skill/Task tool. Matt Pocock compare-and-swap maintenance preserves these edits for review. Claude-host Codex build/review corrections persist under `system/skill-overrides/claudex/claude/`; Claudex offline dry run is a clean no-op. Never use adoption/reset to discard these changes. Native skill discovery and duplicate-name precedence are distinct from static catalog validation.
 
 [Repair report, tests and remaining dependencies](../audits/skills-2026-10-10-repairs/SUMMARY.md). Historical `_snapshots` and `_project-forks` remain preserved.
+
+## 2026-10-11: restored support and verified native loading
+
+Existing research-deep packages now include the recovered validator and field contract; the actual PyYAML environment is isolated outside the vault. Existing bootcamp-parity-audit packages resolve three dated reconstructed benchmark references in the vault, with current-source provenance and historical limits. No missing runtime activation was automatically added.
+
+Watch setup, hook payloads and central credential resolution match across existing runtime copies, including the global Claude copy verified by fresh native startup. Claude loads via its actual Skill tool; Codex loads via supported file reads. Intentional provider-named build/review differences remain unchanged. Native registry discovery is valid, but Codex's bounded skill-description rendering still limits universal automatic selection. [Current verification](../audits/skills-2026-10-11-native/SUMMARY.md).

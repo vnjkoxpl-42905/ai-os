@@ -1,105 +1,43 @@
 ---
 name: research-deep
-description: Read research outline, launch independent agent for each item for deep research. Disable task output.
+description: Research an explicitly selected outline.yaml into structured JSON using its fields.yaml schema, bounded batches and field-coverage validation. Use for structured research batches, not ordinary knowledge questions or transcript intake.
 ---
 
+# Structured research with validated field coverage
 
-## Local execution contract (2026-10-10)
+## Select the topic and authorization
 
-Resolve validator from actual installed skill support directory; if absent, validate required JSON schema directly and report missing helper. Never run invented ~/ai-os or ~/.codex/skills/research paths.
+Use the user-selected topic directory containing `outline.yaml` and `fields.yaml`. If one unambiguous topic is explicitly implied, use it; if several candidates exist, ask which. Do not choose an arbitrary newest outline. Reuse the already authorized batch scope; ask before expanding it, not before each already approved batch. Research is read-only unless saving the requested local outputs. Do not make paid calls or publish results without corresponding authorization.
+
+## Resolve the validator before dispatch
+
+This package includes `scripts/validate_json.py`, recovered from Git commit `9b1a3aa3` (`skills/codex/research/validate_json.py`) and adapted to reject empty/missing inputs. Resolve `{validator_path}` from the actual installed skill directory, not a guessed home path. Its YAML contract is documented in `references/field-contract.md`.
+
+Use an interpreter with PyYAML. On this Windows machine the tested isolated interpreter is `C:/Users/Joshu/dev/ai-os-projects/skill-dependency-tests/.venv/Scripts/python.exe`. Verify it before use. Portable fallback: `uv run --no-project --with pyyaml==6.0.3 python`. If neither exists, install PyYAML in a project environment outside the vault, not system Python. A package-manager operation does not prove the validator ran.
+
+Validate one output before starting a large batch. Require `--require-complete`: all schema fields, no unknown fields, and an `uncertain` array exactly matching fields whose values contain `[uncertain]`. This checks structure and coverage, not truth, source quality, English prose or whether citations support claims.
 
 ## Workflow
 
-# Research Deep - Deep Research
+1. Read the selected outline's topic, items and execution configuration (`output_dir`, `batch_size`, `items_per_agent`). Resolve paths against that selected topic directory.
+2. Resume only after validating existing result files with the current fields schema and strict mode. File existence alone is not completion. Keep invalid prior evidence and repair its output explicitly.
+3. Dispatch within the authorized scope using researcher roles actually available in the host. Parallel work requires available slots. Each worker receives the full item, schema, unique output path and validator command. If no researcher role is available, perform bounded research directly rather than inventing a tool.
+4. Preserve each field's source evidence in the schema's source/citation fields or a companion evidence Markdown file; never manufacture a value just to fill coverage. Mark unresolved values `[uncertain]` and list those field names in `uncertain`.
+5. Run the validator on every result and repair failures. Keep stdout/stderr and the actual exit status. Report passing, failed and uncertain items. Do not suppress failures or infer completeness from an empty directory.
 
-## Trigger
-`/research-deep`
+## Worker prompt
 
-## Workflow
+Substitute only the selected task's values below. `{validator_command}` is the verified interpreter/uv command, quoted script path and `--require-complete -f "{fields_path}" -j "{output_path}"`.
 
-### Step 1: Auto-locate Outline
-Find `*/outline.yaml` file in current working directory, read items list, execution config (including items_per_agent).
-
-### Step 2: Resume Check
-- Check completed JSON files in output_dir
-- Skip completed items
-
-### Step 3: Batch Execution
-- Batch by batch_size (need user approval before next batch)
-- Each agent handles items_per_agent items
-- Launch web-search-agent (background parallel, disable task output)
-
-**Parameter Retrieval**:
-- `{topic}`: topic field from outline.yaml
-- `{item_name}`: item's name field
-- `{item_related_info}`: item's complete yaml content (name + category + description etc.)
-- `{output_dir}`: execution.output_dir from outline.yaml (default: ./results)
-- `{fields_path}`: absolute path to {topic}/fields.yaml
-- `{output_path}`: absolute path to {output_dir}/{item_name_slug}.json (slugify item_name: replace spaces with _, remove special chars)
-
-**Hard Constraint**: The following prompt must be strictly reproduced, only replacing variables in {xxx}, do not modify structure or wording.
-
-**Prompt Template**:
-```python
-prompt = f"""## Task
-Research {item_related_info}, output structured JSON to {output_path}
-
-## Field Definitions
-Read {fields_path} to get all field definitions
-
-## Output Requirements
-1. Output JSON according to fields defined in fields.yaml
-2. Mark uncertain field values with [uncertain]
-3. Add uncertain array at the end of JSON, listing all uncertain field names
-4. All field values must be in English
-
-## Output Path
-{output_path}
-
-## Validation
-After completing JSON output, run validation script to ensure complete field coverage:
-python ~/ai-os/skills/Codex/research/validate_json.py -f {fields_path} -j {output_path}
-Task is complete only after validation passes.
-"""
+```text
+Research {item_related_info}, output structured JSON to {output_path}.
+Read {fields_path} for every field definition.
+Use primary sources and preserve citation evidence. All field values must be in English.
+Mark unresolved field values [uncertain]. Add uncertain as an array of precisely those field names, or [] when none.
+Keep every defined field. Do not invent values to satisfy coverage.
+After saving, run:
+{validator_command}
+Complete only when the actual validator exits 0. Report failures and unresolved source limits.
 ```
 
-**One-shot Example** (assuming researching GitHub Copilot):
-```
-## Task
-Research name: GitHub Copilot
-category: International Product
-description: Developed by Microsoft/GitHub, first mainstream AI coding assistant, ~40% market share, output structured JSON to {project_dir}/results/GitHub_Copilot.json
-
-## Field Definitions
-Read {project_dir}/fields.yaml to get all field definitions
-
-## Output Requirements
-1. Output JSON according to fields defined in fields.yaml
-2. Mark uncertain field values with [uncertain]
-3. Add uncertain array at the end of JSON, listing all uncertain field names
-4. All field values must be in English
-
-## Output Path
-{project_dir}/results/GitHub_Copilot.json
-
-## Validation
-After completing JSON output, run validation script to ensure complete field coverage:
-python ~/ai-os/skills/Codex/research/validate_json.py -f {project_dir}/fields.yaml -j {project_dir}/results/GitHub_Copilot.json
-Task is complete only after validation passes.
-```
-
-### Step 4: Wait and Monitor
-- Wait for current batch to complete
-- Launch next batch
-- Display progress
-
-### Step 5: Summary Report
-After all complete, output:
-- Completion count
-- Failed/uncertain marked items
-- Output directory
-
-## Agent Config
-- Background execution: Yes
-- Task Output: Disabled (agent has explicit output file when complete)
-- Resume support: Yes
+Use plain-language `research-deep` requests or the runtime's supported explicit skill picker. Codex explicit syntax is `$research-deep`; slash-command spellings are not portable.

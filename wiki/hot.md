@@ -1,7 +1,7 @@
 ---
 type: operating-layer
 subject: Hot last-session cache
-updated: 2026-10-10
+updated: 2026-10-11
 aliases: []
 ---
 
@@ -9,7 +9,16 @@ aliases: []
 
 Freshest working state; the first page `/pickup` reads. Rebuilt fresh in the 2026-07-16 vault rebuild (the old cache is archived).
 
-## Most recent (2026-10-10): Skill catalog repaired and verified locally
+## Most recent (2026-10-11): Dependencies repaired and native skill loading checked
+
+- [Current outcome and limits](../audits/skills-2026-10-11-native/SUMMARY.md); [native events and final hashes](../audits/skills-2026-10-11-native/FINAL-VERIFICATION.json). Remaining local skill dependencies repaired through the actual Karpathy agent and independent review.
+- Recovered the original research validator/field contract from Git, repaired false success and installed isolated free PyYAML outside the vault. Three bootcamp references are dated reconstructed standards with current source provenance, not historical originals.
+- Fixed watch free startup, the missed global Claude copy and nested central-key resolution. Two fresh native Claude SessionStart hooks pass silently. Six key skills actually load in both runtimes; representative ingest/query/lint/transcript/persona routing and the negative coding control pass.
+- Native Codex registry: 577 entries, zero errors, all 37 project activations present. Claude init exposes all 12 checked core names. Final readback verifies 55 changed payload hashes; 16 dependency, five final watch and nine watch regression tests pass. Catalog/index validation and Claudex offline no-op pass.
+- Increased only Codex's supported skill-context budget to 10000 with machine-local backup. Renderer visibility improves, but shortened descriptions still prevent certifying automatic selection across the entire library. No persistent duplicate disabling or new global activation. Existing sessions may retain old injected descriptions.
+- No paid provider call, deletion, source/student edit, send, commit, push or publication. Task statuses unchanged. Full vendor workflows and connector auth remain separate; native lsat-u MCP startup reported an authentication requirement.
+
+## Previous (2026-10-10): Skill catalog repaired and verified locally
 
 - Implemented the approved full skill-audit repairs, highest risk first, through the installed Karpathy agent and independent review. [Complete result](../audits/skills-2026-10-10-repairs/SUMMARY.md); [hashes, backups and validation](../audits/skills-2026-10-10-repairs/FINAL-VERIFICATION.json).
 - Narrowed overlapping provider/export/video/persona triggers; fixed WIP review scope, dirty-worktree staging/deletion assumptions, runtime calls, stale paths and activation drift. Useful workflows and extra payloads retained; no new global activation.
