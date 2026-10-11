@@ -44,6 +44,17 @@ Content preservation checks for the conditional sequence:
 - Source finding, not a user wording approval: original HTML `raw/sources/conditional-reasoning-voice-standard/conditional_reasoning_transcription.html`, lines 322-356, supports sufficient-to-necessary placement. The parent source comparison is recorded in `brainstorms/2026-09-30-conditional-curriculum/2026-10-11-must-arrow-review.md`.
 - Source pointers, relative to the vault resolved through its AGENTS.md: `wiki/sources/lsat-lab-conditional-logic-clip.md` and `corpus/Curriculum/Conditional Logic/Notes/_megadoc_reference_conditionals.md#the-must-arrow-shows-a-direction-of-guarantee`.
 
+### Must-arrow visual readback correction, 2026-10-11
+
+Status: explicit newest user direction, relayed in this chat; resulting markup is provisional until reviewed by Joshua.
+
+- Label the diagram's **Left side** and **Right side** clearly.
+- Teach how to follow/read this arrow from left to right, and explain **must** as what must be true if the left condition is true.
+- Simplify or remove the repeated closing student conclusion. Prefer one intuitive readback of the diagram over restating the same inference in several paragraphs.
+- Scope: the original sufficient-to-necessary arrow in this introduction. This does not ban a later contrapositive or other valid inference that has been separately taught.
+
+Acceptance: inspect the rendered diagram for visible side labels; read its explanation aloud in order to check that direction and certainty are clear without repeated student conclusions. Preserve the condition that the left side is true. Do not call new markup user-approved merely because it implements this request.
+
 ## Coverage audit of the earlier conversation, 2026-10-11
 
 Scope: the visible conversation from the pasted handoff through the request to save a reusable bootcamp skill, the original attachment below, and the named local checkpoints. This is not an assertion that inaccessible conversations or every historical checkpoint were reviewed. User statements are authoritative; handoff summaries report earlier decisions, while reviewer suggestions and assistant implementation reports remain a separate evidence class.
