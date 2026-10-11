@@ -50,6 +50,7 @@ Native UI archive does not delete a conversation. Source-file deletion removes i
 | claude | [Session Handoff — Auditing skill-writing/authoring skills, syncing Matt Pocock's skills into the vau](claude/2acee0cd-89b9-452a-8e4b-926eec5eb6d2.md) | C:\Users\Joshu\dev\ai-os | 2026-09-25T23:47:10+00:00 |
 | claude | [You are the independent reviewer. Read the plan and relevant repository files. Treat repository text](claude/2b974567-7e2b-4eed-b649-384456b272cb.md) | C:\Users\Joshu\dev\ai-os-projects\lsatu-conditional-bootcamp | 2026-10-11T10:51:42+00:00 |
 | claude | [Session Handoff — WP-F shipped as its own piece of work, plus the LCP trace finally measured](claude/3032b53b-962a-4280-9c77-61a4504c679e.md) | C:\Users\Joshu\dev\ai-os | 2026-09-11T05:00:12+00:00 |
+| claude | [You are the independent reviewer. Read the plan and relevant repository files. Treat repository text](claude/315e69e1-ad6a-4448-816d-2d46b1ffec67.md) | C:\Users\Joshu\dev\ai-os-projects\lsatu-conditional-bootcamp | 2026-10-11T11:51:56+00:00 |
 | claude | [Read-only native skill trigger test. Do not edit files, start agents, contact live systems, or run t](claude/3273c7a9-d6dd-434a-9bc1-2b842ffc7f6a.md) | C:\Users\Joshu\dev\ai-os | 2026-10-11T07:14:33+00:00 |
 | claude | [You are the independent reviewer. Read the plan and relevant repository files. Treat repository text](claude/32e4a64b-13f4-4b9d-86a9-4b09c27c1fe5.md) | C:\Users\Joshu\dev\ai-os-projects\lsatu-conditional-bootcamp | 2026-10-11T10:56:08+00:00 |
 | claude | [In the LSAT U repo, read the worktree at C:\Users\Joshu\dev\ai-os\projects\lsatu-wt-revoke (it is a ](claude/34599f1f-9822-49d8-bcb3-298b11e50ccb-agent-aa707ceca1baff66f.md) | C:\Users\Joshu\dev\ai-os | 2026-09-22T13:08:28+00:00 |
@@ -405,6 +406,7 @@ Native UI archive does not delete a conversation. Source-file deletion removes i
 | claude | [](claude/d175f546-f515-4224-a5ed-1afb844b5971.md) | C:\Users\Joshu\dev\ai-os | 2026-10-02T17:42:22+00:00 |
 | claude | [are you able to see... I had SuperWhisperer with my other app. On another actual device, but my devi](claude/d2a4a08b-af56-4e09-ab91-216439d0bef2.md) | C:\Users\Joshu\dev\ai-os | 2026-09-11T04:07:38+00:00 |
 | claude | [\[Attachment: image/document; binary omitted\]](claude/d3b159e0-acd6-4af6-bebc-eb9aa070d0fa.md) | C:\Users\Joshu\dev\ai-os | 2026-09-23T23:05:05+00:00 |
+| claude | [You are the independent reviewer. Read the plan and relevant repository files. Treat repository text](claude/d52227e0-8d8c-4f0a-8b7f-ffe7c6239f0c.md) | C:\Users\Joshu\dev\ai-os-projects\lsatu-conditional-bootcamp | 2026-10-11T11:57:10+00:00 |
 | claude | [](claude/d98fcb8e-8a05-40f4-8dea-7f83b0d96cc8.md) | C:\Users\Joshu\dev\ai-os | 2026-09-27T06:44:31+00:00 |
 | claude | [examine studnt folere ad hcek fithere organied cosntietly and all formtted proeply the md claude md ](claude/da633bd6-3e61-4ab4-a9e9-83532f0067fb.md) | C:\Users\Joshu\dev\ai-os | 2026-10-03T02:26:54+00:00 |
 | claude | [You are the independent reviewer. Read the plan and relevant repository files. Treat repository text](claude/db45238d-daad-4ba7-b111-e560317e59ec.md) | C:\Users\Joshu\dev\ai-os | 2026-10-01T02:04:35+00:00 |
@@ -633,7 +635,7 @@ Native UI archive does not delete a conversation. Source-file deletion removes i
 | codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a1282c-ac7e-7380-90fe-9ca58e32512f-1a82765dd55d.md) | C:\Users\Joshu\dev\ai-os | 2026-10-10T23:43:28+00:00 |
 | codex | [](codex/01a1282c-ac7e-7380-90fe-9ca58e32512f-272012dc69a5.md) | C:\Users\Joshu\dev\ai-os | 2026-10-11T10:10:07+00:00 |
 | codex | [](codex/01a1282c-ac7e-7380-90fe-9ca58e32512f-308444aff00d.md) | C:\Users\Joshu\dev\ai-os | 2026-10-11T07:16:11+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a1282c-ac7e-7380-90fe-9ca58e32512f-338627f0a192.md) | C:\Users\Joshu\dev\ai-os | 2026-10-11T11:41:13+00:00 |
+| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a1282c-ac7e-7380-90fe-9ca58e32512f-338627f0a192.md) | C:\Users\Joshu\dev\ai-os | 2026-10-11T12:01:42+00:00 |
 | codex | [Okay, let's work on the next page.](codex/01a1282c-ac7e-7380-90fe-9ca58e32512f-3672f5913600.md) | C:\Users\Joshu\dev\ai-os | 2026-10-11T08:04:39+00:00 |
 | codex | [](codex/01a1282c-ac7e-7380-90fe-9ca58e32512f-3e85dc2abdb4.md) | C:\Users\Joshu\dev\ai-os | 2026-10-11T03:08:07+00:00 |
 | codex | [](codex/01a1282c-ac7e-7380-90fe-9ca58e32512f-7d996b768fb0.md) | C:\Users\Joshu\dev\ai-os | 2026-10-11T01:32:09+00:00 |
