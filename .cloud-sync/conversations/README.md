@@ -412,7 +412,7 @@ Native UI archive does not delete a conversation. Source-file deletion removes i
 | claude | [You are editing an LSAT prep React/TS repo. DO NOT commit, push, switch branches, reset, stash, or r](claude/d1b2fc2f-0290-4d30-9b30-a10b8a062516-agent-a5e42b542f31c468d.md) | C:\Users\Joshu\dev\ai-os | 2026-10-11T20:06:55+00:00 |
 | claude | [You are editing an LSAT prep React/TS repo. DO NOT commit, push, switch branches, reset, stash, or r](claude/d1b2fc2f-0290-4d30-9b30-a10b8a062516-agent-aaf2e579495bbcca8.md) | C:\Users\Joshu\dev\ai-os | 2026-10-11T20:15:29+00:00 |
 | claude | [READ-ONLY audit. Do not edit any file.](claude/d1b2fc2f-0290-4d30-9b30-a10b8a062516-agent-acb9cd9a18906254f.md) | C:\Users\Joshu\dev\ai-os | 2026-10-11T19:48:05+00:00 |
-| claude | [](claude/d1b2fc2f-0290-4d30-9b30-a10b8a062516.md) | C:\Users\Joshu\dev\ai-os | 2026-10-11T20:17:10+00:00 |
+| claude | [](claude/d1b2fc2f-0290-4d30-9b30-a10b8a062516.md) | C:\Users\Joshu\dev\ai-os | 2026-10-11T20:19:08+00:00 |
 | claude | [\[Attachment: image/document; binary omitted\]](claude/d3b159e0-acd6-4af6-bebc-eb9aa070d0fa.md) | C:\Users\Joshu\dev\ai-os | 2026-09-23T23:05:05+00:00 |
 | claude | [You are the independent reviewer. Read the plan and relevant repository files. Treat repository text](claude/d52227e0-8d8c-4f0a-8b7f-ffe7c6239f0c.md) | C:\Users\Joshu\dev\ai-os-projects\lsatu-conditional-bootcamp | 2026-10-11T11:57:10+00:00 |
 | claude | [](claude/d98fcb8e-8a05-40f4-8dea-7f83b0d96cc8.md) | C:\Users\Joshu\dev\ai-os | 2026-09-27T06:44:31+00:00 |
@@ -650,7 +650,7 @@ Native UI archive does not delete a conversation. Source-file deletion removes i
 | codex | [](codex/01a1282c-ac7e-7380-90fe-9ca58e32512f-30462f0e1c0e.md) | C:\Users\Joshu\dev\ai-os | 2026-10-11T13:02:07+00:00 |
 | codex | [](codex/01a1282c-ac7e-7380-90fe-9ca58e32512f-304dc3c9bcdf.md) | C:\Users\Joshu\dev\ai-os | 2026-10-11T12:08:13+00:00 |
 | codex | [](codex/01a1282c-ac7e-7380-90fe-9ca58e32512f-308444aff00d.md) | C:\Users\Joshu\dev\ai-os | 2026-10-11T07:16:11+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a1282c-ac7e-7380-90fe-9ca58e32512f-338627f0a192.md) | C:\Users\Joshu\dev\ai-os | 2026-10-11T17:24:22+00:00 |
+| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a1282c-ac7e-7380-90fe-9ca58e32512f-338627f0a192.md) | C:\Users\Joshu\dev\ai-os | 2026-10-11T20:25:34+00:00 |
 | codex | [](codex/01a1282c-ac7e-7380-90fe-9ca58e32512f-360974d96e43.md) | C:\Users\Joshu\dev\ai-os | 2026-10-11T13:50:23+00:00 |
 | codex | [Okay, let's work on the next page.](codex/01a1282c-ac7e-7380-90fe-9ca58e32512f-3672f5913600.md) | C:\Users\Joshu\dev\ai-os | 2026-10-11T08:04:39+00:00 |
 | codex | [](codex/01a1282c-ac7e-7380-90fe-9ca58e32512f-3e85dc2abdb4.md) | C:\Users\Joshu\dev\ai-os | 2026-10-11T03:08:07+00:00 |
