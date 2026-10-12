@@ -3,23 +3,16 @@ name: chat-export
 description: "Export a conversation to a local Markdown file when explicitly asked to save or export the chat. Retrieve original session logs for a verbatim export; disclose missing ranges. Chat-only continuation uses session-handoff."
 ---
 
-
-## Local execution contract (2026-10-10)
-
-Save operational exports to the current project handoffs directory. A full verbatim export requires original session logs. If those are unavailable, export only visible context, label it partial and list missing/compacted ranges. Never reconstruct absent turns as verbatim.
-
-## Workflow
-
 # Chat Export Skill
 
 Saves the current conversation as a structured markdown file to
-`<current-project-root>/handoffs/` with a full transcript,
+`C:/Users/Joshu/dev/ai-os/handoffs/` with a provenance-labeled transcript,
 summary, and a paste-ready handoff prompt.
 
 ## Output path
 
 ```
-<current-project-root>/handoffs/YYYY-MM-DD_short-title.md
+C:/Users/Joshu/dev/ai-os/handoffs/YYYY-MM-DD_short-title.md
 ```
 
 Use today's date. Make the short title 3-5 words, kebab-case,
@@ -29,17 +22,18 @@ Example: `2026-04-28_claude-folder-cleanup-notebooklm.md`
 
 ## Steps
 
-1. **Retrieve original session logs** for the requested conversation. Verify which turns are available and write retrieved user/assistant messages verbatim. If original logs are unavailable or incomplete, export visible turns only, label the transcript partial, and list missing or compacted ranges. Never reconstruct absent messages as verbatim.
+1. **Retrieve transcript evidence.** Prefer the host's original conversation export/log for this exact session. Record source path, session identifier, available range and exclusions (tools/attachments). If unavailable, export only messages actually visible in context and label it `Visible-context export, incomplete history`. After compaction, a summary is not verbatim evidence: list unknown/missing ranges and never invent them. Use `### User` and `### Assistant` headings; preserve available message text exactly.
 
 2. **Write the structured summary** (see template below).
 
 3. **Write the handoff prompt** — a single paste-ready block the user
    can drop into a new chat to resume instantly. It should:
-   - Point to the file: `Read <current-project-root>/handoffs/<filename>.md`
+   - Point to the file: `Read C:/Users/Joshu/dev/ai-os/handoffs/<filename>.md`
    - State what was done
    - State what to do next (ask the user if unclear)
 
-4. **Save the file** using an available host file-writing tool, then read it back and verify its coverage label and output path.
+4. **Save the file** using an available local file-writing tool to the
+   output path above.
 
 5. **Tell the user**:
    - The filename
@@ -53,7 +47,7 @@ Example: `2026-04-28_claude-folder-cleanup-notebooklm.md`
 **Date:** YYYY-MM-DD
 **Topic:** one-line description
 **Tags:** (pick relevant: lsat-u | lsat-content | applications | tooling | drive-organizer | theology | general)
-**File:** <current-project-root>/handoffs/<filename>.md
+**File:** C:/Users/Joshu/dev/ai-os/handoffs/<filename>.md
 
 ---
 
@@ -76,18 +70,24 @@ One paragraph. What was this chat about, what was the goal, what was accomplishe
 > Paste this into a new chat to continue:
 >
 > ```
-> Read <current-project-root>/handoffs/<filename>.md and continue
+> Read C:/Users/Joshu/dev/ai-os/handoffs/<filename>.md and continue
 > from where we left off. [Specific next thing to do goes here.]
 > ```
 
 ---
 
-## Transcript (complete or partial, with coverage)
+## Transcript coverage
+
+Source: <verified log/export or visible context>
+Available range: <known range>
+Missing sections: <none proven / explicit gaps / unknown earlier history>
+
+## Available transcript
 
 ### User
 [message]
 
-### Claude
+### Assistant
 [reply]
 
 [Repeat for every retrieved message; list unavailable ranges above.]
@@ -95,11 +95,11 @@ One paragraph. What was this chat about, what was the goal, what was accomplishe
 
 ## Notes
 
-- Preserve all retrieved turns. A partial source must remain explicitly partial; report unavailable ranges.
+- Preserve all available verified messages, chunking file writes when needed. Do not call the export complete without original-history coverage evidence.
 - The "Open threads" section is the most important part for handoffs —
   be precise about what is unfinished.
 - If the user specifies a subfolder (e.g. "save this under lsat-u"),
-  save to `<current-project-root>/handoffs/lsat-u/<filename>.md`
+  save to `C:/Users/Joshu/dev/ai-os/handoffs/lsat-u/<filename>.md`
   and create the folder if it doesn't exist.
 - After saving, always show the handoff prompt in a fenced code block
   so the user can copy it in one click.

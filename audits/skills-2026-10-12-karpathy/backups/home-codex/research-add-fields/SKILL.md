@@ -1,0 +1,37 @@
+---
+name: research-add-fields
+description: Add field definitions to existing research outline.
+---
+
+
+## Local execution contract (2026-10-10)
+
+Select exact requested research topic/file before modification. Multiple fields.yaml files are ambiguous; inspect current context or ask only when unresolved. Preserve existing schema/fields.
+
+## Workflow
+
+# Research Add Fields - Supplement Research Fields
+
+## Trigger
+`/research-add-fields`
+
+## Workflow
+
+### Step 1: Auto-locate Fields File
+Find `*/fields.yaml` file in current working directory, auto-read existing fields definitions.
+
+### Step 2: Get Supplement Source
+Ask user to choose:
+- **A. User direct input**: User provides field names and descriptions
+- **B. Web Search**: Launch agent to search common fields in this domain
+
+### Step 3: Display and Confirm
+- Display suggested new fields list
+- User confirms which fields to add
+- User specifies field category and detail_level
+
+### Step 4: Save Update
+Append confirmed fields to fields.yaml, save file.
+
+## Output
+Updated `{topic}/fields.yaml` file (in-place modification, requires user confirmation)

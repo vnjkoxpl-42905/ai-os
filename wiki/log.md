@@ -2936,3 +2936,9 @@ Gathered Joshua's own contrapositive teaching from session transcripts into wiki
 - check-skills.sh runs on Windows; new checks fail on shadowed vault copies and warn on home/catalog drift; PARITY.md no longer exempts 26 skills by mention. Validator PASS (Claude 311, Codex 299, Gemini 222).
 - Wiki lint: 2 dead links in historical log entries. Four clips in `raw/` root never ingested; `wiki/tasks.md` stale since 2026-10-08. Left for Joshua: 121/125/53 remaining drifted home copies, `jq`, claude.ai duplicate skills, level-up's two designs, Codex budget.
 - Nothing deleted, sent, published or committed. A parallel session's 01:17 skill install was left untouched.
+
+## [2026-10-12] system | jq installed; drifted skill copies reviewed
+
+- Installed jq 1.8.2 (winget). pull-submissions then failed on a real bug: `for row in $(jq ...)` split notes on spaces. Rewrote both loops as line reads and stripped CRLF from jq output. A read-only dry run against LSAT U now lists 2 submissions and exits 0 (one earlier dry run also reached the backend because the curl stub was not picked up).
+- Classified all remaining home/catalog drift ([drift-classes.json](../audits/skills-2026-10-12-karpathy/drift-classes.json), [review-classes.json](../audits/skills-2026-10-12-karpathy/review-classes.json)). Synced 40 skills with backups: 30 where the catalog already held everything or only stale lines differed, plus 10 judged by hand.
+- Left on purpose: 82 vendor copies newer than the catalog (mostly gws 0.22.5), 76 Matt Pocock/Superpowers copies owned by their updaters, and newer or divergent copies such as watch, impeccable, skill-creator, second-brain and level-up. Validator PASS; drift now 89/93/29.

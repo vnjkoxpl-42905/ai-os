@@ -4,7 +4,7 @@
 
 Bootstraps a new LSAT U topic bootcamp project end-to-end, from folder creation through Claude Code handoff. Replicates the proven Main Conclusion workflow into a new topic folder. Triggered when Joshua wants to start a new topic build (Causation, Comparison, Necessary Assumption, etc. — any of the 21 LSAT U topics).
 
-Output: a new project folder at `/Users/joshuaf/ai-os/projects/{topic-slug}-bootcamp/` with four pre-populated files (handoff, CLAUDE.md, PROJECT_MEMORY.md, README), source corpus verified, and a paste-ready Claude Code kickoff prompt.
+Output: a new project folder at `C:/Users/Joshu/dev/ai-os/projects/{topic-slug}-bootcamp/` with four pre-populated files (handoff, CLAUDE.md, PROJECT_MEMORY.md, README), source corpus verified, and a paste-ready Claude Code kickoff prompt.
 
 ## Three ways to invoke
 
@@ -12,7 +12,7 @@ Output: a new project folder at `/Users/joshuaf/ai-os/projects/{topic-slug}-boot
 
 In any Claude session (Cowork mode or Claude Code), say:
 
-> "Read the skill at `/Users/joshuaf/ai-os/skills/lsat-u-topic-builder/SKILL.md` and follow it to bootstrap the {topic} bootcamp."
+> "Read the skill at `C:/Users/Joshu/dev/ai-os/skills/lsat-u-topic-builder/SKILL.md` and follow it to bootstrap the {topic} bootcamp."
 
 Replace `{topic}` with the topic name (e.g., "Causation"). Claude reads SKILL.md, follows the six-step workflow, generates the project folder.
 
@@ -23,7 +23,7 @@ This is the recommended way to use the skill right now while it's still v1 and u
 Add a one-liner to your shell or Claude Code's project-level CLAUDE.md so the skill is discoverable from any project:
 
 ```
-The lsat-u-topic-builder skill at /Users/joshuaf/ai-os/skills/lsat-u-topic-builder/SKILL.md bootstraps a new topic bootcamp. Trigger when Joshua says "create a new LSAT U topic bootcamp", "spin up a [topic] bootcamp", "init bootcamp for [topic]", or similar.
+The lsat-u-topic-builder skill at C:/Users/Joshu/dev/ai-os/skills/lsat-u-topic-builder/SKILL.md bootstraps a new topic bootcamp. Trigger when Joshua says "create a new LSAT U topic bootcamp", "spin up a [topic] bootcamp", "init bootcamp for [topic]", or similar.
 ```
 
 ### Option C: Plugin packaging (future, after 2-3 topic projects ship)
@@ -49,7 +49,7 @@ Install via: `claude plugin install lsat-u-topic-builder.plugin` (or distributed
 ## Folder layout
 
 ```
-/Users/joshuaf/ai-os/skills/lsat-u-topic-builder/
+C:/Users/Joshu/dev/ai-os/skills/lsat-u-topic-builder/
 ├── SKILL.md            ← main skill file with workflow + metadata
 ├── INSTALL.md          ← this file
 └── templates/

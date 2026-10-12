@@ -38,7 +38,7 @@ You do not skip gates. Each gate is explicit, blocking, and requires Joshua's wr
 - Topic Homework corpus: `{{CURRICULUM_PATH}}Homework/`
 - Prior audit export (if exists): `{{CURRICULUM_PATH}}_export_*/`
 - Topic project memory (curriculum-level): `{{CURRICULUM_PATH}}_PROJECT.md` (if exists)
-- Netlify prototypes: `/Users/joshuaf/Documents/Claude/02_PROJECTS/lsat-u/Curriculum/Netlify/`
+- Netlify prototypes: `C:/Users/Joshu/dev/ai-os/raw/sources/lsat-curriculum/Netlify/`
 - This project: `{{PROJECT_FOLDER}}`
 
 ## TECH STACK DEFAULTS (LOCK AT GATE 3)

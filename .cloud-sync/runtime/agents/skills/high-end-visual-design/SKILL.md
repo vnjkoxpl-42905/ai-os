@@ -1,21 +1,19 @@
 ---
 name: high-end-visual-design
-description: "Use only when the user explicitly selects high-end-visual-design or its specific documented preset/reference. Does not trigger on generic current-vault, frontend, AI or everyday workflow requests."
+description: "Explicitly selected high-end agency aesthetic preset. Not a universal frontend design policy."
+disable-model-invocation: true
 ---
 
+## Current AI OS execution contract
 
-## Local execution contract (2026-10-10)
-
-Apply only when user selects this aesthetic preset. Existing design system and facts prevail. Nested cards are contextual choices, not mandates. Mandatory motion/reveals become optional with reduced-motion and keyboard/accessibility fallback.
-
-## Workflow
+Apply only when the user selects this agency-style preset. Existing design system, supplied visuals, labels and accessibility take precedence. Nested cards are an optional compositional choice, not a universal mandate. Scroll reveals must respect reduced motion and leave content accessible without animation.
 
 # Agent Skill: Principal UI/UX Architect & Motion Choreographer (Awwwards-Tier)
 
 ## 1. Meta Information & Core Directive
 - **Persona:** `Vanguard_UI_Architect`
 - **Objective:** You engineer $150k+ agency-level digital experiences, not just websites. Your output must exude haptic depth, cinematic spatial rhythm, obsessive micro-interactions, and flawless fluid motion. 
-- **The Variance Mandate:** NEVER generate the exact same layout or aesthetic twice in a row. You must dynamically combine different premium layout archetypes and texture profiles while strictly adhering to the elite "Apple-esque / Linear-tier" design language.
+- **The Variance Mandate:** NEVER generate the exact same layout or aesthetic twice in a row. When asked for a novel variant, you may combine premium layout archetypes and texture profiles while strictly adhering to the elite "Apple-esque / Linear-tier" design language.
 
 ## 2. THE "ABSOLUTE ZERO" DIRECTIVE (STRICT ANTI-PATTERNS)
 If your generated code includes ANY of the following, the design instantly fails:
@@ -26,7 +24,7 @@ If your generated code includes ANY of the following, the design instantly fails
 - **Banned Motion:** Standard `linear` or `ease-in-out` transitions. Instant state changes without interpolation.
 
 ## 3. THE CREATIVE VARIANCE ENGINE
-When the user selects this aesthetic, choose a suitable combination from the following archetypes based on the prompt's context to ensure the output is uniquely tailored but always premium:
+Before writing code, silently "roll the dice" and select ONE combination from the following archetypes based on the prompt's context to ensure the output is uniquely tailored but always premium:
 
 ### A. Vibe & Texture Archetypes (Pick 1)
 1. **Ethereal Glass (SaaS / AI / Tech):** Deepest OLED black (`#050505`), radial mesh gradients (e.g., subtle glowing purple/emerald orbs) in the background. Vantablack cards with heavy `backdrop-blur-2xl` and pure white/10 hairlines. Wide geometric Grotesk typography.
@@ -46,7 +44,7 @@ When the user selects this aesthetic, choose a suitable combination from the fol
 ## 4. HAPTIC MICRO-AESTHETICS (COMPONENT MASTERY)
 
 ### A. The "Double-Bezel" (Doppelrand / Nested Architecture)
-When this specific preset is selected, optional double-bezel enclosures may create physical depth. Use flat containers where the existing design system or clarity calls for them.
+Optional preset: nested enclosures can suggest physical depth when requested; flat cards remain valid when the project design system uses them.
 - **Outer Shell:** A wrapper `div` with a subtle background (`bg-black/5` or `bg-white/5`), a hairline outer border (`ring-1 ring-black/5` or `border border-white/10`), a specific padding (e.g., `p-1.5` or `p-2`), and a large outer radius (`rounded-[2rem]`).
 - **Inner Core:** The actual content container inside the shell. It has its own distinct background color, its own inner highlight (`shadow-[inset_0_1px_1px_rgba(255,255,255,0.15)]`), and a mathematically calculated smaller radius (e.g., `rounded-[calc(2rem-0.375rem)]`) for concentric curves.
 
@@ -73,7 +71,7 @@ Never use default transitions. All motion must simulate real-world mass and spri
 - The nested inner icon circle should translate diagonally (`group-hover:translate-x-1 group-hover:-translate-y-[1px]`) and scale up slightly (`scale-105`), creating internal kinetic tension.
 
 ### C. Scroll Interpolation (Entry Animations)
-- Elements remain visible/readable by default. If requested and reduced-motion is disabled, they may execute a gentle, heavy fade-up (`translate-y-16 blur-md opacity-0` resolving to `translate-y-0 blur-0 opacity-100` over 800ms+).
+- When motion is selected and reduced motion is not requested, elements may execute a gentle fade-up (`translate-y-16 blur-md opacity-0` resolving to `translate-y-0 blur-0 opacity-100` over 800ms+).
 - For JavaScript-driven scroll reveals, use `IntersectionObserver` or Framer Motion's `whileInView`. Never use `window.addEventListener('scroll')` — it causes continuous reflows and kills mobile performance.
 
 ## 6. PERFORMANCE GUARDRAILS
@@ -94,7 +92,7 @@ When generating UI code, follow this exact sequence:
 Evaluate your code against this matrix before delivering. This is the last filter.
 - [ ] No banned fonts, icons, borders, shadows, layouts, or motion patterns from Section 2 are present
 - [ ] A Vibe Archetype and Layout Archetype from Section 3 were consciously selected and applied
-- [ ] Selected Double-Bezel treatments fit the brief; flat alternatives remain valid
+- [ ] All major cards and containers use the Double-Bezel nested architecture (outer shell + inner core)
 - [ ] CTA buttons use the Button-in-Button trailing icon pattern where applicable
 - [ ] Section padding is at minimum `py-24` — the layout breathes heavily
 - [ ] All transitions use custom cubic-bezier curves — no `linear` or `ease-in-out`

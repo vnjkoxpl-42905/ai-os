@@ -1,19 +1,24 @@
 ---
 name: lsat-u-topic-builder
-description: Audit-driven bootstrap for a new LSAT U topic bootcamp. Walks the topic's source corpus, tier-grades every file (S/A/B/C/D), scans the Mac for related files outside /Curriculum/, identifies content gaps, anchors the quality bar to Causation Station / Abstraction (coaching tone, comprehensive, guiding), then generates the project folder with audit findings baked into all four files. Use when Joshua wants to start a new LSAT U topic bootcamp (Causation, Comparison, Necessary Assumption, Conditional Logic, etc.) and have the build start from real corpus knowledge, not generic templates. Trigger phrases include "create a new LSAT U topic bootcamp", "spin up a [topic] bootcamp", "audit and init [topic]", "replicate Main Conclusion for [topic]", "scaffold [topic] project".
+description: "Historical topic-builder reference only by explicit name. New bootcamp creation uses bootcamp-builder."
+disable-model-invocation: true
 ---
+
+## Current AI OS execution contract
+
+Historical teaching reference only. New bootcamp work routes to bootcamp-builder. Never move immutable sources or deduplicate by filename/size/first bytes: copy and verify full hashes with provenance. Resolve current corpus homes rather than Mac Spotlight.
 
 # LSAT U Topic Builder (v2: Audit-Driven Bootstrap)
 
 ## When to use this skill
 
-Trigger when Joshua wants to start a new LSAT U topic bootcamp build. The skill replicates the Main Conclusion four-stage workflow into a new topic project, but does the work upfront so Codex starts Gate 0 with audited corpus, identified gaps, and topic-specific quality bar already established.
+Trigger when Joshua wants to start a new LSAT U topic bootcamp build. The skill replicates the Main Conclusion four-stage workflow into a new topic project, but does the work upfront so Claude Code starts Gate 0 with audited corpus, identified gaps, and topic-specific quality bar already established.
 
 Do NOT trigger mid-build on an existing topic, for shipped topic refactors, or for general workflow discussion.
 
 ## What changed from v1
 
-v1 was folder bootstrap with placeholder templates. v2 actually does Stage 1 work (audit + grading + gap analysis) before generating files. The resulting handoff and PROJECT_MEMORY.md are pre-populated with real findings: tier-graded source list, identified named tools, content gaps, scan-discovered additional files, quality bar specifics. Codex starts at Gate 0 with substantive context, not "TBD at Gate 1" everywhere.
+v1 was folder bootstrap with placeholder templates. v2 actually does Stage 1 work (audit + grading + gap analysis) before generating files. The resulting handoff and PROJECT_MEMORY.md are pre-populated with real findings: tier-graded source list, identified named tools, content gaps, scan-discovered additional files, quality bar specifics. Claude Code starts at Gate 0 with substantive context, not "TBD at Gate 1" everywhere.
 
 Trade-off: v2 takes ~20-40 minutes to run vs v1's ~3 minutes. The output is substantially better.
 
@@ -21,7 +26,7 @@ Trade-off: v2 takes ~20-40 minutes to run vs v1's ~3 minutes. The output is subs
 
 - **Phase A**: Topic Audit (scan, grade, gap-flag, Mac-wide search)
 - **Phase B**: Quality Benchmarking (anchor to Causation Station / Abstraction + external references; lock coaching tone)
-- **Phase C**: Project Bootstrap + Codex Handoff
+- **Phase C**: Project Bootstrap + Claude Code Handoff
 
 ---
 
@@ -29,7 +34,7 @@ Trade-off: v2 takes ~20-40 minutes to run vs v1's ~3 minutes. The output is subs
 
 ### A1. Inventory the topic folder
 
-Bash-list `/Users/joshuaf/Documents/Codex/02_PROJECTS/lsat-u/Curriculum/{Topic}/`. Capture:
+Bash-list `C:/Users/Joshu/dev/ai-os/raw/sources/lsat-curriculum/{Topic}/`. Capture:
 - Files in `Notes/`: filename, extension, file size, modification date
 - Files in `Homework/`: same
 - Any `_scan_*` files (later additions)
@@ -131,7 +136,7 @@ For each module, output: `sufficient` / `marginal` / `insufficient`. If insuffic
 
 ### A8. Output the audit report
 
-Save to `/Users/joshuaf/Documents/Codex/02_PROJECTS/{slug}-bootcamp/AUDIT_REPORT.md` (created in Phase C). Includes:
+Save to `C:/Users/Joshu/dev/ai-os/projects/{slug}-bootcamp/AUDIT_REPORT.md` (created in Phase C). Includes:
 - File rankings (S/A/B/C/D, every file with reasoning)
 - Repetition map (clusters with chosen-version + drops)
 - Garbage list (Tier D, with reason)
@@ -208,11 +213,11 @@ After audit + benchmarking, ask Joshua:
 - Confirm worked examples to preserve verbatim
 - Confirm the topic should ship standalone or repo-native
 - Confirm route target if repo-native
-- Confirm any audit-flagged gaps should be filled by author (Joshua), filled by Codex with review, or deferred to v1.5
+- Confirm any audit-flagged gaps should be filled by author (Joshua), filled by Claude with review, or deferred to v1.5
 
 ### C2. Create the project folder
 
-Use Write tool at `/Users/joshuaf/Documents/Codex/02_PROJECTS/{topic-slug}-bootcamp/{filename}`. Auto-creates folder.
+Use Write tool at `C:/Users/Joshu/dev/ai-os/projects/{topic-slug}-bootcamp/{filename}`. Auto-creates folder.
 
 ### C3. Populate templates with AUDIT-INFORMED substitutions
 
@@ -238,10 +243,10 @@ Read each template in this skill's `templates/` folder. Substitute placeholders 
 
 Write the full audit report (from Phase A8) to `/{slug}-bootcamp/AUDIT_REPORT.md`. This is Joshua's reference for Gate 2 inventory work.
 
-### C5. Output Codex kickoff
+### C5. Output Claude Code kickoff
 
 ```
-Read {HANDOFF_FILENAME}, AGENTS.md, PROJECT_MEMORY.md, and AUDIT_REPORT.md in this folder. The audit report is your starting baseline for Gate 2 — don't re-audit from scratch, build from it.
+Read {HANDOFF_FILENAME}, CLAUDE.md, PROJECT_MEMORY.md, and AUDIT_REPORT.md in this folder. The audit report is your starting baseline for Gate 2 — don't re-audit from scratch, build from it.
 
 Step 1: Restate the 8-point understanding from the handoff.
 Step 2: Run Gate 0 (source-access check). Verify every path in the handoff Section 9 exists and is readable. AUDIT_REPORT.md gives you the file list to verify.
@@ -252,28 +257,28 @@ Step 3: Wait for my approval before any further action.
 
 Tell Joshua:
 - Project folder path
-- Files created (5 of them: handoff, Codex, PROJECT_MEMORY, README, AUDIT_REPORT)
+- Files created (5 of them: handoff, CLAUDE, PROJECT_MEMORY, README, AUDIT_REPORT)
 - Audit summary (file counts by tier, module sufficiency, gap-flagged modules)
 - Pending items he owes (URLs, optional UX research packet, decisions on flagged gaps)
-- The kickoff prompt to paste into Codex
+- The kickoff prompt to paste into Claude Code
 
-Stop. Joshua opens Codex, points it at the new folder, pastes the kickoff.
+Stop. Joshua opens Claude Code, points it at the new folder, pastes the kickoff.
 
 ---
 
-## PHASE D: Codex HANDOFF
+## PHASE D: CLAUDE CODE HANDOFF
 
-Same as v1 — Joshua opens Codex on the new folder, pastes the kickoff prompt, Gate 0 begins. The difference: Codex's Gate 1 and Gate 2 work starts from the audit report, not from scratch. ~50% time savings on those gates because the corpus walk is already done.
+Same as v1 — Joshua opens Claude Code on the new folder, pastes the kickoff prompt, Gate 0 begins. The difference: Claude Code's Gate 1 and Gate 2 work starts from the audit report, not from scratch. ~50% time savings on those gates because the corpus walk is already done.
 
 ---
 
 ## What this skill does NOT do
 
-- Does not run Gate 0. Joshua + Codex do that after kickoff.
+- Does not run Gate 0. Joshua + Claude Code do that after kickoff.
 - Does not modify Main Conclusion files or any other topic's files.
 - Does not delete or move existing topic folders without Joshua's explicit approval.
 - Does not commit to git or push anywhere.
-- Does not connect to Codex Design or external services.
+- Does not connect to Claude Design or external services.
 - Does not claim a topic has enough material when the audit says insufficient — surfaces the gap honestly.
 
 ---
@@ -295,13 +300,13 @@ v3 (after 2-3 topic projects ship using v2): refine based on patterns observed. 
 - Auto-detect topic module fit (some topics = 6 modules, some = 4, some = 8)
 - Auto-detect Mac-wide scan keywords from topic name + corpus content
 - Lock the Gate 1 scaffolding plan template
-- Optional: package as plugin for proper auto-trigger across Cowork + Codex
+- Optional: package as plugin for proper auto-trigger across Cowork + Claude Code
 
 ---
 
 ## How Joshua invokes this skill
 
-In any Codex session (Cowork or Codex):
+In any Claude session (Cowork or Claude Code):
 - "Run lsat-u-topic-builder for Causation"
 - "Audit and init Necessary Assumption"
 - "Spin up a Comparison bootcamp"
@@ -309,4 +314,4 @@ In any Codex session (Cowork or Codex):
 - Or trigger by phrase
 
 Manual invocation if not yet auto-installed:
-> "Read the skill at `/Users/joshuaf/Documents/Codex/02_PROJECTS/skills/lsat-u-topic-builder/SKILL.md` and follow it to audit and bootstrap the {topic} bootcamp."
+> "Read the skill at `C:/Users/Joshu/dev/ai-os/skills/lsat-u-topic-builder/SKILL.md` and follow it to audit and bootstrap the {topic} bootcamp."

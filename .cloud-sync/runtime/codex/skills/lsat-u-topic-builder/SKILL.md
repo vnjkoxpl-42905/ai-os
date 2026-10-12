@@ -1,14 +1,12 @@
 ---
 name: lsat-u-topic-builder
-description: "Explicit legacy topic-builder reference only. New LSAT U topic/module creation uses current bootcamp-builder; preserve useful references without competing automatic triggers."
+description: "Historical topic-builder reference only by explicit name. New bootcamp creation uses bootcamp-builder."
+disable-model-invocation: true
 ---
 
+## Current AI OS execution contract
 
-## Local execution contract (2026-10-10)
-
-Legacy topic reference only; current bootcamp-builder owns new module creation. Resolve current sibling ai-os-projects/lsatu app and preserve source material. No old Mac/vault-contained app output, provider substitution or destructive duplicate heuristics.
-
-## Workflow
+Historical teaching reference only. New bootcamp work routes to bootcamp-builder. Never move immutable sources or deduplicate by filename/size/first bytes: copy and verify full hashes with provenance. Resolve current corpus homes rather than Mac Spotlight.
 
 # LSAT U Topic Builder (v2: Audit-Driven Bootstrap)
 
@@ -36,7 +34,7 @@ Trade-off: v2 takes ~20-40 minutes to run vs v1's ~3 minutes. The output is subs
 
 ### A1. Inventory the topic folder
 
-Bash-list `/Users/joshuaf/ai-os/raw/sources/lsat-curriculum/{Topic}/`. Capture:
+Bash-list `C:/Users/Joshu/dev/ai-os/raw/sources/lsat-curriculum/{Topic}/`. Capture:
 - Files in `Notes/`: filename, extension, file size, modification date
 - Files in `Homework/`: same
 - Any `_scan_*` files (later additions)
@@ -138,7 +136,7 @@ For each module, output: `sufficient` / `marginal` / `insufficient`. If insuffic
 
 ### A8. Output the audit report
 
-Save to `/Users/joshuaf/ai-os/projects/{slug}-bootcamp/AUDIT_REPORT.md` (created in Phase C). Includes:
+Save to `C:/Users/Joshu/dev/ai-os/projects/{slug}-bootcamp/AUDIT_REPORT.md` (created in Phase C). Includes:
 - File rankings (S/A/B/C/D, every file with reasoning)
 - Repetition map (clusters with chosen-version + drops)
 - Garbage list (Tier D, with reason)
@@ -219,7 +217,7 @@ After audit + benchmarking, ask Joshua:
 
 ### C2. Create the project folder
 
-Use Write tool at `/Users/joshuaf/ai-os/projects/{topic-slug}-bootcamp/{filename}`. Auto-creates folder.
+Use Write tool at `C:/Users/Joshu/dev/ai-os/projects/{topic-slug}-bootcamp/{filename}`. Auto-creates folder.
 
 ### C3. Populate templates with AUDIT-INFORMED substitutions
 
@@ -316,4 +314,4 @@ In any Claude session (Cowork or Claude Code):
 - Or trigger by phrase
 
 Manual invocation if not yet auto-installed:
-> "Read the skill at `/Users/joshuaf/ai-os/skills/lsat-u-topic-builder/SKILL.md` and follow it to audit and bootstrap the {topic} bootcamp."
+> "Read the skill at `C:/Users/Joshu/dev/ai-os/skills/lsat-u-topic-builder/SKILL.md` and follow it to audit and bootstrap the {topic} bootcamp."

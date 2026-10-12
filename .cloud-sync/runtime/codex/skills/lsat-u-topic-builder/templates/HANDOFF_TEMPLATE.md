@@ -109,7 +109,7 @@ Account for, by row: every lesson item, guided/worked example, checkpoint questi
 
 ### 4B. Netlify Prototype Extraction Inventory
 
-If any of the six Netlify prototypes contain content relevant to {{TOPIC_NAME}}, inventory them. Prototype source at `/Users/joshuaf/ai-os/raw/sources/lsat-curriculum/Netlify/`.
+If any of the six Netlify prototypes contain content relevant to {{TOPIC_NAME}}, inventory them. Prototype source at `C:/Users/Joshu/dev/ai-os/raw/sources/lsat-curriculum/Netlify/`.
 
 Per-app file mapping (resolved 2026-04-29): file (3) = logicalreasoningfoundation. (4) = mainconclusionrebuttalvsfirst. (5) = introconclusiondrill. (6) = mainconclusion. (1) and (2) are byte-identical React app.
 
@@ -280,7 +280,7 @@ No production code before Gate 3 sign-off.
 - Topic source corpus (Homework): `{{CURRICULUM_PATH}}Homework/`
 - Prior audit export (if exists): `{{CURRICULUM_PATH}}_export_*/`
 - Project memory: `{{CURRICULUM_PATH}}_PROJECT.md` (if exists)
-- Netlify prototype source: `/Users/joshuaf/ai-os/raw/sources/lsat-curriculum/Netlify/`
+- Netlify prototype source: `C:/Users/Joshu/dev/ai-os/raw/sources/lsat-curriculum/Netlify/`
 - This {{TARGET_MODE}} project: `{{PROJECT_FOLDER}}`
 {{#if repo-native}}- LSAT U repo: local clone path supplied by Joshua at session start. Target route: `{{ROUTE_TARGET}}`{{/if}}
 

@@ -3,12 +3,9 @@ name: lovable-prompt
 description: Produce a short, paste-ready prompt for Lovable when a change can only happen through the Lovable UI (not code Codex can reach directly, not a Supabase migration). Use when Joshua asks "give me the prompt for Lovable", "what do I send Lovable", or a task turns out to require Lovable-side config/UI action. Trigger with /lovable-prompt.
 ---
 
+## Current AI OS execution contract
 
-## Local execution contract (2026-10-10)
-
-Use current sibling app instructions and an available approved transport. Supabase MCP is not assumed available. Lovable Cloud Edge Functions deploy through Lovable with required authorization; direct SQL is not universally prohibited. Resolve actual safe-push route and separate preview from publication.
-
-## Workflow
+Read the owning application manual for current backend and deployment. Discover available approved transport instead of assuming Supabase MCP. Lovable-managed Edge Functions deploy through the authorized Lovable route; this does not prohibit approved direct SQL. Lovable credit spending requires immediate confirmation.
 
 Produce a short, paste-ready prompt for Lovable's chat, for the residual class of changes Codex cannot reach directly.
 
@@ -16,7 +13,7 @@ Produce a short, paste-ready prompt for Lovable's chat, for the residual class o
 
 Before reaching for this, check whether the task is actually reachable another way:
 - **Schema/data change** → use the Supabase MCP tools directly (`apply_migration`, `execute_sql` with `confirm_cost`). Do not hand this to Lovable.
-- **Code change in the repo** → make it directly and push via `.Codex/safe-push.sh` (see LSATU AGENTS.md). Do not hand this to Lovable.
+- **Code change in the repo** → make it directly and push via `.claude/safe-push.sh` (see LSATU CLAUDE.md). Do not hand this to Lovable.
 - Only fall back to a Lovable prompt for things genuinely gated behind the Lovable UI/platform itself: project-level settings, Lovable's own deploy/preview config, or when Joshua explicitly wants Lovable's agent to do the implementation instead of Codex.
 
 ## Output format
@@ -35,4 +32,4 @@ Above the code block, in plain text (not in the block):
 
 - No em dashes.
 - Never pad the prompt with context Lovable doesn't need (file structure explanations, rationale) — Lovable prompts are terse instructions, not briefs.
-- If the change touches product rules in the LSATU AGENTS.md (Foyer/Mainhub nav, granular feature flags, no fake data, etc.), restate the relevant constraint inside the prompt so Lovable doesn't violate it.
+- If the change touches product rules in the LSATU CLAUDE.md (Foyer/Mainhub nav, granular feature flags, no fake data, etc.), restate the relevant constraint inside the prompt so Lovable doesn't violate it.

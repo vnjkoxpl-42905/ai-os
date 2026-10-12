@@ -1,14 +1,11 @@
 ---
 name: prompt-architect-refiner
-description: Use this skill when the user wants to improve, rewrite, sharpen, structure, debug, compress, expand, or create a high-quality prompt for Codex Chat, Codex Cowork, Codex, Gemini, ChatGPT, Lovable, NotebookLM, MCP workflows, repo audits, file organization, curriculum production, or app-building tasks. Trigger on phrases like prompt enhancer, prompt refiner, improve this prompt, make this top notch, god mode prompt, Codex Cowork prompt, Codex prompt, system instructions, custom instructions, skill instructions, rewrite this for Codex, make it clearer, or turn this messy request into a professional prompt.
+description: Use this skill when the user wants to improve, rewrite, sharpen, structure, debug, compress, expand, or create a high-quality prompt for Claude Chat, Claude Cowork, Claude Code, Gemini, ChatGPT, Lovable, NotebookLM, MCP workflows, repo audits, file organization, curriculum production, or app-building tasks. Trigger on phrases like prompt enhancer, prompt refiner, improve this prompt, make this top notch, god mode prompt, Claude Cowork prompt, Claude Code prompt, system instructions, custom instructions, skill instructions, rewrite this for Claude, make it clearer, or turn this messy request into a professional prompt.
 ---
 
+## Current AI OS execution contract
 
-## Local execution contract (2026-10-10)
-
-Refine for user-selected actual runtime/product; Claude Cowork and Codex are distinct targets. Respect existing authorization and requested design language, not mandatory dark-glass presets or repeated approval ceremony.
-
-## Workflow
+Respect prior approval and the actual requested brief. Premium dark-glass UI is an optional selected style, not a default for every prompt. Ask only consequential missing questions.
 
 # Prompt Architect Refiner
 
@@ -47,11 +44,11 @@ Use this framework silently. Do not list it unless useful.
 
 Choose the right mode based on the target tool.
 
-### Codex Chat mode
+### Claude Chat mode
 
 Use for reasoning, writing, analysis, research synthesis, decision-making, and non-code workflows.
 
-Strong Codex Chat prompts should:
+Strong Claude Chat prompts should:
 
 - Define the role clearly
 - Give relevant context
@@ -61,16 +58,16 @@ Strong Codex Chat prompts should:
 - Require uncertainty to be stated clearly
 - Avoid unnecessary tool or code instructions
 
-### Codex Cowork mode
+### Claude Cowork mode
 
 Use for planning, setup, file review, audits, project coordination, and multi-step workflows.
 
-Strong Codex Cowork prompts should:
+Strong Claude Cowork prompts should:
 
 - Clarify Cowork’s role as strategist, reviewer, organizer, or setup assistant
 - Separate planning from execution
 - Require a first-pass audit or report before changes
-- Require approval before moving, deleting, overwriting, or restructuring files
+- Require explicit deletion approval; preserve unrelated work and honor existing approval for scoped edits, moves and restructuring.
 - Include logs, trackers, or decision tables when useful
 - Preserve source files unless the user explicitly says otherwise
 - Ask Cowork to recommend, not blindly execute
@@ -80,15 +77,15 @@ For Cowork, prefer this pattern:
 1. Inspect
 2. Summarize reality
 3. Recommend options
-4. Wait for approval
+4. Obtain approval only for a new unresolved consequential choice; existing authorization remains valid
 5. Execute only approved changes
 6. Report exact changes
 
-### Codex mode
+### Claude Code mode
 
 Use for codebase audits, bug fixes, refactors, UI work, tests, and app implementation.
 
-Strong Codex prompts should:
+Strong Claude Code prompts should:
 
 - Require repo inspection before claims
 - Ban edits until after a plan is approved, unless the user explicitly requests direct execution
@@ -97,7 +94,7 @@ Strong Codex prompts should:
 - Require final reporting with changed files, validation results, and remaining risks
 - Avoid broad rewrites unless explicitly approved
 
-For Codex, prefer this pattern:
+For Claude Code, prefer this pattern:
 
 1. Inspect the relevant files
 2. Identify likely causes
@@ -193,21 +190,21 @@ If the user asks for a system instruction, output:
 [system instruction text]
 ```
 
-If the user asks for a Codex prompt, output:
+If the user asks for a Claude Code prompt, output:
 
 ```text
-[Codex prompt]
+[Claude Code prompt]
 ```
 
 If the user asks for a Cowork prompt, output:
 
 ```text
-[Codex Cowork prompt]
+[Claude Cowork prompt]
 ```
 
 ## Joshua-specific preferences
 
-For Joshua’s LSAT U and Codex workflows:
+For Joshua’s LSAT U and Claude workflows:
 
 - Be direct and practical.
 - Keep prompts structured but not bloated.
@@ -220,7 +217,7 @@ For Joshua’s LSAT U and Codex workflows:
 - For UI work, emphasize premium, non-generic, dark-glass, private-academy quality.
 - Avoid em dashes.
 - Avoid generic SaaS language.
-- Prefer output that can be pasted directly into Codex, Cowork, Codex, Lovable, or NotebookLM.
+- Prefer output that can be pasted directly into Claude, Cowork, Claude Code, Lovable, or NotebookLM.
 
 ## Final self-check
 
