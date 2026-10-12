@@ -172,7 +172,7 @@ Native UI archive does not delete a conversation. Source-file deletion removes i
 | claude | [Context: an instructional video for an LSAT drill is built in Remotion (C:/Users/Joshu/dev/ai-os/pro](claude/6bf8aeea-2d39-4a6c-aae3-8d213ed8c968-agent-ade2b1c9b1cf12edb.md) | C:\Users\Joshu\dev\ai-os\projects\video | 2026-09-10T07:24:04+00:00 |
 | claude | [Session Handoff — RRC instructional video, Round 6: corrected against the app's own drill spec](claude/6bf8aeea-2d39-4a6c-aae3-8d213ed8c968.md) | C:\Users\Joshu\dev\ai-os | 2026-09-11T03:19:27+00:00 |
 | claude | [Session Handoff — Drill hub perfect-score plan, packages E through N executed](claude/6c1d3b25-d091-4a50-8b52-d8a1648620ff.md) | C:\Users\Joshu\dev\ai-os | 2026-09-09T20:28:14+00:00 |
-| claude | [](claude/6f1c3429-949a-4b8a-b0c8-a960c83f510f.md) | C:\Users\Joshu\dev\ai-os | 2026-10-12T01:34:37+00:00 |
+| claude | [](claude/6f1c3429-949a-4b8a-b0c8-a960c83f510f.md) | C:\Users\Joshu\dev\ai-os | 2026-10-12T01:50:17+00:00 |
 | claude | [<command-message>impeccable</command-message>](claude/72ce6d4d-8db4-4860-9637-b764fdd0077e.md) | C:\Users\Joshu\dev\ai-os | 2026-09-25T23:47:10+00:00 |
 | claude | [](claude/734a333b-4c83-4023-a4a6-a902fca5c016.md) | C:\Users\Joshu\dev\ai-os | 2026-09-27T03:49:06+00:00 |
 | claude | [I want you to tell me if you can understand Matt Pecock's skill. He has a repo; can you find it and ](claude/734fbdcc-75a8-4803-b43c-51ee8a60c651.md) | C:\Users\Joshu\dev\ai-os | 2026-09-24T23:47:15+00:00 |
