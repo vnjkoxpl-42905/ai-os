@@ -2971,3 +2971,11 @@ Permanently deleted the removed-superpowers archive and 6 leftover lsatu fork fo
 - gws-gmail (vault Codex activation): activated the 5 missing helpers (send, reply, reply-all, forward, watch) by copy from skills/codex.
 - Gemini codex-build/codex-review: installed claudex-loop for Gemini (Claude-host copy) so links resolve; limit recorded in PARITY.md.
 check-skills PASS (claude 299, codex 287, gemini 211).
+
+## [2026-10-12] system | Python 3.15.0 installed beside 3.12
+
+- Joshua asked for the most updated Python. Newest stable on python.org: 3.15.0 (2026-10-09); winget only offered 3.14.7, so the installer came from python.org. Authenticode signature valid (Python Software Foundation), version 3.15.150.0, SHA-256 `67D9A63EB145A34AA939F02EADBF8C57F21FCDD6DECB901CCAC578D2D1F01D6F`. Installed per-user, silent, PATH not prepended.
+- Result: `py` now defaults to 3.15.0 (launcher upgraded to 3.15.0); `py -3.12` still works. Added `requests` and `youtube-transcript-api` to 3.15 for the vault scripts. `wiki-maintenance.py --lint` ran under 3.15 and 38 vault Python files compile under it.
+- Left `python` and `pip` on 3.12.10 on purpose: 3.12 has about 50 packages 3.15 lacks, and the pre-approved `accommodations-email` send script is called as plain `python`. Not tested under 3.15.
+- `python3` is the Microsoft Store stub, which explains the earlier `check-skills.sh` failure; the script now skips it and passes.
+- Updated [[windows-cli-toolchain]]. Nothing uninstalled. The installer copy is in the session scratchpad.
