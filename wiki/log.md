@@ -2895,3 +2895,10 @@ Recovered Codex thread 01a1282c (copies and handoff in handoffs/codex-2026-10-10
 
 ## [2026-10-11] ingest | Contrapositive teaching insights and copy rules
 Gathered Joshua's own contrapositive teaching from session transcripts into wiki/contrapositive-teaching.md. Recorded the 2026-10-11 sophistry corrections in wiki/COPY-CORRECTIONS.md and a feedback memory. Rewrote the Conditional Bootcamp Contrapositive and Must arrow lessons (PR #204).
+
+## [2026-10-12] ingest | 10 New Github Repos to Make Money in 19 mins
+- Source: [source summary](sources/10-new-github-repos-make-money.md); evidence in `raw/sources/clips/10-new-github-repos-make-money-19-mins/`. Clip SHA-256 `83905a7fce8fc1d7b19653dd16d5b3ad9ee9643c78acd8eb641880a67494ea42`, verified against the inbox original (retained).
+- Changed: new source summary and archive only. No topic page changed because every item is captured, not evaluated; find-skills and security-review already exist in the catalog.
+- Finding: twelve tools claimed by one creator; only the Cloudflare security-audit skill has a clear fit (pre-release check for LSAT U). Star counts and repo contents unverified.
+- Verification: hash, links and index checked.
+- Open: no repository inspected; publication date, channel name and three short-link targets unknown; Cloudflare audit evaluation is proposed only.

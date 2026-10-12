@@ -89,8 +89,8 @@ Regenerate this section after page changes with `py system/scripts/wiki-maintena
 - [[wiki/CALCOM-STUCK-BOOKINGS.md|Cal.com stuck bookings]]: When a student says scheduling or payment "isn't working", first ask **which link**. A
 - [[wiki/CELIA-RRC-REPLY-DRAFT-2026-09-08.md|Celia · reply to "still being marked" (DRAFT, not sent)]]: Channel: LSAT U platform message, from Joshua's admin account. Send via the assign-lsatu-work skill only after Joshua approves the text.
 - [[wiki/CONSULTATION-FOLLOW-UP-TEMPLATE.md|Consultation follow-up email]]: The email Joshua sends after a free consultation. Reconstructed 2026-09-11 from the
+- [[wiki/contrapositive-teaching.md|Contrapositive: how Joshua teaches it]]: Gathered 2026-10-11 from his own session transcripts (Gemini auto-notes, raw ASR, so quotes are near-verbatim and unchecked against audio). Use this before writing any contrapositi
 - [[wiki/COPY-CORRECTIONS.md|Copy corrections]]: Every student-facing wording fix, with the reason it was wrong. Read this before
-- [[wiki/contrapositive-teaching.md|Contrapositive, how Joshua teaches it]]: His own wording (logical equivalent, interchangeable, flip and negate), the mistakes he warns about, LSAT question-type uses, and wording that failed. Read before any contrapositive lesson or card
 - [[wiki/dashboard.md|Dashboard : ground-truth pointers]]: Rebuilt fresh 2026-07-16. This page points at authorities; it never accumulates state itself (D4: live systems are authority, the brain mirrors, backend wins on conflict).
 - [[wiki/DRILL-HUB-IMPECCABLE-AUDIT-2026-09-08-RUN2.md|Drill hub: impeccable audit and critique, run 2 (2026-09-08)]]: Second pass after the fixes from DRILL-HUB-IMPECCABLE-AUDIT-2026-09-08 shipped (commits 211d982, 1d1d351, f4cf062, f791016, published to lsatprep.study). Measured live on productio
 - [[wiki/DRILL-HUB-IMPECCABLE-AUDIT-2026-09-08-RUN3.md|Drill hub, run 3]]: Written 2026-09-09 by Claude (Opus 5), executing DRILL-HUB-PERFECT-SCORE-PLAN-2026-09-08 from Part 1g. Run 2 is DRILL-HUB-IMPECCABLE-AUDIT-2026-09-08-RUN2: audit 16/20, critique 31
@@ -141,6 +141,7 @@ Regenerate this section after page changes with `py system/scripts/wiki-maintena
 
 ### Sources
 
+- [[wiki/sources/10-new-github-repos-make-money.md|Ten repos worth a look: mostly a launch-week hype list, two overlap with what we already have]]: "10 New Github Repos to Make Money in 19 mins" is a YouTube video by a creator who calls himself Jack (YouTube, publication date unknown). The full clip (description plus transcrip
 - [[wiki/sources/claude-now-does-video-free-javascript.md|Claude writes the video as a function of time, then checks its own frames]]: Chase AI's video "Claude Now Does Video (FOR FREE) Thanks To JavaScript" (YouTube) argues that Claude Code can produce finished MP4s with plain JavaScript, with no Remotion, no Aft
 - [[wiki/sources/conditional-reasoning-voice.md|Conditional Reasoning supplies the selected LSAT teaching voice]]: Joshua supplied this HTML on 2026-10-02 and explicitly selected its tone, wording, cadence, point of view, explanatory flow, and depth as the standard for LSAT teaching material. T
 - [[wiki/sources/herdr-claude-codex-headache.md|Herdr gives many coding agents one organized, persistent home]]: Chase AI's video "This Repo Just Solved The #1 Claude + Codex Headache" (YouTube, published 2026-07-16) presents Herdr, a free terminal multiplexer for running several coding agent
