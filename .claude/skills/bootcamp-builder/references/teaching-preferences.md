@@ -181,3 +181,50 @@ Implementation direction: concept and example, learner decision, explanation; th
 - Fade assistance across the course. Guided recognition can supply choices; independent translation must begin with blank production and withhold models until the whole attempt is written.
 - Keep one active operation, the source rule in view, readable stage progress and specific feedback. Correct objectively wrong answers before advancing; label written comparison honestly as self-review.
 - Validate actual rendered contrast, responsive layout, stage gating and draft recovery. A source import, passing tests or a wrapper stylesheet alone is not a polished drill.
+
+
+## Gold standard: the Contrapositive lesson page (approved 2026-10-12)
+
+Joshua called the finished page "perfect". Treat it as the template for every other concept lecture: same order, same density, same rules. Do not copy its wording or its examples. Rework the structure for the new topic and pick fresh examples.
+
+**Where it lives:** `ai-os-projects/lsatu-conditional-bootcamp/src/bootcamps/conditionals/components/` (`OpeningCourseContent.tsx` `ContrapositiveNote` and `FourRules`, `ContrapositiveVisuals.tsx`, `contrapositive-visuals.css`), commit `383747e9` plus the uncommitted follow-ups of 2026-10-12. Video project: `ai-os-projects/contrapositive-video/lecture` (`script.json`, `index.html`, `build_audio.py`). Full correction log: `wiki/COPY-CORRECTIONS.md`.
+
+### Page shape (about 600 words of text, seven sections)
+
+1. **What it is.** Plain definition first, in a navy panel, then one short example. No run-up.
+2. **Why it matters or what it gives you.** Two or three sentences. The key term pulses, one exclamation at most.
+3. **Watch the lesson.** A 60 to 90 second narrated video placed after the idea is introduced. Captions track, poster image, written fallback that only renders when opened or when the video fails.
+4. **How to write it.** Two bold steps (Step 1 and Step 2), then an interactive demo with "Step 1. Click here to ..." and "Step 2. Click here to ..." buttons. A second demo uses a fresh, simple, intuitive example where one side already starts negated, so the rule that two nots cancel is shown, not stated. Each demo shows the rule as an if-then sentence above the diagram and the result as an if-then sentence below.
+5. **What it is not.** One line, then slim cards: red "Wrong" for each look-alike, green "Right" for the answer. Badge, one-line change, diagram. Nothing else.
+6. **A short habit paragraph.** One paragraph, no list.
+7. **Pop Quiz.** Centered title with a letter-pop and light-sweep effect. Four items, one at a time. Ideas shown as short phrases, never letters. Right answer explanation is one sentence (the answer as a natural if-then). Wrong answer explanation is "Not that one." plus one specific reason about that choice. No intro paragraph, no category tag lines.
+
+### What Joshua wanted (keep)
+
+- One main example carried through the page, plus one fresh second example. Never the same example in more places than that, and never an example already used on another page.
+- Natural if-then sentences for every rule and result. Diagrams support the sentence; they never replace it.
+- Bold numbered steps. Controls say what to click. The student drives; nothing autoplays.
+- Colour carries meaning and travels with the idea (amber sufficient, teal necessary). Wrong looks wrong (red, X); right looks right (green, check).
+- Sleek, high-end visuals. A new effect for each new moment; never reuse the same trick. Every animation has a still equivalent and stops under reduced motion.
+- Short. When a page feels like too much, cut sections, not words: remove whole parts that repeat what the video, a demo or the quiz already does.
+- Ideas in quiz diagrams are condensed statements ("On the list", "Wristband"), not letter codes.
+- Narrated video in his voice standard, AI voice acceptable, built from the same wording as the page.
+
+### What Joshua rejected (never repeat)
+
+- A squiggle (~) for negation anywhere. Use the word "not" or a diagonal strike from the idea's top left to bottom right.
+- The raffle, coat, coffee, breathing, elevator, door and any example already used elsewhere. "Door", "patterns" and "move" as student words.
+- Sophistry and obligation metaphors ("promise", "depends on", "nothing to stand on"). Stock encouragement and run-ups ("Here's the good news", "Every time:").
+- Content repeated on the page, a legend that restates what a pill already says, a paragraph before the quiz explaining the quiz, tag lines that add nothing.
+- Complicated interactives: the first light-bulb stage (wires, chips, extra buttons) and the "four worlds" picker were both cut as too busy. One idea, one control, one sentence.
+- Long answer explanations. Explanations that talk about the diagram ("both ideas get a not") instead of saying the answer in plain English.
+- Letters standing in for ideas.
+
+### Process that produced it (work backwards from this)
+
+1. Write the section list above for the new topic before any copy. Cut anything the video, a demo or the quiz already covers.
+2. Draft prose in Joshua's voice, then run the `humanizer` skill over it and the corrections log. No em dashes.
+3. Build the visuals one at a time, check each on the live preview (not only in tests), and ask what is new about each effect.
+4. Pin the page order and the key phrases in the content test; update the test when a section is deliberately cut.
+5. Video: one script file, narration synthesized per sentence, word timings for sync, scenes built in the page's own palette, rendered and checked frame by frame. Voice: Kokoro af_heart (author grade A) when no paid voice key exists.
+6. Log every new correction in `wiki/COPY-CORRECTIONS.md` and here before moving on.

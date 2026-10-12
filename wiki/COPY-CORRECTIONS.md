@@ -60,6 +60,8 @@ Joshua rejected the first contrapositive lesson as 'terribly done' and then reje
 - **Never say "patterns" or "move" to students (Joshua, 2026-10-12).** Both read as awkward jargon. Say "four rules", "try it on", "change", "flip the sides". Practice questions get the same visual quality as the rest of the page: one rule at a time on the navy panel, colour-coded idea pills, large answer tiles, instant reasoned feedback, progress dots. The weakest-looking part of a page gets rebuilt, not patched.
 - **Words:** 'Correct', not 'Right', on a correct answer. Bold the word 'if' where the point is that the rule says what follows *if* something is true.
 
+- **Contrapositive page approved as the gold standard (Joshua, 2026-10-12).** Full do and don't list, page shape and build process live in `.claude/skills/bootcamp-builder/references/teaching-preferences.md` under "Gold standard". New rules from the last pass: cut whole sections when a page is too long; one main example plus one fresh simple example, never repeated; show rule and result as if-then sentences; quiz ideas are short phrases, not letters; quiz explanations are one sentence (right answer) or "Not that one." plus one specific reason (wrong answer); no paragraph or tag line before a quiz; the quiz title is just "Pop Quiz", centered, with an effect not used elsewhere on the page.
+
 Still to reconcile (found 2026-10-11, not Joshua decisions): 'establish' is banned below but his approved necessary copy uses it; the raffle was approved for the opening and later rejected as the sufficient anchor; see `.claude/skills/bootcamp-builder/references/teaching-preferences.md`.
 
 ### Conditional opening: define the words before using them (2026-10-03)
