@@ -2942,3 +2942,17 @@ Gathered Joshua's own contrapositive teaching from session transcripts into wiki
 - Installed jq 1.8.2 (winget). pull-submissions then failed on a real bug: `for row in $(jq ...)` split notes on spaces. Rewrote both loops as line reads and stripped CRLF from jq output. A read-only dry run against LSAT U now lists 2 submissions and exits 0 (one earlier dry run also reached the backend because the curl stub was not picked up).
 - Classified all remaining home/catalog drift ([drift-classes.json](../audits/skills-2026-10-12-karpathy/drift-classes.json), [review-classes.json](../audits/skills-2026-10-12-karpathy/review-classes.json)). Synced 40 skills with backups: 30 where the catalog already held everything or only stale lines differed, plus 10 judged by hand.
 - Left on purpose: 82 vendor copies newer than the catalog (mostly gws 0.22.5), 76 Matt Pocock/Superpowers copies owned by their updaters, and newer or divergent copies such as watch, impeccable, skill-creator, second-brain and level-up. Validator PASS; drift now 89/93/29.
+
+## [2026-10-12] ship | Unless Drill (Quick Drills)
+
+- LSAT U PR #205 merged (9c30d38): standalone Unless Drill at /quick-drills/unless-drill, new Quick Drills section in the Desk and student libraries. All four statements per round, answer key per Joshua, 10s then 5s unlock saved to the account (chapter_progress, topic unless-drill: cleared-10s, cleared-5s). Decisions: [brainstorm](../brainstorms/2026-10-12-unless-drill.md).
+- PR #206 merged: `assign.ts --bootcamp <id|title>`.
+- Assigned Unless Drill to Zeina <zeina.borji5@gmail.com> (inbox, bell, email ok). Ran from a clean main worktree because `.lsatu-ops` carries uncommitted hook-file edits (.claude/auto-pull-hook.sh, .claude/notify-hook.sh, .codex/hooks.json) the wrapper refuses to run over; not discarded.
+
+## [2026-10-12] ingest | Three stray clips: Greg Isenberg's five repos, Nate Herk's Fable 5.1 and GPT-6 Astra design videos
+
+- Sources: `raw/5 GitHub Repos Kill AI Slop, Go Viral, Make Money.md` (SHA-256 5ff5ecec...5915), `raw/Fable 5.1 FINALLY Kills AI Website Slop.md` (8712c4af...4070), `raw/GPT-6 Astra FINALLY Kills AI Website Slop.md` (2e8c7c2b...ae21). All read in full. Archived and hash-verified under `raw/sources/clips/`; originals left in `raw/` (they were saved outside the inbox).
+- Created: [five repos](sources/greg-isenberg-5-github-repos-ai-slop.md), [Fable 5.1](sources/fable-5-1-kills-ai-website-slop.md), [GPT-6 Astra](sources/gpt-6-astra-kills-ai-website-slop.md). Updated: [website planning](../references/website-design-planning.md) (fit-the-visitor test, references over adjectives, layering, screenshot verification), [AI workspace hub](../references/ai-workspace/index.md), and a cross-link from the 100-repos summary.
+- Proposed only: scan newly installed third-party skills with SkillSpector `--no-llm`; compare no-ai-slop with `humanizer`. Nothing installed.
+- Not ingested: `raw/7 Key UI Design Principles + How To Use Them.md` is one paragraph of Joshua's own homepage-prompt instructions saved under a video title, not a clip. Left in place.
+- Verification: originals unchanged, `sha256sum -c` passes for all three archives, index regenerated, lint shows only the two pre-existing log links.

@@ -57,4 +57,4 @@ Everything above is **captured** only. None is evaluated, tested or installed.
 
 Publication date unknown; the count in the title does not match the content; his income and agency claims are unverified; the Claude Security plugin was not opened.
 
-Related: [ten-repos clip](10-new-github-repos-make-money.md), [AI workspace hub](../../references/ai-workspace/index.md).
+Related: [ten-repos clip](10-new-github-repos-make-money.md), [Greg Isenberg's five repos, incl. NVIDIA SkillSpector](greg-isenberg-5-github-repos-ai-slop.md), [AI workspace hub](../../references/ai-workspace/index.md).
