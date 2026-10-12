@@ -18,7 +18,7 @@ WinGet package directories are versioned/managed by WinGet. Prefer calling the c
 | Command | Version | Notes |
 |---|---|---|
 | `py` | launcher 3.15.0, default `3.15` | Newest. Python 3.15.0 (released 2026-10-09) from python.org, installer signature checked (Python Software Foundation), per-user at `%LOCALAPPDATA%\Programs\Python\Python315`. Has `requests` and `youtube-transcript-api` for the vault scripts. `py -3.12` still works. |
-| `python`, `pip` | 3.12.10 | Deliberately left on 3.12. It carries about 50 packages 3.15 lacks (`mcp`, `google-genai`, `pydantic`, `pytest`, and others), and the pre-approved `accommodations-email` send script is called as plain `python`. Move `python` to 3.15 only after those packages are installed there and the script is tested. |
+| `python`, `pip` | 3.15.0 | Moved to 3.15 on 2026-10-12 at Joshua's request: `Python315` and `Python315\Scripts` are first among the Python entries on the user PATH. All 50 packages 3.12 had were installed on 3.15 (19 key ones import, `pip check` clean), and the `accommodations-email` send script passed a dry run as plain `python`. Python 3.12.10 stays installed and is reachable as `py -3.12`. |
 | `python3` | Microsoft Store stub | Prints an install hint and does nothing. `check-skills.sh` already skips it. |
 
 The saved Windows user PATH already contains these package directories. All four commands were verified by name after reloading PATH. The original failure was a stale PATH inherited by already-running Codex, not a missing install. Restarting an AI application gives its new terminals the refreshed environment.

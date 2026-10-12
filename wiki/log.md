@@ -2979,3 +2979,13 @@ check-skills PASS (claude 299, codex 287, gemini 211).
 - Left `python` and `pip` on 3.12.10 on purpose: 3.12 has about 50 packages 3.15 lacks, and the pre-approved `accommodations-email` send script is called as plain `python`. Not tested under 3.15.
 - `python3` is the Microsoft Store stub, which explains the earlier `check-skills.sh` failure; the script now skips it and passes.
 - Updated [[windows-cli-toolchain]]. Nothing uninstalled. The installer copy is in the session scratchpad.
+
+## [2026-10-12] system | `python` and `pip` moved to Python 3.15.0
+
+- Joshua asked that `python` be the newest version too. Followed the safe order recorded in the entry above: copied packages, tested the pre-approved send script, then changed PATH.
+- Installed the 50 packages Python 3.12 had but 3.15 lacked (including `mcp`, `google-genai`, `pydantic`, `cryptography`, `pytest`, `pywin32`); all had 3.15 wheels. 19 key modules import, `pip check` reports no broken requirements.
+- `accommodations-email/scripts/send.py` uses only the standard library plus the `gws` command. Dry run passed under 3.15, under 3.12 and as plain `python` in a fresh shell. The dry run does not send or write the ledger; the `wiki/send-ledger.md` changes in the working tree are other sessions' real sends.
+- Put `Python315` and `Python315\Scripts` on the user PATH after the tools folder and Herdr (previous PATH saved in the session scratchpad). `python`, `pip` and `py` all resolve to 3.15.0; `py -3.12` still works. `check-skills.sh` passes and the wiki lint runs under it.
+- Already-running programs keep their old PATH. That includes the current Herdr server's panes and this Claude session's bash, so `python` there is still 3.12 until they are restarted (`herdr server stop`, then relaunch from the desktop shortcut).
+- Slip: a smoke test imported the standard-library `antigravity` module, which opens an xkcd comic in a browser; a stray tab may have opened. Harmless.
+- Open: tools that call a hard-coded `...\Python312\python.exe` path were not searched for. Python 3.12 was not uninstalled.
