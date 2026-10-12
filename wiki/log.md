@@ -2902,3 +2902,17 @@ Gathered Joshua's own contrapositive teaching from session transcripts into wiki
 - Finding: twelve tools claimed by one creator; only the Cloudflare security-audit skill has a clear fit (pre-release check for LSAT U). Star counts and repo contents unverified.
 - Verification: hash, links and index checked.
 - Open: no repository inspected; publication date, channel name and three short-link targets unknown; Cloudflare audit evaluation is proposed only.
+
+## [2026-10-12] ingest | 100+ GitHub repos for Claude (Nate Herk) and ten-repos follow-up
+- Sources: [Nate Herk summary](sources/100-github-repos-for-claude-nate-herk.md) (clip SHA-256 `6ab288c538c24f952e6607ce61afe86f6b736fbe6874e8ee166ffa7d3039d1d6`); [ten-repos summary](sources/10-new-github-repos-make-money.md) extended with a GitHub check, 21st.dev resolution and a value ranking. Second clip generation of the ten-repos video archived (SHA-256 `dfa4f73a1449c81988e1f0c15b0fd786b226a64a1450c902a4be8819e5f0cdec`, line endings only).
+- Changed: two source summaries, archive provenance, `skills/claude/find-skills/SKILL.md` and `skills/codex/find-skills/SKILL.md` (added upstream `--owner` option; local narrow trigger kept).
+- Finding: highest-value items for LSAT U are the Supabase and Stripe skills and a pre-release security audit (Cloudflare skill or Claude Security, evaluate together). Orca recorded alongside Herdr, not installed.
+- Verification: GitHub API stats checked 2026-10-12; clip hashes verified; nothing installed, no API key used.
+- Open: 21st MCP needs Joshua's API key; repo contents not inspected; Zapier link unresolved.
+
+## [2026-10-12] system | Installed Nate Herk's repos (user-authorized)
+- Cloned 12 repos to `C:\Users\Joshu\dev\tools\repos` (outside the vault). Scanned skill files for risky patterns; only benign hits (webhook docs, PyTorch `model.eval()`).
+- Activated 51 skills as copies in `.claude/skills/`, `.agents/skills/`, `skills/claude/`, `skills/codex/`: humanizer, scroll-craft, stripe-best-practices, supabase, supabase-postgres-best-practices, playwright-cli, 25 Addy Osmani skills (test-driven-development skipped, already present), 18 HyperFrames skills. `skills/INDEX.md` regenerated; `check-skills.py` PASS (claude=275 codex=263).
+- Installed Claude Security plugin (user scope) and the playwright-cli and hyperframes CLIs in `dev/tools/node`.
+- Mistake and repair: the CLI install pruned codex, firecrawl and kling from `dev/tools/node` because it had no package.json. Reinstalled all three (codex 0.162.1, firecrawl 1.26.3, kling 0.2.1); `package.json` now lists all five.
+- Not installed: Expo skills, Open SEO, Apify MCP (need a token, a service or a mobile app); Google Workspace CLI already present.

@@ -47,10 +47,46 @@ The description and closing also promote the narrator's paid "Agentic OS" course
 
 All twelve items are **captured** only. None is evaluated, tested, installed or activated. Before relying on any of them, inspect the actual repository (the schema's rule for repos and skills) and check overlap with the catalog.
 
+## Which ones are of value (checked 2026-10-12)
+
+GitHub API check on 2026-10-12. Contents of the repositories were not opened or run.
+
+| Tool | GitHub state | Value to you |
+|---|---|---|
+| Cloudflare security-audit skill | 28k stars, MIT, pushed 2026-09-14 | **High.** Pre-release security pass for LSAT U. Evaluate with Anthropic's Claude Security from the [Nate Herk clip](100-github-repos-for-claude-nate-herk.md) and pick one. |
+| Orca | 90k stars, MIT, pushed today. "ADE for working with a fleet of parallel agents," your own subscription, desktop, mobile and remote runtime | **Medium, kept alongside Herdr.** It overlaps Herdr's job, but the repo advertises mobile and remote runtime. Herdr is installed; Orca is not. Compare only if Herdr falls short. |
+| Find Skills (`vercel-labs/skills`) | 34k stars, MIT, v1.7.2 released 2026-10-09 | **Already have it; now updated.** See below. |
+| 21st.dev | Magic MCP repo: 6k stars, ISC, pushed 2026-09-09 | **Medium for UI work.** Resolved below. Not installed. |
+| Rea | 113k stars, MIT, pushed today | **Medium-low.** "Reverse engineer anything with agents." Interesting for studying how other prep platforms work; no open task needs it. |
+| Zapier MCP | not a GitHub repo | **Low, with a caution.** One more connection layer on top of `gws`. |
+| PhotoCraft | 49k stars, Apache-2.0 | Low. No design-editing task is open. |
+| Compositor | 16k stars, MIT, "Photoshop alternative for Mac" | Low. Mac only. |
+| Ego Lite | `lite.ego.app` (resolved from short link) | Low. Your Chrome extension and the in-app browser already cover this. |
+| Universal Modder | 6.7k stars, MIT | None for LSAT U. |
+| Arena Skill | 460 stars, MIT | Low. Hundred-way sampling is costly; 460 stars means little vetting. |
+| SlopMonster | 895 stars, MIT | Low, and the "sound human" goal conflicts with your own voice standard. |
+
+## 21st.dev, resolved
+
+- The `bit.ly` link in the description points to `https://21st.dev/`, a library of "12,000+ crafted React components, templates, and shadcn themes."
+- The Magic MCP repo (`21st-dev/magic-mcp`) now says Magic MCP **has been replaced by the 21st MCP**. Install is `npx @21st-dev/cli@latest init --client claude`, or add the HTTP server `https://21st.dev/api/mcp` with an `x-api-key` header.
+- It needs a free API key from `21st.dev/mcp`. Old Magic keys were reset. A Claude Code plugin route exists (`claude plugin marketplace add 21st-dev/magic-mcp`, then `/plugin install 21st`, key in `API_KEY_21ST`).
+- Without the paid AI tier, only `search` and `get_component` work; `generate` needs AI access enabled.
+- Fit: LSAT U is React, Tailwind and shadcn, which matches the library. Per your global rule, the key would go in the root `.env`, never in chat.
+- **Not installed.** Installing needs your key and a configuration change.
+
+## Find Skills, updated
+
+Compared the catalog copy with upstream `vercel-labs/skills` (`skills/find-skills/SKILL.md`, 2026-10-12). The only upstream differences were the new `--owner <owner>` option for `npx skills find` and the broader trigger wording. I added `--owner` to both catalog copies (`skills/claude/find-skills`, `skills/codex/find-skills`) and kept your narrower local trigger ("only when asked to find or install a skill"). The upstream file no longer lists `npx skills check`; I left that line in the local copy because I did not verify the CLI dropped the command.
+
+## Second clip generation
+
+Joshua re-clipped the same video on 2026-10-12. The second file (SHA-256 `dfa4f73a1449c81988e1f0c15b0fd786b226a64a1450c902a4be8819e5f0cdec`) differs only in line endings and is archived beside the first.
+
 ## Limits and open questions
 
 - Publication date and channel name are unknown.
-- Ego Lite, 21st.dev and Zapier appear only as short links; their targets were not resolved.
-- Open: should the Cloudflare security-audit skill be evaluated against LSAT U before the next release? Proposed, not agreed.
+- Zapier's short link was not opened.
+- Open: evaluate the Cloudflare audit skill and Claude Security together against LSAT U? Proposed, not agreed.
 
 Related: [AI workspace hub](../../references/ai-workspace/index.md).

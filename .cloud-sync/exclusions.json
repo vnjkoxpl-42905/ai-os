@@ -4,8 +4,16 @@
     "reason": "excluded directory"
   },
   {
+    "path": ".agents/skills/media-use/scripts/lib/telemetry.mjs",
+    "reason": "gitleaks credential redacted in snapshot: generic-api-key"
+  },
+  {
     "path": ".agents/skills/pre-consultation-check-in/logs/checkin.log",
     "reason": "excluded file"
+  },
+  {
+    "path": ".claude/skills/media-use/scripts/lib/telemetry.mjs",
+    "reason": "gitleaks credential redacted in snapshot: generic-api-key"
   },
   {
     "path": ".cloud-sync/conversations/claude/0850cc70-b315-4080-b799-206dbc270f0b.md",
@@ -93,34 +101,6 @@
   },
   {
     "path": ".cloud-sync/conversations/claude/a9074c7e-319b-4775-bb1a-0ef531997f63.md",
-    "reason": "gitleaks credential redacted in snapshot: generic-api-key"
-  },
-  {
-    "path": ".cloud-sync/conversations/claude/b9a9fa19-b5b7-4c50-b688-92ebf103203b.md",
-    "reason": "gitleaks credential redacted in snapshot: aws-access-token"
-  },
-  {
-    "path": ".cloud-sync/conversations/claude/b9a9fa19-b5b7-4c50-b688-92ebf103203b.md",
-    "reason": "gitleaks credential redacted in snapshot: aws-access-token"
-  },
-  {
-    "path": ".cloud-sync/conversations/claude/b9a9fa19-b5b7-4c50-b688-92ebf103203b.md",
-    "reason": "gitleaks credential redacted in snapshot: aws-access-token"
-  },
-  {
-    "path": ".cloud-sync/conversations/claude/b9a9fa19-b5b7-4c50-b688-92ebf103203b.md",
-    "reason": "gitleaks credential redacted in snapshot: aws-access-token"
-  },
-  {
-    "path": ".cloud-sync/conversations/claude/b9a9fa19-b5b7-4c50-b688-92ebf103203b.md",
-    "reason": "gitleaks credential redacted in snapshot: aws-access-token"
-  },
-  {
-    "path": ".cloud-sync/conversations/claude/b9a9fa19-b5b7-4c50-b688-92ebf103203b.md",
-    "reason": "gitleaks credential redacted in snapshot: aws-access-token"
-  },
-  {
-    "path": ".cloud-sync/conversations/claude/b9a9fa19-b5b7-4c50-b688-92ebf103203b.md",
     "reason": "gitleaks credential redacted in snapshot: generic-api-key"
   },
   {
@@ -928,6 +908,10 @@
     "reason": "credential assignment redacted in snapshot"
   },
   {
+    "path": "skills/claude/media-use/scripts/lib/telemetry.mjs",
+    "reason": "gitleaks credential redacted in snapshot: generic-api-key"
+  },
+  {
     "path": "skills/claude/notebooklm/tests/cassettes/artifacts_list.yaml",
     "reason": "API token redacted in snapshot"
   },
@@ -1021,6 +1005,10 @@
   },
   {
     "path": "skills/codex/higgsfield-websites/references/security.md",
+    "reason": "gitleaks credential redacted in snapshot: generic-api-key"
+  },
+  {
+    "path": "skills/codex/media-use/scripts/lib/telemetry.mjs",
     "reason": "gitleaks credential redacted in snapshot: generic-api-key"
   },
   {

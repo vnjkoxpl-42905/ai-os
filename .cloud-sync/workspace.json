@@ -24,7 +24,7 @@
       "projects/lsatu-wt-frozen/.env",
       "projects/lsatu/.env"
     ],
-    "ciphertext_sha256": "f1e0240eb1d5fc047e3efb224bbb2a116302e0f5b4584e4897f84080eea062cc",
+    "ciphertext_sha256": "b75153329ab27adc4b2c9444e70c448d98df8822830cf10c47696ebd9cad69ea",
     "cloud_key_required": "Provision AI_OS_SYNC_KEY privately in the cloud environment; the key is never uploaded."
   },
   "runtime_export": {
@@ -33,8 +33,8 @@
       "agents_skills": 1599,
       "claude_skills": 1636,
       "codex_skills": 435,
-      "claude_plugin_skills": 19,
-      "claude_plugin_files": 265,
+      "claude_plugin_skills": 20,
+      "claude_plugin_files": 272,
       "codex_plugin_skills": 245,
       "codex_plugin_files": 1693,
       "claude_instruction": 1,
@@ -89,6 +89,11 @@
           "source_path": "C:\\Users\\Joshu\\.claude\\plugins\\cache\\claude-plugins-official\\chrome-devtools-mcp\\1.9.0\\skills\\troubleshooting",
           "relative_path": "claude-plugins-official/chrome-devtools-mcp/1.9.0/skills/troubleshooting",
           "files": 1
+        },
+        {
+          "source_path": "C:\\Users\\Joshu\\.claude\\plugins\\cache\\claude-plugins-official\\claude-security\\0.12.0\\skills\\claude-security",
+          "relative_path": "claude-plugins-official/claude-security/0.12.0/skills/claude-security",
+          "files": 7
         },
         {
           "source_path": "C:\\Users\\Joshu\\.claude\\plugins\\cache\\remotion\\remotion\\4.0.523\\skills\\remotion-best-practices",
@@ -1385,15 +1390,17 @@
     ]
   },
   "conversation_export": {
-    "session_count": 724,
+    "session_count": 721,
     "errors": [],
     "snapshot_omitted_count": 0
   },
   "encrypted_original_context": {
     "enabled": true,
     "format": 2,
-    "file_count": 197,
+    "file_count": 200,
     "paths": [
+      "ai-os/.agents/skills/media-use/scripts/lib/telemetry.mjs",
+      "ai-os/.claude/skills/media-use/scripts/lib/telemetry.mjs",
       "ai-os/.cloud-sync/conversations/claude/0850cc70-b315-4080-b799-206dbc270f0b.md",
       "ai-os/.cloud-sync/conversations/claude/184bd7f4-1801-435a-a464-e37067478e55.md",
       "ai-os/.cloud-sync/conversations/claude/39580f3c-d313-4276-a2d3-a89790f0ef09-agent-a7c71cb41361fd87b.md",
@@ -1405,7 +1412,6 @@
       "ai-os/.cloud-sync/conversations/claude/925cea80-b503-484b-b5fa-2f663e9a4370.md",
       "ai-os/.cloud-sync/conversations/claude/a247f049-84d1-48a8-b1ce-cef615411569.md",
       "ai-os/.cloud-sync/conversations/claude/a9074c7e-319b-4775-bb1a-0ef531997f63.md",
-      "ai-os/.cloud-sync/conversations/claude/b9a9fa19-b5b7-4c50-b688-92ebf103203b.md",
       "ai-os/.cloud-sync/conversations/claude/df988054-f0a6-423b-a20e-11dfbed8956f.md",
       "ai-os/.cloud-sync/conversations/claude/f4541da2-e2ab-4690-9bb3-b5d2bf9e2062-agent-a79ea62c9a82926ae.md",
       "ai-os/.cloud-sync/conversations/claude/f9e1648e-8435-402f-acdc-5221fda60fbf-agent-a012ba6cc11d82aeb.md",
@@ -1524,6 +1530,7 @@
       "ai-os/skills/claude/_project-forks/lsatu/notebooklm/tests/cassettes/sources_rename.yaml",
       "ai-os/skills/claude/claude-api/csharp/claude-api/README.md",
       "ai-os/skills/claude/claude-api/go/managed-agents/README.md",
+      "ai-os/skills/claude/media-use/scripts/lib/telemetry.mjs",
       "ai-os/skills/claude/notebooklm/tests/cassettes/artifacts_list.yaml",
       "ai-os/skills/claude/notebooklm/tests/cassettes/artifacts_list_audio.yaml",
       "ai-os/skills/claude/notebooklm/tests/cassettes/artifacts_list_data_tables.yaml",
@@ -1547,6 +1554,7 @@
       "ai-os/skills/codex/claude-api/csharp/claude-api/README.md",
       "ai-os/skills/codex/claude-api/go/managed-agents/README.md",
       "ai-os/skills/codex/higgsfield-websites/references/security.md",
+      "ai-os/skills/codex/media-use/scripts/lib/telemetry.mjs",
       "ai-os/skills/codex/notebooklm/tests/cassettes/artifacts_export_report.yaml",
       "ai-os/skills/codex/notebooklm/tests/cassettes/artifacts_list_data_tables.yaml",
       "ai-os/skills/codex/notebooklm/tests/cassettes/artifacts_rename.yaml",
@@ -1592,17 +1600,17 @@
       "ai-os/wiki/sources/karpathy/repos/files/repos--karpathy--cryptos--getnewaddress.py.md",
       "ai-os/wiki/sources/karpathy/repos/files/repos--karpathy--karpathy.github.io--_posts--2021-06-21-blockchain.markdown.md"
     ],
-    "ciphertext_sha256": "85b3682f540e880fd39da3ee0c285c43b10acbdf6f184806abc8de7ec2037e7d",
+    "ciphertext_sha256": "d2fdb30eef73bafd583f8cfaef0532caaabc86b8fcfb97447f99fd8f122ee7f6",
     "ciphertext_parts": [
       {
         "file": "redacted-context.enc.part0001",
         "bytes": 52428800,
-        "sha256": "e8c4bc3108d1cdff89ad99a7bb74feae880b47d9620cf388c73fe1c3dccc96ee"
+        "sha256": "2a54e9e59519c3c68f0539574aa9558dae844267897f5fb6482f9eb6d5bfae04"
       },
       {
         "file": "redacted-context.enc.part0002",
-        "bytes": 47696614,
-        "sha256": "ce1a5aeb0c28bb3d1823a9b183e805fbee2a80d779e608c9895d11acd778021f"
+        "bytes": 47488486,
+        "sha256": "033c6ee3e282c792bcd1297cb381e9e894c53c9ddf112d3d5b744d49ae91de49"
       }
     ]
   }
