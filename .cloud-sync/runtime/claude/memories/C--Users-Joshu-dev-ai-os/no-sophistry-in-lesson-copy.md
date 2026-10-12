@@ -20,4 +20,4 @@ When writing or editing LSAT lesson copy, say what the thing is in plain words f
 - Related: [[no-em-dashes-no-filler-in-joshuas-writing]], [[lsat-teaching-voice-standard]], [[no-internal-labels-in-student-lessons]].
 - Never say the contrapositive is "the one other thing" a rule tells you (his 2026-10-11 correction). Say equivalent and interchangeable: know one, you know the other.
 - Do not use the raffle/bicycle as the example in new contrapositive or arrow material. Use a fresh everyday example (current contrapositive note: elevator moving, doors closed).
-- Contrapositive lesson mirrors the source HTML: guess box first, flip card for the answer, then the name and "logically equivalent". Say "left side / right side of the arrow". Never mention Logic Games. Never reuse the source's coffee or breathing/air examples.
+- Contrapositive lesson: no thought experiment or guess card (it confused him). Follow the source HTML explanation directly in close language, definition first, equivalence stated, "left side / right side of the arrow". Never mention Logic Games. Never reuse the source coffee or breathing/air examples.
