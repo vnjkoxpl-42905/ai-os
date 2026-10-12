@@ -14,7 +14,7 @@ Native UI archive does not delete a conversation. Source-file deletion removes i
 | claude | [Ingesting — do you know how to? So, whenever I clip something into my inbox for my second brain, do ](claude/0820f7a1-3c45-4ae3-be95-7ca5f3717a32.md) | C:\Users\Joshu\dev\ai-os | 2026-10-11T01:49:15+00:00 |
 | claude | [add 3 credits to sofias account there wre 3 missed sessins](claude/0850cc70-b315-4080-b799-206dbc270f0b.md) | C:\Users\Joshu\dev\ai-os | 2026-09-25T23:47:10+00:00 |
 | claude | [Can you tell me if you can see the Clipped source? It's about Herder. i believe can u  see it chase ](claude/08e58dec-19fc-482d-846b-964cec7f1f03.md) | C:\Users\Joshu\dev\ai-os | 2026-09-25T23:47:10+00:00 |
-| claude | [Session Handoff — Conditional Bootcamp drill polish, audit fixes, progress saving, per-drill walkthr](claude/0adf7428-649b-4749-aee8-c31214842fd4.md) | C:\Users\Joshu\dev\ai-os | 2026-10-11T23:46:33+00:00 |
+| claude | [Session Handoff — Conditional Bootcamp drill polish, audit fixes, progress saving, per-drill walkthr](claude/0adf7428-649b-4749-aee8-c31214842fd4.md) | C:\Users\Joshu\dev\ai-os | 2026-10-12T00:01:15+00:00 |
 | claude | [This is a brand-new Dell 15 DC15250 running Windows 11 Home with:](claude/0b4c747a-84ce-4095-8c2c-9bb1b7ec4ec8.md) | C:\Users\Joshu\dev\ai-os | 2026-09-25T23:47:10+00:00 |
 | claude | [what I'm going to do is get you to send an email to Adriana saying sorry for the late notice and let](claude/0bf11b2b-decb-4328-b419-b2c5f09b015a.md) | C:\Users\Joshu\dev\ai-os | 2026-09-24T23:47:15+00:00 |
 | claude | [Session Handoff — RRC POV instructional video: built from scratch to three rendered cuts](claude/0fab1330-1a2f-4eb3-a78c-b3d24958df4e.md) | C:\Users\Joshu\dev\ai-os | 2026-09-10T06:30:55+00:00 |
@@ -172,6 +172,7 @@ Native UI archive does not delete a conversation. Source-file deletion removes i
 | claude | [Context: an instructional video for an LSAT drill is built in Remotion (C:/Users/Joshu/dev/ai-os/pro](claude/6bf8aeea-2d39-4a6c-aae3-8d213ed8c968-agent-ade2b1c9b1cf12edb.md) | C:\Users\Joshu\dev\ai-os\projects\video | 2026-09-10T07:24:04+00:00 |
 | claude | [Session Handoff — RRC instructional video, Round 6: corrected against the app's own drill spec](claude/6bf8aeea-2d39-4a6c-aae3-8d213ed8c968.md) | C:\Users\Joshu\dev\ai-os | 2026-09-11T03:19:27+00:00 |
 | claude | [Session Handoff — Drill hub perfect-score plan, packages E through N executed](claude/6c1d3b25-d091-4a50-8b52-d8a1648620ff.md) | C:\Users\Joshu\dev\ai-os | 2026-09-09T20:28:14+00:00 |
+| claude | [](claude/6f1c3429-949a-4b8a-b0c8-a960c83f510f.md) | C:\Users\Joshu\dev\ai-os | 2026-10-12T00:08:55+00:00 |
 | claude | [<command-message>impeccable</command-message>](claude/72ce6d4d-8db4-4860-9637-b764fdd0077e.md) | C:\Users\Joshu\dev\ai-os | 2026-09-25T23:47:10+00:00 |
 | claude | [](claude/734a333b-4c83-4023-a4a6-a902fca5c016.md) | C:\Users\Joshu\dev\ai-os | 2026-09-27T03:49:06+00:00 |
 | claude | [I want you to tell me if you can understand Matt Pecock's skill. He has a repo; can you find it and ](claude/734fbdcc-75a8-4803-b43c-51ee8a60c651.md) | C:\Users\Joshu\dev\ai-os | 2026-09-24T23:47:15+00:00 |

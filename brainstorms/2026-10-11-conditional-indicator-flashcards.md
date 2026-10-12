@@ -1,6 +1,6 @@
 # Conditional indicator flashcards: Brainstorm / Discovery Notes
 Date: 2026-10-11 · Goal: Pin down the redesigned indicator flashcards (indicator word on the front, student commits to a group, card flips, back says the group and what to do with it)
-Status: all decisions confirmed; building
+Status: built and pushed to PR #204 (2026-10-11). Resume point: none; open items are the Group 1 lesson decision (below) and the preview of how it reads in the course.
 Context sources: `ai-os-projects/lsatu-conditional-bootcamp/src/bootcamps/conditionals/` (`components/StudyDeck.tsx`, `components/FlashcardTools.tsx`, `content/indicatorFlashcards.ts`)
 
 ## What exists today (verified 2026-10-11, from the code)
