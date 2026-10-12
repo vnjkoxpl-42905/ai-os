@@ -25,7 +25,7 @@
       "projects/lsatu-wt-frozen/.env",
       "projects/lsatu/.env"
     ],
-    "ciphertext_sha256": "81053e8e20a58b100b27ae4eb03679590de9c92e78f8a6814f89d613526f6df2",
+    "ciphertext_sha256": "360a5897a646c3a5427e14cb718856b166932234fa05048d287a70f723457fe3",
     "cloud_key_required": "Provision AI_OS_SYNC_KEY privately in the cloud environment; the key is never uploaded."
   },
   "runtime_export": {
@@ -36,8 +36,8 @@
       "codex_skills": 437,
       "claude_plugin_skills": 21,
       "claude_plugin_files": 273,
-      "codex_plugin_skills": 245,
-      "codex_plugin_files": 1693,
+      "codex_plugin_skills": 247,
+      "codex_plugin_files": 1701,
       "claude_instruction": 1,
       "codex_instruction": 1,
       "claude_memory_files": 70,
@@ -163,6 +163,11 @@
         }
       ],
       "codex": [
+        {
+          "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\21st-dev\\21st\\1.0.1\\skills\\21st-ui",
+          "relative_path": "21st-dev/21st/1.0.1/skills/21st-ui",
+          "files": 1
+        },
         {
           "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\claude-cowork\\anthropic-skills\\1.0.0\\skills\\browser",
           "relative_path": "claude-cowork/anthropic-skills/1.0.0/skills/browser",
@@ -427,6 +432,11 @@
           "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\claude-cowork\\productivity\\1.3.1\\skills\\update",
           "relative_path": "claude-cowork/productivity/1.3.1/skills/update",
           "files": 1
+        },
+        {
+          "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\claude-plugins-official\\claude-security\\0.12.0\\skills\\claude-security",
+          "relative_path": "claude-plugins-official/claude-security/0.12.0/skills/claude-security",
+          "files": 7
         },
         {
           "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\created-by-me-remote\\lsat-u-admin\\0.1.0\\skills\\lsat-u-operations",
@@ -1396,9 +1406,9 @@
     ]
   },
   "conversation_export": {
-    "session_count": 727,
+    "session_count": 736,
     "errors": [],
-    "snapshot_omitted_count": 0
+    "snapshot_omitted_count": 1
   },
   "encrypted_original_context": {
     "enabled": true,
