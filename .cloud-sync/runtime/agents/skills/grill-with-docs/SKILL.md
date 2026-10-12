@@ -4,11 +4,8 @@ description: A relentless interview to sharpen a plan or design, which also crea
 disable-model-invocation: true
 ---
 
+## Current AI OS execution contract
 
-## Local execution contract (2026-10-10)
-
-Compose only requested interview/domain-modeling work using installed host routes. Preserve known answers and actual glossary. This shorthand is not an automatic cross-provider review or compulsory approval gate.
-
-## Workflow
+Resolve domain-modeling and the actual host-supported interview skill from the installed entry point. Do not invoke an unavailable literal Skill tool. Preserve the document-backed composition and previously resolved requirements.
 
 Call the Skill tool twice, for "grilling" and "domain-modeling".

@@ -15,19 +15,21 @@ This skill is the **on-demand pull** that mirrors those submissions into the ai-
 
 ## What it does
 
-1. Logs in with the admin creds in `~/ai-os/.env` (`LSATPREP_ADMIN_*`) against GoTrue, exactly as the admin UI authenticates.
+1. Logs in with the admin creds in the AI OS root `.env` (`LSATPREP_ADMIN_*`) against GoTrue, exactly as the admin UI authenticates.
 2. Calls `booking-pass-admin` → `list_bookings`, keeps every booking that has a note or attached files.
 3. For each new one, downloads the files (via short-lived signed URLs from `get_booking_uploads`) and writes the comment, into `students/<name>/submissions/`.
 4. Records each pulled redemption in a per-student `.pulled.json` manifest so re-running only fetches what's new (idempotent).
 
 ## Run it
 
+From the AI OS root:
+
 ```bash
-bash ~/ai-os/skills/claude/pull-submissions/pull-submissions.sh            # pull everything new
-bash ~/ai-os/skills/claude/pull-submissions/pull-submissions.sh --dry-run  # list only, write nothing
+bash skills/claude/pull-submissions/pull-submissions.sh            # pull everything new
+bash skills/claude/pull-submissions/pull-submissions.sh --dry-run  # list only, write nothing
 ```
 
-Requires `curl` and `jq`. Reads `VITE_SUPABASE_URL` / `VITE_SUPABASE_PUBLISHABLE_KEY` from `../ai-os-projects/lsatu/.env` and the admin creds from the root `.env` (both sourced with absolute paths — cwd is unreliable).
+Requires `curl` and `jq` (on Windows: `winget install jqlang.jq`; it was not installed as of 2026-10-12). The script finds the AI OS root from `AIOS_ROOT`, then the vault it sits in, then `~/dev/ai-os` (Windows) or `~/ai-os` (Mac). Reads `VITE_SUPABASE_URL` / `VITE_SUPABASE_PUBLISHABLE_KEY` from `../ai-os-projects/lsatu/.env` and the admin creds from the root `.env` (both sourced with absolute paths — cwd is unreliable).
 
 ## Output layout
 

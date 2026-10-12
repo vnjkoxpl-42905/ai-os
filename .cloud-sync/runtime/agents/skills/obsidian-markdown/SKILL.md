@@ -3,12 +3,9 @@ name: obsidian-markdown
 description: Create and edit Obsidian Flavored Markdown with wikilinks, embeds, callouts, properties, and other Obsidian-specific syntax. Use when working with .md files in Obsidian, or when the user mentions wikilinks, callouts, frontmatter, tags, embeds, or Obsidian notes.
 ---
 
+## Current AI OS execution contract
 
-## Local execution contract (2026-10-10)
-
-Keep syntax/Canvas/wikilink reference. Existing AI OS portable link/schema conventions take precedence over universal wikilink-only policy. Do not rewrite links wholesale.
-
-## Workflow
+Use syntax appropriate to the owning page. Preserve portable Markdown links required by the AI OS schema; Obsidian wikilinks are supported syntax, not a universal mandate to rewrite all links.
 
 # Obsidian Flavored Markdown Skill
 

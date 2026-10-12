@@ -333,3 +333,8 @@ Further steering in the same session: “Keep the complete condition” was itse
 
 Joshua rejected Inspect set as unclear and awkward. Use Preview drill for viewing the exact selected passages and questions before starting. Keep Start this drill distinct and explain whether answers are hidden and whether work is saved. Generic Menu is also insufficient where the actual action is Question details. This correction does not justify adding more launch instructions, repeated summaries, or unrelated assigned work inside RC setup.
 
+
+
+### Unless: choose either idea (2026-10-12)
+
+Joshua rejected "Find the idea that is not attached to unless." Teach the Group 3 move as: choose either idea, negate it, put it on the left; take the other idea and put it on the right exactly as written. Do not single out which idea to pick. His answer key happens to negate the non-unless idea; choosing the other gives the contrapositive, which is also correct. Applied in the LSAT U Unless drill (PR #205).

@@ -4,12 +4,9 @@ description: "Configure this repo for the engineering skills: set up its issue t
 disable-model-invocation: true
 ---
 
+## Current AI OS execution contract
 
-## Local execution contract (2026-10-10)
-
-Preserve vendor skill sources and local forks. When shared project pointers change, mirror narrowly into both existing AGENTS.md and CLAUDE.md; do not select one or regenerate manuals.
-
-## Workflow
+When this project has both hand-owned manuals, mirror shared routing pointers into AGENTS.md and CLAUDE.md without regeneration. Preserve intentional local forks and upstream identity.
 
 # Setup Matt Pocock's Skills
 

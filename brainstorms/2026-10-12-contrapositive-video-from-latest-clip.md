@@ -1,6 +1,6 @@
 # Contrapositive video from the most recent clip: Brainstorm / Discovery Notes
 Date: 2026-10-12 · Goal: decide what video to make for the Conditional Bootcamp contrapositive lesson, using the most recent thing Joshua clipped. Nothing is generated until Joshua confirms.
-Status: in progress (round 1 answered 2026-10-12; length/format and content still open)
+Status: interview answered 2026-10-12; waiting on Joshua's go-ahead to build
 Context sources: [wiki/sources/claude-now-does-video-free-javascript.md](../wiki/sources/claude-now-does-video-free-javascript.md), [wiki/VIDEO-GENERATION-OPTIONS-2026-09-09.md](../wiki/VIDEO-GENERATION-OPTIONS-2026-09-09.md), memory `conditional-videos-use-kling`, memory `remotion-rspack-emits-no-js`, `lsatu-conditional-bootcamp/docs/agent/conditional-recovery-20261007/media/necessary-film-20261010.md`
 
 ## Facts found (not asked)
@@ -21,6 +21,11 @@ Context sources: [wiki/sources/claude-now-does-video-free-javascript.md](../wiki
 - Q2 (purpose): in a lecture, a brief lecture video of what a contrapositive is, dynamic real-time visuals, very visually engaging.
 - Q3 (route): code-rendered.
 - Q4 (narration): AI voice.
+- Q5 (length/format): 60 to 90 sec, 16:9.
+- Q6 (content): bulb story first (original rule on the two-lamp stage), then the flip and negate, ending on "logically equivalent". Reuses the lesson's visuals.
+- Go-ahead 2026-10-12: install HyperFrames, try Kokoro first, install whatever else is needed, choose the voice that sounds least AI. Voice chosen: Kokoro af_heart (author grade A; am_adam F+, am_michael C+). Chosen from published grades, not by ear.
+- Build 2026-10-12: project at `ai-os-projects/contrapositive-video/lecture` (HyperFrames 0.8.149, Kokoro in `.venv`, faster-whisper for word timings, HeyGen CLI has no Windows build so unused). Script in `script.json`; 7 scenes, 77 s, 16:9, no burned-in captions (WebVTT shipped alongside).
+- Recommendation given 2026-10-12: HyperFrames over Chase AI's method (a tool vs an unidentified recipe; ports the existing HTML visuals; has a voiceover step). Not yet tested on this machine.
 
 ## Open flags (pending input)
 - Whether Playwright and a Chromium download may be installed (ask after the route is chosen).

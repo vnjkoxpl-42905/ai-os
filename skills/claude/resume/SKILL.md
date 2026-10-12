@@ -15,7 +15,7 @@ Continue exactly where the last session left off, without Joshua re-explaining o
 2. If the current working directory is inside `C:/Users/Joshu/dev/ai-os-projects/lsatu/`, also find the newest file in `docs/agent/handoffs/` and the newest file in `docs/implementation-plans/**` (recursive, any depth) within that repo.
 3. Compare mtimes across whatever set you found in steps 1-2. Read the single newest file in full.
 4. If that file references a more specific active plan/spec (a path it names as "next" or "continue from"), open that file too — same exception as `/pickup`'s resume pointer: an explicitly named active plan is exactly where we left off.
-5. If LSAT U work and `wiki/tasks.md` / `wiki/hot.md` exist in the vault (`~/ai-os/`), also check those for a `## Now` item or `## Resume here` pointer that corroborates or updates what the file says. Don't do the full `/pickup` ritual, just this cross-check.
+5. If LSAT U work and `wiki/tasks.md` / `wiki/hot.md` exist in the AI OS vault (`~/dev/ai-os` on Windows, `~/ai-os` on the Mac), also check those for a `## Now` item or `## Resume here` pointer that corroborates or updates what the file says. Don't do the full `/pickup` ritual, just this cross-check.
 
 ## Output: a briefing, then stop
 

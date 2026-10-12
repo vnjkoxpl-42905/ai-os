@@ -3,13 +3,6 @@ name: consultation-inquiry-drafts
 description: "Daily sweep: draft, but do not send, personalized consultation-link replies to new LSAT tutoring inquiries"
 ---
 
-
-## Local execution contract (2026-10-10)
-
-Before creation, reconcile Gmail live sent/thread state and existing unsent drafts using stable thread/event/recipient identity. Reuse the matching draft; update only with scope, or explicitly supersede. Never create a duplicate on repeated sweeps. Follow current teaching voice; draft unless send authorized.
-
-## Workflow
-
 # Consultation Inquiry Drafts
 
 Find new LSAT tutoring inquiries and prepare Gmail drafts for Joshua to review. Never send. AI-generated replies remain drafts unless Joshua separately approves the exact message.
@@ -18,8 +11,8 @@ Find new LSAT tutoring inquiries and prepare Gmail drafts for Joshua to review. 
 
 Before drafting:
 
-1. Read `/Users/joshuaf/ai-os/wiki/teaching-voice.md`.
-2. Read `/Users/joshuaf/ai-os/context/work.md` for current offers, booking, and billing rules.
+1. Read `C:/Users/Joshu/dev/ai-os/wiki/teaching-voice.md`.
+2. Read `C:/Users/Joshu/dev/ai-os/context/work.md` for current offers, booking, and billing rules.
 3. Use Gmail only through the `gws` CLI. Do not use Google connector MCPs.
 4. If the sender may already be a student, check `students/<name>/` first. Use Gmail and other live systems only when the student file does not resolve identity or current state.
 
@@ -61,6 +54,8 @@ Each reply must:
 Do not copy canned situation lines blindly. Mirror the person's message in natural language and follow the current teaching-voice page.
 
 ## Gmail draft behavior
+
+Before creating, list and inspect existing Gmail drafts through `gws`, following pagination and matching the inquiry thread ID + normalized recipient + workflow (`consultation-inquiry`). Reuse the matching unsent draft ID; update only that draft if the current request authorizes revision. Multiple matches are a conflict: report them without deletion. A failed/partial draft lookup blocks creation, rather than assuming none. Repeated sweeps must leave one matching draft. Record draft ID, thread ID and workflow key in the ledger, then verify the draft by ID after the write.
 
 Create the draft through `gws`. Reply inside the existing Gmail thread whenever one exists. Preserve the thread context and reply headers rather than starting a new conversation. Do not send.
 

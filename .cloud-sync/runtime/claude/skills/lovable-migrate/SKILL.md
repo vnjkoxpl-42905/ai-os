@@ -10,13 +10,6 @@ description: >
 allowed-tools: Bash Read Write Edit Glob Grep
 ---
 
-
-## Local execution contract (2026-10-10)
-
-Resolve current sibling app instructions and live backend identity before migration. Lovable Cloud Edge Functions deploy through approved Lovable route; credit spending needs immediate explicit approval. Preserve sources and current runtime manual names; historical IDs are not proof.
-
-## Workflow
-
 # Lovable migrate
 
 The LSAT U backend is `atrcqxpmqrynmtvvyjju`, on Lovable Cloud — a **managed

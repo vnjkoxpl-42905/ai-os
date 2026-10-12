@@ -4,12 +4,28 @@
     "reason": "excluded directory"
   },
   {
+    "path": ".agents/skills/eas-app-stores/references/app-store-metadata.md",
+    "reason": "credential assignment redacted in snapshot"
+  },
+  {
+    "path": ".agents/skills/eas-app-stores/references/ios-app-store.md",
+    "reason": "credential assignment redacted in snapshot"
+  },
+  {
     "path": ".agents/skills/media-use/scripts/lib/telemetry.mjs",
     "reason": "gitleaks credential redacted in snapshot: generic-api-key"
   },
   {
     "path": ".agents/skills/pre-consultation-check-in/logs/checkin.log",
     "reason": "excluded file"
+  },
+  {
+    "path": ".claude/skills/eas-app-stores/references/app-store-metadata.md",
+    "reason": "credential assignment redacted in snapshot"
+  },
+  {
+    "path": ".claude/skills/eas-app-stores/references/ios-app-store.md",
+    "reason": "credential assignment redacted in snapshot"
   },
   {
     "path": ".claude/skills/media-use/scripts/lib/telemetry.mjs",
@@ -212,6 +228,10 @@
     "reason": "API token redacted in snapshot"
   },
   {
+    "path": ".cloud-sync/runtime/agents/skills/media-use/scripts/lib/telemetry.mjs",
+    "reason": "gitleaks credential redacted in snapshot: generic-api-key"
+  },
+  {
     "path": ".cloud-sync/runtime/agents/skills/notebooklm/tests/cassettes/artifacts_delete.yaml",
     "reason": "gitleaks credential redacted in snapshot: generic-api-key"
   },
@@ -333,6 +353,10 @@
   },
   {
     "path": ".cloud-sync/runtime/agents/skills/synced/66ab068d-6d11-4b9b-bace-f3622629a61f_3264ecb8-7644-4b8c-9aed-94ea1fae19cc/browser/agent-workspace/domain-skills/metacritic/scraping.md",
+    "reason": "gitleaks credential redacted in snapshot: generic-api-key"
+  },
+  {
+    "path": ".cloud-sync/runtime/claude/skills/media-use/scripts/lib/telemetry.mjs",
     "reason": "gitleaks credential redacted in snapshot: generic-api-key"
   },
   {
@@ -908,6 +932,14 @@
     "reason": "credential assignment redacted in snapshot"
   },
   {
+    "path": "skills/claude/eas-app-stores/references/app-store-metadata.md",
+    "reason": "credential assignment redacted in snapshot"
+  },
+  {
+    "path": "skills/claude/eas-app-stores/references/ios-app-store.md",
+    "reason": "credential assignment redacted in snapshot"
+  },
+  {
     "path": "skills/claude/media-use/scripts/lib/telemetry.mjs",
     "reason": "gitleaks credential redacted in snapshot: generic-api-key"
   },
@@ -1001,6 +1033,14 @@
   },
   {
     "path": "skills/codex/claude-api/go/managed-agents/README.md",
+    "reason": "credential assignment redacted in snapshot"
+  },
+  {
+    "path": "skills/codex/eas-app-stores/references/app-store-metadata.md",
+    "reason": "credential assignment redacted in snapshot"
+  },
+  {
+    "path": "skills/codex/eas-app-stores/references/ios-app-store.md",
     "reason": "credential assignment redacted in snapshot"
   },
   {

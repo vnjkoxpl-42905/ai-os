@@ -1,9 +1,13 @@
 {
   "enabled": true,
   "format": 2,
-  "file_count": 200,
+  "file_count": 210,
   "paths": [
+    "ai-os/.agents/skills/eas-app-stores/references/app-store-metadata.md",
+    "ai-os/.agents/skills/eas-app-stores/references/ios-app-store.md",
     "ai-os/.agents/skills/media-use/scripts/lib/telemetry.mjs",
+    "ai-os/.claude/skills/eas-app-stores/references/app-store-metadata.md",
+    "ai-os/.claude/skills/eas-app-stores/references/ios-app-store.md",
     "ai-os/.claude/skills/media-use/scripts/lib/telemetry.mjs",
     "ai-os/.cloud-sync/conversations/claude/0850cc70-b315-4080-b799-206dbc270f0b.md",
     "ai-os/.cloud-sync/conversations/claude/184bd7f4-1801-435a-a464-e37067478e55.md",
@@ -34,6 +38,7 @@
     "ai-os/.cloud-sync/conversations/codex/01a11919-6d64-7c42-b320-f23458477014-a354d45dde0e.md",
     "ai-os/.cloud-sync/conversations/codex/01a11919-6d64-7c42-b320-f23458477014-eb48b2726e97.md",
     "ai-os/.cloud-sync/conversations/codex/01a1282c-ac7e-7380-90fe-9ca58e32512f-338627f0a192.md",
+    "ai-os/.cloud-sync/runtime/agents/skills/media-use/scripts/lib/telemetry.mjs",
     "ai-os/.cloud-sync/runtime/agents/skills/notebooklm/tests/cassettes/artifacts_delete.yaml",
     "ai-os/.cloud-sync/runtime/agents/skills/notebooklm/tests/cassettes/artifacts_export_report.yaml",
     "ai-os/.cloud-sync/runtime/agents/skills/notebooklm/tests/cassettes/artifacts_rename.yaml",
@@ -58,6 +63,7 @@
     "ai-os/.cloud-sync/runtime/agents/skills/notebooklm/tests/cassettes/sources_rename.yaml",
     "ai-os/.cloud-sync/runtime/agents/skills/skill-doctor/scripts/collect_sessions.py",
     "ai-os/.cloud-sync/runtime/agents/skills/synced/66ab068d-6d11-4b9b-bace-f3622629a61f_3264ecb8-7644-4b8c-9aed-94ea1fae19cc/browser/agent-workspace/domain-skills/metacritic/scraping.md",
+    "ai-os/.cloud-sync/runtime/claude/skills/media-use/scripts/lib/telemetry.mjs",
     "ai-os/.cloud-sync/runtime/claude/skills/notebooklm/tests/cassettes/artifacts_delete.yaml",
     "ai-os/.cloud-sync/runtime/claude/skills/notebooklm/tests/cassettes/artifacts_export_report.yaml",
     "ai-os/.cloud-sync/runtime/claude/skills/notebooklm/tests/cassettes/artifacts_rename.yaml",
@@ -134,6 +140,8 @@
     "ai-os/skills/claude/_project-forks/lsatu/notebooklm/tests/cassettes/sources_rename.yaml",
     "ai-os/skills/claude/claude-api/csharp/claude-api/README.md",
     "ai-os/skills/claude/claude-api/go/managed-agents/README.md",
+    "ai-os/skills/claude/eas-app-stores/references/app-store-metadata.md",
+    "ai-os/skills/claude/eas-app-stores/references/ios-app-store.md",
     "ai-os/skills/claude/media-use/scripts/lib/telemetry.mjs",
     "ai-os/skills/claude/notebooklm/tests/cassettes/artifacts_list.yaml",
     "ai-os/skills/claude/notebooklm/tests/cassettes/artifacts_list_audio.yaml",
@@ -157,6 +165,8 @@
     "ai-os/skills/codex/_project-forks/lsatu/notebooklm/tests/cassettes/sources_delete.yaml",
     "ai-os/skills/codex/claude-api/csharp/claude-api/README.md",
     "ai-os/skills/codex/claude-api/go/managed-agents/README.md",
+    "ai-os/skills/codex/eas-app-stores/references/app-store-metadata.md",
+    "ai-os/skills/codex/eas-app-stores/references/ios-app-store.md",
     "ai-os/skills/codex/higgsfield-websites/references/security.md",
     "ai-os/skills/codex/media-use/scripts/lib/telemetry.mjs",
     "ai-os/skills/codex/notebooklm/tests/cassettes/artifacts_export_report.yaml",
@@ -204,17 +214,17 @@
     "ai-os/wiki/sources/karpathy/repos/files/repos--karpathy--cryptos--getnewaddress.py.md",
     "ai-os/wiki/sources/karpathy/repos/files/repos--karpathy--karpathy.github.io--_posts--2021-06-21-blockchain.markdown.md"
   ],
-  "ciphertext_sha256": "d2fdb30eef73bafd583f8cfaef0532caaabc86b8fcfb97447f99fd8f122ee7f6",
+  "ciphertext_sha256": "fbb731195e0c031a24603c27e5894795894d358439377f18d09c687747fe9dae",
   "ciphertext_parts": [
     {
       "file": "redacted-context.enc.part0001",
       "bytes": 52428800,
-      "sha256": "2a54e9e59519c3c68f0539574aa9558dae844267897f5fb6482f9eb6d5bfae04"
+      "sha256": "9d485136ea6f4cf4ab4697bb16da3ca69f1ab2e254fcfd9cfbbf57f364a97eb6"
     },
     {
       "file": "redacted-context.enc.part0002",
-      "bytes": 47488486,
-      "sha256": "033c6ee3e282c792bcd1297cb381e9e894c53c9ddf112d3d5b744d49ae91de49"
+      "bytes": 47553133,
+      "sha256": "5647342a6a507d799dee277a7aea86fb0783ed8f61023ea7fd581bb5961d26b0"
     }
   ]
 }

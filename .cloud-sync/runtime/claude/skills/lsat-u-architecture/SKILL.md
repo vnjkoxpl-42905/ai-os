@@ -3,12 +3,9 @@ name: lsat-u-architecture
 description: Architectural source of truth and entry point for LSAT U platform rules. Use this skill whenever building, modifying, speccing, or referencing LSAT U platform features. Trigger when discussing component picks, routing, state models, design tokens, drill mechanics, Foyer navigation, Supabase realtime channels, identity/admin patterns, the always-violate rules, or any decision about how LSAT U is built. Also trigger when writing Claude Code build briefs for LSAT U, when comparing topic modules to the Causation Station architectural template, when explaining LSAT U component patterns, or when reviewing code against platform rules. This skill is the indexed entry point. The canonical full sources live in the vault; this skill gives you the always-violate rules at a glance and routes you to the deeper references. Trigger automatically when Joshua mentions LSAT U code, architecture, components, drill behavior, Foyer, Supabase, build briefs, or topic module integration, even without explicit invocation.
 ---
 
+## Current AI OS execution contract
 
-## Local execution contract (2026-10-10)
-
-Treat hardcoded backend IDs as historical references until matched against current sibling app instructions/live authority. Resolve sibling ai-os-projects/lsatu root; do not assert stale ID is current.
-
-## Workflow
+Treat backend identifiers in the reference as historical. Resolve current application root and backend from its nearest hand-owned manual/live configuration before use. Do not copy a historical backend ID or Mac path into new work.
 
 # LSAT U Architecture
 
@@ -50,9 +47,9 @@ These are the daily-use rules. Every contributor follows them without exception.
 
 For anything beyond the daily-use rules above, route to the canonical content. Authority order when sources conflict, from highest to lowest:
 
-1. **Live repo `<current-ai-os-root>/../ai-os-projects/lsatu/`**. Code is ground truth when documentation drifts.
-2. **April 2026 audit bundle `~/ai-os/archive/wiki-pre-rebuild-2026-07-16/domains/lsat-u/sources/april-2026-audit.md/`**. 14 files documenting verified bugs (F-IDs), the schema drift chain, audit corrections, persistence layer status. Entry points: `PLAYBOOK.md`, `master-reference.md`, `00-index.md`.
-3. **Vault `~/ai-os/CLAUDE.md`**. Architecture rules section plus curriculum/pedagogy rules.
+1. **Live repo `../ai-os-projects/lsatu/`** (relative to the AI OS root). Code is ground truth when documentation drifts.
+2. **April 2026 audit bundle** (historical). Its 14 files (F-ID bugs, schema drift chain, audit corrections, persistence status) lived in the retired `archive/wiki-pre-rebuild-2026-07-16/` tree, which is no longer on disk (checked 2026-10-12). Report that absence; do not cite or recreate its contents.
+3. **The AI OS root `CLAUDE.md`**. Architecture rules section plus curriculum/pedagogy rules.
 4. **Joshua's memory, edit #4** ("LSAT U architecture rules, never violate"). Short reminder list.
 
 If you find a contradiction between sources, fix the lower-authority source, not the higher one.
@@ -61,7 +58,7 @@ If you find a contradiction between sources, fix the lower-authority source, not
 
 - **Frontend:** React 18, Vite 5, TypeScript (`strict: false`, do not rely on type safety), Tailwind 3.4, shadcn/ui, motion/react
 - **Component primitives:** @base-ui/react
-- **Backend:** Supabase, project ID `qodidbkoqrmqhdfwvcmk`
+- **Backend:** Supabase, project ID `<resolve-current-backend-from-owning-app-manual>`
 - **Hosting:** Lovable, auto-deploy from GitHub
 - **Build:** SWC, no type checking at build time
 
@@ -78,7 +75,7 @@ Topic modules route from Foyer. Never add a bottom dock.
 
 ## Component library
 
-27 components, indexed at `~/ai-os/archive/wiki-pre-rebuild-2026-07-16/domains/lsat-u/components/_INDEX.md`. Categories: primitives, forms, overlays, animation, backgrounds, marketing, chat. Pick from this library first. Custom warranted only when the existing library cannot teach the topic mechanic.
+The historical 27-component index lived in the retired `archive/wiki-pre-rebuild-2026-07-16/` tree and is no longer on disk (checked 2026-10-12); inspect the app's `src/components/` instead. Categories: primitives, forms, overlays, animation, backgrounds, marketing, chat. Pick from this library first. Custom warranted only when the existing library cannot teach the topic mechanic.
 
 ## Bug ID conventions
 

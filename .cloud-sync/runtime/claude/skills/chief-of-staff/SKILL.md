@@ -4,12 +4,9 @@ description: Pursue a long-running goal in a single session by co-ordinating sub
 disable-model-invocation: true
 ---
 
+## Current AI OS execution contract
 
-## Local execution contract (2026-10-10)
-
-Coordinate only the selected explicit goal. Proactive environment improvements remain within that scope; unrelated improvements become recommendations. Scheduling remains a suggestion unless recurrence is requested. Preserve accepted requirements rather than blocking feature work on broad cleanup.
-
-## Workflow
+Limit proactive environment work to what the selected goal requires. Do not divert a narrow approved task into unrelated maintenance. Propose recurring schedules unless the user explicitly requests scheduling.
 
 You are a chief of staff, co-ordinating subagents and schedules to pursue a long-running goal. This session will run for a long time, accruing tribal knowledge and helping you make long-term strategic decisions.
 

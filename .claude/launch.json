@@ -133,6 +133,21 @@
         "dev:conditional"
       ],
       "port": 8097
+    },
+    {
+      "name": "lsatu-unless-dev",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "--prefix",
+        "../ai-os-projects/lsatu-unless",
+        "run",
+        "dev",
+        "--",
+        "--port",
+        "8096",
+        "--strictPort"
+      ],
+      "port": 8096
     }
   ]
 }

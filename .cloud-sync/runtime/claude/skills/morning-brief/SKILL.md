@@ -9,12 +9,9 @@ description: >
 allowed-tools: Bash Read Write Edit Glob Grep
 ---
 
+## Current AI OS execution contract
 
-## Local execution contract (2026-10-10)
-
-Reconcile live Gmail thread/sent state and existing drafts by stable event/thread/recipient identity before creating or changing draft status. Reuse matching drafts. A notes attachment does not prove attendance. Never schedule or send implicitly.
-
-## Workflow
+Before creating a draft, check actual Gmail thread/sent/draft state with the stable event/thread/recipient key. Reuse an existing unsent draft. Update ledger status only from fresh authoritative evidence.
 
 # Morning brief
 

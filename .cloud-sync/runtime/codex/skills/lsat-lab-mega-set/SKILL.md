@@ -3,12 +3,9 @@ name: lsat-lab-mega-set
 description: Build one consolidated LSAT Lab Logical Reasoning practice set containing EVERY LR question for a SINGLE PrepTest, in correct order, driving Joshua's logged-in Chrome via the claude-in-chrome extension end to end (create, select-all, rename to "PT### LR (S...)", start, capture URL, log). Use when Joshua gives a bare PrepTest number to turn into a set, e.g. "create set 154", "mega set 154", "LSAT Lab set 154", "make a set for PT 154", "build the LR set for PT 154", "make an LR set for 154". Runs autonomously to completion. NOT for a CSV/list of specific questions (that is lsat-lab-set-builder) and NOT for transcribing written explanations (that is lsat-lab-transcribe).
 ---
 
+## Current AI OS execution contract
 
-## Local execution contract (2026-10-10)
-
-Use actual supported signed-in browser transport, current sibling app/corpus routes and Windows shortcuts. Verify saved exact question IDs/counts before advancement or completion. Preserve recovery artifacts; deletion requires explicit confirmation.
-
-## Workflow
+Use the active host-supported browser and current Windows/project log homes. Wrongly created sets are preserved and flagged until deletion is explicitly authorized; do not delete as automatic recovery. Verify count and set identity before declaring success.
 
 # lsat-lab-mega-set
 
@@ -44,7 +41,7 @@ The number in the message is the PT. On trigger:
   Built: PT <num> LR (S<...>) - <total> questions across <k> LR sections
   Order: verified (each section Q1..last, sections ascending)
   URL: <started-set URL>
-  Logged: output/lsat-lab-set-log.md
+  Logged: docs/from-output/lsat-lab-set-log.md (LSAT U app)
   Next: say "transcribe PT <num>" to capture explanations (lsat-lab-transcribe reads this log and jumps straight in)
   ```
 
@@ -59,7 +56,7 @@ The number in the message is the PT. On trigger:
 - **Input:** a single PT number. ("Make a set for PT 154" means PT = 154.) Everything else is fixed by this skill.
 - **Output:**
   1. A saved practice set named `PT <num> LR (S<a>, S<b>, ...)` containing all LR questions for that PT, in order.
-  2. A new entry in the data log at `~/ai-os/output/lsat-u/lsat-lab-set-log.md` with sections found, per-section counts, total, qsid, and the exact started-set URL.
+  2. A new entry in the data log at `docs/from-output/lsat-lab-set-log.md` in the LSAT U app checkout (`../ai-os-projects/lsatu/` from the AI OS root; the app's git rules apply) with sections found, per-section counts, total, qsid, and the exact started-set URL.
 
 ## Execution rules (read before acting)
 
@@ -124,7 +121,7 @@ If the badge still says "0 selected", the click missed the checkbox (this happen
 - Locate the **Create** button (outline style) at the form bottom; use find + scroll_to rather than blind scrolling. Do NOT click **Start** (blue), which launches immediately.
 - Click **Create**.
 
-**GATE 4 - Dialog count:** the "Practice set created" dialog states the question count: `Created "LR Practice Set - <date, time>" with N questions.` N must equal Gate 2/3's N. If it says 10 (or anything else), the set is wrong: click OK, delete that set via its row's kebab menu (the only permitted delete: a set you just created wrongly), and redo from step 6.
+**GATE 4 - Dialog count:** the "Practice set created" dialog states the question count: `Created "LR Practice Set - <date, time>" with N questions.` N must equal Gate 2/3's N. If it says 10 (or anything else), the set is wrong: click OK, preserve and flag that set; request explicit removal authorization before deleting it, then redo from step 6 without altering other sets.
 - Click **OK**. You land on the **In Progress** tab; your set is the top row.
 
 ### 8. Rename the set
@@ -145,7 +142,7 @@ If the badge still says "0 selected", the click missed the checkbox (this happen
 - Top row must show the new name, N questions. Zoom to confirm the exact text.
 
 ### 11. Log the run
-- Append a per-PT entry to `~/ai-os/output/lsat-u/lsat-lab-set-log.md`:
+- Append a per-PT entry to `docs/from-output/lsat-lab-set-log.md` in the LSAT U app checkout (`../ai-os-projects/lsatu/` from the AI OS root; the app's git rules apply):
   - PT number; set name
   - number of LR sections found; their section numbers; per-section question counts; total
   - qsid; attempt id; exact started-set URL
@@ -162,7 +159,7 @@ If the badge still says "0 selected", the click missed the checkbox (this happen
 | Filter count ~5,000 at Gate 2 | Clear not pressed / grid never filtered | Reopen Tests grid, Clear, select the one PT |
 | Filter count 45-80 but wrong | Wrong tile or a second tile selected | Reopen grid, zoom to inspect, fix |
 | "0 selected" after select-all click | Stale coordinates, click missed | Fresh screenshot, click header checkbox again |
-| Dialog says 10 questions | Select-all skipped | OK -> delete the bad set -> redo step 6 |
+| Dialog says 10 questions | Select-all skipped | OK -> flag and preserve the bad set -> redo step 6; delete only with explicit permission |
 | Opened set shows wrong PT in footer | Row-click race opened another set | Open by qsid directly (A4), verify footer |
 | JS returns `[BLOCKED: ...]` | Output contained URL/long string | Re-run returning compact JSON only; get URLs from Tab Context |
 | JS finds no `<table>` rows | Grid is div-based, tables elsewhere on page | Use the leaf-node technique in A2 |
@@ -238,7 +235,7 @@ Expect `{"tag":"INPUT","type":"text","val":"LR Practice Set ..."}` before typing
 - [ ] Opened set verified by footer `PrepTest <num> - S1 - Q1` and `1 of N`
 - [ ] URL captured from Tab Context (has questionsetid and questionsetattemptid)
 - [ ] Rename confirmed on In Progress list
-- [ ] log entry appended to output/lsat-lab-set-log.md
+- [ ] log entry appended to docs/from-output/lsat-lab-set-log.md in the LSAT U app
 
 ## Gotchas (context)
 

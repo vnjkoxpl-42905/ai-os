@@ -13,13 +13,13 @@ Every entry below carries its justification. An entry without one is not a decis
 snapshot — which is what this file was until the audit noted below.
 
 **Audited 2026-09-12.** The Windows parity pass repaired the cross-platform validator,
-catalogued `kling-cli` for both runtimes, and ported 25 previously undeclared Claude-only
-skills to Codex: `academy-guide`, `algorithmic-art`, `brand-guidelines`, `canvas-design`,
-`claude-api`, `claude-handoff`, `code-review`, `discernment-nudge`, `doc-coauthoring`,
-`docx`, `implement-spec`, `internal-comms`, `loop-me`, `mcp-builder`,
-`migrate-to-shoehorn`, `pdf`, `pptx`, `retro`, `session-recap`,
-`setup-ts-deep-modules`, `slack-gif-creator`, `theme-factory`,
-`web-artifacts-builder`, `wizard`, and `xlsx`. Current catalog counts:
+catalogued kling-cli for both runtimes, and ported 25 previously undeclared Claude-only
+skills to Codex: academy-guide, algorithmic-art, brand-guidelines, canvas-design,
+claude-api, claude-handoff, code-review, discernment-nudge, doc-coauthoring,
+docx, implement-spec, internal-comms, loop-me, mcp-builder,
+migrate-to-shoehorn, pdf, pptx, retro, session-recap,
+setup-ts-deep-modules, slack-gif-creator, theme-factory,
+web-artifacts-builder, wizard, and xlsx. (Names are plain text on purpose: backticks would declare them single-runtime exceptions to check-skills.py, and these are catalogued for both runtimes.) Current catalog counts:
 **claude=211 codex=188**.
 
 Note that DB parity is not activation. The DB is the complete catalog; Codex's activated set

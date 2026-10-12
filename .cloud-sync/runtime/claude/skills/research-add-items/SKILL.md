@@ -3,12 +3,9 @@ name: research-add-items
 description: Add items (research objects) to existing research outline.
 ---
 
+## Current AI OS execution contract
 
-## Local execution contract (2026-10-10)
-
-Modify only selected existing outline.yaml workflow using actual requested items. Preserve previous IDs/sources and avoid duplicate additions; do not invent a parallel research schema.
-
-## Workflow
+Use only within an explicitly selected existing outline.yaml research workflow. Do not create an unrelated second research pipeline or mutate an arbitrary outline.
 
 # Research Add Items - Supplement Research Objects
 

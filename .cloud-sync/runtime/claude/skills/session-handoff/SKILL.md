@@ -3,12 +3,9 @@ name: session-handoff
 description: Use when Joshua says "session handoff", "hand off", "handoff summary", "summarize before I clear", or is about to /clear mid-work (especially near the ~250k dumb-zone). Produces a chat-only handoff — decisions, shipped changes, key files, running state, verification, deferrals, open questions — so a fresh agent (Claude or Codex) continues seamlessly. Distinct from `wrapup`, which updates the wiki ledgers; this writes nothing.
 ---
 
+## Current AI OS execution contract
 
-## Local execution contract (2026-10-10)
-
-Use current project session-handoff and actual native runtime memory paths. Deliver chat-only unless actual request specifies saved export. Preserve scope, unfinished work and evidence; do not write into obsolete memory roots.
-
-## Workflow
+Use the host-supported time/file tools, preserve current open state and explicit scope. Chat-only continuity remains distinct from file-writing wrapup or a broad system audit.
 
 # Session Handoff
 

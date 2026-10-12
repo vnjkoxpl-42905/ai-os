@@ -41,7 +41,7 @@ The number in the message is the PT. On trigger:
   Built: PT <num> LR (S<...>) - <total> questions across <k> LR sections
   Order: verified (each section Q1..last, sections ascending)
   URL: <started-set URL>
-  Logged: output/lsat-lab-set-log.md
+  Logged: docs/from-output/lsat-lab-set-log.md (LSAT U app)
   Next: say "transcribe PT <num>" to capture explanations (lsat-lab-transcribe reads this log and jumps straight in)
   ```
 
@@ -56,7 +56,7 @@ The number in the message is the PT. On trigger:
 - **Input:** a single PT number. ("Make a set for PT 154" means PT = 154.) Everything else is fixed by this skill.
 - **Output:**
   1. A saved practice set named `PT <num> LR (S<a>, S<b>, ...)` containing all LR questions for that PT, in order.
-  2. A new entry in the data log at `~/ai-os/output/lsat-u/lsat-lab-set-log.md` with sections found, per-section counts, total, qsid, and the exact started-set URL.
+  2. A new entry in the data log at `docs/from-output/lsat-lab-set-log.md` in the LSAT U app checkout (`../ai-os-projects/lsatu/` from the AI OS root; the app's git rules apply) with sections found, per-section counts, total, qsid, and the exact started-set URL.
 
 ## Execution rules (read before acting)
 
@@ -142,7 +142,7 @@ If the badge still says "0 selected", the click missed the checkbox (this happen
 - Top row must show the new name, N questions. Zoom to confirm the exact text.
 
 ### 11. Log the run
-- Append a per-PT entry to `~/ai-os/output/lsat-u/lsat-lab-set-log.md`:
+- Append a per-PT entry to `docs/from-output/lsat-lab-set-log.md` in the LSAT U app checkout (`../ai-os-projects/lsatu/` from the AI OS root; the app's git rules apply):
   - PT number; set name
   - number of LR sections found; their section numbers; per-section question counts; total
   - qsid; attempt id; exact started-set URL
@@ -235,7 +235,7 @@ Expect `{"tag":"INPUT","type":"text","val":"LR Practice Set ..."}` before typing
 - [ ] Opened set verified by footer `PrepTest <num> - S1 - Q1` and `1 of N`
 - [ ] URL captured from Tab Context (has questionsetid and questionsetattemptid)
 - [ ] Rename confirmed on In Progress list
-- [ ] log entry appended to output/lsat-lab-set-log.md
+- [ ] log entry appended to docs/from-output/lsat-lab-set-log.md in the LSAT U app
 
 ## Gotchas (context)
 

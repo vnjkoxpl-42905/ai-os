@@ -4,12 +4,9 @@ description: Break a plan, spec, or PRD into independently-grabbable issues on t
 disable-model-invocation: true
 ---
 
+## Current AI OS execution contract
 
-## Local execution contract (2026-10-10)
-
-Use existing to-tickets workflow as shared decomposition core when available, retaining issue-specific compatibility/parent semantics. Local breakdown is draft by default; publishing issues requires actual authorization.
-
-## Workflow
+Explicit GitHub-issue compatibility route, not a competing generic planner. Preserve GitHub parent/child relationships and approval semantics. Reuse the to-tickets vertical-slice planning concepts; publish issues only when explicitly authorized.
 
 # To Issues
 

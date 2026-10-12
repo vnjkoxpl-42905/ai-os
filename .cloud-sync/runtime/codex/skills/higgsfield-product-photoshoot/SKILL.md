@@ -1,17 +1,15 @@
 ---
 version: 0.12.0
 name: higgsfield-product-photoshoot
-description: "Use only when the user explicitly selects higgsfield-product-photoshoot or its specific documented preset/reference. Does not trigger on generic current-vault, frontend, AI or everyday workflow requests."
+description: "Explicitly selected higgsfield-product-photoshoot provider workflow only. Not generic media, product or website requests."
 argument-hint: "[--mode <mode>] [--count N] [prompt]"
 allowed-tools: Bash
+disable-model-invocation: true
 ---
 
+## Current scoped workflow
 
-## Local execution contract (2026-10-10)
-
-Use only when the user explicitly selects Higgsfield provider/workflow. Verify available credentials and authorized cost before media generation. Generic image/video/website requests do not select this provider. Preserve outputs; build preview separately from explicit authorized public deployment.
-
-## Workflow
+Use only for an explicitly selected Higgsfield product photoshoot. Preserve authoritative product appearance and separately authorize billable provider calls.
 
 # Product Photoshoot
 

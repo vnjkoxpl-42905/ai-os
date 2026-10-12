@@ -65,3 +65,5 @@
 - [Conditional bootcamp not yet live](conditional-bootcamp-not-yet-live.md) - unpublished to students as of 2026-10-11; no live drill progress to protect yet, re-check before relying on it.
 - [Every drill gets its own walkthrough](every-drill-gets-its-own-walkthrough.md) - instructions page shows an animated walkthrough of that drill's real steps with a fresh example; never a shared demo.
 - [No sophistry in lesson copy](no-sophistry-in-lesson-copy.md) - plain, natural, personable; contrapositive = logical equivalent first; no "promise / depends on" talk; log every correction in wiki/COPY-CORRECTIONS.md.
+- [Home skill copies shadow the vault](home-skill-copies-shadow-vault.md) - Claude loads ~/.claude/skills first; after a catalog edit run the sync tool or the edit never runs.
+- [Skill listing budget](skill-listing-budget.md) - descriptions get ~1% of context by recent use; vault settings hide/name-only unused skills; rerun listing_overrides.py after installing packs.

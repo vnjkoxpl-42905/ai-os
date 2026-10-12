@@ -4,12 +4,9 @@ description: Extract a DDD-style ubiquitous language glossary from the current c
 disable-model-invocation: true
 ---
 
+## Current AI OS execution contract
 
-## Local execution contract (2026-10-10)
-
-Use the existing authoritative domain-modeling glossary (normally GLOSSARY.md) rather than creating parallel UBIQUITOUS_LANGUAGE truth. Preserve ambiguity/relationship analysis and update current vocabulary only within scope.
-
-## Workflow
+First find the project's authoritative glossary. If GLOSSARY.md exists, update that instead of creating competing UBIQUITOUS_LANGUAGE.md. Preserve ambiguity/relationship analysis and explicit requested terminology scope.
 
 # Ubiquitous Language
 

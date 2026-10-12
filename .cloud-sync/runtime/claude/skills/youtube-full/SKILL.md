@@ -5,14 +5,12 @@ version: "1.5.0"
 user-invocable: true
 compatibility: Free caption extraction uses the installed local collector or yt-dlp; the optional hosted branch requires internet and an authorized TranscriptAPI key.
 metadata: {"openclaw":{"emoji":"▶️","homepage":"https://transcriptapi.com"},"hermes":{"tags":["youtube","transcripts","video","search","channels","playlists","captions"],"category":"media"}}
+disable-model-invocation: true
 ---
 
+## Current AI OS execution contract
 
-## Local execution contract (2026-10-10)
-
-Use free local caption collector/yt-dlp first for ordinary transcripts. This provider reference runs only when explicitly selected and any hosted cost is authorized. Report missing sections and caption provenance; do not require a paid key when free captions exist.
-
-## Workflow
+Optional TranscriptAPI provider reference only. Ordinary transcript requests first use the existing free get_youtube_transcript.py collector. Do not create accounts or spend provider credits without explicit bounded authorization. Preserve unique channel/search/playlist documentation as reference.
 
 # YouTube Full
 

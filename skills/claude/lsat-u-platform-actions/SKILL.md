@@ -28,6 +28,8 @@ The student opens the full lesson from Classroom **Notes and recaps**, the in-ap
 
 The current student verification route is `/teacher/students/<student-id>/notes`. Its “Posted to their Classroom” section shows active notes and labels archived notes as hidden from the student. Use the browser's normal controls for any unsupported action, then verify the saved state through a fresh read. In Codex, use the in-app browser, not Chrome. Do not rely on old `/teacher?ws=` routes or old browser-tool names.
 
+**React controlled inputs (learned 2026-07-16).** Setting a field's DOM value programmatically often does not update React state, which leaves the submit button disabled and sends nothing. In the UI fallback, type with real keystrokes, pick `<select>` options with a real click or the keyboard, confirm the submit button is enabled before clicking, and afterwards confirm the mutation request returned 2xx. A screen that merely looks done is not evidence.
+
 ## Order of operations (every action)
 
 1. **Identify the student** exactly (roster names include email; ambiguity → one
@@ -50,3 +52,11 @@ The current student verification route is `/teacher/students/<student-id>/notes`
 - Fail closed: if verification is ambiguous, say exactly what was and wasn't
   confirmed. Never report an action complete on the strength of a click alone.
 - No student-facing action as a side effect of a different request.
+
+## Paid session credits
+
+Use `node system/scripts/lsatu-admin.mjs passes <exact-email>` for balances and `pass-detail` for evidence. An exhausted pass can be replaced with `pass-create <exact-email> --credits N --minutes 70`; dry-run first, then verify through a fresh read. Preserve exhausted passes.
+
+Before manually restoring a Stripe package, inspect its `stripe_payments` row and the webhook delivery response. The 2026-09-27 policy returned `grant: awaiting_teacher` for intentional teacher approval. On 2026-10-02, Joshua approved and deployed automatic crediting for new validated, confidently matched package Checkouts, including delayed successes. Existing rows default `auto_grant_eligible=false`; historical, dismissed, and granted payments are not automatically recredited. Unmatched payments stay in review. Verify the live row and deployment before diagnosing a bug; an empty `booking_commerce_events` read is not proof of no payment. Evidence: `research/2026-10-02-celia-payment-crediting.md`.
+
+Associate any manual restoration with its exact Stripe payment/event in the booking pass notes. Reconcile the pending teacher grant prompt without adding more credits, using the supported payment-ledger operation after checking its semantics. Do not replay the webhook or invoke `admin_grant_stripe_payment` after manual crediting; either can duplicate sessions. A dismissed payment is not marked granted, and future reconciliation must skip it or explicitly honor the manual fulfillment.

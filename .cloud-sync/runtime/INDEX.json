@@ -1,16 +1,16 @@
 {
   "format": "portable-runtime-export-v1",
   "counts": {
-    "agents_skills": 1599,
-    "claude_skills": 1636,
-    "codex_skills": 435,
-    "claude_plugin_skills": 20,
-    "claude_plugin_files": 272,
+    "agents_skills": 1987,
+    "claude_skills": 2025,
+    "codex_skills": 437,
+    "claude_plugin_skills": 21,
+    "claude_plugin_files": 273,
     "codex_plugin_skills": 245,
     "codex_plugin_files": 1693,
     "claude_instruction": 1,
     "codex_instruction": 1,
-    "claude_memory_files": 67,
+    "claude_memory_files": 69,
     "codex_memory_records": 94
   },
   "source_paths": {
@@ -26,6 +26,11 @@
   },
   "plugin_skills": {
     "claude": [
+      {
+        "source_path": "C:\\Users\\Joshu\\.claude\\plugins\\cache\\21st-dev\\21st\\1.0.1\\skills\\21st-ui",
+        "relative_path": "21st-dev/21st/1.0.1/skills/21st-ui",
+        "files": 1
+      },
       {
         "source_path": "C:\\Users\\Joshu\\.claude\\plugins\\cache\\claude-plugins-official\\chrome-devtools-mcp\\1.9.0\\skills\\a11y-debugging",
         "relative_path": "claude-plugins-official/chrome-devtools-mcp/1.9.0/skills/a11y-debugging",

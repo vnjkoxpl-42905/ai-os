@@ -4,12 +4,9 @@ description: Ask which skill or flow fits your situation. A router over the skil
 disable-model-invocation: true
 ---
 
+## Current AI OS execution contract
 
-## Local execution contract (2026-10-10)
-
-Resolve installed sibling skills and current checkpoints. grill-me can persist brainstorms; do not describe it as necessarily stateless. Honor resolved requirements and route the requested operation rather than restarting an interview.
-
-## Workflow
+The current grill-me interview checkpoints decisions in brainstorms. Resolve the actual sibling skill entry point and preserve its checkpoint contract; do not describe it as stateless.
 
 # Ask Matt
 

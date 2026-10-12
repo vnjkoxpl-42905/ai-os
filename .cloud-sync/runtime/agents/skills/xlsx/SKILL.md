@@ -4,6 +4,10 @@ description: "Use this skill any time a spreadsheet file is the primary input or
 license: Proprietary. LICENSE.txt has complete terms
 ---
 
+## Current AI OS execution contract
+
+Preserve the original workbook and macros/external links where relevant; produce a separate output copy and verify formulas/cached values and the requested changes.
+
 # XLSX creation, editing, and analysis
 
 | Task | Approach |

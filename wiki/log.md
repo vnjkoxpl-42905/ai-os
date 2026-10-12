@@ -2916,3 +2916,23 @@ Gathered Joshua's own contrapositive teaching from session transcripts into wiki
 - Installed Claude Security plugin (user scope) and the playwright-cli and hyperframes CLIs in `dev/tools/node`.
 - Mistake and repair: the CLI install pruned codex, firecrawl and kling from `dev/tools/node` because it had no package.json. Reinstalled all three (codex 0.162.1, firecrawl 1.26.3, kling 0.2.1); `package.json` now lists all five.
 - Not installed: Expo skills, Open SEO, Apify MCP (need a token, a service or a mobile app); Google Workspace CLI already present.
+
+## [2026-10-12] system | Dev runtimes installed (user-authorized)
+- Installed pnpm 12.11.2 and bun 1.4.3 (in `dev/tools/node`), Rust 1.99.0 via rustup plus MSVC Build Tools 14.44 (a test `cargo run` compiled), Go 1.27.0, Temurin JDK 21.0.12, Docker Desktop 29.8.2 (winget).
+- Open: Docker's engine cannot start until WSL2 is installed; the elevated `wsl --install --no-distribution` was waiting on a Windows admin prompt and a reboot may follow. Shells opened before this session need a restart to see Go, Java and Docker on PATH.
+- Update 2026-10-12: WSL 3.0.1 installed (WSL2 default) and Docker Desktop started; `docker info` reports Server Version 29.8.2. Docker open item closed. No container run yet.
+
+## [2026-10-12] system | Remaining Nate Herk repos and the 21st MCP (user-authorized)
+- Activated 36 more skills in both runtimes (project and catalog): 24 Expo/EAS skills and 12 OpenSEO skills. Validator PASS (claude=311 codex=299). Scan hits were documentation only (ngrok, webhook, `base64 -d` on GitHub API output).
+- Installed the 21st plugin (`21st@21st-dev`, user scope, marketplace `21st-dev/magic-mcp`). It reads the key from the `API_KEY_21ST` variable; no key exists yet, so its tools cannot authenticate.
+- Not done: Apify MCP (needs `APIFY_TOKEN`), OpenSEO data (needs a DataForSEO key or the hosted service), 21st key (free key from 21st.dev/mcp). Joshua creates the accounts; keys go in `.env`.
+
+## [2026-10-12] system | Skill visibility, loaded-copy drift and validator repairs
+
+- Joshua asked for a full Karpathy-method scan of skills and wikis, with fixes. [Report](../audits/skills-2026-10-12-karpathy/SUMMARY.md).
+- Skill listing: Claude Code gives descriptions 1% of context (30,000 chars) by recent use, then A to Z. Measured 403 skills wanting 126,322 chars, so most core operational skills were listed by name only. Vault `.claude/settings.json` now sets `skillListingBudgetFraction` 0.015, hides 69 never-used vendor skills from the model (still `/name`), and lists 183 never-used generic skills by name only, including Expo/EAS sub-skills behind their `expo-overview` router. Live check: 10 of 10 sampled core skills now described (0 before).
+- Claude loads `~/.claude/skills` over the vault's `.claude/skills` (observed). Synced 16 skills whose loaded copies had wrong facts (Superwhisper key, wrapup log position, `~/ai-os` paths, auto-push, browser-only LSAT U actions, automatic set deletion) with backups and receipts. Restored the React controlled-input rule and the Claude copy of the paid-credit rules in lsat-u-platform-actions.
+- pull-submissions was broken on Windows (path); fixed, still needs `jq`. assign-lsatu-work credential text corrected and description cut to 851 chars. kling-cli restored for Claude. Gemini audit support files added.
+- check-skills.sh runs on Windows; new checks fail on shadowed vault copies and warn on home/catalog drift; PARITY.md no longer exempts 26 skills by mention. Validator PASS (Claude 311, Codex 299, Gemini 222).
+- Wiki lint: 2 dead links in historical log entries. Four clips in `raw/` root never ingested; `wiki/tasks.md` stale since 2026-10-08. Left for Joshua: 121/125/53 remaining drifted home copies, `jq`, claude.ai duplicate skills, level-up's two designs, Codex budget.
+- Nothing deleted, sent, published or committed. A parallel session's 01:17 skill install was left untouched.

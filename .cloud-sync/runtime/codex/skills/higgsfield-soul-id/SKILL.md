@@ -1,17 +1,15 @@
 ---
 version: 0.12.0
 name: higgsfield-soul-id
-description: "Use only when the user explicitly selects higgsfield-soul-id or its specific documented preset/reference. Does not trigger on generic current-vault, frontend, AI or everyday workflow requests."
+description: "Explicitly selected higgsfield-soul-id provider workflow only. Not generic media, product or website requests."
 argument-hint: "[name] [photo paths...]"
 allowed-tools: Bash
+disable-model-invocation: true
 ---
 
+## Current scoped workflow
 
-## Local execution contract (2026-10-10)
-
-Use only when the user explicitly selects Higgsfield provider/workflow. Verify available credentials and authorized cost before media generation. Generic image/video/website requests do not select this provider. Preserve outputs; build preview separately from explicit authorized public deployment.
-
-## Workflow
+Use only for explicitly selected Higgsfield Soul ID workflows; generic portrait/persona requests do not choose this provider. Verify identity input and bounded cost authorization.
 
 # Higgsfield Soul Character
 

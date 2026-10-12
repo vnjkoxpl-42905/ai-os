@@ -1,6 +1,6 @@
 ---
 name: assign-lsatu-work
-description: "Use whenever Joshua wants to do anything on LSAT U headlessly, with no browser. That covers assigning an Activity, a guided drill, a homework set, or a timed PT section to one or many students (\"assign this to Celia\", \"give Lydia the Negation Station\", \"put PT156.S2 on Avneet due Friday\", \"assign RRC to Celia, Lydia and Dakota\"). It covers messaging a student from his admin account (\"send Dakota a message\", \"tell Celia to start with PT105.S2\"). It covers reading how students are doing (\"how is Celia doing\", \"what does Lydia have\", \"who is overdue\", \"who has gone quiet\", \"Celia's weakest question types\", \"Avneet's last sections\"). It covers accounts and upkeep: new signups (\"who signed up\", \"did anyone new join\"), access (\"give Venusa access\", \"turn on drills for X\", \"what can X see\"), archiving, moving a due date, unassigning, booking passes (\"how many sessions does Sandra have left\"), notifications, and reading or marking messages (\"who messaged me\", \"show my thread with Celia\"). It is the one place for any operation on the LSAT U platform, and none of it uses Lovable."
+description: 'Use whenever Joshua wants anything done on LSAT U headlessly: no browser, no Lovable. Covers assigning an Activity, guided drill, homework set or timed PT section to one or many students ("assign this to Celia", "give Lydia the Negation Station", "put PT156.S2 on Avneet due Friday", "assign RRC to Celia, Lydia and Dakota"); messaging a student ("tell Celia to start with PT105.S2"); reading progress ("how is Celia doing", "what does Lydia have", "who is overdue", "who has gone quiet", "Celia''s weakest question types"); and accounts and upkeep: signups ("who signed up"), access ("give Venusa access", "turn on drills for X"), archiving, due dates, unassigning, booking passes ("how many sessions does Sandra have left"), notifications and messages ("who messaged me", "show my thread with Celia"). The one place for any LSAT U platform operation.'
 ---
 
 
@@ -193,7 +193,7 @@ Joshua makes by clicking.
 
 ## Credentials
 
-Read from `~/ai-os/.env`, which is **not** a git repo:
+Read from the AI OS root `.env`. The vault is a git repo, but `.env` is git-ignored:
 
 - `LSATPREP_ADMIN_EMAIL`, `LSATPREP_ADMIN_PASSWORD` — already set
 
@@ -226,7 +226,7 @@ Check what she has before re-trying (below).
 Pick the full name or the email. Never guess: a misdirected assignment is
 silent, because she simply never sees it.
 
-**Sign-in failed** — the credentials in `~/ai-os/.env` are wrong or the account
+**Sign-in failed** — the credentials in the AI OS root `.env` are wrong or the account
 gained MFA.
 
 ## Checking what a student already has

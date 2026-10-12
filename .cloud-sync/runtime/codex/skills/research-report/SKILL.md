@@ -3,12 +3,9 @@ name: research-report
 description: Summarize deep research results into markdown report, cover all fields, skip uncertain values.
 ---
 
+## Current AI OS execution contract
 
-## Local execution contract (2026-10-10)
-
-Preserve source provenance and uncertainty appendix, do not hide uncertain fields. Generated application helpers/dependencies belong sibling task application workspace; research vault remains evidence/report home.
-
-## Workflow
+Keep generated executable helpers/dependencies in sibling ai-os-projects. Report uncertain fields and provenance in the report/appendix; do not silently remove evidence because it is uncertain.
 
 # Research Report - Summary Report
 

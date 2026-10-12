@@ -24,6 +24,11 @@ Checks:
   (h) effective Claude/Codex skill availability has no undeclared one-runtime drift;
   (i) active instruction scopes have both CLAUDE.md and AGENTS.md;
   (j) Codex agent TOML files are valid, complete, and activated from the catalog.
+  (k) no vault .claude/skills copy is silently shadowed. Claude Code loads ~/.claude/skills
+      first (observed 2026-10-12), so a differing vault copy never runs unless the home copy
+      is a declared dispatcher that routes to it;
+  (l) WARN (non-fatal): home-level copies that differ from their runtime catalog copy. These
+      are what the runtimes load for most skills; the count makes that drift visible.
 Exit 0 = PASS, 1 = FAIL.
 """
 from project_paths import project_path, VAULT_ROOT
@@ -291,6 +296,44 @@ def main():
             elif not filecmp.cmp(source, activated, shallow=False):
                 fails.append(f"stale Codex agent activation: .codex/agents/{name}")
 
+    # (k) shadowed vault activations, and (l) home-level drift from the catalog.
+    dispatcher = re.compile(r"compatibility dispatcher|This is a pointer")
+    home_claude = os.path.join(HOME, ".claude", "skills")
+    vault_claude = os.path.join(BRAIN, ".claude", "skills")
+    if os.path.isdir(home_claude) and os.path.isdir(vault_claude):
+        for n in sorted(os.listdir(vault_claude)):
+            home_skf = os.path.join(home_claude, n, "SKILL.md")
+            vault_skf = os.path.join(vault_claude, n, "SKILL.md")
+            if not (os.path.isfile(home_skf) and os.path.isfile(vault_skf)):
+                continue
+            if entrypoints_match(home_skf, vault_skf):
+                continue
+            with open(home_skf, encoding="utf-8", errors="replace") as f:
+                if dispatcher.search(f.read()):
+                    continue
+            fails.append(f"shadowed activation: ~/.claude/skills/{n} differs from .claude/skills/{n} "
+                         f"and Claude loads the home copy; re-copy it from skills/claude/{n}")
+    warnings = []
+    for runtime, home_root in (("claude", home_claude),
+                               ("codex", os.path.join(HOME, ".agents", "skills")),
+                               ("codex", os.path.join(HOME, ".codex", "skills"))):
+        if not os.path.isdir(home_root):
+            continue
+        drifted = []
+        for n in sorted(os.listdir(home_root)):
+            home_skf = os.path.join(home_root, n, "SKILL.md")
+            cat_skf = os.path.join(DB, runtime, n, "SKILL.md")
+            if not (os.path.isfile(home_skf) and os.path.isfile(cat_skf)) or entrypoints_match(home_skf, cat_skf):
+                continue
+            with open(home_skf, encoding="utf-8", errors="replace") as f, \
+                 open(cat_skf, encoding="utf-8", errors="replace") as g:
+                if dispatcher.search(f.read() + g.read()):
+                    continue
+            drifted.append(n)
+        if drifted:
+            shown = ", ".join(drifted[:8]) + (", ..." if len(drifted) > 8 else "")
+            warnings.append(f"{len(drifted)} loaded copies in {home_root} differ from skills/{runtime}: {shown}")
+
     # Owned global provider sanity is deliberately bounded; external packages
     # need not be catalogued or automatically mirrored to satisfy this check.
     fails.extend(owned_provider_errors([
@@ -298,6 +341,8 @@ def main():
         Path(HOME) / ".claude/skills",
     ]))
 
+    for msg in warnings:
+        print(f"skills: WARN — {msg}", file=sys.stderr)
     if fails:
         for msg in fails:
             print(f"skills: FAIL — {msg}", file=sys.stderr)

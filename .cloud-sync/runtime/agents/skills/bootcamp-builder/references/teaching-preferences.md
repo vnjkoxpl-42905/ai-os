@@ -132,3 +132,52 @@ Explicit correction: Drill 1 needs more than seven application questions. Joshua
 
 ### Progress presentation, 2026-10-11
 Joshua explicitly rejected Drill 1's small answered/remaining counter and requested a more refined visual progress bar. This supersedes the earlier specific answered/remaining display preference for this drill. Implemented candidate: continuous completion rail, prominent percentage, brief start/in-progress/completed state. Keep question position separate and only advance completion after checked answers. Verify narrow widths and reduced-motion support. Visual treatment remains open to his review.
+
+### Necessary-condition rule and indicator presentation, 2026-10-11
+Status: explicit browser corrections in the current conversation; directions to implement, not accepted implementation.
+
+- In the case-comparison panel, state the actual rule: **If you are enrolled in law school, then you are a student.** Replace the generic instruction "Keep the same rule. Choose a person and see what their situation tells you." The rule must remain visible and intelligible while comparing cases.
+- State explicitly that the indicator words help identify the **necessary condition**. Do not substitute the vague label "find a requirement" for the concept being taught. Keep the indicator distinct from the complete necessary condition.
+- Match the indicator-box order and the worked-example order, so learners can move through one consistent sequence. Retain the existing coverage of only, only if, only when, only where, always, requires and must; read each in its full sentence rather than treating it as a context-free substitution rule.
+- Give the indicator box a clear ordered hierarchy, readable spacing and an engaging visual response on hover. Provide equivalent keyboard-focus and touch access; essential explanations cannot depend on hover alone.
+
+Acceptance: compare the visible list and examples item by item for identical order; inspect the actual rule in every case state; verify pointer, keyboard and touch interactions and readable narrow layouts. Resulting copy and visual treatment remain provisional until Joshua reviews them.
+
+### Extend ASTRA visual direction to the lesson pages, 2026-10-11
+Status: explicit extension of creative scope to the necessary-condition and Must arrow pages, not approval of a finished design or publication.
+
+Joshua requested ASTRA-level artistic treatment for these pages, including refined color, typography, dimensional depth and advanced motion where useful. Inspect the entire Must arrow page for awkward alignment, insufficient breathing room and weak section grouping. Keep the left sufficient condition, the connecting arrow and the right necessary condition spatially unambiguous. Artistic effects must strengthen the instructional relationship and preserve complete conditions, readability, responsive access and reduced-motion alternatives.
+
+Complete at least **three genuine iteration passes**: inspect the rendered result closely, record concrete weaknesses, and improve them before inspecting again. Record the actual changes and verification for each pass rather than calling three screenshots three iterations. Generated imagery, GIFs and Kling media are optional means, not required deliverables; procedural visuals may better serve the explanation. Preserve existing authorization boundaries for paid tools. The intended audience of 10,000+ students raises the quality bar but does not authorize deployment or establish acceptance.
+
+### Group 1 visibility and direct flashcard practice, 2026-10-11
+Status: newest explicit user direction, relayed in this conversation; not approval of the resulting implementation.
+
+- Make the Group 1 list easy to find on the sufficient-condition page. Do not bury it below the videos. The current implementation is reported as placing it after the law-school example; this placement report is not user acceptance or a fresh visual verification.
+- Newest clarification: provide a clearly labelled **Go to flashcards** button that opens the dedicated indicator set for the page: **Group 1 conditional indicator words** on the sufficient page and the corresponding **Group 2 conditional indicator words** set on the necessary page. Keep the general concepts/terms flashcard deck separate from these dedicated indicator sets.
+- Support practice of individual indicator words and phrases and clear movement among them. Direct links from individual indicators to matching cards may supplement the button; they are optional, not a replacement for the requested primary button. Preserve the existing group coverage and the distinction between an indicator and the complete condition it identifies.
+
+Acceptance: inspect the list's position on the sufficient page, then activate each page's Go to flashcards button and confirm it opens the correct dedicated group set. Confirm the general concepts/terms deck remains separate. Verify moving among individual words/phrases with keyboard and touch, accurate naming, preservation of all group items, and correct targets for any supplementary individual links. Record implementation and verification separately from Joshua's approval.
+
+### Each lesson must advance the course, 2026-10-11
+Status: explicit review and revision direction for the sufficient-words destination.
+
+Joshua questions the need for a separate indicator-word page after the preceding lessons and Drill 1. Inspect preceding content, the curriculum skeleton/source intent, and the next drill before revising. Cut repeated definitions, recaps and UI that add no useful reasoning task. Do not organize this lesson as word-selector tabs. Keep indicator reference and dedicated flashcard practice in their existing homes. The proposed applied lesson on selecting the complete sufficient condition is an implementation direction, not acceptance of finished wording.
+
+Acceptance: explain the distinct skill this lesson adds, show how it prepares the next drill, and check overlap with later Keep the whole meaning. Inspect the actual rendered lesson and its interaction. Preserve useful source-backed restrictions and distinctions while removing repetition; do not equate shorter copy with complete teaching.
+
+### Integrate complete source banks through a progressive course, 2026-10-11
+Status: explicit implementation authorization, not acceptance or publication.
+
+Joshua wants the finished course, not another isolated prototype or plan. Create the conceptual contrapositive note first, compare the actual Intro to LR lesson/drill progression, then integrate every source question at the point its prerequisites have been taught. Preserve the existing 24 foundation questions; rewriting them is not required. Keep familiar statements when the learner performs a new operation. Preserve all original source text and record corrections separately. Improve interaction and visual design, not merely copy worksheets into cards. Show the complete sequence at the end.
+
+Implementation direction: concept and example, learner decision, explanation; then indicator selection, complete-condition placement, forward diagrams, faithful if/then rewriting, formal contraposition, and full mixed practice. Keep prose self-review distinct from reliable automatic checks, local-device persistence distinct from account records, and source coverage distinct from mastery. Entire-bank availability does not require one long sitting. Provide short-session resume and review.
+
+
+### 2026-10-11: source procedure matters as much as coverage
+
+- Joshua rejected the legacy sufficient-practice drill after source-bank integration. Counting imported items does not prove that the source teaching procedure was implemented. Audit every existing drill route alongside new source sets.
+- Preserve the notes' progression: indicators, complete conditions, learner-defined symbols, original arrow, contrapositive, English readbacks. Introduce each prerequisite before testing it.
+- Fade assistance across the course. Guided recognition can supply choices; independent translation must begin with blank production and withhold models until the whole attempt is written.
+- Keep one active operation, the source rule in view, readable stage progress and specific feedback. Correct objectively wrong answers before advancing; label written comparison honestly as self-review.
+- Validate actual rendered contrast, responsive layout, stage gating and draft recovery. A source import, passing tests or a wrapper stylesheet alone is not a polished drill.

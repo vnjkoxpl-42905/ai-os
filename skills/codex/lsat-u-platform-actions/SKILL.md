@@ -28,6 +28,8 @@ The student opens the full lesson from Classroom **Notes and recaps**, the in-ap
 
 The current student verification route is `/teacher/students/<student-id>/notes`. Its “Posted to their Classroom” section shows active notes and labels archived notes as hidden from the student. Use the browser's normal controls for any unsupported action, then verify the saved state through a fresh read. In Codex, use the in-app browser, not Chrome. Do not rely on old `/teacher?ws=` routes or old browser-tool names.
 
+**React controlled inputs (learned 2026-07-16).** Setting a field's DOM value programmatically often does not update React state, which leaves the submit button disabled and sends nothing. In the UI fallback, type with real keystrokes, pick `<select>` options with a real click or the keyboard, confirm the submit button is enabled before clicking, and afterwards confirm the mutation request returned 2xx. A screen that merely looks done is not evidence.
+
 ## Order of operations (every action)
 
 1. **Identify the student** exactly (roster names include email; ambiguity → one

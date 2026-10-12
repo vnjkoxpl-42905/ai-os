@@ -34,7 +34,7 @@ Everything else is optional. Ask for nothing you were not given.
 
 ## Running it
 
-From `~/ai-os-projects/lsatu`:
+From the LSAT U app checkout, `../ai-os-projects/lsatu` relative to the AI OS root:
 
 ```bash
 npm run booking:link -- --for "Dakota" --price 45 --at "2026-09-10 19:15"
@@ -121,6 +121,6 @@ Relevant files:
 
 ## Credentials
 
-`LSATPREP_ADMIN_EMAIL` / `LSATPREP_ADMIN_PASSWORD` from `~/ai-os/.env`, which is
+`LSATPREP_ADMIN_EMAIL` / `LSATPREP_ADMIN_PASSWORD` from the AI OS root `.env`, which is
 git-ignored. This repo's `.env` is tracked in git — never put a credential
 there.
