@@ -26,6 +26,28 @@ surface that renders them is covered, including surfaces not written yet.
 
 ## Corrections
 
+### Contrapositive and arrow lessons: cut the sophistry (2026-10-11)
+
+Joshua rejected the first contrapositive lesson as 'terribly done' and then rejected the rewrite for 'a lot of sophistry'. Rules from the two rounds:
+
+- **Say what it is first, in plain words, before any example.** Name the idea, say what it states, then show it. The contrapositive is the **same rule said a different way**. The two are **logically equivalent**: if one is true, the other is true, and you can use either. Lead with that. Source: his own teaching, [[contrapositive-teaching]].
+- **No metaphor-of-obligation language.** Never write that a rule 'makes a promise', that the left side 'depends on' the right, or that it has 'nothing to stand on'. Say what is true and why, in the plainest reasoning: if the left side had happened, the right side would have come with it.
+- **Keep it natural, intuitive and personable.** Contractions, short sentences, a teacher thinking next to the student. No lecture-hall phrasing. If a sentence sounds like it is trying to sound wise, cut it.
+- **Name the lesson by its topic.** 'Contrapositive', not 'Write and read the contrapositive'.
+- **A lesson explains before it drills.** Order for a concept lesson: what it is, see it work, how to do it, what it is not, the steps in short, why it matters. Do not open with an example or a question.
+- **Must arrow note must say:** what the arrow says, where to start reading (the left), and what the arrow is for. Not just which side is sufficient.
+- **A card front asks the question, the back gives the answer first.** The answer is the large line. Be specific: 'Can you read a rule from right to left?', not 'Can you reverse the arrow?'. Never 'the other one'.
+- **Fix the vague word, not the sentence.** 'Reverse' and 'the other one' were both rejected as not specific. Say what the student actually does or what the condition actually is.
+- **Never call the contrapositive 'the one other thing' a rule tells you.** Joshua (2026-10-11): it is not the only other thing you know. Say the two are equivalent and interchangeable: know one, you know the other. Do not claim a closed list of what else is known.
+- **Do not use the raffle (win the raffle, get a bicycle) as the example in new contrapositive or arrow material.** Pick a fresh everyday example for each lesson. The contrapositive note now uses an elevator: if it is moving, its doors are closed. The older course text still uses the raffle; replace it as those lessons are revisited.
+- **Contrapositive lesson order follows the source HTML (Joshua, 2026-10-11, later instruction, supersedes 'define first' for this lesson):** recap the rule, run a thought experiment the student must GUESS before seeing the answer (a text box, then a flip card for the solution), name the contrapositive after the answer, say it was inside the rule all along and is logically equivalent, say it out loud with a second example, four-situations table, write it, what it is not, read it don't always write it, why it matters. Do not use the source's own examples (coffee, breathing/air).
+- **Say 'left side of the arrow' and 'right side of the arrow'** in explanations of the arrow and the contrapositive.
+- **Never mention Logic Games.** Only LR and RC exist.
+- **Source cautions are good, keep them:** do not say the rule and its contrapositive are 'all you know', and do not say to 'ignore the conditional'. Say the rule settles nothing in the other two situations.
+- **Words:** 'Correct', not 'Right', on a correct answer. Bold the word 'if' where the point is that the rule says what follows *if* something is true.
+
+Still to reconcile (found 2026-10-11, not Joshua decisions): 'establish' is banned below but his approved necessary copy uses it; the raffle was approved for the opening and later rejected as the sufficient anchor; see `.claude/skills/bootcamp-builder/references/teaching-preferences.md`.
+
 ### Conditional opening: define the words before using them (2026-10-03)
 
 Joshua's marked browser paragraphs used “direction” and “guarantee” before making their meaning clear. The purpose paragraph also described an argument accepting more than its information supports without showing what that meant. Teach what a rule lets you conclude in plain language, then attach the vocabulary to a concrete relationship. Explain sufficient as enough and necessary as required before relying on those roles. Show what the must-arrow records and why English clause order does not determine the two sides.
@@ -188,6 +210,8 @@ From the glossary. Internal names may stay in code, never on the page.
 | "Select the words that signal the rule" | "Select the conditional indicator." Added 2026-10-11: name the thing the student is looking for |
 | "28 sentences", "Sentence 1 of 28", "Next sentence" | questions: "28 questions", "Question 1 of 28", "Next question". Added 2026-10-11: a sentence is not the unit of a drill and reads unprofessional |
 | "Drill 1" as a title | the task itself, e.g. "Spot the condition". Added 2026-10-11: a number says nothing about the reasoning |
+| "a rule makes a promise", "depends on", "nothing to stand on", "the other one" | say what is true and why, in plain words. Added 2026-10-11: reads as sophistry; vague words like "the other one" point at nothing |
+| "Right." on a correct answer | "Correct." Added 2026-10-11 |
 
 **Before designing any new homework, bootcamp, drill or note, read this table.** When a
 word is rejected in review, add it here first, with the reason, then fix the copy.

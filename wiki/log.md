@@ -2892,3 +2892,6 @@ Rebuilt legacy sufficient/contrapositive drills and source worksheets around sta
 ## [2026-10-11] repair | Conditional drills recovered after Codex usage ran out
 
 Recovered Codex thread 01a1282c (copies and handoff in handoffs/codex-2026-10-10-conditional-bootcamp-thread/). Fixed three stale tests; indicator step now checked in Drills 7, 8 and both Revisit drills; worksheet drafts scoped by user id; "who" indicator matched to the answer key; Drill 1 completion notice and dead practice code removed. 302 tests, typecheck and build pass; Drill 7 walked end to end in the browser. Nothing committed or deployed. Seven open decisions listed in HANDOFF-2026-10-11.md.
+
+## [2026-10-11] ingest | Contrapositive teaching insights and copy rules
+Gathered Joshua's own contrapositive teaching from session transcripts into wiki/contrapositive-teaching.md. Recorded the 2026-10-11 sophistry corrections in wiki/COPY-CORRECTIONS.md and a feedback memory. Rewrote the Conditional Bootcamp Contrapositive and Must arrow lessons (PR #204).
