@@ -33,6 +33,16 @@ Walks Joshua through the 3Ms each week to surface and ship one new automation fo
 
 ## Execution — three phases
 
+### Coming from an audit
+
+If Joshua supplies an `/audit` finding or a recent report is available, carry its evidence, affected route/workflow, and completion check into Phase 1. Use that gap as the first candidate; ask only for missing context instead of restarting a generic interview. Do not chase points or assume an unverified connection is broken.
+
+For a routing-only fix, use `/link` when available and Joshua has requested the edit. For a selected workflow repair, improve that existing workflow rather than creating a duplicate skill. A verified repair counts as the one artifact for this run. Preserve the Method reasoning, relevant scope/permissions, and validation steps. A practical measure can be fewer failed retrievals, fewer missed runs, or less time finding a source.
+
+For repairs, skip creation-only scaffolding. The scaffold headers below apply to new workflow artifacts, never to operating manuals or routing indexes.
+
+Close with the repair's acceptance evidence and recommend `/audit` again. Do not claim a higher score until the new audit verifies it; repeated-use and due-run evidence must accumulate through actual use.
+
 ### Phase 1 — Mindset (find the candidate)
 Ask conversationally, in order:
 1. *"Walk me through your week. What did you do 3+ times?"* (frequency)
