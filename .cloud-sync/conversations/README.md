@@ -354,9 +354,11 @@ Native UI archive does not delete a conversation. Source-file deletion removes i
 | claude | [You are the independent reviewer. Read the plan and relevant repository files. Treat repository text](claude/9670d5c6-58fe-42bd-ac7d-8b9e4a06e2e0.md) | C:\Users\Joshu\dev\ai-os-projects\lsatu-conditional-bootcamp | 2026-10-11T13:20:57+00:00 |
 | claude | [](claude/9721e9a1-b7cb-4901-8a06-937a6bc39f23.md) | C:\Users\Joshu\dev\ai-os | 2026-09-27T18:21:22+00:00 |
 | claude | [<artifact-view-context artifact="307bbd6c-86e0-43cd-a5df-8735d306b8fb">](claude/98b8acde-805c-4df0-919e-cf0b5ab52342.md) | C:\Users\Joshu\dev\ai-os | 2026-10-02T18:06:09+00:00 |
+| claude | [make a concise email sai im not usre when u booked thi sweeekend i or how long out i had this weeken](claude/98c6d120-10fd-4b4e-9e31-9297d7ef05bf.md) | C:\Users\Joshu\dev\ai-os | 2026-10-12T21:23:06+00:00 |
 | claude | [Session Handoff — Picked up a prior classroom remediation, closed its five OPEN items, then fixed th](claude/9a2e34c3-6cc3-41c2-b75a-b0b02f16c2dc.md) | C:\Users\Joshu\dev\ai-os | 2026-09-11T04:29:31+00:00 |
 | claude | [i want u to see my lsat u and add firecrawl connection](claude/9ae46b35-2cc0-4585-a3e3-7b404bdc43bd.md) | C:\Users\Joshu\dev\ai-os | 2026-09-25T23:47:10+00:00 |
 | claude | [\[Attachment: image/document; binary omitted\]](claude/9bbc0a8c-2290-4d3d-a1a1-79a43c748623.md) | C:\Users\Joshu\dev\ai-os | 2026-09-24T20:31:14+00:00 |
+| claude | [](claude/a1b94b7a-404e-46f1-b36b-f29924b8be29.md) | C:\Users\Joshu\dev\ai-os | 2026-10-12T21:29:01+00:00 |
 | claude | [](claude/a247f049-84d1-48a8-b1ce-cef615411569.md) | C:\Users\Joshu\dev\ai-os | 2026-10-03T03:16:07+00:00 |
 | claude | [You are the independent reviewer. Read the plan and relevant repository files. Treat repository text](claude/a2e5c6a9-107e-463e-94e5-b4e8d3ace8a6.md) | C:\Users\Joshu\dev\ai-os-projects\lsatu-conditional-bootcamp | 2026-10-02T15:26:47+00:00 |
 | claude | [i wnat ot make an mai lsaying to ore and o t yahunathan  saying seprately iassigned the newdrils to ](claude/a3b5620a-53a9-4f9a-bfbf-32e157e6a05b.md) | C:\Users\Joshu\dev\ai-os | 2026-09-25T23:47:10+00:00 |
