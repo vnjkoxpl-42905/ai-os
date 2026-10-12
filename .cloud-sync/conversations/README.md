@@ -23,7 +23,7 @@ Native UI archive does not delete a conversation. Source-file deletion removes i
 | claude | [In the LSAT U repo (vnjkoxpl-42905/lsatu-684d89db, branch off origin/main, open a PR; never commit t](claude/12fd629a-95e8-415d-9ba7-0e0bbc87840a.md) | C:\Users\Joshu\dev\ai-os | 2026-10-03T02:27:05+00:00 |
 | claude | [<scheduled-task name="notes-recaps-finish-phases" file="C:\Users\Joshu\.claude\scheduled-tasks\notes](claude/137adad8-c8d0-4c36-8992-9384eb4aea9c.md) | C:\Users\Joshu\dev\ai-os | 2026-09-25T23:47:10+00:00 |
 | claude | [Read-only skill discovery verification in this actual AI OS workspace. Do not edit any files, start ](claude/143092e3-6fa5-410d-bfbe-4a652e7f4f0b.md) | C:\Users\Joshu\dev\ai-os | 2026-10-11T07:12:57+00:00 |
-| claude | [](claude/1438185e-0ab7-4408-a0e2-185dd0fe4c2e.md) | C:\Users\Joshu\dev\ai-os | 2026-10-12T06:33:03+00:00 |
+| claude | [](claude/1438185e-0ab7-4408-a0e2-185dd0fe4c2e.md) | C:\Users\Joshu\dev\ai-os | 2026-10-12T06:51:19+00:00 |
 | claude | [<command-message>lsat-lab-transcribe</command-message>](claude/16b4e5cc-1664-44a8-98f3-98a94d009242.md) | C:\Users\Joshu\dev\ai-os | 2026-09-24T23:47:15+00:00 |
 | claude | [You are the independent reviewer. Read the plan and relevant repository files. Treat repository text](claude/1835749a-4670-4fa1-9f2d-d636ca406ea3.md) | C:\Users\Joshu\dev\ai-os-projects\lsatu-conditional-bootcamp | 2026-10-11T12:23:10+00:00 |
 | claude | [](claude/184bd7f4-1801-435a-a464-e37067478e55.md) | C:\Users\Joshu\dev\ai-os | 2026-10-02T11:18:01+00:00 |
