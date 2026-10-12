@@ -4,7 +4,7 @@
 - [Firecrawl via CLI, not MCP](firecrawl-via-cli-not-mcp.md) — use the firecrawl-* skills; the MCP server was removed on purpose.
 - [Stripe Codex connection](stripe-codex-connection.md) — verified 2026-09-14: Aspiring Attorneys account is connected through the Stripe app in live mode; CLI/API key is separate and unverified.
 - [AI OS vault location](ai-os-vault-location.md) — the real vault is dev/ai-os (7,869 files) — build on it, never scaffold a new one.
-- [AI OS safety rules](ai-os-safety-rules.md) — delete blocked at the tool layer; send only when he says "send" in chat (changed 2026-09-11).
+- [AI OS safety rules](ai-os-safety-rules.md) — local deletes on his explicit word + approval prompt (2026-10-12), Gmail/Drive delete denied; send only when he says "send" in chat (changed 2026-09-11).
 - [Session memory needs a real folder](session-memory-needs-a-real-folder.md) — open dev/ai-os, never "No folder".
 - [PowerShell MSIX breaks npm CLIs](powershell-msix-breaks-npm-clis.md) — Store apps (PowerShell MSIX, Windows Terminal, so Herdr panes) see AppData\Roaming\npm as empty; install npm CLIs with --prefix dev\tools\node.
 - [Assigning Activities is pre-authorized](assigning-activities-is-pre-authorized.md) — "assign X to Y" means do it now; runbook in wiki/ASSIGN-AN-ACTIVITY.md.

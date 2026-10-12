@@ -2956,3 +2956,18 @@ Gathered Joshua's own contrapositive teaching from session transcripts into wiki
 - Proposed only: scan newly installed third-party skills with SkillSpector `--no-llm`; compare no-ai-slop with `humanizer`. Nothing installed.
 - Not ingested: `raw/7 Key UI Design Principles + How To Use Them.md` is one paragraph of Joshua's own homepage-prompt instructions saved under a video title, not a clip. Left in place.
 - Verification: originals unchanged, `sha256sum -c` passes for all three archives, index regenerated, lint shows only the two pre-existing log links.
+
+## [2026-10-12] skills | Removed 12 Superpowers skills
+
+Judged weaker than the vault equivalents (grill-me, diagnosing-bugs, claudex-loop, tdd) and never invoked in 491 Claude sessions. Moved all 84 copies (home .claude/.agents/.codex, vault .gemini, catalog claude/codex/gemini) to `audits/skills-2026-10-12-karpathy/removed-superpowers/`, reversible by moving back. Kept `verification-before-completion` and `using-git-worktrees`. grill-me now hands implementation to claudex-loop instead of brainstorming; listing overrides and INDEX regenerated; check-skills PASS.
+
+## [2026-10-12] config | Deletes moved from deny to ask
+
+Permanently deleted the removed-superpowers archive and 6 leftover lsatu fork folders (systematic-debugging, using-superpowers). Global `~/.claude/settings.json`: `rm -rf` / `rm -fr` moved from deny to ask, so a delete Joshua explicitly requests runs after his one-click approval.
+
+## [2026-10-12] skills | Three broken-link fixes from the skill audit
+
+- scroll-craft: removed the pointer to a CHANGELOG.md that never existed (4 copies).
+- gws-gmail (vault Codex activation): activated the 5 missing helpers (send, reply, reply-all, forward, watch) by copy from skills/codex.
+- Gemini codex-build/codex-review: installed claudex-loop for Gemini (Claude-host copy) so links resolve; limit recorded in PARITY.md.
+check-skills PASS (claude 299, codex 287, gemini 211).

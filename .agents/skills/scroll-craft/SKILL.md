@@ -455,6 +455,3 @@ verify. Say if the brief was self-authored rather than interviewed. Give the
 local URL. Keep it brief; the page is the deliverable.
 
 Then append the build's row to `<workspace>/FINGERPRINTS.md`.
-
-Changes to the skill itself, and the build findings that drove them, are logged
-in [CHANGELOG.md](CHANGELOG.md).

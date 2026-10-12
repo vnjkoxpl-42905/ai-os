@@ -11,7 +11,7 @@ Preserve the current host-specific checkpoint behavior and explain it accurately
 
 One skill, self-contained. It holds both the **interview method** (Step 2) and the **capture discipline** (Steps 1 and 3): every answer lands in a durable markdown file, so nothing is lost as context fills up. It does not call the vendor `grilling` skill: the method is written inline below so this skill can add the capture steps around it and keep working even if `grilling` changes upstream.
 
-If the topic is a feature, component, or other implementation work rather than an open-ended plan or decision, `brainstorming` runs a similar interview but gates on a written, approved design doc before any code — reach for that instead when the destination is implementation.
+If the topic is implementation work, finish the interview here, then hand the agreed design to `claudex-loop` to plan and build.
 
 ## Step 1: set up the capture file (BEFORE the first question)
 

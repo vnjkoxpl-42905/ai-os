@@ -90,3 +90,4 @@ go out without a further approval (pre-consultation check-ins only).
 | 2026-10-09 12:50 | charles-moore | Our session today (reschedule request) | sent 2026-10-09 | Joshua explicitly approved send in chat; to moorecamooreca1@gmail.com; Gmail message 1a12192c37c905f0; Sent copy verified |
 | 2026-10-12 | fernande-charleus | Sorry for the scheduling mix-up | sent 2026-10-12 | Joshua approved send in chat; to fernandecharleus@gmail.com; Gmail message 1a13204c4ee9d0ae; Sent copy id returned by API, not independently re-read |
 | 2026-10-12 | ivory-johnson | Sorry for the delay | sent 2026-10-12 | Joshua approved send in chat; to ivoryj.johnson3@gmail.com; Gmail message 1a132095798088f5; Sent copy id returned by API, not independently re-read |
+| 2026-10-12 | celia-cutler | Rescheduling our session | sent 2026-10-12 | Joshua approved send in chat; to celiacutler@gmail.com; Gmail message 1a132198ad179ca5; Sent copy id returned by API, not independently re-read |
