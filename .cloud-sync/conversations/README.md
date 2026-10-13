@@ -752,4 +752,6 @@ Native UI archive does not delete a conversation. Source-file deletion removes i
 | codex | [Reply with the single word OK.](codex/01a130d9-d03e-7e51-bf12-3fadd886e944-e860e6e11013.md) | C:\Users\Joshu\dev\ai-os | 2026-10-12T16:02:23+00:00 |
 | codex | [Session Handoff — Conditional Bootcamp drill polish, audit fixes, progress saving, per-drill walkthr](codex/01a130d9-d18d-7cb1-a470-e17edfb067c4-a2b9cbeb62b9.md) | C:\Users\Joshu\dev\ai-os | 2026-10-12T16:02:23+00:00 |
 | codex | [](codex/01a130d9-d190-7292-b5ce-f0be0a5087c3-7b576ab941f0.md) | C:\Users\Joshu\dev\ai-os | 2026-10-12T16:02:23+00:00 |
+| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a133fc-233a-7b53-b327-566674f6d8f7-21070cec3470.md) | C:\Users\Joshu\dev\ai-os | 2026-10-13T06:40:40+00:00 |
 | codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a133fc-233a-7b53-b327-566674f6d8f7-2301d125a063.md) | C:\Users\Joshu\dev\ai-os | 2026-10-13T06:39:37+00:00 |
+| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a133fc-233a-7b53-b327-566674f6d8f7-4f40006b87ec.md) | C:\Users\Joshu\dev\ai-os | 2026-10-13T06:52:44+00:00 |

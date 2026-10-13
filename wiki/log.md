@@ -3018,3 +3018,10 @@ Calendar (guest giannajean005@gmail.com, 2026-10-08 to 2026-10-13) showed one ne
 ## [2026-10-12] context | Business priorities reconfirmed (grill-me)
 
 Four-round grill-me on business priorities. Capture: `brainstorms/2026-10-12-business-priorities.md`. Updated `context/priorities.md` (new confirmed slate, capacity target, year goal, ideal student), `context/work.md` (dated pointer), `decisions/log.md`. Calendar check via `gws`: about 13 sessions a week over 12 full weeks, consultations near zero since mid-September. Global `~/.claude/CLAUDE.md` and `~/.codex/AGENTS.md` sessions line changed from "~25" to "target 34 ... (calendar showed ~13/week)". Open: no interim date for 34/week; whether the 7Sage post is still up.
+
+## [2026-10-13] system | Orca setup recovered and Antigravity CLI installed
+- Restored archived Codex chat "Identify recently ingested repo" (01a133a9-42a5-7992-924d-4d57ea883ffa). Orca 1.4.224 runtime ready; 21 repos already imported, including ai-os and lsatu.
+- Added Orca resources/bin to user PATH. Installed agy 1.3.4 from Google's Windows release manifest; SHA512 matched and Authenticode signer Google LLC was Valid. Native agy install added its user PATH entry.
+- Opened Codex, Claude Code, and Antigravity terminal tabs in the existing ai-os checkout. Codex and Claude reached their prompts; agy signed in with Google AI Pro and fetched model catalog. No coding task submitted.
+- User selected Codex as primary, with Claude and Antigravity available. User explicitly opted out of Antigravity interaction-data sharing; /config verified Enable Telemetry off.
+- Orca agent-session-history search remains disabled (human app setting required). Claude usage snapshot showed current window exhausted. Fresh terminal/app sessions may be required to pick up PATH additions.

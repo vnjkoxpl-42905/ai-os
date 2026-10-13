@@ -29,7 +29,7 @@
       "projects/lsatu-wt-frozen/.env",
       "projects/lsatu/.env"
     ],
-    "ciphertext_sha256": "46529497da862b230e257aeb20941e068d90cd2dc567108c45e21edbd9a28c40",
+    "ciphertext_sha256": "144fa44ac01a30fa10c3b0b36c38d1962bc0c57c1cf3d05fbcd18f535a21ab89",
     "cloud_key_required": "Provision AI_OS_SYNC_KEY privately in the cloud environment; the key is never uploaded."
   },
   "runtime_export": {
@@ -45,7 +45,7 @@
       "claude_instruction": 1,
       "codex_instruction": 1,
       "claude_memory_files": 71,
-      "codex_memory_records": 124
+      "codex_memory_records": 128
     },
     "source_paths": {
       "agents_skills": "C:\\Users\\Joshu\\.agents\\skills",
@@ -1405,12 +1405,14 @@
       ]
     },
     "warnings": [
+      "Skipped linked directory: C:\\Users\\Joshu\\.claude\\skills\\orca-cli",
+      "Skipped linked directory: C:\\Users\\Joshu\\.claude\\skills\\orchestration",
       "Excluded credential source: C:\\Users\\Joshu\\.codex\\plugins\\cache\\claude-cowork\\anthropic-skills\\1.0.0\\skills\\browser\\.env.example",
       "Plugin skill bundles are readable context. Plugin tools, connectors and binaries require separate cloud installation/authentication; native caches are excluded."
     ]
   },
   "conversation_export": {
-    "session_count": 746,
+    "session_count": 748,
     "errors": [],
     "snapshot_omitted_count": 1
   },
@@ -1630,17 +1632,17 @@
       "ai-os/wiki/sources/karpathy/repos/files/repos--karpathy--cryptos--getnewaddress.py.md",
       "ai-os/wiki/sources/karpathy/repos/files/repos--karpathy--karpathy.github.io--_posts--2021-06-21-blockchain.markdown.md"
     ],
-    "ciphertext_sha256": "63c6c49c01bfb855959f69e2d997a87e6999b1b61375af81ae3dd67949dea51a",
+    "ciphertext_sha256": "711b6e4e033d2bcb60a93411282cfc7da000f7974db1bc8db5cf1a88e70bdf56",
     "ciphertext_parts": [
       {
         "file": "redacted-context.enc.part0001",
         "bytes": 52428800,
-        "sha256": "64fc58831d2334f4b301db9596f7d3e186a0bf83f46c63b451429638982c4909"
+        "sha256": "224c08973ce4b3b2eecedc988d59942afca385caf08c425765ada7c28934794b"
       },
       {
         "file": "redacted-context.enc.part0002",
-        "bytes": 47646388,
-        "sha256": "2c2a0ee29ae6cb632f029c85003f6f5326bb4725e3fae3a89721bc8adf0b4631"
+        "bytes": 47656124,
+        "sha256": "c0f9c8506f3416a8b69867476876566b799910ffd0610922a5e398fb7f97b7b4"
       }
     ]
   }
