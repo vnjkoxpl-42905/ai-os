@@ -85,7 +85,7 @@ Follow the Visualize skill for HTML fragments, bundled widgets, design, and sand
 
 `visualize:` references must stand alone in a top-level paragraph. Nested placement, mixed text, ordinary links, and pasted HTML do not create viewers.
 
-Keep Page headings, explanatory prose, takeaways, and sources in native Page blocks outside embeds. Use Visualize for graphical content; include only text needed to interpret or operate the visual, such as chart titles, labels, legends, brief annotations, tooltips, and controls.
+Keep Page headings, explanatory prose, takeaways, and sources in native Page blocks outside embeds. Use Visualize for graphical content; include only text needed to interpret or operate the visual, such as chart titles, labels, legends, brief annotations, tooltips, and controls. When a Page heading introduces a chart, use that heading as the title and omit a visible title inside the embed. If the user needs a title inside the chart for standalone reuse, include it there and omit a redundant Page heading. Keep distinct panel labels, units, legends, and other interpretive text.
 
 Use separate blocks for independent visuals; combine panels in one responsive embed for side-by-side comparison. Single charts/components normally fit the reading column; dense tables, paired panels, and desktop mockups may need extra width. Avoid clipping and fixed viewport-height layouts; keep related prototypes consistent on plain backgrounds.
 

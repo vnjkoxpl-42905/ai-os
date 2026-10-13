@@ -15,7 +15,7 @@ Read linked references only when their workflow applies. Read each needed refere
 
 Title clarity is an absolute requirement. State the specific subject and purpose so the reader understands what the Page is for before reading the body. Use plain descriptive language with no slogans. Apply this to Page titles, subtitles, and section headings. Use only words, numbers, and spaces, except punctuation required by names or established terms such as C++, .NET, Q&A, or GPT-5.6. Use the native Page title and headings; do not add decorative lines beneath them.
 
-Preserve titles the user explicitly requests and meaningful status such as Draft. Use the Page title as the document title; do not repeat it as the body's opening heading.
+Preserve titles the user explicitly requests and meaningful status such as Draft. Use the Page title as the document title; do not repeat it as the body's opening heading. The Page title is separate from the body outline. Use H1 for the main sections of a new Page, H2 for their subsections, and deeper levels only when needed. Preserve an existing or user-specified heading hierarchy.
 
 The opening content is essential to the reader's understanding of the whole Page. Establish what the Page covers, why it matters to this reader, and the main conclusion, decision, or task. Give enough context and scope to make the sections that follow easy to understand and show what the reader should learn or do.
 
@@ -35,7 +35,7 @@ The opening content is essential to the reader's understanding of the whole Page
 - Separate prose paragraphs with a blank line (`\n\n`) or separate Page blocks. A single newline (`\n`) is a line break within a paragraph; reserve it for intentional breaks, such as addresses or poetry.
 - Use callouts, images, or visualizations when they make the content easier to understand or scan. Keep ordinary text native and editable; choose the simplest format that serves the reader.
 
-Before delivery, verify claims and check clarity and tone. Inspect the Page preview for readability and layout issues when available.
+Before delivery, verify claims and check clarity and tone. While composing, include a qualification only when it prevents a misleading claim, preserves a necessary condition or action, or answers a request for limitations. Apply this before the first Page write, within the existing clarity review. Narrow an overbroad claim instead of keeping it and adding a disclaimer. Keep each necessary condition beside the claim it qualifies, without repeating it elsewhere. Inspect the Page preview for readability and layout issues when available.
 
 For the review steps, examples, and more context, read [writing_quality.md](writing_quality.md#editorial-review-for-documents).
 

@@ -56,7 +56,11 @@ Select evidence that answers the reader's question, including evidence that mate
 | Transit use recovered to 79 percent of its previous level | Transit use increased by 79 percent | Transit use reached 79 percent of its previous level                                                   |
 | A structurally lower level of commuting                   | A permanent drop in commuting       | Retain the structural claim or explain the underlying change using the source; do not infer permanence |
 
-Missing information limits what you may claim; it does not automatically belong in the document. Keep claims within the evidence. State a gap only when the reader needs to resolve it to interpret a claim you actually make or take a concrete next step. If the wording already conveys the limit, leave it there.
+Missing information limits what you may claim; it does not automatically belong in the document. Keep claims within the evidence.
+
+While composing, include sentences about evidence, verification, certainty, proposal status, or how the document was produced only when they prevent a materially misleading claim, preserve a necessary condition or next action, or answer an explicit request for limitations or methods. Apply these criteria before the first Page write, within the existing clarity review.
+
+Judge the sentence in context. A proposal heading and an approval step already establish that a decision is pending; a second sentence saying it is not approved adds nothing. An unmeasured outcome that the document never claims needs no disclaimer. If a claim reaches beyond the evidence, narrow the claim itself. Preserve real uncertainty, approval dependencies, and source restrictions, and state each necessary qualification once beside the claim or action it affects.
 
 ### Use punctuation and voice in context
 
