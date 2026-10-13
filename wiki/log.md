@@ -3037,3 +3037,8 @@ Four-round grill-me on business priorities. Capture: `brainstorms/2026-10-12-bus
 - Actual blank startup reproduced; current profile DB integrity and hashes passed with 21 saved projects. Consistent recovery copy preserved beside profile-state.db. Clean desktop restart restored runtime readiness and projects; exact boot failure cause remains unproven.
 - Added system/scripts/start-orca.ps1: readiness/project/history checks; agent-specific saved session and tab selection; resume commands for Codex, Claude, Antigravity. Local state stored in AppData/Local/AIOS, no credentials. Desktop shortcuts: Orca - Ready (Codex), Orca - Claude, Orca - Antigravity, Orca - All Agents.
 - Verified launcher on current runtime, repeat runs reuse tabs, and all three providers completed a minimal readiness conversation. Saved actual native session IDs for each provider so the launcher can resume exact conversations. Codex remains default. Full cold-launch test was stopped by user Escape and remains unverified.
+
+## [2026-10-13] system | Simplified Orca to the normal app
+- Joshua clarified the desired flow: open Orca, see saved projects, and choose an agent with native chat panels. Removed the four user-authorized extra launcher shortcuts; kept Desktop/Orca.lnk pointing directly to Orca.exe.
+- Enabled Chat UI through Settings/Experimental. Verified saved experimentalNativeChat=true, defaultTuiAgent=codex, and21 projects including ai-os/lsatu.
+- Enabled automatic resume of chats that were working when Orca closed. Existing terminal tabs are retained; Chat UI applies to new supported sessions. Antigravity remains terminal-backed in this version. Launcher source and saved native session identifiers retained for recovery, not used by the plain shortcut.

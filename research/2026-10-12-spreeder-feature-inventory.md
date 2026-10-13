@@ -123,3 +123,16 @@ The application of the rational model to the house-building process in the 1950s
 Many of Steven Spielberg’s films are set in such suburbs. Spielberg’s strategy is to lure the viewer into this highly repetitive world and then to have a completely unexpected event occur. For example, the film Poltergeist takes place in a conventional suburban household in which evil spirits ultimately disrupt the sameness. (The spirits first manifest themselves through another key element of the homogeneous society—the television set.) The great success of Spielberg’s films may be traceable to a longing for some unpredictability, even if it is bizarre and menacing, in increasingly routinized lives.
 
 Paragraph breaks are inferred; Spreeder's word view does not preserve them.
+
+## 10. Desktop app (added 2026-10-13)
+
+Spreeder for Windows 23.8.1 (`C:\Program Files (x86)\Spreeder`) is an Electron shell, not a separate product.
+Its `resources\app.asar` holds only `main.js`, a menu file and icons. `main.js` loads
+`https://www.spreeder.com/app/`, which 301-redirects to `https://spreeder.ereflect.com/` and serves the same
+`main.21893fdef5a7593c.js` bundle this inventory was built from. The bundled-file loader reads from a `dist/`
+folder that is not shipped, so nothing runs offline.
+
+Desktop-only extras (none needed for the LSAT U web build): native menu (Login, Sign Up, Profile, Preferences,
+Goals, Sign Out, Feedback, Help, Admin), a separate admin window, print-to-PDF of a document, auto-update
+(electron-updater), Mac App Store purchase hooks, and a machine-id trial key. Evidence: REA
+`ev_4725d0da8247d433cacafae55ce89cc31d48b11cc17d30a32d5c18a503918525` plus a direct read of the extracted `main.js`.
