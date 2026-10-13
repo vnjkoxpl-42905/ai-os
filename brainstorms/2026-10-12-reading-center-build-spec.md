@@ -1,5 +1,5 @@
 ---
-title: Speed Reader build spec
+title: Reading Center build spec
 date: 2026-10-12
 status: ready for build
 owner: Joshua
@@ -7,16 +7,25 @@ reference: research/2026-10-12-spreeder-feature-inventory.md (the observed Spree
 target: LSAT U (repo vnjkoxpl-42905/lsatu-684d89db; React + Vite + TS + Tailwind + shadcn, Supabase)
 ---
 
-# Speed Reader: build spec
+# Reading Center: build spec
 
 ## 1. Goal
+
+The feature is called the **Reading Center**. Use that name in the nav, page titles, routes
+(`/reading-center`), tables (`reading_center_*`) and the feature flag (`reading_center`).
+
+The builder is a Claude model; a stronger Claude model reviews the PR against this spec, section by
+section, and against the acceptance checks in section 12. Build so the review is easy: one PR, small
+focused commits, and a PR description that maps each spec section to the files that implement it.
 
 Build a speed-reading tool inside LSAT U that replicates every verified Spreeder reader feature, running
 on a **predetermined list of passages** Joshua controls. Students pick a passage from the list and read it
 in any of five modes, with full control over speed, chunking, appearance, and pauses. Their settings,
 progress, bookmarks and reading stats persist.
 
-The passages are general reading passages, **not LSAT RC passages**.
+The passages are general reading passages and real articles, **not LSAT RC passages**. Joshua will
+supply a large set of articles that ship pre-loaded, so the library must handle dozens to hundreds of
+passages comfortably (search, sorting, a bulk import script; see section 11).
 
 ## 2. Ground rules for the builder
 
@@ -27,7 +36,7 @@ The passages are general reading passages, **not LSAT RC passages**.
   passages without a code deploy.
 - No Lovable-credit-spending actions. Database changes go in a SQL migration file.
 - Copy rules: no em dashes in any UI string.
-- Gate the whole feature behind a feature flag (`speed_reader`), off by default, so it can ship dark.
+- Gate the whole feature behind a feature flag (`reading_center`), off by default, so it can ship dark.
 
 ## 3. Scope
 
@@ -46,14 +55,22 @@ The passages are general reading passages, **not LSAT RC passages**.
 - Student-pasted text and document import (Spreeder has them; Joshua wants a fixed list). Leave the
   data model able to support `source = 'user'` later.
 - AI Book Summary / AI Generate.
-- Training games, flashcards, quizzes, word lists, courses, text-to-speech, streaks
-  (present in Spreeder's code but never observed working; see inventory section 7).
+- Quizzes and flashcards: **not a focus**. Do not build them and do not design around them.
+- Training games, courses, text-to-speech, streaks (present in Spreeder's code but never observed
+  working; see inventory section 7).
+
+### Next phase, design for it now
+- **Word lists** will become very important. Do not build the word-list UI in v1, but keep the design
+  ready for it: tokens carry stable `index` values per passage (section 5), and passages are stable rows
+  with ids, so a later `reading_center_word_lists` / `reading_center_word_list_items
+  (word, passage_id, word_index)` can link a saved word back to the exact spot in an article. Leave a
+  short note in the PR describing where word lists would plug in.
 - Built-in book catalogue search.
 
 ## 4. Data model (Supabase / Postgres)
 
 ```sql
-create table speed_reader_passages (
+create table reading_center_passages (
   id uuid primary key default gen_random_uuid(),
   slug text unique not null,
   title text not null,
@@ -67,7 +84,7 @@ create table speed_reader_passages (
   updated_at timestamptz not null default now()
 );
 
-create table speed_reader_preferences (
+create table reading_center_preferences (
   user_id uuid primary key references auth.users(id) on delete cascade,
   wpm int not null default 200 check (wpm between 50 and 5000),
   reading_mode text not null default 'serial'
@@ -85,9 +102,9 @@ create table speed_reader_preferences (
   updated_at timestamptz not null default now()
 );
 
-create table speed_reader_progress (
+create table reading_center_progress (
   user_id uuid references auth.users(id) on delete cascade,
-  passage_id uuid references speed_reader_passages(id) on delete cascade,
+  passage_id uuid references reading_center_passages(id) on delete cascade,
   word_index int not null default 0,
   completed_at timestamptz,
   last_opened_at timestamptz not null default now(),
@@ -95,18 +112,18 @@ create table speed_reader_progress (
   primary key (user_id, passage_id)
 );
 
-create table speed_reader_bookmarks (
+create table reading_center_bookmarks (
   id uuid primary key default gen_random_uuid(),
   user_id uuid references auth.users(id) on delete cascade,
-  passage_id uuid references speed_reader_passages(id) on delete cascade,
+  passage_id uuid references reading_center_passages(id) on delete cascade,
   word_index int not null,
   created_at timestamptz not null default now()
 );
 
-create table speed_reader_sessions (
+create table reading_center_sessions (
   id uuid primary key default gen_random_uuid(),
   user_id uuid references auth.users(id) on delete cascade,
-  passage_id uuid references speed_reader_passages(id) on delete cascade,
+  passage_id uuid references reading_center_passages(id) on delete cascade,
   reading_mode text not null,
   wpm int not null,                 -- setting at the time
   words_read int not null,
@@ -123,7 +140,7 @@ Seed migration: insert passage 1 (section 11).
 
 ## 5. Text processing (shared by every mode)
 
-Write one pure, unit-tested module `speedReader/tokenize.ts`:
+Write one pure, unit-tested module `readingCenter/tokenize.ts`:
 
 - Split `body` into paragraphs on blank lines, paragraphs into words on whitespace. Keep punctuation
   attached to its word. Each token: `{ index, text, paragraphIndex, endsSentence, hasPunctuation }`.
@@ -137,7 +154,7 @@ Write one pure, unit-tested module `speedReader/tokenize.ts`:
 
 ## 6. Timing engine
 
-One hook, `useSpeedReaderClock`, drives every timed mode. Do not depend on a context object that is
+One hook, `useReadingCenterClock`, drives every timed mode. Do not depend on a context object that is
 recreated every tick; keep mutable state in refs.
 
 - Base time per word = `60000 / wpm` ms. Chunk duration = base × words in chunk.
@@ -150,9 +167,9 @@ recreated every tick; keep mutable state in refs.
 - Use `requestAnimationFrame` with elapsed-time accounting so tab throttling does not drift the speed.
 - Time remaining = remaining words × base time (with pauses), rounded up to whole minutes:
   "N minutes remaining" / "Less than a minute remaining".
-- Record a `speed_reader_sessions` row on pause (if ≥ 5 s active), on completion and on exit.
+- Record a `reading_center_sessions` row on pause (if ≥ 5 s active), on completion and on exit.
 
-## 7. Reader screen (`/speed-reader/:slug`)
+## 7. Reader screen (`/reading-center/:slug`)
 
 ### Layout
 - Top bar: Back (to library), passage title (centred), and on the right: Search (e-Reader only),
@@ -229,7 +246,7 @@ Theme values: Light (white bg, near-black text), Dark (black bg, white text), Hi
 yellow `#FFFF00` text, white highlight outline), System (follows OS). Use the app's design tokens for
 everything except High Contrast.
 
-## 9. Library (`/speed-reader`)
+## 9. Library (`/reading-center`)
 
 - Shelves: **Continue reading** (progress > 0 and not complete, newest first, excludes hidden), then
   **All passages** (admin `sort_order`).
@@ -239,7 +256,7 @@ everything except High Contrast.
 - Search box filters by title and author.
 - Empty state if no passages are published.
 
-## 10. Stats and goal (`/speed-reader/stats`)
+## 10. Stats and goal (`/reading-center/stats`)
 
 - Header: student name, a share-free layout.
 - **Vital stats**: two gauges 0–2000 WPM, Current Speed (median effective WPM over the last 5 sessions)
@@ -253,13 +270,19 @@ everything except High Contrast.
   min 300), Set.
 - Effective WPM for a session = `words_read / (active_ms / 60000)`.
 
-## 11. Admin (`/admin/speed-reader`)
+## 11. Admin (`/admin/reading-center`)
 
 - Table of passages: drag to reorder, title, word count, published toggle, edit, delete (confirm).
 - Editor: title, author, optional cover upload (Supabase storage), body textarea (blank line = new
   paragraph), live word count and reading-time estimate at 200 WPM, Save.
 - Deleting a passage with student progress requires typing the title to confirm and warns how many
   students have progress on it.
+
+### Bulk import
+
+Add `scripts/reading-center-import.ts`: reads a folder of `.md` or `.txt` files (first `# ` line or
+filename = title; optional front matter `author`, `sort_order`, `cover`), computes word counts, and
+upserts by slug. Dry-run flag prints what would change. This is how Joshua's article set gets loaded.
 
 ### Seed passage 1: "Living in a rational society"
 
@@ -290,7 +313,6 @@ The builder must verify each of these in the running app and report results in t
 
 ## 13. Open questions for Joshua (do not block the build)
 
-- The rest of the passage list: titles and text. v1 ships with passage 1; more are added through admin.
-- Should completing a passage ask comprehension questions? Not in Spreeder's observable feature set;
-  left out of v1.
-- Nav placement: own sidebar item "Speed Reader", or under an existing practice area.
+- The rest of the passage list: Joshua attaches the articles later; v1 ships with passage 1 and the
+  import script.
+- Nav placement: own sidebar item "Reading Center", or under an existing practice area.

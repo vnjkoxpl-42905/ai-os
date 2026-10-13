@@ -81,5 +81,5 @@ Not verified: signed-in persistence (preview has no user, writes are skipped), t
 - SHIPPED 2026-10-12: PR #208 merged (239fac19), deploy eabffff1; live page verified signed in (new module names, all unlocked).
 - Keep the yellow neo-brutalist look or move Abstract to the shared lesson look (Round 1 Q2, unanswered) -> Joshua
 - Rename "Abstract" in the Library (Round 1 Q4, unanswered) -> Joshua
-- Drills 9 and 20 share the traffic-camera story; drills 4, 18, 19, 20 have only two choices -> Claude, next pass
+- DONE 2026-10-12: drills 4, 18, 19, 20 now have four choices; drill 20 has its own story (PR #209, fcdc32b8, deploy adc160c0, verified in live bundle).
 - Do any students have saved Abstract progress? -> Claude (look up in Supabase)
