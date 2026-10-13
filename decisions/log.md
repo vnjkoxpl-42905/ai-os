@@ -274,3 +274,7 @@ Joshua requested automatic synchronization of AI OS and every project under the 
 ## 2026-10-08 | Run the Karpathy video method in Codex
 
 Joshua explicitly selected Codex instead of Claude for the Karpathy brain method. Preserve the original video prompts and saved source evidence, and adapt the runtime-specific agent, teaching skill and execution gate to Codex. Existing X captures remain the accepted acquisition input; no TwitterAPI.io key or recollection is required. This supersedes the requirement to resume the quota-blocked Claude replay. [Authorized prompt variant](../research/karpathy-video-2026-10-08/CODEX-PROMPTS.md). Native hook activation remains subject to Codex's actual hook trust controls and verification.
+
+## 2026-10-12 | Business slate reconfirmed: LSAT U, then pipeline, then automation
+
+In a grill-me session Joshua confirmed: (1) complete LSAT U, a tool for his tutoring now and a paid public product later; (2) rebuild the new-student pipeline (7Sage and referrals now, Reddit faded); (3) the OS handles post-session work, session prep and consultation emails, with post-session work fully running by 2026-11-02. Capacity target 34 sessions a week; year goal is a fully automated business where he only teaches, at least eight hours a day, with higher rates eventually. Group sessions are later. Supersedes the unconfirmed 2026-07-17 slate. [Capture](../brainstorms/2026-10-12-business-priorities.md).

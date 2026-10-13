@@ -3014,3 +3014,7 @@ Calendar (guest giannajean005@gmail.com, 2026-10-08 to 2026-10-13) showed one ne
 - Installed `rea-agents` 6.4.0 in `dev/tools/node`; ran `rea setup --client claude_code --client codex --yes` (MCP registered in `~/.claude.json` and `~/.codex/config.toml`, backups `*.rea.backup`; skill `reverse-engineer-anything` in `~/.claude/skills` and `~/.agents/skills`). `claude mcp list` shows rea Connected.
 - Downloaded Ghidra 12.1.4 from the NSA GitHub release to `dev/tools/ghidra`; set user env `GHIDRA_INSTALL_DIR`. `rea doctor` reports Ghidra and headless healthy. JS/Electron analysis test ran on a local repo.
 - Not set up: Hopper (commercial), IDA (commercial), other agent clients. The skill is user-global (Rea's own installer), not a project copy.
+
+## [2026-10-12] context | Business priorities reconfirmed (grill-me)
+
+Four-round grill-me on business priorities. Capture: `brainstorms/2026-10-12-business-priorities.md`. Updated `context/priorities.md` (new confirmed slate, capacity target, year goal, ideal student), `context/work.md` (dated pointer), `decisions/log.md`. Calendar check via `gws`: about 13 sessions a week over 12 full weeks, consultations near zero since mid-September. Global `~/.claude/CLAUDE.md` and `~/.codex/AGENTS.md` sessions line changed from "~25" to "target 34 ... (calendar showed ~13/week)". Open: no interim date for 34/week; whether the 7Sage post is still up.

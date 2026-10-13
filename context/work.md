@@ -11,6 +11,8 @@ Authored context — what the business is and how it runs. One authoritative hom
 
 North star: **automate everything around the sessions so Joshua only shows up and teaches.**
 
+Reconfirmed 2026-10-12 ([capture](../brainstorms/2026-10-12-business-priorities.md)): LSAT U supports the tutoring now and becomes a paid public product later; target 34 sessions a week (measured about 13, 2026-07 to 2026-10); lead sources are mostly 7Sage and referrals, Reddit has faded. Pricing was not revisited. Current slate: [priorities](priorities.md).
+
 ## What is sold, to whom
 
 - Personalized 1-on-1 LSAT tutoring/coaching: individual sessions, and five-hour / ten-hour packages **with between-session coaching included**. All paid upfront — no package-balance model exists.

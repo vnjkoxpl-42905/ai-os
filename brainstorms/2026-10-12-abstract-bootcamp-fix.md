@@ -78,7 +78,7 @@ Verified: typecheck clean; lint 0 errors; Abstract has no tests of its own; Dril
 Not verified: signed-in persistence (preview has no user, writes are skipped), teacher Library card visually, mobile widths, M2/M4/M5/M6 notes clicked through, production build.
 
 ## Open flags (pending input)
-- Ship it? Commit, PR, merge to main and free deploy_project to lsatprep.study -> Joshua
+- SHIPPED 2026-10-12: PR #208 merged (239fac19), deploy eabffff1; live page verified signed in (new module names, all unlocked).
 - Keep the yellow neo-brutalist look or move Abstract to the shared lesson look (Round 1 Q2, unanswered) -> Joshua
 - Rename "Abstract" in the Library (Round 1 Q4, unanswered) -> Joshua
 - Drills 9 and 20 share the traffic-camera story; drills 4, 18, 19, 20 have only two choices -> Claude, next pass

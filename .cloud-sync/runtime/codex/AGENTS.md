@@ -10,8 +10,8 @@ Keep this file short. It reloads on every message.
 ## Who
 
 Joshua Fisseha — `contact@aspiringattorneys.com`. Builds **LSAT U** (lsatprep.study) and
-the Aspiring Attorneys brand. Teaches the LSAT: ~25 one-to-one sessions a week plus
-consultations. Windows 11; a MacBook Pro runs some sessions too, so paths differ between
+the Aspiring Attorneys brand. Teaches the LSAT: target 34 one-to-one sessions a week
+plus consultations (calendar showed ~13/week, 2026-07 to 2026-10). Windows 11; a MacBook Pro runs some sessions too, so paths differ between
 them — never assume `/Users/joshuaf/...` resolves here.
 
 ## Where things live

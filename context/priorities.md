@@ -1,7 +1,7 @@
 ---
 type: operating-layer
 subject: Current priorities
-updated: 2026-10-08
+updated: 2026-10-12
 aliases: []
 ---
 
@@ -9,16 +9,25 @@ aliases: []
 
 Authored context — the standing slate. The router points here. Review and refresh roughly quarterly (or when a priority genuinely changes). Granular day-to-day product work lives in `wiki/tasks.md` (the living Now/Next/Done ledger) — this file is the altitude above it.
 
-_Business and personal slate captured 2026-07-17 from the 2026-07-16 onboarding intake. These priorities have not been reconfirmed as a complete current slate. The dated 2026-10-08 AI workspace priority below is current user guidance; use `wiki/tasks.md` and live systems for current commitments._
+_Business slate reconfirmed by Joshua on 2026-10-12 in a grill-me session ([capture](../brainstorms/2026-10-12-business-priorities.md)). Personal priorities were confirmed unchanged the same day. Use `wiki/tasks.md` and live systems for current commitments._
 
-## Business / product
+## Business / product (confirmed 2026-10-12)
 
-1. **Complete and launch LSAT U** (lsatprep.study). Current product focus: Activity Centre, Intro to LR to shipped-quality, platform work (Mainhub, drill, analytics, teacher tools). Granular state: `wiki/tasks.md`.
-2. **Automate the tutoring business so it runs mostly on its own** — Joshua only shows up for the Google Meet sessions. This OS (Jay 2) is that automation; build a consistent pipeline of new students. Highest-leverage next builds: post-session dispatch (Meet transcript → student folder → homework/notes/drafts) and daily inbox triage.
+1. **Complete and launch LSAT U** (lsatprep.study). It is "pretty much launched" but published only to his students. For now it is a tool that supports his one-to-one tutoring; a paid public product comes later. What it should hold: bootcamp material, lecture notes, drills for specific skills, and analysis of each student's own data (imported or pulled in) that recommends drills. Granular state: `wiki/tasks.md`.
+2. **Rebuild the new-student pipeline.** Recent leads come mostly from 7Sage (an earlier post of his, possibly still up) and some referrals; Reddit used to be the main source and now gives very few. Consultations fell to almost none from mid-September 2026.
+3. **Automate everything around the sessions.** The OS should handle post-session notes and homework, session prep, and consultation emails. **Post-session work first, fully running by 2026-11-02**; session prep and consultation emails follow. Automating assignment work is what frees time for more students.
 
-## Personal priorities captured 2026-07-17
+**Capacity target:** 34 one-to-one sessions a week on a five-day week (about eight hours a day). Measured from his calendar: about 13 a week, 2026-07-19 to 2026-10-10.
 
-The former `projects/life-path/` route is unavailable in this checkout. These are historical stated priorities, not newly confirmed commitments.
+**Goal for the year (to 2027-10):** "a fully automated business that I don't have to really be there except for the sessions, entirely," teaching at least eight hours a day, and introducing higher rates eventually. Picture of done: he puts his headphones in, turns his camera on, teaches, and sees his students' scores improve.
+
+**Ideal student:** anyone aiming to improve their score, ideally within about two months; the ideal case starts around 150 and reaches the high 160s or 170s.
+
+**Later, not now:** group sessions; a paid public LSAT U.
+
+## Personal priorities (captured 2026-07-17, confirmed unchanged 2026-10-12)
+
+The former `projects/life-path/` route is unavailable in this checkout.
 
 3. Complete law school applications.
 4. Apply for a pardon (2018 DUI).
