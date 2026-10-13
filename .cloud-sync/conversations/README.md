@@ -513,11 +513,9 @@ Native UI archive does not delete a conversation. Source-file deletion removes i
 | codex | [iOkay, tell me what's going on right now. How do I authenticate it? I don't see it on the app. Is th](codex/01a1083a-4c32-76a0-9cd8-68a85b9044ab-37ff9db43379.md) | C:\Users\Joshu\dev\ai-os | 2026-10-07T19:21:54+00:00 |
 | codex | [iOkay, tell me what's going on right now. How do I authenticate it? I don't see it on the app. Is th](codex/01a1083a-4c32-76a0-9cd8-68a85b9044ab-4f1f303c2d42.md) | C:\Users\Joshu\dev\ai-os | 2026-10-07T16:19:59+00:00 |
 | codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a1083a-4c32-76a0-9cd8-68a85b9044ab-6c76b679d553.md) | C:\Users\Joshu\dev\ai-os | 2026-10-07T15:33:05+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a1083a-4c32-76a0-9cd8-68a85b9044ab-7afdfe766a32.md) | C:\Users\Joshu\dev\ai-os | 2026-10-04T18:46:17+00:00 |
 | codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a1083a-4c32-76a0-9cd8-68a85b9044ab-7b6082d764e5.md) | C:\Users\Joshu\dev\ai-os | 2026-10-07T08:01:27+00:00 |
 | codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a1083a-4c32-76a0-9cd8-68a85b9044ab-9b1a936d1a81.md) | C:\Users\Joshu\dev\ai-os | 2026-10-07T07:52:43+00:00 |
 | codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a1083a-4c32-76a0-9cd8-68a85b9044ab-c8310e3d39f9.md) | C:\Users\Joshu\dev\ai-os | 2026-10-07T19:43:22+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a1083a-4c32-76a0-9cd8-68a85b9044ab-e37ba14250fc.md) | C:\Users\Joshu\dev\ai-os | 2026-10-04T18:43:48+00:00 |
 | codex | [iOkay, tell me what's going on right now. How do I authenticate it? I don't see it on the app. Is th](codex/01a1083a-4c32-76a0-9cd8-68a85b9044ab-ea36f337da81.md) | C:\Users\Joshu\dev\ai-os | 2026-10-07T19:29:57+00:00 |
 | codex | [iOkay, tell me what's going on right now. How do I authenticate it? I don't see it on the app. Is th](codex/01a1083a-4c32-76a0-9cd8-68a85b9044ab-f364bbf7e2f4.md) | C:\Users\Joshu\dev\ai-os | 2026-10-07T19:01:05+00:00 |
 | codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a114b0-a15a-7410-9ef2-cb63c3129a83-d8a594c838b7.md) | C:\Users\Joshu\dev\ai-os | 2026-10-11T07:25:54+00:00 |
@@ -744,10 +742,10 @@ Native UI archive does not delete a conversation. Source-file deletion removes i
 | codex | [reply with the single word ok](codex/01a12cce-25ab-7b23-ac79-4789146ea747-ed9f98ce648c.md) | C:\Users\Joshu\dev\ai-os | 2026-10-11T21:11:09+00:00 |
 | codex | [Read-only native skill acceptance in this AI OS project. No writes, shell commands, live APIs, insta](codex/01a12cce-2662-7f81-b02d-ea4a93fa3ef8-e89a6e17b679.md) | C:\Users\Joshu\dev\ai-os | 2026-10-11T21:11:10+00:00 |
 | codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a12fc6-65f4-7f10-a3b2-5a33ed6fab98-533f5b98a1c6.md) | C:\Users\Joshu\dev\ai-os | 2026-10-12T11:01:35+00:00 |
-| codex | [The conditional indicator drill for group three, the "unless" drill. I want you to isolate that part](codex/01a130d9-ca5d-75a1-8ecf-0da7d48b9cb0-63a24c36502c.md) | C:\Users\Joshu\dev\ai-os | 2026-10-12T16:02:21+00:00 |
-| codex | [I want you to look at my most recent source. No, my recent clip I clipped, which was like 10 new Git](codex/01a130d9-ca61-70a0-932d-20a813cc534f-21f67b761d14.md) | C:\Users\Joshu\dev\ai-os | 2026-10-12T16:02:21+00:00 |
+| codex | [The conditional indicator drill for group three, the "unless" drill. I want you to isolate that part](codex/01a130d9-ca5d-75a1-8ecf-0da7d48b9cb0-63a24c36502c.md) | C:\Users\Joshu\dev\ai-os | 2026-10-13T05:22:05+00:00 |
+| codex | [I want you to look at my most recent source. No, my recent clip I clipped, which was like 10 new Git](codex/01a130d9-ca61-70a0-932d-20a813cc534f-21f67b761d14.md) | C:\Users\Joshu\dev\ai-os | 2026-10-13T05:21:55+00:00 |
 | codex | [](codex/01a130d9-ca62-7091-a55b-4180185f933f-4477ca2e9c02.md) | C:\Users\Joshu\dev\ai-os | 2026-10-12T16:02:21+00:00 |
-| codex | [<command-message>karpathy-teach</command-message>](codex/01a130d9-ca64-7161-940f-c5f2ce51c3ef-c3582c3c0d96.md) | C:\Users\Joshu\dev\ai-os | 2026-10-12T16:02:21+00:00 |
+| codex | [<command-message>karpathy-teach</command-message>](codex/01a130d9-ca64-7161-940f-c5f2ce51c3ef-c3582c3c0d96.md) | C:\Users\Joshu\dev\ai-os | 2026-10-13T05:22:10+00:00 |
 | codex | [](codex/01a130d9-ca79-76b1-83a4-02908d0cfef4-53a00c4cf1eb.md) | C:\Users\Joshu\dev\ai-os | 2026-10-12T16:02:21+00:00 |
 | codex | [Look only at the list of available skills in your context. For each skill below, output one line 'na](codex/01a130d9-ce3b-7523-82f1-0c2f08dc3fc4-0f59602b8a1b.md) | C:\Users\Joshu\dev\ai-os | 2026-10-12T16:02:22+00:00 |
 | codex | [Look only at the list of available skills in your context. For each skill below, output one line 'na](codex/01a130d9-ce8b-7552-bca2-18690e88a8fe-30d4e8500f77.md) | C:\Users\Joshu\dev\ai-os | 2026-10-12T16:02:22+00:00 |
