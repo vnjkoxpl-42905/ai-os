@@ -29,7 +29,7 @@
       "projects/lsatu-wt-frozen/.env",
       "projects/lsatu/.env"
     ],
-    "ciphertext_sha256": "0687548ffa7bfff2b286b52aad1624bb96b5aade782f5d99ab69c2af10ea4a07",
+    "ciphertext_sha256": "8ee7666b6936564109bed5460a56f0521dee1ef9858202661aa212058a169958",
     "cloud_key_required": "Provision AI_OS_SYNC_KEY privately in the cloud environment; the key is never uploaded."
   },
   "runtime_export": {
@@ -44,7 +44,7 @@
       "codex_plugin_files": 1701,
       "claude_instruction": 1,
       "codex_instruction": 1,
-      "claude_memory_files": 71,
+      "claude_memory_files": 72,
       "codex_memory_records": 135
     },
     "source_paths": {
@@ -1412,8 +1412,13 @@
     ]
   },
   "conversation_export": {
-    "session_count": 768,
-    "errors": [],
+    "session_count": 769,
+    "errors": [
+      {
+        "source": "C:\\Users\\Joshu\\.claude\\projects\\C--Users-Joshu-dev-ai-os\\7652d59f-eb5e-4f45-a280-87afc622989d\\subagents\\workflows\\wf_cb3005bf-263\\agent-a0ebccbb240679398.jsonl",
+        "error": "[WinError 5] Access is denied: 'C:\\\\Users\\\\Joshu\\\\dev\\\\ai-os\\\\setup\\\\github-sync\\\\state\\\\conversations\\\\claude\\\\7652d59f-eb5e-4f45-a280-87afc622989d-agent-a0ebccbb240679398.md.tmp' -> 'C:\\\\Users\\\\Joshu\\\\dev\\\\ai-os\\\\setup\\\\github-sync\\\\state\\\\conversations\\\\claude\\\\7652d59f-eb5e-4f45-a280-87afc622989d-agent-a0ebccbb240679398.md'"
+      }
+    ],
     "snapshot_omitted_count": 1
   },
   "encrypted_original_context": {
@@ -1636,17 +1641,17 @@
       "ai-os/wiki/sources/karpathy/repos/files/repos--karpathy--cryptos--getnewaddress.py.md",
       "ai-os/wiki/sources/karpathy/repos/files/repos--karpathy--karpathy.github.io--_posts--2021-06-21-blockchain.markdown.md"
     ],
-    "ciphertext_sha256": "dedb546252a49dc5c03f113a639c45f29ce3c1524f13725408054c139c1d4aad",
+    "ciphertext_sha256": "0af15aea8108d9bcd9226e5e86f31d4d0f6a4fd3ef4d5d1699c96c920d54600e",
     "ciphertext_parts": [
       {
         "file": "redacted-context.enc.part0001",
         "bytes": 52428800,
-        "sha256": "af06134a1d48223797ff10d457aa7a1d9948a5e4379d65f2d495ac114e4e43b2"
+        "sha256": "84bb60385830a4a1dcea451faeab8bbb5a151b92b73600a1ced77266ac946b51"
       },
       {
         "file": "redacted-context.enc.part0002",
-        "bytes": 49304501,
-        "sha256": "da4257b3ded8bbffdc8b001be2145846f7024aa3b7244122e951d7db2b05475c"
+        "bytes": 49440198,
+        "sha256": "e757f144b41ae6cf7c2cb482a1de74a59a559b4a34ee6aee20d3d546c625e5f4"
       }
     ]
   }

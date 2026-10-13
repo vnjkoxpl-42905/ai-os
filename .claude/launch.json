@@ -165,6 +165,21 @@
       "port": 8095
     },
     {
+      "name": "reading-center-dev",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "--prefix",
+        "../ai-os-projects/reading-center",
+        "run",
+        "dev",
+        "--",
+        "--port",
+        "8100",
+        "--strictPort"
+      ],
+      "port": 8100
+    },
+    {
       "name": "lsatu-unless-dev",
       "runtimeExecutable": "npm",
       "runtimeArgs": [
