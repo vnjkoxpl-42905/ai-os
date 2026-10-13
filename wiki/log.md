@@ -3025,3 +3025,10 @@ Four-round grill-me on business priorities. Capture: `brainstorms/2026-10-12-bus
 - Opened Codex, Claude Code, and Antigravity terminal tabs in the existing ai-os checkout. Codex and Claude reached their prompts; agy signed in with Google AI Pro and fetched model catalog. No coding task submitted.
 - User selected Codex as primary, with Claude and Antigravity available. User explicitly opted out of Antigravity interaction-data sharing; /config verified Enable Telemetry off.
 - Orca agent-session-history search remains disabled (human app setting required). Claude usage snapshot showed current window exhausted. Fresh terminal/app sessions may be required to pick up PATH additions.
+
+## [2026-10-13] system | Orca readiness audit and chat search
+- Confirmed Codex default, native Windows runtime, status hooks, folder trust, and isolated Codex servers enabled. Saved launch args bypass permission prompts for Codex, Claude and Antigravity. Refreshed agent detection in Settings; all three now detected (agy previously missed due to stale PATH).
+- Human enabled local Agent Session Search. Verified current index: 403 files, 69,223 messages at completion, no failures or degraded roots, 211 Claude and 73 Codex sessions. Search finds this chat and recovered Orca setup chat with native resume commands. ChatGPT web chats and live-session migration are not established by this index.
+- Installed Orca CLI and orchestration skills through the supported installer for Codex, Claude Code and Antigravity; installed inventory confirms shared plus Claude availability.
+- Cleared ai-os pnpm install setup hook because the vault has no package manifest; backend read confirms empty setup script. Enabled external worktree visibility for ai-os and lsatu; verified 10 LSAT U checkouts visible.
+- Running Orca Codex /mcp confirms core integrations connected (Codex apps, worktrees, CUA, Kling, LSAT U lessons, Node REPL, REA). Standalone lsat-u and netlify MCP entries still require authentication. Claude current usage window showed 100 percent used; this is a provider limit, not an installation failure.
