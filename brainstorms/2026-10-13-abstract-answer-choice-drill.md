@@ -45,3 +45,21 @@ Asked Q12 (order inside Module 1 note), Q13 (steps page lives in Module 3 before
 
 ## Open flags (pending input)
 - Rename "Abstract" in the Library? (asked 3x earlier, unanswered) -> Joshua
+
+
+## Session checkpoint: local draft build in progress, 2026-10-13
+
+Joshua confirmed: **Keep the existing four-step notes in Modules 3 and 7 and retain Module 7’s repeated choices for this draft.** This resolves those teaching choices for the local draft; it does not approve new walkthrough or definition wording.
+
+The local Module 3 redesign is being built in `C:\Users\Joshu\dev\ai-os-projects\lsatu-abstract`. Content now includes all 15 exact source choices, the original seven-step procedure with its emphasis, lightly polished source breakdowns, seven-step applied walkthrough drafts, and a word bank covering every selected keyword. The bank has 45 terms, including 35 newly drafted definitions awaiting Joshua’s approval. Grading requirements preserve choice meaning without demanding details from examples the learner has not yet seen.
+
+Review artifact: [Abstract answer-choice draft for Joshua review](2026-10-13-abstract-answer-choice-review.md). It records source hashes, draft meanings and definitions, walkthroughs, grading requirements, and source limitations.
+
+Status remains **local draft build in progress**. No new content approval, commit, publication, deployment, or AI runtime validation is claimed. Joshua retains deployment of the grader Edge Function. Existing source records and prior checkpoint text are preserved.
+
+
+### Verification addendum, 2026-10-13
+
+Root verified the final local draft with typecheck and production build (both exit 0), six focused tests passing, and a clean diff check. Browser checks covered Module 3 steps, word bank, item 1 keyword taps and written response, an honestly ungraded unavailable-grader fallback, walkthrough and breakdown, then saving and moving to item 2. Module 1 Traps content was present in the DOM; 375px CSS checks showed no horizontal overflow. Item-start scrolling reset to 0, and navigation between modules reset to overview.
+
+Preview progress is session-only and clears after reload. Signed-in account resume was not tested. No deployed endpoint, AI verdict, or AI retry runtime was tested. This remains a local draft pending Joshua’s content approval; nothing was committed, deployed, or shipped. Final parity is not certified because the skill’s approved quality reference remains unavailable.

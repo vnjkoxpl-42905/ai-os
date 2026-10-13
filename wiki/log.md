@@ -3042,3 +3042,13 @@ Four-round grill-me on business priorities. Capture: `brainstorms/2026-10-12-bus
 - Joshua clarified the desired flow: open Orca, see saved projects, and choose an agent with native chat panels. Removed the four user-authorized extra launcher shortcuts; kept Desktop/Orca.lnk pointing directly to Orca.exe.
 - Enabled Chat UI through Settings/Experimental. Verified saved experimentalNativeChat=true, defaultTuiAgent=codex, and21 projects including ai-os/lsatu.
 - Enabled automatic resume of chats that were working when Orca closed. Existing terminal tabs are retained; Chat UI applies to new supported sessions. Antigravity remains terminal-backed in this version. Launcher source and saved native session identifiers retained for recovery, not used by the plain shortcut.
+
+
+## [2026-10-13] implementation | Abstract answer-choice local draft checkpoint
+
+Module 3 redesign is in progress in the `lsatu-abstract` worktree. Joshua confirmed the existing Module 3/7 four-step routines and Module 7 repeated choices remain for this draft. All 15 exact source choices, seven-step applied walkthrough drafts, and a 45-term word bank are authored; 35 new definitions await approval. Review artifact: `brainstorms/2026-10-13-abstract-answer-choice-review.md`; build checkpoint appended to `brainstorms/2026-10-13-abstract-answer-choice-drill.md`. This records a local draft, not completion or shipping. No new content approval, commit, deployment, or AI runtime validation is claimed.
+
+
+### [2026-10-13] verification addendum | Abstract local draft
+
+Root reported final typecheck/build exit 0, focused tests 6/6, and clean diff check. Browser verification covered M3 steps to word bank to item 1 response, honest ungraded fallback, walkthrough/breakdown, save and advance; M1 Traps DOM; 375px without horizontal overflow; item-start scroll and cross-module overview resets. Preview progress clears on reload. Signed-in account resume and deployed AI verdict/retry runtime remain untested. Local draft only: no content approval, commit, deployment, shipping, or final parity claim; approved parity reference remains unavailable.

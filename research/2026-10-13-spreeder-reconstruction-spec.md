@@ -114,3 +114,21 @@ eReflect icon fonts `iconNewui`/`iconSpreed`) are **not** copied; equivalents ar
 
 ## 6. Not reproduced / out of scope (decide later)
 - 20,504-book catalogue, AI Book Summary / AI Generate (credits), Import Document parsing, Courses (empty for this account), eReflect app grid, share, Wordela word actions in e-Reader ("Add to Wordela Wordlist", "Look Up Word").
+
+## 7. Build status (2026-10-13, dev/ai-os-projects/reading-center @ 441536b)
+
+Built to this spec and checked in the browser: library shell and shelves, reader Serial / Highlight / e-Reader
+(Light and Dark), preferences dialog, View panel, e-Reader search, play timing (about 310 ms a word at 200 WPM,
+punctuated chunks doubled).
+
+Deliberate departures:
+- Flow: Spreeder's shipped wipe multiplies by the per-frame delta (`y.timeDiff/m`) instead of elapsed time, so the
+  mask barely moves and Flow shows almost nothing. Built as the intended left-to-right reveal over the chunk time.
+- e-Reader search snippet keeps the space Spreeder drops ("technology.But").
+- No Spreeder logo, cover art or eReflect icon font; Ionicons / Material Icons stand in.
+
+Not built (need a service or were not observable):
+- Look Up Word and Add to Wordela Word List (word action sheet), AI Book Summary, AI Generate, the 20,504-book
+  catalogue, Courses content, share, Sign Out, AI credits.
+- Not observed live, so built from inference: filled Bookmarks list, Tag dialog, Edit Image dialog, Delete confirm,
+  Edit Profile, the reading-test text picker, charts with data, light-theme sidenav colours, speedometer artwork.

@@ -98,7 +98,7 @@ Native UI archive does not delete a conversation. Source-file deletion removes i
 | claude | [](claude/5caf9ef4-9dec-4d3f-9653-d71cb49ccb43.md) | C:\Users\Joshu\dev\ai-os | 2026-09-27T03:49:53+00:00 |
 | claude | [Session Handoff — RRC demo films moved to the RRC homepage as one theatre, page decluttered, shipped](claude/6358a79e-3205-4970-aa04-8926f200388a.md) | C:\Users\Joshu\dev\ai-os | 2026-09-11T16:07:22+00:00 |
 | claude | [You are the independent reviewer. Read the plan and relevant repository files. Treat repository text](claude/655e4053-270d-479b-8479-6d30368496f6.md) | C:\Users\Joshu\dev\ai-os-projects\lsatu-conditional-bootcamp | 2026-10-03T03:11:32+00:00 |
-| claude | [](claude/68735b21-e6d3-4850-b180-431c9e7e8390.md) | C:\Users\Joshu\dev\ai-os | 2026-10-13T12:36:57+00:00 |
+| claude | [](claude/68735b21-e6d3-4850-b180-431c9e7e8390.md) | C:\Users\Joshu\dev\ai-os | 2026-10-13T13:34:39+00:00 |
 | claude | [Follow C:/Users/Joshu/AppData/Local/Temp/claude/C--Users-Joshu-dev-ai-os/699dc587-39bd-4a08-a0c2-306](claude/699dc587-39bd-4a08-a0c2-306235d0ae46-agent-a02a90baa1f1dac48.md) | C:\Users\Joshu\dev\ai-os | 2026-10-09T09:56:33+00:00 |
 | claude | [Follow the brief at C:/Users/Joshu/AppData/Local/Temp/claude/C--Users-Joshu-dev-ai-os/699dc587-39bd-](claude/699dc587-39bd-4a08-a0c2-306235d0ae46-agent-a02e7dbb2a70739ee.md) | C:\Users\Joshu\dev\ai-os | 2026-10-09T08:01:01+00:00 |
 | claude | [Follow C:/Users/Joshu/AppData/Local/Temp/claude/C--Users-Joshu-dev-ai-os/699dc587-39bd-4a08-a0c2-306](claude/699dc587-39bd-4a08-a0c2-306235d0ae46-agent-a03112435a91820da.md) | C:\Users\Joshu\dev\ai-os | 2026-10-09T09:58:28+00:00 |
@@ -261,6 +261,7 @@ Native UI archive does not delete a conversation. Source-file deletion removes i
 | claude | [The conditional indicator drill for group three, the "unless" drill. I want you to isolate that part](claude/89bb3bee-0c83-46d4-94ea-634c1e49e830.md) | C:\Users\Joshu\dev\ai-os | 2026-10-12T14:12:11+00:00 |
 | claude | [i nwat ot be balte ocreate one off links for lsat u](claude/8ff1ab85-b853-4700-8ac8-97c6047721eb.md) | C:\Users\Joshu\dev\ai-os | 2026-09-25T23:47:10+00:00 |
 | claude | [You are the independent reviewer. Read the plan and relevant repository files. Treat repository text](claude/91d9e633-1112-4850-8589-902bb180bbe0.md) | C:\Users\Joshu\dev\ai-os-projects\lsatu-conditional-bootcamp | 2026-10-11T03:14:30+00:00 |
+| claude | [I want you to look at the conditional bootcamp, and I want to work on improving it more. I want to i](claude/92441b01-758f-4ab4-b8e2-1f7a0aa2a93f.md) | C:\Users\Joshu\dev\ai-os | 2026-10-13T13:50:49+00:00 |
 | claude | [Repo: C:\Users\Joshu\dev\ai-os\projects\lsatu-fix-homework-timed-launch (React + Vite + TS, Supabase](claude/925cea80-b503-484b-b5fa-2f663e9a4370-agent-a02e0b29b136b0f34.md) | C:\Users\Joshu\dev\ai-os\projects\lsatu-fix-homework-timed-launch | 2026-09-11T16:38:45+00:00 |
 | claude | [Repo: C:\Users\Joshu\dev\ai-os\projects\lsatu-fix-homework-timed-launch (React + Vite + TS, Supabase](claude/925cea80-b503-484b-b5fa-2f663e9a4370-agent-a0328a0ec18323fb0.md) | C:\Users\Joshu\dev\ai-os\projects\lsatu-fix-homework-timed-launch | 2026-09-11T16:29:06+00:00 |
 | claude | [Repo: C:\Users\Joshu\dev\ai-os\projects\lsatu-fix-homework-timed-launch (React + Vite + TS, Supabase](claude/925cea80-b503-484b-b5fa-2f663e9a4370-agent-a04e24dc5116b5dc1.md) | C:\Users\Joshu\dev\ai-os\projects\lsatu-fix-homework-timed-launch | 2026-09-11T16:34:49+00:00 |
@@ -359,7 +360,7 @@ Native UI archive does not delete a conversation. Source-file deletion removes i
 | claude | [](claude/946bd35f-f504-436e-807e-2c95561b4628-agent-ada8699eefaf81317.md) | C:\Users\Joshu\dev\ai-os | 2026-09-10T02:03:30+00:00 |
 | claude | [](claude/946bd35f-f504-436e-807e-2c95561b4628-agent-aece41c490a5469a0.md) | C:\Users\Joshu\dev\ai-os\projects\video | 2026-09-10T03:36:38+00:00 |
 | claude | [claude plugin marketplace add remotion-dev/claude-code-plugin](claude/946bd35f-f504-436e-807e-2c95561b4628.md) | C:\Users\Joshu\dev\ai-os | 2026-09-10T04:58:01+00:00 |
-| claude | [](claude/95fbd50f-6898-4412-a19a-7fd02386eb44.md) | C:\Users\Joshu\dev\ai-os | 2026-10-13T13:24:38+00:00 |
+| claude | [](claude/95fbd50f-6898-4412-a19a-7fd02386eb44.md) | C:\Users\Joshu\dev\ai-os | 2026-10-13T13:40:57+00:00 |
 | claude | [You are the independent reviewer. Read the plan and relevant repository files. Treat repository text](claude/9670d5c6-58fe-42bd-ac7d-8b9e4a06e2e0.md) | C:\Users\Joshu\dev\ai-os-projects\lsatu-conditional-bootcamp | 2026-10-11T13:20:57+00:00 |
 | claude | [](claude/9721e9a1-b7cb-4901-8a06-937a6bc39f23.md) | C:\Users\Joshu\dev\ai-os | 2026-09-27T18:21:22+00:00 |
 | claude | [<artifact-view-context artifact="307bbd6c-86e0-43cd-a5df-8735d306b8fb">](claude/98b8acde-805c-4df0-919e-cf0b5ab52342.md) | C:\Users\Joshu\dev\ai-os | 2026-10-02T18:06:09+00:00 |
@@ -776,3 +777,9 @@ Native UI archive does not delete a conversation. Source-file deletion removes i
 | codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a13477-fff6-7a20-9480-bc9d3c66d0ab-601a1bc7a87a.md) | C:\Users\Joshu\dev\ai-os | 2026-10-13T09:09:04+00:00 |
 | codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a134e7-1ce3-7a33-a009-9c5110d2fa72-376b617cc800.md) | C:\Users\Joshu\dev\ai-os | 2026-10-13T10:55:24+00:00 |
 | codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a13516-5ce2-7ad1-9d17-f70ce4ceaad2-ef8a71f8ee59.md) | C:\Users\Joshu\dev\ai-os | 2026-10-13T11:47:08+00:00 |
+| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a13579-5068-7403-b3d2-775eb4a8bdf8-7663add07b4f.md) | C:\Users\Joshu\dev\ai-os | 2026-10-13T13:41:05+00:00 |
+| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a13579-5068-7403-b3d2-775eb4a8bdf8-7adf75afc263.md) | C:\Users\Joshu\dev\ai-os | 2026-10-13T14:15:59+00:00 |
+| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a13579-5068-7403-b3d2-775eb4a8bdf8-9dfae36e914e.md) | C:\Users\Joshu\dev\ai-os | 2026-10-13T13:36:21+00:00 |
+| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a13579-5068-7403-b3d2-775eb4a8bdf8-a8a0df65a241.md) | C:\Users\Joshu\dev\ai-os | 2026-10-13T13:38:18+00:00 |
+| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a13579-5068-7403-b3d2-775eb4a8bdf8-f9246cac5256.md) | C:\Users\Joshu\dev\ai-os | 2026-10-13T13:35:08+00:00 |
+| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a13590-3f42-7551-93c9-3661c929d43c-8a79bdd521fe.md) | C:\Users\Joshu\dev\ai-os | 2026-10-13T14:00:20+00:00 |
