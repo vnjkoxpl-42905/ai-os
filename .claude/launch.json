@@ -135,6 +135,21 @@
       "port": 8097
     },
     {
+      "name": "lsatu-str-dev",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "--prefix",
+        "../ai-os-projects/lsatu-str",
+        "run",
+        "dev",
+        "--",
+        "--port",
+        "8095",
+        "--strictPort"
+      ],
+      "port": 8095
+    },
+    {
       "name": "lsatu-unless-dev",
       "runtimeExecutable": "npm",
       "runtimeArgs": [

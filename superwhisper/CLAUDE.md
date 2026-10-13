@@ -13,6 +13,7 @@ This folder is the source of truth for Superwhisper on the Windows laptop. Edit 
 | `sw.py` | The terminal CLI (`sw search / last / stats / add / vocab / rules / export / scan / sync / mode`). Superwhisper's own CLI is macOS-only, so this does the same jobs against the same local files. Launcher: `dev/tools/bin/sw.cmd`, on PATH. |
 | `sync.py` | Pushes all of the above into the app. `--check` shows the diff without writing. Backs up first. |
 | `scan.py` | Scans every transcript for mis-heard known terms, rules that stopped firing, and new candidates. Writes `research/SCAN-<date>.md`. |
+| `hallucinations.py` | Counts invented text (silence fillers, loops, too many words for the clip length) and whether it was pasted. Writes `research/HALLUCINATIONS-<date>.md`. Baseline 2026-10-12: 66 of 807 recordings in 7 days, 45 pasted. |
 | `research/` | The 2026-09-11 customization report, the source list, and dated scans. Read the report before changing a prompt. |
 
 Raw evidence (docs crawl, community pages, searches) is in `raw/sources/superwhisper/research-2026-09-11/`. Transcript exports are in `raw/sources/superwhisper/`.
@@ -44,6 +45,8 @@ Raw evidence (docs crawl, community pages, searches) is in `raw/sources/superwhi
 
 13. **One glossary, every mode.** Vocabulary and replacements were always global (they live in `settings.json` and run before any mode sees the text). The mode *prompt* was not: until 2026-09-26 only Super had the glossary and the house rules. `shared.md` now holds them and `sync.py` appends it to every mode with a language model. Add a term there, not in one mode.
 
+14. **Silence makes the voice model invent text (measured 2026-10-12).** Clips under 2 s (accidental Left Alt taps) are the worst: 1 s clips produced 1,500 characters of "The world is a world of the world." The voice step cannot be fixed from here; `shared.md` step zero strips the known fillers and loops in every AI mode. Re-run `hallucinations.py` to measure.
+
 ## Where the app keeps things
 
 `C:\Users\Joshu\AppData\Local\com.superwhisper.app\`
@@ -74,3 +77,4 @@ The `superwhisper` skill is the runbook for both runtimes: `skills/claude/superw
 ## Related
 
 `wiki/SUPERWHISPER-DICTIONARY.md` is the human-readable ledger and points here. Memory note: `superwhisper-settings-location`.
+

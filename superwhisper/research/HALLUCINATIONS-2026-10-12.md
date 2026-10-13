@@ -1,17 +1,17 @@
-# Hallucination report 2026-10-12 (last 60 days)
+# Hallucination report 2026-10-12 (last 7 days)
 
-386 of 3013 recordings had invented text; 340 reached the pasted result.
+66 of 810 recordings had invented text; 45 reached the pasted result.
 
 | Length | Affected | Total |
 |---|---|---|
-| <2s | 47 | 162 |
-| 2-5s | 66 | 506 |
-| 5-30s | 165 | 1795 |
-| 30s+ | 108 | 550 |
+| <2s | 14 | 61 |
+| 2-5s | 18 | 165 |
+| 5-30s | 31 | 521 |
+| 30s+ | 3 | 63 |
 
-By mode: {'Default': 12, 'Claude Code': 149, 'Consult Notes': 19, 'Super': 154, 'Verbatim': 17, 'AI Instructions': 35}
-By device: {'System Default': 306, 'Microphone (2- Realtek(R) Audio)': 80}
-Phrases: {'thank you': 2452, 'world is a world': 1031, 'part of the world': 182, 'very good feeling about it': 16, 'very good point about it': 4, 'world is not the only one': 3, 'very popular culture': 3}
+By mode: {'Default': 1, 'Verbatim': 17, 'Claude Code': 13, 'AI Instructions': 35}
+By device: {'System Default': 66}
+Phrases: {'world is a world': 1031, 'part of the world': 182, 'very good feeling about it': 16, 'thank you': 6, 'very good point about it': 4, 'world is not the only one': 3, 'very popular culture': 3}
 
 | When | Length | Mode | Why | Pasted | Raw start |
 |---|---|---|---|---|---|

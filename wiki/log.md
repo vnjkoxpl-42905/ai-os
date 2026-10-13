@@ -3002,3 +3002,10 @@ Calendar (guest giannajean005@gmail.com, 2026-10-08 to 2026-10-13) showed one ne
 - `I Turned GPT-6 Astra Into the Ultimate AI Second Brain` (`yysILVsfLFM`), SHA-256 `57f95f79…ee62256b`. Archive `raw/sources/clips/gpt-6-astra-ultimate-second-brain/`. Summary [[gpt-6-astra-ultimate-second-brain-nate-herk]]. All six kit skills present; `onboard`, `link`, `3d-brain` exist only as Claude home copies (Codex lacks them, undeclared in PARITY.md).
 - Related install check the same day: `playwright-cli` skill had no CLI; installed `@playwright/cli` 0.1.22 into `dev/tools/node`. Apify MCP and an open-seo connector were never installed. The [[100-github-repos-for-claude-nate-herk]] page still says "none installed" and is stale.
 - Inbox originals retained; archives hash-verified. No tools installed by these ingests.
+
+## [2026-10-12] ingest | I Tested The Viral Github Repo To Reverse Engineer Anything (Rea)
+- Source: [source summary](sources/reverse-engineer-anything-rea.md); evidence in `raw/sources/clips/reverse-engineer-anything-rea-saraev/` (two caption generations, hashes in provenance). A re-clip of the Nate Herk video was identical text and is noted in its provenance.
+- Changed: new source summary and archive only; no topic page changed.
+- Finding: Rea is real (MIT, `npx rea-agents setup`) but unoriginal tech behind one interface; the creator says the hype outruns the demos. Not installed.
+- Verification: hashes verified; README and repo stats read via GitHub API.
+- Open: install Rea only if Joshua asks; setup edits agent config.

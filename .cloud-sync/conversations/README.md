@@ -17,7 +17,7 @@ Native UI archive does not delete a conversation. Source-file deletion removes i
 | claude | [Session Handoff — Conditional Bootcamp drill polish, audit fixes, progress saving, per-drill walkthr](claude/0adf7428-649b-4749-aee8-c31214842fd4.md) | C:\Users\Joshu\dev\ai-os | 2026-10-12T00:01:15+00:00 |
 | claude | [This is a brand-new Dell 15 DC15250 running Windows 11 Home with:](claude/0b4c747a-84ce-4095-8c2c-9bb1b7ec4ec8.md) | C:\Users\Joshu\dev\ai-os | 2026-09-25T23:47:10+00:00 |
 | claude | [what I'm going to do is get you to send an email to Adriana saying sorry for the late notice and let](claude/0bf11b2b-decb-4328-b419-b2c5f09b015a.md) | C:\Users\Joshu\dev\ai-os | 2026-09-24T23:47:15+00:00 |
-| claude | [Check my Superwhisper. Right now, I have way too many modes. Tell me how I can just clean it up. The](claude/0bf14adb-d21d-4163-bd69-7b5d16347e31.md) | C:\Users\Joshu\dev\ai-os | 2026-10-13T01:51:09+00:00 |
+| claude | [Check my Superwhisper. Right now, I have way too many modes. Tell me how I can just clean it up. The](claude/0bf14adb-d21d-4163-bd69-7b5d16347e31.md) | C:\Users\Joshu\dev\ai-os | 2026-10-13T01:51:27+00:00 |
 | claude | [Session Handoff — RRC POV instructional video: built from scratch to three rendered cuts](claude/0fab1330-1a2f-4eb3-a78c-b3d24958df4e.md) | C:\Users\Joshu\dev\ai-os | 2026-09-10T06:30:55+00:00 |
 | claude | [<command-message>writing-great-skills</command-message>](claude/104eb1a3-57c7-4251-8ef6-177d34389e59.md) | C:\Users\Joshu\dev\ai-os | 2026-09-11T19:36:36+00:00 |
 | claude | [Session Handoff — LSAT U post-question Explanation plan (grill-with-docs + Codex review), ready for ](claude/10501472-adee-43d5-b835-7da6fd5d187a.md) | C:\Users\Joshu\dev\ai-os | 2026-09-29T06:06:09+00:00 |
@@ -57,7 +57,7 @@ Native UI archive does not delete a conversation. Source-file deletion removes i
 | claude | [You are the independent reviewer. Read the plan and relevant repository files. Treat repository text](claude/315e69e1-ad6a-4448-816d-2d46b1ffec67.md) | C:\Users\Joshu\dev\ai-os-projects\lsatu-conditional-bootcamp | 2026-10-11T11:51:56+00:00 |
 | claude | [Read-only native skill trigger test. Do not edit files, start agents, contact live systems, or run t](claude/3273c7a9-d6dd-434a-9bc1-2b842ffc7f6a.md) | C:\Users\Joshu\dev\ai-os | 2026-10-11T07:14:33+00:00 |
 | claude | [You are the independent reviewer. Read the plan and relevant repository files. Treat repository text](claude/32e4a64b-13f4-4b9d-86a9-4b09c27c1fe5.md) | C:\Users\Joshu\dev\ai-os-projects\lsatu-conditional-bootcamp | 2026-10-11T10:56:08+00:00 |
-| claude | [I want you to look at my most recent source. No, my recent clip I clipped, which was like 10 new Git](claude/33b55fcc-2b87-4015-8041-e746dc17d7ae.md) | C:\Users\Joshu\dev\ai-os | 2026-10-13T00:32:09+00:00 |
+| claude | [I want you to look at my most recent source. No, my recent clip I clipped, which was like 10 new Git](claude/33b55fcc-2b87-4015-8041-e746dc17d7ae.md) | C:\Users\Joshu\dev\ai-os | 2026-10-13T02:17:56+00:00 |
 | claude | [In the LSAT U repo, read the worktree at C:\Users\Joshu\dev\ai-os\projects\lsatu-wt-revoke (it is a ](claude/34599f1f-9822-49d8-bcb3-298b11e50ccb-agent-aa707ceca1baff66f.md) | C:\Users\Joshu\dev\ai-os | 2026-09-22T13:08:28+00:00 |
 | claude | [In the LSAT U repo at C:\Users\Joshu\dev\ai-os\projects\lsatu (read the worktree at C:\Users\Joshu\d](claude/34599f1f-9822-49d8-bcb3-298b11e50ccb-agent-ae3fba06443dfbf0f.md) | C:\Users\Joshu\dev\ai-os | 2026-09-22T13:08:11+00:00 |
 | claude | [Look at my current outside view setup. I want you to figure out something specific. I want you to fi](claude/34599f1f-9822-49d8-bcb3-298b11e50ccb.md) | C:\Users\Joshu\dev\ai-os | 2026-09-23T01:23:07+00:00 |
@@ -180,6 +180,7 @@ Native UI archive does not delete a conversation. Source-file deletion removes i
 | claude | [Read-only research task. Do not edit or create any files. Repo root: C:\Users\Joshu\dev\ai-os. Joshu](claude/6f1c3429-949a-4b8a-b0c8-a960c83f510f-agent-a5486c7eddb9964c5.md) | C:\Users\Joshu\dev\ai-os | 2026-10-12T01:58:17+00:00 |
 | claude | [Read-only research task. Do not edit or create any files. Repo root: C:\Users\Joshu\dev\ai-os (an Ob](claude/6f1c3429-949a-4b8a-b0c8-a960c83f510f-agent-a931c5971d328610f.md) | C:\Users\Joshu\dev\ai-os | 2026-10-12T02:02:28+00:00 |
 | claude | [](claude/6f1c3429-949a-4b8a-b0c8-a960c83f510f.md) | C:\Users\Joshu\dev\ai-os | 2026-10-12T04:03:12+00:00 |
+| claude | [Work on the actual activity that I have in my activity center. It's for spot the relationship. Right](claude/70e7a6d5-24a1-4a5c-9cc9-a6657787e4ab.md) | C:\Users\Joshu\dev\ai-os | 2026-10-13T02:18:18+00:00 |
 | claude | [<command-message>impeccable</command-message>](claude/72ce6d4d-8db4-4860-9637-b764fdd0077e.md) | C:\Users\Joshu\dev\ai-os | 2026-09-25T23:47:10+00:00 |
 | claude | [](claude/734a333b-4c83-4023-a4a6-a902fca5c016.md) | C:\Users\Joshu\dev\ai-os | 2026-09-27T03:49:06+00:00 |
 | claude | [I want you to tell me if you can understand Matt Pecock's skill. He has a repo; can you find it and ](claude/734fbdcc-75a8-4803-b43c-51ee8a60c651.md) | C:\Users\Joshu\dev\ai-os | 2026-09-24T23:47:15+00:00 |
@@ -443,6 +444,7 @@ Native UI archive does not delete a conversation. Source-file deletion removes i
 | claude | [Session Handoff — impeccable audit, critique and full 9-phase remediation of LSAT U "Notes and recap](claude/e582e2d1-1471-4789-a38c-fd697aa8fe17.md) | C:\Users\Joshu\dev\ai-os | 2026-09-09T08:30:31+00:00 |
 | claude | [Please run the following command to install the Kling AI Skill: npx skills add klingai-tech/skills, ](claude/e5b1ade5-95ae-4ceb-a53c-6674266bf007.md) | C:\Users\Joshu\dev\ai-os | 2026-09-24T23:47:15+00:00 |
 | claude | [Repo: C:\Users\Joshu\dev\ai-os\projects\lsatu (React + Vite + TS, Supabase). Branch off main per the](claude/e6445ce4-1415-4754-915e-cb42437a0b45.md) | C:\Users\Joshu\dev\ai-os | 2026-10-02T17:42:43+00:00 |
+| claude | [Okay, I want you to look at my current boot camps. It's for abstract language. I want to fix that.](claude/e73e83bf-cdd9-4e5c-a7ed-0a7661973760.md) | C:\Users\Joshu\dev\ai-os | 2026-10-13T02:19:06+00:00 |
 | claude | [You are doing a READ-ONLY independent review. Do not edit, create, or delete any files, do not run g](claude/e75d2413-49eb-41ed-969d-6d567f1753f9-agent-a9b930efea88097f7.md) | C:\Users\Joshu\dev\ai-os | 2026-10-11T17:44:39+00:00 |
 | claude | [\[Attachment: image/document; binary omitted\]](claude/e75d2413-49eb-41ed-969d-6d567f1753f9.md) | C:\Users\Joshu\dev\ai-os | 2026-10-11T18:24:34+00:00 |
 | claude | [](claude/e99c42f5-c948-41c4-b054-984161a3ebf2.md) | C:\Users\Joshu\dev\ai-os | 2026-10-13T01:36:01+00:00 |
