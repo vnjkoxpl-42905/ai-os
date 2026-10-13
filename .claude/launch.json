@@ -2,6 +2,21 @@
   "version": "0.0.1",
   "configurations": [
     {
+      "name": "lsatu-abstract-dev",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "--prefix",
+        "../ai-os-projects/lsatu-abstract",
+        "run",
+        "dev",
+        "--",
+        "--port",
+        "8080",
+        "--strictPort"
+      ],
+      "port": 8080
+    },
+    {
       "name": "lsatu-dev",
       "runtimeExecutable": "npm",
       "runtimeArgs": [

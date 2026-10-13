@@ -3009,3 +3009,8 @@ Calendar (guest giannajean005@gmail.com, 2026-10-08 to 2026-10-13) showed one ne
 - Finding: Rea is real (MIT, `npx rea-agents setup`) but unoriginal tech behind one interface; the creator says the hype outruns the demos. Not installed.
 - Verification: hashes verified; README and repo stats read via GitHub API.
 - Open: install Rea only if Joshua asks; setup edits agent config.
+
+## [2026-10-12] system | Rea installed (user-authorized)
+- Installed `rea-agents` 6.4.0 in `dev/tools/node`; ran `rea setup --client claude_code --client codex --yes` (MCP registered in `~/.claude.json` and `~/.codex/config.toml`, backups `*.rea.backup`; skill `reverse-engineer-anything` in `~/.claude/skills` and `~/.agents/skills`). `claude mcp list` shows rea Connected.
+- Downloaded Ghidra 12.1.4 from the NSA GitHub release to `dev/tools/ghidra`; set user env `GHIDRA_INSTALL_DIR`. `rea doctor` reports Ghidra and headless healthy. JS/Electron analysis test ran on a local repo.
+- Not set up: Hopper (commercial), IDA (commercial), other agent clients. The skill is user-global (Rea's own installer), not a project copy.
