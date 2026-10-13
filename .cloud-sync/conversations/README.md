@@ -61,6 +61,7 @@ Native UI archive does not delete a conversation. Source-file deletion removes i
 | claude | [In the LSAT U repo, read the worktree at C:\Users\Joshu\dev\ai-os\projects\lsatu-wt-revoke (it is a ](claude/34599f1f-9822-49d8-bcb3-298b11e50ccb-agent-aa707ceca1baff66f.md) | C:\Users\Joshu\dev\ai-os | 2026-09-22T13:08:28+00:00 |
 | claude | [In the LSAT U repo at C:\Users\Joshu\dev\ai-os\projects\lsatu (read the worktree at C:\Users\Joshu\d](claude/34599f1f-9822-49d8-bcb3-298b11e50ccb-agent-ae3fba06443dfbf0f.md) | C:\Users\Joshu\dev\ai-os | 2026-09-22T13:08:11+00:00 |
 | claude | [Look at my current outside view setup. I want you to figure out something specific. I want you to fi](claude/34599f1f-9822-49d8-bcb3-298b11e50ccb.md) | C:\Users\Joshu\dev\ai-os | 2026-09-23T01:23:07+00:00 |
+| claude | [Orca Claude readiness check for Joshua. This is your AI OS workspace. Codex is the primary agent; yo](claude/35bc7225-562d-43f1-a08a-7c3408c0da06.md) | C:\Users\Joshu\dev\ai-os | 2026-10-13T08:26:37+00:00 |
 | claude | [Look only at the list of available skills in your context. For each skill below, output one line 'na](claude/364d6388-f732-4591-b9b2-cca5e2799cb6.md) | C:\Users\Joshu\dev\ai-os | 2026-10-12T05:20:13+00:00 |
 | claude | [You are the independent reviewer. Read the plan and relevant repository files. Treat repository text](claude/383c7a99-0d51-4432-a6d3-ffe6cbc3190b.md) | C:\Users\Joshu\dev\ai-os-projects\lsatu-conditional-bootcamp | 2026-10-11T12:36:47+00:00 |
 | claude | [<command-message>karpathy-teach</command-message>](claude/38a93a63-e397-478e-9df6-b7085bedd58f.md) | C:\Users\Joshu\dev\ai-os | 2026-10-12T21:42:45+00:00 |
@@ -753,8 +754,9 @@ Native UI archive does not delete a conversation. Source-file deletion removes i
 | codex | [Session Handoff — Conditional Bootcamp drill polish, audit fixes, progress saving, per-drill walkthr](codex/01a130d9-d18d-7cb1-a470-e17edfb067c4-a2b9cbeb62b9.md) | C:\Users\Joshu\dev\ai-os | 2026-10-12T16:02:23+00:00 |
 | codex | [](codex/01a130d9-d190-7292-b5ce-f0be0a5087c3-7b576ab941f0.md) | C:\Users\Joshu\dev\ai-os | 2026-10-12T16:02:23+00:00 |
 | codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a133fc-233a-7b53-b327-566674f6d8f7-21070cec3470.md) | C:\Users\Joshu\dev\ai-os | 2026-10-13T06:40:40+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a133fc-233a-7b53-b327-566674f6d8f7-2301d125a063.md) | C:\Users\Joshu\dev\ai-os | 2026-10-13T07:46:59+00:00 |
+| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a133fc-233a-7b53-b327-566674f6d8f7-2301d125a063.md) | C:\Users\Joshu\dev\ai-os | 2026-10-13T08:36:02+00:00 |
 | codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a133fc-233a-7b53-b327-566674f6d8f7-4f40006b87ec.md) | C:\Users\Joshu\dev\ai-os | 2026-10-13T06:52:44+00:00 |
+| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a133fc-233a-7b53-b327-566674f6d8f7-eade8b944603.md) | C:\Users\Joshu\dev\ai-os | 2026-10-13T08:03:19+00:00 |
 | codex | [echo hello](codex/01a13430-d825-7222-bca6-b72de462a892-1320b619bed1.md) | C:\Users\Joshu\dev\ai-os | 2026-10-13T07:36:18+00:00 |
 | codex | [echo hello](codex/01a13430-d82c-7600-b270-c123f3ef1e88-3581d2dadec4.md) | C:\Users\Joshu\dev\ai-os | 2026-10-13T07:36:18+00:00 |
 | codex | [](codex/01a13430-d855-7e23-91c0-d0d0099d6e85-eead2c06c929.md) | C:\Users\Joshu\dev\ai-os | 2026-10-13T07:36:18+00:00 |
@@ -766,3 +768,4 @@ Native UI archive does not delete a conversation. Source-file deletion removes i
 | codex | [](codex/01a13430-dbbb-7740-bdcb-7c14f5f05f08-969ef1ef8522.md) | C:\Users\Joshu\dev\ai-os | 2026-10-13T07:36:19+00:00 |
 | codex | [](codex/01a13430-dbf9-70c3-8584-35081341acc5-42c99fef3829.md) | C:\Users\Joshu\dev\ai-os | 2026-10-13T07:36:19+00:00 |
 | codex | [make a concise email sai im not usre when u booked thi sweeekend i or how long out i had this weeken](codex/01a13430-dda5-75f3-8211-744e94fcc185-42b35b4c57bd.md) | C:\Users\Joshu\dev\ai-os | 2026-10-13T07:36:20+00:00 |
+| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a13451-2d39-76b1-bb51-48820bc26218-30ac042f6fb5.md) | C:\Users\Joshu\dev\ai-os | 2026-10-13T08:13:59+00:00 |

@@ -1,0 +1,817 @@
+Startup inventory checked 2026-10-13. Registration is not proof a program is currently running.
+
+STARTUP COMMANDS
+
+Name     : GoogleDriveFS
+Command  : "C:\Program Files\Google\Drive File Stream\132.0.0.0\GoogleDriveFS.exe" --startup_mode
+Location : HKU\S-1-5-18\SOFTWARE\Microsoft\Windows\CurrentVersion\Run
+User     : NT AUTHORITY\SYSTEM
+
+Name     : Herdr image paste
+Command  : Herdr image paste.lnk
+Location : Startup
+User     : LAPTOP-LE9A083P\Joshu
+
+Name     : OneDrive
+Command  : "C:\Users\Joshu\AppData\Local\Microsoft\OneDrive\OneDrive.exe" /background
+Location : HKU\S-1-5-21-929391081-690529265-2085325426-1001\SOFTWARE\Microsoft\Windows\CurrentVersion\Run
+User     : LAPTOP-LE9A083P\Joshu
+
+Name     : GoogleDriveFS
+Command  : "C:\Program Files\Google\Drive File Stream\132.0.0.0\GoogleDriveFS.exe" --startup_mode
+Location : HKU\S-1-5-21-929391081-690529265-2085325426-1001\SOFTWARE\Microsoft\Windows\CurrentVersion\Run
+User     : LAPTOP-LE9A083P\Joshu
+
+Name     : GoogleChromeAutoLaunch_035170CEE30AC9394DDDE75B57CDE9BE
+Command  : "C:\Program Files\Google\Chrome\Application\chrome.exe" --no-startup-window /prefetch:5
+Location : HKU\S-1-5-21-929391081-690529265-2085325426-1001\SOFTWARE\Microsoft\Windows\CurrentVersion\Run
+User     : LAPTOP-LE9A083P\Joshu
+
+Name     : com.klingai.local.app
+Command  : C:\Program Files\KlingAI\KlingAI.exe
+Location : HKU\S-1-5-21-929391081-690529265-2085325426-1001\SOFTWARE\Microsoft\Windows\CurrentVersion\Run
+User     : LAPTOP-LE9A083P\Joshu
+
+Name     : superwhisper
+Command  : C:\Users\Joshu\AppData\Local\superwhisper\Superwhisper.exe 
+Location : HKU\S-1-5-21-929391081-690529265-2085325426-1001\SOFTWARE\Microsoft\Windows\CurrentVersion\Run
+User     : LAPTOP-LE9A083P\Joshu
+
+Name     : Docker Desktop
+Command  : C:\Program Files\Docker\Docker\Docker Desktop.exe
+Location : HKU\S-1-5-21-929391081-690529265-2085325426-1001\SOFTWARE\Microsoft\Windows\CurrentVersion\Run
+User     : LAPTOP-LE9A083P\Joshu
+
+Name     : GoogleDriveFS
+Command  : "C:\Program Files\Google\Drive File Stream\132.0.0.0\GoogleDriveFS.exe" --startup_mode
+Location : HKU\.DEFAULT\SOFTWARE\Microsoft\Windows\CurrentVersion\Run
+User     : .DEFAULT
+
+Name     : SecurityHealth
+Command  : %windir%\system32\SecurityHealthSystray.exe
+Location : HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Run
+User     : Public
+
+Name     : RtkAudUService
+Command  : "C:\Windows\System32\DriverStore\FileRepository\realtekservice.inf_amd64_1de4e7b6b72073a3\RtkAudUService64.exe" -background
+Location : HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Run
+User     : Public
+
+
+LOGIN AND BOOT TASKS
+
+TaskName : AI OS - Matt Pocock Skills Sync
+TaskPath : \
+State    : Ready
+Triggers : MSFT_TaskDailyTrigger, MSFT_TaskLogonTrigger
+Actions  : C:\Users\Joshu\AppData\Local\Programs\Python\Python312\python.exe "C:\Users\Joshu\dev\ai-os\system\scripts\sync-mattpocock-skills.py"
+
+TaskName : AI OS - Private GitHub Sync
+TaskPath : \
+State    : Running
+Triggers : MSFT_TaskTimeTrigger, MSFT_TaskLogonTrigger
+Actions  : C:\Users\Joshu\AppData\Local\Programs\Python\Python312\pythonw.exe "C:\Users\Joshu\dev\ai-os\setup\github-sync\run_sync.py" --once --config "C:\Users\Joshu\dev\ai-os\setup\github-sync\config.json"
+
+TaskName : App Explorer
+TaskPath : \
+State    : Running
+Triggers : MSFT_TaskLogonTrigger
+Actions  : %LOCALAPPDATA%\Host App Service\Engine\HostAppServiceUpdater.exe /LOGON
+
+TaskName : OneDrive Startup TaREDACTED_CREDENTIAL
+TaskPath : \
+State    : Ready
+Triggers : MSFT_TaskLogonTrigger
+Actions  : C:\Users\Joshu\AppData\Local\Microsoft\OneDrive\26.178.0913.0007\OneDriveLauncher.exe /startInstances
+
+TaskName : Private Laptop Backup - Replacement
+TaskPath : \
+State    : Running
+Triggers : MSFT_TaskDailyTrigger, MSFT_TaskLogonTrigger
+Actions  : C:\Users\Joshu\AppData\Local\Programs\Python\Python312\pythonw.exe "C:\Users\Joshu\dev\ai-os\setup\backup\new-machine-run.py"
+
+TaskName : StorPSCTL
+TaskPath : \
+State    : Running
+Triggers : MSFT_TaskLogonTrigger
+Actions  : "C:\Program Files\Acer\StorPSCTL\StorPSCTL.exe" 
+
+TaskName : UbtFrameworkService
+TaskPath : \
+State    : Disabled
+Triggers : MSFT_TaskLogonTrigger
+Actions  : "C:\Program Files\Acer\User Experience Improvement Program Service\Framework\TriggerFramework.exe" 
+
+TaskName : UEIPInvitation
+TaskPath : \
+State    : Ready
+Triggers : MSFT_TaskLogonTrigger
+Actions  : "C:\Program Files\Acer\User Experience Improvement Program Service\Framework\UEIPOOBECheck.exe" 
+
+TaskName : Office Actions Server
+TaskPath : \Microsoft\Office\
+State    : Ready
+Triggers : MSFT_TaskLogonTrigger, MSFT_TaskTimeTrigger
+Actions  : C:\Program Files\Microsoft Office\root\VFS\ProgramFilesCommonX64\Microsoft Shared\Office16\ActionsServer\ActionsServer.exe availabilitycheck
+
+TaskName : Office Automatic Updates 2.0
+TaskPath : \Microsoft\Office\
+State    : Ready
+Triggers : MSFT_TaskWeeklyTrigger, MSFT_TaskLogonTrigger, MSFT_TaskIdleTrigger
+Actions  : C:\Program Files\Common Files\Microsoft Shared\ClickToRun\OfficeC2RClient.exe /frequentupdate SCHEDULEDTASK displaylevel=False
+
+TaskName : Office Background Push Maintenance
+TaskPath : \Microsoft\Office\
+State    : Ready
+Triggers : MSFT_TaskDailyTrigger, MSFT_TaskLogonTrigger
+Actions  : C:\Program Files\Microsoft Office\root\vfs\ProgramFilesCommonx64\Microsoft Shared\Office16\opushutil.exe /pushregistration
+
+TaskName : Office Feature Updates Logon
+TaskPath : \Microsoft\Office\
+State    : Ready
+Triggers : MSFT_TaskLogonTrigger, MSFT_TaskSessionStateChangeTrigger
+Actions  : C:\Program Files\Microsoft Office\root\Office16\sdxhelper.exe /onlogon
+
+TaskName : Office Startup Maintenance
+TaskPath : \Microsoft\Office\
+State    : Ready
+Triggers : MSFT_TaskLogonTrigger, MSFT_TaskDailyTrigger
+Actions  : C:\Program Files\Microsoft Office\root\VFS\ProgramFilesCommonX64\Microsoft Shared\Office16\ActionsServer\ActionsServer.exe wacheck
+
+TaskName : .NET Framework NGEN v4.0.30319
+TaskPath : \Microsoft\Windows\.NET Framework\
+State    : Ready
+Triggers : MSFT_TaskBootTrigger
+Actions  :  
+
+TaskName : .NET Framework NGEN v4.0.30319 64
+TaskPath : \Microsoft\Windows\.NET Framework\
+State    : Ready
+Triggers : MSFT_TaskBootTrigger
+Actions  :  
+
+TaskName : AD RMS Rights Policy Template Management (Automated)
+TaskPath : \Microsoft\Windows\Active Directory Rights Management Services Client\
+State    : Disabled
+Triggers : MSFT_TaskDailyTrigger, MSFT_TaskLogonTrigger
+Actions  :  
+
+TaskName : AD RMS Rights Policy Template Management (Manual)
+TaskPath : \Microsoft\Windows\Active Directory Rights Management Services Client\
+State    : Ready
+Triggers : MSFT_TaskLogonTrigger
+Actions  :  
+
+TaskName : VerifiedPublisherCertStoreCheck
+TaskPath : \Microsoft\Windows\AppID\
+State    : Ready
+Triggers : MSFT_TaskBootTrigger
+Actions  : %windir%\system32\appidcertstorecheck.exe 
+
+TaskName : Pre-staged app cleanup
+TaskPath : \Microsoft\Windows\AppxDeploymentClient\
+State    : Disabled
+Triggers : MSFT_TaskLogonTrigger
+Actions  : %windir%\system32\rundll32.exe %windir%\system32\AppxDeploymentClient.dll,AppxPreStageCleanupRunTask
+
+TaskName : Proxy
+TaskPath : \Microsoft\Windows\Autochk\
+State    : Ready
+Triggers : MSFT_TaskBootTrigger
+Actions  : %windir%\system32\rundll32.exe /d acproxy.dll,PerformAutochkOperations
+
+TaskName : UserTask
+TaskPath : \Microsoft\Windows\CertificateServicesClient\
+State    : Ready
+Triggers : MSFT_TaskTrigger, MSFT_TaskRegistrationTrigger, MSFT_TaskLogonTrigger, MSFT_TaskEventTrigger
+Actions  :  
+
+TaskName : Data Integrity Check And Scan
+TaskPath : \Microsoft\Windows\Data Integrity Scan\
+State    : Ready
+Triggers : MSFT_TaskDailyTrigger, MSFT_TaskBootTrigger
+Actions  :  
+
+TaskName : Device User
+TaskPath : \Microsoft\Windows\Device Information\
+State    : Ready
+Triggers : MSFT_TaskLogonTrigger
+Actions  : %windir%\system32\devicecensus.exe UserCxt
+
+TaskName : Driver Recovery on Reboot
+TaskPath : \Microsoft\Windows\Device Setup\
+State    : Disabled
+Triggers : MSFT_TaskBootTrigger
+Actions  :  
+
+TaskName : RecommendedTroubleshootingScanner
+TaskPath : \Microsoft\Windows\Diagnosis\
+State    : Ready
+Triggers : MSFT_TaskTrigger, MSFT_TaskTrigger, MSFT_TaskTrigger, MSFT_TaskBootTrigger
+Actions  :  
+
+TaskName : DirectXDatabaseUpdater
+TaskPath : \Microsoft\Windows\DirectX\
+State    : Ready
+Triggers : MSFT_TaskLogonTrigger, MSFT_TaskTrigger
+Actions  : %windir%\system32\directxdatabaseupdater.exe 
+
+TaskName : DXGIAdapterCache
+TaskPath : \Microsoft\Windows\DirectX\
+State    : Ready
+Triggers : MSFT_TaskBootTrigger, MSFT_TaskTrigger, MSFT_TaskTrigger
+Actions  : %windir%\system32\dxgiadaptercache.exe 
+
+TaskName : Microsoft-Windows-DiskDiagnosticResolver
+TaskPath : \Microsoft\Windows\DiskDiagnostic\
+State    : Disabled
+Triggers : MSFT_TaskLogonTrigger
+Actions  : %windir%\system32\DFDWiz.exe 
+
+TaskName : ExploitGuard MDM policy Refresh
+TaskPath : \Microsoft\Windows\ExploitGuard\
+State    : Ready
+Triggers : MSFT_TaskTrigger, MSFT_TaskTrigger, MSFT_TaskBootTrigger
+Actions  :  
+
+TaskName : Monitoring
+TaskPath : \Microsoft\Windows\Hotpatch\
+State    : Ready
+Triggers : MSFT_TaskBootTrigger, MSFT_TaskLogonTrigger, MSFT_TaskTimeTrigger
+Actions  : %systemroot%\system32\cmd.exe /d /c %systemroot%\system32\hpatchmonTask.cmd
+
+TaskName : Synchronize Language Settings
+TaskPath : \Microsoft\Windows\International\
+State    : Ready
+Triggers : MSFT_TaskTrigger, MSFT_TaskLogonTrigger
+Actions  :  
+
+TaskName : Installation
+TaskPath : \Microsoft\Windows\LanguageComponentsInstaller\
+State    : Ready
+Triggers : MSFT_TaskLogonTrigger
+Actions  :  
+
+TaskName : ReconcileLanguageResources
+TaskPath : \Microsoft\Windows\LanguageComponentsInstaller\
+State    : Ready
+Triggers : MSFT_TaskLogonTrigger
+Actions  :  
+
+TaskName : RemediateHardwareChange
+TaskPath : \Microsoft\Windows\Management\Autopilot\
+State    : Disabled
+Triggers : MSFT_TaskBootTrigger
+Actions  :  
+
+TaskName : Logon
+TaskPath : \Microsoft\Windows\Management\Provisioning\
+State    : Ready
+Triggers : MSFT_TaskLogonTrigger
+Actions  : %windir%\system32\ProvTool.exe /turn 5 /source LogonIdleTask
+
+TaskName : MdmDiagnosticsCleanup
+TaskPath : \Microsoft\Windows\Management\Provisioning\
+State    : Disabled
+Triggers : MSFT_TaskBootTrigger
+Actions  : %windir%\system32\MdmDiagnosticsTool.exe /clean
+
+TaskName : Retry
+TaskPath : \Microsoft\Windows\Management\Provisioning\
+State    : Disabled
+Triggers : MSFT_TaskBootTrigger
+Actions  : %windir%\system32\ProvTool.exe /turn 5 /source ProvRetryTask
+
+TaskName : RunOnReboot
+TaskPath : \Microsoft\Windows\Management\Provisioning\
+State    : Disabled
+Triggers : MSFT_TaskBootTrigger
+Actions  : %windir%\system32\ProvTool.exe /turn 5 /source ContinueSessionTask
+
+TaskName : AutomaticOfflineMemoryDiagnostic
+TaskPath : \Microsoft\Windows\MemoryDiagnostic\
+State    : Ready
+Triggers : MSFT_TaskLogonTrigger
+Actions  :  
+
+TaskName : SystemSoundsService
+TaskPath : \Microsoft\Windows\Multimedia\
+State    : Running
+Triggers : MSFT_TaskLogonTrigger
+Actions  :  
+
+TaskName : NcsiIdentifyUserProxies
+TaskPath : \Microsoft\Windows\Network Connectivity Status Indicator\
+State    : Ready
+Triggers : MSFT_TaskLogonTrigger, MSFT_TaskSessionStateChangeTrigger, MSFT_TaskSessionStateChangeTrigger
+Actions  :  
+
+TaskName : Device Install Reboot Required
+TaskPath : \Microsoft\Windows\Plug and Play\
+State    : Ready
+Triggers : MSFT_TaskTrigger, MSFT_TaskLogonTrigger
+Actions  :  
+
+TaskName : PITRTask
+TaskPath : \Microsoft\Windows\Setup\
+State    : Ready
+Triggers : MSFT_TaskBootTrigger, MSFT_TaskTimeTrigger
+Actions  :  
+
+TaskName : SvcRestartTaskLogon
+TaskPath : \Microsoft\Windows\SoftwareProtectionPlatform\
+State    : Disabled
+Triggers : MSFT_TaskLogonTrigger
+Actions  :  
+
+TaskName : SpaceAgentTask
+TaskPath : \Microsoft\Windows\SpacePort\
+State    : Ready
+Triggers : MSFT_TaskBootTrigger, MSFT_TaskTrigger
+Actions  : %windir%\system32\SpaceAgent.exe 
+
+TaskName : SpaceManagerTask
+TaskPath : \Microsoft\Windows\SpacePort\
+State    : Ready
+Triggers : MSFT_TaskBootTrigger, MSFT_TaskTrigger
+Actions  : %windir%\system32\spaceman.exe /Work
+
+TaskName : MsCtfMonitor
+TaskPath : \Microsoft\Windows\TextServicesFramework\
+State    : Ready
+Triggers : MSFT_TaskLogonTrigger
+Actions  :  
+
+TaskName : QueueReporting
+TaskPath : \Microsoft\Windows\Windows Error Reporting\
+State    : Ready
+Triggers : MSFT_TaskBootTrigger, MSFT_TaskTrigger, MSFT_TaskTrigger, MSFT_TaskTrigger, MSFT_TaskTimeTrigger
+Actions  : %windir%\system32\wermgr.exe -upload
+
+TaskName : Calibration Loader
+TaskPath : \Microsoft\Windows\WindowsColorSystem\
+State    : Ready
+Triggers : MSFT_TaskLogonTrigger, MSFT_TaskSessionStateChangeTrigger
+Actions  :  
+
+TaskName : CacheTask
+TaskPath : \Microsoft\Windows\Wininet\
+State    : Running
+Triggers : MSFT_TaskLogonTrigger
+Actions  :  
+
+TaskName : Work Folders Logon Synchronization
+TaskPath : \Microsoft\Windows\Work Folders\
+State    : Ready
+Triggers : MSFT_TaskLogonTrigger
+Actions  :  
+
+TaskName : Work Folders Maintenance Work
+TaskPath : \Microsoft\Windows\Work Folders\
+State    : Ready
+Triggers : MSFT_TaskLogonTrigger
+Actions  :  
+
+TaskName : Automatic-Device-Join
+TaskPath : \Microsoft\Windows\Workplace Join\
+State    : Disabled
+Triggers : MSFT_TaskLogonTrigger, MSFT_TaskEventTrigger
+Actions  : %SystemRoot%\System32\dsregcmd.exe $(Arg0) $(Arg1) $(Arg2)
+
+TaskName : Recovery-Check
+TaskPath : \Microsoft\Windows\Workplace Join\
+State    : Disabled
+Triggers : MSFT_TaskLogonTrigger, MSFT_TaskSessionStateChangeTrigger
+Actions  : %SystemRoot%\System32\dsregcmd.exe /checkrecovery
+
+TaskName : AcerJumpstartTask
+TaskPath : \Oem\
+State    : Ready
+Triggers : MSFT_TaskLogonTrigger, MSFT_TaskSessionStateChangeTrigger
+Actions  : "C:\Program Files (x86)\Acer\Acer Jumpstart\hermes.exe" /default
+
+TaskName : JumpstartRuntimeTask
+TaskPath : \Oem\
+State    : Ready
+Triggers : MSFT_TaskLogonTrigger, MSFT_TaskSessionStateChangeTrigger
+Actions  : "C:\Program Files (x86)\Acer\Jumpstart Agent\JSRtMon2.exe" /task
+
+
+ALL AUTOMATIC SERVICES
+
+DisplayName : Acer Care Center
+Name        : AcerCCAgentSvis
+State       : Running
+PathName    : C:\Windows\system32\AcerCCAgent.exe
+
+DisplayName : Acer Device Enabling Sevice V2
+Name        : AcerDeviceEnablingServiceV2
+State       : Running
+PathName    : C:\Windows\System32\DriverStore\FileRepository\acerdeviceenablingservicecomponent.inf_amd64_0a9a6f50fc73b215\ADESv2Svc.exe
+
+DisplayName : Acer Device Info
+Name        : AcerDIAgentSvis
+State       : Running
+PathName    : C:\Windows\system32\AcerDIAgent.exe
+
+DisplayName : Acer Experience Zone Component Service
+Name        : AcerEZSvc
+State       : Running
+PathName    : C:\Windows\System32\DriverStore\FileRepository\ezservicecomponent.inf_amd64_0956e84e8c72d1ab\AcerEZService.exe
+
+DisplayName : Acer ORD Sevice
+Name        : AcerORDService
+State       : Running
+PathName    : C:\Windows\System32\DriverStore\FileRepository\acerordservicecomponent.inf_amd64_f44848d06693310e\AcerORDService.exe
+
+DisplayName : Acer Quick Access
+Name        : AcerQAAgentSvis
+State       : Running
+PathName    : C:\Windows\system32\AcerQAAgent.exe
+
+DisplayName : Acer Service Component Service
+Name        : AcerServiceSvc
+State       : Running
+PathName    : C:\Windows\System32\DriverStore\FileRepository\acerservicecomponent.inf_amd64_c9ec0382fd426cdf\AcerServiceWrapper.exe
+
+DisplayName : AMD Crash Defender Service
+Name        : AMD Crash Defender Service
+State       : Running
+PathName    : C:\Windows\System32\DriverStore\FileRepository\amdfendr.inf_amd64_5f2cd636dbc40dd2\amdfendrsr.exe
+
+DisplayName : AMD External Events Utility
+Name        : AMD External Events Utility
+State       : Running
+PathName    : C:\Windows\System32\DriverStore\FileRepository\u0406808.inf_amd64_069688f2650eb3e4\B406699\atiesrxx.exe
+
+DisplayName : AppX Deployment Service (AppXSVC)
+Name        : AppXSvc
+State       : Running
+PathName    : C:\Windows\system32\svchost.exe -k wsappx -p
+
+DisplayName : Acer System Monitor Service
+Name        : ASMSvc
+State       : Running
+PathName    : C:\Windows\System32\DriverStore\FileRepository\sysmonitorservice.inf_amd64_036d179a08d69847\x64\AcerSystemCentralService.exe
+
+DisplayName : Windows Audio Endpoint Builder
+Name        : AudioEndpointBuilder
+State       : Running
+PathName    : C:\Windows\System32\svchost.exe -k LocalSystemNetworkRestricted -p
+
+DisplayName : Windows Audio
+Name        : Audiosrv
+State       : Running
+PathName    : C:\Windows\System32\svchost.exe -k LocalServiceNetworkRestricted -p
+
+DisplayName : Base Filtering Engine
+Name        : BFE
+State       : Running
+PathName    : C:\Windows\system32\svchost.exe -k LocalServiceNoNetworkFirewall -p
+
+DisplayName : Background Intelligent Transfer Service
+Name        : BITS
+State       : Running
+PathName    : C:\Windows\System32\svchost.exe -k netsvcs -p
+
+DisplayName : Brave Update Service (brave)
+Name        : brave
+State       : Stopped
+PathName    : "C:\Program Files (x86)\BraveSoftware\Update\BraveUpdate.exe" /svc
+
+DisplayName : Background Tasks Infrastructure Service
+Name        : BrokerInfrastructure
+State       : Running
+PathName    : C:\Windows\system32\svchost.exe -k DcomLaunch -p
+
+DisplayName : Capability Access Manager Service
+Name        : camsvc
+State       : Running
+PathName    : C:\Windows\system32\svchost.exe -k osprivacy -p
+
+DisplayName : Connected Devices Platform Service
+Name        : CDPSvc
+State       : Running
+PathName    : C:\Windows\system32\svchost.exe -k LocalService -p
+
+DisplayName : Microsoft Office Click-to-Run Service
+Name        : ClickToRunSvc
+State       : Running
+PathName    : "C:\Program Files\Common Files\Microsoft Shared\ClickToRun\OfficeClickToRun.exe" /service
+
+DisplayName : ChatGPT
+Name        : CodexSandboxService.OpenAI.Codex
+State       : Running
+PathName    : "C:\Program Files\WindowsApps\OpenAI.Codex_26.1007.2314.0_x64__2p2nqsd0c76g0\app\resources\codex-windows-sandbox-service.exe"
+
+DisplayName : CoreMessaging
+Name        : CoreMessagingRegistrar
+State       : Running
+PathName    : C:\Windows\system32\svchost.exe -k LocalServiceNoNetwork -p
+
+DisplayName : Claude
+Name        : CoworkVMService
+State       : Running
+PathName    : "C:\Program Files\WindowsApps\Claude_2.31226.1.0_x64__pzs8sxrjxfjjc\app\resources\cowork-svc.exe"
+
+DisplayName : Cryptographic Services
+Name        : CryptSvc
+State       : Running
+PathName    : C:\Windows\system32\svchost.exe -k NetworkService -p
+
+DisplayName : DCOM Server Process Launcher
+Name        : DcomLaunch
+State       : Running
+PathName    : C:\Windows\system32\svchost.exe -k DcomLaunch -p
+
+DisplayName : DHCP Client
+Name        : Dhcp
+State       : Running
+PathName    : C:\Windows\system32\svchost.exe -k LocalServiceNetworkRestricted -p
+
+DisplayName : Connected User Experiences and Telemetry
+Name        : DiagTrack
+State       : Running
+PathName    : C:\Windows\System32\svchost.exe -k utcsvc -p
+
+DisplayName : Display Policy Service
+Name        : DispBrokerDesktopSvc
+State       : Running
+PathName    : C:\Windows\system32\svchost.exe -k LocalService -p
+
+DisplayName : DNS Client
+Name        : Dnscache
+State       : Running
+PathName    : C:\Windows\system32\svchost.exe -k NetworkService -p
+
+DisplayName : Delivery Optimization
+Name        : DoSvc
+State       : Running
+PathName    : C:\Windows\System32\svchost.exe -k NetworkService -p
+
+DisplayName : Diagnostic Policy Service
+Name        : DPS
+State       : Running
+PathName    : C:\Windows\System32\svchost.exe -k LocalServiceNoNetwork -p
+
+DisplayName : Data Usage
+Name        : DusmSvc
+State       : Running
+PathName    : C:\Windows\System32\svchost.exe -k LocalServiceNetworkRestricted -p -s DusmSvc
+
+DisplayName : Microsoft Edge Update Service (edgeupdate)
+Name        : edgeupdate
+State       : Stopped
+PathName    : "C:\Program Files (x86)\Microsoft\EdgeUpdate\MicrosoftEdgeUpdate.exe" /svc
+
+DisplayName : Windows Event Log
+Name        : EventLog
+State       : Running
+PathName    : C:\Windows\System32\svchost.exe -k LocalServiceNetworkRestricted -p
+
+DisplayName : COM+ Event System
+Name        : EventSystem
+State       : Running
+PathName    : C:\Windows\system32\svchost.exe -k LocalServiceRedirectionGuard -p
+
+DisplayName : Windows Font Cache Service
+Name        : FontCache
+State       : Running
+PathName    : C:\Windows\system32\svchost.exe -k LocalService -p
+
+DisplayName : Google Updater Internal Service (GoogleUpdaterInternalService157.0.8089.0)
+Name        : GoogleUpdaterInternalService157.0.8089.0
+State       : Running
+PathName    : "C:\Program Files (x86)\Google\GoogleUpdater\157.0.8089.0\updater.exe" --system --windows-service --service=update-internal
+
+DisplayName : Google Updater Service (GoogleUpdaterService157.0.8089.0)
+Name        : GoogleUpdaterService157.0.8089.0
+State       : Running
+PathName    : "C:\Program Files (x86)\Google\GoogleUpdater\157.0.8089.0\updater.exe" --system --windows-service --service=update
+
+DisplayName : Group Policy Client
+Name        : gpsvc
+State       : Running
+PathName    : C:\Windows\system32\svchost.exe -k GPSvcGroup
+
+DisplayName : Inventory and Compatibility Appraisal service
+Name        : InventorySvc
+State       : Running
+PathName    : C:\Windows\system32\svchost.exe -k InvSvcGroup -p
+
+DisplayName : IP Helper
+Name        : iphlpsvc
+State       : Running
+PathName    : C:\Windows\System32\svchost.exe -k NetSvcs -p
+
+DisplayName : Server
+Name        : LanmanServer
+State       : Running
+PathName    : C:\Windows\system32\svchost.exe -k netsvcs -p
+
+DisplayName : Workstation
+Name        : LanmanWorkstation
+State       : Running
+PathName    : C:\Windows\System32\svchost.exe -k NetworkService -p
+
+DisplayName : Downloaded Maps Manager
+Name        : MapsBroker
+State       : Stopped
+PathName    : C:\Windows\System32\svchost.exe -k NetworkService -p
+
+DisplayName : Microsoft Defender Core Service
+Name        : MDCoreSvc
+State       : Running
+PathName    : "C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.26090.9-0\MpDefenderCoreService.exe"
+
+DisplayName : Windows Defender Firewall
+Name        : mpssvc
+State       : Running
+PathName    : C:\Windows\system32\svchost.exe -k LocalServiceNoNetworkFirewall -p
+
+DisplayName : Network Store Interface Service
+Name        : nsi
+State       : Running
+PathName    : C:\Windows\system32\svchost.exe -k LocalService -p
+
+DisplayName : Program Compatibility Assistant Service
+Name        : PcaSvc
+State       : Running
+PathName    : C:\Windows\system32\svchost.exe -k LocalSystemNetworkRestricted -p
+
+DisplayName : Power
+Name        : Power
+State       : Running
+PathName    : C:\Windows\system32\svchost.exe -k DcomLaunch -p
+
+DisplayName : User Profile Service
+Name        : ProfSvc
+State       : Running
+PathName    : C:\Windows\system32\svchost.exe -k UserProfileService -p
+
+DisplayName : RPC Endpoint Mapper
+Name        : RpcEptMapper
+State       : Running
+PathName    : C:\Windows\system32\svchost.exe -k RPCSS -p
+
+DisplayName : Remote Procedure Call (RPC)
+Name        : RpcSs
+State       : Running
+PathName    : C:\Windows\system32\svchost.exe -k rpcss -p
+
+DisplayName : Realtek Audio Universal Service
+Name        : RtkAudioUniversalService
+State       : Running
+PathName    : C:\Windows\System32\DriverStore\FileRepository\realtekservice.inf_amd64_1de4e7b6b72073a3\RtkAudUService64.exe
+
+DisplayName : Security Accounts Manager
+Name        : SamSs
+State       : Running
+PathName    : C:\Windows\system32\lsass.exe
+
+DisplayName : Task Scheduler
+Name        : Schedule
+State       : Running
+PathName    : C:\Windows\system32\svchost.exe -k netsvcs -p
+
+DisplayName : System Event Notification Service
+Name        : SENS
+State       : Running
+PathName    : C:\Windows\system32\svchost.exe -k netsvcsRedirectionGuard -p
+
+DisplayName : Shell Hardware Detection
+Name        : ShellHWDetection
+State       : Running
+PathName    : C:\Windows\System32\svchost.exe -k netsvcs -p
+
+DisplayName : Print Spooler
+Name        : Spooler
+State       : Running
+PathName    : C:\Windows\System32\spoolsv.exe
+
+DisplayName : Software Protection
+Name        : sppsvc
+State       : Stopped
+PathName    : C:\Windows\system32\sppsvc.exe
+
+DisplayName : State Repository Service
+Name        : StateRepository
+State       : Running
+PathName    : C:\Windows\system32\svchost.exe -k appmodel -p
+
+DisplayName : Windows Image Acquisition (WIA)
+Name        : StiSvc
+State       : Running
+PathName    : C:\Windows\system32\svchost.exe -k imgsvc
+
+DisplayName : Storage Service
+Name        : StorSvc
+State       : Running
+PathName    : C:\Windows\System32\svchost.exe -k LocalSystemNetworkRestricted -p
+
+DisplayName : SysMain
+Name        : SysMain
+State       : Running
+PathName    : C:\Windows\system32\svchost.exe -k LocalSystemNetworkRestricted -p
+
+DisplayName : System Events Broker
+Name        : SystemEventsBroker
+State       : Running
+PathName    : C:\Windows\system32\svchost.exe -k DcomLaunch -p
+
+DisplayName : Text Input Management Service
+Name        : TextInputManagementService
+State       : Running
+PathName    : C:\Windows\System32\svchost.exe -k LocalSystemNetworkRestricted -p
+
+DisplayName : Themes
+Name        : Themes
+State       : Running
+PathName    : C:\Windows\System32\svchost.exe -k netsvcs -p
+
+DisplayName : Distributed Link Tracking Client
+Name        : TrkWks
+State       : Running
+PathName    : C:\Windows\System32\svchost.exe -k LocalSystemNetworkRestricted -p
+
+DisplayName : User Manager
+Name        : UserManager
+State       : Running
+PathName    : C:\Windows\system32\svchost.exe -k netsvcs -p
+
+DisplayName : Update Orchestrator Service
+Name        : UsoSvc
+State       : Running
+PathName    : C:\Windows\system32\svchost.exe -k netsvcs -p
+
+DisplayName : Windows Connection Manager
+Name        : Wcmsvc
+State       : Running
+PathName    : C:\Windows\system32\svchost.exe -k LocalServiceNetworkRestricted -p -s Wcmsvc
+
+DisplayName : Windows Health and Optimized Experiences
+Name        : whesvc
+State       : Running
+PathName    : C:\Windows\system32\svchost.exe -k whesvc -p
+
+DisplayName : Microsoft Defender Antivirus Service
+Name        : WinDefend
+State       : Running
+PathName    : "C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.26090.9-0\MsMpEng.exe"
+
+DisplayName : Windows Management Instrumentation
+Name        : Winmgmt
+State       : Running
+PathName    : C:\Windows\system32\svchost.exe -k netsvcs -p
+
+DisplayName : WLAN AutoConfig
+Name        : WlanSvc
+State       : Running
+PathName    : C:\Windows\system32\svchost.exe -k LocalSystemNetworkRestricted -p -s Wlansvc
+
+DisplayName : Windows Push Notifications System Service
+Name        : WpnService
+State       : Running
+PathName    : C:\Windows\system32\svchost.exe -k netsvcs -p
+
+DisplayName : Windows AI Components Host
+Name        : WSAIFabricSvc
+State       : Running
+PathName    : C:\Windows\system32\svchost.exe -k WSAIFabricSvcGroup -p
+
+DisplayName : Security Center
+Name        : wscsvc
+State       : Running
+PathName    : C:\Windows\System32\svchost.exe -k LocalServiceNetworkRestricted -p
+
+DisplayName : Windows Search
+Name        : WSearch
+State       : Running
+PathName    : C:\Windows\system32\SearchIndexer.exe /Embedding
+
+DisplayName : WSL Service
+Name        : WSLService
+State       : Running
+PathName    : "C:\Program Files\WSL\wslservice.exe"
+
+DisplayName : Clipboard User Service_bff7c
+Name        : cbdhsvc_bff7c
+State       : Running
+PathName    : C:\Windows\system32\svchost.exe -k ClipboardSvcGroup -p
+
+DisplayName : Connected Devices Platform User Service_bff7c
+Name        : CDPUserSvc_bff7c
+State       : Running
+PathName    : C:\Windows\system32\svchost.exe -k UnistackSvcGroup
+
+DisplayName : Web Threat Defense User Service_bff7c
+Name        : webthreatdefusersvc_bff7c
+State       : Running
+PathName    : C:\Windows\system32\svchost.exe -k LocalSystemNetworkRestricted -p
+
+DisplayName : Windows Push Notifications User Service_bff7c
+Name        : WpnUserService_bff7c
+State       : Running
+PathName    : C:\Windows\system32\svchost.exe -k UnistackSvcGroup
+
+

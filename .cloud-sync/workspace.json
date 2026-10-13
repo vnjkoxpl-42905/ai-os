@@ -29,7 +29,7 @@
       "projects/lsatu-wt-frozen/.env",
       "projects/lsatu/.env"
     ],
-    "ciphertext_sha256": "5df428f3eb0e9fc2fd490ea5f4649ad4f1c97e1eed1492903a0135f7eb95919b",
+    "ciphertext_sha256": "c21ce0c8f725871a101639e80af6c1473c52b58128d539b880353a392bcd9f63",
     "cloud_key_required": "Provision AI_OS_SYNC_KEY privately in the cloud environment; the key is never uploaded."
   },
   "runtime_export": {
@@ -1412,14 +1412,14 @@
     ]
   },
   "conversation_export": {
-    "session_count": 759,
+    "session_count": 762,
     "errors": [],
     "snapshot_omitted_count": 1
   },
   "encrypted_original_context": {
     "enabled": true,
     "format": 2,
-    "file_count": 211,
+    "file_count": 212,
     "paths": [
       "ai-os/.agents/skills/eas-app-stores/references/app-store-metadata.md",
       "ai-os/.agents/skills/eas-app-stores/references/ios-app-store.md",
@@ -1546,6 +1546,7 @@
       "ai-os/audits/skills-2026-10-11-native/watch-preflight/claude-global-scripts-setup.py.before",
       "ai-os/audits/skills-2026-10-11-native/watch-preflight/e649c3a7c49968be.before",
       "ai-os/graph-imports/claude-code-docs/_sources/en__agent-sdk__overview.md",
+      "ai-os/references/ai-workspace/startup-inventory-2026-10-13.txt",
       "ai-os/research/2026-09-27-stripe-integration/check_connection.py",
       "ai-os/research/karpathy-brain-2026-10-08/NATIVE-CODEX-LESSON-ACCEPTANCE.md",
       "ai-os/skills/claude/_inactive/transcriptapi/SKILL.md",
@@ -1633,17 +1634,17 @@
       "ai-os/wiki/sources/karpathy/repos/files/repos--karpathy--cryptos--getnewaddress.py.md",
       "ai-os/wiki/sources/karpathy/repos/files/repos--karpathy--karpathy.github.io--_posts--2021-06-21-blockchain.markdown.md"
     ],
-    "ciphertext_sha256": "e05a95df57033792a9cd69e1f094de905e282d7a9564fa579fadfa03e1b7320c",
+    "ciphertext_sha256": "2294c8234d7cd08d917cf9239c6b06a70f0fc300ee1b24cfad9460040eeba28b",
     "ciphertext_parts": [
       {
         "file": "redacted-context.enc.part0001",
         "bytes": 52428800,
-        "sha256": "7c74c40d827ca987c3e824e5b1d46ec71e1d80d8c88326a19d02dcb765f8e452"
+        "sha256": "5e890c5f64e9ddfa918acb3e1d844ce17407400cfd1fa38f2ce9fb03dcefd943"
       },
       {
         "file": "redacted-context.enc.part0002",
-        "bytes": 48826613,
-        "sha256": "4ccc04f58e52ab538698b9125a455597dec1496d1fcfb02b36c3eba63adcb388"
+        "bytes": 48992246,
+        "sha256": "2516843e033411956aa9eebe01c36bc5485b4ca21a6ba2c5c83d28c25f4e6b03"
       }
     ]
   }
