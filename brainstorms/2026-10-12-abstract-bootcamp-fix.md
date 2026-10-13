@@ -63,5 +63,23 @@ Access and presentation
 
 Data check (Lovable SQL, read-only, 2026-10-12): only Joshua's own 2 drill attempts (drill_1, drill_2) and 2 lesson rows exist. No student has Abstract progress, so restructuring strands no student work. drill_1 and drill_2 option order kept so his attempts still point at the right choice.
 
+## What was built (2026-10-12, uncommitted, worktree ../ai-os-projects/lsatu-abstract, branch claude/abstract-bootcamp-fix off origin/main 940433e3)
+
+- Unlocked every module, note, quiz and drill (AppContext). Progress still tracked.
+- Module map rebuilt by topic: M1 drills 1-2, M2 drills 3 + 10, M3 new Break It Down drill (12 items), M4 drills 5-8, M5 drills 9, 11-13, M6 drills 4, 18-20, M7 drills 14-17. M3 renamed "Break It Down".
+- All seven notes rewritten in components/views/AbstractNotes.tsx. The method is taught once, in M3, with a student-driven 4-step demo (pick keywords, translate, plain sentence, check two stimuli). M1 now defines an abstract choice and has a "which sentence?" interaction. M2 teaches the 13 terms the quiz tests. M5 teaches the 17 methods in four families. M6 teaches the four trap labels and the one-word trap. M7 is the short routine.
+- New Break It Down drill (data/breakdownDrill.ts + BreakdownDrill.tsx): 5 X/Y direction items (Joshua's parsing worksheets), 3 decode items (plain English, which argument fits, write your own with model self-check), 4 build items (concrete argument to abstract answer choice). Retry until correct; first-try score recorded.
+- Quizzes: M1 rewritten ("which sentence is it describing?"); M2 adds explanation, hypothesis, supported premise, defend; M3 uses answer choices 1-7 with a translation self-check; M6 trap labels authored per wrong choice; M7 uses choices 8-18 (minus 11) and adds the stimulus checklist step.
+- Drill data: answer key spread across positions (drill_1/2 untouched), drill_1 explanation fixed, "Method N from the 17 Methods source" labels removed.
+- Tailwind brutal palette now supports opacity shorthands (color-mix); tinted feedback boxes render for the first time, old code included.
+- Sidebar/dashboard names wrap; Library card shows the module outline at large sizes; registry description and stats updated; progress counts only reachable items; dev-only route /dev/abstract-preview for local QA.
+
+Verified: typecheck clean; lint 0 errors; Abstract has no tests of its own; DrillLaunchGate.test.tsx fails 2 tests but imports nothing changed. Walked in Joshua's Chrome on localhost:8080/dev/abstract-preview: dashboard unlocked, M3 note demo all four steps, full 12-item drill (9/12 first try with 3 deliberate misses), M3 quiz partial-credit self-check, M7 quiz checklist, M1 interaction; no console errors.
+Not verified: signed-in persistence (preview has no user, writes are skipped), teacher Library card visually, mobile widths, M2/M4/M5/M6 notes clicked through, production build.
+
 ## Open flags (pending input)
+- Ship it? Commit, PR, merge to main and free deploy_project to lsatprep.study -> Joshua
+- Keep the yellow neo-brutalist look or move Abstract to the shared lesson look (Round 1 Q2, unanswered) -> Joshua
+- Rename "Abstract" in the Library (Round 1 Q4, unanswered) -> Joshua
+- Drills 9 and 20 share the traffic-camera story; drills 4, 18, 19, 20 have only two choices -> Claude, next pass
 - Do any students have saved Abstract progress? -> Claude (look up in Supabase)
