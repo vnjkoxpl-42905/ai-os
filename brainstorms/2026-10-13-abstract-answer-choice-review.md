@@ -1,3 +1,13 @@
+# Current source direction supersedes the draft below
+
+Date: 2026-10-13. The newest authoritative source is Joshua’s Desktop complete transcription. The active exercise shows each answer choice, asks the learner to state its requirements and create their own matching example, then immediately reveals the **exact original source breakdown**. All source wording, chapter/prior-material references, paragraph structure, bold, italics, and underlining are preserved. The four introduction paragraphs are also exact source HTML. The earlier polished breakdowns, authored seven-step walkthroughs, and 45-term bank below are historical draft work, superseded for the active exercise, not approved or shown as the current teaching flow.
+
+Source: `C:\Users\Joshu\Desktop\role_question_answer_choices_complete_transcription.html`. SHA-256: `c914b12b0d61ba8e743e5e55979e48772d3147edcbc2b3dc305648fb3492ba61`.
+
+Exact-source fixture: `src/topics/abstract/data/__fixtures__/role_question_answer_choices_complete_transcription.html`. Fidelity test: `src/topics/abstract/data/answerChoiceDrill.test.ts`. Neither source nor fixture is rewritten. No commit or deployment is authorized by this change.
+
+---
+
 # Abstract answer-choice draft for Joshua review
 
 Date: 2026-10-13. Status: LOCAL DRAFT, not approved for publication.

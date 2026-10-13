@@ -228,3 +228,6 @@ Joshua called the finished page "perfect". Treat it as the template for every ot
 4. Pin the page order and the key phrases in the content test; update the test when a section is deliberately cut.
 5. Video: one script file, narration synthesized per sentence, word timings for sync, scenes built in the page's own palette, rendered and checked frame by frame. Voice: Kokoro af_heart (author grade A) when no paid voice key exists.
 6. Log every new correction in `wiki/COPY-CORRECTIONS.md` and here before moving on.
+
+### Necessary definition and careful door metaphor, 2026-10-13
+Explicit direction: Joshua's wording "The necessary condition is what you can guarantee will occur if the sufficient condition happens." leads the "Where the certainty is" section of the Necessary page. The door metaphor from his source may be used carefully (sufficient opens the door; necessary is guaranteed on the other side). This narrows the earlier blanket rejection of "door" as a student word; "door" as a unit of content stays banned. Avoid copy that sounds AI-written. Acceptance: read the section aloud; the metaphor must not suggest cause, timing, or that the necessary condition is only true behind the door.
