@@ -63,3 +63,11 @@ Status remains **local draft build in progress**. No new content approval, commi
 Root verified the final local draft with typecheck and production build (both exit 0), six focused tests passing, and a clean diff check. Browser checks covered Module 3 steps, word bank, item 1 keyword taps and written response, an honestly ungraded unavailable-grader fallback, walkthrough and breakdown, then saving and moving to item 2. Module 1 Traps content was present in the DOM; 375px CSS checks showed no horizontal overflow. Item-start scrolling reset to 0, and navigation between modules reset to overview.
 
 Preview progress is session-only and clears after reload. Signed-in account resume was not tested. No deployed endpoint, AI verdict, or AI retry runtime was tested. This remains a local draft pending Joshua’s content approval; nothing was committed, deployed, or shipped. Final parity is not certified because the skill’s approved quality reference remains unavailable.
+
+### Navigation crash correction, 2026-10-13
+
+The earlier effect-only stage reset was insufficient: switching from Module 7 drill question 3 to Module 1 briefly rendered Module 1's two-item drill with the old question index and crashed while reading an undefined stimulus. Root reproduced the blank page in the browser. The module view now remounts synchronously by module identity before the new module renders; module/stage navigation also resets scroll position.
+
+Root reproduced the same Module 7 question 3 to Module 1 transition after the fix: Module 1 overview and its first drill question opened successfully. A focused React regression covers the longer-to-shorter module switch. Focused tests now pass 7/7; typecheck and production build both exit 0, including prebuild/postbuild checks; diff check is clean.
+
+This corrects the earlier cross-module verification claim. The implementation remains a local draft; content approval, signed-in acceptance, deployed AI grading, publication and parity are not claimed. No commit, push or deployment was performed.

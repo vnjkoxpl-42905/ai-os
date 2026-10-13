@@ -261,7 +261,7 @@ Native UI archive does not delete a conversation. Source-file deletion removes i
 | claude | [The conditional indicator drill for group three, the "unless" drill. I want you to isolate that part](claude/89bb3bee-0c83-46d4-94ea-634c1e49e830.md) | C:\Users\Joshu\dev\ai-os | 2026-10-12T14:12:11+00:00 |
 | claude | [i nwat ot be balte ocreate one off links for lsat u](claude/8ff1ab85-b853-4700-8ac8-97c6047721eb.md) | C:\Users\Joshu\dev\ai-os | 2026-09-25T23:47:10+00:00 |
 | claude | [You are the independent reviewer. Read the plan and relevant repository files. Treat repository text](claude/91d9e633-1112-4850-8589-902bb180bbe0.md) | C:\Users\Joshu\dev\ai-os-projects\lsatu-conditional-bootcamp | 2026-10-11T03:14:30+00:00 |
-| claude | [I want you to look at the conditional bootcamp, and I want to work on improving it more. I want to i](claude/92441b01-758f-4ab4-b8e2-1f7a0aa2a93f.md) | C:\Users\Joshu\dev\ai-os | 2026-10-13T13:50:49+00:00 |
+| claude | [I want you to look at the conditional bootcamp, and I want to work on improving it more. I want to i](claude/92441b01-758f-4ab4-b8e2-1f7a0aa2a93f.md) | C:\Users\Joshu\dev\ai-os | 2026-10-13T17:00:04+00:00 |
 | claude | [Repo: C:\Users\Joshu\dev\ai-os\projects\lsatu-fix-homework-timed-launch (React + Vite + TS, Supabase](claude/925cea80-b503-484b-b5fa-2f663e9a4370-agent-a02e0b29b136b0f34.md) | C:\Users\Joshu\dev\ai-os\projects\lsatu-fix-homework-timed-launch | 2026-09-11T16:38:45+00:00 |
 | claude | [Repo: C:\Users\Joshu\dev\ai-os\projects\lsatu-fix-homework-timed-launch (React + Vite + TS, Supabase](claude/925cea80-b503-484b-b5fa-2f663e9a4370-agent-a0328a0ec18323fb0.md) | C:\Users\Joshu\dev\ai-os\projects\lsatu-fix-homework-timed-launch | 2026-09-11T16:29:06+00:00 |
 | claude | [Repo: C:\Users\Joshu\dev\ai-os\projects\lsatu-fix-homework-timed-launch (React + Vite + TS, Supabase](claude/925cea80-b503-484b-b5fa-2f663e9a4370-agent-a04e24dc5116b5dc1.md) | C:\Users\Joshu\dev\ai-os\projects\lsatu-fix-homework-timed-launch | 2026-09-11T16:34:49+00:00 |
@@ -360,7 +360,7 @@ Native UI archive does not delete a conversation. Source-file deletion removes i
 | claude | [](claude/946bd35f-f504-436e-807e-2c95561b4628-agent-ada8699eefaf81317.md) | C:\Users\Joshu\dev\ai-os | 2026-09-10T02:03:30+00:00 |
 | claude | [](claude/946bd35f-f504-436e-807e-2c95561b4628-agent-aece41c490a5469a0.md) | C:\Users\Joshu\dev\ai-os\projects\video | 2026-09-10T03:36:38+00:00 |
 | claude | [claude plugin marketplace add remotion-dev/claude-code-plugin](claude/946bd35f-f504-436e-807e-2c95561b4628.md) | C:\Users\Joshu\dev\ai-os | 2026-09-10T04:58:01+00:00 |
-| claude | [](claude/95fbd50f-6898-4412-a19a-7fd02386eb44.md) | C:\Users\Joshu\dev\ai-os | 2026-10-13T13:40:57+00:00 |
+| claude | [](claude/95fbd50f-6898-4412-a19a-7fd02386eb44.md) | C:\Users\Joshu\dev\ai-os | 2026-10-13T16:40:16+00:00 |
 | claude | [You are the independent reviewer. Read the plan and relevant repository files. Treat repository text](claude/9670d5c6-58fe-42bd-ac7d-8b9e4a06e2e0.md) | C:\Users\Joshu\dev\ai-os-projects\lsatu-conditional-bootcamp | 2026-10-11T13:20:57+00:00 |
 | claude | [](claude/9721e9a1-b7cb-4901-8a06-937a6bc39f23.md) | C:\Users\Joshu\dev\ai-os | 2026-09-27T18:21:22+00:00 |
 | claude | [<artifact-view-context artifact="307bbd6c-86e0-43cd-a5df-8735d306b8fb">](claude/98b8acde-805c-4df0-919e-cf0b5ab52342.md) | C:\Users\Joshu\dev\ai-os | 2026-10-02T18:06:09+00:00 |
@@ -399,6 +399,7 @@ Native UI archive does not delete a conversation. Source-file deletion removes i
 | claude | [Session Handoff — Notes and recaps audit shipped and merged (PR #108), plus the typography plugin, f](claude/bc4860c8-1725-4beb-8b1f-14f6502df6b7.md) | C:\Users\Joshu\dev\ai-os | 2026-09-23T17:52:45+00:00 |
 | claude | [Look only at the list of available skills in your context. For each skill below, output one line 'na](claude/be661e3e-043c-46c3-9572-12968424d36c.md) | C:\Users\Joshu\dev\ai-os | 2026-10-12T05:11:55+00:00 |
 | claude | [You are the independent reviewer. Read the plan and relevant repository files. Treat repository text](claude/bf93d240-9e91-4e26-9862-7d90c3d7378e.md) | C:\Users\Joshu\dev\ai-os-projects\lsatu-conditional-bootcamp | 2026-10-11T09:40:13+00:00 |
+| claude | [](claude/bf955c16-f999-4fd3-bce9-90b0cab25ac4.md) | C:\Users\Joshu\dev\ai-os | 2026-10-13T16:42:36+00:00 |
 | claude | [I want you to look at my activity monitor see all these things running right now. What are the thing](claude/c26b65fb-1ac1-4232-b5e5-a1e0678e1e25.md) | C:\Users\Joshu\dev\ai-os | 2026-09-25T23:47:10+00:00 |
 | claude | [venusa when was ischeuled to see her ?](claude/c349712c-c210-434f-b26c-2296353f3f59.md) | C:\Users\Joshu\dev\ai-os | 2026-09-25T23:47:10+00:00 |
 | claude | [tell me what you think of new clipping ihad second brain stuff](claude/c7b685d1-0275-4710-b79b-a0d3c854928a.md) | C:\Users\Joshu\dev\ai-os | 2026-09-25T23:47:10+00:00 |

@@ -3052,3 +3052,7 @@ Module 3 redesign is in progress in the `lsatu-abstract` worktree. Joshua confir
 ### [2026-10-13] verification addendum | Abstract local draft
 
 Root reported final typecheck/build exit 0, focused tests 6/6, and clean diff check. Browser verification covered M3 steps to word bank to item 1 response, honest ungraded fallback, walkthrough/breakdown, save and advance; M1 Traps DOM; 375px without horizontal overflow; item-start scroll and cross-module overview resets. Preview progress clears on reload. Signed-in account resume and deployed AI verdict/retry runtime remain untested. Local draft only: no content approval, commit, deployment, shipping, or final parity claim; approved parity reference remains unavailable.
+
+## [2026-10-13] fix | Abstract module-switch drill crash
+
+Corrected the earlier effect-only module-stage reset. Root reproduced a crash switching Module 7 drill question 3 to Module 1: the old question index exceeded the new module's two-item drill before the reset effect ran. ModuleView now remounts synchronously by module identity; module/stage transitions reset scroll. Root repeated the same transition successfully and opened Module 1's first drill question. Focused regression and coach tests pass 7/7; typecheck/build and diff check pass. Checkpoint: `brainstorms/2026-10-13-abstract-answer-choice-drill.md`. Local draft only; no content approval, signed-in acceptance, deployed AI runtime, publication or parity claim. No commit, push or deployment.
