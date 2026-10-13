@@ -594,7 +594,7 @@ describe("tokenize", () => {
     expect(t[0].hasPunctuation).toBe(false);
   });
   it("treats a closing quote or bracket after a full stop as a sentence end", () => {
-    expect(tokenize("He left.)")[0].endsSentence).toBe(true);
+    expect(tokenize("He left.)")[1].endsSentence).toBe(true);
     expect(tokenize("home.’")[0].endsSentence).toBe(true);
   });
 });
@@ -878,7 +878,14 @@ export interface ModeProps {
 }
 ```
 
-Put `ModeProps` in `components/modes/types.ts`. Then create:
+Put `ModeProps` in `components/modes/types.ts`.
+
+**Font rule (applies to every mode, the View panel body and the Sample Text preview):** the passage text
+element must use `style={READING_TEXT_STYLE}` (import from `../ReaderSurface`). Never set the reading font
+size anywhere else, and never apply it to the top bar, bottom bar, buttons or dialogs. For the Sample Text
+preview in the preferences dialog, set the inline style from the chosen font stack and size directly.
+
+Then create:
 
 ### 10a. `SerialMode.tsx`
 - Show only `chunks[chunk].rows`. Each row is one line: the words joined by a space.
