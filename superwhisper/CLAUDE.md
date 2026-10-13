@@ -63,7 +63,7 @@ This table describes the source configuration. App-loaded state still requires r
 | Rewrite | Sonnet 5 | Select text, say what to do to it. |
 | Session Recording | none | Record a live session, nothing pasted. |
 
-Previous specialist modes and Verbatim are preserved in `modes/archived/`, outside the sync's active file glob. Restore a file to `modes/` and sync to re-enable it. Existing app JSON is preserved. Recording uses Left Alt in toggle mode; the disabled push-to-talk shortcut is not the active recording control.
+Previous specialist modes and Verbatim are preserved in `modes/archived/`, outside the sync's active file glob. Restore a file to `modes/` and sync to re-enable it. **Archiving a mode also needs its app JSON moved out of the app's `modes\` folder**, or the app re-adds it at launch (it stayed live from 2026-10-09 until 2026-10-12, when the six JSONs were moved to `com.superwhisper.app\modes-archived-2026-10-12\`). Recording uses Left Alt in toggle mode; the disabled push-to-talk shortcut is not the active recording control.
 
 Switch with Ctrl+Shift+M, or `superwhisper://mode?key=<key>`. Per-mode hotkeys are set in the app (Modes → mode → Keyboard shortcut) and are not managed here yet.
 

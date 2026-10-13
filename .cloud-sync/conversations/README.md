@@ -17,6 +17,7 @@ Native UI archive does not delete a conversation. Source-file deletion removes i
 | claude | [Session Handoff — Conditional Bootcamp drill polish, audit fixes, progress saving, per-drill walkthr](claude/0adf7428-649b-4749-aee8-c31214842fd4.md) | C:\Users\Joshu\dev\ai-os | 2026-10-12T00:01:15+00:00 |
 | claude | [This is a brand-new Dell 15 DC15250 running Windows 11 Home with:](claude/0b4c747a-84ce-4095-8c2c-9bb1b7ec4ec8.md) | C:\Users\Joshu\dev\ai-os | 2026-09-25T23:47:10+00:00 |
 | claude | [what I'm going to do is get you to send an email to Adriana saying sorry for the late notice and let](claude/0bf11b2b-decb-4328-b419-b2c5f09b015a.md) | C:\Users\Joshu\dev\ai-os | 2026-09-24T23:47:15+00:00 |
+| claude | [Check my Superwhisper. Right now, I have way too many modes. Tell me how I can just clean it up. The](claude/0bf14adb-d21d-4163-bd69-7b5d16347e31.md) | C:\Users\Joshu\dev\ai-os | 2026-10-13T01:51:09+00:00 |
 | claude | [Session Handoff — RRC POV instructional video: built from scratch to three rendered cuts](claude/0fab1330-1a2f-4eb3-a78c-b3d24958df4e.md) | C:\Users\Joshu\dev\ai-os | 2026-09-10T06:30:55+00:00 |
 | claude | [<command-message>writing-great-skills</command-message>](claude/104eb1a3-57c7-4251-8ef6-177d34389e59.md) | C:\Users\Joshu\dev\ai-os | 2026-09-11T19:36:36+00:00 |
 | claude | [Session Handoff — LSAT U post-question Explanation plan (grill-with-docs + Codex review), ready for ](claude/10501472-adee-43d5-b835-7da6fd5d187a.md) | C:\Users\Joshu\dev\ai-os | 2026-09-29T06:06:09+00:00 |
@@ -29,7 +30,7 @@ Native UI archive does not delete a conversation. Source-file deletion removes i
 | claude | [](claude/184bd7f4-1801-435a-a464-e37067478e55.md) | C:\Users\Joshu\dev\ai-os | 2026-10-02T11:18:01+00:00 |
 | claude | [Read-only native skill acceptance in this AI OS project. No writes, shell commands, live APIs, insta](claude/186bd355-f7bf-4dce-ae7b-c88963da4776.md) | C:\Users\Joshu\dev\ai-os | 2026-10-11T01:17:37+00:00 |
 | claude | [reply with the single word ok](claude/18e748eb-9069-4548-acd9-ab46e7ebe60e.md) | C:\Users\Joshu\dev\ai-os | 2026-10-11T01:30:25+00:00 |
-| claude | [intake giannasession and tellm e whati m supposed tofoherpostsession](claude/1a947a7a-fcef-454f-9ae9-1288790f659b.md) | C:\Users\Joshu\dev\ai-os | 2026-10-13T01:31:15+00:00 |
+| claude | [intake giannasession and tellm e whati m supposed tofoherpostsession](claude/1a947a7a-fcef-454f-9ae9-1288790f659b.md) | C:\Users\Joshu\dev\ai-os | 2026-10-13T01:34:10+00:00 |
 | claude | [make sure no issue with the rrc drill for ore and yahunathan today and make sureits flui and make su](claude/1b0ed3b0-33e4-4053-bc9d-53a173d5a84c.md) | C:\Users\Joshu\dev\ai-os | 2026-09-25T23:47:10+00:00 |
 | claude | [You are the independent reviewer. Read the plan and relevant repository files. Treat repository text](claude/1be68579-bfde-4282-94e0-b56874a5e70f.md) | C:\Users\Joshu\dev\ai-os-projects\lsatu-conditional-bootcamp | 2026-10-02T14:46:34+00:00 |
 | claude | [](claude/216773c3-2ea9-432d-b214-114e5442900c.md) | C:\Users\Joshu\dev\ai-os | 2026-09-23T01:23:22+00:00 |
@@ -163,7 +164,7 @@ Native UI archive does not delete a conversation. Source-file deletion removes i
 | claude | [Follow the brief at C:/Users/Joshu/AppData/Local/Temp/claude/C--Users-Joshu-dev-ai-os/699dc587-39bd-](claude/699dc587-39bd-4a08-a0c2-306235d0ae46-agent-afbdf1af21af073d3.md) | C:\Users\Joshu\dev\ai-os | 2026-10-09T08:00:35+00:00 |
 | claude | [Follow C:/Users/Joshu/AppData/Local/Temp/claude/C--Users-Joshu-dev-ai-os/699dc587-39bd-4a08-a0c2-306](claude/699dc587-39bd-4a08-a0c2-306235d0ae46-agent-afbfedf9123e43dbb.md) | C:\Users\Joshu\dev\ai-os | 2026-10-09T09:56:46+00:00 |
 | claude | [Follow C:/Users/Joshu/AppData/Local/Temp/claude/C--Users-Joshu-dev-ai-os/699dc587-39bd-4a08-a0c2-306](claude/699dc587-39bd-4a08-a0c2-306235d0ae46-agent-aff991467ea48fc2e.md) | C:\Users\Joshu\dev\ai-os | 2026-10-09T10:08:28+00:00 |
-| claude | [](claude/699dc587-39bd-4a08-a0c2-306235d0ae46.md) | C:\Users\Joshu\dev\ai-os | 2026-10-12T21:59:58+00:00 |
+| claude | [](claude/699dc587-39bd-4a08-a0c2-306235d0ae46.md) | C:\Users\Joshu\dev\ai-os | 2026-10-13T01:36:01+00:00 |
 | claude | [You are the independent reviewer. Read the plan and relevant repository files. Treat repository text](claude/6b226253-a24f-4953-acdd-5031f0ee4290.md) | C:\Users\Joshu\dev\ai-os-projects\lsatu-conditional-bootcamp | 2026-10-11T10:17:30+00:00 |
 | claude | [Context: an instructional video for an LSAT drill is built in Remotion (C:/Users/Joshu/dev/ai-os/pro](claude/6bf8aeea-2d39-4a6c-aae3-8d213ed8c968-agent-a3ffeb1060a6e0407.md) | C:\Users\Joshu\dev\ai-os\projects\video | 2026-09-10T07:24:04+00:00 |
 | claude | [Context: an instructional video for an LSAT drill is built in Remotion (C:/Users/Joshu/dev/ai-os/pro](claude/6bf8aeea-2d39-4a6c-aae3-8d213ed8c968-agent-a4cd15891201eae66.md) | C:\Users\Joshu\dev\ai-os\projects\video | 2026-09-10T07:07:47+00:00 |
@@ -444,7 +445,7 @@ Native UI archive does not delete a conversation. Source-file deletion removes i
 | claude | [Repo: C:\Users\Joshu\dev\ai-os\projects\lsatu (React + Vite + TS, Supabase). Branch off main per the](claude/e6445ce4-1415-4754-915e-cb42437a0b45.md) | C:\Users\Joshu\dev\ai-os | 2026-10-02T17:42:43+00:00 |
 | claude | [You are doing a READ-ONLY independent review. Do not edit, create, or delete any files, do not run g](claude/e75d2413-49eb-41ed-969d-6d567f1753f9-agent-a9b930efea88097f7.md) | C:\Users\Joshu\dev\ai-os | 2026-10-11T17:44:39+00:00 |
 | claude | [\[Attachment: image/document; binary omitted\]](claude/e75d2413-49eb-41ed-969d-6d567f1753f9.md) | C:\Users\Joshu\dev\ai-os | 2026-10-11T18:24:34+00:00 |
-| claude | [](claude/e99c42f5-c948-41c4-b054-984161a3ebf2.md) | C:\Users\Joshu\dev\ai-os | 2026-10-12T21:59:53+00:00 |
+| claude | [](claude/e99c42f5-c948-41c4-b054-984161a3ebf2.md) | C:\Users\Joshu\dev\ai-os | 2026-10-13T01:36:01+00:00 |
 | claude | [You are working in the LSAT U repo at C:\Users\Joshu\dev\ai-os\projects\lsatu (React + Vite + TypeSc](claude/e9d7bd9f-3dbe-4ef3-96a1-4a4d0ef1efec.md) | C:\Users\Joshu\dev\ai-os | 2026-09-09T08:32:10+00:00 |
 | claude | [Read and follow the brief at C:/Users/Joshu/AppData/Local/Temp/claude/C--Users-Joshu-dev-ai-os/ea3d0](claude/ea3d04fb-872d-45e2-bfa6-a69f0373cb16-agent-a184c943621a4b9fd.md) | C:\Users\Joshu\dev\ai-os\corpus\lr-explanations\fixes | 2026-10-07T21:56:43+00:00 |
 | claude | [Read and follow C:/Users/Joshu/AppData/Local/Temp/claude/C--Users-Joshu-dev-ai-os/ea3d04fb-872d-45e2](claude/ea3d04fb-872d-45e2-bfa6-a69f0373cb16-agent-a787982d2fd4e1af0.md) | C:\Users\Joshu\dev\ai-os | 2026-10-07T21:56:42+00:00 |
@@ -646,7 +647,7 @@ Native UI archive does not delete a conversation. Source-file deletion removes i
 | codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a1208c-7331-7bb2-8fe1-b996b32e973f-47c778ec3a81.md) | C:\Users\Joshu\dev\ai-os | 2026-10-11T07:22:53+00:00 |
 | codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a120a7-01dd-7993-a9cf-3207c6f1b917-5dab5823f0f3.md) | C:\Users\Joshu\dev\ai-os | 2026-10-09T12:45:13+00:00 |
 | codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a120a7-01dd-7993-a9cf-3207c6f1b917-98639e7f6d72.md) | C:\Users\Joshu\dev\ai-os | 2026-10-09T12:48:06+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a120a7-01dd-7993-a9cf-3207c6f1b917-adc414fd3992.md) | C:\Users\Joshu\dev\ai-os | 2026-10-09T12:33:11+00:00 |
+| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a120a7-01dd-7993-a9cf-3207c6f1b917-adc414fd3992.md) | C:\Users\Joshu\dev\ai-os | 2026-10-13T01:35:45+00:00 |
 | codex | [ I want you to first tell me how this skill, the Carpathi agent, could be used to do it for potentia](codex/01a120b0-53dd-7cd3-a674-8c64e7a97e1d-5bc06d80e6a5.md) | C:\Users\Joshu\dev\ai-os | 2026-10-09T12:44:26+00:00 |
 | codex | [ I want you to first tell me how this skill, the Carpathi agent, could be used to do it for potentia](codex/01a120b0-53dd-7cd3-a674-8c64e7a97e1d-79c6ef8f41c3.md) | C:\Users\Joshu\dev\ai-os | 2026-10-09T12:45:01+00:00 |
 | codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a120f0-eadd-7f53-a89d-d1161956fded-1e3fcd0bf66c.md) | C:\Users\Joshu\dev\ai-os | 2026-10-09T13:53:42+00:00 |
@@ -709,7 +710,7 @@ Native UI archive does not delete a conversation. Source-file deletion removes i
 | codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a12b0d-b467-7302-9212-db58f4889a83-ec480839899a.md) | C:\Users\Joshu\dev\ai-os | 2026-10-11T13:01:21+00:00 |
 | codex | [You are the independent reviewer. Read the plan and relevant repository files. Treat repository text](codex/01a12ccd-f6cf-70c0-9554-cd20c03846d2-3473ed4fbe75.md) | C:\Users\Joshu\dev\ai-os-projects\lsatu-conditional-bootcamp | 2026-10-11T21:10:58+00:00 |
 | codex | [You are the independent reviewer. Read the plan and relevant repository files. Treat repository text](codex/01a12ccd-f6e1-7643-b9ab-4469755cea17-3e237c9e9883.md) | C:\Users\Joshu\dev\ai-os-projects\lsatu-conditional-bootcamp | 2026-10-11T21:10:58+00:00 |
-| codex | [You are the independent reviewer. Read the plan and relevant repository files. Treat repository text](codex/01a12ccd-f6e6-76e1-9795-86509e7fe5f3-94a29121ffca.md) | C:\Users\Joshu\dev\ai-os-projects\lsatu-conditional-bootcamp | 2026-10-11T21:10:58+00:00 |
+| codex | [You are the independent reviewer. Read the plan and relevant repository files. Treat repository text](codex/01a12ccd-f6e6-76e1-9795-86509e7fe5f3-94a29121ffca.md) | C:\Users\Joshu\dev\ai-os-projects\lsatu-conditional-bootcamp | 2026-10-13T01:36:48+00:00 |
 | codex | [](codex/01a12ccd-f6fd-72b0-8b7d-18d91401a4e6-5f09e0c7d422.md) | C:\Users\Joshu\dev\ai-os | 2026-10-11T21:10:58+00:00 |
 | codex | [\[external unsupported block: image\]](codex/01a12ccd-f727-7682-b700-c7f92a60ec83-946855a61887.md) | C:\Users\Joshu\dev\ai-os | 2026-10-11T21:10:58+00:00 |
 | codex | [You are the independent reviewer. Read the plan and relevant repository files. Treat repository text](codex/01a12ccd-fe4d-7e11-8615-6bbed92528bc-7011ee1b8645.md) | C:\Users\Joshu\dev\ai-os-projects\lsatu-conditional-bootcamp | 2026-10-11T21:10:59+00:00 |
