@@ -14,6 +14,7 @@ aliases: []
 
 | Date | Full local export | Local package | Source/status |
 |---|---|---|---|
+| 2026-10-11 | [[transcript-downloads/2026-10-11-gianna-notes-by-gemini]] | none yet | Calendar-attached Gemini Doc 1yv_MPxmSA1i8QvIdHbB7GLXSnk0-taztVWNsDxzs8JI; SHA-256 a593d1f0d53a56eea08ff41d21f3bf95e45b217c11af21a12979966fd56a4e4b |
 | 2026-10-08 | [[transcript-downloads/2026-10-08-gianna-notes-by-gemini]] | [[sessions/2026-10-08-argument-structure-and-smacker/transcript|Transcript]] · [[sessions/2026-10-08-argument-structure-and-smacker/summary|Summary]] · [[sessions/2026-10-08-argument-structure-and-smacker/topic-map|Topic map]] · [[sessions/2026-10-08-argument-structure-and-smacker/provenance|Provenance]] | Calendar-attached Gemini Doc; full local export and package |
 | 2026-09-17 | [[transcript-downloads/2026-09-17-gianna-notes-by-gemini]] | [[sessions/2026-09-17-session/transcript|Transcript]] · [[sessions/2026-09-17-session/summary|Summary]] · [[sessions/2026-09-17-session/topic-map|Topic map]] | Calendar-attached Gemini Doc; full local export and package |
 

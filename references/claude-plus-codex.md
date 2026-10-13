@@ -146,6 +146,10 @@ ai-os **already runs this exact pattern** — it was built dual-runtime from the
 - **Worth adopting as a habit:** the plan↔critique and adversarial-review ping-pong between the two models on genuinely hard or high-stakes work; reach for the Codex desktop app's live browser + annotation when doing front-end review.
 - **Already true in ai-os:** the whole file-structure map, twin instruction files, copy-based skill activation, session-handoff bridge, tool-agnostic stance.
 
+## Choosing Sonnet or Opus inside Claude (source claim, 2026-10-12)
+
+Nate Herk's seven-task test argues for Sonnet 5.5 when the task has a clear spec and a check, and Opus 5.5 when the goal is vague or taste-driven; with a skill defining the output, the two came out close and the cheaper one won. Single runs, his judging, API prices. Untested on our work. [Source summary](../wiki/sources/sonnet-5-5-vs-opus-5-5-nate-herk.md).
+
 
 ## Claudex skills installed globally (2026-09-30)
 

@@ -2989,3 +2989,16 @@ check-skills PASS (claude 299, codex 287, gemini 211).
 - Already-running programs keep their old PATH. That includes the current Herdr server's panes and this Claude session's bash, so `python` there is still 3.12 until they are restarted (`herdr server stop`, then relaunch from the desktop shortcut).
 - Slip: a smoke test imported the standard-library `antigravity` module, which opens an xkcd comic in a browser; a stray tab may have opened. Harmless.
 - Open: tools that call a hard-coded `...\Python312\python.exe` path were not searched for. Python 3.12 was not uninstalled.
+
+## [2026-10-12] intake | Gianna 2026-10-11 session
+
+Calendar (guest giannajean005@gmail.com, 2026-10-08 to 2026-10-13) showed one new session, 2026-10-11, with attached Notes by Gemini. Exported as text to students/gianna/transcript-downloads/2026-10-11-gianna-notes-by-gemini.md (SHA-256 a593d1f0...4e4b). Teaching notes, open loops and transcript inventory updated. Session package (transcript/summary/topic-map) not created.
+
+## [2026-10-12] ingest | Three Nate Herk clips (Sonnet vs Opus; Claude second brain; GPT-6 Astra second brain)
+
+- Ingested one at a time at Joshua's request after an install check of Nate Herk sources.
+- `I Tested Sonnet 5.5 vs Opus 5.5` (`7eo-11K2e3c`), SHA-256 `4568056f…6e431b6f`. Archive `raw/sources/clips/sonnet-5-5-vs-opus-5-5/`. Summary [[sonnet-5-5-vs-opus-5-5-nate-herk]]. Added a short model-choice section to `references/claude-plus-codex.md`.
+- `I Turned Claude Into the Ultimate Second Brain` (`8QQ_INxAhRs`), SHA-256 `61100aa5…d9c5527a`. Pending since 2026-09-08. Archive `raw/sources/clips/claude-ultimate-second-brain/`. Summary [[claude-ultimate-second-brain-nate-herk]]. Linked from `references/second-brain-levels.md`. Only real difference from ai-os: he nests other projects in the main repo; ai-os keeps app repos outside the vault on purpose.
+- `I Turned GPT-6 Astra Into the Ultimate AI Second Brain` (`yysILVsfLFM`), SHA-256 `57f95f79…ee62256b`. Archive `raw/sources/clips/gpt-6-astra-ultimate-second-brain/`. Summary [[gpt-6-astra-ultimate-second-brain-nate-herk]]. All six kit skills present; `onboard`, `link`, `3d-brain` exist only as Claude home copies (Codex lacks them, undeclared in PARITY.md).
+- Related install check the same day: `playwright-cli` skill had no CLI; installed `@playwright/cli` 0.1.22 into `dev/tools/node`. Apify MCP and an open-seo connector were never installed. The [[100-github-repos-for-claude-nate-herk]] page still says "none installed" and is stale.
+- Inbox originals retained; archives hash-verified. No tools installed by these ingests.

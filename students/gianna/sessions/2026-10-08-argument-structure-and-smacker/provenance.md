@@ -7,3 +7,7 @@
 - A second attached native Doc, [18qJ7XwpgM6vga3P-oIJ3jvne-liGCmFnCwuXWgSX60Y](https://docs.google.com/document/d/18qJ7XwpgM6vga3P-oIJ3jvne-liGCmFnCwuXWgSX60Y/edit), is titled “Notes - Gianna session.” Its 104-byte text/plain export contains only the date/title, attendees, and blank Notes and Action items; it is not a transcript.
 - Export size: 73877 bytes. SHA-256 of the local export and package transcript: `9562c32adf2a86b7f1a130d6cbcc1b823abfde281fb295c1d8ed52b8c0a7e40c`.
 - Local full export: [source](../../transcript-downloads/2026-10-08-gianna-notes-by-gemini.md).
+
+## Embedded image (added 2026-10-12)
+
+- `smacker-board.jpg`: SMACKER smartboard screenshot (image1) from the native Gemini Doc 1twz8hGHZMGWI2C-xpeUcmfjI82YFEVdn9fxL5nPkobQ, exported as zip. SHA-256 8acf0fac8f95c044bc14ab0f9c52050168b38ed5408a9315f3f09bc537aa55bf.

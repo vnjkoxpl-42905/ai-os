@@ -9,7 +9,9 @@ updated: 2026-10-09
 
 # Gianna Jean open loops
 
-- [ ] [2026-10-08] Provide the promised homework and instructions by 2026-10-11. The transcript does not name exact drills or question sets. Source: [[sessions/2026-10-08-argument-structure-and-smacker/transcript]].
+- [ ] [2026-10-11] Send Gianna the homework promised for the morning of 2026-10-12: about 10 abstract answer choices with an answer key, a de-abstractify drill, the statement-type drill (conditional/causal/comparative/correlation, "already made"), outside practice questions to do after the drills, the macro method breakdown (five points), and a per-day schedule. Due before the Thursday 2026-10-15 session. Source: [[transcript-downloads/2026-10-11-gianna-notes-by-gemini]] 00:58:50-01:00:34.
+- [ ] [2026-10-11] Gianna to start an abstract-terms journal with concrete definitions. Check it on 2026-10-15. Source: same, 00:27:54.
+- [ ] [2026-10-08] (Superseded by 2026-10-11 homework list) Provide the promised homework and instructions by 2026-10-11. The transcript does not name exact drills or question sets. Source: [[sessions/2026-10-08-argument-structure-and-smacker/transcript]].
 
 - [ ] [2026-09-17] Review Gianna's practice analytics if she provides access or data, then give a specific LR diagnosis. Source: [[transcript-downloads/2026-09-17-gianna-notes-by-gemini]].
 - [ ] [2026-09-17] If Gianna continues tutoring, confirm her October versus November test decision and whether she wants accommodation guidance. Check live registration and deadline sources before relaying dates. Source: same transcript.
