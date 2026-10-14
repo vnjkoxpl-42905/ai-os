@@ -139,6 +139,23 @@
       "port": 8094
     },
     {
+      "name": "conditional-four-situations",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "--prefix",
+        "../ai-os-projects/lsatu-four-situations",
+        "run",
+        "dev",
+        "--",
+        "--host",
+        "127.0.0.1",
+        "--port",
+        "8098",
+        "--strictPort"
+      ],
+      "port": 8098
+    },
+    {
       "name": "conditional-bootcamp",
       "runtimeExecutable": "npm",
       "runtimeArgs": [

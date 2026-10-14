@@ -1,7 +1,7 @@
 ---
 type: operating-layer
 subject: Hot last-session cache
-updated: 2026-10-11
+updated: 2026-10-13
 aliases: []
 ---
 
@@ -9,7 +9,32 @@ aliases: []
 
 Freshest working state; the first page `/pickup` reads. Rebuilt fresh in the 2026-07-16 vault rebuild (the old cache is archived).
 
-## Most recent (2026-10-11): Dependencies repaired and native skill loading checked
+## Most recent (2026-10-13): Conditional Claude and Codex histories reconciled
+
+- Recovered the newer Claude continuation `fcf871e0-bec1-4050-afcb-31aaf7c75f07` and seven agent transcripts. Both sessions had branched from `64792cc5`; Claude's later two commits collided with Codex's already-pushed PR work. Its 24-file merge stopped at the session limit. No request to roll back was found in that exact chat, and no direct message was sent to it.
+- Compared both outputs. Codex was the stronger verified functional baseline; retained Claude's useful granular answer migration, historical-run preservation, complete symbol explanations and manual walkthrough refinements. Preserved Codex's persistence, help and completion safeguards. Both parent histories and the interrupted merge remain intact.
+- Reconciled in `68cb0c3b`, integrated current main in `e3ec391c`, and pushed final head `aeb82f93` to open [PR #211](https://github.com/vnjkoxpl-42905/lsatu-684d89db/pull/211). Main's unrelated work is excluded from the comparison. Clean final checkout: `lsatu-conditional-reconcile`.
+- Verified 421 tests across 35 files, final integrated typecheck/build/content guards, 150 full responsive checks and 30 integrated representative checks. Fresh browser replay covered four worksheet items and all 22 staged questions. Independent reviewer confirmed the old incomplete-modal migration bug fixed; all 133 originals/provenance remain unchanged.
+- [Comparison and actual review outcomes](../../ai-os-projects/lsatu-conditional-reconcile/docs/agent/conditional-takeover-20261013/reconciliation.md). Codex review round 1 genuinely found seven defects; round 2 inspected no code and was not an approval. Requested model was GPT-6 Astra; actual model was not recorded.
+- Review branch only. No production merge/publication, backend deployment, paid call, new media or assignment. Signed-in cloud persistence, physical-device acceptance and editorial approval remain separate. Task statuses unchanged.
+
+## Previous (2026-10-13): Reading Center published with assignment-only access
+
+- Recovered Claude's Spreeder chat and finished the standalone fixes, then integrated the newer feature into LSAT U. Teacher assignment controls: https://lsatprep.study/teacher/tools/reading-center. Assigned students see it directly below My Work in the sidebar and in My Work's To do list; backend access also requires the active unlocked grant. No broad Classroom permission is needed. Admin preview remains in Teacher Workspace.
+- Published checked merged release `5d6e5941` through free deployment `1ec3b668-7a31-4f13-bdd4-3ec5be5fe82b`; verified new live assets, signed-in teacher assignment readback, student launch and bookmark persistence after full reload. Concurrent Lovable grading work was preserved before release.
+- Follow-up navigation correction `c50cfb21` published in checked release `1190cb26` via free deployment `b8444b88-80c4-413e-be23-09aa8f802ecc`. Verified live My Work/sidebar placement and launch, 121 focused tests, 91 merged regression tests, TypeScript/build, review and five responsive widths. Assigned-only My Work hides unrelated coursework and keeps Notes gated. QA flag/visibility tests were restored to their original values with the same grant ID; no new assignment or notification.
+- Fixed playback, completion, imports, saved pages, bookmark save races and responsive layouts. Tests, TypeScript/build/content guards, independent review and 46 rolled-back live authorization/tag assertions passed. [Exact evidence and retained QA records](../../ai-os-projects/lsatu-reading-center/docs/agent/reading-center-20261013/verification.md); [maintained source specification](../research/2026-10-13-spreeder-reconstruction-spec.md).
+- Only two test accounts received QA grants; no real student's assignment changed. Commercial catalogue/Courses content, AI Summary/Generate, Wordela and PDF/DOCX parsing remain excluded. No paid Lovable call or Edge deployment. Task statuses unchanged.
+
+## Previous (2026-10-13): Claude Conditional bootcamp takeover repaired
+
+- Recovered the exact Claude chat and four subagent transcripts, preserved its two commits and continued in the isolated `lsatu-conditional-takeover` checkout. Repair commit `7dce7199` is pushed to [PR #211](https://github.com/vnjkoxpl-42905/lsatu-684d89db/pull/211). Main advanced during the guarded push and was merged without conflict as `a3ff1e95`.
+- Fixed worksheet condition grading, all 25 missing Revisit Drill 5 spans, early answer disclosure, completion gating, saved lesson/drill/flashcard state, account hydration and assigned access. All 133 original worksheet source items remain preserved.
+- Verified 375 Conditional/refresher tests, final affected checks, all 12 browser drill runs covering 243 main questions and a fresh follow-up, existing media playback/navigation pause, and 150 responsive screen checks across 375/640/900/1440 pixels. Final independent source review found no actionable issue.
+- Combined main/review code passes typecheck, 38 focused progress integration tests, production build/content guards and representative responsive rechecks. Final pushed head `639190ac` also moves the push typecheck after its merge. [Detailed receipt](../../ai-os-projects/lsatu-conditional-takeover/docs/agent/conditional-takeover-20261013/verification.md); [maintained curriculum checkpoint](../brainstorms/2026-09-30-conditional-curriculum/2026-10-13-four-situations-page.md).
+- Review branch only. No merge into main, publication, Lovable spend, new media or assignment. Signed-in production persistence and physical-device acceptance remain unverified. Editorial copy remains provisional. Task statuses unchanged.
+
+## Previous (2026-10-11): Dependencies repaired and native skill loading checked
 
 - [Current outcome and limits](../audits/skills-2026-10-11-native/SUMMARY.md); [native events and final hashes](../audits/skills-2026-10-11-native/FINAL-VERIFICATION.json). Remaining local skill dependencies repaired through the actual Karpathy agent and independent review.
 - Recovered the original research validator/field contract from Git, repaired false success and installed isolated free PyYAML outside the vault. Three bootcamp references are dated reconstructed standards with current source provenance, not historical originals.

@@ -70,3 +70,4 @@
 - [Contrapositive page is the lesson gold standard](contrapositive-page-is-the-lesson-gold-standard.md) - approved 2026-10-12 quality bar for all lectures; do/don't list lives in bootcamp-builder teaching-preferences.
 - [Brutal palette opacity](brutal-palette-opacity.md) - Abstract bootcamp tints were invisible until the brutal-* tokens went through color-mix (2026-10-12); /dev/abstract-preview for QA.
 - [Reading Center standalone first](reading-center-standalone-first.md) — own app at ai-os-projects/reading-center (port 8100); LSAT U integration later, assign = access flag.
+- [Vite rebundles the MCP function](vite-rebundles-mcp-function.md) — a preview run can stub out supabase/functions/mcp/index.ts; restore it, never commit it.

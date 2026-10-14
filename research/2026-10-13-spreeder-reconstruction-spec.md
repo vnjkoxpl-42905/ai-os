@@ -132,3 +132,46 @@ Not built (need a service or were not observable):
   catalogue, Courses content, share, Sign Out, AI credits.
 - Not observed live, so built from inference: filled Bookmarks list, Tag dialog, Edit Image dialog, Delete confirm,
   Edit Profile, the reading-test text picker, charts with data, light-theme sidenav colours, speedometer artwork.
+
+### Side-by-side pass (2026-10-13 afternoon, reading-center @ 2c2f877)
+
+Matched against live Spreeder (1036px window) or its shipped code, then checked in our app:
+- Library: heading y75, cover 148x210 r5 at y111, title 12.5/400, author 11.5 #918f8f, View All #74b2e5, shelf gap 50px. Card menu 201 wide, 16px rows, opens above the ⋮ with right edges aligned.
+- Sidenav collapses to a 90px icon rail (not hidden). Add Text menu 192 wide, 14/400, 24px icons. AI items left out (Joshua, 2026-10-13).
+- Tags: library/tags swaps the nav for Back, Create New Tag and tag rows (⋮: Tag Color with 24 swatches .c1-.c24, Edit Tag, Delete Tag with "This will delete the tag X..." No/Yes). First tag auto-opens; none shows "Nothing here yet." Tag dialog "Tag <title> as": 300px checklist, Create New Tag stacks a dialog.
+- Delete Text: 450 wide, "Are you sure you want to delete <title>?", No / Yes (green 120).
+- Edit Image: cover 150x225 + Upload Image (Generate With AI left out); Save disabled until changed.
+- View/Location (library and reader): a word click moves the location and keeps the panel open.
+- Add To Library: Enter Title focused, outlined text box, Cancel + Save 120 (disabled grey). Edit Text: Title, Author, Genre, text, one green Save.
+- Bookmarks (from code): list grouped under the text title, 300px bordered table "Page N - Word" (#448aff) | notes | ⋮ (Go to location, Delete). Note dialog: chips title/"Page N - Word", "Position <charPosition>", word; autosaves 5s after typing ("Bookmark saved."); Save (create) / Update + Go to location. No Cancel or Delete in it.
+- Word action sheet: #1f1f1f, title 60px 14px #666, rows 52px 14px.
+- Bottom bar at 1180px and below: keyboard hidden, time left, speed + View right.
+- Punctuation regex as shipped, /[\.\?!:;\-\\u2013,]/, does NOT match the ASCII hyphen. Fixed in both delays and remaining time; "3% - 2 minutes remaining" now matches Spreeder exactly.
+- Speed Variability formula confirmed against shipped serial/flow code; unit-tested.
+- 8px scrollbar (white track, #9b9b9b thumb) from styles.css.
+
+Still not verified: Spreeder's own Import Document UI (it opens a file picker), finish alert, fullscreen (needs a real click), High Contrast and System themes, the shortcuts popover against live Spreeder at >1180px (Joshua's window is 1036px).
+
+### Codex takeover verification (2026-10-13)
+
+- Recovered Claude chat `bf955c16-f999-4fd3-bce9-90b0cab25ac4`, titled "Spreeder website analysis". Its final response matches Joshua's screenshot.
+- Standalone checkout is clean on `main` at `2c2f877`. Fresh checks: all 30 tests pass, TypeScript passes, production build passes. Build warns about a JavaScript chunk over 500 kB.
+- Restarted the stopped development server at http://127.0.0.1:8100 and opened the app. Locally verified Profile Dashboard, Stats empty state, Options menu, and Goals dialog opening with the 600 WPM default. This is a local smoke check, not a new comparison against live Spreeder.
+- Next: complete remaining standalone browser acceptance checks and live comparison, then port the newer standalone feature into the older LSAT U worktree. LSAT U integration and database migration remain outstanding. Import currently supports text, Markdown, and HTML, not general PDF/DOCX parsing.
+
+### Reading Center integration acceptance (2026-10-13)
+
+The takeover checkpoint above is historical. Standalone repairs are committed as `2a1f98f`; the LSAT U port and assignment-only access are committed as `e360b6c3`. Main updates were merged without discarding other work. The checked frontend release is `3389858bf83c34cb1526d68a19a5075efbba3be6`.
+
+- Fixed playback pause/resume, completion and Finished, HTML/text import validation, saved eReader pages, bookmark autosave/save races and responsive reader/dialog/Profile layouts. Fullscreen now applies the compared source focus layout and exits correctly.
+- Browser checks covered five modes, keyboard controls and the wide shortcuts popover, imports, tags, bookmarks, completion, preferences, goals, High Contrast/System, and Profile at 375/640/1036/1440 pixels. Original import chooser, Profile, shortcuts and focus-view enter/exit were compared live. Original source content was preserved; filled source lists and source completion effects still rely on shipped-code evidence.
+- Integrated routes use cloud storage and account-isolated data. A whole-tool assignment grants access through immutable Classroom fields, enforced in both the frontend and database. Unassigned, future-locked, revoked and wrong-account requests fail closed. Assigned students can launch it even without broad Classroom flags.
+- Teacher UI assignment was read back in the saved QA account and opened from its Classroom. Cloud import, bookmark note, tag, preferences, progress and sessions persisted. Finishing one passage retains whole-tool access. Two QA test grants are preserved; no real student's assignment was changed.
+- Final integration slice: 252 tests in 24 files; standalone: 42 tests in 9 files. Both TypeScript checks/builds and app content guards passed. Live probes passed 30 access assertions and 16 tag assertions with probe writes rolled back. Independent final review passed.
+- Detailed evidence: [integration receipt](../../ai-os-projects/lsatu-reading-center/docs/agent/reading-center-20261013/verification.md). Production frontend acceptance is recorded there after free deployment. No paid Lovable agent call or Edge Function deployment.
+
+AI Summary/Generate, commercial catalogue/Courses content, Wordela, and PDF/DOCX parsing remain outside scope. Imported text, Markdown and HTML are supported up to 5 MB.
+
+Production acceptance: published checked merged commit `5d6e59410c0355ff4758165777430e974a58a560` through free Lovable deployment `1ec3b668-7a31-4f13-bdd4-3ec5be5fe82b`. Confirmed changed live entry `/assets/index-D7yiy4Es.js` and unique teacher-assignment chunk marker. Signed-in production teacher confirmed the exact QA grant; assigned student launched from Classroom, saw its private text and Finished shelf, and retained the bookmark note across full reload. The concurrent Lovable grading work was preserved by merging its saved sync branch before publication. The renewed merge passed 152 tests plus 119 grading/ActivityRunner/Observatory regressions, TypeScript and build/content guards. The earlier 252-test run remains recorded, not added into a misleading unique test count.
+
+Navigation clarification, 2026-10-13: Reading Center is student-visible only after admin assignment, immediately below My Work in the sidebar and inside My Work's To do list. The admin student shortcut is hidden; Teacher Workspace retains assignment/preview controls. Assignment-only accounts can use To do/Completed without general Classroom access, while other coursework, weekly plans and Notes remain gated. Corrected in c50cfb21 and published in checked merged release 1190cb2601e29f1449a5e0affc05e9ed62064008 through free deployment b8444b88-80c4-413e-be23-09aa8f802ecc. Live entry /assets/index-DByF-8o8.js contains the new gate marker; signed-in production My Work and its reader link passed. Local browser tested active/withdrawn QA visibility, direct reader denial, five widths and admin controls. Original QA flag=true, visible=true, in_progress grant restored and read back; no real student records changed or notifications sent. Checks passed: 121 focused tests in 8 files, 91 merged regression tests in 7 files, TypeScript/build/content guards and independent review. Exact evidence and live screenshot are in the maintained integration receipt.

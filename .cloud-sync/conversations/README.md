@@ -368,7 +368,11 @@ Native UI archive does not delete a conversation. Source-file deletion removes i
 | claude | [Session Handoff — Picked up a prior classroom remediation, closed its five OPEN items, then fixed th](claude/9a2e34c3-6cc3-41c2-b75a-b0b02f16c2dc.md) | C:\Users\Joshu\dev\ai-os | 2026-09-11T04:29:31+00:00 |
 | claude | [i want u to see my lsat u and add firecrawl connection](claude/9ae46b35-2cc0-4585-a3e3-7b404bdc43bd.md) | C:\Users\Joshu\dev\ai-os | 2026-09-25T23:47:10+00:00 |
 | claude | [\[Attachment: image/document; binary omitted\]](claude/9bbc0a8c-2290-4d3d-a1a1-79a43c748623.md) | C:\Users\Joshu\dev\ai-os | 2026-09-24T20:31:14+00:00 |
-| claude | [](claude/9e2e52ef-70a6-4763-a599-5a2d1b96a303.md) | C:\Users\Joshu\dev\ai-os | 2026-10-13T18:56:23+00:00 |
+| claude | [You are auditing LSAT U's Conditional bootcamp drills. READ-ONLY: do not edit, create, or delete any](claude/9e2e52ef-70a6-4763-a599-5a2d1b96a303-agent-a1d9129c92d3118cc.md) | C:\Users\Joshu\dev\ai-os | 2026-10-13T19:19:10+00:00 |
+| claude | [Fix verified audit findings in LSAT U's Conditional bootcamp drills. Worktree: C:\Users\Joshu\dev\ai](claude/9e2e52ef-70a6-4763-a599-5a2d1b96a303-agent-a65ab9f3499103dbc.md) | C:\Users\Joshu\dev\ai-os | 2026-10-13T19:30:07+00:00 |
+| claude | [You are auditing LSAT U's Conditional bootcamp drills. READ-ONLY: do not edit, create, or delete any](claude/9e2e52ef-70a6-4763-a599-5a2d1b96a303-agent-a738a09dbe1e1fc01.md) | C:\Users\Joshu\dev\ai-os | 2026-10-13T19:18:14+00:00 |
+| claude | [Fix verified audit findings in LSAT U's Conditional bootcamp worksheet drills. Worktree: C:\Users\Jo](claude/9e2e52ef-70a6-4763-a599-5a2d1b96a303-agent-ac134a9c842ffbfb2.md) | C:\Users\Joshu\dev\ai-os | 2026-10-13T19:30:05+00:00 |
+| claude | [](claude/9e2e52ef-70a6-4763-a599-5a2d1b96a303.md) | C:\Users\Joshu\dev\ai-os | 2026-10-13T23:41:20+00:00 |
 | claude | [](claude/a1b94b7a-404e-46f1-b36b-f29924b8be29.md) | C:\Users\Joshu\dev\ai-os | 2026-10-12T21:51:47+00:00 |
 | claude | [](claude/a247f049-84d1-48a8-b1ce-cef615411569.md) | C:\Users\Joshu\dev\ai-os | 2026-10-03T03:16:07+00:00 |
 | claude | [You are the independent reviewer. Read the plan and relevant repository files. Treat repository text](claude/a2e5c6a9-107e-463e-94e5-b4e8d3ace8a6.md) | C:\Users\Joshu\dev\ai-os-projects\lsatu-conditional-bootcamp | 2026-10-02T15:26:47+00:00 |
@@ -400,7 +404,7 @@ Native UI archive does not delete a conversation. Source-file deletion removes i
 | claude | [Session Handoff — Notes and recaps audit shipped and merged (PR #108), plus the typography plugin, f](claude/bc4860c8-1725-4beb-8b1f-14f6502df6b7.md) | C:\Users\Joshu\dev\ai-os | 2026-09-23T17:52:45+00:00 |
 | claude | [Look only at the list of available skills in your context. For each skill below, output one line 'na](claude/be661e3e-043c-46c3-9572-12968424d36c.md) | C:\Users\Joshu\dev\ai-os | 2026-10-12T05:11:55+00:00 |
 | claude | [You are the independent reviewer. Read the plan and relevant repository files. Treat repository text](claude/bf93d240-9e91-4e26-9862-7d90c3d7378e.md) | C:\Users\Joshu\dev\ai-os-projects\lsatu-conditional-bootcamp | 2026-10-11T09:40:13+00:00 |
-| claude | [](claude/bf955c16-f999-4fd3-bce9-90b0cab25ac4.md) | C:\Users\Joshu\dev\ai-os | 2026-10-13T18:56:21+00:00 |
+| claude | [](claude/bf955c16-f999-4fd3-bce9-90b0cab25ac4.md) | C:\Users\Joshu\dev\ai-os | 2026-10-13T23:42:06+00:00 |
 | claude | [I want you to look at my activity monitor see all these things running right now. What are the thing](claude/c26b65fb-1ac1-4232-b5e5-a1e0678e1e25.md) | C:\Users\Joshu\dev\ai-os | 2026-09-25T23:47:10+00:00 |
 | claude | [venusa when was ischeuled to see her ?](claude/c349712c-c210-434f-b26c-2296353f3f59.md) | C:\Users\Joshu\dev\ai-os | 2026-09-25T23:47:10+00:00 |
 | claude | [tell me what you think of new clipping ihad second brain stuff](claude/c7b685d1-0275-4710-b79b-a0d3c854928a.md) | C:\Users\Joshu\dev\ai-os | 2026-09-25T23:47:10+00:00 |
@@ -483,6 +487,14 @@ Native UI archive does not delete a conversation. Source-file deletion removes i
 | claude | [\[Attachment: image/document; binary omitted\]](claude/fb8f2200-e690-4714-8e79-09f9c9ea80de.md) | C:\Users\Joshu\dev\ai-os | 2026-09-25T06:16:51+00:00 |
 | claude | [Session Handoff — RRC instructional video Round 7 (first-person head turn), and the demos shipped li](claude/fc343797-928d-4da2-9404-38f10fb76f72.md) | C:\Users\Joshu\dev\ai-os | 2026-09-11T06:20:28+00:00 |
 | claude | [echo hello](claude/fce4bf77-edc2-4ff2-8466-a0850d3b17f9.md) | C:\Users\Joshu\dev\ai-os | 2026-10-13T04:38:22+00:00 |
+| claude | [Joshua gave full autonomy; don't ask questions. Worktree C:\Users\Joshu\dev\ai-os-projects\lsatu-fou](claude/fcf871e0-bec1-4050-afcb-31aaf7c75f07-agent-a0467994dab45764d.md) | C:\Users\Joshu\dev\ai-os | 2026-10-14T00:16:15+00:00 |
+| claude | [You are perfecting part of the LSAT U Conditional bootcamp. Joshua (the owner) gave full autonomy: d](claude/fcf871e0-bec1-4050-afcb-31aaf7c75f07-agent-a07737814e1456d73.md) | C:\Users\Joshu\dev\ai-os | 2026-10-14T00:07:34+00:00 |
+| claude | [Joshua gave full autonomy; do not ask questions. Resolve an in-progress git merge in the worktree C:](claude/fcf871e0-bec1-4050-afcb-31aaf7c75f07-agent-a1f0623f2cd5698fb.md) | C:\Users\Joshu\dev\ai-os | 2026-10-14T00:50:16+00:00 |
+| claude | [You are perfecting part of the LSAT U Conditional bootcamp. Joshua (the owner) gave full autonomy: d](claude/fcf871e0-bec1-4050-afcb-31aaf7c75f07-agent-a4e0db4e009ca364d.md) | C:\Users\Joshu\dev\ai-os | 2026-10-14T00:10:21+00:00 |
+| claude | [Joshua gave full autonomy; don't ask questions. Worktree C:\Users\Joshu\dev\ai-os-projects\lsatu-fou](claude/fcf871e0-bec1-4050-afcb-31aaf7c75f07-agent-a4e63f90988c254b6.md) | C:\Users\Joshu\dev\ai-os | 2026-10-14T00:33:42+00:00 |
+| claude | [You are perfecting part of the LSAT U Conditional bootcamp. Joshua (the owner) gave full autonomy: d](claude/fcf871e0-bec1-4050-afcb-31aaf7c75f07-agent-a813c7f6af6f08558.md) | C:\Users\Joshu\dev\ai-os | 2026-10-14T00:08:56+00:00 |
+| claude | [Joshua gave full autonomy; don't ask questions. Worktree C:\Users\Joshu\dev\ai-os-projects\lsatu-fou](claude/fcf871e0-bec1-4050-afcb-31aaf7c75f07-agent-ab28d4aad83a2760b.md) | C:\Users\Joshu\dev\ai-os | 2026-10-14T00:39:23+00:00 |
+| claude | [](claude/fcf871e0-bec1-4050-afcb-31aaf7c75f07.md) | C:\Users\Joshu\dev\ai-os | 2026-10-14T00:50:17+00:00 |
 | claude | [Read-only research in the LSAT U repo at C:\Users\Joshu\dev\ai-os\projects\lsatu (React+Vite+TS, Sup](claude/fe553725-d881-4068-8809-1fb7b342eee9-agent-a93337c9f78c81e71.md) | C:\Users\Joshu\dev\ai-os\projects\lsatu | 2026-09-23T08:12:48+00:00 |
 | claude | [+Okay, so thank you. Thank you. I want to work on the actual homepage. I want you to look at the cur](claude/fe553725-d881-4068-8809-1fb7b342eee9.md) | C:\Users\Joshu\dev\ai-os | 2026-09-23T17:07:20+00:00 |
 | claude | [You are the independent reviewer. Read the plan and relevant repository files. Treat repository text](claude/fed8e706-4b31-4eac-908d-f9602e6ea55e.md) | C:\Users\Joshu\dev\ai-os-projects\lsatu-conditional-bootcamp | 2026-10-11T07:22:52+00:00 |
@@ -562,7 +574,7 @@ Native UI archive does not delete a conversation. Source-file deletion removes i
 | codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a11865-52e6-74c2-bb95-d6a32f4dd261-3cc3221ec347.md) | C:\Users\Joshu\dev\ai-os | 2026-10-08T10:03:30+00:00 |
 | codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a11865-52e6-74c2-bb95-d6a32f4dd261-469b9c6a56bc.md) | C:\Users\Joshu\dev\ai-os | 2026-10-09T13:40:55+00:00 |
 | codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a11865-52e6-74c2-bb95-d6a32f4dd261-5981b67000bd.md) | C:\Users\Joshu\dev\ai-os | 2026-10-07T22:45:25+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a11865-52e6-74c2-bb95-d6a32f4dd261-8245528ac630.md) | C:\Users\Joshu\dev\ai-os | 2026-10-13T13:05:12+00:00 |
+| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a11865-52e6-74c2-bb95-d6a32f4dd261-8245528ac630.md) | C:\Users\Joshu\dev\ai-os | 2026-10-13T20:44:35+00:00 |
 | codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a11865-52e6-74c2-bb95-d6a32f4dd261-97b48bf8632b.md) | C:\Users\Joshu\dev\ai-os | 2026-10-09T13:42:02+00:00 |
 | codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a11865-52e6-74c2-bb95-d6a32f4dd261-f6a067ed73ad.md) | C:\Users\Joshu\dev\ai-os | 2026-10-09T06:53:00+00:00 |
 | codex | [](codex/01a11919-6d64-7c42-b320-f23458477014-110490f12eb7.md) | C:\Users\Joshu\dev\ai-os | 2026-10-08T12:13:00+00:00 |
@@ -729,7 +741,7 @@ Native UI archive does not delete a conversation. Source-file deletion removes i
 | codex | [You are the independent reviewer. Read the plan and relevant repository files. Treat repository text](codex/01a12cce-0051-70f1-a54b-ad7297cc8135-6d64da3d1387.md) | C:\Users\Joshu\dev\ai-os-projects\lsatu-conditional-bootcamp | 2026-10-11T21:11:00+00:00 |
 | codex | [You are the independent reviewer. Read the plan and relevant repository files. Treat repository text](codex/01a12cce-0101-7d42-9cfe-2cbff04eeed8-5f65612c3f82.md) | C:\Users\Joshu\dev\ai-os-projects\lsatu-conditional-bootcamp | 2026-10-11T21:11:00+00:00 |
 | codex | [You are the independent reviewer. Read the plan and relevant repository files. Treat repository text](codex/01a12cce-01c3-7271-8f4f-1d5a06abd985-53c331e0915a.md) | C:\Users\Joshu\dev\ai-os-projects\lsatu-conditional-bootcamp | 2026-10-11T21:11:00+00:00 |
-| codex | [You are the independent reviewer. Read the plan and relevant repository files. Treat repository text](codex/01a12cce-09bf-7ef2-bd7e-a2d1ba70fec3-a7daadfd581a.md) | C:\Users\Joshu\dev\ai-os-projects\lsatu-conditional-bootcamp | 2026-10-11T21:11:02+00:00 |
+| codex | [You are the independent reviewer. Read the plan and relevant repository files. Treat repository text](codex/01a12cce-09bf-7ef2-bd7e-a2d1ba70fec3-a7daadfd581a.md) | C:\Users\Joshu\dev\ai-os-projects\lsatu-conditional-bootcamp | 2026-10-14T01:54:25+00:00 |
 | codex | [You are the independent reviewer. Read the plan and relevant repository files. Treat repository text](codex/01a12cce-0a55-7ae3-95d3-73f4ac4ba384-b672cf6cd597.md) | C:\Users\Joshu\dev\ai-os-projects\lsatu-conditional-bootcamp | 2026-10-11T21:11:03+00:00 |
 | codex | [You are the independent reviewer. Read the plan and relevant repository files. Treat repository text](codex/01a12cce-0ae5-7cf2-9612-c7af56896486-34665c7d8505.md) | C:\Users\Joshu\dev\ai-os-projects\lsatu-conditional-bootcamp | 2026-10-11T21:11:03+00:00 |
 | codex | [You are the independent reviewer. Read the plan and relevant repository files. Treat repository text](codex/01a12cce-0b16-7f10-be18-416a1aa424d9-778ca2d0bd0c.md) | C:\Users\Joshu\dev\ai-os-projects\lsatu-conditional-bootcamp | 2026-10-11T21:11:03+00:00 |
@@ -769,7 +781,7 @@ Native UI archive does not delete a conversation. Source-file deletion removes i
 | codex | [](codex/01a13430-d855-7e23-91c0-d0d0099d6e85-eead2c06c929.md) | C:\Users\Joshu\dev\ai-os | 2026-10-13T07:36:18+00:00 |
 | codex | [Use Rea to analyze the website thttps://spreeder.ereflect.com/library and explain how tis works andi](codex/01a13430-d85e-72b0-85f7-6dd457b65e19-b63057992cb7.md) | C:\Users\Joshu\dev\ai-os | 2026-10-13T10:12:14+00:00 |
 | codex | [Okay, I want you to look at my current boot camps. It's for abstract language. I want to fix that.](codex/01a13430-d86f-77b3-80c7-912f51d46103-f799c6cc1dfb.md) | C:\Users\Joshu\dev\ai-os | 2026-10-13T07:36:18+00:00 |
-| codex | [Work on the actual activity that I have in my activity center. It's for spot the relationship. Right](codex/01a13430-daf2-7fb1-8451-cb685b4e6194-41a343a6edba.md) | C:\Users\Joshu\dev\ai-os | 2026-10-13T07:36:19+00:00 |
+| codex | [Work on the actual activity that I have in my activity center. It's for spot the relationship. Right](codex/01a13430-daf2-7fb1-8451-cb685b4e6194-41a343a6edba.md) | C:\Users\Joshu\dev\ai-os | 2026-10-14T02:46:46+00:00 |
 | codex | [Check my Superwhisper. Right now, I have way too many modes. Tell me how I can just clean it up. The](codex/01a13430-db23-76a2-a7c7-efe9aac0c7c0-fea7fb97c8c0.md) | C:\Users\Joshu\dev\ai-os | 2026-10-13T07:36:19+00:00 |
 | codex | [intake giannasession and tellm e whati m supposed tofoherpostsession](codex/01a13430-dba7-72d2-9336-000d5113dca6-5f3a95370ab2.md) | C:\Users\Joshu\dev\ai-os | 2026-10-13T07:36:19+00:00 |
 | codex | [](codex/01a13430-dbbb-7740-bdcb-7c14f5f05f08-969ef1ef8522.md) | C:\Users\Joshu\dev\ai-os | 2026-10-13T07:36:19+00:00 |
@@ -779,9 +791,42 @@ Native UI archive does not delete a conversation. Source-file deletion removes i
 | codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a13477-fff6-7a20-9480-bc9d3c66d0ab-601a1bc7a87a.md) | C:\Users\Joshu\dev\ai-os | 2026-10-13T09:09:04+00:00 |
 | codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a134e7-1ce3-7a33-a009-9c5110d2fa72-376b617cc800.md) | C:\Users\Joshu\dev\ai-os | 2026-10-13T10:55:24+00:00 |
 | codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a13516-5ce2-7ad1-9d17-f70ce4ceaad2-ef8a71f8ee59.md) | C:\Users\Joshu\dev\ai-os | 2026-10-13T11:47:08+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a13579-5068-7403-b3d2-775eb4a8bdf8-7663add07b4f.md) | C:\Users\Joshu\dev\ai-os | 2026-10-13T18:17:44+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a13579-5068-7403-b3d2-775eb4a8bdf8-7adf75afc263.md) | C:\Users\Joshu\dev\ai-os | 2026-10-13T14:15:59+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a13579-5068-7403-b3d2-775eb4a8bdf8-9dfae36e914e.md) | C:\Users\Joshu\dev\ai-os | 2026-10-13T13:36:21+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a13579-5068-7403-b3d2-775eb4a8bdf8-a8a0df65a241.md) | C:\Users\Joshu\dev\ai-os | 2026-10-13T13:38:18+00:00 |
-| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a13579-5068-7403-b3d2-775eb4a8bdf8-f9246cac5256.md) | C:\Users\Joshu\dev\ai-os | 2026-10-13T13:35:08+00:00 |
+| codex | [<external_codex_apps_open_page>{"page_id":null}</external_codex_apps_open_page>](codex/01a13579-5068-7403-b3d2-775eb4a8bdf8-26fda03236ed.md) | C:\Users\Joshu\dev\ai-os | 2026-10-14T01:50:59+00:00 |
+| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a13579-5068-7403-b3d2-775eb4a8bdf8-7663add07b4f.md) | C:\Users\Joshu\dev\ai-os | 2026-10-13T20:35:39+00:00 |
+| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a13579-5068-7403-b3d2-775eb4a8bdf8-7adf75afc263.md) | C:\Users\Joshu\dev\ai-os | 2026-10-13T20:33:34+00:00 |
+| codex | [<external_codex_apps_open_page>{"page_id":null}</external_codex_apps_open_page>](codex/01a13579-5068-7403-b3d2-775eb4a8bdf8-96990539e16d.md) | C:\Users\Joshu\dev\ai-os | 2026-10-14T01:47:33+00:00 |
+| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a13579-5068-7403-b3d2-775eb4a8bdf8-9dfae36e914e.md) | C:\Users\Joshu\dev\ai-os | 2026-10-13T20:45:06+00:00 |
+| codex | [<external_codex_apps_open_page>{"page_id":null}</external_codex_apps_open_page>](codex/01a13579-5068-7403-b3d2-775eb4a8bdf8-a0c5d995924b.md) | C:\Users\Joshu\dev\ai-os | 2026-10-13T21:05:48+00:00 |
+| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a13579-5068-7403-b3d2-775eb4a8bdf8-a8a0df65a241.md) | C:\Users\Joshu\dev\ai-os | 2026-10-13T20:26:26+00:00 |
+| codex | [<external_codex_apps_open_page>{"page_id":null}</external_codex_apps_open_page>](codex/01a13579-5068-7403-b3d2-775eb4a8bdf8-d9a03535d36c.md) | C:\Users\Joshu\dev\ai-os | 2026-10-13T21:17:05+00:00 |
+| codex | [<external_codex_apps_open_page>{"page_id":null}</external_codex_apps_open_page>](codex/01a13579-5068-7403-b3d2-775eb4a8bdf8-de9e17a6df57.md) | C:\Users\Joshu\dev\ai-os | 2026-10-13T21:07:29+00:00 |
+| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a13579-5068-7403-b3d2-775eb4a8bdf8-f9246cac5256.md) | C:\Users\Joshu\dev\ai-os | 2026-10-14T02:20:48+00:00 |
 | codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a13590-3f42-7551-93c9-3661c929d43c-8a79bdd521fe.md) | C:\Users\Joshu\dev\ai-os | 2026-10-13T14:00:20+00:00 |
+| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a136bf-d0cc-7790-b45a-a5b2786a36c8-1d6f997fb2c5.md) | C:\Users\Joshu\dev\ai-os | 2026-10-14T02:51:49+00:00 |
+| codex | [<external_codex_apps_open_page>{"page_id":null}</external_codex_apps_open_page>](codex/01a136bf-d0cc-7790-b45a-a5b2786a36c8-43dd04274cda.md) | C:\Users\Joshu\dev\ai-os | 2026-10-14T01:55:21+00:00 |
+| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a136bf-d0cc-7790-b45a-a5b2786a36c8-8253a32d26a7.md) | C:\Users\Joshu\dev\ai-os | 2026-10-13T19:39:09+00:00 |
+| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a136bf-d0cc-7790-b45a-a5b2786a36c8-8ec019e187a3.md) | C:\Users\Joshu\dev\ai-os | 2026-10-13T19:33:23+00:00 |
+| codex | [<external_codex_apps_open_page>{"page_id":null}</external_codex_apps_open_page>](codex/01a136bf-d0cc-7790-b45a-a5b2786a36c8-b09b68d820fb.md) | C:\Users\Joshu\dev\ai-os | 2026-10-14T01:55:06+00:00 |
+| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a136bf-d0cc-7790-b45a-a5b2786a36c8-b791d33bb4bd.md) | C:\Users\Joshu\dev\ai-os | 2026-10-13T19:39:00+00:00 |
+| codex | [<external_codex_apps_open_page>{"page_id":null}</external_codex_apps_open_page>](codex/01a136bf-d0cc-7790-b45a-a5b2786a36c8-eded4da19be6.md) | C:\Users\Joshu\dev\ai-os | 2026-10-14T02:10:46+00:00 |
+| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a136bf-d0cc-7790-b45a-a5b2786a36c8-f00da0d59ee1.md) | C:\Users\Joshu\dev\ai-os | 2026-10-13T21:15:43+00:00 |
+| codex | [<external_codex_apps_open_page>{"page_id":null}</external_codex_apps_open_page>](codex/01a136bf-d0cc-7790-b45a-a5b2786a36c8-f28fa33faab6.md) | C:\Users\Joshu\dev\ai-os | 2026-10-14T01:54:00+00:00 |
+| codex | [I want you to look at the conditional bootcamp, and I want to work on improving it more. I want to i](codex/01a13702-623c-7862-9ea4-708576871b7a-753375b00aed.md) | C:\Users\Joshu\dev\ai-os | 2026-10-13T20:44:25+00:00 |
+| codex | [](codex/01a13702-6248-7970-8367-fbb9843cbaaf-87a78812eacd.md) | C:\Users\Joshu\dev\ai-os | 2026-10-13T20:44:25+00:00 |
+| codex | [](codex/01a13702-624d-7e20-bf9d-4ae24f300346-1dcfa7f1be23.md) | C:\Users\Joshu\dev\ai-os | 2026-10-14T01:51:13+00:00 |
+| codex | [](codex/01a13702-6253-76d0-beac-4b757b1e3d0e-57fcb2a94a74.md) | C:\Users\Joshu\dev\ai-os | 2026-10-13T20:44:25+00:00 |
+| codex | [](codex/01a13702-6257-7241-a331-6275a3e5aef8-20b8c70e47f6.md) | C:\Users\Joshu\dev\ai-os | 2026-10-13T20:44:25+00:00 |
+| codex | [](codex/01a13702-661f-7143-b28b-bc79c165194a-abd822e345d9.md) | C:\Users\Joshu\dev\ai-os | 2026-10-13T20:44:26+00:00 |
+| codex | [](codex/01a13702-66a1-7ef3-bf37-30291d23c5eb-dbd4ee2db387.md) | C:\Users\Joshu\dev\ai-os | 2026-10-13T20:44:26+00:00 |
+| codex | [Orca Claude readiness check for Joshua. This is your AI OS workspace. Codex is the primary agent; yo](codex/01a13702-66cf-7cd2-a75b-b9407b54c049-399191d764d1.md) | C:\Users\Joshu\dev\ai-os | 2026-10-13T20:44:26+00:00 |
+| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a13714-cdb7-78e1-aaad-0dc13efed18b-1dfdd2d60019.md) | C:\Users\Joshu\dev\ai-os | 2026-10-13T22:08:02+00:00 |
+| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a13714-cdb7-78e1-aaad-0dc13efed18b-1f3d9c05ab35.md) | C:\Users\Joshu\dev\ai-os | 2026-10-13T21:06:07+00:00 |
+| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a13714-cdb7-78e1-aaad-0dc13efed18b-92e2e94d16c6.md) | C:\Users\Joshu\dev\ai-os | 2026-10-13T21:06:49+00:00 |
+| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a13714-cdb7-78e1-aaad-0dc13efed18b-b3d76c8dae7b.md) | C:\Users\Joshu\dev\ai-os | 2026-10-13T22:03:10+00:00 |
+| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a13714-cdb7-78e1-aaad-0dc13efed18b-e3d98756ff72.md) | C:\Users\Joshu\dev\ai-os | 2026-10-13T22:03:18+00:00 |
+| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a1373f-666c-71c3-b78c-58bbf78fec8a-09475b93fc50.md) | C:\Users\Joshu\dev\ai-os | 2026-10-13T21:51:04+00:00 |
+| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a13749-79e7-7f50-998e-a2e7e0426517-498364d35946.md) | C:\Users\Joshu\dev\ai-os | 2026-10-13T22:02:05+00:00 |
+| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a13786-7efd-76d0-8513-4b7503c620c4-99e5cb17d65f.md) | C:\Users\Joshu\dev\ai-os | 2026-10-13T23:08:44+00:00 |
+| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os-projects\lsatu-four-situations](codex/01a137c6-3148-7001-994f-634c7e8271fc-97630c773363.md) | C:\Users\Joshu\dev\ai-os-projects\lsatu-four-situations | 2026-10-14T00:18:30+00:00 |
+| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os-projects\lsatu-four-situations](codex/01a137db-e0e9-7f81-85f6-cc86fcc13601-e8e4ade8ec36.md) | C:\Users\Joshu\dev\ai-os-projects\lsatu-four-situations | 2026-10-14T00:42:11+00:00 |
+| codex | [# AGENTS.md instructions for C:\Users\Joshu\dev\ai-os](codex/01a1381e-baec-7af2-818e-195a18a86bf7-a08376dfe095.md) | C:\Users\Joshu\dev\ai-os | 2026-10-14T01:55:01+00:00 |

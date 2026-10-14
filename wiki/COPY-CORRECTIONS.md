@@ -346,3 +346,9 @@ Joshua rejected "Find the idea that is not attached to unless." Teach the Group 
 - **Approved wording (Joshua, 2026-10-13):** "The necessary condition is what you can guarantee will occur if the sufficient condition happens." Keep verbatim on the Necessary page.
 - **Door is allowed as a careful metaphor** (sufficient condition opens the door, necessary condition is guaranteed on the other side). Still never "door" as a unit of content. Keep it accurate: the door image must not imply the necessary condition only exists behind it, or that it causes or follows in time.
 - **Avoid anything that sounds AI-written.** Plain sentences, no flourishes.
+
+## 2026-10-13: Spot the Relationship comparisons and explanations
+
+The activity rejected implied comparisons in questions 22 and 28 while accepting them in 31, 36 and 47. A comparison can use another object, a numeric benchmark or an earlier state clear from context. Do not teach that it always needs two named objects or the word *than*. The repaired examples remove ambiguous comparative wording from the early single-type questions rather than asking students to ignore it. Question 47 compares pressure with a pressure threshold, not flux.
+
+Questions 33–48 now explain what each indicator connects, the complete requirement or comparison, and the causal reason. A relationship count alone is not an explanation. Several comparisons can share one relationship type; distinguish the number of types from the number of claims. These are implementation corrections under Joshua's fix request, not approval of every exact replacement sentence.

@@ -1,6 +1,6 @@
 ---
 name: sites
-description: Use Sites when the user wants a website built for them (including a landing page, portfolio, dashboard, portal, tracker, hub, game, event registration, or tool), requests changes to a website already built with Sites, wants to publish a website with Sites, or wants to manage Sites hosting.
+description: Use Sites when the user wants a website built for them (including a landing page, portfolio, dashboard, portal, tracker, hub, game, event registration, or tool), wants to edit or remix a Site created with the Sites plugin, wants to publish a website with Sites, or wants to manage Sites hosting.
 ---
 
 # Sites
@@ -15,10 +15,12 @@ For hosting-only changes, use the relevant native Sites tool and confirm its ret
 
 ### 1. Select and open
 
+To remix a Site created with the Sites plugin, follow [Remix a Site](references/remix.md). Use the existing-Site steps below only for the destination it creates.
+
 Default to a new Site unless a specific existing Site is identified.
 
 - **Existing hosted Site:** retain its `project_id` and audience, call `get_site` and `create_source_repository_write_credential`, and open with the [source helper](#source-helper) before editing. Omit `archivePath`; use an empty directory when source is missing, then the returned `checkout_path`.
-- **New Site:** use an empty project subdirectory in the task's workspace, normally `/workspace/sites/<slug>` in managed Linux. Default simple pages and browser-local interactions to buildless HTML/JS; use the supplied Vinext starter for server behavior. Preserve retained templates.
+- **New Site:** create a unique, new empty project subdirectory in the task's workspace, normally `/workspace/sites/<slug>` in managed Linux. Default simple pages and browser-local interactions to buildless HTML/JS; use the supplied Vinext starter for server behavior. Preserve retained templates.
 - **Local-only:** use the available checkout; skip registration, source synchronization, and publication.
 
 ### 2. Prepare and launch
@@ -33,10 +35,10 @@ This copies the starter and configures ignored checkout-local state. Helpers sel
 
 For a retained template, add `--template-source <absolute-sanitized-source-directory>`; exclude Site identity, Git metadata, credentials, and runtime data. For explicitly requested Worker ESM, add `--starter worker-esm` and follow [its README](templates/worker-esm-starter/README.md). Use [Troubleshooting](references/troubleshooting.md#project-configuration) for profile repair or static-to-Worker migration.
 
-After minimal setup, launch registration for new hosted work in a retained execution cell when available. Native `create_site` creates a private, unpublished Site and returns its ID and source credential. Registration includes immediately persisting that ID when the call returns:
+After minimal setup, launch registration for new hosted work in a retained execution cell when available. Native `create_site` creates a private, unpublished Site and returns its ID and source credential. Immediately persist the ID when it returns. For static Sites, include `--static-directory` when known to set both fields at once; omit it for Worker builds. For buildless HTML/JS, run:
 
 ```text
-node <plugin-root>/scripts/set-project-id.mjs --project-id <returned-id>
+node <plugin-root>/scripts/set-project-id.mjs --project-id <returned-id> --static-directory dist
 ```
 
 Reuse an existing ID or registration attempt; resolve uncertain creation before retrying. For app integrations, first read [discovery and declarations](references/app-integrations.md#discover-and-declare).
@@ -55,7 +57,7 @@ Start required image search or generation when its brief is clear, alongside ind
 
 ### 3. Implement
 
-Write application files while setup runs. For hosted work, await persisted Site identity before manifest edits or source synchronization. Await installed dependencies before commands that need them.
+Write application files while setup runs. For hosted work, await persisted Site identity before further manifest edits or source synchronization. Await installed dependencies before commands that need them.
 
 Implement the requested experience in one focused pass; revise for observed failures or unmet requirements. Replace starter title and description and remove temporary `codex-preview` metadata during implementation. Integrate required assets and complete the requested behavior before publishing.
 
@@ -82,10 +84,10 @@ The tracked `.openai/hosting.json` declares Site identity and deployment configu
 
 | Field | Contract |
 | --- | --- |
-| `project_id` | Persist with `set-project-id.mjs`; preserve on updates. |
+| `project_id` | Persist with `set-project-id.mjs` on creation; preserve on updates. |
 | `static` | Object with `directory`: `dist`, `dist/client`, `out`, `build`, or `.output/public`. Omit for Worker builds. |
 | `d1`, `r2` | [Storage bindings](references/storage.md#bindings); leave unused bindings `null`. |
-| `capabilities` | Declare [a Site MCP server](references/site-mcp-server.md#expose-tools) when needed. |
+| `capabilities` | Declare [a Site MCP server](references/site-mcp-server.md#build-the-server) when needed. |
 | `plugins`, `connectors` | [App integration declarations](references/app-integrations.md#discover-and-declare). |
 
 Preserve existing fields. Edit the source manifest; build helpers emit Worker deployment metadata.

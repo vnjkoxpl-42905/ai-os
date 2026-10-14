@@ -91,3 +91,21 @@ go out without a further approval (pre-consultation check-ins only).
 | 2026-10-12 | fernande-charleus | Sorry for the scheduling mix-up | sent 2026-10-12 | Joshua approved send in chat; to fernandecharleus@gmail.com; Gmail message 1a13204c4ee9d0ae; Sent copy id returned by API, not independently re-read |
 | 2026-10-12 | ivory-johnson | Sorry for the delay | sent 2026-10-12 | Joshua approved send in chat; to ivoryj.johnson3@gmail.com; Gmail message 1a132095798088f5; Sent copy id returned by API, not independently re-read |
 | 2026-10-12 | celia-cutler | Rescheduling our session | sent 2026-10-12 | Joshua approved send in chat; to celiacutler@gmail.com; Gmail message 1a132198ad179ca5; Sent copy id returned by API, not independently re-read |
+
+## 2026-10-13 | LSAT U assignment notification | Gianna Jean
+
+- Recipient: giannajean005@gmail.com.
+- Authorization: Joshua explicitly requested assigning the revised Abstract bootcamp as homework; assign-lsatu-work permits normal platform assignment notifications for one named student.
+- Action: app assignWork created Classroom item dd42a851-5af5-49e9-af7c-b097db98f379. Executor reported inbox ok, bell ok and email ok. One visible active assignment confirmed by fresh reads.
+- Delivery scope: platform-generated notification, not a manually authored Gmail send. Inbox/bell/email success is the executor's result; recipient reading and independent Gmail receipt are not claimed.
+- Evidence: students/gianna/assignment-log.md.
+
+## 2026-10-13 | Lovable build prompt | Spot the Relationship
+
+- Destination: existing LSAT U Lovable project 53b9a6f2-aba7-4ae4-8dd1-fa5b8aab4d76, main thread.
+- Authorization: Joshua explicitly authorized exactly one paid prompt to complete the grading repair and make sure it is done properly.
+- Sent once through Lovable send_message in standard build mode, with Max mode disabled. Accepted message umsg_01m4w1f6s5fkt8ykgmtxfzc27n; subsequent readback identified main:user#00000000003701#usr:IVUTCZJR and reproduced the submitted text.
+- Scope: structured-key payload and receipt identity, active grading rubric, content contradictions, final explanations, tests, migration and Lovable Cloud activity-coach deployment. No additional paid prompts, paid grading tests or student notifications authorized.
+- Exact prompt: research/2026-10-13-spot-the-relationship-lovable-repair-prompt.md. Processing is in progress; completion and deployment are not yet verified.
+
+- Completion readback: assistant main:agent#00000001078931#don:FVCWQSIM completed, 20.1 credits, commit d8f82e8ac26830de619419ed22c80fb2b858f628. Agent reported managed migration and activity-coach deployment, but AI grading configuration remained disabled. No second paid prompt sent.

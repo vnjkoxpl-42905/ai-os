@@ -244,6 +244,18 @@
     "reason": "API token redacted in snapshot"
   },
   {
+    "path": ".cloud-sync/conversations/codex/01a136bf-d0cc-7790-b45a-a5b2786a36c8-8ec019e187a3.md",
+    "reason": "gitleaks credential redacted in snapshot: generic-api-key"
+  },
+  {
+    "path": ".cloud-sync/conversations/codex/01a13702-6257-7241-a331-6275a3e5aef8-20b8c70e47f6.md",
+    "reason": "gitleaks credential redacted in snapshot: generic-api-key"
+  },
+  {
+    "path": ".cloud-sync/conversations/codex/01a13702-66a1-7ef3-bf37-30291d23c5eb-dbd4ee2db387.md",
+    "reason": "gitleaks credential redacted in snapshot: generic-api-key"
+  },
+  {
     "path": ".cloud-sync/runtime/agents/skills/media-use/scripts/lib/telemetry.mjs",
     "reason": "gitleaks credential redacted in snapshot: generic-api-key"
   },
@@ -538,6 +550,10 @@
   {
     "path": ".cloud-sync/runtime/codex/skills/higgsfield-websites/references/security.md",
     "reason": "gitleaks credential redacted in snapshot: generic-api-key"
+  },
+  {
+    "path": ".codex/config.toml",
+    "reason": "credential assignment redacted in snapshot"
   },
   {
     "path": ".env",
