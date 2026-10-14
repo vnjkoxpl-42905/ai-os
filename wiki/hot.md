@@ -9,7 +9,13 @@ aliases: []
 
 Freshest working state; the first page `/pickup` reads. Rebuilt fresh in the 2026-07-16 vault rebuild (the old cache is archived).
 
-## Most recent (2026-10-14): Conditional quality pass completed
+## Most recent (2026-10-14): RC acceptance expanded and scroll repair published
+
+- Reconciled the old checkout with current upstream, completed fresh signed-in browser checks, and published the demonstrated passage-layout scroll restoration fix in `8ab6fe29`. Lovable confirmed publication; production serves `index-tSutFC8i.js` and restores split scroll position after passage-only reflow.
+- Finder keyboard/retry, read-only preview, all 90 preference combinations, responsive/docked layouts, failed saves, lost creation/completion responses, newer flag intent, protected review and an automatic 11-question lifecycle have fresh receipts. Three new dedicated test sessions are completed and preserved. [Authoritative evidence and remaining limits](../../ai-os-projects/lsatu/docs/specs/2026-10-09-rc-release-evidence.md).
+- Focused tests 417/417, typecheck, lint and build passed. Whole suite remains red: 43 failures, with 38 independently reproduced upstream and five passing focused reruns. Ticket 08 remains open for physical devices/cross-device persistence, screen-reader speech, actual browser zoom, unresolved original clipping and remaining controlled save/ownership permutations. Scoring authority stays separate; keys and historical grading unchanged. Task statuses unchanged.
+
+## Previous (2026-10-14): Conditional quality pass completed
 
 - Finished Joshua's requested six-category internal rubric on the combined Claude/Codex version. Fixed lost mixed-drill archives on question-bank changes, restored dedicated Group 1/2 flashcards (13/7 cards) with isolated progress and assigned access, and repaired keyboard focus between quiz questions and cards. The optional mixed deck retains existing progress and requires both groups. Authored cards and all original worksheet sources remain unchanged.
 - Quality commit `ac2c24dd` in `lsatu-conditional-reconcile`; [rubric and final evidence](../../ai-os-projects/lsatu-conditional-reconcile/docs/agent/conditional-takeover-20261013/quality-rubric.md). 440 tests/35 files, typecheck, build/postbuild content guard, 52 responsive samples from 320 to 1440 pixels, actual keyboard/reload checks, and scoped independent review passed. All six local rubric categories pass within recorded coverage.

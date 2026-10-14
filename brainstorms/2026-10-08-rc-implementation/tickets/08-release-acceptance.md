@@ -15,3 +15,11 @@ Existing seams: RcHubSurface.test.tsx, rcBuilderSummary.test.ts, RcPlayer.saveSa
 - [ ] Fresh signed-in production acceptance follows deployment, separately from local/source checks.
 
 Deliver a concise evidence ledger keyed to acceptance checks, with tested routes, viewport, actor, test-record identity and observed persistence. Preserve existing account records; do not delete test records without authorization. Scoring correctness remains an open authority gate until independently adjudicated. A finished UI release is not a certified answer-key audit.
+
+## Acceptance checkpoint, 2026-10-14
+
+Expanded signed-in production checks and published the demonstrated scroll-retention repair in `8ab6fe29`, fresh asset `index-tSutFC8i.js`. Finder keyboard/typeahead/Escape and controlled read Retry, builder validation/invalidation/shortfall,90 preference combinations, rejected answer/annotation/flag recovery, newer flag intent, lost creation/completion responses, protected-review immutability and in-progress refusal are evidenced in [the current release ledger](../../../../ai-os-projects/lsatu/docs/specs/2026-10-09-rc-release-evidence.md).
+
+Fresh automatic two-passage drill matched its exact11 previewed identities and verified confirmation-before-reveal for every question. Three new dedicated completed sessions saved8/6/11 first attempts; final backend22 sessions/190 attempts/3 annotations. Existing records and five protected-source hashes were preserved. Final417 focused tests, typecheck, changed-file lint, build and safe-push pass. Full suite remains43 failed/6757 passed/1 skipped; independent baseline/rerun evidence is recorded separately.
+
+This is expanded partial acceptance, not full ticket closure. Required actual200% browser zoom, physical-device/cross-device and screen-reader speech checks remain open, as do the unidentified original clipping condition and broader controlled delayed/lost/duplicate annotation, rapid-passage/teardown and pending-write actor-switch combinations. In-app raw-CDP continuation failed; its interceptors were cleared. Scoring authority remains separate. The unchecked checklist is retained until its complete contracts can be closed.
