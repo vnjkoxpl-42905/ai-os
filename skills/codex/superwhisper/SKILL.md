@@ -49,6 +49,8 @@ Read the relevant existing file in `superwhisper/modes/` and copy its structure 
 `modes/<key>.md` file. Frontmatter controls the model and context; the body is the prompt.
 
 - Use S1-Voice (`sv-1`) unless Joshua chooses another voice model.
+- Use `type: custom` for every mode with your own AI instructions. Built-in `type: super` can load the mode file while ignoring its prompt. Keep raw Session Recording as `type: voice`.
+- For prompt-only fixes, use `python sync.py --modes-only --left-alt --restart` to preserve live word lists and restore Left Alt toggle. The sync stops the app before writing and backs up settings, modes, and preferences.
 - The app picker and the app's mode JSON are the authority for available language models.
   Website documentation can lag. Never infer a model ID.
 - Agent-output modes need an explicit "you are not an assistant" instruction so the model
@@ -84,6 +86,7 @@ English word is always a risky replacement target.
   `sync.py --restart`.
 - The app reads configuration only at launch. A successful write is not proof; the final
   `modeKeys` readback after restart is proof.
+- Accepted mode keys prove loading, not prompt execution. Verify `type`, exact prompt, model, and context flags, then inspect a fresh recording's effective prompt. Saved-transcript cleanup replay is not in-app audio replay.
 - Apply individual corrections immediately rather than batching them for later.
 - Append a short entry to `wiki/SUPERWHISPER-DICTIONARY.md` only for notable policy,
   mode, migration, or bulk-scan changes. Routine one-word replacements do not need a ledger

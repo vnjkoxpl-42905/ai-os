@@ -1,0 +1,290 @@
+{
+  "method": "Local ffprobe plus ffmpeg volumedetect and silencedetect at -40 dBFS for at least 0.1 seconds. Mean volume is whole-clip mean-square level. Threshold is analytical, not a speech detector. No listening or intended-word judgments. No audio uploaded.",
+  "recordings": [
+    {
+      "id": "1791951580",
+      "audio_path": "\\\\localhost\\C$\\Users\\Joshu\\AppData\\Local\\com.superwhisper.app\\recordings\\1791951580\\Output.wav",
+      "saved_audio_duration_seconds": 12.479875,
+      "metadata_duration_ms": 12480,
+      "sample_rate": "16000",
+      "channels": 1,
+      "mean_volume_dbfs": -14.7,
+      "max_volume_dbfs": -0.2,
+      "silence_threshold_dbfs": -40,
+      "minimum_silence_seconds": 0.1,
+      "silence_intervals": [
+        {
+          "start_seconds": 0.0,
+          "end_seconds": 0.301375,
+          "duration_seconds": 0.301375
+        },
+        {
+          "start_seconds": 1.218438,
+          "end_seconds": 2.081375,
+          "duration_seconds": 0.862938
+        },
+        {
+          "start_seconds": 2.615,
+          "end_seconds": 2.974875,
+          "duration_seconds": 0.359875
+        },
+        {
+          "start_seconds": 3.584062,
+          "end_seconds": 4.042875,
+          "duration_seconds": 0.458813
+        },
+        {
+          "start_seconds": 5.2085,
+          "end_seconds": 5.706812,
+          "duration_seconds": 0.498312
+        },
+        {
+          "start_seconds": 8.0765,
+          "end_seconds": 8.815875,
+          "duration_seconds": 0.739375
+        },
+        {
+          "start_seconds": 9.271125,
+          "end_seconds": 9.551687,
+          "duration_seconds": 0.280562
+        },
+        {
+          "start_seconds": 10.262375,
+          "end_seconds": 10.682813,
+          "duration_seconds": 0.420438
+        },
+        {
+          "start_seconds": 10.981687,
+          "end_seconds": 11.30875,
+          "duration_seconds": 0.327063
+        }
+      ],
+      "silence_total_seconds": 4.248751,
+      "silence_fraction": 0.3404482016045834,
+      "ffmpeg_exit_code": 0
+    },
+    {
+      "id": "1791951422",
+      "audio_path": "\\\\localhost\\C$\\Users\\Joshu\\AppData\\Local\\com.superwhisper.app\\recordings\\1791951422\\Output.wav",
+      "saved_audio_duration_seconds": 17.50925,
+      "metadata_duration_ms": 17510,
+      "sample_rate": "16000",
+      "channels": 1,
+      "mean_volume_dbfs": -14.1,
+      "max_volume_dbfs": -0.2,
+      "silence_threshold_dbfs": -40,
+      "minimum_silence_seconds": 0.1,
+      "silence_intervals": [
+        {
+          "start_seconds": 0.0,
+          "end_seconds": 0.381625,
+          "duration_seconds": 0.381625
+        },
+        {
+          "start_seconds": 1.28625,
+          "end_seconds": 1.396313,
+          "duration_seconds": 0.110063
+        },
+        {
+          "start_seconds": 3.017813,
+          "end_seconds": 3.759813,
+          "duration_seconds": 0.742
+        },
+        {
+          "start_seconds": 5.29675,
+          "end_seconds": 5.506875,
+          "duration_seconds": 0.210125
+        },
+        {
+          "start_seconds": 8.408062,
+          "end_seconds": 9.018813,
+          "duration_seconds": 0.61075
+        },
+        {
+          "start_seconds": 10.50275,
+          "end_seconds": 10.72,
+          "duration_seconds": 0.21725
+        },
+        {
+          "start_seconds": 11.65425,
+          "end_seconds": 12.367812,
+          "duration_seconds": 0.713562
+        },
+        {
+          "start_seconds": 13.665875,
+          "end_seconds": 14.200375,
+          "duration_seconds": 0.5345
+        },
+        {
+          "start_seconds": 14.548938,
+          "end_seconds": 14.701562,
+          "duration_seconds": 0.152625
+        },
+        {
+          "start_seconds": 16.578437,
+          "end_seconds": 16.718563,
+          "duration_seconds": 0.140125
+        }
+      ],
+      "silence_total_seconds": 3.812625,
+      "silence_fraction": 0.2177491897140083,
+      "ffmpeg_exit_code": 0
+    },
+    {
+      "id": "1791951242",
+      "audio_path": "\\\\localhost\\C$\\Users\\Joshu\\AppData\\Local\\com.superwhisper.app\\recordings\\1791951242\\Output.wav",
+      "saved_audio_duration_seconds": 17.408,
+      "metadata_duration_ms": 17408,
+      "sample_rate": "16000",
+      "channels": 1,
+      "mean_volume_dbfs": -14.6,
+      "max_volume_dbfs": -0.1,
+      "silence_threshold_dbfs": -40,
+      "minimum_silence_seconds": 0.1,
+      "silence_intervals": [
+        {
+          "start_seconds": 0.0,
+          "end_seconds": 0.352063,
+          "duration_seconds": 0.352063
+        },
+        {
+          "start_seconds": 1.061813,
+          "end_seconds": 1.884875,
+          "duration_seconds": 0.823063
+        },
+        {
+          "start_seconds": 2.5325,
+          "end_seconds": 3.264938,
+          "duration_seconds": 0.732437
+        },
+        {
+          "start_seconds": 4.20125,
+          "end_seconds": 4.905,
+          "duration_seconds": 0.70375
+        },
+        {
+          "start_seconds": 6.705125,
+          "end_seconds": 7.188313,
+          "duration_seconds": 0.483187
+        },
+        {
+          "start_seconds": 8.961562,
+          "end_seconds": 9.498875,
+          "duration_seconds": 0.537312
+        },
+        {
+          "start_seconds": 10.306938,
+          "end_seconds": 10.799188,
+          "duration_seconds": 0.49225
+        },
+        {
+          "start_seconds": 10.812563,
+          "end_seconds": 10.94375,
+          "duration_seconds": 0.131188
+        },
+        {
+          "start_seconds": 13.728063,
+          "end_seconds": 14.546375,
+          "duration_seconds": 0.818312
+        },
+        {
+          "start_seconds": 15.22475,
+          "end_seconds": 15.994687,
+          "duration_seconds": 0.769938
+        },
+        {
+          "start_seconds": 16.888375,
+          "end_seconds": 17.408,
+          "duration_seconds": 0.519625
+        }
+      ],
+      "silence_total_seconds": 6.363125,
+      "silence_fraction": 0.3655287798713235,
+      "ffmpeg_exit_code": 0
+    },
+    {
+      "id": "1791950951",
+      "audio_path": "\\\\localhost\\C$\\Users\\Joshu\\AppData\\Local\\com.superwhisper.app\\recordings\\1791950951\\Output.wav",
+      "saved_audio_duration_seconds": 14.224,
+      "metadata_duration_ms": 14224,
+      "sample_rate": "16000",
+      "channels": 1,
+      "mean_volume_dbfs": -13.8,
+      "max_volume_dbfs": -0.1,
+      "silence_threshold_dbfs": -40,
+      "minimum_silence_seconds": 0.1,
+      "silence_intervals": [
+        {
+          "start_seconds": 0.0,
+          "end_seconds": 0.370563,
+          "duration_seconds": 0.370563
+        },
+        {
+          "start_seconds": 1.64675,
+          "end_seconds": 2.158375,
+          "duration_seconds": 0.511625
+        },
+        {
+          "start_seconds": 2.220875,
+          "end_seconds": 2.523625,
+          "duration_seconds": 0.30275
+        },
+        {
+          "start_seconds": 3.780563,
+          "end_seconds": 3.884313,
+          "duration_seconds": 0.10375
+        },
+        {
+          "start_seconds": 7.154813,
+          "end_seconds": 7.997688,
+          "duration_seconds": 0.842875
+        },
+        {
+          "start_seconds": 11.172937,
+          "end_seconds": 11.534562,
+          "duration_seconds": 0.361625
+        },
+        {
+          "start_seconds": 13.76325,
+          "end_seconds": 14.224,
+          "duration_seconds": 0.46075
+        }
+      ],
+      "silence_total_seconds": 2.953938,
+      "silence_fraction": 0.20767280652418446,
+      "ffmpeg_exit_code": 0
+    },
+    {
+      "id": "1791950057",
+      "audio_path": "\\\\localhost\\C$\\Users\\Joshu\\AppData\\Local\\com.superwhisper.app\\recordings\\1791950057\\Output.wav",
+      "saved_audio_duration_seconds": 1.744,
+      "metadata_duration_ms": 1744,
+      "sample_rate": "16000",
+      "channels": 1,
+      "mean_volume_dbfs": -13.1,
+      "max_volume_dbfs": -0.8,
+      "silence_threshold_dbfs": -40,
+      "minimum_silence_seconds": 0.1,
+      "silence_intervals": [
+        {
+          "start_seconds": 0.0,
+          "end_seconds": 0.224625,
+          "duration_seconds": 0.224625
+        },
+        {
+          "start_seconds": 0.677813,
+          "end_seconds": 0.814,
+          "duration_seconds": 0.136187
+        },
+        {
+          "start_seconds": 1.432375,
+          "end_seconds": 1.744,
+          "duration_seconds": 0.311625
+        }
+      ],
+      "silence_total_seconds": 0.672437,
+      "silence_fraction": 0.38557167431192657,
+      "ffmpeg_exit_code": 0
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 ---
 key: rewrite
 name: Rewrite
-type: super
+type: custom
 voice_model: sv-1
 language_model: claude-sonnet-5
 context_application: false

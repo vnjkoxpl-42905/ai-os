@@ -12,6 +12,8 @@ Claude Desktop sandbox cannot redirect the write (see CLAUDE.md).
 Usage:
   python sync.py            write, after backing up what is there
   python sync.py --check    show what would change, write nothing
+  python sync.py --modes-only --left-alt --restart
+                           preserve live word lists, apply custom modes and Alt toggle
 
 The app reads these files at launch. After a sync, quit Superwhisper from the
 tray icon and reopen it. Never launch it from this shell.
@@ -21,6 +23,7 @@ import json, os, re, shutil, sys, uuid, datetime, glob
 HERE = os.path.dirname(os.path.abspath(__file__))
 TARGET = r"\\localhost\C$\Users\Joshu\AppData\Local\com.superwhisper.app"
 CHECK = "--check" in sys.argv
+MODES_ONLY = "--modes-only" in sys.argv
 
 
 def frontmatter(text):
@@ -108,7 +111,7 @@ def read_modes(existing_dir):
         base.update({
             "key": key,
             "name": meta["name"],
-            "type": meta.get("type", "super"),
+            "type": meta.get("type", "custom"),
             "voiceModelID": meta.get("voice_model", "sv-1"),
             "languageModelID": meta.get("language_model", "") or "",
             "prompt": prompt,
@@ -132,8 +135,8 @@ def main():
     modes_dir = os.path.join(TARGET, "modes")
     settings = json.load(open(settings_path, encoding="utf-8"))
 
-    reps = read_replacements(settings.get("replacements", []))
-    vocab = read_vocabulary(reps)
+    reps = settings.get("replacements", []) if MODES_ONLY else read_replacements(settings.get("replacements", []))
+    vocab = settings.get("vocabulary", []) if MODES_ONLY else read_vocabulary(reps)
     modes = read_modes(modes_dir)
     keys = [m["key"] for m in modes]
 
@@ -162,7 +165,22 @@ def main():
     stamp = datetime.datetime.now().strftime("%Y-%m-%d-%H%M%S")
     bak = os.path.join(TARGET, "settings", "bak")
     os.makedirs(bak, exist_ok=True)
+    if "--restart" in sys.argv:
+        # Stop before writing: a running app can flush its old state over new files.
+        import subprocess
+        subprocess.run(["powershell", "-NoProfile", "-Command", "Get-Process Superwhisper -EA SilentlyContinue | Stop-Process -Force"], check=True, capture_output=True)
+        settings = json.load(open(settings_path, encoding="utf-8"))
+        new_settings = dict(settings)
+        new_settings.update(vocabulary=vocab, replacements=reps, modeKeys=keys)
     shutil.copy(settings_path, os.path.join(bak, f"settings.json.{stamp}"))
+    mode_bak = os.path.join(bak, f"modes.{stamp}")
+    shutil.copytree(modes_dir, mode_bak)
+    preferences_path = os.path.join(TARGET, "preferences.json")
+    shutil.copy(preferences_path, os.path.join(bak, f"preferences.json.{stamp}"))
+    if "--left-alt" in sys.argv:
+        preferences = json.load(open(preferences_path, encoding="utf-8"))
+        preferences.update(toggleRecordingShortcut="AltLeft", p2t=False)
+        json.dump(preferences, open(preferences_path, "w", encoding="utf-8"), indent=2)
     json.dump(new_settings, open(settings_path, "w", encoding="utf-8"), indent=2)
     for m in modes:
         json.dump(m, open(os.path.join(modes_dir, m["key"] + ".json"), "w", encoding="utf-8"), indent=2)
@@ -179,12 +197,14 @@ def restart():
     drops any mode it rejected)."""
     import subprocess
     ps = r'''
-Get-Process Superwhisper -EA SilentlyContinue | Stop-Process -Force; Start-Sleep 3
 $a = New-ScheduledTaskAction -Execute 'C:\Users\Joshu\AppData\Local\superwhisper\Superwhisper.exe'
 Register-ScheduledTask -TaskName SWRun -Action $a -Force | Out-Null; Start-ScheduledTask -TaskName SWRun; Start-Sleep 10; Unregister-ScheduledTask -TaskName SWRun -Confirm:$false
 (Get-Process Superwhisper -EA SilentlyContinue | Measure-Object).Count
 '''
-    out = subprocess.run(["powershell", "-NoProfile", "-Command", ps], capture_output=True, text=True).stdout.strip()
+    result = subprocess.run(["powershell", "-NoProfile", "-Command", ps], capture_output=True, text=True, check=True)
+    out = result.stdout.strip()
+    if not out or not out.splitlines()[-1].isdigit() or int(out.splitlines()[-1]) < 1:
+        raise SystemExit("restart failed: no Superwhisper process confirmed")
     d = json.load(open(os.path.join(TARGET, "settings", "settings.json"), encoding="utf-8"))
     preferences = json.load(open(os.path.join(TARGET, "preferences.json"), encoding="utf-8"))
     shortcut_key = "pushToTalkShortcut" if preferences.get("p2t", False) else "toggleRecordingShortcut"
@@ -192,6 +212,17 @@ Register-ScheduledTask -TaskName SWRun -Action $a -Force | Out-Null; Start-Sched
     behavior = "hold to record" if preferences.get("p2t", False) else "press to start/stop"
     print(f"restarted in the background ({out.splitlines()[-1] if out else '?'} process(es)); recording: {shortcut} ({behavior})")
     print(f"loaded: {len(d['replacements'])} replacements, {len(d['vocabulary'])} vocabulary, {len(d['modeKeys'])} modes: {d['modeKeys']}")
+    expected = read_modes(os.path.join(TARGET, "modes"))
+    if set(d['modeKeys']) != {m['key'] for m in expected}:
+        raise SystemExit("verification failed: loaded mode keys differ from source")
+    for mode in expected:
+        loaded = json.load(open(os.path.join(TARGET, "modes", mode['key'] + '.json'), encoding="utf-8"))
+        for field in ('type', 'prompt', 'languageModelID', 'contextFromActiveApplication', 'contextFromClipboard', 'contextFromSelection'):
+            if loaded.get(field) != mode.get(field):
+                raise SystemExit(f"verification failed: {mode['key']} {field} differs")
+    if "--left-alt" in sys.argv and (shortcut != "AltLeft" or preferences.get("p2t", False)):
+        raise SystemExit("verification failed: Left Alt toggle did not persist")
+    print("verified: loaded mode files match source types, prompts, models, and context flags")
 
 
 if __name__ == "__main__":

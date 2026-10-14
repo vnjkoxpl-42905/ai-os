@@ -58,7 +58,7 @@ This table describes the source configuration. App-loaded state still requires r
 | Mode | Model | Use |
 |---|---|---|
 | Dictation | Sonnet 5 | General speech cleanup; preserves meaning, questions, details, and uncertainty. |
-| AI Instructions | Sonnet 5 | Requests to an agent; preserves every constraint and never answers or acts. |
+| AI Instructions | Sonnet 5.5 | Requests to an agent; preserves every constraint and never answers or acts. |
 | Student Writing | Sonnet 5 | Dictated emails and messages in Joshua's voice, without invented content. |
 | Rewrite | Sonnet 5 | Select text, say what to do to it. |
 | Session Recording | none | Record a live session, nothing pasted. |
@@ -70,6 +70,12 @@ Switch with Ctrl+Shift+M, or `superwhisper://mode?key=<key>`. Per-mode hotkeys a
 ## Skill
 
 The `superwhisper` skill is the runbook for both runtimes: `skills/claude/superwhisper/SKILL.md` for Claude and `skills/codex/superwhisper/SKILL.md` for Codex, activated in their project skill folders. It covers word/correction → variants → `sync.py --restart`; modes; `scan.py`. Invoke it for any Superwhisper request.
+
+## Prompt execution and safe sync (2026-10-14)
+
+Own AI instructions require `type: custom`. The built-in `super` type uses its default template even when a custom prompt is saved. Dictation, AI Instructions, Student Writing, and Rewrite now use Custom; Session Recording stays Voice. AI Instructions preserves its app-selected Sonnet 5.5 model.
+
+Use `python sync.py --modes-only --left-alt --restart` for prompt-only fixes. It preserves live vocabulary/replacements, stops the app before writing, backs up settings/modes/preferences, and verifies exact type/prompt/model/context readback plus Left Alt toggle. General dictation context is disabled; Rewrite uses selection only. Accepted mode keys do not prove execution: inspect a fresh recording's effective prompt. Text replay against saved raw transcripts verifies cleanup behavior only, not audio recognition or the app's runtime prompt.
 
 ## Related
 

@@ -147,3 +147,7 @@ before touching anything.
 | `dev/ai-os/superwhisper/scan.py` | Transcript scan → `research/SCAN-<date>.md`. |
 | `dev/ai-os/superwhisper/research/` | The 2026-09-11 customization report, sources, scans. |
 | `wiki/SUPERWHISPER-DICTIONARY.md` | Dated history ledger; append a line when something notable changes. |
+
+## Prompt execution verification (2026-10-14)
+
+Custom AI instructions require `type: custom`; built-in `type: super` ignores them. Keep Session Recording as Voice. For prompt-only fixes, run `python sync.py --modes-only --left-alt --restart`: it preserves live word lists, stops before writing, backs up settings/modes/preferences, and verifies exact prompts/types/context plus Left Alt toggle. Accepted mode keys alone do not prove execution; inspect a fresh recording's effective prompt. Saved-transcript replay tests cleanup only, not audio recognition or in-app execution.

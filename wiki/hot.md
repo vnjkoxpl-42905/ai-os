@@ -1,7 +1,7 @@
 ---
 type: operating-layer
 subject: Hot last-session cache
-updated: 2026-10-13
+updated: 2026-10-14
 aliases: []
 ---
 
@@ -9,7 +9,13 @@ aliases: []
 
 Freshest working state; the first page `/pickup` reads. Rebuilt fresh in the 2026-07-16 vault rebuild (the old cache is archived).
 
-## Most recent (2026-10-13): Conditional Claude and Codex histories reconciled
+## Most recent (2026-10-14): Conditional quality pass completed
+
+- Finished Joshua's requested six-category internal rubric on the combined Claude/Codex version. Fixed lost mixed-drill archives on question-bank changes, restored dedicated Group 1/2 flashcards (13/7 cards) with isolated progress and assigned access, and repaired keyboard focus between quiz questions and cards. The optional mixed deck retains existing progress and requires both groups. Authored cards and all original worksheet sources remain unchanged.
+- Quality commit `ac2c24dd` in `lsatu-conditional-reconcile`; [rubric and final evidence](../../ai-os-projects/lsatu-conditional-reconcile/docs/agent/conditional-takeover-20261013/quality-rubric.md). 440 tests/35 files, typecheck, build/postbuild content guard, 52 responsive samples from 320 to 1440 pixels, actual keyboard/reload checks, and scoped independent review passed. All six local rubric categories pass within recorded coverage.
+- Review only on [PR #211](https://github.com/vnjkoxpl-42905/lsatu-684d89db/pull/211). Publication, signed-in production persistence, physical-device/screen-reader acceptance and editorial approval remain separate. Task statuses unchanged.
+
+## Previous (2026-10-13): Conditional Claude and Codex histories reconciled
 
 - Recovered the newer Claude continuation `fcf871e0-bec1-4050-afcb-31aaf7c75f07` and seven agent transcripts. Both sessions had branched from `64792cc5`; Claude's later two commits collided with Codex's already-pushed PR work. Its 24-file merge stopped at the session limit. No request to roll back was found in that exact chat, and no direct message was sent to it.
 - Compared both outputs. Codex was the stronger verified functional baseline; retained Claude's useful granular answer migration, historical-run preservation, complete symbol explanations and manual walkthrough refinements. Preserved Codex's persistence, help and completion safeguards. Both parent histories and the interrupted merge remain intact.
