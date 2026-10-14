@@ -1,6 +1,6 @@
 ---
 name: sites
-description: Use Sites when the user wants a website built for them (including a landing page, portfolio, dashboard, portal, tracker, hub, game, event registration, or tool), wants to edit or remix a Site created with the Sites plugin, wants to publish a website with Sites, or wants to manage Sites hosting.
+description: Use Sites when the user wants a website built for them (including a landing page, portfolio, dashboard, portal, tracker, hub, game, event registration, or tool), wants to edit or remix a specific Site built with the Sites plugin, wants to publish a website with Sites, or wants to manage Sites hosting.
 ---
 
 # Sites
@@ -15,7 +15,9 @@ For hosting-only changes, use the relevant native Sites tool and confirm its ret
 
 ### 1. Select and open
 
-To remix a Site created with the Sites plugin, follow [Remix a Site](references/remix.md). Use the existing-Site steps below only for the destination it creates.
+For remix requests: if the intended source is unclear, ask in plain chat whether the user means an existing workspace Site or a new site inspired by the reference. For a workspace Site, ask for its URL or slug.
+
+When the user identifies a Site built with the Sites plugin and asks to remix it, follow [Remix a Site](references/remix.md). Use the existing-Site steps below only for the destination it creates.
 
 Default to a new Site unless a specific existing Site is identified.
 

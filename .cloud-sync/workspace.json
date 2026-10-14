@@ -35,7 +35,7 @@
       "projects/lsatu-wt-frozen/.env",
       "projects/lsatu/.env"
     ],
-    "ciphertext_sha256": "1092bfe41337eead4afdc99b69966ac9da23c489938c8d56165774e55dc2ba77",
+    "ciphertext_sha256": "6a00781873ea7b14f5ecb84f5c69f31fee898a6f42c35c47c4a7bec6d60366da",
     "cloud_key_required": "Provision AI_OS_SYNC_KEY privately in the cloud environment; the key is never uploaded."
   },
   "runtime_export": {
@@ -454,8 +454,8 @@
           "files": 1
         },
         {
-          "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-bundled\\computer-use\\26.1007.21434\\skills\\computer-use",
-          "relative_path": "openai-bundled/computer-use/26.1007.21434/skills/computer-use",
+          "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-bundled\\computer-use\\26.1007.71326\\skills\\computer-use",
+          "relative_path": "openai-bundled/computer-use/26.1007.71326/skills/computer-use",
           "files": 1
         },
         {
@@ -1304,8 +1304,8 @@
           "files": 5
         },
         {
-          "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\sites\\1.0.2\\skills\\sites",
-          "relative_path": "openai-curated-remote/sites/1.0.2/skills/sites",
+          "source_path": "C:\\Users\\Joshu\\.codex\\plugins\\cache\\openai-curated-remote\\sites\\1.0.2-remix-a.1\\skills\\sites",
+          "relative_path": "openai-curated-remote/sites/1.0.2-remix-a.1/skills/sites",
           "files": 137
         },
         {
@@ -1418,17 +1418,8 @@
     ]
   },
   "conversation_export": {
-    "session_count": 823,
-    "errors": [
-      {
-        "source": "C:\\Users\\Joshu\\.claude\\projects\\C--Users-Joshu-dev-ai-os\\df753d22-a2eb-4d12-afaf-fa1dac84e9dd\\subagents\\agent-ad1f8f0ec1ec1ec57.jsonl",
-        "error": "[WinError 5] Access is denied: 'C:\\\\Users\\\\Joshu\\\\dev\\\\ai-os\\\\setup\\\\github-sync\\\\state\\\\conversations\\\\claude\\\\df753d22-a2eb-4d12-afaf-fa1dac84e9dd-agent-ad1f8f0ec1ec1ec57.md.tmp' -> 'C:\\\\Users\\\\Joshu\\\\dev\\\\ai-os\\\\setup\\\\github-sync\\\\state\\\\conversations\\\\claude\\\\df753d22-a2eb-4d12-afaf-fa1dac84e9dd-agent-ad1f8f0ec1ec1ec57.md'"
-      },
-      {
-        "source": "C:\\Users\\Joshu\\.codex\\sessions\\2026\\10\\11\\rollout-2026-10-11T07-03-03-01a12aa1-66ef-78f1-80b3-8879b6c35fc3.jsonl",
-        "error": "[WinError 5] Access is denied: 'C:\\\\Users\\\\Joshu\\\\dev\\\\ai-os\\\\setup\\\\github-sync\\\\state\\\\conversations\\\\codex\\\\01a12aa1-66ef-78f1-80b3-8879b6c35fc3-3a6e77bfdcfd.md.tmp' -> 'C:\\\\Users\\\\Joshu\\\\dev\\\\ai-os\\\\setup\\\\github-sync\\\\state\\\\conversations\\\\codex\\\\01a12aa1-66ef-78f1-80b3-8879b6c35fc3-3a6e77bfdcfd.md'"
-      }
-    ],
+    "session_count": 828,
+    "errors": [],
     "snapshot_omitted_count": 1
   },
   "encrypted_original_context": {
@@ -1655,17 +1646,17 @@
       "ai-os/wiki/sources/karpathy/repos/files/repos--karpathy--cryptos--getnewaddress.py.md",
       "ai-os/wiki/sources/karpathy/repos/files/repos--karpathy--karpathy.github.io--_posts--2021-06-21-blockchain.markdown.md"
     ],
-    "ciphertext_sha256": "b9b5e89012b6a5e7b6ea594d0bf3ab1a1b31d51c5a6e0027afceedfe8bcef720",
+    "ciphertext_sha256": "6df81184c39ddcd325170d0ca82bcfb54fe596b74c48d3ed11d494fa830e9d4f",
     "ciphertext_parts": [
       {
         "file": "redacted-context.enc.part0001",
         "bytes": 52428800,
-        "sha256": "b16c9597917346d8a507560d19ccac46a6b857a69dec015404d3bed9e17d3685"
+        "sha256": "8d61486a928d2297a618dab85f6ca23a3ae0db25df481ec4d22caf97a411b91b"
       },
       {
         "file": "redacted-context.enc.part0002",
-        "bytes": 50173660,
-        "sha256": "7e9b0abf2e12d649ed69cd37b11cb9c28590a7b49b9abee85a8619b96bb2b58e"
+        "bytes": 50173585,
+        "sha256": "60e82b7a1c0a670d9ff747a305440eded70148c795e802d82ae72082efddedd6"
       }
     ]
   }
