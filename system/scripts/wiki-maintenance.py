@@ -16,7 +16,17 @@ def replace_checked(path, text, expected):
     if hashlib.sha256(current).digest() != expected:
         raise RuntimeError(f"Concurrent change: {path.relative_to(ROOT)}")
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(text, encoding="utf-8", newline="\n")
+    # Write via a temp file and retry: on Windows a sync/indexer can briefly lock the target (Errno 22/13).
+    import os, time
+    tmp = path.with_name(path.name + ".tmp")
+    tmp.write_text(text, encoding="utf-8", newline="\n")
+    for attempt in range(10):
+        try:
+            os.replace(tmp, path)
+            return
+        except OSError:
+            time.sleep(0.3 * (attempt + 1))
+    raise OSError(f"Could not replace locked file: {path.relative_to(ROOT)} (new report left at {tmp.name})")
 
 
 def description(path):
@@ -81,7 +91,8 @@ def resolve(source, target, by_name):
         return True, None
     candidates = [source.parent / target, ROOT / target]
     for candidate in candidates:
-        for p in (candidate, candidate.with_suffix(".md") if not candidate.suffix else candidate):
+        # Obsidian resolves [[name.py]] to "name.py.md", so try appending .md as well.
+        for p in (candidate, candidate.parent / (candidate.name + ".md")):
             if p.exists():
                 return True, p.resolve()
     matches = by_name.get(target, []) if "/" not in target and "\\" not in target else []
@@ -102,12 +113,22 @@ def lint(pages):
         if page.name.endswith(".generated.md"):
             continue
         # The index is a directory, so its links don't prove conceptual connectivity.
-        content = re.sub(r"```.*?```", "", text, flags=re.S)
-        targets = re.findall(r"\[\[([^\]|]+)(?:\|[^\]]*)?\]\]", content)
-        targets += re.findall(r"(?<!!)\[[^\]\n]+\]\(([^\n)]+)\)", content)
+        content = re.sub(r"```.*?```|~~~.*?~~~", "", text, flags=re.S)
+        # Inline code (`[[example]]`) documents link syntax; it is not a link.
+        content = re.sub(r"`[^`\n]+`", "", content)
+        rel_page = page.relative_to(ROOT).as_posix()
+        # Verbatim repo-file mirrors quote source text; "[[...]]" there is content, not a vault link.
+        verbatim = rel_page.startswith("wiki/sources/karpathy/repos/files/")
+        targets = [] if verbatim else re.findall(r"\[\[([^\]|]+)(?:\|[^\]]*)?\]\]", content)
+        # <angle-bracket> link targets may contain ")" (e.g. "(and Contrapositive)").
+        targets += re.findall(r"\]\(<([^>\n]+)>\)", content)
+        targets += re.findall(r"(?<!!)\[[^\]\n]+\]\(([^<\n)][^\n)]*)\)", content)
         for target in targets:
             good, dest = resolve(page, target, by_name)
             if not good:
+                # The log is append-only history; its old links record what existed then.
+                if rel_page == "wiki/log.md":
+                    continue
                 issues.append(("broken-or-ambiguous-link", page.relative_to(ROOT).as_posix(), target))
             elif dest and page.name != "index.md" and dest != page.resolve():
                 inbound.add(dest)

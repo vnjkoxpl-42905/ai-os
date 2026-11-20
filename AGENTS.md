@@ -103,6 +103,8 @@ When a skill run exposes a gap, improve the skill before moving on. Runtime-spec
 
 ## Guardrails
 
+- **Laptop first (2026-11-20).** The second brain is the folder `C:\Users\Joshu\dev\ai-os` on Joshua's laptop. All reads and edits happen there. Never work from the Google Drive mirror (`G:\My Drive\CLAUDE-CODE-BACKUP - START HERE`), a GitHub clone, or a copy such as `ai-os-codex-ore` or `ai-os-github-copy`. Drive and GitHub are backups only; restore from them only when Joshua asks. If the laptop folder is missing or unreadable, stop and say so.
+
 - **95% rule.** Make no changes until you are 95% confident what Joshua wants. Ask until you are.
 - **Lovable credits require confirmation.** Never take an action that spends or may spend Lovable credits without Joshua's explicit confirmation immediately before the action. Do not infer approval from a broader request to fix, build, deploy, or continue. Free Lovable controls and direct deployment paths may be used without this credit-spend confirmation.
 - **Lovable Cloud deploys through Lovable.** LSAT U currently uses a Lovable Cloud-managed backend. Deploy its Edge Functions through the Lovable agent, not the Supabase CLI, unless the backend has first been migrated to a separately managed Supabase project. Confirm this route with Joshua before starting a Lovable deployment.

@@ -5230,3 +5230,27 @@ Fixed: lovable-cloud.md (Edge Functions deploy via Lovable agent; SQL via MCP qu
 ## [2026-11-20] query | Teacher rail chat tabs
 
 Checked LexPrep Home's add-tab, draft switching, and saved history against the saved LexPrep motion teardown and Classroom design principles. Added observed behavior and proposed LSAT U implementation guidance to [the Classroom design notes](../brainstorms/2026-11-19-classroom-navigation-and-teacher-rail.md). First send, refresh, tab close, and phone layout were outside the live reference check.
+
+## [2026-11-20] system | Laptop first rule
+- Changed: added the "Laptop first" guardrail to `CLAUDE.md` and `AGENTS.md` (Guardrails sections identical); removed the duplicate auto-saved line from CLAUDE.md "Learned rules"; updated the `ai-os-vault-location` memory.
+- Rule: the laptop folder `C:\Users\Joshu\dev\ai-os` is the primary and only complete copy; Google Drive and GitHub are backups only; never work from a copy or clone.
+- Evidence: 28 of the last 30 chats ran in laptop folders; none used Drive or a GitHub clone. Not compared: `dev\ai-os-codex-ore`, `dev\ai-os-github-copy`.
+- Open: Drive backup not running (no G: drive); `skill-audit/` nested repo breaks `git switch`; both rule files uncommitted.
+
+## [2026-11-20] lint | Full structural pass, linter inline-code fix
+
+- Coverage: 3997 wiki pages, structural lint only (links, orphans, provenance flags). Factual accuracy not re-reviewed.
+- Fix: `system/scripts/wiki-maintenance.py` now ignores `~~~` fences and inline code spans when collecting links, so link syntax shown as an example no longer reads as a broken link. Findings 56 to 52 (the 2 gd4ai examples and 2 others cleared).
+- Remaining 52: 18 RNN sample-output false positives in the verbatim karpathy.github.io post mirror (left as is, editing would alter the mirror); 13 historical links in this append-only log (left); 21 Karpathy pages pointing at raw files never archived (`uv.lock`, `Cargo.lock`, `minGPT/projects/`). The snapshot under `raw/sources/karpathy-brain` lacks them; fetching them would change preserved evidence, so it waits for Joshua's approval.
+
+## [2026-11-20] ingest | Missing Karpathy repo files archived
+
+- On Joshua's approval, fetched 13 files that wiki pages cited but the original snapshot lacked (8 `uv.lock`, 1 `Cargo.lock`, 5 `minGPT/projects/` files) via `gh api` from each repo's default branch. Written only to new paths under `raw/sources/karpathy-brain/raw/github/repos/karpathy/`; no existing file changed.
+- Provenance and hashes: `raw/sources/karpathy-brain/supplements/github-missing-*/PROVENANCE.json` (URL, last commit SHA, bytes) and `SHA256SUMS` (13/13 OK). These reflect GitHub on 2026-11-20, not the original snapshot date.
+- Lint 52 to 31. Remaining: 18 RNN sample-text false positives, 13 historical links in this log.
+
+## [2026-11-20] lint | Zero findings; skill-audit untracked
+
+- Linter: `[[...]]` inside verbatim repo-file mirrors (`wiki/sources/karpathy/repos/files/`) is source text, not a vault link; broken links in this append-only log are history and no longer reported. Markdown links in mirrors are still checked. Probe page with one bad wikilink and one bad Markdown link produced 2 findings, then was removed. Lint 31 to 0.
+- `skill-audit/` removed from the index (gitlink with a broken nested `.git`); files stay on disk and `/skill-audit/` is now in `.gitignore`.
+- "Laptop first" rule also added to the global `~/.claude/CLAUDE.md`.
